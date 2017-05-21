@@ -31,7 +31,12 @@ USE_LDCONFIG=	yes
 
 CONFLICTS=	kdevplatform-kde4-1* kdevplatform-1*
 
-SHEBANG_FILES=	util/kdevplatform_shell_environment.sh
+SHEBANG_FILES=	util/kdevplatform_shell_environment.sh \
+		util/.zshrc
+
+SHEBANG_LANG=	zsh
+zsh_OLD_CMD=	/bin/zsh
+zsh_CMD=	${LOCALBASE}/bin/zsh
 
 PLIST_SUB+=	SHLIB_VER=10.0.0 \
 		SHLIB_SHVER=10
