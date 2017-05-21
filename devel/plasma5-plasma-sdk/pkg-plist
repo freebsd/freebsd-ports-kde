@@ -598,6 +598,9 @@ man/man1/plasmaengineexplorer.1.gz
 man/man1/plasmoidviewer.1.gz
 share/metainfo/org.kde.cuttlefish.appdata.xml
 share/metainfo/org.kde.plasma.cuttlefish.appdata.xml
+share/metainfo/org.kde.plasma.lookandfeelexplorer.appdata.xml
+share/metainfo/org.kde.plasma.plasmoidviewershell.appdata.xml
+share/metainfo/org.kde.plasma.themeexplorer.appdata.xml
 share/plasma/packages/org.kde.plasma.cuttlefish/contents/ui/IconGrid.qml
 share/plasma/packages/org.kde.plasma.cuttlefish/contents/ui/IconGridDelegate.qml
 share/plasma/packages/org.kde.plasma.cuttlefish/contents/ui/Preview.qml
