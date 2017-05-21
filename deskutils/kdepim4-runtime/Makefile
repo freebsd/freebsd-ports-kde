@@ -3,10 +3,8 @@
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE4_KDEPIM_VERSION}
-PORTREVISION=	5
-CATEGORIES=	deskutils kde
-MASTER_SITES=	KDE/${KDE4_APPLICATIONS_BRANCH}/applications/${KDE4_APPLICATIONS_VERSION}/src
-DIST_SUBDIR=	KDE/${PORTVERSION}
+PORTREVISION=	1
+CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM tools and services
@@ -18,7 +16,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libkfbapi.so:net/libkfbapi \
 		libqjson.so:devel/qjson
 
-CONFLICTS_INSTALL=	kdepim-runtime44-4.*
+CONFLICTS_INSTALL=	kdepim-runtime44-4.* kdepim-runtime-kf5*
 
 USES=		cmake:outsource kde:4 shared-mime-info tar:xz
 USE_GNOME=	libxml2 libxslt:build
@@ -30,6 +28,9 @@ USE_QT4=	corelib dbus declarative designer_build gui network qtestlib \
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CMAKE_ARGS=	-DKDEPIM_MOBILE_UI:BOOL=OFF
+
+# Override KDE4 versions to fetch the last one
+KDE_APPLICATIONS_VERSION=	${KDE4_APPLICATIONS_VERSION}
 
 post-patch:
 # Prevent updating MIME during build.

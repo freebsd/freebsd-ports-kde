@@ -1,5 +1,5 @@
 # Created by: alonso@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/graphics/libkscreen/Makefile 13303 2016-11-07 22:24:37Z tcberner $
 
 PORTNAME=	libkscreen
 PORTVERSION=	1.0.5
@@ -15,16 +15,12 @@ LIB_DEPENDS=	libqjson.so:devel/qjson \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-render-util.so:x11/xcb-util-renderutil
 
-USES=		cmake:outsource kde:4 pkgconfig tar:xz
 USE_KDE=	kdelibs automoc4
+USES=		cmake:outsource kde:4 pathfix pkgconfig tar:xz
 USE_QT4=	corelib dbus gui script \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
-
-pre-configure:
-	${REINPLACE_CMD} -e 's,$${LIB_INSTALL_DIR}/pkgconfig,libdata/pkgconfig,' \
-		${WRKSRC}/src/CMakeLists.txt
 
 .include <bsd.port.mk>

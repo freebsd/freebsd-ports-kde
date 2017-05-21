@@ -1,15 +1,14 @@
-# $FreeBSD$
+# $FreeBSD: head/sysutils/baloo/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	baloo
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	5
+PORTREVISION=	3
 CATEGORIES=	sysutils kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE framework for searching and managing user metadata
 
-CONFLICTS_INSTALL=	kde-runtime-4.12.* \
-			kf5-baloo-5.*
+CONFLICTS_INSTALL=	kde-runtime-4.12.*
 
 LIB_DEPENDS=	libxapian.so:databases/xapian-core \
 		libqjson.so:devel/qjson

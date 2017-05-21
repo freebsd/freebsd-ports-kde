@@ -1,0 +1,13 @@
+FreeBSD does not have dl, rely on CMAKE_DL_LIBS.
+
+--- probe/CMakeLists.txt.orig	2017-02-14 19:15:42 UTC
++++ probe/CMakeLists.txt
+@@ -40,7 +40,7 @@ target_link_libraries(gammaray_probe
+ )
+ 
+ if(NOT WIN32 AND NOT QNXNTO AND NOT ANDROID)
+-  target_link_libraries(gammaray_probe dl)
++  target_link_libraries(gammaray_probe ${CMAKE_DL_LIBS})
+ endif()
+ 
+ set_target_properties(gammaray_probe PROPERTIES

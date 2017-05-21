@@ -1,0 +1,17 @@
+include/KAsync/Async
+include/KAsync/Future
+include/KAsync/async.h
+include/KAsync/async_impl.h
+include/KAsync/debug.h
+include/KAsync/future.h
+include/KAsync/job_impl.h
+include/KAsync/kasync_export.h
+include/kasync_version.h
+lib/cmake/KAsync/KAsyncConfig.cmake
+lib/cmake/KAsync/KAsyncConfigVersion.cmake
+lib/cmake/KAsync/KAsyncTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/KAsync/KAsyncTargets.cmake
+lib/libKAsync.so
+lib/libKAsync.so.0
+lib/libKAsync.so.0.1.1
+%%QT_MKSPECDIR%%/modules/qt_KAsync.pri

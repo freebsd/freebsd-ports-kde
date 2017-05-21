@@ -1,8 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/sysutils/nepomuk-widgets/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	nepomuk-widgets
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	4
+PORTREVISION=	3
 CATEGORIES=	sysutils kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org

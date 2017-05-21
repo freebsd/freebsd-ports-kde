@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2014-09-16 23:09:39.620225053 +0200
-+++ CMakeLists.txt	2014-09-16 23:09:49.250232904 +0200
+--- CMakeLists.txt.orig	2014-08-03 21:14:49 UTC
++++ CMakeLists.txt
 @@ -1,7 +1,7 @@
  project(libkscreen)
  set(libkscreen_VERSION_MAJOR 1)
@@ -9,3 +9,19 @@
  set(libkscreen_VERSION "${libkscreen_VERSION_MAJOR}.${libkscreen_VERSION_MINOR}.${libkscreen_VERSION_RELEASE}")
  add_definitions("-DLIBKSCREEN_VERSION=\\\"${libkscreen_VERSION}\\\"")
  
+@@ -12,7 +12,6 @@ if(POLICY CMP0017)
+ endif()
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+-enable_testing()
+ find_package(Qt4 REQUIRED)
+ find_package(KDE4 REQUIRED)
+ find_package(QJSON 0.8 REQUIRED)
+@@ -63,7 +62,6 @@ include_directories(${CMAKE_SOURCE_DIR} 
+ 
+ add_subdirectory(src)
+ add_subdirectory(backends)
+-add_subdirectory(tests)
+ 
+ configure_file(${libkscreen_SOURCE_DIR}/LibKScreenConfig.cmake.in
+                ${libkscreen_BINARY_DIR}/LibKScreenConfig.cmake

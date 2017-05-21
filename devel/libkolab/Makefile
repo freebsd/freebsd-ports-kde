@@ -1,8 +1,7 @@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/libkolab/Makefile 13963 2017-04-26 16:02:39Z tcberner $
 
 PORTNAME=	libkolab
-PORTVERSION=	0.6.3
-PORTREVISION=	5
+PORTVERSION=	1.0.2
 CATEGORIES=	devel kde
 MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/
 
@@ -13,31 +12,22 @@ COMMENT=	Advanced Kolab Object Handling Library
 # itself to be LGPL3-licensed (and so are all the installed headers).
 LICENSE=	LGPL3
 
-PORTSCOUT=	limit:^0\.
-
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_atomic.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
+		libical.so:devel/libical \
 		libkolabxml.so:textproc/libkolabxml \
 		libxerces-c-3.1.so:textproc/xerces-c3
 
-# TODO: Conditionally enable the bindings based on OPTIONs.
-CMAKE_ARGS=	-DBUILD_TESTS:BOOL=OFF \
-		-DPHP_BINDINGS:BOOL=OFF \
-		-DPYTHON_BINDINGS:BOOL=OFF \
-		-DUSE_LIBCALENDARING:BOOL=OFF
-USES=		cmake:outsource kde:4
-USE_KDE=	automoc4 kdelibs pimlibs
+USES=		cmake:outsource kde:5
+USE_KDE=	auth bookmarks codecs completion config configwidgets \
+		coreaddons crash ecm guiaddons i18n iconthemes itemmodels \
+		itemviews jobwidgets kdelibs4support kio notifications parts \
+		service solid sonnet textwidgets unitconversion widgetsaddons \
+		windowsystem xmlgui
+# pim components
+USE_KDE+=	akonadi akonadinotes calendarcore calendarutils contacts mime
+USE_QT5=	core dbus gui network printsupport widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
-USE_QT4=	corelib dbus gui network svg xml \
-		moc_build qmake_build rcc_build uic_build
-# Fix build of desktuils/kdepim4-runtime:
-CXXFLAGS+=	-DMAKE_KOLAB_LIB
-
-PLIST_SUB=	SHLIB_VER=${PORTVERSION}
-
-post-patch:
-# Remove utils, installs nothing, but fails without BUILD_TESTS
-	${REINPLACE_CMD} -e '/add_subdirectory(utils)/d' \
-		${WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

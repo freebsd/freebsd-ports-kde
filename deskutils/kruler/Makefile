@@ -1,16 +1,16 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/deskutils/kruler/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kruler
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	deskutils kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE 4 screen ruler
+COMMENT=	KDE screen ruler
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm doctools i18n notifications windowsystem xmlgui
+USE_QT5=	buildtools_build core gui qmake_build x11extras widgets
 USE_XORG=	x11
 
 .include <bsd.port.mk>

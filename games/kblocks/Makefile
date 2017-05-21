@@ -1,17 +1,18 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/games/kblocks/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kblocks
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	games kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs libkdegames automoc4
-USE_QT4=	corelib gui network \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config configwidgets coreaddons dbusaddons i18n \
+		itemmodels kio libkdegames newstuff notifyconfig \
+		textwidgets widgetsaddons windowsystem xmlgui
+USE_QT5=	buildtools_build core phonon4 qmake_build testlib
 
-.include <${.CURDIR}/../kdegames4/Makefile.common>
+.include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

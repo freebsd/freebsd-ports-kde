@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/x11/kf5-kwayland/Makefile 13647 2017-01-31 12:36:24Z tcberner $
 
 PORTNAME=	kwayland
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

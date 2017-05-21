@@ -1,16 +1,18 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/deskutils/kcharselect/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kcharselect
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	deskutils kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Character selector for KDE
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	automoc4 kdelibs
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
+
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm bookmarks doctools i18n widgetsaddons xmlgui
+USE_QT5=	buildtools_build qmake_build widgets
 
 .include <bsd.port.mk>

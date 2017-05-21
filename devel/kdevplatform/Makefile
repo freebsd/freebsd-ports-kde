@@ -1,36 +1,39 @@
-# Created by: Golyashov Sergei <svvord@mail.ru>
 # $FreeBSD$
 
 PORTNAME=	kdevplatform
-PORTVERSION=	${KDEVELOP_VERSION:S/4./1./}
-PORTREVISION=	5
+PORTVERSION=	5.1.0
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/${KDEVELOP_BRANCH}/kdevelop/${KDEVELOP_VERSION}
-DIST_SUBDIR=	KDE/kdevelop/${KDEVELOP_VERSION}
+MASTER_SITES=	KDE/stable/kdevelop/${PORTVERSION}/src
+DIST_SUBDIR=	KDE/kdevelop
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Set of libraries for KDE IDE-like programs
 
-LIB_DEPENDS=	libsvn_client-1.so:devel/subversion \
-		libboost_thread.so:devel/boost-libs \
-		libqjson.so:devel/qjson
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING.SRC
 
-USES=		cmake:outsource compiler:c++11-lib grantlee:4 kde:4 shebangfix \
-		tar:xz
-USE_KDE=	kate_run kdelibs automoc4
-USE_QT4=	qmake_build moc_build uic_build rcc_build \
-		corelib designer_build gui webkit
+LIB_DEPENDS=	libapr-1.so:devel/apr1 \
+		libsvn_client-1.so:devel/subversion \
+		libboost_thread.so:devel/boost-libs \
+		libkomparediff2.so:textproc/libkomparediff2
+
+USE_KDE=	archive attica auth bookmarks codecs completion config \
+		configwidgets coreaddons guiaddons i18n iconthemes itemmodels \
+		itemviews jobwidgets kcmutils kdeclarative kio newstuff \
+		notifications notifyconfig package parts service solid sonnet \
+		texteditor textwidgets threadweaver widgetsaddons windowsystem \
+		xmlgui
+USE_QT5=	concurrent core dbus gui network qml quick script testlib \
+		webkit widgets xml buildtools_build qmake_build
+USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 \
+		shebangfix tar:xz
 USE_LDCONFIG=	yes
 
-SHEBANG_FILES=	util/kdev_format_source util/kdevplatform_shell_environment.sh
+CONFLICTS=	kdevplatform-kde4-1* kdevplatform-1*
 
-PLIST_SUB+=	SHLIB_VER=8.0.0 \
-		SHLIB_SHVER=8
+SHEBANG_FILES=	util/kdevplatform_shell_environment.sh
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
-
-NLS_USES=	gettext
-NLS_CMAKE_OFF=	-DBUILD_po:BOOL=Off
+PLIST_SUB+=	SHLIB_VER=10.0.0 \
+		SHLIB_SHVER=10
 
 .include <bsd.port.mk>

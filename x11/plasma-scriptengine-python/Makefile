@@ -9,12 +9,12 @@ DISTNAME=	kde-workspace-${PORTVERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma scriptengine for Python
 
-NO_ARCH=	yes
-USES=		cmake:outsource kde:4 python:2 tar:xz
 USE_KDE=	kdelibs pykde4 automoc4
 USE_QT4=	qmake_build moc_build uic_build rcc_build
 DISTINFO_FILE=	${.CURDIR:H:H}/x11/kde4-workspace/distinfo
+USES=		cmake:outsource python:2 kde:4 tar:xz
 
+# Override KDE4 versions to fetch the last one
 KDE_APPLICATIONS_VERSION=	15.08.0
 
 CMAKE_SOURCE_PATH=	${WRKSRC}/plasma/generic/scriptengines/python

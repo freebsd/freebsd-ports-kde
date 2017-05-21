@@ -1,21 +1,20 @@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/games/kajongg/Makefile 13848 2017-04-10 13:10:54Z tcberner $
+
+IGNORE=		Requires python:3, but the dependency py-twisted is only available for python:2
 
 PORTNAME=	kajongg
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
-CATEGORIES=	games kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
-USES=		cmake:outsource kde:4 python tar:xz twisted:run shebangfix sqlite
-USE_KDE=	kdelibs pykde4 automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource pkgconfig python:3 kde:5 tar:xz \
+		twisted:build,run sqlite
+USE_KDE=	ecm
+USE_QT5=	buildtools_build qmake_build
+
 CMAKE_ARGS=	-DINSTALL_KAJONGG:BOOL=TRUE
 
-SHEBANG_FILES=	src/kajongg.py \
-		src/kajonggserver.py \
-		src/kajonggtest.py
-
-.include <${.CURDIR}/../kdegames4/Makefile.common>
+.include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

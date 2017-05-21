@@ -1,19 +1,19 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/math/rocs/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	rocs
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	5
-CATEGORIES=	math kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Graph theory IDE
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
-USES=		cmake:outsource grantlee:4 kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	gui qtestlib script scripttools webkit xml \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext grantlee:5 kde:5 tar:xz
+USE_KDE=	ecm doctools config coreaddons kdeclarative texteditor
+USE_QT5=	buildtools_build core qmake_build quick scripttools svg webkit
+
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

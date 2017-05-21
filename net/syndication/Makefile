@@ -1,0 +1,22 @@
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/net/syndication/Makefile 13959 2017-04-26 14:27:50Z tcberner $
+
+PORTNAME=	syndication
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	net kde kde-applications
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	KDE RSS feed handling library
+
+LICENSE=	LGPL21
+
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
+USE_KDE=	codecs ecm kio
+USE_QT5=	buildtools_build gui qmake_build
+USE_LDCONFIG=	yes
+
+DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
+
+PLIST_SUB=	SHLIB_VER="5.5.1"
+
+.include <bsd.port.mk>

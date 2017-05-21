@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/dns/kf5-kdnssd/Makefile 13526 2016-12-29 04:56:46Z fluffy $
 
 PORTNAME=	kdnssd
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

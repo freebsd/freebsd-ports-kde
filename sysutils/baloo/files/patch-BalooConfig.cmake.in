@@ -1,0 +1,10 @@
+--- BalooConfig.cmake.in.orig	2016-10-13 06:56:24 UTC
++++ BalooConfig.cmake.in
+@@ -21,6 +21,7 @@ set(Baloo_FOUND true)
+ 
+ include(${_currentDir}/BalooTargetsWithPrefix.cmake)
+ 
++set(BALOO_LIBRARY_DIR "@LIB_INSTALL_DIR@")
+ set(BALOO_CORE_LIBRARY baloocore)
+ set(BALOO_FILE_LIBRARY baloofiles)
+ set(BALOO_PIM_LIBRARY baloopim)

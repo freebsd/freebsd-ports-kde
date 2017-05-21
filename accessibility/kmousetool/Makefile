@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	kmousetool
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	accessibility kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	accessibility kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Automatic mouse click tool for KDE

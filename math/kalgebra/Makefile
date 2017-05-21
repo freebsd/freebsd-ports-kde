@@ -1,21 +1,23 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/math/kalgebra/Makefile 13926 2017-04-20 21:19:45Z tcberner $
 
 PORTNAME=	kalgebra
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	math kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE graph calculator
 
-LIB_DEPENDS=	libanalitza.so:math/analitza
+LIB_DEPENDS=	libAnalitza.so:math/analitza
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
 
 CMAKE_ARGS=	-DBUILD_mobile:BOOL=FALSE
-
-USES=		cmake:outsource kde:4 tar:xz
+USES=		cmake:outsource gettext kde:5 tar:xz
 USE_GL=		glu
-USE_KDE=	kdelibs libkdeedu automoc4
-USE_QT4=	corelib declarative gui opengl \
-		moc_build qmake_build rcc_build uic_build
+USE_KDE=	configwidgets doctools ecm i18n kio widgetsaddons
+USE_QT5=	core gui network opengl printsupport qml quick svg testlib \
+		webengine widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

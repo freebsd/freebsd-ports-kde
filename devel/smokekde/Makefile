@@ -1,25 +1,30 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/smokekde/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	smokekde
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	SMOKE bindings for KDE
 
 USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kate kdelibs okular pimlibs \
-		smokegen smokeqt akonadi automoc4 soprano
-USE_QT4=	corelib dbus designer_build gui network opengl sql svg xml \
+USE_KDE=	kdelibs \
+		smokegen smokeqt automoc4 soprano
+USE_QT4=	corelib dbus designer_build gui network opengl phonon \
+		qt3support sql svg xml \
 		qmake_build moc_build uic_build rcc_build
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	ATTICA
-OPTIONS_SUB=	yes
-# Attica bindings often cause the build to coredump.
-ATTICA_DESC=	Bindings for libattica (may crash build)
-ATTICA_CMAKE_OFF=	-DWITH_LibAttica:BOOL=FALSE
+# Disable
+# * attica [apparently unstable]
+# * okular [okular is no longer kde4 based]
+# * nepomuk
+# * akonadi
+CMAKE_ARGS=	-DWITH_LibAttica:BOOL=FALSE \
+		-DWITH_Akonadi:BOOL=FALSE \
+		-DWITH_Nepomuk:BOOL=FALSE \
+		-DWITH_Okular:BOOL=FALSE \
 
 pre-configure:
 	${REINPLACE_CMD} -e '/kde-config.xml/ s|$${SMOKE_GEN_BIN}|smokegen|' \

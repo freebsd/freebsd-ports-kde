@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpegthumbs
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
-CATEGORIES=	multimedia kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	multimedia kde kde-applications
 PKGNAMEPREFIX=	kdemultimedia-
 
 MAINTAINER=	kde@FreeBSD.org
@@ -14,9 +13,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libswscale.so:multimedia/ffmpeg
 
-USES=		cmake:outsource kde:4 pkgconfig tar:xz
-USE_KDE=	automoc4 kdelibs
-USE_QT4=	moc_build qmake_build rcc_build uic_build \
-		corelib dbus gui network svg xml
+USES=		cmake:outsource kde:5 pkgconfig tar:xz
+USE_KDE=	kio
+USE_QT5=	buildtools_build gui qmake_build
 
 .include <bsd.port.mk>

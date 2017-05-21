@@ -1,0 +1,15 @@
+--- common/CMakeLists.txt.orig	2017-04-19 11:59:25 UTC
++++ common/CMakeLists.txt
+@@ -28,8 +28,11 @@ add_definitions("-fvisibility=hidden")
+ 
+ install(EXPORT SinkTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE SinkTargets.cmake)
+ 
++find_package(LMDB REQUIRED)
++include_directories(LMDB_INCLUDE_DIR)
++
+ set(storage_SRCS storage_lmdb.cpp)
+-set(storage_LIBS lmdb)
++set(storage_LIBS ${LMDB_LIBRARIES})
+ 
+ set(command_SRCS
+     store.cpp

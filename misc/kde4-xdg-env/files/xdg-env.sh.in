@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD$
+# $FreeBSD: head/misc/kde4-xdg-env/files/xdg-env.sh.in 415977 2016-05-28 07:53:25Z pi $
 #
 # Submit missing XDG-file locations to kde@freebsd.org!
 

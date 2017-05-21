@@ -1,8 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/sysutils/kfilemetadata/Makefile 421390 2016-09-05 20:02:03Z olivierd $
 
 PORTNAME=	kfilemetadata
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	11
+PORTREVISION=	8
 CATEGORIES=	sysutils kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org

@@ -3,10 +3,8 @@
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE4_KDEPIM_VERSION}
-PORTREVISION=	7
-CATEGORIES=	deskutils kde
-MASTER_SITES=	KDE/${KDE4_APPLICATIONS_BRANCH}/applications/${KDE4_APPLICATIONS_VERSION}/src
-DIST_SUBDIR=	KDE/${PORTVERSION}
+PORTREVISION=	1
+CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM applications
@@ -19,12 +17,12 @@ LIB_DEPENDS=	libgpgme.so:security/gpgme \
 RUN_DEPENDS=	${KDE_PREFIX}/bin/accountwizard:deskutils/kdepim4-runtime \
 		${LOCALBASE}/bin/gmd5sum:sysutils/coreutils
 
-CONFLICTS_INSTALL=	kdepim44-4.*
+CONFLICTS_INSTALL=	kdepim44-4.* kdepim-kf5*
 
+USES=		cmake:outsource gmake grantlee:4 iconv kde:4 shebangfix tar:xz
 USE_GNOME=	libxml2 libxslt:build
 USE_KDE=	kdelibs pimlibs kactivities \
 		akonadi automoc4 soprano nepomuk-widgets baloo
-USES=		cmake:outsource gmake grantlee:4 iconv kde:4 shebangfix tar:xz
 SHEBANG_FILES=	agents/mailfilteragent/kconf_update/migrate-kmail-filters.pl \
 		kalarm/*.pl kmail/kconf_update/*.pl \
 		libkpgp/kconf_update/kpgp-3.1-upgrade-address-data.pl
@@ -39,6 +37,9 @@ CMAKE_ARGS+=	-DKDEPIM_BUILD_MOBILE:BOOL=FALSE
 CXXFLAGS+=	-Wno-error=return-type
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
+
+# Override KDE4 versions to fetch the last one
+KDE_APPLICATIONS_VERSION=	${KDE4_APPLICATIONS_VERSION}
 
 post-patch:
 # Remove BOM

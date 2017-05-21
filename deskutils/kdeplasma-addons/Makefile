@@ -26,12 +26,13 @@ USE_XORG=	x11 xrender xtst
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	MARBLE SCIM IBUS
-OPTIONS_DEFAULT=	MARBLE
+# OPTIONS_DEFAULT=	MARBLE
 OPTIONS_SUB=	yes
 
 MARBLE_DESC=	Support for desktop globe wallpaper
-MARBLE_USE=	KDE=marble
+MARBLE_USE=	KDE=libmarble4
 MARBLE_CMAKE_OFF=	-DWITH_Marble=off
+MARBLE_CMAKE_ON=	-DWITH_Marble=on
 
 IBUS_DESC=	Enable IBUS backend for input dialog
 IBUS_LIB_DEPENDS=	libibus-1.0.so:textproc/ibus

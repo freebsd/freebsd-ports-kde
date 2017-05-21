@@ -1,17 +1,18 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/games/katomic/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	katomic
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	games kde kde-kde4
-
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
-USES=		cmake:outsource kde:4 shebangfix tar:xz
-USE_KDE=	kdelibs libkdegames automoc4
+USES=		cmake:outsource gettext kde:5 shebangfix tar:xz
+USE_KDE=	config configwidgets coreaddons ecm guiaddons i18n \
+		iconthemes itemviews kio libkdegames newstuff \
+		notifyconfig widgetsaddons xmlgui
+USE_QT5=	buildtools_build core gui qmake_build qml quick widgets
 SHEBANG_FILES=	katomic-levelset-upd.pl
-USE_QT4=	moc_build qmake_build rcc_build uic_build
 
-.include <${.CURDIR}/../kdegames4/Makefile.common>
+.include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

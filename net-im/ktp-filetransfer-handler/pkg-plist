@@ -1,5 +1,6 @@
-lib/kde4/libexec/ktp-filetransfer-handler
+lib/libexec/ktp-filetransfer-handler
 share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.FileTransferHandler.service
+share/locale/ast/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/bs/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/ca/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/ca@valencia/LC_MESSAGES/ktp-filetransfer-handler.mo
@@ -25,6 +26,7 @@ share/locale/mr/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/nb/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/nds/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/nl/LC_MESSAGES/ktp-filetransfer-handler.mo
+share/locale/nn/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/pl/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/pt/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/pt_BR/LC_MESSAGES/ktp-filetransfer-handler.mo
@@ -33,10 +35,9 @@ share/locale/ru/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/sk/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/sl/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/sr/LC_MESSAGES/ktp-filetransfer-handler.mo
-share/locale/sr@ijekavian/LC_MESSAGES/ktp-filetransfer-handler.mo
-share/locale/sr@ijekavianlatin/LC_MESSAGES/ktp-filetransfer-handler.mo
-share/locale/sr@latin/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/sv/LC_MESSAGES/ktp-filetransfer-handler.mo
+share/locale/tr/LC_MESSAGES/ktp-filetransfer-handler.mo
+share/locale/ug/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/uk/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/zh_CN/LC_MESSAGES/ktp-filetransfer-handler.mo
 share/locale/zh_TW/LC_MESSAGES/ktp-filetransfer-handler.mo

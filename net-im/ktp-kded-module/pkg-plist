@@ -1,8 +1,10 @@
-lib/kde4/kcm_ktp_integration_module.so
-lib/kde4/kded_ktp_integration_module.so
+%%QT_PLUGINDIR%%/kcm_ktp_integration_module.so
+%%QT_PLUGINDIR%%/kded_ktp_integration_module.so
 share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.KdedIntegrationModule.service
-share/kde4/services/kcm_ktp_integration_module.desktop
-share/kde4/services/kded/kded_ktp_integration_module.desktop
+share/kservices5/kcm_ktp_integration_module.desktop
+share/kservices5/kded/ktp_integration_module.desktop
+share/locale/ar/LC_MESSAGES/kded_ktp_integration_module.mo
+share/locale/ast/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/bs/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/ca/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/ca@valencia/LC_MESSAGES/kded_ktp_integration_module.mo
@@ -29,6 +31,8 @@ share/locale/mr/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/nb/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/nds/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/nl/LC_MESSAGES/kded_ktp_integration_module.mo
+share/locale/nn/LC_MESSAGES/kded_ktp_integration_module.mo
+share/locale/pa/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/pl/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/pt/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/pt_BR/LC_MESSAGES/kded_ktp_integration_module.mo
@@ -37,10 +41,9 @@ share/locale/ru/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/sk/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/sl/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/sr/LC_MESSAGES/kded_ktp_integration_module.mo
-share/locale/sr@ijekavian/LC_MESSAGES/kded_ktp_integration_module.mo
-share/locale/sr@ijekavianlatin/LC_MESSAGES/kded_ktp_integration_module.mo
-share/locale/sr@latin/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/sv/LC_MESSAGES/kded_ktp_integration_module.mo
+share/locale/tr/LC_MESSAGES/kded_ktp_integration_module.mo
+share/locale/ug/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/uk/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/zh_CN/LC_MESSAGES/kded_ktp_integration_module.mo
 share/locale/zh_TW/LC_MESSAGES/kded_ktp_integration_module.mo

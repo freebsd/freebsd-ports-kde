@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/ruby-krossruby/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	krossruby
 PORTVERSION=	${KDE4_VERSION}

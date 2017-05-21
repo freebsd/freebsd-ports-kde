@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	sweeper
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	sysutils kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	sysutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cleans temporal files for KDE

@@ -1,0 +1,56 @@
+--- src/CMakeLists.txt.orig	2016-03-31 08:31:13 UTC
++++ src/CMakeLists.txt
+@@ -3,6 +3,8 @@ add_subdirectory(xapian)
+ add_subdirectory(file)
+ add_subdirectory(pim)
+ add_subdirectory(kioslaves)
++if(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(tools)
++endif() #(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(runner)
+ add_subdirectory(queryparser)
+--- src/file/CMakeLists.txt.orig	2014-11-06 12:03:28 UTC
++++ src/file/CMakeLists.txt
+@@ -3,6 +3,7 @@ add_definitions(${KDE4_ENABLE_EXCEPTIONS
+ add_subdirectory(lib)
+ add_subdirectory(search)
+
++if(NOT BUILD_ONLY_LIBRARIES)
+ set(file_SRCS
+     # Filewatch
+     filewatch.cpp
+@@ -62,10 +63,15 @@ target_link_libraries(baloo_file
+ install(TARGETS baloo_file ${INSTALL_TARGETS_DEFAULT_ARGS})
+ install(FILES baloo_file.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
+ install(FILES org.kde.baloo.file.indexer.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR})
++endif() #(NOT BUILD_ONLY_LIBRARIES)
+
+ add_subdirectory(autotest)
+ add_subdirectory(tests)
++if(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(extractor)
++endif() #NOT BUILD_ONLY_LIBRARIES
+ add_subdirectory(kcm)
+ add_subdirectory(inotify)
++if(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(cleaner)
++endif() #NOT BUILD_ONLY_LIBRARIES
+--- src/pim/CMakeLists.txt.orig 2016-03-31 08:37:27 UTC
++++ src/pim/CMakeLists.txt
+@@ -1,4 +1,6 @@
++if(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(agent)
++endif() #(NOT BUILD_ONLY_LIBRARIES)
+ add_subdirectory(lib)
+ add_subdirectory(search)
+ add_subdirectory(akonadiplugin)
+--- src/file/inotify/CMakeLists.txt.orig        2016-03-31 09:18:27 UTC
++++ src/file/inotify/CMakeLists.txt
+@@ -4,4 +4,6 @@ kde4_add_executable(kde_baloo_filewatch_
+ target_link_libraries(kde_baloo_filewatch_raiselimit ${KDE4_KDECORE_LIBS})
+ install(TARGETS kde_baloo_filewatch_raiselimit DESTINATION ${LIBEXEC_INSTALL_DIR})
+
+-kde4_install_auth_helper_files(kde_baloo_filewatch_raiselimit org.kde.baloo.filewatch root)
++if(NOT BUILD_ONLY_LIBRARIES)
++kde4_install_auth_helper_files(kde_baloo_filewatch_raiselimit org.kde.baloo.filewatch root)
++endif() #(NOT BUILD_ONLY_LIBRARIES)

@@ -1,16 +1,16 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/graphics/kolourpaint/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kolourpaint
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	graphics kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 4 paint program
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4 qimageblitz
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm emoticons init itemmodels kdelibs4support libkexiv2 libksane
+USE_QT5=	buildtools_build core gui qmake_build widgets
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

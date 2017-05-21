@@ -1,16 +1,17 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/japanese/kiten/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kiten
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	japanese kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	japanese kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Japanese reference/study tool for KDE 4
+COMMENT=	Japanese reference/study tool for KDE
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	corelib moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	archive completion config configwidgets coreaddons \
+		doctools ecm khtml xmlgui
+USE_QT5=	core buildtools_build qmake_build widgets
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-knewstuff/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	knewstuff
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
@@ -9,7 +9,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 library for downloading application assets from the network
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	archive attica5 auth codecs completion config \
+USE_KDE=	archive attica auth codecs completion config \
 		configwidgets coreaddons ecm i18n iconthemes itemviews \
 		jobwidgets kio service sonnet textwidgets widgetsaddons \
 		xmlgui

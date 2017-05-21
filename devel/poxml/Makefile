@@ -1,18 +1,15 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/devel/poxml/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	poxml
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	devel kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Tools to translate Docbook XML using gettext
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/libantlr.a:devel/antlr
-
-USES=		cmake:outsource gettext-tools:build,run kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build \
-		corelib xml
+USES=		cmake:outsource gettext-tools:build,run kde:5 tar:xz
+USE_KDE=	doctools ecm
+USE_QT5=	buildtools_build core qmake_build xml
 
 .include <bsd.port.mk>

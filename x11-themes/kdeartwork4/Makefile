@@ -1,10 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11-themes/kdeartwork4/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	kdeartwork
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	x11-themes kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	x11-themes kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Artworks Themes
@@ -23,6 +22,9 @@ GNOME_BUILD_DEPENDS=	${LOCALBASE}/share/applications/xscreensaver-properties.des
 GNOME_RUN_DEPENDS=	${GNOME_BUILD_DEPENDS}
 GNOME_BUILD_DEPENDS_OFF=	xscreensaver:x11/xscreensaver
 GNOME_RUN_DEPENDS_OFF=		${GNOME_BUILD_DEPENDS_OFF}
+
+# Override KDE4 versions to fetch the last one
+KDE_APPLICATIONS_VERSION=	15.08.3
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}|g' \

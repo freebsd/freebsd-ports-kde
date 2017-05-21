@@ -1,0 +1,13 @@
+FreeBSD does not have dl, rely on CMAKE_DL_LIBS.
+
+--- launcher/CMakeLists.txt.orig	2017-02-14 19:15:42 UTC
++++ launcher/CMakeLists.txt
+@@ -65,7 +65,7 @@ elseif(APPLE)
+   target_link_libraries(gammaray_launcher LINK_PRIVATE "-framework CoreFoundation")
+ endif()
+ if(UNIX AND NOT APPLE AND NOT QNXNTO)
+-  target_link_libraries(gammaray_launcher LINK_PRIVATE dl) # for preload check
++  target_link_libraries(gammaray_launcher LINK_PRIVATE ${CMAKE_DL_LIBS}) # for preload check
+ endif()
+ 
+ if(NOT GAMMARAY_PROBE_ONLY_BUILD)

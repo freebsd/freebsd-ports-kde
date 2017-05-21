@@ -1,24 +1,25 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/net-im/ktp-common-internals/Makefile 13957 2017-04-26 14:25:40Z tcberner $
 
 PORTNAME=	ktp-common-internals
-PORTVERSION=	${KTP_VERSION}
-PORTREVISION=	2
-CATEGORIES=	net-im kde
-MASTER_SITES=	KDE/${KTP_BRANCH}/kde-telepathy/${PORTVERSION}/src
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Telepathy internal library
 
-LIB_DEPENDS=	libtelepathy-qt4.so:net-im/telepathy-qt4 \
-		libtelepathy-logger-qt4.so:net-im/telepathy-logger-qt4
-RUN_DEPENDS=	${LOCALBASE}/libexec/mission-control-5:net-im/telepathy-mission-control
+LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt5 \
+		libtelepathy-logger-qt.so:net-im/telepathy-logger-qt5 \
+		libotr.so:security/libotr \
+		libaccounts-qt5.so:net-im/libaccounts-qt5 \
+		libkaccounts.so:net-im/kaccounts-integration
+RUN_DEPENDS=	${LOCALBASE}/lib/mission-control-plugins.0/mcp-account-manager-accounts-sso.so:net-im/telepathy-accounts-signon \
+		${LOCALBASE}/libexec/mission-control-5:net-im/telepathy-mission-control
 
-USES=		cmake compiler:c++11-lang gettext kde:4 tar:bzip2
-USE_KDE=	kdelibs pimlibs automoc4
-USE_QT4=	declarative script \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext pkgconfig kde:5 tar:xz
+USE_KDE=	config coreaddons ecm iconthemes kcmutils kio notifications \
+		notifyconfig people texteditor wallet widgetsaddons windowsystem
+USE_QT5=	buildtools_build core network qmake_build qml
 USE_LDCONFIG=	yes
-
-PLIST_SUB=	KTP_VERSION=${KTP_VERSION}
 
 .include <bsd.port.mk>

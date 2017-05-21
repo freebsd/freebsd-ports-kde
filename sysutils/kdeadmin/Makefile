@@ -1,25 +1,23 @@
+# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	kdeadmin
-PORTVERSION=	${KDE4_VERSION}
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}$
 PORTREVISION=	1
 CATEGORIES=	sysutils kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Administration applications (meta port)
 
-USES=		kde:4 metaport
+USES=		kde:5 metaport
 
-OPTIONS_DEFINE=	KCRON KSYSTEMLOG KUSER
-OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
+OPTIONS_DEFINE=		KCRON KSYSTEMLOG
+OPTIONS_DEFAULT=	KCRON KSYSTEMLOG
 
 KCRON_DESC=		Task scheduler
-KCRON_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kcm_cron.so:sysutils/kcron
+KCRON_RUN_DEPENDS=	kcron>=${KDE_APPLICATIONS_VERSION}:sysutils/kcron
 
 KSYSTEMLOG_DESC=	System log viewer
-KSYSTEMLOG_RUN_DEPENDS=	${KDE_PREFIX}/bin/ksystemlog:sysutils/ksystemlog
-
-KUSER_DESC=		User management application
-KUSER_RUN_DEPENDS=	${KDE_PREFIX}/bin/kuser:sysutils/kuser
+KSYSTEMLOG_RUN_DEPENDS=	ksystemlog>=${KDE_APPLICATIONS_VERSION}:sysutils/ksystemlog
 
 .include <bsd.port.mk>

@@ -1,27 +1,27 @@
-# Created by: Kirill Ponomarew <ponomarew@oberon.net>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/irc/konversation/Makefile 13758 2017-03-12 00:04:19Z tcberner $
 
 PORTNAME=	konversation
-PORTVERSION=	1.5.1
-PORTREVISION=	3
+PORTVERSION=	1.6.2
 CATEGORIES=	irc kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}/src
+DIST_SUBDIR=	KDE/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	User friendly IRC client for KDE
 
-LIB_DEPENDS=	libqca.so:devel/qca
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake:outsource gettext kde:4 python:run shebangfix tar:xz
-USE_KDE=	pimlibs automoc4
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+LIB_DEPENDS=	libqca-qt5.so:devel/qca-qt5
 
-SHEBANG_FILES=	data/scripts/bug \
-		data/scripts/cmd \
-		data/scripts/mail \
-		data/scripts/media \
-		data/scripts/sayclip \
-		data/scripts/sysinfo \
+USES=		cmake:outsource gettext kde:5 shebangfix tar:xz
+USE_KDE=	archive bookmarks config configwidgets coreaddons dbusaddons \
+		doctools ecm emoticons globalaccel i18n iconthemes idletime \
+		itemviews kio notifications notifyconfig parts solid sonnet \
+		wallet widgetsaddons windowsystem
+USE_QT5=	buildtools_build core gui phonon4 qmake_build widgets
+
+SHEBANG_FILES=	data/scripts/mail \
 		data/updaters/*.pl
 
 .include <bsd.port.mk>

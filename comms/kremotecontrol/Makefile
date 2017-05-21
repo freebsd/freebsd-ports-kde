@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	kremotecontrol
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	comms kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	comms kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE frontend for your remote controls

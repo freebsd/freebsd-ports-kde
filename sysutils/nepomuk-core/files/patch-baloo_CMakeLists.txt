@@ -1,0 +1,10 @@
+--- baloo/CMakeLists.txt.orig	2016-10-13 06:59:17 UTC
++++ baloo/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ project(nepomukbaloomigrator)
+ 
+ include_directories(${BALOO_INCLUDE_DIR} ${KFILEMETADATA_INCLUDE_DIR})
++link_directories(${BALOO_LIBRARY_DIR})
+ 
+ set( BALOO_MIGRATOR_SRCS
+   main.cpp

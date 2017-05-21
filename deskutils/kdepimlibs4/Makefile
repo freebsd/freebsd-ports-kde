@@ -4,9 +4,7 @@
 PORTNAME=	kdepimlibs
 PORTVERSION=	${KDE4_KDEPIM_VERSION}
 PORTREVISION=	11
-CATEGORIES=	deskutils kde
-MASTER_SITES=	KDE/${KDE4_APPLICATIONS_BRANCH}/applications/${KDE4_APPLICATIONS_VERSION}/src
-DIST_SUBDIR=	KDE/${PORTVERSION}
+CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM Libraries
@@ -20,14 +18,19 @@ LIB_DEPENDS=	libgpgme.so:security/gpgme \
 		libprison.so:graphics/prison \
 		libqjson.so:devel/qjson
 
+CONFLICTS_INSTALL=	kdepimlibs-kf5*
+
 USES=		cmake:outsource kde:4 shared-mime-info shebangfix tar:xz
 USE_KDE=	kdelibs akonadi \
 		automoc4 ontologies soprano
-SHEBANG_FILES=	mailtransport/kconf_update/migrate-transports.pl
 USE_OPENLDAP=	yes
 USE_QT4=	corelib dbus declarative designer_build gui network sql xml \
 		qmake_build moc_build rcc_build uic_build
+SHEBANG_FILES=	mailtransport/kconf_update/migrate-transports.pl
 USE_LDCONFIG=	yes
+
+# Override KDE4 versions to fetch the last one
+KDE_APPLICATIONS_VERSION=	${KDE4_APPLICATIONS_VERSION}
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \

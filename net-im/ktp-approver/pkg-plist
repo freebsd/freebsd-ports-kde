@@ -1,8 +1,10 @@
-lib/kde4/kded_ktp_approver.so
-share/config/ktp_approverrc
+etc/xdg/ktp_approverrc
+%%QT_PLUGINDIR%%/kded_ktp_approver.so
 share/dbus-1/services/org.freedesktop.Telepathy.Client.KTp.Approver.service
-share/kde4/services/kded/ktp_approver.desktop
-share/kde4/servicetypes/ktp-approver.desktop
+share/kservices5/kded/ktp_approver.desktop
+share/kservicetypes5/ktp-approver.desktop
+share/locale/ar/LC_MESSAGES/kded_ktp_approver.mo
+share/locale/ast/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/bs/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/ca/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/ca@valencia/LC_MESSAGES/kded_ktp_approver.mo
@@ -29,6 +31,8 @@ share/locale/mr/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/nb/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/nds/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/nl/LC_MESSAGES/kded_ktp_approver.mo
+share/locale/nn/LC_MESSAGES/kded_ktp_approver.mo
+share/locale/pa/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/pl/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/pt/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/pt_BR/LC_MESSAGES/kded_ktp_approver.mo
@@ -37,11 +41,9 @@ share/locale/ru/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/sk/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/sl/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/sr/LC_MESSAGES/kded_ktp_approver.mo
-share/locale/sr@ijekavian/LC_MESSAGES/kded_ktp_approver.mo
-share/locale/sr@ijekavianlatin/LC_MESSAGES/kded_ktp_approver.mo
-share/locale/sr@latin/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/sv/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/tr/LC_MESSAGES/kded_ktp_approver.mo
+share/locale/ug/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/uk/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/zh_CN/LC_MESSAGES/kded_ktp_approver.mo
 share/locale/zh_TW/LC_MESSAGES/kded_ktp_approver.mo

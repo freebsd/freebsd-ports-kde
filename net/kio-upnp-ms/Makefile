@@ -1,9 +1,9 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: ports/net/kio-upnp-ms/Makefile,v 1.7 2012/06/06 06:44:12 miwi Exp $
 
 PORTNAME=	kio-upnp-ms
 DISTVERSION=	1.0.0.git20110808
-PORTREVISION=	7
+PORTREVISION=	6
 CATEGORIES=	net devel
 #MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 MASTER_SITES=	LOCAL/fluffy

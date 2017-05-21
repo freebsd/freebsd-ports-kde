@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/x11/kf5-kglobalaccel/Makefile 13452 2016-12-12 16:23:57Z tcberner $
 
 PORTNAME=	kglobalaccel
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

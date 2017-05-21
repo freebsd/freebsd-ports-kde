@@ -633,11 +633,11 @@ share/doc/HTML/en/kcontrol/icons/install-theme.png
 share/doc/HTML/en/kcontrol/icons/main.png
 share/doc/HTML/en/kcontrol/icons/size.png
 share/doc/HTML/en/kcontrol/icons/use-of-icons.png
-share/doc/HTML/en/kcontrol/kcm_ssl/common
-share/doc/HTML/en/kcontrol/kcm_ssl/details.png
-share/doc/HTML/en/kcontrol/kcm_ssl/index.cache.bz2
-share/doc/HTML/en/kcontrol/kcm_ssl/index.docbook
-share/doc/HTML/en/kcontrol/kcm_ssl/module.png
+@comment share/doc/HTML/en/kcontrol/kcm_ssl/common
+@comment share/doc/HTML/en/kcontrol/kcm_ssl/details.png
+@comment share/doc/HTML/en/kcontrol/kcm_ssl/index.cache.bz2
+@comment share/doc/HTML/en/kcontrol/kcm_ssl/index.docbook
+@comment share/doc/HTML/en/kcontrol/kcm_ssl/module.png
 share/doc/HTML/en/kcontrol/kcmcgi/common
 share/doc/HTML/en/kcontrol/kcmcgi/index.cache.bz2
 share/doc/HTML/en/kcontrol/kcmcgi/index.docbook

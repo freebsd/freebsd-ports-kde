@@ -2,43 +2,40 @@
 
 PORTNAME=	kde-runtime
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	3
 CATEGORIES=	x11 kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Runtime components for KDE Plasma Desktop
+
+CONFLICTS_INSTALL=	khelpcenter*
 
 LIB_DEPENDS=	libIlmImf.so:graphics/OpenEXR \
 		libexiv2.so:graphics/exiv2 \
 		libwebp.so:graphics/webp \
 		libslp.so:net/openslp \
 		libssh.so:security/libssh \
-		libqzeitgeist.so:sysutils/qzeitgeist \
-		libImath-2_2.so:graphics/ilmbase \
-		libassuan.so:security/libassuan \
-		libgcrypt.so:security/libgcrypt \
-		libgpg-error.so:security/libgpg-error \
-		libgpgme.so:security/gpgme
+		libqzeitgeist.so:sysutils/qzeitgeist
 # Explicitly depend on libssh to avoid interference with ssh.4 from
 # compat7x.
 BUILD_DEPENDS=	${LOCALBASE}/lib/libssh.so:security/libssh
 RUN_DEPENDS=	cagibid:net/cagibi
 
-USES=		cmake:outsource gettext gmake jpeg kde:4 samba:lib shared-mime-info \
-		shebangfix tar:xz
 USE_KDE=	kactivities kdelibs oxygen-icons5 \
-		attica automoc4 pimlibs soprano strigi nepomuk-core
+		attica automoc4 pimlibs strigi
+USES=		cmake:outsource gettext gmake jpeg kde:4 \
+		samba:lib shared-mime-info shebangfix tar:xz
 USE_QT4=	corelib dbus declarative designer_build gui phonon \
 		network qtestlib script svg webkit xml \
 		moc_build qmake_build rcc_build uic_build
-USE_XORG=	ice sm x11 xau xcursor xext xft xdmcp xpm
+USE_XORG=	x11 xcursor
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 SHEBANG_FILES=	khelpcenter/searchhandlers/*.pl \
 		khelpcenter/searchhandlers/*.pl.cmake \
 		kioslave/info/kde-info2html
 
-OPTIONS_DEFINE=	PULSEAUDIO ZEITGEIST
+OPTIONS_DEFINE=	PULSEAUDIO ZEITGEIST NEPOMUK
+OPTIONS_SUB=	yes
 
 PULSEAUDIO_DESC=Audio configuration via PulseAudio
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio \
@@ -48,6 +45,9 @@ PULSEAUDIO_CMAKE_OFF=	-DWITH_PulseAudio:BOOL=OFF
 
 ZEITGEIST_DESC=	Event logging via Zeitgeist
 ZEITGEIST_RUN_DEPENDS=	zeitgeist-daemon:sysutils/zeitgeist
+
+NEPOMUK_DESC=	Core Nepomuk system libraries and services for KDE
+NEPOMUK_USE=	KDE4=nepomuk-core
 
 # Explicitly disable ALSA, see for details:
 # http://mail.kde.org/pipermail/kde-freebsd/2010-March/008015.html

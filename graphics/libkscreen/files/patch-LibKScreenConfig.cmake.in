@@ -1,0 +1,24 @@
+From 76aba9ff19cf10f7e8fbf6753235bbb47cd2d295 Mon Sep 17 00:00:00 2001
+From: David Faure <faure@kde.org>
+Date: Mon, 27 Jul 2015 09:46:16 +0200
+Subject: [PATCH 4/4] Fix building apps that use kscreen and which fail with
+ "-lqjson not found"
+
+when CMP0003 is NEW.
+This is because qjson's target name doesn't contain "::" so cmake doesn't
+magically look for it as a target, it assumes it's a library.
+
+Reviewed by Alex Merry.
+
+--- LibKScreenConfig.cmake.in.orig	2016-10-13 15:55:15 UTC
++++ LibKScreenConfig.cmake.in
+@@ -5,6 +5,9 @@
+ # LibKScreen_LIBRARY - The library needed to use LibKScreen
+ # LibKScreen_VERSION - The LibKScreen version
+ 
++# qjson's target name doesn't contain "::", so look for it explicitly
++find_package(QJSON REQUIRED)
++
+ get_filename_component(_currentDir ${CMAKE_CURRENT_LIST_FILE} PATH) # The current directory
+ get_filename_component(rootDir ${_currentDir}/@relInstallDir@ ABSOLUTE) # The install prefix
+ 

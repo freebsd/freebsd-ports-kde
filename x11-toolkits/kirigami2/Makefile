@@ -1,11 +1,12 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/x11-toolkits/kirigami2/Makefile 13982 2017-04-29 21:31:21Z tcberner $
 
 PORTNAME=	kirigami2
-PORTVERSION=	2.1.1
-CATEGORIES=	x11-toolkits kde # kde-framework
+PORTVERSION=	2.1.0
 MASTER_SITES=	KDE/stable/${PORTNAME:C/2//}
+# kirigami will likely become a framework. So already put the distfile there.
 DIST_SUBDIR=	KDE/kirigami
+CATEGORIES=	x11-toolkits kde # kde-framework
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	QtQuick based components set

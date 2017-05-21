@@ -1,5 +1,7 @@
 bin/adddebug
 bin/build-progress.sh
+bin/c++-copy-class-and-file
+bin/c++-rename-class-and-file
 bin/cheatmake
 bin/colorsvn
 bin/create_cvsignore
@@ -25,6 +27,7 @@ bin/findmissingcrystal
 bin/fix-include.sh
 bin/fixkdeincludes
 bin/fixuifiles
+bin/grantlee_strings_extractor.py
 bin/includemocs
 bin/kde-systemsettings-tree.py
 bin/kde_generate_export_header
@@ -52,6 +55,7 @@ bin/svnlastchange
 bin/svnlastlog
 bin/svnrevertlast
 bin/svnversions
+bin/uncrustify-kf5
 bin/wcgrep
 bin/zonetab2pot.py
 man/man1/adddebug.1.gz
@@ -72,3 +76,5 @@ man/man1/qtdoc.1.gz
 man/man1/reportview.1.gz
 man/man1/transxx.1.gz
 man/man1/zonetab2pot.py.1.gz
+share/apps/uncrustify/uncrustify-kf5.cfg
+share/apps/uncrustify/uncrustify-qt.cfg

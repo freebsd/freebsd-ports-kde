@@ -1,25 +1,31 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/audio/kmix/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kmix
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	audio kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	audio kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Sound mixer for KDE
 
 LICENSE=	GPLv2
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	automoc4 kdelibs
-USE_QT4=	gui phonon xml \
-		moc_build qmake_build rcc_build uic_build
+LIB_DEPENDS=	libasound.so:audio/alsa-lib
 
-OPTIONS_DEFINE=	ALSA PULSEAUDIO
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	configwidgets dbusaddons ecm emoticons globalaccel i18n \
+		iconthemes init itemmodels itemviews kcmutils kdelibs4support \
+		plasma-framework xmlgui
+USE_QT5=	buildtools_build core gui qmake_build
 
-ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
-ALSA_EXTRA_PATCHES_OFF=	${FILESDIR}/extrapatch-no_alsa
+# we want the KF5 version of kmix
+CMAKE_ARGS=	-DKMIX_KF5_BUILD:BOOL=TRUE
+
+OPTIONS_DEFINE=	PULSEAUDIO
+# TODO: readd ALSA option
+#
+# ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+# ALSA_EXTRA_PATCHES_OFF=	${FILESDIR}/extrapatch-no_alsa
 
 PULSEAUDIO_LIB_DEPENDS=	libcanberra.so:audio/libcanberra \
 			libpulse.so:audio/pulseaudio

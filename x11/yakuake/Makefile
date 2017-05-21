@@ -1,12 +1,10 @@
-# Created by: Shane Bell <decept0@gmail.com>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/x11/yakuake/Makefile 13769 2017-03-12 19:40:52Z tcberner $
 
 PORTNAME=	yakuake
-PORTVERSION=	2.9.9
-PORTREVISION=	7
+PORTVERSION=	3.0.4
 CATEGORIES=	x11 kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
-PKGNAMESUFFIX=	-kde4
+DIST_SUBDIR=	KDE/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Drop-down terminal emulator for KDE
@@ -14,11 +12,15 @@ COMMENT=	Drop-down terminal emulator for KDE
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake gettext kde:4 shebangfix tar:xz
-SHEBANG_FILES=	data/updaters/yakuake-${PORTVERSION}-startupnotification.pl
-USE_KDE=	automoc4 kdelibs
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+RUN_DEPENDS=	konsole:x11/konsole
 
-PLIST_SUB=	VERSION="${PORTVERSION}"
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	attica auth archive codecs completion config configwidgets \
+		coreaddons crash dbusaddons ecm globalaccel i18n iconthemes \
+		jobwidgets kio newstuff notifications notifyconfig parts \
+		service sonnet textwidgets widgetsaddons windowsystem xmlgui
+USE_QT5=	core dbus gui network widgets x11extras xml \
+		buildtools_build qmake_build
+USE_XORG=	x11
 
 .include <bsd.port.mk>

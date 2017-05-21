@@ -1,18 +1,23 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/math/analitza/Makefile 13829 2017-04-09 08:51:06Z tcberner $
 
 PORTNAME=	analitza
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	math kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library from KDE Education project
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	corelib gui opengl svg xml \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource kde:5 tar:xz
 USE_GL=		glu
+USE_KDE=	ecm
+USE_QT5=	core opengl qml quick svg widgets xml \
+		buildtools_build linguisttools_build qmake_build 
+
 USE_LDCONFIG=	yes
+
+SHLIB_VER=	8.0.0
+PLIST_SUB+=	SHLIB_VER="${SHLIB_VER}" \
+		SHLIB_SHVER="${SHLIB_VER:R:R}"
 
 .include <bsd.port.mk>

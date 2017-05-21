@@ -1,0 +1,5 @@
+Allows XSettings aware applications (all GTK+ applications) to be
+informed instantly of changes in KDE configuration, such as theme
+name, default font and so on.
+
+WWW: https://quickgit.kde.org/?p=xsettings-kde.git

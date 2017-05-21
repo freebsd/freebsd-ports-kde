@@ -1,20 +1,21 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/graphics/gwenview-kf5/Makefile 13698 2017-03-08 17:47:13Z tcberner $
 
 PORTNAME=	gwenview
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	graphics kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Image viewer and browser for KDE 4
+COMMENT=	Image viewer and browser for KDE
 
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
 LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
-		libpng.so:graphics/png
+		liblcms2.so:graphics/lcms2
 
-USES=		cmake:outsource jpeg kde:4 pkgconfig tar:xz
-USE_KDE=	kactivities kdelibs baloo kfilemetadata \
-		libkdcraw libkipi libkonq automoc4 soprano
-USE_QT4=	corelib gui opengl qmake_build moc_build uic_build rcc_build
-USE_LDCONFIG=	yes
+USES=		cmake:outsource gettext jpeg pkgconfig kde:5 tar:xz
+USE_KDE=	activities ecm emoticons init itemmodels \
+		kdelibs4support kimageformats
+USE_QT5=	buildtools_build core dbus qmake_build
 
 .include <bsd.port.mk>

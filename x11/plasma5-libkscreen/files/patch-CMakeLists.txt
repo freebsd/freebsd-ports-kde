@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2017-01-19 20:29:18 UTC
++++ CMakeLists.txt
+@@ -20,7 +20,7 @@ set(REQUIRED_QT_VERSION 5.4.0)
+ find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core DBus Gui Test X11Extras)
+ 
+ # Wayland backend
+-find_package(KF5Wayland CONFIG REQUIRED)
++find_package(KF5Wayland CONFIG)
+ add_feature_info("KF5Wayland" KF5Wayland_FOUND "Required for building libkscreen's KWayland backend")
+ 
+ # xrandr backend

@@ -1,20 +1,31 @@
-MASTER_SITES?=	KDE/${KDE4_BRANCH}/${PORTVERSION}/src/kde-l10n/
-PKGNAMEPREFIX=	${KDE4_L10N:S/@/_/}-
-DISTNAME=	${PORTNAME}-${KDE4_L10N}-${PORTVERSION}
-DIST_SUBDIR?=	KDE/${PORTVERSION}/kde-l10n
+MASTER_SITES?=	KDE/${KDE_APPLICATIONS_BRANCH}/applications/${KDE_APPLICATIONS_VERSION}/src/kde-l10n/
+PKGNAMEPREFIX=	${KDE_L10N:S/@/_/}-
+DISTNAME=	kde-l10n-${KDE_L10N}-${KDE_APPLICATIONS_VERSION}
+DIST_SUBDIR?=	KDE/applications/${KDE_APPLICATIONS_VERSION}/kde-l10n
 
-CONFLICTS_INSTALL=	kf5-baloo-5.* \
-			kf5-kdelibs4support-5.* \
-			kf5-kfilemetadata-5.*
+DESCR?=		${.CURDIR:H:H}/misc/kde-l10n/pkg-descr
+DISTINFO_FILE?=	${.CURDIR:H:H}/misc/kde-l10n/distinfo
 
-USE_QT4=	uic_build moc_build qmake_build rcc_build xml
-USE_KDE=	kdelibs automoc4
-USES=		cmake gettext kde:4 tar:xz
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm_build doctools_build
+USE_QT5=	buildtools_build qmake_build linguisttools_build
 
+# For the 4/ subdirectory we require Qt4 tools, automoc and kdelibs.
+# For this, we cannot use USE_QT4= and USE_KDE as the framework only
+# support to choose one version.
+# Therefore depend on these via BUILD_DEPENDS.
+BUILD_DEPENDS+=	${KDE_PREFIX}/bin/automoc4:devel/automoc4 \
+		${PREFIX}/lib/qt4/bin/moc:devel/qt4-moc \
+		${PREFIX}/lib/qt4/bin/qmake:devel/qt4-qmake \
+		${PREFIX}/lib/qt4/bin/rcc:devel/qt4-rcc \
+		${PREFIX}/lib/qt4/bin/uic:devel/qt4-uic \
+		${PREFIX}/libdata/pkgconfig/QtXml.pc:textproc/qt4-xml \
+		${KDE_PREFIX}/bin/meinproc4:x11/kdelibs4
+
+NO_ARCH=	YES
 
 # Support for spelling dictionaries
-
-${KDE4_L10N}_CATEGORY?=	textproc
+${KDE_L10N}_CATEGORY?=	textproc
 ar_CATEGORY=	arabic
 de_CATEGORY=	german
 fr_CATEGORY=	french
@@ -51,24 +62,69 @@ ${i}_hunspell_PORT_PREFIX=	#
 .endfor
 
 .for i in aspell hunspell
-${KDE4_L10N}_${i}_DETECT_PREFIX?=	${KDE4_L10N}-
-${KDE4_L10N}_${i}_DETECT_SUFFIX?=	#
-${KDE4_L10N}_${i}_DETECT?=	${${KDE4_L10N}_${i}_DETECT_PREFIX}${i}${${KDE4_L10N}_${i}_DETECT_SUFFIX}>=0
+${KDE_L10N}_${i}_DETECT_PREFIX?=	${KDE_L10N}-
+${KDE_L10N}_${i}_DETECT_SUFFIX?=	#
+${KDE_L10N}_${i}_DETECT?=	${${KDE_L10N}_${i}_DETECT_PREFIX}${i}${${KDE_L10N}_${i}_DETECT_SUFFIX}>=0
 
-${KDE4_L10N}_${i}_PORT_PREFIX?=	${KDE4_L10N}-
-${KDE4_L10N}_${i}_PORT_SUFFIX?=	#
-${KDE4_L10N}_${i}_PORT?=	${${KDE4_L10N}_CATEGORY}/${${KDE4_L10N}_${i}_PORT_PREFIX}${i}${${KDE4_L10N}_${i}_PORT_SUFFIX}
+${KDE_L10N}_${i}_PORT_PREFIX?=	${KDE_L10N}-
+${KDE_L10N}_${i}_PORT_SUFFIX?=	#
+${KDE_L10N}_${i}_PORT?=	${${KDE_L10N}_CATEGORY}/${${KDE_L10N}_${i}_PORT_PREFIX}${i}${${KDE_L10N}_${i}_PORT_SUFFIX}
 .endfor
 
-.if exists(${.CURDIR}/../../${${KDE4_L10N}_aspell_PORT}/Makefile)
+.if exists(${.CURDIR:H:H}/${${KDE_L10N}_aspell_PORT}/Makefile)
 OPTIONS_DEFINE+=	ASPELL
 ASPELL_DESC=		Install aspell dictionary
 .endif
 
-.if exists(${.CURDIR}/../../${${KDE4_L10N}_hunspell_PORT}/Makefile)
+.if exists(${.CURDIR:H:H}/${${KDE_L10N}_hunspell_PORT}/Makefile)
 OPTIONS_DEFINE+=	HUNSPELL
 HUNSPELL_DESC=		Install hunspell dictionary
 .endif
 
-ASPELL_RUN_DEPENDS+=	${${KDE4_L10N}_aspell_DETECT}:${${KDE4_L10N}_aspell_PORT}
-HUNSPELL_RUN_DEPENDS+=	${${KDE4_L10N}_hunspell_DETECT}:${${KDE4_L10N}_hunspell_PORT}
+ASPELL_RUN_DEPENDS+=	${${KDE_L10N}_aspell_DETECT}:${${KDE_L10N}_aspell_PORT}
+HUNSPELL_RUN_DEPENDS+=	${${KDE_L10N}_hunspell_DETECT}:${${KDE_L10N}_hunspell_PORT}
+
+# Patch in QT_SELECT=qt[45].
+EXTRA_PATCHES=		${.CURDIR:H:H}/misc/kde-l10n/files/extrapatch-qt-environment
+
+# Remove conflicting files from stage dir -- as for example kde-l10n-sr installs
+# files to sr, sr@latin, sr@ijekavian, ${KDE_L10N} needs to be wildcarded.
+# These files are installed by kf5-* or plasma5-* ports already.
+DO_NOT_INSTALL=	share/doc/HTML/${KDE_L10N}*/knetattach \
+		share/doc/HTML/${KDE_L10N}*/kdesu \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/attica_kde.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/baloo_file.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/baloo_file_extractor.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/baloosearch.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/balooshow.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/drkonqi.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/filetypes.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcm_baloofile.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcm_device_automounter.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcm_emoticons.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcm_phonon.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcmcomponentchooser.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcmicons.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcmkded.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcmnotify.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kcmshell.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kdesu.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kfilemetadata.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kio_applications.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kio_baloosearch.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kio_remote.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kio_tags.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kio_timeline.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kioclient.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kmimetypefinder.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/knetattach.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/kstart.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/ktraderclient.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/phonon_kde.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/plasma_runner_baloosearchrunner.mo \
+		share/locale/${KDE_L10N}*/LC_MESSAGES/soliduiserver.mo
+
+post-install:
+.for dni in ${DO_NOT_INSTALL}
+	${RM} -r ${STAGEDIR}${KDE_PREFIX}/${dni}
+.endfor

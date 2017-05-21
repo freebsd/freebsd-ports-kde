@@ -6,8 +6,10 @@ share/apps/kgoldrunner/system/game_GMEP.txt
 share/apps/kgoldrunner/system/game_GMGR.txt
 share/apps/kgoldrunner/system/game_GRII.txt
 share/apps/kgoldrunner/system/game_MAZ.txt
+share/apps/kgoldrunner/system/game_blb.txt
 share/apps/kgoldrunner/system/game_cnt.txt
 share/apps/kgoldrunner/system/game_ende.txt
+share/apps/kgoldrunner/system/game_fd.txt
 share/apps/kgoldrunner/system/game_kgr.txt
 share/apps/kgoldrunner/system/game_lars.txt
 share/apps/kgoldrunner/system/game_plws.txt
@@ -23,6 +25,12 @@ share/apps/kgoldrunner/system/hi_wad.dat
 share/apps/kgoldrunner/system/rec_GMGR.txt
 share/apps/kgoldrunner/system/rec_GRII.txt
 share/apps/kgoldrunner/system/rec_demo.txt
+share/apps/kgoldrunner/system/sol_blb.txt
+share/apps/kgoldrunner/system/sol_fd.txt
+share/apps/kgoldrunner/system/sol_kgr.txt
+share/apps/kgoldrunner/system/sol_plws.txt
+share/apps/kgoldrunner/system/sol_tute.txt
+share/apps/kgoldrunner/system/sol_tutea.txt
 share/apps/kgoldrunner/themes/README
 share/apps/kgoldrunner/themes/accessible/black-on-white-actors.svg
 share/apps/kgoldrunner/themes/accessible/black-on-white-set.svg

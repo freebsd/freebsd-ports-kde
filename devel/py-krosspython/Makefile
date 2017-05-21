@@ -1,4 +1,4 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/py-krosspython/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	krosspython
 PORTVERSION=	${KDE4_VERSION}

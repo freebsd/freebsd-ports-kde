@@ -1,0 +1,10 @@
+snprintf requires __ISO_C_VISIBLE >= 1999.
+
+--- resources/imap/saslplugin/CMakeLists.txt.orig	2017-04-26 16:18:48 UTC
++++ resources/imap/saslplugin/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-add_definitions(-D_POSIX_SOURCE)
++# add_definitions(-D_POSIX_SOURCE)
+ 
+ if (WIN32)
+     add_definitions(-DWIN32)

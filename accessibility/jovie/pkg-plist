@@ -6,7 +6,7 @@ lib/kde4/kcm_kttsd.so
 lib/libkttsd.so
 lib/libkttsd.so.4
 lib/libkttsd.so.%%KDE4_GENERIC_LIB_VERSION%%
-share/applications/kde4/jovieapp.desktop
+share/applications/kde4/org.kde.jovie.desktop
 share/apps/jovie/kcmkttsd_testmessage.desktop
 share/apps/jovie/stringreplacer/abbreviations.xml
 share/apps/jovie/stringreplacer/chat-de.xml
@@ -49,3 +49,4 @@ share/kde4/services/jovie_xmltransformerplugin.desktop
 share/kde4/services/kcmkttsd.desktop
 share/kde4/services/kttsd.desktop
 share/kde4/servicetypes/jovie_filterplugin.desktop
+share/metainfo/org.kde.jovie.appdata.xml

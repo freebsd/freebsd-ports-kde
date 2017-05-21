@@ -1,33 +1,43 @@
 # $FreeBSD$
 
-PORTNAME=	kipi-plugins
-PORTVERSION=	${DIGIKAM_VER}
-PORTREVISION=	2
-PORTEPOCH=	1
+PORTNAME=	kipiplugins
+PORTVERSION=	5.4.0
 CATEGORIES=	graphics kde
+MASTER_SITES=	KDE/stable/digikam
+DIST_SUBDIR=	KDE/digikam/${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE 4 kipi graphics plugins (meta port)
+COMMENT=	Plugins for digikam
 
-NO_BUILD=	yes
-NO_INSTALL=	yes
-NO_MTREE=	yes
+LIB_DEPENDS=	libdigikamcore.so:graphics/digikam
 
-.include "${.CURDIR}/../digikam-kde4/Makefile.common"
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 pkgconfig \
+		tar:xz
+USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
+		coreaddons ecm itemviews jobwidgets kio libkipi service solid \
+		widgetsaddons windowsystem xmlgui
+USE_QT5=	core dbus gui network printsupport widgets xml xmlpatterns \
+		buildtools_build qmake_build
 
-OPTIONS_DEFINE=		DOCS NLS
+CMAKE_ARGS=	-DDIGIKAMSC_COMPILE_DIGIKAM:BOOL=OFF \
+		-DDIGIKAMSC_COMPILE_KIPIPLUGINS:BOOL=ON \
+ 		-DDIGIKAMSC_COMPILE_DOC:BOOL=OFF \
+ 		-DDIGIKAMSC_COMPILE_PO:BOOL=OFF
+
+OPTIONS_DEFINE=		MEDIAWIKI KVKONTAKTE
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
+OPTIONS_SUB=		yes
 
-# DOCS ans NLS options first, then plugins sorted in KIPI_PLUGINS_ALL
-NO_OPTIONS_SORT=	yes
+MEDIAWIKI_DESC=		MediaWiki Plugin
+MEDIAWIKI_CMAKE_BOOL=	DIGIKAMSC_COMPILE_LIBMEDIAWIKI
+MEDIAWIKI_LIB_DEPENDS=	libKF5MediaWiki.so:net/libmediawiki
 
-.for plugin in ${KIPI_PLUGINS_ALL}
-OPTIONS_DEFINE+=	${plugin:tu}
-${plugin:tu}_DESC=	${${plugin}_DESC}
-${plugin:tu}_RUN_DEPENDS=	kipi-plugin-${plugin}>=${DIGIKAM_VER}:graphics/kipi-plugin-${plugin}
-.endfor
+KVKONTAKTE_DESC=	vk.com Plugin
+KVKONTAKTE_CMAKE_BOOL=	DIGIKAMSC_COMPILE_LIBKVKONTAKTE
+KVKONTAKTE_LIB_DEPENDS=	libKF5Vkontakte.so:net/libkvkontakte
 
-NLS_RUN_DEPENDS=	digikam-l10n>=${DIGIKAM_VER}:graphics/digikam-kde4-l10n
-DOCS_RUN_DEPENDS=	digikam-doc>=${DIGIKAM_VER}:graphics/digikam-kde4-doc
+DISTNAME=	digikam-${PORTVERSION}
+DISTINFO_FILE=	${.CURDIR:H:H}/graphics/digikam/distinfo
+DESCR=		${.CURDIR:H:H}/graphics/digikam/pkg-descr
 
 .include <bsd.port.mk>

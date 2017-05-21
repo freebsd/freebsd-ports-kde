@@ -1,5 +1,5 @@
 # Created by: Dima Panov <fluffy@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11-toolkits/attica/Makefile 363371 2014-07-29 18:41:15Z adamw $
 
 PORTNAME=	attica
 PORTVERSION=	0.4.2

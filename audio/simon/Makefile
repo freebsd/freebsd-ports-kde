@@ -1,9 +1,9 @@
 # Created by: alonso@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/audio/simon/Makefile 12997 2016-09-11 21:14:25Z tcberner $
 
 PORTNAME=	simon
 PORTVERSION=	0.4.1
-PORTREVISION=	3
+PORTREVISION=	2
 CATEGORIES=	audio kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE

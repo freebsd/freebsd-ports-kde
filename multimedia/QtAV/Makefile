@@ -1,9 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/multimedia/QtAV/Makefile 13820 2017-04-08 07:30:07Z tcberner $
 
 PORTNAME=		QtAV
 PORTVERSION=		1.11.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=		multimedia
 DIST_SUBDIR=		KDE
 

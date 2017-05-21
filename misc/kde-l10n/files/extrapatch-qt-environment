@@ -1,0 +1,14 @@
+As the kde-l10n ports at the moment require both Qt4 and Qt5, 
+inject the apropriate value of QT_SELECT before entering the 
+respective directories.
+
+--- CMakeLists.txt.orig	2017-03-11 00:58:36 UTC
++++ CMakeLists.txt
+@@ -1,5 +1,7 @@
+ cmake_minimum_required(VERSION 2.8.9 FATAL_ERROR)
+ cmake_policy(SET CMP0002 OLD)
+ cmake_policy(SET CMP0014 OLD)
++set(ENV{QT_SELECT} "qt4")
+ add_subdirectory(4)
++set(ENV{QT_SELECT} "qt5")
+ add_subdirectory(5)

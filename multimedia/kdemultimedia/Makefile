@@ -2,37 +2,28 @@
 # $FreeBSD$
 
 PORTNAME=	kdemultimedia
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	multimedia kde
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Multimedia applications (meta port)
 
-USES=		kde:4 metaport
+USES=		kde:5 metaport
+USE_QT5=	#
 
-OPTIONS_DEFINE=		DRAGON FFMPEG JUK KIO_AUDIOCD KMIX KSCD MPLAYER
-OPTIONS_DEFAULT=	DRAGON FFMPEG JUK KIO_AUDIOCD KMIX KSCD
+OPTIONS_DEFINE=		DRAGON FFMPEG AUDIOCD_KIO KMIX
+OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
 DRAGON_DESC=		Simple video player
-DRAGON_RUN_DEPENDS=	${KDE_PREFIX}/bin/dragon:multimedia/dragon
+DRAGON_RUN_DEPENDS=	dragon>=${KDE_APPLICATIONS_VERSION}:multimedia/dragon
 
 FFMPEG_DESC=		FFMPEG-based video thumbnailer
-FFMPEG_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/ffmpegthumbs.so:multimedia/kdemultimedia4-ffmpegthumbs
+FFMPEG_RUN_DEPENDS=	kdemultimedia-ffmpegthumbs>=${KDE_APPLICATIONS_VERSION}:multimedia/kdemultimedia-ffmpegthumbs
 
-JUK_DESC=		Audio player
-JUK_RUN_DEPENDS=	${KDE_PREFIX}/bin/juk:audio/juk
-
-KIO_AUDIOCD_DESC=	Audio CD IOSlave
-KIO_AUDIOCD_RUN_DEPENDS=	${KDE_PREFIX}/lib/libaudiocdplugins.so:audio/kio-audiocd
+AUDIOCD_KIO_DESC=	Audio CD IOSlave
+AUDIOCD_KIO_RUN_DEPENDS=	audiocd-kio>=${KDE_APPLICATIONS_VERSION}:audio/audiocd-kio
 
 KMIX_DESC=		Audio mixer
-KMIX_RUN_DEPENDS=	${KDE_PREFIX}/bin/kmix:audio/kmix
-
-KSCD_DESC=		CD Player
-KSCD_RUN_DEPENDS=	${KDE_PREFIX}/bin/kscd:audio/kscd
-
-MPLAYER_DESC=		MPlayer-based video thumbnailer
-MPLAYER_RUN_DEPENDS=	${KDE_PREFIX}/bin/mplayerthumbsconfig:multimedia/kdemultimedia4-mplayerthumbs
+KMIX_RUN_DEPENDS=	kmix>=${KDE_APPLICATIONS_VERSION}:audio/kmix
 
 .include <bsd.port.mk>

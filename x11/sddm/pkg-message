@@ -1,0 +1,12 @@
+======= WARNING =========================================================================
+
+Sddm requires the user 'sddm' to be present on the system.
+
+Please add a user with simlilar properties as below:
+
+ sddm:*:161:161::0:0:SDDM Display Manager user:/usr/local/etc/sddm/home:/usr/sbin/nologin
+
+to try it.
+
+=========================================================================================
+

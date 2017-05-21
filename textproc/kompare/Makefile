@@ -1,17 +1,17 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/textproc/kompare/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kompare
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	textproc kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	textproc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Diff/Patch Frontend
 
 LIB_DEPENDS=	libkomparediff2.so:textproc/libkomparediff2
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm codecs doctools config coreaddons texteditor
+USE_QT5=	buildtools_build qmake_build
 
 .include <bsd.port.mk>

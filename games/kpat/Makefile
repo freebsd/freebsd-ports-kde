@@ -1,20 +1,24 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/games/kpat/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kpat
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	games kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
-USES=		cmake:outsource kde:4 shared-mime-info tar:xz
-USE_KDE=	kdelibs libkdegames automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 shared-mime-info tar:xz
+USE_KDE=	completion config configwidgets coreaddons dbusaddons \
+		ecm guiaddons i18n iconthemes itemviews kdeclarative \
+		kio libkdegames newstuff notifyconfig textwidgets \
+		widgetsaddons xmlgui
+USE_QT5=	buildtools_build core gui network phonon4 \
+		qmake_build qml quick svg widgets
 
 post-patch:
 	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d' \
 		${WRKSRC}/mimetypes/CMakeLists.txt
 
-.include <${.CURDIR}/../kdegames4/Makefile.common>
+.include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

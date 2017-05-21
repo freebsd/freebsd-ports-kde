@@ -1,7 +1,8 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/p5-perlqt/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	perlqt
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-kde4 perl5
 PKGNAMEPREFIX=	p5-
 

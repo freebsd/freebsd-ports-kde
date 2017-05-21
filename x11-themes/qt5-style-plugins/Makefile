@@ -13,10 +13,8 @@ COMMENT=	Additional Styles for Qt 5 and KDE
 
 LICENSE=	LGPL21
 
-USES=		qmake
+USES=		qmake:outsource
 USE_QT5=	buildtools_build core gui widgets
 USE_GL+=	gl
-
-WRKSRC=		${WRKDIR}/qtstyleplugins-src-${PORTVERSION}
 
 .include <bsd.port.mk>

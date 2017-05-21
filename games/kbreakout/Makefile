@@ -1,17 +1,19 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/games/kbreakout/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kbreakout
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	games kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs libkdegames automoc4
-USE_QT4=	corelib gui xml \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	completion config configwidgets coreaddons dbusaddons \
+		ecm guiaddons i18n iconthemes jobwidgets kio libkdegames \
+		service widgetsaddons
+USE_QT5=	buildtools_build core gui network qmake_build \
+		qml quick svg widgets
 
-.include <${.CURDIR}/../kdegames4/Makefile.common>
+.include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

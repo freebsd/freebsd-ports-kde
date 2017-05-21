@@ -1,5 +1,5 @@
 bin/ksudoku
-share/applications/kde4/ksudoku.desktop
+share/applications/kde4/org.kde.ksudoku.desktop
 share/apps/ksudoku/4x4.desktop
 share/apps/ksudoku/4x4.xml
 share/apps/ksudoku/6x6.desktop
@@ -10,6 +10,14 @@ share/apps/ksudoku/DoubleRoxdoku.desktop
 share/apps/ksudoku/DoubleRoxdoku.xml
 share/apps/ksudoku/Jigsaw.desktop
 share/apps/ksudoku/Jigsaw.xml
+share/apps/ksudoku/Killer_4x4.desktop
+share/apps/ksudoku/Killer_4x4.xml
+share/apps/ksudoku/Killer_9x9.desktop
+share/apps/ksudoku/Killer_9x9.xml
+share/apps/ksudoku/Mathdoku_4x4.desktop
+share/apps/ksudoku/Mathdoku_4x4.xml
+share/apps/ksudoku/Mathdoku_Settable.desktop
+share/apps/ksudoku/Mathdoku_Settable.xml
 share/apps/ksudoku/Nonomino.desktop
 share/apps/ksudoku/Nonomino.xml
 share/apps/ksudoku/Pentomino.desktop
@@ -119,3 +127,4 @@ share/doc/HTML/en/ksudoku/index.docbook
 share/icons/hicolor/128x128/apps/ksudoku.png
 share/icons/hicolor/16x16/apps/ksudoku.png
 share/icons/hicolor/32x32/apps/ksudoku.png
+share/metainfo/org.kde.ksudoku.appdata.xml

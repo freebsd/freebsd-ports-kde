@@ -1,0 +1,35 @@
+From a5fb9732240a4f6ca0630c55c33c2c61c0a5ad8f Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@gmail.com>
+Date: Tue, 22 Mar 2016 22:08:15 +0100
+Subject: [PATCH] Display information about the systems memory on FreeBSD.
+
+This could probably be extended to Q_OS_*BSD?
+---
+ Modules/about-distro/src/Module.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Modules/about-distro/src/Module.cpp b/Modules/about-distro/src/Module.cpp
+index b1227f0..0e3a5a6 100644
+--- Modules/about-distro/src/Module.cpp
++++ Modules/about-distro/src/Module.cpp
+@@ -41,6 +41,8 @@
+ 
+ #ifdef Q_OS_LINUX
+ #include <sys/sysinfo.h>
++#elif defined(Q_OS_FREEBSD)
++#include <unistd.h>
+ #endif
+ #include <sys/utsname.h>
+ 
+@@ -55,6 +57,8 @@ static qlonglong calculateTotalRam()
+     if (sysinfo(&info) == 0)
+         // manpage "sizes are given as multiples of mem_unit bytes"
+         ret = info.totalram * info.mem_unit;
++#elif defined(Q_OS_FREEBSD)
++    ret = (size_t)sysconf(_SC_PHYS_PAGES) * (size_t)sysconf(_SC_PAGESIZE);
+ #endif
+     return ret;
+ }
+-- 
+2.7.4
+

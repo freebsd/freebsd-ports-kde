@@ -1,15 +1,13 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	kde-l10n
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	french kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	French messages and documentation for KDE SC 4
+COMMENT=	French messages and documentation for KDE
 
-KDE4_L10N=	fr
+KDE_L10N=	fr
 
-.include "${.CURDIR:H:H}/misc/kde4-l10n/files/bsd.l10n.mk"
+.include "${.CURDIR:H:H}/misc/kde-l10n/files/bsd.l10n.mk"
 .include <bsd.port.mk>

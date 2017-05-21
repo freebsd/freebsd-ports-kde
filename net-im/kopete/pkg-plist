@@ -75,10 +75,8 @@ lib/kde4/kcm_kopete_accountconfig.so
 lib/kde4/kcm_kopete_addbookmarks.so
 lib/kde4/kcm_kopete_appearanceconfig.so
 lib/kde4/kcm_kopete_autoreplace.so
-lib/kde4/kcm_kopete_avdeviceconfig.so
 lib/kde4/kcm_kopete_behaviorconfig.so
 lib/kde4/kcm_kopete_chatwindowconfig.so
-lib/kde4/kcm_kopete_cryptography.so
 lib/kde4/kcm_kopete_highlight.so
 lib/kde4/kcm_kopete_history.so
 lib/kde4/kcm_kopete_history2.so
@@ -99,7 +97,6 @@ lib/kde4/kopete_autoreplace.so
 lib/kde4/kopete_bonjour.so
 lib/kde4/kopete_chatwindow.so
 lib/kde4/kopete_contactnotes.so
-lib/kde4/kopete_cryptography.so
 lib/kde4/kopete_emailwindow.so
 lib/kde4/kopete_gadu.so
 lib/kde4/kopete_groupwise.so
@@ -136,9 +133,6 @@ lib/libkopete_oscar.so.%%KDE4_GENERIC_LIB_VERSION%%
 lib/libkopete_otr_shared.so
 lib/libkopete_otr_shared.so.1
 lib/libkopete_otr_shared.so.1.0.0
-lib/libkopete_videodevice.so
-lib/libkopete_videodevice.so.4
-lib/libkopete_videodevice.so.%%KDE4_GENERIC_LIB_VERSION%%
 lib/libkopeteaddaccountwizard.so
 lib/libkopeteaddaccountwizard.so.1
 lib/libkopeteaddaccountwizard.so.1.0.0
@@ -254,7 +248,6 @@ share/apps/kopete/icons/oxygen/128x128/apps/aim_protocol.png
 share/apps/kopete/icons/oxygen/128x128/apps/bonjour_protocol.png
 share/apps/kopete/icons/oxygen/128x128/apps/icq_protocol.png
 share/apps/kopete/icons/oxygen/128x128/apps/jabber_protocol.png
-share/apps/kopete/icons/oxygen/128x128/apps/kopete_avdevice.png
 share/apps/kopete/icons/oxygen/128x128/apps/meanwhile_protocol.png
 share/apps/kopete/icons/oxygen/128x128/apps/qq_protocol.png
 share/apps/kopete/icons/oxygen/128x128/apps/skype_protocol.png
@@ -346,7 +339,6 @@ share/apps/kopete/icons/oxygen/22x22/apps/bonjour_protocol.png
 share/apps/kopete/icons/oxygen/22x22/apps/groupwise_protocol.png
 share/apps/kopete/icons/oxygen/22x22/apps/icq_protocol.png
 share/apps/kopete/icons/oxygen/22x22/apps/jabber_protocol.png
-share/apps/kopete/icons/oxygen/22x22/apps/kopete_avdevice.png
 share/apps/kopete/icons/oxygen/22x22/apps/meanwhile_protocol.png
 share/apps/kopete/icons/oxygen/22x22/apps/qq_protocol.png
 share/apps/kopete/icons/oxygen/22x22/apps/skype_protocol.png
@@ -358,7 +350,6 @@ share/apps/kopete/icons/oxygen/32x32/apps/gadu_protocol.png
 share/apps/kopete/icons/oxygen/32x32/apps/groupwise_protocol.png
 share/apps/kopete/icons/oxygen/32x32/apps/icq_protocol.png
 share/apps/kopete/icons/oxygen/32x32/apps/jabber_protocol.png
-share/apps/kopete/icons/oxygen/32x32/apps/kopete_avdevice.png
 share/apps/kopete/icons/oxygen/32x32/apps/latex.png
 share/apps/kopete/icons/oxygen/32x32/apps/meanwhile_protocol.png
 share/apps/kopete/icons/oxygen/32x32/apps/preferences-plugin-text-effect-kopete.png
@@ -389,7 +380,6 @@ share/apps/kopete/icons/oxygen/64x64/apps/bonjour_protocol.png
 share/apps/kopete/icons/oxygen/64x64/apps/groupwise_protocol.png
 share/apps/kopete/icons/oxygen/64x64/apps/icq_protocol.png
 share/apps/kopete/icons/oxygen/64x64/apps/jabber_protocol.png
-share/apps/kopete/icons/oxygen/64x64/apps/kopete_avdevice.png
 share/apps/kopete/icons/oxygen/64x64/apps/meanwhile_protocol.png
 share/apps/kopete/icons/oxygen/64x64/apps/qq_protocol.png
 share/apps/kopete/icons/oxygen/64x64/apps/sms_protocol.png
@@ -590,8 +580,6 @@ share/apps/kopete/webpresence/webpresence_html_images.xsl
 share/apps/kopete/webpresence/webpresence_xhtml.xsl
 share/apps/kopete/webpresence/webpresence_xhtml_images.xsl
 share/apps/kopete_contactnotes/contactnotesui.rc
-share/apps/kopete_cryptography/cryptographychatui.rc
-share/apps/kopete_cryptography/cryptographyui.rc
 share/apps/kopete_groupwise/gwchatui.rc
 share/apps/kopete_history/historychatui.rc
 share/apps/kopete_history/historyui.rc
@@ -666,6 +654,7 @@ share/doc/HTML/en/kopete/Kopetetutorial_snap018_otrsuccess.png
 share/doc/HTML/en/kopete/Kopetetutorial_snap019_otrauth.png
 share/doc/HTML/en/kopete/chatstyle.docbook
 share/doc/HTML/en/kopete/common
+share/doc/HTML/en/kopete/emoticonspec.docbook
 share/doc/HTML/en/kopete/icq.docbook
 share/doc/HTML/en/kopete/index.cache.bz2
 share/doc/HTML/en/kopete/index.docbook
@@ -749,7 +738,6 @@ share/kde4/services/chatwindow.desktop
 share/kde4/services/emailwindow.desktop
 share/kde4/services/kconfiguredialog/kopete_addbookmarks_config.desktop
 share/kde4/services/kconfiguredialog/kopete_autoreplace_config.desktop
-share/kde4/services/kconfiguredialog/kopete_cryptography_config.desktop
 share/kde4/services/kconfiguredialog/kopete_highlight_config.desktop
 share/kde4/services/kconfiguredialog/kopete_history2_config.desktop
 share/kde4/services/kconfiguredialog/kopete_history_config.desktop
@@ -767,12 +755,10 @@ share/kde4/services/kopete_addbookmarks.desktop
 share/kde4/services/kopete_aim.desktop
 share/kde4/services/kopete_appearanceconfig.desktop
 share/kde4/services/kopete_autoreplace.desktop
-share/kde4/services/kopete_avdeviceconfig.desktop
 share/kde4/services/kopete_behaviorconfig.desktop
 share/kde4/services/kopete_bonjour.desktop
 share/kde4/services/kopete_chatwindowconfig.desktop
 share/kde4/services/kopete_contactnotes.desktop
-share/kde4/services/kopete_cryptography.desktop
 share/kde4/services/kopete_gadu.desktop
 share/kde4/services/kopete_groupwise.desktop
 share/kde4/services/kopete_highlight.desktop

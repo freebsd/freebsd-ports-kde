@@ -1,24 +1,25 @@
-# Created by: fluffy@
+# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	kate
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	editors kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	editors kde kde-applications # kde kde-applications-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Basic editor framework for the KDE system
+COMMENT=	KDE5 kate
 
-LIB_DEPENDS=	libqjson.so:devel/qjson
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
+LIB_DEPENDS=	libgit2.so:devel/libgit2
 
-USES=		cmake:outsource gettext kde:4 perl5 tar:xz
-USE_KDE=	kdelibs automoc4 kactivities
-USE_PERL5=	build
-USE_QT4=	dbus gui script sql webkit xml \
-		moc_build qmake_build rcc_build uic_build
-USE_LDCONFIG=	yes
-
-# editors/kate-plugin-pate installs pate
-CMAKE_ARGS+=	-DBUILD_pate=off
+USES=		cmake:outsource gettext pkgconfig kde:5 tar:xz
+USE_KDE=	activities attica auth bookmarks codecs completion config \
+		configwidgets coreaddons crash dbusaddons doctools ecm \
+		guiaddons i18n iconthemes init itemmodels itemviews \
+		jobwidgets kio newstuff package parts plasma-framework \
+		service solid sonnet texteditor textwidgets threadweaver \
+		wallet widgetsaddons windowsystem xmlgui
+USE_QT5=	core dbus gui network script sql widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -1,17 +1,17 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/graphics/kamera-kf5/Makefile 13698 2017-03-08 17:47:13Z tcberner $
 
 PORTNAME=	kamera
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	graphics kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Digital camera manager for KDE 4
+COMMENT=	Digital camera manager for KDE
 
 LIB_DEPENDS=	libgphoto2.so:graphics/libgphoto2
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config configwidgets doctools ecm i18n kio xmlgui
+USE_QT5=	buildtools_build core gui qmake_build
 
 .include <bsd.port.mk>

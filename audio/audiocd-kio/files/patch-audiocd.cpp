@@ -1,6 +1,6 @@
---- audiocd.cpp.orig	2014-10-09 07:07:27 UTC
-+++ audiocd.cpp
-@@ -228,20 +228,21 @@ static void setDeviceToCd(KCompactDisc *
+--- audiocd.cpp.orig	2010-06-06 08:15:20.000000000 -0400
++++ audiocd.cpp	2010-06-06 08:18:01.000000000 -0400
+@@ -229,20 +229,21 @@
  	// name associated with the device, which throws the rest of audiocd
  	// for a loop.
  	//
@@ -24,7 +24,7 @@
  		}
  		else
  		{
-@@ -249,13 +250,14 @@ static void setDeviceToCd(KCompactDisc *
+@@ -250,13 +251,14 @@
  			// circumstances, so build a representation from
  			// the unit number and SCSI device name.
  			//

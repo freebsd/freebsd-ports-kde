@@ -1,20 +1,18 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/archivers/ark/Makefile 13829 2017-04-09 08:51:06Z tcberner $
 
 PORTNAME=	ark
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	archivers kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	archivers kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Archiving tool for KDE
 
 LIB_DEPENDS=	libqjson.so:devel/qjson
 
-USES=		cmake:outsource kde:4 libarchive cpe tar:xz
-USE_KDE=	automoc4 kdelibs libkonq
-CPE_VENDOR=	kde
-USE_QT4=	qtestlib qmake_build moc_build rcc_build uic_build
+USES=		cmake:outsource gettext libarchive kde:5 tar:xz
+USE_KDE=	archive config crash dbusaddons doctools ecm i18n iconthemes itemmodels \
+		khtml kio pty service widgetsaddons
+USE_QT5=	buildtools_build core gui widgets qmake_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	7ZIP RAR ZIP

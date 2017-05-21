@@ -7,8 +7,8 @@ include/kde4/libkcddb/kcddb.h
 include/kde4/libkcddb/kcddb_export.h
 include/kde4/libkcddb/kcddbconfig.h
 lib/cmake/libkcddb/LibkcddbConfig.cmake
-lib/cmake/libkcddb/LibkcddbTargets.cmake
 lib/cmake/libkcddb/LibkcddbTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/libkcddb/LibkcddbTargets.cmake
 lib/kde4/kcm_cddb.so
 lib/libkcddb.so
 lib/libkcddb.so.4

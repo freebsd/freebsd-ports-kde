@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-kapidox/Makefile 13459 2016-12-13 15:48:45Z tcberner $
 
 PORTNAME=	kapidox
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

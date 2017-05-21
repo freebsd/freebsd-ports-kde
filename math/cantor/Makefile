@@ -1,21 +1,23 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/math/cantor/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	cantor
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	5
-CATEGORIES=	math kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE 4 frontend to mathematical software
+COMMENT=	KDE 5 frontend to mathematical software
 
 LIB_DEPENDS=	libspectre.so:print/libspectre \
 		libqalculate.so:math/libqalculate \
-		libanalitza.so:math/analitza
+		libAnalitza.so:math/analitza
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
 
-USES=		cmake:outsource kde:4 pkgconfig python:2 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	corelib qtestlib_build xml xmlpatterns \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 pkgconfig python:3 tar:xz
+USE_KDE=	ecm config emoticons itemmodels itemviews init newstuff \
+		texteditor coreaddons archive parts pty kdelibs4support
+USE_QT5=	core buildtools_build qmake_build xml xmlpatterns
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	LUAJIT MAXIMA OCTAVE R SAGE SCILAB
@@ -47,5 +49,7 @@ SCILAB_RUN_DEPENDS=	scilab:math/scilab
 post-patch:
 	${REINPLACE_CMD} -e '/FIND_PROGRAM(_GFORTRAN_EXECUTABLE/s,gfortran,${FC},' \
 		${WRKSRC}/cmake/FindR.cmake
+	${REINPLACE_CMD} -e '/find_library(PYTHONLIBS3_LIBRARY/s,python3.5m,python3.5m python3.6m,' \
+		${WRKSRC}/cmake/FindPythonLibs3.cmake
 
 .include <bsd.port.mk>

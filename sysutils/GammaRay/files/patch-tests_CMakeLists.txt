@@ -1,0 +1,13 @@
+FreeBSD does not have dl, rely on CMAKE_DL_LIBS.
+
+--- tests/CMakeLists.txt.orig	2017-02-14 19:15:42 UTC
++++ tests/CMakeLists.txt
+@@ -112,7 +112,7 @@ add_test(NAME sourcelocationtest COMMAND
+ add_executable(selflocatortest selflocatortest.cpp)
+ target_link_libraries(selflocatortest ${QT_QTTEST_LIBRARIES} ${QT_QTGUI_LIBRARIES} gammaray_common)
+ if(NOT WIN32 AND NOT QNXNTO AND NOT ANDROID)
+-  target_link_libraries(selflocatortest dl)
++  target_link_libraries(selflocatortest ${CMAKE_DL_LIBS})
+ endif()
+ add_test(NAME selflocatortest COMMAND selflocatortest)
+ 

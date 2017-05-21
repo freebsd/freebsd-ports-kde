@@ -1,36 +1,32 @@
-# Created by: Markus Brueffer <markus@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/net-p2p/ktorrent/Makefile 13833 2017-04-09 15:07:57Z tcberner $
 
 PORTNAME=	ktorrent
-DISTVERSION=	4.3.1
-PORTREVISION=	9
+DISTVERSION=	5.0.1.20170408
 CATEGORIES=	net-p2p kde
-MASTER_SITES=	http://ktorrent.org/downloads/${DISTVERSION}/
+DIST_SUBDIR=	KDE/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	BitTorrent client for KDE
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/bind.hpp:devel/boost-libs
-LIB_DEPENDS=	libtag.so:audio/taglib \
+LIB_DEPENDS=	libKF5Syndication.so:net/syndication \
+		libKF5Torrent.so:net-p2p/libktorrent \
+		libgcrypt.so:security/libgcrypt \
 		libgmp.so:math/gmp \
-		libktorrent.so:net-p2p/libktorrent
+		libtag.so:audio/taglib
 
-USES=		cmake:outsource gettext kde:4 tar:bzip2
-USE_KDE=	kdelibs automoc4 pimlibs workspace
-USE_QT4=	corelib gui network qt3support qtestlib webkit \
-		qmake_build moc_build rcc_build uic_build
-USE_LDCONFIG=	yes
+USES=		cmake:outsource desktop-file-utils gettext kde:5
+USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
+		coreaddons crash dbusaddons dnssd ecm guiaddons i18n \
+		iconthemes itemviews jobwidgets kcmutils kdelibs4support \
+		kdewebkit kio kross notifications notifyconfig parts \
+		plasma-workspace plotting service solid sonnet textwidgets \
+		unitconversion widgetsaddons windowsystem xmlgui
+USE_QT5=	core dbus gui network phonon4 printsupport script webkit \
+		widgets xml \
+		buildtools_build qmake_build
 
-CONFLICTS_BUILD=	ktorrent-2*
-
-SHLIB_VER=	15.0.0
-PLIST_SUB+=	SHLIB_VER=${SHLIB_VER} \
-		SHLIB_SHVER=${SHLIB_VER:R:R}
-
-CMAKE_ARGS+=	-DENABLE_KIO_MAGNET=1
-
-post-patch:
-	${REINPLACE_CMD} -e 's,ktorrent,$${LIBKTORRENT_LIBRARIES},' \
-		${WRKSRC}/plugins/ipfilter/tests/CMakeLists.txt
+USE_GITHUB=	yes
+GH_ACCOUNT=	KDE
+GH_TAGNAME=	f93c2f3
 
 .include <bsd.port.mk>

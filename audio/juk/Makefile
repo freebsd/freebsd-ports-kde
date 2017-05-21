@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	juk
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	audio kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	audio kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Jukebox, tagger and music collection manager

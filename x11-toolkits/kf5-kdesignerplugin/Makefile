@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/x11-toolkits/kf5-kdesignerplugin/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kdesignerplugin
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

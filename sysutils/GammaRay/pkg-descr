@@ -1,0 +1,6 @@
+GammaRay augments conventional debuggers by understanding the implementation of
+Qt, allowing it to visualize application behavior on a higher level, especially
+with complex frameworks like scene graphs, model/view or state machines being
+involved.
+
+WWW: https://www.kdab.com/development-resources/qt-tools/gammaray

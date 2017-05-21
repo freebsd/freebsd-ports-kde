@@ -1,15 +1,18 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/sysutils/kcron/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kcron
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	sysutils kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	sysutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE task scheduler
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		docbook-xml>0:textproc/docbook-xml
+
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	ecm doctools i18n iconthemes kio xmlgui
+USE_QT5=	buildtools_build printsupport qmake_build widgets
 
 .include <bsd.port.mk>

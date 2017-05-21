@@ -1,15 +1,15 @@
+# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	kdesdk-thumbnailers
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	devel kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE thumbnail generator for gettext po files
 
-USES=		cmake:outsource gettext kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config ecm i18n kio
+USE_QT5=	buildtools_build core gui qmake_build widgets
 
 .include <bsd.port.mk>

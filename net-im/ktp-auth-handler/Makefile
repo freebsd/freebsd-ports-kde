@@ -1,22 +1,21 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/net-im/ktp-auth-handler/Makefile 13957 2017-04-26 14:25:40Z tcberner $
 
 PORTNAME=	ktp-auth-handler
-PORTVERSION=	${KTP_VERSION}
-PORTREVISION=	1
-CATEGORIES=	net-im kde
-MASTER_SITES=	KDE/${KTP_BRANCH}/kde-telepathy/${PORTVERSION}/src
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KWallet integration module for KDE Telepathy
 
-LIB_DEPENDS=	libqjson.so:devel/qjson \
-		libqca.so:devel/qca \
-		libtelepathy-qt4.so:net-im/telepathy-qt4 \
-		libktpcommoninternalsprivate.so:net-im/ktp-common-internals
+LIB_DEPENDS=	libqca-qt5.so:devel/qca-qt5 \
+		libtelepathy-qt5.so:net-im/telepathy-qt5 \
+		libKTpCommonInternals.so:net-im/ktp-common-internals  \
+		libaccounts-qt5.so:net-im/libaccounts-qt5 \
+		libkaccounts.so:net-im/kaccounts-integration
 
-USES=		cmake gettext kde:4 tar:bzip2
-USE_KDE=	kdelibs automoc4
-USE_QT4=	corelib dbus gui xml webkit \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
+USE_KDE=	ecm i18n kdewebkit kio wallet widgetsaddons
+USE_QT5=	buildtools_build core dbus gui network qmake_build webkit
 
 .include <bsd.port.mk>

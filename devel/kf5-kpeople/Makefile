@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-kpeople/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kpeople
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

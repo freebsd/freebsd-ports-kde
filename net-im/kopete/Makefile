@@ -1,25 +1,31 @@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/net-im/kopete/Makefile 10672 2015-04-25 19:17:13Z tcberner $
 
 PORTNAME=	kopete
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	5
-CATEGORIES=	net-im kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
+CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE multi-protocol instant messenger
 
 LIB_DEPENDS=	libidn.so:dns/libidn \
 		libqca.so:devel/qca \
-		libotr.so.5:security/libotr \
+		libotr.so:security/libotr \
 		libgadu.so:polish/libgadu \
-		libkleo.so:deskutils/kdepim4 \
+		libortp.so:net/ortp \
+		libmediastreamer_base.so:net/mediastreamer \
+		libspeex.so:audio/speex \
+		libexpat.so:textproc/expat2 \
 		libmeanwhile.so:net-im/meanwhile \
 		libv4l2.so:multimedia/libv4l \
-		libjasper.so:graphics/jasper
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
+		libjasper.so:graphics/jasper \
+		libjsoncpp.so:devel/jsoncpp
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
+		${LOCALBASE}/lib/mediastreamer/plugins/libmsilbc.so:audio/msilbc
+RUN_DEPENDS=	${LOCALBASE}/lib/mediastreamer/plugins/libmsilbc.so:audio/msilbc
 
-USES=		cmake:outsource jpeg kde:4 pkgconfig shebangfix sqlite tar:xz \
-		webplugin:native
+USES=		cmake:outsource compiler:c++11-lib jpeg kde:4 pkgconfig \
+		shebangfix sqlite ssl tar:xz webplugin:native
 USE_GNOME=	libxml2 libxslt
 USE_KDE=	kdelibs pimlibs \
 		automoc4 qimageblitz
@@ -43,7 +49,13 @@ CMAKE_ARGS+=	-DWITH_Alsa:BOOL=OFF
 CMAKE_ARGS+=	-DMOZPLUGIN_INSTALL_DIR:PATH="${WEBPLUGIN_DIR}"
 
 # Forcefully disable net-im/libmsn which was deprecated on 2013-07-27.
-CMAKE_ARGS+=	-DWITH_wlm:BOOL=OFF
+CMAKE_ARGS+=	-DHAVE_LIBMSN:BOOL=OFF
+
+# Forcefully disable the video support (needs patches)
+CMAKE_ARGS+=	-DDISABLE_VIDEOSUPPORT:BOOL=TRUE
+
+# Forcefully disable libjingle / jingle (needs patches)
+CMAKE_ARGS+=	-DWITH_libjingle:BOOL=FALSE
 
 # Fix build with fresh multimedia/v4l_compat installed.
 CFLAGS+=	-DHAVE_LINUX_INTEGER_TYPES=1
@@ -54,8 +66,10 @@ XMMS_LIB_DEPENDS=	libxmms.so:multimedia/xmms
 XMMS_CMAKE_ON=	-DWITH_Xmms:BOOL=ON
 XMMS_CMAKE_OFF=	-DWITH_Xmms:BOOL=OFF
 
+CMAKE_ARGS+=	-DCMAKE_CXX_STANDARD="11"
+
 post-patch:
-	${REINPLACE_CMD} 's,-std=gnu90,-std=gnu89,' \
-		${WRKSRC}/protocols/jabber/libiris/CMakeLists.txt
+	${REINPLACE_CMD} '/alloca.h/ d' \
+		${WRKSRC}/protocols/jabber/libjingle/talk/base/stringutils.h
 
 .include <bsd.port.mk>

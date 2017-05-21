@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/x11-toolkits/kf5-kconfigwidgets/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kconfigwidgets
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

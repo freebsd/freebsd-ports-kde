@@ -1,0 +1,26 @@
+# $FreeBSD$
+
+PORTNAME=	kdev-python
+PORTVERSION=	5.1.0
+CATEGORIES=	devel kde
+MASTER_SITES=	KDE/stable/kdevelop/${PORTVERSION}/src
+DIST_SUBDIR=	KDE/kdevelop
+
+MAINTAINER=	kde@FreeBSD.org
+COMMENT=	Python support for KDevelop
+
+BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
+LIB_DEPENDS=	libKDevPlatformInterfaces.so:devel/kdevplatform \
+		libkdevcmakecommon.so:devel/kdevelop
+
+USES=		cmake:outsource compiler:c++11-lib gmake kde:5 python:3 tar:xz
+USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
+		ecm i18n itemmodels jobwidgets kio newstuff parts service \
+		sonnet texteditor textwidgets threadweaver widgetsaddons xmlgui
+USE_QT5=	core dbus gui network widgets xml \
+		buildtools_build qmake_build
+
+# Does not build with jobs.
+MAKE_JOBS_UNSAFE=	yes
+
+.include <bsd.port.mk>

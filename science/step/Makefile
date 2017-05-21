@@ -1,20 +1,22 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/science/step/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	step
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
-CATEGORIES=	science kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	science kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE 4 interactive physics simulator
+COMMENT=	KDE interactive physics simulator
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen2.pc:math/eigen2
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
 LIB_DEPENDS=	libqalculate.so:math/libqalculate \
 		libgsl.so:math/gsl
 
-USES=		cmake:outsource kde:4 pkgconfig tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	opengl moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
+USE_KDE=	config doctools ecm emoticons init itemmodels kdelibs4support \
+		khtml newstuff plotting
+USE_QT5=	buildtools_build core gui network opengl printsupport \
+		qmake_build qml quick svg widgets xml
 
 pre-configure:
 # Avoid building translations, should the user pass

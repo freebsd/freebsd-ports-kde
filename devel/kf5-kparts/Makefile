@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-kparts/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kparts
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

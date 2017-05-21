@@ -1,0 +1,22 @@
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/CALLIGRA/textproc/kreport/Makefile 13739 2017-03-10 23:07:35Z tcberner $
+
+PORTNAME=		kreport
+PORTVERSION=		3.0.0
+CATEGORIES=		textproc kde
+MASTER_SITES=		KDE/stable/${PORTNAME}/src
+DIST_SUBDIR=		KDE/${PORTNAME}
+
+MAINTAINER=		kde@FreeBSD.org
+COMMENT=		Framework for creation of reports in multiple formats
+
+LIB_DEPENDS=		libKPropertyCore3.so:x11-toolkits/kproperty
+
+USES=			cmake:outsource gettext kde:5 python:2 tar:xz
+USE_KDE=		config coreaddons ecm marble widgetsaddons
+USE_QT5=		core gui network qml webkit widgets xml \
+			buildtools_build printsupport qmake_build
+
+CONFLICTS_INSTALL=	calligra-2*
+
+.include <bsd.port.mk>

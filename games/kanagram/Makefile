@@ -1,16 +1,17 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/games/kanagram/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kanagram
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	games kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Letter order game for KDE 4
+COMMENT=	Letter order game for KDE
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs libkdeedu automoc4
-USE_QT4=	xml corelib declarative gui opengl script xml \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config configwidgets coreaddons crash doctools ecm \
+		i18n kdeclarative kio libkeduvocdocument newstuff sonnet
+USE_QT5=	core gui opengl qml quick svg widgets xml \
+		qmake_build buildtools_build
 
 .include <bsd.port.mk>

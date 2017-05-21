@@ -1,20 +1,19 @@
 # Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/multimedia/dragon/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	dragon
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	multimedia kde kde-kde4
-# Avoid clash with devel/dragon
-PKGNAMESUFFIX=	-player
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	multimedia kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE multimedia player with a focus on simplicity
 
 LICENSE=	GPLv2
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	automoc4 kdelibs
-USE_QT4=	phonon moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config configwidgets coreaddons dbusaddons doctools ecm \
+		i18n iconthemes jobwidgets notifications parts solid \
+		widgetsaddons windowsystem xmlgui
+USE_QT5=	buildtools_build phonon4 qmake_build
 
 .include <bsd.port.mk>

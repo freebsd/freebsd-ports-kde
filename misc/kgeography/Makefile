@@ -1,15 +1,16 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/misc/kgeography/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kgeography
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	misc kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	misc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	KDE 4 geography trainer
+COMMENT=	KDE geography trainer
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	xml moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	configwidgets coreaddons doctools ecm i18n iconthemes \
+		itemviews service widgetsaddons xmlgui
+USE_QT5=	buildtools_build gui qmake_build widgets xml
 
 .include <bsd.port.mk>

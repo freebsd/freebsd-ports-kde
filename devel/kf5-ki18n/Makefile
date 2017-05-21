@@ -1,5 +1,5 @@
 # Created by: tcberner
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-ki18n/Makefile 13785 2017-03-18 23:04:11Z tcberner $
 
 PORTNAME=	ki18n
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}

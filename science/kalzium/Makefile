@@ -1,9 +1,9 @@
+# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	kalzium
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
-CATEGORIES=	science kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	science kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Periodic table of elements for KDE 4
@@ -16,12 +16,14 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen2.pc:math/eigen2 \
 		${LOCALBASE}/libdata/pkgconfig/chemical-mime-data.pc:science/chemical-mime-data
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/chemical-mime-data.pc:science/chemical-mime-data
 
-USES=		cmake:outsource kde:4 pkgconfig tar:xz
-USE_KDE=	kdelibs automoc4
+USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
+USE_KDE=	ecm archive config coreaddons doctools emoticons i18n itemmodels itemviews \
+		kdelibs4support khtml newstuff parts plotting solid \
+		unitconversion widgetsaddons
 USE_OCAML=	yes
 NO_OCAML_RUNDEPENDS=	yes
-USE_QT4=	corelib declarative designer opengl script xml \
-		moc_build qmake_build rcc_build uic_build
+USE_QT5=	buildtools_build core opengl qmake_build quick script svg widgets
+
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

@@ -1,18 +1,19 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/devel/lokalize/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	lokalize
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
-CATEGORIES=	devel kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Computer-aided translation system
 
 LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build \
-		sql
+USES=		cmake:outsource desktop-file-utils gettext kde:5 tar:xz
+USE_KDE=	config coreaddons doctools ecm \
+		i18n kio kross notifications \
+		sonnet xmlgui
+USE_QT5=	buildtools_build qmake_build sql
 
 .include <bsd.port.mk>

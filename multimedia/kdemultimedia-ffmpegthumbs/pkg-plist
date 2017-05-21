@@ -1,2 +1,2 @@
-lib/kde4/ffmpegthumbs.so
-share/kde4/services/ffmpegthumbs.desktop
+%%QT_PLUGINDIR%%/ffmpegthumbs.so
+share/kservices5/ffmpegthumbs.desktop

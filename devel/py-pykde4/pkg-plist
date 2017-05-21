@@ -2,7 +2,6 @@ lib/kde4/kpythonpluginfactory.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/__init__.py
 %%PYTHON_SITELIBDIR%%/PyKDE4/%%PYCACHE%%__init__.%%PYC_SUFFIX%%
 %%PYTHON_SITELIBDIR%%/PyKDE4/%%PYCACHE%%__init__.%%PYO_SUFFIX%%
-%%PYTHON_SITELIBDIR%%/PyKDE4/akonadi.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/dnssd.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/kdecore.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/kdeui.so
@@ -13,7 +12,6 @@ lib/kde4/kpythonpluginfactory.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/kterminal.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/ktexteditor.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/kutils.so
-%%PYTHON_SITELIBDIR%%/PyKDE4/nepomuk.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/phonon.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/plasma.so
 %%PYTHON_SITELIBDIR%%/PyKDE4/pykdeconfig.py

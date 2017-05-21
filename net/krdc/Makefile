@@ -1,22 +1,23 @@
-# $FreeBSD$
+# Created by: tcberner
+# $FreeBSD: branches/plasma5/KDE/net/krdc/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	krdc
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
-CATEGORIES=	net kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDP and VNC client for KDE
 
-LIB_DEPENDS=	libvncserver.so:net/libvncserver \
-		libtelepathy-qt4.so:net-im/telepathy-qt4
+LIB_DEPENDS=	libvncserver.so:net/libvncserver
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	bookmarks completion config dnssd doctools ecm i18n iconthemes \
+		kcmutils notifications notifyconfig wallet widgetsaddons xmlgui
+USE_QT5=	buildtools_build core gui qmake_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	FREERDP
+OPTIONS_SUB=	yes
 FREERDP_DESC=	Remote Desktop support via FreeRDP
 FREERDP_RUN_DEPENDS=	xfreerdp:net/freerdp
 

@@ -1,19 +1,19 @@
+# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	ktouch
-PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	1
-CATEGORIES=	misc kde kde-kde4
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+CATEGORIES=	misc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Touch typing tutor for KDE 4
+COMMENT=	Touch typing tutor for KDE
 
-RUN_DEPENDS=	${LOCALBASE}/lib/kde4/imports/org/kde/charts/qmldir:graphics/kqtquickcharts
-
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	corelib declarative opengl phonon script sql xmlpatterns \
-		moc_build qmake_build rcc_build uic_build
+USES=		cmake:outsource gettext kde:5 tar:xz
+USE_KDE=	config configwidgets coreaddons doctools ecm i18n itemviews \
+		kcmutils kdeclarative kio newstuff parts texteditor \
+		widgetsaddons windowsystem xmlgui
+USE_QT5=	buildtools_build gui network qmake_build qml quick script sql \
+		testlib widgets x11extras xmlpatterns
 USE_XORG=	xkbfile
 
 .include <bsd.port.mk>

@@ -1,6 +1,5 @@
 bin/juk
-share/appdata/juk.appdata.xml
-share/applications/kde4/juk.desktop
+share/applications/kde4/org.kde.juk.desktop
 share/apps/juk/juk.notifyrc
 share/apps/juk/jukui-rtl.rc
 share/apps/juk/jukui.rc
@@ -28,3 +27,4 @@ share/icons/hicolor/32x32/apps/juk.png
 share/icons/hicolor/48x48/apps/juk.png
 share/icons/hicolor/64x64/apps/juk.png
 share/kde4/services/ServiceMenus/jukservicemenu.desktop
+share/metainfo/org.kde.juk.appdata.xml

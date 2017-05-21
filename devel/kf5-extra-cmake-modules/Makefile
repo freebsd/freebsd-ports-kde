@@ -1,5 +1,5 @@
 # Created by: Yuri Victorovich <yuri@rawbw.com>
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/KDE/devel/kf5-extra-cmake-modules/Makefile 13830 2017-04-09 08:52:32Z tcberner $
 
 PORTNAME=	extra-cmake-modules
 PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
