@@ -26,8 +26,8 @@ LIB_DEPENDS=	libKF5KFace.so:graphics/libkface \
 		liblcms2.so:graphics/lcms2 \
 		liblensfun.so:graphics/lensfun \
 		liblqr-1.so:graphics/liblqr-1 \
-		libopencv_contrib.so:graphics/opencv2 \
-		libopencv_core.so:graphics/opencv2-core \
+		libopencv_contrib.so:graphics/opencv \
+		libopencv_core.so:graphics/opencv-core \
 		libpgf.so:graphics/libpgf \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
