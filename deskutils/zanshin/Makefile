@@ -12,7 +12,7 @@ COMMENT=	Daily organizer for KDE
 LIB_DEPENDS=	libical.so:devel/libical
 
 USES=		cmake:outsource compiler:c++14-lang gettext kde:5 tar:bz2
-USE_KDE=	ecm akonadi-notes akonadicalendar akonadisearch \
+USE_KDE=	ecm akonadinotes akonadicalendar akonadisearch \
 		identitymanagement kontactinterface ldap runner wallet
 USE_QT5=	qmake_build buildtools_build core qml testlib widgets
 
