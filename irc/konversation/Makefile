@@ -14,14 +14,15 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libqca-qt5.so:devel/qca-qt5
 
-USES=		cmake:outsource gettext kde:5 shebangfix tar:xz
+USES=		cmake:outsource gettext kde:5 python:run shebangfix tar:xz
 USE_KDE=	archive bookmarks config configwidgets coreaddons dbusaddons \
 		doctools ecm emoticons globalaccel i18n iconthemes idletime \
 		itemviews kio notifications notifyconfig parts solid sonnet \
 		wallet widgetsaddons windowsystem
 USE_QT5=	buildtools_build core gui phonon4 qmake_build widgets
 
-SHEBANG_FILES=	data/scripts/mail \
+SHEBANG_FILES=	data/scripts/* \
+		data/scripting_support/python/konversation/dbus.py \
 		data/updaters/*.pl
 
 .include <bsd.port.mk>
