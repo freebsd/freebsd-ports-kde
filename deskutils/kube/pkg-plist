@@ -255,3 +255,10 @@ share/kpackage/genericqml/org.kube.components.mailviewer/contents/ui/main.qml
 share/kpackage/genericqml/org.kube.components.mailviewer/metadata.desktop
 share/kpackage/genericqml/org.kube.components.mailviewer/metadata.json
 share/kpackage/genericqml/org.kube.components.mailviewer/qmldir
+share/metainfo/org.kube.accounts.gmail.appdata.xml
+share/metainfo/org.kube.accounts.imap.appdata.xml
+share/metainfo/org.kube.accounts.kolabnow.appdata.xml
+share/metainfo/org.kube.accounts.maildir.appdata.xml
+share/metainfo/org.kube.components.accounts.appdata.xml
+share/metainfo/org.kube.components.kube.appdata.xml
+share/metainfo/org.kube.components.mailviewer.appdata.xml
