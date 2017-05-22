@@ -4124,6 +4124,7 @@ share/locale/zh_TW/LC_MESSAGES/plasmaactivitymanager.mo
 share/metainfo/org.kde.desktopcontainment.appdata.xml
 share/metainfo/org.kde.desktoptoolbox.appdata.xml
 share/metainfo/org.kde.paneltoolbox.appdata.xml
+share/metainfo/org.kde.panel.appdata.xml
 share/metainfo/org.kde.plasma.desktop.appdata.xml
 share/metainfo/org.kde.plasma.desktop.appmenubar.appdata.xml
 share/metainfo/org.kde.plasma.desktop.defaultPanel.appdata.xml
