@@ -163,7 +163,7 @@
     SUBDIR += kdenlive
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kissdx
-    SUBDIR += kmplayer-kde4
+    SUBDIR += kmplayer
     SUBDIR += kodi
     SUBDIR += kplayer-kde4
     SUBDIR += kvazaar

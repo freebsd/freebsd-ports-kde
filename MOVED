@@ -9554,3 +9554,4 @@ x11/yakuake-kde4|x11/yakuake|2017-05-23|Renamed to drop -kde4 suffix
 x11/kde4|x11/kde|2017-05-23|Replace kde4 metaport with kde metaport
 x11/kde5|x11/kde|2017-05-23|Ship only one version of kde metaport
 x11/kde4-runtime|x11/kde-runtime|2017-05-23|Give port it's proper name
+multimedia/kmplayer-kde4|multimedia/kmplayer|2017-05-23|Don't use -kde4 suffix
