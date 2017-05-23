@@ -9391,3 +9391,163 @@ games/ioquake3-devel|games/ioquake3|2017-05-18|GitHub master is the new release 
 games/ioquake3-devel-server|games/ioquake3-server|2017-05-18|GitHub master is the new release model
 devel/rubygem-generator_spec|devel/rubygem-generator_spec-rails5|2017-05-19|Use devel/rubygem-generator_spec-rails4 or devel/rubygem-generator_spec-rails5
 deskutils/openproj|deskutils/projectlibre|2017-05-19|Has expired: Development ceased, superseded by deskutils/projectlibre
+arabic/kde4-l10n|arabic/kde-l10n|2017-05-23|Renamed to be less confusing
+chinese/kde4-l10n-zh_TW|chinese/kde-l10n-zh_TW|2017-05-23|Renamed to be less confusing
+chinese/kde4-l10n-zh_CN|chinese/kde-l10n-zh_CN|2017-05-23|Renamed to be less confusing
+french/kde4-l10n|french/kde-l10n|2017-05-23|Renamed to be less confusing
+german/kde4-l10n|german/kde-l10n|2017-05-23|Renamed to be less confusing
+graphics/digikam-kde4-l10n|graphics/digikam-kde-l10n|2017-05-23|Renamed to be less confusing
+hebrew/kde4-l10n|hebrew/kde-l10n|2017-05-23|Renamed to be less confusing
+hungarian/kde4-l10n|hungarian/kde-l10n|2017-05-23|Renamed to be less confusing
+japanese/kde4-l10n|japanese/kde-l10n|2017-05-23|Renamed to be less confusing
+korean/kde4-l10n|korean/kde-l10n|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-gl|misc/kde-l10n-gl|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-es|misc/kde-l10n-es|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-wa|misc/kde-l10n-wa|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-bg|misc/kde-l10n-bg|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-bs|misc/kde-l10n-bs|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-et|misc/kde-l10n-et|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-pa|misc/kde-l10n-pa|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-hr|misc/kde-l10n-hr|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ga|misc/kde-l10n-ga|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-nb|misc/kde-l10n-nb|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ug|misc/kde-l10n-ug|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ia|misc/kde-l10n-ia|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-nl|misc/kde-l10n-nl|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-lt|misc/kde-l10n-lt|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n|misc/kde-l10n|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-km|misc/kde-l10n-km|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-fa|misc/kde-l10n-fa|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-cs|misc/kde-l10n-cs|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-id|misc/kde-l10n-id|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-lv|misc/kde-l10n-lv|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-eu|misc/kde-l10n-eu|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-sv|misc/kde-l10n-sv|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-fi|misc/kde-l10n-fi|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-el|misc/kde-l10n-el|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-nn|misc/kde-l10n-nn|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-nds|misc/kde-l10n-nds|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-mr|misc/kde-l10n-mr|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-da|misc/kde-l10n-da|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-is|misc/kde-l10n-is|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-en_GB|misc/kde-l10n-en_GB|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-sk|misc/kde-l10n-sk|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-tr|misc/kde-l10n-tr|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-hi|misc/kde-l10n-hi|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-sr|misc/kde-l10n-sr|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-sl|misc/kde-l10n-sl|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-kk|misc/kde-l10n-kk|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-it|misc/kde-l10n-it|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ro|misc/kde-l10n-ro|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ca_valencia|misc/kde-l10n-ca_valencia|2017-05-23|Renamed to be less confusing
+misc/kde4-l10n-ca|misc/kde-l10n-ca|2017-05-23|Renamed to be less confusing
+polish/kde4-l10n|polish/kde-l10n|2017-05-23|Renamed to be less confusing
+portuguese/kde4-l10n-pt_BR|portuguese/kde-l10n-pt_BR|2017-05-23|Renamed to be less confusing
+portuguese/kde4-l10n|portuguese/kde-l10n|2017-05-23|Renamed to be less confusing
+russian/kde4-l10n|russian/kde-l10n|2017-05-23|Renamed to be less confusing
+ukrainian/kde4-l10n|ukrainian/kde-l10n|2017-05-23|Renamed to be less confusing
+vietnamese/kde4-l10n|vietnamese/kde-l10n|2017-05-23|Renamed to be less confusing
+chinese/calligra-l10n-zh_TW|editors/calligra|2017-05-23|Reintegrated into one port
+chinese/calligra-l10n-zh_CN|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-kk|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-it|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-ca|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-da|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-sk|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-tr|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-el|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-sv|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-fi|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-ca_valencia|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-cs|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-nl|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-en_GB|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-bs|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-et|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-nb|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-gl|editors/calligra|2017-05-23|Reintegrated into one port
+editors/calligra-l10n-es|editors/calligra|2017-05-23|Reintegrated into one port
+french/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+german/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+hungarian/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+japanese/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+polish/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+portuguese/calligra-l10n-pt_BR|editors/calligra|2017-05-23|Reintegrated into one port
+portuguese/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+russian/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+ukrainian/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
+graphics/digikam-kde4|graphics/digikam|2017-05-23|Renamed to drop -kde4 suffix
+graphics/digikam-kde4-l10n|graphics/digikam|2017-05-23|Reintegrated into one port
+graphics/digikam-kde4-doc|graphics/digikam|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-acquireimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-advancedslideshow/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-batchprocess/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-calendar/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-debianscreenshots/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-dngconverter/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-dropbox/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-expoblending/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-facebook/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-flashexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-flickrexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-galleryexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-googleservices/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-gpssync/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-htmlexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imageshackexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imageviewer/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imgurexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-ipodexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-jalbumexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-jpeglossless/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kioexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kmlexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kopete/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-mediawiki/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-metadataedit/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-panorama/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-photolayoutseditor/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-piwigoexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-printimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-rajceexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-rawconverter/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-removeredeyes/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-sendimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-shwup/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-smug/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-timeadjust/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-videoslideshow/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-vkontakte/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-yandexfotki/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugins-kde4/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+accessibility/kdeaccessibility4|accessibility/kdeaccessibility|2017-05-23|Renamed to drop -kde4 suffix
+audio/kio-audiocd|audio/audiocd-kio|2017-05-23|Use proper name of package
+devel/kdebindings4||2017-05-23|EOL
+devel/kdesdk4-thumbnailers|devel/kdesdk-thumbnailers|2017-05-23|Renamed to drop -kde4 suffix
+devel/kdesdk4|devel/kdesdk|2017-05-23|Renamed to drop -kde4 suffix
+devel/kdesdk4-kioslaves||2017-05-23|EOL
+devel/kdesdk4-strigi-analyzers||2017-05-23|EOL
+devel/kdesvn-kde4|devel/kdesvn|2017-05-23|Renamed to drop -kde4 suffix
+devel/kdevelop-kde4|devel/kdevelop|2017-05-23|Renamed to drop -kde4 suffix
+editors/kate-plugin-pate||2017-05-23|Not compatible with modern kate
+editors/kile-kde4|editors/kile|2017-05-23|Renamed to drop -kde4 suffix
+graphics/gwenview-kde4|graphics/gwenview|2017-05-23|Renamed to drop -kde4 suffix
+graphics/kamera-kde4|graphics/kamera|2017-05-23|Renamed to drop -kde4 suffix
+graphics/kphotoalbum-kde4|graphics/kphotoalbum|2017-05-23|Renamed to drop -kde4 suffix
+irc/konversation-kde4|irc/konversation|2017-05-23|Renamed to drop -kde4 suffix
+misc/kdeedu4|misc/kdeedu|2017-05-23|Renamed to drop -kde4 suffix
+misc/kdeutils4|misc/kdeutils|2017-05-23|Renamed to drop -kde4 suffix
+multimedia/kdemultimedia4-ffmpegthumbs|multimedia/kdemultimedia-ffmpegthumbs|2017-05-23|Renamed to drop -kde4 suffix
+multimedia/kdemultimedia4|multimedia/kdemultimedia|2017-05-23|Renamed to drop -kde4 suffix
+multimedia/kdemultimedia4-mplayerthumbs||2017-05-23|EOL
+net-im/kopete-kde4|net-im/kopete|2017-05-23|Renamed to drop -kde4 suffix
+net-im/ktp-kded-integration-module|net-im/ktp-kded-module|2017-05-23|Renamed upstream
+net/kdenetwork4-filesharing|net/kdenetwork-filesharing|2017-05-23|Renamed to drop -kde4 suffix
+net/kdenetwork4|net/kdenetwork|2017-05-23|Renamed to drop -kde4 suffix
+net/kdenetwork4-strigi-analyzers||2017-05-23|EOL
+sysutils/filelight-kde4|sysutils/filelight|2017-05-23|Renamed to drop -kde4 suffix
+sysutils/k3b-kde4|sysutils/k3b|2017-05-23|Renamed to drop -kde4 suffix
+sysutils/kdeadmin4|sysutils/kdeadmin|2017-05-23|Renamed to drop -kde4 suffix
+x11-clocks/kdetoys4|x11-clocks/kdetoys|2017-05-23|Renamed to drop -kde4 suffix
+x11/yakuake-kde4|x11/yakuake|2017-05-23|Renamed to drop -kde4 suffix
