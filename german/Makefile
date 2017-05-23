@@ -7,7 +7,6 @@
     SUBDIR += alt-aspell
     SUBDIR += aspell
     SUBDIR += bugzilla44
-    SUBDIR += calligra-l10n
     SUBDIR += dict
     SUBDIR += ding
     SUBDIR += dtaus
@@ -18,7 +17,7 @@
     SUBDIR += hyphen
     SUBDIR += jdictionary-eng-ger
     SUBDIR += jdictionary-ger-hun
-    SUBDIR += kde4-l10n
+    SUBDIR += kde-l10n
     SUBDIR += libreoffice
     SUBDIR += mediathekview
     SUBDIR += mythes

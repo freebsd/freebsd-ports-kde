@@ -24,7 +24,6 @@
     SUBDIR += bookview
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
-    SUBDIR += calligra-l10n
     SUBDIR += canna-lib
     SUBDIR += canna-server
     SUBDIR += cannadic
@@ -141,7 +140,7 @@
     SUBDIR += kbanner
     SUBDIR += kcc
     SUBDIR += kcode
-    SUBDIR += kde4-l10n
+    SUBDIR += kde-l10n
     SUBDIR += kdrill
     SUBDIR += kinput2
     SUBDIR += kiten

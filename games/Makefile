@@ -473,7 +473,7 @@
     SUBDIR += kbounce
     SUBDIR += kbreakout
     SUBDIR += kcheckers
-    SUBDIR += kdegames4
+    SUBDIR += kdegames
     SUBDIR += kdiamond
     SUBDIR += kevedit
     SUBDIR += kfourinline
@@ -527,6 +527,7 @@
     SUBDIR += libggz
     SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
+    SUBDIR += libkdegames-kde4
     SUBDIR += libkmahjongg
     SUBDIR += liblcf
     SUBDIR += libmaitretarot

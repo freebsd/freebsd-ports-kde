@@ -5,7 +5,6 @@
 
     SUBDIR += aspell
     SUBDIR += aster
-    SUBDIR += calligra-l10n
     SUBDIR += eficas
     SUBDIR += eric6
     SUBDIR += fortune-mod-zarathoustra
@@ -15,7 +14,7 @@
     SUBDIR += hunspell
     SUBDIR += hyphen
     SUBDIR += jdictionary-fre-hun
-    SUBDIR += kde4-l10n
+    SUBDIR += kde-l10n
     SUBDIR += libreoffice
     SUBDIR += med
     SUBDIR += mythes

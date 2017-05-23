@@ -42,6 +42,7 @@
     SUBDIR += audacity
     SUBDIR += audex
     SUBDIR += audiere
+    SUBDIR += audiocd-kio
     SUBDIR += audiotag
     SUBDIR += aumix
     SUBDIR += autocd
@@ -343,11 +344,11 @@
     SUBDIR += kid3-kde4
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
-    SUBDIR += kio-audiocd
     SUBDIR += kmix
     SUBDIR += kscd
     SUBDIR += ksmp3play
     SUBDIR += kstreamripper
+    SUBDIR += kwave
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
@@ -384,7 +385,9 @@
     SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libkcddb
+    SUBDIR += libkcddb-kde4
     SUBDIR += libkcompactdisc
+    SUBDIR += libkcompactdisc-kde4
     SUBDIR += liblastfm
     SUBDIR += liblo
     SUBDIR += liblscp
@@ -607,6 +610,7 @@
     SUBDIR += pianobar
     SUBDIR += picard
     SUBDIR += pithos
+    SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi

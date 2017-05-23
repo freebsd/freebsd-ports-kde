@@ -14,6 +14,7 @@
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
+    SUBDIR += akonadi-kde4
     SUBDIR += animenfo-client
     SUBDIR += animenfo-client-gtk
     SUBDIR += apq
@@ -124,6 +125,8 @@
     SUBDIR += jrobin
     SUBDIR += jrrd
     SUBDIR += kbibtex
+    SUBDIR += kdb
+    SUBDIR += kexi
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ldb
@@ -944,6 +947,7 @@
     SUBDIR += rubygem-tarantool
     SUBDIR += sfcgal
     SUBDIR += sharedance
+    SUBDIR += sink
     SUBDIR += skytools
     SUBDIR += slony1v2
     SUBDIR += soci

@@ -6,7 +6,6 @@
     SUBDIR += artwiz-ru
     SUBDIR += aspell
     SUBDIR += bugzilla44
-    SUBDIR += calligra-l10n
     SUBDIR += d1489
     SUBDIR += emkatic
     SUBDIR += eric6
@@ -16,7 +15,7 @@
     SUBDIR += hunspell
     SUBDIR += hyphen
     SUBDIR += ircd-hybrid
-    SUBDIR += kde4-l10n
+    SUBDIR += kde-l10n
     SUBDIR += koi2koi
     SUBDIR += koi8r-ps
     SUBDIR += libreoffice

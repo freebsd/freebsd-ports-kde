@@ -286,8 +286,10 @@
     SUBDIR += keynote
     SUBDIR += keyprint
     SUBDIR += kf5-kdesu
+    SUBDIR += kgpg
     SUBDIR += kgpg-kde4
     SUBDIR += kickpass
+    SUBDIR += kleopatra
     SUBDIR += knock
     SUBDIR += knocker
     SUBDIR += kpcli
@@ -300,6 +302,7 @@
     SUBDIR += kripp
     SUBDIR += kstart
     SUBDIR += kwalletmanager
+    SUBDIR += kwalletmanager-kde4
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
     SUBDIR += l5
@@ -319,6 +322,7 @@
     SUBDIR += libgpg-error
     SUBDIR += libgringotts
     SUBDIR += libident
+    SUBDIR += libkleo
     SUBDIR += libkpass
     SUBDIR += libksba
     SUBDIR += libmcrypt
@@ -811,6 +815,9 @@
     SUBDIR += pkesh
     SUBDIR += pks
     SUBDIR += pktsuckers
+    SUBDIR += plasma5-ksshaskpass
+    SUBDIR += plasma5-kwallet-pam
+    SUBDIR += plasma5-kscreenlocker
     SUBDIR += please
     SUBDIR += polarssl13
     SUBDIR += poly1305aes

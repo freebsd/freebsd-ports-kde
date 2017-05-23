@@ -93,6 +93,7 @@
     SUBDIR += kf5-kxmlgui
     SUBDIR += kirigami
     SUBDIR += kirigami2
+    SUBDIR += kproperty
     SUBDIR += lesstif
     SUBDIR += libXaw
     SUBDIR += libXmu
@@ -191,6 +192,7 @@
     SUBDIR += pangox-compat
     SUBDIR += pangoxsl
     SUBDIR += phat
+    SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += pure-gtk
     SUBDIR += pure-tk

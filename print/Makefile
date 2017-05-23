@@ -183,6 +183,7 @@
     SUBDIR += pmw
     SUBDIR += pnm2ppa
     SUBDIR += poster
+    SUBDIR += print-manager
     SUBDIR += ps2eps
     SUBDIR += pscal
     SUBDIR += psdim

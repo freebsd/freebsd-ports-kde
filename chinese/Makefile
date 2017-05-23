@@ -19,8 +19,6 @@
     SUBDIR += bsdconv-opencc
     SUBDIR += bug5
     SUBDIR += c2t
-    SUBDIR += calligra-l10n-zh_CN
-    SUBDIR += calligra-l10n-zh_TW
     SUBDIR += cconv
     SUBDIR += celvis
     SUBDIR += chiconv
@@ -55,8 +53,8 @@
     SUBDIR += ibus-pinyin
     SUBDIR += jis2gb
     SUBDIR += kcfonts
-    SUBDIR += kde4-l10n-zh_CN
-    SUBDIR += kde4-l10n-zh_TW
+    SUBDIR += kde-l10n-zh_CN
+    SUBDIR += kde-l10n-zh_TW
     SUBDIR += libchewing
     SUBDIR += libpinyin
     SUBDIR += libreoffice-zh_CN

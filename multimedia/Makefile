@@ -158,9 +158,8 @@
     SUBDIR += jmref
     SUBDIR += k9copy-kde4
     SUBDIR += kaffeine
-    SUBDIR += kdemultimedia4
-    SUBDIR += kdemultimedia4-ffmpegthumbs
-    SUBDIR += kdemultimedia4-mplayerthumbs
+    SUBDIR += kdemultimedia
+    SUBDIR += kdemultimedia-ffmpegthumbs
     SUBDIR += kdenlive
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kissdx
@@ -303,6 +302,7 @@
     SUBDIR += php-pHash
     SUBDIR += pitivi
     SUBDIR += playd
+    SUBDIR += plasma5-plasma-mediacenter
     SUBDIR += plexhometheater
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass

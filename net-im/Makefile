@@ -41,17 +41,20 @@
     SUBDIR += jggtrans
     SUBDIR += jitsi
     SUBDIR += kde-telepathy
+    SUBDIR += kaccounts-integration
+    SUBDIR += kaccounts-providers
     SUBDIR += kmess-kde4
-    SUBDIR += kopete-kde4
+    SUBDIR += kopete
     SUBDIR += ktp-accounts-kcm
     SUBDIR += ktp-approver
     SUBDIR += ktp-auth-handler
+    SUBDIR += ktp-call-ui
     SUBDIR += ktp-common-internals
     SUBDIR += ktp-contact-list
     SUBDIR += ktp-contact-runner
     SUBDIR += ktp-desktop-applets
     SUBDIR += ktp-filetransfer-handler
-    SUBDIR += ktp-kded-integration-module
+    SUBDIR += ktp-kded-module
     SUBDIR += ktp-send-file
     SUBDIR += ktp-text-ui
     SUBDIR += libaccounts-glib
@@ -63,6 +66,7 @@
     SUBDIR += libnice-gst1
     SUBDIR += libpurple
     SUBDIR += libqtelegram-ae
+    SUBDIR += libsignon-glib
     SUBDIR += libstrophe
     SUBDIR += libtelepathy
     SUBDIR += libyahoo2
@@ -167,6 +171,7 @@
     SUBDIR += telegram
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
+    SUBDIR += telepathy-accounts-signon
     SUBDIR += telepathy-butterfly
     SUBDIR += telepathy-farsight
     SUBDIR += telepathy-farstream
@@ -176,6 +181,7 @@
     SUBDIR += telepathy-idle
     SUBDIR += telepathy-logger
     SUBDIR += telepathy-logger-qt4
+    SUBDIR += telepathy-logger-qt5
     SUBDIR += telepathy-mission-control
     SUBDIR += telepathy-python
     SUBDIR += telepathy-qt4

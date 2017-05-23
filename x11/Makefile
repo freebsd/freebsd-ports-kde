@@ -117,7 +117,8 @@
     SUBDIR += kb2mb2
     SUBDIR += kbproto
     SUBDIR += kde4
-    SUBDIR += kde4-baseapps
+    SUBDIR += kde5
+    SUBDIR += kde-baseapps
     SUBDIR += kde4-runtime
     SUBDIR += kde4-workspace
     SUBDIR += kdelibs4
@@ -125,6 +126,7 @@
     SUBDIR += keybinder-gtk3
     SUBDIR += keyboardcast
     SUBDIR += keylaunch
+    SUBDIR += kf5-kactivities-stats
     SUBDIR += kf5-frameworkintegration
     SUBDIR += kf5-frameworks
     SUBDIR += kf5-kactivities
@@ -252,6 +254,15 @@
     SUBDIR += pixman
     SUBDIR += plasma-scriptengine-python
     SUBDIR += plasma-scriptengine-ruby
+    SUBDIR += plasma5-kactivitymanagerd
+    SUBDIR += plasma5-kgamma5
+    SUBDIR += plasma5-kscreen
+    SUBDIR += plasma5-kwayland-integration
+    SUBDIR += plasma5-libkscreen
+    SUBDIR += plasma5-plasma
+    SUBDIR += plasma5-plasma-desktop
+    SUBDIR += plasma5-plasma-integration
+    SUBDIR += plasma5-plasma-workspace
     SUBDIR += presentproto
     SUBDIR += printproto
     SUBDIR += printscreen
@@ -286,6 +297,7 @@
     SUBDIR += sbxkb
     SUBDIR += scripts
     SUBDIR += scrnsaverproto
+    SUBDIR += sddm
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap
@@ -517,7 +529,7 @@
     SUBDIR += xxkb
     SUBDIR += xzoom
     SUBDIR += yad
-    SUBDIR += yakuake-kde4
+    SUBDIR += yakuake
     SUBDIR += yalias
     SUBDIR += yeahconsole
     SUBDIR += yelp
