@@ -4735,7 +4735,6 @@ sysutils/kmilo||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/knutclient||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/komparator||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/krename||2013-07-26|Has expired: Depends on Qt 3.x
-sysutils/kshutdown||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/ksynaptics||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/lineak-kdeplugins||2013-07-26|Has expired: Depends on Qt 3.x
 sysutils/luma||2013-07-26|Has expired: Depends on Qt 3.x
@@ -9557,3 +9556,4 @@ x11/kde4-runtime|x11/kde-runtime|2017-05-23|Give port it's proper name
 multimedia/kmplayer-kde4|multimedia/kmplayer|2017-05-23|Don't use -kde4 suffix
 deskutils/kdeplasma-addons||2017-05-23|EOL
 games/knights-kde|games/knights|2017-05-23|Don't use -kde4 suffix
+sysutils/kshutdown-kde4|sysutils/kshutdown|2017-05-23|Don't use -kde4 suffix

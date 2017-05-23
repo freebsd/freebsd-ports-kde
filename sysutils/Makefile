@@ -518,7 +518,7 @@
     SUBDIR += kldpatch
     SUBDIR += knutclient-kde4
     SUBDIR += krename-kde4
-    SUBDIR += kshutdown-kde4
+    SUBDIR += kshutdown
     SUBDIR += ksysguardd
     SUBDIR += ksystemlog
     SUBDIR += kuser
