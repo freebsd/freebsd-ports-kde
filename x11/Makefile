@@ -118,7 +118,7 @@
     SUBDIR += kbproto
     SUBDIR += kde
     SUBDIR += kde-baseapps
-    SUBDIR += kde4-runtime
+    SUBDIR += kde-runtime
     SUBDIR += kde4-workspace
     SUBDIR += kdelibs4
     SUBDIR += keybinder
