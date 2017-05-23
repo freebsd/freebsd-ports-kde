@@ -139,7 +139,6 @@
     SUBDIR += kdepim4
     SUBDIR += kdepim4-runtime
     SUBDIR += kdepimlibs4
-    SUBDIR += kdeplasma-addons
     SUBDIR += keditbookmarks
     SUBDIR += kfind
     SUBDIR += kjots

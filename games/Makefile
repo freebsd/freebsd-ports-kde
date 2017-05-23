@@ -492,7 +492,7 @@
     SUBDIR += kmines
     SUBDIR += knavalbattle
     SUBDIR += knetwalk
-    SUBDIR += knights-kde4
+    SUBDIR += knights
     SUBDIR += kobodeluxe
     SUBDIR += kolf
     SUBDIR += kollision
