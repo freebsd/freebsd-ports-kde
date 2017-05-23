@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	yawp
 PORTVERSION=	0.4.5
 PORTREVISION=	6

@@ -1,6 +1,8 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	fancytasks
 PORTVERSION=	1.1.0
 PORTREVISION=	7
