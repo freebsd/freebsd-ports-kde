@@ -1,7 +1,7 @@
 # Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kde5/Makefile 13975 2017-04-27 14:52:14Z tcberner $
 
-PORTNAME=	kde5
+PORTNAME=	kde
 PORTVERSION=	${KDE_PLASMA_VERSION}
 PORTREVISION=	2
 CATEGORIES=	x11 kde # kde-plasma

@@ -9551,3 +9551,5 @@ sysutils/k3b-kde4|sysutils/k3b|2017-05-23|Renamed to drop -kde4 suffix
 sysutils/kdeadmin4|sysutils/kdeadmin|2017-05-23|Renamed to drop -kde4 suffix
 x11-clocks/kdetoys4|x11-clocks/kdetoys|2017-05-23|Renamed to drop -kde4 suffix
 x11/yakuake-kde4|x11/yakuake|2017-05-23|Renamed to drop -kde4 suffix
+x11/kde4|x11/kde|2017-04-23|Replace kde4 metaport with kde metaport
+x1+/kde5|x11/kde|2017-04-23|Ship only one version of kde metaport

@@ -116,8 +116,7 @@
     SUBDIR += kactivitymanagerd
     SUBDIR += kb2mb2
     SUBDIR += kbproto
-    SUBDIR += kde4
-    SUBDIR += kde5
+    SUBDIR += kde
     SUBDIR += kde-baseapps
     SUBDIR += kde4-runtime
     SUBDIR += kde4-workspace
