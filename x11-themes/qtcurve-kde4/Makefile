@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	qtcurve
 PORTREVISION=	1
 

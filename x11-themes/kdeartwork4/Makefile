@@ -1,6 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD: head/x11-themes/kdeartwork4/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	kdeartwork
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-themes kde kde-applications

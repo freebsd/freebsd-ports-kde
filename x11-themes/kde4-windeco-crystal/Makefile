@@ -1,6 +1,8 @@
 # Created by: decept
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	crystal
 PORTVERSION=	2.2.1
 PORTREVISION=	5

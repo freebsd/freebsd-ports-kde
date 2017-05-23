@@ -1,6 +1,8 @@
 # Created by: Steve Wills <steve@mouf.net>
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	bespin
 PORTVERSION=	201303202227
 PORTREVISION=	5

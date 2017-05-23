@@ -13,11 +13,10 @@ USES=		metaport
 # There is no NO_PATCH
 PATCHDIR=	${MASTERDIR}/none
 
-OPTIONS_DEFINE=	GTK2 KDE4 QT4 QT5
+OPTIONS_DEFINE=	GTK2 QT4 QT5
 OPTIONS_DEFAULT:=	${OPTIONS_DEFINE}
 
 GTK2_RUN_DEPENDS=	gtk2-qtcurve-theme>=1.8.18:x11-themes/qtcurve-gtk2
-KDE4_RUN_DEPENDS=	kde4-style-qtcurve>=1.8.18:x11-themes/qtcurve-kde4
 QT4_RUN_DEPENDS=	qt4-style-qtcurve>=1.8.18:x11-themes/qtcurve-qt4
 QT5_RUN_DEPENDS=	qt5-style-qtcurve>=1.8.18:x11-themes/qtcurve-qt5
 
@@ -31,15 +30,14 @@ GH_ACCOUNT=	QtCurve
 USES=		compiler:c++11-lib cmake execinfo pkgconfig
 USE_XORG=	x11 xcb
 
-.for i in gtk2 kde4 qt4 qt5
+.for i in gtk2 qt4 qt5
 WITH_${i}=	Off
 .endfor
 WITH_${QTCURVE_SLAVE}=	On
 
 CMAKE_ARGS+=	-DENABLE_GTK2=${WITH_gtk2} \
 		-DENABLE_QT4=${WITH_qt4} \
-		-DENABLE_QT5=${WITH_qt5} \
-		-DQTC_QT4_ENABLE_KDE=${WITH_kde4}
+		-DENABLE_QT5=${WITH_qt5}
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 BUILD_WRKSRC=	${WRKSRC}/${QTCURVE_SLAVE}
@@ -69,15 +67,6 @@ USE_LDCONFIG=	yes
 post-install:
 	@(cd ${WRKSRC}/lib/cairo && \
 		${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
-.endif
-
-.if ${QTCURVE_SLAVE} == "kde4"
-WITH_qt4=	On # required for KDE 4
-PKGNAMEPREFIX=	kde4-style-
-USE_KDE=	kdelibs workspace automoc4
-USES+=		kde:4
-USE_QT4=	moc_build qmake_build rcc_build uic_build
-BUILD_WRKSRC=	${WRKSRC}/qt4
 .endif
 
 .if ${QTCURVE_SLAVE} == "qt4"

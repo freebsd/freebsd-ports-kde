@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	ktux
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-clocks kde kde-applications

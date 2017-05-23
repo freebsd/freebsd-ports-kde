@@ -1,6 +1,8 @@
 # Created by: Gvozdikov Veniamin <g.veniamin@googlemail.com>
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	dekorator
 PORTVERSION=	0.5.1
 PORTREVISION=	7

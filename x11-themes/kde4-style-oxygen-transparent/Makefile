@@ -1,6 +1,8 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
 # $FreeBSD$
 
+IGNORE=		kde4-workspace is EOL
+
 PORTNAME=	oxygen-transparent
 PORTVERSION=	2014.03.10
 PORTREVISION=	3
