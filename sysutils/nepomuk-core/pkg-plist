@@ -124,7 +124,6 @@ lib/cmake/NepomukCore/NepomukCoreTargetsWithPrefix.cmake
 lib/kde4/nepomukepubextractor.so
 lib/kde4/nepomukexiv2extractor.so
 lib/kde4/nepomukffmpegextractor.so
-lib/kde4/nepomukmobiextractor.so
 lib/kde4/nepomukodfextractor.so
 lib/kde4/nepomukoffice2007extractor.so
 lib/kde4/nepomukofficeextractor.so
@@ -167,7 +166,6 @@ share/kde4/services/nepomukexiv2extractor.desktop
 share/kde4/services/nepomukffmpegextractor.desktop
 share/kde4/services/nepomukfileindexer.desktop
 share/kde4/services/nepomukfilewatch.desktop
-share/kde4/services/nepomukmobiextractor.desktop
 share/kde4/services/nepomukodfextractor.desktop
 share/kde4/services/nepomukoffice2007extractor.desktop
 share/kde4/services/nepomukofficeextractor.desktop
