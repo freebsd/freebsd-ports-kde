@@ -355,7 +355,7 @@ pykdeuic4_TYPE=		run
 qtruby_PORT=		devel/ruby-qtruby
 qtruby_LIB=		libqtruby4shared.so
 
-runtime_PORT=		x11/kde4-runtime
+runtime_PORT=		x11/kde-runtime
 runtime_PATH=		${KDE_PREFIX}/bin/knotify4
 runtime_TYPE=		run
 
