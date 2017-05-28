@@ -24,11 +24,8 @@ CMAKE_ARGS+=	-DENABLE_PAM:BOOL=FALSE
 
 USE_RC_SUBR=	sddm
 
-# Add the follwowing to $PORTSDIRS/UIDs resp $PORTSDIR/GIDs
-# UIDs:sddm:*:161:161::0:0:SDDM Display Manager user:/usr/local/etc/sddm/home:/usr/sbin/nologin
-# GIDs:sddm:*:161:
-#USERS=		sddm
-#GROUPS=		sddm
+USERS=		sddm
+GROUPS=		sddm
 
 USE_GITHUB=	yes
 
