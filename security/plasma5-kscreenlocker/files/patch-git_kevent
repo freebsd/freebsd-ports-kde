@@ -1,0 +1,252 @@
+From fd4f7b0fb49b14284500c944e75e6d0413ba5e23 Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@gmail.com>
+Date: Fri, 12 May 2017 21:48:29 +0200
+Subject: [PATCH] kcheckpass: Add support in for non-Linux platforms via
+ kevent.
+
+Summary:
+* signalfd() is a Linux specific api:
+  SIGNALFD(2):
+  ```
+  CONFORMING TO         top
+
+       signalfd() and signalfd4() are Linux-specific.
+   ```
+* FreeBSD and OSX and others can use the widely available kevent/kqueue api for a similar effect.
+
+We let the kernel notify us via kevent() [1], if there is a SIGUSR1 or SIGUSR2, and then fetch the signal using sigwaitinf() [2].
+
+[1] https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2
+[2] https://www.freebsd.org/cgi/man.cgi?query=sigwaitinfo&sektion=2
+
+Note: I still have to test this modified version =)
+
+Reviewers: #freebsd, graesslin
+
+Subscribers: plasma-devel
+
+Tags: #plasma
+
+Differential Revision: https://phabricator.kde.org/D5825
+---
+ CMakeLists.txt               |  14 ++++++
+ config-kscreenlocker.h.cmake |   2 +
+ greeter/authenticator.cpp    |   1 +
+ kcheckpass/kcheckpass.c      | 101 ++++++++++++++++++++++++++++++++++++++++++-
+ 4 files changed, 117 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 10d9785..be38f8b 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -33,6 +33,20 @@ add_feature_info("prctl/procctl tracing control"
+                  CAN_DISABLE_PTRACE
+                  "Required for disallowing ptrace on greeter and kcheckpass process")
+
++check_include_file("sys/signalfd.h" HAVE_SIGNALFD_H)
++if (NOT HAVE_SIGNALFD_H)
++    check_include_file("sys/event.h" HAVE_EVENT_H)
++endif ()
++if (NOT (HAVE_SIGNALFD_H OR HAVE_EVENT_H))
++    message(FATAL_ERROR "kcheckpass either needs signalfd() or kevent()&sigtimedwait() to work")
++endif ()
++add_feature_info("sys/signalfd.h"
++                 HAVE_SIGNALFD_H
++                 "Use the signalfd() api for signalhandling")
++add_feature_info("sys/event.h"
++                 HAVE_EVENT_H
++                 "Use the kevent() and sigwaitinfo() api for signalhandling")
++
+ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+                     Crash
+                     Declarative
+diff --git a/config-kscreenlocker.h.cmake b/config-kscreenlocker.h.cmake
+index 276e272..8cd536a 100644
+--- config-kscreenlocker.h.cmake
++++ config-kscreenlocker.h.cmake
+@@ -13,3 +13,5 @@
+ #cmakedefine01 HAVE_SYS_PROCCTL_H
+ #cmakedefine01 HAVE_PROC_TRACE_CTL
+ #cmakedefine01 HAVE_SECCOMP
++#cmakedefine01 HAVE_SIGNALFD_H
++#cmakedefine01 HAVE_EVENT_H
+diff --git a/greeter/authenticator.cpp b/greeter/authenticator.cpp
+index 63b18ce..7b1c24f 100644
+--- greeter/authenticator.cpp
++++ greeter/authenticator.cpp
+@@ -36,6 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #include <sys/socket.h>
+ #include <sys/wait.h>
+ #include <unistd.h>
++#include <signal.h>
+
+ Authenticator::Authenticator(AuthenticationMode mode, QObject *parent)
+     : QObject(parent)
+diff --git a/kcheckpass/kcheckpass.c b/kcheckpass/kcheckpass.c
+index bd18d0b..b07031c 100644
+--- kcheckpass/kcheckpass.c
++++ kcheckpass/kcheckpass.c
+@@ -56,7 +56,6 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <time.h>
+-#include <sys/signalfd.h>
+ #include <signal.h>
+
+ #include <config-kscreenlocker.h>
+@@ -67,6 +66,14 @@
+ #include <unistd.h>
+ #include <sys/procctl.h>
+ #endif
++#if HAVE_SIGNALFD_H
++#include <sys/signalfd.h>
++#endif
++#if HAVE_EVENT_H
++#include <sys/types.h>
++#include <sys/event.h>
++#include <sys/time.h>
++#endif
+
+ #define THROTTLE 3
+
+@@ -265,9 +272,18 @@ main(int argc, char **argv)
+   uid_t		uid;
+   AuthReturn	ret;
+   sigset_t signalMask;
++#if HAVE_SIGNALFD_H
+   int signalFd;
+   struct signalfd_siginfo fdsi;
+   ssize_t sigReadSize;
++#endif
++#if HAVE_EVENT_H
++  /* Event Queue */
++  int           keventQueue;
++  /* Listen for two events: SIGUSR1 and SIGUSR2 */
++  struct kevent keventEvent[2];
++  int           keventData;
++#endif
+   pid_t parentPid;
+
+   parentPid = getppid();
+@@ -346,15 +362,50 @@ main(int argc, char **argv)
+         conv_server(ConvPutAuthError, 0);
+         return 1;
+     }
++#if HAVE_SIGNALFD_H
+     signalFd = signalfd(-1, &signalMask, SFD_CLOEXEC);
+     if (signalFd == -1) {
+         message("Signal fd failed\n");
+         conv_server(ConvPutAuthError, 0);
+         return 1;
+     }
++#endif
++#if HAVE_EVENT_H
++    /* Setup the kequeu */
++    keventQueue = kqueue();
++    if (keventQueue == -1) {
++        message("Failed to create kqueue for SIGUSR1\n");
++        conv_server(ConvPutAuthError, 0);
++        return 1;
++    }
++    /* Setup the events */
++    EV_SET(&keventEvent[0], SIGUSR1, EVFILT_SIGNAL, EV_ADD, 0, 0, NULL);
++    EV_SET(&keventEvent[1], SIGUSR2, EVFILT_SIGNAL, EV_ADD, 0, 0, NULL);
++    int setupResult = kevent(keventQueue, &keventEvent, 2, NULL, 0, NULL);
++    if (setupResult == -1) {
++        message("Failed to attach event to the kqueue\n");
++        conv_server(ConvPutAuthError, 0);
++        return 1;
++    }
++    if (keventEvent[0].flags & EV_ERROR) {
++        message("Error in kevent for SIGUSR1: %s\n", strerror(keventEvent[0].data));
++        conv_server(ConvPutAuthError, 0);
++        return 1;
++    }
++    if (keventEvent[1].flags & EV_ERROR) {
++        message("Error in kevent for SIGUSR2: %s\n", strerror(keventEvent[1].data));
++        conv_server(ConvPutAuthError, 0);
++        return 1;
++    }
++
++    /* signal_info for sigwaitinfo() */
++    siginfo_t signalInfo;
++
++#endif
+     // now lets block on the fd
+     for (;;) {
+         conv_server(ConvPutReadyForAuthentication, 0);
++#if HAVE_SIGNALFD_H
+         sigReadSize = read(signalFd, &fdsi, sizeof(struct signalfd_siginfo));
+         if (sigReadSize != sizeof(struct signalfd_siginfo)) {
+             message("Read wrong size\n");
+@@ -365,6 +416,44 @@ main(int argc, char **argv)
+                 message("signal from wrong process\n");
+                 continue;
+             }
++#endif
++#if HAVE_EVENT_H
++        keventData = kevent(keventQueue, NULL, 0, keventEvent, 1, NULL);
++        if ( keventData == -1 ) {
++            /* Let's figure this out in the future, shall we */
++            message("kevent() failed with %d\n", errno);
++            return 1;
++        }
++        else if ( keventData == 0 ) {
++            /* Do we need to handle timeouts? */
++            message("kevent timeout\n");
++            continue;
++        }
++        // We know we got a SIGUSR1 or SIGUSR2, so fetch it via sigwaitinfo()
++        // (otherwise, we could have used sigtimedwait() )
++        int signalReturn = sigwaitinfo(&signalMask, &signalInfo);
++        if (signalReturn < 0) {
++            if (errno == EINTR) {
++                message("sigawaitinfo() interrupted by unblocked caught signal");
++                continue;
++            }
++            else if (errno == EAGAIN) {
++                /* This should not happen, as kevent notified us about such a signal */
++                message("no signal of type USR1 or USR2 pending.");
++                continue;
++            }
++            else {
++                message("Unhandled error in sigwaitinfo()");
++                conv_server(ConvPutAuthError, 0);
++                return 1;
++            }
++        }
++        if (signalReturn == SIGUSR1) {
++            if (signalInfo.si_pid != parentPid) {
++                message("signal from wrong process\n");
++                continue;
++            }
++#endif
+             /* Now do the fandango */
+             ret = Authenticate(method,
+                                 username,
+@@ -396,12 +485,22 @@ main(int argc, char **argv)
+                 // we don't support multiple auth for setuid kcheckpass
+                 break;
+             }
++#if HAVE_SIGNALFD_H
+         } else if (fdsi.ssi_signo == SIGUSR2) {
+             if (fdsi.ssi_pid != parentPid) {
+                 message("signal from wrong process\n");
+                 continue;
+             }
+             break;
++#endif
++#if HAVE_EVENT_H
++        } else if (signalReturn == SIGUSR2 ) {
++            if (signalInfo.si_pid != parentPid) {
++                message("signal from wrong process\n");
++                continue;
++            }
++            break;
++#endif
+         } else {
+             message("unexpected signal\n");
+         }
+--
+2.13.0
+

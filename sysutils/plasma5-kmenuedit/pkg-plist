@@ -23,6 +23,8 @@ share/doc/HTML/it/kmenuedit/index.cache.bz2
 share/doc/HTML/it/kmenuedit/index.docbook
 share/doc/HTML/nl/kmenuedit/index.cache.bz2
 share/doc/HTML/nl/kmenuedit/index.docbook
+share/doc/HTML/pt/kmenuedit/index.cache.bz2
+share/doc/HTML/pt/kmenuedit/index.docbook
 share/doc/HTML/pt_BR/kmenuedit/done.png
 share/doc/HTML/pt_BR/kmenuedit/index.cache.bz2
 share/doc/HTML/pt_BR/kmenuedit/index.docbook
@@ -31,8 +33,6 @@ share/doc/HTML/pt_BR/kmenuedit/new.png
 share/doc/HTML/pt_BR/kmenuedit/reset.png
 share/doc/HTML/pt_BR/kmenuedit/selecticon.png
 share/doc/HTML/pt_BR/kmenuedit/selectinternet.png
-share/doc/HTML/sv/kmenuedit/index.cache.bz2
-share/doc/HTML/sv/kmenuedit/index.docbook
 share/doc/HTML/uk/kmenuedit/index.cache.bz2
 share/doc/HTML/uk/kmenuedit/index.docbook
 share/icons/hicolor/16x16/apps/kmenuedit.png

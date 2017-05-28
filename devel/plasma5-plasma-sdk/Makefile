@@ -17,11 +17,4 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 USE_QT5=	buildtools_build core dbus gui network qmake_build qml quick \
 		webkit widgets x11extras xml
 
-OPTIONS_DEFINE=	KDEVPLATFORM
-OPTIONS_SUB=	yes
-
-KDEVPLATFORM_LIB_DEPENDS=	libKDevPlatformInterfaces.so:devel/kdevplatform
-KDEVPLATFORM_DESC=		Build plasmate
-KDEVPLATFORM_USE=		KDE=emoticons,kdelibs4support
-
 .include <bsd.port.mk>

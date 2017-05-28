@@ -22,10 +22,10 @@ share/doc/HTML/it/systemsettings/index.cache.bz2
 share/doc/HTML/it/systemsettings/index.docbook
 share/doc/HTML/nl/systemsettings/index.cache.bz2
 share/doc/HTML/nl/systemsettings/index.docbook
+share/doc/HTML/pt/systemsettings/index.cache.bz2
+share/doc/HTML/pt/systemsettings/index.docbook
 share/doc/HTML/pt_BR/systemsettings/index.cache.bz2
 share/doc/HTML/pt_BR/systemsettings/index.docbook
-share/doc/HTML/sv/systemsettings/index.cache.bz2
-share/doc/HTML/sv/systemsettings/index.docbook
 share/doc/HTML/uk/systemsettings/index.cache.bz2
 share/doc/HTML/uk/systemsettings/index.docbook
 share/kservices5/settings-appearance-applicationstyle.desktop
@@ -47,6 +47,7 @@ share/kservices5/settings-network-bluetooth.desktop
 share/kservices5/settings-network-connectivity.desktop
 share/kservices5/settings-network-networksettings.desktop
 share/kservices5/settings-network.desktop
+share/kservices5/settings-personalization-accessibility.desktop
 share/kservices5/settings-personalization-accountdetails.desktop
 share/kservices5/settings-personalization-applications.desktop
 share/kservices5/settings-personalization-notification.desktop

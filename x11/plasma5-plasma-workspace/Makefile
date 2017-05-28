@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/plasma5-plasma-workspace/Makefile 13980 2017-04-29 09:14:58Z tcberner $
 
 PORTNAME=	plasma-workspace
-PORTVERSION=	${KDE_PLASMA_VERSION}.1
+PORTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -40,7 +40,7 @@ USE_QT5=	buildtools_build concurrent core dbus graphicaleffects gui \
 		network paths_run phonon4 printsupport qdbus qmake_build qml quick \
 		quickcontrols_run script sql testlib webkit widgets x11extras \
 		xml
-USE_XORG=	ice sm x11 xau xcb xcomposite xext xfixes xft xkbfile xrender
+USE_XORG=	ice sm x11 xau xcb xcomposite xext xfixes xft xkbfile xrender xtst
 
 CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
 

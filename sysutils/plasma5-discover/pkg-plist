@@ -88,7 +88,9 @@ share/locale/hu/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/hu/LC_MESSAGES/plasma-discover.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
 share/locale/ia/LC_MESSAGES/libdiscover.mo
+share/locale/ia/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/ia/LC_MESSAGES/plasma-discover.mo
+share/locale/ia/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
 share/locale/id/LC_MESSAGES/libdiscover.mo
 share/locale/id/LC_MESSAGES/plasma-discover.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
@@ -178,6 +180,7 @@ share/locale/sv/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/sv/LC_MESSAGES/plasma-discover.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
 share/locale/tr/LC_MESSAGES/libdiscover.mo
+share/locale/tr/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/tr/LC_MESSAGES/plasma-discover.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
 share/locale/ug/LC_MESSAGES/libdiscover.mo

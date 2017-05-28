@@ -1,7 +1,7 @@
 bin/breeze-settings5
-lib/kconf_update_bin/kde4breeze
 lib/cmake/Breeze/BreezeConfig.cmake
 lib/cmake/Breeze/BreezeConfigVersion.cmake
+lib/kconf_update_bin/kde4breeze
 %%QT_PLUGINDIR%%/kstyle_breeze_config.so
 %%QT_PLUGINDIR%%/org.kde.kdecoration2/breezedecoration.so
 %%QT_PLUGINDIR%%/styles/breeze.so
@@ -101,6 +101,7 @@ share/icons/Breeze_Snow/cursors/left_ptr_watch
 share/icons/Breeze_Snow/cursors/left_side
 share/icons/Breeze_Snow/cursors/link
 share/icons/Breeze_Snow/cursors/move
+share/icons/Breeze_Snow/cursors/n-resize
 share/icons/Breeze_Snow/cursors/no-drop
 share/icons/Breeze_Snow/cursors/not-allowed
 share/icons/Breeze_Snow/cursors/openhand
@@ -204,6 +205,7 @@ share/icons/breeze_cursors/cursors/left_ptr_watch
 share/icons/breeze_cursors/cursors/left_side
 share/icons/breeze_cursors/cursors/link
 share/icons/breeze_cursors/cursors/move
+share/icons/breeze_cursors/cursors/n-resize
 share/icons/breeze_cursors/cursors/no-drop
 share/icons/breeze_cursors/cursors/not-allowed
 share/icons/breeze_cursors/cursors/openhand
@@ -286,8 +288,8 @@ share/locale/fi/LC_MESSAGES/breeze_style_config.mo
 share/locale/fr/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/fr/LC_MESSAGES/breeze_style_config.mo
 share/locale/gl/LC_MESSAGES/breeze_kwin_deco.mo
-share/locale/he/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/gl/LC_MESSAGES/breeze_style_config.mo
+share/locale/he/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/hu/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/hu/LC_MESSAGES/breeze_style_config.mo
 share/locale/ia/LC_MESSAGES/breeze_kwin_deco.mo
@@ -351,11 +353,13 @@ share/plasma/look-and-feel/org.kde.breezedark.desktop/metadata.json
 share/wallpapers/Next/contents/images/1024x768.png
 share/wallpapers/Next/contents/images/1280x1024.png
 share/wallpapers/Next/contents/images/1280x800.png
+share/wallpapers/Next/contents/images/1366x768.png
 share/wallpapers/Next/contents/images/1440x900.png
 share/wallpapers/Next/contents/images/1600x1200.png
 share/wallpapers/Next/contents/images/1638x1024.png
 share/wallpapers/Next/contents/images/1680x1050.png
 share/wallpapers/Next/contents/images/1920x1080.png
+share/wallpapers/Next/contents/images/1920x1200.png
 share/wallpapers/Next/contents/images/2560x1440.png
 share/wallpapers/Next/contents/images/2560x1600.png
 share/wallpapers/Next/contents/images/3200x1800.png

@@ -20,7 +20,7 @@ USE_KDE=	auth bookmarks breeze codecs completion config configwidgets \
 		widgetsaddons windowsystem xmlgui
 USE_QT5=	buildtools_build core dbus gui network qmake_build widgets \
 		x11extras xml
-USE_XORG=	xcursor
+USE_XORG=	xcb xcursor
 
 SHEBANG_FILES=	src/platformtheme/fonts_akregator.pl \
 		src/platformtheme/fonts_global.pl \
