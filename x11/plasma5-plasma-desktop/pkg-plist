@@ -22,9 +22,9 @@ lib/libexec/kauth/fontinst_helper
 lib/libexec/kauth/fontinst_x11
 lib/libexec/kauth/kcmdatetimehelper
 lib/libexec/kfontprint
-lib/libexec/kimpanel-ibus-panel
-lib/libexec/kimpanel-ibus-panel-launcher
-lib/libexec/kimpanel-scim-panel
+%%IBUS%%lib/libexec/kimpanel-ibus-panel
+%%IBUS%%lib/libexec/kimpanel-ibus-panel-launcher
+%%SCIM%%lib/libexec/kimpanel-scim-panel
 lib/libexec/plasma-changeicons
 lib/libkdeinit5_kaccess.so
 lib/libkfontinst.so
