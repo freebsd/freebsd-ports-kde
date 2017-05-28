@@ -427,6 +427,7 @@
     SUBDIR += mDNSResponder
     SUBDIR += macchanger
     SUBDIR += mad_fcl
+    SUBDIR += madonctl
     SUBDIR += mailcommon
     SUBDIR += mailimporter
     SUBDIR += malo-firmware-kmod

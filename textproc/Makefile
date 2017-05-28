@@ -1291,6 +1291,7 @@
     SUBDIR += py-openpyxl
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
+    SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-pdfminer
     SUBDIR += py-pss
@@ -1519,6 +1520,7 @@
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-rails-dom-testing
     SUBDIR += rubygem-rails-dom-testing-rails5
+    SUBDIR += rubygem-rails-dom-testing-rails50
     SUBDIR += rubygem-rails-dom-testing1
     SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
@@ -1543,6 +1545,7 @@
     SUBDIR += rubygem-sanitize
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-rails-rails5
+    SUBDIR += rubygem-sass-rails-rails50
     SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sax-machine

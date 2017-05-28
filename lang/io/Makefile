@@ -3,13 +3,15 @@
 
 PORTNAME=	io
 PORTVERSION=	2015.11.11
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	lang
 
 MAINTAINER=	gahr@FreeBSD.org
 COMMENT=	Small prototype-based programming language
 
 LICENSE=	BSD3CLAUSE
+
+BROKEN_armv6=		fails to compile: ucontext.h: expected parameter declarator
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	stevedekorte

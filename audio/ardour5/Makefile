@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ardour5
-PORTVERSION=	5.8.0
-PORTREVISION=	1
+PORTVERSION=	5.9.0
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/beerml/ardour_releases/raw/master/
 # The original master side points to the latest release only:
@@ -48,7 +47,8 @@ USE_GNOME=	atk cairo cairomm gdkpixbuf2 glib20 glibmm gtk20 gtkmm24 pango
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
-BROKEN_aarch64=		Fails to configure: Could not find the program gas,as,gcc
+BROKEN_aarch64=		fails to configure: Could not find the program gas,as,gcc
+BROKEN_powerpc64=	fails to compile: configuration_variable.cc: 'strtof' is not a member of 'std'
 
 PLIST_SUB=	ARDOURVERSION=${PORTVERSION}
 

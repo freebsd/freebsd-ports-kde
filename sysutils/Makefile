@@ -916,6 +916,7 @@
     SUBDIR += py-zfs
     SUBDIR += pydf
     SUBDIR += py3-iocage
+    SUBDIR += py3-pkginfo
     SUBDIR += qchroot
     SUBDIR += qjail
     SUBDIR += qjail2

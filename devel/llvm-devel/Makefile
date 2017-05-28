@@ -51,6 +51,7 @@ OPTIONS_DEFINE_i386=	COMPILER_RT
 OPTIONS_DEFAULT=	CLANG EXTRAS LIT LLD LLDB
 OPTIONS_DEFAULT_amd64=	COMPILER_RT GOLD OPENMP
 OPTIONS_DEFAULT_i386=	COMPILER_RT
+OPTIONS_EXCLUDE_FreeBSD_10=	LLDB
 OPTIONS_SUB=	yes
 
 PLIST_FILES=
@@ -314,6 +315,12 @@ post-patch:
 	    -e 's|from lit|from lit${LLVM_SUFFIX}|' \
 	    -e 's|lit\.|lit${LLVM_SUFFIX}.|' \
 	    ${WRKSRC}/utils/lit/lit.py ${WRKSRC}/utils/lit/lit/*.py
+	${REINPLACE_CMD} -e 's,/usr/local/,${LOCALBASE}/,' \
+	    ${WRKSRC}/CMakeLists.txt
+
+post-patch-COMPILER_RT-on:
+	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-ino64
+	cd ${WRKSRC_compiler_rt} && patch < ${PATCHDIR}/compiler-rt-patch-canonical-syscalls
 
 post-build-COMPILER_RT-on:
 	${MKDIR} ${WRKDIR}/compiler-rt-build

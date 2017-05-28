@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	freebsd-doc
-PORTVERSION=	50088
+PORTVERSION=	50268
 PORTEPOCH=	1
 CATEGORIES=	misc docs
 MASTER_SITES=	LOCAL/blackend
@@ -13,7 +13,7 @@ COMMENT?=	Documentation from the FreeBSD Documentation Project
 
 BUILD_DEPENDS=	docproj>=2.0_6:textproc/docproj
 
-USES=		uidfix
+USES=		groff uidfix
 WRKSRC=		${WRKDIR}/doc
 PLIST_SUB=	DOCSDIR=${DOCBASE} \
 		DOCLANG=${DOCLANG} \
