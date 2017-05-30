@@ -1,4 +1,4 @@
-From fd4f7b0fb49b14284500c944e75e6d0413ba5e23 Mon Sep 17 00:00:00 2001
+From c2fd8526c5238085f30169fb1891ba56ee1cbda8 Mon Sep 17 00:00:00 2001
 From: "Tobias C. Berner" <tcberner@gmail.com>
 Date: Fri, 12 May 2017 21:48:29 +0200
 Subject: [PATCH] kcheckpass: Add support in for non-Linux platforms via
@@ -14,12 +14,12 @@ Summary:
    ```
 * FreeBSD and OSX and others can use the widely available kevent/kqueue api for a similar effect.
 
-We let the kernel notify us via kevent() [1], if there is a SIGUSR1 or SIGUSR2, and then fetch the signal using sigwaitinf() [2].
+We let the kernel notify us via kevent() [1], if there is a SIGUSR1 or SIGUSR2, and then fetch the signal using sigwaitinfo() [2].
 
 [1] https://www.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2
 [2] https://www.freebsd.org/cgi/man.cgi?query=sigwaitinfo&sektion=2
 
-Note: I still have to test this modified version =)
+This seems to work fine on FreeBSD.
 
 Reviewers: #freebsd, graesslin
 
@@ -36,13 +36,13 @@ Differential Revision: https://phabricator.kde.org/D5825
  4 files changed, 117 insertions(+), 1 deletion(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 10d9785..be38f8b 100644
+index ef2f0b8..c7700e7 100644
 --- CMakeLists.txt
 +++ CMakeLists.txt
 @@ -33,6 +33,20 @@ add_feature_info("prctl/procctl tracing control"
                   CAN_DISABLE_PTRACE
                   "Required for disallowing ptrace on greeter and kcheckpass process")
-
+ 
 +check_include_file("sys/signalfd.h" HAVE_SIGNALFD_H)
 +if (NOT HAVE_SIGNALFD_H)
 +    check_include_file("sys/event.h" HAVE_EVENT_H)
@@ -79,7 +79,7 @@ index 63b18ce..7b1c24f 100644
  #include <sys/wait.h>
  #include <unistd.h>
 +#include <signal.h>
-
+ 
  Authenticator::Authenticator(AuthenticationMode mode, QObject *parent)
      : QObject(parent)
 diff --git a/kcheckpass/kcheckpass.c b/kcheckpass/kcheckpass.c
@@ -92,7 +92,7 @@ index bd18d0b..b07031c 100644
  #include <time.h>
 -#include <sys/signalfd.h>
  #include <signal.h>
-
+ 
  #include <config-kscreenlocker.h>
 @@ -67,6 +66,14 @@
  #include <unistd.h>
@@ -106,9 +106,9 @@ index bd18d0b..b07031c 100644
 +#include <sys/event.h>
 +#include <sys/time.h>
 +#endif
-
+ 
  #define THROTTLE 3
-
+ 
 @@ -265,9 +272,18 @@ main(int argc, char **argv)
    uid_t		uid;
    AuthReturn	ret;
@@ -126,7 +126,7 @@ index bd18d0b..b07031c 100644
 +  int           keventData;
 +#endif
    pid_t parentPid;
-
+ 
    parentPid = getppid();
 @@ -346,15 +362,50 @@ main(int argc, char **argv)
          conv_server(ConvPutAuthError, 0);
@@ -247,6 +247,6 @@ index bd18d0b..b07031c 100644
          } else {
              message("unexpected signal\n");
          }
---
+-- 
 2.13.0
 
