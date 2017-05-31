@@ -25,6 +25,9 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 USE_QT5=	concurrent core dbus gui multimedia network widgets xml \
 		buildtools_build qmake_build
 
+CMAKE_ARGS=	-DWITH_OGG_VORBIS=OFF
+LDFLAGS=	-L${LOCALBASE}/lib
+
 OPTIONS_GROUP=			AUDIOPLUGIN
 OPTIONS_GROUP_AUDIOPLUGIN=	ALSA PULSEAUDIO
 ALSA_CMAKE_BOOL=		WITH_ALSA
