@@ -118,7 +118,6 @@ games/blinken
 games/bomber
 games/bovo
 games/granatier
-games/kajongg
 games/kanagram
 games/kapman
 games/katomic
@@ -391,10 +390,8 @@ www/kf5-khtml
 www/kf5-kjs
 www/kf5-kjsembed
 x11-clocks/amor
-x11-clocks/kdetoys
 x11-clocks/kteatime
 x11-clocks/ktimer
-x11-clocks/ktux
 x11-fm/dolphin
 x11-fm/konqueror
 x11-themes/kde4-base-artwork
