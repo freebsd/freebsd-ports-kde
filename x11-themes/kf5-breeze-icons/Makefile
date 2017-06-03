@@ -14,4 +14,6 @@ USE_QT5=	buildtools_build core qmake_build testlib
 
 NO_ARCH=	yes
 
+CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_bash:BOOL=TRUE
+
 .include <bsd.port.mk>
