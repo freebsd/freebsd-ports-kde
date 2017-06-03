@@ -2,7 +2,7 @@
 
 PORTNAME=	mastodon
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4rc5
+DISTVERSION=	1.4.1
 CATEGORIES=	net-im www
 
 MAINTAINER=	jrm@FreeBSD.org
@@ -93,7 +93,6 @@ SUB_FILES=	900.mastodon nginx.conf nginx-include.conf
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' \
-		${WRKSRC}/bin/yarn \
 		${WRKSRC}/config/environments/production.rb
 
 do-install:

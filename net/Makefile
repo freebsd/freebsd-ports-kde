@@ -1003,7 +1003,6 @@
     SUBDIR += py-avahi
     SUBDIR += py-beanstalkc
     SUBDIR += py-cjdns
-    SUBDIR += py-cloudfiles
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-coherence
     SUBDIR += py-cymruwhois
@@ -1062,6 +1061,7 @@
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
+    SUBDIR += py-python-cloudfiles
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient

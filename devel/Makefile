@@ -304,6 +304,7 @@
     SUBDIR += cloudabi-binutils-aarch64
     SUBDIR += cloudabi-binutils-x86_64
     SUBDIR += cloudabi-toolchain
+    SUBDIR += cltune
     SUBDIR += cmake
     SUBDIR += cmake-doc
     SUBDIR += cmake-fedora
@@ -560,6 +561,7 @@
     SUBDIR += erlang-sbroker
     SUBDIR += erlang-ssl_verify_fun
     SUBDIR += erlang-syslog
+    SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
     SUBDIR += etcd
     SUBDIR += etcd3
@@ -4247,6 +4249,7 @@
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dateutil
     SUBDIR += py-dbus
+    SUBDIR += py-ddt
     SUBDIR += py-debtcollector
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
@@ -4947,10 +4950,12 @@
     SUBDIR += py27-setuptools
     SUBDIR += py3-Jinja2
     SUBDIR += py3-babel
+    SUBDIR += py3-cffi
     SUBDIR += py3-click
     SUBDIR += py3-click-log
     SUBDIR += py3-click-threading
     SUBDIR += py3-colorama
+    SUBDIR += py3-coloredlogs
     SUBDIR += py3-dbus
     SUBDIR += py3-defusedxml
     SUBDIR += py3-docopt
@@ -4960,6 +4965,7 @@
     SUBDIR += py3-flake8-import-order
     SUBDIR += py3-flake8-polyfill
     SUBDIR += py3-flake8-quotes
+    SUBDIR += py3-pygit2
     SUBDIR += py3-gobject3
     SUBDIR += py3-hgtools
     SUBDIR += py3-jedi
@@ -4974,6 +4980,7 @@
     SUBDIR += py3-prompt_toolkit
     SUBDIR += py3-py
     SUBDIR += py3-pycodestyle
+    SUBDIR += py3-pycparser
     SUBDIR += py3-pydocstyle
     SUBDIR += py3-pyflakes
     SUBDIR += py3-pyicu
@@ -4989,6 +4996,7 @@
     SUBDIR += py3-six
     SUBDIR += py3-tabulate
     SUBDIR += py3-threema-msgapi
+    SUBDIR += py3-urwid
     SUBDIR += py3-vcversioner
     SUBDIR += py3-wcwidth
     SUBDIR += py3-xdg
@@ -5324,6 +5332,8 @@
     SUBDIR += rubygem-getopt
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
+    SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails_js
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2

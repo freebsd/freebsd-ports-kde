@@ -883,6 +883,7 @@
     SUBDIR += py-filelike
     SUBDIR += py-freenas.cli
     SUBDIR += py-glances
+    SUBDIR += py-gmailfs-fuse
     SUBDIR += py-halite
     SUBDIR += py-honcho
     SUBDIR += py-iocage

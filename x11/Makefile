@@ -437,6 +437,7 @@
     SUBDIR += xkbcomp
     SUBDIR += xkbctrl
     SUBDIR += xkbevd
+    SUBDIR += xkbind
     SUBDIR += xkbprint
     SUBDIR += xkbset
     SUBDIR += xkbutils

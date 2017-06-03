@@ -260,6 +260,7 @@
     SUBDIR += gstreamer-plugins-shout2
     SUBDIR += gstreamer-plugins-sidplay
     SUBDIR += gstreamer-plugins-sndfile
+    SUBDIR += gstreamer-plugins-sndio
     SUBDIR += gstreamer-plugins-soundtouch
     SUBDIR += gstreamer-plugins-spc
     SUBDIR += gstreamer-plugins-speex

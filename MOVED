@@ -4568,7 +4568,6 @@ hebrew/kde3-i18n||2013-07-26|Has expired: Depends on Qt 3.x
 hungarian/kde3-i18n||2013-07-26|Has expired: Depends on Qt 3.x
 irc/eggcreator||2013-07-26|Has expired: Depends on Qt 3.x
 irc/kmyirc||2013-07-26|Has expired: Depends on Qt 3.x
-irc/konversation||2013-07-26|Has expired: Depends on Qt 3.x
 irc/kwirc||2013-07-26|Has expired: Depends on Qt 3.x
 japanese/kde3-i18n||2013-07-26|Has expired: Depends on Qt 3.x
 korean/kde3-i18n||2013-07-26|Has expired: Depends on Qt 3.x
@@ -6397,7 +6396,6 @@ news/husky-hptsqfix||2014-08-19|Obsolete due to husky-*-devel => husky-* migrati
 news/husky-hpucode||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
 news/husky-msged||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
 news/husky-nltools||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
-news/husky-sqpack||2014-08-19|Obsolete due to husky-*-devel => husky-* migration
 net/rsmb|net/mosquitto|2014-08-19|Superseded by net/mosquitto
 deskutils/horde3-hermes||2014-08-20|Has expired: EOL in April 2012
 deskutils/horde3-klutz||2014-08-20|Has expired: EOL in April 2012
@@ -9557,3 +9555,11 @@ deskutils/kdeplasma-addons||2017-05-23|EOL
 games/knights-kde|games/knights|2017-05-23|Don't use -kde4 suffix
 sysutils/kshutdown-kde4|sysutils/kshutdown|2017-05-23|Don't use -kde4 suffix
 net/go-madonctl|net/madonctl|2017-05-21|Remove go- prefix
+net-mgmt/zabbix24-agent||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
+net-mgmt/zabbix24-frontend||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
+net-mgmt/zabbix24-proxy||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
+net-mgmt/zabbix24-server||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
+net/py-cloudfiles|net/py-python-cloudfiles|2017-05-30|Rename to match PyPI naming
+irc/konversation-kde4|irc/konversation|2017-05-30|Renamed to irc/konversation
+lang/perl5.20|lang/perl5.24|2017-06-01|Support ends three years after .0 release, please upgrade to a more recent version of Perl
+misc/unicode-ucd|textproc/UCD|2017-06-02|unicode-ucd was a duplicate of textproc/UCD, remove the younger port
