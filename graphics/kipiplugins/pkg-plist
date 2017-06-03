@@ -1,3 +1,5 @@
+lib/libKF5kipiplugins.so
+lib/libKF5kipiplugins.so.5.5.0
 %%QT_PLUGINDIR%%/kipiplugin_dropbox.so
 %%QT_PLUGINDIR%%/kipiplugin_facebook.so
 %%QT_PLUGINDIR%%/kipiplugin_flashexport.so
@@ -5,6 +7,7 @@
 %%QT_PLUGINDIR%%/kipiplugin_googleservices.so
 %%QT_PLUGINDIR%%/kipiplugin_imageshack.so
 %%QT_PLUGINDIR%%/kipiplugin_imgur.so
+%%QT_PLUGINDIR%%/kipiplugin_jalbum.so
 %%QT_PLUGINDIR%%/kipiplugin_kmlexport.so
 %%QT_PLUGINDIR%%/kipiplugin_piwigo.so
 %%QT_PLUGINDIR%%/kipiplugin_printimages.so
@@ -15,8 +18,6 @@
 %%KVKONTAKTE%%%%QT_PLUGINDIR%%/kipiplugin_vkontakte.so
 %%MEDIAWIKI%%%%QT_PLUGINDIR%%/kipiplugin_wikimedia.so
 %%QT_PLUGINDIR%%/kipiplugin_yandexfotki.so
-lib/libKF5kipiplugins.so
-lib/libKF5kipiplugins.so.5.4.0
 share/applications/kipiplugins.desktop
 share/icons/hicolor/128x128/apps/kipi-flash.png
 share/icons/hicolor/16x16/apps/kipi-dropbox.png
@@ -27,6 +28,7 @@ share/icons/hicolor/16x16/apps/kipi-googledrive.png
 share/icons/hicolor/16x16/apps/kipi-googlephoto.png
 share/icons/hicolor/16x16/apps/kipi-hq.png
 share/icons/hicolor/16x16/apps/kipi-imgur.png
+share/icons/hicolor/16x16/apps/kipi-jalbum.png
 share/icons/hicolor/16x16/apps/kipi-piwigo.png
 share/icons/hicolor/16x16/apps/kipi-rajce.png
 share/icons/hicolor/16x16/apps/kipi-smugmug.png
@@ -44,6 +46,7 @@ share/icons/hicolor/22x22/apps/kipi-piwigo.png
 share/icons/hicolor/22x22/apps/kipi-smugmug.png
 %%MEDIAWIKI%%share/icons/hicolor/22x22/apps/kipi-wikimedia.png
 share/icons/hicolor/22x22/apps/kipi-zooomr.png
+share/icons/hicolor/24x24/apps/kipi-jalbum.png
 share/icons/hicolor/32x32/apps/kipi-dropbox.png
 share/icons/hicolor/32x32/apps/kipi-facebook.png
 share/icons/hicolor/32x32/apps/kipi-flash.png
@@ -53,6 +56,7 @@ share/icons/hicolor/32x32/apps/kipi-googlephoto.png
 share/icons/hicolor/32x32/apps/kipi-hq.png
 share/icons/hicolor/32x32/apps/kipi-imageshack.png
 share/icons/hicolor/32x32/apps/kipi-imgur.png
+share/icons/hicolor/32x32/apps/kipi-jalbum.png
 share/icons/hicolor/32x32/apps/kipi-piwigo.png
 share/icons/hicolor/32x32/apps/kipi-rajce.png
 share/icons/hicolor/32x32/apps/kipi-smugmug.png
@@ -124,6 +128,7 @@ share/kservices5/kipiplugin_flickr.desktop
 share/kservices5/kipiplugin_googleservices.desktop
 share/kservices5/kipiplugin_imageshack.desktop
 share/kservices5/kipiplugin_imgur.desktop
+share/kservices5/kipiplugin_jalbum.desktop
 share/kservices5/kipiplugin_kmlexport.desktop
 share/kservices5/kipiplugin_piwigo.desktop
 share/kservices5/kipiplugin_printimages.desktop
@@ -141,6 +146,7 @@ share/kxmlgui5/kipi/kipiplugin_flickrui.rc
 share/kxmlgui5/kipi/kipiplugin_googleservicesui.rc
 share/kxmlgui5/kipi/kipiplugin_imageshackui.rc
 share/kxmlgui5/kipi/kipiplugin_imgurui.rc
+share/kxmlgui5/kipi/kipiplugin_jalbumui.rc
 share/kxmlgui5/kipi/kipiplugin_kmlexportui.rc
 share/kxmlgui5/kipi/kipiplugin_piwigoui.rc
 share/kxmlgui5/kipi/kipiplugin_printimagesui.rc

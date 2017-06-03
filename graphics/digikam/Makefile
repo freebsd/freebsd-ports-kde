@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/graphics/digikam/Makefile 13784 2017-03-18 15:45:02Z tcberner $
 
 PORTNAME=	digikam
-PORTVERSION=	5.4.0
+PORTVERSION=	5.5.0
 PORTEPOCH=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
