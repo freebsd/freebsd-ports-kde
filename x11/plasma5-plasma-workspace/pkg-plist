@@ -895,6 +895,7 @@ share/locale/da/LC_MESSAGES/freespacenotifier.mo
 share/locale/da/LC_MESSAGES/kcminit.mo
 share/locale/da/LC_MESSAGES/kholidays_calendar_plugin.mo
 share/locale/da/LC_MESSAGES/kio5_applications.mo
+share/locale/da/LC_MESSAGES/kio_desktop.mo
 share/locale/da/LC_MESSAGES/klipper.mo
 share/locale/da/LC_MESSAGES/krunner.mo
 share/locale/da/LC_MESSAGES/ksmserver.mo

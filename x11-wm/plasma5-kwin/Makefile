@@ -35,7 +35,8 @@ USE_XORG=	ice sm x11 xcb xext xi
 
 # Temporary work around to disable UDev detection for now should
 # devel/libudev-devd be installed.
-CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_UDev:BOOL=TRUE
+CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_UDev:BOOL=TRUE \
+		-DCMAKE_DISABLE_FIND_PACKAGE_Libinput:BOOL=TRUE
 
 post-patch:
 	${REINPLACE_CMD} '/sysmacros.h/d' \

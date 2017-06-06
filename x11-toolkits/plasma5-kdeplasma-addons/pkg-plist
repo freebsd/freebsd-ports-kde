@@ -129,7 +129,6 @@ share/locale/ar/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ar/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_news.mo
@@ -188,7 +187,6 @@ share/locale/ast/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ast/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ast/LC_MESSAGES/plasma_applet_news.mo
@@ -237,7 +235,6 @@ share/locale/ast/LC_MESSAGES/plasma_runner_translator.mo
 share/locale/ast/LC_MESSAGES/plasma_runner_youtube.mo
 share/locale/be/LC_MESSAGES/plasma_applet_fileWatcher.mo
 share/locale/be/LC_MESSAGES/plasma_applet_frame.mo
-share/locale/be/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/be/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/be/LC_MESSAGES/plasma_applet_news.mo
 share/locale/be/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -254,7 +251,6 @@ share/locale/be/LC_MESSAGES/plasma_runner_contacts.mo
 share/locale/be/LC_MESSAGES/plasma_runner_converterrunner.mo
 share/locale/be/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 share/locale/bg/LC_MESSAGES/plasma_applet_bookmarks.mo
-share/locale/bg/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/bg/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 share/locale/bg/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
 share/locale/bs/LC_MESSAGES/konqprofiles.mo
@@ -271,7 +267,6 @@ share/locale/bs/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_life.mo
-share/locale/bs/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/bs/LC_MESSAGES/plasma_applet_news.mo
@@ -326,7 +321,6 @@ share/locale/ca/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ca/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ca/LC_MESSAGES/plasma_applet_news.mo
@@ -387,7 +381,6 @@ share/locale/ca@valencia/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ca@valencia/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_applet_news.mo
@@ -448,7 +441,6 @@ share/locale/cs/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_life.mo
-share/locale/cs/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_news.mo
@@ -517,7 +509,6 @@ share/locale/da/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/da/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/da/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/da/LC_MESSAGES/plasma_applet_life.mo
-share/locale/da/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/da/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/da/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/da/LC_MESSAGES/plasma_applet_news.mo
@@ -578,7 +569,6 @@ share/locale/de/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/de/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/de/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/de/LC_MESSAGES/plasma_applet_life.mo
-share/locale/de/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/de/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/de/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/de/LC_MESSAGES/plasma_applet_news.mo
@@ -639,7 +629,6 @@ share/locale/el/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/el/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/el/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/el/LC_MESSAGES/plasma_applet_life.mo
-share/locale/el/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/el/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/el/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/el/LC_MESSAGES/plasma_applet_news.mo
@@ -700,7 +689,6 @@ share/locale/en_GB/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_life.mo
-share/locale/en_GB/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_news.mo
@@ -758,7 +746,6 @@ share/locale/eo/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_life.mo
-share/locale/eo/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/eo/LC_MESSAGES/plasma_applet_news.mo
@@ -809,7 +796,6 @@ share/locale/es/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/es/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/es/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/es/LC_MESSAGES/plasma_applet_life.mo
-share/locale/es/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/es/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/es/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/es/LC_MESSAGES/plasma_applet_news.mo
@@ -870,7 +856,6 @@ share/locale/et/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/et/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/et/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/et/LC_MESSAGES/plasma_applet_life.mo
-share/locale/et/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/et/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/et/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/et/LC_MESSAGES/plasma_applet_news.mo
@@ -917,7 +902,6 @@ share/locale/et/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 share/locale/et/LC_MESSAGES/plasma_runner_translator.mo
 share/locale/et/LC_MESSAGES/plasma_runner_youtube.mo
 share/locale/eu/LC_MESSAGES/libplasma_groupingcontainment.mo
-share/locale/eu/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.comic.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
@@ -942,7 +926,6 @@ share/locale/fi/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_life.mo
-share/locale/fi/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/fi/LC_MESSAGES/plasma_applet_news.mo
@@ -1003,7 +986,6 @@ share/locale/fr/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_life.mo
-share/locale/fr/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_news.mo
@@ -1061,7 +1043,6 @@ share/locale/ga/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ga/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ga/LC_MESSAGES/plasma_applet_news.mo
@@ -1114,7 +1095,6 @@ share/locale/gl/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_life.mo
-share/locale/gl/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_news.mo
@@ -1171,7 +1151,6 @@ share/locale/he/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/he/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/he/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/he/LC_MESSAGES/plasma_applet_life.mo
-share/locale/he/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/he/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/he/LC_MESSAGES/plasma_applet_news.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -1205,9 +1184,7 @@ share/locale/he/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 share/locale/he/LC_MESSAGES/plasma_runner_translator.mo
 share/locale/he/LC_MESSAGES/plasma_runner_youtube.mo
 share/locale/hi/LC_MESSAGES/plasma_applet_frame.mo
-share/locale/hi/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/hne/LC_MESSAGES/plasma_applet_frame.mo
-share/locale/hne/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/hr/LC_MESSAGES/libplasma_groupingcontainment.mo
 share/locale/hr/LC_MESSAGES/libplasmaweather.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_CharSelectApplet.mo
@@ -1220,7 +1197,6 @@ share/locale/hr/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_life.mo
-share/locale/hr/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/hr/LC_MESSAGES/plasma_applet_news.mo
@@ -1270,7 +1246,6 @@ share/locale/hu/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_life.mo
-share/locale/hu/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_news.mo
@@ -1325,7 +1300,6 @@ share/locale/ia/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ia/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_news.mo
@@ -1381,7 +1355,6 @@ share/locale/is/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/is/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/is/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/is/LC_MESSAGES/plasma_applet_life.mo
-share/locale/is/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/is/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/is/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/is/LC_MESSAGES/plasma_applet_news.mo
@@ -1427,7 +1400,6 @@ share/locale/it/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/it/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/it/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/it/LC_MESSAGES/plasma_applet_life.mo
-share/locale/it/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/it/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/it/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/it/LC_MESSAGES/plasma_applet_news.mo
@@ -1488,7 +1460,6 @@ share/locale/ja/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ja/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_news.mo
@@ -1549,7 +1520,6 @@ share/locale/kk/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_life.mo
-share/locale/kk/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/kk/LC_MESSAGES/plasma_applet_news.mo
@@ -1603,7 +1573,6 @@ share/locale/km/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/km/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/km/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/km/LC_MESSAGES/plasma_applet_life.mo
-share/locale/km/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/km/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/km/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/km/LC_MESSAGES/plasma_applet_news.mo
@@ -1656,7 +1625,6 @@ share/locale/ko/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ko/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_news.mo
@@ -1709,7 +1677,6 @@ share/locale/ku/LC_MESSAGES/plasma_applet_frame.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ku/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_news.mo
 share/locale/ku/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -1744,7 +1711,6 @@ share/locale/lt/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_life.mo
-share/locale/lt/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/lt/LC_MESSAGES/plasma_applet_news.mo
@@ -1794,7 +1760,6 @@ share/locale/lv/LC_MESSAGES/plasma_applet_frame.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_life.mo
-share/locale/lv/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/lv/LC_MESSAGES/plasma_applet_news.mo
@@ -1845,7 +1810,6 @@ share/locale/mr/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_life.mo
-share/locale/mr/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/mr/LC_MESSAGES/plasma_applet_news.mo
@@ -1910,7 +1874,6 @@ share/locale/nb/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_life.mo
-share/locale/nb/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/nb/LC_MESSAGES/plasma_applet_news.mo
@@ -1965,7 +1928,6 @@ share/locale/nds/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_life.mo
-share/locale/nds/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/nds/LC_MESSAGES/plasma_applet_news.mo
@@ -2020,7 +1982,6 @@ share/locale/nl/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_life.mo
-share/locale/nl/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/nl/LC_MESSAGES/plasma_applet_news.mo
@@ -2081,7 +2042,6 @@ share/locale/nn/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_life.mo
-share/locale/nn/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/nn/LC_MESSAGES/plasma_applet_news.mo
@@ -2142,7 +2102,6 @@ share/locale/pa/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_life.mo
-share/locale/pa/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/pa/LC_MESSAGES/plasma_applet_news.mo
@@ -2199,7 +2158,6 @@ share/locale/pl/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_life.mo
-share/locale/pl/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_news.mo
@@ -2260,7 +2218,6 @@ share/locale/pt/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_life.mo
-share/locale/pt/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/pt/LC_MESSAGES/plasma_applet_news.mo
@@ -2321,7 +2278,6 @@ share/locale/pt_BR/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_life.mo
-share/locale/pt_BR/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_news.mo
@@ -2382,7 +2338,6 @@ share/locale/ro/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ro/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ro/LC_MESSAGES/plasma_applet_news.mo
@@ -2436,7 +2391,6 @@ share/locale/ru/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ru/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_news.mo
@@ -2497,7 +2451,6 @@ share/locale/sk/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sk/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sk/LC_MESSAGES/plasma_applet_news.mo
@@ -2558,7 +2511,6 @@ share/locale/sl/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sl/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sl/LC_MESSAGES/plasma_applet_news.mo
@@ -2614,7 +2566,6 @@ share/locale/sq/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sq/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sq/LC_MESSAGES/plasma_applet_news.mo
@@ -2661,7 +2612,6 @@ share/locale/sr/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sr/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sr/LC_MESSAGES/plasma_applet_news.mo
@@ -2722,7 +2672,6 @@ share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_news.mo
@@ -2783,7 +2732,6 @@ share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_news.mo
@@ -2844,7 +2792,6 @@ share/locale/sr@latin/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sr@latin/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_applet_news.mo
@@ -2905,7 +2852,6 @@ share/locale/sv/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_life.mo
-share/locale/sv/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/sv/LC_MESSAGES/plasma_applet_news.mo
@@ -2959,7 +2905,6 @@ share/locale/th/LC_MESSAGES/plasma_applet_fileWatcher.mo
 share/locale/th/LC_MESSAGES/plasma_applet_frame.mo
 share/locale/th/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/th/LC_MESSAGES/plasma_applet_life.mo
-share/locale/th/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/th/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/th/LC_MESSAGES/plasma_applet_news.mo
 share/locale/th/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -2995,7 +2940,6 @@ share/locale/tr/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_life.mo
-share/locale/tr/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/tr/LC_MESSAGES/plasma_applet_news.mo
@@ -3055,7 +2999,6 @@ share/locale/ug/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_life.mo
-share/locale/ug/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/ug/LC_MESSAGES/plasma_applet_news.mo
@@ -3109,7 +3052,6 @@ share/locale/uk/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_life.mo
-share/locale/uk/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/uk/LC_MESSAGES/plasma_applet_news.mo
@@ -3167,7 +3109,6 @@ share/locale/wa/LC_MESSAGES/plasma_applet_frame.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_life.mo
-share/locale/wa/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_news.mo
 share/locale/wa/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -3201,7 +3142,6 @@ share/locale/zh_CN/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_life.mo
-share/locale/zh_CN/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_applet_news.mo
@@ -3262,7 +3202,6 @@ share/locale/zh_TW/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_life.mo
-share/locale/zh_TW/LC_MESSAGES/plasma_applet_luna.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_news.mo
