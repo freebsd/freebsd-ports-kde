@@ -18,10 +18,6 @@
 #					   * Common UNIX Printing System (CUPS);
 #					   * Network Audio System (NAS);
 #					   * GTK+-based Qt theme (QGTKSTYLE).
-# QT5_USE_WEBKIT_FORK  - Instead of using the WebKit released by the Qt Community,
-#			 use a fork (www/qt5-webkit-$QT5_USE_WEBKIT_FORK}).
-#			 Possible values:
-#
 
 .if !defined(_POSTMKINCLUDED) && !defined(Qt_Pre_Include)
 
@@ -594,11 +590,7 @@ webengine_LIB=		libQt${_QT_LIBVER}WebEngine.so
 websockets_PORT=	www/${_QT_RELNAME}-websockets
 websockets_LIB=	libQt${_QT_LIBVER}WebSockets.so
 
-.  if ${_QT_VERSION:M4*} || ! defined (QT5_USE_WEBKIT_FORK)
 webkit_PORT=		www/${_QT_RELNAME}-webkit
-.  else
-webkit_PORT=		www/${_QT_RELNAME}-webkit-${QT5_USE_WEBKIT_FORK}
-.  endif
 webkit_LIB=	libQt${_QT_LIBVER}WebKit.so
 
 widgets_PORT=		x11-toolkits/${_QT_RELNAME}-widgets

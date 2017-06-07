@@ -1,81 +1,65 @@
-# $FreeBSD$
+# $FreeBSD: branches/plasma5/PORTS/www/qt5-webkit-annulen/Makefile 13983 2017-05-02 18:01:20Z tcberner $
 
-PORTNAME=	webkit
-DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
-CATEGORIES=	www
-MASTER_SITE_SUBDIR=	community_releases/${QT5_VERSION:R}/${QT5_VERSION}/
-PKGNAMEPREFIX=	qt5-
+PORTNAME=		webkit
+PORTVERSION=		5.212.0.20170607
+DISTVERSIONSUFFIX=	-${GH_TAGNAME}
+CATEGORIES=		www
+MASTER_SITES=		LOCAL/tcberner/${PORTNAME}-${PORTVERSION}
+PKGNAMEPREFIX=		qt5-
 
-MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Qt WebKit implementation
+MAINTAINER=		kde@FreeBSD.org
+COMMENT=		QtWebKit with a more modern WebKit code base
 
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libicui18n.so:devel/icu \
-		libleveldb.so:databases/leveldb \
-		libpng.so:graphics/png \
-		libwebp.so:graphics/webp
-BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex
+LICENSE=		GPLv2
 
-DISTINFO_FILE=	${MASTERDIR}/distinfo
+LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
+			libgstapp-1.0.so:multimedia/gstreamer1-plugins \
+			libgstbase-1.0.so:multimedia/gstreamer1 \
+			libhyphen.so:textproc/hyphen \
+			libicui18n.so:devel/icu \
+			libpng16.so:graphics/png \
+			libwebp.so:graphics/webp
 
-BROKEN_sparc64=	cannot build: uses i386 assembler
+USES=			bison cmake:outsource gperf jpeg pathfix perl5 pkgconfig \
+			python:build sqlite:3 tar:xz
+USE_GNOME=		glib20 libxml2 libxslt
+USE_GSTREAMER1=		core
+USE_QT5=		core gui location network opengl printsupport \
+			qml quick sensors testlib webchannel widgets \
+			buildtools_build qmake_build
+USE_RUBY=		yes
+USE_XORG=		x11 xcomposite xrender
 
-USE_GL=		gl
-USE_GNOME=	libxml2 libxslt
-USE_PERL5=	build
-USE_QT5=	core gui network opengl printsupport qml quick sql \
-		widgets buildtools_build
-QT_DIST=	${PORTNAME}
-USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=	yes
-USE_XORG=	x11 xcomposite xrender
-USES=		bison gperf jpeg perl5 pkgconfig python:build qmake:outsource \
-		sqlite
-# Use flex(1) from ports.
-MAKE_ENV=	PATH="${LOCALBASE}/bin:${PATH}"
-# "all" builds many more targets. The default one is called "first" in
-# QtWebKit, and is invoked by default when make is called without arguments.
-ALL_TARGET=	first
-USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-QT_DEFINES=	ACCESSIBILITY
-QT_CONFIG=	accessibility accessibility-atspi-bridge
+CMAKE_ARGS=		-DPORT:STRING="Qt" \
+			-DKDE_INSTALL_INCLUDEDIR:PATH="${QT_INCDIR_REL}" \
+			-DKDE_INSTALL_LIBDIR:PATH="${QT_LIBDIR_REL}" \
+			-DENABLE_OPENGL:BOOL=TRUE \
+			-DUSE_QT_MULTIMEDIA:BOOL=FALSE
 
-OPTIONS_DEFINE=	GSTREAMER
-OPTIONS_DEFAULT=GSTREAMER
+# Add -DNDEBUG to CXXFLAGS which in turn gets sucked into
+# CMAKE_CXX_FLAGS_RELEASE where we actually want to have it.
+# [for the ASSERT in Source/WebCore/platform/graphics/texmap/GraphicsLayerTextureMapper.cpp ]
+CXXFLAGS+=		-DNDEBUG
 
-GSTREAMER_USE=	GNOME=glib20 GSTREAMER1=yes
+PLIST_SUB=		FULLVER="${PORTVERSION:R}"
 
-.include <bsd.port.pre.mk>
+# The git tag to fetch
+GH_TAGNAME=		5681c65
 
-# Base ld(1) segfaults on PowerPC (inherited from Qt 4):
-# http://bugs.freebsd.org/173042
-.if ${ARCH} == "powerpc"
-BUILD_DEPENDS+=	${LOCALBASE}/bin/ld:devel/binutils
-.endif
+.include <bsd.port.mk>
 
-post-patch:
-	${REINPLACE_CMD} -e 's,python,${PYTHON_VERSION},g' \
-		-e 's,$$$${PYTHON},${PYTHON_VERSION},g' \
-		${WRKSRC}/Source/WebCore/DerivedSources.make \
-		${WRKSRC}/Source/WebCore/DerivedSources.pri \
-		${WRKSRC}/Source/WebKit2/DerivedSources.make \
-		${WRKSRC}/Source/WebKit2/DerivedSources.pri \
-		${WRKSRC}/Source/JavaScriptCore/DerivedSources.make \
-		${WRKSRC}/Source/JavaScriptCore/DerivedSources.pri \
-		${WRKSRC}/Tools/qmake/mkspecs/features/configure.prf
-
-pre-configure:
-	@${REINPLACE_CMD} -Ee 's|linux-?\*|unix|g' \
-		${WRKSRC}/Source/JavaScriptCore/DerivedSources.pri \
-		${WRKSRC}/Source/JavaScriptCore/JavaScriptCore.pri \
-		${WRKSRC}/Source/JavaScriptCore/Target.pri \
-		${WRKSRC}/Source/WebCore/WebCore.pri \
-		${WRKSRC}/Tools/qmake/mkspecs/features/features.prf
-.if ! ${PORT_OPTIONS:MGSTREAMER}
-	@${REINPLACE_CMD} -e 's|packagesExist.*gstreamer.*|false {|' \
-		${WRKSRC}/Tools/qmake/mkspecs/features/features.prf
-.endif
-
-.include <bsd.port.post.mk>
+# The git repository contains subdirectories with tests and websites that take
+# up a lot of space. Therefore manually create a tarball using the target
+# create-src-archive below.
+.PHONY: create-src-archive
+ARCHIVE_DIR=	${DISTDIR}/${DISTNAME}
+ORIGINAL_DIR=	${DISTDIR}/webkit-${GH_TAGNAME}
+DONOTEXTRACT=	JSTests LayoutTests ManualTests PerformanceTests Websites
+create-src-archive:
+	fetch https://codeload.github.com/annulen/webkit/tar.gz/${GH_TAGNAME}?dummy=/ -o ${ORIGINAL_DIR}.tar.gz
+	tar -xf ${ORIGINAL_DIR}.tar.gz ${DONOTEXTRACT:S,^,--exclude ,} --directory ${DISTDIR}
+	${MV} ${ORIGINAL_DIR} ${ARCHIVE_DIR}
+	${TAR} -cf - -C ${ARCHIVE_DIR:H} ${ARCHIVE_DIR:T} | ${XZ_CMD} > ${ARCHIVE_DIR}.tar.xz
+	${MAKE} makesum
