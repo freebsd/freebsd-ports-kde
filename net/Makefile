@@ -365,6 +365,7 @@
     SUBDIR += libmaia
     SUBDIR += libmateweather
     SUBDIR += libmaxminddb
+    SUBDIR += libmdf
     SUBDIR += libmediawiki
     SUBDIR += libmms
     SUBDIR += libmxp
@@ -1108,6 +1109,8 @@
     SUBDIR += py-zope.proxy
     SUBDIR += py-zsi
     SUBDIR += py3-netifaces
+    SUBDIR += py3-pysocks
+    SUBDIR += py3-urllib3
     SUBDIR += pygopherd
     SUBDIR += pynids
     SUBDIR += pyrad
@@ -1213,6 +1216,7 @@
     SUBDIR += rubygem-fog-xenserver
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitlab_omniauth-ldap
+    SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress
@@ -1277,8 +1281,6 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += s3ql
-    SUBDIR += samba42
-    SUBDIR += samba43
     SUBDIR += samba44
     SUBDIR += samba45
     SUBDIR += samba46

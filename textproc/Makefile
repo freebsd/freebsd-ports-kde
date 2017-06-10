@@ -224,8 +224,8 @@
     SUBDIR += google-translate-cli
     SUBDIR += gpp
     SUBDIR += grap
-    SUBDIR += greple
     SUBDIR += grc-aspell
+    SUBDIR += greple
     SUBDIR += groff
     SUBDIR += groonga
     SUBDIR += gsed
@@ -951,6 +951,7 @@
     SUBDIR += p5-Text-Truncate
     SUBDIR += p5-Text-Typography
     SUBDIR += p5-Text-Unaccent
+    SUBDIR += p5-Text-Unaccent-PurePerl
     SUBDIR += p5-Text-VimColor
     SUBDIR += p5-Text-VisualWidth
     SUBDIR += p5-Text-WikiCreole
@@ -960,7 +961,6 @@
     SUBDIR += p5-Text-Wrapper
     SUBDIR += p5-Text-Xslate
     SUBDIR += p5-Text-Xslate-Bridge-TT2Like
-    SUBDIR += p5-Text-Unaccent-PurePerl
     SUBDIR += p5-Text-vCard
     SUBDIR += p5-Tiffany
     SUBDIR += p5-Time-Human
@@ -1362,6 +1362,7 @@
     SUBDIR += py-xlutils
     SUBDIR += py-xlwriter
     SUBDIR += py-xlwt
+    SUBDIR += py-yapf
     SUBDIR += py-zope.app.i18n
     SUBDIR += py-zope.app.locales
     SUBDIR += py-zope.i18nmessageid
@@ -1377,10 +1378,12 @@
     SUBDIR += py3-humanfriendly
     SUBDIR += py3-hunspell
     SUBDIR += py3-libxml2
+    SUBDIR += py3-numpydoc
     SUBDIR += py3-pager
     SUBDIR += py3-pygments
     SUBDIR += py3-pystemmer
     SUBDIR += py3-snowballstemmer
+    SUBDIR += py3-sphinx
     SUBDIR += py3-sphinx_rtd_theme
     SUBDIR += py3-texttable
     SUBDIR += pychm

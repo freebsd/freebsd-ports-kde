@@ -37,7 +37,7 @@ BDB_DEFAULT?=		5
 FIREBIRD_DEFAULT?=	2.5
 # Possible values: 3.0.0
 FPC_DEFAULT?=		3.0.2
-# Possible values: 4.7, 4.8, 4.9, 5, 6
+# Possible values: 4.8, 4.9, 5, 6
 GCC_DEFAULT?=		5
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
@@ -83,7 +83,7 @@ PYTHON2_DEFAULT?=	2.7
 PYTHON3_DEFAULT?=	3.6
 # Possible values: 2.2, 2.3, 2.4
 RUBY_DEFAULT?=		2.3
-# Possible values: 4.2, 4.3, 4.4, 4.5, 4.6
+# Possible values: 4.4, 4.5, 4.6
 SAMBA_DEFAULT?=		4.4
 # Possible values: base, openssl, openssl-devel, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)

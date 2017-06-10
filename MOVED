@@ -9207,7 +9207,7 @@ textproc/p5-XML-XSH||2017-04-10|Has expired: Deprecated by upstream
 www/rubygem-jquery-atwho-rails-rails4|www/rubygem-jquery-atwho-rails|2017-04-10|Has expired: Use www/rubygem-jquery-atwho-rails instead
 www/p5-Catalyst-Plugin-Singleton||2017-04-10|Has expired: Deprecated by upstream
 x11/lumina-i18n||2017-04-10|Has expired: Obsolete, i18n files included in x11/lumina
-sysutils/jail2||2017-04-10|Has expired: Starting with 10.0 functionality has been merged into base.
+sysutils/jail2||2017-04-10|Has expired: Starting with 10.0 functionality has been merged into base
 sysutils/iocage-devel||2017-04-10|Has expired: Outdated version. Please use sysutils/py-iocage instead
 sysutils/iocage||2017-04-10|Has expired: Outdated version. Please use sysutils/py-iocage instead
 databases/puppetdb||2017-04-10|Has expired: Depends on expired sysutils/puppet38, use puppetdb[34] instead
@@ -9563,4 +9563,18 @@ net/py-cloudfiles|net/py-python-cloudfiles|2017-05-30|Rename to match PyPI namin
 irc/konversation-kde4|irc/konversation|2017-05-30|Renamed to irc/konversation
 lang/perl5.20|lang/perl5.24|2017-06-01|Support ends three years after .0 release, please upgrade to a more recent version of Perl
 misc/unicode-ucd|textproc/UCD|2017-06-02|unicode-ucd was a duplicate of textproc/UCD, remove the younger port
+print/gutenprint-base|print/gutenprint|2017-06-04|Folded into gutenprint port
+print/gutenprint-cups|print/gutenprint|2017-06-04|Folded into gutenprint port
+print/gutenprint-foomatic||2017-06-04|Component removed upstream
+print/gutenprint-ijs||2017-06-04|Component removed upstream
+devel/py-PyDispatcher|devel/py-pydispatcher|2017-06-05|Change name to lower case
+mail/linux-thunderbird||2017-06-07|Has expired: Use the native thunderbird mail/thunderbird instead
+devel/p5-Penguin||2017-06-07|Has expired: Depends on expired security/pgp
+security/p5-Crypt-PGPSimple||2017-06-07|Has expired: Depends on expired security/pgp
+mail/pgpsendmail||2017-06-07|Has expired: Depends on expired security/pgp
+security/pgp||2017-06-07|Has expired: This software was last updated in 1996, use security/gnupg1 as a drop-in replacement with legacy PGP support.
+dns/pear-Net_DNS||2017-06-07|Has expired: This Port use PHP4.2 - This PHP-Version is not longer supporded
+net/samba42|net/samba44|2016-09-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
+net/samba43|net/samba44|2017-03-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
+www/py-utidy|www/py-utidylib|2017-06-08|Rename to comply with PyPI scheme
 www/qt5-webkit-annulen|www/qt5-webkit|2017-07-08|The active fork of Qt WebKit has replaced the stale official one
