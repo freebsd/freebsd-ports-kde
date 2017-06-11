@@ -30,6 +30,6 @@ SHEBANG_FILES=	src/kconf_update/kalarm*.pl
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
-PLIST_SUB=	SHLIB_VER="5.5.1"
+PLIST_SUB=	SHLIB_VER="5.5.2"
 
 .include <bsd.port.mk>

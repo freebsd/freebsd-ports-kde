@@ -112,8 +112,6 @@ share/dbus-1/interfaces/org.kde.Akonadi.Maildir.Settings.xml
 share/dbus-1/interfaces/org.kde.Akonadi.MixedMaildir.Settings.xml
 share/doc/HTML/ca/kioslave5/pop3/index.cache.bz2
 share/doc/HTML/ca/kioslave5/pop3/index.docbook
-share/doc/HTML/de/kioslave5/pop3/index.cache.bz2
-share/doc/HTML/de/kioslave5/pop3/index.docbook
 share/doc/HTML/en/kioslave5/pop3/index.cache.bz2
 share/doc/HTML/en/kioslave5/pop3/index.docbook
 share/doc/HTML/es/kioslave5/pop3/index.cache.bz2

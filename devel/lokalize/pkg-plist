@@ -108,10 +108,6 @@ share/locale/ru/LC_MESSAGES/lokalize.mo
 share/locale/sk/LC_MESSAGES/lokalize.mo
 share/locale/sl/LC_MESSAGES/lokalize.mo
 share/locale/sr/LC_MESSAGES/lokalize.mo
-share/locale/sr/docs/lokalize/LC_MESSAGES/glossary.mo
-share/locale/sr/docs/lokalize/LC_MESSAGES/original-diff.mo
-share/locale/sr/docs/lokalize/LC_MESSAGES/sync.mo
-share/locale/sr/docs/lokalize/LC_MESSAGES/tmview.mo
 share/locale/sv/LC_MESSAGES/lokalize.mo
 share/locale/tr/LC_MESSAGES/lokalize.mo
 share/locale/ug/LC_MESSAGES/lokalize.mo

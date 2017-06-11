@@ -25,6 +25,6 @@ USE_QT5=	core dbus network printsupport webengine widgets xml \
 
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	SHLIB_VER="5.5.1"
+PLIST_SUB=	SHLIB_VER="5.5.2"
 
 .include <bsd.port.mk>
