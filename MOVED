@@ -9410,3 +9410,4 @@ dns/pear-Net_DNS||2017-06-07|Has expired: This Port use PHP4.2 - This PHP-Versio
 net/samba42|net/samba44|2016-09-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
 net/samba43|net/samba44|2017-03-07|Has expired: not supported upstream https://wiki.samba.org/index.php/Samba_Release_Planning
 www/py-utidy|www/py-utidylib|2017-06-08|Rename to comply with PyPI scheme
+devel/cmake-modules||2017-06-30|Merged with devel/cmake
