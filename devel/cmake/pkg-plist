@@ -1993,6 +1993,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Platform/DragonFly.cmake
 %%DATADIR%%/Modules/Platform/Euros.cmake
 %%DATADIR%%/Modules/Platform/FreeBSD.cmake
+%%DATADIR%%/Modules/Platform/FreeBSD-CXX.cmake
 %%DATADIR%%/Modules/Platform/Fuchsia.cmake
 %%DATADIR%%/Modules/Platform/GHS-MULTI-Initialize.cmake
 %%DATADIR%%/Modules/Platform/GHS-MULTI.cmake

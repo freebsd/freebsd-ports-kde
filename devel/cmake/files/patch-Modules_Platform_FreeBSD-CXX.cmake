@@ -1,0 +1,6 @@
+--- /dev/null	2017-06-14 21:11:00.000000000 +0200
++++ Modules/Platform/FreeBSD-CXX.cmake	2017-06-14 20:59:51.847698783 +0200
+@@ -0,0 +1,3 @@
++if(NOT CMAKE_CXX_COMPILER_NAMES)
++  set(CMAKE_CXX_COMPILER_NAMES c++)
++endif()
