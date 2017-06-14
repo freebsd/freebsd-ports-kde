@@ -1,6 +1,6 @@
---- Modules/FindImageMagick.cmake.orig	2015-01-18 20:59:07.643587544 +0100
-+++ Modules/FindImageMagick.cmake	2015-01-18 21:00:52.175617819 +0100
-@@ -207,17 +207,17 @@
+--- Modules/FindImageMagick.cmake.orig	2017-05-31 14:00:09 UTC
++++ Modules/FindImageMagick.cmake
+@@ -195,17 +195,17 @@ foreach(component ${ImageMagick_FIND_COM
      )
    if(component STREQUAL "Magick++")
      FIND_IMAGEMAGICK_API(Magick++ Magick++.h

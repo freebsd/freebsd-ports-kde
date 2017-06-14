@@ -62,11 +62,9 @@ post-patch:
 # prevent it from being built/installed by devel/cmake.
 	${RM} ${WRKSRC}/Help/manual/cmake-gui.1.rst
 
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Auxiliary/cmake-mode.el ${STAGEDIR}${PREFIX}/share/emacs/site-lisp
-	${MKDIR} ${STAGEDIR}${DATADIR}/Modules
-	${MKDIR} ${STAGEDIR}${DATADIR}/Templates
-	cd ${WRKSRC}/Modules && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR}/Modules
-	cd ${WRKSRC}/Templates && ${COPYTREE_SHARE} \* ${STAGEDIR}${DATADIR}/Templates
+	@${FIND} ${STAGEDIR}${PREFIX} -name ".NoDartCoverage" -delete
 
 .include <bsd.port.post.mk>
