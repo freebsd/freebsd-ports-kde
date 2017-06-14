@@ -1399,6 +1399,7 @@ share/locale/fi/LC_MESSAGES/freespacenotifier.mo
 share/locale/fi/LC_MESSAGES/kcminit.mo
 share/locale/fi/LC_MESSAGES/kholidays_calendar_plugin.mo
 share/locale/fi/LC_MESSAGES/kio5_applications.mo
+share/locale/fi/LC_MESSAGES/kio_desktop.mo
 share/locale/fi/LC_MESSAGES/klipper.mo
 share/locale/fi/LC_MESSAGES/krunner.mo
 share/locale/fi/LC_MESSAGES/ksmserver.mo
@@ -1466,6 +1467,7 @@ share/locale/fr/LC_MESSAGES/freespacenotifier.mo
 share/locale/fr/LC_MESSAGES/kcminit.mo
 share/locale/fr/LC_MESSAGES/kholidays_calendar_plugin.mo
 share/locale/fr/LC_MESSAGES/kio5_applications.mo
+share/locale/fr/LC_MESSAGES/kio_desktop.mo
 share/locale/fr/LC_MESSAGES/klipper.mo
 share/locale/fr/LC_MESSAGES/krunner.mo
 share/locale/fr/LC_MESSAGES/ksmserver.mo
@@ -1480,6 +1482,7 @@ share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.calendar.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.clipboard.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.devicenotifier.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.digitalclock.mo
+share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.icon.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.lock_logout.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
