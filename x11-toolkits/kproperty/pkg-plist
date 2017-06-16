@@ -68,8 +68,8 @@ lib/libKPropertyCore3.so.3.0
 lib/libKPropertyWidgets3.so
 lib/libKPropertyWidgets3.so.3
 lib/libKPropertyWidgets3.so.3.0
-lib/pkgconfig/KPropertyCore3.pc
-lib/pkgconfig/KPropertyWidgets3.pc
+libdata/pkgconfig/KPropertyCore3.pc
+libdata/pkgconfig/KPropertyWidgets3.pc
 share/kpropertywidgets3/icons/kproperty_breeze.rcc
 share/locale/ast/LC_MESSAGES/kproperty_qt.mo
 share/locale/ca/LC_MESSAGES/kproperty_qt.mo
