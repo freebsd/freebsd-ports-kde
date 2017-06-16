@@ -3,6 +3,7 @@
 
 PORTNAME=	kdepim
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -21,7 +22,8 @@ RUN_DEPENDS=	calendarjanitor:deskutils/akonadi-calendar-tools \
 		knotes:deskutils/knotes \
 		kontact:deskutils/kontact \
 		korganizer:deskutils/korganizer \
-		pimsettingexporter:deskutils/pim-data-exporter
+		pimsettingexporter:deskutils/pim-data-exporter \
+		akonadi_imap_resource:deskutils/kdepim-runtime
 
 USES=		kde:5 metaport
 
