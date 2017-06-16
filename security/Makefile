@@ -1018,6 +1018,7 @@
     SUBDIR += rubygem-devise-two-factor-rails50
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
+    SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-encryptor
@@ -1083,6 +1084,7 @@
     SUBDIR += rubygem-ruby-rc4
     SUBDIR += rubygem-ruby-saml
     SUBDIR += rubygem-scrypt
+    SUBDIR += rubygem-securecompare
     SUBDIR += rubygem-signet
     SUBDIR += rubygem-six
     SUBDIR += rubygem-sshkey
