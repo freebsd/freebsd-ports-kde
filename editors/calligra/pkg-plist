@@ -244,6 +244,7 @@ share/applications/okularApplication_odt_calligra.desktop
 share/applications/okularApplication_powerpoint_calligra.desktop
 share/applications/okularApplication_pptx_calligra.desktop
 share/applications/okularApplication_wpd_calligra.desktop
+share/applications/calligra_filter_odt2docx.desktop
 share/applications/org.kde.calligraplan.desktop
 share/applications/org.kde.calligraplanwork.desktop
 share/applications/org.kde.calligrasheets.desktop

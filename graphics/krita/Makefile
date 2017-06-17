@@ -1,5 +1,4 @@
-# Created by: tcberner
-# $FreeBSD: branches/plasma5/CALLIGRA/graphics/krita/Makefile 13737 2017-03-10 23:04:16Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	krita
 PORTVERSION=	3.1.2.1
@@ -13,6 +12,7 @@ COMMENT=	Sketching and painting program
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
 LIB_DEPENDS=	libIlmImf.so:graphics/OpenEXR \
 		libImath.so:graphics/ilmbase \
 		libOpenColorIO.so:graphics/opencolorio \
@@ -29,10 +29,9 @@ LIB_DEPENDS=	libIlmImf.so:graphics/OpenEXR \
 		libtiff.so:graphics/tiff \
 		libxcb.so:x11/libxcb \
 		libxcb-util.so:x11/xcb-util
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
 
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
-		gettext jpeg kde:5 shared-mime-info
+		gettext jpeg kde:5
 USE_KDE=	archive completion config coreaddons crash guiaddons i18n \
 		itemmodels itemviews kio service widgetsaddons windowsystem
 USE_QT5=	buildtools_build concurrent core dbus gui network printsupport \
@@ -40,7 +39,6 @@ USE_QT5=	buildtools_build concurrent core dbus gui network printsupport \
 USE_XORG=	ice sm xcb xext xi
 
 OPTIONS_DEFINE=		GMIC
-OPTIONS_DEFAULT=	#
 OPTIONS_SUB=		yes
 
 GMIC_DESC=		Build the G'Mic plugin
@@ -48,7 +46,7 @@ GMIC_CMAKE_BOOL=	WITH_GMIC
 
 CONFLICTS_INSTALL=	calligra-2*
 
-PLIST_SUB+=	SHLIB_VER="16.0.0" \
-		SHLIB_SHVER="16"
+PLIST_SUB+=	SHLIB_VER=16.0.0 \
+		SHLIB_SHVER=16
 
 .include <bsd.port.mk>

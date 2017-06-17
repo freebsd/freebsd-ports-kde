@@ -115,7 +115,7 @@ lib/cmake/KDb3/KDbTargets.cmake
 lib/libKDb3.so
 lib/libKDb3.so.3
 lib/libKDb3.so.3.0
-lib/pkgconfig/KDb3.pc
+libdata/pkgconfig/KDb3.pc
 %%QT_MKSPECDIR%%/modules/qt_KDb3.pri
 %%MYSQL%%%%QT_PLUGINDIR%%/kdb3/kdb_mysqldriver.so
 %%PGSQL%%%%QT_PLUGINDIR%%/kdb3/kdb_postgresqldriver.so

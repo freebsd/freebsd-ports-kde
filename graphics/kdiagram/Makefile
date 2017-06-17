@@ -1,5 +1,4 @@
-# Created by: tcberner
-# $FreeBSD: branches/plasma5/PORTS/graphics/kdiagram/Makefile 13846 2017-04-10 12:12:27Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kdiagram
 PORTVERSION=	2.6.0
