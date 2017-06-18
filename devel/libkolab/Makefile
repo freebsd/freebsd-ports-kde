@@ -3,7 +3,8 @@
 PORTNAME=	libkolab
 PORTVERSION=	1.0.2
 CATEGORIES=	devel kde
-MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/
+MASTER_SITES=	LOCAL/tcberner/${PORTNAME}-${PORTVERSION} \
+		http://mirror.kolabsys.com/pub/releases/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Advanced Kolab Object Handling Library
