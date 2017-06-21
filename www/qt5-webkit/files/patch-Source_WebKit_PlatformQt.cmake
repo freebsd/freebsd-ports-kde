@@ -11,15 +11,6 @@
      install(FILES ${WebKit_PKGCONFIG_FILENAME} DESTINATION ${ECM_PKGCONFIG_INSTALL_DIR} COMPONENT Data)
  endif ()
  
-@@ -577,7 +578,7 @@ set(WebKitWidgets_SOURCES
- set(WebKitWidgets_SYSTEM_INCLUDE_DIRECTORIES
-     ${Qt5Gui_INCLUDE_DIRS}
-     ${Qt5Network_INCLUDE_DIRS}
--    ${Qt5Widgets_INCLUDE_DIRS}
-+    {Qt5Widgets_INCLUDE_DIRS}
- )
- 
- set(WebKitWidgets_LIBRARIES
 @@ -671,6 +672,7 @@ if (NOT MACOS_BUILD_FRAMEWORKS)
          BASE_NAME Qt5WebKitWidgets
          DEPS "${WEBKITWIDGETS_PKGCONFIG_DEPS}"
