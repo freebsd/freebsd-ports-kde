@@ -25,7 +25,8 @@ GNOME_RUN_DEPENDS_OFF=		${GNOME_BUILD_DEPENDS_OFF}
 
 # Override KDE4 versions to fetch the last one
 KDE_APPLICATIONS_VERSION=	15.08.3
-# Do not look for eigen. Eigen3 dropped the eigen2 compatibility with 3.2+. 
+
+# Do not look for eigen. Eigen3 dropped the eigen2 compatibility with 3.2+.
 CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_Eigen3:BOOL=TRUE
 
 post-patch:
