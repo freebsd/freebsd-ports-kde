@@ -1,5 +1,4 @@
-# Created by: tcberner
-# $FreeBSD: branches/plasma5/CALLIGRA/databases/kexi/Makefile 13739 2017-03-10 23:07:35Z tcberner $
+# $FreeBSD$
 
 PORTNAME=		kexi
 PORTVERSION=		3.0.0

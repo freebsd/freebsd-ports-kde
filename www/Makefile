@@ -550,6 +550,7 @@
     SUBDIR += npm-less-plugin-clean-css
     SUBDIR += npm2
     SUBDIR += npm3
+    SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
     SUBDIR += nuvolaplayer-all-services
@@ -1645,7 +1646,6 @@
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
-    SUBDIR += py-flask-restplus08
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
@@ -1676,6 +1676,7 @@
     SUBDIR += py-httplib2
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
+    SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit

@@ -10,8 +10,6 @@ CATEGORIES=	x11-themes kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Artworks Themes
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
-
 USES=		cmake:outsource kde:4 tar:xz
 USE_KDE=	kdelibs libkexiv2 workspace automoc4
 USE_QT4=	corelib gui opengl \
@@ -27,6 +25,8 @@ GNOME_RUN_DEPENDS_OFF=		${GNOME_BUILD_DEPENDS_OFF}
 
 # Override KDE4 versions to fetch the last one
 KDE_APPLICATIONS_VERSION=	15.08.3
+# Do not look for eigen. Eigen3 dropped the eigen2 compatibility with 3.2+. 
+CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_Eigen3:BOOL=TRUE
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}|g' \

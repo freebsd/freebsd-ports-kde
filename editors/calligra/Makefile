@@ -1,6 +1,10 @@
 # Created by: tcberner
 # $FreeBSD$
 
+# TODO (when these parts are available in KF5):
+#  - add calendarcore to USE_KDE when KDE PIM is available
+#  - add libOkular5Core.so:graphics/okular to LIB_DEPENDS
+#
 PORTNAME=	calligra
 PORTVERSION=	3.0.1
 CATEGORIES=	editors kde
@@ -67,17 +71,6 @@ CMAKE_ARGS+=	-DCMAKE_CXX_FLAGS="-DKDE_NO_DEBUG_OUTPUT"
 CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_KF5Akonadi:BOOL=FALSE \
 		-DCMAKE_DISABLE_FIND_PACKAGE_KF5AkonadiContact:BOOL=FALSE
 
-PLIST_SUB+=	SHLIB_VER=15.0.0 \
-		SHLIB_SHVER=15
-
-CONFLICTS_INSTALL=	calligra-2*
-
-post-patch:
-# Prevent updating MIME during build/install.
-	@${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d' \
-		${PATCH_WRKSRC}/filters/libmsooxml/CMakeLists.txt \
-		${PATCH_WRKSRC}/filters/stage/keynote/import/CMakeLists.txt \
-		${PATCH_WRKSRC}/filters/words/wiki/CMakeLists.txt \
-		${PATCH_WRKSRC}/plugins/vectorshape/CMakeLists.txt
+PLIST_SUB+=	SHLIB_VER=15.0.0
 
 .include <bsd.port.mk>

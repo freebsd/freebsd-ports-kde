@@ -2689,6 +2689,7 @@
     SUBDIR += p5-List-Objects-WithUtils
     SUBDIR += p5-List-Permutor
     SUBDIR += p5-List-PowerSet
+    SUBDIR += p5-List-Regexp
     SUBDIR += p5-List-Rotation-Cycle
     SUBDIR += p5-List-SomeUtils
     SUBDIR += p5-List-SomeUtils-XS
@@ -4185,6 +4186,7 @@
     SUBDIR += py-bluelet
     SUBDIR += py-boto
     SUBDIR += py-botocore
+    SUBDIR += py-bsd
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-calendar
