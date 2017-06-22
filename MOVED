@@ -4671,7 +4671,6 @@ net/kphone||2013-07-26|Has expired: Depends on Qt 3.x
 net/krdesktop||2013-07-26|Has expired: Depends on Qt 3.x
 net/lanbrowsing||2013-07-26|Has expired: Depends on Qt 3.x
 net/pppload||2013-07-26|Has expired: Depends on Qt 3.x
-net/smb4k||2013-07-26|Has expired: Depends on Qt 3.x
 net/twinkle||2013-07-26|Has expired: Depends on Qt 3.x
 net-im/eva||2013-07-26|Has expired: Depends on Qt 3.x
 net-im/kmerlin||2013-07-26|Has expired: Depends on Qt 3.x
@@ -9590,3 +9589,4 @@ editors/calligra-l10n-tr||2017-06-12|Merged with editors/calligra
 editors/calligra-l10n||2017-06-12|Merged with editors/calligra
 www/py-flask-restplus08||2017-06-21|Obsolete and not depended on anymore
 www/qt5-webkit-annulen|www/qt5-webkit|2017-07-08|The active fork of Qt WebKit has replaced the stale official one
+net/smb4k-kde4|net/smb4k-kde4|2017-07-22|Drop the kde4 suffix
