@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/www/qt5-webkit-annulen/Makefile 13983 2017-05-02 18:01:20Z tcberner $
 
 PORTNAME=		webkit
-PORTVERSION=		5.212.0.20170607
+PORTVERSION=		5.212.0.20170617
 DISTVERSIONSUFFIX=	-${GH_TAGNAME}
 CATEGORIES=		www
 MASTER_SITES=		LOCAL/tcberner/${PORTNAME}-${PORTVERSION}
@@ -46,7 +46,7 @@ CXXFLAGS+=		-DNDEBUG
 PLIST_SUB=		FULLVER="${PORTVERSION:R}"
 
 # The git tag to fetch
-GH_TAGNAME=		5681c65
+GH_TAGNAME=		6d0ad27
 
 .include <bsd.port.mk>
 
