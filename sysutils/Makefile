@@ -282,6 +282,7 @@
     SUBDIR += etcupdate
     SUBDIR += eventlog
     SUBDIR += evtviewer
+    SUBDIR += exa
     SUBDIR += exfat-utils
     SUBDIR += extipl
     SUBDIR += ezjail
@@ -313,6 +314,7 @@
     SUBDIR += flexbackup
     SUBDIR += flock
     SUBDIR += flog
+    SUBIDR += flowgger
     SUBDIR += fluent-bit
     SUBDIR += flyback
     SUBDIR += fonteditfs
@@ -929,7 +931,9 @@
     SUBDIR += qlogtools
     SUBDIR += qpxtool
     SUBDIR += qsynergy
+    SUBDIR += qt5-qtdiag
     SUBDIR += qt5-qtpaths
+    SUBDIR += qt5-qtplugininfo
     SUBDIR += qtpass
     SUBDIR += quicksynergy
     SUBDIR += qzeitgeist

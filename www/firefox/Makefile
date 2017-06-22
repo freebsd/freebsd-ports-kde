@@ -48,6 +48,7 @@ MOZ_OPTIONS=	--enable-application=browser \
 OPTIONS_DEFINE=		RUST KDE
 OPTIONS_DEFAULT=	BUNDLED_CAIRO
 # XXX lang/rust and devel/cargo currently build only on these platforms
+OPTIONS_DEFAULT_aarch64=RUST
 OPTIONS_DEFAULT_amd64=	RUST
 OPTIONS_DEFAULT_i386=	RUST
 
