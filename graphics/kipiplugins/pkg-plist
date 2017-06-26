@@ -1,5 +1,5 @@
 lib/libKF5kipiplugins.so
-lib/libKF5kipiplugins.so.5.5.0
+lib/libKF5kipiplugins.so.5.6.0
 %%QT_PLUGINDIR%%/kipiplugin_dropbox.so
 %%QT_PLUGINDIR%%/kipiplugin_facebook.so
 %%QT_PLUGINDIR%%/kipiplugin_flashexport.so
