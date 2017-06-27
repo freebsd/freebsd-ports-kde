@@ -14,7 +14,7 @@ LIB_DEPENDS=	libgpgme.so:security/gpgme \
 RUN_DEPENDS=	${LOCALBASE}/bin/gmd5sum:sysutils/coreutils
 
 
-USES=		cmake:outsource gettext gmake kde:5 tar:xz
+USES=		cmake:outsource gettext kde:5 tar:xz
 USE_KDE=	completion config coreaddons i18n widgetsaddons windowsystem \
 		pimtextedit
 USE_QT5=	buildtools_build qmake_build widgets

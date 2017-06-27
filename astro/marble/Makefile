@@ -10,7 +10,7 @@ COMMENT=	Virtual globe and world atlas for KDE
 
 LIB_DEPENDS=	libquazip5.so:archivers/quazip-qt5
 
-USES=		cmake:outsource desktop-file-utils gettext gmake kde:5 tar:xz
+USES=		cmake:outsource desktop-file-utils gettext kde:5 tar:xz
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		crash doctools ecm i18n jobwidgets kio newstuff package parts \
 		plasma-framework runner service sonnet textwidgets wallet \

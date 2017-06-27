@@ -10,7 +10,7 @@ COMMENT=	KDE PIM mail related libraries
 
 LICENSE=	LGPL21
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	completion config coreaddons dbusaddons ecm i18n iconthemes \
 		kdewebkit service sonnet widgetsaddons xmlgui
 # pim components

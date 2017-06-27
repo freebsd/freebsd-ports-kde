@@ -15,8 +15,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpgme.so:security/gpgme \
 		libgpgmepp.so:security/gpgme-cpp
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake grantlee:5 \
-		kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
 		ecm i18n iconthemes itemmodels jobwidgets kcmutils kio \
 		notifications notifyconfig parts service sonnet texteditor\

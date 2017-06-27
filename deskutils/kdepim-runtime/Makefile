@@ -13,8 +13,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libkolab.so:devel/libkolab
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake \
-		kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	codecs config itemmodels kcmutils kdelibs4support kio kross \
 		notifyconfig
 # pim components
