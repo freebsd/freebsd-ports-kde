@@ -16,5 +16,4 @@ USE_KDE=	archive completion configwidgets coreaddons doctools ecm \
 		i18n kio
 USE_QT5=	buildtools_build core gui qmake_build testlib
 
-
 .include <bsd.port.mk>

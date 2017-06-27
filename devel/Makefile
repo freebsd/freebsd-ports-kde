@@ -4629,6 +4629,7 @@
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-localserver
+    SUBDIR += py-pytest-mock
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-tornado

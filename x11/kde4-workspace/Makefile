@@ -52,12 +52,12 @@ CONFLICTS=	plasma5-khotkeys-* \
 		plasma5-plasma-desktop-* \
 		plasma5-plasma-workspace-*
 
+USES=		cmake:outsource,noninja compiler:c++11-lib gettext gmake jpeg kde:4 \
+		pkgconfig shebangfix tar:xz
 USE_GL=		glu
-USE_GNOME=	glib20
+USE_GNOME=	glib20 libxml2
 USE_KDE=	kactivities kdelibs nepomuk-core oxygen-icons5 \
 		pimlibs akonadi automoc4 ontologies qimageblitz soprano strigi
-USES=		cmake:outsource compiler:c++11-lib gettext gmake kde:4 \
-		jpeg localbase:ldflags pkgconfig shebangfix tar:xz
 USE_QT4=	corelib dbus declarative designer_build gui network \
 		opengl phonon qtestlib script sql webkit xml \
 		moc_build qmake_build rcc_build uic_build

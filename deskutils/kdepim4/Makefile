@@ -19,7 +19,7 @@ RUN_DEPENDS=	${KDE_PREFIX}/bin/accountwizard:deskutils/kdepim4-runtime \
 
 CONFLICTS_INSTALL=	kdepim44-4.* kdepim-kf5*
 
-USES=		cmake:outsource gmake grantlee:4 iconv kde:4 shebangfix tar:xz
+USES=		cmake:outsource grantlee:4 iconv kde:4 shebangfix tar:xz
 USE_GNOME=	libxml2 libxslt:build
 USE_KDE=	kdelibs pimlibs kactivities \
 		akonadi automoc4 soprano nepomuk-widgets baloo
