@@ -183,6 +183,9 @@ share/locale/fi/LC_MESSAGES/plasmawallpaperviewer.mo
 share/locale/fi/LC_MESSAGES/plasmoidviewer.mo
 share/locale/fi/LC_MESSAGES/remote-widgets-browser.mo
 share/locale/fr/LC_MESSAGES/cuttlefish.mo
+share/locale/fr/LC_MESSAGES/cuttlefish_editorplugin.mo
+share/locale/fr/LC_MESSAGES/org.kde.plasma.lookandfeelexplorer.mo
+share/locale/fr/LC_MESSAGES/org.kde.plasma.themeexplorer.mo
 share/locale/fr/LC_MESSAGES/plasma_shell_org.kde.plasmoidviewershell.mo
 share/locale/fr/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/fr/LC_MESSAGES/plasmawallpaperviewer.mo
@@ -463,6 +466,7 @@ share/locale/tr/LC_MESSAGES/cuttlefish.mo
 share/locale/tr/LC_MESSAGES/cuttlefish_editorplugin.mo
 share/locale/tr/LC_MESSAGES/org.kde.plasma.lookandfeelexplorer.mo
 share/locale/tr/LC_MESSAGES/org.kde.plasma.themeexplorer.mo
+share/locale/tr/LC_MESSAGES/plasma_shell_org.kde.plasmoidviewershell.mo
 share/locale/tr/LC_MESSAGES/plasmaengineexplorer.mo
 share/locale/tr/LC_MESSAGES/plasmawallpaperviewer.mo
 share/locale/tr/LC_MESSAGES/plasmoidviewer.mo
