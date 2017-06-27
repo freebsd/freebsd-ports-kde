@@ -459,7 +459,7 @@
     SUBDIR += tcb
     SUBDIR += team
     SUBDIR += telbook
-    SUBDIR += tellico-kde4
+    SUBDIR += tellico
     SUBDIR += tempcontrol
     SUBDIR += termatrix
     SUBDIR += teseq

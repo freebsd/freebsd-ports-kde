@@ -10,7 +10,7 @@ COMMENT=	KDE PIM addons
 
 LICENSE=	LGPL21
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake kde:5 \
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 \
 		pkgconfig tar:xz
 USE_KDE=	config dbusaddons ecm i18n khtml xmlgui
 # pim components

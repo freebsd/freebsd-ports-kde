@@ -220,8 +220,10 @@ share/desktop-directories/kf5-utilities-peripherals.directory
 share/desktop-directories/kf5-utilities-pim.directory
 share/desktop-directories/kf5-utilities-xutils.directory
 share/desktop-directories/kf5-utilities.directory
-share/doc/HTML/de/klipper/index.cache.bz2
-share/doc/HTML/de/klipper/index.docbook
+share/doc/HTML/ca/klipper/index.cache.bz2
+share/doc/HTML/ca/klipper/index.docbook
+share/doc/HTML/ca/klipper/klipper-widget.png
+share/doc/HTML/ca/klipper/screenshot.png
 share/doc/HTML/en/kcontrol/screenlocker/index.cache.bz2
 share/doc/HTML/en/kcontrol/screenlocker/index.docbook
 share/doc/HTML/en/klipper/index.cache.bz2
@@ -1477,6 +1479,7 @@ share/locale/fr/LC_MESSAGES/phonon_kde_plugin.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.color.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.image.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.analogclock.mo
+share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.appmenu.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.battery.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.calendar.mo
 share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.clipboard.mo
@@ -2166,6 +2169,7 @@ share/locale/ja/LC_MESSAGES/drkonqi5.mo
 share/locale/ja/LC_MESSAGES/freespacenotifier.mo
 share/locale/ja/LC_MESSAGES/kcminit.mo
 share/locale/ja/LC_MESSAGES/kholidays_calendar_plugin.mo
+share/locale/ja/LC_MESSAGES/kio_desktop.mo
 share/locale/ja/LC_MESSAGES/kio5_applications.mo
 share/locale/ja/LC_MESSAGES/klipper.mo
 share/locale/ja/LC_MESSAGES/krunner.mo
@@ -4117,6 +4121,8 @@ share/locale/tr/LC_MESSAGES/plasma_runner_solid.mo
 share/locale/tr/LC_MESSAGES/plasma_runner_webshortcuts.mo
 share/locale/tr/LC_MESSAGES/plasma_runner_windowedwidgets.mo
 share/locale/tr/LC_MESSAGES/plasma_runner_windows.mo
+share/locale/tr/LC_MESSAGES/plasmashell.mo
+share/locale/tr/LC_MESSAGES/plasmashellprivateplugin.mo
 share/locale/tr/LC_MESSAGES/soliduiserver5.mo
 share/locale/tr/LC_MESSAGES/systemmonitor.mo
 share/locale/ug/LC_MESSAGES/drkonqi5.mo

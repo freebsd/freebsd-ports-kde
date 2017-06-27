@@ -13,7 +13,7 @@ BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
 LIB_DEPENDS=	libKDevPlatformInterfaces.so:devel/kdevplatform \
 		libkdevcmakecommon.so:devel/kdevelop
 
-USES=		cmake:outsource compiler:c++11-lib gmake kde:5 python:3 tar:xz
+USES=		cmake:outsource compiler:c++11-lib kde:5 python:3 tar:xz
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		ecm i18n itemmodels jobwidgets kio newstuff parts service \
 		sonnet texteditor textwidgets threadweaver widgetsaddons xmlgui

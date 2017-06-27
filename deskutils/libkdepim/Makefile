@@ -12,7 +12,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
-USES=		cmake:outsource gmake gettext compiler:c++11-lib kde:5 tar:xz
+USES=		cmake:outsource gettext compiler:c++11-lib kde:5 tar:xz
 USE_KDE=	codecs completion ecm i18n iconthemes itemviews kcmutils \
 		wallet
 # pim components

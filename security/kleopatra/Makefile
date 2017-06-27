@@ -12,7 +12,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libboost_thread.so:devel/boost-libs \
 		libgpgme.so:security/gpgme
 
-USES=		cmake:outsource gettext gmake kde:5 tar:xz
+USES=		cmake:outsource gettext kde:5 tar:xz
 USE_KDE=	codecs config dbusaddons doctools ecm i18n iconthemes kcmutils \
 		notifications textwidgets windowsystem xmlgui \
 		libkleo mime

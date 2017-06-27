@@ -29,7 +29,7 @@ USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tu}
 
 USES=		bison cmake compiler:features cpe desktop-file-utils \
-		execinfo fortran gmake pyqt:4 python:2.7 sqlite
+		execinfo fortran pyqt:4 python:2.7 sqlite
 USE_PYQT=	core gui network qscintilla2 sip sql svg xml webkit_run
 
 USE_QT4=	corelib designer doc gui linguist_build moc_build \

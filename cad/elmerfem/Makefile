@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	ElmerCSC
 GH_TAGNAME=	c30fff2
 
-USES=		blaslapack:netlib cmake fortran gmake tcl
+USES=		blaslapack:netlib cmake fortran tcl
 
 USE_LDCONFIG=	${PREFIX}/lib/elmersolver
 ALL_TARGET=	# empty
@@ -28,7 +28,7 @@ CMAKE_ARGS+=	-Wno-dev
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == "amd64" || ${ARCH} == "ia64"
+.if ${ARCH} == "amd64"
 CFLAGS_${ARCH}=	-fPIC
 CXXFLAGS_${ARCH}= -fPIC
 FCFLAGS+=	-fPIC

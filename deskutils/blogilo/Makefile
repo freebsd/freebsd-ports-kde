@@ -13,7 +13,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libical.so:devel/libical
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons ecm i18n iconthemes \
 		itemviews jobwidgets kdelibs4support kio notifications parts \

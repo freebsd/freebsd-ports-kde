@@ -2867,7 +2867,6 @@ lang/p5-JavaScript||2011-11-01|Does not fetch
 lang/TenDRA||2011-11-01|Website disappeared; last release in 2006, does not compile on recent FreeBSD-9
 mail/freepops||2011-11-01|Does not build
 mail/itraxp||2011-11-01|Does not build
-misc/tellico||2011-11-01|Leaves files behind on deinstallation
 net/gsambad||2011-11-01|Does not fetch
 net/nocatauth-gateway||2011-11-01|Uses a UID registered to another port
 net/nocatauth-server||2011-11-01|Uses a UID registered to another port
@@ -4671,7 +4670,6 @@ net/kphone||2013-07-26|Has expired: Depends on Qt 3.x
 net/krdesktop||2013-07-26|Has expired: Depends on Qt 3.x
 net/lanbrowsing||2013-07-26|Has expired: Depends on Qt 3.x
 net/pppload||2013-07-26|Has expired: Depends on Qt 3.x
-net/smb4k||2013-07-26|Has expired: Depends on Qt 3.x
 net/twinkle||2013-07-26|Has expired: Depends on Qt 3.x
 net-im/eva||2013-07-26|Has expired: Depends on Qt 3.x
 net-im/kmerlin||2013-07-26|Has expired: Depends on Qt 3.x
@@ -9457,47 +9455,47 @@ ukrainian/calligra-l10n|editors/calligra|2017-05-23|Reintegrated into one port
 graphics/digikam-kde4|graphics/digikam|2017-05-23|Renamed to drop -kde4 suffix
 graphics/digikam-kde4-l10n|graphics/digikam|2017-05-23|Reintegrated into one port
 graphics/digikam-kde4-doc|graphics/digikam|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-acquireimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-advancedslideshow/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-batchprocess/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-calendar/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-debianscreenshots/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-dngconverter/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-dropbox/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-expoblending/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-facebook/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-flashexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-flickrexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-galleryexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-googleservices/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-gpssync/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-htmlexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-imageshackexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-imageviewer/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-imgurexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-ipodexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-jalbumexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-jpeglossless/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-kioexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-kmlexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-kopete/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-mediawiki/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-metadataedit/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-panorama/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-photolayoutseditor/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-piwigoexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-printimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-rajceexport/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-rawconverter/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-removeredeyes/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-sendimages/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-shwup/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-smug/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-timeadjust/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-videoslideshow/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-vkontakte/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugin-yandexfotki/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
-graphics/kipi-plugins-kde4/Makefile|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-acquireimages|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-advancedslideshow|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-batchprocess|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-calendar|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-debianscreenshots|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-dngconverter|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-dropbox|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-expoblending|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-facebook|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-flashexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-flickrexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-galleryexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-googleservices|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-gpssync|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-htmlexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imageshackexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imageviewer|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-imgurexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-ipodexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-jalbumexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-jpeglossless|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kioexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kmlexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-kopete|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-mediawiki|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-metadataedit|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-panorama|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-photolayoutseditor|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-piwigoexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-printimages|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-rajceexport|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-rawconverter|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-removeredeyes|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-sendimages|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-shwup|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-smug|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-timeadjust|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-videoslideshow|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-vkontakte|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugin-yandexfotki|graphics/kipiplugins|2017-05-23|Reintegrated into one port
+graphics/kipi-plugins-kde4|graphics/kipiplugins|2017-05-23|Reintegrated into one port
 accessibility/kdeaccessibility4|accessibility/kdeaccessibility|2017-05-23|Renamed to drop -kde4 suffix
 audio/kio-audiocd|audio/audiocd-kio|2017-05-23|Use proper name of package
 devel/kdebindings4||2017-05-23|EOL
@@ -9590,3 +9588,10 @@ editors/calligra-l10n-tr||2017-06-12|Merged with editors/calligra
 editors/calligra-l10n||2017-06-12|Merged with editors/calligra
 www/py-flask-restplus08||2017-06-21|Obsolete and not depended on anymore
 www/qt5-webkit-annulen|www/qt5-webkit|2017-07-08|The active fork of Qt WebKit has replaced the stale official one
+net/smb4k-kde4|net/smb4k-kde4|2017-07-22|Drop the kde4 suffix
+misc/tellico-kde4|misc/tellico|2017-07-22|Drop the kde4 suffix
+databases/pgpool-II|databases/pgpool|2017-06-25|Has expired: Deprecated by upstream; use database/pgpool instead
+databases/pgpool-II-30|databases/pgpool|2017-06-25|Has expired: Deprecated by upstream; use database/pgpool instead
+games/libgames-support||2017-06-25|Has expired: Superseded by libgnome-games-support, no longer used by anything
+net/sixxs-aiccu||2017-06-25|Has expired: SixXS shutdown on 2017-06-06, https://www.sixxs.net/sunset/
+databases/pgpoolAdmin||2017-06-25|Removed, depended on expired databases/pgpool-II and only supported PostgreSQL 9.2 which is will EOL in September 2017

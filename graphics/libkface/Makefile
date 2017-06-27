@@ -11,12 +11,7 @@ COMMENT=	KDE library for face recognition
 LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
 
-# Ugly "fix" to work with both the quarterly branch and head
-.if !exists(${.CURDIR:H:H}/graphics/opencv)
-LIB_DEPENDS=	libopencv_legacy.so:graphics/opencv2
-.else
 LIB_DEPENDS=	libopencv_legacy.so:graphics/opencv
-.endif
 
 USES=		cmake:outsource pkgconfig kde:5 tar:xz
 USE_KDE=	ecm

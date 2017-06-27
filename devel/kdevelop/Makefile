@@ -27,7 +27,7 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 USE_QT5=	concurrent core dbus declarative gui help network qml quick \
 		script webkit widgets xml buildtools_build qmake_build
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
-		gettext gmake kde:5 shared-mime-info tar:xz
+		gettext kde:5 shared-mime-info tar:xz
 
 CONFLICTS=	kdevelop-kde4-4* kdevelop-4*
 

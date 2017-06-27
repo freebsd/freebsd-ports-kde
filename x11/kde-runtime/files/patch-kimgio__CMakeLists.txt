@@ -1,11 +1,18 @@
---- kimgio/CMakeLists.txt.orig	2013-08-10 19:08:00.657328464 +0000
-+++ kimgio/CMakeLists.txt	2013-08-10 19:08:12.087324961 +0000
-@@ -10,7 +10,7 @@
+--- kimgio/CMakeLists.txt.orig	2017-06-02 00:43:37 UTC
++++ kimgio/CMakeLists.txt
+@@ -10,7 +10,7 @@ find_library(FOUND_WEBP webp)
  if ( FOUND_WEBP )
    set(kimg_webp_LIB_SRCS webp.cpp)
    kde4_add_plugin(kimg_webp ${kimg_webp_LIB_SRCS})
 -  target_link_libraries(kimg_webp ${KDE4_KDECORE_LIBS} ${QT_QTGUI_LIBRARY} webp)
 +  target_link_libraries(kimg_webp ${KDE4_KDECORE_LIBS} ${QT_QTGUI_LIBRARY} ${FOUND_WEBP})
  
-   install(TARGETS kimg_webp  DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/imageformats/)
-   install(FILES webp.desktop DESTINATION ${SERVICES_INSTALL_DIR}/qimageioplugins/)
+   add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+   add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+@@ -22,6 +22,5 @@ if ( FOUND_WEBP )
+ 
+   find_package(SharedMimeInfo REQUIRED)
+   install(FILES webp.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
+-  update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
+ endif()
+ 

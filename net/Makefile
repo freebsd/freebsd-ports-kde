@@ -1311,11 +1311,10 @@
     SUBDIR += sippy_b2bua
     SUBDIR += siproxd
     SUBDIR += sipsak
-    SUBDIR += sixxs-aiccu
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slurm
-    SUBDIR += smb4k-kde4
+    SUBDIR += smb4k
     SUBDIR += smbldap-tools
     SUBDIR += smcroute
     SUBDIR += smm++

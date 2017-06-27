@@ -13,7 +13,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpgme.so:security/gpgme \
 		libgpgmepp.so:security/gpgme-cpp
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons ecm i18n itemmodels itemviews \
 		jobwidgets kio notifications service solid wallet \
