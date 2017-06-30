@@ -315,7 +315,7 @@
     SUBDIR += flexbackup
     SUBDIR += flock
     SUBDIR += flog
-    SUBIDR += flowgger
+    SUBDIR += flowgger
     SUBDIR += fluent-bit
     SUBDIR += flyback
     SUBDIR += fonteditfs
@@ -1137,10 +1137,11 @@
     SUBDIR += sysinfo
     SUBDIR += syslinux
     SUBDIR += syslog-ng
-    SUBDIR += syslog-ng-devel
     SUBDIR += syslog-ng-incubator
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
+    SUBDIR += syslog-ng39
+    SUBDIR += syslog-ng310
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends

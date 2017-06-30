@@ -46,6 +46,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += blindelephant
+    SUBDIR += boringssl
     SUBDIR += botan110
     SUBDIR += bro
     SUBDIR += broccoli
@@ -1184,6 +1185,7 @@
     SUBDIR += tclgpg
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
+    SUBDIR += testssl.sh
     SUBDIR += tinc
     SUBDIR += tinyca
     SUBDIR += titus

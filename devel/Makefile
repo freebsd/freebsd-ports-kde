@@ -320,6 +320,7 @@
     SUBDIR += cobf
     SUBDIR += coccinelle
     SUBDIR += codeblocks
+    SUBDIR += codesearch-py
     SUBDIR += codeville
     SUBDIR += codeworker
     SUBDIR += colorgcc
@@ -4157,6 +4158,7 @@
     SUBDIR += py-argparse
     SUBDIR += py-args
     SUBDIR += py-arrow
+    SUBDIR += py-asn1crypto
     SUBDIR += py-aspects
     SUBDIR += py-aspyct
     SUBDIR += py-astor
@@ -4450,6 +4452,7 @@
     SUBDIR += py-logan
     SUBDIR += py-logbook
     SUBDIR += py-logilab-common
+    SUBDIR += py-logutils
     SUBDIR += py-louie
     SUBDIR += py-lxml
     SUBDIR += py-magic
