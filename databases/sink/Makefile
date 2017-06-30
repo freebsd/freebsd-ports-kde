@@ -1,6 +1,8 @@
 # Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/databases/sink/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
+BROKEN=		Does not build against flatbuffers-1.7.0.
+
 PORTNAME=	sink
 PORTVERSION=	0.2.0
 DISTVERSIONPREFIX=	v
