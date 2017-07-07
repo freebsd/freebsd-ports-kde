@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-# Created by: tcberner
-# $FreeBSD: branches/plasma5/KDE/sysutils/signon-qt5/Makefile 13250 2016-11-06 16:34:10Z tcberner $
-=======
 # $FreeBSD$
->>>>>>> master
 
 PORTNAME=	signon
 PORTVERSION=	8.58
 CATEGORIES=	sysutils kde
-<<<<<<< HEAD
-MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/
-=======
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/
->>>>>>> master
 PKGNAMESUFFIX=	-qt5
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
@@ -34,12 +25,6 @@ GL_TAGNAME=	aa1bcf3c9218addbdb376a40151b689409046125
 WRKSRC=		${WRKDIR}/${GL_PROJECT}-${GL_TAGNAME}-${GL_TAGNAME}
 
 pre-configure:
-<<<<<<< HEAD
-	#fix pkgconfig location
-	${REINPLACE_CMD} -e 's,$$$${INSTALL_LIBDIR},${LOCALBASE}/libdata,' \
-		${WRKSRC}/common-pkgconfig.pri
-=======
->>>>>>> master
 	#make it find qdbusxml2ccp (as ${QT_BINDIR} is not in PATH)
 	${REINPLACE_CMD} -e 's,qdbusxml2cpp,${QT_BINDIR}/qdbusxml2cpp,' \
 		${WRKSRC}/src/signond/signond.pro
