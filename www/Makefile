@@ -23,10 +23,6 @@
     SUBDIR += apache-forrest
     SUBDIR += apache-mode.el
     SUBDIR += apache22
-    SUBDIR += apache22-event-mpm
-    SUBDIR += apache22-itk-mpm
-    SUBDIR += apache22-peruser-mpm
-    SUBDIR += apache22-worker-mpm
     SUBDIR += apache24
     SUBDIR += apercu
     SUBDIR += aria2
@@ -2135,6 +2131,7 @@
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
+    SUBDIR += rubygem-toml-rb
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks

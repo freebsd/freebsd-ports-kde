@@ -2,12 +2,11 @@
 
 PORTNAME=	ark
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	archivers kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Archiving tool for KDE
-
-LIB_DEPENDS=	libqjson.so:devel/qjson
 
 USES=		cmake:outsource gettext libarchive kde:5 tar:xz
 USE_KDE=	archive config crash dbusaddons doctools ecm i18n iconthemes itemmodels \

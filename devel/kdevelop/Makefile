@@ -2,6 +2,7 @@
 
 PORTNAME=	kdevelop
 PORTVERSION=	5.1.0
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/kdevelop/${PORTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
@@ -24,7 +25,7 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 		notifyconfig package parts plasma-desktop plasma-framework \
 		runner service sonnet texteditor textwidgets threadweaver \
 		widgetsaddons windowsystem xmlgui
-USE_QT5=	concurrent core dbus declarative gui help network qml quick \
+USE_QT5=	concurrent core dbus gui help network qml quick \
 		script webkit widgets xml buildtools_build qmake_build
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
 		gettext kde:5 shared-mime-info tar:xz
