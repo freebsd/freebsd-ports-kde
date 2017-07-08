@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20170613
+PORTVERSION=	s20170629
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -15,10 +15,6 @@ LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/externals/inih/inih/LICENSE.txt
 LICENSE_FILE_BSL=	${WRKSRC}/externals/catch/LICENSE.txt
 LICENSE_FILE_GPLv2+ =	${WRKSRC}/license.txt
 LICENSE_FILE_LGPL21+ =	${_LICENSE_STORE}/LGPL21 # soundtouch
-LICENSE_NAME_UNLICENSE=	The Unlicense
-LICENSE_TEXT_UNLICENSE=	See http://unlicense.org/
-LICENSE_PERMS_UNLICENSE=	${_LICENSE_PERMS_PD}
-LICENSE_GROUPS_UNLICENSE=	${_LICENSE_GROUPS_PD}
 
 BUILD_DEPENDS=	boost-libs>=1.57:devel/boost-libs
 LIB_DEPENDS=	libpng.so:graphics/png
@@ -29,9 +25,9 @@ ONLY_FOR_ARCHS_REASON=	https://github.com/MerryMage/dynarmic/issues/35
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	ac168eeb5
+GH_TAGNAME=	56d718b2a
 GH_TUPLE=	citra-emu:ext-soundtouch:5274ec4:soundtouch/externals/soundtouch \
-		MerryMage:dynarmic:7707ff1:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:8f15e3f:dynarmic/externals/dynarmic \
 		fmtlib:fmt:3.0.0-187-gac5484c:fmt/externals/fmt \
 		herumi:xbyak:v5.40:xbyak/externals/xbyak \
 		neobrain:nihstro:7e24743:nihstro/externals/nihstro \

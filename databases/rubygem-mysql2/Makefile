@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mysql2
-PORTVERSION=	0.4.6
+PORTVERSION=	0.4.7
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -12,8 +12,7 @@ COMMENT=	Simple, fast MySQL library for Ruby, binding to libmysql
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USE_MYSQL=	yes
 USE_RUBY=	yes
-USES=		gem ssl
+USES=		gem mysql ssl
 
 .include <bsd.port.mk>

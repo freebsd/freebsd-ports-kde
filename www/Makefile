@@ -23,10 +23,6 @@
     SUBDIR += apache-forrest
     SUBDIR += apache-mode.el
     SUBDIR += apache22
-    SUBDIR += apache22-event-mpm
-    SUBDIR += apache22-itk-mpm
-    SUBDIR += apache22-peruser-mpm
-    SUBDIR += apache22-worker-mpm
     SUBDIR += apache24
     SUBDIR += apercu
     SUBDIR += aria2
@@ -549,6 +545,7 @@
     SUBDIR += npm-less-plugin-clean-css
     SUBDIR += npm2
     SUBDIR += npm3
+    SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
     SUBDIR += nuvolaplayer-all-services
@@ -1503,6 +1500,7 @@
     SUBDIR += py-WebFlash
     SUBDIR += py-WebTest
     SUBDIR += py-aiohttp
+    SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
@@ -1643,7 +1641,6 @@
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
-    SUBDIR += py-flask-restplus08
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
@@ -1674,6 +1671,7 @@
     SUBDIR += py-httplib2
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
+    SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit
@@ -1683,6 +1681,7 @@
     SUBDIR += py-meld
     SUBDIR += py-meld3
     SUBDIR += py-mt
+    SUBDIR += py-multidict
     SUBDIR += py-nevow
     SUBDIR += py-notebook
     SUBDIR += py-octoprint
@@ -1846,6 +1845,7 @@
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
+    SUBDIR += py-yarl
     SUBDIR += py-zope.app.wsgi
     SUBDIR += py3-cssutils
     SUBDIR += py3-requests
@@ -1939,6 +1939,7 @@
     SUBDIR += rubygem-deckar01-task_list1
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
+    SUBDIR += rubygem-dropzonejs-rails07
     SUBDIR += rubygem-em-http-request
     SUBDIR += rubygem-em-socksify
     SUBDIR += rubygem-em-twitter
@@ -2128,6 +2129,7 @@
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
+    SUBDIR += rubygem-toml-rb
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks

@@ -46,6 +46,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += blindelephant
+    SUBDIR += boringssl
     SUBDIR += botan110
     SUBDIR += bro
     SUBDIR += broccoli
@@ -200,6 +201,7 @@
     SUBDIR += gwee
     SUBDIR += hackbot
     SUBDIR += hamachi
+    SUBDIR += hardening-check
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heimdal
@@ -1177,6 +1179,7 @@
     SUBDIR += tclgpg
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
+    SUBDIR += testssl.sh
     SUBDIR += tinc
     SUBDIR += tinyca
     SUBDIR += titus

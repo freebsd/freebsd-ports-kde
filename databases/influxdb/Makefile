@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	influxdb
-PORTVERSION=	1.2.4
+PORTVERSION=	1.3.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases net-mgmt
 
@@ -10,7 +10,16 @@ COMMENT=	Open-source distributed time series database
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	go>=1.5.0:lang/go
+BUILD_DEPENDS=	go>=1.8.1:lang/go
+
+OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=	MANPAGES
+
+MANPAGES_BUILD_DEPENDS=	xmlto:textproc/xmlto \
+		asciidoc:textproc/asciidoc \
+		docbook-xml>0:textproc/docbook-xml
+MANPAGES_USES=	gmake
+OPTIONS_SUB=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64 armv6
 
@@ -27,14 +36,14 @@ GH_TUPLE=	BurntSushi:toml:9906417:toml/src/github.com/BurntSushi/toml \
 		dgrijalva:jwt-go:24c63f5:jwt_go/src/github.com/dgrijalva/jwt-go \
 		dgryski:go-bits:2ad8d70:go_bits/src/github.com/dgryski/go-bits \
 		dgryski:go-bitstream:7d46cd2:go_bitstream/src/github.com/dgryski/go-bitstream \
-		gogo:protobuf:a9cd0c35:protobuf/src/github.com/gogo/protobuf \
+		gogo:protobuf:3043356:protobuf/src/github.com/gogo/protobuf \
 		golang:snappy:d9eb7a3:snappy/src/github.com/golang/snappy \
 		influxdata:usage-client:6d38953:usage_client/src/github.com/influxdata/usage-client \
-		jwilder:encoding:4dada27:encoding/src/github.com/jwilder/encoding \
+		jwilder:encoding:278947:encoding/src/github.com/jwilder/encoding \
 		paulbellamy:ratecounter:5a11f58:ratecounter/src/github.com/paulbellamy/ratecounter \
-		peterh:liner:8975875:liner/src/github.com/peterh/liner \
-		rakyll:statik:e383bbf:statik/src/github.com/rakyll/statik \
+		peterh:liner:8860952:liner/src/github.com/peterh/liner \
 		retailnext:hllpp:38a7bb7:hllpp/src/github.com/retailnext/hllpp \
+		spaolacci:murmur3:0d12bf8:murmur3/src/github.com/spaolacci/murmur3 \
 		collectd:go-collectd:e84e8af:go_collectd/src/collectd.org \
 		uber-go:atomic:74ca5ec:atomic/src/github.com/uber-go/atomic \
 		uber-go:zap:fbae028:zap/src/github.com/uber-go/zap \
@@ -68,20 +77,23 @@ STRIP=		# stripping can break go binaries
 post-patch:
 	@${MKDIR} ${WRKSRC}/src/github.com/${GH_ACCOUNT_DEFAULT}/${PORTNAME}
 	@cd ${WRKSRC} && \
-		${MV} appveyor.yml build-docker.sh build.py build.sh CHANGELOG.md \
+		${MV} appveyor.yml build.py build.sh CHANGELOG.md \
 		circle-test.sh circle.yml client cmd CODING_GUIDELINES.md \
-		CONTRIBUTING.md coordinator DOCKER.md Dockerfile \
+		CONTRIBUTING.md coordinator \
 		Dockerfile_build_ubuntu32 Dockerfile_build_ubuntu64 \
 		Dockerfile_build_ubuntu64_git Dockerfile_test_ubuntu32 \
 		errors.go etc gobuild.sh Godeps importer influxdb.go influxql \
 		internal LICENSE LICENSE_OF_DEPENDENCIES.md Makefile man models \
-		monitor nightly.sh node.go package.sh pkg QUERIES.md README.md \
+		monitor nightly.sh node.go pkg QUERIES.md README.md \
 		scripts services stress tcp test.sh tests TODO.md toml tsdb uuid \
  		${WRKSRC}/src/github.com/${GH_ACCOUNT_DEFAULT}/${PORTNAME}
 
 do-build:
 		@cd ${WRKSRC}/src/github.com/${GH_ACCOUNT_DEFAULT}/${GH_PROJECT} && \
 			${SETENV} GOPATH=${WRKSRC} go install -ldflags "-X main.version=${DISTVERSION}" ./...
+
+do-build-MANPAGES-on:
+		@cd ${WRKSRC}/src/github.com/influxdata/influxdb/man && ${SETENV} ${MAKE_ENV} ${MAKE_CMD}
 
 do-install:
 		${MKDIR} ${STAGEDIR}${INFLUXD_DBDIR} \
@@ -97,5 +109,12 @@ do-install:
 		${INSTALL_DATA} \
 			${WRKSRC}/src/github.com/${GH_ACCOUNT_DEFAULT}/${GH_PROJECT}/etc/config.sample.toml  \
 			${STAGEDIR}${PREFIX}/etc/influxd.conf.sample
+
+do-install-MANPAGES-on:
+.for i in influx.1 influx_inspect.1 influx_stress.1 influx_tsm.1 \
+	influxd-backup.1 influxd-config.1 influxd-restore.1 \
+	influxd-run.1 influxd-version.1 influxd.1
+		${INSTALL_MAN} ${WRKSRC}/src/github.com/influxdata/influxdb/man/$i ${STAGEDIR}${MAN8PREFIX}/man/man1
+.endfor
 
 .include <bsd.port.mk>

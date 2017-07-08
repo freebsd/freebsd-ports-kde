@@ -3,7 +3,7 @@
 
 PORTNAME=	inkscape
 PORTVERSION=	0.92.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://launchpadlibrarian.net/306309537/ \
 		LOCAL/kwm
@@ -32,7 +32,7 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 
 USE_GNOME=	gtkmm24 libxml2 libxslt
 USES=		compiler:c++11-lib cmake cpe desktop-file-utils gnome \
-		iconv:wchar_t ninja jpeg pathfix pkgconfig python:2,build \
+		iconv:wchar_t jpeg pathfix pkgconfig python:2,build \
 		shebangfix tar:bzip2
 USE_XORG=	x11
 INSTALLS_ICONS=	yes

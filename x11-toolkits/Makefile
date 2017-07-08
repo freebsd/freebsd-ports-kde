@@ -93,6 +93,7 @@
     SUBDIR += kf5-kxmlgui
     SUBDIR += kirigami
     SUBDIR += kirigami2
+    SUBDIR += kproperty
     SUBDIR += lesstif
     SUBDIR += libXaw
     SUBDIR += libXmu
@@ -229,7 +230,6 @@
     SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
-    SUBDIR += qt5-declarative
     SUBDIR += qt5-declarative-render2d
     SUBDIR += qt5-gamepad
     SUBDIR += qt5-gui

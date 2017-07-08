@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	metasploit
-PORTVERSION=	4.14.25
+PORTVERSION=	4.14.28
 CATEGORIES=	security
 
 MAINTAINER=	tanawts@gmail.com
@@ -80,6 +80,7 @@ GH_ACCOUNT=	rapid7
 GH_PROJECT=	metasploit-framework
 
 NO_ARCH=	yes
+NO_ARCH_IGNORE=	template_x64_bsd.bin template_x86_bsd.bin CVE-2013-2171.bin
 STRIP=
 
 USE_RUBY=	yes
@@ -110,6 +111,7 @@ post-patch:
 		/rb-readline/d ; \
 		/metasploit-aggregator/d' \
 		${WRKSRC}/metasploit-framework.gemspec
+	${REINPLACE_CMD} "/pg/s|, '0.20.0'||" ${WRKSRC}/metasploit-framework.gemspec
 .if ${RUBY_VER} < 2.4
 	${REINPLACE_CMD} '/xmlrpc/d' ${WRKSRC}/metasploit-framework.gemspec
 .endif

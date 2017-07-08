@@ -6,7 +6,7 @@ PORTVERSION=	153
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
-MAINTAINER=	ultima1252@gmail.com
+MAINTAINER=	ultima@FreeBSD.org
 COMMENT=	Collects and decodes Machine Check Exception data
 
 LICENSE=	GPLv2
@@ -16,7 +16,7 @@ TEST_DEPENDS=	bash:shells/bash
 USE_GITHUB=	yes
 GH_ACCOUNT=	andikleen
 
-ONLY_FOR_ARCHS=	amd64 i386 ia64
+ONLY_FOR_ARCHS=		amd64 i386
 
 USES=		alias gmake shebangfix
 
