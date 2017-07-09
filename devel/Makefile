@@ -569,7 +569,8 @@
     SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
     SUBDIR += etcd
-    SUBDIR += etcd3
+    SUBDIR += etcd31
+    SUBDIR += etcd32
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += eventxx
@@ -5220,6 +5221,7 @@
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
     SUBDIR += rubygem-bacon
+    SUBDIR += rubygem-baf
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-bin_utils
     SUBDIR += rubygem-bindata
@@ -5418,6 +5420,7 @@
     SUBDIR += rubygem-jbuilder-rails5
     SUBDIR += rubygem-jbuilder-rails50
     SUBDIR += rubygem-jekyll-coffeescript
+    SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jira-ruby
     SUBDIR += rubygem-jmespath
@@ -5590,6 +5593,7 @@
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
     SUBDIR += rubygem-rspec-logsplit
+    SUBDIR += rubygem-rspec-its
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support

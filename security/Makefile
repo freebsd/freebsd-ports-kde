@@ -365,8 +365,11 @@
     SUBDIR += linux-c7-libgpg-error
     SUBDIR += linux-c7-libssh2
     SUBDIR += linux-c7-libtasn1
+    SUBDIR += linux-c7-nettle
     SUBDIR += linux-c7-nss
     SUBDIR += linux-c7-openssl
+    SUBDIR += linux-c7-p11-kit
+    SUBDIR += linux-c7-trousers
     SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
@@ -1029,6 +1032,7 @@
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-jugyo-twitter_oauth
+    SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
     SUBDIR += rubygem-metasploit-model
