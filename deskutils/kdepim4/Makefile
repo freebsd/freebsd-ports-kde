@@ -13,7 +13,7 @@ LIB_DEPENDS=	libgpgme.so:security/gpgme \
 		libassuan.so:security/libassuan \
 		libsasl2.so:security/cyrus-sasl2 \
 		libboost_thread.so:devel/boost-libs \
-		libkgapi2.so:devel/libkgapi
+		libkgapi2.so:devel/libkgapi-kde4
 RUN_DEPENDS=	${KDE_PREFIX}/bin/accountwizard:deskutils/kdepim4-runtime \
 		${LOCALBASE}/bin/gmd5sum:sysutils/coreutils
 

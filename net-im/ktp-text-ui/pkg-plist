@@ -545,6 +545,8 @@ share/locale/sv/LC_MESSAGES/ktp-text-ui.mo
 share/locale/sv/LC_MESSAGES/ktpchat.mo
 share/locale/tr/LC_MESSAGES/kcm_ktp_chat_appearance.mo
 share/locale/tr/LC_MESSAGES/kcm_ktp_chat_behavior.mo
+share/locale/tr/LC_MESSAGES/kcm_ktp_chat_messages.mo
+share/locale/tr/LC_MESSAGES/kcm_ktp_chat_otr.mo
 share/locale/tr/LC_MESSAGES/ktp-adiumxtra-protocol-handler.mo
 share/locale/tr/LC_MESSAGES/ktp-filters.mo
 share/locale/tr/LC_MESSAGES/ktp-text-ui.mo

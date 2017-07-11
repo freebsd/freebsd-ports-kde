@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+IGNORE=		Not part of KDE Applications ${KDE_APPLICATIONS_VERSION}
+
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	vietnamese kde

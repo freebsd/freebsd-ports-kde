@@ -10,7 +10,8 @@ COMMENT=	KDE edu data files
 
 USES=		cmake:outsource kde:5 tar:xz
 USE_KDE=	ecm
-USE_QT5=	buildtools_build qmake_build
+USE_QT5=	core \
+		buildtools_build qmake_build
 
 # The qmake dependency is only needed so that kf5-e-c-m can query qmake for
 # some installation directories.

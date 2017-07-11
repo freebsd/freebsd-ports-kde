@@ -692,6 +692,7 @@ share/locale/fr/LC_MESSAGES/akonadi_openxchange_resource.mo
 share/locale/fr/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/fr/LC_MESSAGES/akonadi_serializer_plugins.mo
 share/locale/fr/LC_MESSAGES/akonadi_singlefile_resource.mo
+share/locale/fr/LC_MESSAGES/akonadi_tomboynotes_resource.mo
 share/locale/fr/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/fr/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/fr/LC_MESSAGES/gid-migrator.mo
@@ -1604,9 +1605,12 @@ share/locale/sv/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/tr/LC_MESSAGES/accountwizard_contacts.mo
 share/locale/tr/LC_MESSAGES/accountwizard_ical.mo
 share/locale/tr/LC_MESSAGES/accountwizard_imap.mo
+share/locale/tr/LC_MESSAGES/accountwizard_kolab.mo
 share/locale/tr/LC_MESSAGES/accountwizard_mailbox.mo
 share/locale/tr/LC_MESSAGES/accountwizard_maildir.mo
 share/locale/tr/LC_MESSAGES/accountwizard_pop3.mo
+share/locale/tr/LC_MESSAGES/accountwizard_vcard.mo
+share/locale/tr/LC_MESSAGES/accountwizard_vcarddir.mo
 share/locale/tr/LC_MESSAGES/akonadi-filestore.mo
 share/locale/tr/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_contacts_resource.mo
@@ -1619,6 +1623,7 @@ share/locale/tr/LC_MESSAGES/akonadi_invitations_agent.mo
 share/locale/tr/LC_MESSAGES/akonadi_kalarm_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_maildir_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_maildispatcher_agent.mo
+share/locale/tr/LC_MESSAGES/akonadi_migration_agent.mo
 share/locale/tr/LC_MESSAGES/akonadi_mbox_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_mixedmaildir_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_newmailnotifier_agent.mo
@@ -1626,10 +1631,13 @@ share/locale/tr/LC_MESSAGES/akonadi_openxchange_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_serializer_plugins.mo
 share/locale/tr/LC_MESSAGES/akonadi_singlefile_resource.mo
+share/locale/tr/LC_MESSAGES/akonadi_tomboynotes_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/tr/LC_MESSAGES/akonadi_vcarddir_resource.mo
+share/locale/tr/LC_MESSAGES/gid-migrator.mo
 share/locale/tr/LC_MESSAGES/kio_akonadi.mo
 share/locale/tr/LC_MESSAGES/kio_pop3.mo
+share/locale/tr/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/ug/LC_MESSAGES/accountwizard_ical.mo
 share/locale/ug/LC_MESSAGES/accountwizard_imap.mo
 share/locale/ug/LC_MESSAGES/accountwizard_mailbox.mo

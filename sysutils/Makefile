@@ -514,6 +514,7 @@
     SUBDIR += kf5-bluez-qt
     SUBDIR += kf5-kwallet
     SUBDIR += kfilemetadata
+    SUBDIR += kfilereplace
     SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool

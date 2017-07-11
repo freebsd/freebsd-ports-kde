@@ -10,7 +10,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM tools and services
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
-		libkgapi2.so:devel/libkgapi \
+		libkgapi2.so:devel/libkgapi-kde4 \
 		libkolab.so:devel/libkolab \
 		libkolabxml.so:textproc/libkolabxml \
 		libkfbapi.so:net/libkfbapi \
