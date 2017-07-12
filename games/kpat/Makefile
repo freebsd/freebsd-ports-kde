@@ -16,9 +16,5 @@ USE_KDE=	completion config configwidgets coreaddons dbusaddons \
 USE_QT5=	buildtools_build core gui network phonon4 \
 		qmake_build qml quick svg widgets
 
-post-patch:
-	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d' \
-		${WRKSRC}/mimetypes/CMakeLists.txt
-
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

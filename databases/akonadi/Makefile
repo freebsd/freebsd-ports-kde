@@ -57,8 +57,5 @@ post-patch:
 # it's nothing but a temporary hack.
 	${REINPLACE_CMD} -e '/wait_timeout/ s|31536000|1073741|' \
 		${PATCH_WRKSRC}/src/server/storage/*.conf
-# Prevent updating MIME during build.
-	${REINPLACE_CMD} -e '/update_xdg_mimetypes/ d' \
-		${PATCH_WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

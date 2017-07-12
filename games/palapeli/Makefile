@@ -13,9 +13,5 @@ USE_QT4=	corelib dbus gui network svg xml \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
-post-patch:
-	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d' \
-		${WRKSRC}/mime/CMakeLists.txt
-
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>
