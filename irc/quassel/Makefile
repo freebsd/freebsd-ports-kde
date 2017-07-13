@@ -3,7 +3,7 @@
 
 PORTNAME=	quassel
 PORTVERSION=	0.12.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	irc
 MASTER_SITES=	http://www.quassel-irc.org/pub/
 
@@ -19,10 +19,9 @@ CPE_VENDOR=	quassel-irc
 CPE_PRODUCT=	quassel_irc
 
 USE_QT5=	buildtools_build core network qmake_build
-CMAKE_ARGS=	-DWITH_KDE=off \
-		-DUSE_QT5=on
+CMAKE_ARGS=	-DUSE_QT5=on
 
-OPTIONS_DEFINE=		NLS
+OPTIONS_DEFINE=		NLS KDE
 OPTIONS_MULTI=		MODULE DB
 MODULE_DESC=		Quassel components
 DB_DESC=		Database for Quassel core / monolithic
@@ -46,6 +45,12 @@ CORE_VARS=		use_rc_subr=quasselcore \
 			groups=quasselcore \
 			plist=${NONEXISTENT} # allow core to override PLIST_FILES
 CORE_PLIST_FILES=	bin/quasselcore
+
+KDE_IMPLIES=		CLIENT
+KDE_CMAKE_BOOL=		WITH_KDE
+KDE_DESC=		Enable KDE integration
+KDE_USES=		kde:5
+KDE_USE=		KDE=configwidgets,coreaddons,notifications,notifyconfig,textwidgets,widgetsaddons,xmlgui 
 
 MONO_DESC=		Quassel standalone (monolithic binary: core+client combined)
 MONO_CMAKE_BOOL=	WANT_MONO
