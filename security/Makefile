@@ -301,6 +301,7 @@
     SUBDIR += krb5-114
     SUBDIR += krb5-115
     SUBDIR += krb5-appl
+    SUBDIR += krb5-devel
     SUBDIR += kripp
     SUBDIR += kstart
     SUBDIR += kwalletmanager
@@ -347,6 +348,7 @@
     SUBDIR += libssh2
     SUBDIR += libtasn1
     SUBDIR += libtomcrypt
+    SUBDIR += libu2f-host
     SUBDIR += libuecc
     SUBDIR += libwhisker
     SUBDIR += libyubikey
