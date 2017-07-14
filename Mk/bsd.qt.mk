@@ -27,7 +27,7 @@ Qt_Pre_Include=	bsd.qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=	4 5
 QT4_VERSION?=	4.8.7
-QT5_VERSION?=	5.7.1
+QT5_VERSION?=	5.9.1
 
 _QT_RELNAME=	qt${_QT_VERSION:R:R}
 _QT_VERSION=	# empty
@@ -88,12 +88,13 @@ LDFLAGS+=		-Wl,--as-needed
 # Ensure that the "makesum" target (with its inner "fetch" one) uses
 # devel/qt*/distinfo for every port.
 .		if ${DISTINFO_FILE:H} == ${.CURDIR:H:H}/devel/${_QT_RELNAME}
-QT_DIST=		3d base canvas3d charts connectivity datavis3d declarative \
-				declarative-render2d gamepad graphicaleffects imageformats \
-				location multimedia quickcontrols quickcontrols2 script scxml \
-				sensors serialbus serialport svg tools translations \
-				virtualkeyboard webchannel webkit websockets x11extras \
-				xmlpatterns
+QT_DIST=		3d activeqt androidextras base canvas3d charts connectivity \
+				datavis3d declarative doc gamepad graphicaleffects imageformats \
+				location macextras multimedia networkauth purchasing \
+				quickcontrols2 quickcontrols remoteobjects script scxml sensors \
+				serialbus serialport speech svg tools translations \
+				virtualkeyboard wayland webchannel webengine webkit-examples \
+				webkit websockets webview winextras x11extras xmlpatterns
 .		endif
 .  endif
 
