@@ -18,7 +18,9 @@ USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	FREERDP
 OPTIONS_SUB=	yes
+FREERDP_CMAKE_BOOL=	WITH_FREERDP
 FREERDP_DESC=	Remote Desktop support via FreeRDP
+FREERDP_BUILD_DEPENDS=	xfreerdp:net/freerdp
 FREERDP_RUN_DEPENDS=	xfreerdp:net/freerdp
 
 .include <bsd.port.mk>
