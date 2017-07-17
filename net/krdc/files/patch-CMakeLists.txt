@@ -16,7 +16,7 @@
 -                                     )
 +option(WITH_FREERDP OFF)
 +if (WITH_FREERDP)
-+   FIND_PROGRAM(FREERDP_EXECUTABLE xfreerdp HINTS ${CMAKE_INSTALL_PREFIX})
++   FIND_PROGRAM(FREERDP_EXECUTABLE xfreerdp)
 +   if(FREERDP_EXECUTABLE)
 +      set(FREERDP_EXECUTABLE_FOUND true)
 +   endif(FREERDP_EXECUTABLE)
