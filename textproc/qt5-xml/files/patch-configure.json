@@ -1,0 +1,17 @@
+--- configure.json.orig	2017-07-20 19:47:50 UTC
++++ configure.json
+@@ -8,13 +8,7 @@
+     },
+ 
+     "subconfigs": [
+-        "src/corelib",
+-        "src/network",
+-        "src/gui",
+-        "src/xml",
+-        "src/widgets",
+-        "src/printsupport",
+-        "src/plugins/sqldrivers"
++        "src/xml"
+     ],
+ 
+     "commandline": {
