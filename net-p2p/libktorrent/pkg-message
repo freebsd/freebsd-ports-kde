@@ -1,0 +1,3 @@
+In order for libktorrent to operate correctly, it is recommended to disable
+the GMP support in security/botan110.
+
