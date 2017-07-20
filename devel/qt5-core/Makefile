@@ -20,13 +20,10 @@ HAS_CONFIGURE=	yes
 # Disable (almost) everything to install minimal qconfig.h.
 # -no-feature-* adds QT_NO_* (for features which have no switch or
 # that need to be detected).
-CONFIGURE_ARGS=	-no-accessibility -no-gif -no-libpng -no-libjpeg \
-		-no-openssl -no-gui -no-widgets -no-cups \
-		-no-iconv -no-dbus -no-opengl \
-		-no-alsa -no-egl -no-evdev -no-feature-concurrent \
-		-no-fontconfig -no-freetype -no-gtk -no-harfbuzz \
-		-no-libudev -no-pulseaudio -no-xcb -no-xinput2 -no-xkb -no-xcb-xlib \
-		-no-xkbcommon -no-xrender -no-xshape -no-xsync -no-libinput
+CONFIGURE_ARGS=	-no-gui -no-widgets  \
+		-no-iconv -no-dbus \
+		-no-feature-concurrent \
+		-no-libudev
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 BUILD_WRKSRC=	${WRKSRC}/src/corelib
