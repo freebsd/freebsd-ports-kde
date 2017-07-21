@@ -1,6 +1,10 @@
 # Created by: arved@FreeBSD.org
 # $FreeBSD$
 
+# Override until 17.08 is release
+KDE_APPLICATIONS_BRANCH=	stable
+KDE_APPLICATIONS_VERSION=	17.04.3
+
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
 CATEGORIES=	x11 kde kde-applications
