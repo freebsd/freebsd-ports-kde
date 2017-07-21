@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	9.1.7
+PORTVERSION=	9.1.9
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
 CATEGORIES=	www devel
 
 MAINTAINER=	tz@FreeBSD.org
@@ -113,6 +112,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-httparty>=0.13.3:www/rubygem-httparty \
 	rubygem-rainbow>=2.1.0:devel/rubygem-rainbow \
 	rubygem-settingslogic>=2.0.9:devel/rubygem-settingslogic \
+	rubygem-re2>=1.0:devel/rubygem-re2 \
 	rubygem-version_sorter>=2.1.0:textproc/rubygem-version_sorter \
 	rubygem-redis-rails>=5.0.1:www/rubygem-redis-rails \
 	rubygem-redis>=3.2:databases/rubygem-redis \
@@ -162,7 +162,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-email_reply_trimmer>=0.1:mail/rubygem-email_reply_trimmer \
 	rubygem-html2text>=0:textproc/rubygem-html2text \
 	rubygem-ruby-prof>=0.16.2:devel/rubygem-ruby-prof \
-	rubygem-oauth2>=1.3.0:net/rubygem-oauth212 \
+	rubygem-oauth2>=1.3.0:net/rubygem-oauth2 \
 	rubygem-paranoia>=2.2:databases/rubygem-paranoia \
 	rubygem-health_check>=2.6.0:devel/rubygem-health_check \
 	rubygem-vmstat>=2.3.0:sysutils/rubygem-vmstat \
