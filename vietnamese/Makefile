@@ -5,7 +5,6 @@
 
     SUBDIR += aspell
     SUBDIR += hunspell
-    SUBDIR += kde-l10n
     SUBDIR += libreoffice
     SUBDIR += libviet
     SUBDIR += unicode-uhoai
