@@ -3,7 +3,6 @@
 
 PORTNAME=	kdepim-runtime
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -19,7 +18,8 @@ USE_KDE=	codecs config itemmodels kcmutils kdelibs4support kio kross \
 # pim components
 USE_KDE+=	akonadinotes akonadicalendar akonadisearch alarmcalendar \
 		calendarcore calendarutils gapi identitymanagement imap \
-		kontactinterface kpimdav mailtransport mbox pimtextedit syndication
+		kontactinterface kpimdav mailtransport mbox pimcommon \
+		pimtextedit syndication
 USE_QT5=	buildtools_build core gui network qmake_build \
 		script webkit widgets xmlpatterns
 
@@ -28,6 +28,6 @@ USE_LDCONFIG=	yes
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
 
-PLIST_SUB=	SHLIB_VER="5.5.3"
+PLIST_SUB=	SHLIB_VER="5.5.80"
 
 .include <bsd.port.mk>

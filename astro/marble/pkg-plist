@@ -176,8 +176,8 @@ lib/libastro.so.0.17.20
 lib/libastro.so.1
 lib/libmarbledeclarative.so
 lib/libmarblewidget-qt5.so
-lib/libmarblewidget-qt5.so.0.27.1
-lib/libmarblewidget-qt5.so.27
+lib/libmarblewidget-qt5.so.0.28.0
+lib/libmarblewidget-qt5.so.28
 lib/marble/plugins/libAnnotatePlugin.so
 lib/marble/plugins/libAprsPlugin.so
 lib/marble/plugins/libAtmospherePlugin.so
@@ -216,7 +216,6 @@ lib/marble/plugins/libNominatimReverseGeocodingPlugin.so
 lib/marble/plugins/libNominatimSearchPlugin.so
 lib/marble/plugins/libNotesPlugin.so
 lib/marble/plugins/libOSRMPlugin.so
-lib/marble/plugins/libOpenCachingComPlugin.so
 lib/marble/plugins/libOpenDesktopPlugin.so
 lib/marble/plugins/libOpenLocationCodeSearchPlugin.so
 lib/marble/plugins/libOpenRouteServicePlugin.so

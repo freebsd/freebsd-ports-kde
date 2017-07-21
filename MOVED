@@ -9615,4 +9615,12 @@ devel/libbrotli|archivers/brotli|2017-07-12|meta project no longer required to b
 dns/opendnssec13|dns/opendnssec14|2017-07-13|Has expired: Approaching EOL, upgrade to opendnssec 1.4 or 2
 multimedia/banshee||2017-07-13|Has expired: Project is not being actively maintained upstream anymore
 www/libhtp-suricata||2017-07-16|No longer required. security/suricata now uses official (not forked) libhtp
-vietnamese/kde-l10n||2017-07-21|Has not been shipped by KDE for a while. 
+vietnamese/kde-l10n||2017-07-21|Has not been shipped by KDE for a while.
+x11/kde4-workspace||2017-07-22|Has reached EOL
+sysutils/ksysguardd||2017-07-22|Has reached EOL
+x11-themes/kdeartwork4||2017-07-22|Has reached EOL
+x11-clocks/ktux||2017-07-22|Has reached EOL
+x11/plasma-scriptengine-python||2017-07-22|Has reached EOL
+x11/plasma-scriptengine-ruby||2017-07-22|Has reached EOL
+deskutils/kdepim4||2017-07-22|Has reached EOL
+deskutils/kdepim4-runtime||2017-07-22|Has reached EOL

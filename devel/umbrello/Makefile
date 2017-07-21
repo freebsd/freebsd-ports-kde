@@ -12,8 +12,9 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 USES=		cmake:outsource kde:5 tar:xz
 USE_GNOME=	libxml2 libxslt
 USE_KDE=	archive auth codecs completion config configwidgets \
-		coreaddons ecm i18n iconthemes jobwidgets kio parts service \
-		sonnet texteditor textwidgets widgetsaddons windowsystem xmlgui
+		coreaddons ecm i18n iconthemes jobwidgets kdelibs4support\
+		kio parts service sonnet texteditor textwidgets \
+		widgetsaddons windowsystem xmlgui
 USE_QT5=	core dbus gui network printsupport svg webkit widgets xml \
 		buildtools_build qmake_build
 

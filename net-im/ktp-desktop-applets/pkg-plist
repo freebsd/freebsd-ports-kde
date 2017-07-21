@@ -25,6 +25,9 @@ share/locale/da/LC_MESSAGES/plasma_applet_org.kde.person.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.ktp-chat.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.ktp-contactlist.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.person.mo
+share/locale/el/LC_MESSAGES/plasma_applet_org.kde.ktp-chat.mo
+share/locale/el/LC_MESSAGES/plasma_applet_org.kde.ktp-contactlist.mo
+share/locale/el/LC_MESSAGES/plasma_applet_org.kde.person.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.ktp-chat.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.ktp-contactlist.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.person.mo

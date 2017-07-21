@@ -11,9 +11,10 @@ man/es/man1/cervisia.1.gz
 man/it/man1/cervisia.1.gz
 man/man1/cervisia.1.gz
 man/nl/man1/cervisia.1.gz
+man/pt/man1/cervisia.1.gz
 man/sv/man1/cervisia.1.gz
 man/uk/man1/cervisia.1.gz
-share/applications/org.kde.cervisia5.desktop
+share/applications/org.kde.cervisia.desktop
 share/config.kcfg/cervisiapart.kcfg
 share/dbus-1/interfaces/org.kde.cervisia5.cvsjob.xml
 share/dbus-1/interfaces/org.kde.cervisia5.cvsloginjob.xml

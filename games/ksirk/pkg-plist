@@ -3,8 +3,8 @@ bin/ksirkskineditor
 lib/libiris_ksirk.so
 lib/libiris_ksirk.so.2
 lib/libiris_ksirk.so.2.0.0
-share/applications/kde4/ksirk.desktop
-share/applications/kde4/ksirkskineditor.desktop
+share/applications/kde4/org.kde.ksirk.desktop
+share/applications/kde4/org.kde.ksirkskineditor.desktop
 share/apps/ksirk/jabber.png
 share/apps/ksirk/ksirkui.rc
 share/apps/ksirk/skins/default/Data/world.desktop
@@ -115,3 +115,4 @@ share/icons/hicolor/48x48/apps/ksirk.png
 share/icons/hicolor/64x64/apps/ksirk.png
 share/icons/locolor/16x16/apps/ksirk.png
 share/icons/locolor/32x32/apps/ksirk.png
+share/metainfo/org.kde.ksirk.appdata.xml

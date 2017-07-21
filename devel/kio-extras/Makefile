@@ -23,8 +23,8 @@ USE_QT5=	core dbus gui network phonon4 printsupport sql svg testlib \
 		buildtools_build qmake_build
 SHEBANG_FILES=	info/kde-info2html
 
-OPTIONS_DEFINE=	SAMBA MTP EXR EXIV SLP SSH
-OPTIONS_DEFAULT=SAMBA MTP EXR EXIV SLP SSH
+OPTIONS_DEFINE=	SAMBA MTP EXR EXIV SLP SSH WEBENGINE
+OPTIONS_DEFAULT=SAMBA MTP EXR EXIV SLP SSH WEBENGINE
 OPTIONS_SUB=	yes
 
 SAMBA_DESC=		Needed to build the SMB kioslave
@@ -51,6 +51,9 @@ SLP_LIB_DEPENDS=	libslp.so:net/openslp
 SSH_DESC=		Needed to build the SFTP kioslave
 SSH_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_LibSSH
 SSH_LIB_DEPENDS=	libssh.so:security/libssh
+
+WEBENGINE_DESC=		Needed to build the html thumbnailer
+WEBENGINE_USE=		QT5=webengine
 
 .include <bsd.port.mk>
 

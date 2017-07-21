@@ -12,13 +12,13 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libical.so:devel/libical
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
+USES=		bison cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	ecm emoticons init itemmodels itemviews kdelibs4support
 USE_QT5=	buildtools_build gui qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
-PLIST_SUB=	SHLIB_VER="5.5.3"
+PLIST_SUB=	SHLIB_VER="5.5.80"
 
 .include <bsd.port.mk>

@@ -30,7 +30,6 @@ share/locale/pa/LC_MESSAGES/kfileaudiopreview4.mo
 share/locale/pa/LC_MESSAGES/kget.mo
 share/locale/pa/LC_MESSAGES/kgetplugin.mo
 share/locale/pa/LC_MESSAGES/kglobalaccel.mo
-share/locale/pa/LC_MESSAGES/kgoldrunner.mo
 share/locale/pa/LC_MESSAGES/khelpcenter.mo
 share/locale/pa/LC_MESSAGES/khotnewstuff.mo
 share/locale/pa/LC_MESSAGES/kiconfinder.mo
@@ -58,13 +57,10 @@ share/locale/pa/LC_MESSAGES/kio_thumbnail.mo
 share/locale/pa/LC_MESSAGES/kio_trash.mo
 share/locale/pa/LC_MESSAGES/kio_zeroconf.mo
 share/locale/pa/LC_MESSAGES/kioexec.mo
-share/locale/pa/LC_MESSAGES/kmag.mo
 share/locale/pa/LC_MESSAGES/kmix.mo
-share/locale/pa/LC_MESSAGES/kmousetool.mo
 share/locale/pa/LC_MESSAGES/kmouth.mo
 share/locale/pa/LC_MESSAGES/knotify4.mo
 share/locale/pa/LC_MESSAGES/kolf.mo
-share/locale/pa/LC_MESSAGES/konquest.mo
 share/locale/pa/LC_MESSAGES/kopete.mo
 share/locale/pa/LC_MESSAGES/kpasswdserver.mo
 share/locale/pa/LC_MESSAGES/kppp.mo
@@ -72,12 +68,9 @@ share/locale/pa/LC_MESSAGES/kppplogview.mo
 share/locale/pa/LC_MESSAGES/kquitapp.mo
 share/locale/pa/LC_MESSAGES/krcdnotifieritem.mo
 share/locale/pa/LC_MESSAGES/kreadconfig.mo
-share/locale/pa/LC_MESSAGES/kreversi.mo
 share/locale/pa/LC_MESSAGES/ksaneplugin.mo
 share/locale/pa/LC_MESSAGES/kscd.mo
 share/locale/pa/LC_MESSAGES/kshorturifilter.mo
-share/locale/pa/LC_MESSAGES/kspaceduel.mo
-share/locale/pa/LC_MESSAGES/ksudoku.mo
 share/locale/pa/LC_MESSAGES/kuiserver.mo
 share/locale/pa/LC_MESSAGES/kurifilter.mo
 share/locale/pa/LC_MESSAGES/kwalletd.mo
@@ -87,7 +80,6 @@ share/locale/pa/LC_MESSAGES/kwriteconfig.mo
 share/locale/pa/LC_MESSAGES/libkunitconversion.mo
 share/locale/pa/LC_MESSAGES/libphonon.mo
 share/locale/pa/LC_MESSAGES/libplasma.mo
-share/locale/pa/LC_MESSAGES/lskat.mo
 share/locale/pa/LC_MESSAGES/nepomukbackup.mo
 share/locale/pa/LC_MESSAGES/nepomukcleaner.mo
 share/locale/pa/LC_MESSAGES/nepomukfileindexer.mo

@@ -296,8 +296,11 @@ share/locale/de/LC_MESSAGES/ktp-text-ui.mo
 share/locale/de/LC_MESSAGES/ktpchat.mo
 share/locale/el/LC_MESSAGES/kcm_ktp_chat_appearance.mo
 share/locale/el/LC_MESSAGES/kcm_ktp_chat_behavior.mo
+share/locale/el/LC_MESSAGES/kcm_ktp_chat_messages.mo
+share/locale/el/LC_MESSAGES/kcm_ktp_chat_otr.mo
 share/locale/el/LC_MESSAGES/ktp-adiumxtra-protocol-handler.mo
 share/locale/el/LC_MESSAGES/ktp-filters.mo
+share/locale/el/LC_MESSAGES/ktp-log-viewer.mo
 share/locale/el/LC_MESSAGES/ktp-text-ui.mo
 share/locale/el/LC_MESSAGES/ktpchat.mo
 share/locale/en_GB/LC_MESSAGES/kcm_ktp_chat_appearance.mo
@@ -549,6 +552,7 @@ share/locale/tr/LC_MESSAGES/kcm_ktp_chat_messages.mo
 share/locale/tr/LC_MESSAGES/kcm_ktp_chat_otr.mo
 share/locale/tr/LC_MESSAGES/ktp-adiumxtra-protocol-handler.mo
 share/locale/tr/LC_MESSAGES/ktp-filters.mo
+share/locale/tr/LC_MESSAGES/ktp-log-viewer.mo
 share/locale/tr/LC_MESSAGES/ktp-text-ui.mo
 share/locale/tr/LC_MESSAGES/ktpchat.mo
 share/locale/ug/LC_MESSAGES/kcm_ktp_chat_appearance.mo

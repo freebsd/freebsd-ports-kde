@@ -25,7 +25,6 @@
     SUBDIR += kdetoys
     SUBDIR += kteatime
     SUBDIR += ktimer
-    SUBDIR += ktux
     SUBDIR += lmclock
     SUBDIR += mlclock
     SUBDIR += mouseclock

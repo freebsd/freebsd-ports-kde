@@ -78,7 +78,7 @@ KDE_PLASMA_BRANCH?=		stable
 KDE_FRAMEWORKS_VERSION?=	5.36.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
-KDE_APPLICATIONS_VERSION?=	17.04.3
+KDE_APPLICATIONS_VERSION?=	17.07.80
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -859,7 +859,7 @@ kate_PORT=		editors/kate
 kate_PATH=		${QT_PLUGINDIR}/ktexteditor/ktexteditor_lumen.so
 
 kio-extras_PORT=	devel/kio-extras
-kio-extras_LIB=		libmolletnetwork5.so.5
+kio-extras_LIB=		libmolletnetwork5.so.17
 
 marble_PORT=		astro/marble
 marble_LIB=		libmarblewidget-qt5.so

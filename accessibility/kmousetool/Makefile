@@ -7,9 +7,11 @@ CATEGORIES=	accessibility kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Automatic mouse click tool for KDE
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	qmake_build moc_build rcc_build uic_build
-USE_XORG=	xtst
+USES=		cmake:outsource kde:5 tar:xz
+USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
+		ecm i18n iconthemes notifications widgetsaddons xmlgui
+USE_QT5=	core dbus gui phonon4 widgets xml \
+		buildtools_build qmake_build
+USE_XORG=	ice sm x11 xext xtst
 
 .include <bsd.port.mk>

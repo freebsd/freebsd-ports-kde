@@ -1,7 +1,7 @@
 bin/kolf
 lib/libkolfprivate.so.4
 lib/libkolfprivate.so.%%KDE4_GENERIC_LIB_VERSION%%
-share/applications/kde4/kolf.desktop
+share/applications/kde4/org.kde.kolf.desktop
 share/apps/kolf/courses/Classic.kolf
 share/apps/kolf/courses/Easy.kolf
 share/apps/kolf/courses/Hard.kolf
@@ -32,3 +32,4 @@ share/icons/hicolor/22x22/apps/kolf.png
 share/icons/hicolor/32x32/apps/kolf.png
 share/icons/hicolor/48x48/apps/kolf.png
 share/icons/hicolor/64x64/apps/kolf.png
+share/metainfo/org.kde.kolf.appdata.xml

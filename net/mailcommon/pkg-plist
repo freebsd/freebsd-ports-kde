@@ -16,11 +16,11 @@ include/KF5/MailCommon/FilterImporterClawsMail
 include/KF5/MailCommon/FilterImporterExporter
 include/KF5/MailCommon/FilterLog
 include/KF5/MailCommon/FilterManager
-include/KF5/MailCommon/FolderCollection
 include/KF5/MailCommon/FolderCollectionMonitor
 include/KF5/MailCommon/FolderJob
 include/KF5/MailCommon/FolderRequester
 include/KF5/MailCommon/FolderSelectionDialog
+include/KF5/MailCommon/FolderSettings
 include/KF5/MailCommon/FolderTreeView
 include/KF5/MailCommon/FolderTreeWidget
 include/KF5/MailCommon/FolderTreeWidgetProxyModel
@@ -59,11 +59,11 @@ include/KF5/mailcommon/filterimporterclawsmail.h
 include/KF5/mailcommon/filterimporterexporter.h
 include/KF5/mailcommon/filterlog.h
 include/KF5/mailcommon/filtermanager.h
-include/KF5/mailcommon/foldercollection.h
 include/KF5/mailcommon/foldercollectionmonitor.h
 include/KF5/mailcommon/folderjob.h
 include/KF5/mailcommon/folderrequester.h
 include/KF5/mailcommon/folderselectiondialog.h
+include/KF5/mailcommon/foldersettings.h
 include/KF5/mailcommon/foldertreeview.h
 include/KF5/mailcommon/foldertreewidget.h
 include/KF5/mailcommon/foldertreewidgetproxymodel.h

@@ -28,6 +28,7 @@ man/es/man1/kate.1.gz
 man/it/man1/kate.1.gz
 man/man1/kate.1.gz
 man/nl/man1/kate.1.gz
+man/pt/man1/kate.1.gz
 man/pt_BR/man1/kate.1.gz
 man/sv/man1/kate.1.gz
 man/uk/man1/kate.1.gz
@@ -264,6 +265,8 @@ share/doc/HTML/nl/katepart/regular-expressions.docbook
 share/doc/HTML/nl/katepart/vi.docbook
 share/doc/HTML/nl/kwrite/index.cache.bz2
 share/doc/HTML/nl/kwrite/index.docbook
+share/doc/HTML/pt/kwrite/index.cache.bz2
+share/doc/HTML/pt/kwrite/index.docbook
 share/doc/HTML/pt_BR/kate/comma-to.png
 share/doc/HTML/pt_BR/kate/configdialog01.png
 share/doc/HTML/pt_BR/kate/configuring.docbook
@@ -551,6 +554,7 @@ share/locale/de/LC_MESSAGES/kwrite.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
 share/locale/de/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/el/LC_MESSAGES/kate-ctags-plugin.mo
+share/locale/el/LC_MESSAGES/kate-replicode-plugin.mo
 share/locale/el/LC_MESSAGES/kate.mo
 share/locale/el/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/el/LC_MESSAGES/katebuild-plugin.mo

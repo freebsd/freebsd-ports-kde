@@ -18,6 +18,7 @@ include/KF5/PimCommon/GenericPlugin
 include/KF5/PimCommon/GenericPluginManager
 include/KF5/PimCommon/KActionMenuChangeCase
 include/KF5/PimCommon/KPimPrintPreviewDialog
+include/KF5/PimCommon/LineEditPassword
 include/KF5/PimCommon/LineEditWithAutoCorrection
 include/KF5/PimCommon/LineEditWithCompleter
 include/KF5/PimCommon/LogActivitiesManager
@@ -76,6 +77,7 @@ include/KF5/pimcommon/genericpluginmanager.h
 include/KF5/pimcommon/imapresourcesettings.h
 include/KF5/pimcommon/kactionmenuchangecase.h
 include/KF5/pimcommon/kpimprintpreviewdialog.h
+include/KF5/pimcommon/lineeditpassword.h
 include/KF5/pimcommon/lineeditwithautocorrection.h
 include/KF5/pimcommon/lineeditwithcompleter.h
 include/KF5/pimcommon/logactivitiesmanager.h

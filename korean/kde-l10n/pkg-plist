@@ -65,12 +65,9 @@ share/locale/ko/LC_MESSAGES/kio_trash.mo
 share/locale/ko/LC_MESSAGES/kio_zeroconf.mo
 share/locale/ko/LC_MESSAGES/kioexec.mo
 share/locale/ko/LC_MESSAGES/klinkstatus.mo
-share/locale/ko/LC_MESSAGES/kmag.mo
 share/locale/ko/LC_MESSAGES/kmix.mo
-share/locale/ko/LC_MESSAGES/kmousetool.mo
 share/locale/ko/LC_MESSAGES/kmouth.mo
 share/locale/ko/LC_MESSAGES/knotify4.mo
-share/locale/ko/LC_MESSAGES/konquest.mo
 share/locale/ko/LC_MESSAGES/kopete.mo
 share/locale/ko/LC_MESSAGES/kpasswdserver.mo
 share/locale/ko/LC_MESSAGES/kppp.mo
@@ -79,12 +76,9 @@ share/locale/ko/LC_MESSAGES/kquitapp.mo
 share/locale/ko/LC_MESSAGES/krcdnotifieritem.mo
 share/locale/ko/LC_MESSAGES/kreadconfig.mo
 share/locale/ko/LC_MESSAGES/kremotecontroldaemon.mo
-share/locale/ko/LC_MESSAGES/kreversi.mo
 share/locale/ko/LC_MESSAGES/ksaneplugin.mo
 share/locale/ko/LC_MESSAGES/kscd.mo
 share/locale/ko/LC_MESSAGES/kshorturifilter.mo
-share/locale/ko/LC_MESSAGES/ksnakeduel.mo
-share/locale/ko/LC_MESSAGES/ksudoku.mo
 share/locale/ko/LC_MESSAGES/kuiserver.mo
 share/locale/ko/LC_MESSAGES/kurifilter.mo
 share/locale/ko/LC_MESSAGES/kwalletd.mo
@@ -95,7 +89,6 @@ share/locale/ko/LC_MESSAGES/libkremotecontrol.mo
 share/locale/ko/LC_MESSAGES/libkunitconversion.mo
 share/locale/ko/LC_MESSAGES/libphonon.mo
 share/locale/ko/LC_MESSAGES/libplasma.mo
-share/locale/ko/LC_MESSAGES/lskat.mo
 share/locale/ko/LC_MESSAGES/nepomukbackup.mo
 share/locale/ko/LC_MESSAGES/nepomukcleaner.mo
 share/locale/ko/LC_MESSAGES/nepomukfileindexer.mo

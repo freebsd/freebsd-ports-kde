@@ -1,6 +1,5 @@
 bin/filelight
 etc/xdg/filelightrc
-%%QT_PLUGINDIR%%/filelightpart.so
 share/applications/org.kde.filelight.desktop
 share/doc/HTML/de/filelight/config_appear.png
 share/doc/HTML/de/filelight/config_scan.png
@@ -46,9 +45,7 @@ share/icons/hicolor/32x32/actions/views_filelight.png
 share/icons/hicolor/32x32/apps/filelight.png
 share/icons/hicolor/48x48/apps/filelight.png
 share/icons/hicolor/64x64/apps/filelight.png
-share/kservices5/filelightpart.desktop
 share/kxmlgui5/filelight/filelightui.rc
-share/kxmlgui5/filelightpart/filelightpartui.rc
 share/locale/ast/LC_MESSAGES/filelight.mo
 share/locale/bg/LC_MESSAGES/filelight.mo
 share/locale/bs/LC_MESSAGES/filelight.mo

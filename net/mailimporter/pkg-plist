@@ -19,6 +19,7 @@ include/KF5/MailImporter/FilterOE
 include/KF5/MailImporter/FilterOpera
 include/KF5/MailImporter/FilterPMail
 include/KF5/MailImporter/FilterPlain
+include/KF5/MailImporter/FilterSeaMonkey
 include/KF5/MailImporter/FilterSylpheed
 include/KF5/MailImporter/FilterTheBat
 include/KF5/MailImporter/FilterThunderbird
@@ -48,6 +49,7 @@ include/KF5/mailimporter/filteropera.h
 include/KF5/mailimporter/filterplain.h
 include/KF5/mailimporter/filterpmail.h
 include/KF5/mailimporter/filters.h
+include/KF5/mailimporter/filterseamonkey.h
 include/KF5/mailimporter/filtersylpheed.h
 include/KF5/mailimporter/filterthebat.h
 include/KF5/mailimporter/filterthunderbird.h

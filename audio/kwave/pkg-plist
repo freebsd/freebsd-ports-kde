@@ -27,6 +27,7 @@ lib/libkwavegui.so.17
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_codec_ogg.so
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_codec_wav.so
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_debug.so
+%%QT_PLUGINDIR%%/kwave/kwaveplugin_export_k3b.so
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_fileinfo.so
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_goto.so
 %%QT_PLUGINDIR%%/kwave/kwaveplugin_insert_at.so
