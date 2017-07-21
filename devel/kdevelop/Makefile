@@ -32,8 +32,4 @@ USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
 
 CONFLICTS=	kdevelop-kde4-4* kdevelop-4*
 
-post-patch:
-	${REINPLACE_CMD} -e '/^update_xdg_mimetypes/ d; /SharedMimeInfo/ d' \
-		${PATCH_WRKSRC}/app/CMakeLists.txt
-
 .include <bsd.port.mk>

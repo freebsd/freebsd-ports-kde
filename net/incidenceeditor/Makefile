@@ -23,6 +23,6 @@ USE_QT5=	buildtools_build gui qmake_build testlib uitools webkit \
 		widgets
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	SHLIB_VER="5.5.2"
+PLIST_SUB=	SHLIB_VER="5.5.80"
 
 .include <bsd.port.mk>

@@ -1,6 +1,7 @@
 etc/xdg/libkdepim.categories
 etc/xdg/libkdepim.renamecategories
 include/KF5/Libkdepim/AddHostDialog
+include/KF5/Libkdepim/AddresseeLineEditUtil
 include/KF5/Libkdepim/BroadcastStatus
 include/KF5/Libkdepim/CustomLogWidget
 include/KF5/Libkdepim/EmailValidator
@@ -24,13 +25,13 @@ include/KF5/Libkdepim/ProgressIndicatorLabel
 include/KF5/Libkdepim/ProgressIndicatorWidget
 include/KF5/Libkdepim/ProgressManager
 include/KF5/Libkdepim/ProgressStatusBarWidget
+include/KF5/Libkdepim/RecentAddresses
 include/KF5/Libkdepim/StatusbarProgressWidget
 include/KF5/Libkdepim/UiStateSaver
 include/KF5/LibkdepimAkonadi/AddContactJob
 include/KF5/LibkdepimAkonadi/AddEmailAddressJob
 include/KF5/LibkdepimAkonadi/AddEmailDisplayJob
 include/KF5/LibkdepimAkonadi/AddresseeLineEdit
-include/KF5/LibkdepimAkonadi/BlackListBalooEmailCompletionDialog
 include/KF5/LibkdepimAkonadi/CollectionSearchJob
 include/KF5/LibkdepimAkonadi/CompletionConfigureDialog
 include/KF5/LibkdepimAkonadi/CompletionOrderEditor
@@ -38,10 +39,10 @@ include/KF5/LibkdepimAkonadi/OpenEmailAddressJob
 include/KF5/LibkdepimAkonadi/Person
 include/KF5/LibkdepimAkonadi/PersonSearchJob
 include/KF5/LibkdepimAkonadi/ProgressManagerAkonadi
-include/KF5/LibkdepimAkonadi/RecentAddresses
 include/KF5/LibkdepimAkonadi/TagSelectionCombo
 include/KF5/LibkdepimAkonadi/TagWidgets
 include/KF5/libkdepim/addhostdialog.h
+include/KF5/libkdepim/addresseelineeditutil.h
 include/KF5/libkdepim/broadcaststatus.h
 include/KF5/libkdepim/customlogwidget.h
 include/KF5/libkdepim/emailvalidator.h
@@ -66,6 +67,7 @@ include/KF5/libkdepim/progressindicatorlabel.h
 include/KF5/libkdepim/progressindicatorwidget.h
 include/KF5/libkdepim/progressmanager.h
 include/KF5/libkdepim/progressstatusbarwidget.h
+include/KF5/libkdepim/recentaddresses.h
 include/KF5/libkdepim/statusbarprogresswidget.h
 include/KF5/libkdepim/uistatesaver.h
 include/KF5/libkdepim_version.h
@@ -73,7 +75,6 @@ include/KF5/libkdepimakonadi/addcontactjob.h
 include/KF5/libkdepimakonadi/addemailaddressjob.h
 include/KF5/libkdepimakonadi/addemaildisplayjob.h
 include/KF5/libkdepimakonadi/addresseelineedit.h
-include/KF5/libkdepimakonadi/blacklistbalooemailcompletiondialog.h
 include/KF5/libkdepimakonadi/collectionsearchjob.h
 include/KF5/libkdepimakonadi/completionconfiguredialog.h
 include/KF5/libkdepimakonadi/completionordereditor.h
@@ -82,7 +83,6 @@ include/KF5/libkdepimakonadi/openemailaddressjob.h
 include/KF5/libkdepimakonadi/person.h
 include/KF5/libkdepimakonadi/personsearchjob.h
 include/KF5/libkdepimakonadi/progressmanagerakonadi.h
-include/KF5/libkdepimakonadi/recentaddresses.h
 include/KF5/libkdepimakonadi/tagselectioncombo.h
 include/KF5/libkdepimakonadi/tagwidgets.h
 include/KF5/libkdepimakonadi_version.h

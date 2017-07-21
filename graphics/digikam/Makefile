@@ -2,6 +2,7 @@
 
 PORTNAME=	digikam
 PORTVERSION=	5.6.0
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
@@ -14,8 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:math/eigen3
-LIB_DEPENDS=	libKF5KFace.so:graphics/libkface \
-		libKF5KGeoMap.so:astro/libkgeomap \
+LIB_DEPENDS=	libKF5KGeoMap.so:astro/libkgeomap \
 		libKF5Sane.so:graphics/libksane \
 		libboost_graph.so:devel/boost-libs \
 		libexiv2.so:graphics/exiv2 \

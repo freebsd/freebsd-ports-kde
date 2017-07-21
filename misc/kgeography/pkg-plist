@@ -65,6 +65,8 @@ share/doc/HTML/nl/kgeography/first-start3.png
 share/doc/HTML/nl/kgeography/first-start4.png
 share/doc/HTML/nl/kgeography/index.cache.bz2
 share/doc/HTML/nl/kgeography/index.docbook
+share/doc/HTML/pt/kgeography/index.cache.bz2
+share/doc/HTML/pt/kgeography/index.docbook
 share/doc/HTML/pt_BR/kgeography/first-start1.png
 share/doc/HTML/pt_BR/kgeography/first-start10.png
 share/doc/HTML/pt_BR/kgeography/first-start11.png
@@ -1123,7 +1125,11 @@ share/locale/et/LC_MESSAGES/kgeography.mo
 share/locale/eu/LC_MESSAGES/kgeography.mo
 share/locale/fa/LC_MESSAGES/kgeography.mo
 share/locale/fi/LC_MESSAGES/kgeography.mo
+share/locale/fi/LC_SCRIPTS/kgeography/kgeography.js
+share/locale/fi/LC_SCRIPTS/kgeography/kgeography.pmap
+share/locale/fi/LC_SCRIPTS/kgeography/kgeography.pmapc
 share/locale/fr/LC_MESSAGES/kgeography.mo
+share/locale/fr/LC_SCRIPTS/kgeography/kgeography.js
 share/locale/ga/LC_MESSAGES/kgeography.mo
 share/locale/gl/LC_MESSAGES/kgeography.mo
 share/locale/he/LC_MESSAGES/kgeography.mo
@@ -1133,6 +1139,7 @@ share/locale/hu/LC_MESSAGES/kgeography.mo
 share/locale/is/LC_MESSAGES/kgeography.mo
 share/locale/it/LC_MESSAGES/kgeography.mo
 share/locale/ja/LC_MESSAGES/kgeography.mo
+share/locale/ja/LC_SCRIPTS/kgeography/kgeography.js
 share/locale/kk/LC_MESSAGES/kgeography.mo
 share/locale/km/LC_MESSAGES/kgeography.mo
 share/locale/ko/LC_MESSAGES/kgeography.mo
@@ -1145,6 +1152,9 @@ share/locale/nl/LC_MESSAGES/kgeography.mo
 share/locale/nn/LC_MESSAGES/kgeography.mo
 share/locale/pa/LC_MESSAGES/kgeography.mo
 share/locale/pl/LC_MESSAGES/kgeography.mo
+share/locale/pl/LC_SCRIPTS/kgeography/general.pmap
+share/locale/pl/LC_SCRIPTS/kgeography/general.pmapc
+share/locale/pl/LC_SCRIPTS/kgeography/kgeography.js
 share/locale/pt/LC_MESSAGES/kgeography.mo
 share/locale/pt_BR/LC_MESSAGES/kgeography.mo
 share/locale/ro/LC_MESSAGES/kgeography.mo
@@ -1155,5 +1165,8 @@ share/locale/sv/LC_MESSAGES/kgeography.mo
 share/locale/tr/LC_MESSAGES/kgeography.mo
 share/locale/ug/LC_MESSAGES/kgeography.mo
 share/locale/uk/LC_MESSAGES/kgeography.mo
+share/locale/uk/LC_SCRIPTS/kgeography/general.pmap
+share/locale/uk/LC_SCRIPTS/kgeography/general.pmapc
+share/locale/uk/LC_SCRIPTS/kgeography/kgeography.js
 share/locale/zh_CN/LC_MESSAGES/kgeography.mo
 share/locale/zh_TW/LC_MESSAGES/kgeography.mo

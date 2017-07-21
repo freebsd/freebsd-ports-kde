@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-# Created by: tcberner
-# $FreeBSD: branches/plasma5/KDE/sysutils/signon-ui/Makefile 13250 2016-11-06 16:34:10Z tcberner $
-=======
 # $FreeBSD$
->>>>>>> master
 
 PORTNAME=	signon-ui
 PORTVERSION=	0.17
 CATEGORIES=	sysutils kde
-<<<<<<< HEAD
-MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/
-=======
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/
->>>>>>> master
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
 MAINTAINER=	kde@FreeBSD.org

@@ -7,6 +7,7 @@ man/et/man6/khangman.6.gz
 man/it/man6/khangman.6.gz
 man/man6/khangman.6.gz
 man/nl/man6/khangman.6.gz
+man/pt/man6/khangman.6.gz
 man/pt_BR/man6/khangman.6.gz
 man/sv/man6/khangman.6.gz
 man/uk/man6/khangman.6.gz
@@ -58,6 +59,8 @@ share/doc/HTML/it/khangman/index.cache.bz2
 share/doc/HTML/it/khangman/index.docbook
 share/doc/HTML/nl/khangman/index.cache.bz2
 share/doc/HTML/nl/khangman/index.docbook
+share/doc/HTML/pt/khangman/index.cache.bz2
+share/doc/HTML/pt/khangman/index.docbook
 share/doc/HTML/pt_BR/khangman/getnewstuff.png
 share/doc/HTML/pt_BR/khangman/index.cache.bz2
 share/doc/HTML/pt_BR/khangman/index.docbook

@@ -132,5 +132,6 @@ share/locale/ug/LC_MESSAGES/ark.mo
 share/locale/uk/LC_MESSAGES/ark.mo
 share/locale/zh_CN/LC_MESSAGES/ark.mo
 share/locale/zh_TW/LC_MESSAGES/ark.mo
+share/kxmlgui5/ark/ark_viewer.rc
 share/metainfo/org.kde.ark.appdata.xml
 share/mime/packages/kerfuffle.xml

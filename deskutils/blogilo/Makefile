@@ -3,7 +3,6 @@
 
 PORTNAME=	blogilo
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -28,6 +27,6 @@ USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
-PLIST_SUB=	SHLIB_VER="5.5.2"
+PLIST_SUB=	SHLIB_VER="5.5.80"
 
 .include <bsd.port.mk>

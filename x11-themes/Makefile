@@ -3,6 +3,8 @@
 
     COMMENT = X11 themes
 
+    SUBDIR += adapta-backgrounds
+    SUBDIR += adapta-gtk-theme
     SUBDIR += adwaita-common
     SUBDIR += adwaita-icon-theme
     SUBDIR += adwaita-qt4
@@ -120,7 +122,6 @@
     SUBDIR += kde4-wallpapers-freebsd
     SUBDIR += kde4-windeco-crystal
     SUBDIR += kde4-windeco-dekorator
-    SUBDIR += kdeartwork4
     SUBDIR += kf5-breeze-icons
     SUBDIR += kf5-kemoticons
     SUBDIR += kf5-kiconthemes

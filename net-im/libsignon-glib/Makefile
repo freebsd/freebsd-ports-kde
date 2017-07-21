@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# Created by: Tobias C. Berner <tcberner@gmail.com>
-# $FreeBSD: branches/plasma5/PORTS/net-im/libsignon-glib/Makefile 13950 2017-04-25 15:56:58Z tcberner $
-=======
 # $FreeBSD$
->>>>>>> master
 
 PORTNAME=	${GL_PROJECT}
 PORTVERSION=	1.14

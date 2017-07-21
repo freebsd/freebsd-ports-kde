@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-# Created by: Tobias C. Berner <tcberner@gmail.com>
-# $FreeBSD: branches/plasma5/PORTS/net-im/telepathy-accounts-signon/Makefile 12902 2016-08-07 09:43:14Z tcberner $
-=======
 # $FreeBSD$
->>>>>>> master
 
 PORTNAME=	${GL_PROJECT}
 PORTVERSION=	1.0
 CATEGORIES=	net-im
-<<<<<<< HEAD
-MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/
-=======
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/
->>>>>>> master
 DIST_SUBDIR=	KDE/${GL_ACCOUNT}
 
 MAINTAINER=	kde@FreeBSD.org

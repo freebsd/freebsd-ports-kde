@@ -3,7 +3,6 @@
 
 PORTNAME=	dolphin
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11-fm kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

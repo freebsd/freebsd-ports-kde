@@ -1,7 +1,10 @@
 bin/kstars
+etc/dbus-1/system.d/org.kde.kf5auth.kstars.conf
 lib/libhtmesh.a
+lib/libexec/kauth/kauth_kstars_helper
 share/applications/org.kde.kstars.desktop
 share/config.kcfg/kstars.kcfg
+share/dbus-1/system-services/org.kde.kf5auth.kstars.service
 share/doc/HTML/ca/kstars/Add_Object_to_Session_plan.png
 share/doc/HTML/ca/kstars/KStars_Neptune.png
 share/doc/HTML/ca/kstars/Savin_session.png
@@ -995,6 +998,7 @@ share/knotifications5/kstars.notifyrc
 %%DATADIR%%/geomap.png
 %%DATADIR%%/glossary.xml
 %%DATADIR%%/image_url.dat
+%%DATADIR%%/indidrivers.xml
 %%DATADIR%%/info_url.dat
 %%DATADIR%%/jupiter.B0.vsop
 %%DATADIR%%/jupiter.B1.vsop
@@ -1260,11 +1264,16 @@ share/knotifications5/kstars.notifyrc
 %%DATADIR%%/tips
 %%DATADIR%%/tools/whatsinteresting/qml/CategoryTitle.qml
 %%DATADIR%%/tools/whatsinteresting/qml/DetailsItem.qml
+%%DATADIR%%/tools/whatsinteresting/qml/downloadIcon.png
+%%DATADIR%%/tools/whatsinteresting/qml/favoriteIcon.png
+%%DATADIR%%/tools/whatsinteresting/qml/helpIcon.png
+%%DATADIR%%/tools/whatsinteresting/qml/inspectIcon.png
 %%DATADIR%%/tools/whatsinteresting/qml/leftArrow.png
 %%DATADIR%%/tools/whatsinteresting/qml/next.png
 %%DATADIR%%/tools/whatsinteresting/qml/previous.png
 %%DATADIR%%/tools/whatsinteresting/qml/reloadIcon.png
 %%DATADIR%%/tools/whatsinteresting/qml/settingsIcon.png
+%%DATADIR%%/tools/whatsinteresting/qml/visibleIcon.png
 %%DATADIR%%/tools/whatsinteresting/qml/wiview.qml
 %%DATADIR%%/unnamedstars.dat
 %%DATADIR%%/uranus.B0.vsop
@@ -1360,5 +1369,6 @@ share/locale/uk/LC_MESSAGES/kstars.mo
 share/locale/zh_CN/LC_MESSAGES/kstars.mo
 share/locale/zh_TW/LC_MESSAGES/kstars.mo
 share/metainfo/org.kde.kstars.appdata.xml
+share/polkit-1/actions/org.kde.kf5auth.kstars.policy
 share/sounds/KDE-KStars-Alert.ogg
 share/sounds/KDE-KStars-Warning.ogg

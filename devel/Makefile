@@ -569,7 +569,8 @@
     SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
     SUBDIR += etcd
-    SUBDIR += etcd3
+    SUBDIR += etcd31
+    SUBDIR += etcd32
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += eventxx
@@ -1264,7 +1265,6 @@
     SUBDIR += libbobcat
     SUBDIR += libbonobo
     SUBDIR += libbonobo-reference
-    SUBDIR += libbrotli
     SUBDIR += libbson
     SUBDIR += libburn
     SUBDIR += libccid
@@ -1369,7 +1369,7 @@
     SUBDIR += libixp
     SUBDIR += libjson++
     SUBDIR += libk8055
-    SUBDIR += libkgapi
+    SUBDIR += libkgapi-kde4
     SUBDIR += libklel
     SUBDIR += libkolab
     SUBDIR += liblangtag
@@ -3686,6 +3686,7 @@
     SUBDIR += p8-platform
     SUBDIR += paexec
     SUBDIR += papi
+    SUBDIR += papilio-loader
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -4172,8 +4173,10 @@
     SUBDIR += py-avro
     SUBDIR += py-babel
     SUBDIR += py-babelfish
+    SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
+    SUBDIR += py-backports.weakref
     SUBDIR += py-backports_abc
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
@@ -4209,6 +4212,7 @@
     SUBDIR += py-circuits
     SUBDIR += py-cjson
     SUBDIR += py-cld
+    SUBDIR += py-cli-helpers
     SUBDIR += py-cliapp
     SUBDIR += py-click
     SUBDIR += py-click-log
@@ -4281,6 +4285,7 @@
     SUBDIR += py-doit
     SUBDIR += py-durus
     SUBDIR += py-dynrules
+    SUBDIR += py-easyprocess
     SUBDIR += py-editdistance
     SUBDIR += py-efilter
     SUBDIR += py-efl
@@ -4737,6 +4742,7 @@
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools_darcs
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
@@ -5220,6 +5226,7 @@
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
     SUBDIR += rubygem-bacon
+    SUBDIR += rubygem-baf
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-bin_utils
     SUBDIR += rubygem-bindata
@@ -5288,6 +5295,7 @@
     SUBDIR += rubygem-cyoi
     SUBDIR += rubygem-daemon_controller
     SUBDIR += rubygem-daemons
+    SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
     SUBDIR += rubygem-debugger-xml
@@ -5386,6 +5394,7 @@
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
     SUBDIR += rubygem-grape-swagger
+    SUBDIR += rubygem-grape0
     SUBDIR += rubygem-grit
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
@@ -5393,6 +5402,7 @@
     SUBDIR += rubygem-hashdiff
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
+    SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check22
@@ -5407,17 +5417,20 @@
     SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-inflecto
+    SUBDIR += rubygem-iniparse
     SUBDIR += rubygem-insist
     SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-iobuffer
+    SUBDIR += rubygem-iso8601
     SUBDIR += rubygem-jammit
     SUBDIR += rubygem-jasmine-core
     SUBDIR += rubygem-jbuilder
     SUBDIR += rubygem-jbuilder-rails5
     SUBDIR += rubygem-jbuilder-rails50
     SUBDIR += rubygem-jekyll-coffeescript
+    SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jira-ruby
     SUBDIR += rubygem-jmespath
@@ -5462,6 +5475,7 @@
     SUBDIR += rubygem-method_source
     SUBDIR += rubygem-micromachine
     SUBDIR += rubygem-minitest
+    SUBDIR += rubygem-mixlib-archive
     SUBDIR += rubygem-mixlib-authentication
     SUBDIR += rubygem-mixlib-cli
     SUBDIR += rubygem-mixlib-config
@@ -5564,6 +5578,7 @@
     SUBDIR += rubygem-rb-kqueue
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rdoc
+    SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
     SUBDIR += rubygem-react-rails-rails5
     SUBDIR += rubygem-readwritesettings
@@ -5589,10 +5604,12 @@
     SUBDIR += rubygem-rspec
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
+    SUBDIR += rubygem-rspec-its
     SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support
+    SUBDIR += rubygem-rspec_junit_formatter
     SUBDIR += rubygem-rubocop
     SUBDIR += rubygem-ruby-atmos-pure
     SUBDIR += rubygem-ruby-bugzilla

@@ -2,16 +2,19 @@
 
 PORTNAME=	ark
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	archivers kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Archiving tool for KDE
 
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 USES=		cmake:outsource gettext libarchive kde:5 tar:xz
 USE_KDE=	archive config crash dbusaddons doctools ecm i18n iconthemes itemmodels \
 		khtml kio pty service widgetsaddons
 USE_QT5=	buildtools_build core gui widgets qmake_build
+
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	7ZIP RAR ZIP

@@ -103,6 +103,8 @@ share/doc/HTML/nl/dolphin/preferences-viewmodes-icons.png
 share/doc/HTML/nl/dolphin/toolbar-navigation.png
 share/doc/HTML/nl/dolphin/toolbar-view-appearance.png
 share/doc/HTML/nl/dolphin/viewproperties-dialog.png
+share/doc/HTML/pt/dolphin/index.cache.bz2
+share/doc/HTML/pt/dolphin/index.docbook
 share/doc/HTML/pt_BR/dolphin/default-ui.png
 share/doc/HTML/pt_BR/dolphin/grouping-view.png
 share/doc/HTML/pt_BR/dolphin/index.cache.bz2
@@ -176,6 +178,7 @@ share/locale/et/LC_MESSAGES/dolphin.mo
 share/locale/eu/LC_MESSAGES/dolphin.mo
 share/locale/fa/LC_MESSAGES/dolphin.mo
 share/locale/fi/LC_MESSAGES/dolphin.mo
+share/locale/fi/LC_SCRIPTS/dolphin/dolphin.js
 share/locale/fr/LC_MESSAGES/dolphin.mo
 share/locale/ga/LC_MESSAGES/dolphin.mo
 share/locale/gl/LC_MESSAGES/dolphin.mo

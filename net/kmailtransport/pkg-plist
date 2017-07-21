@@ -2,9 +2,10 @@ etc/xdg/kmailtransport.categories
 etc/xdg/kmailtransport.renamecategories
 include/KF5/MailTransport/PrecommandJob
 include/KF5/MailTransport/ServerTest
-include/KF5/MailTransport/SmtpJob
 include/KF5/MailTransport/Transport
+include/KF5/MailTransport/TransportAbstractPlugin
 include/KF5/MailTransport/TransportComboBox
+include/KF5/MailTransport/TransportConfigWidget
 include/KF5/MailTransport/TransportJob
 include/KF5/MailTransport/TransportManagementWidget
 include/KF5/MailTransport/TransportManager
@@ -18,11 +19,13 @@ include/KF5/MailTransportAkonadi/SentBehaviourAttribute
 include/KF5/MailTransportAkonadi/TransportAttribute
 include/KF5/mailtransport/mailtransport_export.h
 include/KF5/mailtransport/precommandjob.h
+include/KF5/mailtransport/private/transportconfigwidget_p.h
 include/KF5/mailtransport/servertest.h
-include/KF5/mailtransport/smtpjob.h
 include/KF5/mailtransport/transport.h
+include/KF5/mailtransport/transportabstractplugin.h
 include/KF5/mailtransport/transportbase.h
 include/KF5/mailtransport/transportcombobox.h
+include/KF5/mailtransport/transportconfigwidget.h
 include/KF5/mailtransport/transportjob.h
 include/KF5/mailtransport/transportmanagementwidget.h
 include/KF5/mailtransport/transportmanager.h
@@ -52,6 +55,8 @@ lib/libKF5MailTransport.so.%%SHLIB_VER%%
 lib/libKF5MailTransportAkonadi.so
 lib/libKF5MailTransportAkonadi.so.5
 lib/libKF5MailTransportAkonadi.so.%%SHLIB_VER%%
+%%QT_PLUGINDIR%%/mailtransport/mailtransport_akonadiplugin.so
+%%QT_PLUGINDIR%%/mailtransport/mailtransport_smtpplugin.so
 %%QT_MKSPECDIR%%/modules/qt_KMailTransport.pri
 %%QT_MKSPECDIR%%/modules/qt_KMailTransportAkonadi.pri
 %%QT_PLUGINDIR%%/kcm_mailtransport.so
@@ -71,6 +76,8 @@ share/doc/HTML/it/kioslave5/smtp/index.cache.bz2
 share/doc/HTML/it/kioslave5/smtp/index.docbook
 share/doc/HTML/nl/kioslave5/smtp/index.cache.bz2
 share/doc/HTML/nl/kioslave5/smtp/index.docbook
+share/doc/HTML/pt/kioslave5/smtp/index.cache.bz2
+share/doc/HTML/pt/kioslave5/smtp/index.docbook
 share/doc/HTML/pt_BR/kioslave5/smtp/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/smtp/index.docbook
 share/doc/HTML/ru/kioslave5/smtp/index.cache.bz2

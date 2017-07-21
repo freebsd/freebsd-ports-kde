@@ -40,6 +40,7 @@
     SUBDIR += android-file-transfer-qt5
     SUBDIR += ansible
     SUBDIR += ansible1
+    SUBDIR += anvil
     SUBDIR += apachetop
     SUBDIR += apcpwr
     SUBDIR += apcupsd
@@ -514,6 +515,7 @@
     SUBDIR += kf5-bluez-qt
     SUBDIR += kf5-kwallet
     SUBDIR += kfilemetadata
+    SUBDIR += kfilereplace
     SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool
@@ -522,7 +524,6 @@
     SUBDIR += knutclient-kde4
     SUBDIR += krename-kde4
     SUBDIR += kshutdown
-    SUBDIR += ksysguardd
     SUBDIR += ksystemlog
     SUBDIR += kuser
     SUBDIR += lava
@@ -849,6 +850,7 @@
     SUBDIR += polkit-qt5
     SUBDIR += powerdxx
     SUBDIR += powerman
+    SUBDIR += powermon
     SUBDIR += pp
     SUBDIR += pprotectd
     SUBDIR += prelink
@@ -891,7 +893,6 @@
     SUBDIR += py-gmailfs-fuse
     SUBDIR += py-halite
     SUBDIR += py-honcho
-    SUBDIR += py-iocage
     SUBDIR += py-iowait
     SUBDIR += py-nagiosplugin
     SUBDIR += py-nomad
@@ -1010,6 +1011,7 @@
     SUBDIR += rubygem-hammer_cli_foreman_salt
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
+    SUBDIR += rubygem-hiera-eyaml
     SUBDIR += rubygem-hiera-file
     SUBDIR += rubygem-hiera1
     SUBDIR += rubygem-hieracles
@@ -1027,6 +1029,7 @@
     SUBDIR += rubygem-puppet_forge1
     SUBDIR += rubygem-r10k
     SUBDIR += rubygem-rubyipmi
+    SUBDIR += rubygem-serverspec
     SUBDIR += rubygem-shellany
     SUBDIR += rubygem-smart_proxy_chef
     SUBDIR += rubygem-smart_proxy_dynflow
@@ -1040,6 +1043,7 @@
     SUBDIR += rubygem-sys-proctable
     SUBDIR += rubygem-sys-uname
     SUBDIR += rubygem-sys-uptime
+    SUBDIR += rubygem-syslog-logger
     SUBDIR += rubygem-teamocil
     SUBDIR += rubygem-tmuxinator
     SUBDIR += rubygem-vagrant-bhyve

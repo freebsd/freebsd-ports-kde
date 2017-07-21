@@ -3,23 +3,15 @@
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-CATEGORIES=	www kde kde-applications
+CATEGORIES=	www kde
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Comprehensive html/website development environment
+COMMENT=	Tools for html/website development environment
 
-LIB_DEPENDS=	libtidy.so:www/tidy-lib \
-		libboost_thread.so:devel/boost-libs
+USES=		kde:4 metaport
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_GNOME=	libxml2 libxslt
-USE_KDE=	kdelibs pimlibs automoc4
-USE_QT4=	dbus porting_build \
-		qmake_build moc_build rcc_build uic_build uic3_build
-USE_LDCONFIG=	yes
-
-# Override KDE4 versions to fetch the last one
-KDE_APPLICATIONS_BRANCH=	stable
-KDE_APPLICATIONS_VERSION=       16.08.3
+RUN_DEPENDS=	kfilereplace:sysutils/kfilereplace \
+		kimagemapeditor:graphics/kimagemapeditor \
+		klinkstatus:www/klinkstatus
 
 .include <bsd.port.mk>

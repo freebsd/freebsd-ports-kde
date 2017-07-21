@@ -3,7 +3,6 @@
 
 PORTNAME=	konsole
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	x11 kde kde-applications # kde kde-applications-applications
 
 MAINTAINER=	kde@FreeBSD.org

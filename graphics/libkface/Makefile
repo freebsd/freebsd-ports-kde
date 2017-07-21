@@ -13,7 +13,8 @@ LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libopencv_legacy.so:graphics/opencv
 
-USES=		cmake:outsource pkgconfig kde:5 tar:xz
+# Use localbase:ldflags for OpenCV with TBB
+USES=		cmake:outsource localbase:ldflags pkgconfig kde:5 tar:xz
 USE_KDE=	ecm
 USE_QT5=	buildtools_build core gui qmake_build sql widgets xml
 

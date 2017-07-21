@@ -62,7 +62,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Old KDE desktop.
 KDE4_VERSION?=			4.14.3
-KDE4_KDELIBS_VERSION=		4.14.33
+KDE4_KDELIBS_VERSION=		4.14.34
 KDE4_ACTIVITIES_VERSION=	4.13.3
 KDE4_WORKSPACE_VERSION=		4.11.22
 KDE4_KDEPIM_VERSION?=		4.14.10
@@ -72,14 +72,14 @@ KDE4_APPLICATIONS_VERSION?=	15.04.3
 KDE4_BRANCH?=			stable
 
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.10.3
+KDE_PLASMA_VERSION?=		5.10.4
 KDE_PLASMA_BRANCH?=		stable
 
-KDE_FRAMEWORKS_VERSION?=	5.35.0
+KDE_FRAMEWORKS_VERSION?=	5.36.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
-KDE_APPLICATIONS_VERSION?=	17.04.2
-KDE_APPLICATIONS_BRANCH?=	stable
+KDE_APPLICATIONS_VERSION?=	17.07.80
+KDE_APPLICATIONS_BRANCH?=	unstable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
 _KDE_APPLICATIONS_ATTIC_VERSION=	15.12.3
@@ -859,7 +859,7 @@ kate_PORT=		editors/kate
 kate_PATH=		${QT_PLUGINDIR}/ktexteditor/ktexteditor_lumen.so
 
 kio-extras_PORT=	devel/kio-extras
-kio-extras_LIB=		libmolletnetwork5.so.5
+kio-extras_LIB=		libmolletnetwork5.so.17
 
 marble_PORT=		astro/marble
 marble_LIB=		libmarblewidget-qt5.so

@@ -3,6 +3,7 @@ etc/xdg/libksieve.categories
 etc/xdg/libksieve.renamecategories
 include/KF5/KManageSieve/SieveJob
 include/KF5/KSieveUi/AbstractMoveImapFolderWidget
+include/KF5/KSieveUi/AbstractRegexpEditorLineEdit
 include/KF5/KSieveUi/CheckScriptJob
 include/KF5/KSieveUi/ManageSieveScriptsDialog
 include/KF5/KSieveUi/ManageSieveTreeView
@@ -17,12 +18,14 @@ include/KF5/KSieveUi/SieveImapAccountSettings
 include/KF5/KSieveUi/SieveImapInstance
 include/KF5/KSieveUi/SieveImapInstanceInterface
 include/KF5/KSieveUi/SieveImapInstanceInterfaceManager
+include/KF5/KSieveUi/SieveImapPasswordProvider
 include/KF5/KSieveUi/SieveTreeWidgetItem
 include/KF5/KSieveUi/Util
 include/KF5/KSieveUi/VacationManager
 include/KF5/kmanagesieve/kmanagesieve_export.h
 include/KF5/kmanagesieve/sievejob.h
 include/KF5/ksieveui/abstractmoveimapfolderwidget.h
+include/KF5/ksieveui/abstractregexpeditorlineedit.h
 include/KF5/ksieveui/checkscriptjob.h
 include/KF5/ksieveui/ksieveui_export.h
 include/KF5/ksieveui/managesievescriptsdialog.h
@@ -38,6 +41,7 @@ include/KF5/ksieveui/sieveimapaccountsettings.h
 include/KF5/ksieveui/sieveimapinstance.h
 include/KF5/ksieveui/sieveimapinstanceinterface.h
 include/KF5/ksieveui/sieveimapinstanceinterfacemanager.h
+include/KF5/ksieveui/sieveimappasswordprovider.h
 include/KF5/ksieveui/sievetreewidgetitem.h
 include/KF5/ksieveui/util.h
 include/KF5/ksieveui/vacationmanager.h
@@ -71,6 +75,8 @@ share/doc/HTML/it/kioslave5/sieve/index.cache.bz2
 share/doc/HTML/it/kioslave5/sieve/index.docbook
 share/doc/HTML/nl/kioslave5/sieve/index.cache.bz2
 share/doc/HTML/nl/kioslave5/sieve/index.docbook
+share/doc/HTML/pt/kioslave5/sieve/index.cache.bz2
+share/doc/HTML/pt/kioslave5/sieve/index.docbook
 share/doc/HTML/pt_BR/kioslave5/sieve/index.cache.bz2
 share/doc/HTML/pt_BR/kioslave5/sieve/index.docbook
 share/doc/HTML/ru/kioslave5/sieve/index.cache.bz2

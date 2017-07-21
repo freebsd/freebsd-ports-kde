@@ -1,4 +1,5 @@
 bin/kapptemplate
+etc/xdg/kapptemplate.knsrc
 share/applications/org.kde.kapptemplate.desktop
 share/config.kcfg/kapptemplate.kcfg
 share/doc/HTML/ca/kapptemplate/first-page.png
@@ -31,6 +32,8 @@ share/doc/HTML/it/kapptemplate/index.cache.bz2
 share/doc/HTML/it/kapptemplate/index.docbook
 share/doc/HTML/nl/kapptemplate/index.cache.bz2
 share/doc/HTML/nl/kapptemplate/index.docbook
+share/doc/HTML/pt/kapptemplate/index.cache.bz2
+share/doc/HTML/pt/kapptemplate/index.docbook
 share/doc/HTML/pt_BR/kapptemplate/index.cache.bz2
 share/doc/HTML/pt_BR/kapptemplate/index.docbook
 share/doc/HTML/sv/kapptemplate/index.cache.bz2

@@ -3,7 +3,6 @@
 
 PORTNAME=	kdepimlibs
 PORTVERSION=	${KDE4_KDEPIM_VERSION}
-PORTREVISION=	11
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

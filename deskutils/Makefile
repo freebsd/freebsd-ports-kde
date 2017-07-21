@@ -135,8 +135,6 @@
     SUBDIR += kdepim-addons
     SUBDIR += kdepim-apps-libs
     SUBDIR += kdepim-runtime
-    SUBDIR += kdepim4
-    SUBDIR += kdepim4-runtime
     SUBDIR += kdepimlibs4
     SUBDIR += keditbookmarks
     SUBDIR += kfind
@@ -253,10 +251,12 @@
     SUBDIR += tagutils
     SUBDIR += taskcoach
     SUBDIR += taskd
+    SUBDIR += tasksh
     SUBDIR += taskwarrior
     SUBDIR += teapot
     SUBDIR += tel
     SUBDIR += thinkingrock
+    SUBDIR += timewarrior
     SUBDIR += tine20
     SUBDIR += tnote
     SUBDIR += todo

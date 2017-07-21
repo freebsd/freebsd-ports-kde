@@ -238,6 +238,7 @@ include/KF5/AkonadiWidgets/AgentTypeDialog
 include/KF5/AkonadiWidgets/AgentTypeWidget
 include/KF5/AkonadiWidgets/CollectionComboBox
 include/KF5/AkonadiWidgets/CollectionDialog
+include/KF5/AkonadiWidgets/CollectionMaintenancePage
 include/KF5/AkonadiWidgets/CollectionPropertiesDialog
 include/KF5/AkonadiWidgets/CollectionPropertiesPage
 include/KF5/AkonadiWidgets/CollectionRequester
@@ -264,6 +265,7 @@ include/KF5/AkonadiWidgets/agenttypewidget.h
 include/KF5/AkonadiWidgets/akonadiwidgets_export.h
 include/KF5/AkonadiWidgets/collectioncombobox.h
 include/KF5/AkonadiWidgets/collectiondialog.h
+include/KF5/AkonadiWidgets/collectionmaintenancepage.h
 include/KF5/AkonadiWidgets/collectionpropertiesdialog.h
 include/KF5/AkonadiWidgets/collectionpropertiespage.h
 include/KF5/AkonadiWidgets/collectionrequester.h
@@ -301,6 +303,7 @@ include/KF5/akonadi/private/imapparser_p.h
 include/KF5/akonadi/private/imapset_p.h
 include/KF5/akonadi/private/instance_p.h
 include/KF5/akonadi/private/protocol_exception_p.h
+include/KF5/akonadi/private/protocol_gen.h
 include/KF5/akonadi/private/protocol_p.h
 include/KF5/akonadi/private/scope_p.h
 include/KF5/akonadi/private/standarddirs_p.h
@@ -351,6 +354,14 @@ share/dbus-1/interfaces/org.freedesktop.Akonadi.StorageDebugger.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Tracer.xml
 share/dbus-1/interfaces/org.freedesktop.Akonadi.TracerNotification.xml
 share/dbus-1/services/org.freedesktop.Akonadi.Control.service
+share/icons/hicolor/128x128/apps/akonadi.png
+share/icons/hicolor/16x16/apps/akonadi.png
+share/icons/hicolor/22x22/apps/akonadi.png
+share/icons/hicolor/256x256/apps/akonadi.png
+share/icons/hicolor/32x32/apps/akonadi.png
+share/icons/hicolor/48x48/apps/akonadi.png
+share/icons/hicolor/64x64/apps/akonadi.png
+share/icons/hicolor/scalable/apps/akonadi.svgz
 share/kf5/akonadi/akonadi-xml.xsd
 share/kf5/akonadi/kcfg2dbus.xsl
 share/kf5/akonadi_knut_resource/knut-template.xml

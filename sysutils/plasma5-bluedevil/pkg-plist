@@ -110,7 +110,7 @@ share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/CompactRepresentatio
 share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/DeviceItem.qml
 share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/FullRepresentation.qml
 share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/Header.qml
-share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/MediaPlayer.qml
+share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/MediaPlayerItem.qml
 share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/SwitchButton.qml
 share/plasma/plasmoids/org.kde.plasma.bluetooth/contents/ui/Toolbar.qml
 share/plasma/plasmoids/org.kde.plasma.bluetooth/metadata.desktop

@@ -49,7 +49,7 @@ SQLITE_CMAKE_OFF=	-DAKONADI_BUILD_QSQLITE:BOOL=OFF
 
 OPTIONS_DEFAULT=	MYSQL
 
-PLIST_SUB=	SHLIB_VER="5.5.2"
+PLIST_SUB=	SHLIB_VER="5.5.80"
 
 post-patch:
 # To avoid overflow, MySQL settings need to be lower than
@@ -57,8 +57,5 @@ post-patch:
 # it's nothing but a temporary hack.
 	${REINPLACE_CMD} -e '/wait_timeout/ s|31536000|1073741|' \
 		${PATCH_WRKSRC}/src/server/storage/*.conf
-# Prevent updating MIME during build.
-	${REINPLACE_CMD} -e '/update_xdg_mimetypes/ d' \
-		${PATCH_WRKSRC}/CMakeLists.txt
 
 .include <bsd.port.mk>

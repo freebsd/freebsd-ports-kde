@@ -21,7 +21,7 @@ lib/libpala/libpala-config.cmake
 lib/libpala/pala-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/libpala/pala-targets.cmake
 share/applications/kde4/org.kde.palapeli.desktop
-share/apps/appdata/org.kde.palapeli.appdata.xml
+share/apps/metainfo/org.kde.palapeli.appdata.xml
 share/apps/palapeli/backgrounds/Eliminator-Funk-2.jpg
 share/apps/palapeli/backgrounds/Rear-Admiral-Diplomat-1.jpg
 share/apps/palapeli/backgrounds/Time-For-Lunch-2.jpg

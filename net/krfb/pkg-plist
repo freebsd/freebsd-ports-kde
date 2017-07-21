@@ -2,7 +2,7 @@ bin/krfb
 lib/libkrfbprivate.so.5
 lib/libkrfbprivate.so.5.0
 %%QT_PLUGINDIR%%/krfb/krfb_framebuffer_qt.so
-%%QT_PLUGINDIR%%/krfb/krfb_framebuffer_x11.so
+%%QT_PLUGINDIR%%/krfb/krfb_framebuffer_xcb.so
 share/applications/org.kde.krfb.desktop
 share/doc/HTML/ca/krfb/configuration_network.png
 share/doc/HTML/ca/krfb/configuration_security.png

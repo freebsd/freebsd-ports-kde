@@ -39,6 +39,10 @@ share/doc/HTML/nl/kleopatra/index.cache.bz2
 share/doc/HTML/nl/kleopatra/index.docbook
 share/doc/HTML/nl/kwatchgnupg/index.cache.bz2
 share/doc/HTML/nl/kwatchgnupg/index.docbook
+share/doc/HTML/pt/kleopatra/index.cache.bz2
+share/doc/HTML/pt/kleopatra/index.docbook
+share/doc/HTML/pt/kwatchgnupg/index.cache.bz2
+share/doc/HTML/pt/kwatchgnupg/index.docbook
 share/doc/HTML/pt_BR/kleopatra/index.cache.bz2
 share/doc/HTML/pt_BR/kleopatra/index.docbook
 share/doc/HTML/pt_BR/kwatchgnupg/index.cache.bz2
@@ -60,7 +64,6 @@ share/icons/hicolor/48x48/apps/kleopatra.png
 share/icons/hicolor/64x64/apps/kleopatra.png
 share/kconf_update/kleopatra-15.08-kickoff.sh
 share/kconf_update/kleopatra.upd
-%%DATADIR%%/pics/gpg4win-compact.png
 %%DATADIR%%/pics/kleopatra_splashscreen.png
 %%DATADIR%%/pics/kleopatra_splashscreen.svgz
 %%DATADIR%%/pics/kleopatra_wizard.png

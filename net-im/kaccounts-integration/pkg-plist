@@ -31,6 +31,7 @@ share/locale/ca@valencia/LC_MESSAGES/kaccounts-integration.mo
 share/locale/cs/LC_MESSAGES/kaccounts-integration.mo
 share/locale/da/LC_MESSAGES/kaccounts-integration.mo
 share/locale/de/LC_MESSAGES/kaccounts-integration.mo
+share/locale/el/LC_MESSAGES/kaccounts-integration.mo
 share/locale/en_GB/LC_MESSAGES/kaccounts-integration.mo
 share/locale/es/LC_MESSAGES/kaccounts-integration.mo
 share/locale/et/LC_MESSAGES/kaccounts-integration.mo
@@ -54,6 +55,7 @@ share/locale/sk/LC_MESSAGES/kaccounts-integration.mo
 share/locale/sl/LC_MESSAGES/kaccounts-integration.mo
 share/locale/sr/LC_MESSAGES/kaccounts-integration.mo
 share/locale/sv/LC_MESSAGES/kaccounts-integration.mo
+share/locale/tr/LC_MESSAGES/kaccounts-integration.mo
 share/locale/uk/LC_MESSAGES/kaccounts-integration.mo
 share/locale/zh_CN/LC_MESSAGES/kaccounts-integration.mo
 share/locale/zh_TW/LC_MESSAGES/kaccounts-integration.mo

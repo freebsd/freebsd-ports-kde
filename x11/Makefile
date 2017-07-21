@@ -122,7 +122,6 @@
     SUBDIR += kde
     SUBDIR += kde-baseapps
     SUBDIR += kde-runtime
-    SUBDIR += kde4-workspace
     SUBDIR += kdelibs4
     SUBDIR += keybinder
     SUBDIR += keybinder-gtk3
@@ -255,8 +254,6 @@
     SUBDIR += pantheon-terminal
     SUBDIR += pipeglade
     SUBDIR += pixman
-    SUBDIR += plasma-scriptengine-python
-    SUBDIR += plasma-scriptengine-ruby
     SUBDIR += plasma5-kactivitymanagerd
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen
@@ -270,6 +267,7 @@
     SUBDIR += printproto
     SUBDIR += printscreen
     SUBDIR += props
+    SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt4-opengl
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xdot
