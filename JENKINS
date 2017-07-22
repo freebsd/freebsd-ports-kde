@@ -357,7 +357,6 @@ sysutils/kf5-kwallet
 sysutils/kfilemetadata
 sysutils/kfloppy
 sysutils/khelpcenter
-sysutils/ksysguardd
 sysutils/ksystemlog
 sysutils/kuser
 sysutils/nepomuk-core
@@ -443,8 +442,6 @@ x11/kf5-plasma-framework
 x11/kgamma
 x11/konsole
 x11/libkonq
-x11/plasma-scriptengine-python
-x11/plasma-scriptengine-ruby
 x11/plasma5-kactivitymanagerd
 x11/plasma5-kgamma5
 x11/plasma5-kscreen
