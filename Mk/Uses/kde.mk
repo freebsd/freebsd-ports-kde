@@ -565,7 +565,7 @@ plasma-framework_PORT=	x11/kf5-plasma-framework
 plasma-framework_LIB=	libKF5Plasma.so
 
 plasma-pa_PORT=		audio/plasma5-plasma-pa
-plasma-pa_LIB=		libQPulseAudioPrivate.so
+plasma-pa_PATH=		${QT_PLUGINDIR}/kcms/kcm_pulseaudio.so
 
 plotting_PORT=		graphics/kf5-kplotting
 plotting_LIB=		libKF5Plotting.so
