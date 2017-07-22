@@ -7,11 +7,6 @@ share/apps/kimagemapeditor/kimagemapeditorpartui.rc
 share/apps/kimagemapeditor/kimagemapeditorui.rc
 share/apps/kimagemapeditor/polygoncursor.png
 share/apps/kimagemapeditor/removepointcursor.png
-share/doc/HTML/en/kimagemapeditor/common
-share/doc/HTML/en/kimagemapeditor/configure.png
-share/doc/HTML/en/kimagemapeditor/index.cache.bz2
-share/doc/HTML/en/kimagemapeditor/index.docbook
-share/doc/HTML/en/kimagemapeditor/mainwindow.png
 share/icons/hicolor/16x16/apps/kimagemapeditor.png
 share/icons/hicolor/22x22/actions/addpoint.png
 share/icons/hicolor/22x22/actions/arrow.png

@@ -124,6 +124,11 @@ PORTVERSION?=		${KDE_APPLICATIONS_VERSION}
 MASTER_SITES?=		KDE/Attic/applications/${KDE_APPLICATIONS_VERSION}/src
 .      else
 MASTER_SITES?=		KDE/${KDE_APPLICATIONS_BRANCH}/applications/${KDE_APPLICATIONS_VERSION}/src
+# Let bsd.port.mk create the plist-entries for the documentation.
+# KDE Applications ports install their documentation to 
+# ${PREFIX}/share/doc.
+DOCSDIR=		${PREFIX}/share/doc
+PORTDOCS?=		HTML/*
 .      endif
 DIST_SUBDIR?=		KDE/applications/${KDE_APPLICATIONS_VERSION}
 .    elif ${_KDE_CATEGORY:Mkde-plasma}

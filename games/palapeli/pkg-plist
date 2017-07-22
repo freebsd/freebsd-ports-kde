@@ -42,10 +42,6 @@ share/apps/palapeli/palapeli.kcfg
 share/apps/palapeli/palapeli.notifyrc
 share/apps/palapeli/palapeliui.rc
 share/config/palapeli-collectionrc
-share/doc/HTML/en/palapeli/common
-share/doc/HTML/en/palapeli/index.cache.bz2
-share/doc/HTML/en/palapeli/index.docbook
-share/doc/HTML/en/palapeli/puzzletable1.png
 share/icons/hicolor/128x128/apps/palapeli.png
 share/icons/hicolor/128x128/mimetypes/application-x-palapeli.png
 share/icons/hicolor/16x16/apps/palapeli.png

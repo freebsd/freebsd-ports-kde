@@ -14,10 +14,4 @@ lib/libkcddb.so
 lib/libkcddb.so.4
 lib/libkcddb.so.%%KDE4_GENERIC_LIB_VERSION%%
 share/config.kcfg/libkcddb.kcfg
-share/doc/HTML/en/kcontrol/cddbretrieval/common
-share/doc/HTML/en/kcontrol/cddbretrieval/index.cache.bz2
-share/doc/HTML/en/kcontrol/cddbretrieval/index.docbook
-share/doc/HTML/en/kcontrol/cddbretrieval/kscd13.png
-share/doc/HTML/en/kcontrol/cddbretrieval/kscd14.png
-share/doc/HTML/en/kcontrol/cddbretrieval/kscd16.png
 share/kde4/services/libkcddb.desktop
