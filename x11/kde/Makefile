@@ -15,6 +15,7 @@ RUN_DEPENDS=	kde-baseapps>=0:x11/kde-baseapps \
 
 USES=		kde:5 metaport
 USE_KDE=	plasma-desktop_run
+USE_QT5=	# empty
 
 OPTIONS_DEFINE=	KDEADMIN KDEEDU \
 		KDEGAMES KDEGRAPHICS KDEMULTIMEDIA KDENETWORK \
