@@ -1,0 +1,40 @@
+From 2b8eb66aba0e61e84b3ff0f3f37cba091cbb6e9f Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@FreeBSD.org>
+Date: Sun, 23 Jul 2017 16:45:30 +0200
+Subject: [PATCH] Use pkgconfig in config.tests for libinput and libudev on
+ FreeBSD
+
+Use pkgconfig to add the required CFLAGS and LDFLAGS for the
+config.tests for libudev and libinput on FreeBSD.
+
+Change-Id: I3d2fe220bd1ad7cbce16832dfd1456783f05f2d9
+---
+ config.tests/unix/libinput/libinput.pro | 4 ++++
+ config.tests/unix/libudev/libudev.pro   | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+diff --git config.tests/unix/libinput/libinput.pro config.tests/unix/libinput/libinput.pro
+index 941a0b73ef..f4879ae7b6 100644
+--- config.tests/unix/libinput/libinput.pro
++++ config.tests/unix/libinput/libinput.pro
+@@ -1,2 +1,6 @@
++freebsd {
++    PKGCONFIG += libudev libinput
++    CONFIG += link_pkgconfig
++}
+ SOURCES = libinput.cpp
+ CONFIG -= qt
+diff --git config.tests/unix/libudev/libudev.pro config.tests/unix/libudev/libudev.pro
+index b557e7b17b..035fa2171f 100644
+--- config.tests/unix/libudev/libudev.pro
++++ config.tests/unix/libudev/libudev.pro
+@@ -1,2 +1,6 @@
++freebsd {
++    PKGCONFIG += libudev
++    CONFIG += link_pkgconfig
++}
+ SOURCES = libudev.cpp
+ CONFIG -= qt
+-- 
+2.13.2
+
