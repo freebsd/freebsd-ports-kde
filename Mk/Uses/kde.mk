@@ -82,7 +82,7 @@ KDE_APPLICATIONS_VERSION?=	17.07.80
 KDE_APPLICATIONS_BRANCH?=	unstable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
-_KDE_APPLICATIONS_ATTIC_VERSION=	15.12.3
+_KDE_APPLICATIONS_ATTIC_VERSION=	16.12.3
 
 # ==============================================================================
 
