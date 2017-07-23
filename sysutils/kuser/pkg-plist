@@ -6,6 +6,10 @@ share/apps/kuser/kuserui.rc
 share/apps/kuser/pics/group.png
 share/apps/kuser/pics/user.png
 share/config.kcfg/kuser.kcfg
+share/doc/HTML/en/kuser/common
+share/doc/HTML/en/kuser/index.cache.bz2
+share/doc/HTML/en/kuser/index.docbook
+share/doc/HTML/en/kuser/kuser.png
 share/icons/hicolor/128x128/apps/kuser.png
 share/icons/hicolor/16x16/apps/kuser.png
 share/icons/hicolor/22x22/apps/kuser.png
