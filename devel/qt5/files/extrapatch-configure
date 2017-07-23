@@ -4,7 +4,7 @@
  }
  
  # build qmake
-+if [ '!' -e "$outpath/qmake/qmake" ] ; then 
++if [ '!' -e "$outpath/bin/qmake" ] ; then 
      echo "Creating qmake..."
      mkdir -p "$outpath/qmake" || exit
  

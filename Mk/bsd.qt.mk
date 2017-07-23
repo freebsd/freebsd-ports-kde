@@ -684,10 +684,6 @@ qtbase-pre-configure:
 		${LN} -sf ${QT_BINDIR}/${tool:T} ${CONFIGURE_WRKSRC}/bin/${tool:T} || \
 		${TRUE}
 .  endfor
-.  if ${PORTNAME:N*qmake*}
-	${LN} -sf ${QMAKE} ${CONFIGURE_WRKSRC}/qmake/qmake || ${TRUE}
-.  endif
-
 
 # The following is a fix for the inplace upgrade problem we faced (see
 # QTBUG-40825 and ports bugs 194088, 195105 and 198720) previously,
