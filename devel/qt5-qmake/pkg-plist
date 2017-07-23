@@ -17,7 +17,6 @@
 %%QT_MKSPECDIR%%/common/c89/qplatformdefs.h
 %%QT_MKSPECDIR%%/common/clang-mac.conf
 %%QT_MKSPECDIR%%/common/clang.conf
-%%QT_MKSPECDIR%%/common/freebsd.conf
 %%QT_MKSPECDIR%%/common/g++-base.conf
 %%QT_MKSPECDIR%%/common/g++-macx.conf
 %%QT_MKSPECDIR%%/common/g++-unix.conf
