@@ -13,6 +13,7 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libepoxy.so:graphics/libepoxy \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libudev.so:devel/libudev-devd \
 		libwayland-cursor.so:graphics/wayland \
 		libxcb-cursor.so:x11/xcb-util-cursor \
 		libxcb-image.so:x11/xcb-util-image \
