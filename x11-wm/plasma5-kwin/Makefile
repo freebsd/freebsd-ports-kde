@@ -3,6 +3,7 @@
 
 PORTNAME=	kwin
 PORTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -32,11 +33,6 @@ USE_QT5=	buildtools_build concurrent core dbus gui \
 		multimedia network qmake_build qml quick script \
 		testlib uiplugin uitools widgets x11extras xml
 USE_XORG=	ice sm x11 xcb xext xi
-
-# Temporary work around to disable UDev detection for now should
-# devel/libudev-devd be installed.
-CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_UDev:BOOL=TRUE \
-		-DCMAKE_DISABLE_FIND_PACKAGE_Libinput:BOOL=TRUE
 
 post-patch:
 	${REINPLACE_CMD} '/sysmacros.h/d' \
