@@ -176,7 +176,7 @@ _EXTRA_PATCHES_QT4+=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-armv6
 .  else
 _EXTRA_PATCHES_QT5=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 			${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
-			${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs__common__freebsd.conf \
+			${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf \
 			${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-libinput_libudev
 .  endif
 EXTRA_PATCHES?=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-configure \
@@ -291,8 +291,8 @@ Qt_Post_Include=	bsd.qt.mk
 
 .if !defined(QT_NONSTANDARD)
 CONFIGURE_ENV+=	QTDIR="${QT_ARCHDIR}" QMAKE="${QMAKE}" \
-				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}" \
-				QMAKESPEC="${QMAKESPEC}"
+				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}"
+# 				QMAKESPEC="${QMAKESPEC}"
 CONFIGURE_ARGS+=--with-qt-includes=${QT_INCDIR} \
 				--with-qt-libraries=${QT_LIBDIR} \
 				--with-extra-includes=${LOCALBASE}/include \
