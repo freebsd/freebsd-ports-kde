@@ -10,7 +10,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt core non-graphical module
 
 LIB_DEPENDS=	libicui18n.so:devel/icu \
-		libpcre.so:devel/pcre
+		libpcre2-posix.so:devel/pcre2
 
 USES=		execinfo
 USE_GNOME=	glib20
