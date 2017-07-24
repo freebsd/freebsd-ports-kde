@@ -14,6 +14,8 @@ COMMENT=	Drop-down terminal emulator for KDE
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+RUN_DEPENDS=	konsole:x11/konsole
+
 USES=		cmake gettext kde:4 shebangfix tar:xz
 SHEBANG_FILES=	data/updaters/yakuake-${PORTVERSION}-startupnotification.pl
 USE_KDE=	automoc4 kdelibs
