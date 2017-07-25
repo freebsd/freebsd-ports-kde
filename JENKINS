@@ -67,6 +67,7 @@ devel/kde-dev-scripts
 devel/kde-dev-utils
 devel/kdesdk
 devel/kdesdk-thumbnailers
+devel/kdevelop
 devel/kf5-extra-cmake-modules
 devel/kf5-kapidox
 devel/kf5-kauth
@@ -190,6 +191,7 @@ graphics/okular
 graphics/spectacle
 hebrew/kde-l10n
 hungarian/kde-l10n
+irc/quassel
 japanese/kde-l10n
 japanese/kiten
 korean/kde-l10n
