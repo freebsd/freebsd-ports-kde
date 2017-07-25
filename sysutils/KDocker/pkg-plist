@@ -1,0 +1,5 @@
+bin/kdocker
+etc/bash_completion.d/kdocker
+share/appdata/kdocker.appdata.xml
+share/applications/kdocker.desktop
+share/pixmaps/kdocker.png

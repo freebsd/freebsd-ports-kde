@@ -510,6 +510,7 @@
     SUBDIR += kdf
     SUBDIR += kdialog
     SUBDIR += kdirstat
+    SUBDIR += KDocker
     SUBDIR += keyboard-daemon
     SUBDIR += kf5-baloo
     SUBDIR += kf5-bluez-qt
