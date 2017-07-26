@@ -17,11 +17,26 @@ USE_XORG=	xcb
 MAKE_JOBS_UNSAFE=	yes
 INSTALL_TARGET=	install-strip
 
-CONFIGURE_ARGS=	--without-default-layout \
-		--without-default-model \
-		--without-default-options \
-		--without-default-rules \
-		--without-default-variant \
+# These values can be overriden via make.conf.
+DEFAULT_XKB_RULES?=	xorg
+DEFAULT_XKB_MODEL?=	pc105
+DEFAULT_XKB_LAYOUT?=	us
+DEFAULT_XKB_VARIANT?=	# none
+DEFAULT_XKB_OPTIONS?=	# none
+
+SUB_LIST=	DEFAULT_XKB_RULES="${DEFAULT_XKB_RULES}" \
+		DEFAULT_XKB_MODEL="${DEFAULT_XKB_MODEL}" \
+		DEFAULT_XKB_LAYOUT="${DEFAULT_XKB_LAYOUT}" \
+		DEFAULT_XKB_VARIANT="${DEFAULT_XKB_VARIANT}" \
+		DEFAULT_XKB_OPTIONS="${DEFAULT_XKB_OPTIONS}"
+
+SUB_FILES=	pkg-message
+
+CONFIGURE_ARGS=	--with-default-layout="${DEFAULT_XKB_LAYOUT}" \
+		--with-default-model="${DEFAULT_XKB_MODEL}" \
+		--with-default-options="${DEFAULT_XKB_OPTIONS}" \
+		--with-default-rules="${DEFAULT_XKB_RULES}" \
+		--with-default-variant="${DEFAULT_XKB_VARIANT}" \
 		--without-doxygen \
 		--with-x-locale-root=${PREFIX}/lib/X11/locale
 
