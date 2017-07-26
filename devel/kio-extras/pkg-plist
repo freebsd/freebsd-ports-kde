@@ -8,6 +8,7 @@ lib/libkioarchive.so.5
 lib/libkioarchive.so.5.97.0
 lib/libmolletnetwork5.so.17
 lib/libmolletnetwork5.so.%%KDE_APPLICATIONS_VERSION%%
+%%TAGLIB%%%%QT_PLUGINDIR%%/audiothumbnail.so
 %%QT_PLUGINDIR%%/comicbookthumbnail.so
 %%QT_PLUGINDIR%%/djvuthumbnail.so
 %%EXR%%%%QT_PLUGINDIR%%/exrthumbnail.so
@@ -54,6 +55,7 @@ share/konqsidebartng/virtual_folders/remote/virtualfolder_network.desktop
 share/kservices5/about.protocol
 share/kservices5/activities.protocol
 share/kservices5/ar.protocol
+%%TAGLIB%%share/kservices5/audiothumbnail.desktop
 share/kservices5/bookmarks.protocol
 share/kservices5/bzip.protocol
 share/kservices5/bzip2.protocol
