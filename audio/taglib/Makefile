@@ -1,8 +1,8 @@
 # Created by: Frank Laszlo <laszlof@vonostingroup.com>
-# $FreeBSD$
+# $FreeBSD: head/audio/taglib/Makefile 412344 2016-04-01 13:29:15Z mat $
 
 PORTNAME=	taglib
-PORTVERSION=	1.10
+PORTVERSION=	1.11.1
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
@@ -16,7 +16,9 @@ LICENSE_FILE_MPL=	${WRKSRC}/COPYING.MPL
 
 USES=		cmake cpe pathfix
 CMAKE_ARGS=	-DWITH_ASF:BOOL=ON \
-		-DWITH_MP4:BOOL=ON
+		-DWITH_MP4:BOOL=ON \
+		-DBUILD_SHARED_LIBS:BOOL=ON
+
 USE_LDCONFIG=	yes
 
 CPE_VENDOR=	scott_wheeler
@@ -24,6 +26,12 @@ CPE_VENDOR=	scott_wheeler
 OPTIONS_DEFINE=	RCC
 OPTIONS_SUB=	yes
 
+# The patch official patches for this can be obtained from:
+#   http://darksoft.org/files/rusxmms/patches/
+# however, they do not seem to yet have any for taglib-1.11.1.
+# So instead, use:
+#   https://sourceforge.net/p/qmmp-dev/code/HEAD/tree/trunk/extras/package/win32/contrib/taglib-rusxmms/
+#
 RCC_DESC=		Build with RusXMMS librcc patches (experimental)
 RCC_LIB_DEPENDS=	librcc.so:devel/librcc
 RCC_EXTRA_PATCHES=	${FILESDIR}/extrapatch-rcc
