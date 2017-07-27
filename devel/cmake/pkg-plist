@@ -215,6 +215,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/module/CMakePushCheckState.rst
 %%DATADIR%%/Help/module/CMakeVerifyManifest.rst
 %%DATADIR%%/Help/module/CPack.rst
+%%DATADIR%%/Help/module/CPackArchive.rst
 %%DATADIR%%/Help/module/CPackBundle.rst
 %%DATADIR%%/Help/module/CPackComponent.rst
 %%DATADIR%%/Help/module/CPackCygwin.rst
@@ -227,6 +228,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/module/CPackProductBuild.rst
 %%DATADIR%%/Help/module/CPackRPM.rst
 %%DATADIR%%/Help/module/CPackWIX.rst
+%%DATADIR%%/Help/module/CSharpUtilities.rst
 %%DATADIR%%/Help/module/CTest.rst
 %%DATADIR%%/Help/module/CTestCoverageCollectGCOV.rst
 %%DATADIR%%/Help/module/CTestScriptMode.rst
@@ -242,6 +244,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/module/CheckFortranFunctionExists.rst
 %%DATADIR%%/Help/module/CheckFortranSourceCompiles.rst
 %%DATADIR%%/Help/module/CheckFunctionExists.rst
+%%DATADIR%%/Help/module/CheckIPOSupported.rst
 %%DATADIR%%/Help/module/CheckIncludeFile.rst
 %%DATADIR%%/Help/module/CheckIncludeFileCXX.rst
 %%DATADIR%%/Help/module/CheckIncludeFiles.rst
@@ -252,7 +255,6 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/module/CheckSymbolExists.rst
 %%DATADIR%%/Help/module/CheckTypeSize.rst
 %%DATADIR%%/Help/module/CheckVariableExists.rst
-%%DATADIR%%/Help/module/CSharpUtilities.rst
 %%DATADIR%%/Help/module/Dart.rst
 %%DATADIR%%/Help/module/DeployQt4.rst
 %%DATADIR%%/Help/module/Documentation.rst
@@ -411,6 +413,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/module/GNUInstallDirs.rst
 %%DATADIR%%/Help/module/GenerateExportHeader.rst
 %%DATADIR%%/Help/module/GetPrerequisites.rst
+%%DATADIR%%/Help/module/GoogleTest.rst
 %%DATADIR%%/Help/module/InstallRequiredSystemLibraries.rst
 %%DATADIR%%/Help/module/MacroAddFileDependencies.rst
 %%DATADIR%%/Help/module/ProcessorCount.rst
@@ -500,6 +503,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/policy/CMP0065.rst
 %%DATADIR%%/Help/policy/CMP0066.rst
 %%DATADIR%%/Help/policy/CMP0067.rst
+%%DATADIR%%/Help/policy/CMP0068.rst
+%%DATADIR%%/Help/policy/CMP0069.rst
 %%DATADIR%%/Help/policy/DEPRECATED.txt
 %%DATADIR%%/Help/policy/DISALLOWED_COMMAND.txt
 %%DATADIR%%/Help/prop_cache/ADVANCED.rst
@@ -539,8 +544,11 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_dir/VS_GLOBAL_SECTION_PRE_section.rst
 %%DATADIR%%/Help/prop_dir/VS_STARTUP_PROJECT.rst
 %%DATADIR%%/Help/prop_gbl/ALLOW_DUPLICATE_CUSTOM_TARGETS.rst
+%%DATADIR%%/Help/prop_gbl/AUTOGEN_SOURCE_GROUP.rst
 %%DATADIR%%/Help/prop_gbl/AUTOGEN_TARGETS_FOLDER.rst
+%%DATADIR%%/Help/prop_gbl/AUTOMOC_SOURCE_GROUP.rst
 %%DATADIR%%/Help/prop_gbl/AUTOMOC_TARGETS_FOLDER.rst
+%%DATADIR%%/Help/prop_gbl/AUTORCC_SOURCE_GROUP.rst
 %%DATADIR%%/Help/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.rst
 %%DATADIR%%/Help/prop_gbl/CMAKE_C_KNOWN_FEATURES.rst
 %%DATADIR%%/Help/prop_gbl/DEBUG_CONFIGURATIONS.rst
@@ -550,7 +558,9 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_gbl/ENABLED_LANGUAGES.rst
 %%DATADIR%%/Help/prop_gbl/FIND_LIBRARY_USE_LIB32_PATHS.rst
 %%DATADIR%%/Help/prop_gbl/FIND_LIBRARY_USE_LIB64_PATHS.rst
+%%DATADIR%%/Help/prop_gbl/FIND_LIBRARY_USE_LIBX32_PATHS.rst
 %%DATADIR%%/Help/prop_gbl/FIND_LIBRARY_USE_OPENBSD_VERSIONING.rst
+%%DATADIR%%/Help/prop_gbl/GENERATOR_IS_MULTI_CONFIG.rst
 %%DATADIR%%/Help/prop_gbl/GLOBAL_DEPENDS_DEBUG_MODE.rst
 %%DATADIR%%/Help/prop_gbl/GLOBAL_DEPENDS_NO_CYCLES.rst
 %%DATADIR%%/Help/prop_gbl/IN_TRY_COMPILE.rst
@@ -616,6 +626,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_test/ATTACHED_FILES_ON_FAIL.rst
 %%DATADIR%%/Help/prop_test/COST.rst
 %%DATADIR%%/Help/prop_test/DEPENDS.rst
+%%DATADIR%%/Help/prop_test/DISABLED.rst
 %%DATADIR%%/Help/prop_test/ENVIRONMENT.rst
 %%DATADIR%%/Help/prop_test/FAIL_REGULAR_EXPRESSION.rst
 %%DATADIR%%/Help/prop_test/FIXTURES_CLEANUP.rst
@@ -655,15 +666,19 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_tgt/ARCHIVE_OUTPUT_DIRECTORY_CONFIG.rst
 %%DATADIR%%/Help/prop_tgt/ARCHIVE_OUTPUT_NAME.rst
 %%DATADIR%%/Help/prop_tgt/ARCHIVE_OUTPUT_NAME_CONFIG.rst
+%%DATADIR%%/Help/prop_tgt/AUTOGEN_BUILD_DIR.rst
 %%DATADIR%%/Help/prop_tgt/AUTOGEN_TARGET_DEPENDS.rst
 %%DATADIR%%/Help/prop_tgt/AUTOMOC.rst
+%%DATADIR%%/Help/prop_tgt/AUTOMOC_DEPEND_FILTERS.rst
 %%DATADIR%%/Help/prop_tgt/AUTOMOC_MOC_OPTIONS.rst
 %%DATADIR%%/Help/prop_tgt/AUTORCC.rst
 %%DATADIR%%/Help/prop_tgt/AUTORCC_OPTIONS.rst
 %%DATADIR%%/Help/prop_tgt/AUTOUIC.rst
 %%DATADIR%%/Help/prop_tgt/AUTOUIC_OPTIONS.rst
+%%DATADIR%%/Help/prop_tgt/AUTOUIC_SEARCH_PATHS.rst
 %%DATADIR%%/Help/prop_tgt/BINARY_DIR.rst
 %%DATADIR%%/Help/prop_tgt/BUILD_RPATH.rst
+%%DATADIR%%/Help/prop_tgt/BUILD_WITH_INSTALL_NAME_DIR.rst
 %%DATADIR%%/Help/prop_tgt/BUILD_WITH_INSTALL_RPATH.rst
 %%DATADIR%%/Help/prop_tgt/BUNDLE.rst
 %%DATADIR%%/Help/prop_tgt/BUNDLE_EXTENSION.rst
@@ -685,6 +700,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_tgt/CONFIG_POSTFIX.rst
 %%DATADIR%%/Help/prop_tgt/CROSSCOMPILING_EMULATOR.rst
 %%DATADIR%%/Help/prop_tgt/CUDA_EXTENSIONS.rst
+%%DATADIR%%/Help/prop_tgt/CUDA_PTX_COMPILATION.rst
+%%DATADIR%%/Help/prop_tgt/CUDA_RESOLVE_DEVICE_SYMBOLS.rst
 %%DATADIR%%/Help/prop_tgt/CUDA_SEPARABLE_COMPILATION.rst
 %%DATADIR%%/Help/prop_tgt/CUDA_STANDARD.rst
 %%DATADIR%%/Help/prop_tgt/CUDA_STANDARD_REQUIRED.rst
@@ -730,6 +747,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/prop_tgt/IMPORTED_LOCATION_CONFIG.rst
 %%DATADIR%%/Help/prop_tgt/IMPORTED_NO_SONAME.rst
 %%DATADIR%%/Help/prop_tgt/IMPORTED_NO_SONAME_CONFIG.rst
+%%DATADIR%%/Help/prop_tgt/IMPORTED_OBJECTS.rst
+%%DATADIR%%/Help/prop_tgt/IMPORTED_OBJECTS_CONFIG.rst
 %%DATADIR%%/Help/prop_tgt/IMPORTED_SONAME.rst
 %%DATADIR%%/Help/prop_tgt/IMPORTED_SONAME_CONFIG.rst
 %%DATADIR%%/Help/prop_tgt/IMPORT_PREFIX.rst
@@ -863,6 +882,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/release/3.6.rst
 %%DATADIR%%/Help/release/3.7.rst
 %%DATADIR%%/Help/release/3.8.rst
+%%DATADIR%%/Help/release/3.9.rst
 %%DATADIR%%/Help/release/dev.txt
 %%DATADIR%%/Help/release/index.rst
 %%DATADIR%%/Help/variable/ANDROID.rst
@@ -885,6 +905,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DEPENDENCIES.rst
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DIRECTORIES.rst
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_NDK.rst
+%%DATADIR%%/Help/variable/CMAKE_ANDROID_NDK_DEPRECATED_HEADERS.rst
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_HOST_TAG.rst
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION.rst
 %%DATADIR%%/Help/variable/CMAKE_ANDROID_PROCESS_MAX.rst
@@ -901,17 +922,20 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_ARGC.rst
 %%DATADIR%%/Help/variable/CMAKE_ARGV0.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTOMOC.rst
+%%DATADIR%%/Help/variable/CMAKE_AUTOMOC_DEPEND_FILTERS.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTOMOC_MOC_OPTIONS.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTOMOC_RELAXED_MODE.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTORCC.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTORCC_OPTIONS.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTOUIC.rst
 %%DATADIR%%/Help/variable/CMAKE_AUTOUIC_OPTIONS.rst
+%%DATADIR%%/Help/variable/CMAKE_AUTOUIC_SEARCH_PATHS.rst
 %%DATADIR%%/Help/variable/CMAKE_BACKWARDS_COMPATIBILITY.rst
 %%DATADIR%%/Help/variable/CMAKE_BINARY_DIR.rst
 %%DATADIR%%/Help/variable/CMAKE_BUILD_RPATH.rst
 %%DATADIR%%/Help/variable/CMAKE_BUILD_TOOL.rst
 %%DATADIR%%/Help/variable/CMAKE_BUILD_TYPE.rst
+%%DATADIR%%/Help/variable/CMAKE_BUILD_WITH_INSTALL_NAME_DIR.rst
 %%DATADIR%%/Help/variable/CMAKE_BUILD_WITH_INSTALL_RPATH.rst
 %%DATADIR%%/Help/variable/CMAKE_CACHEFILE_DIR.rst
 %%DATADIR%%/Help/variable/CMAKE_CACHE_MAJOR_VERSION.rst
@@ -974,6 +998,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_EXTRA_SHARED_LIBRARY_SUFFIXES.rst
 %%DATADIR%%/Help/variable/CMAKE_FIND_APPBUNDLE.rst
 %%DATADIR%%/Help/variable/CMAKE_FIND_FRAMEWORK.rst
+%%DATADIR%%/Help/variable/CMAKE_FIND_LIBRARY_CUSTOM_LIB_SUFFIX.rst
 %%DATADIR%%/Help/variable/CMAKE_FIND_LIBRARY_PREFIXES.rst
 %%DATADIR%%/Help/variable/CMAKE_FIND_LIBRARY_SUFFIXES.rst
 %%DATADIR%%/Help/variable/CMAKE_FIND_NO_INSTALL_PREFIX.rst
@@ -1024,6 +1049,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_INSTALL_RPATH.rst
 %%DATADIR%%/Help/variable/CMAKE_INSTALL_RPATH_USE_LINK_PATH.rst
 %%DATADIR%%/Help/variable/CMAKE_INTERNAL_PLATFORM_ABI.rst
+%%DATADIR%%/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION.rst
+%%DATADIR%%/Help/variable/CMAKE_INTERPROCEDURAL_OPTIMIZATION_CONFIG.rst
 %%DATADIR%%/Help/variable/CMAKE_IOS_INSTALL_COMBINED.rst
 %%DATADIR%%/Help/variable/CMAKE_JOB_POOL_COMPILE.rst
 %%DATADIR%%/Help/variable/CMAKE_JOB_POOL_LINK.rst
@@ -1036,10 +1063,12 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_LANG_CLANG_TIDY.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_ABI.rst
+%%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_AR.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_EXTERNAL_TOOLCHAIN.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_ID.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_LAUNCHER.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_LOADED.rst
+%%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_RANLIB.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_TARGET.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILER_VERSION.rst
 %%DATADIR%%/Help/variable/CMAKE_LANG_COMPILE_OBJECT.rst
@@ -1101,6 +1130,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_MAKE_PROGRAM.rst
 %%DATADIR%%/Help/variable/CMAKE_MAP_IMPORTED_CONFIG_CONFIG.rst
 %%DATADIR%%/Help/variable/CMAKE_MATCH_COUNT.rst
+%%DATADIR%%/Help/variable/CMAKE_MATCH_n.rst
 %%DATADIR%%/Help/variable/CMAKE_MFC_FLAG.rst
 %%DATADIR%%/Help/variable/CMAKE_MINIMUM_REQUIRED_VERSION.rst
 %%DATADIR%%/Help/variable/CMAKE_MINOR_VERSION.rst
@@ -1127,6 +1157,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_POSITION_INDEPENDENT_CODE.rst
 %%DATADIR%%/Help/variable/CMAKE_PREFIX_PATH.rst
 %%DATADIR%%/Help/variable/CMAKE_PROGRAM_PATH.rst
+%%DATADIR%%/Help/variable/CMAKE_PROJECT_DESCRIPTION.rst
 %%DATADIR%%/Help/variable/CMAKE_PROJECT_NAME.rst
 %%DATADIR%%/Help/variable/CMAKE_PROJECT_PROJECT-NAME_INCLUDE.rst
 %%DATADIR%%/Help/variable/CMAKE_RANLIB.rst
@@ -1159,6 +1190,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_SUBLIME_TEXT_2_ENV_SETTINGS.rst
 %%DATADIR%%/Help/variable/CMAKE_SUBLIME_TEXT_2_EXCLUDE_BUILD_TREE.rst
 %%DATADIR%%/Help/variable/CMAKE_SYSROOT.rst
+%%DATADIR%%/Help/variable/CMAKE_SYSROOT_COMPILE.rst
+%%DATADIR%%/Help/variable/CMAKE_SYSROOT_LINK.rst
 %%DATADIR%%/Help/variable/CMAKE_SYSTEM.rst
 %%DATADIR%%/Help/variable/CMAKE_SYSTEM_APPBUNDLE_PATH.rst
 %%DATADIR%%/Help/variable/CMAKE_SYSTEM_FRAMEWORK_PATH.rst
@@ -1190,6 +1223,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_VS_NsightTegra_VERSION.rst
 %%DATADIR%%/Help/variable/CMAKE_VS_PLATFORM_NAME.rst
 %%DATADIR%%/Help/variable/CMAKE_VS_PLATFORM_TOOLSET.rst
+%%DATADIR%%/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA.rst
 %%DATADIR%%/Help/variable/CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE.rst
 %%DATADIR%%/Help/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.rst
 %%DATADIR%%/Help/variable/CMAKE_WARN_DEPRECATED.rst
@@ -1197,6 +1231,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/CMAKE_WIN32_EXECUTABLE.rst
 %%DATADIR%%/Help/variable/CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS.rst
 %%DATADIR%%/Help/variable/CMAKE_XCODE_ATTRIBUTE_an-attribute.rst
+%%DATADIR%%/Help/variable/CMAKE_XCODE_GENERATE_SCHEME.rst
 %%DATADIR%%/Help/variable/CMAKE_XCODE_PLATFORM_TOOLSET.rst
 %%DATADIR%%/Help/variable/CPACK_ABSOLUTE_DESTINATION_FILES.rst
 %%DATADIR%%/Help/variable/CPACK_COMPONENT_INCLUDE_TOPLEVEL_DIRECTORY.rst
@@ -1301,6 +1336,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Help/variable/PROJECT-NAME_VERSION_PATCH.rst
 %%DATADIR%%/Help/variable/PROJECT-NAME_VERSION_TWEAK.rst
 %%DATADIR%%/Help/variable/PROJECT_BINARY_DIR.rst
+%%DATADIR%%/Help/variable/PROJECT_DESCRIPTION.rst
 %%DATADIR%%/Help/variable/PROJECT_NAME.rst
 %%DATADIR%%/Help/variable/PROJECT_SOURCE_DIR.rst
 %%DATADIR%%/Help/variable/PROJECT_VERSION.rst
@@ -1436,7 +1472,6 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/CMakeTestRCCompiler.cmake
 %%DATADIR%%/Modules/CMakeTestSwiftCompiler.cmake
 %%DATADIR%%/Modules/CMakeUnixFindMake.cmake
-%%DATADIR%%/Modules/CMakeVS7BackwardCompatibility.cmake
 %%DATADIR%%/Modules/CMakeVerifyManifest.cmake
 %%DATADIR%%/Modules/CPack.DS_Store.in
 %%DATADIR%%/Modules/CPack.Description.plist.in
@@ -1451,6 +1486,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/CPack.background.png.in
 %%DATADIR%%/Modules/CPack.cmake
 %%DATADIR%%/Modules/CPack.distribution.dist.in
+%%DATADIR%%/Modules/CPackArchive.cmake
 %%DATADIR%%/Modules/CPackBundle.cmake
 %%DATADIR%%/Modules/CPackComponent.cmake
 %%DATADIR%%/Modules/CPackCygwin.cmake
@@ -1464,6 +1500,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/CPackRPM.cmake
 %%DATADIR%%/Modules/CPackWIX.cmake
 %%DATADIR%%/Modules/CPackZIP.cmake
+%%DATADIR%%/Modules/CSharpUtilities.cmake
 %%DATADIR%%/Modules/CTest.cmake
 %%DATADIR%%/Modules/CTestCoverageCollectGCOV.cmake
 %%DATADIR%%/Modules/CTestScriptMode.cmake
@@ -1482,6 +1519,16 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/CheckFortranSourceCompiles.cmake
 %%DATADIR%%/Modules/CheckFunctionExists.c
 %%DATADIR%%/Modules/CheckFunctionExists.cmake
+%%DATADIR%%/Modules/CheckIPOSupported.cmake
+%%DATADIR%%/Modules/CheckIPOSupported/CMakeLists-C.txt.in
+%%DATADIR%%/Modules/CheckIPOSupported/CMakeLists-CXX.txt.in
+%%DATADIR%%/Modules/CheckIPOSupported/CMakeLists-Fortran.txt.in
+%%DATADIR%%/Modules/CheckIPOSupported/foo.c
+%%DATADIR%%/Modules/CheckIPOSupported/foo.cpp
+%%DATADIR%%/Modules/CheckIPOSupported/foo.f
+%%DATADIR%%/Modules/CheckIPOSupported/main.c
+%%DATADIR%%/Modules/CheckIPOSupported/main.cpp
+%%DATADIR%%/Modules/CheckIPOSupported/main.f
 %%DATADIR%%/Modules/CheckIncludeFile.c.in
 %%DATADIR%%/Modules/CheckIncludeFile.cmake
 %%DATADIR%%/Modules/CheckIncludeFile.cxx.in
@@ -1517,6 +1564,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Compiler/Bruce-C-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/Bruce-C.cmake
 %%DATADIR%%/Modules/Compiler/CCur-Fortran.cmake
+%%DATADIR%%/Modules/Compiler/CMakeCommonCompilerMacros.cmake
 %%DATADIR%%/Modules/Compiler/Clang-ASM.cmake
 %%DATADIR%%/Modules/Compiler/Clang-C-FeatureTests.cmake
 %%DATADIR%%/Modules/Compiler/Clang-C.cmake
@@ -1525,6 +1573,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Compiler/Clang-CXX.cmake
 %%DATADIR%%/Modules/Compiler/Clang-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/Clang-DetermineCompilerInternal.cmake
+%%DATADIR%%/Modules/Compiler/Clang-FindBinUtils.cmake
 %%DATADIR%%/Modules/Compiler/Clang.cmake
 %%DATADIR%%/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/Compaq-C-DetermineCompiler.cmake
@@ -1533,6 +1582,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Compiler/Cray-CXX.cmake
 %%DATADIR%%/Modules/Compiler/Cray-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/Cray-Fortran.cmake
+%%DATADIR%%/Modules/Compiler/Cray.cmake
 %%DATADIR%%/Modules/Compiler/CrayPrgEnv-C.cmake
 %%DATADIR%%/Modules/Compiler/CrayPrgEnv-CXX.cmake
 %%DATADIR%%/Modules/Compiler/CrayPrgEnv-Cray-C.cmake
@@ -1563,6 +1613,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/GNU-CXX-FeatureTests.cmake
 %%DATADIR%%/Modules/Compiler/GNU-CXX.cmake
+%%DATADIR%%/Modules/Compiler/GNU-FindBinUtils.cmake
 %%DATADIR%%/Modules/Compiler/GNU-Fortran.cmake
 %%DATADIR%%/Modules/Compiler/GNU.cmake
 %%DATADIR%%/Modules/Compiler/HP-ASM.cmake
@@ -1617,11 +1668,13 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Compiler/SDCC-C-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-ASM.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-C-DetermineCompiler.cmake
+%%DATADIR%%/Modules/Compiler/SunPro-C-FeatureTests.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-C.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-CXX-FeatureTests.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-CXX.cmake
 %%DATADIR%%/Modules/Compiler/SunPro-Fortran.cmake
+%%DATADIR%%/Modules/Compiler/SunPro.cmake
 %%DATADIR%%/Modules/Compiler/TI-ASM.cmake
 %%DATADIR%%/Modules/Compiler/TI-C.cmake
 %%DATADIR%%/Modules/Compiler/TI-CXX.cmake
@@ -1648,11 +1701,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/CompilerId/VS-7.vcproj.in
 %%DATADIR%%/Modules/CompilerId/VS-Intel.vfproj.in
 %%DATADIR%%/Modules/CompilerId/VS-NsightTegra.vcxproj.in
-%%DATADIR%%/Modules/CompilerId/Xcode-1.pbxproj.in
-%%DATADIR%%/Modules/CompilerId/Xcode-2.pbxproj.in
 %%DATADIR%%/Modules/CompilerId/Xcode-3.pbxproj.in
 %%DATADIR%%/Modules/CompilerId/main.swift.in
-%%DATADIR%%/Modules/CSharpUtilities.cmake
 %%DATADIR%%/Modules/Dart.cmake
 %%DATADIR%%/Modules/DartConfiguration.tcl.in
 %%DATADIR%%/Modules/DeployQt4.cmake
@@ -1820,6 +1870,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/FortranCInterface/CMakeLists.txt
 %%DATADIR%%/Modules/FortranCInterface/Detect.cmake
 %%DATADIR%%/Modules/FortranCInterface/Input.cmake.in
+%%DATADIR%%/Modules/FortranCInterface/MYMODULE.c
+%%DATADIR%%/Modules/FortranCInterface/MY_MODULE.c
 %%DATADIR%%/Modules/FortranCInterface/Macro.h.in
 %%DATADIR%%/Modules/FortranCInterface/Output.cmake.in
 %%DATADIR%%/Modules/FortranCInterface/Verify/CMakeLists.txt
@@ -1840,6 +1892,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/GNUInstallDirs.cmake
 %%DATADIR%%/Modules/GenerateExportHeader.cmake
 %%DATADIR%%/Modules/GetPrerequisites.cmake
+%%DATADIR%%/Modules/GoogleTest.cmake
 %%DATADIR%%/Modules/ITKCompatibility.cmake
 %%DATADIR%%/Modules/InstallRequiredSystemLibraries.cmake
 %%DATADIR%%/Modules/IntelVSImplicitPath/CMakeLists.txt
@@ -1992,8 +2045,8 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Platform/Darwin.cmake
 %%DATADIR%%/Modules/Platform/DragonFly.cmake
 %%DATADIR%%/Modules/Platform/Euros.cmake
-%%DATADIR%%/Modules/Platform/FreeBSD.cmake
 %%DATADIR%%/Modules/Platform/FreeBSD-CXX.cmake
+%%DATADIR%%/Modules/Platform/FreeBSD.cmake
 %%DATADIR%%/Modules/Platform/Fuchsia.cmake
 %%DATADIR%%/Modules/Platform/GHS-MULTI-Initialize.cmake
 %%DATADIR%%/Modules/Platform/GHS-MULTI.cmake
@@ -2106,6 +2159,9 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/Platform/Windows-OpenWatcom-C.cmake
 %%DATADIR%%/Modules/Platform/Windows-OpenWatcom-CXX.cmake
 %%DATADIR%%/Modules/Platform/Windows-OpenWatcom.cmake
+%%DATADIR%%/Modules/Platform/Windows-PGI-C.cmake
+%%DATADIR%%/Modules/Platform/Windows-PGI-Fortran.cmake
+%%DATADIR%%/Modules/Platform/Windows-PGI.cmake
 %%DATADIR%%/Modules/Platform/Windows-Watcom-C.cmake
 %%DATADIR%%/Modules/Platform/Windows-Watcom-CXX.cmake
 %%DATADIR%%/Modules/Platform/Windows-df.cmake
@@ -2176,6 +2232,9 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Templates/CPack.GenericWelcome.txt
 %%DATADIR%%/Templates/CPackConfig.cmake.in
 %%DATADIR%%/Templates/CTestScript.cmake.in
+%%DATADIR%%/Templates/MSBuild/nasm.props.in
+%%DATADIR%%/Templates/MSBuild/nasm.targets
+%%DATADIR%%/Templates/MSBuild/nasm.xml
 %%DATADIR%%/Templates/TestDriver.cxx.in
 %%DATADIR%%/Templates/Windows/ApplicationIcon.png
 %%DATADIR%%/Templates/Windows/Logo.png
