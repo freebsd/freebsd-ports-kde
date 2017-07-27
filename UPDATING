@@ -5,6 +5,17 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20170727:
+  AFFECTS: users of CMake
+  AUTHOR: groot@kde.org
+
+  The ports devel/cmake and devel/cmake-modules have been merged into
+  devel/cmake. The benefit of being able to update the modules without
+  the binary is outweighed by the issues caused by having the binary
+  out-of-sync with the modules.
+
+  All ports have been updated to depend only on CMake.
+
 20170721:
   AFFECTS: users of security/sshguard*
   AUTHOR: dan.mcgregir@usask.ca

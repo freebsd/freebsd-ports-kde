@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cmake
-DISTVERSION=	3.8.2
+DISTVERSION=	3.9.0
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R}/
@@ -21,7 +21,8 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--parallel=${MAKE_JOBS_NUMBER} \
 		--init="${PATCHDIR}/InitialCache.cmake"
 
-.if !defined(CMAKE_MODULES)
+CMAKE_MODULES=	yes
+
 OPTIONS_DEFINE=	DOCS MANPAGES
 OPTIONS_DEFAULT=MANPAGES
 OPTIONS_SUB=	yes
@@ -33,11 +34,11 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libjsoncpp.so:devel/jsoncpp \
 		libuv.so:devel/libuv \
 		librhash.so:security/rhash
-RUN_DEPENDS=	${LOCALBASE}/share/cmake/Modules/CMake.cmake:devel/cmake-modules
 
 MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 MANPAGES_CONFIGURE_ON=	--sphinx-man
-.endif
+
+CONFLICTS_INSTALL=	cmake-modules-*
 
 .include <bsd.port.pre.mk>
 
@@ -64,9 +65,9 @@ post-patch:
 # prevent it from being built/installed by devel/cmake.
 	${RM} ${WRKSRC}/Help/manual/cmake-gui.1.rst
 
-.if !defined(CMAKE_MODULES)
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Auxiliary/cmake-mode.el ${STAGEDIR}${PREFIX}/share/emacs/site-lisp
-.endif
+	@${FIND} ${STAGEDIR}${PREFIX} -name ".NoDartCoverage" -delete
 
 .include <bsd.port.post.mk>
