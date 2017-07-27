@@ -38,6 +38,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 MANPAGES_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 MANPAGES_CONFIGURE_ON=	--sphinx-man
 
+CONFLICTS_INSTALL=	cmake-modules-*
+
 .include <bsd.port.pre.mk>
 
 .if defined(STRIP) && ${STRIP} != "" && !defined(WITH_DEBUG)
