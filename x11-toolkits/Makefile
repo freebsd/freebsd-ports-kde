@@ -32,7 +32,7 @@
     SUBDIR += gnustep-gui
     SUBDIR += granite
     SUBDIR += gstreamer-plugins-pango
-    SUBDIR += gstreamer1-plugins-gtksink
+    SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
@@ -239,6 +239,7 @@
     SUBDIR += qt5-uiplugin
     SUBDIR += qt5-virtualkeyboard
     SUBDIR += qt5-widgets
+    SUBDIR += qt5pas
     SUBDIR += qtermwidget
     SUBDIR += qwt5
     SUBDIR += qwt5-designerplugin

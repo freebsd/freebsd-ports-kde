@@ -299,6 +299,7 @@
     SUBDIR += krb5-114
     SUBDIR += krb5-115
     SUBDIR += krb5-appl
+    SUBDIR += krb5-devel
     SUBDIR += kripp
     SUBDIR += kstart
     SUBDIR += kwalletmanager
@@ -343,6 +344,7 @@
     SUBDIR += libssh2
     SUBDIR += libtasn1
     SUBDIR += libtomcrypt
+    SUBDIR += libu2f-host
     SUBDIR += libuecc
     SUBDIR += libwhisker
     SUBDIR += libyubikey
@@ -361,8 +363,11 @@
     SUBDIR += linux-c7-libgpg-error
     SUBDIR += linux-c7-libssh2
     SUBDIR += linux-c7-libtasn1
+    SUBDIR += linux-c7-nettle
     SUBDIR += linux-c7-nss
     SUBDIR += linux-c7-openssl
+    SUBDIR += linux-c7-p11-kit
+    SUBDIR += linux-c7-trousers
     SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
@@ -1022,6 +1027,7 @@
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-jugyo-twitter_oauth
+    SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
     SUBDIR += rubygem-metasploit-model
@@ -1146,9 +1152,6 @@
     SUBDIR += ssh_askpass_gtk2
     SUBDIR += sshblock
     SUBDIR += sshguard
-    SUBDIR += sshguard-ipfw
-    SUBDIR += sshguard-null
-    SUBDIR += sshguard-pf
     SUBDIR += sshpass
     SUBDIR += ssl-admin
     SUBDIR += sslscan
@@ -1203,6 +1206,7 @@
     SUBDIR += unicornscan
     SUBDIR += unssh
     SUBDIR += vault
+    SUBDIR += veracrypt
     SUBDIR += vinetto
     SUBDIR += vlock
     SUBDIR += vm-to-tor

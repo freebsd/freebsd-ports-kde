@@ -231,6 +231,7 @@
     SUBDIR += mysqltcl
     SUBDIR += mysqltuner
     SUBDIR += mysqlwsrep56-server
+    SUBDIR += mysqlwsrep57-server
     SUBDIR += mytop
     SUBDIR += nagios-check_mongodb
     SUBDIR += nagios-check_postgres_replication
@@ -664,12 +665,15 @@
     SUBDIR += postgresql-libpqxx3
     SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
+    SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plruby
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-repmgr2
+    SUBDIR += postgresql-tds_fdw
+    SUBDIR += postgresql-zhparser
     SUBDIR += postgresql92-client
     SUBDIR += postgresql92-contrib
     SUBDIR += postgresql92-docs
@@ -764,7 +768,6 @@
     SUBDIR += py-mysql-connector-python2
     SUBDIR += py-mysql2pgsql
     SUBDIR += py-mysqlclient
-    SUBDIR += py-odbc
     SUBDIR += py-oops
     SUBDIR += py-oursql
     SUBDIR += py-peewee
@@ -784,6 +787,7 @@
     SUBDIR += py-pylibmc
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
+    SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb
     SUBDIR += py-pypuppetdb03
     SUBDIR += py-pytc
@@ -798,6 +802,7 @@
     SUBDIR += py-redis
     SUBDIR += py-riak
     SUBDIR += py-rrdtool_lgpl
+    SUBDIR += py-sispy
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy10

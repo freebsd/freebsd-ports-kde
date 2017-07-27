@@ -2,15 +2,17 @@
 # $FreeBSD$
 
 PORTNAME=	rocksdb
-PORTVERSION=	5.5.1
+PORTVERSION=	5.5.5
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 
 MAINTAINER?=	sunpoet@FreeBSD.org
 COMMENT?=	Persistent key-value store for fast storage environments
 
-LICENSE=	BSD3CLAUSE
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE=	APACHE20 GPLv2
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE.Apache
+LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libgflags.so:devel/gflags \
@@ -36,6 +38,7 @@ USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 USES=		compiler:c++11-lib gmake localbase:ldflags shebangfix
 
+PLIST_SUB=	PORTVERSION=${PORTVERSION} SHLIB_MAJOR=${PORTVERSION:R:R} SHLIB_MINOR=${PORTVERSION:R:E}
 PORTDATA=	make_config.mk
 
 GH_ACCOUNT=	facebook

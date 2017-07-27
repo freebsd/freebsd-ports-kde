@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	2ping
-PORTVERSION=	3.2.1
+PORTVERSION=	4.0.1
 CATEGORIES=	net-mgmt perl5
 MASTER_SITES=	http://www.finnie.org/software/2ping/ \
 		LOCAL/sunpoet
@@ -9,12 +9,11 @@ MASTER_SITES=	http://www.finnie.org/software/2ping/ \
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Bi-directional ping utility
 
-LICENSE=	GPLv2 GPLv3
-LICENSE_COMB=	dual
-LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 NO_ARCH=	yes
-USE_PYTHON=	autoplist concurrent distutils
-USES=		python
+USE_PYTHON=	autoplist distutils
+USES=		python:3.4+
 
 .include <bsd.port.mk>

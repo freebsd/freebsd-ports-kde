@@ -157,6 +157,7 @@
     SUBDIR += fcgiwrap
     SUBDIR += feedjack
     SUBDIR += ffproxy
+    SUBDIR += fgallery
     SUBDIR += fira-webfont
     SUBDIR += firefox
     SUBDIR += firefox-esr
@@ -350,7 +351,6 @@
     SUBDIR += libevhtp
     SUBDIR += libgtkhtml
     SUBDIR += libhpack
-    SUBDIR += libhtp-suricata
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -392,9 +392,9 @@
     SUBDIR += mathjax
     SUBDIR += mathopd
     SUBDIR += mediawiki123
-    SUBDIR += mediawiki126
     SUBDIR += mediawiki127
     SUBDIR += mediawiki128
+    SUBDIR += mediawiki129
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -1031,6 +1031,7 @@
     SUBDIR += p5-HTTP-Tiny
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-WebTest
+    SUBDIR += p5-HTTP-XSCookies
     SUBDIR += p5-HTTPD-Log-Filter
     SUBDIR += p5-HTTPD-User-Manage
     SUBDIR += p5-Hijk
@@ -1860,6 +1861,7 @@
     SUBDIR += qt5-webchannel
     SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
+    SUBDIR += qt5-websockets-qml
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
@@ -1957,6 +1959,7 @@
     SUBDIR += rubygem-feed-normalizer
     SUBDIR += rubygem-feedjira
     SUBDIR += rubygem-flowdock
+    SUBDIR += rubygem-fuzzyurl
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
@@ -2062,6 +2065,7 @@
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
+    SUBDIR += rubygem-rack-cors0
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection

@@ -175,6 +175,7 @@
     SUBDIR += bbfreeze-loader
     SUBDIR += bcc
     SUBDIR += bcpp
+    SUBDIR += bear
     SUBDIR += beautifyphp
     SUBDIR += bennugd-core
     SUBDIR += bennugd-modules
@@ -330,6 +331,7 @@
     SUBDIR += configkit
     SUBDIR += cons
     SUBDIR += cons-test
+    SUBDIR += containers
     SUBDIR += cook
     SUBDIR += courier-unicode
     SUBDIR += covtool
@@ -396,6 +398,7 @@
     SUBDIR += cxref
     SUBDIR += cxxtest
     SUBDIR += cxxtools
+    SUBDIR += d-scanner
     SUBDIR += d-feet
     SUBDIR += darts
     SUBDIR += dash.el
@@ -406,6 +409,8 @@
     SUBDIR += dbus-sharp
     SUBDIR += dbus-sharp-glib
     SUBDIR += dbus-tcl
+    SUBDIR += dcd-client
+    SUBDIR += dcd-server
     SUBDIR += dcmtk
     SUBDIR += dconf
     SUBDIR += dconf-editor
@@ -415,10 +420,13 @@
     SUBDIR += deforaos-libsystem
     SUBDIR += deheader
     SUBDIR += delta
+    SUBDIR += derelict-sdl2
+    SUBDIR += derelict-util
     SUBDIR += desktop-file-utils
     SUBDIR += dev86
     SUBDIR += devhelp
     SUBDIR += devtodo
+    SUBDIR += dfmt
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
     SUBDIR += dia2code+
@@ -432,6 +440,8 @@
     SUBDIR += ditrack
     SUBDIR += djgpp-binutils
     SUBDIR += djgpp-crx
+    SUBDIR += dlangui
+    SUBDIR += dlib
     SUBDIR += dmake
     SUBDIR += dmalloc
     SUBDIR += dmucs
@@ -446,6 +456,7 @@
     SUBDIR += dreampie
     SUBDIR += drpython
     SUBDIR += ds2
+    SUBDIR += dsymbol
     SUBDIR += dub
     SUBDIR += dulwich
     SUBDIR += duplo
@@ -567,7 +578,8 @@
     SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
     SUBDIR += etcd
-    SUBDIR += etcd3
+    SUBDIR += etcd31
+    SUBDIR += etcd32
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += eventxx
@@ -1130,6 +1142,7 @@
     SUBDIR += imake
     SUBDIR += include-what-you-use
     SUBDIR += inilib
+    SUBDIR += inifiled
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
@@ -1143,6 +1156,7 @@
     SUBDIR += it-eric6
     SUBDIR += itext
     SUBDIR += ivykis
+    SUBDIR += iz
     SUBDIR += jakarta-commons-configuration
     SUBDIR += jakarta-commons-daemon
     SUBDIR += jakarta-commons-io
@@ -1257,7 +1271,6 @@
     SUBDIR += libbobcat
     SUBDIR += libbonobo
     SUBDIR += libbonobo-reference
-    SUBDIR += libbrotli
     SUBDIR += libbson
     SUBDIR += libburn
     SUBDIR += libccid
@@ -1281,6 +1294,7 @@
     SUBDIR += libdbusmenu
     SUBDIR += libdbusmenu-qt
     SUBDIR += libdbusmenu-qt5
+    SUBDIR += libddoc
     SUBDIR += libdevq
     SUBDIR += libdfui
     SUBDIR += libdisasm
@@ -1292,6 +1306,7 @@
     SUBDIR += libdnsres
     SUBDIR += libdombey
     SUBDIR += libdouble-conversion
+    SUBDIR += libdparse
     SUBDIR += libds
     SUBDIR += libdsp
     SUBDIR += libdwarf
@@ -1659,6 +1674,7 @@
     SUBDIR += mpatrol
     SUBDIR += mph
     SUBDIR += mq4cpp
+    SUBDIR += msgpack-d
     SUBDIR += msgpack
     SUBDIR += msgpuck
     SUBDIR += msp430-debug-stack
@@ -3679,6 +3695,7 @@
     SUBDIR += p8-platform
     SUBDIR += paexec
     SUBDIR += papi
+    SUBDIR += papilio-loader
     SUBDIR += pas2dox
     SUBDIR += pasm
     SUBDIR += patch
@@ -3897,6 +3914,7 @@
     SUBDIR += pecl-propro
     SUBDIR += pecl-propro2
     SUBDIR += pecl-pthreads
+    SUBDIR += pecl-pthreads2
     SUBDIR += pecl-qb
     SUBDIR += pecl-raphf
     SUBDIR += pecl-raphf2
@@ -4162,8 +4180,10 @@
     SUBDIR += py-avro
     SUBDIR += py-babel
     SUBDIR += py-babelfish
+    SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
+    SUBDIR += py-backports.weakref
     SUBDIR += py-backports_abc
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
@@ -4199,6 +4219,7 @@
     SUBDIR += py-circuits
     SUBDIR += py-cjson
     SUBDIR += py-cld
+    SUBDIR += py-cli-helpers
     SUBDIR += py-cliapp
     SUBDIR += py-click
     SUBDIR += py-click-log
@@ -4271,6 +4292,7 @@
     SUBDIR += py-doit
     SUBDIR += py-durus
     SUBDIR += py-dynrules
+    SUBDIR += py-easyprocess
     SUBDIR += py-editdistance
     SUBDIR += py-efilter
     SUBDIR += py-efl
@@ -4727,6 +4749,7 @@
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools_darcs
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
@@ -5210,6 +5233,7 @@
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
     SUBDIR += rubygem-bacon
+    SUBDIR += rubygem-baf
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-bin_utils
     SUBDIR += rubygem-bindata
@@ -5278,6 +5302,7 @@
     SUBDIR += rubygem-cyoi
     SUBDIR += rubygem-daemon_controller
     SUBDIR += rubygem-daemons
+    SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
     SUBDIR += rubygem-debugger-xml
@@ -5376,6 +5401,7 @@
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
     SUBDIR += rubygem-grape-swagger
+    SUBDIR += rubygem-grape0
     SUBDIR += rubygem-grit
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
@@ -5383,6 +5409,7 @@
     SUBDIR += rubygem-hashdiff
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
+    SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check22
@@ -5397,17 +5424,20 @@
     SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-inflecto
+    SUBDIR += rubygem-iniparse
     SUBDIR += rubygem-insist
     SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-iobuffer
+    SUBDIR += rubygem-iso8601
     SUBDIR += rubygem-jammit
     SUBDIR += rubygem-jasmine-core
     SUBDIR += rubygem-jbuilder
     SUBDIR += rubygem-jbuilder-rails5
     SUBDIR += rubygem-jbuilder-rails50
     SUBDIR += rubygem-jekyll-coffeescript
+    SUBDIR += rubygem-jenkins_api_client
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jira-ruby
     SUBDIR += rubygem-jmespath
@@ -5452,6 +5482,7 @@
     SUBDIR += rubygem-method_source
     SUBDIR += rubygem-micromachine
     SUBDIR += rubygem-minitest
+    SUBDIR += rubygem-mixlib-archive
     SUBDIR += rubygem-mixlib-authentication
     SUBDIR += rubygem-mixlib-cli
     SUBDIR += rubygem-mixlib-config
@@ -5554,6 +5585,7 @@
     SUBDIR += rubygem-rb-kqueue
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rdoc
+    SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
     SUBDIR += rubygem-react-rails-rails5
     SUBDIR += rubygem-readwritesettings
@@ -5579,10 +5611,12 @@
     SUBDIR += rubygem-rspec
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
+    SUBDIR += rubygem-rspec-its
     SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support
+    SUBDIR += rubygem-rspec_junit_formatter
     SUBDIR += rubygem-rubocop
     SUBDIR += rubygem-ruby-atmos-pure
     SUBDIR += rubygem-ruby-bugzilla
