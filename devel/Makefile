@@ -172,6 +172,7 @@
     SUBDIR += babeltrace
     SUBDIR += bam
     SUBDIR += bazel
+    SUBDIR += bazel-clang38
     SUBDIR += bbfreeze
     SUBDIR += bbfreeze-loader
     SUBDIR += bcc
@@ -592,7 +593,6 @@
     SUBDIR += fb-adb
     SUBDIR += fb303
     SUBDIR += fc++
-    SUBDIR += ffcall
     SUBDIR += fga
     SUBDIR += fhist
     SUBDIR += fib
@@ -1338,6 +1338,7 @@
     SUBDIR += libfaketime
     SUBDIR += libfastcommon
     SUBDIR += libfastjson
+    SUBDIR += libffcall
     SUBDIR += libffi
     SUBDIR += libfirm
     SUBDIR += libflatarray
@@ -1375,6 +1376,7 @@
     SUBDIR += libhid
     SUBDIR += libhoard
     SUBDIR += libhtp
+    SUBDIR += libhyve-remote
     SUBDIR += libical
     SUBDIR += libical-glib
     SUBDIR += libinotify
@@ -1636,10 +1638,12 @@
     SUBDIR += mate-common
     SUBDIR += matreshka
     SUBDIR += maven-wrapper
+    SUBDIR += maven
     SUBDIR += maven3
     SUBDIR += maven31
     SUBDIR += maven33
     SUBDIR += mcpp
+    SUBDIR += mdb
     SUBDIR += mdds
     SUBDIR += memleax
     SUBDIR += menhir
@@ -4681,6 +4685,7 @@
     SUBDIR += py-pyvalid
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
+    SUBDIR += py-pyxb
     SUBDIR += py-pyxml2obj
     SUBDIR += py-qpid
     SUBDIR += py-qserve
@@ -4863,6 +4868,7 @@
     SUBDIR += py-vcversioner
     SUBDIR += py-venusian
     SUBDIR += py-versiontools
+    SUBDIR += py-verboselogs
     SUBDIR += py-virtualenv
     SUBDIR += py-virtualenv-clone
     SUBDIR += py-virtualenvwrapper
@@ -5421,7 +5427,6 @@
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
-    SUBDIR += rubygem-health_check22
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hitimes
@@ -5456,6 +5461,7 @@
     SUBDIR += rubygem-json1
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
+    SUBDIR += rubygem-jsonapi-renderer
     SUBDIR += rubygem-kafo
     SUBDIR += rubygem-kafo_parsers
     SUBDIR += rubygem-kafo_wizards
@@ -5522,7 +5528,6 @@
     SUBDIR += rubygem-netaddr
     SUBDIR += rubygem-newrelic-grape
     SUBDIR += rubygem-newrelic_rpm
-    SUBDIR += rubygem-newrelic_rpm3
     SUBDIR += rubygem-nice-ffi
     SUBDIR += rubygem-nio4r
     SUBDIR += rubygem-nori
@@ -5654,7 +5659,6 @@
     SUBDIR += rubygem-schash
     SUBDIR += rubygem-sdoc
     SUBDIR += rubygem-semantic_puppet
-    SUBDIR += rubygem-semantic_puppet0
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-sentry-raven
     SUBDIR += rubygem-sequel

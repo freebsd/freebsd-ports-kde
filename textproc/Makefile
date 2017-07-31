@@ -370,6 +370,7 @@
     SUBDIR += kibana44
     SUBDIR += kibana45
     SUBDIR += kibana5
+    SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -1451,6 +1452,7 @@
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
+    SUBDIR += rubygem-case_transform
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-citrus
     SUBDIR += rubygem-cld3
@@ -1510,7 +1512,6 @@
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
-    SUBDIR += rubygem-liquid3
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv

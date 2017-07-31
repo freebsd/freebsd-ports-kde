@@ -9537,6 +9537,7 @@ net-mgmt/zabbix24-proxy||2017-05-29|Has expired: Upstream has declared this vers
 net-mgmt/zabbix24-server||2017-05-29|Has expired: Upstream has declared this version EoL in 2016 (Q1)
 net/py-cloudfiles|net/py-python-cloudfiles|2017-05-30|Rename to match PyPI naming
 irc/konversation-kde4|irc/konversation|2017-05-30|Renamed to irc/konversation
+net/py-python-swiftclient|databases/py-python-swiftclient|2017-05-31|Duplicate port
 lang/perl5.20|lang/perl5.24|2017-06-01|Support ends three years after .0 release, please upgrade to a more recent version of Perl
 misc/unicode-ucd|textproc/UCD|2017-06-02|unicode-ucd was a duplicate of textproc/UCD, remove the younger port
 print/gutenprint-base|print/gutenprint|2017-06-04|Folded into gutenprint port
@@ -9630,3 +9631,19 @@ x11/plasma-scriptengine-ruby||2017-07-22|Has reached EOL
 deskutils/kdepim4||2017-07-22|Has reached EOL
 deskutils/kdepim4-runtime||2017-07-22|Has reached EOL
 devel/cmake-modules||2017-07-27|Merged with devel/cmake
+devel/ffcall|devel/libffcall|2017-07-28|Project was renamed
+databases/grass|databases/grass6|2017-07-30|Project was renamed to allow for grass7
+net/rubygem-oauth212|net/rubygem-oauth2|2017-07-31|Has expired: Only created for www/gitlab; please use net/rubygem-oauth2 instead
+textproc/rubygem-liquid3|textproc/rubygem-liquid|2017-07-31|Has expired: Use textproc/rubygem-liquid instead
+mail/dovecot2-antispam-plugin|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Use pigeonhole instead. See https://wiki2.dovecot.org/HowTo/AntispamWithSieve
+mail/dovecot-antispam|mail/dovecot2-antispam-plugin|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot2-antispam-plugin instead
+mail/dovecot-sieve|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot-pigeonhole instead
+mail/dovecot-managesieve|mail/dovecot2-pigeonhole|2017-07-31|Has expired: Dovecot-1.x is deprecated. Use dovecot2 and dovecot-pigeonhole instead
+www/rubygem-jquery-ui-rails5-rails4|www/rubygem-jquery-ui-rails-rails4|2017-07-31|Has expired: Only created for www/gitlab; please use www/rubygem-jquery-ui-rails-rails4 instead
+security/rubygem-omniauth13|security/rubygem-omniauth|2017-07-31|Has expired: Only created for www/gitlab; please use security/rubygem-omniauth instead
+devel/rubygem-health_check22|devel/rubygem-health_check|2017-07-31|Has expired: Only created for www/gitlab; please use devel/rubygem-health_check instead
+devel/rubygem-semantic_puppet0|devel/rubygem-semantic_puppet|2017-07-31|Has expired: Use devel/rubygem-semantic_puppet instead
+devel/rubygem-newrelic_rpm3|devel/rubygem-newrelic_rpm|2017-07-31|Has expired: Only created for www/gitlab; please use devel/rubygem-newrelic_rpm instead
+lang/p5-Parse-Perl||2017-07-31|Has expired: does not build with Perl >= 5.22
+sysutils/rubygem-puppet_forge1|sysutils/rubygem-puppet_forge|2017-07-31|Has expired: Use sysutils/rubygem-puppet_forge instead
+sysutils/rubygem-SyslogLogger||2017-07-31|Has expired: Project is EOL'd because it was merged into Ruby 2.0
