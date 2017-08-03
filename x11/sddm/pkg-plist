@@ -160,3 +160,5 @@ libexec/sddm-helper
 %%DATADIR%%/translations/tr.qm
 %%DATADIR%%/translations/zh_CN.qm
 %%DATADIR%%/translations/zh_TW.qm
+share/xsessions/kde4.desktop
+share/xsessions/xinitrc.desktop

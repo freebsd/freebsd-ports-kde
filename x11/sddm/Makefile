@@ -36,4 +36,11 @@ post-patch:
 			 -e '/exec.*session/s#exec#exec $${STARTUP}#g' \
 		${PATCH_WRKSRC}/data/scripts/Xsession
 
+post-install:
+# Install kde4.desktop and xinitrc.desktop.
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
+.for df in kde4 xinitrc
+	${INSTALL_DATA} ${FILESDIR}/${df}.desktop ${STAGEDIR}${PREFIX}/share/xsessions
+.endfor
+
 .include <bsd.port.mk>
