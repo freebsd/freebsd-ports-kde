@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Type=XSession
 Exec=sh ~/.xinitrc
-TryExec=sh ~/.xinitrc
+TryExec=~/.xinitrc
 DesktopNames=User Session
 Name=User Session
