@@ -17,7 +17,8 @@ USES=		kde:5 metaport
 #   * powerdevil as it needs UDev at the moment
 #   * plasma-pa don't depend on plamsa-pa by default
 #   * breeze-kde4 don't pull in qt4 bits
-USE_KDE=	${_USE_PLASMA_ALL:Nbluedevil:Npowerdevil:Nplasma-pa:Nbreeze-kde4}
+#   * plasma-mediacenter is not shipped anymore
+USE_KDE=	${_USE_PLASMA_ALL:Nbluedevil:Npowerdevil:Nplasma-pa:Nbreeze-kde4:Nplasma-mediacenter}
 # pull bsd.qt.mk for QT_PLUGINDIR in the kf5-dependencies
 USE_QT5=	#
 
