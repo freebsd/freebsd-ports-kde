@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 PKGNAMEPREFIX=	qt5-
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Qt 5 that wraps the functionality of Wayland
+COMMENT=	Qt5 wrapper for Wayland
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \

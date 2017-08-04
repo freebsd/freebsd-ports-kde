@@ -5,7 +5,7 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20170801:
+20170812:
   AFFECTS: users of CMake
   AUTHOR: groot@kde.org
 
@@ -15,6 +15,39 @@ you update your ports collection, before attempting any port upgrades.
   out-of-sync with the modules.
 
   All ports have been updated to depend only on CMake.
+
+20170803:
+  AFFECTS: users of net/guacamole-client
+  AUTHOR: ultima@FreeBSD.org
+
+  As of version 0.9.13, the configuration directory for guacamole-client
+  has changed from /usr/local/etc/guacamole to
+  /usr/local/etc/guacamole-client.
+
+20170803:
+  AFFECTS: users of net/guacamole-server
+  AUTHOR: ultima@FreeBSD.org
+
+  As of version 0.9.13, the configuration directory for guacamole-server
+  has changed from /usr/local/etc/guacd to /usr/local/etc/guacamole-server.
+
+20170803:
+  AFFECTS: users of sysutils/terraform
+  AUTHOR: lifanov@FreeBSD.org
+
+  Terraform was updated to version 0.10.0, which split out provider plugins.
+  Provider plugins are now installed in the project directory the next time
+  "terraform init" is run. Please see the complete upgrading guide:
+
+  https://www.terraform.io/upgrade-guides/0-10.html
+
+20170729:
+  AFFECTS: users of net-p2p/bitcoin
+  AUTHOR: lwhsu@FreeBSD.org
+
+  Bitcoin data directory has been changed from /var/db/bitcoind to
+  /var/db/bitcoin.  Users of previous versions may want to migrate data to
+  new location or specify bitcoind_data.
 
 20170729:
   AFFECTS: users of mail/mailscanner

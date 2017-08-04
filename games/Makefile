@@ -621,6 +621,7 @@
     SUBDIR += monsterz
     SUBDIR += moon-buggy
     SUBDIR += moonlander
+    SUBDIR += moonlight-embedded
     SUBDIR += mopesnake
     SUBDIR += moria
     SUBDIR += motogt
