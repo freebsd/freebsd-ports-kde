@@ -630,10 +630,13 @@ share/locale/sk/LC_MESSAGES/sieveeditor_plugins.mo
 share/locale/sk/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/sl/LC_MESSAGES/cryptopageplugin.mo
 share/locale/sl/LC_MESSAGES/customtoolsplugin.mo
+share/locale/sl/LC_MESSAGES/importwizard_plugins.mo
 share/locale/sl/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/sl/LC_MESSAGES/kaddressbook_plugins.mo
 share/locale/sl/LC_MESSAGES/kmail_editor_plugins.mo
 share/locale/sl/LC_MESSAGES/kmail_editorsendcheck_plugins.mo
+share/locale/sl/LC_MESSAGES/kmail_editorinit_plugins.mo
+share/locale/sl/LC_MESSAGES/kmailtransport_plugins.mo
 share/locale/sl/LC_MESSAGES/kmail_plugins.mo
 share/locale/sl/LC_MESSAGES/korganizer_plugins.mo
 share/locale/sl/LC_MESSAGES/mailreader.mo
@@ -643,6 +646,7 @@ share/locale/sl/LC_MESSAGES/messageviewer_text_calendar_plugin.mo
 share/locale/sl/LC_MESSAGES/messageviewer_text_vcard_plugin.mo
 share/locale/sl/LC_MESSAGES/messageviewerheaderplugins.mo
 share/locale/sl/LC_MESSAGES/messageviewerplugins.mo
+share/locale/sl/LC_MESSAGES/pimeventsplugin.mo
 share/locale/sl/LC_MESSAGES/sieveeditor_plugins.mo
 share/locale/sl/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/sr/LC_MESSAGES/cryptopageplugin.mo
@@ -742,6 +746,7 @@ share/locale/zh_CN/LC_MESSAGES/kmail_editor_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/kmail_editorinit_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/kmail_editorsendcheck_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/kmail_plugins.mo
+share/locale/zh_CN/LC_MESSAGES/kmailtransport_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/korganizer_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/mailreader.mo
 share/locale/zh_CN/LC_MESSAGES/messageviewer_application_gnupgwks_plugin.mo
@@ -750,6 +755,7 @@ share/locale/zh_CN/LC_MESSAGES/messageviewer_text_calendar_plugin.mo
 share/locale/zh_CN/LC_MESSAGES/messageviewer_text_vcard_plugin.mo
 share/locale/zh_CN/LC_MESSAGES/messageviewerheaderplugins.mo
 share/locale/zh_CN/LC_MESSAGES/messageviewerplugins.mo
+share/locale/zh_CN/LC_MESSAGES/pimeventsplugin.mo
 share/locale/zh_CN/LC_MESSAGES/sieveeditor_plugins.mo
 share/locale/zh_CN/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/zh_TW/LC_MESSAGES/cryptopageplugin.mo

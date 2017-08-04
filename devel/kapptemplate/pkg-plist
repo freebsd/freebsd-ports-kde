@@ -1,5 +1,4 @@
 bin/kapptemplate
-etc/xdg/kapptemplate.knsrc
 share/applications/org.kde.kapptemplate.desktop
 share/config.kcfg/kapptemplate.kcfg
 share/icons/hicolor/128x128/apps/kapptemplate.png
@@ -13,8 +12,6 @@ share/kdevappwizard/templates/akonadiresource.tar.bz2
 share/kdevappwizard/templates/akonadiserializer.tar.bz2
 share/kdevappwizard/templates/kde-frameworks5-simple.tar.bz2
 share/kdevappwizard/templates/kde-frameworks5.tar.bz2
-share/kdevappwizard/templates/kpartapp.tar.bz2
-share/kdevappwizard/templates/ktexteditor.tar.bz2
 share/locale/ast/LC_MESSAGES/kapptemplate.mo
 share/locale/bs/LC_MESSAGES/kapptemplate.mo
 share/locale/ca/LC_MESSAGES/kapptemplate.mo

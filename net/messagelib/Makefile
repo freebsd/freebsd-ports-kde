@@ -23,7 +23,7 @@ USE_QT5=	buildtools_build gui network qmake_build testlib uitools \
 		webengine widgets
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	SHLIB_VER="5.5.80"
+PLIST_SUB=	SHLIB_VER="5.5.90"
 
 OPTIONS_DEFINE=		INOTIFY
 OPTIONS_DEFAULT=	INOTIFY

@@ -9,7 +9,6 @@ man/fr/man1/cvslastchange.1.gz
 man/fr/man1/cvslastlog.1.gz
 man/fr/man1/cvsrevertlast.1.gz
 man/fr/man1/cxxmetric.1.gz
-man/fr/man1/demangle.1.gz
 man/fr/man1/extend_dmalloc.1.gz
 man/fr/man1/extractrc.1.gz
 man/fr/man1/fixincludes.1.gz
@@ -418,7 +417,6 @@ share/locale/fr/LC_MESSAGES/kdelibs4.mo
 share/locale/fr/LC_MESSAGES/kdelibs_colors4.mo
 share/locale/fr/LC_MESSAGES/kdeqt.mo
 share/locale/fr/LC_MESSAGES/kdesud.mo
-share/locale/fr/LC_MESSAGES/kdevphp.mo
 share/locale/fr/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/fr/LC_MESSAGES/kfile.mo
 share/locale/fr/LC_MESSAGES/kfileaudiopreview4.mo
@@ -505,4 +503,5 @@ share/locale/fr/LC_MESSAGES/solid_qt.mo
 share/locale/fr/LC_MESSAGES/sweeper.mo
 share/locale/fr/LC_MESSAGES/timezones4.mo
 share/locale/fr/LC_MESSAGES/umbrello.mo
+share/locale/fr/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/fr/entry.desktop

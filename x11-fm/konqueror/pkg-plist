@@ -163,7 +163,6 @@ share/kwebkitpart/kpartplugins/plugin_babelfish.rc
 share/kwebkitpart/kpartplugins/plugin_translator.desktop
 share/kwebkitpart/kpartplugins/plugin_validators.desktop
 share/kwebkitpart/kpartplugins/plugin_validators.rc
-share/kxmlgui5/konqueror/konqueror.rc
 share/kxmlgui5/webenginepart/webenginepart.rc
 share/locale/ar/LC_MESSAGES/adblock.mo
 share/locale/ar/LC_MESSAGES/akregator_konqplugin.mo
