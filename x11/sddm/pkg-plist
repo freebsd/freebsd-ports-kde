@@ -103,6 +103,7 @@ libexec/sddm-helper
 %%DATADIR%%/scripts/Xsetup
 %%DATADIR%%/scripts/Xstop
 %%DATADIR%%/scripts/wayland-session
+%%DATADIR%%/scripts/xinit-session
 %%DATADIR%%/themes/elarun/Main.qml
 %%DATADIR%%/themes/elarun/README
 %%DATADIR%%/themes/elarun/angle-down.png

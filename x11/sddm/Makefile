@@ -42,5 +42,6 @@ post-install:
 .for df in kde4 xinitrc
 	${INSTALL_DATA} ${FILESDIR}/${df}.desktop ${STAGEDIR}${PREFIX}/share/xsessions
 .endfor
+	${INSTALL_SCRIPT} ${FILESDIR}/xinit-session ${STAGEDIR}${PREFIX}/share/sddm/scripts
 
 .include <bsd.port.mk>
