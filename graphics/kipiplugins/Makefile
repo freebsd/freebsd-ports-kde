@@ -2,6 +2,7 @@
 
 PORTNAME=	kipiplugins
 PORTVERSION=	5.6.0
+PORTREVISION=	1
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/digikam
 DIST_SUBDIR=	KDE/digikam/${PORTVERSION}
