@@ -36,7 +36,7 @@ share/kservices5/kcmdolphingeneral.desktop
 share/kservices5/kcmdolphinnavigation.desktop
 share/kservices5/kcmdolphinservices.desktop
 share/kservices5/kcmdolphinviewmodes.desktop
-share/kservicetypes%%SHLIB_SHVER%%/fileviewversioncontrolplugin.desktop
+share/kservicetypes5/fileviewversioncontrolplugin.desktop
 share/locale/ar/LC_MESSAGES/dolphin.mo
 share/locale/ast/LC_MESSAGES/dolphin.mo
 share/locale/bg/LC_MESSAGES/dolphin.mo
