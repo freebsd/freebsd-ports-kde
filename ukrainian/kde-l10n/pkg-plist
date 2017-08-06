@@ -450,7 +450,6 @@ share/locale/uk/LC_MESSAGES/kdelibs4.mo
 share/locale/uk/LC_MESSAGES/kdelibs_colors4.mo
 share/locale/uk/LC_MESSAGES/kdeqt.mo
 share/locale/uk/LC_MESSAGES/kdesud.mo
-share/locale/uk/LC_MESSAGES/kdevphp.mo
 share/locale/uk/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/uk/LC_MESSAGES/kfile.mo
 share/locale/uk/LC_MESSAGES/kfileaudiopreview4.mo
@@ -537,5 +536,6 @@ share/locale/uk/LC_MESSAGES/solid_qt.mo
 share/locale/uk/LC_MESSAGES/sweeper.mo
 share/locale/uk/LC_MESSAGES/timezones4.mo
 share/locale/uk/LC_MESSAGES/umbrello.mo
+share/locale/uk/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/uk/LC_SCRIPTS/kdelibs4/kdelibs4.js
 share/locale/uk/entry.desktop

@@ -351,7 +351,6 @@ share/locale/it/LC_MESSAGES/kdelibs4.mo
 share/locale/it/LC_MESSAGES/kdelibs_colors4.mo
 share/locale/it/LC_MESSAGES/kdeqt.mo
 share/locale/it/LC_MESSAGES/kdesud.mo
-share/locale/it/LC_MESSAGES/kdevphp.mo
 share/locale/it/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/it/LC_MESSAGES/kfile.mo
 share/locale/it/LC_MESSAGES/kfileaudiopreview4.mo
@@ -438,4 +437,5 @@ share/locale/it/LC_MESSAGES/solid_qt.mo
 share/locale/it/LC_MESSAGES/sweeper.mo
 share/locale/it/LC_MESSAGES/timezones4.mo
 share/locale/it/LC_MESSAGES/umbrello.mo
+share/locale/it/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/it/entry.desktop
