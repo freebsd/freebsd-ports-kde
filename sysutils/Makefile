@@ -183,7 +183,7 @@
     SUBDIR += conky
     SUBDIR += conky-awesome
     SUBDIR += consolehm
-    SUBDIR += consolekit
+    SUBDIR += consolekit2
     SUBDIR += consul
     SUBDIR += consul-alerts
     SUBDIR += contractor
@@ -1218,6 +1218,8 @@
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
+    SUBDIR += u-boot-zedboard
+    SUBDIR += u-boot-zybo
     SUBDIR += ua
     SUBDIR += ucspi-ipc
     SUBDIR += ucspi-proxy
