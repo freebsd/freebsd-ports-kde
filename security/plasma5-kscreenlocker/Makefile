@@ -10,7 +10,7 @@ COMMENT=	Plasma5 secure lock screen architecture
 
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 		libxcb-keysyms.so:x11/xcb-util-keysyms
-RUN_DEPENDS=	ck-list-sessions:sysutils/consolekit \
+RUN_DEPENDS=	ck-list-sessions:sysutils/consolekit2\
 		dbus-send:devel/dbus
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 pkgconfig \

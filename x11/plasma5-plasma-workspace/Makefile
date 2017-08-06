@@ -8,7 +8,7 @@ CATEGORIES=	x11 kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 Plasma workspace
 
-RUN_DEPENDS=	ck-launch-session:sysutils/consolekit \
+RUN_DEPENDS=	ck-launch-session:sysutils/consolekit2\
 		iceauth:x11/iceauth \
 		xsetroot:x11/xsetroot \
 		xset:x11/xset \
