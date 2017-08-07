@@ -9,7 +9,6 @@ man/nl/man1/cvslastchange.1.gz
 man/nl/man1/cvslastlog.1.gz
 man/nl/man1/cvsrevertlast.1.gz
 man/nl/man1/cxxmetric.1.gz
-man/nl/man1/demangle.1.gz
 man/nl/man1/extend_dmalloc.1.gz
 man/nl/man1/extractrc.1.gz
 man/nl/man1/fixincludes.1.gz
