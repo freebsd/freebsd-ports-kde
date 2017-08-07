@@ -75,7 +75,7 @@ KDE4_BRANCH?=			stable
 KDE_PLASMA_VERSION?=		5.10.4
 KDE_PLASMA_BRANCH?=		stable
 
-KDE_FRAMEWORKS_VERSION?=	5.36.0
+KDE_FRAMEWORKS_VERSION?=	5.37.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 KDE_APPLICATIONS_VERSION?=	17.07.90
@@ -233,8 +233,8 @@ _USE_KDE5_ALL=	baseapps kate
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive bluez-qt breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
-			itemviews oxygen-icons5 plotting prison solid sonnet \
-			syntaxhighlighting threadweaver wayland widgetsaddons \
+			itemviews kirigami oxygen-icons5 plotting prison solid \
+			sonnet syntaxhighlighting threadweaver wayland widgetsaddons \
 			windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
 
@@ -255,11 +255,6 @@ _USE_FRAMEWORKS_TIER4= 	frameworkintegration
 # kdelibs 4 to KDE Frameworks 5. Code should aim to port away from this framework,
 # new projects should avoid using these libraries.
 _USE_FRAMEWORKS_PORTING=js jsembed kdelibs4support khtml mediaplayer kross
-
-# These are weird items: not officially released as Frameworks, but
-# required by them (and from KDE).
-#  - kirigami https://dot.kde.org/2016/03/30/kde-proudly-presents-kirigami-ui
-_USE_FRAMEWORKS_EXTRA=	kirigami kirigami2
 
 _USE_FRAMEWORKS_ALL=	ecm \
 			${_USE_FRAMEWORKS_TIER1} \
@@ -531,6 +526,9 @@ kimageformats_PATH=	${QT_PLUGINDIR}/imageformats/kimg_xcf.so
 kio_PORT=		devel/kf5-kio
 kio_LIB=		libKF5KIOCore.so
 
+kirigami_PORT=		x11-toolkits/kf5-kirigami
+kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
+
 kross_PORT=		lang/kf5-kross
 kross_LIB=		libKF5KrossCore.so
 
@@ -623,13 +621,6 @@ xmlgui_LIB=		libKF5XmlGui.so
 
 xmlrpcclient_PORT=	net/kf5-kxmlrpcclient
 xmlrpcclient_LIB=	libKF5XmlRpcClient.so
-
-# Sort kirigami, once it's officially a Framework
-kirigami_PORT=		x11-toolkits/kirigami
-kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami/libkirigamiplugin.so
-
-kirigami2_PORT=		x11-toolkits/kirigami2
-kirigami2_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
 
 # ====================== end of frameworks components ==========================
 

@@ -4443,12 +4443,9 @@ share/metainfo/org.kde.plasma.calendar.appdata.xml
 share/metainfo/org.kde.plasma.clipboard.appdata.xml
 share/metainfo/org.kde.plasma.devicenotifier.appdata.xml
 share/metainfo/org.kde.plasma.digitalclock.appdata.xml
-share/metainfo/org.kde.plasma.icon.appdata.xml
 share/metainfo/org.kde.plasma.lock_logout.appdata.xml
 share/metainfo/org.kde.plasma.mediacontroller.appdata.xml
 share/metainfo/org.kde.plasma.notifications.appdata.xml
-share/metainfo/org.kde.plasma.panelspacer.appdata.xml
-share/metainfo/org.kde.plasma.private.systemtray.appdata.xml
 share/metainfo/org.kde.plasma.systemmonitor.cpu.appdata.xml
 share/metainfo/org.kde.plasma.systemmonitor.diskactivity.appdata.xml
 share/metainfo/org.kde.plasma.systemmonitor.diskusage.appdata.xml

@@ -9660,3 +9660,5 @@ security/openvas-manager|security/openvas8-manager|2017-08-03|Renamed to include
 security/openvas-scanner|security/openvas8-scanner|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
 security/greenbone-security-assistant|security/greenbone-security-assistant8|2017-08-03|Renamed to include openvas 9 ports. It reflects a better name
 sysutils/consolekit|sysutils/consolekit2|2017-08-05|Continuation of the consolekit project
+x11-toolkits/kirigami||2017-08-07|Not needed by anything
+x11-toolkits/kirigami2|x11-toolkits/kf5-kirigami|2017-08-07|Became an official framework

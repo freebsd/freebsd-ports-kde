@@ -3268,7 +3268,6 @@ share/metainfo/org.kde.plasma.konsoleprofiles.appdata.xml
 share/metainfo/org.kde.plasma.mediaframe.appdata.xml
 share/metainfo/org.kde.plasma.minimizeall.appdata.xml
 share/metainfo/org.kde.plasma.notes.appdata.xml
-share/metainfo/org.kde.plasma.private.grouping.appdata.xml
 share/metainfo/org.kde.plasma.quicklaunch.appdata.xml
 share/metainfo/org.kde.plasma.quickshare.appdata.xml
 share/metainfo/org.kde.plasma.showdesktop.appdata.xml
