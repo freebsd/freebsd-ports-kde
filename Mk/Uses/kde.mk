@@ -233,7 +233,7 @@ _USE_KDE5_ALL=	baseapps kate
 # that our list of frameworks matches the structure offered upstream.
 _USE_FRAMEWORKS_TIER1=	apidox archive bluez-qt breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
-			itemviews kirigami oxygen-icons5 plotting prison solid \
+			itemviews kirigami2 oxygen-icons5 plotting prison solid \
 			sonnet syntaxhighlighting threadweaver wayland widgetsaddons \
 			windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
@@ -526,8 +526,8 @@ kimageformats_PATH=	${QT_PLUGINDIR}/imageformats/kimg_xcf.so
 kio_PORT=		devel/kf5-kio
 kio_LIB=		libKF5KIOCore.so
 
-kirigami_PORT=		x11-toolkits/kf5-kirigami
-kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
+kirigami2_PORT=		x11-toolkits/kf5-kirigami2
+kirigami2_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
 
 kross_PORT=		lang/kf5-kross
 kross_LIB=		libKF5KrossCore.so

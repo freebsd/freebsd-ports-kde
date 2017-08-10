@@ -11,7 +11,7 @@ COMMENT=	Plasma5 applications useful for Plasma development
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 tar:xz
 USE_KDE=	archive attica auth codecs completion config configwidgets \
 		coreaddons dbusaddons ecm i18n iconthemes itemmodels \
-		jobwidgets kdeclarative kio kirigami newstuff package parts \
+		jobwidgets kdeclarative kio kirigami2 newstuff package parts \
 		plasma-framework service sonnet texteditor textwidgets \
 		widgetsaddons windowsystem xmlgui
 USE_QT5=	buildtools_build core dbus gui network qmake_build qml quick \
