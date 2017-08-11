@@ -78,8 +78,8 @@ KDE_PLASMA_BRANCH?=		stable
 KDE_FRAMEWORKS_VERSION?=	5.37.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
-KDE_APPLICATIONS_VERSION?=	17.07.90
-KDE_APPLICATIONS_BRANCH?=	unstable
+KDE_APPLICATIONS_VERSION?=	17.08.0
+KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
 _KDE_APPLICATIONS_ATTIC_VERSION=	16.12.3
