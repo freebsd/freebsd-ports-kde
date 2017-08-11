@@ -1,0 +1,38 @@
+From fa6b0355ce42273ae5dbca720b168f60569659d5 Mon Sep 17 00:00:00 2001
+From: Montel Laurent <montel@kde.org>
+Date: Fri, 11 Aug 2017 12:16:08 +0200
+Subject: Make it compile under FreeBSD
+
+---
+ webengineviewer/src/webenginepage.cpp | 2 +-
+ webengineviewer/src/webenginepage.h   | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/webengineviewer/src/webenginepage.cpp b/webengineviewer/src/webenginepage.cpp
+index 798fca8..db5f46a 100644
+--- webengineviewer/src/webenginepage.cpp
++++ webengineviewer/src/webenginepage.cpp
+@@ -29,7 +29,7 @@
+ #include <QTimer>
+ #include <QFileDialog>
+ #include <QWebEngineProfile>
+-
++#include <QPrinter>
+ using namespace WebEngineViewer;
+ 
+ class WebEngineViewer::WebEnginePagePrivate
+diff --git a/webengineviewer/src/webenginepage.h b/webengineviewer/src/webenginepage.h
+index 542ba68..72a84e7 100644
+--- webengineviewer/src/webenginepage.h
++++ webengineviewer/src/webenginepage.h
+@@ -25,6 +25,7 @@
+ #include <QVariant>
+ class QWebEngineProfile;
+ class QWebEngineDownloadItem;
++class QPrinter;
+ namespace WebEngineViewer
+ {
+ class WebHitTest;
+-- 
+cgit v0.11.2
+
