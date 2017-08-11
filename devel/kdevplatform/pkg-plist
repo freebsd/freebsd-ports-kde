@@ -105,6 +105,7 @@ include/kdevplatform/language/codegen/duchainchangeset.h
 include/kdevplatform/language/codegen/sourcefiletemplate.h
 include/kdevplatform/language/codegen/templateclassgenerator.h
 include/kdevplatform/language/codegen/templateengine.h
+include/kdevplatform/language/codegen/templatepreviewicon.h
 include/kdevplatform/language/codegen/templaterenderer.h
 include/kdevplatform/language/codegen/templatesmodel.h
 include/kdevplatform/language/codegen/utilities.h
@@ -454,10 +455,9 @@ share/icons/hicolor/128x128/apps/bazaar.png
 share/icons/hicolor/16x16/actions/breakpoint.png
 share/icons/hicolor/16x16/apps/subversion.png
 share/icons/hicolor/22x22/actions/breakpoint.png
-share/icons/hicolor/22x22/actions/run-clean.png
-share/icons/hicolor/22x22/actions/run-install.png
 share/icons/hicolor/32x32/apps/subversion.png
 share/icons/hicolor/64x64/apps/subversion.png
+share/icons/hicolor/scalable/actions/breakpoint.svg
 share/icons/hicolor/scalable/apps/git.svg
 share/icons/hicolor/scalable/apps/subversion.svg
 share/kdevcodegen/licenses/Apache v2
@@ -1508,6 +1508,7 @@ share/locale/sv/LC_MESSAGES/kdevgrepview.mo
 share/locale/sv/LC_MESSAGES/kdevkonsole.mo
 share/locale/sv/LC_MESSAGES/kdevopenwith.mo
 share/locale/sv/LC_MESSAGES/kdevpatchreview.mo
+share/locale/sv/LC_MESSAGES/kdevperforce.mo
 share/locale/sv/LC_MESSAGES/kdevplatform.mo
 share/locale/sv/LC_MESSAGES/kdevproblemreporter.mo
 share/locale/sv/LC_MESSAGES/kdevprojectfilter.mo
