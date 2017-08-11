@@ -20,7 +20,10 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libtelepathy-logger.so:net-im/telepathy-logger \
 		libtelepathy-qt5.so:net-im/telepathy-qt5
 
-USES=		bison:build cmake:outsource kde:5 pkgconfig python:2,build tar:xz
+# cmake-3.9 breaks this port when using ninja or makejobs.
+MAKE_JOBS_UNSAFE=	yes
+
+USES=		bison:build cmake:noninja,outsource kde:5 pkgconfig python:2,build tar:xz
 USE_GNOME=	glib20 libxml2
 USE_KDE=	ecm
 USE_QT5=	core buildtools_build dbus network qmake_build xml
