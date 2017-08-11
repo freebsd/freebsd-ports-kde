@@ -1,0 +1,110 @@
+From 34ba8cb72ee0b23aafc5fc242dbbc4b80de929c6 Mon Sep 17 00:00:00 2001
+From: Montel Laurent <montel@kde.org>
+Date: Fri, 11 Aug 2017 12:16:08 +0200
+Subject: [PATCH] Make it compile under FreeBSD
+
+Try to make it compile under FreeBSD
+
+We can't use print with qt < 5.8
+
+Fix logic + add missing include
+
+Add missing include/forward declaration
+---
+ messageviewer/src/viewer/webengine/mailwebengineview.cpp | 1 +
+ messageviewer/src/viewer/webengine/mailwebengineview.h   | 1 +
+ webengineviewer/src/CMakeLists.txt                       | 1 +
+ webengineviewer/src/webenginepage.cpp                    | 9 ++++++++-
+ webengineviewer/src/webenginepage.h                      | 1 +
+ 5 files changed, 12 insertions(+), 1 deletion(-)
+
+diff --git messageviewer/src/viewer/webengine/mailwebengineview.cpp messageviewer/src/viewer/webengine/mailwebengineview.cpp
+index c32e2e17..72a92a57 100644
+--- messageviewer/src/viewer/webengine/mailwebengineview.cpp
++++ messageviewer/src/viewer/webengine/mailwebengineview.cpp
+@@ -40,6 +40,7 @@
+ #include <QEventLoop>
+ #include <QPointer>
+ #include <QTimer>
++#include <QPrinter>
+ 
+ #include <WebEngineViewer/WebHitTestResult>
+ 
+diff --git messageviewer/src/viewer/webengine/mailwebengineview.h messageviewer/src/viewer/webengine/mailwebengineview.h
+index 10ba422d..60aad661 100644
+--- messageviewer/src/viewer/webengine/mailwebengineview.h
++++ messageviewer/src/viewer/webengine/mailwebengineview.h
+@@ -22,6 +22,7 @@
+ #include "messageviewer_export.h"
+ #include <WebEngineViewer/WebEngineView>
+ #include <boost/function.hpp>
++class QPrinter;
+ class KActionCollection;
+ namespace WebEngineViewer {
+ class WebHitTestResult;
+diff --git webengineviewer/src/CMakeLists.txt webengineviewer/src/CMakeLists.txt
+index 6527473c..748ab1ed 100644
+--- webengineviewer/src/CMakeLists.txt
++++ webengineviewer/src/CMakeLists.txt
+@@ -104,6 +104,7 @@ target_link_libraries(KF5WebEngineViewer
+     KF5::I18n
+     KF5::WidgetsAddons
+     KF5::ConfigCore
++    Qt5::PrintSupport
+     )
+ 
+ set_target_properties(KF5WebEngineViewer PROPERTIES
+diff --git webengineviewer/src/webenginepage.cpp webengineviewer/src/webenginepage.cpp
+index 798fca88..b7398b6a 100644
+--- webengineviewer/src/webenginepage.cpp
++++ webengineviewer/src/webenginepage.cpp
+@@ -20,6 +20,7 @@
+ #include "webenginepage.h"
+ #include "webhittest.h"
+ #include "webhittestresult.h"
++#include "config-webengineviewer.h"
+ 
+ #include <KLocalizedString>
+ 
+@@ -29,7 +30,7 @@
+ #include <QTimer>
+ #include <QFileDialog>
+ #include <QWebEngineProfile>
+-
++#include <QPrinter>
+ using namespace WebEngineViewer;
+ 
+ class WebEngineViewer::WebEnginePagePrivate
+@@ -99,6 +100,7 @@ void WebEnginePage::javaScriptConsoleMessage(QWebEnginePage::JavaScriptConsoleMe
+ 
+ bool WebEnginePage::execPrintPreviewPage(QPrinter *printer, int timeout)
+ {
++#ifdef WEBENGINEVIEWER_PRINT_SUPPORT
+     QPointer<QEventLoop> loop = new QEventLoop;
+     bool result = false;
+     QTimer::singleShot(timeout, loop.data(), &QEventLoop::quit);
+@@ -114,4 +116,9 @@ bool WebEnginePage::execPrintPreviewPage(QPrinter *printer, int timeout)
+     delete loop;
+ 
+     return result;
++#else
++    Q_UNUSED(printer);
++    Q_UNUSED(timeout);
++    return false;
++#endif
+ }
+diff --git webengineviewer/src/webenginepage.h webengineviewer/src/webenginepage.h
+index 542ba689..72a84e76 100644
+--- webengineviewer/src/webenginepage.h
++++ webengineviewer/src/webenginepage.h
+@@ -25,6 +25,7 @@
+ #include <QVariant>
+ class QWebEngineProfile;
+ class QWebEngineDownloadItem;
++class QPrinter;
+ namespace WebEngineViewer
+ {
+ class WebHitTest;
+-- 
+2.13.3
+
