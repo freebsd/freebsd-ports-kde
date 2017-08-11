@@ -49,7 +49,7 @@ SQLITE_CMAKE_OFF=	-DAKONADI_BUILD_QSQLITE:BOOL=OFF
 
 OPTIONS_DEFAULT=	MYSQL
 
-PLIST_SUB=	SHLIB_VER="5.5.90"
+PLIST_SUB=	SHLIB_VER="5.6.0"
 
 post-patch:
 # To avoid overflow, MySQL settings need to be lower than

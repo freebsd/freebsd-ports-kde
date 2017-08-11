@@ -19,7 +19,7 @@ USE_KDE=	completion config coreaddons i18n widgetsaddons windowsystem \
 		pimtextedit
 USE_QT5=	buildtools_build qmake_build widgets
 
-PLIST_SUB=	SHLIB_VER="5.5.90"
+PLIST_SUB=	SHLIB_VER="5.6.0"
 
 post-extract:
 # use the binaries of coreutils
