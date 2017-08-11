@@ -36,6 +36,9 @@ man/pt/man8/kdeinit4.8.gz
 man/pt/man8/meinproc4.8.gz
 man/pt/man8/nepomukserver.8.gz
 man/pt/man8/nepomukservicestub.8.gz
+share/doc/HTML/pt/apphelp/common
+share/doc/HTML/pt/apphelp/index.cache.bz2
+share/doc/HTML/pt/apphelp/index.docbook
 share/doc/HTML/pt/common/fdl-translated.html
 share/doc/HTML/pt/common/gpl-translated.html
 share/doc/HTML/pt/common/kde-localised.css
@@ -433,6 +436,4 @@ share/locale/pt/LC_MESSAGES/solid-hardware.mo
 share/locale/pt/LC_MESSAGES/solid_qt.mo
 share/locale/pt/LC_MESSAGES/sweeper.mo
 share/locale/pt/LC_MESSAGES/timezones4.mo
-share/locale/pt/LC_MESSAGES/umbrello.mo
-share/locale/pt/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/pt/entry.desktop
