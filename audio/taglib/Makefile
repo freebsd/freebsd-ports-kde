@@ -9,7 +9,7 @@ MASTER_SITES=	http://taglib.github.io/releases/
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	Library for manipulating ID3 tags and Ogg comments
 
-LICENSE=	LGPL21 MPL
+LICENSE=	LGPL21 MPL11
 LICENSE_COMB=	dual
 LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LGPL
 LICENSE_FILE_MPL=	${WRKSRC}/COPYING.MPL
@@ -26,7 +26,7 @@ CPE_VENDOR=	scott_wheeler
 OPTIONS_DEFINE=	RCC
 OPTIONS_SUB=	yes
 
-# The patch official patches for this can be obtained from:
+# The official patches for this can be obtained from:
 #   http://darksoft.org/files/rusxmms/patches/
 # however, they do not seem to yet have any for taglib-1.11.1.
 # So instead, use:

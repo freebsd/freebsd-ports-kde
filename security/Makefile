@@ -107,6 +107,7 @@
     SUBDIR += cyrus-sasl2-gssapi
     SUBDIR += cyrus-sasl2-ldapdb
     SUBDIR += cyrus-sasl2-saslauthd
+    SUBDIR += cyrus-sasl2-sql
     SUBDIR += cyrus-sasl2-srp
     SUBDIR += d0_blind_id
     SUBDIR += dcetest
@@ -208,6 +209,7 @@
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heimdal
+    SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl
     SUBDIR += hmap
@@ -241,10 +243,15 @@
     SUBDIR += hs-cryptohash
     SUBDIR += hs-cryptohash-conduit
     SUBDIR += hs-cryptohash-cryptoapi
+    SUBDIR += hs-cryptohash-md5
+    SUBDIR += hs-cryptohash-sha1
+    SUBDIR += hs-cryptohash-sha256
     SUBDIR += hs-cryptonite
     SUBDIR += hs-digest
+    SUBDIR += hs-ed25519
     SUBDIR += hs-entropy
     SUBDIR += hs-gnutls
+    SUBDIR += hs-hackage-security
     SUBDIR += hs-monadcryptorandom
     SUBDIR += hs-nonce
     SUBDIR += hs-pem
@@ -252,6 +259,7 @@
     SUBDIR += hs-pwstore-fast
     SUBDIR += hs-skein
     SUBDIR += hs-tls
+    SUBDIR += hs-tls-session-manager
     SUBDIR += hs-x509
     SUBDIR += hs-x509-store
     SUBDIR += hs-x509-system
@@ -987,6 +995,7 @@
     SUBDIR += py-zxcvbn-python
     SUBDIR += py3-certifi
     SUBDIR += py3-cryptography
+    SUBDIR += py3-ecdsa
     SUBDIR += py3-libnacl
     SUBDIR += py3-openssl
     SUBDIR += py3-pycrypto

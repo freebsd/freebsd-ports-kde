@@ -202,6 +202,7 @@
     SUBDIR += py-reportlab
     SUBDIR += py-reportlab1
     SUBDIR += py-rtf
+    SUBDIR += py-stapler
     SUBDIR += py-trml2pdf
     SUBDIR += py3-fonttools
     SUBDIR += py3-pycups
