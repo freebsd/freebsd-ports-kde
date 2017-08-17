@@ -26,7 +26,7 @@ BUILD_DEPENDS=	bison:devel/bison \
 		ninja:devel/ninja \
 		python:lang/python \
 		yasm:devel/yasm \
-		/usr/local/include/linux/videodev2.h:multimedia/v4l_compat
+		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libevent.so:devel/libevent \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -82,14 +82,9 @@ ALL_TARGET=	first
 # some configuration tests.
 # Since we use USES=qmake:norecursive, we also need to pass some variables to
 # MAKE_ENV because part of the configuration process happens during the build.
-CONFIGURE_ENV+= NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
+CONFIGURE_ENV+=	NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
 		NINJA_PATH="${LOCALBASE}/bin/ninja"
 MAKE_ENV+=	CC="${CC}" CXX="${CXX}" ${CONFIGURE_ENV}
-
-# Do not depend on the master distinfo file devel/qt5/distinfo
-# as we will probably always require some more time to update webengine
-# than the rest of Qt5.
-DISTINFO_FILE=		${MASTERDIR}/distinfo
 
 post-extract:
 # Install FreeBSD's freebsd.pri file.
@@ -103,6 +98,7 @@ post-extract:
 		${WRKSRC}/src/3rdparty/chromium/third_party/libxml/libxml.gyp
 
 post-patch:
+# Too many occurrences to keep in a patch in files/.
 	${REINPLACE_CMD} -e 's,OS == "linux",(OS == "linux" or OS == "freebsd"),g' \
 		${WRKSRC}/src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gypi
 

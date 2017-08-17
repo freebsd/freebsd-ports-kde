@@ -92,8 +92,8 @@ QT_DIST=		3d base canvas3d charts connectivity datavis3d declarative \
 				declarative-render2d gamepad graphicaleffects imageformats \
 				location multimedia quickcontrols quickcontrols2 script scxml \
 				sensors serialbus serialport svg tools translations \
-				virtualkeyboard wayland webchannel webkit websockets x11extras \
-				xmlpatterns
+				virtualkeyboard wayland webchannel webengine \
+				websockets x11extras xmlpatterns
 .		endif
 .  endif
 
@@ -593,7 +593,7 @@ webchannel_PORT=	www/${_QT_RELNAME}-webchannel
 webchannel_LIB=	libQt${_QT_LIBVER}WebChannel.so
 
 webengine_PORT=		www/${_QT_RELNAME}-webengine
-webengine_LIB=		libQt${_QT_LIBVER}WebEngine.so
+webengine_LIB=	libQt${_QT_LIBVER}WebEngine.so
 
 websockets_PORT=	www/${_QT_RELNAME}-websockets
 websockets_LIB=	libQt${_QT_LIBVER}WebSockets.so
