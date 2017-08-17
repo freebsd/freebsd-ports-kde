@@ -420,8 +420,7 @@ x11-toolkits/kf5-kjobwidgets
 x11-toolkits/kf5-ktextwidgets
 x11-toolkits/kf5-kwidgetsaddons
 x11-toolkits/kf5-kxmlgui
-x11-toolkits/kirigami
-x11-toolkits/kirigami2
+x11-toolkits/kf5-kirigami2
 x11-toolkits/plasma5-kdeplasma-addons
 x11-wm/plasma5-kdecoration
 x11-wm/plasma5-kwin
