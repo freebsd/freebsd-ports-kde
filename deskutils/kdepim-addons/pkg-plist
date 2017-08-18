@@ -209,6 +209,7 @@ share/locale/da/LC_MESSAGES/messageviewerplugins.mo
 share/locale/da/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/de/LC_MESSAGES/cryptopageplugin.mo
 share/locale/de/LC_MESSAGES/customtoolsplugin.mo
+share/locale/de/LC_MESSAGES/importwizard_plugins.mo
 share/locale/de/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/de/LC_MESSAGES/kaddressbook_plugins.mo
 share/locale/de/LC_MESSAGES/kmail_editor_plugins.mo
