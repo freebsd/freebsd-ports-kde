@@ -1,18 +1,18 @@
 Obtained from:
-    http://www.rosenauer.org/hg/mozilla/raw-file/f82a374a310d/mozilla-kde.patch
+	http://www.rosenauer.org/hg/mozilla/file
 
 # HG changeset patch
-# Parent  1fccdb56cf307cef5ddd39ece2ac58c93fe706b8
+# Parent  172cd661ceed38b3161c6246f6729f4d8370dce3
 Description: Add KDE integration to Firefox (toolkit parts)
 Author: Wolfgang Rosenauer <wolfgang@rosenauer.org>
 Author: Lubos Lunak <lunak@suse.com>
 Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=140751
      https://bugzilla.novell.com/show_bug.cgi?id=170055
 
-diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
+diff --git a/modules/libpref/Preferences.cpp b/modules/libpref/Preferences.cpp
 --- modules/libpref/Preferences.cpp
 +++ modules/libpref/Preferences.cpp
-@@ -31,16 +31,17 @@
+@@ -32,16 +32,17 @@
  #include "nsIZipReader.h"
  #include "nsPrefBranch.h"
  #include "nsXPIDLString.h"
@@ -22,23 +22,23 @@ diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
  #include "nsAutoPtr.h"
  #include "nsPrintfCString.h"
 +#include "nsKDEUtils.h"
-
+ 
  #include "nsQuickSort.h"
  #include "PLDHashTable.h"
-
+ 
  #include "prefapi.h"
  #include "prefread.h"
  #include "prefapi_private_data.h"
-
-@@ -1199,16 +1200,34 @@ pref_LoadPrefsInDir(nsIFile* aDir, char
-
+ 
+@@ -1219,16 +1220,34 @@ pref_LoadPrefsInDir(nsIFile* aDir, char 
+ 
  static nsresult pref_LoadPrefsInDirList(const char *listId)
  {
    nsresult rv;
    nsCOMPtr<nsIProperties> dirSvc(do_GetService(NS_DIRECTORY_SERVICE_CONTRACTID, &rv));
    if (NS_FAILED(rv))
      return rv;
-
+ 
 +  // make sure we load these special files after all the others
 +  static const char* specialFiles[] = {
 +#if defined(XP_UNIX)
@@ -63,13 +63,13 @@ diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
                getter_AddRefs(list));
    if (!list)
      return NS_OK;
-
+ 
    bool hasMore;
-@@ -1224,17 +1243,17 @@ static nsresult pref_LoadPrefsInDirList(
-
+@@ -1244,17 +1263,17 @@ static nsresult pref_LoadPrefsInDirList(
+ 
      nsAutoCString leaf;
      path->GetNativeLeafName(leaf);
-
+ 
      // Do we care if a file provided by this process fails to load?
      if (Substring(leaf, leaf.Length() - 4).EqualsLiteral(".xpi"))
        ReadExtensionPrefs(path);
@@ -79,12 +79,12 @@ diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
    }
    return NS_OK;
  }
-
+ 
  static nsresult pref_ReadPrefFromJar(nsZipArchive* jarReader, const char *name)
  {
    nsZipItemPtr<char> manifest(jarReader, name, true);
    NS_ENSURE_TRUE(manifest.Buffer(), NS_ERROR_NOT_AVAILABLE);
-@@ -1328,24 +1347,36 @@ static nsresult pref_InitInitialObjects(
+@@ -1348,24 +1367,36 @@ static nsresult pref_InitInitialObjects(
    /* these pref file names should not be used: we process them after all other application pref files for backwards compatibility */
    static const char* specialFiles[] = {
  #if defined(XP_MACOSX)
@@ -101,7 +101,7 @@ diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
      "beos.js"
  #endif
    };
-
+ 
 +  if(nsKDEUtils::kdeSession()) { // TODO what if some setup actually requires the helper?
 +    for(int i = 0;
 +        i < MOZ_ARRAY_LENGTH(specialFiles);
@@ -116,39 +116,39 @@ diff --git modules/libpref/Preferences.cpp modules/libpref/Preferences.cpp
    rv = pref_LoadPrefsInDir(defaultPrefDir, specialFiles, ArrayLength(specialFiles));
    if (NS_FAILED(rv))
      NS_WARNING("Error parsing application default preferences.");
-
+ 
    // Load jar:$app/omni.jar!/defaults/preferences/*.js
    // or jar:$gre/omni.jar!/defaults/preferences/*.js.
    RefPtr<nsZipArchive> appJarReader = mozilla::Omnijar::GetReader(mozilla::Omnijar::APP);
    // GetReader(mozilla::Omnijar::APP) returns null when $app == $gre, in which
-diff --git modules/libpref/moz.build modules/libpref/moz.build
+diff --git a/modules/libpref/moz.build b/modules/libpref/moz.build
 --- modules/libpref/moz.build
 +++ modules/libpref/moz.build
-@@ -31,16 +31,20 @@ UNIFIED_SOURCES += [
+@@ -33,16 +33,20 @@ EXPORTS.mozilla += [
+ UNIFIED_SOURCES += [
+     'nsPrefBranch.cpp',
+     'nsPrefsFactory.cpp',
+     'prefapi.cpp',
+     'Preferences.cpp',
      'prefread.cpp',
  ]
-
- # prefapi.cpp cannot be built in unified mode because it uses plarena.h
- SOURCES += [
-     'prefapi.cpp',
- ]
-
+ 
 +LOCAL_INCLUDES += [
-+    '/toolkit/xre'
++     '/toolkit/xre'
 +]
 +
  include('/ipc/chromium/chromium-config.mozbuild')
-
+ 
  FINAL_LIBRARY = 'xul'
-
+ 
  DEFINES['OS_ARCH'] = CONFIG['OS_ARCH']
  DEFINES['MOZ_WIDGET_TOOLKIT'] = CONFIG['MOZ_WIDGET_TOOLKIT']
-
- FINAL_TARGET_PP_FILES += [
-diff --git python/mozbuild/mozpack/chrome/flags.py python/mozbuild/mozpack/chrome/flags.py
+ if CONFIG['MOZ_ENABLE_WEBRENDER']:
+     DEFINES['MOZ_ENABLE_WEBRENDER'] = True
+diff --git a/python/mozbuild/mozpack/chrome/flags.py b/python/mozbuild/mozpack/chrome/flags.py
 --- python/mozbuild/mozpack/chrome/flags.py
 +++ python/mozbuild/mozpack/chrome/flags.py
-@@ -211,16 +211,17 @@ class Flags(OrderedDict):
+@@ -220,16 +220,17 @@ class Flags(OrderedDict):
          'contentaccessible': Flag,
          'os': StringFlag,
          'osversion': VersionFlag,
@@ -160,13 +160,13 @@ diff --git python/mozbuild/mozpack/chrome/flags.py python/mozbuild/mozpack/chrom
 +        'desktop': StringFlag,
      }
      RE = re.compile(r'([!<>=]+)')
-
+ 
      def __init__(self, *flags):
          '''
          Initialize a set of flags given in string form.
             flags = Flags('contentaccessible=yes', 'appversion>=3.5')
          '''
-diff --git python/mozbuild/mozpack/chrome/manifest.py python/mozbuild/mozpack/chrome/manifest.py
+diff --git a/python/mozbuild/mozpack/chrome/manifest.py b/python/mozbuild/mozpack/chrome/manifest.py
 --- python/mozbuild/mozpack/chrome/manifest.py
 +++ python/mozbuild/mozpack/chrome/manifest.py
 @@ -33,16 +33,17 @@ class ManifestEntry(object):
@@ -180,106 +180,38 @@ diff --git python/mozbuild/mozpack/chrome/manifest.py python/mozbuild/mozpack/ch
          'process',
 +        'desktop',
      ]
-
+ 
      def __init__(self, base, *flags):
          '''
          Initialize a manifest entry with the given base path and flags.
          '''
          self.base = base
          self.flags = Flags(*flags)
-diff --git toolkit/components/downloads/moz.build toolkit/components/downloads/moz.build
+diff --git a/toolkit/components/downloads/moz.build b/toolkit/components/downloads/moz.build
 --- toolkit/components/downloads/moz.build
 +++ toolkit/components/downloads/moz.build
-@@ -49,16 +49,17 @@ if CONFIG['OS_ARCH'] == 'WINNT':
-         'nsDownloadScanner.cpp',
-     ]
-
+@@ -37,16 +37,17 @@ UNIFIED_SOURCES += [
+     'nsDownloadManager.cpp'
+ ]
+ 
  FINAL_LIBRARY = 'xul'
-
+ 
  LOCAL_INCLUDES += [
      '../protobuf',
      '/ipc/chromium/src',
 +    '/toolkit/xre',
      'chromium'
  ]
-
+ 
  DEFINES['GOOGLE_PROTOBUF_NO_RTTI'] = True
  DEFINES['GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER'] = True
-
+ 
  CXXFLAGS += CONFIG['TK_CFLAGS']
-
-diff --git toolkit/components/downloads/nsDownloadManager.cpp toolkit/components/downloads/nsDownloadManager.cpp
---- toolkit/components/downloads/nsDownloadManager.cpp
-+++ toolkit/components/downloads/nsDownloadManager.cpp
-@@ -52,16 +52,20 @@
- #ifdef XP_WIN
- #include <shlobj.h>
- #include "nsWindowsHelpers.h"
- #ifdef DOWNLOAD_SCANNER
- #include "nsDownloadScanner.h"
- #endif
- #endif
-
-+#if defined(XP_UNIX) && !defined(XP_MACOSX)
-+#include "nsKDEUtils.h"
-+#endif
-+
- #ifdef XP_MACOSX
- #include <CoreFoundation/CoreFoundation.h>
- #endif
-
- #ifdef MOZ_WIDGET_ANDROID
- #include "FennecJNIWrappers.h"
- #endif
-
-@@ -2724,16 +2728,25 @@ nsDownload::SetState(DownloadState aStat
-       nsCOMPtr<nsIPrefBranch> pref(do_GetService(NS_PREFSERVICE_CONTRACTID));
-
-       // Master pref to control this function.
-       bool showTaskbarAlert = true;
-       if (pref)
-         pref->GetBoolPref(PREF_BDM_SHOWALERTONCOMPLETE, &showTaskbarAlert);
-
-       if (showTaskbarAlert) {
-+        if( nsKDEUtils::kdeSupport()) {
-+          nsTArray<nsCString> command;
-+          command.AppendElement( NS_LITERAL_CSTRING( "DOWNLOADFINISHED" ));
-+          nsAutoString displayName;
-+          GetDisplayName( displayName );
-+          command.AppendElement( nsAutoCString( ToNewUTF8String( displayName )));
-+          nsKDEUtils::command( command );
-+        } else {
-+        // begin non-KDE block
-         int32_t alertInterval = 2000;
-         if (pref)
-           pref->GetIntPref(PREF_BDM_SHOWALERTINTERVAL, &alertInterval);
-
-         int64_t alertIntervalUSec = alertInterval * PR_USEC_PER_MSEC;
-         int64_t goat = PR_Now() - mStartTime;
-         showTaskbarAlert = goat > alertIntervalUSec;
-
-@@ -2765,16 +2778,17 @@ nsDownload::SetState(DownloadState aStat
-                   message, !removeWhenDone,
-                   mPrivate ? NS_LITERAL_STRING("private") : NS_LITERAL_STRING("non-private"),
-                   mDownloadManager, EmptyString(), NS_LITERAL_STRING("auto"),
-                   EmptyString(), EmptyString(), nullptr, mPrivate,
-                   false /* requireInteraction */);
-             }
-         }
-       }
-+      }
-
- #if defined(XP_WIN) || defined(XP_MACOSX) || defined(MOZ_WIDGET_ANDROID) || defined(MOZ_WIDGET_GTK)
-       nsCOMPtr<nsIFileURL> fileURL = do_QueryInterface(mTarget);
-       nsCOMPtr<nsIFile> file;
-       nsAutoString path;
-
-       if (fileURL &&
-           NS_SUCCEEDED(fileURL->GetFile(getter_AddRefs(file))) &&
-diff --git toolkit/content/jar.mn toolkit/content/jar.mn
+ 
+diff --git a/toolkit/content/jar.mn b/toolkit/content/jar.mn
 --- toolkit/content/jar.mn
 +++ toolkit/content/jar.mn
-@@ -73,29 +73,33 @@ toolkit.jar:
+@@ -75,29 +75,33 @@ toolkit.jar:
     content/global/bindings/colorpicker.xml     (widgets/colorpicker.xml)
     content/global/bindings/datekeeper.js       (widgets/datekeeper.js)
     content/global/bindings/datepicker.js       (widgets/datepicker.js)
@@ -313,7 +245,7 @@ diff --git toolkit/content/jar.mn toolkit/content/jar.mn
     content/global/bindings/scale.xml           (widgets/scale.xml)
     content/global/bindings/scrollbar.xml       (widgets/scrollbar.xml)
     content/global/bindings/scrollbox.xml       (widgets/scrollbox.xml)
-diff --git toolkit/content/widgets/dialog-kde.xml toolkit/content/widgets/dialog-kde.xml
+diff --git a/toolkit/content/widgets/dialog-kde.xml b/toolkit/content/widgets/dialog-kde.xml
 new file mode 100644
 --- /dev/null
 +++ toolkit/content/widgets/dialog-kde.xml
@@ -773,11 +705,11 @@ new file mode 100644
 +  </binding>
 +
 +</bindings>
-diff --git toolkit/content/widgets/preferences-kde.xml toolkit/content/widgets/preferences-kde.xml
+diff --git a/toolkit/content/widgets/preferences-kde.xml b/toolkit/content/widgets/preferences-kde.xml
 new file mode 100644
 --- /dev/null
 +++ toolkit/content/widgets/preferences-kde.xml
-@@ -0,0 +1,1391 @@
+@@ -0,0 +1,1380 @@
 +<?xml version="1.0"?>
 +
 +<!DOCTYPE bindings [
@@ -907,7 +839,7 @@ new file mode 100644
 +          return;
 +
 +        this.preferences.rootBranchInternal
-+            .addObserver(this.name, this.preferences, false);
++            .addObserver(this.name, this.preferences);
 +        // In non-instant apply mode, we must try and use the last saved state
 +        // from any previous opens of a child dialog instead of the value from
 +        // preferences, to pick up any edits a user may have made.
@@ -961,7 +893,7 @@ new file mode 100644
 +              .removeObserver(this.name, this.preferences);
 +          this.setAttribute("name", val);
 +          this.preferences.rootBranchInternal
-+              .addObserver(val, this.preferences, false);
++              .addObserver(val, this.preferences);
 +
 +          return val;
 +        </setter>
@@ -1117,13 +1049,9 @@ new file mode 100644
 +                         .data;
 +            case "string":
 +            case "unichar":
-+              return this._branch
-+                         .getComplexValue(this.name, Components.interfaces.nsISupportsString)
-+                         .data;
++              return this._branch.getStringPref(this.name);
 +            case "fontname":
-+              var family = this._branch
-+                               .getComplexValue(this.name, Components.interfaces.nsISupportsString)
-+                               .data;
++              var family = this._branch.getStringPref(this.name);
 +              var fontEnumerator = Components.classes["@mozilla.org/gfx/fontenumerator;1"]
 +                                             .createInstance(Components.interfaces.nsIFontEnumerator);
 +              return fontEnumerator.getStandardFamilyName(family);
@@ -1168,11 +1096,7 @@ new file mode 100644
 +          case "string":
 +          case "unichar":
 +          case "fontname":
-+            var iss = Components.classes["@mozilla.org/supports-string;1"]
-+                                .createInstance(Components.interfaces.nsISupportsString);
-+            iss.data = val;
-+            this.preferences.rootBranch
-+                .setComplexValue(this.name, Components.interfaces.nsISupportsString, iss);
++            this.preferences.rootBranch.setStringPref(this.name, val);
 +            break;
 +          case "file":
 +            var lf;
@@ -1627,9 +1551,9 @@ new file mode 100644
 +                  aPaneElement.style.opacity = 0.0;
 +                  this.animate(oldPane, aPaneElement);
 +                } else if (!this._shouldAnimate && prefpanes.length > 1) {
-+                  var targetHeight = parseInt(window.getComputedStyle(this._paneDeckContainer, "").height);
-+                  var verticalPadding = parseInt(window.getComputedStyle(aPaneElement, "").paddingTop);
-+                  verticalPadding += parseInt(window.getComputedStyle(aPaneElement, "").paddingBottom);
++                  var targetHeight = parseInt(window.getComputedStyle(this._paneDeckContainer).height);
++                  var verticalPadding = parseInt(window.getComputedStyle(aPaneElement).paddingTop);
++                  verticalPadding += parseInt(window.getComputedStyle(aPaneElement).paddingBottom);
 +                  if (aPaneElement.contentHeight > targetHeight - verticalPadding) {
 +                    // To workaround the bottom border of a groupbox from being
 +                    // cutoff an hbox with a class of bottomBox may enclose it.
@@ -1638,7 +1562,7 @@ new file mode 100644
 +                    var bottomPadding = 0;
 +                    var bottomBox = aPaneElement.getElementsByAttribute("class", "bottomBox")[0];
 +                    if (bottomBox)
-+                      bottomPadding = parseInt(window.getComputedStyle(bottomBox, "").paddingBottom);
++                      bottomPadding = parseInt(window.getComputedStyle(bottomBox).paddingBottom);
 +                    window.innerHeight += bottomPadding + verticalPadding + aPaneElement.contentHeight - targetHeight;
 +                  }
 +
@@ -1660,11 +1584,8 @@ new file mode 100644
 +        <![CDATA[
 +          var psvc = Components.classes["@mozilla.org/preferences-service;1"]
 +                               .getService(Components.interfaces.nsIPrefBranch);
-+          var animate = /Mac/.test(navigator.platform);
-+          try {
-+            animate = psvc.getBoolPref("browser.preferences.animateFadeIn");
-+          } catch (e) { }
-+          return animate;
++          return psvc.getBoolPref("browser.preferences.animateFadeIn",
++                                  /Mac/.test(navigator.platform));
 +        ]]>
 +        </getter>
 +      </property>
@@ -1722,7 +1643,7 @@ new file mode 100644
 +            }
 +          } else if (aTimer == this._fadeTimer) {
 +            var elt = document.getElementById(this.lastSelected);
-+            var newOpacity = parseFloat(window.getComputedStyle(elt, "").opacity) + this._fadeIncrement;
++            var newOpacity = parseFloat(window.getComputedStyle(elt).opacity) + this._fadeIncrement;
 +            if (newOpacity < 1.0)
 +              elt.style.opacity = newOpacity;
 +            else {
@@ -2090,9 +2011,9 @@ new file mode 100644
 +
 +      <property name="contentHeight">
 +        <getter>
-+          var targetHeight = parseInt(window.getComputedStyle(this._content, "").height);
-+          targetHeight += parseInt(window.getComputedStyle(this._content, "").marginTop);
-+          targetHeight += parseInt(window.getComputedStyle(this._content, "").marginBottom);
++          var targetHeight = parseInt(window.getComputedStyle(this._content).height);
++          targetHeight += parseInt(window.getComputedStyle(this._content).marginTop);
++          targetHeight += parseInt(window.getComputedStyle(this._content).marginBottom);
 +          return targetHeight;
 +        </getter>
 +      </property>
@@ -2169,10 +2090,48 @@ new file mode 100644
 +#    PrefWindow II  (???)
 +#    PrefWindow I   (June 4, 1999)
 +#
-diff --git toolkit/mozapps/downloads/nsHelperAppDlg.js toolkit/mozapps/downloads/nsHelperAppDlg.js
+diff --git a/toolkit/mozapps/downloads/nsHelperAppDlg.js b/toolkit/mozapps/downloads/nsHelperAppDlg.js
 --- toolkit/mozapps/downloads/nsHelperAppDlg.js
 +++ toolkit/mozapps/downloads/nsHelperAppDlg.js
-@@ -1070,30 +1070,56 @@ nsUnknownContentTypeDialog.prototype = {
+@@ -625,17 +625,17 @@ nsUnknownContentTypeDialog.prototype = {
+       else
+         typeString = mimeInfo.MIMEType;
+     }
+     // When the length is unknown, contentLength would be -1
+     if (this.mLauncher.contentLength >= 0) {
+       let [size, unit] = DownloadUtils.
+                          convertByteUnits(this.mLauncher.contentLength);
+       type.value = this.dialogElement("strings")
+-                       .getFormattedString("orderedFileSizeWithType", 
++                       .getFormattedString("orderedFileSizeWithType",
+                                            [typeString, size, unit]);
+     }
+     else {
+       type.value = typeString;
+     }
+   },
+ 
+   // Returns true if opening the default application makes sense.
+@@ -799,17 +799,17 @@ nsUnknownContentTypeDialog.prototype = {
+       switch (this.dialogElement("openHandler").selectedIndex) {
+       case 0:
+         // No app need be specified in this case.
+         ok = true;
+         break;
+       case 1:
+         // only enable the OK button if we have a default app to use or if
+         // the user chose an app....
+-        ok = this.chosenApp || /\S/.test(this.dialogElement("otherHandler").getAttribute("path")); 
++        ok = this.chosenApp || /\S/.test(this.dialogElement("otherHandler").getAttribute("path"));
+         break;
+       }
+     }
+ 
+     // Enable Ok button if ok to press.
+     this.mDialog.document.documentElement.getButton("accept").disabled = !ok;
+   },
+ 
+@@ -1066,30 +1066,56 @@ nsUnknownContentTypeDialog.prototype = {
            params.handlerApp.executable &&
            params.handlerApp.executable.isFile()) {
          // Remember the file they chose to run.
@@ -2241,8 +2200,8 @@ diff --git toolkit/mozapps/downloads/nsHelperAppDlg.js toolkit/mozapps/downloads
        fp.init(this.mDialog,
                this.dialogElement("strings").getString("chooseAppFilePickerTitle"),
                nsIFilePicker.modeOpen);
-
-diff --git toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp
+ 
+diff --git a/toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp b/toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp
 --- toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp
 +++ toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp
 @@ -15,16 +15,17 @@
@@ -2255,12 +2214,12 @@ diff --git toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp toolkit/system
  #include "mozilla/Attributes.h"
  #include "nsIURI.h"
 +#include "nsKDEUtils.h"
-
+ 
  class nsUnixSystemProxySettings final : public nsISystemProxySettings {
  public:
    NS_DECL_ISUPPORTS
    NS_DECL_NSISYSTEMPROXYSETTINGS
-
+ 
    nsUnixSystemProxySettings()
      : mSchemeProxySettings(4)
 @@ -39,16 +40,17 @@ private:
@@ -2274,15 +2233,15 @@ diff --git toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp toolkit/system
    nsresult SetProxyResultFromGSettings(const char* aKeyBase, const char* aType, nsACString& aResult);
 +  nsresult GetProxyFromKDE(const nsACString& aScheme, const nsACString& aHost, PRInt32 aPort, nsACString& aResult);
  };
-
+ 
  NS_IMPL_ISUPPORTS(nsUnixSystemProxySettings, nsISystemProxySettings)
-
+ 
  NS_IMETHODIMP
  nsUnixSystemProxySettings::GetMainThreadOnly(bool *aMainThreadOnly)
  {
    // dbus prevents us from being threadsafe, but this routine should not block anyhow
 @@ -505,16 +507,19 @@ nsUnixSystemProxySettings::GetProxyFromG
-
+ 
  nsresult
  nsUnixSystemProxySettings::GetProxyForURI(const nsACString & aSpec,
                                            const nsACString & aScheme,
@@ -2300,15 +2259,15 @@ diff --git toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp toolkit/system
    }
    if (mGConf)
      return GetProxyFromGConf(aScheme, aHost, aPort, aResult);
-
+ 
 @@ -540,8 +545,34 @@ static const mozilla::Module::ContractID
-
+ 
  static const mozilla::Module kUnixProxyModule = {
    mozilla::Module::kVersion,
    kUnixProxyCIDs,
    kUnixProxyContracts
  };
-
+ 
  NSMODULE_DEFN(nsUnixProxyModule) = &kUnixProxyModule;
 +
 +nsresult
@@ -2336,10 +2295,10 @@ diff --git toolkit/system/unixproxy/nsUnixSystemProxySettings.cpp toolkit/system
 +  return NS_OK;
 +}
 +
-diff --git toolkit/xre/moz.build toolkit/xre/moz.build
+diff --git a/toolkit/xre/moz.build b/toolkit/xre/moz.build
 --- toolkit/xre/moz.build
 +++ toolkit/xre/moz.build
-@@ -53,17 +53,19 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'co
+@@ -61,17 +61,19 @@ elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'co
          '../components/printingui/mac',
      ]
  elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'uikit':
@@ -2357,9 +2316,9 @@ diff --git toolkit/xre/moz.build toolkit/xre/moz.build
      UNIFIED_SOURCES += [
          'nsNativeAppSupportDefault.cpp',
      ]
-
+ 
  if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gtk3':
-diff --git toolkit/xre/nsKDEUtils.cpp toolkit/xre/nsKDEUtils.cpp
+diff --git a/toolkit/xre/nsKDEUtils.cpp b/toolkit/xre/nsKDEUtils.cpp
 new file mode 100644
 --- /dev/null
 +++ toolkit/xre/nsKDEUtils.cpp
@@ -2395,7 +2354,7 @@ new file mode 100644
 +#define KMOZILLAHELPER "kmozillahelper"
 +#else
 +// not need for lib64, it's a binary
-+#define KMOZILLAHELPER "/usr/local/lib/mozilla/kmozillahelper"
++#define KMOZILLAHELPER "/usr/lib/mozilla/kmozillahelper"
 +#endif
 +
 +#define KMOZILLAHELPER_VERSION 6
@@ -2708,7 +2667,7 @@ new file mode 100644
 +    fputs( "\\E\n", commandFile ); // done as \E, so it cannot happen in normal data
 +    fflush( commandFile );
 +    }
-diff --git toolkit/xre/nsKDEUtils.h toolkit/xre/nsKDEUtils.h
+diff --git a/toolkit/xre/nsKDEUtils.h b/toolkit/xre/nsKDEUtils.h
 new file mode 100644
 --- /dev/null
 +++ toolkit/xre/nsKDEUtils.h
@@ -2761,7 +2720,7 @@ new file mode 100644
 +    };
 +
 +#endif // nsKDEUtils
-diff --git uriloader/exthandler/moz.build uriloader/exthandler/moz.build
+diff --git a/uriloader/exthandler/moz.build b/uriloader/exthandler/moz.build
 --- uriloader/exthandler/moz.build
 +++ uriloader/exthandler/moz.build
 @@ -77,17 +77,19 @@ else:
@@ -2770,7 +2729,7 @@ diff --git uriloader/exthandler/moz.build uriloader/exthandler/moz.build
      ]
      if CONFIG['GNU_CXX']:
          CXXFLAGS += ['-Wno-error=shadow']
-
+ 
  if 'gtk' in CONFIG['MOZ_WIDGET_TOOLKIT']:
      UNIFIED_SOURCES += [
 +        'unix/nsCommonRegistry.cpp',
@@ -2784,10 +2743,10 @@ diff --git uriloader/exthandler/moz.build uriloader/exthandler/moz.build
          'android/nsExternalSharingAppService.cpp',
          'android/nsExternalURLHandlerService.cpp',
          'android/nsMIMEInfoAndroid.cpp',
-@@ -123,16 +125,17 @@ include('/ipc/chromium/chromium-config.m
-
+@@ -125,16 +127,17 @@ include('/ipc/chromium/chromium-config.m
+ 
  FINAL_LIBRARY = 'xul'
-
+ 
  LOCAL_INCLUDES += [
      '/dom/base',
      '/dom/ipc',
@@ -2795,14 +2754,14 @@ diff --git uriloader/exthandler/moz.build uriloader/exthandler/moz.build
      '/netwerk/protocol/http',
 +    '/toolkit/xre',
  ]
-
+ 
  if CONFIG['MOZ_ENABLE_DBUS']:
      CXXFLAGS += CONFIG['TK_CFLAGS']
      CXXFLAGS += CONFIG['MOZ_DBUS_CFLAGS']
-
+ 
  if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk2', 'gtk3'):
      CXXFLAGS += CONFIG['TK_CFLAGS']
-diff --git uriloader/exthandler/unix/nsCommonRegistry.cpp uriloader/exthandler/unix/nsCommonRegistry.cpp
+diff --git a/uriloader/exthandler/unix/nsCommonRegistry.cpp b/uriloader/exthandler/unix/nsCommonRegistry.cpp
 new file mode 100644
 --- /dev/null
 +++ uriloader/exthandler/unix/nsCommonRegistry.cpp
@@ -2860,7 +2819,7 @@ new file mode 100644
 +        return nsKDERegistry::GetFromType( aMIMEType );
 +    return nsGNOMERegistry::GetFromType( aMIMEType );
 +}
-diff --git uriloader/exthandler/unix/nsCommonRegistry.h uriloader/exthandler/unix/nsCommonRegistry.h
+diff --git a/uriloader/exthandler/unix/nsCommonRegistry.h b/uriloader/exthandler/unix/nsCommonRegistry.h
 new file mode 100644
 --- /dev/null
 +++ uriloader/exthandler/unix/nsCommonRegistry.h
@@ -2893,7 +2852,7 @@ new file mode 100644
 +};
 +
 +#endif
-diff --git uriloader/exthandler/unix/nsKDERegistry.cpp uriloader/exthandler/unix/nsKDERegistry.cpp
+diff --git a/uriloader/exthandler/unix/nsKDERegistry.cpp b/uriloader/exthandler/unix/nsKDERegistry.cpp
 new file mode 100644
 --- /dev/null
 +++ uriloader/exthandler/unix/nsKDERegistry.cpp
@@ -2986,7 +2945,7 @@ new file mode 100644
 +        }
 +    return nullptr;
 +}
-diff --git uriloader/exthandler/unix/nsKDERegistry.h uriloader/exthandler/unix/nsKDERegistry.h
+diff --git a/uriloader/exthandler/unix/nsKDERegistry.h b/uriloader/exthandler/unix/nsKDERegistry.h
 new file mode 100644
 --- /dev/null
 +++ uriloader/exthandler/unix/nsKDERegistry.h
@@ -3025,7 +2984,7 @@ new file mode 100644
 +};
 +
 +#endif //nsKDERegistry_h__
-diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/unix/nsMIMEInfoUnix.cpp
+diff --git a/uriloader/exthandler/unix/nsMIMEInfoUnix.cpp b/uriloader/exthandler/unix/nsMIMEInfoUnix.cpp
 --- uriloader/exthandler/unix/nsMIMEInfoUnix.cpp
 +++ uriloader/exthandler/unix/nsMIMEInfoUnix.cpp
 @@ -1,50 +1,53 @@
@@ -3034,7 +2993,7 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
   * This Source Code Form is subject to the terms of the Mozilla Public
   * License, v. 2.0. If a copy of the MPL was not distributed with this
   * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
+ 
  #include "nsMIMEInfoUnix.h"
 -#include "nsGNOMERegistry.h"
 +#include "nsCommonRegistry.h"
@@ -3048,14 +3007,14 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
 +#if defined(XP_UNIX) && !defined(XP_MACOSX)
 +#include "nsKDEUtils.h"
 +#endif
-
+ 
  nsresult
  nsMIMEInfoUnix::LoadUriInternal(nsIURI * aURI)
  {
 -  return nsGNOMERegistry::LoadURL(aURI);
 +  return nsCommonRegistry::LoadURL(aURI);
  }
-
+ 
  NS_IMETHODIMP
  nsMIMEInfoUnix::GetHasDefaultHandler(bool *_retval)
  {
@@ -3064,9 +3023,9 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
    // give the GNOME answer.
    if (mDefaultApplication)
      return nsMIMEInfoImpl::GetHasDefaultHandler(_retval);
-
+ 
    *_retval = false;
-
+ 
    if (mClass == eProtocolInfo) {
 -    *_retval = nsGNOMERegistry::HandlerExists(mSchemeOrType.get());
 +    *_retval = nsCommonRegistry::HandlerExists(mSchemeOrType.get());
@@ -3084,7 +3043,7 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
      if (mimeInfo)
        *_retval = true;
    }
-
+ 
    if (*_retval)
      return NS_OK;
 @@ -79,16 +82,33 @@ nsMIMEInfoUnix::LaunchDefaultWithFile(ns
@@ -3095,7 +3054,7 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
    }
    return NS_ERROR_FAILURE;
  #endif
-
+ 
 +  if( nsKDEUtils::kdeSupport()) {
 +    bool supports;
 +    if( NS_SUCCEEDED( GetHasDefaultHandler( &supports )) && supports ) {
@@ -3117,11 +3076,11 @@ diff --git uriloader/exthandler/unix/nsMIMEInfoUnix.cpp uriloader/exthandler/uni
    if (!giovfs) {
      return NS_ERROR_FAILURE;
    }
-
+ 
    // nsGIOMimeApp->Launch wants a URI string instead of local file
    nsresult rv;
    nsCOMPtr<nsIIOService> ioservice = do_GetService(NS_IOSERVICE_CONTRACTID, &rv);
-diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandler/unix/nsOSHelperAppService.cpp
+diff --git a/uriloader/exthandler/unix/nsOSHelperAppService.cpp b/uriloader/exthandler/unix/nsOSHelperAppService.cpp
 --- uriloader/exthandler/unix/nsOSHelperAppService.cpp
 +++ uriloader/exthandler/unix/nsOSHelperAppService.cpp
 @@ -10,17 +10,17 @@
@@ -3129,7 +3088,7 @@ diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandl
  #include <contentaction/contentaction.h>
  #include <QString>
  #endif
-
+ 
  #include "nsOSHelperAppService.h"
  #include "nsMIMEInfoUnix.h"
  #ifdef MOZ_WIDGET_GTK
@@ -3143,22 +3102,22 @@ diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandl
  #include "nsXPIDLString.h"
  #include "nsIURL.h"
  #include "nsIFileStreams.h"
-@@ -1147,26 +1147,26 @@ nsresult nsOSHelperAppService::OSProtoco
+@@ -1143,26 +1143,26 @@ nsresult nsOSHelperAppService::OSProtoco
      ContentAction::Action::defaultActionForScheme(QString(aProtocolScheme) + ':');
-
+ 
    if (action.isValid())
      *aHandlerExists = true;
  #endif
-
+ 
  #ifdef MOZ_WIDGET_GTK
    // Check the GNOME registry for a protocol handler
 -  *aHandlerExists = nsGNOMERegistry::HandlerExists(aProtocolScheme);
 +  *aHandlerExists = nsCommonRegistry::HandlerExists(aProtocolScheme);
  #endif
-
+ 
    return NS_OK;
  }
-
+ 
  NS_IMETHODIMP nsOSHelperAppService::GetApplicationDescription(const nsACString& aScheme, nsAString& _retval)
  {
  #ifdef MOZ_WIDGET_GTK
@@ -3169,15 +3128,15 @@ diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandl
    return NS_ERROR_NOT_AVAILABLE;
  #endif
  }
-
+ 
  nsresult nsOSHelperAppService::GetFileTokenForPath(const char16_t * platformAppPath, nsIFile ** aFile)
  {
-@@ -1253,17 +1253,17 @@ nsOSHelperAppService::GetFromExtension(c
+@@ -1249,17 +1249,17 @@ nsOSHelperAppService::GetFromExtension(c
                                           mime_types_description,
                                           true);
-
+ 
    if (NS_FAILED(rv) || majorType.IsEmpty()) {
-
+ 
  #ifdef MOZ_WIDGET_GTK
      LOG(("Looking in GNOME registry\n"));
      RefPtr<nsMIMEInfoBase> gnomeInfo =
@@ -3188,16 +3147,16 @@ diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandl
        return gnomeInfo.forget();
      }
  #endif
-
+ 
      rv = LookUpTypeAndDescription(NS_ConvertUTF8toUTF16(aFileExt),
                                    majorType,
-@@ -1374,17 +1374,17 @@ nsOSHelperAppService::GetFromType(const
+@@ -1370,17 +1370,17 @@ nsOSHelperAppService::GetFromType(const 
    nsAutoString extensions, mime_types_description;
    LookUpExtensionsAndDescription(majorType,
                                   minorType,
                                   extensions,
                                   mime_types_description);
-
+ 
  #ifdef MOZ_WIDGET_GTK
    if (handler.IsEmpty()) {
 -    RefPtr<nsMIMEInfoBase> gnomeInfo = nsGNOMERegistry::GetFromType(aMIMEType);
@@ -3205,74 +3164,74 @@ diff --git uriloader/exthandler/unix/nsOSHelperAppService.cpp uriloader/exthandl
      if (gnomeInfo) {
        LOG(("Got MIMEInfo from GNOME registry without extensions; setting them "
             "to %s\n", NS_LossyConvertUTF16toASCII(extensions).get()));
-
+ 
        NS_ASSERTION(!gnomeInfo->HasExtensions(), "How'd that happen?");
        gnomeInfo->SetFileExtensions(NS_ConvertUTF16toUTF8(extensions));
        return gnomeInfo.forget();
      }
-diff --git widget/gtk/moz.build widget/gtk/moz.build
+diff --git a/widget/gtk/moz.build b/widget/gtk/moz.build
 --- widget/gtk/moz.build
 +++ widget/gtk/moz.build
-@@ -101,16 +101,17 @@ else:
+@@ -109,16 +109,17 @@ else:
  include('/ipc/chromium/chromium-config.mozbuild')
-
+ 
  FINAL_LIBRARY = 'xul'
-
+ 
  LOCAL_INCLUDES += [
      '/layout/generic',
      '/layout/xul',
      '/other-licenses/atk-1.0',
 +    '/toolkit/xre',
      '/widget',
+     '/widget/headless',
  ]
-
+ 
  if CONFIG['MOZ_X11']:
      LOCAL_INCLUDES += [
          '/widget/x11',
      ]
-
-diff --git widget/gtk/nsFilePicker.cpp widget/gtk/nsFilePicker.cpp
+diff --git a/widget/gtk/nsFilePicker.cpp b/widget/gtk/nsFilePicker.cpp
 --- widget/gtk/nsFilePicker.cpp
 +++ widget/gtk/nsFilePicker.cpp
 @@ -4,32 +4,34 @@
   * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-
+ 
  #include "mozilla/Types.h"
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <unistd.h>
-
+ 
  #include <gtk/gtk.h>
 +#include <gdk/gdkx.h>
-
+ 
  #include "nsGtkUtils.h"
  #include "nsIFileURL.h"
  #include "nsIURI.h"
  #include "nsIWidget.h"
  #include "nsIFile.h"
  #include "nsIStringBundle.h"
-
+ 
  #include "nsArrayEnumerator.h"
  #include "nsMemory.h"
  #include "nsEnumeratorUtils.h"
  #include "nsNetUtil.h"
  #include "nsReadableUtils.h"
  #include "mozcontainer.h"
-
+ 
  #include "nsFilePicker.h"
 +#include "nsKDEUtils.h"
-
+ 
  using namespace mozilla;
-
+ 
  #define MAX_PREVIEW_SIZE 180
  // bug 1184009
  #define MAX_PREVIEW_SOURCE_SIZE 4096
-
+ 
  nsIFile *nsFilePicker::mPrevDisplayDirectory = nullptr;
 @@ -246,17 +248,19 @@ nsFilePicker::AppendFilters(int32_t aFil
    return nsBaseFilePicker::AppendFilters(aFilterMask);
  }
-
+ 
  NS_IMETHODIMP
  nsFilePicker::AppendFilter(const nsAString& aTitle, const nsAString& aFilter)
  {
@@ -3283,22 +3242,22 @@ diff --git widget/gtk/nsFilePicker.cpp widget/gtk/nsFilePicker.cpp
 +    if( mMode != modeOpen || !nsKDEUtils::kdeSupport())
 +      return NS_OK;
    }
-
+ 
    nsAutoCString filter, name;
    CopyUTF16toUTF8(aFilter, filter);
    CopyUTF16toUTF8(aTitle, name);
-
+ 
    mFilters.AppendElement(filter);
    mFilterNames.AppendElement(name);
 @@ -371,16 +375,34 @@ nsFilePicker::Show(int16_t *aReturn)
-
+ 
  NS_IMETHODIMP
  nsFilePicker::Open(nsIFilePickerShownCallback *aCallback)
  {
    // Can't show two dialogs concurrently with the same filepicker
    if (mRunning)
      return NS_ERROR_NOT_AVAILABLE;
-
+ 
 +  // KDE file picker is not handled via callback
 +  if( nsKDEUtils::kdeSupport()) {
 +    int16_t result;
@@ -3319,12 +3278,12 @@ diff --git widget/gtk/nsFilePicker.cpp widget/gtk/nsFilePicker.cpp
 +
    nsXPIDLCString title;
    title.Adopt(ToNewUTF8String(mTitle));
-
+ 
    GtkWindow *parent_widget =
      GTK_WINDOW(mParentWidget->GetNativeData(NS_NATIVE_SHELLWIDGET));
-
+ 
    GtkFileChooserAction action = GetGtkFileChooserAction(mMode);
-
+ 
 @@ -603,8 +625,235 @@ nsFilePicker::Done(GtkWidget* file_choos
    if (mCallback) {
      mCallback->Done(result);
@@ -3561,18 +3520,18 @@ diff --git widget/gtk/nsFilePicker.cpp widget/gtk/nsFilePicker.cpp
 +    return NS_OK;
 +    }
 +
-diff --git widget/gtk/nsFilePicker.h widget/gtk/nsFilePicker.h
+diff --git a/widget/gtk/nsFilePicker.h b/widget/gtk/nsFilePicker.h
 --- widget/gtk/nsFilePicker.h
 +++ widget/gtk/nsFilePicker.h
 @@ -69,14 +69,20 @@ protected:
    nsString  mDefaultExtension;
-
+ 
    nsTArray<nsCString> mFilters;
    nsTArray<nsCString> mFilterNames;
-
+ 
  private:
    static nsIFile *mPrevDisplayDirectory;
-
+ 
 +  bool kdeRunning();
 +  bool getKdeRunning();
 +  NS_IMETHODIMP kdeFileDialog(PRInt16 *aReturn);
@@ -3583,29 +3542,29 @@ diff --git widget/gtk/nsFilePicker.h widget/gtk/nsFilePicker.h
    GtkFileChooserWidget *mFileChooserDelegate;
  #endif
  };
-
+ 
  #endif
-diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.cpp
+diff --git a/xpcom/components/ManifestParser.cpp b/xpcom/components/ManifestParser.cpp
 --- xpcom/components/ManifestParser.cpp
 +++ xpcom/components/ManifestParser.cpp
 @@ -33,16 +33,17 @@
  #include "nsTextFormatter.h"
  #include "nsVersionComparator.h"
  #include "nsXPCOMCIDInternal.h"
-
+ 
  #include "nsIConsoleService.h"
  #include "nsIScriptError.h"
  #include "nsIXULAppInfo.h"
  #include "nsIXULRuntime.h"
 +#include "nsKDEUtils.h"
-
+ 
  using namespace mozilla;
-
+ 
  struct ManifestDirective
  {
    const char* directive;
    int argc;
-
+ 
 @@ -466,16 +467,17 @@ ParseManifest(NSLocationType aType, File
    NS_NAMED_LITERAL_STRING(kRemoteEnabled, "remoteenabled");
    NS_NAMED_LITERAL_STRING(kRemoteRequired, "remoterequired");
@@ -3620,10 +3579,10 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
  #if defined(MOZ_WIDGET_ANDROID)
    NS_NAMED_LITERAL_STRING(kTablet, "tablet");
  #endif
-
+ 
    NS_NAMED_LITERAL_STRING(kMain, "main");
    NS_NAMED_LITERAL_STRING(kContent, "content");
-
+ 
 @@ -526,44 +528,49 @@ ParseManifest(NSLocationType aType, File
          CopyUTF8toUTF16(s, abi);
          abi.Insert(char16_t('_'), 0);
@@ -3631,7 +3590,7 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
        }
      }
    }
-
+ 
    nsAutoString osVersion;
 +  nsAutoString desktop;
  #if defined(XP_WIN)
@@ -3667,13 +3626,13 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
    }
 +  desktop = NS_LITERAL_STRING("android");
  #endif
-
+ 
    if (XRE_IsContentProcess()) {
      process = kContent;
    } else {
      process = kMain;
    }
-
+ 
 @@ -666,25 +673,27 @@ ParseManifest(NSLocationType aType, File
      TriState stOsVersion = eUnspecified;
      TriState stOs = eUnspecified;
@@ -3684,14 +3643,14 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
  #endif
      int flags = 0;
 +    TriState stDesktop = eUnspecified;
-
+ 
      while ((token = nsCRT::strtok(whitespace, kWhitespace, &whitespace)) &&
             ok) {
        ToLowerCase(token);
        NS_ConvertASCIItoUTF16 wtoken(token);
-
+ 
        if (CheckStringFlag(kApplication, wtoken, appID, stApp) ||
-           CheckStringFlag(kOs, wtoken, osTarget, stOs) ||
+           CheckOsFlag(kOs, wtoken, osTarget, stOs) ||
            CheckStringFlag(kABI, wtoken, abi, stABI) ||
 +          CheckStringFlag(kDesktop, wtoken, desktop, stDesktop) ||
            CheckStringFlag(kProcess, wtoken, process, stProcess) ||
@@ -3700,11 +3659,11 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
            CheckVersionFlag(kGeckoVersion, wtoken, geckoVersion, stGeckoVersion)) {
          continue;
        }
-
+ 
  #if defined(MOZ_WIDGET_ANDROID)
-@@ -734,16 +743,17 @@ ParseManifest(NSLocationType aType, File
+@@ -729,16 +738,17 @@ ParseManifest(NSLocationType aType, File
      }
-
+ 
      if (!ok ||
          stApp == eBad ||
          stAppVersion == eBad ||
@@ -3719,11 +3678,11 @@ diff --git xpcom/components/ManifestParser.cpp xpcom/components/ManifestParser.c
          stProcess == eBad) {
        continue;
      }
-
-diff --git xpcom/components/moz.build xpcom/components/moz.build
+ 
+diff --git a/xpcom/components/moz.build b/xpcom/components/moz.build
 --- xpcom/components/moz.build
 +++ xpcom/components/moz.build
-@@ -50,12 +50,13 @@ FINAL_LIBRARY = 'xul'
+@@ -44,12 +44,13 @@ FINAL_LIBRARY = 'xul'
  LOCAL_INCLUDES += [
      '!..',
      '../base',
@@ -3734,10 +3693,10 @@ diff --git xpcom/components/moz.build xpcom/components/moz.build
      '/modules/libjar',
 +    '/toolkit/xre'
  ]
-
+ 
  if 'gtk' in CONFIG['MOZ_WIDGET_TOOLKIT']:
      CXXFLAGS += CONFIG['TK_CFLAGS']
-diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
+diff --git a/xpcom/io/nsLocalFileUnix.cpp b/xpcom/io/nsLocalFileUnix.cpp
 --- xpcom/io/nsLocalFileUnix.cpp
 +++ xpcom/io/nsLocalFileUnix.cpp
 @@ -46,16 +46,17 @@
@@ -3746,23 +3705,23 @@ diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
  #include "nsISimpleEnumerator.h"
  #include "private/pprio.h"
  #include "prlink.h"
-
+ 
  #ifdef MOZ_WIDGET_GTK
  #include "nsIGIOService.h"
 +#include "nsKDEUtils.h"
  #endif
-
+ 
  #ifdef MOZ_WIDGET_COCOA
  #include <Carbon/Carbon.h>
  #include "CocoaFileUtils.h"
  #include "prmem.h"
  #include "plbase64.h"
-
-@@ -1948,59 +1949,74 @@ nsLocalFile::SetPersistentDescriptor(con
+ 
+@@ -1941,59 +1942,74 @@ nsLocalFile::SetPersistentDescriptor(con
    return InitWithNativePath(aPersistentDescriptor);
  #endif
  }
-
+ 
  NS_IMETHODIMP
  nsLocalFile::Reveal()
  {
@@ -3772,12 +3731,12 @@ diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
 -    return NS_ERROR_FAILURE;
 -  }
 +  nsAutoCString url;
-
+ 
    bool isDirectory;
    if (NS_FAILED(IsDirectory(&isDirectory))) {
      return NS_ERROR_FAILURE;
    }
-
+ 
 +  nsCOMPtr<nsIGIOService> giovfs = do_GetService(NS_GIOSERVICE_CONTRACTID);
    if (isDirectory) {
 -    return giovfs->ShowURIForInput(mPath);
@@ -3794,7 +3753,7 @@ diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
    if (NS_FAILED(parentDir->GetNativePath(dirPath))) {
      return NS_ERROR_FAILURE;
    }
-
+ 
 -  return giovfs->ShowURIForInput(dirPath);
 +  url = dirPath;
  #elif defined(MOZ_WIDGET_COCOA)
@@ -3820,7 +3779,7 @@ diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
 +
 +  return giovfs->ShowURIForInput(url);
  }
-
+ 
  NS_IMETHODIMP
  nsLocalFile::Launch()
  {
@@ -3835,7 +3794,7 @@ diff --git xpcom/io/nsLocalFileUnix.cpp xpcom/io/nsLocalFileUnix.cpp
    if (!giovfs) {
      return NS_ERROR_FAILURE;
    }
-
+ 
    return giovfs->ShowURIForInput(mPath);
  #elif defined(MOZ_ENABLE_CONTENTACTION)
    QUrl uri = QUrl::fromLocalFile(QString::fromUtf8(mPath.get()));
