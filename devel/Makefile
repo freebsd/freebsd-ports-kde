@@ -277,6 +277,7 @@
     SUBDIR += checkheaders
     SUBDIR += cheritrace-devel
     SUBDIR += cherivis-devel
+    SUBDIR += chromium-gn
     SUBDIR += chrpath
     SUBDIR += chruby
     SUBDIR += cil

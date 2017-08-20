@@ -1,16 +1,14 @@
-# $FreeBSD: branches/plasma5/PORTS/www/qt5-webkit-annulen/Makefile 13983 2017-05-02 18:01:20Z tcberner $
+# $FreeBSD$
 
 PORTNAME=		webkit
-PORTVERSION=		5.212.0.20170617
-DISTVERSIONSUFFIX=	-${GH_TAGNAME}
+DISTVERSION=		5.212.0-alpha2
 CATEGORIES=		www
-MASTER_SITES=		LOCAL/tcberner/${PORTNAME}-${PORTVERSION}
+MASTER_SITES=		https://github.com/annulen/${PORTNAME}/releases/download/${DISTNAME}/
 PKGNAMEPREFIX=		qt5-
+DISTNAME=		qt${PORTNAME}-${DISTVERSION}
 
 MAINTAINER=		kde@FreeBSD.org
 COMMENT=		QtWebKit with a more modern WebKit code base
-
-LICENSE=		GPLv2
 
 LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 			libgstapp-1.0.so:multimedia/gstreamer1-plugins \
@@ -30,6 +28,9 @@ USE_QT5=		core gui location network opengl printsupport \
 USE_RUBY=		yes
 USE_XORG=		x11 xcomposite xrender
 
+# Fix pkgconfig install paths.
+PATHFIX_CMAKELISTSTXT=	PlatformQt.cmake
+
 RUBY_NO_RUN_DEPENDS=	yes
 
 CMAKE_ARGS=		-DPORT:STRING="Qt" \
@@ -45,21 +46,4 @@ CXXFLAGS+=		-DNDEBUG
 
 PLIST_SUB=		FULLVER="${PORTVERSION:R}"
 
-# The git tag to fetch
-GH_TAGNAME=		6d0ad27
-
 .include <bsd.port.mk>
-
-# The git repository contains subdirectories with tests and websites that take
-# up a lot of space. Therefore manually create a tarball using the target
-# create-src-archive below.
-.PHONY: create-src-archive
-ARCHIVE_DIR=	${DISTDIR}/${DISTNAME}
-ORIGINAL_DIR=	${DISTDIR}/webkit-${GH_TAGNAME}
-DONOTEXTRACT=	JSTests LayoutTests ManualTests PerformanceTests Websites
-create-src-archive:
-	fetch https://codeload.github.com/annulen/webkit/tar.gz/${GH_TAGNAME}?dummy=/ -o ${ORIGINAL_DIR}.tar.gz
-	tar -xf ${ORIGINAL_DIR}.tar.gz ${DONOTEXTRACT:S,^,--exclude ,} --directory ${DISTDIR}
-	${MV} ${ORIGINAL_DIR} ${ARCHIVE_DIR}
-	${TAR} -cf - -C ${ARCHIVE_DIR:H} ${ARCHIVE_DIR:T} | ${XZ_CMD} > ${ARCHIVE_DIR}.tar.xz
-	${MAKE} makesum

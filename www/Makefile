@@ -1545,6 +1545,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
+    SUBDIR += py-django-bulk-update
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms

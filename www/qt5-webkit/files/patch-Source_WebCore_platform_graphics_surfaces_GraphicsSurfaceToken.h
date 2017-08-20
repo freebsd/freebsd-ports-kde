@@ -1,4 +1,4 @@
---- Source/WebCore/platform/graphics/surfaces/GraphicsSurfaceToken.h.orig	2017-04-28 15:27:36 UTC
+--- Source/WebCore/platform/graphics/surfaces/GraphicsSurfaceToken.h.orig	2017-06-15 23:36:48 UTC
 +++ Source/WebCore/platform/graphics/surfaces/GraphicsSurfaceToken.h
 @@ -33,7 +33,7 @@ struct GraphicsSurfaceToken {
  

@@ -1,4 +1,4 @@
---- Source/cmake/KDEInstallDirs.cmake.orig	2017-04-28 15:27:36 UTC
+--- Source/cmake/KDEInstallDirs.cmake.orig	2017-06-15 23:36:48 UTC
 +++ Source/cmake/KDEInstallDirs.cmake
 @@ -420,7 +420,7 @@ endif()
  if(NOT KDE_INSTALL_DIRS_NO_DEPRECATED)
