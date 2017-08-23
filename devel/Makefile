@@ -4691,6 +4691,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
+    SUBDIR += py-pysparklines
     SUBDIR += py-pystorm
     SUBDIR += py-pyte
     SUBDIR += py-pytemplate
@@ -5460,6 +5461,7 @@
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
+    SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape0
     SUBDIR += rubygem-grit

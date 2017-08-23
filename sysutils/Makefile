@@ -682,6 +682,7 @@
     SUBDIR += nbosd
     SUBDIR += ncdu
     SUBDIR += ndmpd
+    SUBDIR += neofetch
     SUBDIR += nepomuk-core
     SUBDIR += nepomuk-widgets
     SUBDIR += nfcutils
@@ -983,6 +984,7 @@
     SUBDIR += rmonitor
     SUBDIR += roottail
     SUBDIR += rovclock
+    SUBDIR += rpi-firmware
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto

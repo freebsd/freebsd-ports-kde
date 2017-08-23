@@ -5,7 +5,7 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20170817:
+20170831:
   AFFECTS: users of CMake
   AUTHOR: groot@kde.org
 
@@ -15,6 +15,15 @@ you update your ports collection, before attempting any port upgrades.
   out-of-sync with the modules.
 
   All ports have been updated to depend only on CMake.
+
+20170820:
+  AFFECTS: users of www/uwsgi
+  AUTHOR: ultima@FreeBSD.org
+
+  The default socket owner and mode had been changed from www:www 600
+  to uwsgi:www 660. This should resolve issue #1471[1] on github.
+
+  [1] https://github.com/unbit/uwsgi/issues/1471
 
 20170808:
   AFFECTS: users of lang/ghc and */hs-*

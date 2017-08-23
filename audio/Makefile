@@ -62,6 +62,7 @@
     SUBDIR += calf
     SUBDIR += cam
     SUBDIR += cantata
+    SUBDIR += caps-lv2
     SUBDIR += caps-plugins
     SUBDIR += ccaudio2
     SUBDIR += cd-console
@@ -652,7 +653,6 @@
     SUBDIR += py-gmusicproxy
     SUBDIR += py-hsaudiotag
     SUBDIR += py-id3
-    SUBDIR += py-jack
     SUBDIR += py-karaoke
     SUBDIR += py-mad
     SUBDIR += py-mpd
@@ -662,6 +662,7 @@
     SUBDIR += py-mutagen
     SUBDIR += py-ogg
     SUBDIR += py-openal
+    SUBDIR += py-py-jack
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
     SUBDIR += py-pylast
@@ -774,6 +775,7 @@
     SUBDIR += sweep
     SUBDIR += swh-lv2
     SUBDIR += swhplugins
+    SUBDIR += synthpod-lv2
     SUBDIR += taglib
     SUBDIR += taglib-extras
     SUBDIR += taglib-sharp
@@ -781,6 +783,7 @@
     SUBDIR += tagtool
     SUBDIR += tagutil
     SUBDIR += tap-plugins
+    SUBDIR += tap-plugins-lv2
     SUBDIR += tcd
     SUBDIR += tclmidi
     SUBDIR += teamspeak3-server
@@ -817,6 +820,7 @@
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
     SUBDIR += vitunes
+    SUBDIR += vm-lv2
     SUBDIR += vo-aacenc
     SUBDIR += vo-amrwbenc
     SUBDIR += voipong

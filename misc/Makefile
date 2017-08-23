@@ -243,6 +243,7 @@
     SUBDIR += ktouch
     SUBDIR += kwordquiz
     SUBDIR += latex-mk
+    SUBDIR += lazyread
     SUBDIR += lc
     SUBDIR += lesspipe
     SUBDIR += libeatmydata
@@ -259,7 +260,6 @@
     SUBDIR += localedata
     SUBDIR += logsurfer
     SUBDIR += loop
-    SUBDIR += lr
     SUBDIR += lv
     SUBDIR += lxde-common
     SUBDIR += magicpoint
