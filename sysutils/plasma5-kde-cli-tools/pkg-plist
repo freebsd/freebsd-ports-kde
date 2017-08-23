@@ -14,12 +14,12 @@ lib/libexec/kf5/kdesu
 lib/libkdeinit5_kcmshell5.so
 %%QT_PLUGINDIR%%/kcm_filetypes.so
 man/man1/kdesu.1.gz
-share/doc/HTML/de/kcontrol5/filetypes/index.cache.bz2
-share/doc/HTML/de/kcontrol5/filetypes/index.docbook
+share/doc/HTML/ca/kcontrol5/filetypes/index.cache.bz2
+share/doc/HTML/ca/kcontrol5/filetypes/index.docbook
 share/doc/HTML/en/kcontrol5/filetypes/index.cache.bz2
 share/doc/HTML/en/kcontrol5/filetypes/index.docbook
-share/doc/HTML/de/kdesu/index.cache.bz2
-share/doc/HTML/de/kdesu/index.docbook
+share/doc/HTML/ca/kdesu/index.cache.bz2
+share/doc/HTML/ca/kdesu/index.docbook
 share/doc/HTML/en/kdesu/index.cache.bz2
 share/doc/HTML/en/kdesu/index.docbook
 share/kservices5/filetypes.desktop

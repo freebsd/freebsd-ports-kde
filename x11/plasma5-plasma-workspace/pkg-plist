@@ -19,6 +19,7 @@ etc/xdg/autostart/klipper.desktop
 etc/xdg/autostart/krunner.desktop
 etc/xdg/autostart/plasmashell.desktop
 etc/xdg/autostart/xembedsniproxy.desktop
+etc/xdg/kuiserver.categories
 etc/xdg/plasmoids.knsrc
 etc/xdg/taskmanagerrulesrc
 etc/xdg/wallpaper.knsrc
@@ -1376,6 +1377,7 @@ share/locale/eu/LC_MESSAGES/plasma_runner_solid.mo
 share/locale/eu/LC_MESSAGES/plasma_runner_webshortcuts.mo
 share/locale/eu/LC_MESSAGES/plasma_runner_windowedwidgets.mo
 share/locale/eu/LC_MESSAGES/plasma_runner_windows.mo
+share/locale/eu/LC_MESSAGES/plasmashell.mo
 share/locale/eu/LC_MESSAGES/soliduiserver5.mo
 share/locale/eu/LC_MESSAGES/systemmonitor.mo
 share/locale/fa/LC_MESSAGES/drkonqi5.mo
@@ -3212,6 +3214,7 @@ share/locale/pt_BR/LC_MESSAGES/freespacenotifier.mo
 share/locale/pt_BR/LC_MESSAGES/kcminit.mo
 share/locale/pt_BR/LC_MESSAGES/kholidays_calendar_plugin.mo
 share/locale/pt_BR/LC_MESSAGES/kio5_applications.mo
+share/locale/pt_BR/LC_MESSAGES/kio_desktop.mo
 share/locale/pt_BR/LC_MESSAGES/klipper.mo
 share/locale/pt_BR/LC_MESSAGES/krunner.mo
 share/locale/pt_BR/LC_MESSAGES/ksmserver.mo

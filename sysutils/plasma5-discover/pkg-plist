@@ -8,6 +8,7 @@ lib/plasma-discover/libDiscoverNotifiers.so
 %%QT_QMLDIR%%/org/kde/discovernotifier/libDiscoverNotifierDeclarativePlugin.so
 %%QT_QMLDIR%%/org/kde/discovernotifier/qmldir
 share/applications/org.kde.discover.desktop
+share/applications/org.kde.discover.urlhandler.desktop
 share/icons/hicolor/128x128/apps/plasmadiscover.png
 share/icons/hicolor/16x16/apps/plasmadiscover.png
 share/icons/hicolor/22x22/apps/plasmadiscover.png
@@ -65,6 +66,10 @@ share/locale/et/LC_MESSAGES/libdiscover.mo
 share/locale/et/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/et/LC_MESSAGES/plasma-discover.mo
 share/locale/et/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
+share/locale/eu/LC_MESSAGES/libdiscover.mo
+share/locale/eu/LC_MESSAGES/plasma-discover-notifier.mo
+share/locale/eu/LC_MESSAGES/plasma-discover.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.discovernotifier.mo
 share/locale/fi/LC_MESSAGES/libdiscover.mo
 share/locale/fi/LC_MESSAGES/plasma-discover-notifier.mo
 share/locale/fi/LC_MESSAGES/plasma-discover.mo
