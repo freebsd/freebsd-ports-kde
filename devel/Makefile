@@ -208,6 +208,7 @@
     SUBDIR += bossa
     SUBDIR += bouml-doc
     SUBDIR += bpython
+    SUBDIR += breakpad
     SUBDIR += bsdbuild
     SUBDIR += bsdcflow
     SUBDIR += bsdowl
@@ -672,7 +673,6 @@
     SUBDIR += gconfmm26
     SUBDIR += gcvs
     SUBDIR += gdb
-    SUBDIR += gdb66
     SUBDIR += gdbmods
     SUBDIR += gdcm
     SUBDIR += geany
@@ -827,6 +827,7 @@
     SUBDIR += godot-tools
     SUBDIR += goffice
     SUBDIR += goffice010
+    SUBDIR += gogland-eap
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
@@ -1186,7 +1187,6 @@
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
-    SUBDIR += insight
     SUBDIR += ioncube
     SUBDIR += ipython
     SUBDIR += ireport
@@ -5111,6 +5111,7 @@
     SUBDIR += py36-setuptools
     SUBDIR += py_static_check
     SUBDIR += pybugz
+    SUBDIR += pycharm-ce
     SUBDIR += pychecker
     SUBDIR += pycount
     SUBDIR += pydbus-common
@@ -5366,6 +5367,7 @@
     SUBDIR += rubygem-ddplugin
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
+    SUBDIR += rubygem-debugger-ruby_core_source
     SUBDIR += rubygem-debugger-xml
     SUBDIR += rubygem-declarative
     SUBDIR += rubygem-declarative-option
@@ -5603,6 +5605,11 @@
     SUBDIR += rubygem-peek
     SUBDIR += rubygem-peek-gc
     SUBDIR += rubygem-peek-host
+    SUBDIR += rubygem-peek-performance_bar
+    SUBDIR += rubygem-peek-rails4
+    SUBDIR += rubygem-peek-rblineprof
+    SUBDIR += rubygem-peek-redis
+    SUBDIR += rubygem-peek-sidekiq
     SUBDIR += rubygem-piston
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
@@ -5648,6 +5655,7 @@
     SUBDIR += rubygem-rb-fsevent
     SUBDIR += rubygem-rb-inotify
     SUBDIR += rubygem-rb-kqueue
+    SUBDIR += rubygem-rblineprof
     SUBDIR += rubygem-rbtrace
     SUBDIR += rubygem-rdoc
     SUBDIR += rubygem-re2
