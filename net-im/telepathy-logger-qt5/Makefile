@@ -1,12 +1,11 @@
 # $FreeBSD: branches/plasma5/KDE/net-im/telepathy-logger-qt5/Makefile 13705 2017-03-08 18:19:23Z tcberner $
 
-PORTNAME=	telepathy-logger-qt5
-PORTVERSION=	15.04.0
-PORTREVISION=	1
+PORTNAME=	telepathy-logger-qt
+PORTVERSION=	17.08.0
 CATEGORIES=	net-im
 MASTER_SITES=	${MASTER_SITE_KDE}
-MASTER_SITE_SUBDIR=	stable/${PORTNAME:C/5$//}/${PORTVERSION:R}/src
-DISTNAME=	${PORTNAME:C/5$//}-${PORTVERSION}
+MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION:R}/src
+PKGNAMESUFFIX=	5
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt binding for Telepathy Logger
