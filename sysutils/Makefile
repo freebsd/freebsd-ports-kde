@@ -44,6 +44,7 @@
     SUBDIR += apachetop
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += aptly
     SUBDIR += arcconf
     SUBDIR += archivemount
     SUBDIR += areca-cli
@@ -79,6 +80,11 @@
     SUBDIR += bacula5-client-static
     SUBDIR += bacula5-docs
     SUBDIR += bacula5-server
+    SUBDIR += bacula9-bat
+    SUBDIR += bacula9-client
+    SUBDIR += bacula9-client-static
+    SUBDIR += bacula9-docs
+    SUBDIR += bacula9-server
     SUBDIR += baloo
     SUBDIR += baloo-widgets
     SUBDIR += baloo-widgets-kde4

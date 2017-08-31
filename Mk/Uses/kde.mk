@@ -234,8 +234,8 @@ _USE_KDE5_ALL=	baseapps kate
 _USE_FRAMEWORKS_TIER1=	apidox archive bluez-qt breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
 			itemviews kirigami2 oxygen-icons5 plotting prison solid \
-			sonnet syntaxhighlighting threadweaver wayland widgetsaddons \
-			windowsystem
+			sonnet syntaxhighlighting threadweaver wayland \
+			widgetsaddons windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
 
 _USE_FRAMEWORKS_TIER2=	activities-stats auth completion crash doctools \

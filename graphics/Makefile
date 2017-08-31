@@ -148,6 +148,7 @@
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
     SUBDIR += driconf
+    SUBDIR += drm-next-kmod
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs

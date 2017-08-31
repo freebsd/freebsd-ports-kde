@@ -32,6 +32,7 @@
     SUBDIR += agame
     SUBDIR += ags
     SUBDIR += aisleriot
+    SUBDIR += aklabeth
     SUBDIR += alephone
     SUBDIR += alephone-data
     SUBDIR += alephone-scenarios
@@ -254,6 +255,7 @@
     SUBDIR += entombed
     SUBDIR += enygma
     SUBDIR += epiar
+    SUBDIR += epiphany-game
     SUBDIR += etracer
     SUBDIR += euchre
     SUBDIR += evilfinder

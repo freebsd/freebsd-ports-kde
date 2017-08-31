@@ -86,6 +86,7 @@
     SUBDIR += kf5-kconfigwidgets
     SUBDIR += kf5-kdesignerplugin
     SUBDIR += kf5-kguiaddons
+    SUBDIR += kf5-kirigami2
     SUBDIR += kf5-kitemviews
     SUBDIR += kf5-kirigami2
     SUBDIR += kf5-kjobwidgets
