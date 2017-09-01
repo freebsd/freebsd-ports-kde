@@ -1532,6 +1532,7 @@ QA_ENV+=		STAGEDIR=${STAGEDIR} \
 				LIB_RUN_DEPENDS='${_LIB_RUN_DEPENDS:C,[^:]*:([^:]*):?.*,\1,}' \
 				UNIFIED_DEPENDS=${_UNIFIED_DEPENDS:C,([^:]*:[^:]*):?.*,\1,:O:u:Q} \
 				PKGBASE=${PKGBASE} \
+				PORTNAME=${PORTNAME} \
 				NO_ARCH=${NO_ARCH} \
 				"NO_ARCH_IGNORE=${NO_ARCH_IGNORE}"
 .if !empty(USES:Mssl)
@@ -1734,6 +1735,20 @@ PKG_DEPENDS+=	${LOCALBASE}/sbin/pkg:${PKG_ORIGIN}
 
 .if defined(USE_GCC)
 .include "${PORTSDIR}/Mk/bsd.gcc.mk"
+.endif
+
+_TEST_LD=/usr/bin/ld
+.if defined(LLD_UNSAFE) && ${_TEST_LD:tA} == "/usr/bin/ld.lld"
+LDFLAGS+=	-fuse-ld=bfd
+.  if !defined(USE_BINUTILS)
+.    if exists(/usr/bin/ld.bfd)
+LD=	/usr/bin/ld.bfd
+CONFIGURE_ENV+=	LD=${LD}
+MAKE_ENV+=	LD=${LD}
+.    else
+USE_BINUTILS=	yes
+.    endif
+.  endif
 .endif
 
 .if defined(USE_BINUTILS) && !defined(DISABLE_BINUTILS)

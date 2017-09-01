@@ -7,12 +7,13 @@ PORTREVISION=	1
 CATEGORIES=	dns
 MASTER_SITES=	http://c-ares.haxx.se/download/ \
 		http://obsd.isc.org/pub/OpenBSD/distfiles/ \
-		http://mirrors.rit.edu/zi/
+		ZI
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Asynchronous DNS resolver library
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-werror

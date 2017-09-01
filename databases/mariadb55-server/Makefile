@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	5.5.56
-PORTREVISION?=	1
+PORTVERSION=	5.5.57
+PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
 		http://mirrors.supportex.net/mariadb/${PORTNAME}-${PORTVERSION}/source/ \
@@ -75,6 +75,7 @@ USE_LDCONFIG|=	${PREFIX}/lib/mysql/plugin
 CONFLICTS_INSTALL=	mariadb5[0-46-9]-server-* \
 			mariadb1*-server-* \
 			mysql[0-9]*-server-* \
+			mysqlwsrep* \
 			percona[0-9]*-server-*
 
 USE_RC_SUBR=	mysql-server

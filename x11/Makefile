@@ -8,6 +8,7 @@
     SUBDIR += 9menu
     SUBDIR += alacritty
     SUBDIR += alltray
+    SUBDIR += alttab
     SUBDIR += altyo
     SUBDIR += antimicro
     SUBDIR += appres
@@ -33,6 +34,7 @@
     SUBDIR += cinnamon-screensaver
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
+    SUBDIR += cl-clx-sbcl
     SUBDIR += compositeproto
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
@@ -52,12 +54,14 @@
     SUBDIR += docker-tray
     SUBDIR += dri2proto
     SUBDIR += dri3proto
+    SUBDIR += dsbautostart
     SUBDIR += dxpc
     SUBDIR += dynamag
     SUBDIR += dzen2
     SUBDIR += eaglemode
     SUBDIR += editres
     SUBDIR += emprint
+    SUBDIR += enventor
     SUBDIR += erun
     SUBDIR += eterm
     SUBDIR += evieext
@@ -289,6 +293,7 @@
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
     SUBDIR += sbxkb
+    SUBDIR += screen-message
     SUBDIR += scripts
     SUBDIR += scrnsaverproto
     SUBDIR += sessreg

@@ -114,6 +114,7 @@
     SUBDIR += dpdk
     SUBDIR += dpinger
     SUBDIR += drawterm
+    SUBDIR += drive
     SUBDIR += dropbox-api-command
     SUBDIR += dropbox-uploader
     SUBDIR += dshell
@@ -204,6 +205,7 @@
     SUBDIR += gssdp
     SUBDIR += gstreamer-plugins-libmms
     SUBDIR += gstreamer1-plugins-libmms
+    SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtic
     SUBDIR += gtk-vnc
     SUBDIR += gtknetcat
@@ -444,6 +446,7 @@
     SUBDIR += ncp
     SUBDIR += ndisc6
     SUBDIR += ndpi
+    SUBDIR += ndproxy
     SUBDIR += nepenthes
     SUBDIR += nepim
     SUBDIR += net6
@@ -943,6 +946,7 @@
     SUBDIR += pipsecd
     SUBDIR += pjsip
     SUBDIR += pjsip-extsrtp
+    SUBDIR += pkt-gen
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
@@ -1166,6 +1170,8 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
+    SUBDIR += rubygem-fog-internet-archive
+    SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
     SUBDIR += rubygem-fog-openstack
     SUBDIR += rubygem-fog-powerdns
@@ -1200,7 +1206,6 @@
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
-    SUBDIR += rubygem-oauth212
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
@@ -1219,6 +1224,7 @@
     SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
+    SUBDIR += rubygem-proxifier
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
@@ -1307,6 +1313,7 @@
     SUBDIR += sqtop
     SUBDIR += srelay
     SUBDIR += ss5
+    SUBDIR += sshping
     SUBDIR += ssldump
     SUBDIR += sslh
     SUBDIR += ssltunnel-client

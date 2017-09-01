@@ -105,12 +105,12 @@
     SUBDIR += noip
     SUBDIR += nsd
     SUBDIR += nslint
+    SUBDIR += nsnotifyd
     SUBDIR += nsping
     SUBDIR += nss_mdns
     SUBDIR += nss_resinit
     SUBDIR += opendd
     SUBDIR += opendnssec
-    SUBDIR += opendnssec13
     SUBDIR += opendnssec2
     SUBDIR += openmdns
     SUBDIR += openresolv
@@ -193,8 +193,10 @@
     SUBDIR += renewck
     SUBDIR += rpsl2acl
     SUBDIR += rubygem-dnsruby
+    SUBDIR += rubygem-idn-ruby
     SUBDIR += rubygem-net-dns
     SUBDIR += rubygem-public_suffix
+    SUBDIR += rubygem-public_suffix2
     SUBDIR += rubygem-public_suffix_service
     SUBDIR += rubygem-simpleidn
     SUBDIR += rubygem-validates_hostname

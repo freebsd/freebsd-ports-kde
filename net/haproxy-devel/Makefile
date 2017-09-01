@@ -3,6 +3,7 @@
 
 PORTNAME=	haproxy
 DISTVERSION=	1.8-dev2
+PORTREVISION=	2
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/1.8/src/devel/
 PKGNAMESUFFIX=	-devel
@@ -19,12 +20,12 @@ CONFLICTS_INSTALL=	haproxy-[1234567890]\*
 USES=		cpe gmake
 USE_RC_SUBR=	haproxy
 
-DEVICEATLAS_VERSION=	2.1.2_1
+DEVICEATLAS_VERSION=	2.1.2_2
 DEVICEATLAS_DISTFILE=	deviceatlas-enterprise-c-${DEVICEATLAS_VERSION}
 DEVICEATLAS_REGISTRATION_URL=	https://deviceatlas.com/deviceatlas-haproxy-module
 
 MAKE_ARGS=	TARGET=freebsd DEFINE=-DFREEBSD_PORTS USE_GETADDRINFO=1 \
-		USE_ZLIB=1 USE_CPU_AFFINITY=1 USE_REGPARM=1 USE_ACCEPT4=1 \
+		USE_ZLIB=1 USE_CPU_AFFINITY=1 USE_ACCEPT4=1 \
 		CC="${CC}" DEBUG_CFLAGS="" CPU_CFLAGS="${CFLAGS}"
 
 OPTIONS_DEFINE=		DOCS EXAMPLES LUA OPENSSL DEVICEATLAS
@@ -82,4 +83,10 @@ do-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/examples/ && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR})
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == "amd64" || ${ARCH} == "i386"
+MAKE_ARGS+=	USE_REGPARM=1
+.endif
+
+.include <bsd.port.post.mk>

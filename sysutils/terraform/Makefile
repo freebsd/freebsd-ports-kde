@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	terraform
-PORTVERSION=	0.9.11
+PORTVERSION=	0.10.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
 MAINTAINER=	lifanov@FreeBSD.org
 COMMENT=	Provides a common configuration to launch infrastructure
 
-LICENSE=	MPL
+LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_GITHUB=	yes

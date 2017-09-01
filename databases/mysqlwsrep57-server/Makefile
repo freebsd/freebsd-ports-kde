@@ -3,16 +3,24 @@
 
 PORTNAME=	mysqlwsrep
 PORTVERSION?=	5.7.18
+DISTVERSIONPREFIX?=	wsrep_
 DISTVERSIONSUFFIX?=	-25.12
+PORTREVISION?=	1
 CATEGORIES=	databases ipv6
+MASTER_SITES+=	SF/boost/boost/1.59.0:boost
 PKGNAMESUFFIX=	57-server
+DISTFILES+=	boost_1_59_0${EXTRACT_SUFX}:boost
 
 MAINTAINER=	devel@galeracluster.com
 COMMENT=	MySQL database enhanced with Galera replication (server package)
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	socat:net/socat lsof:sysutils/lsof netcat:net/netcat rsync:net/rsync
+RUN_DEPENDS=	bash:shells/bash \
+		lsof:sysutils/lsof \
+		netcat:net/netcat \
+		rsync:net/rsync \
+		socat:net/socat
 LIB_DEPENDS=	libevent.so:devel/libevent liblz4.so:archivers/liblz4
 
 USES=		bison \
@@ -34,7 +42,6 @@ MY_TMPDIR=	/var/db/mysql_tmpdir
 USE_GITHUB=	yes
 GH_ACCOUNT=	codership
 GH_PROJECT?=	mysql-wsrep
-GH_TAGNAME?=	wsrep_${DISTVERSION}${DISTVERSIONSUFFIX}
 
 DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
@@ -61,7 +68,7 @@ CMAKE_ARGS+=	-DINSTALL_LAYOUT=FREEBSD \
 		-DINSTALL_SHAREDIR="share" \
 		-DINSTALL_SUPPORTFILESDIR="share/mysql" \
 		-DMYSQL_KEYRINGDIR="${ETCDIR}/keyring" \
-		-DWITH_BOOST="${WRKSRC}/boost" \
+		-DWITH_BOOST="${WRKDIR}/boost_1_59_0" \
 		-DWITH_EDITLINE=system \
 		-DWITH_LIBEVENT=system \
 		-DWITH_LZ4=system \

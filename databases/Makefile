@@ -33,6 +33,7 @@
     SUBDIR += cego
     SUBDIR += cegobridge
     SUBDIR += clickhouse
+    SUBDIR += cockroach
     SUBDIR += couchdb
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -97,7 +98,8 @@
     SUBDIR += gomdb
     SUBDIR += gosqlite3
     SUBDIR += gqlplus
-    SUBDIR += grass
+    SUBDIR += grass6
+    SUBDIR += grass7
     SUBDIR += gtksql
     SUBDIR += hamsterdb
     SUBDIR += hashtypes
@@ -157,7 +159,6 @@
     SUBDIR += libpbl
     SUBDIR += libpqtypes
     SUBDIR += libsdb
-    SUBDIR += libzbxpgsql
     SUBDIR += libzdb
     SUBDIR += linux-c6-sqlite3
     SUBDIR += linux-c7-sqlite3
@@ -567,6 +568,8 @@
     SUBDIR += percona57-server
     SUBDIR += pg_activity
     SUBDIR += pg_citus
+    SUBDIR += pg_dirtyread
+    SUBDIR += pg_partman
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
     SUBDIR += pg_repack
@@ -584,6 +587,7 @@
     SUBDIR += pgFormatter
     SUBDIR += pgfouine
     SUBDIR += pgloader
+    SUBDIR += pgloader3
     SUBDIR += pglogical
     SUBDIR += pgmodeler
     SUBDIR += pgpool
@@ -658,6 +662,7 @@
     SUBDIR += postgis21
     SUBDIR += postgis22
     SUBDIR += postgis23
+    SUBDIR += postgres-xl
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -665,12 +670,23 @@
     SUBDIR += postgresql-libpqxx3
     SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
+    SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plruby
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-repmgr2
+    SUBDIR += postgresql-tds_fdw
+    SUBDIR += postgresql-zhparser
+    SUBDIR += postgresql10-client
+    SUBDIR += postgresql10-contrib
+    SUBDIR += postgresql10-docs
+    SUBDIR += postgresql10-pgtcl
+    SUBDIR += postgresql10-plperl
+    SUBDIR += postgresql10-plpython
+    SUBDIR += postgresql10-pltcl
+    SUBDIR += postgresql10-server
     SUBDIR += postgresql92-client
     SUBDIR += postgresql92-contrib
     SUBDIR += postgresql92-docs
@@ -721,8 +737,10 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += puppetdb-terminus3
     SUBDIR += puppetdb-terminus4
+    SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb3
     SUBDIR += puppetdb4
+    SUBDIR += puppetdb5
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -765,7 +783,6 @@
     SUBDIR += py-mysql-connector-python2
     SUBDIR += py-mysql2pgsql
     SUBDIR += py-mysqlclient
-    SUBDIR += py-odbc
     SUBDIR += py-oops
     SUBDIR += py-oursql
     SUBDIR += py-peewee
@@ -785,6 +802,7 @@
     SUBDIR += py-pylibmc
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
+    SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb
     SUBDIR += py-pypuppetdb03
     SUBDIR += py-pytc
@@ -876,6 +894,7 @@
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
+    SUBDIR += rubygem-active_model_serializers
     SUBDIR += rubygem-active_record_query_trace
     SUBDIR += rubygem-activemodel-serializers-xml
     SUBDIR += rubygem-activemodel4
@@ -934,12 +953,15 @@
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-jdbc-mysql
     SUBDIR += rubygem-leo_manager_client
+    SUBDIR += rubygem-mario-redis-lock
     SUBDIR += rubygem-memcache
     SUBDIR += rubygem-memcache-client
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
+    SUBDIR += rubygem-peek-mysql2
+    SUBDIR += rubygem-peek-pg
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pghero
@@ -980,7 +1002,6 @@
     SUBDIR += sqlite2
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser
-    SUBDIR += sqlitebrowser-qt5
     SUBDIR += sqliteconvert
     SUBDIR += sqliteman
     SUBDIR += sqlitemanager
@@ -1021,6 +1042,9 @@
     SUBDIR += xapian-core10
     SUBDIR += xapian-core12
     SUBDIR += xtrabackup
+    SUBDIR += zabbix22-libzbxpgsql
+    SUBDIR += zabbix3-libzbxpgsql
+    SUBDIR += zabbix32-libzbxpgsql
     SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>

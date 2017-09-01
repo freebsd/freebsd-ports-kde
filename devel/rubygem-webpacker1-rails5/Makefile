@@ -6,7 +6,7 @@ CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	1-rails5
 
-MAINTAINER=	jrm@FreeBSD.org
+MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Use Webpack to manage app-like JavaScript modules in Rails
 
 LICENSE=	MIT
@@ -16,6 +16,9 @@ RUN_DEPENDS=	rubygem-activesupport5>0:devel/rubygem-activesupport5 \
 		rubygem-multi_json>=1.2:devel/rubygem-multi_json \
 		rubygem-railties5>0:www/rubygem-railties5 \
 		yarn>0:www/yarn
+
+DEPRECATED=	Use devel/rubygem-webpacker-rails5 instead
+EXPIRATION_DATE=2017-08-31
 
 PORTSCOUT=	limit:^1\.
 

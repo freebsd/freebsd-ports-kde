@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	trac
-PORTVERSION=	1.2.1
+PORTVERSION=	1.2.2
 CATEGORIES=	www devel python
 MASTER_SITES=	http://ftp.edgewall.com/pub/trac/ \
 		ftp://ftp.edgewall.com/pub/trac/

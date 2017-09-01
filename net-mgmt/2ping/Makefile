@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	2ping
-PORTVERSION=	3.2.1
+PORTVERSION=	4.1
 CATEGORIES=	net-mgmt perl5
-MASTER_SITES=	http://www.finnie.org/software/2ping/ \
+MASTER_SITES=	https://www.finnie.org/software/2ping/ \
 		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 NO_ARCH=	yes
-USE_PYTHON=	autoplist concurrent distutils
-USES=		python
+USE_PYTHON=	autoplist distutils
+USES=		python:3.4+
 
 .include <bsd.port.mk>

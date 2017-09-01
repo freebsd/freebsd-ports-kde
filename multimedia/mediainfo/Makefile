@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mediainfo
-PORTVERSION=	0.7.97
+PORTVERSION=	0.7.98
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mediaarea.net/download/binary/${PORTNAME}/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -14,10 +14,10 @@ COMMENT=	Provides technical and tag information for video and audio files
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/../../../License.html
 
+BROKEN_powerpc64=	does not build: undefined reference to fmodl
+
 LIB_DEPENDS=	libmediainfo.so:multimedia/libmediainfo \
 		libzen.so:multimedia/libzen
-
-BROKEN_powerpc64=	does not build: undefined reference to fmodl
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

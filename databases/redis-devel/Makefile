@@ -2,8 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	4.0-rc3
+DISTVERSION=	4.0.1
 CATEGORIES=	databases
+MASTER_SITES=	http://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	osa@FreeBSD.org
@@ -11,9 +12,9 @@ COMMENT=	Persistent key-value database with built-in net interface
 
 LICENSE=	BSD3CLAUSE
 
+BROKEN_FreeBSD_10_i386=	undefined reference to __atomic_fetch_add_8
+
 USES=		execinfo
-USE_GITHUB=	yes
-GH_ACCOUNT=	antirez
 
 OPTIONS_DEFINE=	TESTS TRIB
 OPTIONS_RADIO=	EXTLUA
@@ -25,6 +26,11 @@ TESTS_DESC=	Install lang/tcl for redis unit tests
 TRIB_DESC=	Install redis-trib.rb (lang/ruby req.)
 
 .include <bsd.port.options.mk>
+
+.if ${ARCH} == i386 && ! ${CFLAGS:M-march=*}
+# Needed for __atomic_fetch_add_8
+CFLAGS+=	-march=i586
+.endif
 
 .if ${PORT_OPTIONS:MTRIB}
 CATEGORIES+=	ruby

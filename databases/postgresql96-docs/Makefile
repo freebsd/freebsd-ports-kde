@@ -2,15 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	postgresql
-PKGNAMESUFFIX?=	${DISTV:S/.//}-docs
+PKGNAMESUFFIX?=	${WANT_PGSQL_VER:S,.,,}-docs
 DISTV=	${DISTVERSION:R}
 
 MAINTAINER=	pgsql@FreeBSD.org
 COMMENT=	The PostgreSQL documentation set
 
 MASTERDIR=	${.CURDIR}/../../databases/postgresql${WANT_PGSQL_VER:S/.//}-server
-
-USES+=		pgsql:${WANT_PGSQL_VER}
 WANT_PGSQL_VER?=9.6
 
 SLAVE_ONLY=	YES
@@ -27,6 +25,8 @@ BUILD_DEPENDS+=	onsgmls:textproc/opensp			\
 		${sgmldir}/iso8879/catalog:textproc/iso8879	\
 		${dbdir}/dsssl/modular/catalog:textproc/dsssl-docbook-modular \
 		docbook-sgml>0:textproc/docbook-sgml
+CONFIGURE_ARGS= --without-readline
+NO_ARCH=	yes
 
 do-build:
 	${MAKE_CMD} -C ${WRKSRC} html

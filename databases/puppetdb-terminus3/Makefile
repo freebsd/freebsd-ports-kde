@@ -6,14 +6,14 @@ CATEGORIES=	databases ruby
 MASTER_SITES=	http://downloads.puppetlabs.com/puppetdb/
 DISTNAME=	puppetdb-${PORTVERSION}
 
-MAINTAINER=	freebsd@zleslie.info
+MAINTAINER=	puppet@FreeBSD.org
 COMMENT=	PuppetDB storeconfigs backend terminus module
 
 LICENSE=	APACHE20
 
 BUILD_DEPENDS=	puppet:sysutils/puppet4
 
-CONFLICTS_INSTALL=	puppetdb-terminus-* puppetdb-terminus4-*
+CONFLICTS_INSTALL=	puppetdb-terminus4-* puppetdb-terminus5-*
 USE_RUBY=	yes
 NO_BUILD=	yes
 

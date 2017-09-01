@@ -24,12 +24,10 @@ DISTNAME=	${PORTNAME}_${DISTVERSION}${DISTNAME_SUFFIX}
 MAINTAINER=	ler@FreeBSD.org
 COMMENT=	Lists information about open files (similar to fstat(1))
 
-LICENSE=lsof
-LICENSE_NAME=lsof
-LICENSE_FILE=${FILESDIR}/LICENSE
-LICENSE_PERMS=	 dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
-
-BROKEN_powerpc64=	fails to compile: sys/pcpu.h: error: size of array '__assert_0' is negative
+LICENSE=	lsof
+LICENSE_NAME=	lsof
+LICENSE_FILE=	${FILESDIR}/LICENSE
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 #Please leave the below line in for the next clean up.
 FIXUP_RELEASE=	YES
