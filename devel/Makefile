@@ -31,6 +31,7 @@
     SUBDIR += R-cran-gbm
     SUBDIR += R-cran-gdata
     SUBDIR += R-cran-glmnet
+    SUBDIR += R-cran-glue
     SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
     SUBDIR += R-cran-gtools
@@ -45,6 +46,7 @@
     SUBDIR += R-cran-plyr
     SUBDIR += R-cran-praise
     SUBDIR += R-cran-proto
+    SUBDIR += R-cran-purrr
     SUBDIR += R-cran-randomForest
     SUBDIR += R-cran-registry
     SUBDIR += R-cran-repr
@@ -58,6 +60,7 @@
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
+    SUBDIR += R-cran-tidyselect
     SUBDIR += SpecTcl
     SUBDIR += aap
     SUBDIR += aarch64-binutils
@@ -4525,6 +4528,7 @@
     SUBDIR += py-log4py
     SUBDIR += py-logan
     SUBDIR += py-logbook
+    SUBDIR += py-logfury
     SUBDIR += py-logilab-common
     SUBDIR += py-logutils
     SUBDIR += py-louie
@@ -5055,7 +5059,6 @@
     SUBDIR += py3-dbus
     SUBDIR += py3-defusedxml
     SUBDIR += py3-docopt
-    SUBDIR += py3-enum34
     SUBDIR += py3-flake8
     SUBDIR += py3-flake8-builtins
     SUBDIR += py3-flake8-docstrings
@@ -5115,7 +5118,6 @@
     SUBDIR += py3-wcwidth
     SUBDIR += py3-xdg
     SUBDIR += py3-yaml
-    SUBDIR += py33-setuptools
     SUBDIR += py34-setuptools
     SUBDIR += py35-setuptools
     SUBDIR += py36-setuptools
@@ -5733,7 +5735,6 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-sentry-raven
     SUBDIR += rubygem-sequel
-    SUBDIR += rubygem-sequel3
     SUBDIR += rubygem-settingslogic
     SUBDIR += rubygem-sexp_processor
     SUBDIR += rubygem-shoulda
@@ -5742,11 +5743,9 @@
     SUBDIR += rubygem-sidekiq
     SUBDIR += rubygem-sidekiq-bulk-rails5
     SUBDIR += rubygem-sidekiq-cron
-    SUBDIR += rubygem-sidekiq-cron04
     SUBDIR += rubygem-sidekiq-limit_fetch
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
-    SUBDIR += rubygem-sidekiq4
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple-navigation
@@ -5837,7 +5836,6 @@
     SUBDIR += rubygem-webby
     SUBDIR += rubygem-webpacker-rails5
     SUBDIR += rubygem-webpacker-rails50
-    SUBDIR += rubygem-webpacker1-rails5
     SUBDIR += rubygem-will_paginate
     SUBDIR += rubygem-windows_error
     SUBDIR += rubygem-wmi-lite
@@ -6070,6 +6068,7 @@
     SUBDIR += yajl-tcl
     SUBDIR += yaml-cpp
     SUBDIR += yaml-cpp03
+    SUBDIR += yaml2argdata
     SUBDIR += yasm
     SUBDIR += yasm-devel
     SUBDIR += z80-asm

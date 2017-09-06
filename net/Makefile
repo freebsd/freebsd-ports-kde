@@ -73,6 +73,7 @@
     SUBDIR += cagibi
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
+    SUBDIR += ceph
     SUBDIR += ceph-devel
     SUBDIR += cf
     SUBDIR += chrony

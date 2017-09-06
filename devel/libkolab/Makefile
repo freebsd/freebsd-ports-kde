@@ -17,7 +17,7 @@ LIB_DEPENDS=	libboost_atomic.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
 		libical.so:devel/libical \
 		libkolabxml.so:textproc/libkolabxml \
-		libxerces-c-3.1.so:textproc/xerces-c3
+		libxerces-c.so:textproc/xerces-c3
 
 USES=		cmake:outsource kde:5
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
