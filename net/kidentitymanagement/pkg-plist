@@ -18,7 +18,7 @@ lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets-%%CMAKE_BUILD_TYPE%
 lib/cmake/KF5IdentityManagement/KF5IdentityManagementTargets.cmake
 lib/libKF5IdentityManagement.so
 lib/libKF5IdentityManagement.so.5
-lib/libKF5IdentityManagement.so.%%SHLIB_VER%%
+lib/libKF5IdentityManagement.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KIdentityManagement.pri
 share/dbus-1/interfaces/kf5_org.kde.pim.IdentityManager.xml
 share/locale/ar/LC_MESSAGES/libkpimidentities5.mo

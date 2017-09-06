@@ -56,7 +56,7 @@ lib/cmake/KF5CalendarSupport/KF5CalendarSupportTargets-%%CMAKE_BUILD_TYPE%%.cmak
 lib/cmake/KF5CalendarSupport/KF5CalendarSupportTargets.cmake
 lib/libKF5CalendarSupport.so
 lib/libKF5CalendarSupport.so.5
-lib/libKF5CalendarSupport.so.%%SHLIB_VER%%
+lib/libKF5CalendarSupport.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_CalendarSupport.pri
 share/kservicetypes5/calendarplugin.desktop
 share/locale/ar/LC_MESSAGES/calendarsupport.mo

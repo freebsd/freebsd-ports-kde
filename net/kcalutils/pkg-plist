@@ -25,7 +25,7 @@ lib/cmake/KF5CalendarUtils/KF5CalendarUtilsTargets.cmake
 lib/grantlee/%%GRANTLEE_VERSION_SHORT%%/kcalendar_grantlee_plugin.so
 lib/libKF5CalendarUtils.so
 lib/libKF5CalendarUtils.so.5
-lib/libKF5CalendarUtils.so.%%SHLIB_VER%%
+lib/libKF5CalendarUtils.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KCalUtils.pri
 share/locale/ar/LC_MESSAGES/libkcalutils5.mo
 share/locale/ast/LC_MESSAGES/libkcalutils5.mo

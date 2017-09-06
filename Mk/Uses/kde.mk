@@ -79,6 +79,7 @@ KDE_FRAMEWORKS_VERSION?=	5.37.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 KDE_APPLICATIONS_VERSION?=	17.08.1
+KDE_APPLICATIONS_SHLIB_VER=	5.6.1
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -125,10 +126,12 @@ MASTER_SITES?=		KDE/Attic/applications/${KDE_APPLICATIONS_VERSION}/src
 .      else
 MASTER_SITES?=		KDE/${KDE_APPLICATIONS_BRANCH}/applications/${KDE_APPLICATIONS_VERSION}/src
 # Let bsd.port.mk create the plist-entries for the documentation.
-# KDE Applications ports install their documentation to 
+# KDE Applications ports install their documentation to
 # ${PREFIX}/share/doc.
 DOCSDIR=		${PREFIX}/share/doc
 PORTDOCS?=		HTML/*
+# Further pass along a SHLIB_VER PLIST_SUB
+PLIST_SUB+=		KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_SHLIB_VER}
 .      endif
 DIST_SUBDIR?=		KDE/applications/${KDE_APPLICATIONS_VERSION}
 .    elif ${_KDE_CATEGORY:Mkde-plasma}

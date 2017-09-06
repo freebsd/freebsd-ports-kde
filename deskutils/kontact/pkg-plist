@@ -2,7 +2,7 @@ bin/kontact
 etc/xdg/kontact.categories
 etc/xdg/kontact.renamecategories
 lib/libkontactprivate.so.5
-lib/libkontactprivate.so.%%SHLIB_VER%%
+lib/libkontactprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kcm_kontact.so
 share/applications/org.kde.kontact.desktop
 share/config.kcfg/kontact.kcfg

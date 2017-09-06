@@ -72,10 +72,10 @@ lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiTargets-%%CMAKE_BUILD_TYP
 lib/cmake/KF5MailImporterAkonadi/KF5MailImporterAkonadiTargets.cmake
 lib/libKF5MailImporter.so
 lib/libKF5MailImporter.so.5
-lib/libKF5MailImporter.so.%%SHLIB_VER%%
+lib/libKF5MailImporter.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5MailImporterAkonadi.so
 lib/libKF5MailImporterAkonadi.so.5
-lib/libKF5MailImporterAkonadi.so.%%SHLIB_VER%%
+lib/libKF5MailImporterAkonadi.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_MailImporter.pri
 %%QT_MKSPECDIR%%/modules/qt_MailImporterAkonadi.pri
 share/locale/ar/LC_MESSAGES/libmailimporter.mo

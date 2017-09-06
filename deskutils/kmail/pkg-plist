@@ -8,7 +8,7 @@ etc/xdg/kmail.categories
 etc/xdg/kmail.renamecategories
 etc/xdg/ktnef.categories
 lib/libkmailprivate.so.5
-lib/libkmailprivate.so.%%SHLIB_VER%%
+lib/libkmailprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kcm_kmail.so
 %%QT_PLUGINDIR%%/kcm_kmailsummary.so
 %%QT_PLUGINDIR%%/kcm_kontactsummary.so

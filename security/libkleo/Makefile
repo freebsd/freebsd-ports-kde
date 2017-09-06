@@ -19,8 +19,6 @@ USE_KDE=	completion config coreaddons i18n widgetsaddons windowsystem \
 		pimtextedit
 USE_QT5=	buildtools_build qmake_build widgets
 
-PLIST_SUB=	SHLIB_VER="5.6.1"
-
 post-extract:
 # use the binaries of coreutils
 	${REINPLACE_CMD} -e '/create-command/ s#sha1sum#gsha1sum#' \

@@ -21,7 +21,7 @@ lib/cmake/KF5Holidays/KF5HolidaysTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Holidays/KF5HolidaysTargets.cmake
 lib/libKF5Holidays.so
 lib/libKF5Holidays.so.5
-lib/libKF5Holidays.so.%%SHLIB_VER%%
+lib/libKF5Holidays.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KHolidays.pri
 %%QT_QMLDIR%%/org/kde/kholidays/libkholidaysdeclarativeplugin.so
 %%QT_QMLDIR%%/org/kde/kholidays/qmldir

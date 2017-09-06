@@ -27,7 +27,7 @@ lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5AlarmCalendar/KF5AlarmCalendarTargets.cmake
 lib/libKF5AlarmCalendar.so
 lib/libKF5AlarmCalendar.so.5
-lib/libKF5AlarmCalendar.so.%%SHLIB_VER%%
+lib/libKF5AlarmCalendar.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KAlarmCal.pri
 share/locale/ar/LC_MESSAGES/libkalarmcal5.mo
 share/locale/ast/LC_MESSAGES/libkalarmcal5.mo

@@ -77,7 +77,7 @@ lib/cmake/KF5Libkleo/KF5LibkleoTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Libkleo/KF5LibkleoTargets.cmake
 lib/libKF5Libkleo.so
 lib/libKF5Libkleo.so.5
-lib/libKF5Libkleo.so.%%SHLIB_VER%%
+lib/libKF5Libkleo.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_Libkleo.pri
 %%DATADIR%%patra/pics/chiasmus_chi.png
 %%DATADIR%%patra/pics/hi16-app-gpg.png

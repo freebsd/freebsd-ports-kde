@@ -7,12 +7,12 @@ etc/xdg/korganizer.knsrc
 etc/xdg/korganizer.renamecategories
 lib/libkorganizer_core.so
 lib/libkorganizer_core.so.5
-lib/libkorganizer_core.so.%%SHLIB_VER%%
+lib/libkorganizer_core.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libkorganizer_interfaces.so
 lib/libkorganizer_interfaces.so.5
-lib/libkorganizer_interfaces.so.%%SHLIB_VER%%
+lib/libkorganizer_interfaces.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libkorganizerprivate.so.5
-lib/libkorganizerprivate.so.%%SHLIB_VER%%
+lib/libkorganizerprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kcm_apptsummary.so
 %%QT_PLUGINDIR%%/kcm_korganizer.so
 %%QT_PLUGINDIR%%/kcm_sdsummary.so

@@ -33,7 +33,7 @@ lib/cmake/KF5Blog/KF5BlogTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Blog/KF5BlogTargets.cmake
 lib/libKF5Blog.so
 lib/libKF5Blog.so.5
-lib/libKF5Blog.so.%%SHLIB_VER%%
+lib/libKF5Blog.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KBlog.pri
 share/locale/ar/LC_MESSAGES/libkblog5.mo
 share/locale/ast/LC_MESSAGES/libkblog5.mo

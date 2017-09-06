@@ -2,7 +2,7 @@ bin/sieveeditor
 etc/xdg/sieveeditor.categories
 etc/xdg/sieveeditor.renamecategories
 lib/libsieveeditor.so.5
-lib/libsieveeditor.so.%%SHLIB_VER%%
+lib/libsieveeditor.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 share/applications/org.kde.sieveeditor.desktop
 share/config.kcfg/sieveeditorglobalconfig.kcfg
 share/kconf_update/sieveeditor-15.08-kickoff.sh

@@ -7,13 +7,13 @@ etc/xdg/kdepim-addons.renamecategories
 etc/xdg/kmail.antispamrc
 etc/xdg/kmail.antivirusrc
 lib/contacteditor/editorpageplugins/cryptopageplugin.so
-lib/libadblocklibprivate.so.%%SHLIB_VER%%
+lib/libadblocklibprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libadblocklibprivate.so.5
-lib/libkaddressbookimportexportlibprivate.so.%%SHLIB_VER%%
+lib/libkaddressbookimportexportlibprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libkaddressbookimportexportlibprivate.so.5
-lib/libkaddressbookmergelibprivate.so.%%SHLIB_VER%%
+lib/libkaddressbookmergelibprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libkaddressbookmergelibprivate.so.5
-lib/libshorturlpluginprivate.so.%%SHLIB_VER%%
+lib/libshorturlpluginprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libshorturlpluginprivate.so.5
 %%QT_PLUGINDIR%%/kaddressbook/kaddressbook_checkgravatarplugin.so
 %%QT_PLUGINDIR%%/kaddressbook/kaddressbook_importexportcsvplugin.so

@@ -4,9 +4,9 @@ etc/xdg/akregator.categories
 etc/xdg/akregator.renamecategories
 lib/libakregatorinterfaces.so
 lib/libakregatorinterfaces.so.5
-lib/libakregatorinterfaces.so.%%SHLIB_VER%%
+lib/libakregatorinterfaces.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libakregatorprivate.so.5
-lib/libakregatorprivate.so.%%SHLIB_VER%%
+lib/libakregatorprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/akregator_config_advanced.so
 %%QT_PLUGINDIR%%/akregator_config_appearance.so
 %%QT_PLUGINDIR%%/akregator_config_archive.so

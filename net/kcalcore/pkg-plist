@@ -72,5 +72,5 @@ lib/cmake/KF5CalendarCore/KF5CalendarCoreTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5CalendarCore/KF5CalendarCoreTargets.cmake
 lib/libKF5CalendarCore.so
 lib/libKF5CalendarCore.so.5
-lib/libKF5CalendarCore.so.%%SHLIB_VER%%
+lib/libKF5CalendarCore.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KCalCore.pri

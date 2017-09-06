@@ -9,7 +9,7 @@ lib/cmake/KF5AkonadiNotes/KF5AkonadiNotesTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5AkonadiNotes/KF5AkonadiNotesTargets.cmake
 lib/libKF5AkonadiNotes.so
 lib/libKF5AkonadiNotes.so.5
-lib/libKF5AkonadiNotes.so.%%SHLIB_VER%%
+lib/libKF5AkonadiNotes.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_AkonadiNotes.pri
 share/locale/ar/LC_MESSAGES/akonadinotes5.mo
 share/locale/ast/LC_MESSAGES/akonadinotes5.mo

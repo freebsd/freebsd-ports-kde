@@ -134,10 +134,10 @@ lib/cmake/KF5PimCommonAkonadi/KF5PimCommonAkonadiTargets-%%CMAKE_BUILD_TYPE%%.cm
 lib/cmake/KF5PimCommonAkonadi/KF5PimCommonAkonadiTargets.cmake
 lib/libKF5PimCommon.so
 lib/libKF5PimCommon.so.5
-lib/libKF5PimCommon.so.%%SHLIB_VER%%
+lib/libKF5PimCommon.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5PimCommonAkonadi.so
 lib/libKF5PimCommonAkonadi.so.5
-lib/libKF5PimCommonAkonadi.so.%%SHLIB_VER%%
+lib/libKF5PimCommonAkonadi.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_PimCommon.pri
 %%QT_MKSPECDIR%%/modules/qt_PimCommonAkonadi.pri
 %%QT_PLUGINDIR%%/designer/pimcommonwidgets.so

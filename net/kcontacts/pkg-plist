@@ -68,7 +68,7 @@ lib/cmake/KF5Contacts/KF5ContactsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Contacts/KF5ContactsTargets.cmake
 lib/libKF5Contacts.so
 lib/libKF5Contacts.so.5
-lib/libKF5Contacts.so.%%SHLIB_VER%%
+lib/libKF5Contacts.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KContacts.pri
 share/kf5/kcontacts/countrytransl.map
 share/locale/ar/LC_MESSAGES/kcontacts5.mo

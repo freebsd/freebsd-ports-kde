@@ -4,9 +4,9 @@ etc/xdg/knotes.categories
 etc/xdg/knotes.renamecategories
 etc/xdg/knotes_printing_theme.knsrc
 lib/libknotesprivate.so.5
-lib/libknotesprivate.so.%%SHLIB_VER%%
+lib/libknotesprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libnotesharedprivate.so.5
-lib/libnotesharedprivate.so.%%SHLIB_VER%%
+lib/libnotesharedprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kcm_knote.so
 %%QT_PLUGINDIR%%/kcm_knotessummary.so
 %%QT_PLUGINDIR%%/kontact_knotesplugin.so

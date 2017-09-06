@@ -23,7 +23,7 @@ lib/cmake/KPimImportWizard/KPimImportWizardTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPimImportWizard/KPimImportWizardTargets.cmake
 lib/libKPimImportWizard.so
 lib/libKPimImportWizard.so.5
-lib/libKPimImportWizard.so.%%SHLIB_VER%%
+lib/libKPimImportWizard.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/importwizard/balsaimporterplugin.so
 %%QT_PLUGINDIR%%/importwizard/clawsmailimporterplugin.so
 %%QT_PLUGINDIR%%/importwizard/evolutionv3importerplugin.so

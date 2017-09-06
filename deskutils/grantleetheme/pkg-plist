@@ -24,7 +24,7 @@ lib/cmake/KF5GrantleeTheme/KF5GrantleeThemeTargets.cmake
 lib/grantlee/%%GRANTLEE_VERSION_SHORT%%/kde_grantlee_plugin.so
 lib/libKF5GrantleeTheme.so
 lib/libKF5GrantleeTheme.so.5
-lib/libKF5GrantleeTheme.so.%%SHLIB_VER%%
+lib/libKF5GrantleeTheme.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_GrantleeTheme.pri
 share/locale/ar/LC_MESSAGES/libgrantleetheme.mo
 share/locale/ast/LC_MESSAGES/libgrantleetheme.mo

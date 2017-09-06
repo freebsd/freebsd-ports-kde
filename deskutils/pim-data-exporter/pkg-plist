@@ -3,7 +3,7 @@ bin/pimsettingexporterconsole
 etc/xdg/pimsettingexporter.categories
 etc/xdg/pimsettingexporter.renamecategories
 lib/libpimsettingexporterprivate.so.5
-lib/libpimsettingexporterprivate.so.%%SHLIB_VER%%
+lib/libpimsettingexporterprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 share/applications/org.kde.pimsettingexporter.desktop
 share/config.kcfg/pimsettingexporterglobalconfig.kcfg
 share/kconf_update/pimsettingexporter-15.08-kickoff.sh

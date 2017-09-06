@@ -96,7 +96,7 @@ lib/cmake/KF5MailCommon/KF5MailCommonTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5MailCommon/KF5MailCommonTargets.cmake
 lib/libKF5MailCommon.so
 lib/libKF5MailCommon.so.5
-lib/libKF5MailCommon.so.%%SHLIB_VER%%
+lib/libKF5MailCommon.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_MailCommon.pri
 %%QT_PLUGINDIR%%/designer/mailcommonwidgets.so
 share/locale/ast/LC_MESSAGES/libmailcommon.mo

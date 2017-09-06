@@ -68,10 +68,10 @@ lib/cmake/KF5ContactEditor/KF5ContactEditorConfigVersion.cmake
 lib/cmake/KF5ContactEditor/KF5ContactEditorTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5ContactEditor/KF5ContactEditorTargets.cmake
 lib/libKF5AkonadiContact.so
-lib/libKF5AkonadiContact.so.%%SHLIB_VER%%
+lib/libKF5AkonadiContact.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5AkonadiContact.so.5
 lib/libKF5ContactEditor.so
-lib/libKF5ContactEditor.so.%%SHLIB_VER%%
+lib/libKF5ContactEditor.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5ContactEditor.so.5
 %%QT_MKSPECDIR%%/modules/qt_AkonadiContact.pri
 %%QT_MKSPECDIR%%/modules/qt_ContactEditor.pri

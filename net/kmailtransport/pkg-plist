@@ -51,10 +51,10 @@ lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets-%%CMAKE_BUILD_T
 lib/cmake/KF5MailTransportAkonadi/KF5MailTransportAkonadiTargets.cmake
 lib/libKF5MailTransport.so
 lib/libKF5MailTransport.so.5
-lib/libKF5MailTransport.so.%%SHLIB_VER%%
+lib/libKF5MailTransport.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5MailTransportAkonadi.so
 lib/libKF5MailTransportAkonadi.so.5
-lib/libKF5MailTransportAkonadi.so.%%SHLIB_VER%%
+lib/libKF5MailTransportAkonadi.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/mailtransport/mailtransport_akonadiplugin.so
 %%QT_PLUGINDIR%%/mailtransport/mailtransport_smtpplugin.so
 %%QT_MKSPECDIR%%/modules/qt_KMailTransport.pri

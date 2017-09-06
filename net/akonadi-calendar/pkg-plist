@@ -35,7 +35,7 @@ lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarTargets-%%CMAKE_BUILD_TYPE%%.cmak
 lib/cmake/KF5AkonadiCalendar/KF5AkonadiCalendarTargets.cmake
 lib/libKF5AkonadiCalendar.so
 lib/libKF5AkonadiCalendar.so.5
-lib/libKF5AkonadiCalendar.so.%%SHLIB_VER%%
+lib/libKF5AkonadiCalendar.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_AkonadiCalendar.pri
 share/locale/ar/LC_MESSAGES/libakonadi-calendar5.mo
 share/locale/ast/LC_MESSAGES/libakonadi-calendar5.mo

@@ -52,5 +52,5 @@ lib/cmake/KPimKDAV/KPimKDAVTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPimKDAV/KPimKDAVTargets.cmake
 lib/libKPimKDAV.so
 lib/libKPimKDAV.so.5
-lib/libKPimKDAV.so.%%SHLIB_VER%%
+lib/libKPimKDAV.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_kdav.pri

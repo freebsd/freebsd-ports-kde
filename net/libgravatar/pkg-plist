@@ -19,7 +19,7 @@ lib/cmake/KF5Gravatar/KF5GravatarTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Gravatar/KF5GravatarTargets.cmake
 lib/libKF5Gravatar.so
 lib/libKF5Gravatar.so.5
-lib/libKF5Gravatar.so.%%SHLIB_VER%%
+lib/libKF5Gravatar.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_Gravatar.pri
 share/locale/ast/LC_MESSAGES/libgravatar.mo
 share/locale/ca/LC_MESSAGES/libgravatar.mo

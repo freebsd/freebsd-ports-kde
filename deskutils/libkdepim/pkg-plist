@@ -97,10 +97,10 @@ lib/cmake/KF5LibkdepimAkonadi/KF5LibkdepimAkonadiTargets.cmake
 lib/cmake/MailTransportDBusService/MailTransportDBusServiceConfig.cmake
 lib/libKF5Libkdepim.so
 lib/libKF5Libkdepim.so.5
-lib/libKF5Libkdepim.so.%%SHLIB_VER%%
+lib/libKF5Libkdepim.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5LibkdepimAkonadi.so
 lib/libKF5LibkdepimAkonadi.so.5
-lib/libKF5LibkdepimAkonadi.so.%%SHLIB_VER%%
+lib/libKF5LibkdepimAkonadi.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_Libkdepim.pri
 %%QT_MKSPECDIR%%/modules/qt_LibkdepimAkonadi.pri
 %%QT_PLUGINDIR%%/designer/kdepimakonadiwidgets.so

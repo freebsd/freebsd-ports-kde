@@ -34,7 +34,7 @@ lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5AkonadiMime/KF5AkonadiMimeTargets.cmake
 lib/libKF5AkonadiMime.so
 lib/libKF5AkonadiMime.so.5
-lib/libKF5AkonadiMime.so.%%SHLIB_VER%%
+lib/libKF5AkonadiMime.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_AkonadiMime.pri
 share/config.kcfg/specialmailcollections.kcfg
 share/locale/ar/LC_MESSAGES/libakonadi-kmime5.mo

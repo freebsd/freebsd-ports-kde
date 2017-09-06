@@ -40,7 +40,7 @@ lib/cmake/KF5EventViews/KF5EventViewsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5EventViews/KF5EventViewsTargets.cmake
 lib/libKF5EventViews.so
 lib/libKF5EventViews.so.5
-lib/libKF5EventViews.so.%%SHLIB_VER%%
+lib/libKF5EventViews.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_EventViews.pri
 share/kservicetypes5/calendardecoration.desktop
 share/locale/ast/LC_MESSAGES/libeventviews.mo

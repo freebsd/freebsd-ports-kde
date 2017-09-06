@@ -78,7 +78,7 @@ lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5PimTextEdit/KF5PimTextEditTargets.cmake
 lib/libKF5PimTextEdit.so
 lib/libKF5PimTextEdit.so.5
-lib/libKF5PimTextEdit.so.%%SHLIB_VER%%
+lib/libKF5PimTextEdit.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KPIMTextEdit.pri
 %%QT_PLUGINDIR%%/designer/kpimtexteditwidgets.so
 share/locale/ar/LC_MESSAGES/libkpimtextedit.mo

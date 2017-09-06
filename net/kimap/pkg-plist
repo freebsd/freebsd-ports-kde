@@ -126,7 +126,7 @@ lib/cmake/KF5IMAP/KF5IMAPTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5IMAP/KF5IMAPTargets.cmake
 lib/libKF5IMAP.so
 lib/libKF5IMAP.so.5
-lib/libKF5IMAP.so.%%SHLIB_VER%%
+lib/libKF5IMAP.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KIMAP.pri
 share/locale/ast/LC_MESSAGES/libkimap5.mo
 share/locale/bs/LC_MESSAGES/libkimap5.mo

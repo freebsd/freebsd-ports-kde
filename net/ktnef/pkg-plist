@@ -22,7 +22,7 @@ lib/cmake/KF5Tnef/KF5TnefTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5Tnef/KF5TnefTargets.cmake
 lib/libKF5Tnef.so
 lib/libKF5Tnef.so.5
-lib/libKF5Tnef.so.%%SHLIB_VER%%
+lib/libKF5Tnef.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_KTNef.pri
 share/locale/ar/LC_MESSAGES/libktnef5.mo
 share/locale/ast/LC_MESSAGES/libktnef5.mo

@@ -2,7 +2,7 @@ bin/blogilo
 etc/xdg/blogilo.categories
 etc/xdg/blogilo.renamecategories
 lib/libcomposereditorwebengineprivate.so.5
-lib/libcomposereditorwebengineprivate.so.%%SHLIB_VER%%
+lib/libcomposereditorwebengineprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 share/applications/org.kde.blogilo.desktop
 share/composereditorwebengine/composereditorinitialhtml
 share/config.kcfg/blogilo.kcfg
