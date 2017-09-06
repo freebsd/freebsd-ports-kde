@@ -19,6 +19,7 @@ share/locale/nn/LC_MESSAGES/kcm_activities.mo
 share/locale/nn/LC_MESSAGES/kcm_attica.mo
 share/locale/nn/LC_MESSAGES/kcm_nepomuk.mo
 share/locale/nn/LC_MESSAGES/kcm_platform.mo
+share/locale/nn/LC_MESSAGES/kcm_remotecontrol.mo
 share/locale/nn/LC_MESSAGES/kcmcgi.mo
 share/locale/nn/LC_MESSAGES/kcmcrypto.mo
 share/locale/nn/LC_MESSAGES/kcmhtmlsearch.mo
@@ -76,6 +77,8 @@ share/locale/nn/LC_MESSAGES/kppp.mo
 share/locale/nn/LC_MESSAGES/kppplogview.mo
 share/locale/nn/LC_MESSAGES/kquitapp.mo
 share/locale/nn/LC_MESSAGES/kreadconfig.mo
+share/locale/nn/LC_MESSAGES/krcdnotifieritem.mo
+share/locale/nn/LC_MESSAGES/kremotecontroldaemon.mo
 share/locale/nn/LC_MESSAGES/ksaneplugin.mo
 share/locale/nn/LC_MESSAGES/kscd.mo
 share/locale/nn/LC_MESSAGES/kshorturifilter.mo

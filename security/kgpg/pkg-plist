@@ -3,6 +3,7 @@ etc/xdg/autostart/org.kde.kgpg.desktop
 share/applications/org.kde.kgpg.desktop
 share/config.kcfg/kgpg.kcfg
 share/dbus-1/interfaces/org.kde.kgpg.Key.xml
+share/icons/hicolor/128x128/apps/kgpg.png
 share/icons/hicolor/16x16/actions/document-export-key.png
 share/icons/hicolor/16x16/actions/document-import-key.png
 share/icons/hicolor/16x16/actions/document-properties-key.png
@@ -34,9 +35,11 @@ share/icons/hicolor/48x48/apps/kgpg.png
 share/icons/hicolor/48x48/status/key-group.png
 share/icons/hicolor/48x48/status/key-pair.png
 share/icons/hicolor/48x48/status/key-single.png
+share/icons/hicolor/64x64/apps/kgpg.png
 share/icons/hicolor/scalable/actions/document-export-key.svgz
 share/icons/hicolor/scalable/actions/document-import-key.svgz
 share/icons/hicolor/scalable/actions/document-properties-key.svgz
+share/icons/hicolor/scalable/apps/kgpg.svg
 share/icons/hicolor/scalable/status/key-group.svgz
 share/icons/hicolor/scalable/status/key-pair.svgz
 share/icons/hicolor/scalable/status/key-single.svgz

@@ -551,12 +551,15 @@ share/locale/id/LC_MESSAGES/katebuild-plugin.mo
 share/locale/id/LC_MESSAGES/katecloseexceptplugin.mo
 share/locale/id/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/id/LC_MESSAGES/katefiletree.mo
+share/locale/id/LC_MESSAGES/kategdbplugin.mo
 share/locale/id/LC_MESSAGES/katekonsoleplugin.mo
 share/locale/id/LC_MESSAGES/kateopenheader.mo
 share/locale/id/LC_MESSAGES/kateproject.mo
+share/locale/id/LC_MESSAGES/katesearch.mo
 share/locale/id/LC_MESSAGES/katesymbolviewer.mo
 share/locale/id/LC_MESSAGES/kwrite.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo
+share/locale/id/LC_MESSAGES/tabswitcherplugin.mo
 share/locale/is/LC_MESSAGES/kate.mo
 share/locale/is/LC_MESSAGES/katefilebrowserplugin.mo
 share/locale/is/LC_MESSAGES/katekonsoleplugin.mo

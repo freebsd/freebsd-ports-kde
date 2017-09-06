@@ -1,7 +1,6 @@
 bin/kdenlive
 bin/kdenlive_render
 etc/xdg/kdenlive.categories
-etc/xdg/kdenlive_projectprofiles.knsrc
 etc/xdg/kdenlive_renderprofiles.knsrc
 etc/xdg/kdenlive_titles.knsrc
 etc/xdg/kdenlive_wipes.knsrc
