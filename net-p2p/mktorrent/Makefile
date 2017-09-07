@@ -3,10 +3,9 @@
 
 PORTNAME=	mktorrent
 PORTVERSION=	1.1
+DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	net-p2p
-MASTER_SITES=	https://github.com/Rudde/mktorrent/archive/
-DISTNAME=	v${PORTVERSION}
-DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Command-line utility for creating BitTorrent metainfo files
@@ -14,7 +13,8 @@ COMMENT=	Command-line utility for creating BitTorrent metainfo files
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-WRKSRC= 	${WRKDIR}/${PORTNAME}-${PORTVERSION}
+USE_GITHUB=	yes
+GH_ACCOUNT=	Rudde
 
 MAKEFILE=	BSDmakefile
 MAKE_ARGS=	USE_LONG_OPTIONS=1

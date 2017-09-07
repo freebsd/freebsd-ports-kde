@@ -19,7 +19,9 @@ USE_XORG=	xcb
 CMAKE_ARGS=	-DUID_MIN=1000 \
 		-DUID_MAX=65000 \
 		-DCMAKE_INSTALL_SYSCONFDIR:PATH=${LOCALBASE}/etc
-# We need to disable PAM at the moment and use the Passwd-based backend
+# We need to disable PAM at the moment and use the passwd-based backend;
+# the two backend are mutually exclusive, and we have to investigate how
+# to make it compatible with OpenPAM.
 CMAKE_ARGS+=	-DENABLE_PAM:BOOL=FALSE
 
 USE_RC_SUBR=	sddm
@@ -37,11 +39,9 @@ post-patch:
 		${PATCH_WRKSRC}/data/scripts/Xsession
 
 post-install:
-# Install kde4.desktop and xinitrc.desktop.
+# Install xsession.desktop to launch .xinitrc via sddm.
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
-.for df in kde4 xinitrc
-	${INSTALL_DATA} ${FILESDIR}/${df}.desktop ${STAGEDIR}${PREFIX}/share/xsessions
-.endfor
+	${INSTALL_DATA} ${FILESDIR}/xinitrc.desktop ${STAGEDIR}${PREFIX}/share/xsessions
 	${INSTALL_SCRIPT} ${FILESDIR}/xinit-session ${STAGEDIR}${PREFIX}/share/sddm/scripts
 
 .include <bsd.port.mk>
