@@ -4,6 +4,7 @@
     COMMENT = Security tools
 
     SUBDIR += 0d1n
+    SUBDIR += 1password-client
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
@@ -934,7 +935,6 @@
     SUBDIR += py-pyelliptic
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons-pynacl
-    SUBDIR += py-pyme
     SUBDIR += py-pynacl
     SUBDIR += py-pyotp
     SUBDIR += py-pyptlib
