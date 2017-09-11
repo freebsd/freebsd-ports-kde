@@ -1,8 +1,8 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/math/cantor/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	cantor
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

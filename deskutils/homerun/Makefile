@@ -4,7 +4,7 @@ IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	homerun
 PORTVERSION=	0.2.3
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 MASTER_SITES=	KDE/unstable/${PORTNAME}/src/
 
