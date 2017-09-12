@@ -81,4 +81,8 @@ NLS_CMAKE_BOOL=		DIGIKAMSC_COMPILE_PO
 NLS_USES=		gettext
 NLS_USE=		KDE=i18n
 
+post-extract:
+# Remove localization file already installed by net/libkvkontakte.
+	${RM} ${WRKSRC}/po/*/libkvkontakte.po
+
 .include <bsd.port.mk>
