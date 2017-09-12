@@ -1,8 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/graphics/digikam/Makefile 13784 2017-03-18 15:45:02Z tcberner $
 
 PORTNAME=	digikam
-PORTVERSION=	5.6.0
-PORTREVISION=	1
+PORTVERSION=	5.7.0
 PORTEPOCH=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
@@ -54,6 +53,8 @@ SHEBANG_FILES=	core/data/scripts/digitaglinktree/digitaglinktree
 # Remember to keep that port in sync with this one.
 CMAKE_ARGS=	-DDIGIKAMSC_COMPILE_DIGIKAM:BOOL=ON \
 		-DDIGIKAMSC_COMPILE_KIPIPLUGINS:BOOL=OFF
+# Disable opencv3, as the ports still only contain opencv2.
+CMAKE_ARGS+=	-DENABLE_OPENCV3:BOOL=FALSE
 
 OPTIONS_DEFINE=		DOCS MULTIMEDIA MYSQL NLS
 OPTIONS_DEFAULT= 	${OPTIONS_DEFINE}
