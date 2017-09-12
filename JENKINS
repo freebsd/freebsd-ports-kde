@@ -163,6 +163,7 @@ games/pairs
 games/palapeli
 games/picmi
 german/kde-l10n
+graphics/digikam
 graphics/gwenview
 graphics/kamera
 graphics/kcolorchooser
@@ -174,6 +175,7 @@ graphics/kf5-kimageformats
 graphics/kf5-kplotting
 graphics/kf5-prison
 graphics/kimagemapeditor
+graphics/kipiplugins
 graphics/kolourpaint
 graphics/kqtquickcharts
 graphics/ksaneplugin
@@ -319,6 +321,8 @@ net/ktnef
 net/libgravatar
 net/libkgapi
 net/libksieve
+net/libkvkontakte
+net/libmediawiki
 net/mailcommon
 net/mailimporter
 net/messagelib
