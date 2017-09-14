@@ -47,6 +47,8 @@ OPTIONS_GROUP=		IM
 OPTIONS_GROUP_IM=	IBUS SCIM
 IM_DESC=		Input Method Support
 
+OPTIONS_DEFAULT=	SYNAPTICS
+
 PULSEAUDIO_CMAKE_BOOL=		WANT_PULSEAUDIO
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 
@@ -55,8 +57,10 @@ SYNAPTICS_BUILD_DEPENDS=	xf86-input-synaptics>0:x11-drivers/xf86-input-synaptics
 SYNAPTICS_RUN_DEPENDS=		xf86-input-synaptics>0:x11-drivers/xf86-input-synaptics
 SYNAPTICS_CMAKE_BOOL=		WANT_SYNAPTICS
 
+IBUS_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_IBus
 IBUS_LIB_DEPENDS=	libibus-1.0.so:textproc/ibus
 IBUS_DESC=		Enable IBUS backend for input dialog
+SCIM_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_SCIM
 SCIM_LIB_DEPENDS=	libscim-1.0.so:textproc/scim
 SCIM_DESC=		Enable SCIM backend for input dialog
 
