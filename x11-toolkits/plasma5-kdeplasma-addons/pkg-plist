@@ -140,7 +140,9 @@ share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
+share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.minimizeall.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
+share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.private.grouping.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.quicklaunch.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.quickshare.mo
 share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.showdesktop.mo
@@ -902,17 +904,25 @@ share/locale/et/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 share/locale/et/LC_MESSAGES/plasma_runner_translator.mo
 share/locale/et/LC_MESSAGES/plasma_runner_youtube.mo
 share/locale/eu/LC_MESSAGES/libplasma_groupingcontainment.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_frame.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_incomingmsg.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.comic.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_qalculate.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_qstardict.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_rssnow.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_weatherstation.mo
 share/locale/eu/LC_MESSAGES/plasma_runner_contacts.mo
 share/locale/eu/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
+share/locale/eu/LC_MESSAGES/plasma_runner_youtube.mo
 share/locale/fi/LC_MESSAGES/konqprofiles.mo
 share/locale/fi/LC_MESSAGES/konsoleprofiles.mo
 share/locale/fi/LC_MESSAGES/libplasma_groupingcontainment.mo
@@ -1110,7 +1120,9 @@ share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
+share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.minimizeall.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
+share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.private.grouping.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.quicklaunch.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.quickshare.mo
 share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.showdesktop.mo
@@ -1143,6 +1155,7 @@ share/locale/gl/LC_MESSAGES/plasma_runner_mediawiki.mo
 share/locale/gl/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 share/locale/gl/LC_MESSAGES/plasma_runner_translator.mo
 share/locale/gl/LC_MESSAGES/plasma_runner_youtube.mo
+share/locale/he/LC_MESSAGES/konqprofiles.mo
 share/locale/he/LC_MESSAGES/konsoleprofiles.mo
 share/locale/he/LC_MESSAGES/libplasma_groupingcontainment.mo
 share/locale/he/LC_MESSAGES/plasma_applet_CharSelectApplet.mo
@@ -1155,6 +1168,7 @@ share/locale/he/LC_MESSAGES/plasma_applet_incomingmsg.mo
 share/locale/he/LC_MESSAGES/plasma_applet_knowledgebase.mo
 share/locale/he/LC_MESSAGES/plasma_applet_leavenote.mo
 share/locale/he/LC_MESSAGES/plasma_applet_life.mo
+share/locale/he/LC_MESSAGES/plasma_applet_magnifique.mo
 share/locale/he/LC_MESSAGES/plasma_applet_microblog.mo
 share/locale/he/LC_MESSAGES/plasma_applet_news.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -1167,6 +1181,7 @@ share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.minimizeall.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
+share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.private.grouping.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.quicklaunch.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.quickshare.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.showdesktop.mo
@@ -1175,6 +1190,7 @@ share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/he/LC_MESSAGES/plasma_applet_plasmaboard.mo
 share/locale/he/LC_MESSAGES/plasma_applet_previewer.mo
+share/locale/he/LC_MESSAGES/plasma_applet_qalculate.mo
 share/locale/he/LC_MESSAGES/plasma_applet_qstardict.mo
 share/locale/he/LC_MESSAGES/plasma_applet_rssnow.mo
 share/locale/he/LC_MESSAGES/plasma_applet_spellcheck.mo
