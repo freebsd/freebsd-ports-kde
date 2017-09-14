@@ -1,4 +1,4 @@
---- daemon/backends/CMakeLists.txt.orig	2016-11-01 12:27:47 UTC
+--- daemon/backends/CMakeLists.txt.orig	2017-09-13 23:01:05 UTC
 +++ daemon/backends/CMakeLists.txt
 @@ -7,11 +7,8 @@ set(powerdevilupowerbackend_SRCS
      ${PowerDevil_SOURCE_DIR}/daemon/powerdevil_debug.cpp
@@ -9,10 +9,10 @@
      upower/xrandrxcbhelper.cpp
 -    upower/udevqtclient.cpp
 -    upower/udevqtdevice.cpp
+     upower/ddcutilbrightness.cpp
  )
  
- set_source_files_properties(
-@@ -47,7 +44,6 @@ target_link_libraries(powerdevilupowerba
+@@ -55,7 +52,6 @@ target_link_libraries(powerdevilupowerbackend
      KF5::CoreAddons
      KF5::DBusAddons
      KF5::I18n

@@ -1,4 +1,4 @@
---- daemon/CMakeLists.txt.orig	2016-11-01 12:27:47 UTC
+--- daemon/CMakeLists.txt.orig	2017-09-13 23:01:05 UTC
 +++ daemon/CMakeLists.txt
 @@ -130,8 +130,6 @@ if (XCB_FOUND)
      target_link_libraries(powerdevil Qt5::X11Extras)
