@@ -1,5 +1,4 @@
 etc/xdg/cgcgtk3.knsrc
-etc/xdg/cgcicon.knsrc
 etc/xdg/cgctheme.knsrc
 lib/libexec/gtk3_preview
 lib/libexec/gtk_preview
