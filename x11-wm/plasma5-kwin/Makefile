@@ -18,7 +18,9 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxkbcommon.so:x11/libxkbcommon
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat \
+		Xwayland:x11-servers/xwayland
+RUN_DEPENDS=	Xwayland:x11-servers/xwayland
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext \
 		kde:5 pkgconfig tar:xz
