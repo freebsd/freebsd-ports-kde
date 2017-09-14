@@ -269,7 +269,7 @@ _USE_FRAMEWORKS_ALL=	ecm \
 
 # List of components of the KDE Plasma distribution.
 _USE_PLASMA_ALL=	activitymanagerd bluedevil breeze breeze-gtk \
-			breeze-kde4 decoration discover hotkeys \
+			breeze-kde4 decoration discover drkonqi hotkeys \
 			infocenter kde-cli-tools kde-gtk-config \
 			kdeplasma-addons kgamma5 kmenuedit kscreen \
 			kscreenlocker ksshaskpass ksysguard kwallet-pam \
@@ -648,6 +648,9 @@ decoration_LIB=		libkdecorations2.so
 
 discover_PORT=		sysutils/plasma5-discover
 discover_PATH=		${KDE_PREFIX}/bin/plasma-discover
+
+drkonqi_PORT=		sysutils/plasma5-drkonqi
+drkonqi_PATH=		${KDE_PREFIX}/lib/libexec/drkonqi
 
 hotkeys_PORT=		devel/plasma5-khotkeys
 hotkeys_LIB=		libkhotkeysprivate.so.5
