@@ -3,8 +3,6 @@ etc/xdg/discover_ktexteditor_codesnippets_core.knsrc
 lib/plasma-discover/libDiscoverCommon.so
 lib/plasma-discover/libDiscoverNotifiers.so
 %%QT_PLUGINDIR%%/discover/kns-backend.so
-%%QT_QMLDIR%%/org/kde/discover/libdiscoverdeclarativeplugin.so
-%%QT_QMLDIR%%/org/kde/discover/qmldir
 %%QT_QMLDIR%%/org/kde/discovernotifier/libDiscoverNotifierDeclarativePlugin.so
 %%QT_QMLDIR%%/org/kde/discovernotifier/qmldir
 share/applications/org.kde.discover.desktop
