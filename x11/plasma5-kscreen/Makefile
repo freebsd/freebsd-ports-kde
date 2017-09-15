@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/plasma5-kscreen/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kscreen
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

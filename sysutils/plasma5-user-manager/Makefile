@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/plasma5-user-manager/Makefile 13601 2017-01-16 23:00:36Z tcberner $
 
 PORTNAME=	user-manager
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

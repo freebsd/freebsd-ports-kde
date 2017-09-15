@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/security/plasma5-ksshaskpass/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	ksshaskpass
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	security kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

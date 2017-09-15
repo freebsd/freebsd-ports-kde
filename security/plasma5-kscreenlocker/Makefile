@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/security/plasma5-kscreenlocker/Makefile 13948 2017-04-25 15:08:16Z tcberner $
 
 PORTNAME=	kscreenlocker
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	security kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

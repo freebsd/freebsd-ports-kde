@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/plasma5-plasma-integration/Makefile 13948 2017-04-25 15:08:16Z tcberner $
 
 PORTNAME=	plasma-integration
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

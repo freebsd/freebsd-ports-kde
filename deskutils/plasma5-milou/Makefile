@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/plasma5-milou/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	milou
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	deskutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	plasma5-wallpapers-freebsd
-PORTVERSION=	1.0
+DISTVERSION=	1.0
 CATEGORIES=	x11-themes kde
 MASTER_SITES=	http://euroquis.nl/doc/
 DISTNAME=	${PORTNAME}-${PORTVERSION}

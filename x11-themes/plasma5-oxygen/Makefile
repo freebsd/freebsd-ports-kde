@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-themes/plasma5-oxygen/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	oxygen
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11-themes kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

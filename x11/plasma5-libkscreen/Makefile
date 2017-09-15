@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/plasma5-libkscreen/Makefile 13609 2017-01-19 20:38:51Z tcberner $
 
 PORTNAME=	libkscreen
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

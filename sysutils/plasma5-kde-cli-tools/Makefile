@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/plasma5-kde-cli-tools/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kde-cli-tools
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

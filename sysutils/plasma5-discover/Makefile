@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/plasma5-discover/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	discover
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-wm/plasma5-kwin/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kwin
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11-wm kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

@@ -4,7 +4,7 @@
 #       on FreeBSD or what is needed to make it work).
 
 PORTNAME=	bluedevil
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org

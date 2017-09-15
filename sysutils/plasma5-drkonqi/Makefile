@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	drkonqi
-PORTVERSION=	${KDE_PLASMA_VERSION}
+DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
