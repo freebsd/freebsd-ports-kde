@@ -54,7 +54,7 @@ OPTIONS_DEFAULT_amd64=	RUST
 OPTIONS_DEFAULT_i386=	RUST
 
 KDE_DESC=		Apply OpenSUSE's KDE patch
-KDE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-hg-kde_f82a374a310d
+KDE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-hg_mozilla-kde.patch
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
