@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-plasma-framework/Makefile 13459 2016-12-13 15:48:45Z tcberner $
 
 PORTNAME=	plasma-framework
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
 

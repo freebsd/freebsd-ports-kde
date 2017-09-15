@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-toolkits/kirigami2/Makefile 13982 2017-04-29 21:31:21Z tcberner $
 
 PORTNAME=	kirigami2
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits kde kde-frameworks
 

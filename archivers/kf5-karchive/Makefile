@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/archivers/kf5-karchive/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	karchive
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	archivers kde kde-frameworks
 

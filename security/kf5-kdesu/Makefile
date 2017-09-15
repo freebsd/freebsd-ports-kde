@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/security/kf5-kdesu/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kdesu
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	security kde kde-frameworks
 

@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/graphics/kf5-kplotting/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kplotting
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	graphics kde kde-frameworks
 

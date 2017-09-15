@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-kdelibs4support/Makefile 13899 2017-04-20 07:16:19Z tcberner $
 
 PORTNAME=	kdelibs4support
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
 

@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kdeclarative/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kdeclarative
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 

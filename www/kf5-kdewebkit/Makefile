@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/www/kf5-kdewebkit/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kdewebkit
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	www kde kde-frameworks
 

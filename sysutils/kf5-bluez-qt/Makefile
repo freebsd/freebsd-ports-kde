@@ -4,7 +4,7 @@
 #       on FreeBSD or what is needed to make it work).
 
 PORTNAME=	bluez-qt
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	sysutils kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org

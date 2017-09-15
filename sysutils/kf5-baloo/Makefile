@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/kf5-baloo/Makefile 13778 2017-03-18 08:55:35Z tcberner $
 
 PORTNAME=	baloo
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	sysutils kde kde-frameworks
 

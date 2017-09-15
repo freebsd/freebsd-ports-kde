@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kcoreaddons/Makefile 13717 2017-03-08 18:40:21Z tcberner $
 
 PORTNAME=	kcoreaddons
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 

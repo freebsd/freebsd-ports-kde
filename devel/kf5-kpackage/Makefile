@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kpackage/Makefile 13591 2017-01-14 18:07:11Z tcberner $
 
 PORTNAME=	kpackage
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 

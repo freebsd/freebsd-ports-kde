@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-themes/kf5-oxygen-icons5/Makefile 13825 2017-04-08 08:23:33Z tcberner $
 
 PORTNAME=	oxygen-icons5
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	x11-themes kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org

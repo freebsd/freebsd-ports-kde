@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-knotifications/Makefile 13459 2016-12-13 15:48:45Z tcberner $
 
 PORTNAME=	knotifications
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 

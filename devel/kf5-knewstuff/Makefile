@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-knewstuff/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	knewstuff
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 

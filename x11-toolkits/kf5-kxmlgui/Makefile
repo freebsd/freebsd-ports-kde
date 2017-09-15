@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-toolkits/kf5-kxmlgui/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kxmlgui
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits kde kde-frameworks
 

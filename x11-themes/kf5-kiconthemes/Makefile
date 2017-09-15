@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-themes/kf5-kiconthemes/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kiconthemes
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11-themes kde kde-frameworks
 

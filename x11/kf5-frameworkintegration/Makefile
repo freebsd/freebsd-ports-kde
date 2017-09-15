@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-frameworkintegration/Makefile 13591 2017-01-14 18:07:11Z tcberner $
 
 PORTNAME=	frameworkintegration
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
 

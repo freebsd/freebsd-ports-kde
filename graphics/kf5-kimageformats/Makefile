@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/graphics/kf5-kimageformats/Makefile 13416 2016-11-23 20:00:33Z tcberner $
 
 PORTNAME=	kimageformats
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	graphics kde kde-frameworks
 

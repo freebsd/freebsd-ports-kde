@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/textproc/kf5-kcodecs/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kcodecs
-PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	textproc kde kde-frameworks
 
