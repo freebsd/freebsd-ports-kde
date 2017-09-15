@@ -1,7 +1,7 @@
 # $FreeBSD: head/x11-clocks/kdetoys4/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	kdetoys
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-clocks kde
 
 MAINTAINER=	kde@FreeBSD.org

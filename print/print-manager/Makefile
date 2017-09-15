@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/print/print-manager-kf5/Makefile 13707 2017-03-08 18:21:36Z tcberner $
 
 PORTNAME=	print-manager
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	print kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

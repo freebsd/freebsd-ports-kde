@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kate
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	editors kde kde-applications # kde kde-applications-applications
 
 MAINTAINER=	kde@FreeBSD.org

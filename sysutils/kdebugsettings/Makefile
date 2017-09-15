@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/kdebugsettings-kf5/Makefile 13710 2017-03-08 18:32:37Z tcberner $
 
 PORTNAME=	kdebugsettings
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	sysutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

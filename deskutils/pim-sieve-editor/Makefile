@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/pim-sieve-editor/Makefile 13945 2017-04-25 06:21:17Z tcberner $
 
 PORTNAME=	pim-sieve-editor
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

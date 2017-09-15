@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/KDE/games/pairs/Makefile 13697 2017-03-08 17:43:58Z tcberner $
 
 PORTNAME=	pairs
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

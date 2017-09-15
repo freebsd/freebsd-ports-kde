@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/KDE/graphics/libkipi-kf5/Makefile 13698 2017-03-08 17:47:13Z tcberner $
 
 PORTNAME=	libkipi
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

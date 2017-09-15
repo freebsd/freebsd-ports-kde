@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net-im/kopete/Makefile 10672 2015-04-25 19:17:13Z tcberner $
 
 PORTNAME=	kopete
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

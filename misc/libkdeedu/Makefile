@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/misc/libkdeedu/Makefile 13352 2016-11-10 20:31:34Z tcberner $
 
 PORTNAME=	libkdeedu
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	misc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

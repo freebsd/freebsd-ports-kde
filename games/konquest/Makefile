@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/games/konquest/Makefile 13778 2017-03-18 08:55:35Z tcberner $
 
 PORTNAME=	konquest
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

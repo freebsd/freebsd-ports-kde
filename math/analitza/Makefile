@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/math/analitza/Makefile 13829 2017-04-09 08:51:06Z tcberner $
 
 PORTNAME=	analitza
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

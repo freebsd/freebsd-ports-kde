@@ -3,7 +3,7 @@
 IGNORE=		Requires PyQt5 for python3 which is broken at the moment.
 
 PORTNAME=	kajongg
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

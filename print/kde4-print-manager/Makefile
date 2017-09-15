@@ -1,7 +1,7 @@
 # $FreeBSD: head/print/kde4-print-manager/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	print-manager
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	print kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

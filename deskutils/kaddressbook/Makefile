@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/kaddressbook/Makefile 13937 2017-04-23 15:49:32Z tcberner $
 
 PORTNAME=	kaddressbook
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

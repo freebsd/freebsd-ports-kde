@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11/konsole/Makefile 13957 2017-04-26 14:25:40Z tcberner $
 
 PORTNAME=	konsole
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11 kde kde-applications # kde kde-applications-applications
 
 MAINTAINER=	kde@FreeBSD.org

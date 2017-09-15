@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/kfind-kf5/Makefile 13695 2017-03-08 17:31:22Z tcberner $
 
 PORTNAME=	kfind
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/games/libkdegames-kde4/Makefile 13743 2017-03-10 23:32:54Z tcberner $
 
 PORTNAME=	libkdegames
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 PKGNAMESUFFIX=	kde4
 

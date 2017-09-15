@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/graphics/libkface-kde4/Makefile 13750 2017-03-11 19:58:37Z tcberner $
 
 PORTNAME=	libkface
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
 PKGNAMESUFFIX=	-kde4
 

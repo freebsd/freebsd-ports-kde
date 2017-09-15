@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-clocks/kteatime/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kteatime
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-clocks kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

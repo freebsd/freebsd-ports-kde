@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-themes/kde4-wallpapers/Makefile 13715 2017-03-08 18:38:30Z tcberner $
 
 PORTNAME=	kde-wallpapers
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-themes kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

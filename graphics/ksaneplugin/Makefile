@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ksaneplugin
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 4 plugin for scanning through libksane

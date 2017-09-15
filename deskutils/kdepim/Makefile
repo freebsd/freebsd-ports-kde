@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/kdepim/Makefile 13937 2017-04-23 15:49:32Z tcberner $
 
 PORTNAME=	kdepim
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde
 
 MAINTAINER=	kde@FreeBSD.org

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kremotecontrol
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	comms kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

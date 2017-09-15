@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/blogilo/Makefile 13965 2017-04-26 16:54:48Z tcberner $
 
 PORTNAME=	blogilo
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

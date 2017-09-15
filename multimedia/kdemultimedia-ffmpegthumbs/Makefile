@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpegthumbs
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	multimedia kde kde-applications
 PKGNAMEPREFIX=	kdemultimedia-
 

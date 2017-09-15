@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/KDE/security/kgpg-kde4/Makefile 13743 2017-03-10 23:32:54Z tcberner $
 
 PORTNAME=	kgpg
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 PKGNAMESUFFIX=	-kde4
 CATEGORIES=	security kde kde-applications
 

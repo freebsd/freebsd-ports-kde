@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/khelpcenter/Makefile 13916 2017-04-20 18:30:09Z tcberner $
 
 PORTNAME=	khelpcenter
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	sysutils kde kde-applications # kde kde-applications-plasma
 
 MAINTAINER=	kde@FreeBSD.org

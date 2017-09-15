@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/x11-fm/konqueror/Makefile 13936 2017-04-23 15:48:34Z tcberner $
 
 PORTNAME=	konqueror
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	x11-fm www kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

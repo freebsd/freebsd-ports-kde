@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/lang/kross-interpreters/Makefile 13686 2017-03-08 10:12:22Z tcberner $
 
 PORTNAME=	kross-interpreters
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	lang kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

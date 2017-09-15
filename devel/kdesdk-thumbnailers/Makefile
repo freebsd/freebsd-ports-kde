@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kdesdk-thumbnailers
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

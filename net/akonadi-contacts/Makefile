@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net/akonadi-contacts/Makefile 13959 2017-04-26 14:27:50Z tcberner $
 
 PORTNAME=	akonadi-contacts
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

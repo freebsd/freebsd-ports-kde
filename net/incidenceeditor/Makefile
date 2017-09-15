@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net/incidenceeditor/Makefile 13916 2017-04-20 18:30:09Z tcberner $
 
 PORTNAME=	incidenceeditor
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

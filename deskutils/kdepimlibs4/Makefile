@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	kdepimlibs
-PORTVERSION=	${KDE4_KDEPIM_VERSION}
+DISTVERSION=	${KDE4_KDEPIM_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

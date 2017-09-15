@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net/mailcommon/Makefile 13937 2017-04-23 15:49:32Z tcberner $
 
 PORTNAME=	mailcommon
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

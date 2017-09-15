@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net-im/ktp-contact-list/Makefile 13957 2017-04-26 14:25:40Z tcberner $
 
 PORTNAME=	ktp-contact-list
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net-im kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

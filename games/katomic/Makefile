@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/games/katomic/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	katomic
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}

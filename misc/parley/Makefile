@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/misc/parley/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	parley
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	misc kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

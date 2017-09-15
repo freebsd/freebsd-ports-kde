@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net-im/kde-telepathy/Makefile 13955 2017-04-25 20:11:18Z tcberner $
 
 PORTNAME=	kde-telepathy
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net-im kde
 
 MAINTAINER=	kde@FreeBSD.org

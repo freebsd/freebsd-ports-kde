@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/kio-extras/Makefile 13916 2017-04-20 18:30:09Z tcberner $
 
 PORTNAME=	kio-extras
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	devel kde kde-applications # kde kde-applications-plasma
 
 MAINTAINER=	kde@FreeBSD.org

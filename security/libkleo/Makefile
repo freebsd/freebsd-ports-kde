@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/security/libkleo/Makefile 13916 2017-04-20 18:30:09Z tcberner $
 
 PORTNAME=	libkleo
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	security kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

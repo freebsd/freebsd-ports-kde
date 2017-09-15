@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/math/rocs/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	rocs
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

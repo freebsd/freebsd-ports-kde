@@ -1,7 +1,7 @@
 # $FreeBSD: head/graphics/kqtquickcharts/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	kqtquickcharts
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

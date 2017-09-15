@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/audio/kwave/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kwave
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	audio kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

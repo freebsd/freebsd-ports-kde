@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/databases/akonadi/Makefile 13958 2017-04-26 14:27:02Z tcberner $
 
 PORTNAME=	akonadi
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	databases kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

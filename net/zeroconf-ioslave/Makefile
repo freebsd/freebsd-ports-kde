@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	zeroconf-ioslave
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

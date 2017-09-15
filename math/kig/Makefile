@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/math/kig/Makefile 13916 2017-04-20 18:30:09Z tcberner $
 
 PORTNAME=	kig
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 

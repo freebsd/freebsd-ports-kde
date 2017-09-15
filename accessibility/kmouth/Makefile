@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kmouth
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	accessibility kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

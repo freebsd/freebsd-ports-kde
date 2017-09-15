@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/kdialog-kf5/Makefile 13487 2016-12-17 10:57:29Z tcberner $
 
 PORTNAME=	kdialog
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	sysutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

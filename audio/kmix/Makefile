@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/KDE/audio/kmix/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kmix
-PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	audio kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
