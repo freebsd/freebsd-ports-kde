@@ -1,7 +1,7 @@
 # $FreeBSD: head/devel/ruby-krossruby/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	krossruby
-PORTVERSION=	${KDE4_VERSION}
+DISTVERSION=	${KDE4_VERSION}
 PORTREVISION=	1
 CATEGORIES=	devel kde kde-kde4 ruby
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}

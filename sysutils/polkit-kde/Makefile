@@ -2,7 +2,7 @@
 # $FreeBSD: ports/sysutils/polkit-kde/Makefile,v 1.8 2012/06/06 06:44:25 miwi Exp $
 
 PORTNAME=	polkit-kde
-PORTVERSION=	0.99.1
+DISTVERSION=	0.99.1
 PORTREVISION=	3
 CATEGORIES=	sysutils kde
 MASTER_SITES=	KDE/stable/apps/KDE4.x/admin/

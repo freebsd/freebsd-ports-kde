@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	${GL_PROJECT}
-PORTVERSION=	1.0
+DISTVERSION=	1.0
 CATEGORIES=	net-im
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/

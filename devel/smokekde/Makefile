@@ -1,7 +1,7 @@
 # $FreeBSD: head/devel/smokekde/Makefile 420774 2016-08-24 08:20:31Z tcberner $
 
 PORTNAME=	smokekde
-PORTVERSION=	${KDE4_VERSION}
+DISTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	devel kde kde-kde4
 

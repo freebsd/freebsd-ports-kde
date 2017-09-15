@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	signon-ui
-PORTVERSION=	0.17
+DISTVERSION=	0.17
 CATEGORIES=	sysutils kde
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/

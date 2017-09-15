@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	showimage
-PORTVERSION=	1.10
+DISTVERSION=	1.10
 CATEGORIES=	graphics kde
 MASTER_SITES=	https://dl.opendesktop.org/api/files/download/id/1482097460/ \
 		LOCAL/tcberner/showimage-0.10/

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libkfbapi
-PORTVERSION=	1.0
+DISTVERSION=	1.0
 PORTREVISION=	5
 CATEGORIES=	net kde
 MASTER_SITES=	KDE/stable/libkfbapi/${PORTVERSION}/src

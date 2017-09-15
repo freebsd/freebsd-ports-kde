@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libkgapi
-PORTVERSION=	2.2.0
+DISTVERSION=	2.2.0
 PORTREVISION=	2
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/libkgapi/${PORTVERSION}/src
@@ -20,7 +20,7 @@ USE_LDCONFIG=	yes
 USE_QT4=	corelib network webkit xml \
 		qmake_build moc_build rcc_build uic_build
 
-PLIST_SUB+=	PORTVERSION=${PORTVERSION}
+PLIST_SUB+=	DISTVERSION=${PORTVERSION}
 
 pre-configure:
 	${REINPLACE_CMD} -e '/pkgconfig/ s/$${LIB_INSTALL_DIR}/libdata/' \

@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/editors/kile/Makefile 13728 2017-03-10 20:39:23Z tcberner $
 
 PORTNAME=	kile
-PORTVERSION=	2.9.60
+DISTVERSION=	2.9.60
 PKGNAMESUFFIX=	-kf5
 CATEGORIES=	editors kde
 

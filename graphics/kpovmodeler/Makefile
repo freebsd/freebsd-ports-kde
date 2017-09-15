@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kpovmodeler
-PORTVERSION=	${APP_VER}.${EXTRA_VER}
+DISTVERSION=	${APP_VER}.${EXTRA_VER}
 PORTREVISION=	14
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/Attic/${EXTRA_VER}/src/extragear

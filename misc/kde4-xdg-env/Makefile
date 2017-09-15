@@ -1,7 +1,7 @@
 # $FreeBSD: head/misc/kde4-xdg-env/Makefile 415977 2016-05-28 07:53:25Z pi $
 
 PORTNAME=	xdg
-PORTVERSION=	1.1
+DISTVERSION=	1.1
 PORTREVISION=	1
 CATEGORIES=	misc kde
 PKGNAMEPREFIX=	kde4-

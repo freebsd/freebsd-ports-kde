@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libdbusmenu-qt
-PORTVERSION=	${MAJOR_VER}.${SNAPSHOT_VER:S/.//g}
+DISTVERSION=	${MAJOR_VER}.${SNAPSHOT_VER:S/.//g}
 PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/main/libd/${PORTNAME}/

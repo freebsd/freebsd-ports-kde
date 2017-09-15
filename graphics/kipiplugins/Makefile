@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kipiplugins
-PORTVERSION=	5.7.0
+DISTVERSION=	5.7.0
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/digikam
 DIST_SUBDIR=	KDE/digikam/${PORTVERSION}

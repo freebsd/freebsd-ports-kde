@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	KPackageKit
-PORTVERSION=	0.6.3.3
+DISTVERSION=	0.6.3.3
 PORTREVISION=	7
 CATEGORIES=	ports-mgmt sysutils kde
 MASTER_SITES=	http://opendesktop.org/CONTENT/content-files/

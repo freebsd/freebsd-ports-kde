@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	policykit-qt
-PORTVERSION=	0.9.4
+DISTVERSION=	0.9.4
 PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	KDE/stable/apps/KDE4.x/admin/

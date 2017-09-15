@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	phonon
-PORTVERSION=	4.9.1
+DISTVERSION=	4.9.1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 PKGNAMESUFFIX=	-designerplugin

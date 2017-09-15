@@ -1,7 +1,7 @@
 # $FreeBSD: ports/www/kwebkitpart/Makefile,v 1.9 2012/06/06 06:44:30 miwi Exp $
 
 PORTNAME=	kwebkitpart
-PORTVERSION=	1.3.2
+DISTVERSION=	1.3.2
 PORTREVISION=	4
 CATEGORIES=	www kde
 MASTER_SITES=	LOCAL/makc

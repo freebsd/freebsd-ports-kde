@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	smokegen
-PORTVERSION=	${KDE4_VERSION}
+DISTVERSION=	${KDE4_VERSION}
 CATEGORIES=	devel kde kde-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	SMOKE bindings for KDE

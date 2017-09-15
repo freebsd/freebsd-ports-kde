@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net-im/telepathy-logger-qt5/Makefile 13705 2017-03-08 18:19:23Z tcberner $
 
 PORTNAME=	telepathy-logger-qt
-PORTVERSION=	17.08.0
+DISTVERSION=	17.08.0
 CATEGORIES=	net-im
 MASTER_SITES=	${MASTER_SITE_KDE}
 MASTER_SITE_SUBDIR=	stable/${PORTNAME}/${PORTVERSION:R}/src

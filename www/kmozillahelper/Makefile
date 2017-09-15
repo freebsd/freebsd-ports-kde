@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kmozillahelper
-PORTVERSION=	5.0.1
+DISTVERSION=	5.0.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www kde
 

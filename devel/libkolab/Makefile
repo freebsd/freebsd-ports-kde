@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/libkolab/Makefile 13963 2017-04-26 16:02:39Z tcberner $
 
 PORTNAME=	libkolab
-PORTVERSION=	1.0.2
+DISTVERSION=	1.0.2
 CATEGORIES=	devel kde
 MASTER_SITES=	LOCAL/tcberner/${PORTNAME}-${PORTVERSION} \
 		http://mirror.kolabsys.com/pub/releases/

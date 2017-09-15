@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/databases/sink/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
 PORTNAME=	sink
-PORTVERSION=	0.2.0
+DISTVERSION=	0.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases kde
 

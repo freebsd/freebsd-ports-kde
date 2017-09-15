@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libiodbc
-PORTVERSION=	3.52.12
+DISTVERSION=	3.52.12
 CATEGORIES=	databases
 MASTER_SITES=	SF/iodbc/iodbc/${PORTVERSION}
 

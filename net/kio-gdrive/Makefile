@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net/kio-gdrive/Makefile 13968 2017-04-26 17:59:10Z tcberner $
 
 PORTNAME=	kio-gdrive
-PORTVERSION=	1.1.1
+DISTVERSION=	1.1.1
 CATEGORIES=	net kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE/${PORTNAME}

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redland
-PORTVERSION=	1.0.17
+DISTVERSION=	1.0.17
 PORTREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/

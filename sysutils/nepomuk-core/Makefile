@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/nepomuk-core/Makefile 421390 2016-09-05 20:02:03Z olivierd $
 
 PORTNAME=	nepomuk-core
-PORTVERSION=	${KDE4_VERSION}
+DISTVERSION=	${KDE4_VERSION}
 PORTREVISION=	13
 CATEGORIES=	sysutils kde kde-kde4
 

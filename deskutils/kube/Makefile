@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/kube/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
 PORTNAME=	kube
-PORTVERSION=	0.2.0
+DISTVERSION=	0.2.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	deskutils kde
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	libkolabxml
-PORTVERSION=	1.1.6
+DISTVERSION=	1.1.6
 PORTREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/

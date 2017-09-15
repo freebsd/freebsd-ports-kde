@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	KDocker
-PORTVERSION=	5.0
+DISTVERSION=	5.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	kde@FreeBSD.org

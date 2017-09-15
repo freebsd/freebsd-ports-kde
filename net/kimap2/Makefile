@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/net/kimap2/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
 PORTNAME=	kimap2
-PORTVERSION=	0.1.0
+DISTVERSION=	0.1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net kde
 

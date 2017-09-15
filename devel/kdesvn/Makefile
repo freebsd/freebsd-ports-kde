@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/devel/kdesvn/Makefile 13476 2016-12-15 19:32:14Z tcberner $
 
 PORTNAME=	kdesvn
-PORTVERSION=	2.0.0
+DISTVERSION=	2.0.0
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 CATEGORIES=	devel kde
 

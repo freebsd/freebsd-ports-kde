@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cagibi
-PORTVERSION=	0.2.0
+DISTVERSION=	0.2.0
 CATEGORIES=	net devel
 MASTER_SITES=	KDE/stable/${PORTNAME}
 

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qoauth
-PORTVERSION=	2.0.0
+DISTVERSION=	2.0.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net devel security
 

@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/PORTS/deskutils/zanshin/Makefile 13533 2016-12-30 01:51:06Z fluffy $
 
 PORTNAME=	zanshin
-PORTVERSION=	0.4.1
+DISTVERSION=	0.4.1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	https://files.kde.org/zanshin/
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kdevelop
-PORTVERSION=	5.1.1
+DISTVERSION=	5.1.1
 #PORTREVISION=	0
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/kdevelop/${PORTVERSION}/src

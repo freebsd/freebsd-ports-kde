@@ -1,7 +1,7 @@
 # $FreeBSD: head/security/pam_kde/Makefile 344893 2014-02-18 14:23:03Z makc $
 
 PORTNAME=	pam_kde
-PORTVERSION=	1.0
+DISTVERSION=	1.0
 CATEGORIES=	security kde
 DISTFILES=	# none
 

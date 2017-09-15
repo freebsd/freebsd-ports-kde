@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/devel/asynqt/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	asynqt
-PORTVERSION=	5.18.0
+DISTVERSION=	5.18.0
 CATEGORIES=	devel kde
 
 MAINTAINER=	kde@FreeBSD.org

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kiconedit
-PORTVERSION=	${EXTRA_VER}
+DISTVERSION=	${EXTRA_VER}
 PORTREVISION=	6
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/extragear

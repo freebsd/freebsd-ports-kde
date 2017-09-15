@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	taglib-extras
-PORTVERSION=	1.0.1
+DISTVERSION=	1.0.1
 CATEGORIES=	audio
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 

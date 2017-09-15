@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/deskutils/kjots/Makefile 13967 2017-04-26 17:48:42Z tcberner $
 
 PORTNAME=	kjots
-PORTVERSION=	5.0.2
+DISTVERSION=	5.0.2
 CATEGORIES=	deskutils kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/
 DIST_SUBDIR=	KDE/${PORTNAME}

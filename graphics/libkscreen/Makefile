@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/PORTS/graphics/libkscreen/Makefile 13303 2016-11-07 22:24:37Z tcberner $
 
 PORTNAME=	libkscreen
-PORTVERSION=	1.0.5
+DISTVERSION=	1.0.5
 PORTREVISION=	3
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
@@ -21,6 +21,6 @@ USE_QT4=	corelib dbus gui script \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
-PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
+PLIST_SUB+=	DISTVERSION="${PORTVERSION}"
 
 .include <bsd.port.mk>

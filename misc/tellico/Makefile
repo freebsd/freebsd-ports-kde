@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tellico
-PORTVERSION=	3.0.2
+DISTVERSION=	3.0.2
 CATEGORIES=	misc kde
 MASTER_SITES=	http://tellico-project.org/files/
 

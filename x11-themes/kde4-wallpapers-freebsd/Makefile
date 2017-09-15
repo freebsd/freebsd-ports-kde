@@ -1,7 +1,7 @@
 # $FreeBSD: head/x11-themes/kde4-wallpapers-freebsd/Makefile 415864 2016-05-25 20:56:06Z rene $
 
 PORTNAME=	kde4-wallpapers-freebsd
-PORTVERSION=	1.0
+DISTVERSION=	1.0
 CATEGORIES=	x11-themes kde
 MASTER_SITES=	LOCAL/avilla
 DISTNAME=	stripes-freebsd-${PORTVERSION}

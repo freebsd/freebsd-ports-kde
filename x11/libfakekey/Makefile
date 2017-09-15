@@ -2,7 +2,7 @@
 # $FreeBSD: branches/plasma5/PORTS/x11/libfakekey/Makefile 11849 2016-01-22 06:52:09Z rakuco $
 
 PORTNAME=	libfakekey
-PORTVERSION=	0.1
+DISTVERSION=	0.1
 CATEGORIES=	x11 kde
 MASTER_SITES=	http://downloads.yoctoproject.org/releases/matchbox/${PORTNAME}/${PORTVERSION}/
 

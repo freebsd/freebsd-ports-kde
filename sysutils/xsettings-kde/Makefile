@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/sysutils/xsettings-kde/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	xsettings-kde
-PORTVERSION=	0.12.3
+DISTVERSION=	0.12.3
 CATEGORIES=	sysutils kde
 
 MAINTAINER=	kde@FreeBSD.org

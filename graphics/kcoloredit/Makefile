@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kcoloredit
-PORTVERSION=	${APP_VER}.${EXTRA_VER}
+DISTVERSION=	${APP_VER}.${EXTRA_VER}
 PORTREVISION=	6
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/extragear

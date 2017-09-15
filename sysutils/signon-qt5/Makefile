@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	signon
-PORTVERSION=	8.58
+DISTVERSION=	8.58
 CATEGORIES=	sysutils kde
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=${GL_TAGNAME}&num;/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/
