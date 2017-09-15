@@ -5,9 +5,9 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20170910:
+20170914:
   AFFECTS: users of CMake
-  AUTHOR: groot@kde.org
+  AUTHOR: adridg@freebsd.org
 
   The ports devel/cmake and devel/cmake-modules have been merged into
   devel/cmake. The benefit of being able to update the modules without

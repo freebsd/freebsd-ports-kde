@@ -2,13 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	cmake
-DISTVERSION=	3.9.1
-PORTREVISION?=	0
+DISTVERSION=	3.9.2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R}/
 
 MAINTAINER=	kde@FreeBSD.org
-COMMENT?=	Cross-platform Makefile generator
+COMMENT=	Cross-platform Makefile generator
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/Copyright.txt
@@ -24,7 +23,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 OPTIONS_DEFINE=	DOCS MANPAGES
 OPTIONS_DEFAULT=MANPAGES
 OPTIONS_SUB=	yes
-USES+=		execinfo libarchive ncurses
+USES=		execinfo libarchive ncurses
 HAS_CONFIGURE=	yes
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -63,9 +62,10 @@ post-patch:
 # prevent it from being built/installed by devel/cmake.
 	${RM} ${WRKSRC}/Help/manual/cmake-gui.1.rst
 
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Auxiliary/cmake-mode.el ${STAGEDIR}${PREFIX}/share/emacs/site-lisp
+	# The .NoDartCoverage is supposed to suppress testing in the
+	# source directories, but gets accidentally installed.
 	@${FIND} ${STAGEDIR}${PREFIX} -name ".NoDartCoverage" -delete
 
 .include <bsd.port.post.mk>
