@@ -7,6 +7,11 @@ CATEGORIES=	x11 kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 Plasma workspace
 
+LIB_DEPENDS=	libcln.so:math/cln \
+		libdbusmenu-qt5.so:devel/libdbusmenu-qt5 \
+		libqalculate.so:math/libqalculate \
+		libxcb-image.so:x11/xcb-util-image \
+		libxcb-util.so:x11/xcb-util
 RUN_DEPENDS=	ck-launch-session:sysutils/consolekit2\
 		iceauth:x11/iceauth \
 		xsetroot:x11/xsetroot \
@@ -14,11 +19,6 @@ RUN_DEPENDS=	ck-launch-session:sysutils/consolekit2\
 		xmessage:x11/xmessage \
 		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:x11/xkeyboard-config \
 		iso-codes>=0:misc/iso-codes
-LIB_DEPENDS=	libcln.so:math/cln \
-		libdbusmenu-qt5.so:devel/libdbusmenu-qt5 \
-		libqalculate.so:math/libqalculate \
-		libxcb-image.so:x11/xcb-util-image \
-		libxcb-util.so:x11/xcb-util
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 pkgconfig \
 		tar:xz
