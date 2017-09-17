@@ -48,7 +48,6 @@ SQLITE_CMAKE_OFF=	-DAKONADI_BUILD_QSQLITE:BOOL=OFF
 
 OPTIONS_DEFAULT=	MYSQL
 
-
 post-patch:
 # To avoid overflow, MySQL settings need to be lower than
 # INT_MAX / kern.hz. This setting assumes kern.hz=2000, and
