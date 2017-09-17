@@ -9,7 +9,7 @@ COMMENT=	Plasma5 GTK2 and GTK3 configurator
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext \
 		kde:5 pkgconfig tar:xz
-USE_GNOME=	cairo gdkpixbuf2  gtk20 gtk30 glib20
+USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 glib20
 USE_KDE=	archive attica auth codecs completion config configwidgets \
 		coreaddons ecm i18n iconthemes jobwidgets kcmutils kio \
 		newstuff service widgetsaddons xmlgui
