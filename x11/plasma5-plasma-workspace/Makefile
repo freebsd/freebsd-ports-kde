@@ -50,8 +50,6 @@ OPTIONS_SUB=		yes
 CALENDAR_DESC=	Support display of holidays in calendar applet
 CALENDAR_USE=	KDE=holidays
 
-.include <bsd.port.options.mk>
-
 post-patch:
 # set the paths in startkde
 	${REINPLACE_CMD} -e 's|%%KDE_PREFIX%%|${KDE_PREFIX}|g' \
