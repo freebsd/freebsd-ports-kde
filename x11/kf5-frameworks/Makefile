@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-frameworks/Makefile 13619 2017-01-21 11:39:47Z tcberner $
 
 PORTNAME=	frameworks

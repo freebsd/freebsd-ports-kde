@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/lang/kross-interpreters/Makefile 13686 2017-03-08 10:12:22Z tcberner $
 
 PORTNAME=	kross-interpreters

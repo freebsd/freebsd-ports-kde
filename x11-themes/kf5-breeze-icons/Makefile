@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11-themes/kf5-breeze-icons/Makefile 13458 2016-12-13 15:47:03Z tcberner $
 
 PORTNAME=	breeze-icons

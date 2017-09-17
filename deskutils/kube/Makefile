@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kube/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
 PORTNAME=	kube

@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kmail-account-wizard/Makefile 13947 2017-04-25 06:54:14Z tcberner $
 
 PORTNAME=	kmail-account-wizard

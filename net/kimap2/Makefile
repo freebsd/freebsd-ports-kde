@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/net/kimap2/Makefile 13970 2017-04-26 19:42:11Z tcberner $
 
 PORTNAME=	kimap2

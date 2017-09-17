@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kfilemetadata/Makefile 13617 2017-01-21 08:15:36Z tcberner $
 
 PORTNAME=	kfilemetadata

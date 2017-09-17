@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/plasma5-sddm-kcm/Makefile 13601 2017-01-16 23:00:36Z tcberner $
 
 PORTNAME=	sddm-kcm

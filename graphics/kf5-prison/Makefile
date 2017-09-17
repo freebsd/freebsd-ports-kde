@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/graphics/kf5-prison/Makefile 13614 2017-01-21 08:10:15Z tcberner $
 
 PORTNAME=	prison

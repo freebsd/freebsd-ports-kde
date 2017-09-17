@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/sysutils/kf5-bluez-qt/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 # Note: this probably does not work yet (TOOD: find out if bluez-qt works on

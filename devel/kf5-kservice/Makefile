@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kservice/Makefile 13616 2017-01-21 08:13:15Z tcberner $
 
 PORTNAME=	kservice

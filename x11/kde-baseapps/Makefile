@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kde-baseapps/Makefile 13955 2017-04-25 20:11:18Z tcberner $
 
 PORTNAME=	kde-baseapps

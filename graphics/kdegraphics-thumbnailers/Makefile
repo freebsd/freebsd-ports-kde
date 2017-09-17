@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD$
 
 PORTNAME=	kdegraphics-thumbnailers

@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-solid/Makefile 13615 2017-01-21 08:11:51Z tcberner $
 
 PORTNAME=	solid

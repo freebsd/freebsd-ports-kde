@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-kactivities/Makefile 13452 2016-12-12 16:23:57Z tcberner $
 
 PORTNAME=	kactivities

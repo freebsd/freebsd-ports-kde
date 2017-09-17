@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/sysutils/plasma5-polkit-kde-agent-1/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	polkit-kde-agent-1

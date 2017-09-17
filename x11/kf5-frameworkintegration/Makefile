@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-frameworkintegration/Makefile 13591 2017-01-14 18:07:11Z tcberner $
 
 PORTNAME=	frameworkintegration

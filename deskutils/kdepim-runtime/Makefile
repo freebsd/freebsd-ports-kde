@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kdepim-runtime/Makefile 13964 2017-04-26 16:37:19Z tcberner $
 
 PORTNAME=	kdepim-runtime

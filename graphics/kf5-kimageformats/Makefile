@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/graphics/kf5-kimageformats/Makefile 13416 2016-11-23 20:00:33Z tcberner $
 
 PORTNAME=	kimageformats

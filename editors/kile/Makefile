@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/PORTS/editors/kile/Makefile 13728 2017-03-10 20:39:23Z tcberner $
 
 PORTNAME=	kile

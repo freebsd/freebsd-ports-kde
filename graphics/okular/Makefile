@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/graphics/okular/Makefile 13698 2017-03-08 17:47:13Z tcberner $
 
 PORTNAME=	okular

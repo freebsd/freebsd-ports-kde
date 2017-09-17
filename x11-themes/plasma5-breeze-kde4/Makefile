@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11-themes/plasma5-breeze-kde4/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	breeze

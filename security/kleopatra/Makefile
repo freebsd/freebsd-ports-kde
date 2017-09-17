@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/security/kleopatra-kf5/Makefile 13709 2017-03-08 18:23:47Z tcberner $
 
 PORTNAME=	kleopatra

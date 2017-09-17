@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/pim-sieve-editor/Makefile 13945 2017-04-25 06:21:17Z tcberner $
 
 PORTNAME=	pim-sieve-editor

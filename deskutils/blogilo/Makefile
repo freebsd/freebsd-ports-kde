@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/blogilo/Makefile 13965 2017-04-26 16:54:48Z tcberner $
 
 PORTNAME=	blogilo

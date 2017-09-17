@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kjots/Makefile 13967 2017-04-26 17:48:42Z tcberner $
 
 PORTNAME=	kjots

@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/audio/plasma5-plasma-pa/Makefile 13948 2017-04-25 15:08:16Z tcberner $
 
 PORTNAME=	plasma-pa

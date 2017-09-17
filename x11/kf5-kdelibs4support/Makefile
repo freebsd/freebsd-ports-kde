@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-kdelibs4support/Makefile 13899 2017-04-20 07:16:19Z tcberner $
 
 PORTNAME=	kdelibs4support

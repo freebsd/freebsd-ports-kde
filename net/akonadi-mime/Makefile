@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/net/akonadi-mime/Makefile 13959 2017-04-26 14:27:50Z tcberner $
 
 PORTNAME=	akonadi-mime

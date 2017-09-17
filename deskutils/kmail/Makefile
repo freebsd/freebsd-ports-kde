@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kmail/Makefile 13949 2017-04-25 15:21:11Z tcberner $
 
 PORTNAME=	kmail

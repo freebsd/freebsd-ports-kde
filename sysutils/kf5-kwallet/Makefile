@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/sysutils/kf5-kwallet/Makefile 13395 2016-11-21 15:55:52Z tcberner $
 
 PORTNAME=	kwallet

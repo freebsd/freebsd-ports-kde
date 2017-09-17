@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/kf5-plasma-framework/Makefile 13459 2016-12-13 15:48:45Z tcberner $
 
 PORTNAME=	plasma-framework

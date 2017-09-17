@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kcoreaddons/Makefile 13717 2017-03-08 18:40:21Z tcberner $
 
 PORTNAME=	kcoreaddons

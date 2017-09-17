@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/kfind-kf5/Makefile 13695 2017-03-08 17:31:22Z tcberner $
 
 PORTNAME=	kfind

@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/devel/kf5-kbookmarks/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kbookmarks

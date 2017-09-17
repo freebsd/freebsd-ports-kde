@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/PORTS/devel/kdesvn/Makefile 13476 2016-12-15 19:32:14Z tcberner $
 
 PORTNAME=	kdesvn

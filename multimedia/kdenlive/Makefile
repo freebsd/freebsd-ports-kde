@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/multimedia/kdenlive/Makefile 13957 2017-04-26 14:25:40Z tcberner $
 
 PORTNAME=	kdenlive

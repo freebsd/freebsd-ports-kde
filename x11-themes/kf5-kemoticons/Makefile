@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11-themes/kf5-kemoticons/Makefile 13250 2016-11-06 16:34:10Z tcberner $
 
 PORTNAME=	kemoticons

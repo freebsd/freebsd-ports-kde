@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/deskutils/korganizer/Makefile 13937 2017-04-23 15:49:32Z tcberner $
 
 PORTNAME=	korganizer

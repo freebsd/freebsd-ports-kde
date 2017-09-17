@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/x11/plasma5-plasma-integration/Makefile 13948 2017-04-25 15:08:16Z tcberner $
 
 PORTNAME=	plasma-integration

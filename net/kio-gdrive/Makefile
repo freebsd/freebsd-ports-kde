@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/net/kio-gdrive/Makefile 13968 2017-04-26 17:59:10Z tcberner $
 
 PORTNAME=	kio-gdrive

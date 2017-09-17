@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/games/libkdegames-kf5/Makefile 13697 2017-03-08 17:43:58Z tcberner $
 
 PORTNAME=	libkdegames

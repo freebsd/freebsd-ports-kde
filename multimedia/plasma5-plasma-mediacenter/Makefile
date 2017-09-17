@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/multimedia/plasma5-plasma-mediacenter/Makefile 13779 2017-03-18 09:57:45Z tcberner $
 
 PORTNAME=	plasma-mediacenter

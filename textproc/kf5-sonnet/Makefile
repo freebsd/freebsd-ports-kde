@@ -1,4 +1,3 @@
-# Created by: tcberner
 # $FreeBSD: branches/plasma5/KDE/textproc/kf5-sonnet/Makefile 13591 2017-01-14 18:07:11Z tcberner $
 
 PORTNAME=	sonnet
