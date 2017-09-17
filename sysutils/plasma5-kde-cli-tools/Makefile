@@ -18,4 +18,3 @@ USE_QT5=	buildtools_build core dbus gui network printsupport qmake_build \
 USE_XORG=	x11
 
 .include <bsd.port.mk>
-

@@ -16,4 +16,3 @@ USE_KDE=	ecm idletime wayland windowsystem
 USE_QT5=	buildtools_build core gui qmake_build widgets
 
 .include <bsd.port.mk>
-

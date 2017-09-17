@@ -26,4 +26,3 @@ SHEBANG_FILES=	src/platformtheme/fonts_akregator.pl \
 		src/platformtheme/mono_font.pl
 
 .include <bsd.port.mk>
-
