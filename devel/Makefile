@@ -256,7 +256,6 @@
     SUBDIR += calibrator
     SUBDIR += capstone3
     SUBDIR += capstone4
-    SUBDIR += cargo
     SUBDIR += cask
     SUBDIR += catch
     SUBDIR += cbrowser
@@ -4061,6 +4060,7 @@
     SUBDIR += picp
     SUBDIR += picprog
     SUBDIR += pig
+    SUBDIR += pijul
     SUBDIR += piklab
     SUBDIR += pinba_engine
     SUBDIR += pipestatus
@@ -4720,6 +4720,7 @@
     SUBDIR += py-pytest-asyncio
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
+    SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock

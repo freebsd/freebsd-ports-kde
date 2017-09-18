@@ -8062,7 +8062,6 @@ databases/py32-sqlite3||2016-02-02|Has expired: Full EOL reached. Please update 
 x11-toolkits/py32-tkinter||2016-02-02|Has expired: Full EOL reached. Please update to Python 3.5
 sysutils/puppet|sysutils/puppet38|2016-02-05|Renamed
 devel/etcdctl|devel/etcd|2016-02-06|Has expired: etcdctl is now part of etcd, following the change from the upstream
-graphics/py-graphviz|graphics/py-pygraphviz|2016-02-07|Renamed to match upstream (PyPI) name
 security/polarssl||2016-02-07|Has expired: Upstream is ending support for 1.2.x
 multimedia/xbmc-addon-pvr||2016-02-12|Has expired: Does not work with multimedia/kodi 15.x and newer
 security/py-openid|security/py-python-openid|2016-02-13|Renamed to match upstream (PyPI) name
@@ -9706,4 +9705,6 @@ devel/py33-setuptools||2017-09-03|Removed, please update to Python 3.6
 x11-toolkits/py33-tkinter||2017-09-03|Removed, please update to Python 3.6
 devel/py3-enum34||2017-09-03|Removed, Python 3.3 only
 security/clambc||2017-09-14|Has expired: Practically unmaintained, featuring issues elsewhere solved 6 years ago
-devel/cmake-modules||2017-09-14|Merged with devel/cmake
+devel/cmake-modules||2017-09-14|Deleted, merged into devel/cmake
+devel/cargo|lang/rust|2017-09-15|Merged with lang/rust
+sysutils/filelight-kde4|sysutils/filelight|2017-09-16|Renamed to sysutils/filelight

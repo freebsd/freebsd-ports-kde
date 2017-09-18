@@ -1,8 +1,8 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: branches/plasma5/KDE/sysutils/filelight-kf5/Makefile 13710 2017-03-08 18:32:37Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	filelight
-DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	sysutils kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -11,8 +11,11 @@ COMMENT=	Map of concentric segmented-rings representing file system
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 
-USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	coreaddons doctools ecm i18n kio parts solid xmlgui
-USE_QT5=	buildtools_build core dbus qmake_build script widgets
+USES=		cmake:outsource desktop-file-utils gettext kde:5 tar:xz
+USE_KDE=	auth codecs completion config configwidgets coreaddons doctools \
+		ecm i18n jobwidgets kio parts service solid sonnet textwidgets \
+		widgetsaddons xmlgui
+USE_QT5=	core dbus gui network script widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>
