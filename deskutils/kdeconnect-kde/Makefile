@@ -2,10 +2,9 @@
 # $FreeBSD: branches/plasma5/PORTS/deskutils/kdeconnect-kde-kf5/Makefile 13532 2016-12-29 17:19:52Z fluffy $
 
 PORTNAME=	kdeconnect-kde
-DISTVERSION=	1.0.3
+DISTVERSION=	1.2
 CATEGORIES=	deskutils kde
 MASTER_SITES=	KDE/stable/kdeconnect/${PORTVERSION}/src/
-PKGNAMESUFFIX=	-kf5
 DIST_SUBDIR=	KDE
 
 MAINTAINER=	kde@FreeBSD.org
