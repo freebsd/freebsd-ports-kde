@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/net-p2p/ktorrent/Makefile 13833 2017-04-09 15:07:57Z tcberner $
 
 PORTNAME=	ktorrent
-DISTVERSION=	5.0.90.20170819
+DISTVERSION=	5.1.0
 CATEGORIES=	net-p2p kde
 DIST_SUBDIR=	KDE/${PORTNAME}
 
@@ -27,6 +27,6 @@ USE_QT5=	core dbus gui network phonon4 printsupport script testlib \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	KDE
-GH_TAGNAME=	0ae10b8
+GH_TAGNAME=	949d58b
 
 .include <bsd.port.mk>
