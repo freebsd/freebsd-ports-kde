@@ -20,7 +20,7 @@ RUN_DEPENDS=	git:devel/git
 CONFLICTS_INSTALL=	kdesvn-1.7.0*
 
 USES=		bdb cmake:outsource compiler:c++11-lang desktop-file-utils \
-		gettext execinfo kde:5 tar:xz
+		gettext kde:5 tar:xz
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons dbusaddons doctools ecm i18n iconthemes itemviews \
 		jobwidgets kio notifications parts service sonnet texteditor \
