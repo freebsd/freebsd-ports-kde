@@ -17,9 +17,10 @@ GH_ACCOUNT=	KDAB
 GH_PROJECT=	Charm
 
 USES=		cmake
-CMAKE_ARGS+=	-DCharm_VERSION:STRING=${PORTVERSION} -DCHARM_FORCE_QT4=true
-USE_QT4=	qmake_build moc_build rcc_build uic_build corelib dbus gui \
-		network qtestlib script sql sql-sqlite3 xml
+CMAKE_ARGS+=	-DCharm_VERSION:STRING=${PORTVERSION} -DCHARM_FORCE_QT5=true
+USE_QT5=	core dbus gui \
+		network script sql sql-sqlite3 xml \
+		buildtools_build qmake_build
 USE_XORG=	ice x11 xext xscrnsaver
 INSTALLS_ICONS=	yes
 
