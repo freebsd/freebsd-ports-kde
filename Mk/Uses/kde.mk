@@ -224,6 +224,7 @@ _USE_KDE4_ALL=	baseapps kactivities kdelibs \
 		pimlibs pykde4 pykdeuic4 qtruby runtime smokegen smokekde \
 		smokeqt workspace \
 		oxygen-icons5
+_USE_KDE4_EOL=	workspace
 # These components are not part of the Software Compilation.
 _USE_KDE4_ALL+=	automoc4 ontologies qimageblitz soprano strigi
 _USE_KDE4_ALL+=	${_USE_KDE_BOTH}
@@ -370,9 +371,6 @@ smokekde_LIB=		libsmokekdecore.so
 
 smokeqt_PORT=		devel/smokeqt
 smokeqt_LIB=		libsmokeqtcore.so
-
-workspace_PORT=		x11/kde4-workspace
-workspace_LIB=		libkworkspace.so
 
 # Non-Software Compilation components
 
@@ -937,6 +935,10 @@ _USE_KDE_ALL=	${_USE_${_KDE_RELNAME}_ALL}
 
 # Iterate through components deprived of suffix.
 .  for component in ${USE_KDE:O:u:C/_.+//}
+  # Check if it is EOL'd
+.    if ${_USE_KDE4_EOL:M${component}}
+IGNORE?=	EOL '${component}' is no longer supported by kde.mk
+.    endif
   # Check that the component is valid.
 .    if ${_USE_KDE_ALL:M${component}} != ""
    # Skip meta-components (currently none).

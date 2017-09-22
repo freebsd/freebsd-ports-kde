@@ -1,6 +1,5 @@
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	geekclock
 PORTVERSION=	1.0

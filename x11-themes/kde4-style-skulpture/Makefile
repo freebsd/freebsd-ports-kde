@@ -1,7 +1,6 @@
 # Created by: Steve Wills <steve@mouf.net>
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	skulpture
 PORTVERSION=	0.2.4

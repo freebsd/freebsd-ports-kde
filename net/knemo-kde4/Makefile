@@ -1,6 +1,5 @@
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL -- there is an upstream KF5-based branch
 
 PORTNAME=	knemo
 PORTVERSION=	0.7.7

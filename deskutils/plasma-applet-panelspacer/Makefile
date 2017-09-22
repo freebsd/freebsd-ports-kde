@@ -1,6 +1,5 @@
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	panelspacer
 PORTVERSION=	0.2

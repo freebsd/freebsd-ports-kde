@@ -1,6 +1,5 @@
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	serverstatuswidget
 PORTVERSION=	1.5.1

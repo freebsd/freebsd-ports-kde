@@ -1,6 +1,5 @@
 # $FreeBSD$
 
-IGNORE=		kde4-workspace is EOL
 
 PORTNAME=	daisy
 PORTVERSION=	0.0.4.26
