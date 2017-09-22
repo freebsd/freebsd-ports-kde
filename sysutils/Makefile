@@ -843,6 +843,7 @@
     SUBDIR += pick
     SUBDIR += pidof
     SUBDIR += pipemeter
+    SUBDIR += plasma5-drkonqi
     SUBDIR += plasma5-libksysguard
     SUBDIR += plasma5-polkit-kde-agent-1
     SUBDIR += plasma5-systemsettings
