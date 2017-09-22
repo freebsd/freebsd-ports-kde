@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	kdevelop-pg-qt
-DISTVERSION=	${KDEVELOP_PG_QT_VERSION:R}
+DISTVERSION=	2.1.0
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/${KDEVELOP_PG_QT_VERSION}/src
+MASTER_SITES=	KDE/stable/${PORTNAME}/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
 
 MAINTAINER=	kde@FreeBSD.org
@@ -21,7 +21,5 @@ USE_QT5=	core testlib \
 		buildtools_build qmake_build
 
 CONFLICTS=	kdevelop-pg-qt-1.0*
-
-KDEVELOP_PG_QT_VERSION=	2.0.0
 
 .include <bsd.port.mk>
