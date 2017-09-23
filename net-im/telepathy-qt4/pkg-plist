@@ -423,13 +423,13 @@ lib/cmake/TelepathyQt%%QTVER_SUFFIX%%Service/TelepathyQt%%QTVER_SUFFIX%%ServiceC
 lib/cmake/TelepathyQt%%QTVER_SUFFIX%%Service/TelepathyQt%%QTVER_SUFFIX%%ServiceConfigVersion.cmake
 lib/libtelepathy-qt%%QTVER_SUFFIX%%-farstream.so
 lib/libtelepathy-qt%%QTVER_SUFFIX%%-farstream.so.%%SHLIB_SUFFIX%%
-lib/libtelepathy-qt%%QTVER_SUFFIX%%-farstream.so.%%SHLIB_SUFFIX%%.%%PORTVERSION%%
+lib/libtelepathy-qt%%QTVER_SUFFIX%%-farstream.so.%%SHLIB_SUFFIX%%.%%DISTVERSION%%
 lib/libtelepathy-qt%%QTVER_SUFFIX%%-service.so
 lib/libtelepathy-qt%%QTVER_SUFFIX%%-service.so.0
-lib/libtelepathy-qt%%QTVER_SUFFIX%%-service.so.%%SHLIB_SUFFIX%%.%%PORTVERSION%%
+lib/libtelepathy-qt%%QTVER_SUFFIX%%-service.so.%%SHLIB_SUFFIX%%.%%DISTVERSION%%
 lib/libtelepathy-qt%%QTVER_SUFFIX%%.so
 lib/libtelepathy-qt%%QTVER_SUFFIX%%.so.%%SHLIB_SUFFIX%%
-lib/libtelepathy-qt%%QTVER_SUFFIX%%.so.%%SHLIB_SUFFIX%%.%%PORTVERSION%%
+lib/libtelepathy-qt%%QTVER_SUFFIX%%.so.%%SHLIB_SUFFIX%%.%%DISTVERSION%%
 libdata/pkgconfig/TelepathyQt%%QTVER_SUFFIX%%.pc
 libdata/pkgconfig/TelepathyQt%%QTVER_SUFFIX%%Farstream.pc
 libdata/pkgconfig/TelepathyQt%%QTVER_SUFFIX%%Service.pc
