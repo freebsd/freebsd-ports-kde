@@ -93,8 +93,8 @@ QT_DIST=		3d activeqt androidextras base canvas3d charts connectivity \
 				location macextras multimedia networkauth purchasing \
 				quickcontrols2 quickcontrols remoteobjects script scxml sensors \
 				serialbus serialport speech svg tools translations \
-				virtualkeyboard wayland webchannel webengine webkit-examples \
-				webkit websockets webview winextras x11extras xmlpatterns
+				virtualkeyboard wayland webchannel webengine websockets webview \
+				winextras x11extras xmlpatterns
 .		endif
 .  endif
 
