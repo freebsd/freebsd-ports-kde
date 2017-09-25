@@ -160,7 +160,7 @@ opendnssec:*:215:
 nsd:*:216:
 anvil:*:217:
 zap:*:218:
-# free: 219
+sddm:*:219:
 bs:*:220:
 # free: 221
 rtpproxy:*:222:
@@ -175,7 +175,7 @@ kismet:*:229:
 # free: 231
 # free: 232
 # free: 233
-# free: 234
+kafka:*:234:
 # free: 235
 # free: 236
 # free: 237
@@ -719,7 +719,7 @@ cockroach:*:771:
 # free: 775
 # free: 776
 openxpki:*:777:
-# free: 778
+litecoin:*:778:
 bitcoin:*:779:
 zetacoin:*:780:
 # free: 781

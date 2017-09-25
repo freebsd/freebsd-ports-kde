@@ -238,7 +238,6 @@
     SUBDIR += milter-bogom
     SUBDIR += milter-callback
     SUBDIR += milter-greylist
-    SUBDIR += milter-greylist-devel
     SUBDIR += milter-manager
     SUBDIR += milter-regex
     SUBDIR += milter-skem
@@ -251,7 +250,6 @@
     SUBDIR += mlmmj
     SUBDIR += mls
     SUBDIR += mmr
-    SUBDIR += movemail
     SUBDIR += mpop
     SUBDIR += mreport
     SUBDIR += msgconvert
@@ -615,7 +613,6 @@
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer
     SUBDIR += rubygem-exception_notification
-    SUBDIR += rubygem-larch
     SUBDIR += rubygem-mail
     SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mailboxer

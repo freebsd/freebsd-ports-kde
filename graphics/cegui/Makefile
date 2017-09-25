@@ -3,7 +3,7 @@
 
 PORTNAME=	cegui
 PORTVERSION=	0.8.4
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	graphics devel
 MASTER_SITES=	SF/crayzedsgui/CEGUI%20Mk-2/0.8
 
@@ -17,7 +17,7 @@ CONFIGURE_ENV+=	TOLUA_INC="${LUA_INCDIR}"
 CMAKE_ARGS=	-DCEGUI_SAMPLES_ENABLED:BOOL=OFF \
 		-DCEGUI_BUILD_TESTS=OFF
 USE_LDCONFIG=	yes
-USES=		compiler:c++11-lib cmake execinfo pkgconfig tar:bzip2
+USES=		compiler:c++11-lib cmake pkgconfig tar:bzip2
 
 PORTDOCS=	*
 

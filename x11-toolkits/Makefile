@@ -218,7 +218,6 @@
     SUBDIR += py-wxPython28-common
     SUBDIR += py-wxPython30
     SUBDIR += py-xlib
-    SUBDIR += py33-tkinter
     SUBDIR += py34-tkinter
     SUBDIR += py35-tkinter
     SUBDIR += py36-tkinter
@@ -270,6 +269,7 @@
     SUBDIR += tk84
     SUBDIR += tk85
     SUBDIR += tk86
+    SUBDIR += tk87
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable

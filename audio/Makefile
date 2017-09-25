@@ -657,6 +657,7 @@
     SUBDIR += py-mutagen
     SUBDIR += py-ogg
     SUBDIR += py-openal
+    SUBDIR += py-opuslib
     SUBDIR += py-py-jack
     SUBDIR += py-pyacoustid
     SUBDIR += py-pyaudio
@@ -796,7 +797,6 @@
     SUBDIR += timidity++-xaw
     SUBDIR += timidity++-xskin
     SUBDIR += tkeca
-    SUBDIR += tomahawk
     SUBDIR += toolame
     SUBDIR += tosha
     SUBDIR += trommler

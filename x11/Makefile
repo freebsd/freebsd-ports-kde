@@ -213,6 +213,8 @@
     SUBDIR += lsw
     SUBDIR += luit
     SUBDIR += lumina
+    SUBDIR += lumina-core
+    SUBDIR += lumina-coreutils
     SUBDIR += lupe
     SUBDIR += lxde-meta
     SUBDIR += lxhotkey
@@ -296,6 +298,7 @@
     SUBDIR += screen-message
     SUBDIR += scripts
     SUBDIR += scrnsaverproto
+    SUBDIR += sddm
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap

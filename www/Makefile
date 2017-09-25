@@ -5,6 +5,7 @@
 
     SUBDIR += R-cran-RgoogleMaps
     SUBDIR += R-cran-Rook
+    SUBDIR += R-cran-downloader
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
@@ -423,6 +424,7 @@
     SUBDIR += mod_auth_mysql2
     SUBDIR += mod_auth_mysql_another
     SUBDIR += mod_auth_openid
+    SUBDIR += mod_auth_openidc
     SUBDIR += mod_auth_pam2
     SUBDIR += mod_auth_pgsql2
     SUBDIR += mod_auth_pubtkt
@@ -542,6 +544,8 @@
     SUBDIR += node4
     SUBDIR += node6
     SUBDIR += nostromo
+    SUBDIR += novnc
+    SUBDIR += novnc-websockify
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
     SUBDIR += npc
@@ -1079,6 +1083,7 @@
     SUBDIR += p5-MediaWiki-API
     SUBDIR += p5-Mobile-UserAgent
     SUBDIR += p5-ModPerl-VersionUtil
+    SUBDIR += p5-Mojo-IOLoop-ForkCall
     SUBDIR += p5-Mojo-Server-FastCGI
     SUBDIR += p5-MojoMojo
     SUBDIR += p5-MojoX-Log-Dispatch-Simple
@@ -1618,7 +1623,6 @@
     SUBDIR += py-django110
     SUBDIR += py-django111
     SUBDIR += py-django18
-    SUBDIR += py-django19
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1699,6 +1703,7 @@
     SUBDIR += py-pastedeploy
     SUBDIR += py-pastescript
     SUBDIR += py-pelican
+    SUBDIR += py-planet
     SUBDIR += py-plone.alterego
     SUBDIR += py-plone.app.blob
     SUBDIR += py-plone.app.caching
@@ -1830,6 +1835,7 @@
     SUBDIR += py-tmdb3
     SUBDIR += py-tornado
     SUBDIR += py-trello
+    SUBDIR += py-treq
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-twistedWeb
@@ -2101,6 +2107,7 @@
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
     SUBDIR += rubygem-rdf
+    SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
     SUBDIR += rubygem-redis-rack1
@@ -2199,7 +2206,6 @@
     SUBDIR += sogo3-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spdylay
-    SUBDIR += speedtest-mini
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid

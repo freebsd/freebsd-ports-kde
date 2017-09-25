@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	fldigi
-PORTVERSION=	4.0.8
+PORTVERSION=	4.0.9
+PORTREVISION=	1
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
@@ -23,7 +24,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs\
 
 USE_CXXSTD=	gnu++0x
 GNU_CONFIGURE=	yes
-USES=		autoreconf compiler:c++11-lib execinfo jpeg gmake perl5 pkgconfig shebangfix
+USES=		autoreconf compiler:c++11-lib jpeg gmake perl5 pkgconfig shebangfix
 USE_XORG=	x11 xft xext xfixes xcursor xinerama
 CONFIGURE_ENV=	FLTK_CONFIG="${LOCALBASE}/bin/fltk-config" \
 		    EXTRA_LIBS="-lexecinfo"

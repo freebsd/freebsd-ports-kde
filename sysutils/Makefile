@@ -191,6 +191,7 @@
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
+    SUBDIR += consul_exporter
     SUBDIR += consul-alerts
     SUBDIR += contractor
     SUBDIR += copytape
@@ -311,7 +312,7 @@
     SUBDIR += ffs2recov
     SUBDIR += file
     SUBDIR += filedupe
-    SUBDIR += filelight-kde4
+    SUBDIR += filelight
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
@@ -1140,10 +1141,11 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslog-ng-incubator
+    SUBDIR += syslog-ng310
+    SUBDIR += syslog-ng311
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
-    SUBDIR += syslog-ng310
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1349,6 +1351,7 @@
     SUBDIR += zfstools
     SUBDIR += zidrav
     SUBDIR += zisofs-tools
+    SUBDIR += znapzend
     SUBDIR += zogftw
     SUBDIR += zrep
     SUBDIR += zsd
