@@ -41,7 +41,7 @@ USE_XORG=	ice sm xcb xext xi
 
 CONFLICTS_INSTALL=	calligra-2*
 
-PLIST_SUB+=	SHLIB_VER=18.0.0 \
+PLIST_SUB=	SHLIB_VER=18.0.0 \
 		SHLIB_SHVER=18
 
 .include <bsd.port.mk>
