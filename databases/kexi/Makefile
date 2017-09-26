@@ -30,12 +30,4 @@ CMAKE_ARGS=		-DBUILD_TESTING:BOOL=OFF \
 			-DKEXI_QTGUI_RUNTIME_AVAILABLE:BOOL=TRUE \
 			-DKEXI_ENABLE_QTGUI_FOR_TESTS:BOOL=FALSE
 
-.include <bsd.port.pre.mk>
-# There is a bug in clang < 3.9 not accepting pointers to incomplete classes:
-# https://bugs.llvm.org//show_bug.cgi?id=26297
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200000
-BUILD_DEPENDS+=		clang++39:devel/llvm39
-CXX=			clang++39
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
