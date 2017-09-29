@@ -1,8 +1,12 @@
 # $FreeBSD$
 
+# TODO (when these parts are available in KF5):
+#  - add calendarcore to USE_KDE when KDE PIM is available
+#  - add libOkular5Core.so:graphics/okular to LIB_DEPENDS
+#
 PORTNAME=	calligra
 DISTVERSION=	3.0.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	editors kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	KDE/${PORTNAME}

@@ -3,7 +3,7 @@
 
 PORTNAME=	gearmand
 PORTVERSION=	1.0.6
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/gearmand/1.0/${PORTVERSION}/+download/
 
@@ -31,7 +31,8 @@ SUB_LIST+=	USERS=${USERS} GROUPS=${GROUPS}
 
 CONFIGURE_ARGS+=--with-lib-prefix=${LOCALBASE} --with-boost=${LOCALBASE} \
 		--localstatedir=/var/db/${PORTNAME} --enable-static
-LDFLAGS+=	-lexecinfo
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
 
 OPTIONS_DEFINE=	DRIZZLE MEMCACHED PGSQL SQLITE MYSQL HIREDIS TOKYOCAB
 OPTIONS_DEFAULT=SQLITE

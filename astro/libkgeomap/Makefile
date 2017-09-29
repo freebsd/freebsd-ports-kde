@@ -11,12 +11,7 @@ LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/graph/buffer_concepts.hpp:devel/boost-libs
-# Ugly "fix" to work with both the quarterly branch and head
-.if !exists(${.CURDIR:H:H}/graphics/opencv)
-LIB_DEPENDS=	libopencv_legacy.so:graphics/opencv2
-.else
 LIB_DEPENDS=	libopencv_legacy.so:graphics/opencv
-.endif
 
 USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
 USE_QT5=	buildtools_build concurrent core gui network qmake_build \
