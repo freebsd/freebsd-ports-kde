@@ -36,14 +36,14 @@ USE_QT5=	buildtools_build concurrent core dbus gui \
 		testlib uiplugin uitools widgets x11extras xml
 USE_XORG=	ice sm x11 xcb xext xi
 
+.include <bsd.port.pre.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
 # Base compiler clang 3.5 does not understand -Winconsistent-missing-override
 EXTRA_PATCHES=	${PATCHDIR}/extra-patch-fbsd10
 .endif
 
-
 post-patch:
 	${REINPLACE_CMD} '/sysmacros.h/d' \
 		${PATCH_WRKSRC}/logind.cpp
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
