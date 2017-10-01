@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	otter-browser
-DISTVERSION=	0.9.12
+DISTVERSION=	0.9.91
 DISTVERSIONPREFIX=	v
-PORTREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	kde@FreeBSD.org
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
 
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils
 USE_QT5=	concurrent core dbus gui multimedia network printsupport \
-		qml script sql sql-sqlite3 widgets xmlpatterns \
+		qml script sql sql-sqlite3 svg widgets xmlpatterns \
 		buildtools_build qmake_build
 
 OPTIONS_SINGLE=		BACKEND
