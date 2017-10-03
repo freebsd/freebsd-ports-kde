@@ -9715,3 +9715,4 @@ devel/libexecinfo||2017-09-22|Is present in the base system of all supported rel
 games/ember||2017-09-23|Removed, it is BROKEN and no longer developed since 2014
 ports-mgmt/packagekit-qt4||2017-09-28|Has expired: Ignored for more than 5 years
 ports-mgmt/kpackagekit||2017-09-28|Has expired: Skipped for more than 5 years
+devel/kdevplatfrom||2017-10-03|Has been reintegrated into kdevelop upstream

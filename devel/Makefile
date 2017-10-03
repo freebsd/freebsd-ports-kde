@@ -1255,7 +1255,6 @@
     SUBDIR += kdevelop-pg-qt
     SUBDIR += kdevelop-php
     SUBDIR += kdevelop-php-docs
-    SUBDIR += kdevplatform
     SUBDIR += kf5-extra-cmake-modules
     SUBDIR += kf5-kapidox
     SUBDIR += kf5-kauth
