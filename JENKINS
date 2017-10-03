@@ -68,6 +68,8 @@ devel/kde-dev-utils
 devel/kdesdk
 devel/kdesdk-thumbnailers
 devel/kdevelop
+devel/kdev-php
+devel/kdev-python
 devel/kf5-extra-cmake-modules
 devel/kf5-kapidox
 devel/kf5-kauth
