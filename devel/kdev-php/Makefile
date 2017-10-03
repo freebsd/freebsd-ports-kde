@@ -1,17 +1,16 @@
 # $FreeBSD$
 
 PORTNAME=	kdev-php
-DISTVERSION=	5.1.2
+DISTVERSION=	5.1.80
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/stable/kdevelop/${PORTVERSION}/src
+MASTER_SITES=	KDE/unstable/kdevelop/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	PHP support for KDevelop
 
 BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
-LIB_DEPENDS=	libKDevPlatformInterfaces.so:devel/kdevplatform \
-		libkdevcmakecommon.so:devel/kdevelop
+LIB_DEPENDS=	libkdevcmakecommon.so:devel/kdevelop
 
 USES=		cmake:outsource compiler:c++11-lib kde:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons ecm \

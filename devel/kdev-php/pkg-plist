@@ -1,10 +1,11 @@
+etc/xdg/kdevphpsupport.categories
 lib/libkdevphpcompletion.so
 lib/libkdevphpduchain.so
 lib/libkdevphpparser.so
-%%QT_PLUGINDIR%%/kdevplatform/27/kcm/kcm_kdevphpdocs.so
-%%QT_PLUGINDIR%%/kdevplatform/27/kdevphpdocs.so
-%%QT_PLUGINDIR%%/kdevplatform/27/kdevphplanguagesupport.so
-%%QT_PLUGINDIR%%/kdevplatform/27/kdevphpunitprovider.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kcm/kcm_kdevphpdocs.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kdevphpdocs.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kdevphplanguagesupport.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kdevphpunitprovider.so
 share/kdevappwizard/templates/simple_phpapp.tar.bz2
 share/kdevphpsupport/phpfunctions.php
 share/kdevphpsupport/phpunitdeclarations.php
