@@ -52,11 +52,11 @@ share/applications/org.kde.kexi.desktop
 %%DATADIR%%/icons/hicolor/16x16/actions/web_browser.png
 %%DATADIR%%/icons/hicolor/22x22/actions/web_browser.png
 %%DATADIR%%/icons/kexi_breeze.rcc
-%%DATADIR%%/status/%%GTK3_VERSION%%/contribution_details.ui
-%%DATADIR%%/status/%%GTK3_VERSION%%/contribution_help.ui
-%%DATADIR%%/status/%%GTK3_VERSION%%/status.rcc
-%%DATADIR%%/status/%%GTK3_VERSION%%/status.ui
-%%DATADIR%%/status/%%GTK3_VERSION%%/status_strings.ui
+%%DATADIR%%/status/3.0.0/contribution_details.ui
+%%DATADIR%%/status/3.0.0/contribution_help.ui
+%%DATADIR%%/status/3.0.0/status.rcc
+%%DATADIR%%/status/3.0.0/status.ui
+%%DATADIR%%/status/3.0.0/status_strings.ui
 share/locale/ar/LC_MESSAGES/kexi.mo
 share/locale/ast/LC_MESSAGES/kexi.mo
 share/locale/ast/LC_MESSAGES/kexiforms_mapwidgetplugin.mo

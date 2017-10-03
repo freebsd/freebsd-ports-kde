@@ -482,6 +482,7 @@
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
     SUBDIR += intel-qcu
+    SUBDIR += iocage
     SUBDIR += iocell
     SUBDIR += iogen
     SUBDIR += iograph
@@ -942,7 +943,6 @@
     SUBDIR += py-zdaemon
     SUBDIR += py-zfs
     SUBDIR += py3-execnet
-    SUBDIR += py3-iocage
     SUBDIR += py3-pkginfo
     SUBDIR += py3-ptyprocess
     SUBDIR += pydf
@@ -1377,6 +1377,7 @@
     SUBDIR += znapzend
     SUBDIR += zogftw
     SUBDIR += zrep
+    SUBDIR += zrepl
     SUBDIR += zsd
     SUBDIR += zxfer
 

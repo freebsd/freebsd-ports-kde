@@ -59,6 +59,7 @@
     SUBDIR += R-cran-rngtools
     SUBDIR += R-cran-rprojroot
     SUBDIR += R-cran-rstudioapi
+    SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
@@ -1331,7 +1332,6 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
-    SUBDIR += libclaw
     SUBDIR += libclc
     SUBDIR += libcli
     SUBDIR += libconcurrent
@@ -2466,6 +2466,7 @@
     SUBDIR += p5-Exporter-Lite
     SUBDIR += p5-Exporter-Tidy
     SUBDIR += p5-Exporter-Tiny
+    SUBDIR += p5-ExportTo
     SUBDIR += p5-ExtUtils-AutoInstall
     SUBDIR += p5-ExtUtils-CBuilder
     SUBDIR += p5-ExtUtils-CChecker
@@ -4884,6 +4885,7 @@
     SUBDIR += py-terminable_thread
     SUBDIR += py-termstyle
     SUBDIR += py-testgears
+    SUBDIR += py-testinfra
     SUBDIR += py-testoob
     SUBDIR += py-testpath
     SUBDIR += py-testtools
@@ -4911,10 +4913,6 @@
     SUBDIR += py-twilio
     SUBDIR += py-twine
     SUBDIR += py-twisted
-    SUBDIR += py-twisted152
-    SUBDIR += py-twistedCore
-    SUBDIR += py-twistedFlow
-    SUBDIR += py-twistedRunner
     SUBDIR += py-txaio
     SUBDIR += py-typed-ast
     SUBDIR += py-typing
