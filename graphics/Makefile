@@ -138,7 +138,6 @@
     SUBDIR += derelict-gl3
     SUBDIR += devil
     SUBDIR += dia
-    SUBDIR += diacanvas2
     SUBDIR += diffpdf
     SUBDIR += digikam
     SUBDIR += dilay

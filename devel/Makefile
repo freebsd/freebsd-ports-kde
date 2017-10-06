@@ -2757,6 +2757,7 @@
     SUBDIR += p5-List-Group
     SUBDIR += p5-List-Objects-Types
     SUBDIR += p5-List-Objects-WithUtils
+    SUBDIR += p5-List-Pairwise
     SUBDIR += p5-List-Permutor
     SUBDIR += p5-List-PowerSet
     SUBDIR += p5-List-Regexp
@@ -3660,6 +3661,7 @@
     SUBDIR += p5-UNIVERSAL-ref
     SUBDIR += p5-UNIVERSAL-require
     SUBDIR += p5-UNIVERSAL-which
+    SUBDIR += p5-Util-Any
     SUBDIR += p5-UUID
     SUBDIR += p5-UUID-Random
     SUBDIR += p5-UUID-Random-Patch-UseMRS
