@@ -18,6 +18,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	xapian-core>=${PORTVERSION}:databases/xapian-core
 LIB_DEPENDS=	libxapian.so:databases/xapian-core
 
+CONFLICTS_INSTALL=	xapian-bindings12
+
 OPTIONS_DEFINE=	DOCS
 
 PORTSCOUT=	limitw:1,even
@@ -32,10 +34,7 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USES=		libtool php:build tar:xz
 
-PLIST_FILES=	lib/php/${PHP_EXT_DIR}/xapian.a \
-		lib/php/${PHP_EXT_DIR}/xapian.so
-PORTDATA=	*
-PORTDOCS=	*
+PLIST_SUB=	PHP_EXT_DIR=${PHP_EXT_DIR} PHP_MAJOR_VER=${PHP_VER:C|.$||}
 
 .include <bsd.port.pre.mk>
 

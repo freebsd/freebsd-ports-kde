@@ -631,6 +631,7 @@
     SUBDIR += p5-Color-Rgb
     SUBDIR += p5-Color-Scheme
     SUBDIR += p5-Convert-Color
+    SUBDIR += p5-Convert-Color-XTerm
     SUBDIR += p5-Data-Google-Visualization-DataSource
     SUBDIR += p5-Data-Google-Visualization-DataTable
     SUBDIR += p5-GD
@@ -821,9 +822,7 @@
     SUBDIR += py-glewpy
     SUBDIR += py-goocanvas
     SUBDIR += py-gphoto2
-    SUBDIR += py-graph
     SUBDIR += py-graph-core
-    SUBDIR += py-graph-dot
     SUBDIR += py-graphviz
     SUBDIR += py-graphy
     SUBDIR += py-gvgen

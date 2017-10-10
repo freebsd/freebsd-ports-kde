@@ -170,6 +170,7 @@
     SUBDIR += gcipher
     SUBDIR += gcr
     SUBDIR += git-crypt
+    SUBDIR += git-remote-gcrypt
     SUBDIR += gnome-gpg
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
@@ -445,6 +446,7 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-devel
+    SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli

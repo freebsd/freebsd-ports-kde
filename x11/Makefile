@@ -338,6 +338,7 @@
     SUBDIR += trapproto
     SUBDIR += trayer
     SUBDIR += tycoon
+    SUBDIR += urxvt-font-size
     SUBDIR += urxvt-perls
     SUBDIR += vdesk
     SUBDIR += videoproto
