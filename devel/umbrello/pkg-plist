@@ -74,6 +74,7 @@ share/locale/ug/LC_MESSAGES/umbrello.mo
 share/locale/uk/LC_MESSAGES/umbrello.mo
 share/locale/uk/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/zh_CN/LC_MESSAGES/umbrello.mo
+share/locale/zh_CN/LC_MESSAGES/umbrello_kdevphp.mo
 share/locale/zh_TW/LC_MESSAGES/umbrello.mo
 share/metainfo/org.kde.umbrello.appdata.xml
 %%DATADIR%%5/common.ent

@@ -73,6 +73,8 @@ share/icons/locolor/16x16/apps/ktnef.png
 share/icons/locolor/32x32/apps/ktnef.png
 share/kconf_update/kmail-15.08-kickoff.sh
 share/kconf_update/kmail.upd
+share/kconf_update/kmail2.sh
+share/kconf_update/kmail2.upd
 %%DATADIR%%2/pics/pgp-keys.png
 share/knotifications5/akonadi_archivemail_agent.notifyrc
 share/knotifications5/akonadi_followupreminder_agent.notifyrc

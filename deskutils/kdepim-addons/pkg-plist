@@ -313,6 +313,7 @@ share/locale/fi/LC_MESSAGES/kmail_editor_plugins.mo
 share/locale/fi/LC_MESSAGES/kmail_editorinit_plugins.mo
 share/locale/fi/LC_MESSAGES/kmail_editorsendcheck_plugins.mo
 share/locale/fi/LC_MESSAGES/kmail_plugins.mo
+share/locale/fi/LC_MESSAGES/kmailtransport_plugins.mo
 share/locale/fi/LC_MESSAGES/korganizer_plugins.mo
 share/locale/fi/LC_MESSAGES/mailreader.mo
 share/locale/fi/LC_MESSAGES/messageviewer_application_gnupgwks_plugin.mo
@@ -321,6 +322,7 @@ share/locale/fi/LC_MESSAGES/messageviewer_text_calendar_plugin.mo
 share/locale/fi/LC_MESSAGES/messageviewer_text_vcard_plugin.mo
 share/locale/fi/LC_MESSAGES/messageviewerheaderplugins.mo
 share/locale/fi/LC_MESSAGES/messageviewerplugins.mo
+share/locale/fi/LC_MESSAGES/pimeventsplugin.mo
 share/locale/fi/LC_MESSAGES/sieveeditor_plugins.mo
 share/locale/fi/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/fr/LC_MESSAGES/cryptopageplugin.mo

@@ -628,6 +628,7 @@ share/locale/fi/LC_MESSAGES/akonadi-filestore.mo
 share/locale/fi/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_contacts_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_davgroupware_resource.mo
+share/locale/fi/LC_MESSAGES/akonadi_facebook_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_gmail_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_googlecalendar_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_googlecontacts_resource.mo

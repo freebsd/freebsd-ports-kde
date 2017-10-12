@@ -1,4 +1,5 @@
 share/locale/id/LC_MESSAGES/audiorename_plugin.mo
+share/locale/id/LC_MESSAGES/baloowidgets.mo
 share/locale/id/LC_MESSAGES/htmlsearch.mo
 share/locale/id/LC_MESSAGES/imagerename_plugin.mo
 share/locale/id/LC_MESSAGES/kcm_attica.mo
@@ -13,6 +14,7 @@ share/locale/id/LC_MESSAGES/kde-menu.mo
 share/locale/id/LC_MESSAGES/kdebugdialog.mo
 share/locale/id/LC_MESSAGES/kdecalendarsystems.mo
 share/locale/id/LC_MESSAGES/kdelibs4.mo
+share/locale/id/LC_MESSAGES/kdelibs_colors4.mo
 share/locale/id/LC_MESSAGES/kdesud.mo
 share/locale/id/LC_MESSAGES/kdontchangethehostname.mo
 share/locale/id/LC_MESSAGES/kfile.mo
@@ -68,4 +70,5 @@ share/locale/id/LC_MESSAGES/plasma_scriptengine_qscript.mo
 share/locale/id/LC_MESSAGES/plasmapkg.mo
 share/locale/id/LC_MESSAGES/solid-hardware.mo
 share/locale/id/LC_MESSAGES/sweeper.mo
+share/locale/id/LC_MESSAGES/timezones4.mo
 share/locale/id/entry.desktop

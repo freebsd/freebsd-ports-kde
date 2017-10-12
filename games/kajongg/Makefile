@@ -12,7 +12,7 @@ COMMENT=	${${PORTNAME}_DESC}
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}twisted>=16.6.0:devel/py-twisted
 
 USES=		cmake:outsource pkgconfig python:3 pyqt:5 kde:5 tar:xz \
-		twisted:build,run sqlite
+		sqlite
 USE_KDE=	config doctools ecm
 USE_PYQT=	core gui svg widgets
 USE_QT5=	core gui svg widgets \
