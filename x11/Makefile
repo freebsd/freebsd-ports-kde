@@ -145,6 +145,7 @@
     SUBDIR += kf5-plasma-framework
     SUBDIR += kgamma
     SUBDIR += konsole
+    SUBDIR += latte-dock
     SUBDIR += leechcraft
     SUBDIR += lemonbar
     SUBDIR += libICE
