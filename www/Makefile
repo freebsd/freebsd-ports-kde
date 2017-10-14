@@ -476,6 +476,7 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_musicindex
     SUBDIR += mod_ntlm2
+    SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
     SUBDIR += mod_php56
     SUBDIR += mod_php70
@@ -1813,6 +1814,7 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib

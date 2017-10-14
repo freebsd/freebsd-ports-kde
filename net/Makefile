@@ -90,6 +90,7 @@
     SUBDIR += corkscrew
     SUBDIR += corosync
     SUBDIR += courier-authlib-ldap
+    SUBDIR += cppzmq
     SUBDIR += crtmpserver
     SUBDIR += cryptcat
     SUBDIR += csocks
