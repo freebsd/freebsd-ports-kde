@@ -1,0 +1,3164 @@
+commit fc510adaecf1dc83416eaf4392925ee4f3c5a1e0
+Author: Dominik Haumann <dhaumann@kde.org>
+Date:   Sat Aug 26 19:39:05 2017 +0200
+
+    Port Document/View scripting API to QJSValue-based solution
+    
+    Differential Revision: https://phabricator.kde.org/D7337
+
+diff --git src/script/katescriptdocument.cpp src/script/katescriptdocument.cpp
+index c41ceea..3637408 100644
+--- src/script/katescriptdocument.cpp
++++ src/script/katescriptdocument.cpp
+@@ -52,83 +52,111 @@ int KateScriptDocument::defStyleNum(int line, int column)
+     return m_document->defStyleNum(line, column);
+ }
+ 
+-int KateScriptDocument::defStyleNum(const QJSValue &jscursor)
++int KateScriptDocument::defStyleNum(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return defStyleNum(cursor.line(), cursor.column());
+ }
+ 
++int KateScriptDocument::defStyleNum(const QJSValue &jscursor)
++{
++    return defStyleNum(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isCode(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+     return _isCode(defaultStyle);
+ }
+ 
+-bool KateScriptDocument::isCode(const QJSValue &jscursor)
++bool KateScriptDocument::isCode(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isCode(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isCode(const QJSValue &jscursor)
++{
++    return isCode(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isComment(int line, int column)
+ {
+     return m_document->isComment(line, column);
+ }
+ 
+-bool KateScriptDocument::isComment(const QJSValue &jscursor)
++bool KateScriptDocument::isComment(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isComment(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isComment(const QJSValue &jscursor)
++{
++    return isComment(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isString(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+     return defaultStyle == KTextEditor::dsString;
+ }
+ 
+-bool KateScriptDocument::isString(const QJSValue &jscursor)
++bool KateScriptDocument::isString(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isString(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isString(const QJSValue &jscursor)
++{
++    return isString(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isRegionMarker(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+     return defaultStyle == KTextEditor::dsRegionMarker;
+ }
+ 
+-bool KateScriptDocument::isRegionMarker(const QJSValue &jscursor)
++bool KateScriptDocument::isRegionMarker(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isRegionMarker(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isRegionMarker(const QJSValue &jscursor)
++{
++    return isRegionMarker(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isChar(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+     return defaultStyle == KTextEditor::dsChar;
+ }
+ 
+-bool KateScriptDocument::isChar(const QJSValue &jscursor)
++bool KateScriptDocument::isChar(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isChar(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isChar(const QJSValue &jscursor)
++{
++    return isChar(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isOthers(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+     return defaultStyle == KTextEditor::dsOthers;
+ }
+ 
+-bool KateScriptDocument::isOthers(const QJSValue &jscursor)
++bool KateScriptDocument::isOthers(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isOthers(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::isOthers(const QJSValue &jscursor)
++{
++    return isOthers(cursorFromScriptValue(jscursor));
++}
++
+ int KateScriptDocument::firstVirtualColumn(int line)
+ {
+     const int tabWidth = m_document->config()->tabWidth();
+@@ -161,22 +189,20 @@ int KateScriptDocument::toVirtualColumn(int line, int column)
+     return textLine->toVirtualColumn(column, tabWidth);
+ }
+ 
+-int KateScriptDocument::toVirtualColumn(const QJSValue &jscursor)
++int KateScriptDocument::toVirtualColumn(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return toVirtualColumn(cursor.line(), cursor.column());
+ }
+ 
+-QJSValue KateScriptDocument::toVirtualCursor(int line, int column)
++int KateScriptDocument::toVirtualColumn(const QJSValue &jscursor)
+ {
+-    const KTextEditor::Cursor cursor(line, toVirtualColumn(line, column));
+-    return cursorToScriptValue(m_engine, cursor);
++    return toVirtualColumn(cursorFromScriptValue(jscursor));
+ }
+ 
+-QJSValue KateScriptDocument::toVirtualCursor(const QJSValue &jscursor)
++KTextEditor::Cursor KateScriptDocument::toVirtualCursor(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return toVirtualCursor(cursor.line(), cursor.column());
++    return KTextEditor::Cursor(cursor.line(),
++                               toVirtualColumn(cursor.line(), cursor.column()));
+ }
+ 
+ int KateScriptDocument::fromVirtualColumn(int line, int virtualColumn)
+@@ -189,22 +215,15 @@ int KateScriptDocument::fromVirtualColumn(int line, int virtualColumn)
+     return textLine->fromVirtualColumn(virtualColumn, tabWidth);
+ }
+ 
+-int KateScriptDocument::fromVirtualColumn(const QJSValue &jscursor)
++int KateScriptDocument::fromVirtualColumn(const KTextEditor::Cursor &virtualCursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return fromVirtualColumn(cursor.line(), cursor.column());
++    return fromVirtualColumn(virtualCursor.line(), virtualCursor.column());
+ }
+ 
+-QJSValue KateScriptDocument::fromVirtualCursor(int line, int column)
++KTextEditor::Cursor KateScriptDocument::fromVirtualCursor(const KTextEditor::Cursor &virtualCursor)
+ {
+-    const KTextEditor::Cursor cursor(line, fromVirtualColumn(line, column));
+-    return cursorToScriptValue(m_engine, cursor);
+-}
+-
+-QJSValue KateScriptDocument::fromVirtualCursor(const QJSValue &jscursor)
+-{
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return fromVirtualCursor(cursor.line(), cursor.column());
++    return KTextEditor::Cursor(virtualCursor.line(),
++                               fromVirtualColumn(virtualCursor.line(), virtualCursor.column()));
+ }
+ 
+ KTextEditor::Cursor KateScriptDocument::rfindInternal(int line, int column, const QString &text, int attribute)
+@@ -361,6 +380,8 @@ bool KateScriptDocument::endsWith(int line, const QString &pattern, bool skipWhi
+     return textLine->endsWith(pattern);
+ }
+ 
++//BEGIN Automatically generated
++
+ QString KateScriptDocument::fileName()
+ {
+     return m_document->documentName();
+@@ -408,21 +429,22 @@ QString KateScriptDocument::text()
+ 
+ QString KateScriptDocument::text(int fromLine, int fromColumn, int toLine, int toColumn)
+ {
+-    const KTextEditor::Range range(fromLine, fromColumn, toLine, toColumn);
+-    return m_document->text(range);
++    return text(KTextEditor::Range(fromLine, fromColumn, toLine, toColumn));
+ }
+ 
+-QString KateScriptDocument::text(const QJSValue &jsfrom, const QJSValue &jsto)
++QString KateScriptDocument::text(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to)
+ {
+-    const KTextEditor::Cursor from = cursorFromScriptValue(jsfrom);
+-    const KTextEditor::Cursor to = cursorFromScriptValue(jsto);
+-    return text(from.line(), from.column(), to.line(), to.column());
++    return text(KTextEditor::Range(from, to));
++}
++
++QString KateScriptDocument::text(const KTextEditor::Range &range)
++{
++    return m_document->text(range);
+ }
+ 
+ QString KateScriptDocument::text(const QJSValue &jsrange)
+ {
+-    const auto range = rangeFromScriptValue(jsrange);
+-    return text(range.start().line(), range.start().column(), range.end().line(), range.end().column());
++    return text(rangeFromScriptValue(jsrange));
+ }
+ 
+ QString KateScriptDocument::line(int line)
+@@ -432,39 +454,38 @@ QString KateScriptDocument::line(int line)
+ 
+ QString KateScriptDocument::wordAt(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
+-    return m_document->wordAt(cursor);
++    return wordAt(KTextEditor::Cursor(line, column));
+ }
+ 
+-QString KateScriptDocument::wordAt(const QJSValue &jscursor)
++QString KateScriptDocument::wordAt(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return wordAt(cursor.line(), cursor.column());
++    return m_document->wordAt(cursor);
+ }
+ 
+ QJSValue KateScriptDocument::wordRangeAt(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
+-    return rangeToScriptValue(m_engine, m_document->wordRangeAt(cursor));
++    return wordRangeAt(KTextEditor::Cursor(line, column));
+ }
+ 
+-QJSValue KateScriptDocument::wordRangeAt(const QJSValue &jscursor)
++QJSValue KateScriptDocument::wordRangeAt(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return wordRangeAt(cursor.line(), cursor.column());
++    return rangeToScriptValue(m_engine, m_document->wordRangeAt(cursor));
+ }
+ 
+ QString KateScriptDocument::charAt(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
++    return charAt(KTextEditor::Cursor(line, column));
++}
++
++QString KateScriptDocument::charAt(const KTextEditor::Cursor &cursor)
++{
+     const QChar c = m_document->characterAt(cursor);
+     return c.isNull() ? QString() : QString(c);
+ }
+ 
+ QString KateScriptDocument::charAt(const QJSValue &jscursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return charAt(cursor.line(), cursor.column());
++    return charAt(cursorFromScriptValue(jscursor));
+ }
+ 
+ QString KateScriptDocument::firstChar(int line)
+@@ -491,14 +512,17 @@ QString KateScriptDocument::lastChar(int line)
+ 
+ bool KateScriptDocument::isSpace(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
++    return isSpace(KTextEditor::Cursor(line, column));
++}
++
++bool KateScriptDocument::isSpace(const KTextEditor::Cursor &cursor)
++{
+     return m_document->characterAt(cursor).isSpace();
+ }
+ 
+ bool KateScriptDocument::isSpace(const QJSValue &jscursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return isSpace(cursor.line(), cursor.column());
++    return isSpace(cursorFromScriptValue(jscursor));
+ }
+ 
+ bool KateScriptDocument::matchesAt(int line, int column, const QString &s)
+@@ -507,12 +531,19 @@ bool KateScriptDocument::matchesAt(int line, int column, const QString &s)
+     return textLine ? textLine->matchesAt(column, s) : false;
+ }
+ 
+-bool KateScriptDocument::matchesAt(const QJSValue &jscursor, const QString &s)
++bool KateScriptDocument::matchesAt(const KTextEditor::Cursor &cursor, const QString &s)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
++
+     return matchesAt(cursor.line(), cursor.column(), s);
+ }
+ 
++bool KateScriptDocument::matchesAt(const QJSValue &jscursor, const QString &s)
++{
++
++    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
++    return matchesAt(cursor, s);
++}
++
+ bool KateScriptDocument::setText(const QString &s)
+ {
+     return m_document->setText(s);
+@@ -530,44 +561,55 @@ bool KateScriptDocument::truncate(int line, int column)
+         return false;
+     }
+ 
+-    return removeText(line, column, line, textLine->text().size() - column);
++    KTextEditor::Cursor from(line, column), to(line, textLine->text().size() - column);
++    return removeText(KTextEditor::Range(from, to));
+ }
+ 
+-bool KateScriptDocument::truncate(const QJSValue &jscursor)
++bool KateScriptDocument::truncate(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return truncate(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::truncate(const QJSValue &cursor)
++{
++    return truncate(cursorFromScriptValue(cursor));
++}
++
+ bool KateScriptDocument::insertText(int line, int column, const QString &s)
+ {
+-    KTextEditor::Cursor cursor(line, column);
++    return insertText(KTextEditor::Cursor(line, column), s);
++}
++
++bool KateScriptDocument::insertText(const KTextEditor::Cursor &cursor, const QString &s)
++{
+     return m_document->insertText(cursor, s);
+ }
+ 
+ bool KateScriptDocument::insertText(const QJSValue &jscursor, const QString &s)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    return insertText(cursor.line(), cursor.column(), s);
++    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
++    return insertText(cursor, s);
+ }
+ 
+ bool KateScriptDocument::removeText(int fromLine, int fromColumn, int toLine, int toColumn)
+ {
+-    const KTextEditor::Range range(fromLine, fromColumn, toLine, toColumn);
+-    return m_document->removeText(range);
++    return removeText(KTextEditor::Range(fromLine, fromColumn, toLine, toColumn));
+ }
+ 
+-bool KateScriptDocument::removeText(const QJSValue &jsfrom, const QJSValue &jsto)
++bool KateScriptDocument::removeText(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to)
+ {
+-    const KTextEditor::Cursor from = cursorFromScriptValue(jsfrom);
+-    const KTextEditor::Cursor to = cursorFromScriptValue(jsto);
+-    return removeText(from.line(), from.column(), to.line(), to.column());
++    return removeText(KTextEditor::Range(from, to));
++}
++
++bool KateScriptDocument::removeText(const KTextEditor::Range &range)
++{
++    return m_document->removeText(range);
+ }
+ 
+ bool KateScriptDocument::removeText(const QJSValue &jsrange)
+ {
+-    const auto range = rangeFromScriptValue(jsrange);
+-    return removeText(range.start().line(), range.start().column(), range.end().line(), range.end().column());
++    KTextEditor::Range range = rangeFromScriptValue(jsrange);
++    return removeText(range);
+ }
+ 
+ bool KateScriptDocument::insertLine(int line, const QString &s)
+@@ -585,12 +627,16 @@ bool KateScriptDocument::wrapLine(int line, int column)
+     return m_document->editWrapLine(line, column);
+ }
+ 
+-bool KateScriptDocument::wrapLine(const QJSValue &jscursor)
++bool KateScriptDocument::wrapLine(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return wrapLine(cursor.line(), cursor.column());
+ }
+ 
++bool KateScriptDocument::wrapLine(const QJSValue &jscursor)
++{
++    return wrapLine(cursorFromScriptValue(jscursor));
++}
++
+ void KateScriptDocument::joinLines(int startLine, int endLine)
+ {
+     m_document->joinLines(startLine, endLine);
+@@ -646,6 +692,11 @@ bool KateScriptDocument::isValidTextPosition(int line, int column)
+     return m_document->isValidTextPosition(KTextEditor::Cursor(line, column));
+ }
+ 
++bool KateScriptDocument::isValidTextPosition(const KTextEditor::Cursor& cursor)
++{
++    return m_document->isValidTextPosition(cursor);
++}
++
+ bool KateScriptDocument::isValidTextPosition(const QJSValue& cursor)
+ {
+     return m_document->isValidTextPosition(cursorFromScriptValue(cursor));
+@@ -672,12 +723,16 @@ int KateScriptDocument::prevNonSpaceColumn(int line, int column)
+     return textLine->previousNonSpaceChar(column);
+ }
+ 
+-int KateScriptDocument::prevNonSpaceColumn(const QJSValue &jscursor)
++int KateScriptDocument::prevNonSpaceColumn(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return prevNonSpaceColumn(cursor.line(), cursor.column());
+ }
+ 
++int KateScriptDocument::prevNonSpaceColumn(const QJSValue &cursor)
++{
++    return prevNonSpaceColumn(cursorFromScriptValue(cursor));
++}
++
+ int KateScriptDocument::nextNonSpaceColumn(int line, int column)
+ {
+     Kate::TextLine textLine = m_document->plainKateTextLine(line);
+@@ -687,12 +742,16 @@ int KateScriptDocument::nextNonSpaceColumn(int line, int column)
+     return textLine->nextNonSpaceChar(column);
+ }
+ 
+-int KateScriptDocument::nextNonSpaceColumn(const QJSValue &jscursor)
++int KateScriptDocument::nextNonSpaceColumn(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return nextNonSpaceColumn(cursor.line(), cursor.column());
+ }
+ 
++int KateScriptDocument::nextNonSpaceColumn(const QJSValue &cursor)
++{
++    return nextNonSpaceColumn(cursorFromScriptValue(cursor));
++}
++
+ int KateScriptDocument::prevNonEmptyLine(int line)
+ {
+     const int startLine = line;
+@@ -772,9 +831,8 @@ int KateScriptDocument::attribute(int line, int column)
+     return textLine->attribute(column);
+ }
+ 
+-int KateScriptDocument::attribute(const QJSValue &jscursor)
++int KateScriptDocument::attribute(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return attribute(cursor.line(), cursor.column());
+ }
+ 
+@@ -783,9 +841,8 @@ bool KateScriptDocument::isAttribute(int line, int column, int attr)
+     return attr == attribute(line, column);
+ }
+ 
+-bool KateScriptDocument::isAttribute(const QJSValue &jscursor, int attr)
++bool KateScriptDocument::isAttribute(const KTextEditor::Cursor &cursor, int attr)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isAttribute(cursor.line(), cursor.column(), attr);
+ }
+ 
+@@ -797,23 +854,32 @@ QString KateScriptDocument::attributeName(int line, int column)
+     return a->name();
+ }
+ 
+-QString KateScriptDocument::attributeName(const QJSValue &jscursor)
++QString KateScriptDocument::attributeName(const KTextEditor::Cursor &cursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return attributeName(cursor.line(), cursor.column());
+ }
+ 
++QString KateScriptDocument::attributeName(const QJSValue &jscursor)
++{
++    return attributeName(cursorFromScriptValue(jscursor));
++}
++
+ bool KateScriptDocument::isAttributeName(int line, int column, const QString &name)
+ {
+     return name == attributeName(line, column);
+ }
+ 
+-bool KateScriptDocument::isAttributeName(const QJSValue &jscursor, const QString &name)
++bool KateScriptDocument::isAttributeName(const KTextEditor::Cursor &cursor, const QString &name)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+     return isAttributeName(cursor.line(), cursor.column(), name);
+ }
+ 
++bool KateScriptDocument::isAttributeName(const QJSValue &jscursor, const QString &name)
++{
++    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
++    return isAttributeName(cursor, name);
++}
++
+ QString KateScriptDocument::variable(const QString &s)
+ {
+     return m_document->variable(s);
+@@ -824,6 +890,8 @@ void KateScriptDocument::setVariable(const QString &s, const QString &v)
+     m_document->setVariable(s, v);
+ }
+ 
++//END
++
+ bool KateScriptDocument::_isCode(int defaultStyle)
+ {
+     return (defaultStyle != KTextEditor::dsComment
+@@ -833,8 +901,13 @@ bool KateScriptDocument::_isCode(int defaultStyle)
+             && defaultStyle != KTextEditor::dsOthers);
+ }
+ 
+-void KateScriptDocument::indent(const QJSValue &jsrange, int change)
++void KateScriptDocument::indent(KTextEditor::Range range, int change)
+ {
+-    const auto range = rangeFromScriptValue(jsrange);
+     m_document->indent(range, change);
+ }
++
++void KateScriptDocument::indent(const QJSValue &jsrange, int change)
++{
++    KTextEditor::Range range = rangeFromScriptValue(jsrange);
++    indent(range, change);
++}
+diff --git src/script/katescriptdocument.h src/script/katescriptdocument.h
+index d4801b5..ad42274 100644
+--- src/script/katescriptdocument.h
++++ src/script/katescriptdocument.h
+@@ -60,33 +60,41 @@ public:
+     Q_INVOKABLE bool isModified();
+     Q_INVOKABLE QString text();
+     Q_INVOKABLE QString text(int fromLine, int fromColumn, int toLine, int toColumn);
+-    Q_INVOKABLE QString text(const QJSValue &jsfrom, const QJSValue &jsto);
++    QString text(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
++    QString text(const KTextEditor::Range &range);
+     Q_INVOKABLE QString text(const QJSValue &jsrange);
+     Q_INVOKABLE QString line(int line);
+     Q_INVOKABLE QString wordAt(int line, int column);
+-    Q_INVOKABLE QString wordAt(const QJSValue &jscursor);
++    QString wordAt(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE QJSValue wordRangeAt(int line, int column);
+-    Q_INVOKABLE QJSValue wordRangeAt(const QJSValue &jscursor);
++    QJSValue wordRangeAt(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE QString charAt(int line, int column);
+-    Q_INVOKABLE QString charAt(const QJSValue &jscursor);
++    QString charAt(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE QString charAt(const QJSValue &cursor);
+     Q_INVOKABLE QString firstChar(int line);
+     Q_INVOKABLE QString lastChar(int line);
+     Q_INVOKABLE bool isSpace(int line, int column);
++    bool isSpace(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isSpace(const QJSValue &jscursor);
+     Q_INVOKABLE bool matchesAt(int line, int column, const QString &s);
++    bool matchesAt(const KTextEditor::Cursor &cursor, const QString &s);
+     Q_INVOKABLE bool matchesAt(const QJSValue &cursor, const QString &s);
+     Q_INVOKABLE bool setText(const QString &s);
+     Q_INVOKABLE bool clear();
+     Q_INVOKABLE bool truncate(int line, int column);
+-    Q_INVOKABLE bool truncate(const QJSValue &jscursor);
++    bool truncate(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE bool truncate(const QJSValue &cursor);
+     Q_INVOKABLE bool insertText(int line, int column, const QString &s);
++    bool insertText(const KTextEditor::Cursor &cursor, const QString &s);
+     Q_INVOKABLE bool insertText(const QJSValue &jscursor, const QString &s);
+     Q_INVOKABLE bool removeText(int fromLine, int fromColumn, int toLine, int toColumn);
++    bool removeText(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
++    bool removeText(const KTextEditor::Range &range);
+     Q_INVOKABLE bool removeText(const QJSValue &range);
+-    Q_INVOKABLE bool removeText(const QJSValue &jsfrom, const QJSValue &jsto);
+     Q_INVOKABLE bool insertLine(int line, const QString &s);
+     Q_INVOKABLE bool removeLine(int line);
+     Q_INVOKABLE bool wrapLine(int line, int column);
++    bool wrapLine(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool wrapLine(const QJSValue &cursor);
+     Q_INVOKABLE void joinLines(int startLine, int endLine);
+     Q_INVOKABLE int lines();
+@@ -101,9 +109,11 @@ public:
+     Q_INVOKABLE int firstColumn(int line);
+     Q_INVOKABLE int lastColumn(int line);
+     Q_INVOKABLE int prevNonSpaceColumn(int line, int column);
+-    Q_INVOKABLE int prevNonSpaceColumn(const QJSValue &jscursor);
++    int prevNonSpaceColumn(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE int prevNonSpaceColumn(const QJSValue &cursor);
+     Q_INVOKABLE int nextNonSpaceColumn(int line, int column);
+-    Q_INVOKABLE int nextNonSpaceColumn(const QJSValue &jscursor);
++    int nextNonSpaceColumn(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE int nextNonSpaceColumn(const QJSValue &cursor);
+     Q_INVOKABLE int prevNonEmptyLine(int line);
+     Q_INVOKABLE int nextNonEmptyLine(int line);
+     Q_INVOKABLE bool isInWord(const QString &character, int attribute);
+@@ -116,30 +126,33 @@ public:
+     Q_INVOKABLE QJSValue documentRange();
+     Q_INVOKABLE QJSValue documentEnd();
+     Q_INVOKABLE bool isValidTextPosition(int line, int column);
++    bool isValidTextPosition(const KTextEditor::Cursor& cursor);
+     Q_INVOKABLE bool isValidTextPosition(const QJSValue& cursor);
+ 
+     /**
+      * Get the syntax highlighting attribute at a given position in the document.
+      */
+     Q_INVOKABLE int attribute(int line, int column);
+-    Q_INVOKABLE int attribute(const QJSValue &jscursor);
++    int attribute(const KTextEditor::Cursor &cursor);
+ 
+     /**
+      * Return true if the highlight attribute equals @p attr.
+      */
+     Q_INVOKABLE bool isAttribute(int line, int column, int attr);
+-    Q_INVOKABLE bool isAttribute(const QJSValue &jscursor, int attr);
++    bool isAttribute(const KTextEditor::Cursor &cursor, int attr);
+ 
+     /**
+      * Get the name of the syntax highlighting attribute at the given position.
+      */
+     Q_INVOKABLE QString attributeName(int line, int column);
++    QString attributeName(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE QString attributeName(const QJSValue &jscursor);
+ 
+     /**
+      * Return true is the name of the syntax attribute equals @p name.
+      */
+     Q_INVOKABLE bool isAttributeName(int line, int column, const QString &name);
++    bool isAttributeName(const KTextEditor::Cursor &cursor, const QString &name);
+     Q_INVOKABLE bool isAttributeName(const QJSValue &cursor, const QString &name);
+ 
+     Q_INVOKABLE QString variable(const QString &s);
+@@ -149,13 +162,12 @@ public:
+     Q_INVOKABLE int firstVirtualColumn(int line);
+     Q_INVOKABLE int lastVirtualColumn(int line);
+     Q_INVOKABLE int toVirtualColumn(int line, int column);
++    int toVirtualColumn(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int toVirtualColumn(const QJSValue &cursor);
+-    Q_INVOKABLE QJSValue toVirtualCursor(int line, int column);
+-    Q_INVOKABLE QJSValue toVirtualCursor(const QJSValue &jscursor);
++    KTextEditor::Cursor toVirtualCursor(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int fromVirtualColumn(int line, int virtualColumn);
+-    Q_INVOKABLE int fromVirtualColumn(const QJSValue &jscursor);
+-    Q_INVOKABLE QJSValue fromVirtualCursor(int line, int column);
+-    Q_INVOKABLE QJSValue fromVirtualCursor(const QJSValue &jscursor);
++    int fromVirtualColumn(const KTextEditor::Cursor &virtualCursor);
++    KTextEditor::Cursor fromVirtualCursor(const KTextEditor::Cursor &virtualCursor);
+ 
+     KTextEditor::Cursor anchorInternal(int line, int column, QChar character);
+     KTextEditor::Cursor anchor(const KTextEditor::Cursor &cursor, QChar character);
+@@ -167,23 +179,31 @@ public:
+     Q_INVOKABLE QJSValue rfind(const QJSValue &cursor, const QString &text, int attribute = -1);
+ 
+     Q_INVOKABLE int defStyleNum(int line, int column);
++    int defStyleNum(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int defStyleNum(const QJSValue &cursor);
+     Q_INVOKABLE bool isCode(int line, int column);
++    bool isCode(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isCode(const QJSValue &cursor);
+     Q_INVOKABLE bool isComment(int line, int column);
++    bool isComment(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isComment(const QJSValue &cursor);
+     Q_INVOKABLE bool isString(int line, int column);
++    bool isString(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isString(const QJSValue &cursor);
+     Q_INVOKABLE bool isRegionMarker(int line, int column);
++    bool isRegionMarker(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isRegionMarker(const QJSValue &cursor);
+     Q_INVOKABLE bool isChar(int line, int column);
++    bool isChar(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isChar(const QJSValue &cursor);
+     Q_INVOKABLE bool isOthers(int line, int column);
++    bool isOthers(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isOthers(const QJSValue &cursor);
+ 
+     Q_INVOKABLE bool startsWith(int line, const QString &pattern, bool skipWhiteSpaces);
+     Q_INVOKABLE bool endsWith(int line, const QString &pattern, bool skipWhiteSpaces);
+ 
++    void indent(KTextEditor::Range range, int change);
+     Q_INVOKABLE void indent(const QJSValue &jsrange, int change);
+ 
+ private:
+diff --git src/script/katescriptview.cpp src/script/katescriptview.cpp
+index 8bcff63..1334205 100644
+--- src/script/katescriptview.cpp
++++ src/script/katescriptview.cpp
+@@ -50,14 +50,18 @@ QJSValue KateScriptView::cursorPosition()
+ 
+ void KateScriptView::setCursorPosition(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
++    KTextEditor::Cursor c(line, column);
++    m_view->setCursorPosition(c);
++}
++
++void KateScriptView::setCursorPosition(const KTextEditor::Cursor &cursor)
++{
+     m_view->setCursorPosition(cursor);
+ }
+ 
+ void KateScriptView::setCursorPosition(const QJSValue &jscursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    m_view->setCursorPosition(cursor);
++    setCursorPosition(cursorFromScriptValue(jscursor));
+ }
+ 
+ QJSValue KateScriptView::virtualCursorPosition()
+@@ -67,14 +71,17 @@ QJSValue KateScriptView::virtualCursorPosition()
+ 
+ void KateScriptView::setVirtualCursorPosition(int line, int column)
+ {
+-    const KTextEditor::Cursor cursor(line, column);
++    setVirtualCursorPosition(KTextEditor::Cursor(line, column));
++}
++
++void KateScriptView::setVirtualCursorPosition(const KTextEditor::Cursor &cursor)
++{
+     m_view->setCursorPositionVisual(cursor);
+ }
+ 
+ void KateScriptView::setVirtualCursorPosition(const QJSValue &jscursor)
+ {
+-    const auto cursor = cursorFromScriptValue(jscursor);
+-    setVirtualCursorPosition(cursor.line(), cursor.column());
++    setVirtualCursorPosition(cursorFromScriptValue(jscursor));
+ }
+ 
+ QString KateScriptView::selectedText()
+@@ -114,6 +121,6 @@ void KateScriptView::clearSelection()
+ 
+ void KateScriptView::align(const QJSValue &jsrange)
+ {
+-    const auto range = rangeFromScriptValue(jsrange);
++    KTextEditor::Range range = rangeFromScriptValue(jsrange);
+     m_view->doc()->align (m_view, range);
+ }
+diff --git src/script/katescriptview.h src/script/katescriptview.h
+index 8009630..c68679c 100644
+--- src/script/katescriptview.h
++++ src/script/katescriptview.h
+@@ -53,10 +53,12 @@ public:
+      * @since 4.4
+      */
+     Q_INVOKABLE void setCursorPosition(int line, int column);
++     void setCursorPosition(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE void setCursorPosition(const QJSValue &cursor);
+ 
+     Q_INVOKABLE QJSValue virtualCursorPosition();
+     Q_INVOKABLE void setVirtualCursorPosition(int line, int column);
++    void setVirtualCursorPosition(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE void setVirtualCursorPosition(const QJSValue &cursor);
+ 
+     Q_INVOKABLE QString selectedText();
+@@ -68,7 +70,7 @@ public:
+     Q_INVOKABLE void clearSelection();
+ 
+     Q_INVOKABLE void align(const QJSValue &range);
+-
++    
+ private:
+     KTextEditor::ViewPrivate *m_view;
+     QJSEngine *m_engine;
+commit 878797830dbd3b29bd5dcd8241c17ea20fb6914e
+Author: Allan Sandfeld Jensen <allan.jensen@qt.io>
+Date:   Wed Jul 26 11:05:52 2017 +0200
+
+    Switch from QtScript to QtQml
+    
+    Summary:
+    Replaces the QtScript depedency with QtQml.
+    
+    Reviewers: cullmann, dhaumann, #frameworks
+    
+    Reviewed By: cullmann
+    
+    Subscribers: dfaure, cullmann, #frameworks
+    
+    Tags: #frameworks
+    
+    Differential Revision: https://phabricator.kde.org/D6914
+
+diff --git CMakeLists.txt CMakeLists.txt
+index 95826a2..e2343ad 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -40,7 +40,7 @@ ecm_setup_version(
+ set(REQUIRED_QT_VERSION 5.7.0)
+ 
+ # Required Qt5 components to build this framework
+-find_package(Qt5 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Core Widgets Qml PrintSupport Xml XmlPatterns)
++find_package(Qt5 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Core Widgets Script PrintSupport Xml XmlPatterns)
+ 
+ find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
+ find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
+diff --git autotests/CMakeLists.txt autotests/CMakeLists.txt
+index 12ecc8a..e865475 100644
+--- autotests/CMakeLists.txt
++++ autotests/CMakeLists.txt
+@@ -38,7 +38,7 @@ set (KTEXTEDITOR_TEST_LINK_LIBS KF5TextEditor
+   KF5::I18n
+   KF5::IconThemes
+   KF5::GuiAddons
+-  Qt5::Qml
++  Qt5::Script
+ )
+ 
+ include(ECMMarkAsTest)
+diff --git autotests/src/bug313759.cpp autotests/src/bug313759.cpp
+index d639f98..476183c 100644
+--- autotests/src/bug313759.cpp
++++ autotests/src/bug313759.cpp
+@@ -24,7 +24,7 @@
+ #include <kateview.h>
+ #include <kmainwindow.h>
+ 
+-#include <QtQml/QJSEngine>
++#include <QtScript/QScriptEngine>
+ #include <QtTestWidgets>
+ 
+ #include "testutils.h"
+@@ -66,8 +66,9 @@ void BugTest::tryCrash()
+     QFile scriptFile(QLatin1String(JS_DATA_DIR "commands/utils.js"));
+     QVERIFY(scriptFile.exists());
+     QVERIFY(scriptFile.open(QFile::ReadOnly));
+-    QJSValue result = env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
+-    QVERIFY2(!result.isError(), result.toString().toUtf8().constData());
++    QScriptValue result = env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
++    QVERIFY2(!result.isError(), qPrintable(QString(result.toString() + QLatin1String("\nat ")
++                                           + env->engine()->uncaughtExceptionBacktrace().join(QStringLiteral("\n")))));
+ 
+     // enable on the fly spell checking
+     doc->onTheFlySpellCheckingEnabled(true);
+diff --git autotests/src/bug317111.cpp autotests/src/bug317111.cpp
+index 9870327..4a0ee4d 100644
+--- autotests/src/bug317111.cpp
++++ autotests/src/bug317111.cpp
+@@ -24,7 +24,7 @@
+ #include <kateview.h>
+ #include <kmainwindow.h>
+ 
+-#include <QtQml/QJSEngine>
++#include <QtScript/QScriptEngine>
+ #include <QtTestWidgets>
+ 
+ #include "testutils.h"
+@@ -66,8 +66,9 @@ void BugTest::tryCrash()
+     QFile scriptFile(QLatin1String(JS_DATA_DIR"commands/utils.js"));
+     QVERIFY(scriptFile.exists());
+     QVERIFY(scriptFile.open(QFile::ReadOnly));
+-    QJSValue result = env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
+-    QVERIFY2(!result.isError(), result.toString().toUtf8().constData());
++    QScriptValue result = env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
++    QVERIFY2(!result.isError(), qPrintable(QString(result.toString() + QLatin1String("\nat ")
++                                           + env->engine()->uncaughtExceptionBacktrace().join(QStringLiteral("\n")))));
+ 
+     // view must be visible...
+     view->show();
+diff --git autotests/src/script_test_base.cpp autotests/src/script_test_base.cpp
+index 2cd8ed3..0bc3afa 100644
+--- autotests/src/script_test_base.cpp
++++ autotests/src/script_test_base.cpp
+@@ -34,7 +34,7 @@
+ #include <QProcess>
+ #include <QDirIterator>
+ #include <QMainWindow>
+-#include <QJSEngine>
++#include <QScriptEngine>
+ #include <QCryptographicHash>
+ #include <QTest>
+ 
+@@ -79,8 +79,9 @@ void ScriptTestBase::getTestData(const QString &script)
+         QFile scriptFile(QLatin1String(JS_DATA_DIR) + m_script_dir + QLatin1Char('/') + script + QLatin1String(".js"));
+         if (scriptFile.exists()) {
+             QVERIFY(scriptFile.open(QFile::ReadOnly));
+-            QJSValue result = m_env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
+-            QVERIFY2(!result.isError(), (result.toString() + QLatin1String(" in file ") + scriptFile.fileName()).toUtf8().constData());
++            QScriptValue result = m_env->engine()->evaluate(QString::fromLatin1(scriptFile.readAll()), scriptFile.fileName());
++            QVERIFY2(!result.isError(), qPrintable(QString(result.toString() + QLatin1String("\nat ")
++                                               + m_env->engine()->uncaughtExceptionBacktrace().join(QLatin1String("\n")))));
+         }
+     }
+ 
+@@ -130,7 +131,7 @@ void ScriptTestBase::runTest(const ExpectedFailures &failures)
+     sourceFile.close();
+ 
+     // Execute script
+-    QJSValue result = m_env->engine()->evaluate(code, testcase + QLatin1String("/input.js"), 1);
++    QScriptValue result = m_env->engine()->evaluate(code, testcase + QLatin1String("/input.js"), 1);
+     QVERIFY2(!result.isError(), result.toString().toUtf8().constData());
+ 
+     const QString fileExpected = testcase + QLatin1String("/expected");
+diff --git autotests/src/scriptdocument_test.cpp autotests/src/scriptdocument_test.cpp
+index ce85e36..fc9d92b 100644
+--- autotests/src/scriptdocument_test.cpp
++++ autotests/src/scriptdocument_test.cpp
+@@ -20,12 +20,10 @@
+ #include "scriptdocument_test.h"
+ 
+ #include <kateglobal.h>
+-#include "ktexteditor/cursor.h"
+ #include <ktexteditor/view.h>
+ #include <katedocument.h>
+ #include <katescriptdocument.h>
+ 
+-#include <QJSEngine>
+ #include <QtTestWidgets>
+ 
+ QTEST_MAIN(ScriptDocumentTest)
+@@ -70,7 +68,7 @@ void ScriptDocumentTest::init()
+ {
+     m_doc = new KTextEditor::DocumentPrivate;
+     m_view = m_doc->createView(nullptr);
+-    m_scriptDoc = new KateScriptDocument(nullptr, this);
++    m_scriptDoc = new KateScriptDocument(this);
+     m_scriptDoc->setDocument(m_doc);
+ }
+ 
+@@ -124,8 +122,7 @@ void ScriptDocumentTest::testRfind()
+ 
+     m_scriptDoc->setText("a a a a a a a a a a a a");
+ 
+-    KTextEditor::Cursor cursor = m_scriptDoc->rfind(searchStart, "a a a");
+-    QCOMPARE(cursor, result);
++    QCOMPARE(m_scriptDoc->rfind(searchStart.line(), searchStart.column(), "a a a"), result);
+ }
+ 
+ #include "moc_scriptdocument_test.cpp"
+diff --git autotests/src/templatehandler_test.cpp autotests/src/templatehandler_test.cpp
+index 4b6fd4f..e886318 100644
+--- autotests/src/templatehandler_test.cpp
++++ autotests/src/templatehandler_test.cpp
+@@ -54,7 +54,7 @@ void TemplateHandlerTest::testUndo()
+     doc->config()->setIndentationWidth(4);
+     doc->config()->setReplaceTabsDyn(true);
+ 
+-    view->insertTemplate(KTextEditor::Cursor(0, 0), snippet);
++    view->insertTemplate({0, 0}, snippet);
+ 
+     const QString result = "for (int i = ; i < ; ++i)\n"
+                            "{\n"
+@@ -359,7 +359,7 @@ void TemplateHandlerTest::testDefaults()
+     QFETCH(QString, input);
+     QFETCH(QString, function);
+ 
+-    view->insertTemplate(KTextEditor::Cursor(0, 0), input, function);
++    view->insertTemplate({0, 0}, input, function);
+     QTEST(doc->text(), "expected");
+ 
+     view->selectAll();
+diff --git autotests/src/testutils.cpp autotests/src/testutils.cpp
+index 8689de9..e2589e1 100644
+--- autotests/src/testutils.cpp
++++ autotests/src/testutils.cpp
+@@ -30,55 +30,92 @@
+ #include "kateconfig.h"
+ #include "katedocument.h"
+ #include "katescripthelpers.h"
+-#include "ktexteditor/cursor.h"
+-#include "ktexteditor/range.h"
+ 
+-#include <QJSEngine>
+-#include <QObject>
+-#include <QQmlEngine>
++#include <QtScript/QScriptEngine>
+ #include <QTest>
+ 
+ //END Includes
+ 
+ //BEGIN TestScriptEnv
+ 
++//BEGIN conversion functions for Cursors and Ranges
++/** Converstion function from KTextEditor::Cursor to QtScript cursor */
++static QScriptValue cursorToScriptValue(QScriptEngine *engine, const KTextEditor::Cursor &cursor)
++{
++    QString code = QStringLiteral("new Cursor(%1, %2);").arg(cursor.line())
++                   .arg(cursor.column());
++    return engine->evaluate(code);
++}
++
++/** Converstion function from QtScript cursor to KTextEditor::Cursor */
++static void cursorFromScriptValue(const QScriptValue &obj, KTextEditor::Cursor &cursor)
++{
++    cursor.setPosition(obj.property(QStringLiteral("line")).toInt32(),
++                       obj.property(QStringLiteral("column")).toInt32());
++}
++
++/** Converstion function from QtScript range to KTextEditor::Range */
++static QScriptValue rangeToScriptValue(QScriptEngine *engine, const KTextEditor::Range &range)
++{
++    QString code = QStringLiteral("new Range(%1, %2, %3, %4);").arg(range.start().line())
++                   .arg(range.start().column())
++                   .arg(range.end().line())
++                   .arg(range.end().column());
++    return engine->evaluate(code);
++}
++
++/** Converstion function from QtScript range to KTextEditor::Range */
++static void rangeFromScriptValue(const QScriptValue &obj, KTextEditor::Range &range)
++{
++    range.setStart(KTextEditor::Cursor(
++                       obj.property(QStringLiteral("start")).property(QStringLiteral("line")).toInt32(),
++                       obj.property(QStringLiteral("start")).property(QStringLiteral("column")).toInt32()
++                   ));
++    range.setEnd(KTextEditor::Cursor(
++                     obj.property(QStringLiteral("end")).property(QStringLiteral("line")).toInt32(),
++                     obj.property(QStringLiteral("end")).property(QLatin1String("column")).toInt32()
++                 ));
++}
++//END
++
+ TestScriptEnv::TestScriptEnv(KTextEditor::DocumentPrivate *part, bool &cflag)
+     : m_engine(nullptr), m_viewObj(nullptr), m_docObj(nullptr), m_output(nullptr)
+ {
+-    m_engine = new QJSEngine(this);
++    m_engine = new QScriptEngine(this);
++
++    qScriptRegisterMetaType(m_engine, cursorToScriptValue, cursorFromScriptValue);
++    qScriptRegisterMetaType(m_engine, rangeToScriptValue, rangeFromScriptValue);
+ 
+     // export read & require function and add the require guard object
+-    QJSValue functions = m_engine->newQObject(new Kate::ScriptHelper(m_engine));
+-    m_engine->globalObject().setProperty(QStringLiteral("functions"), functions);
+-    m_engine->globalObject().setProperty(QStringLiteral("read"), functions.property(QStringLiteral("read")));
+-    m_engine->globalObject().setProperty(QStringLiteral("require"), functions.property(QStringLiteral("require")));
++    m_engine->globalObject().setProperty(QStringLiteral("read"), m_engine->newFunction(Kate::Script::read));
++    m_engine->globalObject().setProperty(QStringLiteral("require"), m_engine->newFunction(Kate::Script::require));
+     m_engine->globalObject().setProperty(QStringLiteral("require_guard"), m_engine->newObject());
+-
+-   // export debug function
+-    m_engine->globalObject().setProperty(QStringLiteral("debug"), functions.property(QStringLiteral("debug")));
++    
++    // export debug function
++    m_engine->globalObject().setProperty(QStringLiteral("debug"), m_engine->newFunction(Kate::Script::debug));
+ 
+     // export translation functions
+-    m_engine->globalObject().setProperty(QStringLiteral("i18n"), functions.property(QStringLiteral("_i18n")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18nc"), functions.property(QStringLiteral("_i18nc")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18np"), functions.property(QStringLiteral("_i18np")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18ncp"), functions.property(QStringLiteral("_i18ncp")));
++    m_engine->globalObject().setProperty(QStringLiteral("i18n"), m_engine->newFunction(Kate::Script::i18n));
++    m_engine->globalObject().setProperty(QStringLiteral("i18nc"), m_engine->newFunction(Kate::Script::i18nc));
++    m_engine->globalObject().setProperty(QStringLiteral("i18ncp"), m_engine->newFunction(Kate::Script::i18ncp));
++    m_engine->globalObject().setProperty(QStringLiteral("i18np"), m_engine->newFunction(Kate::Script::i18np));
+ 
+     KTextEditor::ViewPrivate *view = qobject_cast<KTextEditor::ViewPrivate *>(part->widget());
+ 
+-    m_viewObj = new KateViewObject(m_engine, view);
+-    QJSValue sv = m_engine->newQObject(m_viewObj);
++    m_viewObj = new KateViewObject(view);
++    QScriptValue sv = m_engine->newQObject(m_viewObj);
+ 
+     m_engine->globalObject().setProperty(QStringLiteral("view"), sv);
+     m_engine->globalObject().setProperty(QStringLiteral("v"), sv);
+ 
+-    m_docObj = new KateDocumentObject(m_engine, view->doc());
+-    QJSValue sd = m_engine->newQObject(m_docObj);
++    m_docObj = new KateDocumentObject(view->doc());
++    QScriptValue sd = m_engine->newQObject(m_docObj);
+ 
+     m_engine->globalObject().setProperty(QStringLiteral("document"), sd);
+     m_engine->globalObject().setProperty(QStringLiteral("d"), sd);
+ 
+     m_output = new OutputObject(view, cflag);
+-    QJSValue so = m_engine->newQObject(m_output);
++    QScriptValue so = m_engine->newQObject(m_output);
+ 
+     m_engine->globalObject().setProperty(QStringLiteral("output"), so);
+     m_engine->globalObject().setProperty(QStringLiteral("out"), so);
+@@ -102,8 +139,8 @@ TestScriptEnv::~TestScriptEnv()
+ 
+ //BEGIN KateViewObject
+ 
+-KateViewObject::KateViewObject(QJSEngine *engine, KTextEditor::ViewPrivate *view)
+-    : KateScriptView(engine)
++KateViewObject::KateViewObject(KTextEditor::ViewPrivate *view)
++    : KateScriptView()
+ {
+     setView(view);
+ }
+@@ -197,8 +234,8 @@ ALIAS(shiftWordNext, shiftWordRight)
+ 
+ //BEGIN KateDocumentObject
+ 
+-KateDocumentObject::KateDocumentObject(QJSEngine *engine, KTextEditor::DocumentPrivate *doc)
+-    : KateScriptDocument(engine)
++KateDocumentObject::KateDocumentObject(KTextEditor::DocumentPrivate *doc)
++    : KateScriptDocument()
+ {
+     setDocument(doc);
+ }
+@@ -210,6 +247,7 @@ KateDocumentObject::~KateDocumentObject()
+ //END KateDocumentObject
+ 
+ //BEGIN OutputObject
++
+ OutputObject::OutputObject(KTextEditor::ViewPrivate *v, bool &cflag)
+     : view(v), cflag(cflag)
+ {
+@@ -223,11 +261,10 @@ OutputObject::~OutputObject()
+ void OutputObject::output(bool cp, bool ln)
+ {
+     QString str;
+-//   FIXME: This is not available with QtQml, but not sure if we need it
+-//    for (int i = 0; i < context()->argumentCount(); ++i) {
+-//        QJSValue arg = context()->argument(i);
+-//        str += arg.toString();
+-//    }
++    for (int i = 0; i < context()->argumentCount(); ++i) {
++        QScriptValue arg = context()->argument(i);
++        str += arg.toString();
++    }
+ 
+     if (cp) {
+         KTextEditor::Cursor c = view->cursorPosition();
+@@ -312,4 +349,5 @@ void OutputObject::posLn()
+ {
+     output(true, true);
+ }
++
+ //END OutputObject
+diff --git autotests/src/testutils.h autotests/src/testutils.h
+index 9feab27..077a613 100644
+--- autotests/src/testutils.h
++++ autotests/src/testutils.h
+@@ -24,9 +24,9 @@
+ #define TESTUTILS_H
+ 
+ #include "katescriptview.h"
+-
+ #include "katescriptdocument.h"
+-#include <QtQml/QJSEngine>
++
++#include <QtScript/QScriptable>
+ 
+ namespace KTextEditor { class ViewPrivate; }
+ class RegressionTest;
+@@ -45,7 +45,7 @@ public:
+     explicit TestScriptEnv(KTextEditor::DocumentPrivate *part, bool &cflag);
+     virtual ~TestScriptEnv();
+ 
+-    QJSEngine *engine() const
++    QScriptEngine *engine() const
+     {
+         return m_engine;
+     }
+@@ -57,7 +57,7 @@ public:
+     }
+ 
+ private:
+-    QJSEngine *m_engine;
++    QScriptEngine *m_engine;
+     KateViewObject *m_viewObj;
+     KateDocumentObject *m_docObj;
+ 
+@@ -73,7 +73,7 @@ class KateViewObject : public KateScriptView
+ 
+ public:
+ 
+-    explicit KateViewObject(QJSEngine *engine, KTextEditor::ViewPrivate *view);
++    explicit KateViewObject(KTextEditor::ViewPrivate *view);
+     virtual ~KateViewObject();
+ 
+     // Edit functions
+@@ -155,7 +155,7 @@ class KateDocumentObject : public KateScriptDocument
+     Q_OBJECT
+ 
+ public:
+-    explicit KateDocumentObject(QJSEngine *engine, KTextEditor::DocumentPrivate *doc);
++    explicit KateDocumentObject(KTextEditor::DocumentPrivate *doc);
+     virtual ~KateDocumentObject();
+ 
+ private:
+@@ -168,7 +168,7 @@ private:
+  * enabling one to check for coordinates and the like.
+  * @internal
+  */
+-class OutputObject : public QObject
++class OutputObject : public QObject, protected QScriptable
+ {
+     Q_OBJECT
+ 
+@@ -201,4 +201,5 @@ private:
+     KTextEditor::ViewPrivate *view;
+     bool &cflag;
+ };
++
+ #endif // TESTUTILS_H
+diff --git autotests/src/vimode/CMakeLists.txt autotests/src/vimode/CMakeLists.txt
+index f89ad7e..831b8f6 100644
+--- autotests/src/vimode/CMakeLists.txt
++++ autotests/src/vimode/CMakeLists.txt
+@@ -6,6 +6,7 @@ include_directories(
+ 
+ set (VIMODE_TEST_LINK_LIBS KF5TextEditor
+   KF5::I18n
++  Qt5::Script
+   Qt5::Test
+ )
+ 
+diff --git src/CMakeLists.txt src/CMakeLists.txt
+index f10c774..5c2ed62 100644
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -305,7 +305,7 @@ target_link_libraries(KF5TextEditor
+ PUBLIC
+   KF5::Parts
+ PRIVATE
+-  Qt5::Qml
++  Qt5::Script
+   Qt5::PrintSupport
+   KF5::I18n
+   KF5::Archive
+diff --git src/include/ktexteditor/cursor.h src/include/ktexteditor/cursor.h
+index 3140397..e02e1df 100644
+--- src/include/ktexteditor/cursor.h
++++ src/include/ktexteditor/cursor.h
+@@ -381,7 +381,7 @@ private:
+     int m_column;
+ };
+ 
+-} // namespace KTextEditor
++}
+ 
+ Q_DECLARE_TYPEINFO(KTextEditor::Cursor, Q_MOVABLE_TYPE);
+ Q_DECLARE_METATYPE(KTextEditor::Cursor)
+diff --git src/script/data/indentation/ada.js src/script/data/indentation/ada.js
+index 5100ede..3f3a04f 100644
+--- src/script/data/indentation/ada.js
++++ src/script/data/indentation/ada.js
+@@ -49,6 +49,8 @@ var katescript = {
+ // TODO: 'protected', 'task', 'select' &
+ //       possibly other keywords not recognised
+ 
++"use strict";
++
+ // required katepart js libraries
+ require ("range.js");
+ require ("cursor.js");
+@@ -62,11 +64,11 @@ var debugMode = false;
+ 
+ //END USER CONFIGURATION
+ 
+-var AdaComment    = /\s*--.*$/;
+-var unfStmt       = /([.=\(]|:=[^;]*)\s*$/;
+-var unfLoop       = /^\s*(for|while)\b(?!.*\bloop\b)/i;
+-var AdaBlockStart = /^\s*(if\b|while\b|else\b|elsif\b|loop\b|for\b.*\b(loop|use)\b|declare\b|begin\b|type\b.*\bis\b[^;]*$|(type\b.*)?\brecord\b|procedure\b|function\b|with\s+function\b|accept\b|do\b|task\b|generic\b|package\b|private\b|then\b|when\b|is\b)/i;
+-var StatementStart = /^\s*(if|when|while|else|elsif|loop|for\b.*\b(loop|use)|begin)\b/i;
++const AdaComment    = /\s*--.*$/;
++const unfStmt       = /([.=\(]|:=[^;]*)\s*$/;
++const unfLoop       = /^\s*(for|while)\b(?!.*\bloop\b)/i;
++const AdaBlockStart = /^\s*(if\b|while\b|else\b|elsif\b|loop\b|for\b.*\b(loop|use)\b|declare\b|begin\b|type\b.*\bis\b[^;]*$|(type\b.*)?\brecord\b|procedure\b|function\b|with\s+function\b|accept\b|do\b|task\b|generic\b|package\b|private\b|then\b|when\b|is\b)/i;
++const StatementStart = /^\s*(if|when|while|else|elsif|loop|for\b.*\b(loop|use)|begin)\b/i;
+ 
+ function dbg() {
+     if (debugMode) {
+@@ -83,7 +85,7 @@ function dbg() {
+ 
+ 
+ // regexp of keywords & patterns that cause reindenting of the current line.
+-var AdaReIndent = /^\s*((then|end|elsif|when|exception|begin|is|record|private)\s+|<<\w+>>|end;|[#\)])(.*)$/;
++const AdaReIndent = /^\s*((then|end|elsif|when|exception|begin|is|record|private)\s+|<<\w+>>|end;|[#\)])(.*)$/;
+ 
+ // characters which trigger indent, beside the default '\n'
+ var triggerCharacters = " \t)#>;";
+diff --git src/script/data/indentation/cstyle.js src/script/data/indentation/cstyle.js
+index 88fa611..cded67c 100644
+--- src/script/data/indentation/cstyle.js
++++ src/script/data/indentation/cstyle.js
+@@ -761,9 +761,8 @@ function processChar(line, c)
+     var prevFirstPos = document.firstColumn(line - 1);
+     var lastPos = document.lastColumn(line);
+ 
+-    dbg("firstPos: " + firstPos);
+-    dbg("column..: " + column);
+-    dbg("char    : " + c);
++     dbg("firstPos: " + firstPos);
++     dbg("column..: " + column);
+ 
+     if (firstPos == column - 1 && c == '{') {
+         // todo: maybe look for if etc.
+@@ -791,7 +790,7 @@ function processChar(line, c)
+     } else if (cfgSnapSlash && c == '/' && lastPos == column - 1) {
+         // try to snap the string "* /" to "*/"
+         var currentString = document.line(line);
+-        if (/^(\s*)\*\s+\/\s*$/.test(currentString)) {
++        if (currentString.search(/^(\s*)\*\s+\/\s*$/) != -1) {
+             currentString = RegExp.$1 + "*/";
+             document.editBegin();
+             document.removeLine(line);
+diff --git src/script/data/indentation/pascal.js src/script/data/indentation/pascal.js
+index cc7df5e..ffdf4ae 100644
+--- src/script/data/indentation/pascal.js
++++ src/script/data/indentation/pascal.js
+@@ -94,8 +94,11 @@ Fixing them is possible, but would make the indenter too big, slow and clever.
+  - procedure/function declarations in 'interface' should be indented
+ */
+ 
++"use strict";
++
+ // required katepart js libraries
+ require ("range.js");
++require ("cursor.js");
+ require ("string.js");
+ 
+ //BEGIN USER CONFIGURATION
+@@ -107,13 +110,13 @@ var debugMode = false;            // send debug output to terminal
+ //END USER CONFIGURATION
+ 
+ 
+-var patTrailingSemi = /;\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/;
+-var patMatchEnd     = /\b(begin|case|record)\b/i;
+-var patDeclaration  = /^\s*(program|module|unit|uses|import|implementation|interface|label|const|type|var|function|procedure|operator)\b/i;
+-var patTrailingBegin = /\bbegin\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
+-var patTrailingEnd = /\bend;?\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
+-var patCaseValue = /^(\s*[^,:;]+\s*(,\s*[^,:;]+\s*)*):(?!=)/;
+-var patEndOfStatement = /(;|end)\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
++const patTrailingSemi = /;\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/;
++const patMatchEnd     = /\b(begin|case|record)\b/i;
++const patDeclaration  = /^\s*(program|module|unit|uses|import|implementation|interface|label|const|type|var|function|procedure|operator)\b/i;
++const patTrailingBegin = /\bbegin\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
++const patTrailingEnd = /\bend;?\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
++const patCaseValue = /^(\s*[^,:;]+\s*(,\s*[^,:;]+\s*)*):(?!=)/;
++const patEndOfStatement = /(;|end)\s*(\/\/.*|\{.*\}|\(\*.*\*\))?\s*$/i;
+ 
+ function dbg() {
+     if (debugMode) {
+@@ -1389,7 +1392,7 @@ function tryStatement(line)
+ triggerCharacters = " \t)]}#;";
+ 
+ // possible outdent for lines that match this regexp
+-var PascalReIndent = /^\s*((end|const|type|var|begin|until|function|procedure|operator|else|otherwise|\w+\s*:)\s+|[#\)\]\}]|end;)(.*)$/;
++const PascalReIndent = /^\s*((end|const|type|var|begin|until|function|procedure|operator|else|otherwise|\w+\s*:)\s+|[#\)\]\}]|end;)(.*)$/;
+ 
+ // check if the trigger characters are in the right context,
+ // otherwise running the indenter might be annoying to the user
+diff --git src/script/data/indentation/ruby.js src/script/data/indentation/ruby.js
+index 4d57fe8..1b6c972 100644
+--- src/script/data/indentation/ruby.js
++++ src/script/data/indentation/ruby.js
+@@ -27,7 +27,6 @@ var katescript = {
+  */
+ 
+ // required katepart js libraries
+-require ("cursor.js");
+ require ("range.js");
+ 
+ //BEGIN USER CONFIGURATION
+@@ -43,13 +42,6 @@ var rxIndent = /^\s*(def|if|unless|for|while|until|class|module|else|elsif|case|
+ // Unindent lines that match this regexp
+ var rxUnindent = /^\s*((end|when|else|elsif|rescue|ensure)\b|[\]\}])(.*)$/;
+ 
+-var debugMode = false;
+-function dbg() {
+-    if (debugMode) {
+-        debug.apply(this, arguments);
+-    }
+-}
+-
+ function assert(cond)
+ {
+   if (!cond)
+@@ -97,11 +89,10 @@ function isLastCodeColumn(line, column)
+ function testAtEnd(stmt, rx)
+ {
+   assert(rx.global);
++
+   var cnt = stmt.content();
+   var res;
+-  // Work-around QML bug:
+-  rx.lastIndex = 0;
+-  while ((res = rx.exec(cnt)) !== null) {
++  while (res = rx.exec(cnt)) {
+     var start = res.index;
+     var end = rx.lastIndex;
+     if (stmt.isCode(start)) {
+@@ -158,7 +149,7 @@ function Statement(start, end)
+     while (line < this.end && document.lineLength(line) < offset) {
+       offset -= document.lineLength(line++) + 1;
+     }
+-    return new Cursor(line, offset);
++    return {line: line, column: offset};
+   }
+ 
+   // Return document.attribute at the given offset in a statement
+@@ -181,7 +172,7 @@ function Statement(start, end)
+ 
+   // Return the indent at the beginning of the statement
+   this.indent = function() {
+-    return document.firstVirtualColumn(this.start);
++    return document.firstVirtualColumn(this.start)
+   }
+ 
+   // Return the content of the statement from the document
+diff --git src/script/katecommandlinescript.cpp src/script/katecommandlinescript.cpp
+index ee7fe78..6e5802c 100644
+--- src/script/katecommandlinescript.cpp
++++ src/script/katecommandlinescript.cpp
+@@ -20,8 +20,8 @@
+ 
+ #include "katecommandlinescript.h"
+ 
+-#include <QJSValue>
+-#include <QJSEngine>
++#include <QScriptValue>
++#include <QScriptEngine>
+ 
+ #include <KLocalizedString>
+ #include <KShell>
+@@ -50,24 +50,24 @@ const KateCommandLineScriptHeader &KateCommandLineScript::commandHeader()
+ bool KateCommandLineScript::callFunction(const QString &cmd, const QStringList args, QString &errorMessage)
+ {
+     clearExceptions();
+-    QJSValue command = function(cmd);
+-    if (!command.isCallable()) {
++    QScriptValue command = function(cmd);
++    if (!command.isValid()) {
+         errorMessage = i18n("Function '%1' not found in script: %2", cmd, url());
+         return false;
+     }
+ 
+     // add the arguments that we are going to pass to the function
+-    QJSValueList arguments;
+-    for (const QString &arg : args) {
+-        arguments << QJSValue(arg);
++    QScriptValueList arguments;
++    foreach (const QString &arg, args) {
++        arguments << QScriptValue(m_engine, arg);
+     }
+ 
+-    QJSValue result = command.call(arguments);
++    QScriptValue result = command.call(QScriptValue(), arguments);
+     // error during the calling?
+-    if (result.isError()) {
+-       errorMessage = backtrace(result, i18n("Error calling %1", cmd));
+-       return false;
+-   }
++    if (m_engine->hasUncaughtException()) {
++        errorMessage = backtrace(result, i18n("Error calling %1", cmd));
++        return false;
++    }
+ 
+     return true;
+ }
+@@ -119,19 +119,19 @@ bool KateCommandLineScript::help(KTextEditor::View *view, const QString &cmd, QS
+     }
+ 
+     clearExceptions();
+-    QJSValue helpFunction = function(QStringLiteral("help"));
+-    if (!helpFunction.isCallable()) {
++    QScriptValue helpFunction = function(QStringLiteral("help"));
++    if (!helpFunction.isValid()) {
+         return false;
+     }
+ 
+     // add the arguments that we are going to pass to the function
+-    QJSValueList arguments;
+-    arguments << QJSValue(cmd);
++    QScriptValueList arguments;
++    arguments << QScriptValue(m_engine, cmd);
+ 
+-    QJSValue result = helpFunction.call(arguments);
++    QScriptValue result = helpFunction.call(QScriptValue(), arguments);
+ 
+     // error during the calling?
+-    if (result.isError()) {
++    if (m_engine->hasUncaughtException()) {
+         msg = backtrace(result, i18n("Error calling 'help %1'", cmd));
+         return false;
+     }
+diff --git src/script/kateindentscript.cpp src/script/kateindentscript.cpp
+index 15ce387..12221ab 100644
+--- src/script/kateindentscript.cpp
++++ src/script/kateindentscript.cpp
+@@ -19,8 +19,8 @@
+ 
+ #include "kateindentscript.h"
+ 
+-#include <QJSValue>
+-#include <QJSEngine>
++#include <QScriptValue>
++#include <QScriptEngine>
+ 
+ #include "katedocument.h"
+ #include "kateview.h"
+@@ -62,31 +62,34 @@ QPair<int, int> KateIndentScript::indent(KTextEditor::ViewPrivate *view, const K
+     }
+ 
+     clearExceptions();
+-    QJSValue indentFunction = function(QStringLiteral("indent"));
+-    if (!indentFunction.isCallable()) {
++    QScriptValue indentFunction = function(QStringLiteral("indent"));
++    if (!indentFunction.isValid()) {
+         return qMakePair(-2, -2);
+     }
+     // add the arguments that we are going to pass to the function
+-    QJSValueList arguments;
+-    arguments << QJSValue(position.line());
+-    arguments << QJSValue(indentWidth);
+-    arguments << (typedCharacter.isNull() ? QJSValue(QString()) : QJSValue(QString(typedCharacter)));
++    QScriptValueList arguments;
++    arguments << QScriptValue(m_engine, position.line());
++    arguments << QScriptValue(m_engine, indentWidth);
++    arguments << QScriptValue(m_engine, typedCharacter.isNull() ? QString() : QString(typedCharacter));
+     // get the required indent
+-    QJSValue result = indentFunction.call(arguments);
++    QScriptValue result = indentFunction.call(QScriptValue(), arguments);
+     // error during the calling?
+-    if (result.isError()) {
++    if (m_engine->hasUncaughtException()) {
+         displayBacktrace(result, QStringLiteral("Error calling indent()"));
+         return qMakePair(-2, -2);
+     }
+     int indentAmount = -2;
+     int alignAmount = -2;
+     if (result.isArray()) {
+-        indentAmount = result.property(0).toInt();
+-        alignAmount = result.property(1).toInt();
++        indentAmount = result.property(0).toInt32();
++        alignAmount = result.property(1).toInt32();
+     } else {
+-        indentAmount = result.toInt();
++        indentAmount = result.toInt32();
++    }
++    if (m_engine->hasUncaughtException()) {
++        displayBacktrace(QScriptValue(), QStringLiteral("Bad return type (must be integer)"));
++        return qMakePair(-2, -2);
+     }
+-
+     return qMakePair(indentAmount, alignAmount);
+ }
+ 
+diff --git src/script/katescript.cpp src/script/katescript.cpp
+index 56d9001..61edad0 100644
+--- src/script/katescript.cpp
++++ src/script/katescript.cpp
+@@ -31,13 +31,45 @@
+ 
+ #include <QFile>
+ #include <QFileInfo>
+-#include <QJSEngine>
+-#include <QJSValue>
++#include <QScriptEngine>
++#include <QScriptValue>
++#include <QScriptContext>
+ #include <QMap>
+-#include <QQmlEngine>
+ 
+ //BEGIN conversion functions for Cursors and Ranges
++/** Converstion function from KTextEditor::Cursor to QtScript cursor */
++static QScriptValue cursorToScriptValue(QScriptEngine *engine, const KTextEditor::Cursor &cursor)
++{
++    QString code = QStringLiteral("new Cursor(%1, %2);").arg(cursor.line())
++                   .arg(cursor.column());
++    return engine->evaluate(code);
++}
++
++/** Converstion function from QtScript cursor to KTextEditor::Cursor */
++static void cursorFromScriptValue(const QScriptValue &obj, KTextEditor::Cursor &cursor)
++{
++    cursor.setPosition(obj.property(QStringLiteral("line")).toInt32(),
++                       obj.property(QStringLiteral("column")).toInt32());
++}
++
++/** Converstion function from QtScript range to KTextEditor::Range */
++static QScriptValue rangeToScriptValue(QScriptEngine *engine, const KTextEditor::Range &range)
++{
++    QString code = QStringLiteral("new Range(%1, %2, %3, %4);").arg(range.start().line())
++                   .arg(range.start().column())
++                   .arg(range.end().line())
++                   .arg(range.end().column());
++    return engine->evaluate(code);
++}
+ 
++/** Converstion function from QtScript range to KTextEditor::Range */
++static void rangeFromScriptValue(const QScriptValue &obj, KTextEditor::Range &range)
++{
++    range.setRange(KTextEditor::Cursor(obj.property(QStringLiteral("start")).property(QStringLiteral("line")).toInt32(),
++                                       obj.property(QStringLiteral("start")).property(QStringLiteral("column")).toInt32()),
++                   KTextEditor::Cursor(obj.property(QStringLiteral("end")).property(QStringLiteral("line")).toInt32(),
++                                       obj.property(QStringLiteral("end")).property(QStringLiteral("column")).toInt32()));
++}
+ //END
+ 
+ KateScript::KateScript(const QString &urlOrScript, enum InputType inputType)
+@@ -56,13 +88,13 @@ KateScript::~KateScript()
+ {
+     if (m_loadSuccessful) {
+         // remove data...
++        delete m_engine;
+         delete m_document;
+         delete m_view;
+-        delete m_engine;
+     }
+ }
+ 
+-QString KateScript::backtrace(const QJSValue &error, const QString &header)
++QString KateScript::backtrace(const QScriptValue &error, const QString &header)
+ {
+     QString bt;
+     if (!header.isNull()) {
+@@ -72,10 +104,12 @@ QString KateScript::backtrace(const QJSValue &error, const QString &header)
+         bt += error.toString() + QLatin1Char('\n');
+     }
+ 
++    bt += m_engine->uncaughtExceptionBacktrace().join(QStringLiteral("\n")) + QLatin1Char('\n');
++
+     return bt;
+ }
+ 
+-void KateScript::displayBacktrace(const QJSValue &error, const QString &header)
++void KateScript::displayBacktrace(const QScriptValue &error, const QString &header)
+ {
+     if (!m_engine) {
+         std::cerr << "KateScript::displayBacktrace: no engine, cannot display error\n";
+@@ -89,22 +123,23 @@ void KateScript::clearExceptions()
+     if (!load()) {
+         return;
+     }
++    m_engine->clearExceptions();
+ }
+ 
+-QJSValue KateScript::global(const QString &name)
++QScriptValue KateScript::global(const QString &name)
+ {
+     // load the script if necessary
+     if (!load()) {
+-        return QJSValue::UndefinedValue;
++        return QScriptValue();
+     }
+     return m_engine->globalObject().property(name);
+ }
+ 
+-QJSValue KateScript::function(const QString &name)
++QScriptValue KateScript::function(const QString &name)
+ {
+-    QJSValue value = global(name);
+-    if (!value.isCallable()) {
+-        return QJSValue::UndefinedValue;
++    QScriptValue value = global(name);
++    if (!value.isFunction()) {
++        return QScriptValue();
+     }
+     return value;
+ }
+@@ -129,23 +164,23 @@ bool KateScript::load()
+     }
+ 
+     // create script engine, register meta types
+-    m_engine = new QJSEngine();
++    m_engine = new QScriptEngine();
++    qScriptRegisterMetaType(m_engine, cursorToScriptValue, cursorFromScriptValue);
++    qScriptRegisterMetaType(m_engine, rangeToScriptValue, rangeFromScriptValue);
+ 
+     // export read & require function and add the require guard object
+-    QJSValue functions = m_engine->newQObject(new Kate::ScriptHelper(m_engine));
+-    m_engine->globalObject().setProperty(QStringLiteral("functions"), functions);
+-    m_engine->globalObject().setProperty(QStringLiteral("read"), functions.property(QStringLiteral("read")));
+-    m_engine->globalObject().setProperty(QStringLiteral("require"), functions.property(QStringLiteral("require")));
++    m_engine->globalObject().setProperty(QStringLiteral("read"), m_engine->newFunction(Kate::Script::read));
++    m_engine->globalObject().setProperty(QStringLiteral("require"), m_engine->newFunction(Kate::Script::require));
+     m_engine->globalObject().setProperty(QStringLiteral("require_guard"), m_engine->newObject());
+ 
+     // export debug function
+-    m_engine->globalObject().setProperty(QStringLiteral("debug"), functions.property(QStringLiteral("debug")));
++    m_engine->globalObject().setProperty(QStringLiteral("debug"), m_engine->newFunction(Kate::Script::debug));
+ 
+     // export translation functions
+-    m_engine->globalObject().setProperty(QStringLiteral("i18n"), functions.property(QStringLiteral("_i18n")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18nc"), functions.property(QStringLiteral("_i18nc")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18np"), functions.property(QStringLiteral("_i18np")));
+-    m_engine->globalObject().setProperty(QStringLiteral("i18ncp"), functions.property(QStringLiteral("_i18ncp")));
++    m_engine->globalObject().setProperty(QStringLiteral("i18n"), m_engine->newFunction(Kate::Script::i18n));
++    m_engine->globalObject().setProperty(QStringLiteral("i18nc"), m_engine->newFunction(Kate::Script::i18nc));
++    m_engine->globalObject().setProperty(QStringLiteral("i18ncp"), m_engine->newFunction(Kate::Script::i18ncp));
++    m_engine->globalObject().setProperty(QStringLiteral("i18np"), m_engine->newFunction(Kate::Script::i18np));
+ 
+     // register default styles as ds* global properties
+     m_engine->globalObject().setProperty(QStringLiteral("dsNormal"), KTextEditor::dsNormal);
+@@ -181,14 +216,14 @@ bool KateScript::load()
+     m_engine->globalObject().setProperty(QStringLiteral("dsError"), KTextEditor::dsError);
+ 
+     // register scripts itself
+-    QJSValue result = m_engine->evaluate(source, m_url);
++    QScriptValue result = m_engine->evaluate(source, m_url);
+     if (hasException(result, m_url)) {
+         return false;
+     }
+ 
+     // AFTER SCRIPT: set the view/document objects as necessary
+-    m_engine->globalObject().setProperty(QStringLiteral("document"), m_engine->newQObject(m_document = new KateScriptDocument(m_engine)));
+-    m_engine->globalObject().setProperty(QStringLiteral("view"), m_engine->newQObject(m_view = new KateScriptView(m_engine)));
++    m_engine->globalObject().setProperty(QStringLiteral("document"), m_engine->newQObject(m_document = new KateScriptDocument()));
++    m_engine->globalObject().setProperty(QStringLiteral("view"), m_engine->newQObject(m_view = new KateScriptView()));
+ 
+     // yip yip!
+     m_loadSuccessful = true;
+@@ -196,37 +231,29 @@ bool KateScript::load()
+     return true;
+ }
+ 
+-QJSValue KateScript::evaluate(const QString& program, const FieldMap& env)
++QScriptValue KateScript::evaluate(const QString& program, const FieldMap& env)
+ {
+     if ( !load() ) {
+         qWarning() << "load of script failed:" << program;
+-        return QJSValue();
++        return QScriptValue();
+     }
+ 
+-    // Wrap the arguments in a function to avoid poluting the global object
+-    QString programWithContext = QStringLiteral("function(") +
+-                                     QStringList(env.keys()).join(QLatin1Char(',')) +
+-                                 QStringLiteral(") { return ") +
+-                                     program +
+-                                 QStringLiteral("}");
+-    QJSValue programFunction = m_engine->evaluate(programWithContext);
+-    Q_ASSERT(programFunction.isCallable());
++    // set up stuff in a new context, to not pollute the global stuff
++    auto context = m_engine->pushContext();
+ 
+-    QJSValueList args;
++    auto obj = context->activationObject();
+     for ( auto it = env.begin(); it != env.end(); it++ ) {
+-        args << it.value();
++        obj.setProperty(it.key(), *it);
+     }
++    auto result = m_engine->evaluate(program);
+ 
+-    QJSValue result = programFunction.call(args);
+-    if (result.isError())
+-        qWarning() << "Error evaluating script: " << result.toString();
+-
++    m_engine->popContext();
+     return result;
+ }
+ 
+-bool KateScript::hasException(const QJSValue &object, const QString &file)
++bool KateScript::hasException(const QScriptValue &object, const QString &file)
+ {
+-    if (object.isError()) {
++    if (m_engine->hasUncaughtException()) {
+         displayBacktrace(object, i18n("Error loading script %1\n", file));
+         m_errorMessage = i18n("Error loading script %1", file);
+         delete m_engine;
+@@ -257,3 +284,4 @@ KateScriptHeader &KateScript::generalHeader()
+ {
+     return m_generalHeader;
+ }
++
+diff --git src/script/katescript.h src/script/katescript.h
+index a9679a5..f78f243 100644
+--- src/script/katescript.h
++++ src/script/katescript.h
+@@ -21,11 +21,11 @@
+ #ifndef KATE_SCRIPT_H
+ #define KATE_SCRIPT_H
+ 
+-#include <QtCore/QString>
+-#include <QtCore/QMap>
+-#include <QtQml/QJSValue>
++#include <QScriptValue>
++#include <QString>
++#include <QMap>
+ 
+-class QJSEngine;
++class QScriptEngine;
+ 
+ namespace KTextEditor { class ViewPrivate; }
+ 
+@@ -122,7 +122,7 @@ public:
+         InputSCRIPT
+     };
+ 
+-    typedef QMap<QString, QJSValue> FieldMap;
++    typedef QMap<QString, QScriptValue> FieldMap;
+ 
+     /**
+      * Create a new script representation, passing either a file or the script
+@@ -154,16 +154,16 @@ public:
+     bool setView(KTextEditor::ViewPrivate *view);
+ 
+     /**
+-     * Get a QJSValue for a global item in the script given its name, or an
+-     * invalid QJSValue if no such global item exists.
++     * Get a QScriptValue for a global item in the script given its name, or an
++     * invalid QScriptValue if no such global item exists.
+      */
+-    QJSValue global(const QString &name);
++    QScriptValue global(const QString &name);
+ 
+     /**
+-     * Return a function in the script of the given name, or an invalid QJSValue
++     * Return a function in the script of the given name, or an invalid QScriptValue
+      * if no such function exists.
+      */
+-    QJSValue function(const QString &name);
++    QScriptValue function(const QString &name);
+ 
+     /** Return a context-specific error message */
+     const QString &errorMessage()
+@@ -172,13 +172,13 @@ public:
+     }
+ 
+     /** Returns the backtrace when a script has errored out */
+-    QString backtrace(const QJSValue &error, const QString &header = QString());
++    QString backtrace(const QScriptValue &error, const QString &header = QString());
+ 
+     /** Execute a piece of code **/
+-    QJSValue evaluate(const QString& program, const FieldMap& env = FieldMap());
++    QScriptValue evaluate(const QString& program, const FieldMap& env = FieldMap());
+ 
+     /** Displays the backtrace when a script has errored out */
+-    void displayBacktrace(const QJSValue &error, const QString &header = QString());
++    void displayBacktrace(const QScriptValue &error, const QString &header = QString());
+ 
+     /** Clears any uncaught exceptions in the script engine. */
+     void clearExceptions();
+@@ -190,7 +190,7 @@ public:
+ 
+ protected:
+     /** Checks for exception and gives feedback on the console. */
+-    bool hasException(const QJSValue &object, const QString &file);
++    bool hasException(const QScriptValue &object, const QString &file);
+ 
+ private:
+     /** Whether or not there has been a call to load */
+@@ -207,7 +207,7 @@ private:
+ 
+ protected:
+     /** The Qt interpreter for this script */
+-    QJSEngine *m_engine;
++    QScriptEngine *m_engine;
+ 
+ private:
+     /** general header data */
+diff --git src/script/katescriptdocument.cpp src/script/katescriptdocument.cpp
+index 3637408..d206da3 100644
+--- src/script/katescriptdocument.cpp
++++ src/script/katescriptdocument.cpp
+@@ -26,14 +26,13 @@
+ #include "katehighlight.h"
+ #include "katescript.h"
+ #include "katepartdebug.h"
+-#include "scriptcursor.h"
+-#include "scriptrange.h"
+ 
+ #include <ktexteditor/documentcursor.h>
+-#include <QJSEngine>
+ 
+-KateScriptDocument::KateScriptDocument(QJSEngine *engine, QObject *parent)
+-    : QObject(parent), m_document(nullptr), m_engine(engine)
++#include <QScriptEngine>
++
++KateScriptDocument::KateScriptDocument(QObject *parent)
++    : QObject(parent), m_document(nullptr)
+ {
+ }
+ 
+@@ -57,11 +56,6 @@ int KateScriptDocument::defStyleNum(const KTextEditor::Cursor &cursor)
+     return defStyleNum(cursor.line(), cursor.column());
+ }
+ 
+-int KateScriptDocument::defStyleNum(const QJSValue &jscursor)
+-{
+-    return defStyleNum(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isCode(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+@@ -73,11 +67,6 @@ bool KateScriptDocument::isCode(const KTextEditor::Cursor &cursor)
+     return isCode(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isCode(const QJSValue &jscursor)
+-{
+-    return isCode(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isComment(int line, int column)
+ {
+     return m_document->isComment(line, column);
+@@ -88,11 +77,6 @@ bool KateScriptDocument::isComment(const KTextEditor::Cursor &cursor)
+     return isComment(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isComment(const QJSValue &jscursor)
+-{
+-    return isComment(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isString(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+@@ -104,11 +88,6 @@ bool KateScriptDocument::isString(const KTextEditor::Cursor &cursor)
+     return isString(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isString(const QJSValue &jscursor)
+-{
+-    return isString(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isRegionMarker(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+@@ -120,11 +99,6 @@ bool KateScriptDocument::isRegionMarker(const KTextEditor::Cursor &cursor)
+     return isRegionMarker(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isRegionMarker(const QJSValue &jscursor)
+-{
+-    return isRegionMarker(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isChar(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+@@ -136,11 +110,6 @@ bool KateScriptDocument::isChar(const KTextEditor::Cursor &cursor)
+     return isChar(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isChar(const QJSValue &jscursor)
+-{
+-    return isChar(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isOthers(int line, int column)
+ {
+     const int defaultStyle = defStyleNum(line, column);
+@@ -152,11 +121,6 @@ bool KateScriptDocument::isOthers(const KTextEditor::Cursor &cursor)
+     return isOthers(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::isOthers(const QJSValue &jscursor)
+-{
+-    return isOthers(cursorFromScriptValue(jscursor));
+-}
+-
+ int KateScriptDocument::firstVirtualColumn(int line)
+ {
+     const int tabWidth = m_document->config()->tabWidth();
+@@ -194,11 +158,6 @@ int KateScriptDocument::toVirtualColumn(const KTextEditor::Cursor &cursor)
+     return toVirtualColumn(cursor.line(), cursor.column());
+ }
+ 
+-int KateScriptDocument::toVirtualColumn(const QJSValue &jscursor)
+-{
+-    return toVirtualColumn(cursorFromScriptValue(jscursor));
+-}
+-
+ KTextEditor::Cursor KateScriptDocument::toVirtualCursor(const KTextEditor::Cursor &cursor)
+ {
+     return KTextEditor::Cursor(cursor.line(),
+@@ -226,7 +185,7 @@ KTextEditor::Cursor KateScriptDocument::fromVirtualCursor(const KTextEditor::Cur
+                                fromVirtualColumn(virtualCursor.line(), virtualCursor.column()));
+ }
+ 
+-KTextEditor::Cursor KateScriptDocument::rfindInternal(int line, int column, const QString &text, int attribute)
++KTextEditor::Cursor KateScriptDocument::rfind(int line, int column, const QString &text, int attribute)
+ {
+     KTextEditor::DocumentCursor cursor(document(), line, column);
+     const int start = cursor.line();
+@@ -264,21 +223,10 @@ KTextEditor::Cursor KateScriptDocument::rfindInternal(int line, int column, cons
+ 
+ KTextEditor::Cursor KateScriptDocument::rfind(const KTextEditor::Cursor &cursor, const QString &text, int attribute)
+ {
+-    return rfindInternal(cursor.line(), cursor.column(), text, attribute);
+-}
+-
+-QJSValue KateScriptDocument::rfind(int line, int column, const QString &text, int attribute)
+-{
+-    return cursorToScriptValue(m_engine, rfindInternal(line, column, text, attribute));
+-}
+-
+-QJSValue KateScriptDocument::rfind(const QJSValue &jscursor, const QString &text, int attribute)
+-{
+-    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
+-    return cursorToScriptValue(m_engine, rfind(cursor, text, attribute));
++    return rfind(cursor.line(), cursor.column(), text, attribute);
+ }
+ 
+-KTextEditor::Cursor KateScriptDocument::anchorInternal(int line, int column, QChar character)
++KTextEditor::Cursor KateScriptDocument::anchor(int line, int column, QChar character)
+ {
+     QChar lc;
+     QChar rc;
+@@ -336,17 +284,6 @@ KTextEditor::Cursor KateScriptDocument::anchorInternal(int line, int column, QCh
+ 
+ KTextEditor::Cursor KateScriptDocument::anchor(const KTextEditor::Cursor &cursor, QChar character)
+ {
+-    return anchorInternal(cursor.line(), cursor.column(), character);
+-}
+-
+-QJSValue KateScriptDocument::anchor(int line, int column, QChar character)
+-{
+-    return cursorToScriptValue(m_engine, anchorInternal(line, column, character));
+-}
+-
+-QJSValue KateScriptDocument::anchor(const QJSValue &jscursor, QChar character)
+-{
+-    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
+     return anchor(cursor.line(), cursor.column(), character);
+ }
+ 
+@@ -412,9 +349,9 @@ QStringList KateScriptDocument::embeddedHighlightingModes()
+     return m_document->embeddedHighlightingModes();
+ }
+ 
+-QString KateScriptDocument::highlightingModeAt(const QJSValue &jspos)
++QString KateScriptDocument::highlightingModeAt(const KTextEditor::Cursor &pos)
+ {
+-    return m_document->highlightingModeAt(cursorFromScriptValue(jspos));
++    return m_document->highlightingModeAt(pos);
+ }
+ 
+ bool KateScriptDocument::isModified()
+@@ -442,11 +379,6 @@ QString KateScriptDocument::text(const KTextEditor::Range &range)
+     return m_document->text(range);
+ }
+ 
+-QString KateScriptDocument::text(const QJSValue &jsrange)
+-{
+-    return text(rangeFromScriptValue(jsrange));
+-}
+-
+ QString KateScriptDocument::line(int line)
+ {
+     return m_document->line(line);
+@@ -454,7 +386,7 @@ QString KateScriptDocument::line(int line)
+ 
+ QString KateScriptDocument::wordAt(int line, int column)
+ {
+-    return wordAt(KTextEditor::Cursor(line, column));
++    return m_document->wordAt(KTextEditor::Cursor(line, column));
+ }
+ 
+ QString KateScriptDocument::wordAt(const KTextEditor::Cursor &cursor)
+@@ -462,14 +394,14 @@ QString KateScriptDocument::wordAt(const KTextEditor::Cursor &cursor)
+     return m_document->wordAt(cursor);
+ }
+ 
+-QJSValue KateScriptDocument::wordRangeAt(int line, int column)
++KTextEditor::Range KateScriptDocument::wordRangeAt(int line, int column)
+ {
+     return wordRangeAt(KTextEditor::Cursor(line, column));
+ }
+ 
+-QJSValue KateScriptDocument::wordRangeAt(const KTextEditor::Cursor &cursor)
++KTextEditor::Range KateScriptDocument::wordRangeAt(const KTextEditor::Cursor &cursor)
+ {
+-    return rangeToScriptValue(m_engine, m_document->wordRangeAt(cursor));
++    return m_document->wordRangeAt(cursor);
+ }
+ 
+ QString KateScriptDocument::charAt(int line, int column)
+@@ -483,11 +415,6 @@ QString KateScriptDocument::charAt(const KTextEditor::Cursor &cursor)
+     return c.isNull() ? QString() : QString(c);
+ }
+ 
+-QString KateScriptDocument::charAt(const QJSValue &jscursor)
+-{
+-    return charAt(cursorFromScriptValue(jscursor));
+-}
+-
+ QString KateScriptDocument::firstChar(int line)
+ {
+     Kate::TextLine textLine = m_document->plainKateTextLine(line);
+@@ -520,11 +447,6 @@ bool KateScriptDocument::isSpace(const KTextEditor::Cursor &cursor)
+     return m_document->characterAt(cursor).isSpace();
+ }
+ 
+-bool KateScriptDocument::isSpace(const QJSValue &jscursor)
+-{
+-    return isSpace(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::matchesAt(int line, int column, const QString &s)
+ {
+     Kate::TextLine textLine = m_document->plainKateTextLine(line);
+@@ -533,17 +455,9 @@ bool KateScriptDocument::matchesAt(int line, int column, const QString &s)
+ 
+ bool KateScriptDocument::matchesAt(const KTextEditor::Cursor &cursor, const QString &s)
+ {
+-
+     return matchesAt(cursor.line(), cursor.column(), s);
+ }
+ 
+-bool KateScriptDocument::matchesAt(const QJSValue &jscursor, const QString &s)
+-{
+-
+-    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
+-    return matchesAt(cursor, s);
+-}
+-
+ bool KateScriptDocument::setText(const QString &s)
+ {
+     return m_document->setText(s);
+@@ -570,11 +484,6 @@ bool KateScriptDocument::truncate(const KTextEditor::Cursor &cursor)
+     return truncate(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::truncate(const QJSValue &cursor)
+-{
+-    return truncate(cursorFromScriptValue(cursor));
+-}
+-
+ bool KateScriptDocument::insertText(int line, int column, const QString &s)
+ {
+     return insertText(KTextEditor::Cursor(line, column), s);
+@@ -585,12 +494,6 @@ bool KateScriptDocument::insertText(const KTextEditor::Cursor &cursor, const QSt
+     return m_document->insertText(cursor, s);
+ }
+ 
+-bool KateScriptDocument::insertText(const QJSValue &jscursor, const QString &s)
+-{
+-    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
+-    return insertText(cursor, s);
+-}
+-
+ bool KateScriptDocument::removeText(int fromLine, int fromColumn, int toLine, int toColumn)
+ {
+     return removeText(KTextEditor::Range(fromLine, fromColumn, toLine, toColumn));
+@@ -606,12 +509,6 @@ bool KateScriptDocument::removeText(const KTextEditor::Range &range)
+     return m_document->removeText(range);
+ }
+ 
+-bool KateScriptDocument::removeText(const QJSValue &jsrange)
+-{
+-    KTextEditor::Range range = rangeFromScriptValue(jsrange);
+-    return removeText(range);
+-}
+-
+ bool KateScriptDocument::insertLine(int line, const QString &s)
+ {
+     return m_document->insertLine(line, s);
+@@ -632,11 +529,6 @@ bool KateScriptDocument::wrapLine(const KTextEditor::Cursor &cursor)
+     return wrapLine(cursor.line(), cursor.column());
+ }
+ 
+-bool KateScriptDocument::wrapLine(const QJSValue &jscursor)
+-{
+-    return wrapLine(cursorFromScriptValue(jscursor));
+-}
+-
+ void KateScriptDocument::joinLines(int startLine, int endLine)
+ {
+     m_document->joinLines(startLine, endLine);
+@@ -697,11 +589,6 @@ bool KateScriptDocument::isValidTextPosition(const KTextEditor::Cursor& cursor)
+     return m_document->isValidTextPosition(cursor);
+ }
+ 
+-bool KateScriptDocument::isValidTextPosition(const QJSValue& cursor)
+-{
+-    return m_document->isValidTextPosition(cursorFromScriptValue(cursor));
+-}
+-
+ int KateScriptDocument::firstColumn(int line)
+ {
+     Kate::TextLine textLine = m_document->plainKateTextLine(line);
+@@ -728,11 +615,6 @@ int KateScriptDocument::prevNonSpaceColumn(const KTextEditor::Cursor &cursor)
+     return prevNonSpaceColumn(cursor.line(), cursor.column());
+ }
+ 
+-int KateScriptDocument::prevNonSpaceColumn(const QJSValue &cursor)
+-{
+-    return prevNonSpaceColumn(cursorFromScriptValue(cursor));
+-}
+-
+ int KateScriptDocument::nextNonSpaceColumn(int line, int column)
+ {
+     Kate::TextLine textLine = m_document->plainKateTextLine(line);
+@@ -747,11 +629,6 @@ int KateScriptDocument::nextNonSpaceColumn(const KTextEditor::Cursor &cursor)
+     return nextNonSpaceColumn(cursor.line(), cursor.column());
+ }
+ 
+-int KateScriptDocument::nextNonSpaceColumn(const QJSValue &cursor)
+-{
+-    return nextNonSpaceColumn(cursorFromScriptValue(cursor));
+-}
+-
+ int KateScriptDocument::prevNonEmptyLine(int line)
+ {
+     const int startLine = line;
+@@ -812,14 +689,14 @@ QString KateScriptDocument::commentEnd(int attribute)
+     return m_document->highlight()->getCommentEnd(attribute);
+ }
+ 
+-QJSValue KateScriptDocument::documentRange()
++KTextEditor::Range KateScriptDocument::documentRange()
+ {
+-    return rangeToScriptValue(m_engine, m_document->documentRange());
++    return m_document->documentRange();
+ }
+ 
+-QJSValue KateScriptDocument::documentEnd()
++KTextEditor::Cursor KateScriptDocument::documentEnd()
+ {
+-    return cursorToScriptValue(m_engine, m_document->documentEnd());
++    return m_document->documentEnd();
+ }
+ 
+ int KateScriptDocument::attribute(int line, int column)
+@@ -859,11 +736,6 @@ QString KateScriptDocument::attributeName(const KTextEditor::Cursor &cursor)
+     return attributeName(cursor.line(), cursor.column());
+ }
+ 
+-QString KateScriptDocument::attributeName(const QJSValue &jscursor)
+-{
+-    return attributeName(cursorFromScriptValue(jscursor));
+-}
+-
+ bool KateScriptDocument::isAttributeName(int line, int column, const QString &name)
+ {
+     return name == attributeName(line, column);
+@@ -874,12 +746,6 @@ bool KateScriptDocument::isAttributeName(const KTextEditor::Cursor &cursor, cons
+     return isAttributeName(cursor.line(), cursor.column(), name);
+ }
+ 
+-bool KateScriptDocument::isAttributeName(const QJSValue &jscursor, const QString &name)
+-{
+-    KTextEditor::Cursor cursor = cursorFromScriptValue(jscursor);
+-    return isAttributeName(cursor, name);
+-}
+-
+ QString KateScriptDocument::variable(const QString &s)
+ {
+     return m_document->variable(s);
+@@ -905,9 +771,3 @@ void KateScriptDocument::indent(KTextEditor::Range range, int change)
+ {
+     m_document->indent(range, change);
+ }
+-
+-void KateScriptDocument::indent(const QJSValue &jsrange, int change)
+-{
+-    KTextEditor::Range range = rangeFromScriptValue(jsrange);
+-    indent(range, change);
+-}
+diff --git src/script/katescriptdocument.h src/script/katescriptdocument.h
+index ad42274..e66c201 100644
+--- src/script/katescriptdocument.h
++++ src/script/katescriptdocument.h
+@@ -22,10 +22,11 @@
+ 
+ #include <QObject>
+ #include <QStringList>
++#include <QScriptable>
+ 
+ #include <ktexteditor_export.h>
+ 
+-#include <QtQml/QJSValue>
++#include <QScriptValue>
+ 
+ #include <ktexteditor/cursor.h>
+ #include <ktexteditor/range.h>
+@@ -36,16 +37,19 @@ namespace KTextEditor { class DocumentPrivate; }
+  * Thinish wrapping around KTextEditor::DocumentPrivate, exposing the methods we want exposed
+  * and adding some helper methods.
+  *
++ * We inherit from QScriptable to have more thight access to the scripting
++ * engine.
++ *
+  * setDocument _must_ be called before using any other method. This is not checked
+  * for the sake of speed.
+  */
+-class KTEXTEDITOR_EXPORT KateScriptDocument : public QObject
++class KTEXTEDITOR_EXPORT KateScriptDocument : public QObject, protected QScriptable
+ {
+     Q_OBJECT
+     // Note: we have no Q_PROPERTIES due to consistency: everything is a function.
+ 
+ public:
+-    KateScriptDocument(QJSEngine *, QObject *parent = nullptr);
++    KateScriptDocument(QObject *parent = nullptr);
+     void setDocument(KTextEditor::DocumentPrivate *document);
+     KTextEditor::DocumentPrivate *document();
+ 
+@@ -56,46 +60,38 @@ public:
+     Q_INVOKABLE QString encoding();
+     Q_INVOKABLE QString highlightingMode();
+     Q_INVOKABLE QStringList embeddedHighlightingModes();
+-    Q_INVOKABLE QString highlightingModeAt(const QJSValue &pos);
++    Q_INVOKABLE QString highlightingModeAt(const KTextEditor::Cursor &pos);
+     Q_INVOKABLE bool isModified();
+     Q_INVOKABLE QString text();
+     Q_INVOKABLE QString text(int fromLine, int fromColumn, int toLine, int toColumn);
+-    QString text(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
+-    QString text(const KTextEditor::Range &range);
+-    Q_INVOKABLE QString text(const QJSValue &jsrange);
++    Q_INVOKABLE QString text(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
++    Q_INVOKABLE QString text(const KTextEditor::Range &range);
+     Q_INVOKABLE QString line(int line);
+     Q_INVOKABLE QString wordAt(int line, int column);
+-    QString wordAt(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE QJSValue wordRangeAt(int line, int column);
+-    QJSValue wordRangeAt(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE QString wordAt(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE KTextEditor::Range wordRangeAt(int line, int column);
++    Q_INVOKABLE KTextEditor::Range wordRangeAt(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE QString charAt(int line, int column);
+-    QString charAt(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE QString charAt(const QJSValue &cursor);
++    Q_INVOKABLE QString charAt(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE QString firstChar(int line);
+     Q_INVOKABLE QString lastChar(int line);
+     Q_INVOKABLE bool isSpace(int line, int column);
+-    bool isSpace(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isSpace(const QJSValue &jscursor);
++    Q_INVOKABLE bool isSpace(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool matchesAt(int line, int column, const QString &s);
+-    bool matchesAt(const KTextEditor::Cursor &cursor, const QString &s);
+-    Q_INVOKABLE bool matchesAt(const QJSValue &cursor, const QString &s);
++    Q_INVOKABLE bool matchesAt(const KTextEditor::Cursor &cursor, const QString &s);
+     Q_INVOKABLE bool setText(const QString &s);
+     Q_INVOKABLE bool clear();
+     Q_INVOKABLE bool truncate(int line, int column);
+-    bool truncate(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool truncate(const QJSValue &cursor);
++    Q_INVOKABLE bool truncate(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool insertText(int line, int column, const QString &s);
+-    bool insertText(const KTextEditor::Cursor &cursor, const QString &s);
+-    Q_INVOKABLE bool insertText(const QJSValue &jscursor, const QString &s);
++    Q_INVOKABLE bool insertText(const KTextEditor::Cursor &cursor, const QString &s);
+     Q_INVOKABLE bool removeText(int fromLine, int fromColumn, int toLine, int toColumn);
+-    bool removeText(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
+-    bool removeText(const KTextEditor::Range &range);
+-    Q_INVOKABLE bool removeText(const QJSValue &range);
++    Q_INVOKABLE bool removeText(const KTextEditor::Cursor &from, const KTextEditor::Cursor &to);
++    Q_INVOKABLE bool removeText(const KTextEditor::Range &range);
+     Q_INVOKABLE bool insertLine(int line, const QString &s);
+     Q_INVOKABLE bool removeLine(int line);
+     Q_INVOKABLE bool wrapLine(int line, int column);
+-    bool wrapLine(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool wrapLine(const QJSValue &cursor);
++    Q_INVOKABLE bool wrapLine(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE void joinLines(int startLine, int endLine);
+     Q_INVOKABLE int lines();
+     Q_INVOKABLE bool isLineModified(int line);
+@@ -109,11 +105,9 @@ public:
+     Q_INVOKABLE int firstColumn(int line);
+     Q_INVOKABLE int lastColumn(int line);
+     Q_INVOKABLE int prevNonSpaceColumn(int line, int column);
+-    int prevNonSpaceColumn(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE int prevNonSpaceColumn(const QJSValue &cursor);
++    Q_INVOKABLE int prevNonSpaceColumn(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int nextNonSpaceColumn(int line, int column);
+-    int nextNonSpaceColumn(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE int nextNonSpaceColumn(const QJSValue &cursor);
++    Q_INVOKABLE int nextNonSpaceColumn(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int prevNonEmptyLine(int line);
+     Q_INVOKABLE int nextNonEmptyLine(int line);
+     Q_INVOKABLE bool isInWord(const QString &character, int attribute);
+@@ -123,37 +117,34 @@ public:
+     Q_INVOKABLE QString commentStart(int attribute);
+     Q_INVOKABLE QString commentEnd(int attribute);
+ 
+-    Q_INVOKABLE QJSValue documentRange();
+-    Q_INVOKABLE QJSValue documentEnd();
++    Q_INVOKABLE KTextEditor::Range documentRange();
++    Q_INVOKABLE KTextEditor::Cursor documentEnd();
+     Q_INVOKABLE bool isValidTextPosition(int line, int column);
+-    bool isValidTextPosition(const KTextEditor::Cursor& cursor);
+-    Q_INVOKABLE bool isValidTextPosition(const QJSValue& cursor);
++    Q_INVOKABLE bool isValidTextPosition(const KTextEditor::Cursor& cursor);
+ 
+     /**
+      * Get the syntax highlighting attribute at a given position in the document.
+      */
+     Q_INVOKABLE int attribute(int line, int column);
+-    int attribute(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE int attribute(const KTextEditor::Cursor &cursor);
+ 
+     /**
+      * Return true if the highlight attribute equals @p attr.
+      */
+     Q_INVOKABLE bool isAttribute(int line, int column, int attr);
+-    bool isAttribute(const KTextEditor::Cursor &cursor, int attr);
++    Q_INVOKABLE bool isAttribute(const KTextEditor::Cursor &cursor, int attr);
+ 
+     /**
+      * Get the name of the syntax highlighting attribute at the given position.
+      */
+     Q_INVOKABLE QString attributeName(int line, int column);
+-    QString attributeName(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE QString attributeName(const QJSValue &jscursor);
++    Q_INVOKABLE QString attributeName(const KTextEditor::Cursor &cursor);
+ 
+     /**
+      * Return true is the name of the syntax attribute equals @p name.
+      */
+     Q_INVOKABLE bool isAttributeName(int line, int column, const QString &name);
+-    bool isAttributeName(const KTextEditor::Cursor &cursor, const QString &name);
+-    Q_INVOKABLE bool isAttributeName(const QJSValue &cursor, const QString &name);
++    Q_INVOKABLE bool isAttributeName(const KTextEditor::Cursor &cursor, const QString &name);
+ 
+     Q_INVOKABLE QString variable(const QString &s);
+     Q_INVOKABLE void setVariable(const QString &s, const QString &v);
+@@ -162,55 +153,41 @@ public:
+     Q_INVOKABLE int firstVirtualColumn(int line);
+     Q_INVOKABLE int lastVirtualColumn(int line);
+     Q_INVOKABLE int toVirtualColumn(int line, int column);
+-    int toVirtualColumn(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE int toVirtualColumn(const QJSValue &cursor);
+-    KTextEditor::Cursor toVirtualCursor(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE int toVirtualColumn(const KTextEditor::Cursor &cursor);
++    Q_INVOKABLE KTextEditor::Cursor toVirtualCursor(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE int fromVirtualColumn(int line, int virtualColumn);
+-    int fromVirtualColumn(const KTextEditor::Cursor &virtualCursor);
+-    KTextEditor::Cursor fromVirtualCursor(const KTextEditor::Cursor &virtualCursor);
+-
+-    KTextEditor::Cursor anchorInternal(int line, int column, QChar character);
+-    KTextEditor::Cursor anchor(const KTextEditor::Cursor &cursor, QChar character);
+-    Q_INVOKABLE QJSValue anchor(int line, int column, QChar character);
+-    Q_INVOKABLE QJSValue anchor(const QJSValue &cursor, QChar character);
+-    KTextEditor::Cursor rfindInternal(int line, int column, const QString &text, int attribute = -1);
+-    KTextEditor::Cursor rfind(const KTextEditor::Cursor &cursor, const QString &text, int attribute = -1);
+-    Q_INVOKABLE QJSValue rfind(int line, int column, const QString &text, int attribute = -1);
+-    Q_INVOKABLE QJSValue rfind(const QJSValue &cursor, const QString &text, int attribute = -1);
++    Q_INVOKABLE int fromVirtualColumn(const KTextEditor::Cursor &virtualCursor);
++    Q_INVOKABLE KTextEditor::Cursor fromVirtualCursor(const KTextEditor::Cursor &virtualCursor);
++
++    Q_INVOKABLE KTextEditor::Cursor anchor(int line, int column, QChar character);
++    Q_INVOKABLE KTextEditor::Cursor anchor(const KTextEditor::Cursor &cursor, QChar character);
++    Q_INVOKABLE KTextEditor::Cursor rfind(int line, int column, const QString &text, int attribute = -1);
++    Q_INVOKABLE KTextEditor::Cursor rfind(const KTextEditor::Cursor &cursor, const QString &text, int attribute = -1);
+ 
+     Q_INVOKABLE int defStyleNum(int line, int column);
+-    int defStyleNum(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE int defStyleNum(const QJSValue &cursor);
++    Q_INVOKABLE int defStyleNum(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isCode(int line, int column);
+-    bool isCode(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isCode(const QJSValue &cursor);
++    Q_INVOKABLE bool isCode(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isComment(int line, int column);
+-    bool isComment(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isComment(const QJSValue &cursor);
++    Q_INVOKABLE bool isComment(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isString(int line, int column);
+-    bool isString(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isString(const QJSValue &cursor);
++    Q_INVOKABLE bool isString(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isRegionMarker(int line, int column);
+-    bool isRegionMarker(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isRegionMarker(const QJSValue &cursor);
++    Q_INVOKABLE bool isRegionMarker(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isChar(int line, int column);
+-    bool isChar(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isChar(const QJSValue &cursor);
++    Q_INVOKABLE bool isChar(const KTextEditor::Cursor &cursor);
+     Q_INVOKABLE bool isOthers(int line, int column);
+-    bool isOthers(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE bool isOthers(const QJSValue &cursor);
++    Q_INVOKABLE bool isOthers(const KTextEditor::Cursor &cursor);
+ 
+     Q_INVOKABLE bool startsWith(int line, const QString &pattern, bool skipWhiteSpaces);
+     Q_INVOKABLE bool endsWith(int line, const QString &pattern, bool skipWhiteSpaces);
+ 
+-    void indent(KTextEditor::Range range, int change);
+-    Q_INVOKABLE void indent(const QJSValue &jsrange, int change);
++    Q_INVOKABLE void indent(KTextEditor::Range range, int change);
+ 
+ private:
+     bool _isCode(int defaultStyle);
+ 
+     KTextEditor::DocumentPrivate *m_document;
+-    QJSEngine *m_engine;
+ };
+ 
+ #endif
+diff --git src/script/katescripthelpers.cpp src/script/katescripthelpers.cpp
+index a24bf48..3b63ca4 100644
+--- src/script/katescripthelpers.cpp
++++ src/script/katescripthelpers.cpp
+@@ -33,13 +33,12 @@
+ 
+ #include <iostream>
+ 
+-#include <QJSEngine>
+-#include <QJSValue>
++#include <QScriptEngine>
++#include <QScriptValue>
++#include <QScriptContext>
+ #include <QFile>
+ #include <QStandardPaths>
+ 
+-#include <QDebug>
+-
+ #include <KLocalizedString>
+ 
+ namespace Kate
+@@ -64,22 +63,18 @@ bool readFile(const QString &sourceUrl, QString &sourceCode)
+     return true;
+ }
+ 
+-} // namespace Script
+-
+-QString ScriptHelper::read(const QString &file)
++QScriptValue read(QScriptContext *context, QScriptEngine *)
+ {
+-    QList<QString> files;
+-    files << file;
+     /**
+      * just search for all given files and read them all
+      */
+     QString fullContent;
+-    for (int i = 0; i < files.count(); ++i) {
++    for (int i = 0; i < context->argumentCount(); ++i) {
+         /**
+          * get full name of file
+          * skip on errors
+          */
+-        const QString name = files[i];
++        const QString name = context->argument(i).toString();
+         QString fullName = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                  QLatin1String("katepart5/script/files/") + name);
+         if (fullName.isEmpty()) {
+@@ -96,7 +91,7 @@ QString ScriptHelper::read(const QString &file)
+          * skip non-existing files
+          */
+         QString content;
+-        if (!Script::readFile(fullName, content)) {
++        if (!readFile(fullName, content)) {
+             continue;
+         }
+ 
+@@ -109,22 +104,20 @@ QString ScriptHelper::read(const QString &file)
+     /**
+      * return full content
+      */
+-    return fullContent;
++    return QScriptValue(fullContent);
+ }
+ 
+-void ScriptHelper::require(const QString &file)
++QScriptValue require(QScriptContext *context, QScriptEngine *engine)
+ {
+-    QStringList files;
+-    files << file;
+     /**
+      * just search for all given scripts and eval them
+      */
+-    for (int i = 0; i < files.count(); ++i) {
++    for (int i = 0; i < context->argumentCount(); ++i) {
+         /**
+          * get full name of file
+          * skip on errors
+          */
+-        const QString name = files[i];
++        const QString name = context->argument(i).toString();
+         QString fullName = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                  QLatin1String("katepart5/script/libraries/") + name);
+         if (fullName.isEmpty()) {
+@@ -139,7 +132,7 @@ void ScriptHelper::require(const QString &file)
+         /**
+          * check include guard
+          */
+-        QJSValue require_guard = m_engine->globalObject().property(QStringLiteral("require_guard"));
++        QScriptValue require_guard = engine->globalObject().property(QStringLiteral("require_guard"));
+         if (require_guard.property(fullName).toBool()) {
+             continue;
+         }
+@@ -149,81 +142,198 @@ void ScriptHelper::require(const QString &file)
+          * skip non-existing files
+          */
+         QString code;
+-        if (!Script::readFile(fullName, code)) {
++        if (!readFile(fullName, code)) {
+             continue;
+         }
+ 
+         /**
++         * fixup QScriptContext
++         * else the nested evaluate will not work :/
++         * see http://www.qtcentre.org/threads/31027-QtScript-nesting-with-include-imports-or-spawned-script-engines
++         * http://www.qtcentre.org/threads/20432-Can-I-include-a-script-from-script
++         */
++        QScriptContext *context = engine->currentContext();
++        QScriptContext *parent = context->parentContext();
++        if (parent) {
++            context->setActivationObject(context->parentContext()->activationObject());
++            context->setThisObject(context->parentContext()->thisObject());
++        }
++
++        /**
+          * eval in current script engine
+          */
+-        QJSValue val = m_engine->evaluate(code, fullName);
+-        if (val.isError())
+-            qWarning() << "error evaluating" << fullName << val.toString();
++        engine->evaluate(code, fullName);
+ 
+         /**
+          * set include guard
+          */
+-        require_guard.setProperty(fullName, QJSValue(true));
++        require_guard.setProperty(fullName, QScriptValue(true));
+     }
++
++    /**
++     * no return value
++     */
++    return engine->nullValue();
+ }
+ 
+-void ScriptHelper::debug(const QString &message)
++QScriptValue debug(QScriptContext *context, QScriptEngine *engine)
+ {
++    QStringList message;
++    for (int i = 0; i < context->argumentCount(); ++i) {
++        message << context->argument(i).toString();
++    }
+     // debug in blue to distance from other debug output if necessary
+-    std::cerr << "\033[31m" << qPrintable(message) << "\033[0m\n";
++    std::cerr << "\033[31m" << qPrintable(message.join(QLatin1Char(' '))) << "\033[0m\n";
++    return engine->nullValue();
+ }
+ 
+ //BEGIN code adapted from kdelibs/kross/modules/translation.cpp
+ /// helper function to do the substitution from QtScript > QVariant > real values
+-//KLocalizedString substituteArguments(const KLocalizedString &kls, const QVariantList &arguments, int max = 99)
+-//{
+-//    KLocalizedString ls = kls;
+-//    int cnt = qMin(arguments.count(), max);   // QString supports max 99
+-//    for (int i = 0; i < cnt; ++i) {
+-//        QVariant arg = arguments[i];
+-//        switch (arg.type()) {
+-//        case QVariant::Int: ls = ls.subs(arg.toInt()); break;
+-//        case QVariant::UInt: ls = ls.subs(arg.toUInt()); break;
+-//        case QVariant::LongLong: ls = ls.subs(arg.toLongLong()); break;
+-//        case QVariant::ULongLong: ls = ls.subs(arg.toULongLong()); break;
+-//        case QVariant::Double: ls = ls.subs(arg.toDouble()); break;
+-//        default: ls = ls.subs(arg.toString()); break;
+-//        }
+-//    }
+-//    return ls;
+-//}
++KLocalizedString substituteArguments(const KLocalizedString &kls, const QVariantList &arguments, int max = 99)
++{
++    KLocalizedString ls = kls;
++    int cnt = qMin(arguments.count(), max);   // QString supports max 99
++    for (int i = 0; i < cnt; ++i) {
++        QVariant arg = arguments[i];
++        switch (arg.type()) {
++        case QVariant::Int: ls = ls.subs(arg.toInt()); break;
++        case QVariant::UInt: ls = ls.subs(arg.toUInt()); break;
++        case QVariant::LongLong: ls = ls.subs(arg.toLongLong()); break;
++        case QVariant::ULongLong: ls = ls.subs(arg.toULongLong()); break;
++        case QVariant::Double: ls = ls.subs(arg.toDouble()); break;
++        default: ls = ls.subs(arg.toString()); break;
++        }
++    }
++    return ls;
++}
+ 
+ /// i18n("text", arguments [optional])
+-QString ScriptHelper::_i18n(const QString &text)
++QScriptValue i18n(QScriptContext *context, QScriptEngine *engine)
+ {
+-    KLocalizedString ls = ki18n(text.toUtf8().constData());
+-    return ls.toString(); //substituteArguments(ls, args).toString();
++    Q_UNUSED(engine)
++    QString text;
++    QVariantList args;
++    const int argCount = context->argumentCount();
++
++    if (argCount == 0) {
++        qCWarning(LOG_KTE) << "wrong usage of i18n:" << context->backtrace().join(QStringLiteral("\n\t"));
++    }
++
++    if (argCount > 0) {
++        text = context->argument(0).toString();
++    }
++
++    for (int i = 1; i < argCount; ++i) {
++        args << context->argument(i).toVariant();
++    }
++
++    KLocalizedString ls = ki18n(text.toUtf8().data());
++    return substituteArguments(ls, args).toString();
+ }
+ 
+ /// i18nc("context", "text", arguments [optional])
+-QString ScriptHelper::_i18nc(const QString &textContext, const QString &text)
++QScriptValue i18nc(QScriptContext *context, QScriptEngine *engine)
+ {
+-    KLocalizedString ls = ki18nc(textContext.toUtf8().constData(), text.toUtf8().constData());
+-    return ls.toString(); //substituteArguments(ls, args).toString();
++    Q_UNUSED(engine)
++    QString text;
++    QString textContext;
++    QVariantList args;
++    const int argCount = context->argumentCount();
++
++    if (argCount < 2) {
++        qCWarning(LOG_KTE) << "wrong usage of i18nc:" << context->backtrace().join(QStringLiteral("\n\t"));
++    }
++
++    if (argCount > 0) {
++        textContext = context->argument(0).toString();
++    }
++
++    if (argCount > 1) {
++        text = context->argument(1).toString();
++    }
++
++    for (int i = 2; i < argCount; ++i) {
++        args << context->argument(i).toVariant();
++    }
++
++    KLocalizedString ls = ki18nc(textContext.toUtf8().data(), text.toUtf8().data());
++    return substituteArguments(ls, args).toString();
+ }
+ 
+ /// i18np("singular", "plural", number, arguments [optional])
+-QString ScriptHelper::_i18np(const QString &trSingular, const QString &trPlural, int number)
++QScriptValue i18np(QScriptContext *context, QScriptEngine *engine)
+ {
+-    KLocalizedString ls = ki18np(trSingular.toUtf8().constData(), trPlural.toUtf8().constData()).subs(number);
+-    return ls.toString(); //substituteArguments(ls, args, 98).toString();
++    Q_UNUSED(engine)
++    QString trSingular;
++    QString trPlural;
++    int number = 0;
++    QVariantList args;
++    const int argCount = context->argumentCount();
++
++    if (argCount < 3) {
++        qCWarning(LOG_KTE) << "wrong usage of i18np:" << context->backtrace().join(QStringLiteral("\n\t"));
++    }
++
++    if (argCount > 0) {
++        trSingular = context->argument(0).toString();
++    }
++
++    if (argCount > 1) {
++        trPlural = context->argument(1).toString();
++    }
++
++    if (argCount > 2) {
++        number = context->argument(2).toInt32();
++    }
++
++    for (int i = 3; i < argCount; ++i) {
++        args << context->argument(i).toVariant();
++    }
++
++    KLocalizedString ls = ki18np(trSingular.toUtf8().data(), trPlural.toUtf8().data()).subs(number);
++    return substituteArguments(ls, args, 98).toString();
+ }
+ 
+ /// i18ncp("context", "singular", "plural", number, arguments [optional])
+-QString ScriptHelper::_i18ncp(
+-        const QString &trContext, const QString &trSingular,
+-        const QString &trPlural, int number)
++QScriptValue i18ncp(QScriptContext *context, QScriptEngine *engine)
+ {
++    Q_UNUSED(engine)
++    QString trContext;
++    QString trSingular;
++    QString trPlural;
++    int number = 0;
++    QVariantList args;
++    const int argCount = context->argumentCount();
++
++    if (argCount < 4) {
++        qCWarning(LOG_KTE) << "wrong usage of i18ncp:" << context->backtrace().join(QStringLiteral("\n\t"));
++    }
++
++    if (argCount > 0) {
++        trContext = context->argument(0).toString();
++    }
++
++    if (argCount > 1) {
++        trSingular = context->argument(1).toString();
++    }
++
++    if (argCount > 2) {
++        trPlural = context->argument(2).toString();
++    }
++
++    if (argCount > 3) {
++        number = context->argument(3).toInt32();
++    }
++
++    for (int i = 4; i < argCount; ++i) {
++        args << context->argument(i).toVariant();
++    }
++
+     KLocalizedString ls = ki18ncp(trContext.toUtf8().data(), trSingular.toUtf8().data(), trPlural.toUtf8().data()).subs(number);
+-    return ls.toString(); // substituteArguments(ls, args, 98).toString();
++    return substituteArguments(ls, args, 98).toString();
+ }
+-
+ //END code adapted from kdelibs/kross/modules/translation.cpp
+ 
+-} // namespace kate
++}
++}
+ 
+diff --git src/script/katescripthelpers.h src/script/katescripthelpers.h
+index 53a99bb..ae9fb2c 100644
+--- src/script/katescripthelpers.h
++++ src/script/katescripthelpers.h
+@@ -21,11 +21,11 @@
+ #ifndef KATE_SCRIPTHELPERS_H
+ #define KATE_SCRIPTHELPERS_H
+ 
+-#include <QtCore/QObject>
+-#include <QtQml/QJSValue>
++#include <QScriptValue>
+ #include <ktexteditor_export.h>
+ 
+-class QJSEngine;
++class QScriptEngine;
++class QScriptContext;
+ 
+ namespace Kate
+ {
+@@ -36,24 +36,15 @@ namespace Script
+ /** read complete file contents, helper */
+ KTEXTEDITOR_EXPORT bool readFile(const QString &sourceUrl, QString &sourceCode);
+ 
+-} // namespace Script
+-
+-class KTEXTEDITOR_EXPORT ScriptHelper : public QObject {
+-    Q_OBJECT
+-    QJSEngine *m_engine;
+-public:
+-    ScriptHelper(QJSEngine *engine) : m_engine(engine) {}
+-    Q_INVOKABLE QString read(const QString &file);
+-    Q_INVOKABLE void require(const QString &file);
+-    Q_INVOKABLE void debug(const QString &msg);
+-    Q_INVOKABLE QString _i18n(const QString &msg);
+-    Q_INVOKABLE QString _i18nc(const QString &textContext, const QString &text);
+-    Q_INVOKABLE QString _i18np(const QString &trSingular, const QString &trPlural, int number);
+-    Q_INVOKABLE QString _i18ncp(const QString &trContext, const QString &trSingular,
+-                                const QString &trPlural, int number = 0);
+-};
+-
+-} // namespace Kate
++KTEXTEDITOR_EXPORT QScriptValue read(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue require(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue debug(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue i18n(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue i18nc(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue i18np(QScriptContext *context, QScriptEngine *engine);
++KTEXTEDITOR_EXPORT QScriptValue i18ncp(QScriptContext *context, QScriptEngine *engine);
++}
++}
+ 
+ #endif
+ 
+diff --git src/script/katescriptview.cpp src/script/katescriptview.cpp
+index 1334205..a43d162 100644
+--- src/script/katescriptview.cpp
++++ src/script/katescriptview.cpp
+@@ -23,13 +23,9 @@
+ #include "kateview.h"
+ #include "katerenderer.h"
+ #include "katescript.h"
+-#include "scriptcursor.h"
+-#include "scriptrange.h"
+ 
+-#include <QJSEngine>
+-
+-KateScriptView::KateScriptView(QJSEngine *engine, QObject *parent)
+-    : QObject(parent), m_view(nullptr), m_engine(engine)
++KateScriptView::KateScriptView(QObject *parent)
++    : QObject(parent), m_view(nullptr)
+ {
+ }
+ 
+@@ -43,9 +39,9 @@ KTextEditor::ViewPrivate *KateScriptView::view()
+     return m_view;
+ }
+ 
+-QJSValue KateScriptView::cursorPosition()
++KTextEditor::Cursor KateScriptView::cursorPosition()
+ {
+-    return cursorToScriptValue(m_engine, m_view->cursorPosition());
++    return m_view->cursorPosition();
+ }
+ 
+ void KateScriptView::setCursorPosition(int line, int column)
+@@ -59,14 +55,9 @@ void KateScriptView::setCursorPosition(const KTextEditor::Cursor &cursor)
+     m_view->setCursorPosition(cursor);
+ }
+ 
+-void KateScriptView::setCursorPosition(const QJSValue &jscursor)
+-{
+-    setCursorPosition(cursorFromScriptValue(jscursor));
+-}
+-
+-QJSValue KateScriptView::virtualCursorPosition()
++KTextEditor::Cursor KateScriptView::virtualCursorPosition()
+ {
+-    return cursorToScriptValue(m_engine, m_view->cursorPositionVirtual());
++    return m_view->cursorPositionVirtual();
+ }
+ 
+ void KateScriptView::setVirtualCursorPosition(int line, int column)
+@@ -79,11 +70,6 @@ void KateScriptView::setVirtualCursorPosition(const KTextEditor::Cursor &cursor)
+     m_view->setCursorPositionVisual(cursor);
+ }
+ 
+-void KateScriptView::setVirtualCursorPosition(const QJSValue &jscursor)
+-{
+-    setVirtualCursorPosition(cursorFromScriptValue(jscursor));
+-}
+-
+ QString KateScriptView::selectedText()
+ {
+     return m_view->selectionText();
+@@ -94,14 +80,14 @@ bool KateScriptView::hasSelection()
+     return m_view->selection();
+ }
+ 
+-QJSValue KateScriptView::selection()
++KTextEditor::Range KateScriptView::selection()
+ {
+-    return rangeToScriptValue(m_engine, m_view->selectionRange());
++    return m_view->selectionRange();
+ }
+ 
+-void KateScriptView::setSelection(const QJSValue &jsrange)
++void KateScriptView::setSelection(const KTextEditor::Range &range)
+ {
+-    m_view->setSelection(rangeFromScriptValue(jsrange));
++    m_view->setSelection(range);
+ }
+ 
+ void KateScriptView::removeSelectedText()
+@@ -119,8 +105,7 @@ void KateScriptView::clearSelection()
+     m_view->clearSelection();
+ }
+ 
+-void KateScriptView::align(const QJSValue &jsrange)
++void KateScriptView::align(const KTextEditor::Range &range)
+ {
+-    KTextEditor::Range range = rangeFromScriptValue(jsrange);
+     m_view->doc()->align (m_view, range);
+ }
+diff --git src/script/katescriptview.h src/script/katescriptview.h
+index c68679c..7efd4ce 100644
+--- src/script/katescriptview.h
++++ src/script/katescriptview.h
+@@ -21,7 +21,7 @@
+ #define KATE_SCRIPT_VIEW_H
+ 
+ #include <QObject>
+-#include <QJSValue>
++#include <QScriptable>
+ 
+ #include <ktexteditor_export.h>
+ 
+@@ -29,51 +29,51 @@
+ #include <ktexteditor/range.h>
+ 
+ namespace KTextEditor { class ViewPrivate; }
+-class QJSEngine;
++
+ /**
+  * Thinish wrapping around KTextEditor::ViewPrivate, exposing the methods we want exposed
+  * and adding some helper methods.
+  *
++ * We inherit from QScriptable to have more thight access to the scripting
++ * engine.
++ *
+  * setView _must_ be called before using any other method. This is not checked
+  * for the sake of speed.
+  */
+-class KTEXTEDITOR_EXPORT KateScriptView : public QObject
++class KTEXTEDITOR_EXPORT KateScriptView : public QObject, protected QScriptable
+ {
+     /// Properties are accessible with a nicer syntax from JavaScript
+     Q_OBJECT
+ 
+ public:
+-    KateScriptView(QJSEngine *, QObject *parent = nullptr);
++    KateScriptView(QObject *parent = nullptr);
+     void setView(KTextEditor::ViewPrivate *view);
+     KTextEditor::ViewPrivate *view();
+ 
+-    Q_INVOKABLE QJSValue cursorPosition();
++    Q_INVOKABLE KTextEditor::Cursor cursorPosition();
+     /**
+      * Set the cursor position in the view.
+      * @since 4.4
+      */
+     Q_INVOKABLE void setCursorPosition(int line, int column);
+-     void setCursorPosition(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE void setCursorPosition(const QJSValue &cursor);
++    Q_INVOKABLE void setCursorPosition(const KTextEditor::Cursor &cursor);
+ 
+-    Q_INVOKABLE QJSValue virtualCursorPosition();
++    Q_INVOKABLE KTextEditor::Cursor virtualCursorPosition();
+     Q_INVOKABLE void setVirtualCursorPosition(int line, int column);
+-    void setVirtualCursorPosition(const KTextEditor::Cursor &cursor);
+-    Q_INVOKABLE void setVirtualCursorPosition(const QJSValue &cursor);
++    Q_INVOKABLE void setVirtualCursorPosition(const KTextEditor::Cursor &cursor);
+ 
+     Q_INVOKABLE QString selectedText();
+     Q_INVOKABLE bool hasSelection();
+-    Q_INVOKABLE QJSValue selection();
+-    Q_INVOKABLE void setSelection(const QJSValue &range);
++    Q_INVOKABLE KTextEditor::Range selection();
++    Q_INVOKABLE void setSelection(const KTextEditor::Range &range);
+     Q_INVOKABLE void removeSelectedText();
+     Q_INVOKABLE void selectAll();
+     Q_INVOKABLE void clearSelection();
+ 
+-    Q_INVOKABLE void align(const QJSValue &range);
++    Q_INVOKABLE void align(const KTextEditor::Range &range);
+     
+ private:
+     KTextEditor::ViewPrivate *m_view;
+-    QJSEngine *m_engine;
+ };
+ 
+ #endif
+diff --git src/script/scriptcursor.h src/script/scriptcursor.h
+index 2116afd..0000000
+--- src/script/scriptcursor.h
++++ /dev/null
+@@ -1,46 +0,0 @@
+-/* This file is part of the KDE project
+-   Copyright (C) 2017 Allan Sandfeld Jensen <kde@carewolf.com>
+-
+-   This library is free software; you can redistribute it and/or
+-   modify it under the terms of the GNU Library General Public
+-   License as published by the Free Software Foundation; either
+-   version 2 of the License, or (at your option) any later version.
+-
+-   This library is distributed in the hope that it will be useful,
+-   but WITHOUT ANY WARRANTY; without even the implied warranty of
+-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+-   Library General Public License for more details.
+-
+-   You should have received a copy of the GNU Library General Public License
+-   along with this library; see the file COPYING.LIB.  If not, write to
+-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+-   Boston, MA 02110-1301, USA.
+-*/
+-
+-#ifndef KTEXTEDITOR_SCRIPTCURSOR_H
+-#define KTEXTEDITOR_SCRIPTCURSOR_H
+-
+-#include <QtQml/QJSEngine>
+-#include <QtQml/QJSValue>
+-
+-#include "ktexteditor/cursor.h"
+-
+-inline QJSValue cursorToScriptValue(QJSEngine *engine, const KTextEditor::Cursor &cursor)
+-{
+-    QString code = QStringLiteral("new Cursor(%1, %2);").arg(cursor.line()).arg(cursor.column());
+-    QJSValue result = engine->evaluate(code);
+-    Q_ASSERT(!result.isError());
+-    return result;
+-}
+-
+-inline KTextEditor::Cursor cursorFromScriptValue(const QJSValue &obj)
+-{
+-    KTextEditor::Cursor cursor;
+-    QJSValue line = obj.property(QStringLiteral("line"));
+-    QJSValue column = obj.property(QStringLiteral("column"));
+-    Q_ASSERT(!line.isError() && !column.isError());
+-    cursor.setPosition(line.toInt(), column.toInt());
+-    return cursor;
+-}
+-
+-#endif
+diff --git src/script/scriptrange.h src/script/scriptrange.h
+deleted file mode 100644
+index 098f816..0000000
+--- src/script/scriptrange.h
++++ /dev/null
+@@ -1,49 +0,0 @@
+-/* This file is part of the KDE project
+-   Copyright (C) 2017 Allan Sandfeld Jensen <kde@carewolf.com>
+-
+-   This library is free software; you can redistribute it and/or
+-   modify it under the terms of the GNU Library General Public
+-   License as published by the Free Software Foundation; either
+-   version 2 of the License, or (at your option) any later version.
+-
+-   This library is distributed in the hope that it will be useful,
+-   but WITHOUT ANY WARRANTY; without even the implied warranty of
+-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+-   Library General Public License for more details.
+-
+-   You should have received a copy of the GNU Library General Public License
+-   along with this library; see the file COPYING.LIB.  If not, write to
+-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+-   Boston, MA 02110-1301, USA.
+-*/
+-
+-#ifndef KTEXTEDITOR_SCRIPTRANGE_H
+-#define KTEXTEDITOR_SCRIPTRANGE_H
+-
+-#include <QtQml/QJSEngine>
+-#include <QtQml/QJSValue>
+-
+-#include "ktexteditor/range.h"
+-
+-inline QJSValue rangeToScriptValue(QJSEngine *engine, const KTextEditor::Range &range)
+-{
+-    QString code = QStringLiteral("new Range(%1, %2, %3, %4);").arg(range.start().line())
+-                   .arg(range.start().column())
+-                   .arg(range.end().line())
+-                   .arg(range.end().column());
+-    QJSValue result = engine->evaluate(code);
+-    Q_ASSERT(!result.isError());
+-    return result;
+-}
+-
+-inline KTextEditor::Range rangeFromScriptValue(const QJSValue &obj)
+-{
+-    KTextEditor::Range range;
+-    range.setRange(KTextEditor::Cursor(obj.property(QStringLiteral("start")).property(QStringLiteral("line")).toInt(),
+-                                       obj.property(QStringLiteral("start")).property(QStringLiteral("column")).toInt()),
+-                   KTextEditor::Cursor(obj.property(QStringLiteral("end")).property(QStringLiteral("line")).toInt(),
+-                                       obj.property(QStringLiteral("end")).property(QStringLiteral("column")).toInt()));
+-    return range;
+-}
+-
+-#endif
+diff --git src/utils/katetemplatehandler.cpp src/utils/katetemplatehandler.cpp
+index 04336b0..a168445 100644
+--- src/utils/katetemplatehandler.cpp
++++ src/utils/katetemplatehandler.cpp
+@@ -549,7 +549,7 @@ KateScript::FieldMap KateTemplateHandler::fieldMap() const
+             // only editable fields are of interest to the scripts
+             continue;
+         }
+-        map.insert(field.identifier, QJSValue(doc()->text(field.range->toRange())));
++        map.insert(field.identifier, QScriptValue(doc()->text(field.range->toRange())));
+     }
+     return map;
+ }
