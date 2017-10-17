@@ -117,9 +117,9 @@
     SUBDIR += arduino-builder
     SUBDIR += arduino-core
     SUBDIR += arduino-ctags
-    SUBDIR += arduino-glcd
     SUBDIR += arduino-irremote
     SUBDIR += arduino-mk
+    SUBDIR += arduino-openglcd
     SUBDIR += arduino-sevseg
     SUBDIR += arduino-tools
     SUBDIR += arduino18
@@ -6011,6 +6011,7 @@
     SUBDIR += tnt
     SUBDIR += toh
     SUBDIR += tokamak
+    SUBDIR += tokei
     SUBDIR += tortoisehg
     SUBDIR += tpasm
     SUBDIR += tr-eric6
@@ -6048,7 +6049,6 @@
     SUBDIR += violet
     SUBDIR += visualparadigm
     SUBDIR += vstr
-    SUBDIR += vtcl
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
     SUBDIR += wandio

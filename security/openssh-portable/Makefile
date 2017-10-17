@@ -3,7 +3,7 @@
 
 PORTNAME=	openssh
 DISTVERSION=	7.6p1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	OPENBSD/OpenSSH/portable
@@ -17,15 +17,18 @@ COMMENT=	The portable version of OpenBSD's OpenSSH
 
 CONFLICTS?=		openssh-3.* ssh-1.* ssh2-3.* openssh-portable-devel-*
 
-USES=			alias autoreconf groff ncurses ssl
+USES=			alias autoreconf ncurses ssl
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		ac_cv_func_strnvis=no
 CONFIGURE_ARGS=		--prefix=${PREFIX} --with-md5-passwords \
-			--without-zlib-version-check --with-ssl-engine
+			--without-zlib-version-check --with-ssl-engine \
+			--with-mantype=man
+
 ETCOLD=			${PREFIX}/etc
 
-BROKEN_SSL=	openssl-devel
+BROKEN_SSL=	openssl-devel libressl
 BROKEN_SSL_REASON_openssl-devel=	incomplete definition of type struct rsa_st
+BROKEN_SSL_REASON_libressl=		random crashes with 7.6 PR 223000
 
 OPTIONS_DEFINE=		PAM TCP_WRAPPERS LIBEDIT BSM \
 			HPN X509 KERB_GSSAPI \

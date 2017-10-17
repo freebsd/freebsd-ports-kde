@@ -1386,6 +1386,7 @@
     SUBDIR += torsocks
     SUBDIR += traceroute
     SUBDIR += traff
+    SUBDIR += traefik
     SUBDIR += trafshow
     SUBDIR += trafshow3
     SUBDIR += tramp
@@ -1464,7 +1465,6 @@
     SUBDIR += xmlrpc-epi
     SUBDIR += xorp
     SUBDIR += xprobe
-    SUBDIR += xpvm
     SUBDIR += xrdesktop2
     SUBDIR += xrdp
     SUBDIR += xrdp-devel
