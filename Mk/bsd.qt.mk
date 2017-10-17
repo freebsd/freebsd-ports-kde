@@ -27,7 +27,7 @@ Qt_Pre_Include=	bsd.qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=	4 5
 QT4_VERSION?=	4.8.7
-QT5_VERSION?=	5.10.0-alpha
+QT5_VERSION?=	5.9.1
 
 _QT_RELNAME=	qt${_QT_VERSION:R:R}
 _QT_VERSION=	# empty
@@ -67,8 +67,8 @@ MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/
 DISTNAME=		qt-everywhere-opensource-src-${_QT_VERSION}
 DIST_SUBDIR=		KDE
 . else
-MASTER_SITE_SUBDIR?=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
-DISTNAME=		${QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+DISTNAME=		${QT_DIST:S,^,qt,:S,$,-opensource-src-${DISTVERSION},}
 DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 
