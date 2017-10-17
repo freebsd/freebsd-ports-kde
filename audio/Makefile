@@ -141,7 +141,6 @@
     SUBDIR += fdk-aac
     SUBDIR += fdmf
     SUBDIR += festalon
-    SUBDIR += festdoc
     SUBDIR += festival
     SUBDIR += festival-freebsoft-utils
     SUBDIR += festlex-cmu
@@ -252,7 +251,6 @@
     SUBDIR += gstreamer-plugins-ladspa
     SUBDIR += gstreamer-plugins-lame
     SUBDIR += gstreamer-plugins-mad
-    SUBDIR += gstreamer-plugins-moodbar
     SUBDIR += gstreamer-plugins-mp3
     SUBDIR += gstreamer-plugins-musepack
     SUBDIR += gstreamer-plugins-nas
@@ -811,7 +809,6 @@
     SUBDIR += umurmur
     SUBDIR += vagalume
     SUBDIR += vamp-plugin-sdk
-    SUBDIR += ventrilo-server
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
     SUBDIR += vitunes

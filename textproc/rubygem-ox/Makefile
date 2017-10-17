@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	ox
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
 
@@ -9,8 +10,6 @@ MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Speed-optimized XML parser and object serializer for Ruby
 
 LICENSE=	MIT
-
-LIB_DEPENDS=	libunwind.so:devel/libunwind
 
 USES=		gem
 USE_RUBY=	yes

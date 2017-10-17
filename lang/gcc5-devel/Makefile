@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcc
-PORTVERSION=	5.4.1.s20170919
+PORTVERSION=	5.4.1.s20171003
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
@@ -42,10 +42,9 @@ USE_BINUTILS=	yes
 USE_PERL5=	build
 SSP_UNSAFE=	yes
 
-OPTIONS_DEFINE=		BOOTSTRAP GRAPHITE
+OPTIONS_DEFINE=		BOOTSTRAP
 OPTIONS_DEFAULT=	BOOTSTRAP
 BOOTSTRAP_DESC=		Build using a full bootstrap
-GRAPHITE_DESC=		Support for Graphite loop optimizations
 
 .if exists(/usr/lib32/libc.so)
 OPTIONS_DEFINE_powerpc64+=	MULTILIB
@@ -66,7 +65,7 @@ CONFIGURE_TARGET=	x86_64-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_ENV+=	UNAME_m="powerpc64"
 .endif
 
-.if ${ARCH} == armv6 || ${ARCH} == aarch64
+.if ${ARCH} == aarch64 || ${ARCH} == armv6
 . if ${COMPILER_TYPE} == clang
 .  if empty(PORT_OPTIONS:MBOOTSTRAP)
 MAKE_ARGS+=CXXFLAGS+=-fbracket-depth=512
@@ -112,17 +111,12 @@ INFO=		gcc${SUFFIX}/cpp \
 		gcc${SUFFIX}/gccint \
 		gcc${SUFFIX}/gfortran \
 		gcc${SUFFIX}/libgomp
-.if ${ARCH} == i386 || ${ARCH} == amd64
+.if ${ARCH} == amd64 || ${ARCH} == i386
 INFO+=		gcc${SUFFIX}/libquadmath \
 		gcc${SUFFIX}/libitm
 .endif
 SUB_FILES=	pkg-message
 SUB_LIST+=	TARGLIB=${TARGLIB}
-
-.if ${PORT_OPTIONS:MGRAPHITE}
-LIB_DEPENDS+=	libisl.so:devel/isl
-CONFIGURE_ARGS+=--with-isl=${LOCALBASE}
-.endif
 
 CONFIGURE_ARGS+=--enable-languages=${LANGUAGES}
 

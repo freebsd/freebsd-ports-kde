@@ -1,3 +1,8 @@
+https://github.com/icing/mod_md/blob/master/patches/mod_ssl_md-2.4.x-v5.diff
+
+Fix for using a fallback certificate on initial signup of a
+Managed Domain. Requires also a changed mod_ssl patch (v5) to take effect.
+
 Index: modules/ssl/ssl_engine_init.c
 ===================================================================
 --- modules/ssl/ssl_engine_init.c	(revision 1808124)

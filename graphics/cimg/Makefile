@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cimg
-DISTVERSION=	2.0.4
+DISTVERSION=	2.1.1
 PORTEPOCH=	3
 CATEGORIES=	graphics devel
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ssh-vault
-PORTVERSION=	0.12.1
+PORTVERSION=	0.12.3
 CATEGORIES=	security
 
 MAINTAINER=	nbari@tequila.io
@@ -19,8 +19,6 @@ USE_GITHUB=	yes
 GH_TUPLE=	ssh-vault:crypto:ae180e0:crypto/src/github.com/ssh-vault/crypto \
 		ssh-vault:ssh2pem:c1edc64:ssh2pem/src/github.com/ssh-vault/ssh2pem
 GH_SUBDIR=	src/github.com/${PORTNAME}/${PORTNAME}
-
-STRIP=		# stripping can break go binaries
 
 PLIST_FILES=	bin/ssh-vault
 

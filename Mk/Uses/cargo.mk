@@ -38,7 +38,7 @@ CARGO_DIST_SUBDIR?=	rust/crates
 
 # Generate list of DISTFILES.
 .for _crate in ${CARGO_CRATES}
-MASTER_SITES+=	${MASTER_SITES_CRATESIO}/${_crate:C/-[^-]*$//}/${_crate:C/^.*-//}/download?dummy=/:cargo_${_crate:S/-//g:S/.//g}
+MASTER_SITES+=	${MASTER_SITES_CRATESIO}/${_crate:C/-[0-9].*$//}/${_crate:C/^.*-([0-9].*)/\1/}/download?dummy=/:cargo_${_crate:S/-//g:S/.//g}
 DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:S/-//g:S/.//g}
 .endfor
 
@@ -46,7 +46,7 @@ DISTFILES+=	${CARGO_DIST_SUBDIR}/${_crate}.tar.gz:cargo_${_crate:S/-//g:S/.//g}
 
 CARGO_BUILDDEP?=	yes
 .if ${CARGO_BUILDDEP:tl} == "yes"
-BUILD_DEPENDS+=	 rust>=1.19.0:lang/rust
+BUILD_DEPENDS+=	 rust>=1.19.0_2:lang/rust
 .endif
 
 # Location of cargo binary (default to lang/rust's Cargo binary)

@@ -57,6 +57,7 @@
     SUBDIR += c-icap
     SUBDIR += c-icap-modules
     SUBDIR += cadaver
+    SUBDIR += caddy
     SUBDIR += calamaris
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
@@ -473,6 +474,7 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_musicindex
     SUBDIR += mod_ntlm2
+    SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
     SUBDIR += mod_php56
     SUBDIR += mod_php70
@@ -1668,6 +1670,9 @@
     SUBDIR += py-goobook
     SUBDIR += py-google
     SUBDIR += py-google-api-python-client
+    SUBDIR += py-google-cloud-core
+    SUBDIR += py-google-cloud-storage
+    SUBDIR += py-google-resumable-media
     SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
@@ -1807,7 +1812,9 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
+    SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests1
@@ -1838,8 +1845,6 @@
     SUBDIR += py-treq
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-twistedWeb
-    SUBDIR += py-twistedWeb2
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
     SUBDIR += py-urlgrabber
@@ -1953,7 +1958,6 @@
     SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
     SUBDIR += rubygem-deckar01-task_list
-    SUBDIR += rubygem-deckar01-task_list1
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
     SUBDIR += rubygem-dropzonejs-rails07
@@ -2106,6 +2110,7 @@
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
+    SUBDIR += rubygem-rbovirt
     SUBDIR += rubygem-rdf
     SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth

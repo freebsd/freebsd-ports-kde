@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	quagga
-PORTVERSION=	1.2.1
-PORTREVISION=	3
+PORTVERSION=	1.2.2
 CATEGORIES=	net ipv6
 MASTER_SITES=	SAVANNAH
 
@@ -14,7 +13,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	gawk:lang/gawk
 
-CONFLICTS=	openbgpd openospfd zebra quagga-re frr
+CONFLICTS=	openbgpd openospfd zebra quagga-esr frr pimd
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-exampledir=${PREFIX}/share/examples/quagga

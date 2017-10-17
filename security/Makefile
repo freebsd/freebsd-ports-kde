@@ -100,6 +100,7 @@
     SUBDIR += cryptlib
     SUBDIR += cryptopp
     SUBDIR += ct-submit
+    SUBDIR += cvechecker
     SUBDIR += cvm
     SUBDIR += cyberchef
     SUBDIR += cyrus-sasl2
@@ -170,6 +171,7 @@
     SUBDIR += gcipher
     SUBDIR += gcr
     SUBDIR += git-crypt
+    SUBDIR += git-remote-gcrypt
     SUBDIR += gnome-gpg
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
@@ -441,6 +443,7 @@
     SUBDIR += openssh-portable
     SUBDIR += openssl
     SUBDIR += openssl-devel
+    SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -866,6 +869,7 @@
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
+    SUBDIR += py-btchip
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
     SUBDIR += py-certifi
@@ -906,6 +910,7 @@
     SUBDIR += py-mcrypt
     SUBDIR += py-mhash
     SUBDIR += py-mixbox
+    SUBDIR += py-mnemonic
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
     SUBDIR += py-onetime
@@ -960,9 +965,9 @@
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-tlslite
+    SUBDIR += py-trezor
     SUBDIR += py-trustedpickle
     SUBDIR += py-tuf
-    SUBDIR += py-twistedConch
     SUBDIR += py-twofish
     SUBDIR += py-txtorcon
     SUBDIR += py-virustotal-api
@@ -1120,6 +1125,7 @@
     SUBDIR += samhain-client
     SUBDIR += samhain-server
     SUBDIR += sancp
+    SUBDIR += sandsifter
     SUBDIR += sasp
     SUBDIR += scamp
     SUBDIR += scanhill

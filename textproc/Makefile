@@ -819,6 +819,8 @@
     SUBDIR += p5-String-ShellQuote
     SUBDIR += p5-String-ShowDiff
     SUBDIR += p5-String-Strip
+    SUBDIR += p5-String-Tagged
+    SUBDIR += p5-String-Tagged-Terminal
     SUBDIR += p5-String-ToIdentifier-EN
     SUBDIR += p5-String-Tokenizer
     SUBDIR += p5-String-Trim
@@ -1365,7 +1367,6 @@
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
     SUBDIR += py-tvgrab
-    SUBDIR += py-twistedLore
     SUBDIR += py-ucl
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
@@ -1791,6 +1792,7 @@
     SUBDIR += xslide.el
     SUBDIR += xstream
     SUBDIR += xsv
+    SUBDIR += xsv-rs
     SUBDIR += xwindiff
     SUBDIR += xxdiff
     SUBDIR += xxdiff-scripts
