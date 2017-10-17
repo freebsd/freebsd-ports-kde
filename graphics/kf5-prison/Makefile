@@ -1,8 +1,7 @@
 # $FreeBSD: branches/plasma5/KDE/graphics/kf5-prison/Makefile 13614 2017-01-21 08:10:15Z tcberner $
 
 PORTNAME=	prison
-DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
+PORTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	graphics kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
