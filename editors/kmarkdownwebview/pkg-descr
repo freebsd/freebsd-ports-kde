@@ -1,0 +1,14 @@
+This is
+* a Markdown viewer KParts plugin which allows KParts-using applications
+  to display files in Markdown format in the target format
+* a Markdown file KIO thumbnail generator plugin which allows KIO-powered
+  file managers & dialogs to show thumbnails and previews of files in
+  Markdown format in the target format (currently only available when
+  building against QtWebKit)
+
+The software is inspired by the WebEngine Markdown Editor Example from
+the Qt documentation. The plain text file data is fed into a webpage via
+a QWebChannel or QtWebKit bridge, where a JavaScript library creates HTML
+from it which then is displayed.
+
+WWW: https://github.com/KDE/kmarkdownwebview

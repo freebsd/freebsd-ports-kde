@@ -1,0 +1,7 @@
+lib/libKMarkdownWebView.so
+%%QT_PLUGINDIR%%/kmarkdownwebviewpart.so
+%%WEBKIT%%%%QT_PLUGINDIR%%/kmarkdownwebviewthumbnail.so
+share/kservices5/kmarkdownwebviewpart.desktop
+%%WEBKIT%%share/kservices5/kmarkdownwebviewthumbnail.desktop
+share/kxmlgui5/kmarkdownwebviewpart/kmarkdownwebviewpartui.rc
+share/metainfo/org.kde.kmarkdownwebviewpart.appdata.xml

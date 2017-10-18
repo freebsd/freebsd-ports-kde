@@ -70,6 +70,7 @@
     SUBDIR += kate-plugin-pate
     SUBDIR += kile
     SUBDIR += klat4
+    SUBDIR += kmarkdownwebview
     SUBDIR += komodo-edit
     SUBDIR += latexila
     SUBDIR += lazarus
