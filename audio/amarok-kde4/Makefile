@@ -18,7 +18,7 @@ LIB_DEPENDS=	libtag.so:audio/taglib \
 		libdbus-1.so:devel/dbus
 BUILD_DEPENDS=	${LOCALBASE}/lib/qt4/plugins/script/libqtscript_core.so.1.0.0:devel/qtscriptgenerator
 RUN_DEPENDS=	${LOCALBASE}/lib/qt4/plugins/script/libqtscript_core.so.1.0.0:devel/qtscriptgenerator \
-		${KDE_PREFIX}/lib/kde4/kio_upnp_ms.so:net/kio-upnp-ms
+		${KDE_PREFIX}/lib/kde4/kio_upnp_ms.so:net/kio-upnp-ms-kde4
 
 USES=		cmake:outsource kde:4 mysql pkgconfig \
 		shared-mime-info shebangfix tar:bzip2

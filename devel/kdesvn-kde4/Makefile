@@ -17,7 +17,7 @@ LIB_DEPENDS=	libsvn_client-1.so:devel/subversion \
 		libapr-1.so:devel/apr1 \
 		libgdbm.so:databases/gdbm \
 		libexpat.so:textproc/expat2
-RUN_DEPENDS=	keditbookmarks:x11/kde4-baseapps
+RUN_DEPENDS=	keditbookmarks:x11/kde-baseapps-kde4
 
 CONFLICTS=	qsvn-[0-9]*
 

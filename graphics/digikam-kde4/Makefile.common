@@ -134,7 +134,7 @@ USES+=		pkgconfig
 
 .if ${KIPI_PLUGIN} != "libkipiplugins"
 EXTRA_PATCHES=	${.CURDIR:H:H}/graphics/kipi-plugins-kde4/files/extrapatch-CMakeLists.txt
-LIB_DEPENDS+=	libkipiplugins.so:graphics/libkipiplugins
+LIB_DEPENDS+=	libkipiplugins.so:graphics/libkipiplugins-kde4
 .endif
 EXTRA_PATCHES+=	${.CURDIR:H:H}/graphics/kipi-plugins-kde4/files/extrapatch-extra_kipi_plugins_cmakelists.patch
 

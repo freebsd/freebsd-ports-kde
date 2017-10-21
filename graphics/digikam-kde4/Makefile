@@ -19,9 +19,9 @@ LIB_DEPENDS=	libtiff.so:graphics/tiff \
 		libjasper.so:graphics/jasper \
 		liblensfun.so:graphics/lensfun \
 		liblqr-1.so:graphics/liblqr-1 \
-		libkface.so:graphics/libkface \
+		libkface.so:graphics/libkface-kde4 \
 		libpgf.so:graphics/libpgf \
-		libkgeomap.so:astro/libkgeomap \
+		libkgeomap.so:astro/libkgeomap-kde4 \
 		libboost_graph.so:devel/boost-libs
 
 USES+=		pkgconfig shebangfix

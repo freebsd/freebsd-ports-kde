@@ -11,7 +11,7 @@ DIST_SUBDIR=	KDE/kdevelop/${KDEVELOP_VERSION}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plugin extensible IDE for KDE
 
-LIB_DEPENDS=	libkdevplatforminterfaces.so:devel/kdevplatform
+LIB_DEPENDS=	libkdevplatforminterfaces.so:devel/kdevplatform-kde4
 RUN_DEPENDS=	gmake:devel/gmake
 
 USES=		cmake:outsource compiler:c++11-lib kde:4 \
@@ -25,12 +25,12 @@ OPTIONS_DEFAULT=	OKTETA PHP
 OPTIONS_SUB=	yes
 
 OKTETA_DESC=	Hex editing support via Okteta
-OKTETA_LIB_DEPENDS=	libokteta1core.so:devel/okteta
+OKTETA_LIB_DEPENDS=	libokteta1core.so:devel/okteta-kde4
 OKTETA_CMAKE_OFF=	-DWITH_LibOktetaKasten:BOOL=OFF
 OKTETA_CMAKE_ON=	-DWITH_LibOktetaKasten:BOOL=ON
 
 PHP_DESC=	PHP support for KDevelop
-PHP_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kdevphplanguagesupport.so:devel/kdevelop-php
+PHP_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kdevphplanguagesupport.so:devel/kdevelop-php-kde4
 
 NLS_USES=	gettext
 NLS_CMAKE_OFF=	-DBUILD_po:BOOL=FALSE

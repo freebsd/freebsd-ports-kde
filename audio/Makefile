@@ -341,7 +341,7 @@
     SUBDIR += jid3lib
     SUBDIR += jmusic
     SUBDIR += jokosher
-    SUBDIR += juk
+    SUBDIR += juk-kde4
     SUBDIR += juke
     SUBDIR += julius
     SUBDIR += jxm
@@ -350,9 +350,9 @@
     SUBDIR += kid3-kde4
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
-    SUBDIR += kio-audiocd
-    SUBDIR += kmix
-    SUBDIR += kscd
+    SUBDIR += kio-audiocd-kde4
+    SUBDIR += kmix-kde4
+    SUBDIR += kscd-kde4
     SUBDIR += ksmp3play
     SUBDIR += kstreamripper
     SUBDIR += ladspa
@@ -390,8 +390,8 @@
     SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
-    SUBDIR += libkcddb
-    SUBDIR += libkcompactdisc
+    SUBDIR += libkcddb-kde4
+    SUBDIR += libkcompactdisc-kde4
     SUBDIR += liblastfm
     SUBDIR += liblo
     SUBDIR += liblscp
@@ -725,7 +725,7 @@
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
-    SUBDIR += simon
+    SUBDIR += simon-kde4
     SUBDIR += simplemod
     SUBDIR += siren
     SUBDIR += skype-call-recorder

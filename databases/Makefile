@@ -13,7 +13,7 @@
     SUBDIR += adminer
     SUBDIR += adodb
     SUBDIR += adodb5
-    SUBDIR += akonadi
+    SUBDIR += akonadi-kde4
     SUBDIR += animenfo-client
     SUBDIR += animenfo-client-gtk
     SUBDIR += apq
@@ -125,7 +125,7 @@
     SUBDIR += jlog
     SUBDIR += jrobin
     SUBDIR += jrrd
-    SUBDIR += kbibtex
+    SUBDIR += kbibtex-kde4
     SUBDIR += kdb
     SUBDIR += kexi
     SUBDIR += kyotocabinet

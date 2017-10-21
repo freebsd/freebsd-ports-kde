@@ -24,7 +24,7 @@ NO_OPTIONS_SORT=	yes
 .for plugin in ${KIPI_PLUGINS_ALL}
 OPTIONS_DEFINE+=	${plugin:tu}
 ${plugin:tu}_DESC=	${${plugin}_DESC}
-${plugin:tu}_RUN_DEPENDS=	kipi-plugin-${plugin}>=${DIGIKAM_VER}:graphics/kipi-plugin-${plugin}
+${plugin:tu}_RUN_DEPENDS=	kipi-plugin-${plugin}>=${DIGIKAM_VER}:graphics/kipi-plugin-${plugin}-kde4
 .endfor
 
 NLS_RUN_DEPENDS=	digikam-l10n>=${DIGIKAM_VER}:graphics/digikam-kde4-l10n
