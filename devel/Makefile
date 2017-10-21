@@ -2786,7 +2786,6 @@
     SUBDIR += p5-Log-Any-Adapter-Callback
     SUBDIR += p5-Log-Any-Adapter-Dispatch
     SUBDIR += p5-Log-Any-Adapter-Log4perl
-    SUBDIR += p5-Log-Any-Adapter-Syslog
     SUBDIR += p5-Log-Any-App
     SUBDIR += p5-Log-Any-IfLOG
     SUBDIR += p5-Log-Contextual
@@ -4279,6 +4278,7 @@
     SUBDIR += py-capstone
     SUBDIR += py-castellan
     SUBDIR += py-cclib
+    SUBDIR += py-cdg
     SUBDIR += py-celery
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
@@ -5617,6 +5617,7 @@
     SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-notify
     SUBDIR += rubygem-nprogress-rails
+    SUBDIR += rubygem-nsa-rails5
     SUBDIR += rubygem-numerizer
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
@@ -5797,6 +5798,7 @@
     SUBDIR += rubygem-state_machines
     SUBDIR += rubygem-statsd
     SUBDIR += rubygem-statsd-instrument
+    SUBDIR += rubygem-statsd-ruby
     SUBDIR += rubygem-stella
     SUBDIR += rubygem-stemmer
     SUBDIR += rubygem-stomp
@@ -5804,6 +5806,7 @@
     SUBDIR += rubygem-stream
     SUBDIR += rubygem-streetaddress
     SUBDIR += rubygem-stringex
+    SUBDIR += rubygem-strong_migrations
     SUBDIR += rubygem-structured_warnings
     SUBDIR += rubygem-stud
     SUBDIR += rubygem-subexec
