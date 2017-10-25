@@ -2,6 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	astk
+PORTREVISION=	1
 
 COMMENT=	Graphical interface for Code_Aster (client side)
 

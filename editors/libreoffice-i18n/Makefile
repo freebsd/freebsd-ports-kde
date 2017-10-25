@@ -2,7 +2,7 @@
 
 .include "${.CURDIR}/../../editors/libreoffice/Makefile.common"
 
-PORTREVISION=	0
+PORTREVISION=	1
 PKGNAMESUFFIX=	-i18n
 
 COMMENT=	Localized interface for libreoffice

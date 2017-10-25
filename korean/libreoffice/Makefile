@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 CATEGORIES=	korean
 LO_I18N=	ko

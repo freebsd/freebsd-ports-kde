@@ -3,7 +3,7 @@
 
 PORTNAME=	policykit-qt
 PORTVERSION=	0.9.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	KDE/stable/apps/KDE4.x/admin/
 DISTNAME=	polkit-qt-${PORTVERSION}

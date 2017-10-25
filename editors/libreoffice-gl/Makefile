@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 LO_I18N=	gl
 LO_HAS_HELPPACK=	yes

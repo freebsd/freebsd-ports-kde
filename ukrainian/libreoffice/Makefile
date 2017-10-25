@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 CATEGORIES=	ukrainian
 LO_I18N=	uk

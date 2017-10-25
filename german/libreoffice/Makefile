@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 CATEGORIES=	german
 LO_I18N=	de

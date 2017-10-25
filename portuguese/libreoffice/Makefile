@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 CATEGORIES=	portuguese
 LO_I18N=	pt

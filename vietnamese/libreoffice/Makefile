@@ -1,4 +1,5 @@
 # $FreeBSD$
+PORTREVISION=	1
 
 CATEGORIES=	vietnamese
 LO_I18N=	vi

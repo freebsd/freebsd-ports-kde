@@ -2,7 +2,7 @@
 
 PORTNAME=	ksysguardd
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils kde kde-applications
 DISTNAME=	kde-workspace-${PORTVERSION}
 
