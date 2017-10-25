@@ -1374,6 +1374,7 @@ share/locale/eu/LC_MESSAGES/libkworkspace.mo
 share/locale/eu/LC_MESSAGES/phonon_kde_plugin.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.image.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.analogclock.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.appmenu.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.battery.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.devicenotifier.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.digitalclock.mo
