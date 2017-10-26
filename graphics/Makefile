@@ -760,6 +760,7 @@
     SUBDIR += piglit
     SUBDIR += pikopixel
     SUBDIR += pinpoint
+    SUBDIR += pixd
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
