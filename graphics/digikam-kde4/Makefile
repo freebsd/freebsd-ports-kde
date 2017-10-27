@@ -38,9 +38,9 @@ OPTIONS_DEFAULT=	GPHOTO2 PIMLIBS
 NO_OPTIONS_SORT=	yes
 OPTIONS_SUB=		yes # MYSQL
 
-DOCS_RUN_DEPENDS=	digikam-doc>=${DIGIKAM_VER}:graphics/digikam-kde4-doc
+DOCS_RUN_DEPENDS=	digikam-kde4-doc>=${DIGIKAM_VER}:graphics/digikam-kde4-doc
 
-NLS_RUN_DEPENDS=	digikam-l10n>=${DIGIKAM_VER}:graphics/digikam-kde4-l10n
+NLS_RUN_DEPENDS=	digikam-kde4-l10n>=${DIGIKAM_VER}:graphics/digikam-kde4-l10n
 
 GPHOTO2_DESC=		Gphoto2 camera support
 GPHOTO2_LIB_DEPENDS=	libgphoto2.so:graphics/libgphoto2

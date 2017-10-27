@@ -1,9 +1,10 @@
 # $FreeBSD$
 
-PORTNAME=	digikam-l10n
+PORTNAME=	digikam
 PORTVERSION=	${DIGIKAM_VER}
 PORTREVISION=	2
 CATEGORIES=	graphics kde
+PKGNAMESUFFIX=	-kde4-l10n
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	l10n for digiKam, showFoto, and Kipi-plugins

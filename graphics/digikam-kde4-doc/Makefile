@@ -1,9 +1,10 @@
 # $FreeBSD$
 
-PORTNAME=	digikam-doc
+PORTNAME=	digikam
 PORTVERSION=	${DIGIKAM_VER}
 PORTREVISION=	2
 CATEGORIES=	graphics kde
+PKGNAMESUFFIX=	-kde4-doc
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Documentation for digiKam, showFoto, and Kipi-plugins
