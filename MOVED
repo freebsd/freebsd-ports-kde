@@ -1,8 +1,11 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
+#
 # $FreeBSD$
+#
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
+#
 #     Port:	A port that was moved (category/portname)
 #     Moved to:	Where the port was moved to, or which port users can
 #		and should migrate to (category/portname); no entry
@@ -10,12 +13,15 @@
 #     Date:	When the moving or the removal was done (YYYY-MM-DD,
 #		in PST/PDT)
 #     Why:	The reason why the port was moved or removed
+#
 # Keep this list sorted in the chronological order.  New entries must be
 # added at the tail.  Reason for (re)move should start with a capital letter
 # (unless it's a file or other special name) and not end with the dot.
+#
 # If previously removed port gets restored, make sure to delete the relevant
 # line.  If a port is copied to a new location and the old location is kept
 # (e.g. upgraded to a later version), don't record it here.
+#
 # Port|Moved to|Date|Why
 audio/polypaudio|audio/pulseaudio|2008-01-01|Project renamed
 audio/akode-plugins-polypaudio||2008-01-01|Polypaudio is obsolete in favor of Pulseaudio
