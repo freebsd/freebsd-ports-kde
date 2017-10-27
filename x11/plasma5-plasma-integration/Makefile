@@ -7,8 +7,8 @@ CATEGORIES=	x11 kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt Platform Theme integration plugins for the Plasma workspaces
 
-RUN_DEPENDS=	${LOCALBASE}/share/fonts/noto/NotoSans-Regular.ttf:x11-fonts/noto-lite \
-		${LOCALBASE}/share/fonts/hack-font/Hack-Regular.otf:x11-fonts/hack-font
+RUN_DEPENDS=	noto-lite>=0:x11-fonts/noto-lite \
+		hack-font>=0:x11-fonts/hack-font
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 pkgconfig \
 		shebangfix tar:xz
