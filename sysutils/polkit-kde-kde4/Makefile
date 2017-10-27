@@ -7,6 +7,7 @@ PORTREVISION=	5
 CATEGORIES=	sysutils kde
 MASTER_SITES=	KDE/stable/apps/KDE4.x/admin/
 DISTNAME=	${PORTNAME}-agent-1-${PORTVERSION:C/1$/0/}
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Polkit authentication UI for KDE Workspaces

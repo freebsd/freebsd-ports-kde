@@ -6,7 +6,7 @@ PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	multimedia kde kde-kde4
 # Avoid clash with devel/dragon
-PKGNAMESUFFIX=	-player
+PKGNAMESUFFIX=	-player-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE multimedia player with a focus on simplicity

@@ -6,6 +6,7 @@ PORTREVISION=	7
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/extragear
 DIST_SUBDIR=	KDE/extragear
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE icon editor

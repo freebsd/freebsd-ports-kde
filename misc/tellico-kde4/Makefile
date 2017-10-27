@@ -6,6 +6,7 @@ PORTVERSION=	2.3.12
 PORTREVISION=	4
 CATEGORIES=	misc kde
 MASTER_SITES=	http://tellico-project.org/files/
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Collection manager for KDE

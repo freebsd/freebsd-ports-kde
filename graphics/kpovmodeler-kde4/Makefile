@@ -7,6 +7,7 @@ CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/Attic/${EXTRA_VER}/src/extragear
 DISTNAME=	${PORTNAME}-${APP_VER}-kde${EXTRA_VER}
 DIST_SUBDIR=	KDE/extragear
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE editor/frontend for Povray

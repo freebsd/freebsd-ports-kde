@@ -6,6 +6,7 @@ PORTREVISION=	4
 CATEGORIES=	sysutils kde
 MASTER_SITES=	SF/${PORTNAME}/KShutdown/${DISTVERSION}/
 DISTNAME=	${PORTNAME}-source-${DISTVERSION}
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Advanced shutdown utility for KDE

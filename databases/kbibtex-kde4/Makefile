@@ -6,6 +6,7 @@ DISTVERSION=	0.6.2
 PORTREVISION=	3
 CATEGORIES=	databases kde
 MASTER_SITES=	http://download.gna.org/${PORTNAME}/${PORTVERSION:R}/
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Bibliography editor for KDE

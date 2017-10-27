@@ -6,6 +6,7 @@ PORTREVISION=	2
 CATEGORIES=	net-im kde
 MASTER_SITES=	KDE/${KTP_BRANCH}/kde-telepathy/${PORTVERSION}/src
 PKGNAMEPREFIX=	plasma-applet-
+PKGNAMESUFFIX=	-kde4
 DISTNAME=	${PORTNAME}-desktop-applets-${PORTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org

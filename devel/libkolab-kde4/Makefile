@@ -5,6 +5,7 @@ PORTVERSION=	0.6.3
 PORTREVISION=	9
 CATEGORIES=	devel kde
 MASTER_SITES=	http://mirror.kolabsys.com/pub/releases/
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Advanced Kolab Object Handling Library

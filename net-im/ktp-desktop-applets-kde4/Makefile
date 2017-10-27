@@ -5,6 +5,7 @@ PORTVERSION=	${KTP_VERSION}
 PORTREVISION=	2
 CATEGORIES=	net-im kde
 MASTER_SITES=	KDE/${KTP_BRANCH}/kde-telepathy/${PORTVERSION}/src
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE instant messaging plasma widgets

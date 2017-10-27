@@ -7,6 +7,7 @@ PORTREVISION=	8
 CATEGORIES=	net devel
 #MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 MASTER_SITES=	LOCAL/fluffy
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KIO slave to access UPnP MediaServers

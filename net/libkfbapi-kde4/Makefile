@@ -6,6 +6,7 @@ PORTREVISION=	6
 CATEGORIES=	net kde
 MASTER_SITES=	KDE/stable/libkfbapi/${PORTVERSION}/src
 DIST_SUBDIR=	KDE
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library for accessing Facebook services

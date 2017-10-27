@@ -6,6 +6,7 @@ PORTREVISION=	3
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/libkgapi/${PORTVERSION}/src
 DIST_SUBDIR=	KDE
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE-based library for accessing various Google services

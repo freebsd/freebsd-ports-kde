@@ -15,6 +15,7 @@
 
 DIGIKAM_VER=	4.14.0
 MASTER_SITES=	KDE/Attic/digikam
+PKGNAMESUFFIX=	-kde4
 
 KIPI_PLUGINS_ALL=	acquireimages \
 			advancedslideshow \
