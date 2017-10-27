@@ -128,6 +128,7 @@
     SUBDIR += elgg
     SUBDIR += elinks
     SUBDIR += elixir-html_entities
+    SUBDIR += elixir-html_sanitize_ex
     SUBDIR += elixir-httpoison
     SUBDIR += elixir-httpotion
     SUBDIR += elixir-joken
@@ -1811,6 +1812,7 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-cache
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-mock
