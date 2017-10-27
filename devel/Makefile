@@ -330,6 +330,7 @@
     SUBDIR += cobf
     SUBDIR += coccinelle
     SUBDIR += codeblocks
+    SUBDIR += codeblocks-devel
     SUBDIR += codequery
     SUBDIR += codesearch-py
     SUBDIR += codeville
@@ -891,6 +892,7 @@
     SUBDIR += hapy
     SUBDIR += hcs12mem
     SUBDIR += hexcompare
+    SUBDIR += hexd
     SUBDIR += hg-git
     SUBDIR += hgreviewboard
     SUBDIR += hgsvn
@@ -1622,6 +1624,7 @@
     SUBDIR += lion
     SUBDIR += listserialc
     SUBDIR += liteide
+    SUBDIR += llbuild
     SUBDIR += lldb38
     SUBDIR += llnextgen
     SUBDIR += llvm-cheri
