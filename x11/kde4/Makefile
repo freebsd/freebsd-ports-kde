@@ -1,9 +1,9 @@
 # Created by: Will Andrews <will@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	kde
+PORTNAME=	kde4
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 kde
 
 MAINTAINER=	kde@FreeBSD.org
