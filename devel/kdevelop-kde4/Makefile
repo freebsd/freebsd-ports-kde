@@ -31,7 +31,7 @@ OKTETA_CMAKE_OFF=	-DWITH_LibOktetaKasten:BOOL=OFF
 OKTETA_CMAKE_ON=	-DWITH_LibOktetaKasten:BOOL=ON
 
 PHP_DESC=	PHP support for KDevelop
-PHP_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kdevphplanguagesupport.so:devel/kdevelop-php-kde4
+PHP_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kdevphplanguagesupport.so:devel/kdevelop-kde4-php
 
 NLS_USES=	gettext
 NLS_CMAKE_OFF=	-DBUILD_po:BOOL=FALSE

@@ -9676,3 +9676,6 @@ x11/kdelibs4|x11/kdelibs-kde4|2017-10-27|Apply consistent name to KDE4
 x11/libkonq|x11/libkonq-kde4|2017-10-27|Apply consistent name to KDE4
 x11/plasma-scriptengine-python|x11/plasma-scriptengine-python-kde4|2017-10-27|Apply consistent name to KDE4
 x11/plasma-scriptengine-ruby|x11/plasma-scriptengine-ruby-kde4|2017-10-27|Apply consistent name to KDE4
+devel/kdevelop-pg-qt-kde4|devel/kdevelop-kde4-pg-qt|2017-10-27|Apply consistent name to KDE4
+devel/kdevelop-php-kde4|devel/kdevelop-kde4-php|2017-10-27|Apply consistent name to KDE4
+devel/kdevelop-php-docs-kde4|devel/kdevelop-kde4-php-docs|2017-10-27|Apply consistent name to KDE4

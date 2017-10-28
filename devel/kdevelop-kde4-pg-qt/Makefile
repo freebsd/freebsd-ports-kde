@@ -1,13 +1,13 @@
 # Created by: Douglas Carmichael <dcarmich@dcarmichael.net>
 # $FreeBSD$
 
-PORTNAME=	kdevelop-pg-qt
-PORTVERSION=	1.0.0
+PORTNAME=	kdevelop-kde4-pg-qt
+DISTVERSION=	1.0.0
 PORTREVISION=	4
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
+MASTER_SITES=	KDE/stable/${PORTNAME:C/-kde4//}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE
-PKGNAMESUFFIX=	-kde4
+DISTNAME=	${PORTNAME:C/-kde4//}-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Parser-generator from KDevplatform
