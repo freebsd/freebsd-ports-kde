@@ -53,7 +53,7 @@ KCACHEGRIND_DESC=	Profiler frontend
 KCACHEGRIND_RUN_DEPENDS=	${KDE_PREFIX}/bin/kcachegrind:devel/kcachegrind-kde4
 
 KIOSLAVES_DESC=		SDK related KIO slaves
-KIOSLAVES_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kio_svn.so:devel/kdesdk4-kioslaves-kde4
+KIOSLAVES_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/kio_svn.so:devel/kdesdk-kioslaves-kde4
 
 KOMPARE_DESC=		Diff/Patch frontend
 KOMPARE_RUN_DEPENDS=	${KDE_PREFIX}/bin/kompare:textproc/kompare-kde4
@@ -68,10 +68,10 @@ POXML_DESC=		Tools to translate DocBook XML using gettext
 POXML_RUN_DEPENDS=	${KDE_PREFIX}/bin/po2xml:devel/poxml-kde4
 
 STRIGI_DESC=		Strigi analyzers for SDK file formats
-STRIGI_RUN_DEPENDS=	${KDE_PREFIX}/lib/strigi/strigila_diff.so:devel/kdesdk4-strigi-analyzers-kde4
+STRIGI_RUN_DEPENDS=	${KDE_PREFIX}/lib/strigi/strigila_diff.so:devel/kdesdk-strigi-analyzers-kde4
 
 THUMBNAILER_DESC=	Thumbnail generator for gettext po files
-THUMBNAILER_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/pothumbnail.so:devel/kdesdk4-thumbnailers-kde4
+THUMBNAILER_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/pothumbnail.so:devel/kdesdk-thumbnailers-kde4
 
 UMBRELLO_DESC=		UML modeller
 UMBRELLO_RUN_DEPENDS=	${KDE_PREFIX}/bin/umbrello:devel/umbrello-kde4
