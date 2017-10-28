@@ -4074,6 +4074,9 @@
     SUBDIR += pkg-info.el
     SUBDIR += pkgconf
     SUBDIR += plan9port
+    SUBDIR += plasma5-plasma-sdk
+    SUBDIR += plasma5-khotkeys
+    SUBDIR += plasma5-kwrited
     SUBDIR += pmccabe
     SUBDIR += pmd
     SUBDIR += poco

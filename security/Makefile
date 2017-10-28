@@ -836,6 +836,9 @@
     SUBDIR += pkesh
     SUBDIR += pks
     SUBDIR += pktsuckers
+    SUBDIR += plasma5-ksshaskpass
+    SUBDIR += plasma5-kwallet-pam
+    SUBDIR += plasma5-kscreenlocker
     SUBDIR += please
     SUBDIR += polarssl13
     SUBDIR += poly1305aes

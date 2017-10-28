@@ -305,6 +305,7 @@
     SUBDIR += photofilmstrip
     SUBDIR += php-pHash
     SUBDIR += pitivi
+    SUBDIR += plasma5-plasma-mediacenter
     SUBDIR += playd
     SUBDIR += plexhometheater
     SUBDIR += plexmediaserver

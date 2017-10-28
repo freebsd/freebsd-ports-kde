@@ -620,6 +620,7 @@
     SUBDIR += pianobar
     SUBDIR += picard
     SUBDIR += pithos
+    SUBDIR += plasma5-pa
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
