@@ -433,7 +433,7 @@ x11-wm/plasma5-kwin
 x11/kactivities
 x11/kactivitymanagerd
 x11/kde-baseapps
-x11/kde
+x11/kde5
 x11/kdelibs4
 x11/kf5-frameworkintegration
 x11/kf5-frameworks
