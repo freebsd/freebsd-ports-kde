@@ -37,6 +37,7 @@
     SUBDIR += libosmium
     SUBDIR += libosmpbf
     SUBDIR += luna
+    SUBDIR += marble
     SUBDIR += marble-kde4
     SUBDIR += match
     SUBDIR += merkaartor

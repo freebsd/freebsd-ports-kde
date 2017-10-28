@@ -1,0 +1,16 @@
+--- messageviewer/src/CMakeLists.txt.orig	2015-11-21 01:41:03 UTC
++++ messageviewer/src/CMakeLists.txt
+@@ -23,7 +23,11 @@ endif()
+
+ configure_file(settings/messageviewer.kcfg.cmake ${CMAKE_CURRENT_BINARY_DIR}/messageviewer.kcfg)
+ include(CheckIncludeFiles)
+-check_include_files(sys/inotify.h SYS_INOTIFY_H_FOUND)
++#Find inotify on FreeBSD
++find_package(Inotify)
++set_package_properties(Inotify PROPERTIES
++                       PURPOSE "Filesystem alteration notifications using inotify")
++set(HAVE_SYS_INOTIFY_H ${Inotify_FOUND})
+ macro_bool_to_01(SYS_INOTIFY_H_FOUND HAVE_SYS_INOTIFY_H)
+ configure_file(config-messageviewer.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-messageviewer.h)
+
+

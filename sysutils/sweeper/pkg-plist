@@ -1,0 +1,4 @@
+bin/sweeper
+share/applications/kde4/sweeper.desktop
+share/apps/sweeper/sweeperui.rc
+share/dbus-1/interfaces/org.kde.sweeper.xml

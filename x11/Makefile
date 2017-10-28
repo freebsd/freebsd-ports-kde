@@ -124,6 +124,8 @@
     SUBDIR += kb2mb2
     SUBDIR += kbproto
     SUBDIR += kde4
+    SUBDIR += kde5
+    SUBDIR += kde-baseapps
     SUBDIR += kde-baseapps-kde4
     SUBDIR += kde-runtime-kde4
     SUBDIR += kde-workspace-kde4
@@ -144,7 +146,9 @@
     SUBDIR += kf5-kwayland
     SUBDIR += kf5-kwindowsystem
     SUBDIR += kf5-plasma-framework
+    SUBDIR += kgamma
     SUBDIR += kgamma-kde4
+    SUBDIR += konsole
     SUBDIR += konsole-kde4
     SUBDIR += leechcraft
     SUBDIR += lemonbar

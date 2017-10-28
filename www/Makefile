@@ -342,6 +342,7 @@
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
     SUBDIR += kf5-kjsembed
+    SUBDIR += klinkstatus
     SUBDIR += kohana
     SUBDIR += kpartsplugin
     SUBDIR += kplaylist

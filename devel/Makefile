@@ -272,6 +272,7 @@
     SUBDIR += cdecl
     SUBDIR += cdialog
     SUBDIR += cdk
+    SUBDIR += cervisia
     SUBDIR += cervisia-kde4
     SUBDIR += cflow
     SUBDIR += cflow2vcg
@@ -459,6 +460,7 @@
     SUBDIR += dmalloc
     SUBDIR += dmucs
     SUBDIR += doctorj
+    SUBDIR += dolphin-plugins
     SUBDIR += dolphin-plugins-kde4
     SUBDIR += dotconf
     SUBDIR += dotconf++
@@ -1241,16 +1243,22 @@
     SUBDIR += jwasm
     SUBDIR += k8048
     SUBDIR += kBuild
+    SUBDIR += kapptemplate
     SUBDIR += kapptemplate-kde4
     SUBDIR += kaptain
     SUBDIR += kcachegrind
+    SUBDIR += kcachegrind-kde4
     SUBDIR += kdbg
+    SUBDIR += kde-dev-scripts
     SUBDIR += kde-dev-scripts-kde4
+    SUBDIR += kde-dev-utils
     SUBDIR += kde-dev-utils-kde4
     SUBDIR += kdebindings-kde4
+    SUBDIR += kdesdk
     SUBDIR += kdesdk-kd4
     SUBDIR += kdesdk-kioslaves-kde4
     SUBDIR += kdesdk-strigi-analyzers-kde
+    SUBDIR += kdesdk-thumbnailers
     SUBDIR += kdesdk-thumbnailers-kde4
     SUBDIR += kdesvn-kde4
     SUBDIR += kdevelop-kde4
@@ -1287,6 +1295,7 @@
     SUBDIR += kf5-solid
     SUBDIR += kf5-threadweaver
     SUBDIR += kickassembler
+    SUBDIR += kio-extras
     SUBDIR += kimwitu
     SUBDIR += kore
     SUBDIR += kore-notls
@@ -1434,6 +1443,7 @@
     SUBDIR += libk8055
     SUBDIR += libkgapi-kde4
     SUBDIR += libklel
+    SUBDIR += libkolab
     SUBDIR += libkolab-kde4
     SUBDIR += liblangtag
     SUBDIR += liblas
@@ -1645,6 +1655,7 @@
     SUBDIR += log4net
     SUBDIR += log4sh
     SUBDIR += log4shib
+    SUBDIR += lokalize
     SUBDIR += lokalize-kde4
     SUBDIR += loki
     SUBDIR += looks
@@ -1816,6 +1827,7 @@
     SUBDIR += oclgrind
     SUBDIR += ode
     SUBDIR += ois
+    SUBDIR += okteta
     SUBDIR += okteta-kde4
     SUBDIR += omake
     SUBDIR += omniNotify
@@ -4087,6 +4099,7 @@
     SUBDIR += powerpc64-binutils
     SUBDIR += powerpc64-gcc
     SUBDIR += powerpc64-xtoolchain-gcc
+    SUBDIR += poxml
     SUBDIR += poxml-kde4
     SUBDIR += ppl
     SUBDIR += pragmarcs
@@ -6040,6 +6053,7 @@
     SUBDIR += ucpp
     SUBDIR += udis86
     SUBDIR += ultragetopt
+    SUBDIR += umbrello
     SUBDIR += umbrello-kde4
     SUBDIR += umem
     SUBDIR += umlgraph

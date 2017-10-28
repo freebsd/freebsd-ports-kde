@@ -69,6 +69,7 @@
     SUBDIR += iboview
     SUBDIR += isaac-cfd
     SUBDIR += jstrack
+    SUBDIR += kalzium
     SUBDIR += kalzium-kde4
     SUBDIR += kst2
     SUBDIR += lamprop
@@ -184,6 +185,7 @@
     SUBDIR += silo
     SUBDIR += simlib
     SUBDIR += simsmith
+    SUBDIR += step
     SUBDIR += step-kde4
     SUBDIR += svmlight
     SUBDIR += szip

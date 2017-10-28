@@ -1,0 +1,5 @@
+KLinkStatus is a link checker. It allows you to search internal and external
+links in either your entire web site, a single page or a specified depth. For
+performance, links can be checked simultaneously.
+
+WWW: https://www.kde.org/applications/development/klinkstatus

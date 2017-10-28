@@ -1,0 +1,17 @@
+bin/kfilereplace
+lib/kde4/libkfilereplacepart.so
+share/applications/kde4/kfilereplace.desktop
+share/apps/kfilereplace/kfilereplaceui.rc
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/backup_option.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/casesensitive_option.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/command_option.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/filesimulate.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/invert.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/recursive_option.png
+share/apps/kfilereplacepart/icons/hicolor/22x22/actions/regularexpression_option.png
+share/apps/kfilereplacepart/kfilereplacepartui.rc
+share/dbus-1/interfaces/org.kde.kfilereplace.xml
+share/icons/hicolor/22x22/apps/kfilereplace.png
+share/icons/hicolor/32x32/apps/kfilereplace.png
+share/icons/hicolor/48x48/apps/kfilereplace.png
+share/kde4/services/kfilereplacepart.desktop
