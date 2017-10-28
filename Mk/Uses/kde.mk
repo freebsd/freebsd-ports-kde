@@ -224,12 +224,11 @@ PLIST_SUB+=		PYCACHE="" \
 # ==============================================================================
 
 _USE_KDE_BOTH=		akonadi attica libkcddb libkcompactdisc libkdcraw libkdegames \
-			libkexiv2 libkface libkipi libksane \
+			libkeduvocdocument libkexiv2 libkface libkipi libksane \
 			baloo baloo-widgets
 
 _USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kate kdelibs \
 			kfilemetadata korundum \
-			libkdeedu libkipi \
 			libkonq marble nepomuk-core nepomuk-widgets \
 			okular oxygen-icons5 perlkde perlqt pimlibs pykde4 \
 			pykdeuic4 qtruby runtime smokegen smokekde smokeqt \
@@ -327,9 +326,6 @@ kfilemetadata_LIB=	libkfilemetadata.so
 korundum_PORT=		devel/ruby-korundum-kde4
 korundum_PATH=		${KDE_PREFIX}/lib/kde4/krubypluginfactory.so
 korundum_TYPE=		run
-
-libkdeedu_PORT=		misc/libkdeedu-kde4
-libkdeedu_LIB=		libkeduvocdocument.so
 
 libkonq_PORT=		x11/libkonq-kde4
 libkonq_LIB=		libkonq.so
@@ -889,6 +885,11 @@ libkdegames4_PORT=	games/libkdegames-kde4
 libkdegames4_LIB=	libkdegames.so
 libkdegames5_PORT=	games/libkdegames
 libkdegames5_LIB=	libKF5KDEGames.so
+
+libkeduvocdocument4_PORT=	misc/libkdeedu-kde4
+libkeduvocdocument4_LIB=	libkeduvocdocument.so
+libkeduvocdocument5_PORT=        misc/libkeduvocdocument
+libkeduvocdocument5_LIB=         libKEduVocDocument.so
 
 libkexiv24_PORT=	graphics/libkexiv2-kde4
 libkexiv24_LIB=		libkexiv2.so

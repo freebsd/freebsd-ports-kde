@@ -252,7 +252,6 @@
     SUBDIR += lesspipe
     SUBDIR += libeatmydata
     SUBDIR += libisocodes
-    SUBDIR += libkdeedu
     SUBDIR += libkdeedu-kde4
     SUBDIR += libkeduvocdocument
     SUBDIR += libmetalink
