@@ -49,12 +49,8 @@ MOZ_EXPORT=	BINDGEN_CFLAGS="-isystem${LOCALBASE}/include/nspr \
 MOZ_OPTIONS=	--enable-application=browser \
 		--enable-official-branding
 
-OPTIONS_DEFINE=		KDE
 OPTIONS_DEFAULT=	BUNDLED_CAIRO
 OPTIONS_EXCLUDE=	GNOMEUI
-
-KDE_DESC=		Apply OpenSUSE's KDE patch
-KDE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-hg_mozilla-kde.patch
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 
