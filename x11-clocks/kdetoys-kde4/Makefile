@@ -4,6 +4,7 @@ PORTNAME=	kdetoys
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	x11-clocks kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE miscellaneous applications (meta port)

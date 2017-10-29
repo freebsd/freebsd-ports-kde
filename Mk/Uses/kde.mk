@@ -225,11 +225,11 @@ PLIST_SUB+=		PYCACHE="" \
 
 _USE_KDE_BOTH=		akonadi attica libkcddb libkcompactdisc libkdcraw libkdegames \
 			libkeduvocdocument libkexiv2 libkface libkipi libksane \
-			baloo baloo-widgets
+			baloo baloo-widgets kate marble
 
-_USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kate kdelibs \
+_USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kdelibs \
 			kfilemetadata korundum \
-			libkonq marble nepomuk-core nepomuk-widgets \
+			libkonq  nepomuk-core nepomuk-widgets \
 			okular oxygen-icons5 perlkde perlqt pimlibs pykde4 \
 			pykdeuic4 qtruby runtime smokegen smokekde smokeqt \
 			workspace
@@ -314,9 +314,6 @@ baseapps_TYPE=		run
 kactivities_PORT=	x11/kactivities-kde4
 kactivities_LIB=	libkactivities.so
 
-kate_PORT=		editors/kate-kde4
-kate_LIB=		libkateinterfaces.so
-
 kdelibs_PORT=		x11/kdelibs-kde4
 kdelibs_LIB=		libkdecore.so
 
@@ -329,9 +326,6 @@ korundum_TYPE=		run
 
 libkonq_PORT=		x11/libkonq-kde4
 libkonq_LIB=		libkonq.so
-
-marble_PORT=		astro/marble-kde4
-marble_LIB=		libmarblewidget.so
 
 nepomuk-core_PORT=	sysutils/nepomuk-core-kde4
 nepomuk-core_LIB=	libnepomukcore.so
@@ -866,6 +860,12 @@ baloo-widgets4_LIB=	libbaloowidgets.so
 baloo-widgets5_PORT=	sysutils/baloo-widgets
 baloo-widgets5_LIB=	libKF5BalooWidgets.so
 
+
+kate4_PORT=		editors/kate-kde4
+kate4_LIB=		libkateinterfaces.so
+kate5_PORT=		editors/kate
+kate5_LIB=		${QT_PLUGINDIR}/ktexteditor/katebacktracebrowserplugin.so
+
 libkcddb4_PORT=		audio/libkcddb-kde4
 libkcddb4_LIB=		libkcddb.so
 libkcddb5_PORT=		audio/libkcddb
@@ -910,11 +910,18 @@ libkface4_PORT=		graphics/libkface-kde4
 libkface4_LIB=		libkface.so
 libkface5_PORT=		graphics/libkface
 libkface5_LIB=		libKF5KFace.so
+
+marble4_PORT=		astro/marble-kde4
+marble4_LIB=		libmarblewidget.so
+marble5_PORT=		astro/marble
+marble5_LIB=		libmarblewidget-qt5.so
+
 # ====================== select the proper multiversion component ==============
 .  for comp in ${_USE_KDE_BOTH}
 ${comp}_PORT=		${${comp}${_KDE_VERSION}_PORT}
 ${comp}_LIB=		${${comp}${_KDE_VERSION}_LIB}
 . endfor
+#===============================================================================
 
 # end of component list ########################################################
 

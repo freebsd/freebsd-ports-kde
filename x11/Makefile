@@ -146,7 +146,6 @@
     SUBDIR += kf5-kwayland
     SUBDIR += kf5-kwindowsystem
     SUBDIR += kf5-plasma-framework
-    SUBDIR += kgamma
     SUBDIR += kgamma-kde4
     SUBDIR += konsole
     SUBDIR += konsole-kde4

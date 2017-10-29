@@ -5,6 +5,7 @@ PORTNAME=	kdeutils
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	3
 CATEGORIES=	misc kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Collection of utilities for KDE 4

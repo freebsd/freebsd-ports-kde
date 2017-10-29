@@ -4,6 +4,7 @@ PORTNAME=	kde-telepathy
 PORTVERSION=	${KTP_VERSION}
 PORTREVISION=	2
 CATEGORIES=	net-im kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE integrated instant messaging framework

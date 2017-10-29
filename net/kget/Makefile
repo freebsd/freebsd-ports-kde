@@ -3,6 +3,7 @@
 PORTNAME=	kget
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
+PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE download manager

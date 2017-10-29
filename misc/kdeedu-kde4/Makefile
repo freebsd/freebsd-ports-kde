@@ -5,6 +5,7 @@ PORTNAME=	kdeedu
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	misc kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Entertaining and educational programs for KDE 4 (meta port)

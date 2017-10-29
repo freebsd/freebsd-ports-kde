@@ -11,15 +11,15 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	${QT_PLUGINDIR}/ffmpegthumbs.so:multimedia/kdemultimedia-ffmpegthumbs \
-		${QT_PLUGINDIR}/gsthumbnail.so:graphics/kdegraphics-thumbnailers
+		${QT_PLUGINDIR}/gsthumbnail.so:graphics/kdegraphics-thumbnailers \
+		${QT_PLUGINDIR}/audiothumbnail.so:devel/kio-extras
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	activities baloo baloo-widgets bookmarks completion \
 		coreaddons dbusaddons doctools ecm emoticons filemetadata \
 		i18n iconthemes init itemmodels kcmutils kde-cli-tools \
 		kdelibs4support kio newstuff notifications parts solid \
-		texteditor windowsystem \
-		kio-extras_run
+		texteditor windowsystem
 USE_QT5=	buildtools_build concurrent core dbus gui phonon4 \
 		qmake_build widgets
 

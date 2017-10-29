@@ -4,6 +4,7 @@ PORTNAME=	kdegames
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	games kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Games for KDE 4 (meta port)

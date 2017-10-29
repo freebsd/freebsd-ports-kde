@@ -5,6 +5,7 @@ DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	graphics kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 4 plugin for scanning through libksane
+PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 USES=		cmake:outsource kde:4 tar:xz
 USE_KDE=	kdelibs libksane automoc4

@@ -4,6 +4,7 @@ PORTNAME=	kdeadmin
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	sysutils kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Administration applications (meta port)

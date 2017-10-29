@@ -5,6 +5,7 @@ PORTNAME=	kdegraphics
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	graphics kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Graphics utilities for KDE 4 (meta port)

@@ -470,12 +470,10 @@
     SUBDIR += kolourpaint-kde4
     SUBDIR += kphotoalbum-kde4
     SUBDIR += kpovmodeler
-    SUBDIR += kqtquickcharts
     SUBDIR += kqtquickcharts-kde4
     SUBDIR += krita
     SUBDIR += ksaneplugin
     SUBDIR += ksaneplugin-kde4
-    SUBDIR += ksnapshot
     SUBDIR += ksnapshot-kde4
     SUBDIR += kudu
     SUBDIR += l2p

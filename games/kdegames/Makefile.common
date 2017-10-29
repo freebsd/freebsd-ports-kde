@@ -1,4 +1,4 @@
-# KDE4_GAMES_ALL entry must be a portname, port directory can be overridden
+# KDE_GAMES_ALL entry must be a portname, port directory can be overridden
 # if needed. Option description is also used as port's COMMENT
 # (use COMMENT=	${${PORTNAME}_DESC} for new ports)
 
@@ -32,7 +32,7 @@ KDE_GAMES_ALL=	bomber \
 bomber_DESC=	Arcade Bombing game
 bovo_DESC=	Five-in-a-row Board game
 granatier_DESC=	Bomberman clone
-kajongg_DESC=	Ancient Chinese board game for 4 players
+# kajongg_DESC=	Ancient Chinese board game for 4 players
 kapman_DESC=	Pac-Man Clone
 katomic_DESC=	Sokoban-like Logic game
 kblackbox_DESC=	Blackbox Logic game
@@ -52,13 +52,11 @@ kmahjongg_DESC=	Mahjongg Solitaire
 kmines_DESC=	Minesweeper-like game
 knavalbattle_DESC=	Ship Sinking game
 knetwalk_DESC=	Network Construction game
-kolf_DESC=	Miniature Golf
 kollision_DESC=	Simple ball dodging game
 konquest_DESC=	Galactic Strategy game
 kpat_DESC=	Patience Card game
 kreversi_DESC=	Reversi Board game
 kshisen_DESC=	Shisen-Sho Mahjongg-like Tile game
-ksirk_DESC=	World Domination Strategy game
 ksnakeduel_DESC=	Snake-like game
 kspaceduel_DESC=	Space Arcade game
 ksquares_DESC=	Connect the dots to create squares

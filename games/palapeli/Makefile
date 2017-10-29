@@ -3,6 +3,7 @@
 PORTNAME=	palapeli
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	games kde kde-applications
+PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}

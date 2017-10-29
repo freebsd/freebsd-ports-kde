@@ -5,6 +5,7 @@ PORTNAME=	kdemultimedia
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	multimedia kde
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Multimedia applications (meta port)

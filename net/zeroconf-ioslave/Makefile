@@ -3,6 +3,7 @@
 PORTNAME=	zeroconf-ioslave
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
+PKGNAMESUFFIX=	# hack
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Network monitor for DNS-SD services (Zeroconf)

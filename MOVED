@@ -9626,6 +9626,10 @@ devel/smokekde|devel/smokekde-kde4|2017-10-27|Apply consistent name to KDE4
 devel/smokeqt|devel/smokeqt-kde4|2017-10-27|Apply consistent name to KDE4
 editors/kate-plugin-pate|editors/kate-plugin-pate-kde4|2017-10-27|Apply consistent name to KDE4
 games/kdegames4|games/kdegames-kde4|2017-10-27|Apply consistent name to KDE4
+games/kajongg|games/kajongg-kde4|2017-10-27|Apply consistent name to KDE4
+games/ksirk|games/ksirk-kde4|2017-10-27|Apply consistent name to KDE4
+games/kolf|games/kolf-kde4|2017-10-27|Apply consistent name to KDE4
+games/pairs|games/pairs-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/kcoloredit|graphics/kcoloredit-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/kdegraphics4-mobipocket|graphics/kdegraphics-mobipocket-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/kdegraphics4-strigi-analyzer|graphics/kdegraphics-strigi-analyzer-kde4|2017-10-27|Apply consistent name to KDE44
@@ -9634,6 +9638,8 @@ graphics/kdegraphics4-thumbnailers|graphics/kdegraphics-thumbnailers-kde4|2017-1
 graphics/kdegraphics4|graphics/kdegraphics4-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/kiconedit|graphics/kiconedit-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/kpovmodeler|graphics/kpovmodeler-kde4|2017-10-27|Apply consistent name to KDE4
+graphics/kqtquickcharts|graphics/kqtquickcharts-kde4|2017-10-27|Apply consistent name to KDE4
+graphics/ksnapshot|graphics/ksnapshot-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/libkipiplugins|graphics/libkipiplugins-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/libkscreen|graphics/libkscreen-kde4|2017-10-27|Apply consistent name to KDE4
 graphics/skanlite|graphics/skanlite-kde4|2017-10-27|Apply consistent name to KDE4
@@ -9659,6 +9665,7 @@ sysutils/kcm-polkit-kde|sysutils/kcm-polkit-kde-kde4|2017-10-27|Apply consistent
 sysutils/kdeadmin4|sysutils/kdeadmin-kde4|2017-10-27|Apply consistent name to KDE4
 sysutils/kfilemetadata|sysutils/kfilemetadata-kde4|2017-10-27|Apply consistent name to KDE4
 sysutils/ksysguardd|sysutils/ksysguardd-kde4|2017-10-27|Apply consistent name to KDE4
+sysutils/kuser|sysutils/kuser-kde4|2017-10-27|Apply consistent name to KDE4
 sysutils/nepomuk-core|sysutils/nepomuk-core-kde4|2017-10-27|Apply consistent name to KDE4
 sysutils/nepomuk-widgets|sysutils/nepomuk-widgets-kde4|2017-10-27|Apply consistent name to KDE4
 sysutils/policykit-qt|sysutils/policykit-qt-kde4|2017-10-27|Apply consistent name to KDE4
@@ -9673,6 +9680,7 @@ x11-themes/kdeartwork4|x11-themes/kdeartwork-kde4|2017-10-27|Apply consistent na
 x11/kactivities|x11/kactivities-kde4|2017-10-27|Apply consistent name to KDE4
 x11/kactivitymanagerd|x11/kactivitymanagerd-kde4|2017-10-27|Apply consistent name to KDE4
 x11/kdelibs4|x11/kdelibs-kde4|2017-10-27|Apply consistent name to KDE4
+x11/kgamma|x11/kgamma-kde4|2017-10-27|Apply consistent name to KDE4
 x11/libkonq|x11/libkonq-kde4|2017-10-27|Apply consistent name to KDE4
 x11/plasma-scriptengine-python|x11/plasma-scriptengine-python-kde4|2017-10-27|Apply consistent name to KDE4
 x11/plasma-scriptengine-ruby|x11/plasma-scriptengine-ruby-kde4|2017-10-27|Apply consistent name to KDE4

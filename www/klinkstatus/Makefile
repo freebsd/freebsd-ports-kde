@@ -3,6 +3,7 @@
 PORTNAME=	klinkstatus
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	www kde kde-applications
+PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KLinkStatus is a link checker
