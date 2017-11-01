@@ -864,7 +864,7 @@ baloo-widgets5_LIB=	libKF5BalooWidgets.so
 kate4_PORT=		editors/kate-kde4
 kate4_LIB=		libkateinterfaces.so
 kate5_PORT=		editors/kate
-kate5_LIB=		${QT_PLUGINDIR}/ktexteditor/katebacktracebrowserplugin.so
+kate5_PATH=		${QT_PLUGINDIR}/ktexteditor/katebacktracebrowserplugin.so
 
 libkcddb4_PORT=		audio/libkcddb-kde4
 libkcddb4_LIB=		libkcddb.so
@@ -919,7 +919,14 @@ marble5_LIB=		libmarblewidget-qt5.so
 # ====================== select the proper multiversion component ==============
 .  for comp in ${_USE_KDE_BOTH}
 ${comp}_PORT=		${${comp}${_KDE_VERSION}_PORT}
+.    if defined(${comp}${_KDE_VERSION}_LIB)
 ${comp}_LIB=		${${comp}${_KDE_VERSION}_LIB}
+.    else
+.      if defined(${comp}${_KDE_VERSION}_PATH})
+${comp}_PATH=		${${comp}${_KDE_VERSION}_LIB}
+.      endif
+# If neither is defined, this gets caught below when checking components
+.    endif
 . endfor
 #===============================================================================
 
