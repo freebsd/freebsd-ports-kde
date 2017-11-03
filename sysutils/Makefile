@@ -352,6 +352,7 @@
     SUBDIR += fusefs-curlftpfs
     SUBDIR += fusefs-encfs
     SUBDIR += fusefs-exfat
+    SUBDIR += fusefs-ext2
     SUBDIR += fusefs-ext4fuse
     SUBDIR += fusefs-funionfs
     SUBDIR += fusefs-fusepak
@@ -910,6 +911,7 @@
     SUBDIR += py-execnet
     SUBDIR += py-ezjailremote
     SUBDIR += py-filelike
+    SUBDIR += py-filelock
     SUBDIR += py-freenas.cli
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
@@ -1126,6 +1128,7 @@
     SUBDIR += sloth
     SUBDIR += slst
     SUBDIR += slurm-wlm
+    SUBDIR += smart
     SUBDIR += smartmontools
     SUBDIR += smenu
     SUBDIR += smp_utils

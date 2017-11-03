@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	renpy
-PORTVERSION?=	6.99.12.4
+PORTVERSION?=	6.99.13
 DISTVERSIONSUFFIX=-sdk
-PORTREVISION?=	3
+PORTREVISION?=	0
 CATEGORIES=	devel games
 MASTER_SITES=	https://www.renpy.org/dl/${PORTVERSION}/
 
@@ -36,6 +36,11 @@ USE_SDL?=	sdl2
 EXCLUDE=	gen 'module/*.py[co]' 'renpy/*.py[co]'
 EXTRACT_AFTER_ARGS=${EXCLUDE:S,^,--exclude ,}
 SHEBANG_FILES=	renpy.py launcher/game/tkaskdir.py
+.ifndef PKGNAMESUFFIX
+python3_CMD?=	${PYTHON_CMD}
+SHEBANG_LANG=	python3
+SHEBANG_FILES+=	tutorial/recrop.py
+.endif
 TARGET_ORDER_OVERRIDE=610:fix-shebang
 BUILD_WRKSRC=	${WRKSRC}/module
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
@@ -58,6 +63,9 @@ DIST_DESC=	Distribution runtimes for Windows, OS X, Linux
 DIST_VARS=	LICENSE+="ART20 PSFL" \
 		PORTDATA+="lib renpy.app renpy.exe renpy.sh"
 EXAMPLES_VARS=	PORTDATA+="the_question tutorial"
+.ifndef PKGNAMESUFFIX
+EXAMPLES_VARS+=	PORTDATA+="oldtutorial"
+.endif
 TKINTER_DESC=	Install Tkinter to allow choosing Projects Directory
 TKINTER_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}tkinter>0:x11-toolkits/py-tkinter
 

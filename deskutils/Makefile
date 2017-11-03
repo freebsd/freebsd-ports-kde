@@ -99,6 +99,7 @@
     SUBDIR += gourmet
     SUBDIR += grantlee-editor
     SUBDIR += grantleetheme
+    SUBDIR += gpicker
     SUBDIR += griffith
     SUBDIR += growl-for-linux
     SUBDIR += gruler
