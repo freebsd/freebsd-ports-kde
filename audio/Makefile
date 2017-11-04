@@ -706,6 +706,7 @@
     SUBDIR += rosegarden
     SUBDIR += rplay
     SUBDIR += rsynth
+    SUBDIR += rtaudio
     SUBDIR += rtmidi
     SUBDIR += rubberband
     SUBDIR += ruby-smf
