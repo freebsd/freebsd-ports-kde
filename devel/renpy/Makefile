@@ -3,7 +3,7 @@
 PORTNAME=	renpy
 PORTVERSION?=	6.99.13
 DISTVERSIONSUFFIX=-sdk
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel games
 MASTER_SITES=	https://www.renpy.org/dl/${PORTVERSION}/
 
@@ -46,6 +46,9 @@ BUILD_WRKSRC=	${WRKSRC}/module
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 MAKE_ENV+=	RENPY_DEPS_INSTALL="${LOCALBASE}"
 PORTDATA=	launcher renpy renpy.py templates
+.ifndef PKGNAMESUFFIX
+PORTDATA+=	gui
+.endif
 PORTDOCS=	*
 PLIST_FILES=	bin/${PORTNAME}
 
@@ -96,8 +99,9 @@ post-build:
 
 add-plist-post: add-empty-dirs
 add-empty-dirs:
-# Keep images directory in templates, see renpy@d81ea29
-	${FIND} ${WRKSRC}/templates -type d ! -name "saves" -empty | \
+# Keep images directory in gui and templates, see renpy@d81ea29
+	${FIND} ${WRKSRC} -type d -empty \
+		! \( -name "saves" -or -name "pysdlsound" \) | \
 		${SED} 's,^${WRKSRC},@dir ${DATADIR},' >>${TMPPLIST}
 
 post-install:

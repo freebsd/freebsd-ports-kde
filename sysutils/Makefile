@@ -807,6 +807,7 @@
     SUBDIR += pax-utils
     SUBDIR += pbi-manager
     SUBDIR += pbimaker
+    SUBDIR += pc-networkmanager
     SUBDIR += pcapfix
     SUBDIR += pcbsd-appweb
     SUBDIR += pcbsd-libsh
@@ -941,6 +942,7 @@
     SUBDIR += py-scriptine
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
+    SUBDIR += py-superlance
     SUBDIR += py-supervisor
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
@@ -956,6 +958,7 @@
     SUBDIR += qjail4
     SUBDIR += qlogtools
     SUBDIR += qpxtool
+    SUBDIR += qsudo
     SUBDIR += qsynergy
     SUBDIR += qt5-qtdiag
     SUBDIR += qt5-qtpaths
@@ -1215,6 +1218,7 @@
     SUBDIR += tty-clock
     SUBDIR += ttyd
     SUBDIR += ttyload
+    SUBDIR += trueos-libqt5
     SUBDIR += tuptime
     SUBDIR += tw_cli
     SUBDIR += tzdialog
