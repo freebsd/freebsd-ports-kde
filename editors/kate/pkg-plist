@@ -556,6 +556,8 @@ share/locale/id/LC_MESSAGES/katekonsoleplugin.mo
 share/locale/id/LC_MESSAGES/kateopenheader.mo
 share/locale/id/LC_MESSAGES/kateproject.mo
 share/locale/id/LC_MESSAGES/katesearch.mo
+share/locale/id/LC_MESSAGES/katesnippetsplugin.mo
+share/locale/id/LC_MESSAGES/katesql.mo
 share/locale/id/LC_MESSAGES/katesymbolviewer.mo
 share/locale/id/LC_MESSAGES/kwrite.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.katesessions.mo

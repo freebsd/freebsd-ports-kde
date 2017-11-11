@@ -3,7 +3,6 @@
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
-PORTREVISION=	5
 CATEGORIES=	x11 kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -80,8 +79,6 @@ AVAHI_LIB_DEPENDS=	libavahi-core.so:net/avahi-app
 UPNP_DESC=	UPnP backend for Solid (WARNING: Unstable)
 UPNP_LIB_DEPENDS=	libHUpnp.so:net/hupnp
 UPNP_CMAKE_ON=	-DHUPNP_ENABLED:BOOL=On
-
-KDE_APPLICATIONS_VERSION=	16.12.3
 
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},g' \

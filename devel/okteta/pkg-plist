@@ -675,8 +675,10 @@ share/locale/hu/LC_MESSAGES/liboktetagui.mo
 share/locale/hu/LC_MESSAGES/liboktetakasten.mo
 share/locale/hu/LC_MESSAGES/okteta.mo
 share/locale/hu/LC_MESSAGES/oktetapart.mo
+share/locale/id/LC_MESSAGES/libkasten.mo
 share/locale/id/LC_MESSAGES/liboktetacore.mo
 share/locale/id/LC_MESSAGES/okteta.mo
+share/locale/id/LC_MESSAGES/liboktetagui.mo
 share/locale/id/LC_MESSAGES/oktetapart.mo
 share/locale/is/LC_MESSAGES/libkasten.mo
 share/locale/is/LC_MESSAGES/liboktetacore.mo
