@@ -722,6 +722,7 @@ share/locale/ca/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/ca/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/ca/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/ca/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/ca/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/ca/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/ca/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/ca/LC_MESSAGES/plasma_engine_network.mo
@@ -790,6 +791,7 @@ share/locale/ca@valencia/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/ca@valencia/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_engine_network.mo
@@ -953,10 +955,12 @@ share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.diskactiv
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.diskusage.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.memory.mo
 share/locale/da/LC_MESSAGES/plasma_applet_org.kde.plasma.systemmonitor.net.mo
+share/locale/da/LC_MESSAGES/plasma_containmentactions_applauncher.mo
 share/locale/da/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/da/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/da/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/da/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/da/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/da/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/da/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/da/LC_MESSAGES/plasma_engine_network.mo
@@ -1264,6 +1268,7 @@ share/locale/es/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/es/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/es/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/es/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/es/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/es/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/es/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/es/LC_MESSAGES/plasma_engine_network.mo
@@ -1372,10 +1377,16 @@ share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.image.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.analogclock.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.appmenu.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.battery.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.calendar.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.clipboard.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.devicenotifier.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.digitalclock.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.icon.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.lock_logout.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.panelspacer.mo
+share/locale/eu/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
 share/locale/eu/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/eu/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/eu/LC_MESSAGES/plasma_engine_applicationjobs.mo
@@ -2882,6 +2893,7 @@ share/locale/nl/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/nl/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/nl/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/nl/LC_MESSAGES/plasma_engine_network.mo
@@ -3179,6 +3191,7 @@ share/locale/pt/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/pt/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/pt/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/pt/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/pt/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/pt/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/pt/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/pt/LC_MESSAGES/plasma_engine_network.mo
@@ -3247,6 +3260,7 @@ share/locale/pt_BR/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/pt_BR/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_engine_network.mo
@@ -3487,6 +3501,7 @@ share/locale/sk/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/sk/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sk/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sk/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sk/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sk/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sk/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sk/LC_MESSAGES/plasma_engine_network.mo
@@ -3654,6 +3669,7 @@ share/locale/sr/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/sr/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sr/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sr/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sr/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sr/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sr/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sr/LC_MESSAGES/plasma_engine_network.mo
@@ -3722,6 +3738,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sr@ijekavian/LC_MESSAGES/plasma_engine_network.mo
@@ -3790,6 +3807,7 @@ share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_containmentactions_contextmenu
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_engine_network.mo
@@ -3858,6 +3876,7 @@ share/locale/sr@latin/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sr@latin/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sr@latin/LC_MESSAGES/plasma_engine_network.mo
@@ -3926,6 +3945,7 @@ share/locale/sv/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/sv/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/sv/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/sv/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/sv/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/sv/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/sv/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/sv/LC_MESSAGES/plasma_engine_network.mo
@@ -4197,6 +4217,7 @@ share/locale/uk/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/uk/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/uk/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/uk/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/uk/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/uk/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/uk/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/uk/LC_MESSAGES/plasma_engine_network.mo
