@@ -325,7 +325,6 @@ math/rkward
 math/rocs
 math/rocs-kde4
 misc/artikulate
-misc/artikulate-kde4
 misc/kde-thumbnailer-chm
 misc/kde-thumbnailer-epub
 misc/kde-thumbnailer-fb2
@@ -437,7 +436,6 @@ net/kldap
 net/kmailtransport
 net/kmbox
 net/kmime
-net/knemo-kde4
 net/kontactinterface
 net/kpimtextedit
 net/krdc
