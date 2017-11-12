@@ -14,7 +14,6 @@
     SUBDIR += asis
     SUBDIR += asn1c
     SUBDIR += atlast
-    SUBDIR += ats
     SUBDIR += awka
     SUBDIR += bas2tap
     SUBDIR += basic256
@@ -85,7 +84,6 @@
     SUBDIR += fpc-rtl-extra
     SUBDIR += fpc-rtl-objpas
     SUBDIR += fpc-rtl-unicode
-    SUBDIR += fpc-tcl
     SUBDIR += fpc-units
     SUBDIR += fpc-utils
     SUBDIR += fsharp
@@ -99,8 +97,6 @@
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
-    SUBDIR += gcc5-aux
-    SUBDIR += gcc5-devel
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc6-devel

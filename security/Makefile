@@ -48,6 +48,7 @@
     SUBDIR += blindelephant
     SUBDIR += boringssl
     SUBDIR += botan110
+    SUBDIR += botan2
     SUBDIR += bro
     SUBDIR += broccoli
     SUBDIR += bruteblock
@@ -419,6 +420,7 @@
     SUBDIR += nmap
     SUBDIR += nss
     SUBDIR += nss_compat_ossl
+    SUBDIR += nyx
     SUBDIR += oath-toolkit
     SUBDIR += obfsclient
     SUBDIR += obfsproxy
@@ -855,6 +857,7 @@
     SUBDIR += pwauth
     SUBDIR += pwman
     SUBDIR += pwman3
+    SUBDIR += pwned-check
     SUBDIR += pxytest
     SUBDIR += py-AccessControl
     SUBDIR += py-PF
@@ -869,7 +872,7 @@
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
-    SUBDIR += py-btchip
+    SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
     SUBDIR += py-certifi
@@ -973,7 +976,6 @@
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-vulndb
-    SUBDIR += py-xmlsec
     SUBDIR += py-yara
     SUBDIR += py-yubioath-desktop
     SUBDIR += py-zope.app.authentication
@@ -996,6 +998,8 @@
     SUBDIR += py3-ecdsa
     SUBDIR += py3-libnacl
     SUBDIR += py3-openssl
+    SUBDIR += py3-pbkdf2
+    SUBDIR += py3-pyaes
     SUBDIR += py3-pycrypto
     SUBDIR += qtkeychain-qt4
     SUBDIR += qtkeychain-qt5
@@ -1120,7 +1124,6 @@
     SUBDIR += rubygem-webpush
     SUBDIR += s2n
     SUBDIR += safesh
-    SUBDIR += samba-virusfilter
     SUBDIR += samhain
     SUBDIR += samhain-client
     SUBDIR += samhain-server
@@ -1212,6 +1215,7 @@
     SUBDIR += tcpcrypt
     SUBDIR += testssl.sh
     SUBDIR += tinc
+    SUBDIR += tinc-devel
     SUBDIR += tinyca
     SUBDIR += titus
     SUBDIR += tls-check

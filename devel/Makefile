@@ -106,6 +106,7 @@
     SUBDIR += antlr4
     SUBDIR += apache-ant
     SUBDIR += apache-rat
+    SUBDIR += aphpunit
     SUBDIR += api-sanity-autotest
     SUBDIR += apiextractor
     SUBDIR += appstream-glib
@@ -295,7 +296,6 @@
     SUBDIR += cl-alexandria-sbcl
     SUBDIR += cl-asdf
     SUBDIR += cl-cffi
-    SUBDIR += cl-cffi-sbcl
     SUBDIR += cl-infix
     SUBDIR += cl-infix-sbcl
     SUBDIR += cl-port
@@ -329,6 +329,7 @@
     SUBDIR += cobf
     SUBDIR += coccinelle
     SUBDIR += codeblocks
+    SUBDIR += codeblocks-devel
     SUBDIR += codequery
     SUBDIR += codesearch-py
     SUBDIR += codeville
@@ -473,7 +474,6 @@
     SUBDIR += dulwich
     SUBDIR += duplo
     SUBDIR += dwarfdump
-    SUBDIR += dwarves
     SUBDIR += dxa65
     SUBDIR += dyncall
     SUBDIR += e00compr
@@ -498,6 +498,7 @@
     SUBDIR += elfutils
     SUBDIR += elixir-apex
     SUBDIR += elixir-bson
+    SUBDIR += elixir-cachex
     SUBDIR += elixir-calendar
     SUBDIR += elixir-combine
     SUBDIR += elixir-conform
@@ -507,8 +508,10 @@
     SUBDIR += elixir-crontab
     SUBDIR += elixir-csv
     SUBDIR += elixir-decimal
+    SUBDIR += elixir-deppie
     SUBDIR += elixir-dialyze
     SUBDIR += elixir-estree
+    SUBDIR += elixir-eternal
     SUBDIR += elixir-exactor
     SUBDIR += elixir-excoveralls
     SUBDIR += elixir-exjsx
@@ -539,6 +542,7 @@
     SUBDIR += elixir-swarm
     SUBDIR += elixir-timex
     SUBDIR += elixir-tirexs
+    SUBDIR += elixir-trailing_format_plug
     SUBDIR += elixir-tzdata
     SUBDIR += embb
     SUBDIR += epl.el
@@ -886,6 +890,7 @@
     SUBDIR += hapy
     SUBDIR += hcs12mem
     SUBDIR += hexcompare
+    SUBDIR += hexd
     SUBDIR += hg-git
     SUBDIR += hgreviewboard
     SUBDIR += hgsvn
@@ -1522,6 +1527,7 @@
     SUBDIR += libsigrokdecode
     SUBDIR += libsigscan
     SUBDIR += libsigsegv
+    SUBDIR += libsimdpp
     SUBDIR += libslang2
     SUBDIR += libsmdev
     SUBDIR += libsmpp34
@@ -1590,7 +1596,6 @@
     SUBDIR += linux-c6-libsigc++20
     SUBDIR += linux-c6-libsoup
     SUBDIR += linux-c6-libthai
-    SUBDIR += linux-c6-ncurses-base
     SUBDIR += linux-c6-nspr
     SUBDIR += linux-c6-qt47
     SUBDIR += linux-c6-sdl12
@@ -1603,7 +1608,6 @@
     SUBDIR += linux-c7-libpciaccess
     SUBDIR += linux-c7-libsigc++20
     SUBDIR += linux-c7-libthai
-    SUBDIR += linux-c7-ncurses-base
     SUBDIR += linux-c7-nspr
     SUBDIR += linux-c7-qt
     SUBDIR += linux-c7-sdl12
@@ -1613,6 +1617,7 @@
     SUBDIR += lion
     SUBDIR += listserialc
     SUBDIR += liteide
+    SUBDIR += llbuild
     SUBDIR += lldb38
     SUBDIR += llnextgen
     SUBDIR += llvm-cheri
@@ -2059,6 +2064,7 @@
     SUBDIR += p5-Class-Factory
     SUBDIR += p5-Class-Factory-Util
     SUBDIR += p5-Class-Field
+    SUBDIR += p5-Class-Fields
     SUBDIR += p5-Class-Forward
     SUBDIR += p5-Class-Generate
     SUBDIR += p5-Class-Gomor
@@ -2455,13 +2461,13 @@
     SUBDIR += p5-Exception-Class-TryCatch
     SUBDIR += p5-Exception-Handler
     SUBDIR += p5-Expect-Simple
+    SUBDIR += p5-ExportTo
     SUBDIR += p5-Exporter
     SUBDIR += p5-Exporter-Declare
     SUBDIR += p5-Exporter-Easy
     SUBDIR += p5-Exporter-Lite
     SUBDIR += p5-Exporter-Tidy
     SUBDIR += p5-Exporter-Tiny
-    SUBDIR += p5-ExportTo
     SUBDIR += p5-ExtUtils-AutoInstall
     SUBDIR += p5-ExtUtils-CBuilder
     SUBDIR += p5-ExtUtils-CChecker
@@ -2781,7 +2787,6 @@
     SUBDIR += p5-Log-Any-Adapter-Callback
     SUBDIR += p5-Log-Any-Adapter-Dispatch
     SUBDIR += p5-Log-Any-Adapter-Log4perl
-    SUBDIR += p5-Log-Any-Adapter-Syslog
     SUBDIR += p5-Log-Any-App
     SUBDIR += p5-Log-Any-IfLOG
     SUBDIR += p5-Log-Contextual
@@ -3237,6 +3242,7 @@
     SUBDIR += p5-SDL
     SUBDIR += p5-SNMP-Persist
     SUBDIR += p5-SOAP-WSDL
+    SUBDIR += p5-SPOPS
     SUBDIR += p5-SSN-Validate
     SUBDIR += p5-SUPER
     SUBDIR += p5-SVN-ACL
@@ -3656,7 +3662,6 @@
     SUBDIR += p5-UNIVERSAL-ref
     SUBDIR += p5-UNIVERSAL-require
     SUBDIR += p5-UNIVERSAL-which
-    SUBDIR += p5-Util-Any
     SUBDIR += p5-UUID
     SUBDIR += p5-UUID-Random
     SUBDIR += p5-UUID-Random-Patch-UseMRS
@@ -3666,6 +3671,7 @@
     SUBDIR += p5-Unix-Statgrab
     SUBDIR += p5-Unix-Uptime
     SUBDIR += p5-User-Identity
+    SUBDIR += p5-Util-Any
     SUBDIR += p5-VCP-Dest-svk
     SUBDIR += p5-VCP-Source-cvsbk
     SUBDIR += p5-VCP-autrijus
@@ -3883,7 +3889,6 @@
     SUBDIR += pear-PHP_Timer
     SUBDIR += pear-PHP_TokenStream
     SUBDIR += pear-PHP_UML
-    SUBDIR += pear-PPW
     SUBDIR += pear-Pager
     SUBDIR += pear-PhpDocumentor
     SUBDIR += pear-Pirum
@@ -4061,7 +4066,6 @@
     SUBDIR += pig
     SUBDIR += pijul
     SUBDIR += piklab
-    SUBDIR += pinba_engine
     SUBDIR += pipestatus
     SUBDIR += pire
     SUBDIR += pit
@@ -4271,6 +4275,7 @@
     SUBDIR += py-capstone
     SUBDIR += py-castellan
     SUBDIR += py-cclib
+    SUBDIR += py-cdg
     SUBDIR += py-celery
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
@@ -4369,7 +4374,6 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-evdev
-    SUBDIR += py-event
     SUBDIR += py-exam
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4381,6 +4385,7 @@
     SUBDIR += py-fasteners
     SUBDIR += py-fastentrypoints
     SUBDIR += py-fastimport
+    SUBDIR += py-fastnumbers
     SUBDIR += py-filemagic
     SUBDIR += py-fileutils
     SUBDIR += py-five.customerize
@@ -4442,6 +4447,7 @@
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
     SUBDIR += py-grpcio
+    SUBDIR += py-grpcio-tools
     SUBDIR += py-gtfslib
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
@@ -4497,6 +4503,7 @@
     SUBDIR += py-jsonpointer
     SUBDIR += py-jsonref
     SUBDIR += py-jsonrpclib
+    SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
@@ -4665,6 +4672,7 @@
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
+    SUBDIR += py-pybloomfiltermmap
     SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
     SUBDIR += py-pycallgraph
@@ -5090,6 +5098,7 @@
     SUBDIR += py3-ply
     SUBDIR += py3-pretend
     SUBDIR += py3-prompt_toolkit
+    SUBDIR += py3-protobuf
     SUBDIR += py3-py
     SUBDIR += py3-pyasn1
     SUBDIR += py3-pycodestyle
@@ -5129,6 +5138,7 @@
     SUBDIR += py35-setuptools
     SUBDIR += py36-setuptools
     SUBDIR += py_static_check
+    SUBDIR += pybind11
     SUBDIR += pybugz
     SUBDIR += pycharm-ce
     SUBDIR += pychecker
@@ -5326,8 +5336,8 @@
     SUBDIR += rubygem-blockenspiel
     SUBDIR += rubygem-bones
     SUBDIR += rubygem-bootsnap
-    SUBDIR += rubygem-bosh-template
     SUBDIR += rubygem-bootstrap_form
+    SUBDIR += rubygem-bosh-template
     SUBDIR += rubygem-bosh_common
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-buftok
@@ -5609,6 +5619,7 @@
     SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-notify
     SUBDIR += rubygem-nprogress-rails
+    SUBDIR += rubygem-nsa-rails5
     SUBDIR += rubygem-numerizer
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
@@ -5789,6 +5800,7 @@
     SUBDIR += rubygem-state_machines
     SUBDIR += rubygem-statsd
     SUBDIR += rubygem-statsd-instrument
+    SUBDIR += rubygem-statsd-ruby
     SUBDIR += rubygem-stella
     SUBDIR += rubygem-stemmer
     SUBDIR += rubygem-stomp
@@ -5796,6 +5808,7 @@
     SUBDIR += rubygem-stream
     SUBDIR += rubygem-streetaddress
     SUBDIR += rubygem-stringex
+    SUBDIR += rubygem-strong_migrations
     SUBDIR += rubygem-structured_warnings
     SUBDIR += rubygem-stud
     SUBDIR += rubygem-subexec

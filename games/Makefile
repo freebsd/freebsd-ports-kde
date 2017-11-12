@@ -576,7 +576,6 @@
     SUBDIR += lmarbles
     SUBDIR += lmpc
     SUBDIR += lolcat
-    SUBDIR += lordsawar
     SUBDIR += lpairs
     SUBDIR += lskat
     SUBDIR += ltris
@@ -680,6 +679,7 @@
     SUBDIR += oneko-sakura
     SUBDIR += oolite
     SUBDIR += oonsoo
+    SUBDIR += open-adventure
     SUBDIR += openalchemist
     SUBDIR += openarena
     SUBDIR += openarena-data
@@ -1002,6 +1002,7 @@
     SUBDIR += tt
     SUBDIR += ttraffic
     SUBDIR += ttt
+    SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxfighter
     SUBDIR += tuxkart

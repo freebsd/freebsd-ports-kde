@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	vapoursynth
-PORTVERSION=	R39
-PORTREVISION=	1
+PORTVERSION=	R40
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org

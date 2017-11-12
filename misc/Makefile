@@ -39,6 +39,7 @@
     SUBDIR += chord2html
     SUBDIR += cinnamon-translations
     SUBDIR += clex
+    SUBDIR += cldr-emoji-annotation
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += cmatrix
@@ -475,6 +476,7 @@
     SUBDIR += umodunpack
     SUBDIR += unclutter
     SUBDIR += unclutter-xfixes
+    SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += us-zipcodes
     SUBDIR += usbids
