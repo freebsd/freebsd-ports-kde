@@ -28,28 +28,23 @@ CONFIGURE_ARGS=	-no-accessibility -no-openssl -no-gui -no-cups \
 		-no-evdev -no-xkbcommon \
 		-no-freetype -no-gif -no-harfbuzz -no-libjpeg \
 		-no-libpng -no-widgets
-# Features yet to be removed from qconfig.pri.
-TBR_CONFIG=	concurrent|inotify|xlib
 QMAKESPEC=	freebsd-${QMAKE_COMPILER}
 INSTALL_TARGET=	sub-qmake-qmake-aux-pro-install_subtargets install_mkspecs
 
 BUILD_WRKSRC=	${WRKSRC}/${PORTNAME}
 
 post-patch:
-# Prevent qconfig.pri from being module dependent.
-	@${REINPLACE_CMD} -E -e '/"\$$QT_CONFIG +(${TBR_CONFIG})"/ d' \
-		${WRKSRC}/configure
 # Clean up files created by patching
 	@${RM} ${WRKSRC}/mkspecs/*/*.orig
 
 post-build:
 # Complete configure stage to generate *.pri files.
-	@cd ${WRKSRC} && \
+	cd ${WRKSRC} && \
 		${SETENV} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
-		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
+		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" BUILD_QMAKE=1 \
 		${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}
 # Cleanup qmodule.pri to make it module agnostic.
-	@${REINPLACE_CMD} -En -e '/^(CONFIG|QT_BUILD_PARTS|.*_DIR) / p' \
-		${WRKSRC}/mkspecs/qmodule.pri
+#	@${REINPLACE_CMD} -En -e '/^(CONFIG|QT_BUILD_PARTS|.*_DIR) / p' \
+#		${WRKSRC}/mkspecs/qmodule.pri
 
 .include <bsd.port.mk>
