@@ -8365,7 +8365,6 @@ devel/ifd-test||2016-07-04|Has expired: Broken for more than 6 months
 devel/eric4||2016-07-04|Has expired: Broken for more than 6 months
 devel/uclmmbase||2016-07-04|Has expired: Broken for more than 6 months
 devel/obfuscatejs||2016-07-04|Has expired: Broken for more than 6 months
-devel/oniguruma||2016-07-04|Has expired: Broken for more than 6 months
 devel/libbnr||2016-07-04|Has expired: Broken for more than 6 months
 devel/c4||2016-07-04|Has expired: Broken for more than 6 months
 devel/memcheck||2016-07-04|Has expired: Broken for more than 6 months
@@ -9600,6 +9599,32 @@ databases/puppetdb3|databases/puppetdb4|2017-11-03|Has expired: End of life upst
 net/libsocketcpp||2017-11-06|Has expired: Uses gets(3)
 security/py-btchip|security/py-btchip-python|2017-11-07|Rename to reflect official Python modules naming scheme
 devel/pear-PPW||2017-11-09|Has expired: Project is EoL
+lang/ats||2017-11-11|Has expired: Unmaintained, outdated, needs lots of refreshment
+games/lordsawar||2017-11-11|Has expired: Broken for more than 6 months
+databases/elixir-ecto_migrate||2017-11-11|Has expired: Broken for more than 6 months
+audio/gspeakers||2017-11-11|Has expired: Broken for more than 6 months
+net/p5-Filesys-SmbClient||2017-11-11|Has expired: Broken for more than 6 months
+audio/tclmidi||2017-11-11|Has expired: Broken for more than 6 months
+security/py-xmlsec||2017-11-11|Has expired: Broken for more than 6 months
+security/samba-virusfilter||2017-11-11|Has expired: Broken for more than 6 months
+textproc/ocaml-pxp||2017-11-11|Has expired: Broken for more than 6 months
+audio/sooperlooper||2017-11-11|Has expired: Broken for more than 6 months
+devel/dwarves||2017-11-11|Has expired: Broken for more than 6 months
+devel/cl-cffi-sbcl||2017-11-11|Has expired: Broken for more than 6 months
+devel/pinba_engine||2017-11-11|Has expired: Broken for more than 6 months
+devel/py-event||2017-11-11|Has expired: Broken for more than 6 months
+databases/glom||2017-11-11|Has expired: Broken for more than 6 months
+math/bargraph||2017-11-11|Has expired: Unfetchable for more than six months (google code has gone away)
+devel/oniguruma4|devel/oniguruma6|2017-11-12|Upstream no longer maintained, superseded by devel/oniguruma6
+devel/oniguruma5|devel/oniguruma6|2017-11-12|Upstream no longer maintained, superseded by devel/oniguruma6
+devel/oniguruma6|devel/oniguruma|2017-11-12|Rename devel/oniguruma6 to oniguruma (no other versions in ports tree)
+multimedia/plexhometheater||2017-11-12|Has expired: Broken for more than 6 months
+databases/cassandra2||2017-11-12|Has expired: Broken for more than 6 months
+graphics/geos35|graphics/geos|2017-11-12|Has expired: legacy version, no longer needed
+astro/gmapcatcher||2017-11-12|Has expired: Unfetchable for more than six months (google code has gone away)
+audio/smasher||2017-11-12|Has expired: Does not build with modern csound
+audio/csound|audio/csound6|2017-11-12|Has expired: Not supported upstream anymore, use csound6
+french/eficas||2017-11-14|Removed with Code_Aster 13.4.0, should be replaced by aster-study in cad/salome
 accessibility/kdeaccessibility4|accessibility/kdeaccessibility-kde4|2017-11-11|Apply consistent name to KDE4
 audio/kio-audiocd|audio/kio-audiocd-kde4|2017-11-11|Apply consistent name to KDE4
 audio/simon|audio/simon-kde4|2017-11-11|Apply consistent name to KDE4
