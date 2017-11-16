@@ -33,9 +33,23 @@ QT_CONFIG=	glib icu
 
 .include <bsd.port.pre.mk>
 
+post-configure:
+.for d in src/tools/bootstrap src/tools/qfloat16-tables src/corelib
+	${MKDIR} ${WRKSRC}/${d}
+	cd ${WRKSRC}/${d} && ${SETENV} ${QMAKE_ENV} ${_QMAKE} ${QMAKE_ARGS} ${WRKSRC}/${d}
+.endfor
+
+pre-build:
+.for d in src/tools/bootstrap src/tools/qfloat16-tables src/corelib
+	${MKDIR} ${WRKSRC}/${d}
+	cd ${WRKSRC}/${d} && \
+		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
+		${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
+.endfor
+
 post-install:
 # Allow qconfig.h to be customized by single ports.
-	${AWK} 'BEGIN{print "#include <QtCore/qconfig-modules.h>"}{print}' \
+	${AWK} 'END{print "#include <QtCore/qconfig-modules.h>"}{print}' \
 		${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h > ${WRKDIR}/qconfig.h
 	${MV} ${WRKDIR}/qconfig.h ${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h
 

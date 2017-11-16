@@ -1,0 +1,10 @@
+--- configure.json
++++ configure.json
+@@ -1,6 +1,5 @@
+ {
+     "subconfigs": [
+-        "src/qml",
+-        "src/quick"
++        "src/qml"
+     ]
+ }
