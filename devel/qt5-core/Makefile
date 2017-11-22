@@ -21,7 +21,6 @@ HAS_CONFIGURE=	yes
 # that need to be detected).
 CONFIGURE_ARGS=	-no-gui -no-widgets  \
 		-no-iconv -no-dbus \
-		-no-feature-concurrent \
 		-no-libudev
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
