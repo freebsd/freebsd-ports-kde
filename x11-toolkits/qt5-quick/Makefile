@@ -16,6 +16,8 @@ QT_DIST=	declarative
 USES=		python:build qmake
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
+CONFLICTS=	qt5-declarative-render2d-*
+
 QT_DEFINES=	ACCESSIBILITY
 QT_CONFIG=	accessibility accessibility-atspi-bridge
 
