@@ -313,7 +313,7 @@ _USE_QT4_ONLY=	accessible assistant-adp assistantclient clucene codecs-cn codecs
 				qtestlib qvfb rcc uic uic3 xmlpatterns-tool
 
 _USE_QT5_ONLY=	3d buildtools canvas3d charts concurrent connectivity \
-				core datavis3d declarative-render2d diag examples gamepad \
+				core datavis3d diag examples gamepad \
 				graphicaleffects location paths phonon4 plugininfo printsupport \
 				qdbus qdoc qdoc-data qev qml quick quickcontrols \
 				quickcontrols2 scxml sensors serialbus serialport \
@@ -379,9 +379,6 @@ dbus_LIB=			libQt${_QT_LIBVER}DBus.so
 
 declarative_PORT=	x11-toolkits/${_QT_RELNAME}-declarative
 declarative_LIB=	libQt${_QT_LIBVER}Declarative.so
-
-declarative-render2d_PORT=	x11-toolkits/${_QT_RELNAME}-declarative-render2d
-declarative-render2d_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/scenegraph/libsoftwarecontext.so
 
 demo_PORT=			misc/${_QT_RELNAME}-qtdemo
 demo_PATH=			${LOCALBASE}/${QT_BINDIR_REL}/qtdemo
