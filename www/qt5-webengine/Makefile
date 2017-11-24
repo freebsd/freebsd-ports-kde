@@ -16,7 +16,6 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -70,7 +69,8 @@ QT_DIST=	${PORTNAME}
 
 QMAKE_ARGS=	WEBENGINE_CONFIG+=use_nss \
 		WEBENGINE_CONFIG+=use_proprietary_codecs \
-		WEBENGINE_CONFIG+=use_system_libevent
+		WEBENGINE_CONFIG+=use_system_libevent \
+		WEBENGINE_CONFIG+=use_system_snappy
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
@@ -90,23 +90,14 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}" ${CONFIGURE_ENV}
 post-extract:
 # Install FreeBSD's freebsd.pri file.
 	${CP} ${FILESDIR}/freebsd.pri ${WRKSRC}/src/core/config/freebsd.pri
-# Unbundle libusb.
-	${RM} -r ${WRKSRC}/src/3rdparty/chromium/third_party/libusb/src
-	${CP} ${WRKSRC}/src/3rdparty/chromium/build/linux/unbundle/libusb.gyp \
-		${WRKSRC}/src/3rdparty/chromium/third_party/libusb/libusb.gyp
-# Unbundle libxml.
-	${CP} ${WRKSRC}/src/3rdparty/chromium/build/linux/unbundle/libxml.gyp \
-		${WRKSRC}/src/3rdparty/chromium/third_party/libxml/libxml.gyp
-
-post-patch:
-# Too many occurrences to keep in a patch in files/.
-	${REINPLACE_CMD} -e 's,OS == "linux",(OS == "linux" or OS == "freebsd"),g' \
-		${WRKSRC}/src/3rdparty/chromium/third_party/ffmpeg/ffmpeg_generated.gypi
 
 pre-configure:
-# Link in ${PYTHON_CMD} to ${CONFIGURE_WRKSRC}/bin -- the scripts hardcode 'python' 
+# Link in ${PYTHON_CMD} to ${CONFIGURE_WRKSRC}/bin -- the scripts hardcode 'python'
 # in too many places to reasonably patch. So just link in ${PYTHON_CMD} to work around
 # $LOCALBASE/bin/python being python3 if the default versions is set to 3.x.
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python
+# Unbundle a few dependencies.
+	${PYTHON_CMD} ${WRKSRC}/src/3rdparty/chromium/build/linux/unbundle/replace_gn_files.py \
+		--system-libraries libwebp libxml libxslt yasm
 
 .include <bsd.port.mk>

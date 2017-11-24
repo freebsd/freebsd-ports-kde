@@ -1,0 +1,30 @@
+Include the freebsd.pri file provided by the port, to pass FreeBSD specific
+settings to gyp.
+
+--- mkspecs/features/functions.prf
++++ mkspecs/features/functions.prf
+@@ -15,7 +15,7 @@ defineTest(isQtMinimum) {
+ 
+ defineTest(isPlatformSupported) {
+   QT_FOR_CONFIG += gui-private
+-  linux {
++  unix {
+     !gcc:!clang {
+       skipBuild("Qt WebEngine on Linux requires clang or GCC.")
+       return(false)
+@@ -358,6 +358,7 @@ defineReplace(gnArgs) {
+     }
+     macos: include($$QTWEBENGINE_ROOT/src/core/config/mac_osx.pri)
+     win32: include($$QTWEBENGINE_ROOT/src/core/config/windows.pri)
++    freebsd: include($$QTWEBENGINE_ROOT/src/core/config/freebsd.pri)
+     isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
+     return($$gn_args)
+ }
+@@ -377,6 +378,7 @@ defineReplace(gnOS) {
+     macos: return(mac)
+     win32: return(win)
+     linux: return(linux)
++    freebsd: return(bsd)
+     error(Unsupported platform)
+     return(unknown)
+ }
