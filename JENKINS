@@ -253,6 +253,7 @@ games/palapeli
 games/palapeli-kde4
 games/picmi
 games/picmi-kde4
+graphics/digikam
 graphics/digikam-kde4
 graphics/gnash
 graphics/gwenview
@@ -273,6 +274,7 @@ graphics/kdegraphics-thumbnailers
 graphics/kdegraphics-thumbnailers-kde4
 graphics/kiconedit-kde4
 graphics/kimagemapeditor
+graphics/kipiplugins
 graphics/kolourpaint
 graphics/kolourpaint-kde4
 graphics/kphotoalbum-kde4
