@@ -2,10 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	exiv2
-PORTVERSION=	0.25
+DISTVERSION=	0.26
+DISTVERSIONSUFFIX=	-trunk
 PORTEPOCH=	1
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.exiv2.org/
+MASTER_SITES=	http://www.exiv2.org/builds/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Exif, IPTC, and XMP metadata manipulation library and tools
@@ -25,5 +26,7 @@ CMAKE_ARGS=	-DEXIV2_ENABLE_VIDEO:BOOL=TRUE \
 PATHFIX_CMAKELISTSTXT=	CMakeChecks.txt
 
 CFLAGS_powerpc64=	-mminimal-toc
+
+WRKSRC=		${WRKDIR}/${PORTNAME}-trunk
 
 .include <bsd.port.mk>
