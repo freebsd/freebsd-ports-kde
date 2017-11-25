@@ -139,6 +139,7 @@
     SUBDIR += devil
     SUBDIR += dia
     SUBDIR += diffpdf
+    SUBDIR += digikam
     SUBDIR += digikam-kde4
     SUBDIR += digikam-kde4-doc
     SUBDIR += digikam-kde4-l10n
@@ -464,6 +465,7 @@
     SUBDIR += kipi-plugin-vkontakte-kde4
     SUBDIR += kipi-plugin-yandexfotki-kde4
     SUBDIR += kipi-plugins-kde4
+    SUBDIR += kipiplugins
     SUBDIR += kix-kmod
     SUBDIR += klatexformula
     SUBDIR += kludge3d
