@@ -9720,3 +9720,20 @@ x11/plasma-scriptengine-ruby|x11/plasma-scriptengine-ruby-kde4|2017-11-11|Apply 
 devel/kdevelop-pg-qt-kde4|devel/kdevelop-kde4-pg-qt|2017-11-11|Apply consistent name to KDE4
 devel/kdevelop-php-kde4|devel/kdevelop-kde4-php|2017-11-11|Apply consistent name to KDE4
 devel/kdevelop-php-docs-kde4|devel/kdevelop-kde4-php-docs|2017-11-11|Apply consistent name to KDE4
+databases/grass6|databases/grass7|2017-11-18|Removed in favor of grass 7
+news/brag||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+textproc/srilm||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+x11-toolkits/tk84|x11-toolkits/tk85|2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+devel/tkinspect||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+games/bogged||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+games/ttraffic||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+games/ifm||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+games/tksol||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+lang/tcl84|lang/tcl85|2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+mail/tkrat2||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+multimedia/dtv||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+net-mgmt/netwag||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+net/hping-devel||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
+www/linux-firefox||2017-11-22|Has expired: Use native www/firefox or www/firefox-esr instead
+www/linux-seamonkey||2017-11-22|Has expired: Use native www/seamonkey instead
+graphics/linux-adobesvg||2017-11-22|Has expired: not supported by linux-firefox 52 or later

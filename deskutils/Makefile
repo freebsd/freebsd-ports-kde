@@ -153,6 +153,7 @@
     SUBDIR += ksshaskpass
     SUBDIR += launchy
     SUBDIR += libkdepim
+    SUBDIR += latte-dock
     SUBDIR += libopensync-plugin-vformat-devel
     SUBDIR += libstreamanalyzer
     SUBDIR += libstreams

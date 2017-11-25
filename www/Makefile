@@ -378,10 +378,8 @@
     SUBDIR += links1
     SUBDIR += linux-c6-qt47-webkit
     SUBDIR += linux-c7-qtwebkit
-    SUBDIR += linux-firefox
     SUBDIR += linux-flashplayer
     SUBDIR += linux-opera
-    SUBDIR += linux-seamonkey
     SUBDIR += lionwiki
     SUBDIR += litmus
     SUBDIR += ljdeps
@@ -541,6 +539,8 @@
     SUBDIR += newsbeuter
     SUBDIR += newsboat
     SUBDIR += nextcloud
+    SUBDIR += nextcloud-calendar
+    SUBDIR += nextcloud-contacts
     SUBDIR += nghttp2
     SUBDIR += nginx
     SUBDIR += nginx-devel
@@ -560,6 +560,9 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-less-plugin-clean-css
+    SUBDIR += npm-node4
+    SUBDIR += npm-node6
+    SUBDIR += npm-node8
     SUBDIR += npm2
     SUBDIR += npm3
     SUBDIR += npm4
@@ -1398,6 +1401,7 @@
     SUBDIR += p5-pQuery
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
+    SUBDIR += palemoon
     SUBDIR += paros
     SUBDIR += payara
     SUBDIR += pear-HTML_AJAX
@@ -1541,6 +1545,7 @@
     SUBDIR += py-boto3
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
+    SUBDIR += py-buku
     SUBDIR += py-cachecontrol
     SUBDIR += py-caldav
     SUBDIR += py-cherrypy
@@ -1899,6 +1904,7 @@
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
+    SUBDIR += qutebrowser
     SUBDIR += radicale
     SUBDIR += red5
     SUBDIR += redaxo
@@ -2032,6 +2038,7 @@
     SUBDIR += rubygem-hurley
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
+    SUBDIR += rubygem-jekyll-sanity
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
@@ -2092,6 +2099,7 @@
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
+    SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
     SUBDIR += rubygem-rack-cache

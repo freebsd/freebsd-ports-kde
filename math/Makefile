@@ -102,6 +102,7 @@
     SUBDIR += algotutor
     SUBDIR += alt-ergo
     SUBDIR += amath
+    SUBDIR += ambit
     SUBDIR += analitza
     SUBDIR += analitza-kde4
     SUBDIR += ann
@@ -167,6 +168,7 @@
     SUBDIR += emc2
     SUBDIR += ent
     SUBDIR += entropy
+    SUBDIR += eprover
     SUBDIR += ess
     SUBDIR += eukleides
     SUBDIR += eval

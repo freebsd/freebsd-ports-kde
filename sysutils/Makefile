@@ -468,6 +468,7 @@
     SUBDIR += hs-ekg-core
     SUBDIR += hs-ekg-json
     SUBDIR += hs-mountpoints
+    SUBDIR += hstr
     SUBDIR += htop
     SUBDIR += httplog
     SUBDIR += hwstat
