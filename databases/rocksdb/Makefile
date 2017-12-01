@@ -4,6 +4,7 @@
 PORTNAME=	rocksdb
 PORTVERSION=	5.8.6
 DISTVERSIONPREFIX=	${PORTNAME}-
+PORTREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER?=	sunpoet@FreeBSD.org
@@ -17,6 +18,7 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 BROKEN_DragonFly=	does not build on DragonFly BSD using GCC with -Werror
 BROKEN_aarch64=	does not build: the clang compiler does not support -march=native
 BROKEN_armv6=	does not build: the clang compiler does not support -march=native
+BROKEN_armv7=	does not build: /nxb-bin/usr/bin/ld: undefined reference to symbol `__gnu_Unwind_Find_exidx@@FBSD_1.4' (try adding -lc)
 BROKEN_powerpc64=	does not build: the clang compiler does not support -march=native
 BROKEN_sparc64=	cannot build: uses unknown compiler flags
 
@@ -33,7 +35,7 @@ CONFIGURE_ARGS=	make_config.mk
 CONFIGURE_ENV=	PORTABLE=0 ROCKSDB_ROOT=${WRKSRC}
 CONFIGURE_SCRIPT=	build_tools/build_detect_platform
 HAS_CONFIGURE=	yes
-MAKE_ENV=	CXX=${CXX} INSTALL_PATH=${STAGEDIR}${PREFIX}
+MAKE_ENV=	CXX=${CXX} INSTALL_PATH=${STAGEDIR}${PREFIX} USE_RTTI=1
 USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 USES=		compiler:c++11-lib gmake localbase:ldflags shebangfix

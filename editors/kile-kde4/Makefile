@@ -11,6 +11,9 @@ PKGNAMESUFFIX=	-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	LaTeX source editor for KDE
 
+LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 RUN_DEPENDS=	identify:graphics/ImageMagick
 
 USES=		cmake gettext-tools kde:4 shared-mime-info tar:bzip2

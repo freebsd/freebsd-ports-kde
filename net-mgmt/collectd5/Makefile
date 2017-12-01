@@ -3,6 +3,7 @@
 
 PORTNAME=	collectd
 PORTVERSION=	5.8.0
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://storage.googleapis.com/collectd-tarballs/
 PKGNAMESUFFIX=	5
@@ -214,9 +215,10 @@ PING_LIB_DEPENDS=		liboping.so:net/liboping
 PING_CONFIGURE_ENABLE=		ping
 PING_CONFIGURE_WITH=		liboping=${LOCALBASE}
 
-PYTHON_USES=			python:2
+PYTHON_USES=			python
 PYTHON_CONFIGURE_ENABLE=	python
 PYTHON_CONFIGURE_WITH=		python=${PYTHON_CMD}
+PYTHON_CONFIGURE_ENV=		PYTHON_CONFIG=${PYTHON_CMD}-config
 
 RABBITMQ_LIB_DEPENDS=		librabbitmq.so:net/rabbitmq-c
 RABBITMQ_CONFIGURE_ENABLE=	rabbitmq

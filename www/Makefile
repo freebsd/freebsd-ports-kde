@@ -103,6 +103,7 @@
     SUBDIR += dalbum
     SUBDIR += davical
     SUBDIR += dddbl
+    SUBDIR += ddgr
     SUBDIR += decss
     SUBDIR += deforaos-surfer
     SUBDIR += demoroniser
@@ -536,7 +537,6 @@
     SUBDIR += netrik
     SUBDIR += netstiff
     SUBDIR += netsurf
-    SUBDIR += newsbeuter
     SUBDIR += newsboat
     SUBDIR += nextcloud
     SUBDIR += nextcloud-calendar
@@ -1389,7 +1389,6 @@
     SUBDIR += p5-WebService-Technorati
     SUBDIR += p5-WebService-YouTube
     SUBDIR += p5-WordPress-XMLRPC
-    SUBDIR += p5-Yahoo-Lifestyle
     SUBDIR += p5-Yahoo-Search
     SUBDIR += p5-ZConf-RSS
     SUBDIR += p5-ZConf-RSS-GUI-GTK
@@ -1557,6 +1556,7 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-ddgr
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1886,9 +1886,6 @@
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
     SUBDIR += py-zope.app.wsgi
-    SUBDIR += py3-cssutils
-    SUBDIR += py3-httplib2
-    SUBDIR += py3-requests
     SUBDIR += pyblosxom
     SUBDIR += pycarddav
     SUBDIR += pydio
@@ -2099,7 +2096,6 @@
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
-    SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
     SUBDIR += rubygem-rack-cache
@@ -2116,6 +2112,7 @@
     SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
+    SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50
@@ -2416,6 +2413,7 @@
     SUBDIR += w3mir
     SUBDIR += waccess
     SUBDIR += wadcomblog
+    SUBDIR += waterfox
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser

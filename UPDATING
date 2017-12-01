@@ -5,6 +5,37 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20171130:
+  AFFECTS: */py*
+  AUTHOR: mat@FreeBSD.org
+
+  Ports using Python via USES=python are now flavored.  All the py3-* ports
+  have been removed and folded into their py-* master ports.
+
+  People using Poudriere 3.2+ and binary packages do not have to do anything.
+
+  For other people, to build the Python 3.6 version of, for example,
+  databases/py-gdbm, you need to run:
+
+    # make FLAVOR=py36 install
+
+20171126:
+  AFFECTS: users of security/p5-openxpki
+  AUTHOR: dbaio@FreeBSD.org
+
+  OpenXPKI has been updated to 1.19.4, some important changes were made, please
+  see the upgrading documentation for more details:
+
+  http://openxpki.readthedocs.io/en/latest/upgrading.html
+
+20171126:
+  AFFECTS: users of mail/sympa
+  AUTHOR: dgeo@centrale-marseille.fr
+
+  Web's static dirs have moved to a single dedicated directory.
+  Users should review webserver's /static configuration (examples in
+  share/examples/sympa).
+
 20171119:
   AFFECTS: users of sysutils/zrepl
   AUTHOR: woodsb02@FreeBSD.org

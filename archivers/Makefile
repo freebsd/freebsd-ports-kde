@@ -189,7 +189,7 @@
     SUBDIR += py-rcssmin
     SUBDIR += py-rjsmin
     SUBDIR += py-warctools
-    SUBDIR += py3-libarchive-c
+    SUBDIR += py-xopen
     SUBDIR += qpress
     SUBDIR += quazip
     SUBDIR += quazip-qt5

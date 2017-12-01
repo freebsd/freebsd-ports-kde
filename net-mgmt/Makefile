@@ -88,8 +88,10 @@
     SUBDIR += icingaweb2-module-businessprocess
     SUBDIR += icingaweb2-module-cube
     SUBDIR += icingaweb2-module-director
+    SUBDIR += icingaweb2-module-elasticsearch
     SUBDIR += icingaweb2-module-generictts
     SUBDIR += icingaweb2-module-grafana
+    SUBDIR += icingaweb2-module-graphite
     SUBDIR += icingaweb2-module-map
     SUBDIR += icingaweb2-module-vsphere
     SUBDIR += icli
@@ -296,6 +298,7 @@
     SUBDIR += prometheus
     SUBDIR += pushgateway
     SUBDIR += py-adal
+    SUBDIR += py-dnsdiag
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
     SUBDIR += py-msrest
@@ -310,7 +313,6 @@
     SUBDIR += py-snmp4-mibs
     SUBDIR += py-snmp_passpersist
     SUBDIR += py-yapsnmp
-    SUBDIR += py3-dnsdiag
     SUBDIR += qkismet
     SUBDIR += rackmonkey
     SUBDIR += rancid3
