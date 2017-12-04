@@ -2,10 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	incron
-DISTVERSION=	2017-10-30
+DISTVERSION=	2017-11-13
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-MAINTAINER=	mi@aldan.algebra.com
+MAINTAINER=	joh.hendriks@gmail.com
 COMMENT=	Handle filesystem-events the way cron handles time ones
 
 LICENSE=	GPLv2 LGPL21 MIT
@@ -18,12 +19,13 @@ LIB_DEPENDS=	libinotify.so:devel/libinotify
 
 USE_GITHUB=	indeed
 GH_ACCOUNT=	ar-
-GH_TAGNAME=	e05b7c892f569cf7dadc3c02a464ec1824d27b8e
+GH_TAGNAME=	81421d3a8bde0989d7e167d8a814d5232896c930
 CPPFLAGS+=	-I${LOCALBASE}/include -D__NR_inotify_init
 LDFLAGS+=	-L${LOCALBASE}/lib -linotify
 MAKE_ARGS=	PREFIX="${PREFIX}" USER=${UID}	\
 		DOCDIR="${PREFIX}/etc"	\
 		MANPATH=${MANPREFIX}/man
+USE_RC_SUBR=	${PORTNAME}
 
 post-patch:
 	${REINPLACE_CMD} -e 's,/etc/incron,${PREFIX}/etc/incron,'	\

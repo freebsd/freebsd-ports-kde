@@ -3,6 +3,7 @@
 
 PORTNAME=	newsboat
 PORTVERSION=	2.10.1
+DISTVERSIONPREFIX=	r
 CATEGORIES=	www
 
 MAINTAINER=	mt@markoturk.info
@@ -20,10 +21,9 @@ OPTIONS_DEFAULT=PODCAST
 OPTIONS_SUB=	yes
 PODCAST_DESC=	Podcast client (podbeuter)
 
-USE_GITHUB=	yes
-DISTVERSIONPREFIX=	r
 USES=		compiler:c++11-lib gettext gmake iconv:translit ncurses perl5 \
 		pkgconfig sqlite shebangfix ssl
+USE_GITHUB=	yes
 USE_CXXSTD=	gnu++11
 USE_PERL5=	build
 SHEBANG_FILES=	txt2h.pl
@@ -41,6 +41,8 @@ post-patch:
 	${REINPLACE_CMD} -e 's,fail "ncursesw",true,; s,fail "libcrypto",true,' \
 		${WRKSRC}/config.sh
 	${REINPLACE_CMD} -e 's|-liconv|${ICONV_LIB} -lcrypto -lncursesw|;s|-Werror||' \
+		${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e 's|LDFLAGS+=-L. -fprofile-arcs -ftest-coverage|LDFLAGS+=-L.|' \
 		${WRKSRC}/Makefile
 
 post-install:

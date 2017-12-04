@@ -26,6 +26,7 @@
     SUBDIR += cdent
     SUBDIR += ceylon
     SUBDIR += cfortran
+    SUBDIR += chez-scheme
     SUBDIR += chibi-scheme
     SUBDIR += chicken
     SUBDIR += cilkplus
@@ -46,7 +47,6 @@
     SUBDIR += cparser
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython3
     SUBDIR += diveintopython
     SUBDIR += dlang-tools
     SUBDIR += dlv
@@ -92,7 +92,6 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
-    SUBDIR += gcc46
     SUBDIR += gcc47
     SUBDIR += gcc48
     SUBDIR += gcc49
@@ -257,6 +256,8 @@
     SUBDIR += php70-extensions
     SUBDIR += php71
     SUBDIR += php71-extensions
+    SUBDIR += php72
+    SUBDIR += php72-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78
@@ -342,7 +343,6 @@
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl84
     SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87

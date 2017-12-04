@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vim
-PORTVERSION=	8.0.1289
-PORTREVISION=	1
+PORTVERSION=	8.0.1365
 DISTVERSIONPREFIX=	v
 CATEGORIES=	editors
 
@@ -32,6 +31,7 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 PLIST_SUB=	VIM_VER=${VIM_VER}
 PORTDATA=	${VIM_VER}
+PORTSCOUT=	ignore:1
 REINPLACE_ARGS=	-i ''
 SHEBANG_FILES=	runtime/tools/demoserver.py runtime/tools/efm_perl.pl
 VIM_VER=	${PORTNAME}${PORTVERSION:R:S|.||g}
@@ -70,12 +70,12 @@ SCHEME_DESC=		MzScheme (Racket) bindings
 OPTIONS_EXCLUDE_powerpc64=	RUBY
 
 # GENERAL OPTIONS
-CSCOPE_ENABLE=		cscope
+CSCOPE_CONFIGURE_ENABLE=cscope
 CSCOPE_RUN_DEPENDS=	cscope:devel/cscope
 
 EXUBERANT_CTAGS_RUN_DEPENDS=	exctags:devel/ctags
 
-NLS_ENABLE=		nls
+NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext
 
 # UI

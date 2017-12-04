@@ -56,6 +56,7 @@
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosspad
+    SUBDIR += crosti
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += dahdi
@@ -97,10 +98,12 @@
     SUBDIR += fortune-mod-bible
     SUBDIR += fortune-mod-bofh
     SUBDIR += fortune-mod-epictetus
+    SUBDIR += fortune-mod-freebsd-classic
     SUBDIR += fortune-mod-futurama
     SUBDIR += fortune-mod-psalms
     SUBDIR += fortuneit
     SUBDIR += fpc-chm
+    SUBDIR += free42
     SUBDIR += freebsd-doc-all
     SUBDIR += freebsd-doc-bn
     SUBDIR += freebsd-doc-da
@@ -286,6 +289,7 @@
     SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
     SUBDIR += otter
+    SUBDIR += owrep
     SUBDIR += p5-Acme-ButFirst
     SUBDIR += p5-Array-Compare
     SUBDIR += p5-Array-Diff
@@ -363,6 +367,7 @@
     SUBDIR += php56-calendar
     SUBDIR += php70-calendar
     SUBDIR += php71-calendar
+    SUBDIR += php72-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -373,6 +378,7 @@
     SUBDIR += ptsort
     SUBDIR += py-YABT
     SUBDIR += py-cinder
+    SUBDIR += py-colorbrewer
     SUBDIR += py-crudini
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
@@ -393,8 +399,6 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
-    SUBDIR += py3-pexpect
-    SUBDIR += py3-tqdm
     SUBDIR += pylize
     SUBDIR += qbrew
     SUBDIR += qlas
