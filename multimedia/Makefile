@@ -448,6 +448,7 @@
     SUBDIR += vtkmpeg2encode
     SUBDIR += w_scan
     SUBDIR += webcamd
+    SUBDIR += webcamoid
     SUBDIR += webvfx-qt5
     SUBDIR += win32-codecs
     SUBDIR += winff

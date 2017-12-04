@@ -4,6 +4,7 @@
 PORTNAME=	arpc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.6
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	ed@FreeBSD.org
@@ -18,7 +19,9 @@ LIB_DEPENDS=	libargdata.so:devel/argdata
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyPEG2>=2.15.2:textproc/py-pyPEG2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}toposort>=1.5:devel/py-toposort@${PY_FLAVOR}
 
-USES=		cmake localbase:ldflags python:3.4+ tar:xz
+USES=		cmake localbase:ldflags python:3.4+ shebangfix tar:xz
+python_OLD_CMD=	"/usr/bin/env python3"
+SHEBANG_FILES=	scripts/aprotoc.py
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	NuxiNL

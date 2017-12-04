@@ -322,6 +322,7 @@
     SUBDIR += hs-ALUT
     SUBDIR += hs-OpenAL
     SUBDIR += hs-libmpd
+    SUBDIR += hts_engine-API
     SUBDIR += hydrogen
     SUBDIR += hydrogen-devel
     SUBDIR += icecast-kh
