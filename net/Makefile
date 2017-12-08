@@ -54,7 +54,6 @@
     SUBDIR += binkd
     SUBDIR += bird
     SUBDIR += bird-devel
-    SUBDIR += bird6
     SUBDIR += bittwist
     SUBDIR += bluemix-cli
     SUBDIR += bmon

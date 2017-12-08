@@ -107,6 +107,7 @@
     SUBDIR += antlr4
     SUBDIR += apache-ant
     SUBDIR += apache-rat
+    SUBDIR += aphpbreakdown
     SUBDIR += aphpunit
     SUBDIR += api-sanity-autotest
     SUBDIR += apiextractor
@@ -1300,7 +1301,6 @@
     SUBDIR += kio-extras
     SUBDIR += kimwitu
     SUBDIR += kore
-    SUBDIR += kore-notls
     SUBDIR += ksql
     SUBDIR += kyra
     SUBDIR += kyua
@@ -1635,7 +1635,6 @@
     SUBDIR += lldb38
     SUBDIR += llnextgen
     SUBDIR += llvm-cheri
-    SUBDIR += llvm-cheri128
     SUBDIR += llvm-devel
     SUBDIR += llvm33
     SUBDIR += llvm34
@@ -4279,6 +4278,7 @@
     SUBDIR += py-avro
     SUBDIR += py-babel
     SUBDIR += py-babelfish
+    SUBDIR += py-backports
     SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
