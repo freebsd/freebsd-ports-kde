@@ -1067,6 +1067,7 @@
 %%QT_LIBDIR%%/libQt53DAnimation.so.5
 %%QT_LIBDIR%%/libQt53DAnimation.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt53DAnimation.so.%%FULLVER%%
+%%DEBUG%%%%QT_LIBDIR%%/libQt53DAnimation.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt53DCore.prl
 %%QT_LIBDIR%%/libQt53DCore.so
 %%QT_LIBDIR%%/libQt53DCore.so.5
@@ -1102,6 +1103,7 @@
 %%QT_LIBDIR%%/libQt53DQuickAnimation.so.5
 %%QT_LIBDIR%%/libQt53DQuickAnimation.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt53DQuickAnimation.so.%%FULLVER%%
+%%DEBUG%%%%QT_LIBDIR%%/libQt53DQuickAnimation.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt53DQuickExtras.prl
 %%QT_LIBDIR%%/libQt53DQuickExtras.so
 %%QT_LIBDIR%%/libQt53DQuickExtras.so.5
@@ -1125,6 +1127,7 @@
 %%QT_LIBDIR%%/libQt53DQuickScene2D.so.5
 %%QT_LIBDIR%%/libQt53DQuickScene2D.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt53DQuickScene2D.so.%%FULLVER%%
+%%DEBUG%%%%QT_LIBDIR%%/libQt53DQuickScene2D.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt53DRender.prl
 %%QT_LIBDIR%%/libQt53DRender.so
 %%QT_LIBDIR%%/libQt53DRender.so.5
@@ -1156,11 +1159,17 @@
 %%QT_MKSPECDIR%%/modules/qt_lib_3drender.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3drender_private.pri
 %%QT_PLUGINDIR%%/geometryloaders/libdefaultgeometryloader.so
+%%DEBUG%%%%QT_PLUGINDIR%%/geometryloaders/libdefaultgeometryloader.so.debug
 %%QT_PLUGINDIR%%/geometryloaders/libgltfgeometryloader.so
+%%DEBUG%%%%QT_PLUGINDIR%%/geometryloaders/libgltfgeometryloader.so.debug
 %%QT_PLUGINDIR%%/renderplugins/libscene2d.so
+%%DEBUG%%%%QT_PLUGINDIR%%/renderplugins/libscene2d.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so
+%%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libassimpsceneimport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so
+%%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libgltfsceneexport.so.debug
 %%QT_PLUGINDIR%%/sceneparsers/libgltfsceneimport.so
+%%DEBUG%%%%QT_PLUGINDIR%%/sceneparsers/libgltfsceneimport.so.debug
 %%QT_QMLDIR%%/Qt3D/Animation/libquick3danimationplugin.so
 %%DEBUG%%%%QT_QMLDIR%%/Qt3D/Animation/libquick3danimationplugin.so.debug
 %%QT_QMLDIR%%/Qt3D/Animation/plugins.qmltypes
