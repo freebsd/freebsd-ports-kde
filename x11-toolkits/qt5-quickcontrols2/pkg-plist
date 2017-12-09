@@ -113,11 +113,13 @@
 %%QT_LIBDIR%%/libQt5QuickControls2.so.5
 %%QT_LIBDIR%%/libQt5QuickControls2.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5QuickControls2.so.%%FULLVER%%
+%%DEBUG%%%%QT_LIBDIR%%/libQt5QuickControls2.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5QuickTemplates2.prl
 %%QT_LIBDIR%%/libQt5QuickTemplates2.so
 %%QT_LIBDIR%%/libQt5QuickTemplates2.so.5
 %%QT_LIBDIR%%/libQt5QuickTemplates2.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5QuickTemplates2.so.%%FULLVER%%
+%%DEBUG%%%%QT_LIBDIR%%/libQt5QuickTemplates2.so.%%FULLVER%%.debug
 %%QT_MKSPECDIR%%/modules/qt_lib_quickcontrols2.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quickcontrols2_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quicktemplates2_private.pri
@@ -128,9 +130,11 @@
 %%QT_QMLDIR%%/Qt/labs/calendar/WeekNumberColumn.qml
 %%QT_QMLDIR%%/Qt/labs/calendar/WeekNumberColumn.qmlc
 %%QT_QMLDIR%%/Qt/labs/calendar/libqtlabscalendarplugin.so
+%%DEBUG%%%%QT_QMLDIR%%/Qt/labs/calendar/libqtlabscalendarplugin.so.debug
 %%QT_QMLDIR%%/Qt/labs/calendar/plugins.qmltypes
 %%QT_QMLDIR%%/Qt/labs/calendar/qmldir
 %%QT_QMLDIR%%/Qt/labs/platform/libqtlabsplatformplugin.so
+%%DEBUG%%%%QT_QMLDIR%%/Qt/labs/platform/libqtlabsplatformplugin.so.debug
 %%QT_QMLDIR%%/Qt/labs/platform/plugins.qmltypes
 %%QT_QMLDIR%%/Qt/labs/platform/qmldir
 %%QT_QMLDIR%%/QtQuick/Controls.2/AbstractButton.qml
@@ -280,6 +284,7 @@
 %%QT_QMLDIR%%/QtQuick/Controls.2/Material/Tumbler.qml
 %%QT_QMLDIR%%/QtQuick/Controls.2/Material/Tumbler.qmlc
 %%QT_QMLDIR%%/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+%%DEBUG%%%%QT_QMLDIR%%/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Controls.2/Material/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Controls.2/Material/qmldir
 %%QT_QMLDIR%%/QtQuick/Controls.2/Menu.qml
@@ -443,6 +448,7 @@
 %%QT_QMLDIR%%/QtQuick/Controls.2/Universal/Tumbler.qml
 %%QT_QMLDIR%%/QtQuick/Controls.2/Universal/Tumbler.qmlc
 %%QT_QMLDIR%%/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
+%%DEBUG%%%%QT_QMLDIR%%/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Controls.2/Universal/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Controls.2/Universal/qmldir
 %%QT_QMLDIR%%/QtQuick/Controls.2/designer/BusyIndicatorSpecifics.qml
@@ -613,9 +619,11 @@
 %%QT_QMLDIR%%/QtQuick/Controls.2/designer/images/tumbler-icon@2x.png
 %%QT_QMLDIR%%/QtQuick/Controls.2/designer/qtquickcontrols2.metainfo
 %%QT_QMLDIR%%/QtQuick/Controls.2/libqtquickcontrols2plugin.so
+%%DEBUG%%%%QT_QMLDIR%%/QtQuick/Controls.2/libqtquickcontrols2plugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Controls.2/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Controls.2/qmldir
 %%QT_QMLDIR%%/QtQuick/Templates.2/libqtquicktemplates2plugin.so
+%%DEBUG%%%%QT_QMLDIR%%/QtQuick/Templates.2/libqtquicktemplates2plugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Templates.2/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Templates.2/qmldir
 libdata/pkgconfig/Qt5QuickControls2.pc
