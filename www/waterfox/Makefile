@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	waterfox
-DISTVERSION=	56.0.s20171130
-PORTREVISION=	1
+DISTVERSION=	56.0.s20171208
 CATEGORIES=	www ipv6
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -33,7 +32,7 @@ LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
 USE_GITHUB=	yes
 GH_ACCOUNT=	MrAlex94
 GH_PROJECT=	Waterfox
-GH_TAGNAME=	8c17fb8d3c7f
+GH_TAGNAME=	a3dd3280cff5
 
 USE_GECKO=	gecko
 MOZ_PKGCONFIG_FILES=	# empty
@@ -56,6 +55,7 @@ OPTIONS_DEFAULT=	BUNDLED_CAIRO
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/%u/%U/' -e '/X-MultipleArgs/d' \
+		-e 's/firefox/${MOZILLA}/' \
 		-e 's/Firefox/${MOZILLA_NAME}/' \
 		${WATERFOX_DESKTOP}
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \

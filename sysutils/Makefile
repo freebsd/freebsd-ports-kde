@@ -696,6 +696,7 @@
     SUBDIR += node_exporter
     SUBDIR += nomad
     SUBDIR += npadmin
+    SUBDIR += nq
     SUBDIR += nrg2iso
     SUBDIR += nut
     SUBDIR += nvclock
@@ -1151,6 +1152,7 @@
     SUBDIR += syslog-ng310
     SUBDIR += syslog-ng311
     SUBDIR += syslog-ng312
+    SUBDIR += syslog-ng313
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
