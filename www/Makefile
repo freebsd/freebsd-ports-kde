@@ -612,6 +612,7 @@
     SUBDIR += p5-AnyEvent-ReverseHTTP
     SUBDIR += p5-AnyEvent-SCGI
     SUBDIR += p5-Apache-ASP
+    SUBDIR += p5-AnyEvent-WebSocket-Client
     SUBDIR += p5-Apache-Admin-Config
     SUBDIR += p5-Apache-AuthCookie
     SUBDIR += p5-Apache-AuthTicket
@@ -1644,6 +1645,7 @@
     SUBDIR += py-django110
     SUBDIR += py-django111
     SUBDIR += py-django18
+    SUBDIR += py-django20
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1669,6 +1671,7 @@
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-login
+    SUBDIR += py-flask-migrate
     SUBDIR += py-flask-oauthlib
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
@@ -1867,6 +1870,7 @@
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
+    SUBDIR += py-unit
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
@@ -2390,6 +2394,11 @@
     SUBDIR += ufdbguard
     SUBDIR += uglifyjs
     SUBDIR += unit
+    SUBDIR += unit-go
+    SUBDIR += unit-php56
+    SUBDIR += unit-php70
+    SUBDIR += unit-php71
+    SUBDIR += unit-php72
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
