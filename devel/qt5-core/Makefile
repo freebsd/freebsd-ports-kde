@@ -49,6 +49,9 @@ post-install:
 # Allow qconfig.h to be customized by single ports.
 	${AWK} 'END{print "#include <QtCore/qconfig-modules.h>"}{print}' \
 		${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h > ${WRKDIR}/qconfig.h
+# Cleanup qconfig.h and remove stray '#define QT_NO_FOO'
+	${REINPLACE_CMD} "/#define QT_NO_DBUS/d" ${WRKDIR}/qconfig.h
+	${REINPLACE_CMD} "/#define QT_NO_WIDGETS/d" ${WRKDIR}/qconfig.h
 	${MV} ${WRKDIR}/qconfig.h ${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h
 
 .include <bsd.port.post.mk>
