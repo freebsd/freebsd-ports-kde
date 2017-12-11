@@ -321,7 +321,7 @@ _USE_QT5_ONLY=	3d buildtools canvas3d charts concurrent connectivity \
 				core datavis3d diag examples gamepad \
 				graphicaleffects location paths phonon4 plugininfo printsupport \
 				qdbus qdoc qdoc-data qev qml quick quickcontrols \
-				quickcontrols2 scxml sensors serialbus serialport \
+				quickcontrols2 scxml sensors serialbus serialport speech \
 				sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
 				webengine websockets websockets-qml widgets x11extras
 
@@ -546,6 +546,9 @@ serialbus_LIB=		libQt${_QT_LIBVER}SerialBus.so
 
 serialport_PORT=	comms/${_QT_RELNAME}-serialport
 serialport_LIB=	libQt${_QT_LIBVER}SerialPort.so
+
+speech_PORT=		accessiblity/${_QT_RELNAME}-speech
+speech_LIB=			libQt${_QT_LIBVER}TextToSpeech.so
 
 sql_PORT=			databases/${_QT_RELNAME}-sql
 sql_LIB=			libQt${_QT_LIBVER}Sql.so
