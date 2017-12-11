@@ -11,7 +11,7 @@ COMMENT=	Qt audio, video, radio and camera support module
 
 # LICENSE set via USES_QT5 (bsd.qt.mk)
 
-USES=		pkgconfig qmake
+USES=		pkgconfig qmake:norecursive
 USE_GL=		gl
 USE_GNOME=	glib20
 USE_QT5=	core gui network opengl qml quick widgets \

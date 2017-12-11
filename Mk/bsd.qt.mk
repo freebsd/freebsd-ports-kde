@@ -157,14 +157,14 @@ QMAKE_ARGS+=	QT_CONFIG+="debug separate_debug_info" \
 				QT_CONFIG-="release"
 PLIST_SUB+=		DEBUG=""
 . else
-CONFIGURE_ARGS+=-release -no-separate-debug-info
+CONFIGURE_ARGS+=-release -no-separate-debug-info -recheck-all
 QMAKE_ARGS+=	QT_CONFIG+="release" \
 				QT_CONFIG-="debug separate_debug_info"
 PLIST_SUB+=		DEBUG="@comment "
 . endif
 
 # Make configure verbose (otherwise it depends on bash).
-CONFIGURE_ARGS+=-verbose
+# CONFIGURE_ARGS+=-verbose
 
 . if ${QT_DIST} == "base" || ${_QT_VERSION:M4*}
 .  if ${_QT_VERSION:M4*}
@@ -282,6 +282,11 @@ PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 # Pass the chosen Qt version to the environment for qtchooser.
 CONFIGURE_ENV+=	QT_SELECT=${_QT_RELNAME}
 MAKE_ENV+=	QT_SELECT=${_QT_RELNAME}
+
+# Make sure both the installed mkspecs as well as the ones being built are
+# found, with the ones from the port being built having preference.
+CONFIGURE_ENV+=	QMAKEMODULES="${WRKSRC}/mkspecs/modules:${LOCALBASE}/${QT_MKSPECDIR_REL}/modules"
+MAKE_ENV+=		QMAKEMODULES="${WRKSRC}/mkspecs/modules:${LOCALBASE}/${QT_MKSPECDIR_REL}/modules"
 
 .endif # !defined(_POSTMKINCLUDED) && !defined(Qt_Pre_Include)
 
@@ -721,7 +726,7 @@ qtbase-post-patch:
 .  if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
 
-post-configure: qmake-configure
+# post-configure: qmake-configure
 .  endif
 . endif # ${QT_DIST} == "base"
 
@@ -762,7 +767,21 @@ qt-post-install:
 	@${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
 	@${ECHO_CMD} -n \
 		> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#if defined(QT_NO_${QT_MODNAME:tu}) && defined(QT_${QT_MODNAME:tu}_LIB)" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#  undef QT_NO_${QT_MODNAME:tu}" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#endif" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .  for def in ${QT_DEFINES:N-*:O:u:C/=.*$//}
+	@${ECHO_CMD} "#if defined(QT_NO_${def}) && defined(QT_${def})" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#  undef QT_NO_${def}" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#endif" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	@${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	${ECHO_CMD} "# define QT_${def}" \
