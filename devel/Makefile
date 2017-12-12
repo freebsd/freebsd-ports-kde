@@ -1264,6 +1264,10 @@
     SUBDIR += kdesdk-thumbnailers
     SUBDIR += kdesdk-thumbnailers-kde4
     SUBDIR += kdesvn-kde4
+    SUBDIR += kdev-php
+    SUBDIR += kdev-python
+    SUBDIR += kdevelop-pg-qt
+    SUBDIR += kdevelop
     SUBDIR += kdevelop-kde4
     SUBDIR += kdevelop-kde4-pg-qt
     SUBDIR += kdevelop-kde4-php

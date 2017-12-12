@@ -9637,10 +9637,6 @@ devel/kdesdk4-kioslaves|devel/kdesdk-kioslaves-kde4|2017-11-11|Apply consistent 
 devel/kdesdk4-strigi-analyzers|devel/kdesdk-strigi-analyzers-kde4|2017-11-11|Apply consistent name to KDE4
 devel/kdesdk4-thumbnailers|devel/kdesdk-thumbnailers-kde4|2017-11-11|Apply consistent name to KDE4
 devel/kdesdk4|devel/kdesdk-kde4|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-pg-qt|devel/kdevelop-pg-qt-kde4|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-php-docs|devel/kdevelop-php-docs-kde4|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-php|devel/kdevelop-php-kde4|2017-11-11|Apply consistent name to KDE4
-devel/kdevplatform|devel/kdevplatform-kde4|2017-11-11|Apply consistent name to KDE4
 devel/libkgapi|devel/libkgapi-kde4|2017-11-11|Apply consistent name to KDE4
 devel/p5-perlkde|devel/p5-perlkde-kde4|2017-11-11|Apply consistent name to KDE4
 devel/p5-perlqt|devel/p5-perlqt-kde4|2017-11-11|Apply consistent name to KDE4
@@ -9712,9 +9708,6 @@ x11/kgamma|x11/kgamma-kde4|2017-11-11|Apply consistent name to KDE4
 x11/libkonq|x11/libkonq-kde4|2017-11-11|Apply consistent name to KDE4
 x11/plasma-scriptengine-python|x11/plasma-scriptengine-python-kde4|2017-11-11|Apply consistent name to KDE4
 x11/plasma-scriptengine-ruby|x11/plasma-scriptengine-ruby-kde4|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-pg-qt-kde4|devel/kdevelop-kde4-pg-qt|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-php-kde4|devel/kdevelop-kde4-php|2017-11-11|Apply consistent name to KDE4
-devel/kdevelop-php-docs-kde4|devel/kdevelop-kde4-php-docs|2017-11-11|Apply consistent name to KDE4
 databases/grass6|databases/grass7|2017-11-18|Removed in favor of grass 7
 news/brag||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
 textproc/srilm||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
