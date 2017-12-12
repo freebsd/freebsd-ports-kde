@@ -13,7 +13,9 @@ OPTIONS_RADIO_ZEROCONF=AVAHI MDNSRESPONDER
 ZEROCONF_DESC=	Zeroconf (Bonjour) support
 
 AVAHI_CLAGS+=			-I${LOCALBASE}/include/avahi-compat-libdns_sd
+AVAHI_BUILD_DEPENDS=		${LOCALBASE}/include/avahi-compat-libdns_sd/dns_sd.h:net/avahi-libdns
 AVAHI_LIB_DEPENDS=		libdns_sd.so:net/avahi-libdns
+MDNSRESPONDER_BUILD_DEPENDS=	${LOCALBASE}/include/dns_sd.h:net/mDNSResponder
 MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
 
 # TODO: options to depend on avahi and/or dnssd
