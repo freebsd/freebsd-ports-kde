@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	kdev-php
-DISTVERSION=	5.1.80
+DISTVERSION=	5.2.1
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/unstable/kdevelop/${DISTVERSION}/src
+MASTER_SITES=	KDE/stable/kdevelop/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
 
 MAINTAINER=	kde@FreeBSD.org
@@ -14,7 +14,7 @@ LIB_DEPENDS=	libkdevcmakecommon.so:devel/kdevelop
 
 USES=		cmake:outsource compiler:c++11-lib kde:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons ecm \
-		i18n itemmodels jobwidgets kcmutils kio parts service sonnet \
+		i18n jobwidgets kcmutils kio parts service sonnet \
 		texteditor textwidgets threadweaver widgetsaddons xmlgui
 USE_QT5=	core dbus gui network webkit widgets xml \
 		buildtools_build qmake_build
