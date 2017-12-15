@@ -1438,9 +1438,11 @@
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/camera.cpp
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/camera.h
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/camera.pro
+%%QT_EXAMPLEDIR%%/multimediawidgets/camera/camera.qrc
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/camera.ui
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/doc/images/camera-example.png
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/doc/src/camera.qdoc
+%%QT_EXAMPLEDIR%%/multimediawidgets/camera/images/shutter.svg
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/imagesettings.cpp
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/imagesettings.h
 %%QT_EXAMPLEDIR%%/multimediawidgets/camera/imagesettings.ui
@@ -4059,18 +4061,18 @@
 %%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/doc/images/qtquickcontrols2-chattutorial-chapter5-conversations-universal-dark.png
 %%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/doc/images/qtquickcontrols2-chattutorial-chapter5-conversations-universal.png
 %%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/doc/src/qtquickcontrols2-chattutorial.qdoc
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert Einstein.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert Einstein@2x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert Einstein@3x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert Einstein@4x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest Hemingway.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest Hemingway@2x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest Hemingway@3x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest Hemingway@4x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans Gude.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans Gude@2x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans Gude@3x.png
-%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans Gude@4x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert_Einstein.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert_Einstein@2x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert_Einstein@3x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Albert_Einstein@4x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest_Hemingway.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest_Hemingway@2x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest_Hemingway@3x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Ernest_Hemingway@4x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans_Gude.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans_Gude@2x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans_Gude@3x.png
+%%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/Hans_Gude@4x.png
 %%QT_EXAMPLEDIR%%/quickcontrols2/chattutorial/shared/shared.qrc
 %%QT_EXAMPLEDIR%%/quickcontrols2/contactlist/ContactDelegate.ui.qml
 %%QT_EXAMPLEDIR%%/quickcontrols2/contactlist/ContactDialog.qml
@@ -5094,6 +5096,8 @@
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-html/chatclient.html
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-html/doc/images/chatclient-html.png
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-html/doc/src/chatclient-html.qdoc
+%%QT_EXAMPLEDIR%%/webchannel/chatclient-qml/LoginForm.ui.qml
+%%QT_EXAMPLEDIR%%/webchannel/chatclient-qml/MainForm.ui.qml
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-qml/chatclient-qml.pro
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-qml/doc/images/chatclient-qml.png
 %%QT_EXAMPLEDIR%%/webchannel/chatclient-qml/doc/src/chatclient-qml.qdoc
@@ -5113,10 +5117,14 @@
 %%QT_EXAMPLEDIR%%/webchannel/qwclient/package.json
 %%QT_EXAMPLEDIR%%/webchannel/qwclient/qwclient.js
 %%QT_EXAMPLEDIR%%/webchannel/qwclient/qwclient.pro
+%%QT_EXAMPLEDIR%%/webchannel/shared/qwebchannel.js
 %%QT_EXAMPLEDIR%%/webchannel/shared/websocketclientwrapper.cpp
 %%QT_EXAMPLEDIR%%/webchannel/shared/websocketclientwrapper.h
 %%QT_EXAMPLEDIR%%/webchannel/shared/websockettransport.cpp
 %%QT_EXAMPLEDIR%%/webchannel/shared/websockettransport.h
+%%QT_EXAMPLEDIR%%/webchannel/standalone/core.h
+%%QT_EXAMPLEDIR%%/webchannel/standalone/dialog.cpp
+%%QT_EXAMPLEDIR%%/webchannel/standalone/dialog.h
 %%QT_EXAMPLEDIR%%/webchannel/standalone/dialog.ui
 %%QT_EXAMPLEDIR%%/webchannel/standalone/doc/images/standalone-screenshot.png
 %%QT_EXAMPLEDIR%%/webchannel/standalone/doc/src/standalone.qdoc
@@ -5352,10 +5360,6 @@
 %%QT_EXAMPLEDIR%%/widgets/dialogs/licensewizard/licensewizard.pro
 %%QT_EXAMPLEDIR%%/widgets/dialogs/licensewizard/licensewizard.qrc
 %%QT_EXAMPLEDIR%%/widgets/dialogs/licensewizard/main.cpp
-%%QT_EXAMPLEDIR%%/widgets/dialogs/sipdialog/dialog.cpp
-%%QT_EXAMPLEDIR%%/widgets/dialogs/sipdialog/dialog.h
-%%QT_EXAMPLEDIR%%/widgets/dialogs/sipdialog/main.cpp
-%%QT_EXAMPLEDIR%%/widgets/dialogs/sipdialog/sipdialog.pro
 %%QT_EXAMPLEDIR%%/widgets/dialogs/standarddialogs/dialog.cpp
 %%QT_EXAMPLEDIR%%/widgets/dialogs/standarddialogs/dialog.h
 %%QT_EXAMPLEDIR%%/widgets/dialogs/standarddialogs/main.cpp
@@ -5537,7 +5541,6 @@
 %%QT_EXAMPLEDIR%%/widgets/doc/src/simpledommodel.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/simpletreemodel.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/simplewidgetmapper.qdoc
-%%QT_EXAMPLEDIR%%/widgets/doc/src/sipdialog.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/sliders.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/spinboxdelegate.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/spinboxes.qdoc

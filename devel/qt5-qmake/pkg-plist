@@ -268,6 +268,7 @@
 %%QT_MKSPECDIR%%/features/uikit/xcodebuild.mk
 %%QT_MKSPECDIR%%/features/uikit/xcodebuild.prf
 %%QT_MKSPECDIR%%/features/unix/bsymbolic_functions.prf
+%%QT_MKSPECDIR%%/features/unix/ccache.prf
 %%QT_MKSPECDIR%%/features/unix/hide_symbols.prf
 %%QT_MKSPECDIR%%/features/unix/largefile.prf
 %%QT_MKSPECDIR%%/features/unix/opengl.prf

@@ -50,6 +50,7 @@
 %%QT_QMLDIR%%/QtGraphicalEffects/ZoomBlur.qmlc
 %%QT_QMLDIR%%/QtGraphicalEffects/libqtgraphicaleffectsplugin.so
 %%DEBUG%%%%QT_QMLDIR%%/QtGraphicalEffects/libqtgraphicaleffectsplugin.so.debug
+%%QT_QMLDIR%%/QtGraphicalEffects/plugins.qmltypes
 %%QT_QMLDIR%%/QtGraphicalEffects/private/DropShadowBase.qml
 %%QT_QMLDIR%%/QtGraphicalEffects/private/DropShadowBase.qmlc
 %%QT_QMLDIR%%/QtGraphicalEffects/private/FastGlow.qml

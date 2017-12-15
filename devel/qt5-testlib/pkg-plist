@@ -18,6 +18,7 @@
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtestcorelist_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtestelement_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtestelementattribute_p.h
+%%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtesthelpers_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtestlog_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtestresult_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qtesttable_p.h

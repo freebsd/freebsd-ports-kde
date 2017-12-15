@@ -106,7 +106,6 @@
 %%QT_INCDIR%%/Qt3DAnimation/qvertexblendanimation.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/aspectcommanddebugger_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/corelogging_p.h
-%%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/dependencyhandler_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/nullservices_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/propertychangehandler_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qabstractaspect_p.h
@@ -137,7 +136,6 @@
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qframeallocator_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qframeallocator_p_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qhandle_p.h
-%%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qhandlemanager_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qlockableobserverinterface_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qmath3d_p.h
 %%QT_INCDIR%%/Qt3DCore/%%FULLVER%%/Qt3DCore/private/qnode_p.h

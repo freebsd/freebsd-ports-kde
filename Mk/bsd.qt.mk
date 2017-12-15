@@ -27,7 +27,7 @@ Qt_Pre_Include=	bsd.qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=	4 5
 QT4_VERSION?=	4.8.7
-QT5_VERSION?=	5.9.1
+QT5_VERSION?=	5.9.3
 
 _QT_RELNAME=	qt${_QT_VERSION:R:R}
 _QT_VERSION=	# empty
@@ -176,8 +176,7 @@ _EXTRA_PATCHES_QT4+=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-armv6
 .  else
 _EXTRA_PATCHES_QT5=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
-					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf \
-					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-libinput_libudev
+					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf
 .  endif
 EXTRA_PATCHES?=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-configure \
 		${_EXTRA_PATCHES_QT4} ${_EXTRA_PATCHES_QT5}
@@ -547,7 +546,7 @@ serialbus_LIB=		libQt${_QT_LIBVER}SerialBus.so
 serialport_PORT=	comms/${_QT_RELNAME}-serialport
 serialport_LIB=	libQt${_QT_LIBVER}SerialPort.so
 
-speech_PORT=		accessiblity/${_QT_RELNAME}-speech
+speech_PORT=		accessibility/${_QT_RELNAME}-speech
 speech_LIB=			libQt${_QT_LIBVER}TextToSpeech.so
 
 sql_PORT=			databases/${_QT_RELNAME}-sql

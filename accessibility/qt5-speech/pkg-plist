@@ -20,7 +20,7 @@
 %%QT_LIBDIR%%/libQt5TextToSpeech.so.5
 %%QT_LIBDIR%%/libQt5TextToSpeech.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5TextToSpeech.so.%%FULLVER%%
-%%QT_LIBDIR%%/libQt5TextToSpeech.so.%%FULLVER%%.debug
+%%DEBUG%%%%QT_LIBDIR%%/libQt5TextToSpeech.so.%%FULLVER%%.debug
 %%QT_MKSPECDIR%%/modules/qt_lib_texttospeech.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_texttospeech_private.pri
 libdata/pkgconfig/Qt5TextToSpeech.pc

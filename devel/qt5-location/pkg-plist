@@ -102,6 +102,7 @@
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qplacesupplier_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qplaceuser_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qquickgeomapgesturearea_p.h
+%%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qtlocation-config_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/unsupportedreplies_p.h
 %%QT_INCDIR%%/QtLocation/QGeoCodeReply
 %%QT_INCDIR%%/QtLocation/QGeoCodingManager
@@ -188,6 +189,7 @@
 %%QT_INCDIR%%/QtLocation/qplacesearchsuggestionreply.h
 %%QT_INCDIR%%/QtLocation/qplacesupplier.h
 %%QT_INCDIR%%/QtLocation/qplaceuser.h
+%%QT_INCDIR%%/QtLocation/qtlocation-config.h
 %%QT_INCDIR%%/QtLocation/qtlocationversion.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qclipperutils_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qdeclarativegeoaddress_p.h
