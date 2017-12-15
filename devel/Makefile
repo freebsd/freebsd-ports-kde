@@ -309,7 +309,6 @@
     SUBDIR += clanlib
     SUBDIR += clanlib1
     SUBDIR += clanlib22
-    SUBDIR += cld
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
@@ -822,6 +821,7 @@
     SUBDIR += go-glide
     SUBDIR += go-go.uuid
     SUBDIR += go-gocode
+    SUBDIR += go-godef
     SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
@@ -1838,6 +1838,7 @@
     SUBDIR += omniNotify
     SUBDIR += omniORB
     SUBDIR += omniORB-4.1
+    SUBDIR += omnisharp-server
     SUBDIR += oniguruma
     SUBDIR += onscripter
     SUBDIR += onscripter-1byte
@@ -3109,7 +3110,6 @@
     SUBDIR += p5-POSIX-strftime-Compiler
     SUBDIR += p5-POSIX-strptime
     SUBDIR += p5-PPerl
-    SUBDIR += p5-Pthread-GetThreadId
     SUBDIR += p5-PV
     SUBDIR += p5-Package-Constants
     SUBDIR += p5-Package-DeprecationManager
@@ -3222,6 +3222,7 @@
     SUBDIR += p5-Proc-WaitStat
     SUBDIR += p5-Project-Gantt
     SUBDIR += p5-Project-Libs
+    SUBDIR += p5-Pthread-GetThreadId
     SUBDIR += p5-Qudo
     SUBDIR += p5-RPSL-Parser
     SUBDIR += p5-RRDTool-OO
@@ -4159,6 +4160,7 @@
     SUBDIR += py-DateTime
     SUBDIR += py-DocumentTemplate
     SUBDIR += py-ExtensionClass
+    SUBDIR += py-IBMQuantumExperience
     SUBDIR += py-InlineEgg
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
@@ -4212,6 +4214,7 @@
     SUBDIR += py-Products.validation
     SUBDIR += py-PyExecJS
     SUBDIR += py-PyLD
+    SUBDIR += py-PyODE
     SUBDIR += py-RPyC
     SUBDIR += py-Record
     SUBDIR += py-SymbolType
@@ -4286,9 +4289,9 @@
     SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
+    SUBDIR += py-backports.tempfile
     SUBDIR += py-backports.weakref
     SUBDIR += py-backports_abc
-    SUBDIR += py-backports.tempfile
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
     SUBDIR += py-billiard
@@ -4311,6 +4314,7 @@
     SUBDIR += py-buildbot-waterfall-view
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
+    SUBDIR += py-bullet3
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-calendar
@@ -4634,7 +4638,6 @@
     SUBDIR += py-notify
     SUBDIR += py-numba
     SUBDIR += py-ocempgui
-    SUBDIR += py-ode
     SUBDIR += py-odfpy
     SUBDIR += py-offtrac
     SUBDIR += py-olefile
@@ -5201,6 +5204,7 @@
     SUBDIR += quickcheck++
     SUBDIR += quilt
     SUBDIR += racer
+    SUBDIR += racerd
     SUBDIR += radare2
     SUBDIR += ragel
     SUBDIR += raknet
@@ -5660,6 +5664,7 @@
     SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
+    SUBDIR += rubygem-rainbow2
     SUBDIR += rubygem-rake
     SUBDIR += rubygem-rake-compiler
     SUBDIR += rubygem-rake-compiler-dock
@@ -5688,8 +5693,8 @@
     SUBDIR += rubygem-ref
     SUBDIR += rubygem-request_store
     SUBDIR += rubygem-require_all
-    SUBDIR += rubygem-retriable
     SUBDIR += rubygem-resque
+    SUBDIR += rubygem-retriable
     SUBDIR += rubygem-retryable
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rice
@@ -6077,6 +6082,7 @@
     SUBDIR += yaml2argdata
     SUBDIR += yasm
     SUBDIR += yasm-devel
+    SUBDIR += youcompleteme
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex

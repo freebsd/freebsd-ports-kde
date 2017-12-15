@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	recursor
-DISTVERSION=	4.0.7
+DISTVERSION=	4.1.0
+PORTREVISION=	1
 CATEGORIES=	dns ipv6
 MASTER_SITES=	http://downloads.powerdns.com/releases/
 PKGNAMEPREFIX=	powerdns-
@@ -57,4 +58,10 @@ SETUID_EXTRA_PATCHES=	${PATCHDIR}/extrapatch-setuid
 
 SUB_FILES=	pkg-message
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1003506
+IGNORE=		no _cxa_thread_atexit() support in FreeBSD libc < 10.4
+.endif
+
+.include <bsd.port.post.mk>

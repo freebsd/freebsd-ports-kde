@@ -3,6 +3,7 @@
 
     COMMENT = Audio tools
 
+    SUBDIR += GxSwitchlessWah-lv2
     SUBDIR += HVSC-Update
     SUBDIR += Maaate
     SUBDIR += aacgain
@@ -69,7 +70,6 @@
     SUBDIR += carla
     SUBDIR += cava
     SUBDIR += ccaudio2
-    SUBDIR += cd-console
     SUBDIR += cd-discid
     SUBDIR += cd2mp3
     SUBDIR += cddb-bundle
