@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	kdev-python
-DISTVERSION=	5.1.80
+DISTVERSION=	5.2.1
 CATEGORIES=	devel kde
-MASTER_SITES=	KDE/unstable/kdevelop/${DISTVERSION}/src
+MASTER_SITES=	KDE/stable/kdevelop/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,8 +13,8 @@ BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
 LIB_DEPENDS=	libkdevcmakecommon.so:devel/kdevelop
 
 USES=		cmake:outsource compiler:c++11-lib kde:5 python:3 tar:xz
-USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
-		ecm i18n itemmodels jobwidgets kio newstuff parts service \
+USE_KDE=	attica auth codecs completion config coreaddons \
+		ecm i18n jobwidgets kio parts service \
 		sonnet texteditor textwidgets threadweaver widgetsaddons xmlgui
 USE_QT5=	core dbus gui network widgets xml \
 		buildtools_build qmake_build
