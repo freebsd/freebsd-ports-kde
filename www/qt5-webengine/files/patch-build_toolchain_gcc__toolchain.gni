@@ -21,12 +21,12 @@
 -    cxx = "$prefix/clang++"
 -    ld = cxx
 +    if (is_bsd) {
-+      cc = "${toolprefix}clang39"
-+      cxx = "${toolprefix}clang++39"
++      cc = "${toolprefix}clang"
++      cxx = "${toolprefix}clang++"
 +      ld = cxx
 +      readelf = "readelf"
-+      ar = "${toolprefix}llvm-ar39"
-+      nm = "${toolprefix}llvm-nm39"
++      ar = "${toolprefix}ar"
++      nm = "${toolprefix}nm"
 +    } else {
 +      prefix = rebase_path("$clang_base_path/bin", root_build_dir)
 +      cc = "$prefix/clang"
