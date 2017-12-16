@@ -38,6 +38,7 @@
     SUBDIR += barnyard2
     SUBDIR += barnyard2-sguil
     SUBDIR += base
+    SUBDIR += base-audit
     SUBDIR += bcrypt
     SUBDIR += bcwipe
     SUBDIR += bdes
@@ -1175,6 +1176,7 @@
     SUBDIR += snort
     SUBDIR += snort-rep
     SUBDIR += snort2pfcd
+    SUBDIR += snort3
     SUBDIR += snortreport
     SUBDIR += snortsam
     SUBDIR += snortsnarf
@@ -1244,6 +1246,7 @@
     SUBDIR += truecrypt
     SUBDIR += tsshbatch
     SUBDIR += tthsum
+    SUBDIR += u2f-devd
     SUBDIR += umit
     SUBDIR += unhide
     SUBDIR += unicornscan

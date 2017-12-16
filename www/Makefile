@@ -13,6 +13,7 @@
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
     SUBDIR += R-cran-shiny
+    SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += WebMagick
     SUBDIR += ach
@@ -401,6 +402,7 @@
     SUBDIR += mediawiki127
     SUBDIR += mediawiki128
     SUBDIR += mediawiki129
+    SUBDIR += mediawiki130
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -612,6 +614,7 @@
     SUBDIR += p5-AnyEvent-ReverseHTTP
     SUBDIR += p5-AnyEvent-SCGI
     SUBDIR += p5-Apache-ASP
+    SUBDIR += p5-AnyEvent-WebSocket-Client
     SUBDIR += p5-Apache-Admin-Config
     SUBDIR += p5-Apache-AuthCookie
     SUBDIR += p5-Apache-AuthTicket
@@ -1644,6 +1647,7 @@
     SUBDIR += py-django110
     SUBDIR += py-django111
     SUBDIR += py-django18
+    SUBDIR += py-django20
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1669,6 +1673,7 @@
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-login
+    SUBDIR += py-flask-migrate
     SUBDIR += py-flask-oauthlib
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
@@ -1867,6 +1872,7 @@
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
+    SUBDIR += py-unit
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
@@ -2030,6 +2036,8 @@
     SUBDIR += rubygem-http
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
+    SUBDIR += rubygem-http-form_data1
+    SUBDIR += rubygem-http2
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
@@ -2039,6 +2047,7 @@
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
     SUBDIR += rubygem-jekyll-watch
+    SUBDIR += rubygem-jekyll-watch1
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-rails
@@ -2390,6 +2399,11 @@
     SUBDIR += ufdbguard
     SUBDIR += uglifyjs
     SUBDIR += unit
+    SUBDIR += unit-go
+    SUBDIR += unit-php56
+    SUBDIR += unit-php70
+    SUBDIR += unit-php71
+    SUBDIR += unit-php72
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop

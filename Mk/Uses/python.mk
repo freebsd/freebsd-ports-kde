@@ -451,7 +451,7 @@ FLAVOR=	${FLAVORS:[1]}
 .  endif
 .endif
 
-.if ${FLAVOR:Mpy[23]*}
+.if ${FLAVOR:Mpy[23][0-9]}
 _PYTHON_VERSION=	${FLAVOR:S/py//:C/(.)/\1./}
 .endif
 
@@ -463,11 +463,12 @@ PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 .endif
 
 # To avoid having dependencies with @ and empty flavor:
-.if empty(FLAVOR)
-PY_FLAVOR=	${PYTHON_VERSION:S/^python/py/:S/.//}
-.else
-PY_FLAVOR=	${FLAVOR}
-.endif
+# _PYTHON_VERSION is either set by (first that matches):
+# - If using Python flavors, from the current Python flavor
+# - If using a version restriction (USES=python:3.4+), from the first
+#   acceptable default Python version.
+# - From PYTHON_DEFAULT
+PY_FLAVOR=	py${_PYTHON_VERSION:S/.//}
 
 # Pass PYTHON_VERSION down the dependency chain. This ensures that
 # port A -> B -> C all will use the same python version and do not
@@ -566,8 +567,13 @@ RUN_DEPENDS+=	cython-${PYTHON_VER}:lang/cython@${PY_FLAVOR}
 .endif
 
 .if defined(_PYTHON_FEATURE_CONCURRENT)
+.if !defined(_PYTHON_FEATURE_FLAVORS) && (${_PYTHON_VERSION_MINIMUM:M3*} || ${_PYTHON_VERSION_MAXIMUM:M2*})
+DEV_WARNING+=	"USE_PYTHON=concurrent when only one of Python 2 or 3 is supported AND not using flavors does not make any sense"
+.endif
 _USES_POST+=		uniquefiles:dirs
-.if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
+.if defined(_PYTHON_FEATURE_FLAVORS) && ${FLAVOR} == ${FLAVORS:[1]}
+UNIQUE_DEFAULT_LINKS=	yes
+.elif !defined(_PYTHON_FEATURE_FLAVORS) && ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
 UNIQUE_DEFAULT_LINKS=	yes
 .else
 UNIQUE_DEFAULT_LINKS=	no
