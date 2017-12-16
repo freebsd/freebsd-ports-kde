@@ -85,7 +85,10 @@ ALL_TARGET=	first
 CONFIGURE_ENV+=	NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
 		NINJA_PATH="${LOCALBASE}/bin/ninja"  \
 		PATH=${CONFIGURE_WRKSRC}/bin:${PATH}
-MAKE_ENV+=	CC="${CC}" CXX="${CXX}" ${CONFIGURE_ENV}
+MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
+		C_INCLUDE_PATH=${LOCALBASE}/include	\
+		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
+		${CONFIGURE_ENV}
 
 post-extract:
 # Install FreeBSD's freebsd.pri file.
