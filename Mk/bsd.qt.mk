@@ -731,8 +731,6 @@ qtbase-post-patch:
 
 .  if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
-
-# post-configure: qmake-configure
 .  endif
 . endif # ${QT_DIST} == "base"
 
