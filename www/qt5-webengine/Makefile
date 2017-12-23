@@ -38,6 +38,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
 		libprotobuf.so:devel/protobuf \
+		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libsrtp.so:net/libsrtp \
 		libwebp.so:graphics/webp
