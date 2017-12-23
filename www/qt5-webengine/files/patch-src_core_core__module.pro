@@ -4,10 +4,6 @@
 
 --- src/core/core_module.pro.orig	2017-04-20 22:41:02 UTC
 +++ src/core/core_module.pro
-diff --git a/src/core/core_module.pro b/src/core/core_module.pro
-index 44e8ac61..293650e0 100644
---- a/src/core/core_module.pro
-+++ b/src/core/core_module.pro
 @@ -4,6 +4,9 @@ include(core_common.pri)
  # Needed to set a CFBundleIdentifier
  QMAKE_INFO_PLIST = Info_mac.plist
