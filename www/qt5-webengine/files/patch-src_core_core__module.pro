@@ -29,7 +29,7 @@
  # GN's LFLAGS doesn't always work across all the Linux configurations we support.
  # The Windows and macOS ones from GN does provide a few useful flags however
 -linux: QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now -Wl,-z,defs
-+unix: QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now -Wl,-z,defs
++unix: QMAKE_LFLAGS += -Wl,--gc-sections -Wl,-O1 -Wl,-z,now
  else: QMAKE_LFLAGS += $$NINJA_LFLAGS
  POST_TARGETDEPS += $$NINJA_TARGETDEPS
  
