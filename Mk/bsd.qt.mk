@@ -146,6 +146,9 @@ CONFIGURE_ARGS+=-no-sse2
 # Work around a bug in current binutils, where the gold linker creates
 # duplicate symbols. See pr 218187. Disable the gold-linker for Qt5 ports.
 CONFIGURE_ARGS+=	-no-use-gold-linker
+# Pass -recheck-all so that multiple calls to the configure script really
+# re-run all checks.
+CONFIGURE_ARGS+=	-recheck-all
 . endif
 
 . if defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
@@ -157,7 +160,7 @@ QMAKE_ARGS+=	QT_CONFIG+="debug separate_debug_info" \
 				QT_CONFIG-="release"
 PLIST_SUB+=		DEBUG=""
 . else
-CONFIGURE_ARGS+=-release -no-separate-debug-info -recheck-all
+CONFIGURE_ARGS+=-release -no-separate-debug-info
 QMAKE_ARGS+=	QT_CONFIG+="release" \
 				QT_CONFIG-="debug separate_debug_info"
 PLIST_SUB+=		DEBUG="@comment "
