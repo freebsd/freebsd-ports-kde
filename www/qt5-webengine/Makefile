@@ -76,6 +76,13 @@ QMAKE_ARGS=	WEBENGINE_CONFIG+=use_nss \
 # dependencies correctly in the generated Makefiles, use the right target here.
 ALL_TARGET=	first
 
+# We need ar(1) from ports because the Chromium code uses the @file syntax.
+# We then need to ensure ld(1) from ports is used because of the archives ar(1)
+# generated.
+USE_BINUTILS=	yes
+CC+=		"-B${LOCALBASE}/bin"
+CXX+=		"-B${LOCALBASE}/bin"
+
 # The build system reads the environment variable $NINJA_PATH to decide whether
 # to boostrap ninja or not (and also to invoke it afterwards). CC and CXX are
 # read by some Chromium code to determine which compiler to invoke when running
@@ -84,7 +91,7 @@ ALL_TARGET=	first
 # MAKE_ENV because part of the configuration process happens during the build.
 CONFIGURE_ENV+=	NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
 		NINJA_PATH="${LOCALBASE}/bin/ninja"  \
-		PATH=${CONFIGURE_WRKSRC}/bin:${PATH}
+		PATH=${CONFIGURE_WRKSRC}/bin:${LOCALBASE}/bin:${PATH}
 MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		C_INCLUDE_PATH=${LOCALBASE}/include	\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
