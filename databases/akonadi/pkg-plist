@@ -362,6 +362,8 @@ share/icons/hicolor/32x32/apps/akonadi.png
 share/icons/hicolor/48x48/apps/akonadi.png
 share/icons/hicolor/64x64/apps/akonadi.png
 share/icons/hicolor/scalable/apps/akonadi.svgz
+share/kdevappwizard/templates/akonadiresource.tar.bz2
+share/kdevappwizard/templates/akonadiserializer.tar.bz2
 share/kf5/akonadi/akonadi-xml.xsd
 share/kf5/akonadi/kcfg2dbus.xsl
 share/kf5/akonadi_knut_resource/knut-template.xml

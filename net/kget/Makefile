@@ -3,29 +3,34 @@
 PORTNAME=	kget
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
-PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE download manager
 
-LIB_DEPENDS=	libgpgme.so:security/gpgme \
-		libktorrent.so:net-p2p/libktorrent-kde4 \
-		libmms.so:net/libmms \
-		libqca.so:devel/qca \
-		libboost_thread.so:devel/boost-libs
+LIB_DEPENDS=    libKF5Torrent.so:net-p2p/libktorrent  \
+		libassuan.so:security/libassuan \
+		libgcrypt.so:security/libgcrypt \
+		libgmp.so:math/gmp \
+		libgpg-error.so:security/libgpg-error \
+		libgpgme.so:security/gpgme \
+		libgpgmepp.so:security/gpgme-cpp \
+		libqca-qt5.so:devel/qca-qt5 \
+		libqgpgme.so:security/gpgme-qt5
 
-# do not depend on workspace/nepomuk this way there is no conflict
-# with plasma5*
-CMAKE_ARGS=	-DWITH_KDE4_Workspace:BOOL=FALSE \
-		-DWITH_NepomukCore:BOOL=FALSE \
-		-DWITH_NepomukWidgets:BOOL=FALSE
+USES=		cmake:outsource kde:5 shebangfix sqlite tar:xz
 
-USES=		cmake:outsource kde:4 shebangfix sqlite tar:xz
-USE_KDE=	automoc4 kdelibs libkonq ontologies soprano
-USE_QT4=	corelib dbus gui network phonon sql svg xml \
-		moc_build qmake_build rcc_build uic_build
+USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
+		coreaddons crash dbusaddons emoticons guiaddons i18n \
+		iconthemes itemmodels itemviews jobwidgets kcmutils \
+		kdelibs4support kio notifications notifyconfig parts service \
+		solid sonnet textwidgets unitconversion wallet widgetsaddons \
+		windowsystem xmlgui
+USE_QT5=        core dbus gui network printsupport sql widgets xml \
+		buildtools_build qmake_build
+
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	conf/*.pl
+
 
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null
 CONFIGURE_ENV=	XDG_CONFIG_HOME=/dev/null

@@ -22,9 +22,11 @@ KDE_GAMES_ALL=	bomber \
 		kmines \
 		knavalbattle \
 		knetwalk \
+		kolf \
 		kollision \
 		kpat \
 		kshisen \
+		ksirk \
 		ksquares \
 		ktuberling \
 		picmi

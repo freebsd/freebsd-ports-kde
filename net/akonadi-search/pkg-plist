@@ -1,6 +1,11 @@
 bin/akonadi_indexing_agent
 etc/xdg/akonadi-search.categories
 etc/xdg/akonadi-search.renamecategories
+include/KF5/AkonadiSearch/Core/query.h
+include/KF5/AkonadiSearch/Core/resultiterator.h
+include/KF5/AkonadiSearch/Core/search_core_export.h
+include/KF5/AkonadiSearch/Core/searchstore.h
+include/KF5/AkonadiSearch/Core/term.h
 include/KF5/AkonadiSearch/Debug/akonadisearchdebugdialog.h
 include/KF5/AkonadiSearch/Debug/akonadisearchdebugsearchpathcombobox.h
 include/KF5/AkonadiSearch/Debug/search_debug_export.h
@@ -13,6 +18,12 @@ include/KF5/AkonadiSearch/PIM/notequery.h
 include/KF5/AkonadiSearch/PIM/query.h
 include/KF5/AkonadiSearch/PIM/resultiterator.h
 include/KF5/AkonadiSearch/PIM/search_pim_export.h
+include/KF5/AkonadiSearch/Xapian/search_xapian_export.h
+include/KF5/AkonadiSearch/Xapian/xapiandatabase.h
+include/KF5/AkonadiSearch/Xapian/xapiandocument.h
+include/KF5/AkonadiSearch/Xapian/xapianqueryparser.h
+include/KF5/AkonadiSearch/Xapian/xapiansearchstore.h
+include/KF5/AkonadiSearch/Xapian/xapiantermgenerator.h
 include/KF5/akonadi_search_version.h
 lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfig.cmake
 lib/cmake/KF5AkonadiSearch/KF5AkonadiSearchConfigVersion.cmake

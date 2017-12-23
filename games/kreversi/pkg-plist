@@ -28,7 +28,6 @@ share/knotifications5/kreversi.notifyrc
 %%DATADIR%%/qml/globals.js
 %%DATADIR%%/sounds/reversi-click.wav
 %%DATADIR%%/sounds/reversi-won.wav
-share/kxmlgui5/kreversi/kreversiui.rc
 share/locale/ar/LC_MESSAGES/kreversi.mo
 share/locale/ast/LC_MESSAGES/kreversi.mo
 share/locale/bg/LC_MESSAGES/kreversi.mo

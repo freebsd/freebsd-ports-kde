@@ -9,7 +9,6 @@ share/icons/hicolor/48x48/apps/kjumpingcube.png
 share/icons/hicolor/64x64/apps/kjumpingcube.png
 %%DATADIR%%/pics/default.desktop
 %%DATADIR%%/pics/default.svg
-share/kxmlgui5/kjumpingcube/kjumpingcubeui.rc
 share/locale/ar/LC_MESSAGES/kjumpingcube.mo
 share/locale/ast/LC_MESSAGES/kjumpingcube.mo
 share/locale/bg/LC_MESSAGES/kjumpingcube.mo

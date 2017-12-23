@@ -74,8 +74,8 @@ KDE_FRAMEWORKS_VERSION?=	5.41.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	17.08.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.6.3
+KDE_APPLICATIONS_VERSION?=	17.12.0
+KDE_APPLICATIONS_SHLIB_VER?=	5.7.0
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -296,7 +296,7 @@ _USE_KDEPIM5_ALL=	akonadicontacts akonadimime akonadinotes \
 			gravatar holidays identitymanagement imap \
 			incidenceeditor kdepim-addons kdepim-apps-libs \
 			kdepim-runtime5 kdepim5 kontactinterface kpimdav \
-			ldap libkdepim libkleo libksieve mailcommon \
+			ksmtp ldap libkdepim libkleo libksieve mailcommon \
 			mailimporter mailtransport mbox messagelib \
 			mime pimcommon pimtextedit syndication tnef
 
@@ -799,6 +799,9 @@ kontactinterface_LIB=	libKF5KontactInterface.so
 
 kpimdav_PORT=		net/kdav
 kpimdav_LIB=		libKPimKDAV.so
+
+ksmtp_PORT=			net/ksmtp
+ksmtp_LIB=			libKPimSMTP.so
 
 ldap_PORT=		net/kldap
 ldap_LIB=		libKF5Ldap.so

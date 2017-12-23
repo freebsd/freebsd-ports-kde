@@ -19,7 +19,6 @@ share/icons/hicolor/64x64/apps/kfourinline.png
 %%DATADIR%%/grafix/yellow.svg
 %%DATADIR%%/grafix/yellow_reflection.desktop
 %%DATADIR%%/grafix/yellow_reflection.rc
-share/kxmlgui5/kfourinline/kfourinlineui.rc
 share/locale/ar/LC_MESSAGES/kfourinline.mo
 share/locale/ast/LC_MESSAGES/kfourinline.mo
 share/locale/bg/LC_MESSAGES/kfourinline.mo

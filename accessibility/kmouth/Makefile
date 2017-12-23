@@ -3,13 +3,14 @@
 PORTNAME=	kmouth
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	accessibility kde kde-applications
-PKGNAMESUFFIX=	# hack: uses kde:4 but we don't want the pkgname suffix
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Speech synthesizer frontend for KDE
 
-USES=		cmake:outsource kde:4 tar:xz
-USE_KDE=	kdelibs automoc4
-USE_QT4=	qmake_build moc_build rcc_build uic_build
+USES=		cmake:outsource kde:5 tar:xz
+USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
+		ecm i18n jobwidgets kio service widgetsaddons xmlgui
+USE_QT5=	core dbus gui network printsupport speech widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

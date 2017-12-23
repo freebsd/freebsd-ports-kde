@@ -22,7 +22,6 @@ share/icons/hicolor/64x64/apps/klines.png
 %%DATADIR%%/themes/pool.desktop
 %%DATADIR%%/themes/pool.png
 %%DATADIR%%/themes/pool.svgz
-share/kxmlgui5/klines/klinesui.rc
 share/locale/ar/LC_MESSAGES/klines.mo
 share/locale/ast/LC_MESSAGES/klines.mo
 share/locale/bg/LC_MESSAGES/klines.mo

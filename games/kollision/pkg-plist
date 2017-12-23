@@ -17,7 +17,6 @@ share/icons/oxygen/64x64/apps/kollision.png
 %%DATADIR%%/sounds/hit_wall.ogg
 %%DATADIR%%/sounds/start.ogg
 %%DATADIR%%/sounds/you_lose.ogg
-share/kxmlgui5/kollision/kollisionui.rc
 share/locale/ast/LC_MESSAGES/kollision.mo
 share/locale/bs/LC_MESSAGES/kollision.mo
 share/locale/ca/LC_MESSAGES/kollision.mo

@@ -22,7 +22,6 @@ share/icons/hicolor/64x64/apps/gwenview.png
 share/kservices5/ServiceMenus/slideshow.desktop
 share/kservices5/gvpart.desktop
 share/kxmlgui5/gvpart/gvpart.rc
-share/kxmlgui5/gwenview/gwenviewui.rc
 share/locale/ar/LC_MESSAGES/gwenview.mo
 share/locale/ast/LC_MESSAGES/gwenview.mo
 share/locale/bg/LC_MESSAGES/gwenview.mo

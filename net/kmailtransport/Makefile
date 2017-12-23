@@ -14,7 +14,7 @@ LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	ecm kcmutils kdelibs4support wallet
 # pim components
-USE_KDE+=	akonadi akonadimime
+USE_KDE+=	akonadi akonadimime ksmtp
 USE_QT5=	buildtools_build gui qmake_build
 USE_LDCONFIG=	yes
 

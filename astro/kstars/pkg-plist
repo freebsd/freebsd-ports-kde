@@ -1,10 +1,7 @@
 bin/kstars
-etc/dbus-1/system.d/org.kde.kf5auth.kstars.conf
 lib/libhtmesh.a
-lib/libexec/kauth/kauth_kstars_helper
 share/applications/org.kde.kstars.desktop
 share/config.kcfg/kstars.kcfg
-share/dbus-1/system-services/org.kde.kf5auth.kstars.service
 share/icons/hicolor/128x128/apps/kstars.png
 share/icons/hicolor/16x16/apps/kstars.png
 share/icons/hicolor/32x32/apps/kstars.png
@@ -49,7 +46,6 @@ share/knotifications5/kstars.notifyrc
 %%DATADIR%%/earth.R4.vsop
 %%DATADIR%%/earth.R5.vsop
 %%DATADIR%%/earth.orbit
-%%DATADIR%%/fr/info_url.dat
 %%DATADIR%%/geomap.png
 %%DATADIR%%/glossary.xml
 %%DATADIR%%/image_url.dat
@@ -119,7 +115,6 @@ share/knotifications5/kstars.notifyrc
 %%DATADIR%%/moonLR.dat
 %%DATADIR%%/moonless-night.colors
 %%DATADIR%%/namedstars.dat
-%%DATADIR%%/nds/info_url.dat
 %%DATADIR%%/neptune.B0.vsop
 %%DATADIR%%/neptune.B1.vsop
 %%DATADIR%%/neptune.B2.vsop
@@ -424,6 +419,5 @@ share/locale/uk/LC_MESSAGES/kstars.mo
 share/locale/zh_CN/LC_MESSAGES/kstars.mo
 share/locale/zh_TW/LC_MESSAGES/kstars.mo
 share/metainfo/org.kde.kstars.appdata.xml
-share/polkit-1/actions/org.kde.kf5auth.kstars.policy
 share/sounds/KDE-KStars-Alert.ogg
 share/sounds/KDE-KStars-Warning.ogg

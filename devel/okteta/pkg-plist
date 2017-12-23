@@ -542,7 +542,7 @@ lib/libokteta2core.so.2
 lib/libokteta2gui.so
 lib/libokteta2gui.so.0.9.1
 lib/libokteta2gui.so.2
-%%QT_PLUGINDIR%%/designer/oktetadesignerplugin.so
+%%QT_PLUGINDIR%%/designer/oktetawidgets.so
 %%QT_PLUGINDIR%%/oktetapart.so
 share/applications/org.kde.okteta.desktop
 share/config.kcfg/structviewpreferences.kcfg

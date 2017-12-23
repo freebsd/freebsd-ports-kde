@@ -26,6 +26,8 @@ share/icons/hicolor/scalable/apps/ktouch.svgz
 %%DATADIR%%/courses/bg2.xml
 %%DATADIR%%/courses/br.xml
 %%DATADIR%%/courses/cat.xml
+%%DATADIR%%/courses/ch1.xml
+%%DATADIR%%/courses/ch2.xml
 %%DATADIR%%/courses/cz.xml
 %%DATADIR%%/courses/de.dvorak.xml
 %%DATADIR%%/courses/de.neo.xml

@@ -12,6 +12,7 @@ lib/libkerfuffle.so.%%KDE_APPLICATIONS_VERSION%%
 %%QT_PLUGINDIR%%/kerfuffle/kerfuffle_libbz2.so
 %%QT_PLUGINDIR%%/kerfuffle/kerfuffle_libgz.so
 %%QT_PLUGINDIR%%/kerfuffle/kerfuffle_libxz.so
+%%ZIP%%%%QT_PLUGINDIR%%/kerfuffle/kerfuffle_libzip.so
 %%QT_PLUGINDIR%%/kf5/kfileitemaction/compressfileitemaction.so
 %%QT_PLUGINDIR%%/kf5/kfileitemaction/extractfileitemaction.so
 %%QT_PLUGINDIR%%/kf5/kio_dnd/extracthere.so
@@ -36,8 +37,7 @@ share/icons/hicolor/64x64/apps/ark.png
 share/icons/hicolor/scalable/apps/ark.svgz
 share/kservices5/ark_part.desktop
 share/kservicetypes5/kerfufflePlugin.desktop
-share/kxmlgui5/ark/ark_part.rc
-share/kxmlgui5/ark/arkui.rc
+share/kxmlgui5/ark/ark_viewer.rc
 share/locale/ar/LC_MESSAGES/ark.mo
 share/locale/ast/LC_MESSAGES/ark.mo
 share/locale/bg/LC_MESSAGES/ark.mo
@@ -92,6 +92,5 @@ share/locale/ug/LC_MESSAGES/ark.mo
 share/locale/uk/LC_MESSAGES/ark.mo
 share/locale/zh_CN/LC_MESSAGES/ark.mo
 share/locale/zh_TW/LC_MESSAGES/ark.mo
-share/kxmlgui5/ark/ark_viewer.rc
 share/metainfo/org.kde.ark.appdata.xml
 share/mime/packages/kerfuffle.xml
