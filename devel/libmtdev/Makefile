@@ -22,12 +22,4 @@ CPPFLAGS+=	-I${LOCALBASE}/include # v4l_compat
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 
-# TODO: do this less hacky -- work around conflict with Qt-5.9.
-.include <bsd.port.pre.mk>
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200000
-post-install:
-	${REINPLACE_CMD} -e 's|linux/input.h|dev/evdev/input.h|' \
-		${STAGEDIR}${PREFIX}/include/mtdev.h
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
