@@ -166,8 +166,9 @@ QMAKE_ARGS+=	QT_CONFIG+="release" \
 PLIST_SUB+=		DEBUG="@comment "
 . endif
 
-# Make configure verbose (otherwise it depends on bash).
-# CONFIGURE_ARGS+=-verbose
+. if defined(WANT_QT_VERBOSE_CONFIGURE)
+CONFIGURE_ARGS+=-verbose
+. endif
 
 . if ${QT_DIST} == "base" || ${_QT_VERSION:M4*}
 .  if ${_QT_VERSION:M4*}
