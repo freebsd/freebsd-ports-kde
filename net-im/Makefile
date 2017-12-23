@@ -3,7 +3,6 @@
 
     COMMENT = Instant messaging
 
-    SUBDIR += bsflite
     SUBDIR += centerim
     SUBDIR += centerim-devel
     SUBDIR += chattahoochie
@@ -88,7 +87,6 @@
     SUBDIR += p5-Jabber-Connection
     SUBDIR += p5-Jabber-Lite
     SUBDIR += p5-Jabber-SimpleSend
-    SUBDIR += p5-Net-AIM
     SUBDIR += p5-Net-AOLIM
     SUBDIR += p5-Net-Async-XMPP
     SUBDIR += p5-Net-ICQ2000
@@ -168,6 +166,7 @@
     SUBDIR += skype4
     SUBDIR += teamwords
     SUBDIR += telegram
+    SUBDIR += telegram-desktop
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
     SUBDIR += telepathy-accounts-signon

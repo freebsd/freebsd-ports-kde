@@ -6,6 +6,8 @@
     SUBDIR += 2d-rewriter
     SUBDIR += ALPSCore
     SUBDIR += InsightToolkit
+    SUBDIR += MOOSE-neural-simulator
+    SUBDIR += PETSc
     SUBDIR += R-cran-AMORE
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -15,6 +17,7 @@
     SUBDIR += R-cran-eco
     SUBDIR += R-cran-epicalc
     SUBDIR += R-cran-etm
+    SUBDIR += R-cran-fastICA
     SUBDIR += R-cran-kernlab
     SUBDIR += R-cran-snow
     SUBDIR += R-cran-som
@@ -167,6 +170,7 @@
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
     SUBDIR += py-pydicom
+    SUBDIR += py-pymol
     SUBDIR += py-pysal
     SUBDIR += py-pyteomics
     SUBDIR += py-pyteomics.biolccc

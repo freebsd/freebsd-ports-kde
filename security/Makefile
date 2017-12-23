@@ -427,6 +427,7 @@
     SUBDIR += nss_compat_ossl
     SUBDIR += nyx
     SUBDIR += oath-toolkit
+    SUBDIR += obfs4proxy-tor
     SUBDIR += obfsclient
     SUBDIR += obfsproxy
     SUBDIR += ocaml-cryptgps
@@ -1085,6 +1086,7 @@
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-openssl
+    SUBDIR += rubygem-openssl20
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami

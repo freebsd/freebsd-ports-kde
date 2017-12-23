@@ -143,6 +143,7 @@
     SUBDIR += faac
     SUBDIR += faad
     SUBDIR += fapg
+    SUBDIR += faust
     SUBDIR += fcplay
     SUBDIR += fdk-aac
     SUBDIR += fdmf
@@ -371,7 +372,6 @@
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
-    SUBDIR += last.fm
     SUBDIR += lastfm-desktop
     SUBDIR += liba52
     SUBDIR += libaacplus
@@ -629,6 +629,7 @@
     SUBDIR += patchage
     SUBDIR += pavucontrol
     SUBDIR += pavumeter
+    SUBDIR += pc-mixer
     SUBDIR += pd
     SUBDIR += pd-cyclone
     SUBDIR += pear-Text_Spell_Audio
