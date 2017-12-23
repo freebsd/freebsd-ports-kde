@@ -30,6 +30,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libevent.so:devel/libevent \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz \
 		libjsoncpp.so:devel/jsoncpp \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
@@ -37,6 +38,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
 		libprotobuf.so:devel/protobuf \
+		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libsrtp.so:net/libsrtp \
 		libwebp.so:graphics/webp
@@ -60,7 +62,7 @@ USES=		gperf jpeg python:2.7,build pkgconfig \
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT5=	core designer gui location network qml quick webchannel \
 		widgets buildtools_build qmake_build
-USE_XORG=	scrnsaverproto x11 xcomposite xcursor xext xi xproto \
+USE_XORG=	scrnsaverproto x11 xcb xcomposite xcursor xext xi xproto \
 		xrandr xrender xscrnsaver xtst
 
 USE_LDCONFIG=	${QT_LIBDIR}
@@ -71,10 +73,18 @@ QMAKE_ARGS=	WEBENGINE_CONFIG+=use_nss \
 		WEBENGINE_CONFIG+=use_proprietary_codecs \
 		WEBENGINE_CONFIG+=use_system_libevent \
 		WEBENGINE_CONFIG+=use_system_snappy
+QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
 ALL_TARGET=	first
+
+# We need ar(1) from ports because the Chromium code uses the @file syntax.
+# We then need to ensure ld(1) from ports is used because of the archives ar(1)
+# generated.
+USE_BINUTILS=	yes
+CC+=		"-B${LOCALBASE}/bin"
+CXX+=		"-B${LOCALBASE}/bin"
 
 # The build system reads the environment variable $NINJA_PATH to decide whether
 # to boostrap ninja or not (and also to invoke it afterwards). CC and CXX are
@@ -84,7 +94,7 @@ ALL_TARGET=	first
 # MAKE_ENV because part of the configuration process happens during the build.
 CONFIGURE_ENV+=	NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
 		NINJA_PATH="${LOCALBASE}/bin/ninja"  \
-		PATH=${CONFIGURE_WRKSRC}/bin:${PATH}
+		PATH=${CONFIGURE_WRKSRC}/bin:${LOCALBASE}/bin:${PATH}
 MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		C_INCLUDE_PATH=${LOCALBASE}/include	\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
