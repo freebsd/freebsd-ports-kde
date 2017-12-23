@@ -1,0 +1,9 @@
+--- src/webchannel/resources.qrc.orig	2017-12-15 20:55:31 UTC
++++ src/webchannel/resources.qrc
+@@ -1,5 +1,5 @@
+ <RCC>
+     <qresource prefix="/qtwebchannel/">
+-        <file alias="qwebchannel.js">../../examples/webchannel/shared/qwebchannel.js</file>
++        <file alias="qwebchannel.js">%%QT_EXAMPLEDIR%%/webchannel/shared/qwebchannel.js</file>
+     </qresource>
+ </RCC>

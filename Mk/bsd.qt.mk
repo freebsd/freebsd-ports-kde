@@ -27,7 +27,7 @@ Qt_Pre_Include=	bsd.qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=	4 5
 QT4_VERSION?=	4.8.7
-QT5_VERSION?=	5.7.1
+QT5_VERSION?=	5.9.3
 
 _QT_RELNAME=	qt${_QT_VERSION:R:R}
 _QT_VERSION=	# empty
@@ -88,23 +88,19 @@ LDFLAGS+=		-Wl,--as-needed
 # Ensure that the "makesum" target (with its inner "fetch" one) uses
 # devel/qt*/distinfo for every port.
 .		if ${DISTINFO_FILE:H} == ${.CURDIR:H:H}/devel/${_QT_RELNAME}
-QT_DIST=		3d base canvas3d charts connectivity datavis3d declarative \
-				declarative-render2d gamepad graphicaleffects imageformats \
-				location multimedia quickcontrols quickcontrols2 script scxml \
-				sensors serialbus serialport svg tools translations \
-				virtualkeyboard wayland webchannel webengine \
-				websockets x11extras xmlpatterns
+QT_DIST=		3d activeqt androidextras base canvas3d charts connectivity \
+				datavis3d declarative doc gamepad graphicaleffects imageformats \
+				location macextras multimedia networkauth purchasing \
+				quickcontrols2 quickcontrols remoteobjects script scxml sensors \
+				serialbus serialport speech svg tools translations \
+				virtualkeyboard wayland webchannel webengine websockets webview \
+				winextras x11extras xmlpatterns
 .		endif
 .  endif
 
 .  if ${QT_DIST} == "base" && ${PORTNAME} != "qmake"
 # Qt configure requires pkg-config to detect dependencies.
 USES+=			pkgconfig
-
-# Set QMAKESPEC when building qtbase so that qmake (called by the configure
-# script) can find the mkspecs we create ourselves in devel/qmake5.
-CONFIGURE_ENV+=	QMAKESPEC="${QMAKESPEC}"
-MAKE_ENV+=		QMAKESPEC="${QMAKESPEC}"
 .  endif
 
 # -nomake is only used by qtbase's configure script.
@@ -161,29 +157,28 @@ QMAKE_ARGS+=	QT_CONFIG+="debug separate_debug_info" \
 				QT_CONFIG-="release"
 PLIST_SUB+=		DEBUG=""
 . else
-CONFIGURE_ARGS+=-release -no-separate-debug-info
+CONFIGURE_ARGS+=-release -no-separate-debug-info -recheck-all
 QMAKE_ARGS+=	QT_CONFIG+="release" \
 				QT_CONFIG-="debug separate_debug_info"
 PLIST_SUB+=		DEBUG="@comment "
 . endif
 
-. if defined(WANT_QT_VERBOSE_CONFIGURE)
-CONFIGURE_ARGS+=-verbose
-. endif
+# Make configure verbose (otherwise it depends on bash).
+# CONFIGURE_ARGS+=-verbose
 
 . if ${QT_DIST} == "base" || ${_QT_VERSION:M4*}
 .  if ${_QT_VERSION:M4*}
 _EXTRA_PATCHES_QT4=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-src-corelib-global-qglobal.h \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-libtool
+		${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-config.tests-unix-compile.test \
 # Patch in proper name for armv6 architecture: https://gcc.gnu.org/ml/gcc-patches/2015-06/msg01679.html
 _EXTRA_PATCHES_QT4+=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-armv6
 .  else
 _EXTRA_PATCHES_QT5=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
-					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-config.tests_unix_arch.test
+					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf
 .  endif
 EXTRA_PATCHES?=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-configure \
-		${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-config.tests-unix-compile.test \
 		${_EXTRA_PATCHES_QT4} ${_EXTRA_PATCHES_QT5}
 . endif
 
@@ -261,7 +256,7 @@ UIC?=			${QT_BINDIR}/uic
 QMAKE?=			${QT_BINDIR}/qmake
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
-QMAKESPEC?=		${QT_MKSPECDIR}/freebsd-${QMAKE_COMPILER}
+QMAKESPEC?=		freebsd-${QMAKE_COMPILER}
 
 # The whole Qt distribution should be built with the same compiler, but it's
 # better to support custom settings. Dereferencing the detection allows to
@@ -287,6 +282,11 @@ PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 CONFIGURE_ENV+=	QT_SELECT=${_QT_RELNAME}
 MAKE_ENV+=	QT_SELECT=${_QT_RELNAME}
 
+# Make sure both the installed mkspecs as well as the ones being built are
+# found, with the ones from the port being built having preference.
+CONFIGURE_ENV+=	QMAKEMODULES="${WRKSRC}/mkspecs/modules:${LOCALBASE}/${QT_MKSPECDIR_REL}/modules"
+MAKE_ENV+=		QMAKEMODULES="${WRKSRC}/mkspecs/modules:${LOCALBASE}/${QT_MKSPECDIR_REL}/modules"
+
 .endif # !defined(_POSTMKINCLUDED) && !defined(Qt_Pre_Include)
 
 .if defined(_POSTMKINCLUDED) && !defined(Qt_Post_Include)
@@ -295,8 +295,8 @@ Qt_Post_Include=	bsd.qt.mk
 
 .if !defined(QT_NONSTANDARD)
 CONFIGURE_ENV+=	QTDIR="${QT_ARCHDIR}" QMAKE="${QMAKE}" \
-				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}" \
-				QMAKESPEC="${QMAKESPEC}"
+				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}"
+# 				QMAKESPEC="${QMAKESPEC}"
 CONFIGURE_ARGS+=--with-qt-includes=${QT_INCDIR} \
 				--with-qt-libraries=${QT_LIBDIR} \
 				--with-extra-includes=${LOCALBASE}/include \
@@ -317,10 +317,10 @@ _USE_QT4_ONLY=	accessible assistant-adp assistantclient clucene codecs-cn codecs
 				qtestlib qvfb rcc uic uic3 xmlpatterns-tool
 
 _USE_QT5_ONLY=	3d buildtools canvas3d charts concurrent connectivity \
-				core datavis3d declarative-render2d diag examples gamepad \
+				core datavis3d diag examples gamepad \
 				graphicaleffects location paths phonon4 plugininfo printsupport \
 				qdbus qdoc qdoc-data qev qml quick quickcontrols \
-				quickcontrols2 scxml sensors serialbus serialport \
+				quickcontrols2 scxml sensors serialbus serialport speech \
 				sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
 				webengine websockets websockets-qml widgets x11extras
 
@@ -383,9 +383,6 @@ dbus_LIB=			libQt${_QT_LIBVER}DBus.so
 
 declarative_PORT=	x11-toolkits/${_QT_RELNAME}-declarative
 declarative_LIB=	libQt${_QT_LIBVER}Declarative.so
-
-declarative-render2d_PORT=	x11-toolkits/${_QT_RELNAME}-declarative-render2d
-declarative-render2d_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/scenegraph/libsoftwarecontext.so
 
 demo_PORT=			misc/${_QT_RELNAME}-qtdemo
 demo_PATH=			${LOCALBASE}/${QT_BINDIR_REL}/qtdemo
@@ -548,6 +545,9 @@ serialbus_LIB=		libQt${_QT_LIBVER}SerialBus.so
 
 serialport_PORT=	comms/${_QT_RELNAME}-serialport
 serialport_LIB=	libQt${_QT_LIBVER}SerialPort.so
+
+speech_PORT=		accessibility/${_QT_RELNAME}-speech
+speech_LIB=			libQt${_QT_LIBVER}TextToSpeech.so
 
 sql_PORT=			databases/${_QT_RELNAME}-sql
 sql_LIB=			libQt${_QT_LIBVER}Sql.so
@@ -728,7 +728,7 @@ qtbase-post-patch:
 .  if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
 
-post-configure: qmake-configure
+# post-configure: qmake-configure
 .  endif
 . endif # ${QT_DIST} == "base"
 
@@ -769,7 +769,21 @@ qt-post-install:
 	@${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
 	@${ECHO_CMD} -n \
 		> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#if defined(QT_NO_${QT_MODNAME:tu}) && defined(QT_${QT_MODNAME:tu}_LIB)" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#  undef QT_NO_${QT_MODNAME:tu}" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#endif" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .  for def in ${QT_DEFINES:N-*:O:u:C/=.*$//}
+	@${ECHO_CMD} "#if defined(QT_NO_${def}) && defined(QT_${def})" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#  undef QT_NO_${def}" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
+	@${ECHO_CMD} "#endif" \
+		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	@${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	${ECHO_CMD} "# define QT_${def}" \

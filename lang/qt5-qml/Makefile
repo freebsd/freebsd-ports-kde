@@ -2,7 +2,6 @@
 
 PORTNAME=	qml
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
 CATEGORIES=	lang
 PKGNAMEPREFIX=	qt5-
 
@@ -22,6 +21,8 @@ INSTALL_WRKSRC=	${WRKSRC}/src
 post-patch:
 # tools/tools.pro will be processed automatically unless it does not exist.
 	${RM} -r ${WRKSRC}/tools
+
+#	${RM} -r ${WRKSRC}/src/quick
 
 	${REINPLACE_CMD} 's,python,${PYTHON_CMD},g' \
 		${WRKSRC}/src/3rdparty/masm/masm.pri

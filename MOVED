@@ -9904,3 +9904,4 @@ devel/android-tools-fastboot-devel|devel/android-tools-fastboot|2017-12-20|Out o
 math/petsc|science/PETSc|2017-12-20|Recreated after it has been deleted in r366959 on 2014-09-01
 math/petsc-mpich|science/PETSc|2017-12-20|Recreated after it has been deleted in r321243 on 2013-06-19 (it was a slave port)
 textproc/py-elasticsearch-py|textproc/py-elasticsearch|2017-12-21|Rename to match PyPI naming
+x11-toolkits/qt5-declarative-render2d/||2017-12-31|Merged into x11-toolkits/qt5-quick
