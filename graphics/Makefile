@@ -495,6 +495,7 @@
     SUBDIR += lib3ds
     SUBDIR += libGLU
     SUBDIR += libGLw
+    SUBDIR += libQGLViewer
     SUBDIR += libafterimage
     SUBDIR += libart_lgpl
     SUBDIR += libboard

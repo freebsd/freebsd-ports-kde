@@ -1,69 +1,22 @@
-1;95;0c--- portmaster.orig	2017-12-15 12:40:13.818570000 +0100
-+++ portmaster	2017-12-15 16:49:11.583821000 +0100
-@@ -1449,6 +1449,24 @@
- 	fi
- }
+--- portmaster.orig	2017-12-21 09:02:44 UTC
++++ portmaster
+@@ -2264,12 +2264,14 @@ make_dep_list () {
  
-+find_new_port () {
-+	# Global: new_port
-+	local portdir flavor flavor_option
-+
-+	[ -n "$new_port" ] && return
-+
-+	portdir=$(dir_part "$1")
-+	flavor=$(flavor_part "$1")
-+	flavor_option=${flavor:+FLAVOR=$flavor}
-+#	export_flavor $flavor
-+	if pm_cd_pd $portdir; then
-+		new_port=`pm_make -V PKGNAME ${flavor_option}`
-+	else
-+		new_port=`parse_index $portdir name` ||
-+			fail "No entry for $portdir in $PM_INDEX"
-+	fi
-+}
-+
- check_for_updates () {
- 	# Global: num_updates
- 	local nf iport originflavor flavor origin port_ver do_update skip
-@@ -2148,24 +2166,6 @@
- 	PM_NEEDS_UPDATE="${PM_NEEDS_UPDATE}${1} "
- }
- 
--find_new_port () {
--	# Global: new_port
--	local portdir flavor flavor_option
--
--	[ -n "$new_port" ] && return
--
--	portdir=$(dir_part "$1")
--	flavor=$(flavor_part "$1")
--	flavor_option=${flavor:+FLAVOR=$flavor}
--#	export_flavor $flavor
--	if pm_cd_pd $portdir; then
--		new_port=`pm_make -V PKGNAME ${flavor_option}`
--	else
--		new_port=`parse_index $portdir name` ||
--			fail "No entry for $portdir in $PM_INDEX"
--	fi
--}
--
- update_build_l () {
- 	local originflavor origin flavor iport
- 
-@@ -3129,7 +3129,7 @@
- 	dir=$(dir_part $1)
- 	flavor=$(flavor_part $1)
- 	pkgname=$(make -C "$pd/$dir" -V PKGNAME FLAVOR=$flavor) || return 1
--	pkg info -x ${pkgname%-*}'-[^-]*'
-+	pkg info -qx ${pkgname%-*}'-[^-]*'
- }
- 
- if [ -z "$upg_port" -a -z "$REPLACE_ORIGIN" ]; then
-@@ -3594,6 +3594,7 @@
- 	fi
- 
- 	pm_cd_pd $portdir
-+	export_flavor $(flavor_part $portdir)
- 	[ -z "$DONT_PRE_CLEAN" ] && { pm_make clean NOCLEANDEPENDS=ncd ||
- 		fail 'make clean failed'; }
- 
+ 	for dep_type in $*; do
+ 		case $dep_type in
+-		all-depends-list)
+-			var_opt="$var_opt -V BUILD_DEPENDS -V LIB_DEPENDS -V RUN_DEPENDS" ;;
+-		build-depends-list)
+-			var_opt="$var_opt -V BUILD_DEPENDS -V LIB_DEPENDS" ;;
++		all-depends-list|build-depends-list)
++			var_opt="$var_opt -V PKG_DEPENDS -V EXTRACT_DEPENDS \
++				-V PATCH_DEPENDS -V FETCH_DEPENDS -V BUILD_DEPENDS -V LIB_DEPENDS"
++			[ "$dep_type" = all-depends-list ] && var_opt="$var_opt -V RUN_DEPENDS" ;;
+ 		run-depends-list)
+- 			var_opt="$var_opt -V RUN_DEPENDS -V LIB_DEPENDS" ;;
++			var_opt="$var_opt -V RUN_DEPENDS -V LIB_DEPENDS" ;;
++		test-depends-list)
++			var_opt="$var_opt -V TEST_DEPENDS" ;;
+ 		*)
+ 			fail "make_dep_list: Unsupported option '$dep_type'"
+ 		esac

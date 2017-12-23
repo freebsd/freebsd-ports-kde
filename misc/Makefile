@@ -259,6 +259,7 @@
     SUBDIR += libkdeedu-kde4
     SUBDIR += libkeduvocdocument
     SUBDIR += libmetalink
+    SUBDIR += libpostal
     SUBDIR += libpri
     SUBDIR += libsupertone
     SUBDIR += libutf

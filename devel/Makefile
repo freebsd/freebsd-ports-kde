@@ -97,9 +97,7 @@
     SUBDIR += amd64-gcc
     SUBDIR += amd64-xtoolchain-gcc
     SUBDIR += android-tools-adb
-    SUBDIR += android-tools-adb-devel
     SUBDIR += android-tools-fastboot
-    SUBDIR += android-tools-fastboot-devel
     SUBDIR += android-tools-simpleperf
     SUBDIR += anjuta
     SUBDIR += antlr
@@ -4257,6 +4255,7 @@
     SUBDIR += py-anyjson
     SUBDIR += py-apache_conf_parser
     SUBDIR += py-apipkg
+    SUBDIR += py-apns2
     SUBDIR += py-appdirs
     SUBDIR += py-application
     SUBDIR += py-apptools
@@ -4742,6 +4741,7 @@
     SUBDIR += py-pyelftools
     SUBDIR += py-pyev
     SUBDIR += py-pyface
+    SUBDIR += py-pyfcm
     SUBDIR += py-pyflakes
     SUBDIR += py-pygdbmi
     SUBDIR += py-pygit2
@@ -5429,6 +5429,7 @@
     SUBDIR += rubygem-filesize
     SUBDIR += rubygem-flexmock
     SUBDIR += rubygem-flipper
+    SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper010
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
@@ -5951,8 +5952,6 @@
     SUBDIR += svn_load_dirs
     SUBDIR += svntrac
     SUBDIR += swank-clojure
-    SUBDIR += swig13
-    SUBDIR += swig20
     SUBDIR += swig30
     SUBDIR += synfig
     SUBDIR += sysconftool

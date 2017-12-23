@@ -167,6 +167,7 @@
     SUBDIR += lumina-fm
     SUBDIR += lumina-mediaplayer
     SUBDIR += lumina-notify
+    SUBDIR += lumina-pdf
     SUBDIR += lumina-screenshot
     SUBDIR += lumina-textedit
     SUBDIR += lumina-xdg-entry
@@ -248,6 +249,7 @@
     SUBDIR += rubygem-shellplay
     SUBDIR += rubygem-taskjuggler
     SUBDIR += semantik
+    SUBDIR += showdown
     SUBDIR += shutter
     SUBDIR += silence
     SUBDIR += simpleagenda

@@ -21,24 +21,21 @@ LICENSE_PERMS_QPL10=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 BROKEN_aarch64=		Does not build: sh: as: not found
 BROKEN_armv7=		Does not build: hasgot.c: undefined reference to `tgetent'
 BROKEN_powerpc64=	Does not build: error: too few arguments to function gethostbyname_r
-BROKEN_sparc64=	ocamlc.opt seg-faults, please try to fix
+BROKEN_sparc64=	No rule to make target 'none.o', needed by 'libasmrun.a'
 BROKEN_mips64=	No ASM support
 BROKEN_mips=	No ASM support
 
 USES=		cpe gmake tar:xz
 USE_LDCONFIG=	yes
 CPE_VENDOR=	inria
-REINPLACE_ARGS=	-i ""
 HAS_CONFIGURE=	yes
 ALL_TARGET=	world.opt
 STRIP=
 SSP_UNSAFE=	yes
 MAKE_JOBS_UNSAFE=	yes
 
-MAKE_ENV+=	STAGEDIR="${STAGEDIR}"
 CONFIGURE_ARGS=	-verbose -prefix "${PREFIX}" \
-		-cc "${CC} ${CFLAGS}" \
-		-as "${AS} ${ASFLAGS}" \
+		-cc "${CC}" \
 		-aspp "${CC} -c" \
 		-partialld "${LD} -r"
 
@@ -97,7 +94,6 @@ CONFIGURE_ARGS+=-no-graph
 .endif
 
 .include <bsd.port.pre.mk>
-.include "${FILESDIR}/manfiles"
 
 .if defined(NO_PROFILE) || ${ARCH:Mpowerpc} || ${ARCH:Mamd64}
 PLIST_SUB+=	PROF="@comment "
@@ -116,14 +112,11 @@ post-extract:
 .endif
 
 post-patch:
-# Don't hardcode GCC for depend target
 	@${REINPLACE_CMD} \
 		-e '\|MKLIB=|s|ar rc|${AR} rc|' \
 		-e '\|RANLIB|s|ranlib|${RANLIB}|' \
 		-e '\|bytecclinkopts=|s|""|"${LDFLAGS}"|' \
 		-e "\|nativecclinkopts=|s|''|\"${LDFLAGS:C/-Wl,//}\"|" \
-		-e '\|mksharedlib=|s|$$bytecc|& $$bytecclinkopts|' \
-		-e 's|-lbfd -ldl|-lbfd $$dllib|' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's,$$(ARCH),$$(SYSTEM_ARCH),' \
 		${WRKSRC}/Makefile ${WRKSRC}/asmrun/Makefile \
@@ -132,10 +125,7 @@ post-patch:
 		${WRKSRC}/testsuite/tests/asmcomp/Makefile
 
 post-configure:
-# CFLAGS safeness
 	@${REINPLACE_CMD} -E \
-		-e 's|(BYTECCCOMPOPTS[ \t]*=.*)|\1 ${CFLAGS}|' \
-		-e 's|(NATIVECCCOMPOPTS[ \t]*=.*)|\1 ${CFLAGS}|' \
 		-e '/^PTHREAD_LINK/s,-pthread,${THR_LD},g' \
 		${WRKSRC}/config/Makefile
 
@@ -161,8 +151,5 @@ post-install:
 	${INSTALL_DATA} ${_DISTDIR}${DOCSDISTNAME}-refman.ps.gz ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${_DISTDIR}${DOCSDISTNAME}-refman.pdf ${STAGEDIR}${DOCSDIR}
 .endif
-
-# Fix permissions for ld.conf
-	@${CHMOD} 644 ${STAGEDIR}${PREFIX}/lib/ocaml/ld.conf
 
 .include <bsd.port.post.mk>
