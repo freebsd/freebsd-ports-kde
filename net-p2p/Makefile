@@ -108,6 +108,7 @@
     SUBDIR += verlihub-plugins-messanger
     SUBDIR += verlihub-plugins-stats
     SUBDIR += vuze
+    SUBDIR += xmrig
     SUBDIR += xnap
     SUBDIR += zetacoin
     SUBDIR += zetacoin-nox11
