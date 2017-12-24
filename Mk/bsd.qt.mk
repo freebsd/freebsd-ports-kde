@@ -146,6 +146,9 @@ CONFIGURE_ARGS+=-no-sse2
 # Work around a bug in current binutils, where the gold linker creates
 # duplicate symbols. See pr 218187. Disable the gold-linker for Qt5 ports.
 CONFIGURE_ARGS+=	-no-use-gold-linker
+# Pass -recheck-all so that multiple calls to the configure script really
+# re-run all checks.
+CONFIGURE_ARGS+=	-recheck-all
 . endif
 
 . if defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
@@ -157,21 +160,22 @@ QMAKE_ARGS+=	QT_CONFIG+="debug separate_debug_info" \
 				QT_CONFIG-="release"
 PLIST_SUB+=		DEBUG=""
 . else
-CONFIGURE_ARGS+=-release -no-separate-debug-info -recheck-all
+CONFIGURE_ARGS+=-release -no-separate-debug-info
 QMAKE_ARGS+=	QT_CONFIG+="release" \
 				QT_CONFIG-="debug separate_debug_info"
 PLIST_SUB+=		DEBUG="@comment "
 . endif
 
-# Make configure verbose (otherwise it depends on bash).
-# CONFIGURE_ARGS+=-verbose
+. if defined(WANT_QT_VERBOSE_CONFIGURE)
+CONFIGURE_ARGS+=-verbose
+. endif
 
 . if ${QT_DIST} == "base" || ${_QT_VERSION:M4*}
 .  if ${_QT_VERSION:M4*}
 _EXTRA_PATCHES_QT4=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-src-corelib-global-qglobal.h \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-libtool \
-		${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-config.tests-unix-compile.test 
-	# Patch in proper name for armv6 architecture: https://gcc.gnu.org/ml/gcc-patches/2015-06/msg01679.html
+					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-config.tests-unix-compile.test
+# Patch in proper name for armv6 architecture: https://gcc.gnu.org/ml/gcc-patches/2015-06/msg01679.html
 _EXTRA_PATCHES_QT4+=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-armv6
 .  else
 _EXTRA_PATCHES_QT5=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
@@ -727,8 +731,6 @@ qtbase-post-patch:
 
 .  if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
-
-# post-configure: qmake-configure
 .  endif
 . endif # ${QT_DIST} == "base"
 
