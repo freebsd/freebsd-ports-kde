@@ -26,6 +26,7 @@ include/KF5/Akonadi/Contact/SelectAddressBookDialog
 include/KF5/Akonadi/Contact/StandardContactActionManager
 include/KF5/Akonadi/Contact/StandardContactFormatter
 include/KF5/Akonadi/Contact/StandardContactGroupFormatter
+include/KF5/ContactEditor/AbstractAddressLocationWidget
 include/KF5/ContactEditor/CategoriesEditAbstractWidget
 include/KF5/ContactEditor/ContactEditorPagePlugin
 include/KF5/akonadi/contact/abstractcontactformatter.h
@@ -55,6 +56,7 @@ include/KF5/akonadi/contact/selectaddressbookdialog.h
 include/KF5/akonadi/contact/standardcontactactionmanager.h
 include/KF5/akonadi/contact/standardcontactformatter.h
 include/KF5/akonadi/contact/standardcontactgroupformatter.h
+include/KF5/contacteditor/abstractaddresslocationwidget.h
 include/KF5/contacteditor/categorieseditabstractwidget.h
 include/KF5/contacteditor/contacteditor_export.h
 include/KF5/contacteditor/contacteditorpageplugin.h
@@ -68,17 +70,15 @@ lib/cmake/KF5ContactEditor/KF5ContactEditorConfigVersion.cmake
 lib/cmake/KF5ContactEditor/KF5ContactEditorTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KF5ContactEditor/KF5ContactEditorTargets.cmake
 lib/libKF5AkonadiContact.so
-lib/libKF5AkonadiContact.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5AkonadiContact.so.5
+lib/libKF5AkonadiContact.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5ContactEditor.so
-lib/libKF5ContactEditor.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libKF5ContactEditor.so.5
+lib/libKF5ContactEditor.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_MKSPECDIR%%/modules/qt_AkonadiContact.pri
 %%QT_MKSPECDIR%%/modules/qt_ContactEditor.pri
 %%QT_PLUGINDIR%%/akonadi/contacts/plugins/categorieseditwidgetplugin.so
 %%QT_PLUGINDIR%%/kcm_akonadicontact_actions.so
-share/contacteditor/grantleetheme/default/addresseslocation.css
-share/contacteditor/grantleetheme/default/addresseslocation.html
 share/kf5/akonadi/contact/data/zone.tab
 share/kf5/akonadi/contact/pics/world.jpg
 share/kservices5/akonadi/contact/aimprotocol.desktop

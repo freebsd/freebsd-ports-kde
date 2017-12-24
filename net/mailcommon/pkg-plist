@@ -5,6 +5,7 @@ include/KF5/MailCommon/AddTagDialog
 include/KF5/MailCommon/BackupJob
 include/KF5/MailCommon/CollectionExpiryPage
 include/KF5/MailCommon/CollectionGeneralPage
+include/KF5/MailCommon/CryptoUtils
 include/KF5/MailCommon/DBusOperators
 include/KF5/MailCommon/ExpireCollectionAttribute
 include/KF5/MailCommon/FavoriteCollectionWidget
@@ -14,6 +15,7 @@ include/KF5/MailCommon/FilterImporterAbstract
 include/KF5/MailCommon/FilterImporterBalsa
 include/KF5/MailCommon/FilterImporterClawsMail
 include/KF5/MailCommon/FilterImporterExporter
+include/KF5/MailCommon/FilterImporterPathCache
 include/KF5/MailCommon/FilterLog
 include/KF5/MailCommon/FilterManager
 include/KF5/MailCommon/FolderCollectionMonitor
@@ -48,6 +50,7 @@ include/KF5/mailcommon/addtagdialog.h
 include/KF5/mailcommon/backupjob.h
 include/KF5/mailcommon/collectionexpirypage.h
 include/KF5/mailcommon/collectiongeneralpage.h
+include/KF5/mailcommon/cryptoutils.h
 include/KF5/mailcommon/dbusoperators.h
 include/KF5/mailcommon/expirecollectionattribute.h
 include/KF5/mailcommon/favoritecollectionwidget.h
@@ -57,6 +60,7 @@ include/KF5/mailcommon/filterimporterabstract.h
 include/KF5/mailcommon/filterimporterbalsa.h
 include/KF5/mailcommon/filterimporterclawsmail.h
 include/KF5/mailcommon/filterimporterexporter.h
+include/KF5/mailcommon/filterimporterpathcache.h
 include/KF5/mailcommon/filterlog.h
 include/KF5/mailcommon/filtermanager.h
 include/KF5/mailcommon/foldercollectionmonitor.h

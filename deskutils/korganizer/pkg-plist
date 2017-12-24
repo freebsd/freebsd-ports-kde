@@ -1,4 +1,3 @@
-bin/ical2vcal
 bin/korgac
 bin/korganizer
 etc/xdg/autostart/org.kde.korgac.desktop
@@ -90,8 +89,6 @@ share/kservices5/korganizer_configviews.desktop
 share/kservices5/korganizer_part.desktop
 share/kservices5/webcal.protocol
 share/kservicetypes5/dbuscalendar.desktop
-share/kxmlgui5/korganizer/korganizer_part.rc
-share/kxmlgui5/korganizer/korganizerui.rc
 share/locale/ar/LC_MESSAGES/korganizer.mo
 share/locale/ast/LC_MESSAGES/korgac.mo
 share/locale/ast/LC_MESSAGES/korganizer.mo

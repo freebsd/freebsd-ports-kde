@@ -10,7 +10,7 @@ LICENSE=	LGPL21
 
 USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 \
 		tar:xz
-USE_KDE=	codecs completion ecm kio
+USE_KDE=	codecs completion ecm kio prison
 # pim components
 USE_KDE+=	akonadi akonadimime calendarcore contacts mime
 USE_QT5=	core gui testlib webengine widgets \

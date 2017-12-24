@@ -238,10 +238,6 @@ include/KPim/KGAPI/kgapi/tasks/taskmovejob.h
 include/KPim/KGAPI/kgapi/types.h
 include/KPim/KGAPI/kgapi/utils.h
 include/KPim/kgapi_version.h
-lib/cmake/KF5GAPI/KF5GAPIConfig.cmake
-lib/cmake/KF5GAPI/KF5GAPIConfigVersion.cmake
-lib/cmake/KF5GAPI/KPimGAPITargets-%%CMAKE_BUILD_TYPE%%.cmake
-lib/cmake/KF5GAPI/KPimGAPITargets.cmake
 lib/cmake/KPimGAPI/KPimGAPIConfig.cmake
 lib/cmake/KPimGAPI/KPimGAPIConfigVersion.cmake
 lib/cmake/KPimGAPI/KPimGAPITargets-%%CMAKE_BUILD_TYPE%%.cmake

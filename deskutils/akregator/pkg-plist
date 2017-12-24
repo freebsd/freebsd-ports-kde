@@ -46,8 +46,6 @@ share/kservices5/akregator_part.desktop
 share/kservices5/feed.protocol
 share/kservices5/kontact/akregatorplugin.desktop
 share/kservicetypes5/akregator_plugin.desktop
-share/kxmlgui5/akregator/akregator_part.rc
-share/kxmlgui5/akregator/akregator_shell.rc
 share/locale/ar/LC_MESSAGES/akregator.mo
 share/locale/ast/LC_MESSAGES/akregator.mo
 share/locale/bg/LC_MESSAGES/akregator.mo
@@ -101,5 +99,4 @@ share/locale/ug/LC_MESSAGES/akregator.mo
 share/locale/uk/LC_MESSAGES/akregator.mo
 share/locale/zh_CN/LC_MESSAGES/akregator.mo
 share/locale/zh_TW/LC_MESSAGES/akregator.mo
-share/messageviewer/about/default/introduction_akregator.html
 share/metainfo/org.kde.akregator.appdata.xml

@@ -1,7 +1,6 @@
 bin/kaddressbook
 etc/xdg/kaddressbook.categories
 etc/xdg/kaddressbook.renamecategories
-etc/xdg/kaddressbook_themes.knsrc
 lib/libkaddressbookprivate.so.5
 lib/libkaddressbookprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kaddressbook_config_plugins.so
