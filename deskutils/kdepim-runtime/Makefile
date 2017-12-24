@@ -9,7 +9,7 @@ COMMENT=	KDE PIM tools and services
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	libkolab.so:devel/libkolab
+LIB_DEPENDS=	libkolabxml.so:textproc/libkolabxml
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
 USE_KDE=	codecs config itemmodels kcmutils kdelibs4support kio kross \
