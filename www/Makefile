@@ -157,6 +157,7 @@
     SUBDIR += eventum
     SUBDIR += extjs
     SUBDIR += fabio
+    SUBDIR += falkon
     SUBDIR += fancybox
     SUBDIR += faup
     SUBDIR += fcgi
