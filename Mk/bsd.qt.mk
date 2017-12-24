@@ -260,7 +260,15 @@ UIC?=			${QT_BINDIR}/uic
 QMAKE?=			${QT_BINDIR}/qmake
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
+
+# For Qt4 we need to specify the full path to the mkspec, mostly because the
+# Qt4 ports themselves don't extract the mkspecs/ directory and also for
+# backwards compatibility. Qt >= 5.8.0 expect just the name.
+.if ${_QT_VERSION:M4*}
+QMAKESPEC?=		${QT_MKSPECDIR}/freebsd-${QMAKE_COMPILER}
+.else
 QMAKESPEC?=		freebsd-${QMAKE_COMPILER}
+.endif
 
 # The whole Qt distribution should be built with the same compiler, but it's
 # better to support custom settings. Dereferencing the detection allows to
