@@ -14,6 +14,4 @@ QT_DIST=	${PORTNAME}
 USES=		qmake:norecursive
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-WITH_DEBUG=	yes
-
 .include <bsd.port.mk>
