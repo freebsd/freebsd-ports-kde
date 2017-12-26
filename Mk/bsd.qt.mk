@@ -779,21 +779,7 @@ qt-post-install:
 	@${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
 	@${ECHO_CMD} -n \
 		> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#if defined(QT_NO_${QT_MODNAME:tu}) && defined(QT_${QT_MODNAME:tu}_LIB)" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#  undef QT_NO_${QT_MODNAME:tu}" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#endif" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .  for def in ${QT_DEFINES:N-*:O:u:C/=.*$//}
-	@${ECHO_CMD} "#if defined(QT_NO_${def}) && defined(QT_${def})" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#  undef QT_NO_${def}" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#endif" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	@${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	${ECHO_CMD} "# define QT_${def}" \
