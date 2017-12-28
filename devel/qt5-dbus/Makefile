@@ -25,7 +25,7 @@ QT_DEFINES=	DBUS
 QT_CONFIG=	dbus
 
 post-configure:
-.for d in src/corelib src/dbus src/tools/qdbuscpp2xml src/tools/qdbusxml2cpp
+.for d in src/dbus src/tools/qdbuscpp2xml src/tools/qdbusxml2cpp
 	${MKDIR} ${WRKSRC}/${d}
 	cd ${WRKSRC}/${d} && ${SETENV} ${QMAKE_ENV} ${_QMAKE} ${QMAKE_ARGS} ${WRKSRC}/${d}
 .endfor
