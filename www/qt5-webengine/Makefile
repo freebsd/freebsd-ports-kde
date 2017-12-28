@@ -69,11 +69,7 @@ USE_LDCONFIG=	${QT_LIBDIR}
 
 QT_DIST=	${PORTNAME}
 
-QMAKE_ARGS=	WEBENGINE_CONFIG+=use_nss \
-		WEBENGINE_CONFIG+=use_proprietary_codecs \
-		WEBENGINE_CONFIG+=use_system_libevent \
-		WEBENGINE_CONFIG+=use_system_snappy
-QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf
+QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
