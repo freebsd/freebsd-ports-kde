@@ -14,7 +14,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libwayland-egl.so:graphics/mesa-libs \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		pkgconfig qmake:norecursive,outsource
+USES=		pkgconfig qmake:norecursive
 USE_GL=		egl gl
 USE_GNOME=	glib20
 USE_QT5=	core dbus gui qml quick \
