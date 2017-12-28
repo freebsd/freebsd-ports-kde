@@ -26,7 +26,8 @@ BUILD_DEPENDS=	bison:devel/bison \
 		ninja:devel/ninja \
 		yasm:devel/yasm \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
+		libdbus-1.so:devel/dbus \
 		libevent.so:devel/libevent \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
@@ -69,7 +70,7 @@ USE_LDCONFIG=	${QT_LIBDIR}
 
 QT_DIST=	${PORTNAME}
 
-QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs
+QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs -system-ffmpeg
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
