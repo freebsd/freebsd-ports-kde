@@ -407,6 +407,7 @@
     SUBDIR += gkrellm2
     SUBDIR += gkrelltop
     SUBDIR += gksu
+    SUBDIR += glogg
     SUBDIR += gnome-control-center
     SUBDIR += gnome-device-manager
     SUBDIR += gnome-mount
@@ -1115,6 +1116,7 @@
     SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
+    SUBDIR += snooze
     SUBDIR += snowlog
     SUBDIR += socket
     SUBDIR += socklog

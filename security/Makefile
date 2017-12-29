@@ -1174,6 +1174,7 @@
     SUBDIR += snortreport
     SUBDIR += snortsam
     SUBDIR += snortsnarf
+    SUBDIR += snuffleupagus
     SUBDIR += softether
     SUBDIR += softether-devel
     SUBDIR += softhsm
@@ -1224,6 +1225,7 @@
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
+    SUBDIR += titan
     SUBDIR += titus
     SUBDIR += tls-check
     SUBDIR += tlswrap
