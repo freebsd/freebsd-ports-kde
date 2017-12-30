@@ -75,6 +75,16 @@ QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs -system-ffmpeg
 # dependencies correctly in the generated Makefiles, use the right target here.
 ALL_TARGET=	first
 
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-10
+
+BUILD_DEPENDS+=	clang50:devel/llvm50
+CC=		clang50
+CXX=		clang++50
+.endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+
 # We need ar(1) from ports because the Chromium code uses the @file syntax.
 # We then need to ensure ld(1) from ports is used because of the archives ar(1)
 # generated.
@@ -109,4 +119,4 @@ pre-configure:
 	${PYTHON_CMD} ${WRKSRC}/src/3rdparty/chromium/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries libwebp libxml libxslt yasm
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
