@@ -38,7 +38,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
-		libprotobuf.so:devel/protobuf \
 		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libsrtp.so:net/libsrtp \
