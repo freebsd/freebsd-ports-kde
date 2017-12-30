@@ -14,7 +14,11 @@ COMMENT=	Qt 5 documentation
 
 WRKSRC=		${WRKDIR}/Docs/Qt-${QT5_VERSION}
 
-USES=		7z
+# bsdtar(1) from 10.3 and earlier cannot read the distfile correctly:
+#   tar: Damaged 7-Zip archive
+# Depend on p7zip across all versions because Uses/7z.mk does not work if
+# included after bsd.port.pre.mk.
+USES=		7z:p7zip
 USE_QT5=	# we just need access to QT5_VERSION and other variables.
 
 DESCR=		${.CURDIR:H:H}/devel/qt5/pkg-descr
