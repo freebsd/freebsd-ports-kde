@@ -19,8 +19,7 @@ BUILD_WRKSRC=	${WRKSRC}/src/tools/bootstrap
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 MORE_WRKSRCS=	src/tools/moc \
-		src/tools/rcc \
-		src/tools/uic
+		src/tools/rcc
 
 # Required for the build system not to depend on other parts of Qt such as
 # src/corelib.
