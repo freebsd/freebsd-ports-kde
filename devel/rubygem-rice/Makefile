@@ -2,6 +2,7 @@
 
 PORTNAME=	rice
 PORTVERSION=	2.1.2
+PORTREVISION=	1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -13,14 +14,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_powerpc64=	fails to configure: could not find ruby.h
 
-GNU_CONFIGURE=	yes
 USE_RUBY=	yes
 USES=		autoreconf:build gem
-INSTDIR=	${PREFIX}/${GEM_LIB_DIR}
 
-# Fixup path in mkmf-rice.rb so things that build using it can find -lrice.
 post-install:
-	${REINPLACE_CMD} -e 's,${STAGEDIR}${INSTDIR},${INSTDIR},g' \
-		${STAGEDIR}${INSTDIR}/ruby/lib/mkmf-rice.rb
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${GEM_LIB_DIR}/test/unittest
 
 .include <bsd.port.mk>

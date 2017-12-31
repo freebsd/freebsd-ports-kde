@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	3.0-rc3
+DISTVERSION=	3.0-rc4
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -147,13 +147,10 @@ DISTFILES+=	${COMP_DIST}:cho
 
 EXTRACT_DEPENDS=bash:shells/bash \
 		git:devel/git \
-		${AUTOCONF_DEPENDS}
-
-USE_AUTOTOOLS=	autoconf:env
+		autoreconf-2.69:devel/autoconf
 
 post-extract: fix-shebang
 	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${COMP_DIST} --strip-components 1
-	${REINPLACE_CMD} 's|autoreconf|${AUTORECONF}|g' ${WRKSRC}/patches/patchinstall.sh
 	cd ${WRKSRC} && bash ./patches/patchinstall.sh --backend=patch DESTDIR=${WRKSRC} --all
 .endif
 

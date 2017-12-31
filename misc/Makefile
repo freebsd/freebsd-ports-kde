@@ -289,6 +289,7 @@
     SUBDIR += najitool
     SUBDIR += newer
     SUBDIR += nms
+    SUBDIR += nnn
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
@@ -308,7 +309,6 @@
     SUBDIR += p5-Array-LineReader
     SUBDIR += p5-Array-PrintCols
     SUBDIR += p5-Array-RefElem
-    SUBDIR += p5-Asterisk
     SUBDIR += p5-Asterisk-FastAGI
     SUBDIR += p5-Bot-Training
     SUBDIR += p5-Bot-Training-MegaHAL
@@ -363,6 +363,7 @@
     SUBDIR += p5-Text-FIGlet
     SUBDIR += p5-Tie-DxHash
     SUBDIR += p5-Zen-Koans
+    SUBDIR += p5-asterisk-perl
     SUBDIR += pantry
     SUBDIR += parley
     SUBDIR += parley-kde4

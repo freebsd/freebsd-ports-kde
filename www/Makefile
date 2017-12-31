@@ -1685,7 +1685,7 @@
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
     SUBDIR += py-flexget
-    SUBDIR += py-flup
+    SUBDIR += py-flup6
     SUBDIR += py-formalchemy
     SUBDIR += py-formencode
     SUBDIR += py-frappe-bench
@@ -1720,6 +1720,7 @@
     SUBDIR += py-jsonfield
     SUBDIR += py-jswebkit
     SUBDIR += py-kallithea
+    SUBDIR += py-lesscpy
     SUBDIR += py-libsass
     SUBDIR += py-mechanize
     SUBDIR += py-meld
