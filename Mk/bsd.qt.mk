@@ -113,7 +113,6 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME:S,$,/examples,:S,^,--exclude ,} \
 CONFIGURE_ENV+=	MAKE="${MAKE:T}"
 
 CONFIGURE_ARGS+=-opensource -confirm-license \
-				-platform ${QMAKESPEC} \
 				-no-pch \
 				-prefix ${PREFIX} \
 				-bindir ${PREFIX}/${QT_BINDIR_REL} \
@@ -128,6 +127,7 @@ CONFIGURE_ARGS+=-opensource -confirm-license \
 
 . if ${_QT_VERSION:M4*}
 CONFIGURE_ARGS+=-fast \
+				-platform ${QMAKESPEC} \
 				-system-libjpeg -system-libpng \
 				-system-libmng -system-libtiff -system-zlib \
 				-no-phonon-backend \
@@ -135,6 +135,7 @@ CONFIGURE_ARGS+=-fast \
 				-demosdir ${PREFIX}/${QT_EXAMPLEDIR_REL}/demos
 . else
 CONFIGURE_ARGS+=-nomake examples -nomake tests \
+				-platform ${QMAKESPEC:T} \
 				-archdatadir ${PREFIX}/${QT_ARCHDIR_REL} \
 				-libexecdir ${PREFIX}/${QT_LIBEXECDIR_REL} \
 				-qmldir ${PREFIX}/${QT_QMLDIR_REL} \
@@ -260,14 +261,7 @@ UIC?=			${QT_BINDIR}/uic
 QMAKE?=			${QT_BINDIR}/qmake
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
-
-# For Qt4 we need to specify the full path to the makespec. Qt5 > 5.7.3
-# expects just the name.
-.if ${_QT_VERSION:M4*}
 QMAKESPEC?=		${QT_MKSPECDIR}/freebsd-${QMAKE_COMPILER}
-.else
-QMAKESPEC?=		freebsd-${QMAKE_COMPILER}
-.endif
 
 # The whole Qt distribution should be built with the same compiler, but it's
 # better to support custom settings. Dereferencing the detection allows to
@@ -306,8 +300,8 @@ Qt_Post_Include=	bsd.qt.mk
 
 .if !defined(QT_NONSTANDARD)
 CONFIGURE_ENV+=	QTDIR="${QT_ARCHDIR}" QMAKE="${QMAKE}" \
-				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}"
-# 				QMAKESPEC="${QMAKESPEC}"
+				MOC="${MOC}" RCC="${RCC}" UIC="${UIC}" \
+				QMAKESPEC="${QMAKESPEC}"
 CONFIGURE_ARGS+=--with-qt-includes=${QT_INCDIR} \
 				--with-qt-libraries=${QT_LIBDIR} \
 				--with-extra-includes=${LOCALBASE}/include \
@@ -778,21 +772,7 @@ qt-post-install:
 	@${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
 	@${ECHO_CMD} -n \
 		> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#if defined(QT_NO_${QT_MODNAME:tu}) && defined(QT_${QT_MODNAME:tu}_LIB)" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#  undef QT_NO_${QT_MODNAME:tu}" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#endif" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .  for def in ${QT_DEFINES:N-*:O:u:C/=.*$//}
-	@${ECHO_CMD} "#if defined(QT_NO_${def}) && defined(QT_${def})" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#  undef QT_NO_${def}" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#endif" \
-		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	@${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	${ECHO_CMD} "# define QT_${def}" \

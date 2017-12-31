@@ -17,6 +17,8 @@ USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 BUILD_WRKSRC=	${WRKSRC}/src/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
+MORE_WRKSRCS=	src/tools/uic
+
 QT_DEFINES=	ACCESSIBILITY WIDGETS XSYNC
 QT_CONFIG=	accessibility accessibility-atspi-bridge xlib
 
@@ -40,10 +42,15 @@ QT_CONFIG+=	-gtk
 .endif
 
 post-configure:
-.for d in src/widgets ${MORE_WRKSRCS}
+.for d in src/tools/uic src/widgets ${MORE_WRKSRCS}
 	${MKDIR} ${WRKSRC}/${d}
 	cd ${WRKSRC}/${d} && ${SETENV} ${QMAKE_ENV} ${_QMAKE} ${QMAKE_ARGS} ${WRKSRC}/${d}
 .endfor
+
+pre-build:
+	cd ${WRKSRC}/src/tools/uic && \
+		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
+		${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
 
 post-build:
 .for d in ${MORE_WRKSRCS}
@@ -53,7 +60,7 @@ post-build:
 .endfor
 
 post-install:
-.for d in ${MORE_WRKSRCS}
+.for d in src/tools/uic ${MORE_WRKSRCS}
 	@cd ${WRKSRC}/${d} && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
 		${MAKE_ARGS} ${INSTALL_TARGET}

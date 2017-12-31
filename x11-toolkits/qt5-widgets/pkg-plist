@@ -492,6 +492,7 @@
 %%QT_LIBDIR%%/libQt5Widgets.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5Widgets.so.%%FULLVER%%
 %%DEBUG%%%%QT_LIBDIR%%/libQt5Widgets.so.%%FULLVER%%.debug
+%%QT_BINDIR%%/uic
 %%QT_MKSPECDIR%%/modules/qt_lib_widgets.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_widgets_private.pri
 %%GTK3%%%%QT_PLUGINDIR%%/platformthemes/libqgtk3.so

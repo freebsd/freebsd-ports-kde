@@ -8,8 +8,10 @@ PKGNAMEPREFIX=	qt5-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibilty features for Qt5
 
-USES=		qmake:outsource
-USE_QT5=	core buildtools_build qmake_build
+LIB_DEPENDS=	libspeechd.so:accessibility/speech-dispatcher
+
+USES=		pkgconfig qmake:outsource
+USE_QT5=	core gui buildtools_build qmake_build
 QT_DIST=	${PORTNAME}
 
 .include <bsd.port.mk>

@@ -18,9 +18,13 @@ HAS_CONFIGURE=	yes
 # Disable (almost) everything to install minimal qconfig.h.
 # -no-feature-* adds QT_NO_* (for features which have no switch or
 # that need to be detected).
-CONFIGURE_ARGS=	-no-gui -no-widgets  \
-		-no-iconv -no-dbus \
-		-no-libudev
+CONFIGURE_ARGS=	-no-accessibility -no-gif -no-libpng -no-libjpeg \
+		-no-openssl -no-gui -no-widgets -no-cups \
+		-no-iconv -no-dbus -no-opengl \
+		-no-egl -no-evdev \
+		-no-fontconfig -no-freetype -no-gtk -no-harfbuzz \
+		-no-libudev -no-xcb -no-xinput2 -no-xkb -no-xcb-xlib \
+		-no-xkbcommon -no-libinput
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 BUILD_WRKSRC=	${WRKSRC}/src/corelib
@@ -47,11 +51,10 @@ pre-build:
 
 post-install:
 # Allow qconfig.h to be customized by single ports.
-	${AWK} 'END{print "#include <QtCore/qconfig-modules.h>"}{print}' \
+	${AWK} 'BEGIN{print "#include <QtCore/qconfig-modules.h>"}{print}' \
 		${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h > ${WRKDIR}/qconfig.h
 # Cleanup qconfig.h and remove stray '#define QT_NO_FOO'
-	${REINPLACE_CMD} "/#define QT_NO_DBUS/d" ${WRKDIR}/qconfig.h
-	${REINPLACE_CMD} "/#define QT_NO_WIDGETS/d" ${WRKDIR}/qconfig.h
+	${REINPLACE_CMD} "/#define QT_NO_/d" ${WRKDIR}/qconfig.h
 	${MV} ${WRKDIR}/qconfig.h ${STAGEDIR}${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig.h
 
 .include <bsd.port.post.mk>

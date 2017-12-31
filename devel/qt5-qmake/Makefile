@@ -45,8 +45,5 @@ post-build:
 		${SETENV} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" BUILD_QMAKE=1 \
 		${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}
-# Cleanup qmodule.pri to make it module agnostic.
-#	@${REINPLACE_CMD} -En -e '/^(CONFIG|QT_BUILD_PARTS|.*_DIR) / p' \
-#		${WRKSRC}/mkspecs/qmodule.pri
 
 .include <bsd.port.mk>

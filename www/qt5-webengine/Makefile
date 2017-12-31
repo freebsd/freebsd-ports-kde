@@ -26,7 +26,8 @@ BUILD_DEPENDS=	bison:devel/bison \
 		ninja:devel/ninja \
 		yasm:devel/yasm \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
+		libdbus-1.so:devel/dbus \
 		libevent.so:devel/libevent \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
@@ -37,7 +38,6 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
-		libprotobuf.so:devel/protobuf \
 		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libsrtp.so:net/libsrtp \
@@ -69,15 +69,21 @@ USE_LDCONFIG=	${QT_LIBDIR}
 
 QT_DIST=	${PORTNAME}
 
-QMAKE_ARGS=	WEBENGINE_CONFIG+=use_nss \
-		WEBENGINE_CONFIG+=use_proprietary_codecs \
-		WEBENGINE_CONFIG+=use_system_libevent \
-		WEBENGINE_CONFIG+=use_system_snappy
-QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf
+QMAKE_CONFIGURE_ARGS=	-no-printing-and-pdf -proprietary-codecs -system-ffmpeg
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
 ALL_TARGET=	first
+
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-10
+
+BUILD_DEPENDS+=	clang50:devel/llvm50
+CC=		clang50
+CXX=		clang++50
+.endif  # ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
 
 # We need ar(1) from ports because the Chromium code uses the @file syntax.
 # We then need to ensure ld(1) from ports is used because of the archives ar(1)
@@ -113,4 +119,4 @@ pre-configure:
 	${PYTHON_CMD} ${WRKSRC}/src/3rdparty/chromium/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries libwebp libxml libxslt yasm
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

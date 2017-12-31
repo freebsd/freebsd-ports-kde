@@ -19,12 +19,7 @@ BUILD_WRKSRC=	${WRKSRC}/src/tools/bootstrap
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 MORE_WRKSRCS=	src/tools/moc \
-		src/tools/rcc \
-		src/tools/uic
-
-# Required for the build system not to depend on other parts of Qt such as
-# src/corelib.
-QMAKE_ARGS+=	CONFIG+="force_bootstrap"
+		src/tools/rcc
 
 post-configure:
 .for d in src/tools/bootstrap ${MORE_WRKSRCS}

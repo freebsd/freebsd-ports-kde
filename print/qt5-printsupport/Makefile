@@ -43,14 +43,14 @@ post-configure:
 
 post-build:
 .if ${PORT_OPTIONS:MCUPS}
-	@cd ${WRKSRC}/src/plugins/${PORTNAME} && \
+	@cd ${WRKSRC}/src/plugins/${PORTNAME}/cups && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
 		${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET}
 .endif
 
 post-install:
 .if ${PORT_OPTIONS:MCUPS}
-	@cd ${WRKSRC}/src/plugins/${PORTNAME} && \
+	@cd ${WRKSRC}/src/plugins/${PORTNAME}/cups && \
 		${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} \
 		${MAKE_ARGS} ${INSTALL_TARGET}
 .endif
