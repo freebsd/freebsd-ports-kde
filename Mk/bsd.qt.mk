@@ -113,7 +113,6 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME:S,$,/examples,:S,^,--exclude ,} \
 CONFIGURE_ENV+=	MAKE="${MAKE:T}"
 
 CONFIGURE_ARGS+=-opensource -confirm-license \
-				-platform ${QMAKESPEC} \
 				-no-pch \
 				-prefix ${PREFIX} \
 				-bindir ${PREFIX}/${QT_BINDIR_REL} \
@@ -128,6 +127,7 @@ CONFIGURE_ARGS+=-opensource -confirm-license \
 
 . if ${_QT_VERSION:M4*}
 CONFIGURE_ARGS+=-fast \
+				-platform ${QMAKESPEC} \
 				-system-libjpeg -system-libpng \
 				-system-libmng -system-libtiff -system-zlib \
 				-no-phonon-backend \
@@ -135,6 +135,7 @@ CONFIGURE_ARGS+=-fast \
 				-demosdir ${PREFIX}/${QT_EXAMPLEDIR_REL}/demos
 . else
 CONFIGURE_ARGS+=-nomake examples -nomake tests \
+				-platform ${QMAKESPEC:T} \
 				-archdatadir ${PREFIX}/${QT_ARCHDIR_REL} \
 				-libexecdir ${PREFIX}/${QT_LIBEXECDIR_REL} \
 				-qmldir ${PREFIX}/${QT_QMLDIR_REL} \
@@ -260,15 +261,7 @@ UIC?=			${QT_BINDIR}/uic
 QMAKE?=			${QT_BINDIR}/qmake
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
-
-# For Qt4 we need to specify the full path to the mkspec, mostly because the
-# Qt4 ports themselves don't extract the mkspecs/ directory and also for
-# backwards compatibility. Qt >= 5.8.0 expect just the name.
-.if ${_QT_VERSION:M4*}
 QMAKESPEC?=		${QT_MKSPECDIR}/freebsd-${QMAKE_COMPILER}
-.else
-QMAKESPEC?=		freebsd-${QMAKE_COMPILER}
-.endif
 
 # The whole Qt distribution should be built with the same compiler, but it's
 # better to support custom settings. Dereferencing the detection allows to
