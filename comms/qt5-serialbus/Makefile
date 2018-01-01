@@ -13,7 +13,4 @@ QT_DIST=	serialbus
 USES=		compiler:c++11-lib qmake
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-BUILD_WRKSRC=	${WRKSRC}/src/serialbus
-INSTALL_WRKSRC=	${BUILD_WRKSRC}
-
 .include <bsd.port.mk>

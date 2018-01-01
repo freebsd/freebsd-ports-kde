@@ -741,6 +741,7 @@
     SUBDIR += superlu
     SUBDIR += superlu_mt
     SUBDIR += surf
+    SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += testu01

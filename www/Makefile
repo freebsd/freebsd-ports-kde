@@ -568,8 +568,6 @@
     SUBDIR += npm-node4
     SUBDIR += npm-node6
     SUBDIR += npm-node8
-    SUBDIR += npm2
-    SUBDIR += npm3
     SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
