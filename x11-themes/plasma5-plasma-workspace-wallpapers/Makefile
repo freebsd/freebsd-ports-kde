@@ -7,6 +7,11 @@ CATEGORIES=	x11-themes kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 wallpapers
 
+LICENSE=	GPLv2 LGPL3
+LICENSE_COMB=	multi
+LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LGPL3
+
 USES=		cmake:outsource cpe kde:5 tar:xz
 USE_KDE=	ecm
 USE_QT5=	buildtools_build qmake_build
