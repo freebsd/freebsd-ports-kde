@@ -8,7 +8,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 library to create window decorations
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING.lib
+LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 USES=		cmake:outsource compiler:c++11-lib cpe kde:5 tar:xz
 USE_LDCONFIG=	yes

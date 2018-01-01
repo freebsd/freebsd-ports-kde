@@ -8,7 +8,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 Breeze visual style for Gtk
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 USES=		cmake:outsource cpe kde:5 pkgconfig tar:xz
 USE_GNOME=	gdkpixbuf2
