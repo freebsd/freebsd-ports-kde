@@ -22,7 +22,6 @@ include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextEditorWidget
 include/KF5/KPIMTextEdit/KPIMTextEdit/RichTextExternalComposer
 include/KF5/KPIMTextEdit/KPIMTextEdit/SelectSpecialCharDialog
 include/KF5/KPIMTextEdit/KPIMTextEdit/SlideContainer
-include/KF5/KPIMTextEdit/KPIMTextEdit/SyntaxHighlighterBase
 include/KF5/KPIMTextEdit/KPIMTextEdit/TableActionMenu
 include/KF5/KPIMTextEdit/KPIMTextEdit/TableCellFormatDialog
 include/KF5/KPIMTextEdit/KPIMTextEdit/TableFormatDialog
@@ -59,7 +58,6 @@ include/KF5/KPIMTextEdit/kpimtextedit/richtexteditorwidget.h
 include/KF5/KPIMTextEdit/kpimtextedit/richtextexternalcomposer.h
 include/KF5/KPIMTextEdit/kpimtextedit/selectspecialchardialog.h
 include/KF5/KPIMTextEdit/kpimtextedit/slidecontainer.h
-include/KF5/KPIMTextEdit/kpimtextedit/syntaxhighlighterbase.h
 include/KF5/KPIMTextEdit/kpimtextedit/tableactionmenu.h
 include/KF5/KPIMTextEdit/kpimtextedit/tablecellformatdialog.h
 include/KF5/KPIMTextEdit/kpimtextedit/tableformatdialog.h

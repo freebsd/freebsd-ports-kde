@@ -1,8 +1,9 @@
 # $FreeBSD: branches/plasma5/KDE/astro/kstars/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kstars
-DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-CATEGORIES=	astro kde kde-applications
+DISTVERSION=	2.8.9
+CATEGORIES=	astro kde
+MASTER_SITES=	KDE/stable/${PORTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE desktop planetarium

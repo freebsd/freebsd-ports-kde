@@ -524,6 +524,7 @@
     SUBDIR += knights
     SUBDIR += knights-kde4
     SUBDIR += kobodeluxe
+    SUBDIR += kolf
     SUBDIR += kolf-kde4
     SUBDIR += kollision
     SUBDIR += kollision-kde4
@@ -536,6 +537,7 @@
     SUBDIR += kreversi-kde4
     SUBDIR += kshisen
     SUBDIR += kshisen-kde4
+    SUBDIR += ksirk
     SUBDIR += ksirk-kde4
     SUBDIR += ksnakeduel
     SUBDIR += ksnakeduel-kde4

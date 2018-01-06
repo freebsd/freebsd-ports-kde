@@ -19,7 +19,6 @@ share/icons/hicolor/64x64/apps/kmines.png
 %%DATADIR%%/themes/kmines_green.svgz
 %%DATADIR%%/themes/kmines_oxygen.svgz
 share/knotifications5/kmines.notifyrc
-share/kxmlgui5/kmines/kminesui.rc
 share/locale/ar/LC_MESSAGES/kmines.mo
 share/locale/ast/LC_MESSAGES/kmines.mo
 share/locale/bg/LC_MESSAGES/kmines.mo

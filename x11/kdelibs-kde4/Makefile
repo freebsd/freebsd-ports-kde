@@ -84,6 +84,9 @@ UPNP_CMAKE_ON=	-DHUPNP_ENABLED:BOOL=On
 OPENEXR_LIB_DEPENDS=	libIlmImf.so:graphics/OpenEXR
 OPENEXR_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_OpenEXR
 
+# kdelibs is no longer shipped with current applications past 17.08.3
+KDE_APPLICATIONS_VERSION=	17.08.3
+
 post-patch:
 	${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},g' \
 		${PATCH_WRKSRC}/kde3support/kdeui/k3sconfig.cpp \

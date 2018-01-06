@@ -10,7 +10,6 @@ COMMENT=	KDE PIM applications metaport
 RUN_DEPENDS=	calendarjanitor:deskutils/akonadi-calendar-tools \
 		akonadiconsole:deskutils/akonadiconsole \
 		akregator:deskutils/akregator \
-		blogilo:deskutils/blogilo \
 		headerthemeeditor:deskutils/grantlee-editor \
 		kaddressbook:deskutils/kaddressbook \
 		kalarm:deskutils/kalarm \

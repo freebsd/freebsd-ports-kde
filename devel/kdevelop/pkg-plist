@@ -9,6 +9,7 @@ etc/xdg/kdevplatform.categories
 include/kdevelop/custom-definesandincludes/idefinesandincludesmanager.h
 include/kdevelop/kdevelop_version.h
 include/kdevelop/makebuilder/imakebuilder.h
+include/kdevelop/qmake/iqmakebuilder.h
 include/kdevplatform/config-kdevplatform.h
 include/kdevplatform/debugger/breakpoint/breakpoint.h
 include/kdevplatform/debugger/breakpoint/breakpointdetails.h
@@ -457,6 +458,8 @@ lib/libkdevcmakecommon.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevproblemreporter.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevprojectfilter.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevprojectmanagerview.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kdevqmakebuilder.so
+%%QT_PLUGINDIR%%/kdevplatform/30/kdevqmakemanager.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevqmljslanguagesupport.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevqthelp.so
 %%QT_PLUGINDIR%%/kdevplatform/30/kdevquickopen.so
@@ -684,6 +687,7 @@ share/kdevlldb/formatters/kde.py
 share/kdevlldb/formatters/qt.py
 share/kdevmanpage/manpagedocumentation.css
 share/kdevplatform/shellutils/.zshrc
+share/kdevqmakebuilder/data.kdev4
 share/kdevqmljssupport/nodejsmodules/__builtin_dom.js
 share/kdevqmljssupport/nodejsmodules/__builtin_ecmascript.js
 share/kdevqmljssupport/nodejsmodules/__builtin_qml.qml

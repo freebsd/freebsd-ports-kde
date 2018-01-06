@@ -7,6 +7,9 @@ CATEGORIES=	x11-wm kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 window manager
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libepoxy.so:graphics/libepoxy \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -30,9 +33,10 @@ USE_KDE=	activities activities attica auth breeze codecs \
 		jobwidgets kcmutils kdeclarative kio package kscreenlocker \
 		newstuff notifications plasma-framework service sonnet \
 		textwidgets wayland widgetsaddons windowsystem xmlgui
-USE_QT5=	buildtools_build concurrent core dbus gui \
-		multimedia network qmake_build qml quick script \
-		testlib uiplugin uitools widgets x11extras xml
+USE_LDCONFIG=	yes
+USE_QT5=	concurrent core dbus gui multimedia network qml quick script \
+		testlib uiplugin uitools widgets x11extras xml \
+		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xcb xext xi
 
 .include <bsd.port.pre.mk>

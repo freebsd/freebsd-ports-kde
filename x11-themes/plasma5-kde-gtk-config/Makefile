@@ -7,6 +7,11 @@ CATEGORIES=	x11-themes kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 GTK2 and GTK3 configurator
 
+LICENSE=	GPLv2 LGPL21
+LICENSE_COMB=	multi
+LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
+
 USES=		cmake:outsource compiler:c++11-lib cpe gettext \
 		kde:5 pkgconfig tar:xz
 USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30 glib20

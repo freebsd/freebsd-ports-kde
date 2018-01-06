@@ -12,7 +12,7 @@ USE_KDE=	config configwidgets coreaddons dbusaddons ecm emoticons \
 		i18n init itemmodels kdelibs4support kio libkdegames \
 		newstuff notifyconfig textwidgets widgetsaddons \
 		windowsystem xmlgui
-USE_QT5=	buildtools_build core gui network phonon4 qmake_build qml \
+USE_QT5=	buildtools_build core gui multimedia network phonon4 qmake_build qml \
 		quick svg testlib widgets
 
 .include <${.CURDIR}/../kdegames/Makefile.common>

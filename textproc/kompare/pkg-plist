@@ -16,7 +16,7 @@ share/kservices5/komparenavtreepart.desktop
 share/kservices5/komparepart.desktop
 share/kservicetypes5/komparenavigationpart.desktop
 share/kservicetypes5/kompareviewpart.desktop
-share/kxmlgui5/kompare/komparepartui.rc
+share/kxmlgui5/komparepart/komparepartui.rc
 share/kxmlgui5/kompare/kompareui.rc
 share/locale/ar/LC_MESSAGES/kompare.mo
 share/locale/ast/LC_MESSAGES/kompare.mo

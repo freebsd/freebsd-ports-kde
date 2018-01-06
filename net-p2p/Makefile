@@ -42,6 +42,7 @@
     SUBDIR += ktorrent-kde4
     SUBDIR += libbt
     SUBDIR += liberator
+    SUBDIR += libktorrent
     SUBDIR += libktorrent-kde4
     SUBDIR += libpdtp
     SUBDIR += libswift

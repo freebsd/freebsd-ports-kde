@@ -11,6 +11,7 @@ COMMENT=	Qt5 wrapper for Wayland
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libwayland-client.so:graphics/wayland \
+		libwayland-egl.so:graphics/mesa-libs \
 		libxkbcommon.so:x11/libxkbcommon
 
 USES=		pkgconfig qmake:norecursive

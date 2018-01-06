@@ -10,7 +10,7 @@ COMMENT=	KDE mail client
 LICENSE=	LGPL21
 
 RUN_DEPENDS=	accountwizard:deskutils/kmail-account-wizard \
-		importwizard:deskutils/akonadi-import-wizard \
+		akonadiimportwizard:deskutils/akonadi-import-wizard \
 		mboximporter:deskutils/mbox-importer \
 		sieveeditor:deskutils/pim-sieve-editor
 

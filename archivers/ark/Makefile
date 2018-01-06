@@ -18,6 +18,7 @@ USE_QT5=	buildtools_build core gui widgets qmake_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	7ZIP RAR ZIP
+OPTIONS_SUB=		YES
 
 7ZIP_DESC=	Support for 7-Zip archives
 7ZIP_RUN_DEPENDS=	7z:archivers/p7zip
@@ -27,7 +28,7 @@ RAR_RUN_DEPENDS=	unrar:archivers/unrar \
 			rar:archivers/rar
 
 ZIP_DESC=	Support for ZIP archives
-ZIP_RUN_DEPENDS=	unzip>0:archivers/unzip \
-			zip:archivers/zip
+ZIP_LIB_DEPENDS=	libzip.so:archivers/libzip
+ZIP_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_LibZip
 
 .include <bsd.port.mk>

@@ -1,0 +1,53 @@
+From 24ef9a938e23d32f8c0044ad91e39bbf310b2081 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Daniel=20Vr=C3=A1til?= <dvratil@kde.org>
+Date: Fri, 15 Dec 2017 10:13:08 +0100
+Subject: [PATCH] Fix a porting bug when persing timezones
+
+Missing argument to ICalTimeZoneParser::parsePhase() would've changed
+the behavior of the parser in some cases. Apparently this only compiled
+thanks to 'daylight' being a defined as global variable in time.h.
+---
+ src/icaltimezones.cpp | 6 +++---
+ src/icaltimezones_p.h | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/icaltimezones.cpp b/src/icaltimezones.cpp
+index d9b0bede0..f8e4022c0 100644
+--- src/icaltimezones.cpp
++++ src/icaltimezones.cpp
+@@ -551,11 +551,11 @@ ICalTimeZone ICalTimeZoneParser::parseTimeZone(icalcomponent *vtimezone)
+         switch (kind) {
+         case ICAL_XSTANDARD_COMPONENT:
+             //qCDebug(KCALCORE_LOG) << "---standard phase: found";
+-            parsePhase(c, icalTz.standard);
++            parsePhase(c, false, icalTz.standard);
+             break;
+         case ICAL_XDAYLIGHT_COMPONENT:
+             //qCDebug(KCALCORE_LOG) << "---daylight phase: found";
+-            parsePhase(c, icalTz.daylight);
++            parsePhase(c, true, icalTz.daylight);
+             break;
+ 
+         default:
+@@ -567,7 +567,7 @@ ICalTimeZone ICalTimeZoneParser::parseTimeZone(icalcomponent *vtimezone)
+     return icalTz;
+ }
+ 
+-bool ICalTimeZoneParser::parsePhase(icalcomponent *c, ICalTimeZonePhase &phase)
++bool ICalTimeZoneParser::parsePhase(icalcomponent *c, bool daylight, ICalTimeZonePhase &phase)
+ {
+     // Read the observance data for this standard/daylight savings phase
+     int utcOffset = 0;
+diff --git a/src/icaltimezones_p.h b/src/icaltimezones_p.h
+index 7a7e0dc60..f31f74f39 100644
+--- src/icaltimezones_p.h
++++ src/icaltimezones_p.h
+@@ -99,7 +99,7 @@ class KCALCORE_EXPORT ICalTimeZoneParser
+ 
+ 
+     ICalTimeZone parseTimeZone(icalcomponent *zone);
+-    bool parsePhase(icalcomponent *c, ICalTimeZonePhase &phase);
++    bool parsePhase(icalcomponent *c, bool daylight, ICalTimeZonePhase &phase);
+     QTimeZone resolveICalTimeZone(const ICalTimeZone &icalZone);
+ 
+     ICalTimeZoneCache *mCache;

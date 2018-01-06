@@ -15,7 +15,6 @@ share/icons/hicolor/64x64/apps/ksnakeduel.png
 %%DATADIR%%/themes/neon.desktop
 %%DATADIR%%/themes/neon.png
 %%DATADIR%%/themes/neon.svg
-share/kxmlgui5/ksnakeduel/ksnakeduelui.rc
 share/locale/ast/LC_MESSAGES/ksnakeduel.mo
 share/locale/bs/LC_MESSAGES/ksnakeduel.mo
 share/locale/ca/LC_MESSAGES/ksnakeduel.mo

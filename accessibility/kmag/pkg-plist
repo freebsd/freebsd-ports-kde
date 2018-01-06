@@ -72,3 +72,4 @@ share/locale/ug/LC_MESSAGES/kmag.mo
 share/locale/uk/LC_MESSAGES/kmag.mo
 share/locale/zh_CN/LC_MESSAGES/kmag.mo
 share/locale/zh_TW/LC_MESSAGES/kmag.mo
+share/metainfo/org.kde.kmag.appdata.xml

@@ -17,7 +17,7 @@ USE_KDE=	ecm doctools coreaddons config crash i18n kio \
 		kcmutils xmlgui \
 		libkeduvocdocument
 USE_QT5=	buildtools_build concurrent core gui network \
-		multimedia qmake_build svg widgets
+		multimedia qmake_build svg webengine widgets
 USE_XORG=	x11 xrender
 
 .include <bsd.port.mk>

@@ -11,6 +11,7 @@ BUILD_DEPENDS=	convert:graphics/ImageMagick
 LIB_DEPENDS=	libaudiofile.so:audio/libaudiofile \
 		libFLAC.so:audio/flac \
 		libfftw3.so:math/fftw3 \
+		libid3.so:audio/id3lib \
 		libogg.so:audio/libogg \
 		libopus.so:audio/opus \
 		libsamplerate.so:audio/libsamplerate \

@@ -15,7 +15,6 @@ share/icons/hicolor/64x64/apps/kontact.png
 share/kconf_update/kontact-15.08-kickoff.sh
 share/kconf_update/kontact.upd
 share/kservices5/kontactconfig.desktop
-share/kxmlgui5/kontact/kontactui.rc
 share/locale/ar/LC_MESSAGES/kontact.mo
 share/locale/ast/LC_MESSAGES/kontact.mo
 share/locale/bg/LC_MESSAGES/kontact.mo

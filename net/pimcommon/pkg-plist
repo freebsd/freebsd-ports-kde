@@ -18,9 +18,8 @@ include/KF5/PimCommon/GenericPlugin
 include/KF5/PimCommon/GenericPluginManager
 include/KF5/PimCommon/KActionMenuChangeCase
 include/KF5/PimCommon/KPimPrintPreviewDialog
-include/KF5/PimCommon/LineEditPassword
 include/KF5/PimCommon/LineEditWithAutoCorrection
-include/KF5/PimCommon/LineEditWithCompleter
+include/KF5/PimCommon/LineEditWithCompleterNg
 include/KF5/PimCommon/LogActivitiesManager
 include/KF5/PimCommon/MetaType
 include/KF5/PimCommon/MigrateApplicationFiles
@@ -34,10 +33,8 @@ include/KF5/PimCommon/PluginUtil
 include/KF5/PimCommon/RenameFileDialog
 include/KF5/PimCommon/RichTexteditWithAutoCorrection
 include/KF5/PimCommon/ShareServiceUrlManager
-include/KF5/PimCommon/SieveSyntaxHighlighter
-include/KF5/PimCommon/SieveSyntaxHighlighterRules
 include/KF5/PimCommon/SieveSyntaxHighlighterUtil
-include/KF5/PimCommon/SimpleStringlistEditor
+include/KF5/PimCommon/SimpleStringListEditor
 include/KF5/PimCommon/SpellCheckLineEdit
 include/KF5/PimCommon/TemplateListWidget
 include/KF5/PimCommon/TemplateManager
@@ -77,9 +74,8 @@ include/KF5/pimcommon/genericpluginmanager.h
 include/KF5/pimcommon/imapresourcesettings.h
 include/KF5/pimcommon/kactionmenuchangecase.h
 include/KF5/pimcommon/kpimprintpreviewdialog.h
-include/KF5/pimcommon/lineeditpassword.h
 include/KF5/pimcommon/lineeditwithautocorrection.h
-include/KF5/pimcommon/lineeditwithcompleter.h
+include/KF5/pimcommon/lineeditwithcompleterng.h
 include/KF5/pimcommon/logactivitiesmanager.h
 include/KF5/pimcommon/metatype.h
 include/KF5/pimcommon/migrateapplicationfiles.h
@@ -96,8 +92,6 @@ include/KF5/pimcommon/pluginutil.h
 include/KF5/pimcommon/renamefiledialog.h
 include/KF5/pimcommon/richtexteditwithautocorrection.h
 include/KF5/pimcommon/shareserviceurlmanager.h
-include/KF5/pimcommon/sievesyntaxhighlighter.h
-include/KF5/pimcommon/sievesyntaxhighlighterrules.h
 include/KF5/pimcommon/sievesyntaxhighlighterutil.h
 include/KF5/pimcommon/simplestringlisteditor.h
 include/KF5/pimcommon/spellchecklineedit.h

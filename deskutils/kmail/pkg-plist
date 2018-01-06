@@ -97,10 +97,6 @@ share/kservices5/kmail_config_security.desktop
 share/kservices5/kontact/kmailplugin.desktop
 share/kservices5/kontact/summaryplugin.desktop
 share/kservicetypes5/dbusmail.desktop
-share/kxmlgui5/kmail2/kmail_part.rc
-share/kxmlgui5/kmail2/kmcomposerui.rc
-share/kxmlgui5/kmail2/kmmainwin.rc
-share/kxmlgui5/kmail2/kmreadermainwin.rc
 share/kxmlgui5/kontactsummary/kontactsummary_part.rc
 share/locale/ar/LC_MESSAGES/akonadi_archivemail_agent.mo
 share/locale/ar/LC_MESSAGES/akonadi_followupreminder_agent.mo
@@ -327,6 +323,7 @@ share/locale/sv/LC_MESSAGES/kmail.mo
 share/locale/sv/LC_MESSAGES/ktnef.mo
 share/locale/tr/LC_MESSAGES/akonadi_followupreminder_agent.mo
 share/locale/tr/LC_MESSAGES/akonadi_mailfilter_agent.mo
+share/locale/tr/LC_MESSAGES/akonadi_sendlater_agent.mo
 share/locale/tr/LC_MESSAGES/kmail.mo
 share/locale/tr/LC_MESSAGES/ktnef.mo
 share/locale/ug/LC_MESSAGES/akonadi_archivemail_agent.mo
@@ -353,5 +350,4 @@ share/locale/zh_TW/LC_MESSAGES/akonadi_mailfilter_agent.mo
 share/locale/zh_TW/LC_MESSAGES/akonadi_sendlater_agent.mo
 share/locale/zh_TW/LC_MESSAGES/kmail.mo
 share/locale/zh_TW/LC_MESSAGES/ktnef.mo
-share/messageviewer/about/default/introduction_kmail.html
 share/metainfo/org.kde.kmail2.appdata.xml

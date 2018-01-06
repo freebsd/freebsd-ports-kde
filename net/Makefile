@@ -342,6 +342,7 @@
     SUBDIR += krfb
     SUBDIR += krfb-kde4
     SUBDIR += ktnef
+    SUBDIR += ksmtp
     SUBDIR += kwooty
     SUBDIR += l2tpd
     SUBDIR += l4ip
