@@ -1,6 +1,17 @@
 --- portmaster.orig	2017-12-21 09:02:44 UTC
 +++ portmaster
-@@ -113,13 +113,13 @@ kill_bad_children () {
+@@ -51,9 +51,8 @@ fi
+ #=============== Begin functions we always want to have ===============
+ 
+ version () {
+-	local pkgname="%%PKGNAME%%"
++	local pkgname="portmaster-3.18_6"
+ 	echo '' ; echo "===>>> Version ${pkgname##*-}"
+-	#svn='$FreeBSD: user/dougb/portmaster/portmaster 241090 2012-10-01 08:32:05Z dougb $'
+ }
+ 
+ fail () {
+@@ -113,13 +112,13 @@ kill_bad_children () {
  		[ "$pid" -gt 25 ] || continue
  		case "$ppid" in
  		1)	case "$command" in
@@ -16,7 +27,70 @@
  			*'make -DBATCH checksum'*|*'/fetch '*|\[sh\]) pm_kill $pid ;;
  			esac ;;
  		esac
-@@ -1616,15 +1616,14 @@ pm_pkg_create () {
+@@ -333,9 +332,8 @@ pm_mktemp () {
+ 		fail "mktemp for $1 failed:\n       ${pm_mktemp_file#mktemp: }"
+ }
+ pm_unlink () { [ -e "$1" ] && /bin/unlink $1; }
+-pm_islocked	() { [ -n "$1" ] || return 1;
+-			[ -e "$pdb/$1/+IGNOREME" ] && pkg info -e "$1" ||
+-			[ `pkg query %k "$1"` -eq "1" ]; }
++pm_islocked	() { local locked; [ -n "$1" ] && locked=`pkg query %k "$1"` &&
++			[ "$locked" = 1 -o -e "$pdb/$1/+IGNOREME" ]; }
+ 
+ # Superuser versions for commands that need root privileges
+ 
+@@ -412,7 +410,7 @@ usage () {
+ 	echo "    [[[--packages|-P]|[--packages-only|-PP]] | [--packages-build]]"
+ 	echo "    [--packages-if-newer] [--delete-build-only] [--always-fetch]"
+ 	echo "    [--local-packagedir=<path>] [--packages-local] [--delete-packages]"
+-	echo "    [--no-confirm] [--no-term-title] [--no-index-fetch]"
++	echo "    [--backup-format=<fmt>] [--no-confirm] [--no-term-title] [--no-index-fetch]"
+ 	echo "    [--index|--index-first|--index-only] [-m <arguments for make>]"
+ 	echo "    [-x <glob pattern to exclude from building>]"
+ 	echo "$progname [Common flags] <full name of port directory in $pdb>"
+@@ -653,6 +651,10 @@ for var in "$@" ; do
+ 				export LOCAL_PACKAGEDIR ;;
+ 	--delete-packages)	PM_DELETE_PACKAGES=pm_delete_packages
+ 				export PM_DELETE_PACKAGES ;;
++	--backup-format=*)	BACKUP_FORMAT=${var#--backup-format=}
++				export BACKUP_FORMAT ;;
++	--package-format=*)	PACKAGE_FORMAT=${var#--package-format=}
++				export PACKAGE_FORMAT ;;
+ #	--flavor=*)		PM_FLAVOR=${var#--flavor=} ;;
+ 	--update-if-newer)	PM_UPDATE_IF_NEWER=pm_update_if_newer
+ 				export PM_UPDATE_IF_NEWER ;;
+@@ -1589,25 +1591,28 @@ init_packages () {
+ }
+ 
+ pm_pkg_create () {
+-	local pkgdir backup
++	local pkgdir backup format_option
+ 
+ 	init_packages
+ 
++	[ -z "$BACKUP_FORMAT" -a -n "$PACKAGE_FORMAT" ] && export BACKUP_FORMAT=$PACKAGE_FORMAT
+ 	if [ "$1" = "$PACKAGES" ]; then
+ 		for pkgdir in All Latest ${portdir%/*}; do
+ 			pm_mkdir_s ${PACKAGES}/${pkgdir} ||
+ 				fail "Cannot mkdir -p ${PACKAGES}/${pkgdir}"
+ 		done
+ 		pkgdir=${PACKAGES}/All
++		format_option=${PACKAGE_FORMAT:+-f $PACKAGE_FORMAT}
+ 		echo "===>>> Creating a package for new version $2"
+ 	else
+ 		pkgdir=$1 ; echo ''
++		format_option=${BACKUP_FORMAT:+-f $BACKUP_FORMAT}
+ 		echo "===>>> Creating a backup package for old version $2"
+ 		backup=backup
+ 	fi
+ 
+ 	pm_cd $pkgdir || fail "Cannot cd into $pkgdir to create a package"
+-	if $PM_SU_CMD pkg create $2; then
++	if $PM_SU_CMD pkg create $format_option $2; then
+ 		if [ "$1" = "$pbu" ]; then
+ 			if [ -n "$BACKUP" ]; then
+ 				echo "	===>>> Package saved to $1" ; echo ''
+@@ -1616,15 +1621,14 @@ pm_pkg_create () {
  				NB_DELETE="${NB_DELETE}${pkg} "
  			fi
  		elif [ "$1" = "$PACKAGES" ]; then
@@ -36,7 +110,7 @@
  			fi
  
  			cd ${1}/${portdir%/*}
-@@ -1665,7 +1664,7 @@ find_dl_distfiles () {
+@@ -1665,7 +1669,7 @@ find_dl_distfiles () {
  	else
  		# Old method, for now
  		if pm_cd $pd/$1; then
@@ -45,7 +119,7 @@
  			dist_list="${dist_list%options}distfiles"
  		else
  			# The port might have moved, etc.; so take a stab at it,
-@@ -1803,6 +1802,7 @@ set_distfiles_and_subdir () {
+@@ -1803,6 +1807,7 @@ set_distfiles_and_subdir () {
  }
  
  delete_stale_distfiles () {
@@ -53,7 +127,7 @@
  	# Global: distfiles_checked
  	local file answer
  
-@@ -1849,6 +1849,7 @@ delete_stale_distfiles () {
+@@ -1849,6 +1854,7 @@ delete_stale_distfiles () {
  }
  
  delete_all_distfiles () {
@@ -61,7 +135,7 @@
  	# Global: delete_all DISTDIR
  	local origin rc delete_current
  
-@@ -2264,12 +2265,14 @@ make_dep_list () {
+@@ -2264,12 +2270,14 @@ make_dep_list () {
  
  	for dep_type in $*; do
  		case $dep_type in
@@ -81,7 +155,7 @@
  		*)
  			fail "make_dep_list: Unsupported option '$dep_type'"
  		esac
-@@ -3302,7 +3305,7 @@ pm_cd_pd $portdir
+@@ -3302,7 +3310,7 @@ pm_cd_pd $portdir
  
  if [ -n "$PM_BUILD_ONLY_LIST" ]; then
  	case "$build_only_dl_g" in
@@ -90,7 +164,7 @@
  		[ -n "$PM_PACKAGES_BUILD" ] && PM_PACKAGES_BUILD=doing_build_only_dep
  		[ -n "$PM_DEL_BUILD_ONLY" ] && PM_DEL_BUILD_ONLY=doing_build_only_dep ;;
  	*)	[ -n "$PM_PACKAGES_BUILD" ] && PM_PACKAGES_BUILD=pmp_build
-@@ -3402,31 +3405,19 @@ fetch_package () {
+@@ -3402,31 +3410,19 @@ fetch_package () {
  }
  	if [ -z "$PACKAGESITE" -a -z "$PM_PACKAGES_LOCAL" ]; then
  		release=`uname -r`
@@ -127,7 +201,7 @@
  
  	echo "===>>> Checking package repository for latest available version"
  
-@@ -3437,11 +3428,12 @@ fetch_package () {
+@@ -3437,11 +3433,12 @@ fetch_package () {
  			latest_pv=${local_package##*/}
  		fi
  		if [ -z "$latest_pv" -a -z "$PM_INDEX_ONLY" ]; then
@@ -145,3 +219,28 @@
  				latest_pv=${latest_pv##*/}
  			else
  				pm_v "===>>> No local package for ${new_port}, attempting fetch"
+@@ -3753,6 +3750,7 @@ if [ -z "$use_package" ]; then
+ 	unset np_orphan
+ 	# Defining NO_DEPENDS ensures that we will control the installation
+ 	# of the depends, not bsd.port.mk.
++#	export_flavor $(flavor_part "$portdir")
+ 	eval pm_make_s -DNO_DEPENDS install $port_log_args || install_failed $new_port
+ else
+ 	[ -n "$local_package" ] && ppd=${LOCAL_PACKAGEDIR}/All
+@@ -3850,7 +3848,7 @@ fi
+ if [ -n "$MAKE_PACKAGE" ]; then
+ 	if [ -z "$use_package" ]; then
+ 		echo "===>>> Creating a package for new version $new_port"
+-		pm_make_s -D_OPTIONS_OK package >/dev/null || fail "Package creation of $new_port failed"
++		pm_make_s -D_OPTIONS_OK ${PACKAGE_FORMAT:+PKG_SUFX=.$PACKAGE_FORMAT} package >/dev/null || fail "Package creation of $new_port failed"
+ 		echo "	===>>> Package saved to $PACKAGES/All" ; echo ''
+ 	else
+ 		pm_pkg_create $PACKAGES $new_port
+@@ -3858,6 +3856,7 @@ if [ -n "$MAKE_PACKAGE" ]; then
+ fi
+ 
+ if [ -z "$use_package" -a -z "$DONT_POST_CLEAN" ]; then
++#	export_flavor $(flavor_part $portdir)
+ 	pm_v "===>>> Running 'make clean' in the background"
+ 	(pm_make_s clean NOCLEANDEPENDS=ncd2 >/dev/null)&
+ 	pm_v

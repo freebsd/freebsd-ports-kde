@@ -7,11 +7,10 @@ CATEGORIES=	science kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE interactive physics simulator
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
 LIB_DEPENDS=	libqalculate.so:math/libqalculate \
 		libgsl.so:math/gsl
 
-USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
+USES=		cmake:outsource eigen:3 gettext kde:5 pkgconfig tar:xz
 USE_KDE=	config doctools ecm emoticons init itemmodels kdelibs4support \
 		khtml newstuff plotting
 USE_QT5=	buildtools_build core gui network opengl printsupport \
