@@ -91,12 +91,15 @@
     SUBDIR += R-cran-units
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
+    SUBDIR += SCIP
+    SUBDIR += SoPlex
     SUBDIR += aamath
     SUBDIR += abacus
     SUBDIR += abakus
     SUBDIR += abs
     SUBDIR += acalc
     SUBDIR += add
+    SUBDIR += adept
     SUBDIR += algae
     SUBDIR += alglib
     SUBDIR += algotutor
@@ -182,6 +185,7 @@
     SUBDIR += fftw3-long
     SUBDIR += fftw3-quad
     SUBDIR += fityk
+    SUBDIR += flann
     SUBDIR += form
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
@@ -733,9 +737,11 @@
     SUBDIR += spooles-mpich
     SUBDIR += stp
     SUBDIR += suitesparse
+    SUBDIR += sundials
     SUBDIR += superlu
     SUBDIR += superlu_mt
     SUBDIR += surf
+    SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += testu01
@@ -772,5 +778,6 @@
     SUBDIR += xspread
     SUBDIR += yacas
     SUBDIR += z3
+    SUBDIR += zimpl
 
 .include <bsd.port.subdir.mk>

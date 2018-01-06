@@ -5,6 +5,26 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180102:
+  AFFECTS: users of devel/awscli
+  AUTHOR: bhughes@FreeBSD.org
+
+  The package name for devel/awscli has changed (back) to just awscli.
+  The introduction of flavors erroneously caused the awscli package to
+  be renamed to py27-awscli.
+
+20171230:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  If you are building ejabberd 17.11 on a host, which already has an older 
+  version of ejabberd installed, then build process will fail with "unknown type
+  specifier" errors. As a workaround, please uninstall ejabberd before building
+  ejabberd.
+
+  This has been reported upstream at:
+  https://github.com/processone/ejabberd/issues/2194
+
 20171223:
   AFFECTS: users of dns/dnscrypt-proxy
   AUTHOR: egypcio@googlemail.com

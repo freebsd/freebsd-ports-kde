@@ -30,6 +30,7 @@
     SUBDIR += chibi-scheme
     SUBDIR += chicken
     SUBDIR += cilkplus
+    SUBDIR += cim
     SUBDIR += cint
     SUBDIR += cjs
     SUBDIR += clang-devel
@@ -304,6 +305,7 @@
     SUBDIR += ruby22
     SUBDIR += ruby23
     SUBDIR += ruby24
+    SUBDIR += ruby25
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly

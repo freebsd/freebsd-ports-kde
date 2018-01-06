@@ -113,6 +113,7 @@
     SUBDIR += dictem
     SUBDIR += dictfmt
     SUBDIR += dictionary
+    SUBDIR += diff-so-fancy
     SUBDIR += diffmark
     SUBDIR += diffsplit
     SUBDIR += diffstat
@@ -754,6 +755,7 @@
     SUBDIR += p5-RADIUS-UserFile
     SUBDIR += p5-RDF-Core
     SUBDIR += p5-RDF-Notation3
+    SUBDIR += p5-RDF-Query
     SUBDIR += p5-RDF-Simple
     SUBDIR += p5-RDF-Trine
     SUBDIR += p5-RDFStore
@@ -1160,6 +1162,7 @@
     SUBDIR += pcrs
     SUBDIR += pdfgrep
     SUBDIR += pdfoutline
+    SUBDIR += pdfsandwich
     SUBDIR += pdftohtml
     SUBDIR += pear-File_Fortune
     SUBDIR += pear-File_MARC
@@ -1524,6 +1527,7 @@
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
+    SUBDIR += rubygem-liquid-tag-parser
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
@@ -1584,6 +1588,7 @@
     SUBDIR += rubygem-tidy
     SUBDIR += rubygem-truncato
     SUBDIR += rubygem-twitter-text
+    SUBDIR += rubygem-twitter-text1
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter

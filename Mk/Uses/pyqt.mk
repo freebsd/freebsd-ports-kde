@@ -61,10 +61,10 @@ MASTER_SITES_PYQT5=	SF/pyqt/PyQt5/PyQt-${PORTVERSION} \
 MASTER_SITES_QSCI2=	SF/pyqt/QScintilla2/QScintilla-${PORTVERSION} \
 			GENTOO
 
-SIP_VERSION=		4.19.2
+SIP_VERSION=		4.19.6
 QSCI2_VERSION=		2.9.1
-PYQT4_VERSION=		4.12
-PYQT5_VERSION=		5.7.1
+PYQT4_VERSION=		4.12.1
+PYQT5_VERSION=		5.9.2
 
 SIP_DISTNAME=		sip-${SIP_VERSION}
 PYQT4_DISTNAME=		PyQt4_gpl_x11-${PYQT4_VERSION}
@@ -72,13 +72,15 @@ PYQT4_DISTINFO_FILE=	${.CURDIR:H:H}/devel/${PYQT_RELNAME}/distinfo
 PYQT5_DISTNAME=		PyQt5_gpl-${PYQT5_VERSION}
 PYQT5_DISTINFO_FILE=	${.CURDIR:H:H}/devel/${PYQT_RELNAME}/distinfo
 QSCI2_DISTNAME=		QScintilla-gpl-${QSCI2_VERSION}
+PYQT4_LICENSE=		GPLv3
+PYQT5_LICENSE=		GPLv3
 
 # PyQt components split up into pyqt4/pyqt5/...
 _USE_PYQT_ALL=		core dbus dbussupport demo designer designerplugin \
-			doc gui multimedia network opengl qscintilla2 \
+			gui multimedia network opengl qscintilla2 \
 			sql svg test webkit xml xmlpatterns sip
 # List of components only in pyqt4
-_USE_PYQT4_ONLY=	assistant declarative \
+_USE_PYQT4_ONLY=	assistant declarative doc \
 			help phonon script scripttools
 # List of components only in pyqt5
 _USE_PYQT5_ONLY=	multimediawidgets printsupport qml serialport \
@@ -91,6 +93,7 @@ PYQT_PY_RELNAME=	${PYTHON_PKGNAMEPREFIX}qt${_PYQT_VERSION}
 PYQT_MASTERSITES=	${MASTER_SITES_PYQT${_PYQT_VERSION}}
 PYQT_DISTNAME=		${PYQT${_PYQT_VERSION}_DISTNAME}
 PYQT_DISTINFO_FILE=	${PYQT${_PYQT_VERSION}_DISTINFO_FILE}
+PYQT_LICENSE=		${PYQT${_PYQT_VERSION}_LICENSE}
 
 py-sip_PATH=		${PYTHON_PKGNAMEPREFIX}sip>=${SIP_VERSION}
 
@@ -123,7 +126,7 @@ py-multimediawidgets_PATH=	${PYQT_PY_RELNAME}-multimediawidgets>=${PYQT_VERSION}
 py-qml_PATH=			${PYQT_PY_RELNAME}-qml>=${PYQT_VERSION}
 py-printsupport_PATH=		${PYQT_PY_RELNAME}-printsupport>=${PYQT_VERSION}
 py-serialport_PATH=		${PYQT_PY_RELNAME}-serialport>=${PYQT_VERSION}
-py-webkitwidgets_PATH= 		${PYQT_PY_RELNAME}-webkitwidgets>=${PYQT_VERSION}
+py-webkitwidgets_PATH=		${PYQT_PY_RELNAME}-webkitwidgets>=${PYQT_VERSION}
 py-widgets_PATH=		${PYQT_PY_RELNAME}-widgets>=${PYQT_VERSION}
 
 py-sip_PORT=		devel/py-sip
@@ -157,7 +160,7 @@ py-multimediawidgets_PORT=	multimedia/py-qt5-multimediawidgets
 py-qml_PORT=			lang/py-qt5-qml
 py-printsupport_PORT=		print/py-qt5-printsupport
 py-serialport_PORT=		comms/py-qt5-serialport
-py-webkitwidgets_PORT= 		www/py-qt5-webkitwidgets
+py-webkitwidgets_PORT=		www/py-qt5-webkitwidgets
 py-widgets_PORT=		x11-toolkits/py-qt5-widgets
 
 py-assistant_DESC=	Python bindings for QtAssistant module
@@ -189,7 +192,7 @@ py-multimediawidgets_DESC=	Python bindings for QtMultimediaWidgets module
 py-qml_DESC=			Python bindings for Qml module
 py-printsupport_DESC=		Python bindings for Printsupport module
 py-serialport_DESC=		Python bindings for QtSerialPort
-py-webkitwidgets_DESC= 		Python bindings for QtWebKitWidgets module
+py-webkitwidgets_DESC=		Python bindings for QtWebKitWidgets module
 py-widgets_DESC=		Python bindings for QTWidgets module
 
 SIPDIR_REL=	share/py-sip/PyQt${_PYQT_VERSION}
@@ -202,6 +205,7 @@ MASTER_SITES=	${PYQT_MASTERSITES}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
 DISTNAME=	${PYQT_DISTNAME}
 DISTINFO_FILE=	${PYQT_DISTINFO_FILE}
+LICENSE?=	${PYQT_LICENSE}
 HAS_CONFIGURE=	yes
 QT_NONSTANDARD=	yes  # Do not add unknown arguments to CONFIGURE_ARGS.
 

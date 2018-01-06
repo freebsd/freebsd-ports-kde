@@ -182,7 +182,6 @@
     SUBDIR += gnomint
     SUBDIR += gnupg
     SUBDIR += gnupg1
-    SUBDIR += gnupg20
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
     SUBDIR += go.crypto
@@ -1102,6 +1101,7 @@
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
+    SUBDIR += rubygem-rbnacl4
     SUBDIR += rubygem-rbnacl-libsodium
     SUBDIR += rubygem-recog
     SUBDIR += rubygem-rex-arch
@@ -1181,6 +1181,7 @@
     SUBDIR += snortreport
     SUBDIR += snortsam
     SUBDIR += snortsnarf
+    SUBDIR += snuffleupagus
     SUBDIR += softether
     SUBDIR += softether-devel
     SUBDIR += softhsm
@@ -1231,6 +1232,7 @@
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
+    SUBDIR += titan
     SUBDIR += titus
     SUBDIR += tls-check
     SUBDIR += tlswrap

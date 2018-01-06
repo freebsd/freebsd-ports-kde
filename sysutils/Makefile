@@ -6,7 +6,6 @@
     SUBDIR += 3dm
     SUBDIR += 44bsd-more
     SUBDIR += 915resolution
-    SUBDIR += DTraceToolkit
     SUBDIR += LPRng
     SUBDIR += LPRngTool
     SUBDIR += UEFITool
@@ -190,6 +189,7 @@
     SUBDIR += consul
     SUBDIR += consul_exporter
     SUBDIR += consul-alerts
+    SUBDIR += container-diff
     SUBDIR += contractor
     SUBDIR += copytape
     SUBDIR += coreutils
@@ -409,6 +409,7 @@
     SUBDIR += gkrellm2
     SUBDIR += gkrelltop
     SUBDIR += gksu
+    SUBDIR += glogg
     SUBDIR += gnome-control-center
     SUBDIR += gnome-device-manager
     SUBDIR += gnome-mount
@@ -913,6 +914,7 @@
     SUBDIR += py-crontab
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
+    SUBDIR += py-distro
     SUBDIR += py-dlipower
     SUBDIR += py-docker
     SUBDIR += py-drmaa
@@ -1139,8 +1141,8 @@
     SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
+    SUBDIR += snooze
     SUBDIR += snowlog
-    SUBDIR += socket
     SUBDIR += socklog
     SUBDIR += solaar
     SUBDIR += sortu
@@ -1247,6 +1249,7 @@
     SUBDIR += u-boot-orangepi-one
     SUBDIR += u-boot-orangepi-pc2
     SUBDIR += u-boot-orangepi-plus-2e
+    SUBDIR += u-boot-orangepi-zero
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine64
@@ -1312,6 +1315,7 @@
     SUBDIR += vpnc-scripts
     SUBDIR += vstrip
     SUBDIR += vttest
+    SUBDIR += vzvol
     SUBDIR += wait_on
     SUBDIR += warden
     SUBDIR += watchdog
