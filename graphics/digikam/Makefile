@@ -13,7 +13,6 @@ COMMENT=	KDE digital photo management application
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:math/eigen3
 LIB_DEPENDS=	libKF5KGeoMap.so:astro/libkgeomap \
 		libKF5Sane.so:graphics/libksane \
 		libboost_graph.so:devel/boost-libs \
@@ -31,7 +30,7 @@ LIB_DEPENDS=	libKF5KGeoMap.so:astro/libkgeomap \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff
 
-USES=		cmake:outsource compiler:c++11-lib jpeg kde:5 pkgconfig \
+USES=		cmake:outsource compiler:c++11-lib eigen:3 jpeg kde:5 pkgconfig \
 		shebangfix tar:xz
 USE_GNOME=	glib20
 USE_KDE=	archive auth bookmarks calendarcore codecs completion config \
