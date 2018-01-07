@@ -150,9 +150,9 @@
     SUBDIR += kruler
     SUBDIR += kruler-kde4
     SUBDIR += ksshaskpass
+    SUBDIR += latte-dock
     SUBDIR += launchy
     SUBDIR += libkdepim
-    SUBDIR += latte-dock
     SUBDIR += libopensync-plugin-vformat-devel
     SUBDIR += libstreamanalyzer
     SUBDIR += libstreams
