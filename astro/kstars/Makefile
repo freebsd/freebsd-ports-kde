@@ -13,7 +13,7 @@ LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 BUILD_DEPENDS=	xplanet:astro/xplanet
 RUN_DEPENDS=	xplanet:astro/xplanet
 
-USES=		cmake:outsource gettext compiler:c++11-lib kde:5 \
+USES=		cmake:outsource compiler:c++11-lib eigen:3 gettext kde:5 \
 		pkgconfig tar:xz
 USE_KDE=	config dbusaddons doctools ecm guiaddons i18n iconthemes init \
 		jobwidgets kio newstuff notifications parts plotting \
