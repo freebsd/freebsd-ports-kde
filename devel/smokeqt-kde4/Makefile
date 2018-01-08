@@ -18,5 +18,6 @@ USE_QT4=	corelib dbus declarative designer_build gui help \
 		sql svg webkit xml xmlpatterns \
 		qmake_build moc_build uic_build rcc_build
 USE_LDCONFIG=	yes
+USE_CXXSTD=	gnu++98
 
 .include <bsd.port.mk>
