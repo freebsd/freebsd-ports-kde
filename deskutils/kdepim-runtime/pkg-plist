@@ -560,6 +560,7 @@ share/locale/eo/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/eo/LC_MESSAGES/kio_akonadi.mo
 share/locale/eo/LC_MESSAGES/kio_pop3.mo
 share/locale/es/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/es/LC_MESSAGES/accountwizard_ews.mo
 share/locale/es/LC_MESSAGES/accountwizard_ical.mo
 share/locale/es/LC_MESSAGES/accountwizard_imap.mo
 share/locale/es/LC_MESSAGES/accountwizard_kolab.mo
@@ -640,6 +641,7 @@ share/locale/et/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/eu/LC_MESSAGES/kio_pop3.mo
 share/locale/fa/LC_MESSAGES/kio_pop3.mo
 share/locale/fi/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/fi/LC_MESSAGES/accountwizard_ews.mo
 share/locale/fi/LC_MESSAGES/accountwizard_ical.mo
 share/locale/fi/LC_MESSAGES/accountwizard_imap.mo
 share/locale/fi/LC_MESSAGES/accountwizard_kolab.mo
@@ -648,6 +650,7 @@ share/locale/fi/LC_MESSAGES/accountwizard_maildir.mo
 share/locale/fi/LC_MESSAGES/accountwizard_pop3.mo
 share/locale/fi/LC_MESSAGES/accountwizard_vcard.mo
 share/locale/fi/LC_MESSAGES/accountwizard_vcarddir.mo
+share/locale/fi/LC_MESSAGES/akonadi_ews_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi-filestore.mo
 share/locale/fi/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/fi/LC_MESSAGES/akonadi_contacts_resource.mo
@@ -1301,6 +1304,7 @@ share/locale/pa/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/pa/LC_MESSAGES/kio_akonadi.mo
 share/locale/pa/LC_MESSAGES/kio_pop3.mo
 share/locale/pl/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/pl/LC_MESSAGES/accountwizard_ews.mo
 share/locale/pl/LC_MESSAGES/accountwizard_ical.mo
 share/locale/pl/LC_MESSAGES/accountwizard_imap.mo
 share/locale/pl/LC_MESSAGES/accountwizard_kolab.mo
@@ -1450,6 +1454,7 @@ share/locale/ro/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/ro/LC_MESSAGES/kio_akonadi.mo
 share/locale/ro/LC_MESSAGES/kio_pop3.mo
 share/locale/ru/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/ru/LC_MESSAGES/accountwizard_ews.mo
 share/locale/ru/LC_MESSAGES/accountwizard_ical.mo
 share/locale/ru/LC_MESSAGES/accountwizard_imap.mo
 share/locale/ru/LC_MESSAGES/accountwizard_kolab.mo
@@ -1463,6 +1468,7 @@ share/locale/ru/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_contacts_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_davgroupware_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_facebook_resource.mo
+share/locale/ru/LC_MESSAGES/akonadi_ews_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_gmail_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_googlecalendar_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_googlecontacts_resource.mo
@@ -1481,6 +1487,7 @@ share/locale/ru/LC_MESSAGES/akonadi_openxchange_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_serializer_plugins.mo
 share/locale/ru/LC_MESSAGES/akonadi_singlefile_resource.mo
+share/locale/ru/LC_MESSAGES/akonadi_tomboynotes_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_vcard_resource.mo
 share/locale/ru/LC_MESSAGES/akonadi_vcarddir_resource.mo
 share/locale/ru/LC_MESSAGES/gid-migrator.mo
@@ -1568,6 +1575,7 @@ share/locale/sl/LC_MESSAGES/kio_akonadi.mo
 share/locale/sl/LC_MESSAGES/kio_pop3.mo
 share/locale/sl/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/sr/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/sr/LC_MESSAGES/accountwizard_ews.mo
 share/locale/sr/LC_MESSAGES/accountwizard_ical.mo
 share/locale/sr/LC_MESSAGES/accountwizard_imap.mo
 share/locale/sr/LC_MESSAGES/accountwizard_kolab.mo
@@ -1756,6 +1764,7 @@ share/locale/uk/LC_MESSAGES/kio_akonadi.mo
 share/locale/uk/LC_MESSAGES/kio_pop3.mo
 share/locale/uk/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/zh_CN/LC_MESSAGES/accountwizard_contacts.mo
+share/locale/zh_CN/LC_MESSAGES/accountwizard_ews.mo
 share/locale/zh_CN/LC_MESSAGES/accountwizard_ical.mo
 share/locale/zh_CN/LC_MESSAGES/accountwizard_imap.mo
 share/locale/zh_CN/LC_MESSAGES/accountwizard_kolab.mo

@@ -827,6 +827,7 @@ share/locale/id/LC_MESSAGES/searchbarplugin.mo
 share/locale/id/LC_MESSAGES/uachangerplugin.mo
 share/locale/id/LC_MESSAGES/validatorsplugin.mo
 share/locale/id/LC_MESSAGES/webarchiver.mo
+share/locale/id/LC_MESSAGES/webenginepart.mo
 share/locale/is/LC_MESSAGES/adblock.mo
 share/locale/is/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/is/LC_MESSAGES/autorefresh.mo
