@@ -46,6 +46,7 @@
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
+    SUBDIR += bitwarden-ruby
     SUBDIR += blindelephant
     SUBDIR += boringssl
     SUBDIR += botan110
@@ -331,6 +332,7 @@
     SUBDIR += libbeid
     SUBDIR += libbf
     SUBDIR += libcryptui
+    SUBDIR += libdecaf
     SUBDIR += libecc
     SUBDIR += libfprint
     SUBDIR += libgcrypt
@@ -805,6 +807,7 @@
     SUBDIR += pecl-gnupg
     SUBDIR += pecl-krb5
     SUBDIR += pecl-libsodium
+    SUBDIR += pecl-mcrypt
     SUBDIR += pecl-pam
     SUBDIR += pecl-scrypt
     SUBDIR += pecl-ssh2
@@ -1096,6 +1099,7 @@
     SUBDIR += rubygem-openssl20
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
+    SUBDIR += rubygem-pbkdf2-ruby
     SUBDIR += rubygem-pundit
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
@@ -1241,6 +1245,7 @@
     SUBDIR += tor-devel
     SUBDIR += tpm-tools
     SUBDIR += tpmmanager
+    SUBDIR += trezord
     SUBDIR += trinokiller
     SUBDIR += tripwire
     SUBDIR += tripwire-131

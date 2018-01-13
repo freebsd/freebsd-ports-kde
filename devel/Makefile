@@ -1552,6 +1552,7 @@
     SUBDIR += libsoup-gnome
     SUBDIR += libsoup-reference
     SUBDIR += libspark2012
+    SUBDIR += libspice-server
     SUBDIR += libstatgrab
     SUBDIR += libstatgrab0
     SUBDIR += libstrfunc
@@ -1673,6 +1674,7 @@
     SUBDIR += lua-alien
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
+    SUBDIR += lua-bitop-51
     SUBDIR += lua-cjson
     SUBDIR += lua-gettext
     SUBDIR += lua-lgi
@@ -4423,6 +4425,7 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-evdev
+    SUBDIR += py-eventlib
     SUBDIR += py-exam
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4766,6 +4769,7 @@
     SUBDIR += py-pyqi
     SUBDIR += py-pyqtree
     SUBDIR += py-pyral
+    SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
@@ -4843,7 +4847,6 @@
     SUBDIR += py-rcsparse
     SUBDIR += py-rebulk
     SUBDIR += py-rednose
-    SUBDIR += py-repl
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
     SUBDIR += py-repoze.tm2
@@ -5539,6 +5542,7 @@
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-licensee
+    SUBDIR += rubygem-licensee8
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-local_time
@@ -5744,6 +5748,7 @@
     SUBDIR += rubygem-sdoc
     SUBDIR += rubygem-semantic_puppet
     SUBDIR += rubygem-semi_semantic
+    SUBDIR += rubygem-semver2
     SUBDIR += rubygem-sentry-raven
     SUBDIR += rubygem-sequel
     SUBDIR += rubygem-settingslogic

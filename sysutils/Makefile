@@ -959,6 +959,7 @@
     SUBDIR += py-zfs
     SUBDIR += pydf
     SUBDIR += qchroot
+    SUBDIR += qdirstat
     SUBDIR += qjail
     SUBDIR += qjail4
     SUBDIR += qlogtools

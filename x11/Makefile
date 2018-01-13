@@ -278,6 +278,7 @@
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
+    SUBDIR += polybar
     SUBDIR += presentproto
     SUBDIR += printproto
     SUBDIR += printscreen

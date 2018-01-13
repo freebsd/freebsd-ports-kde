@@ -258,8 +258,10 @@
     SUBDIR += libisocodes
     SUBDIR += libkdeedu-kde4
     SUBDIR += libkeduvocdocument
+    SUBDIR += liblxi
     SUBDIR += libmetalink
     SUBDIR += libpostal
+    SUBDIR += libpredict
     SUBDIR += libpri
     SUBDIR += libsupertone
     SUBDIR += libutf
@@ -271,6 +273,7 @@
     SUBDIR += loop
     SUBDIR += lv
     SUBDIR += lxde-common
+    SUBDIR += lxi-tools
     SUBDIR += magicpoint
     SUBDIR += man.el
     SUBDIR += mbuffer
@@ -383,6 +386,7 @@
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
+    SUBDIR += pnpids
     SUBDIR += podsleuth
     SUBDIR += posixtestsuite
     SUBDIR += proxyper
