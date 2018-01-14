@@ -449,6 +449,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += rumprun
     SUBDIR += saaghar
     SUBDIR += seabios
     SUBDIR += sent
