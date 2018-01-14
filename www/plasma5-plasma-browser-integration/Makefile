@@ -3,6 +3,7 @@
 PORTNAME=	plasma-browser-integration
 DISTVERSION=	5.10.95.20181011
 CATEGORIES=	www kde
+PKGNAMEPREFIX=	plasma5- # this port is not yet using CATEGORIES=kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 components to integrate browsers into the desktop
