@@ -1507,6 +1507,7 @@
     SUBDIR += piwigo
     SUBDIR += piwik
     SUBDIR += planet
+    SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plexwatchweb
     SUBDIR += plone
     SUBDIR += plugger
