@@ -267,8 +267,8 @@
     SUBDIR += pcdm
     SUBDIR += pipeglade
     SUBDIR += pixman
-    SUBDIR += plasma-scriptengine-python
-    SUBDIR += plasma-scriptengine-ruby
+    SUBDIR += plasma-scriptengine-python-kde4
+    SUBDIR += plasma-scriptengine-ruby-kde4
     SUBDIR += plasma5-kactivitymanagerd
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen

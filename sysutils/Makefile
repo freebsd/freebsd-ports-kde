@@ -872,7 +872,7 @@
     SUBDIR += pmt
     SUBDIR += policykit
     SUBDIR += policykit-gnome
-    SUBDIR += policykit-qt
+    SUBDIR += policykit-qt-kde4
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-kde-kde4

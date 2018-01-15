@@ -473,7 +473,7 @@
     SUBDIR += kolourpaint
     SUBDIR += kolourpaint-kde4
     SUBDIR += kphotoalbum-kde4
-    SUBDIR += kpovmodeler
+    SUBDIR += kpovmodeler-kde4
     SUBDIR += kqtquickcharts-kde4
     SUBDIR += krita
     SUBDIR += ksaneplugin

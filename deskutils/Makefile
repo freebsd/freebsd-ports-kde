@@ -133,6 +133,7 @@
     SUBDIR += kchmviewer
     SUBDIR += kdeconnect
     SUBDIR += kdepim
+    SUBDIR += kdepim4
     SUBDIR += kdepim-addons
     SUBDIR += kdepim-apps-libs
     SUBDIR += kdepim-kde4

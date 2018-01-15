@@ -1257,9 +1257,9 @@
     SUBDIR += kde-dev-utils-kde4
     SUBDIR += kdebindings-kde4
     SUBDIR += kdesdk
-    SUBDIR += kdesdk-kd4
+    SUBDIR += kdesdk-kde4
     SUBDIR += kdesdk-kioslaves-kde4
-    SUBDIR += kdesdk-strigi-analyzers-kde
+    SUBDIR += kdesdk-strigi-analyzers-kde4
     SUBDIR += kdesdk-thumbnailers
     SUBDIR += kdesdk-thumbnailers-kde4
     SUBDIR += kdesvn-kde4

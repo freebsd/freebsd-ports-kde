@@ -77,8 +77,8 @@
     SUBDIR += checkbot
     SUBDIR += chems
     SUBDIR += cherokee
-    SUBDIR += choqok
     SUBDIR += chpasswd
+    SUBDIR += choqok-kde4
     SUBDIR += chromium
     SUBDIR += ckeditor
     SUBDIR += cl-lml
