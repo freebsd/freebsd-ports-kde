@@ -1,7 +1,7 @@
 # $FreeBSD: branches/plasma5/PORTS/graphics/digikam/Makefile 13784 2017-03-18 15:45:02Z tcberner $
 
 PORTNAME=	digikam
-DISTVERSION=	5.7.0
+DISTVERSION=	5.8.0
 PORTEPOCH=	2
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
@@ -32,7 +32,7 @@ LIB_DEPENDS=	libKF5KGeoMap.so:astro/libkgeomap \
 
 USES=		cmake:outsource compiler:c++11-lib eigen:3 jpeg kde:5 pkgconfig \
 		shebangfix tar:xz
-USE_GNOME=	glib20
+USE_GNOME=	glib20 libxml2 libxslt
 USE_KDE=	archive auth bookmarks calendarcore codecs completion config \
 		configwidgets coreaddons crash doctools ecm filemetadata \
 		guiaddons i18n iconthemes itemviews jobwidgets kdelibs4support \
@@ -50,13 +50,12 @@ SHEBANG_FILES=	core/data/scripts/digitaglinktree/digitaglinktree
 
 # Disable kipiplugins, as they are built in their own port: graphics/kipiplugins.
 # Remember to keep that port in sync with this one.
-CMAKE_ARGS=	-DDIGIKAMSC_COMPILE_DIGIKAM:BOOL=ON \
-		-DDIGIKAMSC_COMPILE_KIPIPLUGINS:BOOL=OFF
-# Disable opencv3, as the ports still only contain opencv2.
-CMAKE_ARGS+=	-DENABLE_OPENCV3:BOOL=FALSE
+CMAKE_ON=	DIGIKAMSC_COMPILE_DIGIKAM
+CMAKE_OFF=	DIGIKAMSC_COMPILE_KIPIPLUGINS \
+		ENABLE_OPENCV3
 
 OPTIONS_DEFINE=		DOCS MULTIMEDIA MYSQL NLS
-OPTIONS_DEFAULT= 	${OPTIONS_DEFINE}
+OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 OPTIONS_SUB=		yes
 
 DOCS_DESC=		Digikam documentation
@@ -79,6 +78,8 @@ NLS_DESC=		Digikam i18n translations
 NLS_CMAKE_BOOL=		DIGIKAMSC_COMPILE_PO
 NLS_USES=		gettext
 NLS_USE=		KDE=i18n
+
+PLIST_SUB=		SHLIB_VER=${DISTVERSION}
 
 post-extract:
 # Remove localization file already installed by net/libkvkontakte.

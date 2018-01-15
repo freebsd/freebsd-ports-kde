@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kipiplugins
-DISTVERSION=	5.7.0
+DISTVERSION=	5.8.0
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/digikam
 DIST_SUBDIR=	KDE/digikam/${PORTVERSION}
@@ -14,15 +14,15 @@ LIB_DEPENDS=	libdigikamcore.so:graphics/digikam
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 pkgconfig \
 		tar:xz
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
-		coreaddons ecm itemviews jobwidgets kio libkipi service solid \
-		widgetsaddons windowsystem xmlgui
+		coreaddons ecm i18n itemviews jobwidgets kio libkipi service \
+		solid widgetsaddons windowsystem xmlgui
 USE_QT5=	core dbus gui network printsupport widgets xml xmlpatterns \
 		buildtools_build qmake_build
 
-CMAKE_ARGS=	-DDIGIKAMSC_COMPILE_DIGIKAM:BOOL=OFF \
-		-DDIGIKAMSC_COMPILE_KIPIPLUGINS:BOOL=ON \
- 		-DDIGIKAMSC_COMPILE_DOC:BOOL=OFF \
- 		-DDIGIKAMSC_COMPILE_PO:BOOL=OFF
+CMAKE_ON=	DIGIKAMSC_COMPILE_KIPIPLUGINS
+CMAKE_OFF=	DIGIKAMSC_COMPILE_DIGIKAM \
+		DIGIKAMSC_COMPILE_DOC \
+		DIGIKAMSC_COMPILE_PO
 
 OPTIONS_DEFINE=		MEDIAWIKI KVKONTAKTE
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
@@ -39,5 +39,7 @@ KVKONTAKTE_LIB_DEPENDS=	libKF5Vkontakte.so:net/libkvkontakte
 DISTNAME=	digikam-${PORTVERSION}
 DISTINFO_FILE=	${.CURDIR:H:H}/graphics/digikam/distinfo
 DESCR=		${.CURDIR:H:H}/graphics/digikam/pkg-descr
+
+PLIST_SUB=		SHLIB_VER=${DISTVERSION}
 
 .include <bsd.port.mk>
