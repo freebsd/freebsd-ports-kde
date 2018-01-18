@@ -3,7 +3,7 @@
 
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION1}.${AOOVERSION2}.${SVNREVISION}
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	4
 CATEGORIES=	editors java
 MASTER_SITES=	https://dist.apache.org/repos/dist/dev/openoffice/${AOOVERSION}-${AOORC}-r${SVNREVISION}/source/ \
@@ -450,6 +450,9 @@ do-build:
 	fi ;								  \
 	cd ${WRKSRC}/instsetoo_native ;					  \
 	. ../${FREEBSD_ENV_SET} ;					  \
+	if [ -n "${HOME}" -a ! -w "${HOME}" ]; then			  \
+		export HOME=/tmp ;					  \
+	fi ;								  \
 	build.pl --all -P$${numproc} -- -P$${dmproc}
 
 do-install:

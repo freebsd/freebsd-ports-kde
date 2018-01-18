@@ -431,6 +431,7 @@
     SUBDIR += deforaos-libsystem
     SUBDIR += deheader
     SUBDIR += delta
+    SUBDIR += dep
     SUBDIR += derelict-sdl2
     SUBDIR += derelict-util
     SUBDIR += desktop-file-utils
@@ -1674,7 +1675,6 @@
     SUBDIR += lua-alien
     SUBDIR += lua-bitlib
     SUBDIR += lua-bitop
-    SUBDIR += lua-bitop-51
     SUBDIR += lua-cjson
     SUBDIR += lua-gettext
     SUBDIR += lua-lgi
@@ -1685,6 +1685,7 @@
     SUBDIR += lua-posix
     SUBDIR += lua-pty
     SUBDIR += lua-sysctl
+    SUBDIR += lua51-bitop
     SUBDIR += lua51-cjson
     SUBDIR += lua51-libevent
     SUBDIR += luabind
@@ -4587,6 +4588,7 @@
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
     SUBDIR += py-llfuse
+    SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
     SUBDIR += py-lock_file
     SUBDIR += py-lockfile
@@ -5247,14 +5249,11 @@
     SUBDIR += rth
     SUBDIR += ruby-bsearch
     SUBDIR += ruby-build
-    SUBDIR += ruby-calendar
-    SUBDIR += ruby-date2
     SUBDIR += ruby-gems
     SUBDIR += ruby-korundum-kde4
     SUBDIR += ruby-krossruby-kde4
     SUBDIR += ruby-ncurses
     SUBDIR += ruby-qtruby-kde4
-    SUBDIR += ruby-rbbr
     SUBDIR += ruby-rbprof
     SUBDIR += ruby-sdl
     SUBDIR += ruby-setup.rb

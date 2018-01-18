@@ -161,6 +161,7 @@
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
     SUBDIR += cinnamon-settings-daemon
+    SUBDIR += circonus-agent
     SUBDIR += ciso
     SUBDIR += ciso-maker
     SUBDIR += ck4up

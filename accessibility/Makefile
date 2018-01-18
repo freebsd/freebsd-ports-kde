@@ -32,6 +32,7 @@
     SUBDIR += qt5-speech
     SUBDIR += redshift
     SUBDIR += rubygem-atk
+    SUBDIR += sct
     SUBDIR += speech-dispatcher
     SUBDIR += yasr
 
