@@ -510,6 +510,7 @@
     SUBDIR += elixir-decimal
     SUBDIR += elixir-deppie
     SUBDIR += elixir-dialyze
+    SUBDIR += elixir-distillery
     SUBDIR += elixir-estree
     SUBDIR += elixir-eternal
     SUBDIR += elixir-exactor
@@ -2942,6 +2943,7 @@
     SUBDIR += p5-MooX-HandlesVia
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-StrictConstructor
+    SUBDIR += p5-MooX-Thunking
     SUBDIR += p5-MooX-TypeTiny
     SUBDIR += p5-MooX-Types-MooseLike
     SUBDIR += p5-MooX-Types-MooseLike-Numeric
@@ -4402,6 +4404,7 @@
     SUBDIR += py-diazo
     SUBDIR += py-dill
     SUBDIR += py-dirspec
+    SUBDIR += py-dis3
     SUBDIR += py-distorm
     SUBDIR += py-django-rq
     SUBDIR += py-django-rq-dashboard
@@ -5022,6 +5025,7 @@
     SUBDIR += py-xattr
     SUBDIR += py-xcaplib
     SUBDIR += py-xdg
+    SUBDIR += py-xdis
     SUBDIR += py-xerox
     SUBDIR += py-xmltodict
     SUBDIR += py-xoltar-toolkit
@@ -5415,6 +5419,7 @@
     SUBDIR += rubygem-extlib
     SUBDIR += rubygem-extras
     SUBDIR += rubygem-facets
+    SUBDIR += rubygem-faker
     SUBDIR += rubygem-faraday_middleware-multi_json
     SUBDIR += rubygem-fast-stemmer
     SUBDIR += rubygem-fast_blank
