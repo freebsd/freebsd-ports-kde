@@ -4964,7 +4964,6 @@
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-clip2tri.html
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-clipper.html
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-earcut.html
-%%QT_DOCDIR%%/qtlocation/qtlocation-attribution-mapboxgl-any.html
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-mapboxgl-boost.html
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-mapboxgl-css-color-parser.html
 %%QT_DOCDIR%%/qtlocation/qtlocation-attribution-mapboxgl-earcut.html
