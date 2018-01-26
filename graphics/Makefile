@@ -473,6 +473,7 @@
     SUBDIR += kludge3d
     SUBDIR += kolourpaint
     SUBDIR += kolourpaint-kde4
+    SUBDIR += kphotoalbum
     SUBDIR += kphotoalbum-kde4
     SUBDIR += kpovmodeler-kde4
     SUBDIR += kqtquickcharts-kde4
