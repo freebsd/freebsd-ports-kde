@@ -845,6 +845,7 @@
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy10
     SUBDIR += py-sqlalchemy11
+    SUBDIR += py-sqlalchemy12
     SUBDIR += py-sqlite3
     SUBDIR += py-sqlite3dbm
     SUBDIR += py-sqlobject

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	GraphicsMagick
-PORTVERSION=	1.3.27a
-PORTREVISION=	1
+PORTVERSION=	1.3.28
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF \
@@ -19,8 +18,6 @@ OPTIONS_DEFAULT=FREETYPE JASPER JBIG JPEG LCMS2 OPENMP PNG TIFF WEBP WMF X11 XML
 DPS_DESC=	Display Ghostscript support
 Q8BIT_DESC=	Use 8-bit pixels (speed) instead of 16-bit (quality)
 TEST_DESC=	Run bundled self-tests after build
-
-PORTSCOUT=	skipv:1.3.27
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-static \

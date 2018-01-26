@@ -48,7 +48,9 @@
     SUBDIR += everygui
     SUBDIR += fbreader
     SUBDIR += fet
+    SUBDIR += flameshot
     SUBDIR += freemind
+    SUBDIR += freeplane
     SUBDIR += fusenshi
     SUBDIR += gaddr
     SUBDIR += ganttproject

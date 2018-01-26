@@ -740,6 +740,7 @@
     SUBDIR += opencity
     SUBDIR += openclaw
     SUBDIR += openclonk
+    SUBDIR += opendungeons
     SUBDIR += opengfx
     SUBDIR += openglad
     SUBDIR += openjazz
