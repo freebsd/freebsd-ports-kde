@@ -424,6 +424,7 @@
     SUBDIR += ncrypt
     SUBDIR += netpgp
     SUBDIR += nettle
+    SUBDIR += nextcloud-passman
     SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += ngrok

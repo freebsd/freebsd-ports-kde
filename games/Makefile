@@ -490,6 +490,7 @@
     SUBDIR += kdegames-kde4
     SUBDIR += kdiamond
     SUBDIR += kdiamond-kde4
+    SUBDIR += keeperrl
     SUBDIR += kevedit
     SUBDIR += kfourinline
     SUBDIR += kfourinline-kde4

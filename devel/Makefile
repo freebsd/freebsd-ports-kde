@@ -479,6 +479,7 @@
     SUBDIR += e00compr
     SUBDIR += e2fsprogs-libss
     SUBDIR += easygit
+    SUBDIR += easyloggingpp
     SUBDIR += eblob
     SUBDIR += ebnf2yacc
     SUBDIR += ecgi
@@ -1649,6 +1650,7 @@
     SUBDIR += llvm39
     SUBDIR += llvm40
     SUBDIR += llvm50
+    SUBDIR += llvm60
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -3590,6 +3592,7 @@
     SUBDIR += p5-Test-YAML-Meta
     SUBDIR += p5-Test-YAML-Valid
     SUBDIR += p5-Test-utf8
+    SUBDIR += p5-Test2-Harness
     SUBDIR += p5-Test2-Plugin-NoWarnings
     SUBDIR += p5-Test2-Suite
     SUBDIR += p5-Text-Levenshtein
@@ -3742,6 +3745,7 @@
     SUBDIR += p5-experimental
     SUBDIR += p5-forks
     SUBDIR += p5-github_creator
+    SUBDIR += p5-goto-file
     SUBDIR += p5-iCal-Parser
     SUBDIR += p5-indirect
     SUBDIR += p5-interface
@@ -4218,6 +4222,7 @@
     SUBDIR += py-PyExecJS
     SUBDIR += py-PyLD
     SUBDIR += py-PyODE
+    SUBDIR += py-QtPy
     SUBDIR += py-RPyC
     SUBDIR += py-Record
     SUBDIR += py-SymbolType
@@ -6082,6 +6087,7 @@
     SUBDIR += xtoolchain-llvm-devel
     SUBDIR += xtoolchain-llvm40
     SUBDIR += xtoolchain-llvm50
+    SUBDIR += xtoolchain-llvm60
     SUBDIR += xwpe
     SUBDIR += xxgdb
     SUBDIR += xxhash
