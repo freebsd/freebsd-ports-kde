@@ -1396,6 +1396,7 @@
     SUBDIR += py-xlutils
     SUBDIR += py-xlwriter
     SUBDIR += py-xlwt
+    SUBDIR += py-xml-default-dict
     SUBDIR += py-yapf
     SUBDIR += py-zope.app.i18n
     SUBDIR += py-zope.app.locales
@@ -1587,6 +1588,8 @@
     SUBDIR += rubygem-text
     SUBDIR += rubygem-tidy
     SUBDIR += rubygem-tidy_ffi
+    SUBDIR += rubygem-toml
+    SUBDIR += rubygem-tomlrb
     SUBDIR += rubygem-truncato
     SUBDIR += rubygem-twitter-text
     SUBDIR += rubygem-twitter-text1

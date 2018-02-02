@@ -200,7 +200,6 @@
     SUBDIR += gbsplay
     SUBDIR += gervill
     SUBDIR += ghostess
-    SUBDIR += gigedit
     SUBDIR += gimmix
     SUBDIR += gkrellmms2
     SUBDIR += gkrellmss2
@@ -228,7 +227,6 @@
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural
     SUBDIR += gnome-music
-    SUBDIR += gnomoradio
     SUBDIR += gnormalize
     SUBDIR += gnuitar
     SUBDIR += gnupod
@@ -477,7 +475,6 @@
     SUBDIR += linux-c7-sdl_mixer
     SUBDIR += linux-genpuid
     SUBDIR += linux-laudio
-    SUBDIR += linux-mbrola
     SUBDIR += linux-skype_oss_wrapper
     SUBDIR += linuxsampler
     SUBDIR += listener
@@ -502,7 +499,6 @@
     SUBDIR += maplay
     SUBDIR += mate-media
     SUBDIR += mbox
-    SUBDIR += mbrolavox
     SUBDIR += mcplay
     SUBDIR += mctoolame-decoder
     SUBDIR += mctoolame-encoder

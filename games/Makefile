@@ -72,7 +72,6 @@
     SUBDIR += awale
     SUBDIR += awele
     SUBDIR += balazar
-    SUBDIR += balazarbrothers
     SUBDIR += ballerburg
     SUBDIR += banihstypos
     SUBDIR += barbie_seahorse_adventures
@@ -154,7 +153,6 @@
     SUBDIR += cgoban
     SUBDIR += chanta
     SUBDIR += chapping
-    SUBDIR += cheech
     SUBDIR += chessx
     SUBDIR += childsplay
     SUBDIR += chocolate-doom
@@ -340,7 +338,6 @@
     SUBDIR += ggz-txt-client
     SUBDIR += gigalomania
     SUBDIR += gillo
-    SUBDIR += gish-demo
     SUBDIR += gl-117
     SUBDIR += glaxium
     SUBDIR += glbsp
@@ -576,7 +573,6 @@
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
-    SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
     SUBDIR += lightyears

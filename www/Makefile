@@ -65,7 +65,6 @@
     SUBDIR += caldavzap
     SUBDIR += calendarserver
     SUBDIR += castget
-    SUBDIR += caudium14
     SUBDIR += cblog
     SUBDIR += cgi-lib
     SUBDIR += cgi-lib.pl
@@ -183,6 +182,7 @@
     SUBDIR += fpc-googleapi
     SUBDIR += fpc-httpd22
     SUBDIR += fpc-httpd24
+    SUBDIR += fpc-libmicrohttpd
     SUBDIR += free-sa-devel
     SUBDIR += freeway
     SUBDIR += fswiki
@@ -243,7 +243,6 @@
     SUBDIR += havp
     SUBDIR += helma
     SUBDIR += hiawatha
-    SUBDIR += hinventory-client
     SUBDIR += horde-ansel
     SUBDIR += horde-base
     SUBDIR += horde-passwd
@@ -352,7 +351,6 @@
     SUBDIR += kplaylist
     SUBDIR += kwebkitpart
     SUBDIR += larbin
-    SUBDIR += lessc
     SUBDIR += libapreq2
     SUBDIR += libdom
     SUBDIR += libecap
@@ -564,7 +562,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-less-plugin-clean-css
     SUBDIR += npm-node4
     SUBDIR += npm-node6
     SUBDIR += npm-node8
@@ -1646,7 +1643,6 @@
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-voting
-    SUBDIR += py-django110
     SUBDIR += py-django111
     SUBDIR += py-django18
     SUBDIR += py-django20
@@ -1729,7 +1725,6 @@
     SUBDIR += py-multidict
     SUBDIR += py-nevow
     SUBDIR += py-notebook
-    SUBDIR += py-octoprint
     SUBDIR += py-pafy
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
@@ -2042,7 +2037,6 @@
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
     SUBDIR += rubygem-http-form_data1
-    SUBDIR += rubygem-http2
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
@@ -2052,7 +2046,6 @@
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
     SUBDIR += rubygem-jekyll-watch
-    SUBDIR += rubygem-jekyll-watch1
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-rails
@@ -2109,7 +2102,6 @@
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
-    SUBDIR += rubygem-puma2
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
@@ -2196,7 +2188,6 @@
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks
-    SUBDIR += rubygem-turbolinks-classic
     SUBDIR += rubygem-turbolinks-rails5
     SUBDIR += rubygem-turbolinks-rails50
     SUBDIR += rubygem-turbolinks-source
@@ -2404,7 +2395,6 @@
     SUBDIR += uchiwa
     SUBDIR += udmsearch
     SUBDIR += ufdbguard
-    SUBDIR += uglifyjs
     SUBDIR += unit
     SUBDIR += unit-go
     SUBDIR += unit-php56
@@ -2529,7 +2519,6 @@
     SUBDIR += xpi-mrtech-local-install
     SUBDIR += xpi-neo-diggler
     SUBDIR += xpi-no-referrer
-    SUBDIR += xpi-noscript
     SUBDIR += xpi-passwordmaker
     SUBDIR += xpi-pdf_download
     SUBDIR += xpi-permatabs
