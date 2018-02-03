@@ -23,6 +23,6 @@ USE_QT5=	buildtools_build core dbus gui multimedia network \
 # last distfile from the Plasma distribution.
 # Also drop it from kde.mk then.
 KDE_PLASMA_VERSION=	5.7.3
-KDE_PLASMA_BRANCH=	stable
+KDE_PLASMA_BRANCH=	Attic
 
 .include <bsd.port.mk>
