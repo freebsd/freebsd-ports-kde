@@ -2,13 +2,12 @@ Dirtily patch in FreeBSD Name/Information. This should be done
 in a better way down the line.
 
 
---- Modules/about-distro/src/OSRelease.cpp.orig	2018-02-01 13:18:11 UTC
+--- Modules/about-distro/src/OSRelease.cpp.orig	2015-11-19 12:04:36 UTC
 +++ Modules/about-distro/src/OSRelease.cpp
-@@ -63,73 +63,10 @@ static void setVar(QStringList *var, const QString &va
- 
+@@ -64,72 +64,10 @@ static void setVar(QStringList *var, con
  OSRelease::OSRelease()
  {
--    // Set default values for non-optional fields.
+     // Set default values for non-optional fields.
 -    name = QStringLiteral("Linux");
 -    id = QStringLiteral("linux");
 -    prettyName = QStringLiteral("Linux");
@@ -36,12 +35,12 @@ in a better way down the line.
 -    while (!file.atEnd()) {
 -        line = file.readLine();
 -
--        if (line.startsWith(QLatin1Char('#'))) {
+-        if (line.startsWith(QChar('#'))) {
 -            // Comment line
 -            continue;
 -        }
 -
--        comps = line.split(QLatin1Char('='));
+-        comps = line.split(QChar('='));
 -
 -        if (comps.size() != 2) {
 -            // Invalid line.
@@ -77,11 +76,10 @@ in a better way down the line.
 -        // os-release explicitly allows for vendor specific aditions. We have no
 -        // interest in those right now.
 -    }
--}
 +    name = QLatin1String("FreeBSD");
 +    id = QLatin1String("FreeBSD");
 +    prettyName = QLatin1String("FreeBSD");
 +    homeUrl = QLatin1String("https://freebsd.org");
 +    supportUrl = QLatin1String("https://www.freebsd.org/support.html");
 +    bugReportUrl = QLatin1String("https://bugs.freebsd.org/bugzilla");
-+}	
+ }
