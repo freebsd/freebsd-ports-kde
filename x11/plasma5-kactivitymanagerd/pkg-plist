@@ -1,5 +1,6 @@
 bin/kactivitymanagerd
 lib/libkactivitymanagerd_plugin.so
+share/dbus-1/services/org.kde.activitymanager.service
 %%QT_PLUGINDIR%%/kactivitymanagerd/1/kactivitymanagerd_plugin_activitytemplates.so
 %%QT_PLUGINDIR%%/kactivitymanagerd/1/kactivitymanagerd_plugin_eventspy.so
 %%QT_PLUGINDIR%%/kactivitymanagerd/1/kactivitymanagerd_plugin_globalshortcuts.so

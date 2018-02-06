@@ -2255,6 +2255,7 @@ share/locale/ja/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/ja/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/ja/LC_MESSAGES/plasma_engine_applicationjobs.mo
 share/locale/ja/LC_MESSAGES/plasma_engine_devicenotifications.mo
+share/locale/ja/LC_MESSAGES/plasma_engine_dict.mo
 share/locale/ja/LC_MESSAGES/plasma_engine_keystate.mo
 share/locale/ja/LC_MESSAGES/plasma_engine_mpris2.mo
 share/locale/ja/LC_MESSAGES/plasma_engine_network.mo

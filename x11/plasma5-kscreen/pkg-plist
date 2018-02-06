@@ -1,4 +1,5 @@
 bin/kscreen-console
+etc/xdg/kscreen.categories
 %%QT_PLUGINDIR%%/kcm_kscreen.so
 %%QT_PLUGINDIR%%/kf5/kded/kscreen.so
 share/icons/hicolor/48x48/actions/kdocumentinfo.png
@@ -60,6 +61,7 @@ share/locale/he/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/he/LC_MESSAGES/kscreen.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.plasma.kscreen.mo
 share/locale/hu/LC_MESSAGES/kcm_displayconfiguration.mo
+share/locale/hu/LC_MESSAGES/kscreen.mo
 share/locale/ia/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/ia/LC_MESSAGES/kscreen.mo
 share/locale/ia/LC_MESSAGES/plasma_applet_org.kde.plasma.kscreen.mo

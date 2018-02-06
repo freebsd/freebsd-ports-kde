@@ -1,4 +1,5 @@
 lib/libexec/drkonqi
+share/applications/org.kde.drkonqi.desktop
 %%DATADIR%%/debuggers/external/gdbrc
 %%DATADIR%%/debuggers/external/kdbgrc
 %%DATADIR%%/debuggers/internal/dbxrc
