@@ -4701,6 +4701,7 @@
     SUBDIR += py-paver
     SUBDIR += py-pbr
     SUBDIR += py-pefile
+    SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-petname
     SUBDIR += py-pex
@@ -5979,8 +5980,8 @@
     SUBDIR += sysconftool
     SUBDIR += sysfsutils
     SUBDIR += t1lib
-    SUBDIR += tablist
     SUBDIR += ta-lib
+    SUBDIR += tablist
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += tass64
