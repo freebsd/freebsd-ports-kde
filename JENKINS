@@ -1,6 +1,4 @@
-accessibility/jovie
 accessibility/jovie-kde4
-accessibility/kaccessible
 accessibility/kaccessible-kde4
 accessibility/kdeaccessibility
 accessibility/kdeaccessibility-kde4
@@ -29,7 +27,6 @@ audio/kid3-kde4
 audio/kio-audiocd-kde4
 audio/kmix
 audio/kmix-kde4
-audio/kscd
 audio/kscd-kde4
 audio/kstreamripper
 audio/kwave
@@ -41,7 +38,6 @@ audio/plasma5-plasma-pa
 audio/simon-kde4
 audio/soundkonverter
 chinese/qterm
-comms/kremotecontrol
 comms/kremotecontrol-kde4
 databases/akonadi
 databases/akonadi-kde4
@@ -51,7 +47,6 @@ deskutils/akonadi-import-wizard
 deskutils/akonadiconsole
 deskutils/akregator
 deskutils/basket
-deskutils/blogilo
 deskutils/cairo-dock-plugins
 deskutils/grantlee-editor
 deskutils/grantleetheme
@@ -247,7 +242,6 @@ games/libkmahjongg
 games/libkmahjongg-kde4
 games/lskat
 games/lskat-kde4
-games/pairs
 games/pairs-kde4
 games/palapeli
 games/palapeli-kde4
@@ -280,15 +274,12 @@ graphics/kolourpaint-kde4
 graphics/kphotoalbum-kde4
 graphics/kpovmodeler-kde4
 graphics/kqtquickcharts-kde4
-graphics/ksaneplugin
 graphics/ksaneplugin-kde4
-graphics/ksnapshot
 graphics/ksnapshot-kde4
 graphics/libkdcraw
 graphics/libkdcraw-kde4
 graphics/libkexiv2
 graphics/libkexiv2-kde4
-graphics/libkface
 graphics/libkface-kde4
 graphics/libkipi
 graphics/libkipi-kde4
@@ -494,7 +485,6 @@ sysutils/kdf-kde4
 sysutils/kdialog
 sysutils/kdirstat
 sysutils/kfilemetadata-kde4
-sysutils/kfilereplace
 sysutils/kfloppy
 sysutils/kfloppy-kde4
 sysutils/khelpcenter
@@ -504,7 +494,6 @@ sysutils/kshutdown-kde4
 sysutils/ksysguardd-kde4
 sysutils/ksystemlog
 sysutils/ksystemlog-kde4
-sysutils/kuser
 sysutils/kuser-kde4
 sysutils/nepomuk-core-kde4
 sysutils/nepomuk-widgets-kde4
@@ -534,7 +523,6 @@ textproc/libkomparediff2-kde4
 textproc/uim-kde4
 www/choqok-kde4
 www/kdewebdev-kde4
-www/klinkstatus
 www/kpartsplugin
 www/kwebkitpart
 www/opera
