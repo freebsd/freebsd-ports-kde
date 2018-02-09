@@ -108,6 +108,7 @@ lib/kritaplugins/kritarotateimage.so
 lib/kritaplugins/kritaroundcornersfilter.so
 lib/kritaplugins/kritaroundmarkerpaintop.so
 lib/kritaplugins/kritarulerassistanttool.so
+lib/kritaplugins/kritaasccdl.so
 lib/kritaplugins/kritaselectiontools.so
 lib/kritaplugins/kritaseparatechannels.so
 lib/kritaplugins/kritashearimage.so
