@@ -14,7 +14,4 @@ USE_KDE=	ecm emoticons kdelibs4support init itemmodels itemviews
 USE_QT5=	buildtools_build core gui qmake_build
 USE_LDCONFIG=	yes
 
-DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
-
 .include <bsd.port.mk>
