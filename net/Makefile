@@ -324,10 +324,10 @@
     SUBDIR += kdenetwork-filesharing-kde4
     SUBDIR += kdenetwork-strigi-analyzers-kde4
     SUBDIR += kea
+    SUBDIR += kf5-kholidays
     SUBDIR += kf5-kxmlrpcclient
     SUBDIR += kget
     SUBDIR += kget-kde4
-    SUBDIR += kholidays
     SUBDIR += kidentitymanagement
     SUBDIR += kimap
     SUBDIR += kio-upnp-ms-kde4

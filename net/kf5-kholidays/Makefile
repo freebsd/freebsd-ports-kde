@@ -1,8 +1,8 @@
 # $FreeBSD: branches/plasma5/KDE/net/kholidays/Makefile 13959 2017-04-26 14:27:50Z tcberner $
 
 PORTNAME=	kholidays
-DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-CATEGORIES=	net kde kde-applications
+DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+CATEGORIES=	net kde kde-frameworks
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE library for calendar holidays

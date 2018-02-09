@@ -240,6 +240,7 @@
     SUBDIR += kdeedu-kde4
     SUBDIR += kdeutils
     SUBDIR += kdeutils-kde4
+    SUBDIR += kf5-purpose
     SUBDIR += kenny
     SUBDIR += kgeography
     SUBDIR += kgeography-kde4

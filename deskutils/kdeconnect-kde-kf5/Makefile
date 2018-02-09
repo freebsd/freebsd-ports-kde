@@ -3,6 +3,7 @@
 PORTNAME=	kdeconnect-kde
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	KDE/stable/kdeconnect/${DISTVERSION}/src/
 PKGNAMESUFFIX=	-kf5
@@ -29,6 +30,7 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 USE_QT5=	buildtools_build core dbus gui network qmake_build qml quick \
 		testlib widgets x11extras xml
 USE_XORG=	ice sm x11 xext xtst
+USE_LDCONFIG=	${QT_QMLDIR}/org/kde/kdeconnect
 
 .include <bsd.port.mk>
 

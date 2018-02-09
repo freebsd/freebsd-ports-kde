@@ -1,0 +1,20 @@
+Make the bindings on KDE Connect toggleable.
+
+--- src/plugins/CMakeLists.txt.orig	2018-02-05 12:04:31 UTC
++++ src/plugins/CMakeLists.txt
+@@ -22,8 +22,13 @@ endfunction()
+ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+ include(QMLModules)
+ find_qmlmodule(Ubuntu.OnlineAccounts 0.1)
+-find_qmlmodule(org.kde.kdeconnect 1.0)
+-find_qmlmodule(org.kde.kquickcontrolsaddons 2.0)
++
++option(KDECONNECT "Enable KDE Connect" ON)
++if (KDECONNECT)
++  find_qmlmodule(org.kde.kdeconnect 1.0)
++endif ()
++
++find_qmlmodule(org.kde.kquickcontrolsaddons 2.0)
+ 
+ find_package(KAccounts)
+ find_package(KF5KIO ${KF5_DEP_VERSION} REQUIRED)
