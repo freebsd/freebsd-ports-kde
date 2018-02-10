@@ -1,0 +1,9 @@
+Elisa is a music player designed to be simple and nice to use.
+
+Elisa allows to browse music by album, artist or all tracks. The music
+is indexed using either a private indexer or an indexer using Baloo.
+The private one can be configured to scan music on chosen paths. The
+Baloo one is much faster because Baloo is providing all needed data
+from its own database. You can build and play your own playlist.
+
+WWW: https://phabricator.kde.org/project/board/193/
