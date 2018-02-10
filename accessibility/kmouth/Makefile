@@ -7,7 +7,10 @@ CATEGORIES=	accessibility kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Speech synthesizer frontend for KDE
 
-USES=		cmake:outsource kde:5 tar:xz
+LICENSE=	GLPv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
+USES=		cmake:outsource gettext kde:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
 		ecm i18n jobwidgets kio service widgetsaddons xmlgui
 USE_QT5=	core dbus gui network printsupport speech widgets xml \
