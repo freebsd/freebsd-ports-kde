@@ -34,6 +34,7 @@ lib/libkwebenginepartlib.so
 %%QT_PLUGINDIR%%/kcm_performance.so
 %%QT_PLUGINDIR%%/kf5/parts/webenginepart.so
 %%QT_PLUGINDIR%%/khtmlsettingsplugin.so
+%%QT_PLUGINDIR%%/khtmlttsplugin.so
 %%QT_PLUGINDIR%%/kimgallery.so
 %%QT_PLUGINDIR%%/konq_aboutpage.so
 %%QT_PLUGINDIR%%/konq_shellcmdplugin.so
@@ -105,6 +106,8 @@ share/khtml/kpartplugins/autorefresh.desktop
 share/khtml/kpartplugins/autorefresh.rc
 share/khtml/kpartplugins/khtmlsettingsplugin.desktop
 share/khtml/kpartplugins/khtmlsettingsplugin.rc
+share/khtml/kpartplugins/khtmltts.desktop
+share/khtml/kpartplugins/khtmltts.rc
 share/khtml/kpartplugins/minitoolsplugin.desktop
 share/khtml/kpartplugins/minitoolsplugin.rc
 share/khtml/kpartplugins/plugin_babelfish.rc
@@ -159,6 +162,8 @@ share/kwebkitpart/kpartplugins/autorefresh.desktop
 share/kwebkitpart/kpartplugins/autorefresh.rc
 share/kwebkitpart/kpartplugins/khtmlsettingsplugin.desktop
 share/kwebkitpart/kpartplugins/khtmlsettingsplugin.rc
+share/kwebkitpart/kpartplugins/khtmltts.desktop
+share/kwebkitpart/kpartplugins/khtmltts.rc
 share/kwebkitpart/kpartplugins/plugin_babelfish.rc
 share/kwebkitpart/kpartplugins/plugin_translator.desktop
 share/kwebkitpart/kpartplugins/plugin_validators.desktop
