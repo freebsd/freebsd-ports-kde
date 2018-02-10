@@ -8,8 +8,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Handy timer for steeping tea
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	config crash doctools ecm i18n iconthemes notifications \
-		notifyconfig textwidgets widgetsaddons xmlgui
-USE_QT5=	buildtools_build core dbus gui qmake_build widgets
+USE_KDE=	auth codecs config configwidgets coreaddons crash doctools ecm \
+		i18n iconthemes notifications notifyconfig sonnet textwidgets \
+		widgetsaddons xmlgui
+USE_QT5=	core dbus gui widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -15,7 +15,8 @@ USE_KDE=	activities  archive auth bookmarks codecs completion config configwidge
 		itemviews jobwidgets js kcmutils kdelibs4support \
 		kdesu khtml kio notifications parts pty service solid sonnet \
 		textwidgets unitconversion widgetsaddons windowsystem xmlgui
-USE_QT5=	core dbus gui network printsupport script webengine widgets x11extras xml \
+USE_QT5=	core dbus gui location network printsupport qml quick script \
+		speech webchannel webengine widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xext
 

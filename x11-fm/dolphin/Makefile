@@ -15,13 +15,15 @@ RUN_DEPENDS=	${QT_PLUGINDIR}/ffmpegthumbs.so:multimedia/kdemultimedia-ffmpegthum
 		${QT_PLUGINDIR}/audiothumbnail.so:devel/kio-extras
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	activities baloo baloo-widgets bookmarks completion \
-		coreaddons dbusaddons doctools ecm emoticons filemetadata \
-		i18n iconthemes init itemmodels kcmutils kde-cli-tools \
-		kdelibs4support kio newstuff notifications parts solid \
-		texteditor windowsystem
-USE_QT5=	buildtools_build concurrent core dbus gui phonon4 \
-		qmake_build widgets
+USE_KDE=	activities attica auth baloo baloo-widgets bookmarks codecs \
+		completion config configwidgets coreaddons crash dbusaddons \
+		doctools ecm emoticons filemetadata i18n iconthemes init \
+		itemmodels itemviews jobwidgets kcmutils kde-cli-tools \
+		kdelibs4support kio newstuff notifications parts service \
+		solid sonnet texteditor textwidgets widgetsaddons \
+		windowsystem xmlgui
+USE_QT5=	concurrent core dbus gui network phonon4 widgets xml \
+		buildtools_build qmake_build
 
 SHLIB_VER=	5.0.0
 PLIST_SUB+=	SHLIB_VER="${SHLIB_VER}" \
