@@ -7,16 +7,21 @@ CATEGORIES=	math kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE 5 frontend to mathematical software
 
-LIB_DEPENDS=	libspectre.so:print/libspectre \
+LIB_DEPENDS=	libAnalitza.so:math/analitza \
+		libcln.so:math/cln \
 		libqalculate.so:math/libqalculate \
-		libAnalitza.so:math/analitza
+		libspectre.so:print/libspectre
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 
 USES=		cmake:outsource gettext kde:5 pkgconfig python:3 tar:xz
-USE_KDE=	ecm config emoticons itemmodels itemviews init newstuff \
-		texteditor coreaddons archive parts pty kdelibs4support
-USE_QT5=	core buildtools_build qmake_build xml xmlpatterns
+USE_KDE=	attica auth archive bookmarks codecs completion config \
+		configwidgets coreaddons crash ecm emoticons i18n iconthemes \
+		itemmodels itemviews init jobwidgets kdelibs4support kio \
+		newstuff parts pty service solid sonnet texteditor textwidgets \
+		widgetsaddons xmlgui
+USE_QT5=	core dbus gui network printsupport widgets xml xmlpatterns \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	LUAJIT MAXIMA OCTAVE R SAGE SCILAB

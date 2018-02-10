@@ -10,8 +10,13 @@ COMMENT=	KDE Graph theory IDE
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs
 
 USES=		cmake:outsource gettext grantlee:5 kde:5 tar:xz
-USE_KDE=	ecm doctools config coreaddons kdeclarative texteditor
-USE_QT5=	buildtools_build core qmake_build quick scripttools svg webkit
+USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
+		crash doctools ecm i18n itemviews jobwidgets kdeclarative \
+		kio package parts service sonnet texteditor textwidgets \
+		widgetsaddons xmlgui
+USE_QT5=	core dbus gui network qml script quick scripttools svg webkit \
+		widgets xml xmlpatterns \
+		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
 

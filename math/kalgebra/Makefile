@@ -14,9 +14,10 @@ BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-
 CMAKE_ARGS=	-DBUILD_mobile:BOOL=FALSE
 USES=		cmake:outsource gettext kde:5 tar:xz
 USE_GL=		glu
-USE_KDE=	configwidgets doctools ecm i18n kio widgetsaddons
-USE_QT5=	core gui network opengl printsupport qml quick svg testlib \
-		webengine widgets xml \
+USE_KDE=	auth codecs config configwidgets coreaddons doctools ecm i18n \
+		kio service widgetsaddons xmlgui
+USE_QT5=	core dbus gui location network opengl printsupport qml quick \
+		svg testlib webchannel webengine widgets xml \
 		buildtools_build qmake_build
 
 .include <bsd.port.mk>
