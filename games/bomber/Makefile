@@ -8,10 +8,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	${${PORTNAME}_DESC}
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	config configwidgets coreaddons dbusaddons ecm i18n \
-		kio libkdegames xmlgui
-USE_QT5=	buildtools_build qmake_build core gui widgets qml \
-		quick phonon4
+USE_KDE=	auth codecs config configwidgets coreaddons crash dbusaddons \
+		ecm i18n kio libkdegames widgetsaddons xmlgui
+USE_QT5=	core dbus gui network widgets phonon4 qml quick xml \
+		buildtools_buildqmake_build
 
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>
