@@ -2,6 +2,7 @@
 
 PORTNAME=	plasma-workspace
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -42,7 +43,7 @@ USE_QT5=	concurrent core dbus graphicaleffects gui network phonon4 \
 		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xau xcb xcomposite xext xfixes xft xkbfile xrender xtst
 
-CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
+CMAKE_OFF=	BUILD_TESTING
 
 post-patch:
 # set the paths in startkde

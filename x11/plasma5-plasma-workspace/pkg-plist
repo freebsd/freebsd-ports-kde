@@ -160,8 +160,12 @@ lib/libweather_ion.so.7.0.0
 %%QT_PLUGINDIR%%/plasma_containmentactions_switchactivity.so
 %%QT_PLUGINDIR%%/plasma_containmentactions_switchdesktop.so
 %%QT_PLUGINDIR%%/plasma_containmentactions_switchwindow.so
+%%QT_PLUGINDIR%%/plasmacalendarplugins/holidays/HolidaysConfig.qml
+%%QT_PLUGINDIR%%/plasmacalendarplugins/holidaysevents.so
 %%QT_QMLDIR%%/org/kde/colorcorrect/libcolorcorrectplugin.so
 %%QT_QMLDIR%%/org/kde/colorcorrect/qmldir
+%%QT_QMLDIR%%/org/kde/holidayeventshelperplugin/libholidayeventshelperplugin.so
+%%QT_QMLDIR%%/org/kde/holidayeventshelperplugin/qmldir
 %%QT_QMLDIR%%/org/kde/plasma/private/appmenu/libappmenuplugin.so
 %%QT_QMLDIR%%/org/kde/plasma/private/appmenu/qmldir
 %%QT_QMLDIR%%/org/kde/plasma/private/digitalclock/libdigitalclockplugin.so
