@@ -7,7 +7,7 @@ CATEGORIES=	accessibility kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Speech synthesizer frontend for KDE
 
-LICENSE=	GLPv2
+LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake:outsource gettext kde:5 tar:xz

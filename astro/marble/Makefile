@@ -7,7 +7,7 @@ CATEGORIES=	astro kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Virtual globe and world atlas for KDE
 
-LICENSE=	GPLv2.1+
+LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libquazip5.so:archivers/quazip-qt5
