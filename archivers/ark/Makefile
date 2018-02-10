@@ -11,9 +11,12 @@ LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		cmake:outsource gettext libarchive kde:5 tar:xz
-USE_KDE=	archive config crash dbusaddons doctools ecm i18n iconthemes itemmodels \
-		khtml kio pty service widgetsaddons
-USE_QT5=	buildtools_build core gui widgets qmake_build
+USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
+		coreaddons crash dbusaddons doctools ecm i18n iconthemes \
+		itemmodels itemviews jobwidgets khtml kio parts pty service \
+		solid sonnet textwidgets widgetsaddons xmlgui
+USE_QT5=	concurrent core dbus gui network widgets xml \
+		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
 

@@ -7,16 +7,20 @@ CATEGORIES=	security kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Certificate manager for KDE
 
-LIB_DEPENDS=	libgpgme.so:security/gpgme \
+LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libgpg-error.so:security/libgpg-error \
+		libgpgme.so:security/gpgme \
 		libqgpgme.so:security/gpgme-qt5 \
 		libgpgmepp.so:security/gpgme-cpp
 RUN_DEPENDS=	${LOCALBASE}/bin/gmd5sum:sysutils/coreutils
 
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	completion config coreaddons i18n widgetsaddons windowsystem \
+USE_KDE=	codecs completion config coreaddons i18n itemmodels \
+		widgetsaddons windowsystem \
 		pimtextedit
-USE_QT5=	buildtools_build qmake_build widgets
+USE_QT5=	core gui widgets \
+		buildtools_build qmake_build
 
 post-extract:
 # use the binaries of coreutils

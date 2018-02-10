@@ -9,12 +9,17 @@ COMMENT=	Certificate manager for KDE
 
 LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libboost_thread.so:devel/boost-libs \
-		libgpgme.so:security/gpgme
+		libgpgme.so:security/gpgme \
+		libgpg-error.so:security/libgpg-error \
+		libgpgmepp.so:security/gpgme-cpp \
+		libqgpgme.so:security/gpgme-qt5
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	codecs config dbusaddons doctools ecm i18n iconthemes kcmutils \
-		notifications textwidgets windowsystem xmlgui \
+USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
+		doctools ecm i18n iconthemes itemmodels kcmutils notifications \
+		service sonnet textwidgets widgetsaddons windowsystem xmlgui \
 		libkleo mime
-USE_QT5=	buildtools_build network qmake_build testlib widgets
+USE_QT5=	core dbus gui network printsupport testlib widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -17,11 +17,13 @@ CONFLICTS=	akonadi-[0-9]* akonadi-kf5-git-[0-9]*
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 \
 		shared-mime-info tar:xz
-USE_KDE=	completion config dbusaddons ecm guiaddons i18n \
-		iconthemes itemmodels itemviews kio windowsystem \
+USE_GNOME=	libxml2
+USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
+		dbusaddons ecm guiaddons i18n iconthemes itemmodels itemviews \
+		kio service windowsystem widgetsaddons xmlgui \
 		designerplugin_build designerplugin_run
-USE_QT5=	buildtools_build core dbus designer gui network qmake_build \
-		sql testlib widgets xml
+USE_QT5=	core dbus designer gui network sql testlib widgets xml \
+		buildtools_build qmake_build
 CMAKE_ARGS+=	-DCMAKE_REQUIRED_INCLUDES:STRING="${LOCALBASE}/include"
 
 USE_LDCONFIG=	yes

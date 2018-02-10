@@ -8,8 +8,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library to compare files and strings
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	codecs config coreaddons ecm i18n kio parts xmlgui
-USE_QT5=	buildtools_build core qmake_build widgets
+USE_KDE=	auth codecs config configwidgets coreaddons ecm i18n kio parts \
+		service widgetsaddons xmlgui
+USE_QT5=	core dbus gui widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
