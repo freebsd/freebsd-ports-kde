@@ -8,6 +8,9 @@ MASTER_SITES=	KDE/stable/${PORTNAME}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE desktop planetarium
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 		libwcs.so:astro/wcslib
 BUILD_DEPENDS=	xplanet:astro/xplanet

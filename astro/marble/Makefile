@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/astro/marble/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	marble
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
@@ -6,6 +6,9 @@ CATEGORIES=	astro kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Virtual globe and world atlas for KDE
+
+LICENSE=	GPLv2.1+
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libquazip5.so:archivers/quazip-qt5
 
