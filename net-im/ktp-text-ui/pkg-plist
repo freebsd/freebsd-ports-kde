@@ -19,6 +19,7 @@ lib/libktpimagesharer.so
 %%QT_PLUGINDIR%%/ktptextui_message_filter_latex.so
 %%QT_PLUGINDIR%%/ktptextui_message_filter_otr.so
 %%QT_PLUGINDIR%%/ktptextui_message_filter_searchexpansion.so
+%%QT_PLUGINDIR%%/ktptextui_message_filter_tts.so
 %%QT_PLUGINDIR%%/ktptextui_message_filter_urlexpansion.so
 %%QT_PLUGINDIR%%/ktptextui_message_filter_youtube.so
 share/applications/org.kde.ktplogviewer.desktop
@@ -40,6 +41,7 @@ share/kservices5/ktptextui_message_filter_images.desktop
 share/kservices5/ktptextui_message_filter_latex.desktop
 share/kservices5/ktptextui_message_filter_otr.desktop
 share/kservices5/ktptextui_message_filter_searchexpansion.desktop
+share/kservices5/ktptextui_message_filter_tts.desktop
 share/kservices5/ktptextui_message_filter_urlexpansion.desktop
 share/kservices5/ktptextui_message_filter_youtube.desktop
 share/kservicetypes5/ktptxtui_message_filter.desktop
