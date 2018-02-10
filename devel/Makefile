@@ -1451,7 +1451,6 @@
     SUBDIR += libk8055
     SUBDIR += libkgapi-kde4
     SUBDIR += libklel
-    SUBDIR += libkolab
     SUBDIR += libkolab-kde4
     SUBDIR += liblangtag
     SUBDIR += liblas
