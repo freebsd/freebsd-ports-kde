@@ -10,8 +10,9 @@ COMMENT=	SANE library interface for KDE
 LIB_DEPENDS=	libsane.so:graphics/sane-backends
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	config ecm i18n textwidgets wallet widgetsaddons
-USE_QT5=	buildtools_build core gui qmake_build testlib widgets
+USE_KDE=	config ecm i18n sonnet textwidgets wallet widgetsaddons
+USE_QT5=	core gui testlib widgets \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
