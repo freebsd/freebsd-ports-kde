@@ -1,6 +1,6 @@
---- audiocd.cpp.orig	2010-06-06 08:15:20.000000000 -0400
-+++ audiocd.cpp	2010-06-06 08:18:01.000000000 -0400
-@@ -229,20 +229,21 @@
+--- audiocd.cpp.orig	2017-06-20 12:55:21 UTC
++++ audiocd.cpp
+@@ -230,20 +230,21 @@ static void setDeviceToCd(KCompactDisc *cd, struct cdr
  	// name associated with the device, which throws the rest of audiocd
  	// for a loop.
  	//
@@ -24,7 +24,7 @@
  		}
  		else
  		{
-@@ -250,13 +251,14 @@
+@@ -251,13 +252,14 @@ static void setDeviceToCd(KCompactDisc *cd, struct cdr
  			// circumstances, so build a representation from
  			// the unit number and SCSI device name.
  			//
