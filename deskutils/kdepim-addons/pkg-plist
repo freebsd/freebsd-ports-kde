@@ -16,6 +16,11 @@ lib/libkaddressbookmergelibprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 lib/libshorturlpluginprivate.so.5
 lib/libshorturlpluginprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/contacteditor/addresslocationeditorplugin.so
+%%QT_PLUGINDIR%%/importwizard/evolutionv1importerplugin.so
+%%QT_PLUGINDIR%%/importwizard/evolutionv2importerplugin.so
+%%QT_PLUGINDIR%%/importwizard/gearyimporterplugin.so
+%%QT_PLUGINDIR%%/importwizard/nylasmailimporterplugin.so
+%%QT_PLUGINDIR%%/importwizard/operaimporterplugin.so
 %%QT_PLUGINDIR%%/kaddressbook/kaddressbook_checkgravatarplugin.so
 %%QT_PLUGINDIR%%/kaddressbook/kaddressbook_importexportcsvplugin.so
 %%QT_PLUGINDIR%%/kaddressbook/kaddressbook_importexportgmxplugin.so
@@ -447,8 +452,8 @@ share/locale/it/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/ja/LC_MESSAGES/cryptopageplugin.mo
 share/locale/ja/LC_MESSAGES/customtoolsplugin.mo
 share/locale/ja/LC_MESSAGES/importwizard_plugins.mo
-share/locale/ja/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/ja/LC_MESSAGES/kaddressbook_contacteditor.mo
+share/locale/ja/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/ja/LC_MESSAGES/kaddressbook_plugins.mo
 share/locale/ja/LC_MESSAGES/kmail_editor_plugins.mo
 share/locale/ja/LC_MESSAGES/kmail_editorinit_plugins.mo
