@@ -7,7 +7,8 @@ CATEGORIES=	devel kde kde-applications # kde kde-applications-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 library to increase the functionality of KIO
 
-LIB_DEPENDS=	libtag.so:audio/taglib
+LIB_DEPENDS=	libtag.so:audio/taglib \
+		libHalf.so:graphics/ilmbase
 
 USES=		cmake:outsource compiler:c++11-lib gettext gperf kde:5 \
 		pkgconfig shared-mime-info shebangfix tar:xz
@@ -17,8 +18,8 @@ USE_KDE=	activities archive auth bookmarks codecs completion config \
 		jobwidgets js kdelibs4support khtml kio notifications parts \
 		pty service solid sonnet textwidgets unitconversion \
 		widgetsaddons windowsystem xmlgui
-USE_QT5=	core dbus gui network phonon4 printsupport sql svg testlib \
-		widgets xml \
+USE_QT5=	core dbus gui location network phonon4 printsupport qml quick \
+		sql svg testlib webchannel widgets xml \
 		buildtools_build qmake_build
 SHEBANG_FILES=	info/kde-info2html
 
