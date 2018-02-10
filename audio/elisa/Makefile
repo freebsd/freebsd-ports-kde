@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USES=		cmake:outsource kde:5 tar:xz
 USE_QT5=	dbus core gui multimedia quick quickcontrols2 xml \
 		buildtools_build qmake_build linguisttools_build
-USE_KDE=	baloo5 config coreaddons doctools filemetadata5 i18n \
+USE_KDE=	baloo5 config coreaddons doctools filemetadata i18n \
 		kcmutils kdeclarative package \
 		xmlgui \
 		ecm_build

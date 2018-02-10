@@ -3,7 +3,9 @@ bin/elisa
 share/applications/org.kde.elisa.desktop
 share/doc/HTML/ca/elisa/index.cache.bz2
 share/doc/HTML/ca/elisa/index.docbook
-share/doc/HTML/en/elisa/Screenshot_20170615_224755.png
+share/doc/HTML/de/elisa/index.cache.bz2
+share/doc/HTML/de/elisa/index.docbook
+share/doc/HTML/en/elisa/Screenshot_20180112_174013.png
 share/doc/HTML/en/elisa/index.cache.bz2
 share/doc/HTML/en/elisa/index.docbook
 share/doc/HTML/it/elisa/index.cache.bz2
@@ -41,6 +43,7 @@ share/locale/da/LC_MESSAGES/kcm_elisa_local_file.mo
 share/locale/de/LC_MESSAGES/elisa.mo
 share/locale/de/LC_MESSAGES/kcm_elisa_local_file.mo
 share/locale/en_GB/LC_MESSAGES/elisa.mo
+share/locale/en_GB/LC_MESSAGES/kcm_elisa_local_file.mo
 share/locale/es/LC_MESSAGES/elisa.mo
 share/locale/es/LC_MESSAGES/kcm_elisa_local_file.mo
 share/locale/fr/LC_MESSAGES/elisa.mo
