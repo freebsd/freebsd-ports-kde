@@ -1,4 +1,3 @@
-# Created by: Simon Barner <barner@gmx.de>
 # $FreeBSD$
 
 PORTNAME=	kcachegrind

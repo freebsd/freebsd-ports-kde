@@ -1,4 +1,3 @@
-# Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
 # $FreeBSD$
 
 PORTNAME=	filelight

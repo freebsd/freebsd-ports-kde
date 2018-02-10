@@ -1,4 +1,3 @@
-# Created by: Raphael Kubo da Costa <rakuco@FreeBSD.org>
 # $FreeBSD: branches/plasma5/KDE/audio/kmix/Makefile 13724 2017-03-10 19:28:23Z tcberner $
 
 PORTNAME=	kmix

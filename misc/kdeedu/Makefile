@@ -1,4 +1,3 @@
-# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD: branches/plasma5/KDE/misc/kdeedu/Makefile 13955 2017-04-25 20:11:18Z tcberner $
 
 PORTNAME=	kdeedu
