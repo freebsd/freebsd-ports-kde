@@ -14,8 +14,8 @@ USES=		cmake:outsource compiler:c++11-lib cpe \
 		gettext kde:5 pkgconfig tar:xz
 USE_KDE=	auth breeze-icons codecs config configwidgets coreaddons \
 		decoration ecm frameworkintegration guiaddons i18n kcmutils \
-		plasma-framework service widgetsaddons windowsystem
-USE_QT5=	core dbus gui widgets x11extras xml \
+		plasma-framework service wayland widgetsaddons windowsystem
+USE_QT5=	core dbus gui network qml quick widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	xcb
 

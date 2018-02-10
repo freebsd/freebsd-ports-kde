@@ -14,9 +14,11 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libepoxy.so:graphics/libepoxy \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libinput.so:x11/libinput \
 		libudev.so:devel/libudev-devd \
 		libwayland-cursor.so:graphics/wayland \
 		libxcb-cursor.so:x11/xcb-util-cursor \
+		libxcb-icccm.so:x11/xcb-util-wm \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxkbcommon.so:x11/libxkbcommon
@@ -35,7 +37,7 @@ USE_KDE=	activities activities attica auth breeze codecs \
 		textwidgets wayland widgetsaddons windowsystem xmlgui
 USE_LDCONFIG=	yes
 USE_QT5=	concurrent core dbus gui multimedia network qml quick script \
-		testlib uiplugin uitools widgets x11extras xml \
+		sensors testlib uiplugin uitools widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xcb xext xi
 

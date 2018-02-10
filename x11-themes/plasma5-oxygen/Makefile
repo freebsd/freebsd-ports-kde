@@ -17,8 +17,8 @@ USES=		cmake:outsource compiler:c++11-lib cpe gettext \
 USE_LDCONFIG=	yes
 USE_KDE=	auth codecs completion config configwidgets coreaddons decoration ecm \
 		frameworkintegration guiaddons i18n kcmutils service \
-		widgetsaddons windowsystem
-USE_QT5=	core dbus gui widgets x11extras xml \
+		wayland widgetsaddons windowsystem
+USE_QT5=	core dbus gui network qml quick widgets x11extras xml \
 		buildtools_build qmake_build
 USE_XORG=	xcb
 

@@ -25,7 +25,7 @@ USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 pkgconfig \
 USE_KDE=	activities activitymanagerd attica auth baloo bookmarks \
 		codecs completion config configwidgets coreaddons crash \
 		dbusaddons doctools emoticons filemetadata globalaccel \
-		guiaddons i18n iconthemes idletime init itemmodels \
+		guiaddons holidays i18n iconthemes idletime init itemmodels \
 		itemviews jobwidgets js jsembed kcmutils kdeclarative \
 		kdelibs4support kdesu kdewebkit kio kscreenlocker \
 		notifications package pty kwin libkscreen libksysguard \
