@@ -18,8 +18,8 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		kdelibs4support kio notifications package parts init \
 		itemmodels itemviews service solid sonnet textwidgets \
 		unitconversion wayland wayland widgetsaddons windowsystem xmlgui
-USE_QT5=	buildtools_build core dbus gui network printsupport \
-		qmake_build widgets xml
+USE_QT5=	core dbus gui network printsupport widgets xml \
+		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xext
 
 # TODO	-- this should be handled correctly...

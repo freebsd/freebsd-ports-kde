@@ -35,10 +35,11 @@ USE_KDE=	activities activitymanagerd attica auth baloo bookmarks \
 		widgetsaddons windowsystem xmlgui xmlrpcclient \
 		breeze_run breeze-icons_run oxygen-icons5_run \
 		kde-cli-tools_run kded_run milou_run
-USE_QT5=	buildtools_build concurrent core dbus graphicaleffects gui \
-		network paths_run phonon4 printsupport qdbus qmake_build qml quick \
-		quickcontrols_run script sql testlib webkit widgets x11extras \
-		xml
+USE_QT5=	concurrent core dbus graphicaleffects gui network phonon4 \
+		printsupport qdbus qml quick quickcontrols_run script sql \
+		testlib webkit widgets x11extras xml \
+		paths_run \
+		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xau xcb xcomposite xext xfixes xft xkbfile xrender xtst
 
 CMAKE_ARGS+=	-DBUILD_TESTING:BOOL=OFF

@@ -13,8 +13,8 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		iconthemes init itemmodels itemviews jobwidgets \
 		kdelibs4support kio notifications parts service solid sonnet \
 		textwidgets unitconversion widgetsaddons windowsystem xmlgui
-USE_QT5=	buildtools_build core dbus gui network printsupport \
-		qmake_build widgets x11extras xml
+USE_QT5=	core dbus gui network printsupport widgets x11extras xml \
+		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xext xxf86vm
 
 .include <bsd.port.mk>

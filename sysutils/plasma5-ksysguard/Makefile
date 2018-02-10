@@ -14,7 +14,8 @@ USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		itemviews jobwidgets kdelibs4support kio libksysguard \
 		newstuff notifications service widgetsaddons windowsystem \
 		xmlgui
-USE_QT5=	buildtools_build core dbus gui network qmake_build widgets xml
+USE_QT5=	core dbus gui network widgets xml \
+		buildtools_build qmake_build
 
 OPTIONS_DEFINE=	INOTIFY
 OPTIONS_DEFAULT=INOTIFY

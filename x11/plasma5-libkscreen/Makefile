@@ -10,7 +10,8 @@ COMMENT=	Plasma5 screen management library
 USES=		cmake:outsource compiler:c++11-lib cpe kde:5 pathfix \
 		pkgconfig tar:xz
 USE_KDE=	ecm
-USE_QT5=	buildtools_build core dbus gui qmake_build testlib x11extras
+USE_QT5=	core dbus gui testlib x11extras \
+		buildtools_build qmake_build
 USE_XORG=	x11 xcb xrandr
 
 # Temporary option to get rid of the dependency on wayland.

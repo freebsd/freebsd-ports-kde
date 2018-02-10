@@ -11,7 +11,7 @@ USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons i18n \
 		iconthemes package plasma-framework service widgetsaddons \
 		windowsystem
-USE_QT5=	buildtools_build core dbus gui network qmake_build \
-		script webkit widgets x11extras xml
+USE_QT5=	core dbus gui network script webkit widgets x11extras xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

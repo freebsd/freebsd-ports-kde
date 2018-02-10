@@ -15,8 +15,8 @@ USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 \
 USE_GNOME=	gconf2
 USE_KDE=	config configwidgets coreaddons ecm globalaccel i18n \
 		kdeclarative package plasma-framework
-USE_QT5=	buildtools_build core dbus gui network qmake_build \
-		qml quick widgets
+USE_QT5=	core dbus gui network qml quick widgets \
+		buildtools_build qmake_build
 
 SHEBANG_FILES=	data/plasmaVolumeDisableKMixAutostart.pl
 

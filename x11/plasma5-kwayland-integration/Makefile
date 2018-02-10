@@ -13,6 +13,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
 
 USES=		cmake:outsource compiler:c++11-lib cpe kde:5 tar:xz
 USE_KDE=	ecm idletime wayland windowsystem
-USE_QT5=	buildtools_build core gui qmake_build widgets
+USE_QT5=	core gui widgets \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -19,8 +19,8 @@ USE_KDE=	auth codecs config configwidgets coreaddons crash ecm \
 		kdeclarative kdelibs4support notifications package \
 		plasma-framework sonnet textwidgets wayland widgetsaddons \
 		windowsystem xmlgui
-USE_QT5=	buildtools_build core dbus gui network qmake_build qml quick \
-		testlib widgets x11extras xml
+USE_QT5=	core dbus gui network qml quick testlib widgets x11extras xml \
+		buildtools_build qmake_build
 USE_XORG=	ice sm x11 xcb xcursor xext xi
 
 SHEBANG_FILES=	updaters/ksreenlocker_5_3_separate_autologin.pl

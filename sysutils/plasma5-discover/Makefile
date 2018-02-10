@@ -15,10 +15,10 @@ USES=		cmake:outsource compiler:c++11-lib cpe desktop-file-utils \
 USE_KDE=	archive attica auth codecs completion config configwidgets \
 		coreaddons crash dbusaddons ecm i18n iconthemes itemmodels \
 		itemviews jobwidgets kdeclarative kio kirigami2 newstuff \
-		 notifications package plasma-framework service solid \
+		notifications package plasma-framework service solid \
 		textwidgets wallet widgetsaddons xmlgui
-USE_QT5=	buildtools_build concurrent core dbus gui network \
-		qmake_build qml quick svg testlib widgets xml
+USE_QT5=	concurrent core dbus gui network qml quick svg testlib widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>
 

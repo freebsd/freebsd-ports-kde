@@ -9,6 +9,7 @@ COMMENT=	Plasma5 ssh-add frontend
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 tar:xz
 USE_KDE=	coreaddons doctools ecm i18n wallet widgetsaddons
-USE_QT5=	buildtools_build core gui qmake_build widgets
+USE_QT5=	core gui widgets \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>
