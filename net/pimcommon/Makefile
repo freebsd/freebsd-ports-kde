@@ -17,7 +17,7 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 		jobwidgets kdelibs4support kio newstuff service sonnet textwidgets \
 		wallet widgetsaddons xmlgui
 # pim components
-USE_KDE+=	akonadi akonadi-contacts contacts imap  libkdepim mime \
+USE_KDE+=	akonadi akonadicontacts contacts imap libkdepim mime \
 		pimtextedit
 USE_QT5=	core dbus designer gui network printsupport script testlib \
 		uiplugin uitools webkit widgets xml \
