@@ -9,18 +9,23 @@ COMMENT=	KDE PIM mail related libraries
 
 LICENSE=	LGPL21
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	completion config coreaddons dbusaddons ecm i18n iconthemes \
-		kdewebkit service sonnet widgetsaddons xmlgui
+LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libgpg-error.so:security/libgpg-error \
+		libgpgme.so:security/gpgme \
+		libgpgmepp.so:security/gpgme-cpp \
+		libqgpgme.so:security/gpgme-qt5
+
+USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 tar:xz
+USE_KDE=	auth codecs completion config configwidgets coreaddons \
+		dbusaddons ecm i18n iconthemes itemmodels jobwidgets \
+		kdewebkit kio service sonnet widgetsaddons xmlgui
 # pim components
-USE_KDE+=	akonadi contacts grantleetheme  libkleo mime \
+USE_KDE+=	akonadi akonadicontacts contacts grantleetheme  libkleo mime \
 		pimcommon pimtextedit
-USE_QT5=	dbus gui testlib uitools webkit widgets \
+USE_QT5=	core dbus gui network testlib uitools webkit widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
-
 
 .include <bsd.port.mk>

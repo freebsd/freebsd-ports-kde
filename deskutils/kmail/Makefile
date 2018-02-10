@@ -9,6 +9,12 @@ COMMENT=	KDE mail client
 
 LICENSE=	LGPL21
 
+LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libgpg-error.so:security/libgpg-error \
+		libgpgme.so:security/gpgme \
+		libgpgmepp.so:security/gpgme-cpp \
+		libqgpgme.so:security/gpgme-qt5
+
 RUN_DEPENDS=	accountwizard:deskutils/kmail-account-wizard \
 		akonadiimportwizard:deskutils/akonadi-import-wizard \
 		mboximporter:deskutils/mbox-importer \
@@ -24,8 +30,9 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 # pim components
 USE_KDE+=	akonadi akonadicontacts akonadimime akonadisearch calendarcore \
 		calendarutils contacts gravatar kdepim-apps-libs \
-		identitymanagement libksieve kontactinterface ldap \
-		mailcommon mailtransport messagelib tnef
+		identitymanagement libkdepim libkleo libksieve \
+		kontactinterface ldap mailcommon mailtransport messagelib \
+		mime pimcommon pimtextedit tnef
 USE_QT5=	core dbus gui location network printsupport qml quick \
 		webchannel webengine widgets xml \
 		buildtools_build qmake_build
