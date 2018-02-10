@@ -19,7 +19,7 @@ USE_KDE=	attica auth codecs completion configwidgets coreaddons config \
 		libkeduvocdocument
 USE_QT5=	concurrent core dbus gui location network multimedia qml quick \
 		script svg webchannel webengine widgets xml \
-		buildtools_buildqmake_build
+		buildtools_build qmake_build
 USE_XORG=	x11 xrender
 
 .include <bsd.port.mk>

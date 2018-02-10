@@ -10,7 +10,7 @@ COMMENT=	Language interpreters to enable in-process scripting with Kross
 USES=		cmake:outsource gettext kde:5 python:2 tar:xz
 USE_KDE=	ecm kross
 USE_QT5=	core gui script widgets xml \
-		buildtools_build  qmake_build
+		buildtools_build qmake_build
 
 OPTIONS_DEFINE=		RUBY
 OPTIONS_SUB=		yes

@@ -12,7 +12,7 @@ USE_KDE=	archive auth codecs config configwidgets coreaddons crash \
 		dbusaddons ecm guiaddons i18n iconthemes libkdegames sonnet \
 		textwidgets widgetsaddons xmlgui
 USE_QT5=	core dbus gui network qml quick svg widgets xml \
-		buildtools_build  qmake_build
+		buildtools_build qmake_build
 
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>

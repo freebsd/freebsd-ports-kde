@@ -17,7 +17,8 @@ CMAKE_ARGS+=	-DWITH_OpenMP:BOOL=False \
 
 USES=		cmake:outsource compiler:c++11-lang jpeg kde:5 pkgconfig tar:xz
 USE_KDE=	ecm
-USE_QT5=	buildtools_build core gui qmake_build
+USE_QT5=	core gui \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

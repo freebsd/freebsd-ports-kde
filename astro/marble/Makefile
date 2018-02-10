@@ -17,9 +17,9 @@ USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		crash doctools ecm i18n jobwidgets kio newstuff package parts \
 		plasma-framework runner service sonnet textwidgets wallet \
 		widgetsaddons xmlgui
-USE_QT5=	buildtools_build concurrent core dbus designer \
-		gui location network opengl phonon4 printsupport qmake_build \
-		qml quick script sql svg webkit widgets xml
+USE_QT5=	concurrent core dbus designer gui location network opengl \
+		phonon4 printsupport qml quick script sql svg webkit widgets xml \
+		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CONFIG_HOME=/dev/null

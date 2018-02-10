@@ -9,6 +9,7 @@ COMMENT=	Tools to translate Docbook XML using gettext
 
 USES=		cmake:outsource gettext-tools:build,run kde:5 tar:xz
 USE_KDE=	doctools ecm
-USE_QT5=	buildtools_build core qmake_build xml
+USE_QT5=	core xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

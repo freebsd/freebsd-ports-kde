@@ -22,7 +22,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons ecm iconthemes \
 		i18n kcmutils kdeclarative notifications package service \
 		wallet widgetsaddons xmlgui
 USE_QT5=	core dbus gui network qml quick widgets xml \
-		buildtools_build  qmake_build
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>
