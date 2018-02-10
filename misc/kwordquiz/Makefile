@@ -8,11 +8,13 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Flash card trainer for KDE Applications
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	config configwidgets crash doctools ecm emoticons guiaddons \
-		i18n iconthemes init itemmodels itemviews kdeclarative \
+USE_KDE=	attica auth bookmarks codecs completion config configwidgets \
+		coreaddons crash doctools ecm emoticons guiaddons i18n \
+		iconthemes init itemmodels itemviews jobwidgets kdeclarative \
 		kdelibs4support kio libkeduvocdocument newstuff notifications \
-		notifyconfig sonnet xmlgui
-USE_QT5=	buildtools_build core gui phonon4 printsupport \
-		qmake_build widgets
+		notifyconfig parts service solid sonnet textwidgets \
+		unitconversion widgetsaddons windowsystem xmlgui
+USE_QT5=	core dbus gui network phonon4 printsupport widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -12,12 +12,14 @@ BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-
 
 USES=		cmake:outsource gettext kde:5 tar:xz
 USE_GNOME=	libxml2 libxslt
-USE_KDE=	ecm doctools coreaddons config crash i18n kio \
-		newstuff notifications kross khtml sonnet \
-		kcmutils xmlgui \
+USE_KDE=	attica auth codecs completion configwidgets coreaddons config \
+		crash doctools ecm i18n jobwidgets kcmutils kio newstuff \
+		notifications kross khtml service sonnet textwidgets \
+		widgetsaddons xmlgui \
 		libkeduvocdocument
-USE_QT5=	buildtools_build concurrent core gui network \
-		multimedia qmake_build svg webengine widgets
+USE_QT5=	concurrent core dbus gui location network multimedia qml quick \
+		script svg webchannel webengine widgets xml \
+		buildtools_buildqmake_build
 USE_XORG=	x11 xrender
 
 .include <bsd.port.mk>
