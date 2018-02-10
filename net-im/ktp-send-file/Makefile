@@ -13,7 +13,10 @@ RUN_DEPENDS=	${KDE_PREFIX}/lib/libexec/ktp-filetransfer-handler:net-im/ktp-filet
 		${KDE_PREFIX}/bin/ktp-contactlist:net-im/ktp-contact-list
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	ecm i18n iconthemes kcmutils kio
-USE_QT5=	buildtools_build core gui qmake_build widgets
+USE_KDE=	auth codecs completion config configwidgets coreaddons ecm \
+		i18n iconthemes jobwidgets kcmutils kio service wallet \
+		widgetsaddons
+USE_QT5=	core dbus gui network widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

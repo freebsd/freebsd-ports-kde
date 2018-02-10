@@ -10,11 +10,12 @@ COMMENT=	Library for gravatar support
 LICENSE=	LGPL21
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	config ecm i18n widgetsaddons
+USE_KDE=	auth codecs config configwidgets coreaddons ecm i18n kio \
+		service sonnet textwidgets widgetsaddons
 # pim components
 USE_KDE+=	pimcommon
-USE_QT5=	buildtools_build gui network qmake_build testlib widgets
+USE_QT5=	core gui network testlib widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
-
 
 .include <bsd.port.mk>

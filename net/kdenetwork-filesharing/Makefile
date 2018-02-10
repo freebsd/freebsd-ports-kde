@@ -8,7 +8,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Filesharing via Samba
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	coreaddons doctools ecm i18n kio widgetsaddons
-USE_QT5=	buildtools_build core gui qmake_build widgets
+USE_KDE=	completion config coreaddons doctools ecm i18n jobwidgets kio \
+		service widgetsaddons
+USE_QT5=	core gui network widgets \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

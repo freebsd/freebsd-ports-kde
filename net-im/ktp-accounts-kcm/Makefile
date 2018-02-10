@@ -7,7 +7,9 @@ CATEGORIES=	net-im kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE instant messaging account management module
 
-LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt5 \
+LIB_DEPENDS=	libaccounts-qt5.so:net-im/libaccounts-qt5 \
+		libkaccounts.so:net-im/kaccounts-integration \
+		libtelepathy-qt5.so:net-im/telepathy-qt5 \
 		libtelepathy-logger-qt.so:net-im/telepathy-logger-qt5 \
 		libKTpCommonInternals.so:net-im/ktp-common-internals \
 		libKF5AkonadiPrivate.so:databases/akonadi \
@@ -18,9 +20,11 @@ RUN_DEPENDS=	${KDE_PREFIX}/bin/ktp-contactlist:net-im/ktp-contact-list  \
 
 USES=		cmake:outsource gettext kde:5 pkgconfig tar:xz
 USE_GNOME=	intltool
-USE_KDE=	config coreaddons ecm iconthemes kcmutils kio notifications \
-		notifyconfig texteditor wallet widgetsaddons windowsystem
-USE_QT5=	buildtools_build core qmake_build qml sql
+USE_KDE=	auth codecs config configwidgets coreaddons ecm i18n \
+		iconthemes itemviews kcmutils kio notifications notifyconfig \
+		service texteditor wallet widgetsaddons windowsystem
+USE_QT5=	core dbus gui network qml sql widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	HAZE IRC JABBER SALUT

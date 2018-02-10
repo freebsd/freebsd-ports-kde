@@ -12,13 +12,14 @@ LICENSE=	LGPL21
 LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
 USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	ecm kcmutils kdelibs4support wallet
+USE_KDE=	auth codecs completion config configwidgets coreaddons i18n \
+		itemmodels jobwidgets kcmutils kio service wallet widgetsaddons
 # pim components
-USE_KDE+=	akonadi akonadimime ksmtp
-USE_QT5=	buildtools_build gui qmake_build
+USE_KDE+=	akonadi akonadimime ksmtp mime
+USE_QT5=	core dbus gui network widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
 
 .include <bsd.port.mk>

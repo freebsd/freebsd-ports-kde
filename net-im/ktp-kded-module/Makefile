@@ -11,8 +11,10 @@ LIB_DEPENDS=	libtelepathy-qt5.so:net-im/telepathy-qt5 \
 		libKTpCommonInternals.so:net-im/ktp-common-internals
 
 USES=		cmake:outsource gettext kde:5 tar:xz
-USE_KDE=	config configwidgets dbusaddons i18n idletime \
-		kcmutils kio notifications widgetsaddons
-USE_QT5=	buildtools_build core qmake_build
+USE_KDE=	auth codecs completion config configwidgets coreaddons \
+		dbusaddons i18n idletime jobwidgets kcmutils kio notifications \
+		service wallet widgetsaddons
+USE_QT5=	concurrent core dbus gui network sql widgets xml \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>

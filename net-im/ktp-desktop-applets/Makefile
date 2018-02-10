@@ -11,6 +11,7 @@ LIB_DEPENDS=	libKTpCommonInternals.so:net-im/ktp-common-internals
 
 USES=		cmake:outsource gettext kde:5 tar:xz
 USE_KDE=	ecm plasma-framework windowsystem
-USE_QT5=	buildtools_build core qmake_build
+USE_QT5=	core dbus gui network qml widgets \
+		buildtools_build qmake_build
 
 .include <bsd.port.mk>
