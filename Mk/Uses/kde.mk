@@ -289,7 +289,7 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			user-manager
 
 # List of components of the KDE PIM distribution (part of applications).
-_USE_KDEPIM5_ALL=	akonadicontacts akonadimime akonadinotes \
+_USE_KDEPIM5_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
 			akonadicalendar akonadisearch alarmcalendar \
 			blog calendarcore calendarsupport calendarutils \
 			contacts eventviews gapi grantleetheme \
@@ -733,6 +733,9 @@ systemsettings_PATH=	${KDE_PREFIX}/bin/systemsettings5
 # ====================== pim5 components =======================================
 akonadicontacts_PORT=	net/akonadi-contacts
 akonadicontacts_LIB=	libKF5AkonadiContact.so
+
+akonadiimportwizard_PORT=	deskutils/akonadi-import-wizard
+akonadiimportwizard_LIB=	libKPimImportWizard.so
 
 akonadimime_PORT=	net/akonadi-mime
 akonadimime_LIB=	libKF5AkonadiMime.so
