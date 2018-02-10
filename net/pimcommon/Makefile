@@ -11,15 +11,17 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	archive codecs config dbusaddons ecm emoticons i18n init \
-		itemmodels kdelibs4support newstuff sonnet textwidgets wallet \
-		xmlgui
+USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 tar:xz
+USE_KDE=	archive attica auth codecs completion config configwidgets \
+		dbusaddons ecm emoticons i18n init iconthemes itemmodels \
+		jobwidgets kdelibs4support kio newstuff service sonnet textwidgets \
+		wallet widgetsaddons xmlgui
 # pim components
-USE_KDE+=	akonadi contacts imap  libkdepim mime \
+USE_KDE+=	akonadi akonadi-contacts contacts imap  libkdepim mime \
 		pimtextedit
-USE_QT5=	buildtools_build designer gui network qmake_build script \
-		testlib uiplugin uitools webkit widgets
+USE_QT5=	core dbus designer gui network printsupport script testlib \
+		uiplugin uitools webkit widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr

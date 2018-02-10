@@ -10,14 +10,15 @@ LICENSE=	LGPL21
 
 USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 \
 		tar:xz
-USE_KDE=	codecs completion ecm kio prison
+USE_KDE=	auth codecs completion config configwidgets coreaddons \
+		dbusaddons ecm i18n iconthemes itemmodels jobwidgets kio \
+		prison service sonnet textwidgets widgetsaddons xmlgui
 # pim components
 USE_KDE+=	akonadi akonadimime calendarcore contacts mime
-USE_QT5=	core gui testlib webengine widgets \
+USE_QT5=	dbus core gui network testlib webengine widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
 
 .include <bsd.port.mk>

@@ -9,17 +9,26 @@ COMMENT=	Library for handling messages
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	libboost_system.so:devel/boost-libs
+LIB_DEPENDS=	libassuan.so:security/libassuan \
+		libboost_system.so:devel/boost-libs \
+		libgpg-error.so:security/libgpg-error \
+		libgpgme.so:security/gpgme \
+		libgpgmepp.so:security/gpgme-cpp \
+		libqgpgme.so:security/gpgme-qt5
 
-USES=		cmake:outsource compiler:c++11-lib gettext kde:5 tar:xz
-USE_KDE=	archive codecs completion config ecm i18n iconthemes \
-		itemviews kdewebkit xmlgui
+USES=		cmake:outsource compiler:c++11-lib gettext grantlee:5 kde:5 tar:xz
+USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
+		coreaddons ecm i18n iconthemes itemmodels itemviews jobwidgets \
+		kdewebkit kio service solid sonnet syntaxhighlighting \
+		textwidgets wallet widgetsaddons windowsystem xmlgui
 # pim components
-USE_KDE+=	akonadi akonadisearch contacts grantleetheme gravatar \
-		identitymanagement kdepim-apps-libs  ldap \
-		libkdepim libkleo mailtransport mbox
-USE_QT5=	buildtools_build gui network qmake_build testlib uitools \
-		webengine widgets
+USE_KDE+=	akonadi akonadicontacts akonadimime akonadisearch calendarcore \
+		contacts grantleetheme gravatar identitymanagement \
+		kdepim-apps-libs ldap libkdepim libkleo mailtransport mbox \
+		mime pimcommon pimtextedit
+USE_QT5=	core dbus gui location network printsupport qml quick testlib \
+		uitools webchannel webengine widgets xml \
+		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
 
