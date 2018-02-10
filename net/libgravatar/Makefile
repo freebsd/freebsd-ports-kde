@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net/libgravatar/Makefile 13916 2017-04-20 18:30:09Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	libgravatar
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

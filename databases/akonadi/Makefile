@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/databases/akonadi/Makefile 13958 2017-04-26 14:27:02Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	akonadi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

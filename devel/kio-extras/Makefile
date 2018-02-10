@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/devel/kio-extras/Makefile 13916 2017-04-20 18:30:09Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kio-extras
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

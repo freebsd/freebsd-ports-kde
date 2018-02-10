@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/games/kajongg/Makefile 13848 2017-04-10 13:10:54Z tcberner $
+# $FreeBSD$
 
 BROKEN=		Requires PyQt5 for python3 which is broken at the moment.
 

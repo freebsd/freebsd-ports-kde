@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/graphics/libkdcraw-kf5/Makefile 13698 2017-03-08 17:47:13Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	libkdcraw
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

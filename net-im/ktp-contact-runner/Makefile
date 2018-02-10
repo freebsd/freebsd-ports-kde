@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net-im/ktp-contact-runner/Makefile 13957 2017-04-26 14:25:40Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	ktp-contact-runner
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

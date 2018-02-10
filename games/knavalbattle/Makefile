@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/games/knavalbattle/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	knavalbattle
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

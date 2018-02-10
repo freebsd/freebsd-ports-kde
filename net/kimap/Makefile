@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net/kimap/Makefile 13959 2017-04-26 14:27:50Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kimap
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

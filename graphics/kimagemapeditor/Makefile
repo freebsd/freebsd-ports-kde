@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/graphics/kimagemapeditor/Makefile 13839 2017-04-10 09:36:18Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kimagemapeditor
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

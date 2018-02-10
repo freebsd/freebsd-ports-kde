@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/x11-fm/dolphin/Makefile 13779 2017-03-18 09:57:45Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	dolphin
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/x11/kde-baseapps/Makefile 13955 2017-04-25 20:11:18Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kde-baseapps
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/deskutils/kmail/Makefile 13949 2017-04-25 15:21:11Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kmail
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

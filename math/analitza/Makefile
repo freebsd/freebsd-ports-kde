@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/math/analitza/Makefile 13829 2017-04-09 08:51:06Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	analitza
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

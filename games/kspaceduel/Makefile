@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/games/kspaceduel/Makefile 13778 2017-03-18 08:55:35Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kspaceduel
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

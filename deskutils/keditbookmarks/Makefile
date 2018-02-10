@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/deskutils/keditbookmarks-kf5/Makefile 13483 2016-12-17 10:00:12Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	keditbookmarks
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

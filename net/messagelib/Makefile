@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net/messagelib/Makefile 13937 2017-04-23 15:49:32Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	messagelib
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

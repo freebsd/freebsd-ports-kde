@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/deskutils/kmail-account-wizard/Makefile 13947 2017-04-25 06:54:14Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kmail-account-wizard
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net/libkgapi/Makefile 13961 2017-04-26 15:29:37Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	libkgapi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

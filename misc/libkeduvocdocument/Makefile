@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/misc/libkeduvocdocument-kf5/Makefile 13702 2017-03-08 18:02:29Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	libkeduvocdocument
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

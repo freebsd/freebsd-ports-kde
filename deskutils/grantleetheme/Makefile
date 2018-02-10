@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/deskutils/grantleetheme/Makefile 13916 2017-04-20 18:30:09Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	grantleetheme
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

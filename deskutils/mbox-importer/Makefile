@@ -1,4 +1,4 @@
-# $FreeBSD
+# $FreeBSD$
 
 PORTNAME=	mbox-importer
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

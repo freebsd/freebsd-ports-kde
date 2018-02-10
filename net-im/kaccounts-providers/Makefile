@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net-im/kaccounts-providers/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kaccounts-providers
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

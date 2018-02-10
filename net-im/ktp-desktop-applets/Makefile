@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net-im/ktp-desktop-applets/Makefile 13957 2017-04-26 14:25:40Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	ktp-desktop-applets
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

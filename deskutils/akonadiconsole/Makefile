@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/deskutils/akonadiconsole/Makefile 13937 2017-04-23 15:49:32Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	akonadiconsole
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

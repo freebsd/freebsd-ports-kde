@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/net/kcalcore/Makefile 13959 2017-04-26 14:27:50Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kcalcore
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

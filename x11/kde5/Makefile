@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/x11/kde5/Makefile 13975 2017-04-27 14:52:14Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kde5
 DISTVERSION=	${KDE_PLASMA_VERSION}.${KDE_APPLICATIONS_VERSION}

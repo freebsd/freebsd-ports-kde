@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/math/kalgebra/Makefile 13926 2017-04-20 21:19:45Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kalgebra
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

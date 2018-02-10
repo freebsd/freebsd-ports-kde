@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/games/kblackbox/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kblackbox
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

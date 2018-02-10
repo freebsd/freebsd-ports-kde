@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/games/klickety/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	klickety
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}

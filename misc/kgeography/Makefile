@@ -1,4 +1,4 @@
-# $FreeBSD: branches/plasma5/KDE/misc/kgeography/Makefile 13724 2017-03-10 19:28:23Z tcberner $
+# $FreeBSD$
 
 PORTNAME=	kgeography
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
