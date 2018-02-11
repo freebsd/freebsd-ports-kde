@@ -2729,12 +2729,12 @@ www/asterisk-gui||2011-10-14|Depends on net/asterisk14, which is FORBIDDEN
 databases/dbmetrix||2011-10-14|Depends on databases/mysql323-client, which is FORBIDDEN
 databases/xmysqladmin||2011-10-14|Depends on databases/mysql323-client, which is FORBIDDEN
 devel/subversion-freebsd||2011-10-16|Merged with devel/subversion
-accessibility/ktts|accessibility/jovie|2011-10-16|Renamed upstream
+accessibility/ktts|accessibility/jovie-kde4|2011-10-16|Renamed upstream
 misc/konq-plugins-kde4||2011-10-16|Merged with x11/kde4-baseapps
 misc/nepomukcontroller||2011-10-16|Merged with x11/kde4-runtime
-x11/kdebase4|x11/kde4-baseapps|2011-10-16|Renamed upstream
-x11/kdebase4-runtime|x11/kde4-runtime|2011-10-16|Renamed upstream
-x11/kdebase4-workspace|x11/kde4-workspace|2011-10-16|Renamed upstream
+x11/kdebase4|x11/kde-baseapps-kde4|2011-10-16|Renamed upstream
+x11/kdebase4-runtime|x11/kde-runtime-kde4|2011-10-16|Renamed upstream
+x11/kdebase4-workspace|x11/kde-workspace-kde4|2011-10-16|Renamed upstream
 deskutils/lightning|www/seamonkey|2011-10-19|Superseded by LIGHTNING option in SeaMonkey
 deskutils/lightning-thunderbird|mail/thunderbird|2011-10-19|Superseded by LIGHTNING option in Thunderbird
 mail/enigmail-seamonkey2|mail/enigmail-seamonkey|2011-10-19|Depends on outdated and vulnerable SeaMonkey 2.0
@@ -9605,7 +9605,6 @@ deskutils/kdepim4-runtime|deskutils/kdepim-runtime-kde4|2017-11-11|Apply consist
 deskutils/kdepim4|deskutils/kdepim-kde4|2017-11-11|Apply consistent name to KDE4
 deskutils/kdepimlibs4|deskutils/kdepimlibs-kde4|2017-11-11|Apply consistent name to KDE4
 deskutils/kdeplasma-addons|deskutils/kdeplasma-addons-kde4|2017-11-11|Apply consistent name to KDE4
-deskutils/strigi.common|deskutils/strigi-kde4.common|2017-11-11|Apply consistent name to KDE4
 deskutils/superkaramba|deskutils/superkaramba-kde4|2017-11-11|Apply consistent name to KDE4
 devel/kdebindings4|devel/kdebindings-kde4|2017-11-11|Apply consistent name to KDE4
 devel/kdesdk4-kioslaves|devel/kdesdk-kioslaves-kde4|2017-11-11|Apply consistent name to KDE4
@@ -9618,7 +9617,6 @@ devel/p5-perlqt|devel/p5-perlqt-kde4|2017-11-11|Apply consistent name to KDE4
 devel/py-krosspython|devel/py-krosspython-kde4|2017-11-11|Apply consistent name to KDE4
 devel/py-pykde4|devel/py-pykde4-kde4|2017-11-11|Apply consistent name to KDE4
 devel/py-pykdeuic4|devel/py-pykdeuic4-kde4|2017-11-11|Apply consistent name to KDE4
-devel/py-pykdeuic|devel/py-pykdeuic-kde4|2017-11-11|Apply consistent name to KDE4
 devel/ruby-korundum|devel/ruby-korundum-kde4|2017-11-11|Apply consistent name to KDE4
 devel/ruby-krossruby|devel/ruby-krossruby-kde4|2017-11-11|Apply consistent name to KDE4
 devel/ruby-qtruby|devel/ruby-qtruby-kde4|2017-11-11|Apply consistent name to KDE4
@@ -9633,7 +9631,7 @@ graphics/kdegraphics4-mobipocket|graphics/kdegraphics-mobipocket-kde4|2017-11-11
 graphics/kdegraphics4-strigi-analyzer|graphics/kdegraphics-strigi-analyzer-kde4|2017-11-11|Apply consistent name to KDE44
 graphics/kdegraphics4-svgpart|graphics/kdegraphics-svgpart-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kdegraphics4-thumbnailers|graphics/kdegraphics-thumbnailers-kde4|2017-11-11|Apply consistent name to KDE4
-graphics/kdegraphics4|graphics/kdegraphics4-kde4|2017-11-11|Apply consistent name to KDE4
+graphics/kdegraphics4|graphics/kdegraphics-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kiconedit|graphics/kiconedit-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kpovmodeler|graphics/kpovmodeler-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kqtquickcharts|graphics/kqtquickcharts-kde4|2017-11-11|Apply consistent name to KDE4
@@ -9655,7 +9653,7 @@ net/kio-upnp-ms|net/kio-upnp-ms-kde4|2017-11-11|Apply consistent name to KDE4
 net/libkfbapi|net/libkfbapi-kde4|2017-11-11|Apply consistent name to KDE4
 print/kde4-print-manager|print/print-manager-kde4|2017-11-11|Apply consistent name to KDE4
 sysutils/baloo|sysutils/baloo-kde4|2017-11-11|Apply consistent name to KDE4
-sysutils/kcm-polkit-kde|sysutils/kcm-polkit-kde-kde4|2017-11-11|Apply consistent name to KDE4
+sysutils/kcm-polkit-kde|sysutils/kcm-polkit-kde4|2017-11-11|Apply consistent name to KDE4
 sysutils/kdeadmin4|sysutils/kdeadmin-kde4|2017-11-11|Apply consistent name to KDE4
 sysutils/kfilemetadata|sysutils/kfilemetadata-kde4|2017-11-11|Apply consistent name to KDE4
 sysutils/ksysguardd|sysutils/ksysguardd-kde4|2017-11-11|Apply consistent name to KDE4
