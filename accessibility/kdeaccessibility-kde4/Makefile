@@ -7,7 +7,6 @@ PORTREVISION=	2
 CATEGORIES=	accessibility kde
 PKGNAMESUFFIX=	-kde4
 
-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibility applications for KDE 4
 

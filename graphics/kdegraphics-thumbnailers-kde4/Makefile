@@ -4,6 +4,7 @@ PORTNAME=	kdegraphics-thumbnailers
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	graphics kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Thumbnailers for various graphics file formats

@@ -2,8 +2,9 @@
 
 PORTNAME=	kdenetwork-strigi-analyzers
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	net kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Strigi analyzers for network-related file formats

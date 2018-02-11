@@ -5,6 +5,7 @@ PORTNAME=	kdeartwork
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	3
 CATEGORIES=	x11-themes kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Artworks Themes
@@ -22,7 +23,7 @@ GNOME_RUN_DEPENDS=	${GNOME_BUILD_DEPENDS}
 GNOME_BUILD_DEPENDS_OFF=	xscreensaver:x11/xscreensaver
 GNOME_RUN_DEPENDS_OFF=		${GNOME_BUILD_DEPENDS_OFF}
 
-# Do not look for eigen. Eigen3 dropped the eigen2 compatibility with 3.2+. 
+# Do not look for eigen. Eigen3 dropped the eigen2 compatibility with 3.2+.
 CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_Eigen3:BOOL=TRUE
 
 post-patch:

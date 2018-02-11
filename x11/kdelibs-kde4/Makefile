@@ -3,8 +3,9 @@
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	x11 kde kde-applications
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Base set of libraries needed by KDE programs

@@ -3,8 +3,9 @@
 
 PORTNAME=	kdewebdev
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	www kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Comprehensive html/website development environment

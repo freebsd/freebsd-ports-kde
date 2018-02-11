@@ -4,6 +4,7 @@ PORTNAME=	kdesdk-kioslaves
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	devel kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	SDK related KIO slaves

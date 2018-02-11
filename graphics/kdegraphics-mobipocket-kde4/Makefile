@@ -4,6 +4,7 @@ PORTNAME=	kdegraphics-mobipocket
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	3
 CATEGORIES=	graphics kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Mobipocket plugins for Strigi indexing and thumbnails

@@ -6,6 +6,7 @@ PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	multimedia kde kde-kde4
 PKGNAMEPREFIX=	kdemultimedia-
+PKGNAMESUFIFX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	MPlayer-based thumbnail generator for video files
