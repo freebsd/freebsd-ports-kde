@@ -39,6 +39,7 @@
     SUBDIR += hs-torrent
     SUBDIR += jackett
     SUBDIR += jigdo
+    SUBDIR += ktorrent
     SUBDIR += ktorrent-kde4
     SUBDIR += libbt
     SUBDIR += liberator
