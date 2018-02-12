@@ -420,7 +420,6 @@ math/labplot
 math/rocs
 math/rocs-kde4
 misc/artikulate
-misc/artikulate-kde4
 misc/kde4-l10n
 misc/kde4-l10n-bg
 misc/kde4-l10n-bs
@@ -681,7 +680,6 @@ textproc/redland
 textproc/redland-bindings
 textproc/soprano
 ukrainian/kde4-l10n
-vietnamese/kde4-l10n
 www/choqok-kde4
 www/falkon
 www/kdewebdev-kde4
