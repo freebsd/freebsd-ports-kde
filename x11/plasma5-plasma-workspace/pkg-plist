@@ -748,6 +748,7 @@ share/locale/ca/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/ca/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/ca/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/ca/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/ca/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/ca/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/ca/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/ca/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -817,6 +818,7 @@ share/locale/ca@valencia/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/ca@valencia/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/ca@valencia/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -1572,6 +1574,7 @@ share/locale/fr/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/fr/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/fr/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/fr/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/fr/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/fr/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/fr/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/fr/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -2939,6 +2942,7 @@ share/locale/nl/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/nl/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/nl/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/nl/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/nl/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/nl/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/nl/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/nl/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -3008,6 +3012,7 @@ share/locale/nn/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/nn/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/nn/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/nn/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/nn/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/nn/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/nn/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/nn/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -3241,6 +3246,7 @@ share/locale/pt/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/pt/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/pt/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/pt/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/pt/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/pt/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/pt/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/pt/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -3552,6 +3558,7 @@ share/locale/sk/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/sk/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/sk/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/sk/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/sk/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/sk/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/sk/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/sk/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -3998,6 +4005,7 @@ share/locale/sv/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/sv/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/sv/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/sv/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/sv/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/sv/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/sv/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/sv/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -4270,6 +4278,7 @@ share/locale/uk/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/uk/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/uk/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/uk/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/uk/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/uk/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/uk/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/uk/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -4398,6 +4407,7 @@ share/locale/zh_CN/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/zh_CN/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/zh_CN/LC_MESSAGES/plasma_runner_calculatorrunner.mo

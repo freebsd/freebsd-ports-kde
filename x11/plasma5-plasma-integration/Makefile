@@ -7,8 +7,7 @@ CATEGORIES=	x11 kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt Platform Theme integration plugins for the Plasma workspaces
 
-RUN_DEPENDS=	noto-lite>=0:x11-fonts/noto-lite \
-		hack-font>=0:x11-fonts/hack-font
+RUN_DEPENDS=	hack-font>=0:x11-fonts/hack-font
 
 USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 pkgconfig \
 		shebangfix tar:xz
@@ -25,5 +24,15 @@ SHEBANG_FILES=	src/platformtheme/fonts_akregator.pl \
 		src/platformtheme/fonts_global.pl \
 		src/platformtheme/fonts_kate.pl \
 		src/platformtheme/mono_font.pl
+
+OPTIONS_SINGLE=	NOTO
+OPTIONS_SINGLE_NOTO=	LIGHT BIG
+OPTIONS_DEFAULT=	LIGHT
+NOTO_DESC=	KDE default font
+LIGHT_DESC=	Use noto-light
+BIG_DESC=	Use complete noto
+
+LIGHT_RUN_DEPENDS=	noto-lite>=0:x11-fonts/noto-lite 
+BIG_RUN_DEPENDS=	noto=0:x11-fonts/noto
 
 .include <bsd.port.mk>

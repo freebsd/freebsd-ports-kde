@@ -2649,6 +2649,7 @@ share/locale/ja/LC_MESSAGES/kcm_autostart.mo
 share/locale/ja/LC_MESSAGES/kcm_desktoppaths.mo
 share/locale/ja/LC_MESSAGES/kcm_desktoptheme.mo
 share/locale/ja/LC_MESSAGES/kcm_lookandfeel.mo
+share/locale/ja/LC_MESSAGES/kcm_nightcolor.mo
 share/locale/ja/LC_MESSAGES/kcm_search.mo
 share/locale/ja/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/ja/LC_MESSAGES/kcm_splashscreen.mo
