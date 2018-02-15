@@ -7,7 +7,7 @@ CATEGORIES=	math kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE interactive geometry application
 
-LIB_DEPENDS=	libboost_python.so:devel/boost-python-libs
+LIB_DEPENDS=	${PY_BOOST}
 
 USES=		cmake:outsource gettext compiler:c++11-lib kde:5 python:run \
 		shebangfix tar:xz

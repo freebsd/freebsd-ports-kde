@@ -2,7 +2,7 @@
 
 PORTNAME=	mod_pagespeed
 PORTVERSION=	1.12.34.2
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	www devel
 MASTER_SITES=	LOCAL/mmokhi:boringssl,chromium_base,chromium_build,googleurl,gflags_arch,gflags_src,libjpeg_turbo_src,yasm_patched,libwebp,modpb64 \
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		closure-compiler:www/closure-compiler \
 		greadlink:sysutils/coreutils \
 		gsed:textproc/gsed \
-		gyp:devel/py-gyp \
+		gyp:devel/py-gyp@${PY_FLAVOR} \
 		flock:sysutils/flock \
 		${LOCALBASE}/include/apr-1/apr_pools.h:devel/apr1
 LIB_DEPENDS=	libpng.so:graphics/png \
@@ -32,8 +32,8 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libopencv_legacy.so:graphics/opencv
 
 USES=		compiler:c++14-lang gperf jpeg gmake localbase pkgconfig \
-		python shebangfix ssl tar:xz
-USE_APACHE=	24
+		python:2.7 shebangfix ssl tar:xz
+USE_APACHE=	22+
 SHEBANG_GLOB=	*.gyp *.gypi *.py *.sh
 SHEBANG_FILES=	build/fix_proto_and_invoke_protoc
 
@@ -48,6 +48,7 @@ BUILDTYPE=	Release
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 CLR_VERSION=	20161024
 GYP_DEFINES+=	os_posix=1 \
+		support_posix_shared_mem=1 \
 		use_system_libs=1 \
 		use_system_protobuf=1 \
 		use_system_openssl=1 \

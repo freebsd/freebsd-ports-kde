@@ -242,6 +242,7 @@
     SUBDIR += kdeutils-kde4
     SUBDIR += kf5-purpose
     SUBDIR += kenny
+    SUBDIR += kf5-purpose
     SUBDIR += kgeography
     SUBDIR += kgeography-kde4
     SUBDIR += klettres
