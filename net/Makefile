@@ -203,6 +203,7 @@
     SUBDIR += google-startup-scripts
     SUBDIR += googlecl
     SUBDIR += gopher
+    SUBDIR += goreplay
     SUBDIR += gotthard
     SUBDIR += gq
     SUBDIR += grdesktop
@@ -210,7 +211,6 @@
     SUBDIR += grilo-plugins
     SUBDIR += grilo-plugins2
     SUBDIR += grilo2
-    SUBDIR += grive
     SUBDIR += grive2
     SUBDIR += grsync
     SUBDIR += gsk
@@ -1147,7 +1147,6 @@
     SUBDIR += qt5-network
     SUBDIR += qtweetlib
     SUBDIR += quagga
-    SUBDIR += quagga-esr
     SUBDIR += queso
     SUBDIR += quiterss
     SUBDIR += quoted
