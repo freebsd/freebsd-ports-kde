@@ -33,6 +33,6 @@ LIGHT_DESC=	Use noto-light
 BIG_DESC=	Use complete noto
 
 LIGHT_RUN_DEPENDS=	noto-lite>=0:x11-fonts/noto-lite 
-BIG_RUN_DEPENDS=	noto=0:x11-fonts/noto
+BIG_RUN_DEPENDS=	noto>=0:x11-fonts/noto
 
 .include <bsd.port.mk>
