@@ -11,6 +11,9 @@ COMMENT=	Connection pool server for PostgreSQL
 
 LICENSE=	MIT
 
+BROKEN_SSL=	openssl-devel
+BROKEN_SSL_REASON_openssl-devel=	library 'ssl' is required for OpenSSL
+
 RUN_DEPENDS=	rsync:net/rsync
 
 USES=		gmake libtool perl5 pgsql

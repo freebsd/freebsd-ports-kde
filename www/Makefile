@@ -212,6 +212,7 @@
     SUBDIR += gnome-web-photo
     SUBDIR += go-fasthttp
     SUBDIR += go-www
+    SUBDIR += gobuffalo
     SUBDIR += gohugo
     SUBDIR += google-appengine
     SUBDIR += google-sitemapgen
