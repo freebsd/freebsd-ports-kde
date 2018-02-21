@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		kproperty
-DISTVERSION=		3.0.2
+DISTVERSION=		3.0.95
 CATEGORIES=		x11-toolkits kde
 MASTER_SITES=		KDE/stable/${PORTNAME}/src
 DIST_SUBDIR=		KDE/${PORTNAME}
