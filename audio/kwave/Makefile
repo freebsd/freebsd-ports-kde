@@ -18,7 +18,7 @@ LIB_DEPENDS=	libaudiofile.so:audio/libaudiofile \
 		libsamplerate.so:audio/libsamplerate \
 		libvorbisenc.so:audio/libvorbis
 
-USES=		cmake:outsource,noninja desktop-file-utils gettext kde:5 \
+USES=		cmake:outsource desktop-file-utils gettext kde:5 \
 		localbase:ldflags pkgconfig tar:xz
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons ecm i18n iconthemes itemviews \
