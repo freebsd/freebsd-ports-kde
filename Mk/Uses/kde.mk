@@ -709,6 +709,9 @@ plasma-integration_PATH=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme.s
 plasma-mediacenter_PORT=	multimedia/plasma5-plasma-mediacenter
 plasma-mediacenter_LIB=		libplasmamediacenter.so.5
 
+plasma-pa_PORT=		audio/plasma5-plasma-pa
+plasma-pa_LIB=		kcm_pulseaudio.so
+
 plasma-sdk_PORT=	devel/plasma5-plasma-sdk
 plasma-sdk_PATH=	${KDE_PREFIX}/bin/plasmoidviewer
 
@@ -718,6 +721,9 @@ plasma-workspace_LIB=	libkdeinit5_kcminit.so
 plasma-workspace-wallpapers_PORT=	x11-themes/plasma5-plasma-workspace-wallpapers
 plasma-workspace-wallpapers_PATH=	${KDE_PREFIX}/share/wallpapers/Autumn/contents/images/1280x1024.jpg
 
+polkit-kde-agent-1_PORT=	sysutils/plasma5-polkit-kde-agent-1
+polkit-kde-agent-1_PATH=	${KDE_PREFIX}/lib/libexec/polkit-kde-authentication-agent-1
+
 powerdevil_PORT=	sysutils/plasma5-powerdevil
 powerdevil_LIB=		libpowerdevilcore.so
 
@@ -726,6 +732,9 @@ syntaxhighlighting_LIB=		libKF5SyntaxHighlighting.so
 
 systemsettings_PORT=	sysutils/plasma5-systemsettings
 systemsettings_PATH=	${KDE_PREFIX}/bin/systemsettings5
+
+user-manager_PORT=	sysutils/plasma5-user-manager
+user-manager_PATH=	user_manager.so
 # ====================== end of plasma components ==============================
 
 
