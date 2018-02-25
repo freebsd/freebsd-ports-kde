@@ -223,13 +223,13 @@ PLIST_SUB+=		PYCACHE="" \
 # ==============================================================================
 
 _USE_KDE_BOTH=		akonadi attica libkcddb libkcompactdisc libkdcraw libkdegames \
-			libkeduvocdocument libkexiv2 libkface libkipi libksane \
+			libkeduvocdocument libkexiv2 libkface libkipi libksane okular \
 			baloo baloo-widgets kate marble
 
 _USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kdelibs \
 			kfilemetadata korundum \
 			libkonq  nepomuk-core nepomuk-widgets \
-			okular oxygen-icons5 perlkde perlqt pimlibs pykde4 \
+			oxygen-icons5 perlkde perlqt pimlibs pykde4 \
 			pykdeuic4 qtruby runtime smokegen smokekde smokeqt \
 			workspace
 # These components are not part of the Software Compilation.
@@ -331,9 +331,6 @@ nepomuk-core_LIB=	libnepomukcore.so
 
 nepomuk-widgets_PORT=	sysutils/nepomuk-widgets-kde4
 nepomuk-widgets_LIB=	libnepomukwidgets.so
-
-okular_PORT=		graphics/okular-kde4
-okular_LIB=		libokularcore.so
 
 perlkde_PORT=		devel/p5-perlkde-kde4
 perlkde_PATH=		${KDE_PREFIX}/lib/kde4/kperlpluginfactory.so
@@ -932,6 +929,11 @@ marble4_PORT=		astro/marble-kde4
 marble4_LIB=		libmarblewidget.so
 marble5_PORT=		astro/marble
 marble5_LIB=		libmarblewidget-qt5.so
+
+okular4_PORT=		graphics/okular-kde4
+okular4_LIB=		libokularcore.so
+okular5_PORT=		graphics/okular
+okular5_LIB=		libOkular5Core.so
 
 # ====================== select the proper multiversion component ==============
 .  for comp in ${_USE_KDE_BOTH}
