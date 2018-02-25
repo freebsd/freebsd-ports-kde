@@ -1,4 +1,4 @@
-%%WAYLAND%%bin/kscreen-doctor
+bin/kscreen-doctor
 include/KF5/KScreen/KScreen/Config
 include/KF5/KScreen/KScreen/ConfigMonitor
 include/KF5/KScreen/KScreen/ConfigOperation
@@ -33,7 +33,7 @@ lib/libKF5Screen.so.%%KDE_PLASMA_VERSION%%
 lib/libKF5Screen.so.7
 lib/libexec/kf5/kscreen_backend_launcher
 %%QT_PLUGINDIR%%/kf5/kscreen/KSC_Fake.so
-%%WAYLAND%%%%QT_PLUGINDIR%%/kf5/kscreen/KSC_KWayland.so
+%%QT_PLUGINDIR%%/kf5/kscreen/KSC_KWayland.so
 %%QT_PLUGINDIR%%/kf5/kscreen/KSC_QScreen.so
 %%QT_PLUGINDIR%%/kf5/kscreen/KSC_XRandR.so
 %%QT_PLUGINDIR%%/kf5/kscreen/KSC_XRandR11.so
