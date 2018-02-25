@@ -2,6 +2,7 @@
 
 PORTNAME=	user-manager
 DISTVERSION=	${KDE_PLASMA_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,5 +19,6 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		unitconversion widgetsaddons windowsystem xmlgui
 USE_QT5=	core dbus gui network printsupport widgets xml \
 		buildtools_build qmake_build
+USE_LDCONFIG=	${QT_PLUGINDIR}
 
 .include <bsd.port.mk>
