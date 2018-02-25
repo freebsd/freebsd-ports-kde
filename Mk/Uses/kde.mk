@@ -731,7 +731,7 @@ systemsettings_PORT=	sysutils/plasma5-systemsettings
 systemsettings_PATH=	${KDE_PREFIX}/bin/systemsettings5
 
 user-manager_PORT=	sysutils/plasma5-user-manager
-user-manager_PATH=	user_manager.so
+user-manager_PATH=	${QT_PLUGINDIR}/user_manager.so
 # ====================== end of plasma components ==============================
 
 
