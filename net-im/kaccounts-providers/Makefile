@@ -20,7 +20,7 @@ USE_QT5=	core gui network qml xml \
 
 #install to ${LOCALBASE}:
 pre-configure:
-	${REINPLACE_CMD} -e 's,/etc,${LOCALBASE}/etc,' \
+	${REINPLACE_CMD} -e 's,/etc,${PREFIX}/etc,' \
 		${WRKSRC}/webkit-options/CMakeLists.txt
 
 .include <bsd.port.mk>

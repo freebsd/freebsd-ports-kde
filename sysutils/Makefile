@@ -1143,6 +1143,7 @@
     SUBDIR += showbeastie
     SUBDIR += siegfried
     SUBDIR += signon-kwallet-extension
+    SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
     SUBDIR += skill
