@@ -3,10 +3,10 @@
 
 PORTNAME=	dragon
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia kde kde-kde4
 # Avoid clash with devel/dragon
-PKGNAMESUFFIX=	-player-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE multimedia player with a focus on simplicity

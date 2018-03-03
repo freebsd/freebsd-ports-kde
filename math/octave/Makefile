@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	octave
-PORTVERSION=	4.0.3
-PORTREVISION=	9
-CATEGORIES=	math
+PORTVERSION=	4.2.1
+PORTREVISION=	2
+CATEGORIES=	math java
 MASTER_SITES=	GNU
 
-MAINTAINER=	maho@FreeBSD.org
+MAINTAINER=	stephen@FreeBSD.org
 COMMENT=	High-level interactive language for numerical computations
 
 LICENSE=	GPLv3
@@ -33,20 +33,21 @@ LIB_DEPENDS=	libGraphicsMagick.so:graphics/GraphicsMagick \
 		libumfpack.so:math/suitesparse \
 		libglpk.so:math/glpk \
 		libgl2ps.so:print/gl2ps \
-		libqscintilla2.so:devel/qscintilla2 \
+		libqscintilla2_qt4.so:devel/qscintilla2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		charsetfix fortran gmake libtool perl5 pkgconfig readline tar:xz
+USES=		charsetfix fortran gmake libtool perl5 pkgconfig readline \
+		tar:xz compiler:c++14-lang
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}/${PORTVERSION}
 USE_PERL5=	build
-USE_TEX=	dvipsk:build
+USE_TEX=	dvipsk:build formats:build
 GNU_CONFIGURE=	yes
 USE_JAVA=	yes
 JAVA_VERSION=	1.7+
-USE_QT4=	corelib gui network opengl uic_build moc_build rcc_build linguist_build
+USE_QT4=	corelib gui network opengl moc_build qmake_build rcc_build uic_build linguist_build
 USE_XORG=	x11 xext xfixes xft
-USE_GL=		gl glu 
+USE_GL=		gl glu
 
 OCTAVE_VERSION=	${PORTVERSION}
 GNU_HOST=	${ARCH}-portbld-freebsd${OSREL}
@@ -61,7 +62,9 @@ CONFIGURE_ARGS=	--host=${GNU_HOST} \
 		--with-blas="-L${LOCALBASE}/lib ${BLASLIB}" \
 		--with-lapack="${LAPACKLIB}" \
 		--enable-shared \
-		--disable-jit
+		--disable-jit \
+		--disable-openmp \
+		--with-qt=4
 
 OPTIONS_DEFINE=	DOCS
 
@@ -84,7 +87,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/icons/octave.desktop \
 		${STAGEDIR}${DESKTOPDIR}/www.octave.org-octave.desktop
-	(cd ${STAGEDIR}${DATADIR} && ln -s ${PORTVERSION}/imagelib  .)
+	(cd ${STAGEDIR}${DATADIR} && ${LN} -s ${PORTVERSION}/imagelib  .)
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

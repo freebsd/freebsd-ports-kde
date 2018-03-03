@@ -387,6 +387,7 @@
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
+    SUBDIR += kibana6
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -417,6 +418,7 @@
     SUBDIR += libcue
     SUBDIR += libe-book
     SUBDIR += libebml
+    SUBDIR += libepubgen
     SUBDIR += libextractor
     SUBDIR += libexttextcat
     SUBDIR += libflate
@@ -435,6 +437,7 @@
     SUBDIR += libnxml
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
+    SUBDIR += libqxp
     SUBDIR += librevenge
     SUBDIR += libsass
     SUBDIR += libsoldout
@@ -1264,6 +1267,7 @@
     SUBDIR += pure-csv
     SUBDIR += pure-xml
     SUBDIR += py-Chameleon
+    SUBDIR += py-CommonMark
     SUBDIR += py-MarkupSafe
     SUBDIR += py-Tempita
     SUBDIR += py-acora
@@ -1298,6 +1302,7 @@
     SUBDIR += py-et_xmlfile
     SUBDIR += py-excelerator
     SUBDIR += py-feedparser
+    SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
@@ -1579,9 +1584,9 @@
     SUBDIR += rubygem-sanitize20
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-listen
+    SUBDIR += rubygem-sass-rails-rails4
     SUBDIR += rubygem-sass-rails-rails5
     SUBDIR += rubygem-sass-rails-rails50
-    SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sass34
     SUBDIR += rubygem-sax-machine

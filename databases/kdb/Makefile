@@ -11,7 +11,7 @@ COMMENT=		Database connectivity and creation framework
 
 LIB_DEPENDS=		libicuuc.so:devel/icu
 
-USES=			cmake:outsource gettext kde:5 python:2 tar:xz
+USES=			cmake:outsource gettext kde:5 python:2.7 tar:xz
 USE_KDE=		coreaddons ecm i18n
 USE_QT5=		core gui network widgets xml \
 			buildtools_build qmake_build

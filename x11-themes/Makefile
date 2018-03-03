@@ -111,13 +111,12 @@
     SUBDIR += kde-icons-nuovext2
     SUBDIR += kde-icons-nuvola
     SUBDIR += kde-base-artwork-kde4
+    SUBDIR += kde-wallpapers-kde4
     SUBDIR += kde4-style-bespin
     SUBDIR += kde4-style-nitrogen
     SUBDIR += kde4-style-oxygen-transparent
     SUBDIR += kde4-style-polyester
     SUBDIR += kde4-style-skulpture
-    SUBDIR += kde-wallpapers-kde4
-    SUBDIR += kde4-wallpapers-freebsd
     SUBDIR += kde4-windeco-crystal
     SUBDIR += kde4-windeco-dekorator
     SUBDIR += kdeartwork-kde4
@@ -177,6 +176,7 @@
     SUBDIR += slim-themes
     SUBDIR += thewidgetfactory
     SUBDIR += ubuntulooks
+    SUBDIR += wallpapers-freebsd-kde4
     SUBDIR += xcursor-themes
     SUBDIR += xfce-evolution
     SUBDIR += xfce-icons-elementary

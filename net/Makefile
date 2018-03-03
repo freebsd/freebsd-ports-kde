@@ -140,6 +140,7 @@
     SUBDIR += enet
     SUBDIR += erlang-ranch
     SUBDIR += erlang-xmlrpc
+    SUBDIR += eternalterminal
     SUBDIR += etrace
     SUBDIR += eventviews
     SUBDIR += exabgp
@@ -188,6 +189,7 @@
     SUBDIR += gnome-online-miners
     SUBDIR += gnu-dico
     SUBDIR += gnu-radius
+    SUBDIR += gobgp
     SUBDIR += go-amqp
     SUBDIR += go-bapu
     SUBDIR += go-cs
@@ -1035,6 +1037,7 @@
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-eventlet
+    SUBDIR += py-flask-xml-rpc
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet
@@ -1043,6 +1046,7 @@
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib
+    SUBDIR += py-iptools
     SUBDIR += py-kafka-python
     SUBDIR += py-kombu
     SUBDIR += py-ldap
@@ -1161,7 +1165,6 @@
     SUBDIR += radreport
     SUBDIR += radsecproxy
     SUBDIR += radvd
-    SUBDIR += raggle
     SUBDIR += rclone
     SUBDIR += rdapper
     SUBDIR += rdesktop

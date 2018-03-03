@@ -2,8 +2,9 @@
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	14
+PORTREVISION=	16
 CATEGORIES=	x11 kde kde-applications
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Plasma Desktop
@@ -95,10 +96,10 @@ KACTIVITY_DESC=		Activity Manager daemon
 KACTIVITY_RUN_DEPENDS=	${KDE_PREFIX}/bin/kactivitymanagerd:x11/kactivitymanagerd-kde4
 
 PYTHON_DESC=		Python plasmoids support
-PYTHON_RUN_DEPENDS=	${KDE_PREFIX}/share/apps/plasma_scriptengine_python/plasma_importer.py:x11/plasma-scriptengine-python
+PYTHON_RUN_DEPENDS=	${KDE_PREFIX}/share/apps/plasma_scriptengine_python/plasma_importer.py:x11/plasma-scriptengine-python-kde4
 
 RUBY_DESC=		Ruby plasmoids support
-RUBY_RUN_DEPENDS=	${KDE_PREFIX}/share/apps/plasma_scriptengine_ruby/applet.rb:x11/plasma-scriptengine-ruby
+RUBY_RUN_DEPENDS=	${KDE_PREFIX}/share/apps/plasma_scriptengine_ruby/applet.rb:x11/plasma-scriptengine-ruby-kde4
 
 UPOWER_DESC=		Power management via UPower
 UPOWER_RUN_DEPENDS=	${LOCALBASE}/libexec/upowerd:sysutils/upower
@@ -108,7 +109,7 @@ VLC_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/plugins/phonon_backend/phonon_vlc.so:mul
 
 WALLPAPERS_DESC=	Install official KDE wallpapers
 WALLPAPERS_RUN_DEPENDS=	${KDE_PREFIX}/share/wallpapers/Horos/metadata.desktop:x11-themes/kde-wallpapers-kde4 \
-			${KDE_PREFIX}/share/wallpapers/stripes-freebsd-blue/metadata.desktop:x11-themes/kde4-wallpapers-freebsd
+			${KDE_PREFIX}/share/wallpapers/stripes-freebsd-blue/metadata.desktop:x11-themes/wallpapers-freebsd-kde4
 
 .if !exists(/usr/lib/libutempter.so)
 LIB_DEPENDS+=	libutempter.so:sysutils/libutempter

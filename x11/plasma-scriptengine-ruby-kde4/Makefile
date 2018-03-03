@@ -2,9 +2,10 @@
 
 PORTNAME=	plasma-scriptengine-ruby
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 kde kde-applications
 DISTNAME=	kde-workspace-${PORTVERSION}
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma scriptengine for Ruby

@@ -3,7 +3,7 @@
 
 PORTNAME=	kdesvn
 DISTVERSION=	1.7.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/
 
@@ -25,7 +25,7 @@ CMAKE_ARGS+=	-DSUBVERSION_INCLUDE_DIR=${LOCALBASE}/include/subversion-1 \
 		-DMAN_INSTALL_DIR=${MANPREFIX}/man
 
 USES=		cmake:outsource compiler:c11 bdb kde:4 tar:xz
-USE_KDE=	automoc4 kdelibs soprano
+USE_KDE=	automoc4 kdelibs soprano baseapps_run
 USE_LDCONFIG=	yes
 USE_QT4=	corelib gui xml network dbus svg sql \
 		qmake_build moc_build rcc_build uic_build linguist_build

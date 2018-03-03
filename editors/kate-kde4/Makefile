@@ -3,7 +3,7 @@
 
 PORTNAME=	kate
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	editors kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,7 +18,7 @@ USE_QT4=	dbus gui script sql webkit xml \
 		moc_build qmake_build rcc_build uic_build
 USE_LDCONFIG=	yes
 
-# editors/kate-plugin-pate installs pate
+# editors/kate-plugin-pate-kde4 installs pate
 CMAKE_ARGS+=	-DBUILD_pate=off
 
 .include <bsd.port.mk>

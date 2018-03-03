@@ -6,7 +6,6 @@ etc/xdg/cantor_kalgebra.knsrc
 %%LUAJIT%%etc/xdg/cantor_lua.knsrc
 etc/xdg/cantor_maxima.knsrc
 etc/xdg/cantor_octave.knsrc
-etc/xdg/cantor_python2.knsrc
 etc/xdg/cantor_python3.knsrc
 etc/xdg/cantor_qalculate.knsrc
 %%R%%etc/xdg/cantor_r.knsrc
@@ -53,7 +52,6 @@ lib/libcantorlibs.so.%%KDE_APPLICATIONS_VERSION%%
 %%QT_PLUGINDIR%%/cantor/backends/cantor_maximabackend.so
 %%QT_PLUGINDIR%%/cantor/backends/cantor_nullbackend.so
 %%QT_PLUGINDIR%%/cantor/backends/cantor_octavebackend.so
-%%QT_PLUGINDIR%%/cantor/backends/cantor_python2backend.so
 %%QT_PLUGINDIR%%/cantor/backends/cantor_python3backend.so
 %%QT_PLUGINDIR%%/cantor/backends/cantor_qalculatebackend.so
 %%R%%%%QT_PLUGINDIR%%/cantor/backends/cantor_rbackend.so
@@ -87,7 +85,6 @@ share/config.kcfg/kalgebrabackend.kcfg
 %%LUAJIT%%share/config.kcfg/luabackend.kcfg
 share/config.kcfg/maximabackend.kcfg
 share/config.kcfg/octavebackend.kcfg
-share/config.kcfg/python2backend.kcfg
 share/config.kcfg/python3backend.kcfg
 share/config.kcfg/qalculatebackend.kcfg
 %%R%%share/config.kcfg/rserver.kcfg

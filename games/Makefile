@@ -23,7 +23,6 @@
     SUBDIR += abuse_sdl
     SUBDIR += ace-of-penguins
     SUBDIR += acm
-    SUBDIR += adgali
     SUBDIR += adom
     SUBDIR += adonthell
     SUBDIR += aestats
@@ -128,6 +127,7 @@
     SUBDIR += bsdrain
     SUBDIR += bsdtris
     SUBDIR += bsp
+    SUBDIR += bstone
     SUBDIR += bubble-chains
     SUBDIR += bubbros
     SUBDIR += bugsquish
@@ -469,6 +469,7 @@
     SUBDIR += kanagram
     SUBDIR += kanagram-kde4
     SUBDIR += kapman
+    SUBDIR += kanagram-kde4
     SUBDIR += kapman-kde4
     SUBDIR += kardsgt
     SUBDIR += kartofel
@@ -482,6 +483,10 @@
     SUBDIR += kbounce
     SUBDIR += kbounce-kde4
     SUBDIR += kbreakout
+    SUBDIR += katomic-kde4
+    SUBDIR += kblackbox-kde4
+    SUBDIR += kblocks-kde4
+    SUBDIR += kbounce-kde4
     SUBDIR += kbreakout-kde4
     SUBDIR += kcheckers
     SUBDIR += kdegames
@@ -570,6 +575,7 @@
     SUBDIR += libkdegames
     SUBDIR += libkdegames-kde4
     SUBDIR += libkmahjongg
+    SUBDIR += libkdegames-kde4
     SUBDIR += libkmahjongg-kde4
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
@@ -1059,7 +1065,6 @@
     SUBDIR += tuxpaint-config
     SUBDIR += tuxpaint-fonts
     SUBDIR += tuxpaint-stamps
-    SUBDIR += tuxpuck
     SUBDIR += tuxracer
     SUBDIR += tuxtype
     SUBDIR += twind

@@ -2,6 +2,7 @@
 
 PORTNAME=	kodi
 DISTVERSION=	18.0.g201801112007
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMESUFFIX?=	-devel
 
@@ -35,7 +36,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 		liblzo2.so:archivers/lzo2 \
 		libpcre.so:devel/pcre \
 		libpcrecpp.so:devel/pcre \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libpostproc.so:multimedia/ffmpeg \
 		libswresample.so:multimedia/ffmpeg \
 		libswscale.so:multimedia/ffmpeg \
@@ -72,13 +73,14 @@ CONFIGURE_ENV=	OPENSSL_LIBS="-L${OPENSSLLIB}" OPENSSL_CFLAGS="-I${OPENSSLINC}"
 KODIARCH_i386=	x86
 KODIARCH_amd64=	x86_64
 
-PLIST_SUB=	ARCH=${KODIARCH_${ARCH}:U${ARCH}} OPSYS=${OPSYS:tl}
+PLIST_SUB=	ARCH=${KODIARCH_${ARCH}:U${ARCH}} OPSYS=${OPSYS:tl} \
+		WAYLAND="@comment "
 
 OPTIONS_DEFINE=	AVAHI CEC DBUS LIBBLURAY MYSQL NFS SMB SSH UPNP VAAPI	\
 		VDPAU WEBSERVER
 OPTIONS_DEFAULT=	SNDIO SSH UPNP VAAPI VDPAU WEBSERVER X11
 OPTIONS_SINGLE=	PLATFORM
-OPTIONS_SINGLE_PLATFORM=	GBM RPI WAYLAND X11
+OPTIONS_SINGLE_PLATFORM=	GBM RPI X11
 OPTIONS_EXCLUDE_amd64=	RPI
 OPTIONS_EXCLUDE_i386=	RPI
 OPTIONS_SUB=	yes

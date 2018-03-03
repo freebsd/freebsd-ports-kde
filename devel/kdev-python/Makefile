@@ -12,7 +12,7 @@ COMMENT=	Python support for KDevelop
 BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
 LIB_DEPENDS=	libkdevcmakecommon.so:devel/kdevelop
 
-USES=		cmake:outsource compiler:c++11-lib kde:5 python:3 tar:xz
+USES=		cmake:outsource compiler:c++11-lib kde:5 python:3.4+ tar:xz
 USE_KDE=	attica auth codecs completion config coreaddons \
 		ecm i18n jobwidgets kio parts service \
 		sonnet texteditor textwidgets threadweaver widgetsaddons xmlgui

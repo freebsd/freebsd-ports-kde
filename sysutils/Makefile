@@ -201,6 +201,7 @@
     SUBDIR += cpuburn
     SUBDIR += cpuid
     SUBDIR += cpulimit
+    SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += createrepo
@@ -373,6 +374,7 @@
     SUBDIR += fusefs-mhddfs
     SUBDIR += fusefs-mp3fs
     SUBDIR += fusefs-ntfs
+    SUBDIR += fusefs-ntfs-compression
     SUBDIR += fusefs-pod
     SUBDIR += fusefs-rar2fs
     SUBDIR += fusefs-s3fs
@@ -543,6 +545,7 @@
     SUBDIR += kfloppy
     SUBDIR += kfloppy-kde4
     SUBDIR += khelpcenter
+    SUBDIR += kfloppy-kde4
     SUBDIR += kiconvtool
     SUBDIR += kldfind
     SUBDIR += kldpatch
@@ -595,6 +598,7 @@
     SUBDIR += logstash
     SUBDIR += logstash-forwarder
     SUBDIR += logstash5
+    SUBDIR += logstash6
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
@@ -862,6 +866,7 @@
     SUBDIR += php71-posix
     SUBDIR += php72-fileinfo
     SUBDIR += php72-posix
+    SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1024,7 +1029,6 @@
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
-    SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
@@ -1152,6 +1156,7 @@
     SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
+    SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += snowlog
     SUBDIR += socket
@@ -1259,6 +1264,7 @@
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-orangepi-one
+    SUBDIR += u-boot-orangepi-pc
     SUBDIR += u-boot-orangepi-pc2
     SUBDIR += u-boot-orangepi-plus-2e
     SUBDIR += u-boot-orangepi-zero

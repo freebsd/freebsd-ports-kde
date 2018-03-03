@@ -166,6 +166,7 @@
     SUBDIR += eom
     SUBDIR += eos-movrec
     SUBDIR += epdfview
+    SUBDIR += ephoto
     SUBDIR += epix
     SUBDIR += eps2png
     SUBDIR += epstool
@@ -412,6 +413,8 @@
     SUBDIR += kcolorchooser-kde4
     SUBDIR += kcoloredit-kde4
     SUBDIR += kdegraphics
+    SUBDIR += kcolorchooser-kde4
+    SUBDIR += kcoloredit
     SUBDIR += kdegraphics-kde4
     SUBDIR += kdegraphics-mobipocket
     SUBDIR += kdegraphics-mobipocket-kde4
@@ -538,10 +541,12 @@
     SUBDIR += libkface-kde4
     SUBDIR += libkipi
     SUBDIR += libkipi-kde4
+    SUBDIR += libkipiplugins
     SUBDIR += libkipiplugins-kde4
     SUBDIR += libksane
     SUBDIR += libksane-kde4
     SUBDIR += libkscreen-kde4
+    SUBDIR += libkscreen
     SUBDIR += liblqr-1
     SUBDIR += liblug
     SUBDIR += libmng

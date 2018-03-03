@@ -58,6 +58,7 @@
     SUBDIR += cpuid
     SUBDIR += crosspad
     SUBDIR += crosti
+    SUBDIR += cryptoballot
     SUBDIR += cs
     SUBDIR += cstream
     SUBDIR += dahdi
@@ -251,6 +252,10 @@
     SUBDIR += ktouch
     SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz
+    SUBDIR += kgeography-kde4
+    SUBDIR += klettres-kde4
+    SUBDIR += krecipes-kde4
+    SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz-kde4
     SUBDIR += latex-mk
     SUBDIR += lazyread
@@ -439,7 +444,7 @@
     SUBDIR += rpl
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
-    SUBDIR += rubygem-dotenv-rails
+    SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5
     SUBDIR += rubygem-dotenv-rails-rails50
     SUBDIR += rubygem-iesd
@@ -489,7 +494,6 @@
     SUBDIR += tkregexp
     SUBDIR += tkrunit
     SUBDIR += toilet
-    SUBDIR += tpp
     SUBDIR += translate
     SUBDIR += ttyrec
     SUBDIR += tudu

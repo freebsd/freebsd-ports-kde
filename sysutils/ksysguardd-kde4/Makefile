@@ -5,6 +5,7 @@ PORTVERSION=	${KDE4_WORKSPACE_VERSION}
 PORTREVISION=	2
 CATEGORIES=	sysutils kde kde-applications
 DISTNAME=	kde-workspace-${PORTVERSION}
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE System Guard Daemon

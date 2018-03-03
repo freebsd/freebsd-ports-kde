@@ -170,7 +170,6 @@
     SUBDIR += mg
     SUBDIR += mh
     SUBDIR += migemo
-    SUBDIR += migemo-emacs
     SUBDIR += migemo.el
     SUBDIR += mime_pls
     SUBDIR += ming

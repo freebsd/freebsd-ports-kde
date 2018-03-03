@@ -2,7 +2,7 @@
 
 PORTNAME=	kfilemetadata
 PORTVERSION=	${KDE4_VERSION}
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	sysutils kde kde-kde4
 
 MAINTAINER=	kde@FreeBSD.org

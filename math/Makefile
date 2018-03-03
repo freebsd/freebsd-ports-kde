@@ -36,6 +36,7 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
+    SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
@@ -138,7 +139,6 @@
     SUBDIR += cgal
     SUBDIR += chaco
     SUBDIR += chryzodus
-    SUBDIR += clarence
     SUBDIR += clasp
     SUBDIR += clblas
     SUBDIR += clblast
@@ -404,7 +404,6 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-ocs
     SUBDIR += octave-forge-oct2mat
-    SUBDIR += octave-forge-octcdf
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
@@ -416,7 +415,6 @@
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pdb
     SUBDIR += octave-forge-plot
-    SUBDIR += octave-forge-pt_br
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -696,6 +694,7 @@
     SUBDIR += randlib
     SUBDIR += rapid
     SUBDIR += reduce
+    SUBDIR += reduce-psl
     SUBDIR += reed-solomon
     SUBDIR += rexx-regmath
     SUBDIR += rkward
@@ -757,7 +756,6 @@
     SUBDIR += trlan
     SUBDIR += truthtable
     SUBDIR += tvmet
-    SUBDIR += ufc
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran
