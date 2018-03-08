@@ -526,6 +526,7 @@ share/locale/mr/LC_MESSAGES/messageviewer_application_mstnef_plugin.mo
 share/locale/mr/LC_MESSAGES/messageviewer_text_calendar_plugin.mo
 share/locale/mr/LC_MESSAGES/messageviewer_text_vcard_plugin.mo
 share/locale/nb/LC_MESSAGES/cryptopageplugin.mo
+share/locale/nb/LC_MESSAGES/kaddressbook_contacteditor.mo
 share/locale/nb/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/nb/LC_MESSAGES/korganizer_plugins.mo
 share/locale/nb/LC_MESSAGES/mailreader.mo
@@ -623,6 +624,7 @@ share/locale/pt/LC_MESSAGES/sieveeditor_plugins.mo
 share/locale/pt/LC_MESSAGES/webengineurlinterceptor.mo
 share/locale/pt_BR/LC_MESSAGES/cryptopageplugin.mo
 share/locale/pt_BR/LC_MESSAGES/customtoolsplugin.mo
+share/locale/pt_BR/LC_MESSAGES/importwizard_plugins.mo
 share/locale/pt_BR/LC_MESSAGES/kaddressbook_importexportplugins.mo
 share/locale/pt_BR/LC_MESSAGES/kaddressbook_plugins.mo
 share/locale/pt_BR/LC_MESSAGES/kmail_editor_plugins.mo

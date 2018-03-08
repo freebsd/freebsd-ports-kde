@@ -1,4 +1,3 @@
-etc/xdg/akonadi-contacts.categories
 etc/xdg/contact-editor.categories
 include/KF5/Akonadi/Contact/AbstractContactFormatter
 include/KF5/Akonadi/Contact/AbstractContactGroupFormatter

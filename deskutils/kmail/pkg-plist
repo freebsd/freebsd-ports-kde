@@ -6,7 +6,8 @@ bin/kmail
 bin/ktnef
 etc/xdg/kmail.categories
 etc/xdg/kmail.renamecategories
-etc/xdg/ktnef.categories
+etc/xdg/ktnefapps.categories
+etc/xdg/ktnefapps.renamecategories
 lib/libkmailprivate.so.5
 lib/libkmailprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kcm_kmail.so
