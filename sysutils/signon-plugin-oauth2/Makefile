@@ -3,16 +3,17 @@
 PORTNAME=	signon-plugin-oauth2
 DISTVERSION=	0.24
 CATEGORIES=	sysutils kde
-MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/archive${EXTRACT_SUFX}?ref=VERSION_${GL_TAGNAME}&num; \
-		LOCAL/tcberner/${GL_ACCOUNT}/
-DIST_SUBDIR=	KDE/${GL_ACCOUNT}
+MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/VERSION_${DISTVERSION}/ \
+		LOCAL/tcberner/${GL_ACCOUNT}/${GL_PROJECT}/${DISTVERSION}/
+DISTNAME=	archive
+DIST_SUBDIR=	KDE/${GL_ACCOUNT}/${GL_PROJECT}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Component for handling accounts-sso user interactions
 
 LIB_DEPENDS=	libsignon-qt5.so:sysutils/signon-qt5
 
-USES=		pkgconfig python qmake tar:bz2
+USES=		pkgconfig python qmake
 USE_QT5=	core network testlib \
 		buildtools_build qmake_build
 USE_LDCONFIG=	${PREFIX}/lib/signon

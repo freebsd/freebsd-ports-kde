@@ -1,3 +1,3 @@
-TIMESTAMP = 1520090568
-SHA256 (KDE/accounts-sso/signon-plugin-oauth2-0.24.tar.bz2) = 4331f345fd937718dfe1f97328e0d1680f5f6b05a32018bb2c5d969ec3a0796a
-SIZE (KDE/accounts-sso/signon-plugin-oauth2-0.24.tar.bz2) = 33218
+TIMESTAMP = 1520529726
+SHA256 (KDE/accounts-sso/signon-plugin-oauth2/archive.tar.gz) = bc7d29174100c3fb504740672c88c245c62915bd9924a08e0335f8063bbf258a
+SIZE (KDE/accounts-sso/signon-plugin-oauth2/archive.tar.gz) = 39062
