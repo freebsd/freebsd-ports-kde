@@ -1,16 +1,17 @@
 # $FreeBSD$
 
-PORTNAME=		falkon
-DISTVERSION=	2.1.99.20180114
+PORTNAME=	falkon
+DISTVERSION=	3.0.0
 CATEGORIES=	www
+MASTER_SITES=	KDE/stable/falkon/${DISTVERSION:R}/src/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Web browser based on WebKit engine and Qt Framework
 
 LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake:outsource desktop-file-utils kde:5 ssl
+USES=		cmake:outsource desktop-file-utils kde:5 ssl tar:xz
 USE_KDE=	wallet
 USE_QT5=	core dbus gui location network printsupport qml quick \
 		sql webchannel webengine widgets x11extras \
@@ -18,10 +19,5 @@ USE_QT5=	core dbus gui location network printsupport qml quick \
 USE_XORG=	xcb
 
 USE_LDCONFIG=	yes
-USE_GITHUB=	yes
-GH_ACCOUNT=	KDE
-GH_TAGNAME=	087c983
-
-CONFLICTS_INSTALL=	qupzilla-qt[45]*
 
 .include <bsd.port.mk>

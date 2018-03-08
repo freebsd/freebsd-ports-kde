@@ -282,6 +282,7 @@
     SUBDIR += mythtv-frontend
     SUBDIR += naludump
     SUBDIR += nordlicht
+    SUBDIR += nostt
     SUBDIR += obs-studio
     SUBDIR += oggvideotools
     SUBDIR += ogmrip

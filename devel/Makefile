@@ -2197,6 +2197,7 @@
     SUBDIR += p5-DB_File-Lock
     SUBDIR += p5-Daemon-Control
     SUBDIR += p5-Dancer-Debug
+    SUBDIR += p5-Dancer-Logger-Syslog
     SUBDIR += p5-Danga-Socket
     SUBDIR += p5-Danga-Socket-Callback
     SUBDIR += p5-Data-ACL
@@ -4612,6 +4613,7 @@
     SUBDIR += py-magic
     SUBDIR += py-mailcap-fix
     SUBDIR += py-manuel
+    SUBDIR += py-marshmallow
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
@@ -4704,6 +4706,7 @@
     SUBDIR += py-pep8-naming
     SUBDIR += py-period
     SUBDIR += py-petname
+    SUBDIR += py-pew
     SUBDIR += py-pex
     SUBDIR += py-phabricator
     SUBDIR += py-phonenumbers
@@ -4714,6 +4717,7 @@
     SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
+    SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
     SUBDIR += py-plan
     SUBDIR += py-plex
@@ -5225,6 +5229,7 @@
     SUBDIR += radare2
     SUBDIR += ragel
     SUBDIR += raknet
+    SUBDIR += range-v3
     SUBDIR += rapidjson
     SUBDIR += raylib
     SUBDIR += rbenv

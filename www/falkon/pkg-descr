@@ -11,11 +11,4 @@ RSS feeds with an included RSS reader, block ads with a builtin AdBlock plugin,
 block Flash content with Click2Flash and edit the local CA Certificates
 database with an SSL Manager.
 
-Falkon's main aim is to be a very fast and very stable QtWebKit browser
-available to everyone.  There are already a lot of QtWebKit browsers available,
-but they are either bound to the KDE environment (rekonq), are not actively
-developed or very unstable and miss important features. But there is missing a
-multiplatform, modern and actively developed browser. Falkon is trying to
-fill this gap by providing a very stable browsing experience.
-
-WWW: https://github.com/KDE/falkon
+WWW: https://userbase.kde.org/Falkon

@@ -662,6 +662,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-pandas
+    SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
     SUBDIR += py-plastex
     SUBDIR += py-probstat
