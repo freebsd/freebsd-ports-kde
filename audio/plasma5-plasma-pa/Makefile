@@ -18,7 +18,6 @@ USE_KDE=	config configwidgets coreaddons ecm globalaccel i18n \
 		kdeclarative package plasma-framework
 USE_QT5=	core dbus gui network qml quick widgets \
 		buildtools_build qmake_build
-USE_LDCONFIG=	${QT_PLUGINDIR}/kcms
 
 SHEBANG_FILES=	data/plasmaVolumeDisableKMixAutostart.pl
 

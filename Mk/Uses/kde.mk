@@ -707,7 +707,7 @@ plasma-mediacenter_PORT=	multimedia/plasma5-plasma-mediacenter
 plasma-mediacenter_LIB=		libplasmamediacenter.so.5
 
 plasma-pa_PORT=		audio/plasma5-plasma-pa
-plasma-pa_LIB=		kcm_pulseaudio.so
+plasma-pa_PATH=		${QT_PLUGINDIR}/kcms/kcm_pulseaudio.so
 
 plasma-sdk_PORT=	devel/plasma5-plasma-sdk
 plasma-sdk_PATH=	${KDE_PREFIX}/bin/plasmoidviewer
