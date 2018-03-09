@@ -50,9 +50,11 @@ lib/libkformdesigner3.1.so.3.1.0
 share/applications/org.kde.kexi-3.1.desktop
 share/doc/HTML/de/kexi/index.cache.bz2
 share/doc/HTML/de/kexi/index.docbook
+share/doc/HTML/nl/kexi/index.cache.bz2
+share/doc/HTML/nl/kexi/index.docbook
 share/doc/HTML/it/kexi/index.cache.bz2
 share/doc/HTML/it/kexi/index.docbook
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/3.1/Simple_Database.kexi
+%%DATADIR%%/3.1/examples/Simple_Database.kexi
 %%DATADIR%%/3.1/icons/kexi_breeze.rcc
 %%DATADIR%%/3.1/icons/org.kexi-project.form.widgets.main_breeze.rcc
 %%DATADIR%%/3.1/icons/org.kexi-project.form.widgets.web-browser_breeze.rcc
