@@ -6,7 +6,7 @@ CATEGORIES=	sysutils kde
 MASTER_SITES=	https://gitlab.com/${GL_ACCOUNT}/${GL_PROJECT}/repository/VERSION_${DISTVERSION}/ \
 		LOCAL/tcberner/${GL_ACCOUNT}/${GL_PROJECT}/${DISTVERSION}/
 DISTNAME=	archive
-DIST_SUBDIR=	KDE/${GL_ACCOUNT}/${GL_PROJECT}
+DIST_SUBDIR=	KDE/${GL_ACCOUNT}/${GL_PROJECT}/${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Component for handling accounts-sso user interactions
