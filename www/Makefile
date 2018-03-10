@@ -40,11 +40,9 @@
     SUBDIR += awstats
     SUBDIR += axis
     SUBDIR += axis2
-    SUBDIR += b2evolution
     SUBDIR += bacula-web
     SUBDIR += baikal
     SUBDIR += bareos-webui
-    SUBDIR += bblog
     SUBDIR += bigbluebutton
     SUBDIR += bins
     SUBDIR += bkmrkconv
@@ -100,7 +98,6 @@
     SUBDIR += csstidy
     SUBDIR += ctemplate
     SUBDIR += cutycapt
-    SUBDIR += dalbum
     SUBDIR += davical
     SUBDIR += dddbl
     SUBDIR += ddgr
@@ -153,8 +150,6 @@
     SUBDIR += erlang-mochiweb-basho
     SUBDIR += erlang-webmachine
     SUBDIR += erwn
-    SUBDIR += eventum
-    SUBDIR += extjs
     SUBDIR += fabio
     SUBDIR += falkon
     SUBDIR += fancybox
@@ -184,7 +179,6 @@
     SUBDIR += fpc-httpd24
     SUBDIR += fpc-libmicrohttpd
     SUBDIR += free-sa-devel
-    SUBDIR += freeway
     SUBDIR += fswiki
     SUBDIR += ftasv
     SUBDIR += g-cows
@@ -195,7 +189,6 @@
     SUBDIR += gatling
     SUBDIR += gecko-mediaplayer
     SUBDIR += geckodriver
-    SUBDIR += geeklog
     SUBDIR += geeknote
     SUBDIR += geneweb
     SUBDIR += geolizer
@@ -240,8 +233,6 @@
     SUBDIR += gurlchecker
     SUBDIR += h2o
     SUBDIR += habari
-    SUBDIR += hastymail
-    SUBDIR += hastymail2
     SUBDIR += hastymail2-devel
     SUBDIR += havp
     SUBDIR += helma
@@ -323,17 +314,14 @@
     SUBDIR += ikiwiki
     SUBDIR += ilias
     SUBDIR += imgsizer
-    SUBDIR += impresscms
     SUBDIR += interchange
     SUBDIR += iridium
     SUBDIR += itop
-    SUBDIR += iwebcal
     SUBDIR += jdresolve
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty8
     SUBDIR += jetty9
-    SUBDIR += jinzora
     SUBDIR += jmeter
     SUBDIR += joomla3
     SUBDIR += jspwiki
@@ -372,7 +360,6 @@
     SUBDIR += lightsquid
     SUBDIR += lighttpd
     SUBDIR += lighttpd-mod_h264_streaming
-    SUBDIR += lilurl
     SUBDIR += limesurvey
     SUBDIR += linkcheck
     SUBDIR += linkchecker
@@ -384,7 +371,6 @@
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-flashplayer
     SUBDIR += linux-opera
-    SUBDIR += lionwiki
     SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += ljdump
@@ -591,7 +577,6 @@
     SUBDIR += obhttpd
     SUBDIR += ocaml-net
     SUBDIR += opencart
-    SUBDIR += openxmldir
     SUBDIR += opera
     SUBDIR += opera-linuxplugins
     SUBDIR += orangehrm
@@ -1498,14 +1483,12 @@
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
-    SUBDIR += phpmp
     SUBDIR += phpmustache
     SUBDIR += phpmyfaq
     SUBDIR += phprecipebook
     SUBDIR += phproxy
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
-    SUBDIR += phpwebapp
     SUBDIR += pivotx
     SUBDIR += piwigo
     SUBDIR += piwik
@@ -1920,7 +1903,6 @@
     SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
-    SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
     SUBDIR += qutebrowser
@@ -2275,7 +2257,6 @@
     SUBDIR += squidview
     SUBDIR += srg
     SUBDIR += stagit
-    SUBDIR += subsonic
     SUBDIR += subsonic-standalone
     SUBDIR += suphp
     SUBDIR += surf
@@ -2294,7 +2275,6 @@
     SUBDIR += template_
     SUBDIR += templatelite
     SUBDIR += testlink
-    SUBDIR += textpattern
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
@@ -2420,10 +2400,7 @@
     SUBDIR += ufdbguard
     SUBDIR += unit
     SUBDIR += unit-go
-    SUBDIR += unit-php56
-    SUBDIR += unit-php70
-    SUBDIR += unit-php71
-    SUBDIR += unit-php72
+    SUBDIR += unit-php
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
@@ -2485,7 +2462,6 @@
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
     SUBDIR += xapian-omega12
-    SUBDIR += xaraya
     SUBDIR += xcache
     SUBDIR += xfce4-smartbookmark-plugin
     SUBDIR += xist
@@ -2583,17 +2559,14 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yaws
-    SUBDIR += yii
     SUBDIR += you-get
     SUBDIR += yourls
     SUBDIR += youtube_dl
     SUBDIR += yuicompressor
-    SUBDIR += zen-cart
     SUBDIR += zend-framework
     SUBDIR += zend-framework1
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
-    SUBDIR += zikula
     SUBDIR += zope213
 
 .include <bsd.port.subdir.mk>
