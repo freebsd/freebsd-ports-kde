@@ -184,6 +184,7 @@
     SUBDIR += mosh
     SUBDIR += mosml
     SUBDIR += mtasc
+    SUBDIR += mujs
     SUBDIR += munger
     SUBDIR += myrddin
     SUBDIR += nawk

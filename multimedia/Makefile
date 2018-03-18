@@ -317,7 +317,6 @@
     SUBDIR += playd
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
-    SUBDIR += plexpy
     SUBDIR += plexwatch
     SUBDIR += podcastdl
     SUBDIR += poe
@@ -379,6 +378,7 @@
     SUBDIR += rubygem-gstreamer
     SUBDIR += rubygem-paperclip-av-transcoder
     SUBDIR += rubygem-paperclip-av-transcoder-rails50
+    SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += sabbu
     SUBDIR += schroedinger
     SUBDIR += shotcut
@@ -401,6 +401,7 @@
     SUBDIR += swfdec-gnome
     SUBDIR += syncplay
     SUBDIR += szap-s2
+    SUBDIR += tautulli
     SUBDIR += tcmplex-panteltje
     SUBDIR += tivodecode
     SUBDIR += totem

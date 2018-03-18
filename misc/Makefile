@@ -271,6 +271,7 @@
     SUBDIR += libpredict
     SUBDIR += libpri
     SUBDIR += libsupertone
+    SUBDIR += libsweep-lidar
     SUBDIR += libutf
     SUBDIR += lifelines
     SUBDIR += lingoteach
@@ -399,6 +400,7 @@
     SUBDIR += proxyper
     SUBDIR += pspresent
     SUBDIR += ptsort
+    SUBDIR += pubs
     SUBDIR += py-YABT
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
@@ -517,6 +519,7 @@
     SUBDIR += viz
     SUBDIR += whichman
     SUBDIR += window
+    SUBDIR += with
     SUBDIR += wmScoreBoard
     SUBDIR += wmcalendar
     SUBDIR += wmjulia

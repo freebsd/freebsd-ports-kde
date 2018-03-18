@@ -2,7 +2,7 @@
 
 PORTNAME=	testssl.sh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.5-1
+DISTVERSION=	2.9.5-2
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -19,6 +19,7 @@ USES=		shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	drwetter
 
+NO_ARCH=	yes
 NO_BUILD=	yes
 
 SHEBANG_FILES=	testssl.sh utils/*

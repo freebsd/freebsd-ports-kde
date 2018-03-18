@@ -1,4 +1,3 @@
-# Created by: Fernando Apesteguia <fernando.apesteguia@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	code-eli
@@ -6,7 +5,7 @@ PORTVERSION=	0.3.6
 PORTREVISION=	4
 CATEGORIES=	graphics
 
-MAINTAINER=	fernando.apesteguia@gmail.com
+MAINTAINER=	fernape@FreeBSD.org
 COMMENT=	Library with functionalities for geometries
 
 LICENSE=	EPL

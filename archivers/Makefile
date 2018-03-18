@@ -197,7 +197,6 @@
     SUBDIR += py-zstd
     SUBDIR += qpress
     SUBDIR += quazip
-    SUBDIR += quazip-qt5
     SUBDIR += rar
     SUBDIR += rox-archive
     SUBDIR += rpm2cpio

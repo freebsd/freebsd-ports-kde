@@ -33,6 +33,7 @@
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
+    SUBDIR += asterisk15
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -155,7 +156,6 @@
     SUBDIR += fpc-ldap
     SUBDIR += fpc-pcap
     SUBDIR += fping
-    SUBDIR += freebsd-tftp
     SUBDIR += freebsd-uucp
     SUBDIR += freediameter
     SUBDIR += freenet6
@@ -1292,6 +1292,7 @@
     SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
+    SUBDIR += rubygem-private_address_check
     SUBDIR += rubygem-proxifier
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
@@ -1487,6 +1488,7 @@
     SUBDIR += vblade
     SUBDIR += vde
     SUBDIR += vde2
+    SUBDIR += vether-kmod
     SUBDIR += viamillipede
     SUBDIR += vinagre
     SUBDIR += vino

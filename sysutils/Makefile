@@ -367,6 +367,7 @@
     SUBDIR += fusefs-gnome-vfs
     SUBDIR += fusefs-gstfs
     SUBDIR += fusefs-gunzip
+    SUBDIR += fusefs-hfsfuse
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
     SUBDIR += fusefs-libs
@@ -386,6 +387,7 @@
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
     SUBDIR += fusefs-wdfs
+    SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
@@ -615,6 +617,8 @@
     SUBDIR += lxsplit
     SUBDIR += lxtask
     SUBDIR += lxterminal
+    SUBDIR += mac_nonet
+    SUBDIR += mac_rtprio
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan
@@ -695,6 +699,7 @@
     SUBDIR += mountsmb2
     SUBDIR += mpiexec
     SUBDIR += mptd
+    SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += msyslog
     SUBDIR += mtpfs
@@ -972,7 +977,6 @@
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
-    SUBDIR += py-zfs
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
