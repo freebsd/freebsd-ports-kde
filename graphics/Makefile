@@ -102,7 +102,6 @@
     SUBDIR += clutter-gtk
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
-    SUBDIR += code-eli
     SUBDIR += cogl
     SUBDIR += colmap
     SUBDIR += colord
@@ -804,8 +803,6 @@
     SUBDIR += pencil
     SUBDIR += peps
     SUBDIR += perceptualdiff
-    SUBDIR += pfscalibration
-    SUBDIR += pfstmo
     SUBDIR += pfstools
     SUBDIR += pgplot
     SUBDIR += pho

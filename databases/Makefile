@@ -95,6 +95,7 @@
     SUBDIR += gigabase
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
+    SUBDIR += go-carbon
     SUBDIR += gomdb
     SUBDIR += gosqlite3
     SUBDIR += gqlplus
@@ -579,7 +580,6 @@
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
     SUBDIR += pg_repack
-    SUBDIR += pg_rman
     SUBDIR += pg_stat_kcache
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -812,6 +812,7 @@
     SUBDIR += py-psycogreen
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi
+    SUBDIR += py-pum
     SUBDIR += py-pyPgSQL
     SUBDIR += py-pyhs
     SUBDIR += py-pylibmc

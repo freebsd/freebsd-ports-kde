@@ -62,6 +62,7 @@
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
     SUBDIR += calendarserver
+    SUBDIR += carbonapi
     SUBDIR += castget
     SUBDIR += cblog
     SUBDIR += cgi-lib
@@ -1683,6 +1684,7 @@
     SUBDIR += py-gevent-websocket
     SUBDIR += py-goobook
     SUBDIR += py-google
+    SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-storage

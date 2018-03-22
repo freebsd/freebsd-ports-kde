@@ -683,6 +683,7 @@
     SUBDIR += py-sympy
     SUBDIR += py-theano
     SUBDIR += py-ufl
+    SUBDIR += py-uncertainties
     SUBDIR += py-viper
     SUBDIR += py-yt
     SUBDIR += qalculate

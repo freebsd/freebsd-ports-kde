@@ -1,16 +1,22 @@
 # $FreeBSD$
 
 PORTNAME=	waterfox
-DISTVERSION=	56.0.4-36
-DISTVERSIONSUFFIX=	-g79492ecca478
-PORTREVISION=	3
+DISTVERSION=	56.0.4-72
+DISTVERSIONSUFFIX=	-ga9c77bbb9f25
+PORTREVISION=	1
 CATEGORIES=	www ipv6
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	ad38ad1b4750.patch:-p1 \
+		557f604cc4b3.patch:-p1 \
+		75c3dd6b9888.patch:-p1 \
+		${NULL}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Distilled fork of Firefox
 
 DEPRECATED=	Temporary experiment
-EXPIRATION_DATE=2018-03-20
+EXPIRATION_DATE=2018-05-16
 
 BUILD_DEPENDS=	nspr>=4.16:devel/nspr \
 		nss>=3.32.1:security/nss \

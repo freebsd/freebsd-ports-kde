@@ -530,9 +530,7 @@
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
     SUBDIR += elixir-quantum
-    SUBDIR += elixir-simple_bayes
     SUBDIR += elixir-smppex
-    SUBDIR += elixir-stemmer
     SUBDIR += elixir-swarm
     SUBDIR += elixir-timex
     SUBDIR += elixir-tirexs
@@ -4674,6 +4672,7 @@
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
     SUBDIR += py-omniorb-3
+    SUBDIR += py-opendht
     SUBDIR += py-openstacksdk
     SUBDIR += py-opster
     SUBDIR += py-optik
