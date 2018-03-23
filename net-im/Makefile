@@ -195,6 +195,7 @@
     SUBDIR += telepathy-glib
     SUBDIR += telepathy-haze
     SUBDIR += telepathy-idle
+    SUBDIR += telepathy-kde4
     SUBDIR += telepathy-logger
     SUBDIR += telepathy-logger-qt4
     SUBDIR += telepathy-logger-qt5

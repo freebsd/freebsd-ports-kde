@@ -1,13 +1,16 @@
 # Created by: Rusty Nejdl <rnejdl@ringofsaturn.com>
-# $FreeBSD: head/sysutils/filelight-kde4/Makefile 439367 2017-04-25 08:20:30Z riggs $
+# $FreeBSD$
 
 PORTNAME=	filelight
 PORTVERSION=	${KDE4_VERSION}
 PORTREVISION=	2
 CATEGORIES=	sysutils kde kde-kde4
+PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Map of concentric segmented-rings representing file system
+
+CONFLICTS_INSTALL=      ${PORTNAME}
 
 USES=		cmake:outsource kde:4 tar:xz
 USE_KDE=	kdelibs automoc4
