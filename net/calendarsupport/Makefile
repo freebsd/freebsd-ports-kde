@@ -22,5 +22,4 @@ USE_QT5=	core gui network printsupport testlib uitools widgets xml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
 
-
 .include <bsd.port.mk>
