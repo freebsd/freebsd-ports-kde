@@ -2,11 +2,11 @@
 
 PORTNAME=	skanlite
 PORTVERSION=	1.1
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
-DIST_SUBDIR=	KDE/extragear
 PKGNAMESUFFIX=	-kde4
+DIST_SUBDIR=	KDE/extragear
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Simple image scanning application for KDE

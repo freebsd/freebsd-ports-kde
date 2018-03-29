@@ -647,7 +647,6 @@
     SUBDIR += sieve-connect
     SUBDIR += sigrot
     SUBDIR += simscan
-    SUBDIR += sisyphus
     SUBDIR += slapd-cyrus
     SUBDIR += sma
     SUBDIR += smfsav
@@ -741,7 +740,6 @@
     SUBDIR += vqadmin
     SUBDIR += vrfy
     SUBDIR += wanderlust
-    SUBDIR += wanderlust-devel
     SUBDIR += websieve
     SUBDIR += whoson
     SUBDIR += wmbiff

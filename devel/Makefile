@@ -664,6 +664,7 @@
     SUBDIR += fujaba
     SUBDIR += funnelweb
     SUBDIR += fuzzylite
+    SUBDIR += ga
     SUBDIR += gaa
     SUBDIR += gamin
     SUBDIR += gauche-readline
@@ -871,7 +872,6 @@
     SUBDIR += gtkparasite
     SUBDIR += gtranslator
     SUBDIR += guichan
-    SUBDIR += guikachu
     SUBDIR += guile-lib
     SUBDIR += gumbo
     SUBDIR += gvfs
@@ -4381,6 +4381,8 @@
     SUBDIR += py-construct
     SUBDIR += py-construct28
     SUBDIR += py-contextlib2
+    SUBDIR += py-coreapi
+    SUBDIR += py-coreschema
     SUBDIR += py-country
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
@@ -4457,6 +4459,7 @@
     SUBDIR += py-fastnumbers
     SUBDIR += py-filemagic
     SUBDIR += py-fileutils
+    SUBDIR += py-first
     SUBDIR += py-five.customerize
     SUBDIR += py-five.formlib
     SUBDIR += py-five.globalrequest
@@ -4503,6 +4506,7 @@
     SUBDIR += py-geotypes
     SUBDIR += py-gevent
     SUBDIR += py-git-up
+    SUBDIR += py-git_semver
     SUBDIR += py-gitdb2
     SUBDIR += py-gitless
     SUBDIR += py-gitosis
@@ -4533,6 +4537,7 @@
     SUBDIR += py-imgkit
     SUBDIR += py-incremental
     SUBDIR += py-inflect
+    SUBDIR += py-inflection
     SUBDIR += py-iniparse
     SUBDIR += py-initgroups
     SUBDIR += py-instant
@@ -4550,6 +4555,7 @@
     SUBDIR += py-isodate
     SUBDIR += py-isort
     SUBDIR += py-iterpipes
+    SUBDIR += py-itypes
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
@@ -4569,6 +4575,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
+    SUBDIR += py-json_tricks
     SUBDIR += py-jsonlib
     SUBDIR += py-jsonlib2
     SUBDIR += py-jsonlines
@@ -4628,13 +4635,16 @@
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
+    SUBDIR += py-medikit
     SUBDIR += py-meliae
     SUBDIR += py-memory_profiler
     SUBDIR += py-mercurialserver
     SUBDIR += py-microversion-parse
     SUBDIR += py-mimeparse
     SUBDIR += py-minimongo
+    SUBDIR += py-minio
     SUBDIR += py-mock
+    SUBDIR += py-mondrian
     SUBDIR += py-mongoengine
     SUBDIR += py-mongokit
     SUBDIR += py-monotonic
@@ -4672,6 +4682,7 @@
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
     SUBDIR += py-omniorb-3
+    SUBDIR += py-openapi-codec
     SUBDIR += py-opendht
     SUBDIR += py-openstacksdk
     SUBDIR += py-opster
@@ -4729,6 +4740,7 @@
     SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
+    SUBDIR += py-pip-tools
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
     SUBDIR += py-plan
@@ -4961,6 +4973,7 @@
     SUBDIR += py-sure
     SUBDIR += py-sysctl
     SUBDIR += py-sysv_ipc
+    SUBDIR += py-swagger-spec-validator
     SUBDIR += py-tables
     SUBDIR += py-tabulate
     SUBDIR += py-tapi
@@ -5040,6 +5053,7 @@
     SUBDIR += py-weblib
     SUBDIR += py-websockify
     SUBDIR += py-wheel
+    SUBDIR += py-whistle
     SUBDIR += py-widgetsnbextension
     SUBDIR += py-wrapt
     SUBDIR += py-wsgi_intercept
@@ -5304,6 +5318,7 @@
     SUBDIR += rubygem-activesupport4
     SUBDIR += rubygem-activesupport5
     SUBDIR += rubygem-activesupport50
+    SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
     SUBDIR += rubygem-algorithms
@@ -5311,7 +5326,6 @@
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
     SUBDIR += rubygem-ansi
-    SUBDIR += rubygem-airborne
     SUBDIR += rubygem-apipie-bindings
     SUBDIR += rubygem-apipie-params
     SUBDIR += rubygem-app_config
@@ -5511,6 +5525,7 @@
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf351
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
@@ -6126,6 +6141,7 @@
     SUBDIR += websvn
     SUBDIR += wininfo
     SUBDIR += wizardkit
+    SUBDIR += woff2
     SUBDIR += wxGlade
     SUBDIR += wxformbuilder
     SUBDIR += xa65

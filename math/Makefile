@@ -191,6 +191,7 @@
     SUBDIR += fpc-numlib
     SUBDIR += freemat
     SUBDIR += fxt
+    SUBDIR += g2o
     SUBDIR += galculator
     SUBDIR += gambit
     SUBDIR += gap
@@ -638,6 +639,7 @@
     SUBDIR += py-cdecimal
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
+    SUBDIR += py-cvxopt
     SUBDIR += py-fastcluster
     SUBDIR += py-ffc
     SUBDIR += py-fiat
@@ -672,6 +674,7 @@
     SUBDIR += py-pygsl
     SUBDIR += py-pyhull
     SUBDIR += py-pymc
+    SUBDIR += py-pymc3
     SUBDIR += py-pysparse
     SUBDIR += py-pyvtk
     SUBDIR += py-roman

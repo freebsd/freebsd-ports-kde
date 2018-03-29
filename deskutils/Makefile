@@ -10,6 +10,7 @@
     SUBDIR += akregator
     SUBDIR += alarm-clock-applet
     SUBDIR += anamnesis
+    SUBDIR += anydesk
     SUBDIR += appwrapper
     SUBDIR += aspostit
     SUBDIR += autocutsel
@@ -188,6 +189,7 @@
     SUBDIR += nautilus-actions
     SUBDIR += nautilus-sendto
     SUBDIR += nemo-extensions
+    SUBDIR += nextcloudclient
     SUBDIR += note
     SUBDIR += notecase
     SUBDIR += noti

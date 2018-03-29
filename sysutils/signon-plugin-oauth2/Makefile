@@ -4,8 +4,9 @@ PORTNAME=	signon-plugin-oauth2
 DISTVERSION=	0.24
 CATEGORIES=	sysutils kde
 DISTNAME=	archive
+
 MAINTAINER=	kde@FreeBSD.org
-COMMENT=	Component for handling accounts-sso user interactions
+COMMENT=	Signon OAuth 1.0 and 2.0 plugin for accounts-sso
 
 LIB_DEPENDS=	libsignon-qt5.so:sysutils/signon-qt5
 

@@ -125,16 +125,16 @@ DIST_SUBDIR?=		KDE/${KDE4_VERSION}
 PKGNAMESUFFIX=		-kde4
 CONFLICTS_INSTALL=	${PORTNAME:C/-kde4//}-4.*
 .    elif  ${_KDE_CATEGORY:Mkde-applications}
-PORTVERSION?=           ${KDE_APPLICATIONS_VERSION}
+PORTVERSION?=		${KDE_APPLICATIONS_VERSION}
 .      if ${_KDE_VERSION:M4}
-CONFLICTS_INSTALL?=     ${PORTNAME}-[0-9][0-9].[0-9]*
+CONFLICTS_INSTALL?=	${PORTNAME}-[0-9]*
 PKGNAMESUFFIX?=		-kde4
 .      else
-CONFLICTS_INSTALL?=     kde4-${PORTNAME}-* ${PORTNAME}-kde4-*
+CONFLICTS_INSTALL?=	${PORTNAME}-kde4-[0-9]*
 .      endif
-# Decide where the file lies on KDE's servers: Check whether the file lies in  Attic
+# Decide where the file lies on KDE's servers: Check whether the file lies in Attic
 .      if ${KDE_APPLICATIONS_VERSION:R:R} <= ${_KDE_APPLICATIONS_ATTIC_VERSION:R:R}
-MASTER_SITES?=          KDE/Attic/applications/${KDE_APPLICATIONS_VERSION}/src
+MASTER_SITES?=		KDE/Attic/applications/${KDE_APPLICATIONS_VERSION}/src
 .      else
 MASTER_SITES?=		KDE/${KDE_APPLICATIONS_BRANCH}/applications/${KDE_APPLICATIONS_VERSION}/src
 # Let bsd.port.mk create the plist-entries for the documentation.
@@ -145,7 +145,7 @@ PORTDOCS?=		HTML/*
 # Further pass along a SHLIB_VER PLIST_SUB
 PLIST_SUB+=		KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_SHLIB_VER}
 .      endif
-DIST_SUBDIR?=           KDE/applications/${KDE_APPLICATIONS_VERSION}
+DIST_SUBDIR?=		KDE/applications/${KDE_APPLICATIONS_VERSION}
 .    elif ${_KDE_CATEGORY:Mkde-plasma}
 PORTVERSION?=		${KDE_PLASMA_VERSION}
 PKGNAMEPREFIX?=		plasma5-
@@ -223,17 +223,17 @@ PLIST_SUB+=		PYCACHE="" \
 # ==============================================================================
 
 _USE_KDE_BOTH=		akonadi attica libkcddb libkcompactdisc libkdcraw libkdegames \
-			libkeduvocdocument libkexiv2 libkface libkipi libksane okular \
+			libkeduvocdocument libkexiv2 libkipi libksane okular \
 			baloo baloo-widgets kate marble
 
 _USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kdelibs \
 			kfilemetadata korundum \
-			libkonq  nepomuk-core nepomuk-widgets \
+			libkonq nepomuk-core nepomuk-widgets \
 			oxygen-icons5 perlkde perlqt pimlibs pykde4 \
 			pykdeuic4 qtruby runtime smokegen smokekde smokeqt \
 			workspace
 # These components are not part of the Software Compilation.
-_USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
+_USE_KDE4_ALL+=		akonadi automoc4 ontologies qimageblitz soprano \
 			strigi
 
 _USE_KDE4_ALL+= 	${_USE_KDE_BOTH}
@@ -902,8 +902,8 @@ libkdegames5_LIB=	libKF5KDEGames.so
 
 libkeduvocdocument4_PORT=	misc/libkdeedu-kde4
 libkeduvocdocument4_LIB=	libkeduvocdocument.so
-libkeduvocdocument5_PORT=        misc/libkeduvocdocument
-libkeduvocdocument5_LIB=         libKEduVocDocument.so
+libkeduvocdocument5_PORT=	misc/libkeduvocdocument
+libkeduvocdocument5_LIB=	libKEduVocDocument.so
 
 libkexiv24_PORT=	graphics/libkexiv2-kde4
 libkexiv24_LIB=		libkexiv2.so

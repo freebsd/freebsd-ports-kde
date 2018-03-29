@@ -1148,6 +1148,7 @@
     SUBDIR += p5-XML-XUpdate-LibXML
     SUBDIR += p5-YAML
     SUBDIR += p5-YAML-LibYAML
+    SUBDIR += p5-YAML-PP
     SUBDIR += p5-YAML-Shell
     SUBDIR += p5-YAML-Syck
     SUBDIR += p5-YAML-Tiny
@@ -1306,6 +1307,7 @@
     SUBDIR += py-feedparser
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
+    SUBDIR += py-gfm
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
     SUBDIR += py-html2text

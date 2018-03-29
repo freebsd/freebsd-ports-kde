@@ -98,6 +98,7 @@
     SUBDIR += routino
     SUBDIR += saoimage
     SUBDIR += sextractor
+    SUBDIR += siril
     SUBDIR += sscalc
     SUBDIR += stardates
     SUBDIR += starplot

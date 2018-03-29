@@ -17,6 +17,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 USES=		gmake jpeg localbase pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	x42
+LLD_UNSAFE=	yes
 
 MAKE_JOBS_UNSAFE=	yes # https://github.com/x42/harvid/issues/5
 
