@@ -535,6 +535,7 @@
     SUBDIR += k3b
     SUBDIR += k3b-kde4
     SUBDIR += k8temp
+    SUBDIR += kbackup
     SUBDIR += kcm-polkit-kde4
     SUBDIR += kcron
     SUBDIR += kcron-kde4
