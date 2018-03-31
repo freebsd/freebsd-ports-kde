@@ -13,6 +13,8 @@ lib/cmake/KF5BalooWidgets/KF5BalooWidgetsTargets.cmake
 lib/libKF5BalooWidgets.so
 lib/libKF5BalooWidgets.so.5
 lib/libKF5BalooWidgets.so.5.0.0
+%%QT_PLUGINDIR%%/baloofilepropertiesplugin.so
+share/kservices5/baloofilepropertiesplugin.desktop
 share/locale/ar/LC_MESSAGES/baloo_naturalqueryparser.mo
 share/locale/ar/LC_MESSAGES/baloowidgets5.mo
 share/locale/ast/LC_MESSAGES/baloo_naturalqueryparser.mo
