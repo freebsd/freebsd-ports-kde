@@ -600,6 +600,7 @@
     SUBDIR += lmon
     SUBDIR += lnav
     SUBDIR += lockfile-progs
+    SUBDIR += log-courier
     SUBDIR += log_analysis
     SUBDIR += logrotate
     SUBDIR += logstalgia
