@@ -55,7 +55,10 @@ LOKALIZE_DESC=		Computer-aided translation system
 LOKALIZE_RUN_DEPENDS=	lokalize>=${KDE_APPLICATIONS_VERSION}:devel/lokalize
 
 OKTETA_DESC=		Hex editor
-OKTETA_RUN_DEPENDS=	okteta>=${KDE_APPLICATIONS_VERSION}:devel/okteta
+# As to not get an old kde4 version of okteta, depend on at least 17.12.3.
+# This will change once okteta is released outside of applications. Maybe
+# it should also be dropped from this meta port entirely.
+OKTETA_RUN_DEPENDS=	okteta>=17.12.3:devel/okteta
 
 POXML_DESC=		Tools to translate DocBook XML using gettext
 POXML_RUN_DEPENDS=	poxml>=${KDE_APPLICATIONS_VERSION}:devel/poxml

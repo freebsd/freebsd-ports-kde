@@ -1,5 +1,8 @@
 # $FreeBSD$
 
+# Temporary override:
+KDE_APPLICATIONS_SHLIB_VER=	5.7.82
+
 PORTNAME=	libksieve
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications

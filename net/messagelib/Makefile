@@ -1,4 +1,7 @@
 # $FreeBSD$
+ 
+# Temporary override:
+KDE_APPLICATIONS_SHLIB_VER=	5.7.86
 
 PORTNAME=	messagelib
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
