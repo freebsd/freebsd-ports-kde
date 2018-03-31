@@ -1,20 +1,21 @@
 # $FreeBSD$
 
 PORTNAME=	mlt
-PORTVERSION=	6.4.1
-PORTREVISION?=	6
+DISTVERSIONPREFIX=	v
+DISTVERSION=	6.6.0
 CATEGORIES?=	multimedia
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
-MAINTAINER?=	avilla@FreeBSD.org
+MAINTAINER=	avilla@FreeBSD.org
 COMMENT?=	Multimedia framework for TV broadcasting
 
 LICENSE?=	GPLv2 GPLv3 LGPL21
 LICENSE_COMB?=	multi
 
-USES+=		alias eigen:3 gmake pkgconfig
+USES+=		alias eigen:3 gmake localbase pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-gpl --enable-gpl3 --target-os=FreeBSD
+USE_GITHUB=	yes
+GH_ACCOUNT=	mltframework
 
 .ifndef(WITH_DEBUG)
 CONFIGURE_ARGS+=--disable-debug
@@ -31,6 +32,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3
 
 BROKEN_sparc64=		does not compile on sparc64 (invokes i386 asm)
 
+USE_GL=		gl
 USE_GNOME=	libxml2
 USE_SDL=	image
 USE_XORG=	x11
