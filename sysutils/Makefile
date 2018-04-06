@@ -459,6 +459,7 @@
     SUBDIR += hal-info
     SUBDIR += hardlink
     SUBDIR += hare
+    SUBDIR += hared
     SUBDIR += hatop
     SUBDIR += hdrecover
     SUBDIR += healthd

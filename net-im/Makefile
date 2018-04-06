@@ -6,7 +6,6 @@
     SUBDIR += centerim
     SUBDIR += centerim-devel
     SUBDIR += chattahoochie
-    SUBDIR += cjc
     SUBDIR += climm
     SUBDIR += coccinella
     SUBDIR += convey
@@ -91,6 +90,7 @@
     SUBDIR += linux-telegram-desktop
     SUBDIR += loudmouth
     SUBDIR += mastodon
+    SUBDIR += matterircd
     SUBDIR += mbpurple
     SUBDIR += mcabber
     SUBDIR += meanwhile
@@ -154,7 +154,6 @@
     SUBDIR += py-nbxmpp
     SUBDIR += py-punjab
     SUBDIR += py-python-telegram-bot
-    SUBDIR += py-pyxmpp
     SUBDIR += py-skype4py
     SUBDIR += py-slackclient
     SUBDIR += py-sleekxmpp
