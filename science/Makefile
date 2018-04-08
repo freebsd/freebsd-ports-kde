@@ -169,6 +169,7 @@
     SUBDIR += py-mlpy
     SUBDIR += py-netCDF4
     SUBDIR += py-obspy
+    SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
@@ -197,6 +198,10 @@
     SUBDIR += rdkit
     SUBDIR += rubygem-ai4r
     SUBDIR += rubygem-cdo
+    SUBDIR += rubygem-rgeo
+    SUBDIR += rubygem-rgeo-geojson
+    SUBDIR += rubygem-rgeo-proj4
+    SUBDIR += rubygem-rgeo-shapefile
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += sigrok-cli

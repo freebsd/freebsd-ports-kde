@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	erlang
-PORTVERSION=	19.3.6.7
+PORTVERSION=	19.3.6.8
 PORTEPOCH=	4
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
@@ -26,7 +26,7 @@ PATCHFILES=	patch-otp-19.3.1 patch-otp-19.3.2 patch-otp-19.3.3 \
 		patch-otp-19.3.4 patch-otp-19.3.5 patch-otp-19.3.6 \
 		patch-otp-19.3.6.1 patch-otp-19.3.6.2 patch-otp-19.3.6.3 \
 		patch-otp-19.3.6.4 patch-otp-19.3.6.5 patch-otp-19.3.6.6 \
-		patch-otp-19.3.6.7
+		patch-otp-19.3.6.7 patch-otp-19.3.6.8
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Functional programming language from Ericsson
@@ -60,16 +60,18 @@ WX_DESC=	Enable WX application
 NATIVE_IMPLIES=	HIPE
 
 OPTIONS_DEFAULT=HIPE KQUEUE OPENSSL SCTP SMP THREADS DTRACE
-OPTIONS_EXCLUDE_DragonFly=	HIPE NATIVE SCTP
 
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
 .endif
 
+OPTIONS_EXCLUDE_DragonFly=	HIPE NATIVE SCTP
 OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
-OPTIONS_EXCLUDE_i386=		DTRACE
 # ld(1) fails to link probes: missing __dtrace_erlang___* symbols
 OPTIONS_EXCLUDE_aarch64=	DTRACE
+OPTIONS_EXCLUDE_armv6=		DTRACE
+OPTIONS_EXCLUDE_armv7=		DTRACE
+OPTIONS_EXCLUDE_i386=		DTRACE
 
 OPENSSL_VARS=	BROKEN_SSL=openssl-devel
 
@@ -88,7 +90,7 @@ APP_UPGRADE=	erts            8.3  8.3.5.4 \
 		lib/inets     6.3.6    6.3.9 \
 		lib/kernel      5.2  5.2.0.1 \
 		lib/mnesia   4.14.3 4.14.3.1 \
-		lib/ssh       4.4.1  4.4.2.2 \
+		lib/ssh       4.4.1  4.4.2.3 \
 		lib/ssl       8.1.1  8.1.3.1.1 \
 		lib/xmerl    1.3.13   1.3.14
 EI_VSN=		3.9.3

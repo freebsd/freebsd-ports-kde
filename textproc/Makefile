@@ -176,6 +176,7 @@
     SUBDIR += en-hunspell
     SUBDIR += en-mythes
     SUBDIR += enchant
+    SUBDIR += enchant2
     SUBDIR += eo-aspell
     SUBDIR += eqe
     SUBDIR += erlang-edown
@@ -1316,6 +1317,7 @@
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
     SUBDIR += py-jaxml
+    SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
     SUBDIR += py-libtre
     SUBDIR += py-libxml2
@@ -1326,6 +1328,8 @@
     SUBDIR += py-markdown
     SUBDIR += py-markdown2
     SUBDIR += py-mistune
+    SUBDIR += py-mkdocs
+    SUBDIR += py-mkdocs-nature
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-nltk
     SUBDIR += py-numpydoc
@@ -1392,7 +1396,9 @@
     SUBDIR += py-stemming
     SUBDIR += py-syck
     SUBDIR += py-tabletext
+    SUBDIR += py-tablib
     SUBDIR += py-terminaltables
+    SUBDIR += py-textfsm
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
     SUBDIR += py-toronado
@@ -1511,7 +1517,6 @@
     SUBDIR += rubygem-escape_utils-rails4
     SUBDIR += rubygem-ezamar
     SUBDIR += rubygem-fast_xs
-    SUBDIR += rubygem-fast_xs073
     SUBDIR += rubygem-ferret
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji

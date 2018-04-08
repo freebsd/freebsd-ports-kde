@@ -709,7 +709,6 @@
     SUBDIR += p5-Net-Ident
     SUBDIR += p5-Net-Ifconfig-Wrapper
     SUBDIR += p5-Net-Interface
-    SUBDIR += p5-Net-Jaiku
     SUBDIR += p5-Net-Jifty
     SUBDIR += p5-Net-LDAP-AutoDNs
     SUBDIR += p5-Net-LDAP-AutoServer
@@ -907,7 +906,6 @@
     SUBDIR += packetdrill
     SUBDIR += packter-agent
     SUBDIR += panoptis
-    SUBDIR += paris-traceroute
     SUBDIR += passlogd
     SUBDIR += pathneck
     SUBDIR += pbnc
@@ -969,6 +967,7 @@
     SUBDIR += pecl-oauth
     SUBDIR += pecl-oauth2
     SUBDIR += pecl-radius
+    SUBDIR += pecl-rdkafka
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-yaz
     SUBDIR += pecl-yp
@@ -1122,6 +1121,7 @@
     SUBDIR += py-soap2py
     SUBDIR += py-soappy
     SUBDIR += py-socketio-client
+    SUBDIR += py-softlayer
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshuttle
     SUBDIR += py-stomp.py
@@ -1293,6 +1293,7 @@
     SUBDIR += rubygem-omniauth-twitter12
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-opennebula
+    SUBDIR += rubygem-ovirt-engine-sdk
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
     SUBDIR += rubygem-private_address_check

@@ -742,6 +742,7 @@
     SUBDIR += gettext-runtime
     SUBDIR += gettext-tools
     SUBDIR += gflags
+    SUBDIR += ghub
     SUBDIR += giggle
     SUBDIR += gindent
     SUBDIR += gio-sharp
@@ -1678,7 +1679,6 @@
     SUBDIR += lua-gettext
     SUBDIR += lua-lgi
     SUBDIR += lua-lpeg
-    SUBDIR += lua-lpeg51
     SUBDIR += lua-luacheck
     SUBDIR += lua-luarocks
     SUBDIR += lua-lunit
@@ -1703,6 +1703,7 @@
     SUBDIR += m17n-lib
     SUBDIR += m4
     SUBDIR += magit
+    SUBDIR += magit-popup
     SUBDIR += make++
     SUBDIR += makedepend
     SUBDIR += marisa-trie
@@ -3267,6 +3268,7 @@
     SUBDIR += p5-Rose-DateTime
     SUBDIR += p5-Rose-Object
     SUBDIR += p5-Router-R3
+    SUBDIR += p5-Routes-Tiny
     SUBDIR += p5-RunApp
     SUBDIR += p5-SDL
     SUBDIR += p5-SNMP-Persist
@@ -3505,6 +3507,7 @@
     SUBDIR += p5-Test-LeakTrace
     SUBDIR += p5-Test-LectroTest
     SUBDIR += p5-Test-LoadAllModules
+    SUBDIR += p5-Test-Log-Log4perl
     SUBDIR += p5-Test-Log4perl
     SUBDIR += p5-Test-LongString
     SUBDIR += p5-Test-Manifest
@@ -4309,6 +4312,7 @@
     SUBDIR += py-backports_abc
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-bidict
     SUBDIR += py-billiard
     SUBDIR += py-binplist
     SUBDIR += py-biplist
@@ -4454,6 +4458,7 @@
     SUBDIR += py-fabric
     SUBDIR += py-fabric3
     SUBDIR += py-fam
+    SUBDIR += py-fastcache
     SUBDIR += py-fasteners
     SUBDIR += py-fastentrypoints
     SUBDIR += py-fastimport
@@ -4995,6 +5000,8 @@
     SUBDIR += py-testinfra
     SUBDIR += py-testoob
     SUBDIR += py-testpath
+    SUBDIR += py-testresources
+    SUBDIR += py-testscenarios
     SUBDIR += py-testtools
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
@@ -5040,6 +5047,7 @@
     SUBDIR += py-usb
     SUBDIR += py-user_agents
     SUBDIR += py-utils
+    SUBDIR += py-validators
     SUBDIR += py-validictory
     SUBDIR += py-vcrpy
     SUBDIR += py-vcversioner
@@ -5486,7 +5494,9 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store011
+    SUBDIR += rubygem-flipper-active_support_cache_store013
     SUBDIR += rubygem-flipper011
+    SUBDIR += rubygem-flipper013
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core

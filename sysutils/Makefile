@@ -459,6 +459,7 @@
     SUBDIR += hal-info
     SUBDIR += hardlink
     SUBDIR += hare
+    SUBDIR += hared
     SUBDIR += hatop
     SUBDIR += hdrecover
     SUBDIR += healthd
@@ -497,6 +498,7 @@
     SUBDIR += installwatch
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
+    SUBDIR += intel-pcm-devel
     SUBDIR += intel-qcu
     SUBDIR += iocage
     SUBDIR += iocell

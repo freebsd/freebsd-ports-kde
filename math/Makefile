@@ -84,6 +84,7 @@
     SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
+    SUBDIR += R-cran-spData
     SUBDIR += R-cran-spdep
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
@@ -95,7 +96,6 @@
     SUBDIR += SCIP
     SUBDIR += SoPlex
     SUBDIR += aamath
-    SUBDIR += abacus
     SUBDIR += abakus
     SUBDIR += abs
     SUBDIR += acalc
@@ -110,6 +110,7 @@
     SUBDIR += analitza
     SUBDIR += analitza-kde4
     SUBDIR += ann
+    SUBDIR += antic
     SUBDIR += apc
     SUBDIR += arb
     SUBDIR += aribas
@@ -330,6 +331,7 @@
     SUBDIR += mpexpr
     SUBDIR += mpfr
     SUBDIR += mpir
+    SUBDIR += mppp
     SUBDIR += mprime
     SUBDIR += msieve
     SUBDIR += mtl
@@ -644,6 +646,7 @@
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
+    SUBDIR += py-cyipopt
     SUBDIR += py-fastcluster
     SUBDIR += py-ffc
     SUBDIR += py-fiat
@@ -656,6 +659,7 @@
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
+    SUBDIR += py-levmar
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
@@ -679,6 +683,9 @@
     SUBDIR += py-pyhull
     SUBDIR += py-pymc
     SUBDIR += py-pymc3
+    SUBDIR += py-pyneqsys
+    SUBDIR += py-pynleq2
+    SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
     SUBDIR += py-pysym
     SUBDIR += py-pyvtk
@@ -687,6 +694,7 @@
     SUBDIR += py-seaborn
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
+    SUBDIR += py-sym
     SUBDIR += py-symcxx
     SUBDIR += py-symeig
     SUBDIR += py-sympy

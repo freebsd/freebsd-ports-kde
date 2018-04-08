@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	keyring
-DISTVERSION=	10.5.1
+DISTVERSION=	12.0.1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +13,11 @@ COMMENT=	Store and access your passwords safely
 LICENSE=	PSFL
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>=1.15.1:devel/py-setuptools_scm@${FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}entrypoints>=0.2.3:devel/py-entrypoints@${FLAVOR}
 
-NO_ARCH=	yes
 USES=		python
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist concurrent distutils
+NO_ARCH=	yes
 
 OPTIONS_DEFINE=		DBUS KEYRINGS_ALT SECRET_SERVICE
 OPTIONS_DEFAULT=	KEYRINGS_ALT SECRET_SERVICE
