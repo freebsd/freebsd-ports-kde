@@ -586,6 +586,7 @@ share/locale/is/LC_MESSAGES/katetextfilter.mo
 share/locale/is/LC_MESSAGES/katexmltools.mo
 share/locale/is/LC_MESSAGES/kwrite.mo
 share/locale/it/LC_MESSAGES/kate-ctags-plugin.mo
+share/locale/it/LC_MESSAGES/kate-replicode-plugin.mo
 share/locale/it/LC_MESSAGES/kate.mo
 share/locale/it/LC_MESSAGES/katebacktracebrowserplugin.mo
 share/locale/it/LC_MESSAGES/katebuild-plugin.mo

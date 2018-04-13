@@ -1,8 +1,5 @@
 # $FreeBSD$
 
-# Temporary override:
-KDE_APPLICATIONS_SHLIB_VER=	5.7.81
-
 PORTNAME=	akonadi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	databases kde kde-applications
