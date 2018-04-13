@@ -7,8 +7,7 @@ CATEGORIES=	audio kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Sound editor for KDE
 
-BUILD_DEPENDS=	convert:graphics/ImageMagick \
-		llvm50>=0:devel/llvm50
+BUILD_DEPENDS=	convert:graphics/ImageMagick
 LIB_DEPENDS=	libaudiofile.so:audio/libaudiofile \
 		libFLAC.so:audio/flac \
 		libfftw3.so:math/fftw3 \
@@ -35,9 +34,14 @@ ALSA_LIB_DEPENDS=		libasound.so:audio/alsa-lib
 PULSEAUDIO_CMAKE_BOOL=		WITH_PULSEAUDIO
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 
+.include <bsd.port.pre.mk>
+
+.  if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100000 && ${OSVERSION} < 1101505
+BUILD_DEPENDS+=		llvm50>=0:devel/llvm50
 # Build is broken on 11.x as clang is not new enough.
 # Workaround by manually setting CC to clang50.
-CC=	${LOCALBASE}/bin/clang50
-CXX=	${LOCALBASE}/bin/clang++50
+CC=		${LOCALBASE}/bin/clang50
+CXX=		${LOCALBASE}/bin/clang++50
+.  endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

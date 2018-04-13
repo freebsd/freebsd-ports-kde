@@ -411,9 +411,6 @@
     SUBDIR += kamera-kde4
     SUBDIR += kcolorchooser
     SUBDIR += kcolorchooser-kde4
-    SUBDIR += kcoloredit-kde4
-    SUBDIR += kdegraphics
-    SUBDIR += kcolorchooser-kde4
     SUBDIR += kcoloredit
     SUBDIR += kdegraphics-kde4
     SUBDIR += kdegraphics-mobipocket

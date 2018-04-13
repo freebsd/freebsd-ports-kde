@@ -543,6 +543,7 @@
     SUBDIR += kdebugsettings
     SUBDIR += kdeadmin
     SUBDIR += kdeadmin-kde4
+    SUBDIR += kdebugsettings
     SUBDIR += kdf
     SUBDIR += kdf-kde4
     SUBDIR += kdialog
@@ -556,6 +557,7 @@
     SUBDIR += kfloppy-kde4
     SUBDIR += khelpcenter
     SUBDIR += kfloppy-kde4
+    SUBDIR += khelpcenter
     SUBDIR += kiconvtool
     SUBDIR += kldfind
     SUBDIR += kldpatch
@@ -662,9 +664,9 @@
     SUBDIR += megarc
     SUBDIR += memdump
     SUBDIR += memfetch
-    SUBDIR += memtest
     SUBDIR += memtest86
     SUBDIR += memtest86+
+    SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
     SUBDIR += mgeupsd

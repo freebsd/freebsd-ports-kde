@@ -294,7 +294,7 @@ _USE_KDEPIM5_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
 			contacts eventviews gapi grantleetheme \
 			gravatar identitymanagement imap \
 			incidenceeditor kdepim-addons kdepim-apps-libs \
-			kdepim-runtime5 kdepim5 kontactinterface kpimdav \
+			kdepim-runtime5 kontactinterface kpimdav \
 			ksmtp ldap libkdepim libkleo libksieve mailcommon \
 			mailimporter mailtransport mbox messagelib \
 			mime pimcommon pimtextedit syndication tnef
@@ -734,7 +734,6 @@ user-manager_PORT=	sysutils/plasma5-user-manager
 user-manager_PATH=	${QT_PLUGINDIR}/user_manager.so
 # ====================== end of plasma components ==============================
 
-
 # ====================== pim5 components =======================================
 akonadicontacts_PORT=	net/akonadi-contacts
 akonadicontacts_LIB=	libKF5AkonadiContact.so
@@ -794,7 +793,7 @@ incidenceeditor_PORT=	net/incidenceeditor
 incidenceeditor_LIB=	libKF5IncidenceEditor.so
 
 kdepim-addons_PORT=	deskutils/kdepim-addons
-kdepim-addons_PATH=	${KDE_PREFIX}/lib/akonadi/contact/editorpageplugins/cryptopageplugin.so
+kdepim-addons_PATH=	${KDE_PREFIX}/lib/contacteditor/editorpageplugins/cryptopageplugin.so
 
 kdepim-apps-libs_PORT=	deskutils/kdepim-apps-libs
 kdepim-apps-libs_LIB=	libKF5SendLater.so
@@ -802,17 +801,14 @@ kdepim-apps-libs_LIB=	libKF5SendLater.so
 kdepim-runtime5_PORT=	deskutils/kdepim-runtime
 kdepim-runtime5_LIB=	libakonadi-filestore.so.5
 
-kdepim5_PORT=		deskutils/kdepim
-kdepim5_PATH=		${KDE_PREFIX}/bin/akonadiconsole
-
 kontactinterface_PORT=	net/kontactinterface
 kontactinterface_LIB=	libKF5KontactInterface.so
 
 kpimdav_PORT=		net/kdav
 kpimdav_LIB=		libKPimKDAV.so
 
-ksmtp_PORT=			net/ksmtp
-ksmtp_LIB=			libKPimSMTP.so
+ksmtp_PORT=		net/ksmtp
+ksmtp_LIB=		libKPimSMTP.so
 
 ldap_PORT=		net/kldap
 ldap_LIB=		libKF5Ldap.so
@@ -934,6 +930,7 @@ okular4_PORT=		graphics/okular-kde4
 okular4_LIB=		libokularcore.so
 okular5_PORT=		graphics/okular
 okular5_LIB=		libOkular5Core.so
+# ====================== end of multiversion components ========================
 
 # ====================== select the proper multiversion component ==============
 .  for comp in ${_USE_KDE_BOTH}

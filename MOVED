@@ -864,7 +864,6 @@ devel/tclxml-libxml2|devel/tclxml|2009-11-26|Port now is part of devel/tclxml
 devel/tclxml-expat|devel/tclxml|2009-11-26|Port now is part of devel/tclxml
 www/tcldom|devel/tclxml|2009-11-26|Port now is part of devel/tclxml
 www/tcldom-libxml2|devel/tclxml|2009-11-26|Port now is part of devel/tclxml
-lang/erlang-doc||2009-11-27|Documentation now part of lang/erlang package
 devel/gtkmozedit||2009-11-27|No longer under development, does not build with libxul
 finance/p5-HTML-Query|www/p5-HTML-Query|2009-11-28|Moved to www category
 graphics/clutter-cairo|graphics/clutter|2009-11-28|This port is obsolete, all functionality is now in graphics/clutter
@@ -8248,7 +8247,6 @@ security/easypg||2016-05-22|Has expired: Included into emacs since 2.3
 misc/kdehier4||2016-05-25|Not used since 2014
 devel/maven-ant-tasks||2016-05-27|Use Maven directly
 graphics/py-imaging|graphics/py-pillow|2016-05-28|Has expired: Unmaintained upstream; use graphics/py-pillow
-textproc/py-curator|textproc/py-elasticsearch-curator-py|2016-05-29|Follow existing Elasticsearch naming conventions
 databases/py-psycopg|databases/py-psycopg2|2016-05-29|Has expired: This port is obsoleted by databases/py-psycopg2
 security/py-clamav|security/py-pyclamd|2016-05-30|Has expired: Not updated since 2008 by upstream and abandoned in favor of pyClamd (security/py-pyclamd)
 graphics/ruby-gdal||2016-05-31|Has expired: disabled by upstream (https://trac.osgeo.org/gdal/changeset/28756)
@@ -8706,7 +8704,6 @@ www/hydra||2016-11-01|Has expired: Broken for more than 6 months
 math/py-pyfst||2016-11-01|Has expired: Broken for more than 6 months
 archivers/ruby-zip||2016-11-01|Has expired: Broken will all supported versions of Ruby
 devel/ruby-langscan||2016-11-01|Has expired: Broken will all supported versions of Ruby
-math/octave-forge-dicom||2016-11-01|Has expired: Broken for more than 6 months
 graphics/linux-c6-libGLU|graphics/linux-c6-dri|2016-11-04|Unused
 graphics/linux-c7-libGLU|graphics/linux-c7-dri|2016-11-04|Unused
 multimedia/libmovtar||2016-11-05|Not used anymore, abandonware
@@ -10141,3 +10138,15 @@ net-im/py-pyxmpp||2018-04-03|Has expired: Obsoleted in favor of PyXMPP2
 converters/php5-bsdconv|converters/php-bsdconv|2018-04-03|It supports PHP 7 since 11.5.0
 converters/rubygem-bsdconv|converters/rubygem-ruby-bsdconv|2018-04-03|Rename to match our rubygem- port naming
 www/piwik|www/matomo|2018-04-06|Project renamed
+textproc/py-curator-py|textproc/py-elasticsearch-curator|2018-04-09|Follow existing Elasticsearch naming conventions
+sysutils/memtest|sysutils/memtester|2018-04-09|Use actual upstream name
+textproc/elasticsearch5-x-pack||2018-04-09|Use elasticsearch-plugin to install X-Pack
+textproc/kibana5-x-pack||2018-04-09|Use kibana-plugin to install X-Pack
+textproc/elasticsearch||2018-04-09|ElasticSearch 1.x End of Life
+textproc/elasticsearch-plugin-hq||2018-04-09|ElasticSearch 1.x End of Life
+textproc/elasticsearch-plugin-marvel||2018-04-09|ElasticSearch 1.x End of Life
+textproc/elasticsearch-plugin-migration||2018-04-09|ElasticSearch 1.x End of Life
+textproc/elasticsearch-plugin-sql||2018-04-09|ElasticSearch 1.x End of Life
+textproc/elasticsearch-river-rabbitmq||2018-04-09|ElasticSearch 1.x End of Life
+devel/libkgapi|devel/libkgapi-kde4|2018-04-11|Make room for KDE updates
+finance/libalkimia|finance/alkimia-qt4|2018-04-13|Project renamed

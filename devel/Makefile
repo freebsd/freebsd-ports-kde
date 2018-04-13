@@ -15,6 +15,7 @@
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
+    SUBDIR += R-cran-abind
     SUBDIR += R-cran-bindr
     SUBDIR += R-cran-bindrcpp
     SUBDIR += R-cran-bit
@@ -891,6 +892,7 @@
     SUBDIR += hadoop2
     SUBDIR += hapy
     SUBDIR += hcs12mem
+    SUBDIR += heimdall
     SUBDIR += hexcompare
     SUBDIR += hexd
     SUBDIR += hg-git
@@ -1300,6 +1302,7 @@
     SUBDIR += kickassembler
     SUBDIR += kio-extras
     SUBDIR += kimwitu
+    SUBDIR += kio-extras
     SUBDIR += kore
     SUBDIR += ksql
     SUBDIR += kyra
@@ -4142,6 +4145,7 @@
     SUBDIR += protobuf
     SUBDIR += protobuf-c
     SUBDIR += protobuf25
+    SUBDIR += protozero
     SUBDIR += pructl
     SUBDIR += psptoolchain
     SUBDIR += psptoolchain-binutils
@@ -4833,6 +4837,7 @@
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-flake8
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
     SUBDIR += py-pytest-runner
@@ -4980,9 +4985,9 @@
     SUBDIR += py-subversion
     SUBDIR += py-subvertpy
     SUBDIR += py-sure
+    SUBDIR += py-swagger-spec-validator
     SUBDIR += py-sysctl
     SUBDIR += py-sysv_ipc
-    SUBDIR += py-swagger-spec-validator
     SUBDIR += py-tables
     SUBDIR += py-tabulate
     SUBDIR += py-tapi
@@ -5623,6 +5628,7 @@
     SUBDIR += rubygem-lumberjack
     SUBDIR += rubygem-main
     SUBDIR += rubygem-map
+    SUBDIR += rubygem-marcel
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize

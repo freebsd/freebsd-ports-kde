@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+# TODO: once plasma5 ports are in, re-add dependency on workspace.
+
 PORTNAME=	ktorrent
 DISTVERSION=	5.1.0
 CATEGORIES=	net-p2p kde

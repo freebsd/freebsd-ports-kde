@@ -101,6 +101,8 @@
     SUBDIR += grantlee-editor
     SUBDIR += grantleetheme
     SUBDIR += gpicker
+    SUBDIR += grantlee-editor
+    SUBDIR += grantleetheme
     SUBDIR += griffith
     SUBDIR += growl-for-linux
     SUBDIR += gruler

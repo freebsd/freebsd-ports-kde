@@ -252,10 +252,6 @@
     SUBDIR += ktouch
     SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz
-    SUBDIR += kgeography-kde4
-    SUBDIR += klettres-kde4
-    SUBDIR += krecipes-kde4
-    SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz-kde4
     SUBDIR += latex-mk
     SUBDIR += lazyread
@@ -306,6 +302,9 @@
     SUBDIR += nut
     SUBDIR += ondir
     SUBDIR += opencyc
+    SUBDIR += openhab2
+    SUBDIR += openhab2-addons
+    SUBDIR += openmvg
     SUBDIR += openr2
     SUBDIR += orville-write
     SUBDIR += osinfo-db

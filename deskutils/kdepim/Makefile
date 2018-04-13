@@ -7,21 +7,7 @@ CATEGORIES=	deskutils kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM applications metaport
 
-RUN_DEPENDS=	calendarjanitor:deskutils/akonadi-calendar-tools \
-		akonadiconsole:deskutils/akonadiconsole \
-		akregator:deskutils/akregator \
-		headerthemeeditor:deskutils/grantlee-editor \
-		kaddressbook:deskutils/kaddressbook \
-		kalarm:deskutils/kalarm \
-		kmail_antivir.sh:deskutils/kdepim-addons \
-		kleopatra:security/kleopatra \
-		kmail:deskutils/kmail \
-		knotes:deskutils/knotes \
-		kontact:deskutils/kontact \
-		korganizer:deskutils/korganizer \
-		pimsettingexporter:deskutils/pim-data-exporter \
-		akonadi_imap_resource:deskutils/kdepim-runtime
-
 USES=		kde:5 metaport
+USE_KDE=	${_USE_KDEPIM5_ALL}
 
 .include <bsd.port.mk>

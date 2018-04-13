@@ -466,11 +466,11 @@
     SUBDIR += jvgs
     SUBDIR += jzip
     SUBDIR += kajaani-kombat
+    SUBDIR += kajongg
     SUBDIR += kajongg-kde4
     SUBDIR += kanagram
     SUBDIR += kanagram-kde4
     SUBDIR += kapman
-    SUBDIR += kanagram-kde4
     SUBDIR += kapman-kde4
     SUBDIR += kardsgt
     SUBDIR += kartofel
@@ -484,10 +484,6 @@
     SUBDIR += kbounce
     SUBDIR += kbounce-kde4
     SUBDIR += kbreakout
-    SUBDIR += katomic-kde4
-    SUBDIR += kblackbox-kde4
-    SUBDIR += kblocks-kde4
-    SUBDIR += kbounce-kde4
     SUBDIR += kbreakout-kde4
     SUBDIR += kcheckers
     SUBDIR += kdegames
@@ -576,7 +572,6 @@
     SUBDIR += libkdegames
     SUBDIR += libkdegames-kde4
     SUBDIR += libkmahjongg
-    SUBDIR += libkdegames-kde4
     SUBDIR += libkmahjongg-kde4
     SUBDIR += liblcf
     SUBDIR += libmaitretarot
