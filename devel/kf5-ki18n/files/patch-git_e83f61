@@ -1,0 +1,48 @@
+From e83f612fa1ce1539d0393067c91c0a01ab5edab5 Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@FreeBSD.org>
+Date: Sun, 15 Apr 2018 21:16:59 +0200
+Subject: [PATCH] Reduce the number of zombies to a minimum
+
+Summary:
+With Frameworks 5.45 [1] when building for example plasma-workspace, I get
+1000s of zombie processes, and the build hangs (burries zombies) for a long time.
+
+Whith this change here, this is no longer the case.
+
+[1] Probably from: https://phabricator.kde.org/D10776
+
+Reviewers: #freebsd, sitter, apol
+
+Subscribers: #frameworks
+
+Tags: #frameworks
+
+Differential Revision: https://phabricator.kde.org/D12231
+---
+ cmake/build-pofiles.cmake | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git cmake/build-pofiles.cmake cmake/build-pofiles.cmake
+index d0991ad..ca0b96b 100644
+--- cmake/build-pofiles.cmake
++++ cmake/build-pofiles.cmake
+@@ -31,7 +31,7 @@ include(ProcessorCount)
+ ProcessorCount(numberOfProcesses)
+ 
+ set(i 0)
+-set(commands)
++set(commands "")
+ 
+ function(_processCommands)
+     if(NOT commands)
+@@ -62,6 +62,7 @@ foreach(pofile IN LISTS pofiles)
+     if(i EQUAL ${numberOfProcesses})
+         _processCommands()
+         set(i 0)
++        set(commands "")
+     endif()
+ endforeach()
+ 
+-- 
+2.16.3
+
