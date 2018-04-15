@@ -3,7 +3,7 @@
 
 PORTNAME=	libkscreen
 PORTVERSION=	1.0.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMESUFFIX=	-kde4
@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	-kde4
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE screen management library
 
-LIB_DEPENDS=	libqjson.so:devel/qjson \
+LIB_DEPENDS=	libqjson.so:devel/qjson@qt4 \
 		libxcb.so:x11/libxcb \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-render-util.so:x11/xcb-util-renderutil

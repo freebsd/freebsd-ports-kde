@@ -9582,7 +9582,6 @@ databases/glom||2017-11-11|Has expired: Broken for more than 6 months
 math/bargraph||2017-11-11|Has expired: Unfetchable for more than six months (google code has gone away)
 audio/simon|audio/simon-kde4|2017-11-11|Apply consistent name to KDE4
 databases/kbibtex|databases/kbibtex-kde4|2017-11-11|Apply consistent name to KDE4
-devel/libkgapi|devel/libkgapi-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kcoloredit|graphics/kcoloredit-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kiconedit|graphics/kiconedit-kde4|2017-11-11|Apply consistent name to KDE4
 graphics/kpovmodeler|graphics/kpovmodeler-kde4|2017-11-11|Apply consistent name to KDE4
@@ -10150,3 +10149,10 @@ textproc/elasticsearch-plugin-sql||2018-04-09|ElasticSearch 1.x End of Life
 textproc/elasticsearch-river-rabbitmq||2018-04-09|ElasticSearch 1.x End of Life
 devel/libkgapi|devel/libkgapi-kde4|2018-04-11|Make room for KDE updates
 finance/libalkimia|finance/alkimia-qt4|2018-04-13|Project renamed
+security/py-zxcvbn-python|security/py-zxcvbn|2018-04-13|Renamed upstream
+devel/py-libusb115|devel/py-libusb1|2018-04-14|Unused and unmaintained upstream
+devel/qca-qt5|devel/qca@qt5|2018-04-14|Moved to a flavoured version
+devel/qjson-qt5|devel/qjson@qt5|2018-04-14|Moved to a flavoured version
+sysutils/polkit-qt5|sysutils/polkit-qt@qt5|2018-04-14|Moved to flavoured version
+multimedia/gstreamer1-qt4|multimedia/gstreamer1-qt@qt4|2018-04-14|Moved to a flavoured version
+multimedia/gstreamer1-qt5|multimedia/gstreamer1-qt@qt5|2018-04-14|Moved to a flavoured version
