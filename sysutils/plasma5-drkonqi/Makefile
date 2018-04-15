@@ -11,7 +11,7 @@ USES=		cmake:outsource kde:5 pkgconfig tar:xz
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		 crash i18n idletime jobwidgets kio notifications \
 		service wallet widgetsaddons xmlrpcclient
-USE_QT5=	core dbus gui widgets x11extras xml \
+USE_QT5=	concurrent core dbus gui network widgets x11extras xml \
 		buildtools_build qmake_build
 
 .include <bsd.port.mk>
