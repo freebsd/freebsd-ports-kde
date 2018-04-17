@@ -26,6 +26,7 @@
     SUBDIR += emboss
     SUBDIR += fasta
     SUBDIR += fasta3
+    SUBDIR += fastahack
     SUBDIR += fastdnaml
     SUBDIR += fastool
     SUBDIR += fastqc
@@ -111,6 +112,7 @@
     SUBDIR += seqtools
     SUBDIR += sim4
     SUBDIR += slclust
+    SUBDIR += smithwaterman
     SUBDIR += ssaha
     SUBDIR += stacks
     SUBDIR += tRNAscan-SE
@@ -122,6 +124,7 @@
     SUBDIR += trimmomatic
     SUBDIR += ugene
     SUBDIR += vcftools
+    SUBDIR += vcflib
     SUBDIR += velvet
     SUBDIR += wise
     SUBDIR += xmolwt
