@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libfakekey.so:x11/libfakekey \
-		libqca-qt5.so:devel/qca@@t5
+		libqca-qt5.so:devel/qca@qt5
 RUN_DEPENDS=	sshfs:sysutils/fusefs-sshfs
 
 CONFLICTS_INSTALL=	kdeconnect-kde-0.7*
