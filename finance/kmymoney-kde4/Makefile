@@ -2,7 +2,7 @@
 
 PORTNAME=	kmymoney
 PORTVERSION=	4.8.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMESUFFIX=	-kde4
@@ -29,6 +29,8 @@ USE_LDCONFIG=	yes
 # configure encryption:
 # Settings -> Configure KMyMoney... -> Encryption
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_Gpgmepp
+
+CONFLICTS_INSTALL=	kmymoney
 
 SHEBANG_FILES=	kmymoney/misc/financequote.pl
 

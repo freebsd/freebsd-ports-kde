@@ -960,6 +960,7 @@
     SUBDIR += py-halite
     SUBDIR += py-hared
     SUBDIR += py-honcho
+    SUBDIR += py-hpilo
     SUBDIR += py-iowait
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
@@ -1121,6 +1122,7 @@
     SUBDIR += runit
     SUBDIR += runit-faster
     SUBDIR += runwhen
+    SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
     SUBDIR += s6-rc
@@ -1419,6 +1421,7 @@
     SUBDIR += xstow
     SUBDIR += xsysstats
     SUBDIR += xvidcap
+    SUBDIR += yadm
     SUBDIR += yum
     SUBDIR += zap
     SUBDIR += zbackup
