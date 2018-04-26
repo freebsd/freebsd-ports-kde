@@ -2396,6 +2396,7 @@
     SUBDIR += ufdbguard
     SUBDIR += unit
     SUBDIR += unit-go
+    SUBDIR += unit-perl
     SUBDIR += unit-php
     SUBDIR += usermanager
     SUBDIR += uwsgi

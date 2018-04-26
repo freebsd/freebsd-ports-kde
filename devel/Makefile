@@ -42,6 +42,7 @@
     SUBDIR += R-cran-hms
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
+    SUBDIR += R-cran-later
     SUBDIR += R-cran-lubridate
     SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
@@ -52,6 +53,7 @@
     SUBDIR += R-cran-plogr
     SUBDIR += R-cran-plyr
     SUBDIR += R-cran-praise
+    SUBDIR += R-cran-promises
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
     SUBDIR += R-cran-randomForest
@@ -309,8 +311,10 @@
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
+    SUBDIR += cligen
     SUBDIR += clinfo
     SUBDIR += clisp-hyperspec
+    SUBDIR += clixon
     SUBDIR += clojure-cider
     SUBDIR += cloudabi
     SUBDIR += cloudabi-toolchain
@@ -590,6 +594,7 @@
     SUBDIR += etcd
     SUBDIR += etcd31
     SUBDIR += etcd32
+    SUBDIR += etcd33
     SUBDIR += etl
     SUBDIR += euca2ools
     SUBDIR += evemu
@@ -4299,6 +4304,7 @@
     SUBDIR += py-astor
     SUBDIR += py-astroid
     SUBDIR += py-asttokens
+    SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
     SUBDIR += py-asyncio
     SUBDIR += py-atomiclong

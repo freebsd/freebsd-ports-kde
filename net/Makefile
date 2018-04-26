@@ -201,8 +201,6 @@
     SUBDIR += gofish
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
-    SUBDIR += google-daemon
-    SUBDIR += google-startup-scripts
     SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += goreplay
@@ -214,6 +212,7 @@
     SUBDIR += grilo-plugins2
     SUBDIR += grilo2
     SUBDIR += grive2
+    SUBDIR += grpcurl
     SUBDIR += grsync
     SUBDIR += gsk
     SUBDIR += gspoof

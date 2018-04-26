@@ -417,12 +417,10 @@
     SUBDIR += octave-forge-nlwing2
     SUBDIR += octave-forge-nnet
     SUBDIR += octave-forge-nurbs
-    SUBDIR += octave-forge-ocs
     SUBDIR += octave-forge-oct2mat
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
-    SUBDIR += octave-forge-odepkg
     SUBDIR += octave-forge-optics
     SUBDIR += octave-forge-optim
     SUBDIR += octave-forge-optiminterp
@@ -630,6 +628,7 @@
     SUBDIR += php72-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
+    SUBDIR += piranha
     SUBDIR += plman
     SUBDIR += ploticus
     SUBDIR += ploticus-nox11
@@ -685,6 +684,7 @@
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-piranha
     SUBDIR += py-plastex
     SUBDIR += py-probstat
     SUBDIR += py-pyasp
@@ -767,6 +767,7 @@
     SUBDIR += sound-of-sorting
     SUBDIR += spar
     SUBDIR += spblas
+    SUBDIR += spectra
     SUBDIR += speedcrunch
     SUBDIR += spooles
     SUBDIR += spooles-mpich
