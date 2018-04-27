@@ -1,5 +1,5 @@
 bin/kamoso
-lib/gstreamer-1.0/gstkamoso-qt5videosink.so
+lib/gstreamer-1.0/gstkamosoqt5videosink.so
 share/applications/org.kde.kamoso.desktop
 share/icons/hicolor/16x16/apps/kamoso.png
 share/icons/hicolor/22x22/apps/kamoso.png
