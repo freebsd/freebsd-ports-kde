@@ -1273,6 +1273,7 @@
     SUBDIR += symbion-sslproxy
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
+    SUBDIR += teleport
     SUBDIR += testssl.sh
     SUBDIR += tinc
     SUBDIR += tinc-devel
