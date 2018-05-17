@@ -29,6 +29,15 @@
  	if (match)
  		xf86Msg(X_WARNING, "%s: device file already in use by %s. "
  			"Ignoring.\n", pInfo->name, pDevices->name);
+@@ -123,7 +124,7 @@ ret:
+ static struct
+ {
+ 	const char* type;
+-	__u16 tool[3]; /* tool array is terminated by 0 */
++	uint16_t tool[3]; /* tool array is terminated by 0 */
+ } wcmType [] =
+ {
+ 	{ "stylus", { BTN_TOOL_PEN,       0                  } },
 @@ -205,6 +206,10 @@ int wcmDeviceTypeKeys(InputInfoPtr pInfo
  		case 0x314: /* Intuos Pro S */
  		case 0x315: /* Intuos Pro M */

@@ -7,7 +7,8 @@ COMMENT=	X Clients under Wayland
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/wayland-protocols.pc:graphics/wayland-protocols
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
+		${LOCALBASE}/libdata/pkgconfig/wayland-protocols.pc:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 		libinput.so:x11/libinput
 

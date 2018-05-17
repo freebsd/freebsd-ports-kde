@@ -19,14 +19,13 @@ LIB_DEPENDS?=	libgsm.so:audio/gsm \
 		libpopt.so:devel/popt \
 		libopus.so:audio/opus \
 		librtlsdr.so:comms/rtl-sdr
-BUILD_DEPENDS=	pkg-config:devel/pkgconf \
-		${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	sm0svx
 GH_PROJECT=	svxlink
 
-USES=		cmake tcl groff
+USES=		cmake tcl groff pkgconfig
 CMAKE_SOURCE_PATH=	${WRKSRC}/src
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:FILEPATH=${MANDIRS} \
 		-DLOCAL_STATE_DIR=/var
