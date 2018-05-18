@@ -6,6 +6,7 @@ lib/plasma-discover/libDiscoverNotifiers.so
 %%QT_QMLDIR%%/org/kde/discovernotifier/libDiscoverNotifierDeclarativePlugin.so
 %%QT_QMLDIR%%/org/kde/discovernotifier/qmldir
 share/applications/org.kde.discover.desktop
+share/applications/org.kde.discover.snap.urlhandler.desktop
 share/applications/org.kde.discover.urlhandler.desktop
 share/icons/hicolor/128x128/apps/plasmadiscover.png
 share/icons/hicolor/16x16/apps/plasmadiscover.png

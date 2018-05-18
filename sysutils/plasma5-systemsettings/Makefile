@@ -11,8 +11,8 @@ USES=		cmake:outsource compiler:c++11-lib cpe gettext kde:5 tar:xz
 USE_KDE=	activities activities-stats auth codecs completion config \
 		configwidgets coreaddons crash dbusaddons doctools ecm i18n \
 		iconthemes itemviews jobwidgets js kcmutils kdeclarative khtml \
-		kio kirigami2 package parts service sonnet textwidgets \
-		widgetsaddons windowsystem xmlgui
+		kio kirigami2 package parts plasma-workspace service sonnet \
+		textwidgets widgetsaddons windowsystem xmlgui
 USE_QT5=	concurrent core dbus gui network qml quick widgets xml \
 		buildtools_build qmake_build
 

@@ -44,6 +44,7 @@ share/QtCurve/Breeze.qtcurve
 share/color-schemes/Breeze.colors
 share/color-schemes/BreezeDark.colors
 share/color-schemes/BreezeHighContrast.colors
+share/color-schemes/BreezeLight.colors
 share/icons/Breeze_Snow/cursors/00000000000000020006000e7e9ffc3f
 share/icons/Breeze_Snow/cursors/00008160000006810000408080010102
 share/icons/Breeze_Snow/cursors/03b6e0fcb3499374a867c041f52298f0
@@ -60,6 +61,7 @@ share/icons/Breeze_Snow/cursors/9d800788f1b08800ae810202380a0822
 share/icons/Breeze_Snow/cursors/a2a266d0498c3104214a47bd64ab0fc8
 share/icons/Breeze_Snow/cursors/alias
 share/icons/Breeze_Snow/cursors/all-scroll
+share/icons/Breeze_Snow/cursors/arrow
 share/icons/Breeze_Snow/cursors/b66166c04f8c3109214a4fbd64a50fc8
 share/icons/Breeze_Snow/cursors/bottom_left_corner
 share/icons/Breeze_Snow/cursors/bottom_right_corner
@@ -164,6 +166,7 @@ share/icons/breeze_cursors/cursors/9d800788f1b08800ae810202380a0822
 share/icons/breeze_cursors/cursors/a2a266d0498c3104214a47bd64ab0fc8
 share/icons/breeze_cursors/cursors/alias
 share/icons/breeze_cursors/cursors/all-scroll
+share/icons/breeze_cursors/cursors/arrow
 share/icons/breeze_cursors/cursors/b66166c04f8c3109214a4fbd64a50fc8
 share/icons/breeze_cursors/cursors/bottom_left_corner
 share/icons/breeze_cursors/cursors/bottom_right_corner
@@ -295,6 +298,7 @@ share/locale/hu/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/hu/LC_MESSAGES/breeze_style_config.mo
 share/locale/ia/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/ia/LC_MESSAGES/breeze_style_config.mo
+share/locale/id/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/id/LC_MESSAGES/breeze_style_config.mo
 share/locale/it/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/it/LC_MESSAGES/breeze_style_config.mo
