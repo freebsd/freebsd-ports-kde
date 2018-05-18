@@ -14,7 +14,7 @@ COMMENT=	Video editing system
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat \
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:multimedia/v4l_compat \
 		${LOCALBASE}/bin/analyseplugin:audio/ladspa
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libjack.so:audio/jack \

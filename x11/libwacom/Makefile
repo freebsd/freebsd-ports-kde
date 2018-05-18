@@ -12,6 +12,7 @@ COMMENT=	Adds tablet support to libinput
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	libgudev-1.0.so:devel/libgudev
 
 USES=		gettext-runtime gmake libtool localbase pkgconfig \

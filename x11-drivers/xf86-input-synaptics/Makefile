@@ -18,7 +18,7 @@ OPTIONS_DEFINE=	EVDEV
 EVDEV_DESC=	Use evdev for input events (requires kernel support)
 
 EVDEV_CONFIGURE_ENV=	BUILD_EVENTCOMM=yes
-EVDEV_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
+EVDEV_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 EVDEV_LIB_DEPENDS=	libevdev.so:devel/libevdev
 
 .include <bsd.port.mk>
