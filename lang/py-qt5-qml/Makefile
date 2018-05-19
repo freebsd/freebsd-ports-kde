@@ -1,7 +1,6 @@
 # $FreeBSD$
 
 PORTNAME=	qml
-PORTREVISION=	5
 CATEGORIES=	lang devel python
 
 MAINTAINER=	kde@FreeBSD.org

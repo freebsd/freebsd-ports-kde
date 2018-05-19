@@ -1,7 +1,6 @@
 # $FreeBSD$
 
 PORTNAME=	printsupport
-PORTREVISION=	5
 CATEGORIES=	print python
 
 MAINTAINER=	kde@FreeBSD.org

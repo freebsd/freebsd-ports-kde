@@ -25,4 +25,5 @@
 %%PYQT_SIPDIR%%/QtQml/qqmlpropertymap.sip
 %%PYQT_SIPDIR%%/QtQml/qqmlpropertyvaluesource.sip
 %%PYQT_SIPDIR%%/QtQml/qqmlscriptstring.sip
+%%PYQT_SIPDIR%%/QtQml/qqml.sip
 %%API%%share/qt5/qsci/api/python/QtQml.api

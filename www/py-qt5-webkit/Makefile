@@ -1,7 +1,6 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTREVISION=	5
 CATEGORIES=	www devel python
 
 MAINTAINER=	kde@FreeBSD.org
