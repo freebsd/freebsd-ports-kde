@@ -305,6 +305,7 @@ share/locale/cs/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/cs/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/cs/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/cs/LC_MESSAGES/plasma_packagestructure_comic.mo
 share/locale/cs/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/cs/LC_MESSAGES/plasma_runner_converterrunner.mo
@@ -366,6 +367,7 @@ share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/de/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/de/LC_MESSAGES/plasma_packagestructure_comic.mo
 share/locale/de/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/de/LC_MESSAGES/plasma_runner_converterrunner.mo
@@ -1145,6 +1147,7 @@ share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.dict.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.minimizeall.mo
@@ -1157,6 +1160,7 @@ share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/pt_BR/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_packagestructure_comic.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/pt_BR/LC_MESSAGES/plasma_runner_converterrunner.mo
