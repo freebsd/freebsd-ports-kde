@@ -13,6 +13,8 @@ COMMENT=	Network monitoring tool with command line and web interfaces
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		Makefiles use hacks that don't work with recent automake.  Try net/ntopng
+
 LIB_DEPENDS=	libgdbm.so:databases/gdbm \
 		libevent.so:devel/libevent
 BUILD_DEPENDS=	rrdtool12>=1.2:databases/rrdtool12 \
@@ -65,7 +67,7 @@ XMLDUMP_CPPFLAGS=	-I${LOCALBASE}/include/libxml2 \
 # see http://www.cyberciti.biz/faq/freebsd-jumbo-frames-networking-configration/
 JUMBO_FRAMES_CONFIGURE_ON=	--enable-jumbo-frames
 
-MAKO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako
+MAKO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mako>0:textproc/py-mako@${PY_FLAVOR}
 
 pre-configure:
 	@(cd ${WRKSRC} && ./autogen.sh --noconfig)

@@ -22,9 +22,11 @@
     SUBDIR += R-cran-snow
     SUBDIR += R-cran-som
     SUBDIR += R-cran-udunits2
+    SUBDIR += abinit
     SUBDIR += afni
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
+    SUBDIR += atompaw
     SUBDIR += avogadro
     SUBDIR += bddsolve
     SUBDIR += bft
@@ -76,7 +78,6 @@
     SUBDIR += hdf
     SUBDIR += hdf5
     SUBDIR += hdf5-18
-    SUBDIR += hs-bio
     SUBDIR += hypre
     SUBDIR += iboview
     SUBDIR += isaac-cfd
@@ -123,10 +124,6 @@
     SUBDIR += nifticlib
     SUBDIR += openbabel
     SUBDIR += openkim
-    SUBDIR += orthanc
-    SUBDIR += orthanc-dicomweb
-    SUBDIR += orthanc-postgresql
-    SUBDIR += orthanc-webviewer
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find

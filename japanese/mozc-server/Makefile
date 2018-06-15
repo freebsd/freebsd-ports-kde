@@ -94,6 +94,7 @@ BUILD_MOZC_CMD=	cd ${BUILD_WRKSRC} && \
 		    CXX_target="${CXX}" \
 		    LD_host="${CXX}" \
 		    AR_host="${AR}" \
+		    ${MAKE_ENV} \
 		    ${PYTHON_CMD} build_mozc.py
 BUILD_MOZC_CMD_BUILD=	${BUILD_MOZC_CMD} build -c ${BUILD_MODE} ${_MAKE_JOBS}
 BUILD_GYP_CMD=	${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/gyp

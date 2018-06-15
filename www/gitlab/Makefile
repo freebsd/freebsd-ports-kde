@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	10.7.3
-PORTREVISION=	1
+PORTVERSION=	10.7.5
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -29,6 +29,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	gitlab-shell>=7.1.2:devel/gitlab-shell \
 	gitlab-workhorse>=4.1.0:www/gitlab-workhorse \
 	gitaly>=0.96.1:devel/gitaly \
+	gitlab-pages>=0.9.1:www/gitlab-pages \
 	redis>=2.8.23:databases/redis \
 	npm>=4.3.0:www/npm \
 	yarn>=0.17.0:www/yarn \
@@ -82,7 +83,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-hamlit26>=2.6.1:www/rubygem-hamlit26 \
 	rubygem-carrierwave>=1.1:www/rubygem-carrierwave \
 	rubygem-dropzonejs-rails07>=0.7.1:www/rubygem-dropzonejs-rails07 \
-	rubygem-fog-aws>=2.0.1:net/rubygem-fog-aws \
+	rubygem-fog-aws2>=2.0.1:net/rubygem-fog-aws2 \
 	rubygem-fog-core1>=1.44:devel/rubygem-fog-core1 \
 	rubygem-fog-google>=1.3.3:net/rubygem-fog-google \
 	rubygem-fog-local>=0.3:net/rubygem-fog-local \
@@ -185,13 +186,13 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-health_check26>=2.6.0:devel/rubygem-health_check26 \
 	rubygem-vmstat>=2.3.0:sysutils/rubygem-vmstat \
 	rubygem-sys-filesystem>=1.1.6:sysutils/rubygem-sys-filesystem \
-	rubygem-net-ssh>=4.2.0:security/rubygem-net-ssh \
+	rubygem-net-ssh4>=4.2.0:security/rubygem-net-ssh4 \
 	rubygem-sshkey>=1.9.0:security/rubygem-sshkey \
 	rubygem-rbnacl4<=4.0.2:security/rubygem-rbnacl4 \
 	rubygem-rbnacl-libsodium>=0:security/rubygem-rbnacl-libsodium \
 	rubygem-bcrypt_pbkdf>=1.0:security/rubygem-bcrypt_pbkdf \
 	rubygem-gitaly-proto096>=0.96.0:net/rubygem-gitaly-proto096 \
-	rubygem-grpc>=1.10.0:net/rubygem-grpc \
+	rubygem-grpc>=1.11.0:net/rubygem-grpc \
 	rubygem-gitaly>=0.8.0:net/rubygem-gitaly \
 	rubygem-google-protobuf351>=3.5.1:devel/rubygem-google-protobuf351 \
 	rubygem-toml-rb10>=1.0.0:www/rubygem-toml-rb10 \

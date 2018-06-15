@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	3.0
+DISTVERSION=	3.0.1
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
@@ -130,8 +130,10 @@ CPPFLAGS+=		-D__builtin_ms_va_list=__builtin_va_list \
 .endif
 
 # Wine assumes a WoW64 package is available however WoW64 is not yet available on FreeBSD.
+# Also fix the desktop file.
 post-patch:
 	${REINPLACE_CMD} 's|/wine|/wine64|g' ${WRKSRC}/tools/wineapploader.in
+	${REINPLACE_CMD} '/Exec/s|wine|wine64|g' ${WRKSRC}/loader/wine.desktop
 
 .else
 PLIST_SUB+=		WINE32="" WINE64="@comment "

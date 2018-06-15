@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	google-compute-engine
-DISTVERSION=	2.7.6
-PORTREVISION=	1
+DISTVERSION=	2.8.3
 CATEGORIES=	sysutils python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,17 +23,21 @@ USE_PYTHON=	autoplist concurrent distutils
 NO_ARCH=	yes
 
 USE_RC_SUBR=	google_instance_setup \
-		google_network_setup \
 		google_accounts_daemon \
 		google_clock_skew_daemon \
-		google_ip_forwarding_daemon \
+		google_network_daemon \
 		google_startup
 
 SUB_LIST=	PYTHON_CMD="${PYTHON_CMD}"
 REINPLACE_ARGS=	-i ''
 
 post-install:
+	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/syslog.d ${STAGEDIR}/etc
 	${INSTALL_DATA} ${FILESDIR}/instance_configs.cfg.distro.sample \
 		${STAGEDIR}${PREFIX}/etc/instance_configs.cfg.distro.sample
+	${INSTALL_DATA} ${FILESDIR}/90-google.conf.sample \
+		${STAGEDIR}${PREFIX}/etc/syslog.d/90-google.conf.sample
+	${INSTALL_DATA} ${FILESDIR}/google_set_hostname \
+		${STAGEDIR}/etc/dhclient-exit-hooks
 
 .include <bsd.port.mk>

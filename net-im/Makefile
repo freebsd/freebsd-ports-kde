@@ -133,6 +133,7 @@
     SUBDIR += pidgin-skype
     SUBDIR += pidgin-skypeweb
     SUBDIR += pidgin-twitter
+    SUBDIR += pidgin-window_merge
     SUBDIR += plasma-applet-ktp-kde4
     SUBDIR += poezio
     SUBDIR += profanity
@@ -144,6 +145,7 @@
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
     SUBDIR += purple-hangouts
+    SUBDIR += purple-slack
     SUBDIR += py-fbmq
     SUBDIR += py-jabber
     SUBDIR += py-jabberbot
