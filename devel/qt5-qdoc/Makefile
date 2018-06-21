@@ -8,6 +8,9 @@ PKGNAMEPREFIX=	qt5-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt documentation generator
 
+BUILD_DEPENDS=	llvm60>=0:devel/llvm60
+RUN_DEPENDS=	llvm60>=0:devel/llvm60
+
 USE_QT5=	core qml buildtools_build qdoc-data_run
 QT_DIST=	tools
 USES=		qmake
@@ -16,5 +19,7 @@ BUILD_WRKSRC=	${WRKSRC}/src/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 PLIST_FILES=	${QT_BINDIR}/qdoc
+
+CONFIGURE_ENV=	LLVM_INSTALL_DIR=${LOCALBASE}/llvm60
 
 .include <bsd.port.mk>
