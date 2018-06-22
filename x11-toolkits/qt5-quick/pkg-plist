@@ -1,4 +1,3 @@
-%%QT_LIBDIR%%/cmake/Qt5QuickCompiler/Qt5QuickCompilerConfig.cmake
 %%QT_BINDIR%%/qmlcachegen
 %%QT_INCDIR%%/QtPacketProtocol/%%FULLVER%%/QtPacketProtocol/private/qpacket_p.h
 %%QT_INCDIR%%/QtPacketProtocol/%%FULLVER%%/QtPacketProtocol/private/qpacketprotocol_p.h
@@ -378,6 +377,7 @@
 %%QT_CMAKEDIR%%/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake
 %%QT_CMAKEDIR%%/Qt5Quick/Qt5QuickConfig.cmake
 %%QT_CMAKEDIR%%/Qt5Quick/Qt5QuickConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt5QuickCompiler/Qt5QuickCompilerConfig.cmake
 %%QT_CMAKEDIR%%/Qt5QuickTest/Qt5QuickTestConfig.cmake
 %%QT_CMAKEDIR%%/Qt5QuickTest/Qt5QuickTestConfigVersion.cmake
 %%QT_CMAKEDIR%%/Qt5QuickWidgets/Qt5QuickWidgetsConfig.cmake
