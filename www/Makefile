@@ -100,8 +100,10 @@
     SUBDIR += csso
     SUBDIR += csstidy
     SUBDIR += ctemplate
+    SUBDIR += cutelyst
     SUBDIR += cutycapt
     SUBDIR += davical
+    SUBDIR += davix
     SUBDIR += dddbl
     SUBDIR += ddgr
     SUBDIR += decss
@@ -464,7 +466,6 @@
     SUBDIR += mod_php71
     SUBDIR += mod_php72
     SUBDIR += mod_proctitle
-    SUBDIR += mod_proxy_uwsgi
     SUBDIR += mod_proxy_xml
     SUBDIR += mod_python35
     SUBDIR += mod_qos
@@ -494,6 +495,7 @@
     SUBDIR += moodle32
     SUBDIR += moodle33
     SUBDIR += moodle34
+    SUBDIR += moodle35
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -523,7 +525,6 @@
     SUBDIR += nginx-naxsi
     SUBDIR += nibbleblog
     SUBDIR += node
-    SUBDIR += node4
     SUBDIR += node6
     SUBDIR += node8
     SUBDIR += nostromo
@@ -533,7 +534,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm-node4
     SUBDIR += npm-node6
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
@@ -554,7 +554,6 @@
     SUBDIR += nuvolaplayer-yandex-music
     SUBDIR += nuvolaplayer-youtube
     SUBDIR += obhttpd
-    SUBDIR += ocaml-net
     SUBDIR += opencart
     SUBDIR += opera
     SUBDIR += opera-linuxplugins
@@ -663,6 +662,7 @@
     SUBDIR += p5-CGI-FormBuilder
     SUBDIR += p5-CGI-Framework
     SUBDIR += p5-CGI-Kwiki
+    SUBDIR += p5-CGI-Lite
     SUBDIR += p5-CGI-Minimal
     SUBDIR += p5-CGI-PSGI
     SUBDIR += p5-CGI-Pager
@@ -682,7 +682,6 @@
     SUBDIR += p5-CGI-Utils
     SUBDIR += p5-CGI-XMLApplication
     SUBDIR += p5-CGI.pm
-    SUBDIR += p5-CGI_Lite
     SUBDIR += p5-CIF-Client
     SUBDIR += p5-CSS-DOM
     SUBDIR += p5-CSS-Inliner
@@ -972,6 +971,7 @@
     SUBDIR += p5-HTML-WikiConverter-UseMod
     SUBDIR += p5-HTML-WikiConverter-WakkaWiki
     SUBDIR += p5-HTML-WikiConverter-WikkaWiki
+    SUBDIR += p5-HTML5-DOM
     SUBDIR += p5-HTTP-Async
     SUBDIR += p5-HTTP-Body
     SUBDIR += p5-HTTP-BrowserDetect
@@ -987,6 +987,7 @@
     SUBDIR += p5-HTTP-Date
     SUBDIR += p5-HTTP-Engine
     SUBDIR += p5-HTTP-Engine-Middleware
+    SUBDIR += p5-HTTP-Entity-Parser
     SUBDIR += p5-HTTP-Exception
     SUBDIR += p5-HTTP-HeaderParser-XS
     SUBDIR += p5-HTTP-Headers-Fast
@@ -997,6 +998,7 @@
     SUBDIR += p5-HTTP-MobileAgent
     SUBDIR += p5-HTTP-MobileAgent-Plugin-Charset
     SUBDIR += p5-HTTP-MobileAgent-Plugin-Locator
+    SUBDIR += p5-HTTP-MultiPartParser
     SUBDIR += p5-HTTP-Negotiate
     SUBDIR += p5-HTTP-Parser
     SUBDIR += p5-HTTP-Parser-XS
@@ -1502,6 +1504,7 @@
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
+    SUBDIR += py-arxiv
     SUBDIR += py-autobahn
     SUBDIR += py-aws-requests-auth
     SUBDIR += py-azure-common
@@ -1516,6 +1519,7 @@
     SUBDIR += py-boto3
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
+    SUBDIR += py-branca
     SUBDIR += py-buku
     SUBDIR += py-cachecontrol
     SUBDIR += py-caldav
@@ -1669,6 +1673,7 @@
     SUBDIR += py-flask-wtf
     SUBDIR += py-flexget
     SUBDIR += py-flup6
+    SUBDIR += py-folium
     SUBDIR += py-formalchemy
     SUBDIR += py-formencode
     SUBDIR += py-frappe-bench
@@ -1910,6 +1915,7 @@
     SUBDIR += qupzilla-qt5
     SUBDIR += qutebrowser
     SUBDIR += radicale
+    SUBDIR += radicale2
     SUBDIR += red5
     SUBDIR += redaxo
     SUBDIR += redmine
@@ -2007,11 +2013,13 @@
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
+    SUBDIR += rubygem-gitlab-gollum-rugged_adapter
     SUBDIR += rubygem-gitlab-grack
     SUBDIR += rubygem-gitlab-turbolinks-classic
     SUBDIR += rubygem-goldfinger
     SUBDIR += rubygem-gollum
     SUBDIR += rubygem-gollum-grit_adapter
+    SUBDIR += rubygem-gollum-grit_adapter10
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gollum-lib-gitlab
     SUBDIR += rubygem-gollum-rugged_adapter
@@ -2247,6 +2255,8 @@
     SUBDIR += sogo2-activesync
     SUBDIR += sogo3
     SUBDIR += sogo3-activesync
+    SUBDIR += sogo4
+    SUBDIR += sogo4-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spdylay
     SUBDIR += spreadlogd

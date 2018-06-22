@@ -3,7 +3,7 @@
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 kde kde-applications
 PKGNAMESUFFIX=	-kde4
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libImath-2_2.so:graphics/ilmbase \
 		libgif.so:graphics/giflib \
 		libpng.so:graphics/png \
 		libhal.so:sysutils/hal \
-		libqca.so:devel/qca \
+		libqca.so:devel/qca@qt4 \
 		libpolkit-qt-core-1.so:sysutils/polkit-qt@qt4 \
 		libdbusmenu-qt.so:devel/libdbusmenu-qt@qt4 \
 		libstreams.so:deskutils/libstreams

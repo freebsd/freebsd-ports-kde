@@ -251,9 +251,9 @@
     SUBDIR += pcc
     SUBDIR += pecl-perl
     SUBDIR += perl5-devel
-    SUBDIR += perl5.22
     SUBDIR += perl5.24
     SUBDIR += perl5.26
+    SUBDIR += perl5.28
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += phantomjs
@@ -324,7 +324,6 @@
     SUBDIR += scheme48
     SUBDIR += scm
     SUBDIR += sdcc
-    SUBDIR += sdcc-devel
     SUBDIR += see
     SUBDIR += seed7
     SUBDIR += siod
@@ -344,6 +343,7 @@
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey38
+    SUBDIR += spidermonkey52
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

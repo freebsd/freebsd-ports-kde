@@ -16,8 +16,6 @@
     SUBDIR += adodb5
     SUBDIR += akonadi
     SUBDIR += akonadi-kde4
-    SUBDIR += animenfo-client
-    SUBDIR += animenfo-client-gtk
     SUBDIR += apq
     SUBDIR += apq-mysql
     SUBDIR += apq-odbc
@@ -32,6 +30,7 @@
     SUBDIR += c3p0
     SUBDIR += cassandra-cpp-driver
     SUBDIR += casstcl
+    SUBDIR += cayley
     SUBDIR += cdb
     SUBDIR += cego
     SUBDIR += cegobridge
@@ -189,6 +188,8 @@
     SUBDIR += mariadb101-server
     SUBDIR += mariadb102-client
     SUBDIR += mariadb102-server
+    SUBDIR += mariadb103-client
+    SUBDIR += mariadb103-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
     SUBDIR += mdbtools
@@ -272,6 +273,8 @@
     SUBDIR += p5-CDB_File
     SUBDIR += p5-CDB_File-Generator
     SUBDIR += p5-CGI-Session-Driver-memcached
+    SUBDIR += p5-CHI-Driver-Memcached
+    SUBDIR += p5-CHI-Driver-Redis
     SUBDIR += p5-Cache-BDB
     SUBDIR += p5-Cache-Memcached
     SUBDIR += p5-Cache-Memcached-Fast
@@ -471,6 +474,7 @@
     SUBDIR += p5-Protocol-CassandraCQL
     SUBDIR += p5-RRD-Simple
     SUBDIR += p5-Redis
+    SUBDIR += p5-Redis-Fast
     SUBDIR += p5-Redis-hiredis
     SUBDIR += p5-RedisDB
     SUBDIR += p5-RedisDB-Parser
@@ -491,6 +495,7 @@
     SUBDIR += p5-SQL-Statement
     SUBDIR += p5-SQL-Translator
     SUBDIR += p5-SQLite-Work
+    SUBDIR += p5-Scope-Container-DBI
     SUBDIR += p5-Search-InvertedIndex
     SUBDIR += p5-Search-Namazu
     SUBDIR += p5-Search-Xapian10
@@ -886,16 +891,13 @@
     SUBDIR += qt5-sqldrivers-sqlite3
     SUBDIR += qt5-sqldrivers-tds
     SUBDIR += radix.v2
-    SUBDIR += rdb
-    SUBDIR += rdfdb
     SUBDIR += recutils
     SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
+    SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += retcl
-    SUBDIR += riak
-    SUBDIR += riak2
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
     SUBDIR += rrdman
@@ -904,7 +906,6 @@
     SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
     SUBDIR += ruby-gdbm
-    SUBDIR += ruby-mysql
     SUBDIR += ruby-odbc
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet

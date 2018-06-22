@@ -178,6 +178,7 @@
     SUBDIR += nedi
     SUBDIR += nefu
     SUBDIR += net-snmp
+    SUBDIR += netbox
     SUBDIR += netdata
     SUBDIR += netdisco
     SUBDIR += netdisco-mibs
@@ -314,6 +315,7 @@
     SUBDIR += py-msrest
     SUBDIR += py-msrestazure
     SUBDIR += py-napalm
+    SUBDIR += py-napalm-logs
     SUBDIR += py-ncclient
     SUBDIR += py-pdagent
     SUBDIR += py-pyIOSXR

@@ -5,10 +5,8 @@
 
     SUBDIR += adapta-backgrounds
     SUBDIR += adapta-gtk-theme
-    SUBDIR += adwaita-common
     SUBDIR += adwaita-icon-theme
-    SUBDIR += adwaita-qt4
-    SUBDIR += adwaita-qt5
+    SUBDIR += adwaita-qt
     SUBDIR += arc-gruvbox-theme
     SUBDIR += audacious-skins
     SUBDIR += beastie
@@ -124,6 +122,7 @@
     SUBDIR += kf5-kemoticons
     SUBDIR += kf5-kiconthemes
     SUBDIR += kf5-oxygen-icons5
+    SUBDIR += kf5-qqc2-desktop-style
     SUBDIR += lumina-themes
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme

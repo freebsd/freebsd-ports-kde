@@ -14,6 +14,7 @@ LICENSE=	GPLv2+ LGPL20+
 LICENSE_COMB=	multi
 
 BROKEN_FreeBSD_10=	error: "SSE instruction set not enabled"
+BROKEN_aarch64=		fails to compile: mmintrin.h:47:5: use of undeclared identifier '__builtin_ia32_emms'; did you mean '__builtin_isless'?
 
 USES=		cmake:outsource localbase:ldflags
 USE_GITHUB=	yes
@@ -65,7 +66,7 @@ PLUGINS_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 			libflann_cpp_s.so:math/flann \
 			libfreetype.so:print/freetype2 \
 			libpcl_people.so:graphics/pcl-pointclouds \
-			libpng16.so:graphics/png \
+			libpng.so:graphics/png \
 			libtiff.so:graphics/tiff \
 			libvtkDomainsChemistry-6.2.so:math/vtk6
 PLUGINS_IMPLIES=	SHAPELIB

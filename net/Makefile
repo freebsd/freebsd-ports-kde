@@ -53,7 +53,7 @@
     SUBDIR += bindtest
     SUBDIR += binkd
     SUBDIR += bird
-    SUBDIR += bird-devel
+    SUBDIR += bird2
     SUBDIR += bittwist
     SUBDIR += bluemix-cli
     SUBDIR += bmon
@@ -88,7 +88,8 @@
     SUBDIR += coda6_server
     SUBDIR += concourse-fly
     SUBDIR += corkscrew
-    SUBDIR += corosync
+    SUBDIR += corosync2
+    SUBDIR += corosync3
     SUBDIR += courier-authlib-ldap
     SUBDIR += cppzmq
     SUBDIR += crtmpserver
@@ -165,7 +166,8 @@
     SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
-    SUBDIR += frr
+    SUBDIR += frr3
+    SUBDIR += frr4
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -245,6 +247,7 @@
     SUBDIR += howl
     SUBDIR += hping
     SUBDIR += hs-aws
+    SUBDIR += hs-bsb-http-chunked
     SUBDIR += hs-connection
     SUBDIR += hs-gsasl
     SUBDIR += hs-hoauth2
@@ -258,6 +261,7 @@
     SUBDIR += hs-network-uri
     SUBDIR += hs-pcap
     SUBDIR += hs-publicsuffixlist
+    SUBDIR += hs-resolv
     SUBDIR += hs-sendfile
     SUBDIR += hs-simple-sendfile
     SUBDIR += hs-socks
@@ -406,18 +410,21 @@
     SUBDIR += libpcap
     SUBDIR += libpcapnav
     SUBDIR += libproxy
-    SUBDIR += libproxy-gnome
+    SUBDIR += libproxy-gnome2
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-mozjs
     SUBDIR += libproxy-perl
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit
+    SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
     SUBDIR += librouteros
     SUBDIR += librsync2
+    SUBDIR += libsignal
     SUBDIR += libsocket++
     SUBDIR += libsrtp
+    SUBDIR += libsrtp2
     SUBDIR += libstorj
     SUBDIR += libtnl
     SUBDIR += libtrace
@@ -481,6 +488,7 @@
     SUBDIR += mpich
     SUBDIR += mpich2
     SUBDIR += mping
+    SUBDIR += mptsd
     SUBDIR += mrouted
     SUBDIR += msend
     SUBDIR += mtr
@@ -903,7 +911,8 @@
     SUBDIR += p5-ldap2pw
     SUBDIR += p5-perl-ldap
     SUBDIR += p5-srv2pf
-    SUBDIR += pacemaker
+    SUBDIR += pacemaker1
+    SUBDIR += pacemaker2
     SUBDIR += packetdrill
     SUBDIR += packter-agent
     SUBDIR += panoptis
@@ -1085,7 +1094,6 @@
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pygeoip
-    SUBDIR += py-pyldap
     SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
@@ -1229,6 +1237,7 @@
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-aws1
+    SUBDIR += rubygem-fog-aws2
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-cloudatcost
@@ -1260,12 +1269,11 @@
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
-    SUBDIR += rubygem-gitaly-proto083
-    SUBDIR += rubygem-gitaly-proto084
     SUBDIR += rubygem-gitaly-proto088
     SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitaly-proto095
     SUBDIR += rubygem-gitaly-proto096
+    SUBDIR += rubygem-gitaly-proto099
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-grpc
@@ -1341,7 +1349,6 @@
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += s3ql
-    SUBDIR += samba45
     SUBDIR += samba46
     SUBDIR += samba47
     SUBDIR += samba48
@@ -1415,9 +1422,6 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
-    SUBDIR += syncthing-cli
-    SUBDIR += syncthing-discosrv
-    SUBDIR += syncthing-inotify
     SUBDIR += syndication
     SUBDIR += tableutil
     SUBDIR += tac_plus4
@@ -1517,6 +1521,8 @@
     SUBDIR += wakeonlan
     SUBDIR += whois
     SUBDIR += widentd
+    SUBDIR += wireguard
+    SUBDIR += wireguard-go
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wireshark-qt5

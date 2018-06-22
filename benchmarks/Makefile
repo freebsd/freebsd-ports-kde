@@ -44,7 +44,6 @@
     SUBDIR += netio
     SUBDIR += netperf
     SUBDIR += netperfmeter
-    SUBDIR += netpipe
     SUBDIR += nosqlbench
     SUBDIR += nqueens
     SUBDIR += nttcp
@@ -56,6 +55,7 @@
     SUBDIR += pathload
     SUBDIR += pathrate
     SUBDIR += pear-Benchmark
+    SUBDIR += perftest
     SUBDIR += phoronix-test-suite
     SUBDIR += pipebench
     SUBDIR += polygraph
