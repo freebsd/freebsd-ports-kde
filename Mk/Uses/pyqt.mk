@@ -241,7 +241,6 @@ PORTSCOUT?=	limit:^${_QT_VERSION:R}
 .endif
 
 PATCHDIR=	${.CURDIR}/../../devel/${PYQT_RELNAME}-core/files
-QSCIDIR=	${PREFIX}/share/qt${_PYQT_VERSION}/${PYTHON_VER}/qsci
 CONFIGURE_ARGS+=-b ${PREFIX}/bin \
 		-d ${PYTHONPREFIX_SITELIBDIR} \
 		-q ${QMAKE} \
