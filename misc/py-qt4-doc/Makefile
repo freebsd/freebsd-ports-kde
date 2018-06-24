@@ -20,16 +20,14 @@ USES=		python pyqt:4
 USE_PYQT=	#
 USE_PYTHON=	concurrent flavors py3kplist
 
-DOCSDIR=	${PYQT_DOCDIR}
-
 do-install:
 	cd ${WRKSRC} &&\
-		${MKDIR} ${STAGEDIR}${DOCSDIR} &&\
+		${MKDIR} ${STAGEDIR}${PYQT_DOCDIR} &&\
 		${INSTALL_DATA} LICENSE \
 				NEWS \
 				README \
 				THANKS\
-			${STAGEDIR}${DOCSDIR}
-	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR}
+			${STAGEDIR}${PYQT_DOCDIR}
+	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${STAGEDIR}${PYQT_DOCDIR}
 
 .include <bsd.port.mk>
