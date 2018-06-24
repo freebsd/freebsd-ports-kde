@@ -19,8 +19,6 @@ NO_BUILD=	yes
 USES=		python pyqt:4
 USE_PYTHON=	py3kplist concurrent flavors py3kplist
 
-EXAMPLESDIR=	${PYQT_EXAMPLEDIR}
-
 USE_PYQT=	assistant_run core_run dbus_run dbussupport_run declarative_run \
 		designer_run designerplugin_run doc_run gui_run help_run \
 		multimedia_run network_run opengl_run phonon_run qscintilla2_run \
@@ -29,13 +27,13 @@ USE_PYQT=	assistant_run core_run dbus_run dbussupport_run declarative_run \
 
 do-install:
 	${RM} ${WRKSRC}/examples/designer/plugins/plugins.py.orig
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${PYQT_EXAMPLEDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${PYQT_EXAMPLEDIR}
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR} \
-		${STAGEDIR}${EXAMPLESDIR}
+		${STAGEDIR}${PYQT_EXAMPLEDIR}
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR} \
-		${STAGEDIR}${EXAMPLESDIR}
+		${STAGEDIR}${PYQT_EXAMPLEDIR}
 
 .include <bsd.port.mk>

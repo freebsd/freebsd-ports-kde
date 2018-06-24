@@ -25,16 +25,14 @@ USE_PYQT=	core_run dbus_run designer_run \
 USE_PYTHON=	py3kplist concurrent flavors py3kplist
 NO_ARCH=	yes
 
-EXAMPLESDIR=	${PYQT_EXAMPLEDIR}
-
 do-install:
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${EXAMPLESDIR}
+	${MKDIR} ${STAGEDIR}${PYQT_EXAMPLEDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} \* ${STAGEDIR}${PYQT_EXAMPLEDIR}
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR} \
-		${STAGEDIR}${EXAMPLESDIR}
+		${STAGEDIR}${PYQT_EXAMPLEDIR}
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR} \
-		${STAGEDIR}${EXAMPLESDIR}
+		${STAGEDIR}${PYQT_EXAMPLEDIR}
 
 .include <bsd.port.mk>
