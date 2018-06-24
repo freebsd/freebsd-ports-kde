@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mod_md
-PORTVERSION=	1.1.10
-PORTREVISION=	3
+PORTVERSION=	1.1.12
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -14,6 +13,8 @@ COMMENT=	Early experience LetsEncrypt module for Apache httpd
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_powerpc64=	fails to compile: md_json.c:29: expected [error|warning|ignored] after '#pragma GCC diagnostic'
 
 LIB_DEPENDS=	libaprutil-1.so:devel/apr1 \
 		libcurl.so:ftp/curl \

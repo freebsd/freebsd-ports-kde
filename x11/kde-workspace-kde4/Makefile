@@ -2,7 +2,7 @@
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	20
+PORTREVISION=	21
 CATEGORIES=	x11 kde kde-applications
 PKGNAMESUFFIX=	-kde4
 
@@ -105,7 +105,7 @@ UPOWER_DESC=		Power management via UPower
 UPOWER_RUN_DEPENDS=	${LOCALBASE}/libexec/upowerd:sysutils/upower
 
 VLC_DESC=		Multimedia via Phonon-VLC
-VLC_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/plugins/phonon_backend/phonon_vlc.so:multimedia/phonon-vlc
+VLC_RUN_DEPENDS=	${KDE_PREFIX}/lib/kde4/plugins/phonon_backend/phonon_vlc.so:multimedia/phonon-vlc@qt4
 
 WALLPAPERS_DESC=	Install official KDE wallpapers
 WALLPAPERS_RUN_DEPENDS=	${KDE_PREFIX}/share/wallpapers/Horos/metadata.desktop:x11-themes/kde-wallpapers-kde4 \
@@ -133,7 +133,7 @@ pre-configure:
 		${PATCH_WRKSRC}/doc/CMakeLists.txt
 
 post-install:
-	${LN} -sf ${PREFIX}/bin/startkde ${STAGEDIR}${PREFIX}/bin/startkde4
+	${RLN} ${STAGEDIR}${PREFIX}/bin/startkde ${STAGEDIR}${PREFIX}/bin/startkde4
 # Install kde4.desktop to launch kde4 via sddm.
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
 	${INSTALL_DATA} ${FILESDIR}/kde4.desktop ${STAGEDIR}${PREFIX}/share/xsessions

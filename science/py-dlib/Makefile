@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	dlib
-DISTVERSION=	19.6
+DISTVERSION=	19.13
 CATEGORIES=	science devel math python
 MASTER_SITES=	http://dlib.net/files/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +11,10 @@ COMMENT=	Machine learning framework written in C++ (python bindings)
 
 LICENSE=	BSL
 LICENSE_FILE=	${WRKSRC}/dlib/LICENSE.txt
+
+BROKEN_aarch64=		fails to build: CMake Error at test_for_avx/CMakeLists.txt:17 (if): if given arguments: "EQUAL" "0" "AND" "compile_result": Unknown arguments specified
+BROKEN_armv6=		fails to build: CMake Error at test_for_avx/CMakeLists.txt:17 (if): if given arguments: "EQUAL" "0" "AND" "compile_result": Unknown arguments specified
+BROKEN_armv7=		fails to build: CMake Error at test_for_avx/CMakeLists.txt:17 (if): if given arguments: "EQUAL" "0" "AND" "compile_result": Unknown arguments specified
 
 BUILD_DEPENDS=		cmake:devel/cmake
 LIB_DEPENDS=		${PY_BOOST}
@@ -41,17 +45,17 @@ GIF_VARS=		gifargs="--yes DLIB_GIF_SUPPORT"
 GIF_VARS_OFF=		gifargs="--no DLIB_GIF_SUPPORT"
 
 SQLITE_USES=		sqlite
-SQLITE_VARS=		sqliteargs="--yes DLIB_LINK_WITH_SQLITE"
-SQLITE_VARS_OFF=	sqliteargs="--no DLIB_LINK_WITH_SQLITE"
+SQLITE_VARS=		sqliteargs="--yes DLIB_LINK_WITH_SQLITE3"
+SQLITE_VARS_OFF=	sqliteargs="--no DLIB_LINK_WITH_SQLITE3"
 
 BLASLAPACK_USES=	blaslapack
 BLASLAPACK_VARS_OFF=	avxargs="--no DLIB_USE_BLAS --no DLIB_USE_LAPACK --no DLIB_USE_MKL_FFT"
 
 AVX_VARS=		avxargs="--yes USE_AVX_INSTRUCTIONS"
 
-PYDISTUTILS_BUILDARGS=	--cmake-extra BOOST_PYTHON_SUFFIX:STRING=${PYTHON_SUFFIX} ${X11ARGS} ${JPEGARGS} ${PNGARGS} ${GIFARGS} ${SQLITEARGS} ${BLASLAPACKARGS} ${AVXARGS}
+PYDISTUTILS_BUILDARGS=	--set BOOST_PYTHON_SUFFIX:STRING=${PYTHON_SUFFIX} ${X11ARGS} ${JPEGARGS} ${PNGARGS} ${GIFARGS} ${SQLITEARGS} ${BLASLAPACKARGS} ${AVXARGS}
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/dlib/dlib.so
+	${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/dlib.so
 
 .include <bsd.port.mk>

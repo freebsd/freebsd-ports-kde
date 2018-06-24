@@ -4,7 +4,7 @@
 PORTNAME=	soundkonverter
 PORTVERSION=	2.2.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	audio kde
 
 MAINTAINER=	dbn@FreeBSD.org
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libtag.so:audio/taglib \
 		libcdda_paranoia.so:audio/cdparanoia \
-		libphonon.so:multimedia/phonon
+		libphonon.so:multimedia/phonon@qt4
 
 GH_ACCOUNT=	HessiJames
 USES=		cmake compiler:c++11-lang kde:4

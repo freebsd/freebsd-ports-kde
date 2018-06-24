@@ -3,7 +3,7 @@
 PORTNAME=	mongodb
 PORTVERSION=	3.4.6
 DISTVERSIONPREFIX=	r
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/ \
@@ -33,8 +33,8 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libboost_system.so:devel/boost-libs \
 		librocksdb.so:databases/rocksdb \
 		liblz4.so:archivers/liblz4
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml \
-		${PYTHON_PKGNAMEPREFIX}pymongo>=3.0:databases/pymongo
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}yaml>=3.11:devel/py-yaml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pymongo>=3.0:databases/pymongo@${PY_FLAVOR}
 
 USES=		compiler:c++14-lang cpe python:build scons
 USE_RC_SUBR=	mongod \
@@ -51,7 +51,6 @@ CONFLICTS_INSTALL=	mongodb \
 			mongodb32 \
 			mongodb34
 
-WITH_DEBUG=yes
 MAKE_ARGS=	--prefix=${STAGEDIR}${PREFIX} \
 		--use-system-pcre --use-system-snappy \
 		--use-system-boost --use-system-zlib \

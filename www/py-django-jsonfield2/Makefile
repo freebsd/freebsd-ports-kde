@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	jsonfield2
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}django-
 
@@ -12,7 +12,7 @@ COMMENT=	Reusable Django field to store validated JSON in your model
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django111>=0:www/py-django111@${FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django111>=0:www/py-django111@${PY_FLAVOR}
 
 NO_ARCH=	yes
 USE_PYTHON=	autoplist distutils

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	google-cloud-sdk
-PORTVERSION=	200.0.0
-PORTREVISION=	1
+PORTVERSION=	206.0.0
 CATEGORIES=	net
 MASTER_SITES=	https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/
 DISTNAME=	google-cloud-sdk-${PORTVERSION}-linux-x86_64
@@ -17,7 +16,7 @@ WRKSRC=		${WRKDIR}/google-cloud-sdk
 PLIST_FILES=	bin/bq bin/gcloud bin/git-credential-gcloud.sh bin/gsutil
 
 RUN_DEPENDS=	python:lang/python \
-		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3
+		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR}
 
 post-extract:
 	@${RM} -r \

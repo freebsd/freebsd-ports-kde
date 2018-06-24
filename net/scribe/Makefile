@@ -11,6 +11,8 @@ COMMENT=	Aggregating log data streamed in real time
 
 LICENSE=	APACHE20
 
+BROKEN=		fails to build
+
 BUILD_DEPENDS=	fb303>0:devel/fb303 \
 		thrift:devel/thrift
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
@@ -18,7 +20,7 @@ LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libthrift.so:devel/thrift-cpp
 RUN_DEPENDS=	p5-Class-Accessor>0:devel/p5-Class-Accessor \
 		p5-Thrift>0:devel/p5-Thrift \
-		${PYTHON_PKGNAMEPREFIX}thrift>0:devel/py-thrift
+		${PYTHON_PKGNAMEPREFIX}thrift>0:devel/py-thrift@${PY_FLAVOR}
 
 BROKEN_powerpc64=	Does not build
 
