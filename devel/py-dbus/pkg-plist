@@ -12,9 +12,6 @@
 %%PYTHON_SITELIBDIR%%/dbus/_expat_introspect_parser.py
 %%PYTHON_SITELIBDIR%%/dbus/_expat_introspect_parser.pyc
 %%PYTHON_SITELIBDIR%%/dbus/_expat_introspect_parser.pyo
-%%PYTHON_SITELIBDIR%%/dbus/_version.py
-%%PYTHON_SITELIBDIR%%/dbus/_version.pyc
-%%PYTHON_SITELIBDIR%%/dbus/_version.pyo
 %%PYTHON_SITELIBDIR%%/dbus/bus.py
 %%PYTHON_SITELIBDIR%%/dbus/bus.pyc
 %%PYTHON_SITELIBDIR%%/dbus/bus.pyo
