@@ -7,6 +7,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtWebEngine module
 
 # LICENSE set in Mk/Uses/pyqt.mk
+IGNORE=		Does not compile against WebEngine 5.9.5
 
 USES=		python pyqt:5
 USE_GL=		gl
