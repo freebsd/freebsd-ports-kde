@@ -3,6 +3,7 @@
 
 PORTNAME=	doc
 PORTVERSION=	${PYQT4_VERSION}
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	misc devel python
 MASTER_SITES=	${MASTER_SITES_PYQT4}
@@ -17,9 +18,9 @@ NO_BUILD=	yes
 
 USES=		python pyqt:4
 USE_PYQT=	#
-USE_PYTHON=	flavors
+USE_PYTHON=	concurrent flavors py3kplist
 
-DOCSDIR=	${PREFIX}/share/doc/py-qt4
+DOCSDIR=	${PYQT_DOCDIR}
 
 do-install:
 	cd ${WRKSRC} &&\

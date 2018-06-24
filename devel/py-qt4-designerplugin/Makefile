@@ -2,6 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	designerplugin
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	devel python
 
@@ -17,7 +18,7 @@ PYQT_DIST=	yes
 
 USES=		python pyqt:4
 USE_PYQT=	sip_build
-USE_PYTHON=	flavors
+USE_PYTHON=	concurrent flavors py3kplist
 USE_QT4=	corelib designer gui script xml moc_build qmake_build
 
 OPTIONS_DEFINE=		DEBUG

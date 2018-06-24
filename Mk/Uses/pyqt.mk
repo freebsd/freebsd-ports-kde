@@ -16,11 +16,10 @@
 #		* foo_build    only build depend
 #		* foo_run      only run depend
 #		* foo          both (default)
-# SIPDIR	- Absolute path where sip files will be installed
-# SIPDIR_REL	- Relative version of SIPDIR
-#
-# Also PYQT_SIPDIR=${SIPDIR_REL} will be added to PLIST_SUB.
-#
+# PYQT_SIPDIR	- where sip files will be installed to
+# PYQT_APIDIR	- where api files will be installed to
+# PYQT_DOCDIR	- where doc files will be installed to
+# PYQT_EXAMPLESDIR	- where examples will be installed to
 
 .if !defined(_INCLUDE_USES_PYQT_MK)
 _INCLUDE_USES_PYQT_MK=	yes
@@ -202,9 +201,26 @@ py-serialport_DESC=		Python bindings for QtSerialPort
 py-webkitwidgets_DESC=		Python bindings for QtWebKitWidgets module
 py-widgets_DESC=		Python bindings for QTWidgets module
 
-SIPDIR_REL=	share/py-sip/PyQt${_PYQT_VERSION}
-SIPDIR=		${PREFIX}/${SIPDIR_REL}
-PLIST_SUB+=	PYQT_SIPDIR=${SIPDIR_REL}
+# The versionned executable of sip
+SIP=		${LOCALBASE}/bin/sip-${PYTHON_VER}
+
+# Relative directories
+_VERSION_SUBDIR_REL=	PyQt${_PYQT_VERSION}/${PYTHON_VER}
+_APIDIR_REL=	share/${_VERSION_SUBDIR_REL}/qsci
+_DOCDIR_REL=	share/doc/${_VERSION_SUBDIR_REL}
+_EXAMPLEDIR_REL=	share/examples/${_VERSION_SUBDIR_REL}
+_SIPDIR_REL=	share/${_VERSION_SUBDIR_REL}/sip
+
+# Absolute direcotries
+PYQT_APIDIR=		${PREFIX}/${_APIDIR_REL}
+PYQT_DOCDIR=		${PREFIX}/${_DOCDIR_REL}
+PYQT_EXAMPLEDIR=	${PREFIX}/${_EXAMPLEDIR_REL}
+PYQT_SIPDIR=		${PREFIX}/${_SIPDIR_REL}
+
+PLIST_SUB+=	PYQT_APIDIR=${_APIDIR_REL} \
+		PYQT_DOCDIR=${_DOCDIR_REL} \
+		PYQT_EXAMPLEDIR=${_EXAMPLEDIR_REL} \
+		PYQT_SIPDIR=${_SIPDIR_REL}
 
 .if defined(PYQT_DIST)
 PORTVERSION=	${PYQT_VERSION}
@@ -225,13 +241,13 @@ PORTSCOUT?=	limit:^${_QT_VERSION:R}
 .endif
 
 PATCHDIR=	${.CURDIR}/../../devel/${PYQT_RELNAME}-core/files
-QSCIDIR=	${PREFIX}/share/qt${_PYQT_VERSION}/qsci
+QSCIDIR=	${PREFIX}/share/qt${_PYQT_VERSION}/${PYTHON_VER}/qsci
 CONFIGURE_ARGS+=-b ${PREFIX}/bin \
 		-d ${PYTHONPREFIX_SITELIBDIR} \
 		-q ${QMAKE} \
 		--confirm-license \
-		--sip ${LOCALBASE}/bin/sip-${PYTHON_VER} \
-		--sipdir ${SIPDIR}
+		--sip ${SIP} \
+		--sipdir ${PYQT_SIPDIR}
 
 # One of the things PyQt looks for to determine whether to build the Qt DBus
 # main loop module (${PYQT_RELNAME}-dbussupport) is whether the dbus/ directory is

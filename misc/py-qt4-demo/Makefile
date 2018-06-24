@@ -3,7 +3,7 @@
 
 PORTNAME=	demo
 PORTVERSION=	${PYQT4_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	misc devel python
 MASTER_SITES=	${MASTER_SITES_PYQT4}
@@ -17,9 +17,9 @@ DISTINFO_FILE=	${PYQT4_DISTINFO_FILE}
 
 NO_BUILD=	yes
 USES=		python pyqt:4
-USE_PYTHON=	py3kplist flavors
+USE_PYTHON=	py3kplist concurrent flavors py3kplist
 
-EXAMPLESDIR=	${PREFIX}/share/examples/py-qt4
+EXAMPLESDIR=	${PYQT_EXAMPLEDIR}
 
 USE_PYQT=	assistant_run core_run dbus_run dbussupport_run declarative_run \
 		designer_run designerplugin_run doc_run gui_run help_run \

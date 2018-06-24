@@ -22,10 +22,10 @@ USE_PYQT=	core_run dbus_run designer_run \
 		sql_run svg_run test_run webkit_run xml_run \
 		xmlpatterns_run sip_run qscintilla2_run \
 		printsupport_run serialport_run webkitwidgets_run widgets_run
-USE_PYTHON=	py3kplist flavors
+USE_PYTHON=	py3kplist concurrent flavors py3kplist
 NO_ARCH=	yes
 
-EXAMPLESDIR=	${PREFIX}/share/examples/py-qt5
+EXAMPLESDIR=	${PYQT_EXAMPLEDIR}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

@@ -14,7 +14,7 @@ PYQT_DIST=	yes
 
 USES=		pkgconfig python pyqt:5
 USE_PYQT=	sip_build
-USE_PYTHON=	flavors
+USE_PYTHON=	concurrent flavors py3kplist
 USE_QT5=	core buildtools_build qmake_build
 
 OPTIONS_DEFINE=		DEBUG
