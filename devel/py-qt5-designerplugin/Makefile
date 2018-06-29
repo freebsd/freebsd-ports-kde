@@ -13,11 +13,12 @@ DESTDIRNAME=	INSTALL_ROOT
 CONFIGURE_ARGS=	--enable QtDesigner
 PYQT_DIST=	yes
 
-USES=		python pyqt:5
+USES=		python pyqt:5 qt:5
 USE_GL=		gl
 USE_PYQT=	sip_build
 USE_PYTHON=	concurrent flavors py3kplist
-USE_QT5=	core designer gui xml widgets \
+USE_PYTHON=	flavors
+USE_QT=		core designer gui xml widgets \
 		buildtools_build qmake_build
 
 OPTIONS_DEFINE=		DEBUG

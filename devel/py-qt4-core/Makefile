@@ -15,7 +15,7 @@ PYQT_DIST=		yes
 USES=			python pyqt:4
 USE_PYTHON=		py3kplist concurrent flavors py3kplist
 USE_PYQT=		sip
-USE_QT4=		corelib qmake_build moc_build
+USE_QT=			corelib qmake_build moc_build
 
 OPTIONS_DEFINE=	API DEBUG
 OPTIONS_DEFAULT=API
