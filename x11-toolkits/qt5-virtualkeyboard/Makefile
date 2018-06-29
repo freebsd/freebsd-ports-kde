@@ -10,10 +10,9 @@ COMMENT=	Qt 5 Virtual Keyboard Module
 
 LIB_DEPENDS=	libhunspell-1.6.so:textproc/hunspell
 
-USE_QT5=	core network gui widgets svg qml quick buildtools_build
-QT_DIST=	${PORTNAME}
+USES=		qmake qt-dist:5,virtualkeyboard
+USE_QT=		core network gui widgets svg qml quick buildtools_build
 
-USES=		pkgconfig qmake
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 # Disable the builtin layouts -- otherwise we need to pull in a lot of other

@@ -171,6 +171,7 @@
     SUBDIR += lumina-screenshot
     SUBDIR += lumina-textedit
     SUBDIR += lumina-xdg-entry
+    SUBDIR += mat
     SUBDIR += mate-notification-daemon
     SUBDIR += mate-utils
     SUBDIR += mbox-importer
@@ -262,6 +263,7 @@
     SUBDIR += sugarcrm
     SUBDIR += superkaramba-kde4
     SUBDIR += surrealtodo
+    SUBDIR += synapse
     SUBDIR += syncthing-gtk
     SUBDIR += systempreferences
     SUBDIR += tagutils

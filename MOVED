@@ -8370,7 +8370,6 @@ graphics/whirlgif||2016-07-04|Has expired: Broken for more than 6 months
 graphics/libaux||2016-07-04|Has expired: Broken for more than 6 months
 graphics/import-pictures||2016-07-04|Has expired: Broken for more than 6 months
 math/xgobi||2016-07-04|Has expired: Broken for more than 6 months
-math/fricas||2016-07-04|Has expired: Broken for more than 6 months
 math/dcdflib||2016-07-04|Has expired: Broken for more than 6 months
 math/libneural||2016-07-04|Has expired: Broken for more than 6 months
 math/open-axiom||2016-07-04|Has expired: Broken for more than 6 months
@@ -10288,3 +10287,9 @@ multimedia/qt5-phonon4|multimedia/phonon@qt5|2018-06-21|Moved to a flavored vers
 multimedia/qt5-phonon4-designerplugin|multimedia/phonon-designerplugin@qt5|2018-06-21|Moved to a flavored version
 multimedia/qt5-phonon4-gstreamer|multimedia/phonon-gstreamer@qt5|2018-06-21|Moved to a flavored version
 multimedia/qt5-phonon4-vlc|multimedia/phonon-vlc@qt5|2018-06-21|Moved to a flavored version
+net/libproxy-gnome|net/libproxy-gnome2|2018-07-22|Renamed to make slave names consistent
+www/npapi-vlc||2018-06-22|Removed, depends on expired www/libxul
+www/libxul||2018-06-22|Has expired: NPAPI are no longer supported
+mail/postfix211||2018-06-24|Has expired: Not supported anymore by vendor. Please choose a new one version
+mail/postfix211-sasl||2018-06-24|Has expired: Not supported anymore by vendor. Please choose a new one version
+devel/py-binplist||2018-06-26|Has expired: Not depended upon anymore, no longer maintained upstream

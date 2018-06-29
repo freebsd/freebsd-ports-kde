@@ -11,9 +11,8 @@ COMMENT=	Qt documentation generator
 BUILD_DEPENDS=	llvm60>=0:devel/llvm60
 RUN_DEPENDS=	llvm60>=0:devel/llvm60
 
-USE_QT5=	core qml buildtools_build qdoc-data_run
-QT_DIST=	tools
-USES=		qmake
+USES=		qmake qt-dist:5,tools
+USE_QT=		core qml buildtools_build qdoc-data_run
 
 BUILD_WRKSRC=	${WRKSRC}/src/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
