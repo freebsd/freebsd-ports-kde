@@ -11,9 +11,9 @@ LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 		libwayland-client.so:graphics/wayland
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
-USES=		cmake:outsource compiler:c++11-lib cpe kde:5 tar:xz
+USES=		cmake:outsource compiler:c++11-lib cpe kde:5 qt:5 tar:xz
 USE_KDE=	ecm idletime wayland windowsystem
-USE_QT5=	core gui widgets \
+USE_QT=		core gui widgets \
 		buildtools_build qmake_build
 
 .include <bsd.port.mk>

@@ -22,6 +22,7 @@
     SUBDIR += clustalw
     SUBDIR += clustalx
     SUBDIR += consed
+    SUBDIR += cytoscape
     SUBDIR += ddocent
     SUBDIR += diamond
     SUBDIR += emboss
@@ -43,6 +44,7 @@
     SUBDIR += hmmer
     SUBDIR += htslib
     SUBDIR += hyphy
+    SUBDIR += igv
     SUBDIR += infernal
     SUBDIR += iolib
     SUBDIR += iqtree

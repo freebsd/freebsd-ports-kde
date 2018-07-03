@@ -5,6 +5,29 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180701:
+  AFFECTS: users of devel/bats
+  AUTHOR: lifanov@FreeBSD.org
+
+  The devel/bats port has been renamed to devel/bats-core to match the
+  new upstream project.
+
+20180630:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  In version 18.06, upstream has removed support for IRC transport.
+
+20180625:
+  AFFECTS: users of PHP based applications like drush
+  AUTHOR: mfechner@FreeBSD.org
+
+  Flavors are being added to PHP applications. If you use PHP 5.6 you need:
+
+  # pkg set -n drush:drush-php56
+
+  For more details see 20180611.
+
 20180612:
   AFFECTS: users of the nox flavor of editors/emacs-devel
   AUTHOR: jrm@FreeBSD.org
@@ -222,7 +245,7 @@ you update your ports collection, before attempting any port upgrades.
   AUTHOT: madpilot@FreeBSD.org
 
   Flavors have been added to the composer port with the update to
-  1.6.3. Due to the change in PKGNAME pkg(and other tols) will not
+  1.6.3. Due to the change in PKGNAME pkg(and other tools) will not
   notice the update. It is required to tell pkg about the name
   change, for example:
 

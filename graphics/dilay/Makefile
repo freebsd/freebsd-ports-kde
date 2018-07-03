@@ -2,11 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	dilay
-DISTVERSION=	1.8.0
+DISTVERSION=	1.9.0
 CATEGORIES=	graphics
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	d4489e40bab1193a78d354bb6335da4224ff5253.patch:-p1
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	3D sculpting application
@@ -16,12 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
-USES=		compiler:c++14-lang gmake qmake
+USES=		compiler:c++14-lang gmake qmake qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	abau
 USE_CXXSTD=	c++14
 USE_GL=		gl
-USE_QT5=	core gui opengl widgets xml buildtools_build
+USE_QT=		core gui opengl widgets xml buildtools_build
 
 MAKE_JOBS_UNSAFE=	yes  # Workaround for: https://github.com/abau/dilay/issues/19 parallel build fails (still a problem despite having been closed)
 

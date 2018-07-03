@@ -41,6 +41,7 @@
     SUBDIR += ansible1
     SUBDIR += ansible23
     SUBDIR += ansible24
+    SUBDIR += ansible25
     SUBDIR += anvil
     SUBDIR += apachetop
     SUBDIR += apcpwr
@@ -151,6 +152,7 @@
     SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine-masterfiles311
+    SUBDIR += cfengine-masterfiles312
     SUBDIR += cfengine-masterfiles36
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
@@ -158,6 +160,7 @@
     SUBDIR += cfengine22
     SUBDIR += cfengine310
     SUBDIR += cfengine311
+    SUBDIR += cfengine312
     SUBDIR += cfengine32
     SUBDIR += cfengine33
     SUBDIR += cfengine34
@@ -716,6 +719,7 @@
     SUBDIR += mount.app
     SUBDIR += mountsmb2
     SUBDIR += mpiexec
+    SUBDIR += mping
     SUBDIR += mptd
     SUBDIR += msiklm
     SUBDIR += msktutil
@@ -1298,6 +1302,7 @@
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-imx-serial-loader
     SUBDIR += u-boot-master
+    SUBDIR += u-boot-nanopi-a64
     SUBDIR += u-boot-nanopi-m1plus
     SUBDIR += u-boot-nanopi-neo
     SUBDIR += u-boot-nanopi-neo-air

@@ -52,6 +52,7 @@
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += dlpoly-classic
+    SUBDIR += eccodes
     SUBDIR += ecs
     SUBDIR += epte
     SUBDIR += erd
@@ -167,6 +168,7 @@
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
     SUBDIR += py-PyQuante
+    SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-cdo
@@ -175,6 +177,7 @@
     SUBDIR += py-gsd
     SUBDIR += py-h5py
     SUBDIR += py-hcluster
+    SUBDIR += py-kinematics
     SUBDIR += py-mdp
     SUBDIR += py-mlpy
     SUBDIR += py-mmtf-python
@@ -193,6 +196,7 @@
     SUBDIR += py-pyteomics.biolccc
     SUBDIR += py-qspin
     SUBDIR += py-quantities
+    SUBDIR += py-rmf
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn
     SUBDIR += py-scikit-sparse
@@ -209,6 +213,7 @@
     SUBDIR += qcl
     SUBDIR += qtresistors
     SUBDIR += rdkit
+    SUBDIR += rmf
     SUBDIR += rubygem-ai4r
     SUBDIR += rubygem-cdo
     SUBDIR += rubygem-rgeo
