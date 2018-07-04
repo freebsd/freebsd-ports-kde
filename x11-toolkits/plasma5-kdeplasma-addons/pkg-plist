@@ -1099,6 +1099,7 @@ share/locale/pl/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/pl/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/pl/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/pl/LC_MESSAGES/plasma_packagestructure_comic.mo
 share/locale/pl/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/pl/LC_MESSAGES/plasma_runner_converterrunner.mo
@@ -1212,6 +1213,7 @@ share/locale/ru/LC_MESSAGES/plasma_applet_org.kde.plasma.systemloadviewer.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 share/locale/ru/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+share/locale/ru/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/ru/LC_MESSAGES/plasma_packagestructure_comic.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_converterrunner.mo

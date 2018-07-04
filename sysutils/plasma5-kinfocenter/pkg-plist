@@ -435,6 +435,8 @@ share/locale/ia/LC_MESSAGES/kcmusb.mo
 share/locale/ia/LC_MESSAGES/kcmview1394.mo
 share/locale/ia/LC_MESSAGES/kinfocenter.mo
 share/locale/id/LC_MESSAGES/kcm-about-distro.mo
+share/locale/id/LC_MESSAGES/kcm_energyinfo.mo
+share/locale/id/LC_MESSAGES/kcm_fileindexermonitor.mo
 share/locale/id/LC_MESSAGES/kcm_memory.mo
 share/locale/id/LC_MESSAGES/kcm_pci.mo
 share/locale/id/LC_MESSAGES/kcmdevinfo.mo

@@ -291,6 +291,8 @@ share/doc/HTML/pt_BR/klipper/index.docbook
 share/doc/HTML/pt_BR/klipper/klipper-application.png
 share/doc/HTML/pt_BR/klipper/klipper-widget.png
 share/doc/HTML/pt_BR/klipper/screenshot.png
+share/doc/HTML/ru/kcontrol/screenlocker/index.cache.bz2
+share/doc/HTML/ru/kcontrol/screenlocker/index.docbook
 share/doc/HTML/sv/kcontrol/screenlocker/index.cache.bz2
 share/doc/HTML/sv/kcontrol/screenlocker/index.docbook
 share/doc/HTML/sv/klipper/index.cache.bz2
@@ -2046,7 +2048,9 @@ share/locale/ia/LC_MESSAGES/soliduiserver5.mo
 share/locale/ia/LC_MESSAGES/systemmonitor.mo
 share/locale/id/LC_MESSAGES/freespacenotifier.mo
 share/locale/id/LC_MESSAGES/kcminit.mo
+share/locale/id/LC_MESSAGES/kholidays_calendar_plugin.mo
 share/locale/id/LC_MESSAGES/kio5_applications.mo
+share/locale/id/LC_MESSAGES/kio_desktop.mo
 share/locale/id/LC_MESSAGES/klipper.mo
 share/locale/id/LC_MESSAGES/ksmserver.mo
 share/locale/id/LC_MESSAGES/kuiserver5.mo
@@ -3360,6 +3364,7 @@ share/locale/ru/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/ru/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/ru/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/ru/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/ru/LC_MESSAGES/plasma_runner_calculatorrunner.mo
