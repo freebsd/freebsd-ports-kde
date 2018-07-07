@@ -2,8 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	clementine
-PORTVERSION=	1.3.1
-PORTREVISION=	21
+DISTVERSIONPREFIX=	v
+DISTVERSION=		1.3.1-441
+DISTVERSIONSUFFIX=	-gc01b7bc
+PORTREVISION=	2
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-player
 
@@ -34,12 +36,13 @@ USES=		cmake \
 		desktop-file-utils \
 		gettext-tools \
 		pkgconfig \
-		sqlite
+		qt:4 sqlite
 
-USE_GL=		glew
+USE_GL=		gl glew glu
+USE_XORG=	x11
 
 CONFLICTS_BUILD=	qt-3.*
-USE_QT4=	corelib \
+USE_QT=		corelib \
 		dbus \
 		gui \
 		imageformats \
@@ -170,7 +173,8 @@ GOOGLE_DRIVE_CMAKE_OFF=	-DENABLE_GOOGLE_DRIVE=OFF
 
 GPOD_LIB_DEPENDS=	libgpod.so:audio/libgpod \
 			libplist.so:devel/libplist \
-			libusbmuxd.so:comms/libusbmuxd
+			libusbmuxd.so:comms/libusbmuxd \
+			libimobiledevice.so:comms/libimobiledevice
 GPOD_CMAKE_ON=		-DENABLE_LIBGPOD=ON
 GPOD_CMAKE_OFF=		-DENABLE_LIBGPOD=OFF
 

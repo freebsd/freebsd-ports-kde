@@ -18,7 +18,6 @@
     SUBDIR += calculix-ccx
     SUBDIR += cascade
     SUBDIR += chipvault
-    SUBDIR += cider
     SUBDIR += cura-engine
     SUBDIR += dinotrace
     SUBDIR += dxf2fig
@@ -48,7 +47,9 @@
     SUBDIR += kicad
     SUBDIR += kicad-devel
     SUBDIR += kicad-library
-    SUBDIR += kicad-library-devel
+    SUBDIR += kicad-library-footprints-devel
+    SUBDIR += kicad-library-packages3d-devel
+    SUBDIR += kicad-library-symbols-devel
     SUBDIR += klayout
     SUBDIR += layouteditor
     SUBDIR += ldraw
@@ -84,7 +85,6 @@
     SUBDIR += qucs
     SUBDIR += repsnapper
     SUBDIR += rubygem-gdsii
-    SUBDIR += sceptre
     SUBDIR += scotch
     SUBDIR += solvespace
     SUBDIR += sp2sp

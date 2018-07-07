@@ -3,7 +3,7 @@
 
 PORTNAME=			${SAMBA4_BASENAME}48
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			0
+PORTREVISION=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -13,16 +13,21 @@ COMMENT=			Free SMB/CIFS and AD/DC server and client for Unix
 
 LICENSE=			GPLv3
 
+BROKEN_powerpc64=		fails to compile: auth.idl:107: Unable to determine origin of type struct cli_credentials
+
 IGNORE_NONTHREAD_PYTHON=	needs port lang/python${PYTHON_SUFFIX} to be build with THREADS support
 
 CONFLICTS_INSTALL?=		samba4-4.0.* samba4[1-79]-4.* p5-Parse-Pidl-4.*
 
 EXTRA_PATCHES+=			${PATCHDIR}/0001-Zfs-provision-1.patch:-p1
 EXTRA_PATCHES+=			${PATCHDIR}/0001-Freenas-master-mdns-fixes-22.patch:-p1
+EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-13427.patch:-p1
+EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-13175.patch:-p1
+EXTRA_PATCHES+=			${PATCHDIR}/0001-bug-228462.patch:-p1
 
 SAMBA4_BASENAME=		samba
 SAMBA4_PORTNAME=		${SAMBA4_BASENAME}4
-SAMBA4_VERSION=			4.8.0
+SAMBA4_VERSION=			4.8.2
 SAMBA4_DISTNAME=		${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=			${WRKDIR}/${DISTNAME}
@@ -86,7 +91,7 @@ OPTIONS_SUB=			yes
 OPTIONS_DEFINE=			AD_DC ADS DEBUG DOCS FAM LDAP \
 				QUOTAS SYSLOG UTMP PROFILE
 # Make those default options
-OPTIONS_DEFAULT:=		${OPTIONS_DEFINE}
+OPTIONS_DEFAULT:=		${OPTIONS_DEFINE} GSSAPI_BUILTIN
 # This shouldn't be default in the release
 OPTIONS_DEFINE+=		DEVELOPER MANDOC
 
@@ -94,12 +99,17 @@ OPTIONS_DEFINE_amd64=		AESNI
 OPTIONS_DEFAULT_amd64=		AESNI
 
 OPTIONS_DEFINE+=		CUPS GPGME NTVFS SPOTLIGHT
+#OPTIONS_DEFINE+=		MEMORY_DEBUG
+
+OPTIONS_SINGLE=			GSSAPI
+# GSSAPI_HEIMDAL
+OPTIONS_SINGLE_GSSAPI=		GSSAPI_BUILTIN GSSAPI_MIT
 
 OPTIONS_RADIO=			DNS ZEROCONF
-OPTIONS_RADIO_DNS=		NSUPDATE BIND99 BIND910 BIND911
+OPTIONS_RADIO_DNS=		NSUPDATE BIND911
 OPTIONS_RADIO_ZEROCONF=		MDNSRESPONDER AVAHI
 ##############################################################################
-AD_DC_DESC=			Active Directory Domain Controller
+AD_DC_DESC=			Active Directory Domain Controller(implies LDAP)
 ADS_DESC=			Active Directory client(implies LDAP)
 AESNI_DESC=			Accelerated AES crypto functions(amd64 only)
 CLUSTER_DESC=			Clustering
@@ -111,14 +121,15 @@ LDAP_DESC=			LDAP client
 LIBZFS_DESC=			LibZFS
 SPOTLIGHT_DESC=			Spotlight
 MANDOC_DESC=			Build manpages from DOCBOOK templates
+MEMORY_DEBUG_DESC=		Debug memory allocation
 NTVFS_DESC=			Build *DEPRECATED* NTVFS file server
 PICKY_DEVELOPER_DESC=		Treat compiler warnings as errors(implies DEVELOPER)
 PROFILE_DESC=			Profiling data
 QUOTAS_DESC=			Disk quota
 UTMP_DESC=			UTMP accounting
 
-BIND99_DESC=			Use Bind 9.9 as AD DC DNS server frontend
-BIND910_DESC=			Use Bind 9.10 as AD DC DNS server frontend
+GSSAPI_BUILTIN_DESC=		GSSAPI support via bundled Heimdal
+
 BIND911_DESC=			Use Bind 9.11 as AD DC DNS server frontend
 NSUPDATE_DESC=			Use samba NSUPDATE utility for AD DC
 ##############################################################################
@@ -171,8 +182,8 @@ PLIST_SUB+=			SAMBA4_BUNDLED_TALLOC=""
 SUB_LIST+=			SAMBA4_BUNDLED_TALLOC=""
 .else
 SAMBA4_BUNDLED_LIBS+=		!talloc
-BUILD_DEPENDS+=			talloc>=2.1.11:devel/talloc
-RUN_DEPENDS+=			talloc>=2.1.11:devel/talloc
+BUILD_DEPENDS+=			talloc>=2.1.13:devel/talloc
+RUN_DEPENDS+=			talloc>=2.1.13:devel/talloc
 PLIST_SUB+=			SAMBA4_BUNDLED_TALLOC="@comment "
 SUB_LIST+=			SAMBA4_BUNDLED_TALLOC="@comment "
 .endif
@@ -211,8 +222,8 @@ PLIST_SUB+=			SAMBA4_BUNDLED_LDB=""
 SUB_LIST+=			SAMBA4_BUNDLED_LDB=""
 .else
 .       if ${SAMBA4_LDB} == 13
-BUILD_DEPENDS+=			ldb13>=1.3.2:databases/ldb13
-RUN_DEPENDS+=			ldb13>=1.3.2:databases/ldb13
+BUILD_DEPENDS+=			ldb13>=1.3.3:databases/ldb13
+RUN_DEPENDS+=			ldb13>=1.3.3:databases/ldb13
 .       elif ${SAMBA4_LDB} == 12
 BUILD_DEPENDS+=			ldb12>=1.2.3:databases/ldb12
 RUN_DEPENDS+=			ldb12>=1.2.3:databases/ldb12
@@ -256,10 +267,7 @@ CONFIGURE_ARGS+=		\
 				--with-sendfile-support \
 				--disable-ctdb-tests \
 				${ICONV_CONFIGURE_BASE}
-
 ##############################################################################
-BIND99_RUN_DEPENDS=		bind99>=9.9.0.0:dns/bind99
-BIND910_RUN_DEPENDS=		bind910>=9.10.0.0:dns/bind910
 BIND911_RUN_DEPENDS=		bind911>=9.11.0.0:dns/bind911
 NSUPDATE_RUN_DEPENDS=		samba-nsupdate:dns/samba-nsupdate
 
@@ -272,6 +280,10 @@ MDNSRESPONDER_LIB_DEPENDS=	libdns_sd.so:net/mDNSResponder
 DEBUG_CONFIGURE_ON=		--verbose --enable-debug
 DEBUG_MAKE_ARGS=		--verbose
 DEBUG_FLAGS=			-g -ggdb3 -O0
+
+MEMORY_DEBUG_IMPLIES=		DEBUG
+MEMORY_DEBUG_CONFIGURE_ENV=	ADDITIONAL_CFLAGS="-DENABLE_JEMALLOC `pkg-config --cflags jemalloc`" ADDITIONAL_LDFLAGS="`pkg-config --libs jemalloc`"
+MEMORY_DEBUG_LIB_DEPENDS=	libjemalloc.so.2:devel/jemalloc
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194046
 GDB_CMD?=			${LOCALBASE}/bin/gdb
 # https://bugzilla.samba.org/show_bug.cgi?id=8969
@@ -327,6 +339,10 @@ LDAP_CONFIGURE_WITH=		ldap
 LDAP_CONFIGURE_ON=		--with-openldap=${LOCALBASE}
 LDAP_USE=			OPENLDAP=yes
 LDAP_VARS=			SAMBA4_MODULES+=idmap_ldap
+
+GSSAPI_MIT_CONFIGURE_ON=	--with-system-mitkrb5 ${GSSAPIBASEDIR} \
+				--with-system-mitkdc=${GSSAPIBASEDIR}/sbin/krb5kdc
+GSSAPI_MIT_USES=		gssapi:mit
 
 LIBZFS_CONFIGURE_WITH=		libzfs
 LIBZFS_VARS=			SAMBA4_MODULES+=vfs_zfs_space
@@ -459,6 +475,10 @@ PLIST_FILES+=			lib/samba4/private/libaesni-intel-samba4.so
 .else
 CONFIGURE_ARGS+=		--accel-aes=none
 .endif
+
+.if ${PORT_OPTIONS:MAD_DC} && ${PORT_OPTIONS:MGSSAPI_MIT}
+PLIST_FILES+=			lib/samba4/krb5/plugins/kdb/samba.so
+.endif
 # for libexecinfo: (so that __builtin_frame_address() finds the top of the stack)
 CFLAGS_amd64+=			-fno-omit-frame-pointer
 # No fancy color error messages
@@ -508,6 +528,12 @@ post-patch:
 
 # Use threading (or multiprocessing) but not thread (renamed in python 3+).
 pre-configure:
+.if ! ${PORT_OPTIONS:MAD_DC} && ${PORT_OPTIONS:MNTVFS}
+				@${ECHO_CMD}; \
+				${ECHO_MSG} "===>  NTVFS option requires AD_DC to be set"; \
+				${ECHO_CMD}; \
+				${FALSE}
+.endif
 				@if ! ${PYTHON_CMD} -c "import multiprocessing;" 2>/dev/null; then \
 					${ECHO_CMD}; \
 					${ECHO_MSG} "===>  ${PKGNAME} "${IGNORE_NONTHREAD_PYTHON:Q}.; \

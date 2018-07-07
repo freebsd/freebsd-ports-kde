@@ -36,6 +36,7 @@
     SUBDIR += R-cran-backports
     SUBDIR += R-cran-bdsmatrix
     SUBDIR += R-cran-car
+    SUBDIR += R-cran-carData
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
@@ -75,6 +76,7 @@
     SUBDIR += R-cran-numDeriv
     SUBDIR += R-cran-outliers
     SUBDIR += R-cran-pbkrtest
+    SUBDIR += R-cran-pls
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
@@ -151,7 +153,6 @@
     SUBDIR += clblas
     SUBDIR += clblast
     SUBDIR += clfft
-    SUBDIR += clipper
     SUBDIR += cln
     SUBDIR += cloog
     SUBDIR += clp
@@ -165,12 +166,14 @@
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += cvc3
+    SUBDIR += cvc4
     SUBDIR += diehard
     SUBDIR += dieharder
     SUBDIR += djbfft
     SUBDIR += drgeo
     SUBDIR += dynare
     SUBDIR += e
+    SUBDIR += ecos
     SUBDIR += edenmath
     SUBDIR += eigen2
     SUBDIR += eigen3
@@ -198,7 +201,7 @@
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
-    SUBDIR += freemat
+    SUBDIR += fricas
     SUBDIR += fxt
     SUBDIR += g2o
     SUBDIR += galculator
@@ -620,6 +623,7 @@
     SUBDIR += pecl-stats
     SUBDIR += pecl-stats2
     SUBDIR += pecl-trader
+    SUBDIR += petiga
     SUBDIR += php56-bcmath
     SUBDIR += php56-gmp
     SUBDIR += php70-bcmath
@@ -644,6 +648,7 @@
     SUBDIR += pure-rational
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
+    SUBDIR += py-PyMetis
     SUBDIR += py-PySCIPOpt
     SUBDIR += py-PyWavelets
     SUBDIR += py-Pyomo
@@ -669,6 +674,7 @@
     SUBDIR += py-gmpy2
     SUBDIR += py-gnuplot
     SUBDIR += py-graphillion
+    SUBDIR += py-igakit
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
@@ -687,9 +693,12 @@
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-permutation
+    SUBDIR += py-petsc4py
     SUBDIR += py-piranha
     SUBDIR += py-plastex
     SUBDIR += py-probstat
+    SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
     SUBDIR += py-pybloom
     SUBDIR += py-pycosat
@@ -707,7 +716,12 @@
     SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-scientific
+    SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
+    SUBDIR += py-secp256k1
+    SUBDIR += py-simhash
+    SUBDIR += py-slepc4py
+    SUBDIR += py-spectral
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-sym
@@ -756,7 +770,6 @@
     SUBDIR += sc-im
     SUBDIR += scalapack
     SUBDIR += scilab
-    SUBDIR += scilab-toolbox-sivp
     SUBDIR += scilab-toolbox-swt
     SUBDIR += sdpa
     SUBDIR += sdpara
@@ -765,6 +778,7 @@
     SUBDIR += sfst
     SUBDIR += simd-viterbi
     SUBDIR += slatec
+    SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += snns
     SUBDIR += solitaire

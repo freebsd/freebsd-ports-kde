@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	curl
-PORTVERSION=	7.59.0
+PORTVERSION=	7.60.0
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.haxx.se/download/ \
 		LOCAL/sunpoet
@@ -80,7 +80,8 @@ DEBUG_CONFIGURE_ENABLE=	debug
 DICT_CONFIGURE_ENABLE=	dict
 FTP_CONFIGURE_ENABLE=	ftp
 GNUTLS_CONFIGURE_WITH=	gnutls
-GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
+GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls \
+			libnettle.so:security/nettle
 GOPHER_CONFIGURE_ENABLE=gopher
 GSSAPI_BASE_CONFIGURE_ON=	--with-gssapi=${GSSAPIBASEDIR} ${GSSAPI_CONFIGURE_ARGS}
 GSSAPI_BASE_CPPFLAGS=	${GSSAPICPPFLAGS}
@@ -116,7 +117,8 @@ METALINK_CONFIGURE_WITH=libmetalink
 METALINK_LIB_DEPENDS=	libmetalink.so:misc/libmetalink
 METALINK_LIBS=		-lcrypto
 NSS_CONFIGURE_WITH=	nss
-NSS_LIB_DEPENDS=	libnss3.so:security/nss
+NSS_LIB_DEPENDS=	libnss3.so:security/nss \
+			libnspr4.so:devel/nspr
 NSS_USES=		pkgconfig
 OPENSSL_CONFIGURE_WITH=	ssl=${OPENSSLBASE}
 OPENSSL_CPPFLAGS=	-I${OPENSSLINC}
@@ -160,7 +162,7 @@ post-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/ ${STAGEDIR}${DOCSDIR}/libcurl/
 	cd ${WRKSRC}/docs/ && ${INSTALL_DATA} ${DOCS} ${STAGEDIR}${DOCSDIR}/
-	cd ${WRKSRC}/docs/libcurl/ && ${INSTALL_DATA} ABI *.html *.m4 ${STAGEDIR}${DOCSDIR}/libcurl/
+	cd ${WRKSRC}/docs/libcurl/ && ${INSTALL_DATA} ABI *.m4 ${STAGEDIR}${DOCSDIR}/libcurl/
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/

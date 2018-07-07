@@ -3,7 +3,7 @@
 
 PORTNAME=			${SAMBA4_BASENAME}47
 PORTVERSION=			${SAMBA4_VERSION}
-PORTREVISION=			0
+PORTREVISION=			1
 CATEGORIES?=			net
 MASTER_SITES=			SAMBA/samba/stable SAMBA/samba/rc
 DISTNAME=			${SAMBA4_DISTNAME}
@@ -22,7 +22,7 @@ EXTRA_PATCHES+=			${PATCHDIR}/0001-Freenas-master-mdns-fixes-22.patch:-p1
 
 SAMBA4_BASENAME=		samba
 SAMBA4_PORTNAME=		${SAMBA4_BASENAME}4
-SAMBA4_VERSION=			4.7.6
+SAMBA4_VERSION=			4.7.7
 SAMBA4_DISTNAME=		${SAMBA4_BASENAME}-${SAMBA4_VERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 WRKSRC?=			${WRKDIR}/${DISTNAME}
@@ -95,7 +95,7 @@ OPTIONS_DEFAULT_amd64=		AESNI
 OPTIONS_DEFINE+=		CLUSTER CUPS GLUSTERFS GPGME NTVFS SPOTLIGHT
 
 OPTIONS_RADIO=			DNS ZEROCONF
-OPTIONS_RADIO_DNS=		NSUPDATE BIND99 BIND910 BIND911
+OPTIONS_RADIO_DNS=		NSUPDATE BIND911
 OPTIONS_RADIO_ZEROCONF=		MDNSRESPONDER AVAHI
 ##############################################################################
 AD_DC_DESC=			Active Directory Domain Controller
@@ -116,8 +116,6 @@ PROFILE_DESC=			Profiling data
 QUOTAS_DESC=			Disk quota
 UTMP_DESC=			UTMP accounting
 
-BIND99_DESC=			Use Bind 9.9 as AD DC DNS server frontend
-BIND910_DESC=			Use Bind 9.10 as AD DC DNS server frontend
 BIND911_DESC=			Use Bind 9.11 as AD DC DNS server frontend
 NSUPDATE_DESC=			Use samba NSUPDATE utility for AD DC
 ##############################################################################
@@ -255,8 +253,6 @@ CONFIGURE_ARGS+=		\
 				${ICONV_CONFIGURE_BASE}
 
 ##############################################################################
-BIND99_RUN_DEPENDS=		bind99>=9.9.0.0:dns/bind99
-BIND910_RUN_DEPENDS=		bind910>=9.10.0.0:dns/bind910
 BIND911_RUN_DEPENDS=		bind911>=9.11.0.0:dns/bind911
 NSUPDATE_RUN_DEPENDS=		samba-nsupdate:dns/samba-nsupdate
 
@@ -350,7 +346,7 @@ LIB_DEPENDS+=			libdbus-1.so:devel/dbus
 LIB_DEPENDS+=			libdbus-glib-1.so:devel/dbus-glib
 .endif
 
-#SAMBA4_MODULES+=		vfs_freebsd
+SAMBA4_MODULES+=		vfs_freebsd
 
 SAMBA4_MODULES+=		idmap_nss idmap_autorid idmap_rid idmap_hash idmap_tdb idmap_tdb2 idmap_script nss-info_hash
 # List of extra modules taken from RHEL build
@@ -412,10 +408,10 @@ BUILD_DEPENDS+=			${PYTHON_PKGNAMEPREFIX}iso8601>=0.1.11:devel/py-iso8601@${PY_F
 RUN_DEPENDS+=			${PYTHON_PKGNAMEPREFIX}iso8601>=0.1.11:devel/py-iso8601@${PY_FLAVOR}
 # XXX: This is a gross hack to make port use both Python 2.7+ and 3.3+
 # This is not officially supported, use at your own risk
-.if defined(WITH_SAMBA4_PYTHON3) && ${WITH_SAMBA4_PYTHON3:Mpython3\.[0-9]}
-SAMBA4_PYTHON3=			${WITH_SAMBA4_PYTHON3}
-SAMBA4_PYTHON3_VERSION:=	${SAMBA4_PYTHON3:S/^python//}
-SAMBA4_PYTHON3_VER:=		${SAMBA4_PYTHON3_VERSION:C/\.//}
+.if defined(WITH_SAMBA4_PYTHON3) && ${WITH_SAMBA4_PYTHON3:M3\.[0-9]}
+SAMBA4_PYTHON3_VERSION=	${WITH_SAMBA4_PYTHON3}
+SAMBA4_PYTHON3=		python${SAMBA4_PYTHON3_VERSION}
+SAMBA4_PYTHON3_VER=	${SAMBA4_PYTHON3_VERSION:C/\.//}
 .if !exists(${PORTSDIR}/lang/python${SAMBA4_PYTHON3_VER})
 .error				unsupported or unknown Python version ${SAMBA4_PYTHON3_VERSION}
 .endif

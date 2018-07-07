@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	elixir
-PORTVERSION=	1.6.5
+PORTVERSION=	1.6.6
 DISTVERSIONPREFIX=	v
 CATEGORIES=	lang
 MASTER_SITES+=	https://github.com/elixir-lang/elixir/releases/download/${DISTVERSIONPREFIX}${PORTVERSION}/:doc
 DISTFILES=	Docs.zip:doc
 DIST_SUBDIR=	elixir/${PORTVERSION}
 
-MAINTAINER=	olgeni@FreeBSD.org
+MAINTAINER=	erlang@FreeBSD.org
 COMMENT=	Functional, meta-programming aware language built on top of Erlang VM
 
 LICENSE=	APACHE20
@@ -17,10 +17,11 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	erlang>=19:lang/erlang
 RUN_DEPENDS=	erlang>=19:lang/erlang
 
+USES=		gmake
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	elixir-lang
 
-USES=		gmake
 USE_LOCALE=	en_US.UTF-8
 ALL_TARGET=	# empty
 REINPLACE_ARGS=	-i ""
@@ -48,5 +49,8 @@ post-install-SRC-on:
 		cd ${WRKSRC}/lib/$${lib}/lib && \
 			${COPYTREE_SHARE} \* ${STAGEDIR}${PREFIX}/lib/elixir/lib/$${lib}/lib; \
 	done
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} test
 
 .include <bsd.port.mk>

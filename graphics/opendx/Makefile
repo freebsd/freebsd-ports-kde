@@ -22,7 +22,7 @@ LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick	\
 		libXp.so:x11/libXp
 
 MAKE_JOBS_UNSAFE=	yes
-USES=		bison motif gmake libtool
+USES=		bison compiler:c++17-lang gmake libtool motif
 USE_XORG=	x11 xt xinerama xext xpm xmu sm ice
 USE_GL=		gl glu
 GNU_CONFIGURE=	yes
@@ -83,6 +83,14 @@ post-patch:
 		${WRKSRC}/src/uipp/java/server/Makefile.in
 	@${REINPLACE_CMD} -e 's|$$(ARCH)|@ARCH@|' \
 		${WRKSRC}/src/misc/Makefile.*
+	@${REINPLACE_CMD} -e 's/void exit (int);/[[noreturn]] void exit (int);/' \
+		${WRKSRC}/configure
+	for f in `find ${WRKSRC} -name "*.bm"`; do \
+		if [ $${f%/*} != "${WRKSRC}/src/uipp/widgets" ]; then \
+				${REINPLACE_CMD} -E 's/0x(..)/static_cast<char>(0x\1)/g' $$f; \
+				${REINPLACE_CMD} -E 's/static unsigned char/static char/g' $$f; \
+		fi; \
+	done
 
 post-install:
 	@${CP} ${FILESDIR}/pkg-message.in ${PKGMESSAGE}

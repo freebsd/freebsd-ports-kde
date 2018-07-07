@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-runner
-PORTVERSION=	10.6.0
+PORTVERSION=	11.0.0
 CATEGORIES=	devel
 MASTER_SITES=	\
 		https://gitlab-runner-downloads.s3.amazonaws.com/master/docker/:dockerx64 \
@@ -26,10 +26,10 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
-GL_COMMIT=	a3543a275e3f9555da06041c501429d1f4aeef2d
-GITREV=		a3543a27
-GITBRANCH=	10-6-stable
-BUILT=		2018-03-22T08:33:57+00:00
+GL_COMMIT=	5396d320cd17c02bd4133d52b8ac9acd21b20f51
+GITREV=		5396d320
+GITBRANCH=	11-0-stable
+BUILT=		2018-06-22T11:03:39+00:00
 
 GO_LDFLAGS=	-X gitlab.com/gitlab-org/gitlab-runner/common.VERSION=${PORTVERSION} \
 		-X gitlab.com/gitlab-org/gitlab-runner/common.REVISION=${GITREV} \

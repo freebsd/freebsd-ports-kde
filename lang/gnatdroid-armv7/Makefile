@@ -9,11 +9,13 @@ MASTER_SITES=	GCC/releases/gcc-${GCC_VERSION}
 PKGNAMEPREFIX?=	gnatdroid-
 DISTFILES=	${IDENTIFICATION}.tar.xz
 
-MAINTAINER?=	ports@FreeBSD.org
+MAINTAINER?=	jamie@catflap.org
 COMMENT?=	C/Ada cross-compiler, target: Android ARMv7
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
+
+BROKEN=		fails to package
 
 BUILD_DEPENDS=	${SYSROOT}>=0:lang/${SYSROOT} \
 		${GDBINUTILS}>=2.21:lang/${GDBINUTILS}

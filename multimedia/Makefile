@@ -34,6 +34,7 @@
     SUBDIR += cclive
     SUBDIR += cheese
     SUBDIR += chilitags
+    SUBDIR += cinelerra-gg
     SUBDIR += clipgrab
     SUBDIR += clive
     SUBDIR += clutter-gst
@@ -42,6 +43,7 @@
     SUBDIR += cx88
     SUBDIR += deforaos-player
     SUBDIR += devede
+    SUBDIR += din
     SUBDIR += dirac
     SUBDIR += dragon
     SUBDIR += dragon-kde4
@@ -177,6 +179,8 @@
     SUBDIR += kissdx
     SUBDIR += kmplayer-kde4
     SUBDIR += kodi
+    SUBDIR += kodi-addon-pvr-hts
+    SUBDIR += kodi-addon-pvr-iptvsimple
     SUBDIR += kodi-devel
     SUBDIR += kplayer-kde4
     SUBDIR += kvazaar
@@ -341,6 +345,7 @@
     SUBDIR += py-openlp
     SUBDIR += py-periscope
     SUBDIR += py-pretty_midi
+    SUBDIR += py-PySceneDetect
     SUBDIR += py-qt4-multimedia
     SUBDIR += py-qt4-phonon
     SUBDIR += py-qt5-multimedia
@@ -358,10 +363,6 @@
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
     SUBDIR += qt5-multimedia
-    SUBDIR += qt5-phonon4
-    SUBDIR += qt5-phonon4-designerplugin
-    SUBDIR += qt5-phonon4-gstreamer
-    SUBDIR += qt5-phonon4-vlc
     SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi

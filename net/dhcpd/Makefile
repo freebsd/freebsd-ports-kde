@@ -2,6 +2,7 @@
 
 PORTNAME=	dhcpd
 PORTVERSION=	6.0.20170207
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	koue@chaosophia.net
@@ -23,8 +24,21 @@ CFLAGS+=	-Wall
 
 MAKE_ARGS+=	BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/man/man
 
-USERS=		dhcpd
-GROUPS=		dhcpd
+OPTIONS_DEFINE= NOPF
+
+NOPF_DESC=	Disable PF support
+
+OPTIONS_SUB=	yes
+
+NOPF_CFLAGS=		-DNO_PF=1
+NOPF_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-dhcp.c \
+			${PATCHDIR}/extra-patch-dhcpd.c \
+			${PATCHDIR}/extra-patch-memory.c \
+			${PATCHDIR}/extra-patch-pfutils.c
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|/etc/dhcpd.conf|${PREFIX}/etc/dhcpd.conf|" \
+		${WRKSRC}/dhcpd.[h8]
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dhcpd.conf \

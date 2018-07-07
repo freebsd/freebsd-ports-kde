@@ -16,7 +16,7 @@ LIBV4L_SLAVE=	compat
 
 BASE_HEADERS=	ivtv.h v4l2-controls.h v4l2-common.h videodev2.h
 DVB_HEADERS=	audio.h dmx.h frontend.h video.h
-EXTRA_HEADERS=	ca.h osd.h version.h
+EXTRA_HEADERS=	ca.h net.h osd.h version.h
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/include/linux/dvb/

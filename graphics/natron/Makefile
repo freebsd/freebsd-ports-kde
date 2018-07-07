@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	natron
-PORTVERSION=	2.3.4
-PORTREVISION=	1
+PORTVERSION=	2.3.13
 CATEGORIES=	graphics
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -25,19 +24,20 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 				libpyside-${PYTHON_VERSION}.so:devel/pyside \
 				libfreetype.so:print/freetype2
 
-USES=	pkgconfig python qmake shebangfix desktop-file-utils shared-mime-info \
-		gettext-runtime
+USES=	pkgconfig python qmake qt:4 shebangfix desktop-file-utils shared-mime-info \
+		gettext-runtime desktop-file-utils
 USE_GITHUB=	yes
-GH_ACCOUNT=	MrKepzie
+GH_ACCOUNT=	NatronGitHub
 GH_PROJECT=	Natron
-GH_TUPLE=	MrKepzie:OpenColorIO-Configs:Natron-v2.3:OpenColorIO_Configs/OpenColorIO-Configs \
-			MrKepzie:google-test:50d6fc3:google_test/Tests/google-test \
-			MrKepzie:google-mock:17945db:google_mock/Tests/google-mock \
-			MrKepzie:SequenceParsing:4b5e605:SequenceParsing/libs/SequenceParsing \
-			MrKepzie:tinydir:60f0905:tinydir/libs/SequenceParsing/tinydir \
-			devernay:openfx:3056fd6:openfx/libs/OpenFX
+GH_TUPLE=	NatronGitHub:openfx:a85dc34:openfx/libs/OpenFX \
+			NatronGitHub:google-test:50d6fc3:google_test/Tests/google-test \
+			NatronGitHub:google-mock:17945db:google_mock/Tests/google-mock \
+			NatronGitHub:google-breakpad:9474c3f:google_breakpad/libs/google-breakpad \
+			NatronGitHub:SequenceParsing:9e8b77a:SequenceParsing/libs/SequenceParsing \
+			NatronGitHub:tinydir:3aae922:tinydir/libs/SequenceParsing/tinydir \
+			NatronGitHub:OpenColorIO-Configs:Natron-v3.0:OpenColorIO_Configs/OpenColorIO-Configs
 
-USE_QT4=	corelib gui moc_build qmake_build rcc_build uic_build network opengl
+USE_QT=		corelib gui moc_build qmake_build rcc_build uic_build network opengl
 USE_XORG=	x11 pixman
 USE_GL=		gl
 

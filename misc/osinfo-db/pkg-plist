@@ -49,6 +49,7 @@ share/osinfo/install-script/debian.org/debian-preseed-desktop.xml
 share/osinfo/install-script/debian.org/debian-preseed-jeos.xml
 share/osinfo/install-script/fedoraproject.org/fedora-kickstart-desktop.xml
 share/osinfo/install-script/fedoraproject.org/fedora-kickstart-jeos.xml
+share/osinfo/install-script/fedoraproject.org/silverblue-kickstart-desktop.xml
 share/osinfo/install-script/microsoft.com/windows-cmd-desktop.xml
 share/osinfo/install-script/microsoft.com/windows-reg-desktop.xml
 share/osinfo/install-script/microsoft.com/windows-sif-desktop.xml
@@ -134,6 +135,7 @@ share/osinfo/os/fedoraproject.org/fedora-24.xml
 share/osinfo/os/fedoraproject.org/fedora-25.xml
 share/osinfo/os/fedoraproject.org/fedora-26.xml
 share/osinfo/os/fedoraproject.org/fedora-27.xml
+share/osinfo/os/fedoraproject.org/fedora-28.xml
 share/osinfo/os/fedoraproject.org/fedora-3.xml
 share/osinfo/os/fedoraproject.org/fedora-4.xml
 share/osinfo/os/fedoraproject.org/fedora-5.xml
@@ -142,6 +144,7 @@ share/osinfo/os/fedoraproject.org/fedora-7.xml
 share/osinfo/os/fedoraproject.org/fedora-8.xml
 share/osinfo/os/fedoraproject.org/fedora-9.xml
 share/osinfo/os/fedoraproject.org/fedora-unknown.xml
+share/osinfo/os/fedoraproject.org/silverblue-28.xml
 share/osinfo/os/freebsd.org/freebsd-1.0.xml
 share/osinfo/os/freebsd.org/freebsd-10.0.xml
 share/osinfo/os/freebsd.org/freebsd-10.1.xml
@@ -282,6 +285,7 @@ share/osinfo/os/netbsd.org/netbsd-6.1.xml
 share/osinfo/os/netbsd.org/netbsd-7.0.xml
 share/osinfo/os/netbsd.org/netbsd-7.1.1.xml
 share/osinfo/os/netbsd.org/netbsd-7.1.xml
+share/osinfo/os/netbsd.org/netbsd-7.1.2.xml
 share/osinfo/os/novell.com/netware-4.xml
 share/osinfo/os/novell.com/netware-5.xml
 share/osinfo/os/novell.com/netware-6.xml
@@ -317,6 +321,7 @@ share/osinfo/os/opensuse.org/opensuse-12.2.xml
 share/osinfo/os/opensuse.org/opensuse-12.3.xml
 share/osinfo/os/opensuse.org/opensuse-13.1.xml
 share/osinfo/os/opensuse.org/opensuse-13.2.xml
+share/osinfo/os/opensuse.org/opensuse-15.0.xml
 share/osinfo/os/opensuse.org/opensuse-42.1.xml
 share/osinfo/os/opensuse.org/opensuse-42.2.xml
 share/osinfo/os/opensuse.org/opensuse-42.3.xml

@@ -33,25 +33,26 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 
+BROKEN_powerpc64=	fails to link: /usr/bin/ld: cannot find -latomic
+
+LIB_DEPENDS=	libxml2.so:textproc/libxml2
+
+# XXX: remove tar:bz2
+USES=	cpe libedit ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.0a0.2018.05.14
+ISCVERSION=	9.13.1a0.2018.06.30
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	34de85dab844040f896f56d4891bc5afd4f30d1b
-
-# XXX: remove tar:bz2
-USES=	cpe libedit ssl tar:bz2
+GL_COMMIT=	cebcd9184ed242375b66bcd9071d0723ad342d17
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
 .if ${ISCVERSION:M*-*}
 CPE_UPDATE=	${ISCVERSION:C/.*-//:tl}
 .endif
-
-LIB_DEPENDS=	libxml2.so:textproc/libxml2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
@@ -65,7 +66,7 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 ETCDIR=		${PREFIX}/etc/namedb
 
 # XXX: Add -devel
-CONFLICTS=	bind99 bind910 bind911 bind912
+CONFLICTS=	bind99 bind910 bind911 bind912 bind913
 
 .if defined(BIND_TOOLS_SLAVE)
 CONFIGURE_ARGS+=	--disable-shared
@@ -166,15 +167,15 @@ GOST_ASN1_CONFIGURE_ON=	--with-gost=asn1
 
 GOST_CONFIGURE_ON=	--with-gost
 
-GSSAPI_BASE_CONFIGURE_ON= \
+GSSAPI_BASE_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
 GSSAPI_BASE_USES=	gssapi
 
-GSSAPI_HEIMDAL_CONFIGURE_ON= \
+GSSAPI_HEIMDAL_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
 GSSAPI_HEIMDAL_USES=	gssapi:heimdal
 
-GSSAPI_MIT_CONFIGURE_ON= \
+GSSAPI_MIT_CONFIGURE_ON=\
 	--with-gssapi=${GSSAPIBASEDIR} KRB5CONFIG="${KRB5CONFIG}"
 GSSAPI_MIT_USES=	gssapi:mit
 
@@ -200,9 +201,9 @@ MINCACHE_EXTRA_PATCHES=	${FILESDIR}/extrapatch-bind-min-override-ttl
 NATIVE_PKCS11_CONFIGURE_ENABLE=	native-pkcs11
 NATIVE_PKCS11_IMPLIES=	THREADS
 
-PYTHON_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply
+PYTHON_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply@${PY_FLAVOR}
 PYTHON_CONFIGURE_WITH=	python=${PYTHON_CMD}
-PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply
+PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply@${PY_FLAVOR}
 PYTHON_USES=	python
 
 QUERYTRACE_CONFIGURE_ENABLE=	querytrace
@@ -212,7 +213,6 @@ RPZ_NSDNAME_CONFIGURE_ENABLE=	rpz-nsdname
 RPZ_NSIP_CONFIGURE_ENABLE=	rpz-nsip
 
 SIGCHASE_CONFIGURE_ON=	STD_CDEFINES="-DDIG_SIGCHASE=1"
-
 
 START_LATE_SUB_LIST=	NAMED_REQUIRE="SERVERS cleanvar" \
 			NAMED_BEFORE="LOGIN"

@@ -17,12 +17,12 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libmythes-1.2.so:textproc/mythes
 
-MAJOR_VERSION=	2.2
-MINOR_VERSION=	4
+MAJOR_VERSION=	2.3
+MINOR_VERSION=	0
 
 USES=		desktop-file-utils gmake iconv pkgconfig perl5 \
-		python:2.7 shebangfix tar:xz
-USE_QT5=	core concurrent gui svg widgets buildtools_build qmake_build
+		python:2.7 qt:5 shebangfix tar:xz
+USE_QT=		core concurrent gui svg widgets buildtools_build qmake_build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-included-boost \
 		--without-included-mythes \
@@ -32,7 +32,10 @@ CONFIGURE_ARGS=	--without-included-boost \
 		--with-extra-prefix=${LOCALBASE}
 SHEBANG_FILES=	lib/configure.py \
 		lib/lyx2lyx/lyx2lyx \
-		lib/scripts/listerrors
+		lib/scripts/listerrors \
+		lib/scripts/gnuplot2pdf.py \
+		lib/scripts/svg2pdftex.py \
+		lib/scripts/svg2pstex.py
 
 LIBS+=		-lexecinfo
 
