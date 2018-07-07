@@ -2684,6 +2684,7 @@
     SUBDIR += p5-Goo-Canvas2
     SUBDIR += p5-Google-Checkout
     SUBDIR += p5-Google-ProtocolBuffers
+    SUBDIR += p5-GraphQL
     SUBDIR += p5-Gravatar-URL
     SUBDIR += p5-Gtk2-Notify
     SUBDIR += p5-Gtk2-Spell
@@ -4477,6 +4478,7 @@
     SUBDIR += py-dill
     SUBDIR += py-dirspec
     SUBDIR += py-dis3
+    SUBDIR += py-distlib
     SUBDIR += py-distorm
     SUBDIR += py-django-rq
     SUBDIR += py-django-rq-dashboard
@@ -4779,6 +4781,7 @@
     SUBDIR += py-oslo.utils
     SUBDIR += py-oslo.versionedobjects
     SUBDIR += py-oslo.vmware
+    SUBDIR += py-oslotest
     SUBDIR += py-osprofiler
     SUBDIR += py-p4python
     SUBDIR += py-packaging
@@ -5620,10 +5623,13 @@
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
     SUBDIR += rubygem-grape-entity060
+    SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape0
     SUBDIR += rubygem-grape_logging
+    SUBDIR += rubygem-graphiql-rails
+    SUBDIR += rubygem-graphql
     SUBDIR += rubygem-grit
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
@@ -5754,7 +5760,6 @@
     SUBDIR += rubygem-numerizer
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
-    SUBDIR += rubygem-oj2
     SUBDIR += rubygem-omniauth_crowd
     SUBDIR += rubygem-omniauth_crowd22
     SUBDIR += rubygem-open3_backport
@@ -5887,6 +5892,7 @@
     SUBDIR += rubygem-rubyinlineaccel
     SUBDIR += rubygem-rubytree
     SUBDIR += rubygem-rufus-scheduler
+    SUBDIR += rubygem-rufus-scheduler342
     SUBDIR += rubygem-rugged
     SUBDIR += rubygem-runt
     SUBDIR += rubygem-ruport
