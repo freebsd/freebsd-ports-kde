@@ -21,12 +21,11 @@ LIB_DEPENDS?=	libgsm.so:audio/gsm \
 		librtlsdr.so:comms/rtl-sdr
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
-USES+=		cmake compiler:c++11-lang tcl groff
+USES+=		cmake compiler:c++11-lang tcl groff pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	sm0svx
 GH_PROJECT=	svxlink
 
-USES=		cmake tcl groff pkgconfig
 CMAKE_SOURCE_PATH=	${WRKSRC}/src
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR:FILEPATH=${MANDIRS} \
 		-DLOCAL_STATE_DIR=/var

@@ -1,26 +1,6 @@
---- meson.build.orig	2017-11-28 05:13:06 UTC
+--- meson.build.orig	2018-06-09 12:13:40 UTC
 +++ meson.build
-@@ -72,6 +72,8 @@ endif
- 
- ############ udev bits ############
- 
-+if false
-+
- udev_dir = get_option('udev-dir')
- if udev_dir == ''
- 	udev_dir = join_paths(get_option('prefix'), 'lib', 'udev')
-@@ -127,6 +129,8 @@ litest_model_quirks_file = configure_file(input : 'ude
- 	       output : '90-libinput-model-quirks-litest.rules',
- 	       install : false,
- 	       configuration : litest_udev_rules_config)
-+
-+endif
- 
- ############ libinput-util.a ############
- src_libinput_util = [
---- meson.build.orig	2017-10-30 05:16:22 UTC
-+++ meson.build
-@@ -44,6 +44,8 @@ pkgconfig = import('pkgconfig')
+@@ -59,6 +59,8 @@ pkgconfig = import('pkgconfig')
  dep_udev = dependency('libudev')
  dep_mtdev = dependency('mtdev', version : '>= 1.1.0')
  dep_libevdev = dependency('libevdev', version : '>= 0.4')
@@ -29,7 +9,25 @@
  dep_lm = cc.find_library('m', required : false)
  dep_rt = cc.find_library('rt', required : false)
  
-@@ -184,6 +188,7 @@ deps_libinput = [
+@@ -96,6 +98,8 @@ endif
+ 
+ ############ udev bits ############
+ 
++if false
++
+ udev_dir = get_option('udev-dir')
+ if udev_dir == ''
+ 	udev_dir = join_paths(get_option('prefix'), 'lib', 'udev')
+@@ -152,6 +156,8 @@ litest_model_quirks_file = configure_file(input : 'ude
+ 	       install : false,
+ 	       configuration : litest_udev_rules_config)
+ 
++endif
++
+ ############ libinput-util.a ############
+ src_libinput_util = [
+ 		'src/libinput-util.c',
+@@ -217,6 +223,7 @@ deps_libinput = [
  	dep_mtdev,
  	dep_udev,
  	dep_libevdev,
@@ -37,3 +35,25 @@
  	dep_lm,
  	dep_rt,
  	dep_libwacom,
+@@ -504,21 +511,6 @@ install_data('tools/libinput-measure-trackpoint-range'
+             install_dir : libinput_tool_path)
+ configure_file(input : 'tools/libinput-measure-trackpoint-range.man',
+ 	       output : 'libinput-measure-trackpoint-range.1',
+-	       configuration : man_config,
+-	       install : true,
+-	       install_dir : join_paths(get_option('mandir'), 'man1')
+-	       )
+-
+-libinput_record_sources = [ 'tools/libinput-record.c', git_version_h ]
+-executable('libinput-record',
+-	   libinput_record_sources,
+-	   dependencies : deps_tools + [dep_udev],
+-	   include_directories : [includes_src, includes_include],
+-	   install_dir : libinput_tool_path,
+-	   install : true,
+-	   )
+-configure_file(input : 'tools/libinput-record.man',
+-	       output : 'libinput-record.1',
+ 	       configuration : man_config,
+ 	       install : true,
+ 	       install_dir : join_paths(get_option('mandir'), 'man1')
