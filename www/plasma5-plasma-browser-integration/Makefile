@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	plasma-browser-integration
-DISTVERSION=	5.10.95.20181011
+DISTVERSION=	5.13.2
 CATEGORIES=	www kde
 PKGNAMEPREFIX=	plasma5- # this port is not yet using CATEGORIES=kde-plasma
 
