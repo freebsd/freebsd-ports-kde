@@ -818,6 +818,7 @@ share/locale/id/LC_MESSAGES/kcmkwm.mo
 share/locale/id/LC_MESSAGES/kwin.mo
 share/locale/id/LC_MESSAGES/kwin_clients.mo
 share/locale/id/LC_MESSAGES/kwin_effects.mo
+share/locale/id/LC_MESSAGES/kwin_scripting.mo
 share/locale/is/LC_MESSAGES/kcm_kwindesktop.mo
 share/locale/is/LC_MESSAGES/kcm_kwintabbox.mo
 share/locale/id/LC_MESSAGES/kcm-kwin-scripts.mo
