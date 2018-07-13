@@ -777,6 +777,7 @@
     SUBDIR += sfft
     SUBDIR += sfst
     SUBDIR += simd-viterbi
+    SUBDIR += singular
     SUBDIR += slatec
     SUBDIR += slepc
     SUBDIR += slgrace
@@ -817,6 +818,7 @@
     SUBDIR += vtk5
     SUBDIR += vtk5-data
     SUBDIR += vtk6
+    SUBDIR += vtk8
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3

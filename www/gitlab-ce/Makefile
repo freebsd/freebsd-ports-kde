@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	11.0.2
+PORTVERSION=	11.0.3
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -120,7 +121,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-sidekiq-cron>=0.6.0:devel/rubygem-sidekiq-cron \
 	rubygem-redis-namespace>=1.6.0:databases/rubygem-redis-namespace \
 	rubygem-sidekiq-limit_fetch>=3.4:devel/rubygem-sidekiq-limit_fetch \
-	rubygem-rufus-scheduler>=3.4.0:devel/rubygem-rufus-scheduler \
+	rubygem-rufus-scheduler342>=3.4.0:devel/rubygem-rufus-scheduler342 \
 	rubygem-httparty>=0.13.3:www/rubygem-httparty \
 	rubygem-rainbow2>=2.2:devel/rubygem-rainbow2 \
 	rubygem-ruby-progressbar>=0:devel/rubygem-ruby-progressbar \
@@ -137,7 +138,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-gemnasium-gitlab-service>=0.2:devel/rubygem-gemnasium-gitlab-service \
 	rubygem-slack-notifier1>=1.5.1:devel/rubygem-slack-notifier1 \
 	rubygem-asana>=0.6.0:www/rubygem-asana \
-	rubygem-ruby-fogbugz>=0.2.1:devel/rubygem-ruby-fogbugz \
+	rubygem-ruby-fogbugz021>=0.2.1:devel/rubygem-ruby-fogbugz021 \
 	rubygem-kubeclient>=3.1.0:www/rubygem-kubeclient \
 	rubygem-sanitize>=4.6.5:textproc/rubygem-sanitize \
 	rubygem-babosa>=1.0.2:textproc/rubygem-babosa \
@@ -213,7 +214,7 @@ USE_RC_SUBR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the here: https://gitlab.com/gitlab-org/gitlab-ce/tags
-GL_COMMIT=	d9540ee0464796746ec0906c0c2762ca099be3e5
+GL_COMMIT=	aa6207551b023ecba0dba332c6358e1007f4b0eb
 
 USERS=	git
 GROUPS=	git

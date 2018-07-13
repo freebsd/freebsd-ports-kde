@@ -3,14 +3,14 @@
 PORTNAME=	waterfox
 DISTVERSION=	56.2.1-55
 DISTVERSIONSUFFIX=	-g6395bf177f76a
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www ipv6
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Distilled fork of Firefox
 
 DEPRECATED=	Temporary experiment
-EXPIRATION_DATE=2018-07-10
+EXPIRATION_DATE=2018-07-17
 
 BUILD_DEPENDS=	nspr>=4.16:devel/nspr \
 		nss>=3.32.1:security/nss \
