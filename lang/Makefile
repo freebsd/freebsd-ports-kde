@@ -23,6 +23,7 @@
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
+    SUBDIR += cbmbasic
     SUBDIR += ccl
     SUBDIR += cdent
     SUBDIR += ceylon
@@ -213,6 +214,7 @@
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
+    SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-nox11

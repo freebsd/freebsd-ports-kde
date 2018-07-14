@@ -773,6 +773,7 @@
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
     SUBDIR += py-agate-sql
+    SUBDIR += py-aiopg
     SUBDIR += py-aioredis
     SUBDIR += py-alembic
     SUBDIR += py-apsw
@@ -900,6 +901,7 @@
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += retcl
+    SUBDIR += riak
     SUBDIR += rocksdb
     SUBDIR += rocksdb-lite
     SUBDIR += rrdman

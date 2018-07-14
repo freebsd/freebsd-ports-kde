@@ -44,7 +44,9 @@
     SUBDIR += chemtool
     SUBDIR += chemtool-devel
     SUBDIR += clhep
+    SUBDIR += clipper
     SUBDIR += colt
+    SUBDIR += coot
     SUBDIR += crf++
     SUBDIR += dcl
     SUBDIR += devisor
@@ -89,6 +91,7 @@
     SUBDIR += kst2
     SUBDIR += lamprop
     SUBDIR += libaec
+    SUBDIR += libccp4
     SUBDIR += libcint
     SUBDIR += libctl
     SUBDIR += libefp
@@ -99,6 +102,7 @@
     SUBDIR += liblinear
     SUBDIR += liboglappth
     SUBDIR += libquantum
+    SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
     SUBDIR += libxc
@@ -115,6 +119,7 @@
     SUBDIR += metaf2xml
     SUBDIR += metaphysicl
     SUBDIR += minc2
+    SUBDIR += mmdb2
     SUBDIR += mol2ps
     SUBDIR += mpb
     SUBDIR += mpqc
@@ -126,6 +131,7 @@
     SUBDIR += nifticlib
     SUBDIR += openbabel
     SUBDIR += openkim
+    SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
