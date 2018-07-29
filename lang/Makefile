@@ -23,6 +23,7 @@
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
+    SUBDIR += cbmbasic
     SUBDIR += ccl
     SUBDIR += cdent
     SUBDIR += ceylon
@@ -100,7 +101,6 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
-    SUBDIR += gcc47
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
@@ -109,6 +109,7 @@
     SUBDIR += gcc6-devel
     SUBDIR += gcc7
     SUBDIR += gcc7-devel
+    SUBDIR += gcc8
     SUBDIR += gcc8-devel
     SUBDIR += gcc9-devel
     SUBDIR += gforth
@@ -213,6 +214,7 @@
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
+    SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-nox11
@@ -345,7 +347,6 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spec.alpha
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey170
     SUBDIR += spidermonkey185

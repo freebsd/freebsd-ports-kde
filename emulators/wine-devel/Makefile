@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	3.11
+DISTVERSION=	3.13
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	http://mirrors.ibiblio.org/wine/source/3.x/ \
-		SF/${PORTNAME}/Source
+MASTER_SITES=	SF/${PORTNAME}/Source \
+		http://mirrors.ibiblio.org/wine/source/3.x/
 PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -83,7 +83,7 @@ LDAP_USE=		OPENLDAP=yes
 LIBXSLT_CONFIGURE_WITH=	xslt
 LIBXSLT_LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-4.7.1.msi:emulators/wine-mono-devel
+MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-4.7.3.msi:emulators/wine-mono-devel
 
 MPG123_CONFIGURE_WITH=	mpg123
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
@@ -146,7 +146,7 @@ DISTFILES+=	${COMP_DIST}:cho
 
 EXTRACT_DEPENDS=bash:shells/bash \
 		git:devel/git \
-		autoreconf-2.69:devel/autoconf
+		autoconf>0:devel/autoconf
 LIB_DEPENDS+=	libtxc_dxtn.so:graphics/s2tc
 
 post-extract: fix-shebang

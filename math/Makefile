@@ -298,6 +298,7 @@
     SUBDIR += lapacke
     SUBDIR += laspack
     SUBDIR += ldouble
+    SUBDIR += lean
     SUBDIR += levmar
     SUBDIR += libRmath
     SUBDIR += libflame
@@ -306,6 +307,7 @@
     SUBDIR += libmissing
     SUBDIR += libocas
     SUBDIR += liborigin
+    SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
     SUBDIR += librsb
@@ -593,6 +595,7 @@
     SUBDIR += p5-Set-Window
     SUBDIR += p5-Statistics-Basic
     SUBDIR += p5-Statistics-Benford
+    SUBDIR += p5-Statistics-CaseResampling
     SUBDIR += p5-Statistics-ChiSquare
     SUBDIR += p5-Statistics-Contingency
     SUBDIR += p5-Statistics-Descriptive
@@ -679,6 +682,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-keras
     SUBDIR += py-levmar
+    SUBDIR += py-libpoly
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
@@ -733,6 +737,7 @@
     SUBDIR += py-uncertainties
     SUBDIR += py-viper
     SUBDIR += py-yt
+    SUBDIR += py-z3
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
@@ -777,6 +782,7 @@
     SUBDIR += sfft
     SUBDIR += sfst
     SUBDIR += simd-viterbi
+    SUBDIR += singular
     SUBDIR += slatec
     SUBDIR += slepc
     SUBDIR += slgrace
@@ -817,6 +823,7 @@
     SUBDIR += vtk5
     SUBDIR += vtk5-data
     SUBDIR += vtk6
+    SUBDIR += vtk8
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3
@@ -834,6 +841,7 @@
     SUBDIR += xspread
     SUBDIR += xtensor
     SUBDIR += yacas
+    SUBDIR += yices
     SUBDIR += z3
     SUBDIR += zimpl
 

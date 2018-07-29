@@ -147,6 +147,8 @@
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
     SUBDIR += faust
+    SUBDIR += faust-lv2
+    SUBDIR += faustlive
     SUBDIR += fcplay
     SUBDIR += fdk-aac
     SUBDIR += fdmf
@@ -203,10 +205,10 @@
     SUBDIR += gbsplay
     SUBDIR += gervill
     SUBDIR += ghostess
+    SUBDIR += giada
     SUBDIR += gimmix
     SUBDIR += gkrellmms2
     SUBDIR += gkrellmvolume2
-    SUBDIR += glame
     SUBDIR += glurp
     SUBDIR += gmidimonitor
     SUBDIR += gmixer
@@ -911,6 +913,7 @@
     SUBDIR += xvmixer
     SUBDIR += xwave
     SUBDIR += yell
+    SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
     SUBDIR += zinf

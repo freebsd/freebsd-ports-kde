@@ -28,6 +28,7 @@
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += apercu
+    SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += aria2fe
     SUBDIR += asql
@@ -236,6 +237,7 @@
     SUBDIR += guile-www
     SUBDIR += gurlchecker
     SUBDIR += h2o
+    SUBDIR += h2o-devel
     SUBDIR += habari
     SUBDIR += hastymail2-devel
     SUBDIR += havp
@@ -553,6 +555,7 @@
     SUBDIR += nuvolaplayer-yandex-music
     SUBDIR += nuvolaplayer-youtube
     SUBDIR += obhttpd
+    SUBDIR += onionshare
     SUBDIR += opencart
     SUBDIR += opera
     SUBDIR += opera-linuxplugins
@@ -1363,8 +1366,6 @@
     SUBDIR += p5-WebService-YouTube
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
-    SUBDIR += p5-ZConf-RSS
-    SUBDIR += p5-ZConf-RSS-GUI-GTK
     SUBDIR += p5-chklinks
     SUBDIR += p5-jQuery-File-Upload
     SUBDIR += p5-libapreq2
@@ -1877,6 +1878,7 @@
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
     SUBDIR += py-unit
+    SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
@@ -2262,6 +2264,7 @@
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid
+    SUBDIR += squid3
     SUBDIR += squid-devel
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
@@ -2280,7 +2283,6 @@
     SUBDIR += swish++
     SUBDIR += swish-e
     SUBDIR += sws
-    SUBDIR += sxweb
     SUBDIR += syndigator
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
