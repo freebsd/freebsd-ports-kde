@@ -293,6 +293,7 @@
     SUBDIR += john
     SUBDIR += kbfs
     SUBDIR += kc
+    SUBDIR += kc24
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
     SUBDIR += keepass
@@ -309,6 +310,7 @@
     SUBDIR += kgpg
     SUBDIR += kgpg-kde4
     SUBDIR += kickpass
+    SUBDIR += klee
     SUBDIR += kleopatra
     SUBDIR += knock
     SUBDIR += knocker
@@ -912,11 +914,15 @@
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
     SUBDIR += py-certbot-dns-dnsmadeeasy
+    SUBDIR += py-certbot-dns-gehirn
     SUBDIR += py-certbot-dns-google
+    SUBDIR += py-certbot-dns-linode
     SUBDIR += py-certbot-dns-luadns
     SUBDIR += py-certbot-dns-nsone
+    SUBDIR += py-certbot-dns-ovh
     SUBDIR += py-certbot-dns-rfc2136
     SUBDIR += py-certbot-dns-route53
+    SUBDIR += py-certbot-dns-sakuracloud
     SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
     SUBDIR += py-certstream
@@ -1004,6 +1010,7 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-python-gnupg
+    SUBDIR += py-python-jose
     SUBDIR += py-python-nss
     SUBDIR += py-python-openid
     SUBDIR += py-python-registry

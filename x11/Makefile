@@ -6,6 +6,7 @@
     SUBDIR += 3ddesktop
     SUBDIR += 9box
     SUBDIR += 9menu
+    SUBDIR += admiral
     SUBDIR += alacritty
     SUBDIR += alltray
     SUBDIR += alttab
@@ -227,6 +228,7 @@
     SUBDIR += lxmenu-data
     SUBDIR += lxpanel
     SUBDIR += lxqt-globalkeys
+    SUBDIR += lxqt-globalkeys-l10n
     SUBDIR += lxqt-l10n
     SUBDIR += lxrandr
     SUBDIR += mate
@@ -502,6 +504,7 @@
     SUBDIR += xpr
     SUBDIR += xpra
     SUBDIR += xprehashprinterlist
+    SUBDIR += xprintidle
     SUBDIR += xprompt
     SUBDIR += xprop
     SUBDIR += xproto

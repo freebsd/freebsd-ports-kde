@@ -218,6 +218,7 @@
     SUBDIR += pynn
     SUBDIR += qcl
     SUBDIR += qtresistors
+    SUBDIR += quantum-espresso
     SUBDIR += rdkit
     SUBDIR += rmf
     SUBDIR += rubygem-ai4r
@@ -246,6 +247,7 @@
     SUBDIR += v_sim
     SUBDIR += vmd
     SUBDIR += voro++
+    SUBDIR += xcrysden
     SUBDIR += xfce4-equake-plugin
     SUBDIR += xmakemol
 

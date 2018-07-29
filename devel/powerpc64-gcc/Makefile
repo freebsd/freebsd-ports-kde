@@ -2,7 +2,7 @@
 
 PORTNAME=	gcc
 PORTVERSION=	6.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GCC/releases/gcc-${DISTVERSION}
 PKGNAMEPREFIX?=	powerpc64-
@@ -71,7 +71,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/LOCAL_INCLUDE_DIR/ d ' \
 		${WRKSRC}//gcc/Makefile.in
 
-.if ${TARGETARCH} == "amd64"
+.if ${ARCH} == "amd64"
 CONFIGURE_TARGET=	x86_64-unknown-${OPSYS:tl}${OSREL}
 .else
 CONFIGURE_TARGET=	${ARCH}-unknown-${OPSYS:tl}${OSREL}
@@ -84,13 +84,13 @@ MAKE_ARGS+=CXXFLAGS=-fbracket-depth=512
 .endif
 
 post-install:
-.for f in cpp gcov gcov-tool
+.for f in cpp gcov gcov-dump gcov-tool
 	@if [ -f ${STAGEDIR}${PREFIX}/bin/$f ] ; then \
 		${MV} ${STAGEDIR}${PREFIX}/bin/$f  \
 		    ${STAGEDIR}${PREFIX}/bin/${GCC_TARGET}-$f ; \
 	fi
 .endfor
-.for f in c++ cpp g++ gcc gcc-ar gcc-nm gcc-ranlib gcov gcov-tool
+.for f in c++ cpp g++ gcc gcc-ar gcc-nm gcc-ranlib gcov gcov-dump gcov-tool
 	@if [ ! -f ${STAGEDIR}${PREFIX}/man/man1/${GCC_TARGET}-$f.1 ] ; then \
 		if [ -f ${STAGEDIR}${PREFIX}/man/man1/$f.1 ] ; then \
 			${CP} ${STAGEDIR}${PREFIX}/man/man1/$f.1  \
@@ -105,6 +105,10 @@ post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/man/man7/*
 .if empty(PKGNAMEPREFIX:M*-*-)
 	@${RM} -r ${STAGEDIR}${PREFIX}/lib/gcc/${GCC_TARGET}/${PORTVERSION}/include-fixed
+.endif
+.if ${TARGETARCH} == "amd64" || ${TARGETARCH} == "i386"
+	# Conflicts with sys/x86/include/float.h
+	${RM} ${STAGEDIR}${PREFIX}/lib/gcc/${GCC_TARGET$}/${PORTVERSION}/include/float.h
 .endif
 
 # This port and all its slave ports fail on aarch64 -- but not all

@@ -237,6 +237,7 @@
     SUBDIR += guile-www
     SUBDIR += gurlchecker
     SUBDIR += h2o
+    SUBDIR += h2o-devel
     SUBDIR += habari
     SUBDIR += hastymail2-devel
     SUBDIR += havp
@@ -1365,8 +1366,6 @@
     SUBDIR += p5-WebService-YouTube
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
-    SUBDIR += p5-ZConf-RSS
-    SUBDIR += p5-ZConf-RSS-GUI-GTK
     SUBDIR += p5-chklinks
     SUBDIR += p5-jQuery-File-Upload
     SUBDIR += p5-libapreq2
@@ -1879,6 +1878,7 @@
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
     SUBDIR += py-unit
+    SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
