@@ -33,6 +33,7 @@ lib/libkdecorations2private.so.6
 share/locale/ca/LC_MESSAGES/kdecoration.mo
 share/locale/ca@valencia/LC_MESSAGES/kdecoration.mo
 share/locale/cs/LC_MESSAGES/kdecoration.mo
+share/locale/da/LC_MESSAGES/kdecoration.mo
 share/locale/de/LC_MESSAGES/kdecoration.mo
 share/locale/en_GB/LC_MESSAGES/kdecoration.mo
 share/locale/es/LC_MESSAGES/kdecoration.mo
