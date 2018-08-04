@@ -316,6 +316,7 @@
     SUBDIR += knock
     SUBDIR += knocker
     SUBDIR += kpcli
+    SUBDIR += kpkpass
     SUBDIR += kqoauth
     SUBDIR += kr
     SUBDIR += krb5
