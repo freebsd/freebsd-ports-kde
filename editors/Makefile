@@ -33,6 +33,7 @@
     SUBDIR += dte
     SUBDIR += e3
     SUBDIR += ecce
+    SUBDIR += ecrire
     SUBDIR += edith
     SUBDIR += editorconfig-core-c
     SUBDIR += emacs
@@ -48,6 +49,7 @@
     SUBDIR += gedit
     SUBDIR += gedit-plugins
     SUBDIR += ghex
+    SUBDIR += ghostwriter
     SUBDIR += gmanedit
     SUBDIR += gnotepad+
     SUBDIR += gobby

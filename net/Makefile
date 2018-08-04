@@ -339,6 +339,7 @@
     SUBDIR += kio-upnp-ms
     SUBDIR += kippo
     SUBDIR += kissd
+    SUBDIR += kitinerary
     SUBDIR += kldap
     SUBDIR += kmailtransport
     SUBDIR += kmbox
@@ -1219,7 +1220,6 @@
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
     SUBDIR += rubygem-asset_sync
-    SUBDIR += rubygem-asset_sync220
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
     SUBDIR += rubygem-azure
@@ -1271,11 +1271,9 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitaly-proto094
-    SUBDIR += rubygem-gitaly-proto095
-    SUBDIR += rubygem-gitaly-proto096
-    SUBDIR += rubygem-gitaly-proto099
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
+    SUBDIR += rubygem-gitlab_omniauth-ldap20
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
@@ -1301,7 +1299,6 @@
     SUBDIR += rubygem-omniauth-facebook4
     SUBDIR += rubygem-omniauth-github
     SUBDIR += rubygem-omniauth-github-discourse
-    SUBDIR += rubygem-omniauth-github11
     SUBDIR += rubygem-omniauth-google-oauth2
     SUBDIR += rubygem-omniauth-kerberos
     SUBDIR += rubygem-omniauth-oauth
