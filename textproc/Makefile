@@ -74,6 +74,7 @@
     SUBDIR += c2html
     SUBDIR += c2man
     SUBDIR += ca-aspell
+    SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
     SUBDIR += cdiff
@@ -1290,9 +1291,9 @@
     SUBDIR += py-duecredit
     SUBDIR += py-elasticsearch
     SUBDIR += py-elasticsearch-async
-    SUBDIR += py-elasticsearch5
     SUBDIR += py-elasticsearch-curator
     SUBDIR += py-elasticsearch-dsl
+    SUBDIR += py-elasticsearch5
     SUBDIR += py-elib.intl
     SUBDIR += py-empy
     SUBDIR += py-enchant
@@ -1356,6 +1357,7 @@
     SUBDIR += py-pyaml
     SUBDIR += py-pyctpp2
     SUBDIR += py-pyes
+    SUBDIR += py-pygccxml
     SUBDIR += py-pygments
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
@@ -1550,9 +1552,8 @@
     SUBDIR += rubygem-heredoc_unindent
     SUBDIR += rubygem-hikidoc
     SUBDIR += rubygem-html-pipeline
-    SUBDIR += rubygem-html-pipeline27
-    SUBDIR += rubygem-html-pipeline-gitlab
     SUBDIR += rubygem-html-pipeline1
+    SUBDIR += rubygem-html-pipeline27
     SUBDIR += rubygem-html2text
     SUBDIR += rubygem-htmlentities
     SUBDIR += rubygem-ini

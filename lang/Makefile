@@ -39,7 +39,6 @@
     SUBDIR += clang33
     SUBDIR += clang34
     SUBDIR += clang35
-    SUBDIR += clang38
     SUBDIR += cling
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
@@ -147,6 +146,7 @@
     SUBDIR += icon
     SUBDIR += intercal
     SUBDIR += io
+    SUBDIR += io-devel
     SUBDIR += itcl
     SUBDIR += itcl4
     SUBDIR += jakarta-commons-jelly
@@ -168,14 +168,14 @@
     SUBDIR += libobjc2
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
+    SUBDIR += linux-c6-tcl85
+    SUBDIR += linux-c7-tcl85
     SUBDIR += linux-dotnet-cli
     SUBDIR += linux-dotnet-runtime
     SUBDIR += linux-dotnet-sdk
     SUBDIR += linux-dotnet10-runtime
     SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-dotnet11-sdk
-    SUBDIR += linux-c6-tcl85
-    SUBDIR += linux-c7-tcl85
     SUBDIR += linux-j
     SUBDIR += lua-ada
     SUBDIR += lua51

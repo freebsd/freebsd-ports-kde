@@ -4,6 +4,7 @@
     COMMENT = Miscellaneous utilities
 
     SUBDIR += R-cran-mime
+    SUBDIR += R-cran-xfun
     SUBDIR += achievo
     SUBDIR += aclgen
     SUBDIR += amanda-client
@@ -291,6 +292,7 @@
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmv
+    SUBDIR += morse
     SUBDIR += mtail
     SUBDIR += mtx
     SUBDIR += najitool
@@ -300,6 +302,7 @@
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
+    SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += opencyc
     SUBDIR += openhab2
@@ -456,7 +459,6 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qtchooser
-    SUBDIR += R-cran-xfun
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
