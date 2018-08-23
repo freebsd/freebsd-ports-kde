@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	11.1.2
+PORTVERSION=	11.1.4
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -40,7 +40,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-grape-path-helpers>=1.0:devel/rubygem-grape-path-helpers \
 	rubygem-faraday>=0.12.0:www/rubygem-faraday \
 	rubygem-devise>=4.4:devel/rubygem-devise \
-	rubygem-doorkeeper>=4.3:security/rubygem-doorkeeper \
+	rubygem-doorkeeper43>=4.3:security/rubygem-doorkeeper43 \
 	rubygem-doorkeeper-openid_connect>=1.5:security/rubygem-doorkeeper-openid_connect \
 	rubygem-omniauth>=1.8:security/rubygem-omniauth \
 	rubygem-omniauth-auth0>=2.0.0:net/rubygem-omniauth-auth0 \
@@ -68,7 +68,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-validates_hostname>=1.0.6:dns/rubygem-validates_hostname \
 	rubygem-browser>=2.2:www/rubygem-browser \
 	rubygem-gpgme>=2.0.13:security/rubygem-gpgme \
-	rubygem-gitlab_omniauth-ldap>=2.0.4:net/rubygem-gitlab_omniauth-ldap \
+	rubygem-gitlab_omniauth-ldap20>=2.0.4:net/rubygem-gitlab_omniauth-ldap20 \
 	rubygem-net-ldap>=0.16.0:net/rubygem-net-ldap \
 	rubygem-gitlab-gollum-lib>=4.2.0:www/rubygem-gitlab-gollum-lib \
 	rubygem-gitlab-gollum-rugged_adapter>=0.4.4:www/rubygem-gitlab-gollum-rugged_adapter \
@@ -86,11 +86,11 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-dropzonejs-rails07>=0.7.1:www/rubygem-dropzonejs-rails07 \
 	rubygem-fog-aws2>=2.0.1:net/rubygem-fog-aws2 \
 	rubygem-fog-core1>=1.44:devel/rubygem-fog-core1 \
-	rubygem-fog-google>=1.3.3:net/rubygem-fog-google \
+	rubygem-fog-google13>=1.3.3:net/rubygem-fog-google13 \
 	rubygem-fog-local>=0.3:net/rubygem-fog-local \
 	rubygem-fog-openstack>=0.1:net/rubygem-fog-openstack \
 	rubygem-fog-rackspace>=0.1.1:net/rubygem-fog-rackspace \
-	rubygem-fog-aliyun>=0.2.0:net/rubygem-fog-aliyun \
+	rubygem-fog-aliyun02>=0.2.0:net/rubygem-fog-aliyun02 \
 	rubygem-google-api-client>=0.19.8:devel/rubygem-google-api-client \
 	rubygem-unf>=0.1.4:textproc/rubygem-unf \
 	rubygem-seed-fu>=2.3.7:databases/rubygem-seed-fu \
@@ -117,7 +117,7 @@ RUN_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-state_machines-activerecord>=0.5.1:databases/rubygem-state_machines-activerecord \
 	rubygem-acts-as-taggable-on>=5.0:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq>=5.1.0:devel/rubygem-sidekiq \
-	rubygem-sidekiq-cron>=0.6.0:devel/rubygem-sidekiq-cron \
+	rubygem-sidekiq-cron0>=0.6.0:devel/rubygem-sidekiq-cron0 \
 	rubygem-redis-namespace>=1.6.0:databases/rubygem-redis-namespace \
 	rubygem-sidekiq-limit_fetch>=3.4:devel/rubygem-sidekiq-limit_fetch \
 	rubygem-rufus-scheduler342>=3.4.0:devel/rubygem-rufus-scheduler342 \
@@ -213,7 +213,7 @@ USE_RC_SUBR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the here: https://gitlab.com/gitlab-org/gitlab-ce/tags
-GL_COMMIT=	35936b0b6282db026128d21abe8f3490c1d376f2
+GL_COMMIT=	63daf37ad326bb4c4e74ebee8b8e2be7878b298f
 
 USERS=	git
 GROUPS=	git
@@ -240,6 +240,9 @@ post-patch-PGSQL-on:
 post-patch-PGSQL-off:
 	${REINPLACE_CMD} -e "/gem 'pg'/d" ${WRKSRC}/Gemfile
 	${REINPLACE_CMD} -e "/gem 'peek-pg'/d" ${WRKSRC}/Gemfile
+
+pre-install:
+	(cd ${WRKSRC} && rm Gemfile.lock && bundle install --local)
 
 do-install:
 	${FIND} ${WRKSRC} -name '*.orig' -delete

@@ -4,12 +4,12 @@
     COMMENT = Miscellaneous utilities
 
     SUBDIR += R-cran-mime
+    SUBDIR += R-cran-xfun
     SUBDIR += achievo
     SUBDIR += aclgen
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
-    SUBDIR += amfm
     SUBDIR += ansiweather
     SUBDIR += apparix
     SUBDIR += artikulate
@@ -186,6 +186,7 @@
     SUBDIR += inplace
     SUBDIR += ipa_conv
     SUBDIR += ipbt
+    SUBDIR += ironscanner
     SUBDIR += iselect
     SUBDIR += iso-codes
     SUBDIR += jargon
@@ -290,6 +291,7 @@
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmv
+    SUBDIR += morse
     SUBDIR += mtail
     SUBDIR += mtx
     SUBDIR += najitool
@@ -299,6 +301,7 @@
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
+    SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += opencyc
     SUBDIR += openhab2
@@ -455,7 +458,6 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qtchooser
-    SUBDIR += R-cran-xfun
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
@@ -497,6 +499,7 @@
     SUBDIR += spamcalc
     SUBDIR += sshbuddy
     SUBDIR += sssnips
+    SUBDIR += survex
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
@@ -536,10 +539,12 @@
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
     SUBDIR += utftools
+    SUBDIR += valentina
     SUBDIR += valspeak
     SUBDIR += vdmfec
     SUBDIR += vera
     SUBDIR += vifm
+    SUBDIR += visp
     SUBDIR += viz
     SUBDIR += whichman
     SUBDIR += window
@@ -563,7 +568,6 @@
     SUBDIR += xiphos
     SUBDIR += xless
     SUBDIR += xosd
-    SUBDIR += xpns
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += xtypo

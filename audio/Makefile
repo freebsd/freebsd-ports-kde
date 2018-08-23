@@ -115,6 +115,7 @@
     SUBDIR += denemo
     SUBDIR += dir2ogg
     SUBDIR += discid
+    SUBDIR += dpf-plugins-lv2
     SUBDIR += dream
     SUBDIR += drumgizmo
     SUBDIR += drumpiler
@@ -366,6 +367,7 @@
     SUBDIR += julius
     SUBDIR += kexis
     SUBDIR += kid3-kde4
+    SUBDIR += kid3-kf5
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
     SUBDIR += kio-audiocd-kde4
@@ -426,7 +428,6 @@
     SUBDIR += libmp3splt
     SUBDIR += libmpd
     SUBDIR += libmpdclient
-    SUBDIR += libmusicbrainz3
     SUBDIR += libmusicbrainz5
     SUBDIR += libmusicxml
     SUBDIR += libmysofa
@@ -664,6 +665,7 @@
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
+    SUBDIR += pulseaudio-module-xrdp
     SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-ao

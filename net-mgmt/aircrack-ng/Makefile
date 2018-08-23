@@ -3,10 +3,11 @@
 
 PORTNAME=	aircrack-ng
 DISTVERSION=	1.3
+PORTREVISION=	1
 CATEGORIES=	net-mgmt security
 MASTER_SITES=	http://download.aircrack-ng.org/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	lme@FreeBSD.org
 COMMENT=	802.11 WEP and WPA-PSK keys cracking program
 
 LICENSE=	GPLv2 BSD3CLAUSE APACHE20

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	drm-next-kmod
-PORTVERSION=	4.11.g20180619
-PORTREVISION=	1
+PORTVERSION=	4.11.g20180802
 CATEGORIES=	graphics
 
 MAINTAINER=	jmd@FreeBSD.org
@@ -17,7 +16,7 @@ ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64
 
 RUN_DEPENDS=	gpu-firmware-kmod>=g20180319:graphics/gpu-firmware-kmod
 
-CONFLICTS_INSTALL=	drm-devel-kmod drm-stable-kmod
+CONFLICTS_INSTALL=	drm-devel-kmod drm-stable-kmod drm-legacy-kmod
 
 OPTIONS_DEFINE=	DEBUG
 
@@ -26,7 +25,7 @@ USES=		kmod uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreeBSDDesktop
 GH_PROJECT=	kms-drm
-GH_TAGNAME=	a753215
+GH_TAGNAME=	cc04340
 
 .include <bsd.port.options.mk>
 

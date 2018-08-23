@@ -49,7 +49,6 @@
     SUBDIR += aptly
     SUBDIR += arcconf
     SUBDIR += archivemount
-    SUBDIR += areca-cli
     SUBDIR += ascpu
     SUBDIR += asfsm
     SUBDIR += asmctl
@@ -87,16 +86,16 @@
     SUBDIR += baloo-widgets
     SUBDIR += baloo-widgets-kde4
     SUBDIR += bamf
-    SUBDIR += bareos16-bat
-    SUBDIR += bareos16-client
-    SUBDIR += bareos16-client-static
-    SUBDIR += bareos16-server
-    SUBDIR += bareos16-traymonitor
     SUBDIR += bareos-client
     SUBDIR += bareos-client-static
     SUBDIR += bareos-docs
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
+    SUBDIR += bareos16-bat
+    SUBDIR += bareos16-client
+    SUBDIR += bareos16-client-static
+    SUBDIR += bareos16-server
+    SUBDIR += bareos16-traymonitor
     SUBDIR += batmon
     SUBDIR += battfink
     SUBDIR += battmond
@@ -263,6 +262,7 @@
     SUBDIR += dmidecode
     SUBDIR += docker
     SUBDIR += docker-compose
+    SUBDIR += docker-credential-pass
     SUBDIR += docker-freebsd
     SUBDIR += docker-machine
     SUBDIR += doctl
@@ -300,6 +300,7 @@
     SUBDIR += ec2-scripts
     SUBDIR += edid-decode
     SUBDIR += eject
+    SUBDIR += eksctl
     SUBDIR += endian
     SUBDIR += enteruser
     SUBDIR += entr
@@ -396,6 +397,7 @@
     SUBDIR += fusefs-ntfs-compression
     SUBDIR += fusefs-pod
     SUBDIR += fusefs-rar2fs
+    SUBDIR += fusefs-s3backer
     SUBDIR += fusefs-s3fs
     SUBDIR += fusefs-simple-mtpfs
     SUBDIR += fusefs-smbnetfs
@@ -479,6 +481,7 @@
     SUBDIR += healthd
     SUBDIR += heartbeat
     SUBDIR += heirloom
+    SUBDIR += helm
     SUBDIR += hextools
     SUBDIR += hfm
     SUBDIR += hfsexplorer
@@ -530,6 +533,7 @@
     SUBDIR += isomaster
     SUBDIR += isomd5sum
     SUBDIR += istatserver
+    SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
     SUBDIR += jailadmin
@@ -573,11 +577,13 @@
     SUBDIR += kldfind
     SUBDIR += kldpatch
     SUBDIR += knutclient-kde4
+    SUBDIR += kops
     SUBDIR += krename
     SUBDIR += kshutdown-kde4
     SUBDIR += ksysguardd-kde4
     SUBDIR += ksystemlog
     SUBDIR += ksystemlog-kde4
+    SUBDIR += kubectl
     SUBDIR += kuser-kde4
     SUBDIR += lava
     SUBDIR += lbl-cf
@@ -597,6 +603,7 @@
     SUBDIR += libieee1284
     SUBDIR += libretto-config
     SUBDIR += libsunacl
+    SUBDIR += libsysstat 
     SUBDIR += liburcu
     SUBDIR += libutempter
     SUBDIR += life-preserver
@@ -635,6 +642,7 @@
     SUBDIR += lttng-ust
     SUBDIR += luckybackup
     SUBDIR += lxinput
+    SUBDIR += lxqt-config
     SUBDIR += lxqt-policykit
     SUBDIR += lxqt-qtplugin
     SUBDIR += lxsplit
@@ -683,6 +691,7 @@
     SUBDIR += metalog
     SUBDIR += mfid
     SUBDIR += mgeupsd
+    SUBDIR += minikube
     SUBDIR += minimunin
     SUBDIR += minirsyslogd
     SUBDIR += mixer
@@ -953,6 +962,7 @@
     SUBDIR += pxattr
     SUBDIR += py-XenAPI
     SUBDIR += py-analyzemft
+    SUBDIR += py-ansible-lint
     SUBDIR += py-bcfg2
     SUBDIR += py-cdmi
     SUBDIR += py-consul
@@ -1069,9 +1079,13 @@
     SUBDIR += rubygem-capistrano-ext
     SUBDIR += rubygem-capistrano-harrow
     SUBDIR += rubygem-chef
+    SUBDIR += rubygem-chef12
     SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-config
+    SUBDIR += rubygem-chef-config12
+    SUBDIR += rubygem-chef-dk
     SUBDIR += rubygem-chef-zero
+    SUBDIR += rubygem-chef-zero5
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
     SUBDIR += rubygem-fluent-plugin-config-expander
@@ -1079,7 +1093,6 @@
     SUBDIR += rubygem-fluent-plugin-graylog
     SUBDIR += rubygem-fluent-plugin-tail-asis
     SUBDIR += rubygem-fluentd
-    SUBDIR += rubygem-fluentd010
     SUBDIR += rubygem-fssm
     SUBDIR += rubygem-god
     SUBDIR += rubygem-guard
@@ -1105,6 +1118,7 @@
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
+    SUBDIR += rubygem-ohai8
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
     SUBDIR += rubygem-r10k
@@ -1243,6 +1257,7 @@
     SUBDIR += syslog-ng313
     SUBDIR += syslog-ng314
     SUBDIR += syslog-ng315
+    SUBDIR += syslog-ng317
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
@@ -1326,6 +1341,7 @@
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2
     SUBDIR += u-boot-rpi3
+    SUBDIR += u-boot-rpi-0-w
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-tools

@@ -2,7 +2,7 @@
 
 PORTNAME=	rumprun
 DISTVERSION=	g20180105
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	fabian.freyer@physik.tu-berlin.de
@@ -12,6 +12,8 @@ LICENSE=	BSD2CLAUSE
 
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	not yet ported to FreeBSD on other architectures
+
+BROKEN=		fails with current versions of GCC	# PR 230125
 
 USES=		gmake
 USE_GCC=	any

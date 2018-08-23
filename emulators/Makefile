@@ -72,7 +72,6 @@
     SUBDIR += linux_base-c7
     SUBDIR += lisaem
     SUBDIR += loemu
-    SUBDIR += m2000
     SUBDIR += mame
     SUBDIR += mastergear
     SUBDIR += mednafen
@@ -132,8 +131,6 @@
     SUBDIR += rubygem-fission
     SUBDIR += simh
     SUBDIR += skyeye
-    SUBDIR += snes9express
-    SUBDIR += snes9x
     SUBDIR += snes9x-gtk
     SUBDIR += spim
     SUBDIR += stella
