@@ -3,6 +3,7 @@
 
 PORTNAME=	openvswitch
 PORTVERSION=	2.9.2
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://openvswitch.org/releases/
 
@@ -11,6 +12,7 @@ COMMENT=	Production quality, multilayer virtual switch
 
 LICENSE=	APACHE20
 
+BROKEN_mips64=		fails to compile: ofp-actions.h:486: flexible array member in otherwise empty struct
 BROKEN_powerpc64=	fails to compile: bfd.c: internal compiler error: in extract_insn, at recog.c
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six@${PY_FLAVOR}

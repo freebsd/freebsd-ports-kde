@@ -28,6 +28,7 @@
     SUBDIR += apache-mode.el
     SUBDIR += apache24
     SUBDIR += apercu
+    SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += aria2fe
     SUBDIR += asql
@@ -42,8 +43,8 @@
     SUBDIR += axis2
     SUBDIR += bacula-web
     SUBDIR += baikal
-    SUBDIR += bareos16-webui
     SUBDIR += bareos-webui
+    SUBDIR += bareos16-webui
     SUBDIR += bigbluebutton
     SUBDIR += bins
     SUBDIR += bkmrkconv
@@ -93,6 +94,7 @@
     SUBDIR += coppermine
     SUBDIR += cplanet
     SUBDIR += cppcms
+    SUBDIR += cpr
     SUBDIR += crawl
     SUBDIR += crp
     SUBDIR += css-mode.el
@@ -200,7 +202,7 @@
     SUBDIR += getleft
     SUBDIR += gist
     SUBDIR += gitea
-    SUBDIR += gitlab
+    SUBDIR += gitlab-ce
     SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish
@@ -236,7 +238,9 @@
     SUBDIR += guile-www
     SUBDIR += gurlchecker
     SUBDIR += h2o
+    SUBDIR += h2o-devel
     SUBDIR += habari
+    SUBDIR += halberd
     SUBDIR += hastymail2-devel
     SUBDIR += havp
     SUBDIR += helma
@@ -395,6 +399,7 @@
     SUBDIR += mediawiki127
     SUBDIR += mediawiki129
     SUBDIR += mediawiki130
+    SUBDIR += mediawiki131
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -487,11 +492,11 @@
     SUBDIR += mod_xsendfile
     SUBDIR += mohawk
     SUBDIR += moinmoin
+    SUBDIR += moinmoincli
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += moodle31
-    SUBDIR += moodle32
     SUBDIR += moodle33
     SUBDIR += moodle34
     SUBDIR += moodle35
@@ -552,6 +557,7 @@
     SUBDIR += nuvolaplayer-yandex-music
     SUBDIR += nuvolaplayer-youtube
     SUBDIR += obhttpd
+    SUBDIR += onionshare
     SUBDIR += opencart
     SUBDIR += opera
     SUBDIR += opera-linuxplugins
@@ -1075,6 +1081,7 @@
     SUBDIR += p5-Mojolicious
     SUBDIR += p5-Mojolicious-Plugin-Authentication
     SUBDIR += p5-Mojolicious-Plugin-Database
+    SUBDIR += p5-Mojolicious-Plugin-HamlRenderer
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
     SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
@@ -1362,8 +1369,6 @@
     SUBDIR += p5-WebService-YouTube
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
-    SUBDIR += p5-ZConf-RSS
-    SUBDIR += p5-ZConf-RSS-GUI-GTK
     SUBDIR += p5-chklinks
     SUBDIR += p5-jQuery-File-Upload
     SUBDIR += p5-libapreq2
@@ -1573,7 +1578,6 @@
     SUBDIR += py-django-json-rpc
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-jsonfield2
-    SUBDIR += py-django-keyedcache
     SUBDIR += py-django-ldapdb
     SUBDIR += py-django-livesettings
     SUBDIR += py-django-markdownx
@@ -1604,10 +1608,8 @@
     SUBDIR += py-django-rest-swagger
     SUBDIR += py-django-reversion
     SUBDIR += py-django-sekizai
-    SUBDIR += py-django-signals-ahoy
     SUBDIR += py-django-simple-captcha
     SUBDIR += py-django-simple-history
-    SUBDIR += py-django-social-auth
     SUBDIR += py-django-solo
     SUBDIR += py-django-sortedm2m
     SUBDIR += py-django-star-ratings
@@ -1620,7 +1622,6 @@
     SUBDIR += py-django-taggit
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-templatetag-sugar
-    SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-treebeard
@@ -1629,15 +1630,16 @@
     SUBDIR += py-django111
     SUBDIR += py-django18
     SUBDIR += py-django20
+    SUBDIR += py-django21
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangorestframework
-    SUBDIR += py-djangorestframework36
     SUBDIR += py-djangorestframework-csv
     SUBDIR += py-djangorestframework-filters
     SUBDIR += py-djangorestframework-xml
+    SUBDIR += py-djangorestframework36
     SUBDIR += py-djangotoolbox
     SUBDIR += py-dojango
     SUBDIR += py-drf-yasg
@@ -1690,6 +1692,7 @@
     SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
+    SUBDIR += py-grip
     SUBDIR += py-gunicorn
     SUBDIR += py-h2
     SUBDIR += py-horizon
@@ -1725,6 +1728,7 @@
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
     SUBDIR += py-pastescript
+    SUBDIR += py-path-and-address
     SUBDIR += py-pelican
     SUBDIR += py-planet
     SUBDIR += py-plone.alterego
@@ -1876,6 +1880,7 @@
     SUBDIR += py-txrequests
     SUBDIR += py-uliweb
     SUBDIR += py-unit
+    SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
     SUBDIR += py-user_agent
@@ -1890,6 +1895,7 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
+    SUBDIR += py-wfuzz
     SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
     SUBDIR += py-ws4py
@@ -1900,9 +1906,9 @@
     SUBDIR += py-zope.app.wsgi
     SUBDIR += pyblosxom
     SUBDIR += pycarddav
-    SUBDIR += pydio
     SUBDIR += pyjamas
     SUBDIR += qdecoder
+    SUBDIR += qhttpengine
     SUBDIR += qooxdoo
     SUBDIR += qt4-webkit
     SUBDIR += qt5-webchannel
@@ -2021,10 +2027,8 @@
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-grit_adapter10
     SUBDIR += rubygem-gollum-lib
-    SUBDIR += rubygem-gollum-lib-gitlab
     SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon
-    SUBDIR += rubygem-gon61
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -2082,7 +2086,6 @@
     SUBDIR += rubygem-kaminari-rails50
     SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
-    SUBDIR += rubygem-kubeclient22
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less
     SUBDIR += rubygem-lighthouse-api
@@ -2263,6 +2266,7 @@
     SUBDIR += sqstat
     SUBDIR += squid
     SUBDIR += squid-devel
+    SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav
@@ -2280,7 +2284,6 @@
     SUBDIR += swish++
     SUBDIR += swish-e
     SUBDIR += sws
-    SUBDIR += sxweb
     SUBDIR += syndigator
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
@@ -2464,6 +2467,7 @@
     SUBDIR += webreport
     SUBDIR += webresolve
     SUBDIR += websh
+    SUBDIR += websocat
     SUBDIR += websocketd
     SUBDIR += webstats
     SUBDIR += webstone
@@ -2476,6 +2480,7 @@
     SUBDIR += wsdlpull
     SUBDIR += wsmake
     SUBDIR += wt
+    SUBDIR += wuzz
     SUBDIR += www6to4
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega

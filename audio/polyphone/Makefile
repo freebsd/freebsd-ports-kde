@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	polyphone
-DISTVERSION=	1.8
-DISTVERSIONSUFFIX=	-src
+DISTVERSION=	1.9
 PORTREVISION=	1
+DISTVERSIONSUFFIX=	-src
 CATEGORIES=	audio
 MASTER_SITES=	http://polyphone-soundfonts.com/en/download/file/76-polyphone-1-8-src-zip/latest/download?ae95d968569b61bc77f7b8559a14db4d=1/
 

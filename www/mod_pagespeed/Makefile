@@ -2,13 +2,14 @@
 
 PORTNAME=	mod_pagespeed
 PORTVERSION=	1.12.34.2
-PORTREVISION=	12
+PORTREVISION=	13
 PORTEPOCH=	1
 CATEGORIES=	www devel
 MASTER_SITES=	LOCAL/mmokhi:boringssl,chromium_base,chromium_build,googleurl,gflags_arch,gflags_src,libjpeg_turbo_src,yasm_patched,libwebp,modpb64 \
 		https://dl.google.com/closure-compiler/:closurezip
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 DISTFILES=	${NON_GH_DISTS}
+DIST_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	mmokhi@FreeBSD.org
 COMMENT=	Apache module for rewriting web pages to reduce latency

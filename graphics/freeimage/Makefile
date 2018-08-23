@@ -3,7 +3,7 @@
 
 PORTNAME=	freeimage
 PORTVERSION=	3.16.0
-PORTREVISION=	5
+PORTREVISION=	6
 # Version 3.17.0 is available, but does not build on i386 (and probably
 # other 32-bit arches) without some not-quite-trivial patching.  If one
 # decides to update the port, please make sure 32-bit builds are tested!
@@ -13,6 +13,9 @@ DISTNAME=	FreeImage${PORTVERSION:S/.//g}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple C/C++ bitmap graphics library
+
+BROKEN_mips=		fails to compile: opcode not supported on this processor: mips3 (mips3) `madd $16,$6'
+BROKEN_mips64=		fails to compile: opcode not supported on this processor: mips3 (mips3) 'madd $4,$5'
 
 USES=		dos2unix gmake zip
 DOS2UNIX_FILES=	Source/LibOpenJPEG/opj_malloc.h \
@@ -40,7 +43,7 @@ PLIST_FILES=	include/FreeImage.h \
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} == amd64 || ${ARCH} == powerpc
+.if ${ARCH} == amd64 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == sparc64
 USES+=		compiler:c++0x
 .endif
 

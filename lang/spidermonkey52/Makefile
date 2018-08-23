@@ -3,7 +3,7 @@
 
 PORTNAME=	spidermonkey
 PORTVERSION=	52.8.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	MOZILLA/firefox/releases/${PORTVERSION}esr/source
 DISTNAME=	firefox-${PORTVERSION}esr.source
@@ -28,6 +28,7 @@ WRKSRC=		${WRKDIR}/firefox-${PORTVERSION}esr/js/src
 PATCH_WRKSRC=	${WRKDIR}/firefox-${PORTVERSION}esr/
 
 CONFIGURE_ARGS=	--with-pthreads \
+		--prefix=${PREFIX:Q} \
 		--target=${CONFIGURE_TARGET} \
 		--with-intl-api \
 		--with-system-zlib \

@@ -43,8 +43,11 @@
     SUBDIR += chemps2
     SUBDIR += chemtool
     SUBDIR += chemtool-devel
+    SUBDIR += chrono
     SUBDIR += clhep
+    SUBDIR += clipper
     SUBDIR += colt
+    SUBDIR += coot
     SUBDIR += crf++
     SUBDIR += dcl
     SUBDIR += devisor
@@ -89,6 +92,7 @@
     SUBDIR += kst2
     SUBDIR += lamprop
     SUBDIR += libaec
+    SUBDIR += libccp4
     SUBDIR += libcint
     SUBDIR += libctl
     SUBDIR += libefp
@@ -99,6 +103,7 @@
     SUBDIR += liblinear
     SUBDIR += liboglappth
     SUBDIR += libquantum
+    SUBDIR += libssm
     SUBDIR += libsvm
     SUBDIR += libsvm-python
     SUBDIR += libxc
@@ -115,6 +120,7 @@
     SUBDIR += metaf2xml
     SUBDIR += metaphysicl
     SUBDIR += minc2
+    SUBDIR += mmdb2
     SUBDIR += mol2ps
     SUBDIR += mpb
     SUBDIR += mpqc
@@ -126,6 +132,7 @@
     SUBDIR += nifticlib
     SUBDIR += openbabel
     SUBDIR += openkim
+    SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
@@ -168,6 +175,7 @@
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
     SUBDIR += py-PyQuante
+    SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-cdo
@@ -195,6 +203,7 @@
     SUBDIR += py-pyteomics.biolccc
     SUBDIR += py-qspin
     SUBDIR += py-quantities
+    SUBDIR += py-rmf
     SUBDIR += py-scikit-fuzzy
     SUBDIR += py-scikit-learn
     SUBDIR += py-scikit-sparse
@@ -202,15 +211,18 @@
     SUBDIR += py-scipy
     SUBDIR += py-scoria
     SUBDIR += py-spglib
-    SUBDIR += py-tensorflow
     SUBDIR += py-veusz
     SUBDIR += py-ws2300
     SUBDIR += pybrain
     SUBDIR += pycdf
     SUBDIR += pynn
     SUBDIR += qcl
+    SUBDIR += qmcpack
     SUBDIR += qtresistors
+    SUBDIR += quantum-espresso
+    SUBDIR += qwalk
     SUBDIR += rdkit
+    SUBDIR += rmf
     SUBDIR += rubygem-ai4r
     SUBDIR += rubygem-cdo
     SUBDIR += rubygem-rgeo
@@ -237,6 +249,8 @@
     SUBDIR += v_sim
     SUBDIR += vmd
     SUBDIR += voro++
+    SUBDIR += xcrysden
+    SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin
     SUBDIR += xmakemol
 

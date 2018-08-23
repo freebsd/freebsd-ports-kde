@@ -3,15 +3,16 @@
 
 PORTNAME=	ghemical
 PORTVERSION=	3.0.0
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	science
 MASTER_SITES=	http://bioinformatics.org/ghemical/download/%SUBDIR%/
 MASTER_SITE_SUBDIR=	release20111012 current
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Computational chemistry software package
 
 LICENSE=	GPLv2+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libmopac7.so:biology/mopac \
 		libghemical.so:science/libghemical \

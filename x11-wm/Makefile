@@ -73,6 +73,7 @@
     SUBDIR += lwm
     SUBDIR += lxappearance-obconf
     SUBDIR += lxmed
+    SUBDIR += lxqt-panel
     SUBDIR += lxsession
     SUBDIR += marco
     SUBDIR += matwm2
@@ -138,6 +139,7 @@
     SUBDIR += xfce4
     SUBDIR += xfce4-desktop
     SUBDIR += xfce4-panel
+    SUBDIR += xfce4-panel-profiles
     SUBDIR += xfce4-session
     SUBDIR += xfce4-wm
 

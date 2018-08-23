@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	litecoin
-PORTVERSION=	0.15.1
-DISTVERSIONPREFIX=	v
+PORTVERSION=	0.16.0
 PORTREVISION=	2
+DISTVERSIONPREFIX=	v
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	swills@FreeBSD.org
@@ -101,6 +101,7 @@ PLIST_FILES?=	bin/litecoin-qt man/man1/litecoin-qt.1.gz \
 .if ${OSVERSION} < 1100000
 EXTRA_PATCHES=	${FILESDIR}/extra-patch-src_crypto_scrypt.cpp \
 		${FILESDIR}/extra-patch-src_crypto_scrypt.h
+CONFIGURE_ARGS+=--disable-asm
 .endif
 
 .if defined(SLAVE_PORT) && ${SLAVE_PORT} == "no"

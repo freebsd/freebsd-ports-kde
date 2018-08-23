@@ -3,6 +3,7 @@
 
 PORTNAME=	bunnysay
 PORTVERSION=	1.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
@@ -12,9 +13,7 @@ COMMENT=	Bunny Sign for terminals with UTF-8 support
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_powerpc64=	fails to compile: cc1plus: error: unrecognized command line option -std=c++11
-
-USES=		gmake
+USES=		compiler:c++11-lang gmake
 
 ALL_TARGET=	bunnysay
 

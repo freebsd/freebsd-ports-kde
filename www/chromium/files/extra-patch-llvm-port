@@ -1,6 +1,6 @@
---- build/toolchain/gcc_toolchain.gni.orig	2017-06-05 19:03:01 UTC
-+++ build/toolchain/gcc_toolchain.gni
-@@ -19,6 +19,11 @@ analyzer_wrapper =
+--- build/toolchain/gcc_toolchain.gni.orig	2018-06-13 00:10:02.000000000 +0200
++++ build/toolchain/gcc_toolchain.gni	2018-07-21 12:38:45.107087000 +0200
+@@ -25,6 +25,11 @@
      rebase_path("//build/toolchain/clang_static_analyzer_wrapper.py",
                  root_build_dir) + " --mode=clang"
  
@@ -12,7 +12,22 @@
  # This template defines a toolchain for something that works like gcc
  # (including clang).
  #
-@@ -548,13 +553,22 @@ template("clang_toolchain") {
+@@ -343,12 +348,12 @@
+         # We use slightly different arflags for AIX.
+         extra_arflags = "-r -c -s"
+       } else {
+-        extra_arflags = "-r -c -s -D"
++        extra_arflags = "rcsD"
+       }
+ 
+       # Almost all targets build with //build/config/compiler:thin_archive which
+       # adds -T to arflags.
+-      command = "$python_path \"$ar_wrapper\"$whitelist_flag --output={{output}} --ar=\"$ar\" \"{{arflags}} $extra_arflags\" @\"$rspfile\""
++      command = "$python_path \"$ar_wrapper\"$whitelist_flag --output={{output}} --ar=\"$ar\" {{arflags}} $extra_arflags @\"$rspfile\""
+       description = "AR {{output}}"
+       rspfile_content = "{{inputs}}"
+       outputs = [
+@@ -608,13 +613,22 @@
    }
  
    gcc_toolchain(target_name) {

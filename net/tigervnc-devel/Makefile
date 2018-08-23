@@ -1,8 +1,8 @@
-# Created by: Koichiro IWAO <meta+ports@vmeta.jp>
 # $FreeBSD$
 
 PORTNAME=	tigervnc
-PORTVERSION=	1.7.90
+PORTVERSION=	1.9.0
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net x11-servers
 PKGNAMESUFFIX=	-devel
@@ -12,6 +12,8 @@ COMMENT=	High-performance, platform-neutral implementation of VNC
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENCE.TXT
+
+IGNORE=		no development version available right now. Please use net/tigervnc instead
 
 PATCH_DEPENDS=	${NONEXISTENT}:x11-servers/xorg-server:patch
 BUILD_DEPENDS=	${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
@@ -26,25 +28,19 @@ RUN_DEPENDS=	${LOCALBASE}/share/X11/xkb/rules/base:x11/xkeyboard-config \
 		xkbcomp:x11/xkbcomp
 
 CONFLICTS=	tigervnc-[0-9]* \
-		tightvnc-[0-9]* \
-		tridiavnc-[0-9]*
+		tightvnc-[0-9]*
 
-USES=		autoreconf:build cmake cpe iconv jpeg libtool pkgconfig \
-		python ssl
+USES=		autoreconf:build cmake:noninja cpe iconv jpeg libtool \
+		pkgconfig python ssl
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	TigerVNC
 
-USE_XORG+=	bigreqsproto compositeproto damageproto fixesproto fontsproto glproto \
-		ice inputproto kbproto pixman presentproto randrproto renderproto \
-		resourceproto scrnsaverproto sm videoproto x11 xau xcmiscproto xdamage \
-		xdmcp xext xextproto xfont xkbfile xorg-macros xproto xrandr xrender \
-		xtrans xtst
+USE_XORG+=	ice pixman sm x11 xau xdamage xdmcp xext xfixes xfont xkbfile \
+		xorg-macros xorgproto xrandr xrender xtrans xtst
 
 CFLAGS+=	-fPIC
-
-IGNORE=		no development version available right now. Please use net/tigervnc instead
 
 OPTIONS_DEFINE=		GNUTLS NLS PAM VIEWER DOCS
 OPTIONS_DEFAULT=	GNUTLS PAM VIEWER

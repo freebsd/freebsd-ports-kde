@@ -10,7 +10,7 @@
 # slave ports instead (`x11/nvidia-driver-340' or `x11/nvidia-driver-304').
 
 PORTNAME=	nvidia-driver
-DISTVERSION?=	390.59
+DISTVERSION?=	390.77
 # Always try to set PORTREVISION as it can be overridden by the slave ports
 PORTREVISION?=	0
 CATEGORIES=	x11
@@ -74,6 +74,7 @@ EXTRA_PATCHES=	${FILESDIR}/extra-patch-src_nvidia_Makefile \
 		${FILESDIR}/extra-patch-src_nvidia_nv-misc.h
 NVSRC=		nvidia
 .endif
+
 .if ${NVVERSION} >= 358.009
 # Initialize memory allocations to avoid spurious "lock re-initialization"
 # errors.  A little more detail can be found in bug 201340 starting around
@@ -112,24 +113,19 @@ MAKE_ENV+=	WITHOUT_LINUX=yes
 .endif
 
 post-patch: .SILENT
+# KPI of kmem_alloc_contig() changed in FreeBSD src r338143
+.if ${OSVERSION} >= 1200079
+	${REINPLACE_CMD} -e 's/kmem_alloc_contig(kmem_arena, /kmem_alloc_contig(/' ${WRKSRC}/src/${NVSRC}/nvidia_subr.c
+.endif
 # We should support -CURRENT: kill the check
 	${REINPLACE_CMD} -e '24,26d' ${WRKSRC}/src/${NVSRC}/nv-freebsd.h
 # Adjust Linux headers #include's after FreeBSD src r246085
 	${REINPLACE_CMD} -E '/#include "machine\/\.\.\/linux(32)?\/linux.h"/ \
 		{ x ; s/.*/#include "machine\/..\/..\/compat\/linux\/linux_ioctl.h"/ ; H ; x ; }' \
 			${WRKSRC}/src/${NVSRC}/nvidia_linux.c
-# Adjust `vm_object' locking after FreeBSD src r248084 and bogus memset() call
-	${REINPLACE_CMD} -e '/#include <vm\/vm_object.h>/ \
-		{ x ; s/.*/#include <sys\/rwlock.h>/ ; G ; }' \
-			${WRKSRC}/src/${NVSRC}/nv-freebsd.h
-	${REINPLACE_CMD} -E 's/(VM_OBJECT_)(UN)?(LOCK)/\1W\2\3/ ; \
-		/memset/s/sizeof\(ci/sizeof(*ci/' \
-			${WRKSRC}/src/${NVSRC}/nvidia_subr.c
-# Adjust kmem(9) calls after FreeBSD src r254025
-.if ${NVVERSION} < 331.067
-	${REINPLACE_CMD} -e '/kmem_/s/kernel_map/kernel_arena/' \
+# Fix bogus memset() call
+	${REINPLACE_CMD} -e '/memset/s/sizeof(ci/sizeof(*ci/' \
 		${WRKSRC}/src/${NVSRC}/nvidia_subr.c
-.endif
 # Chase `sys/capability.h' rename to `sys/capsicum.h' in FreeBSD src r263232
 	${REINPLACE_CMD} -e 's:sys/capability\.h:sys/capsicum.h:' \
 		${WRKSRC}/src/${NVSRC}/nv-freebsd.h

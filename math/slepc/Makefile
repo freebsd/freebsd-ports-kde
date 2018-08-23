@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	slepc
-DISTVERSION=	3.9.1
+DISTVERSION=	3.9.2
+PORTREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	http://slepc.upv.es/download/distrib/
 
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libmpich.so:net/mpich2 \
 		libpetsc.so:science/PETSc
 
-USES=		gmake fortran python shebangfix
+USES=		gmake fortran python:2.7 shebangfix
 SHEBANG_FILES=	configure
 MAKEFILE=	makefile
 MAKE_ENV=	PETSC_DIR=${LOCALBASE} PETSC_ARCH="" SLEPC_DIR=${WRKSRC} FREEBSD_STAGEDIR=${STAGEDIR} PYTHON=${PYTHON_CMD}

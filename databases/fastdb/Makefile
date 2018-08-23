@@ -3,7 +3,7 @@
 
 PORTNAME=	fastdb
 PORTVERSION=	3.75
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	SF
 
@@ -12,6 +12,8 @@ COMMENT=	Main Memory Relational Database Management System
 
 LICENSE=	MIT
 
+BROKEN_mips=		fails to compile: unrecognized command line option "-std=gnu++03"
+BROKEN_mips64=		fails to compile: unrecognized command line option "-std=gnu++03"
 BROKEN_powerpc64=	fails to compile: unrecognized command line option "-std=gnu++03"
 
 USES=		gmake dos2unix

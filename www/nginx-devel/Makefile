@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.15.0
+PORTVERSION=	1.15.2
 PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/ \
