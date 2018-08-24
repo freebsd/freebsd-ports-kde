@@ -1,44 +1,38 @@
 # $FreeBSD$
 
 PORTNAME=	urbackup-client
-DISTVERSION=	2.2.5
+DISTVERSION=	2.2.6
 CATEGORIES=	archivers
 MASTER_SITES=	https://hndl.urbackup.org/Client/${DISTVERSION}/
 
 MAINTAINER=	freebsd@coombscloud.com
 COMMENT=	Client component of the UrBackup backup system
 
-LICENSE=	AGPLv3
+LICENSE=	AGPLv3+
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-WRKSRC=		${WRKDIR}/${DISTNAME}.0
+LIB_DEPENDS=	libcryptopp.so:security/cryptopp
 
-OPTIONS_DEFINE=	GUI
-GUI_DESC=	GTK2 Tray Icon
-OPTIONS_SUB=	yes
-
-LIB_DEPENDS+=	libcryptopp.so:security/cryptopp
-GUI_LIB_DEPENDS+=	libwx_baseu-3.0.so:x11-toolkits/wxgtk30
+USES=		gettext dos2unix localbase
+USE_RC_SUBR=	urbackup_client
 
 USERS=		urbackup
 GROUPS=		urbackup
 
-USES=		gettext
-GNU_CONFIGURE=	YES
-CPPFLAGS+=	-I${PREFIX}/include
-LDFLAGS+=	-L${PREFIX}/lib
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-clientupdate
 
-.include <bsd.port.options.mk>
+SUB_FILES=	pkg-message urbackupclient.conf.sample-daemon
 
-.if ${PORT_OPTIONS:MGUI}
-USE_WX=		3.0+
-CONFIGURE_ARGS+=	--with-wx-config=${WX_CONFIG}
-.else
-CONFIGURE_ARGS+=	--enable-headless
-.endif
+WRKSRC=		${WRKDIR}/${DISTNAME}.0
 
-USE_RC_SUBR=	urbackup_client
-SUB_FILES=	pkg-message
+OPTIONS_DEFINE=	GUI
+OPTIONS_SUB=	yes
+
+GUI_DESC=		GTK2 Tray Icon
+GUI_USE=		WX=3.0+
+GUI_CONFIGURE_ON=	--with-wx-config=${WX_CONFIG}
+GUI_CONFIGURE_OFF=	--enable-headless
 
 CONFFILES=	mariadbdump.conf \
 		mariadbxtrabackup.conf \
@@ -58,6 +52,7 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/urbackup/scripts
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/urbackup
 	${MKDIR} ${STAGEDIR}/var/urbackup/data
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
 
 	${INSTALL_PROGRAM} ${WRKSRC}/urbackupclientctl \
 		${STAGEDIR}${PREFIX}/bin
@@ -67,6 +62,12 @@ do-install:
 
 	(cd ${WRKSRC}/urbackupclient/backup_scripts && 	${COPYTREE_BIN} . \
 		${STAGEDIR}${PREFIX}/share/urbackup/scripts "! -name *\.conf")
+
+	${INSTALL_DATA} ${WRKDIR}/urbackupclient.conf.sample-daemon \
+		${STAGEDIR}${PREFIX}/etc/urbackup/urbackupclient.conf.sample
+
+	${INSTALL_DATA} ${FILESDIR}/urbackupclient.conf-newsyslog \
+		${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/urbackupclient.conf
 
 .for f in ${CONFFILES}
 	${INSTALL_DATA} ${WRKSRC}/urbackupclient/backup_scripts/${f} \

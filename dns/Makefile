@@ -32,6 +32,7 @@
     SUBDIR += dns2blackhole
     SUBDIR += dns2tcp
     SUBDIR += dns_balance
+    SUBDIR += dnsblast
     SUBDIR += dnscap
     SUBDIR += dnscheck
     SUBDIR += dnscheckengine
@@ -62,6 +63,7 @@
     SUBDIR += dnswalk
     SUBDIR += dnswall
     SUBDIR += doc
+    SUBDIR += doh-proxy
     SUBDIR += dq
     SUBDIR += drool
     SUBDIR += dsc
@@ -76,7 +78,6 @@
     SUBDIR += gdnsd2
     SUBDIR += gen6dns
     SUBDIR += getdns
-    SUBDIR += ghtool
     SUBDIR += go-geodns
     SUBDIR += hesiod
     SUBDIR += hostdb
@@ -110,6 +111,7 @@
     SUBDIR += mdnsd
     SUBDIR += mydns
     SUBDIR += mydns-ng
+    SUBDIR += namesilo_ddns
     SUBDIR += noip
     SUBDIR += nsd
     SUBDIR += nslint
@@ -194,12 +196,14 @@
     SUBDIR += py-ldns
     SUBDIR += py-namebench
     SUBDIR += py-publicsuffix
+    SUBDIR += py-publicsuffixlist
     SUBDIR += py-py3dns
     SUBDIR += py-pycares
     SUBDIR += py-pydnstable
     SUBDIR += py-pywdns
     SUBDIR += py-tld
     SUBDIR += py-tldextract
+    SUBDIR += qmdnsengine
     SUBDIR += radns
     SUBDIR += rbldnsd
     SUBDIR += rbllookup

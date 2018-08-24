@@ -4,7 +4,7 @@
 PORTNAME=	monero-cli
 # To build from an arbitrary git commit comment the following two lines
 PORTVERSION=	0.12.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines
 #PORTVERSION=	0
@@ -15,6 +15,11 @@ MAINTAINER=	vd@FreeBSD.org
 COMMENT=	Private, secure, untraceable, decentralised digital currency (CLI)
 
 LICENSE=	BSD3CLAUSE
+
+BROKEN_aarch64=		fails to compile: the clang compiler does not support -march=native
+BROKEN_armv6=		fails to compile: the clang compiler does not support -march=native
+BROKEN_armv7=		fails to compile: the clang compiler does not support -march=native
+BROKEN_powerpc64=	fails to compile: the clang compiler does not support -march=native
 
 LIB_DEPENDS=	\
 		libboost_chrono.so:devel/boost-libs \
