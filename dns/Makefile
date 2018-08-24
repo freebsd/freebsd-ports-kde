@@ -78,7 +78,6 @@
     SUBDIR += gdnsd2
     SUBDIR += gen6dns
     SUBDIR += getdns
-    SUBDIR += ghtool
     SUBDIR += go-geodns
     SUBDIR += hesiod
     SUBDIR += hostdb
@@ -197,6 +196,7 @@
     SUBDIR += py-ldns
     SUBDIR += py-namebench
     SUBDIR += py-publicsuffix
+    SUBDIR += py-publicsuffixlist
     SUBDIR += py-py3dns
     SUBDIR += py-pycares
     SUBDIR += py-pydnstable

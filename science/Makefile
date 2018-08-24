@@ -43,6 +43,7 @@
     SUBDIR += chemps2
     SUBDIR += chemtool
     SUBDIR += chemtool-devel
+    SUBDIR += chrono
     SUBDIR += clhep
     SUBDIR += clipper
     SUBDIR += colt
@@ -129,6 +130,7 @@
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran
     SUBDIR += nifticlib
+    SUBDIR += nwchem
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openstructure
@@ -216,8 +218,10 @@
     SUBDIR += pycdf
     SUBDIR += pynn
     SUBDIR += qcl
+    SUBDIR += qmcpack
     SUBDIR += qtresistors
     SUBDIR += quantum-espresso
+    SUBDIR += qwalk
     SUBDIR += rdkit
     SUBDIR += rmf
     SUBDIR += rubygem-ai4r

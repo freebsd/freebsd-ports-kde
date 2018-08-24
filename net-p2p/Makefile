@@ -21,7 +21,6 @@
     SUBDIR += dclib
     SUBDIR += deluge
     SUBDIR += deluge-cli
-    SUBDIR += dogecoin
     SUBDIR += ed2k
     SUBDIR += edonkey-tool-hash
     SUBDIR += eiskaltdcpp-cli
@@ -96,7 +95,6 @@
     SUBDIR += transmission-qt
     SUBDIR += transmission-remote-gui
     SUBDIR += tribler
-    SUBDIR += twister
     SUBDIR += uhub
     SUBDIR += valknut
     SUBDIR += verlihub

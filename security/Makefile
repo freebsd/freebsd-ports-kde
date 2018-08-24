@@ -44,6 +44,7 @@
     SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
+    SUBDIR += beid
     SUBDIR += belier
     SUBDIR += bfbtester
     SUBDIR += binwalk
@@ -146,8 +147,6 @@
     SUBDIR += fakebo
     SUBDIR += fakeident
     SUBDIR += fakeroot
-    SUBDIR += fastd
-    SUBDIR += fastd-devel
     SUBDIR += fbopenssl
     SUBDIR += fcheck
     SUBDIR += fcrackzip
@@ -293,13 +292,13 @@
     SUBDIR += jbrofuzz
     SUBDIR += john
     SUBDIR += kbfs
+    SUBDIR += kbfsd
     SUBDIR += kc
     SUBDIR += kc24
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
     SUBDIR += keepass
     SUBDIR += keepass-plugin-keepassrpc
-    SUBDIR += keepassx
     SUBDIR += keepassx-devel
     SUBDIR += keepassx2
     SUBDIR += keepassxc
@@ -337,7 +336,6 @@
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
-    SUBDIR += libbeid
     SUBDIR += libbf
     SUBDIR += libcryptui
     SUBDIR += libdecaf
@@ -425,6 +423,7 @@
     SUBDIR += morphis
     SUBDIR += munge
     SUBDIR += mussh
+    SUBDIR += n2n
     SUBDIR += nacl
     SUBDIR += ncrack
     SUBDIR += ncrypt
@@ -828,7 +827,6 @@
     SUBDIR += pecl-ssh2
     SUBDIR += pecl-ssh2-0
     SUBDIR += pev
-    SUBDIR += pft
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
@@ -1291,6 +1289,7 @@
     SUBDIR += tcpcrypt
     SUBDIR += teleport
     SUBDIR += testssl.sh
+    SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
     SUBDIR += tinyca
