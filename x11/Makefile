@@ -216,9 +216,11 @@
     SUBDIR += lxhotkey
     SUBDIR += lxmenu-data
     SUBDIR += lxpanel
+    SUBDIR += lxqt-about
     SUBDIR += lxqt-globalkeys
     SUBDIR += lxqt-globalkeys-l10n
     SUBDIR += lxqt-l10n
+    SUBDIR += lxqt-runner
     SUBDIR += lxrandr
     SUBDIR += mate
     SUBDIR += mate-applets

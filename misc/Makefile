@@ -123,7 +123,6 @@
     SUBDIR += freebsd-doc-pl
     SUBDIR += freebsd-doc-pt
     SUBDIR += freebsd-doc-ru
-    SUBDIR += freebsd-doc-sr
     SUBDIR += freebsd-doc-tr
     SUBDIR += freebsd-doc-zh_cn
     SUBDIR += freebsd-doc-zh_tw
@@ -458,6 +457,7 @@
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += qtchooser
+    SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
