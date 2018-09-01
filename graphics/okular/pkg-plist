@@ -391,11 +391,14 @@ share/locale/eu/LC_MESSAGES/okular_fax.mo
 share/locale/eu/LC_MESSAGES/okular_fictionbook.mo
 share/locale/eu/LC_MESSAGES/okular_ghostview.mo
 share/locale/eu/LC_MESSAGES/okular_kimgio.mo
+share/locale/eu/LC_MESSAGES/okular_markdown.mo
 share/locale/eu/LC_MESSAGES/okular_mobi.mo
 share/locale/eu/LC_MESSAGES/okular_ooo.mo
 share/locale/eu/LC_MESSAGES/okular_plucker.mo
 share/locale/eu/LC_MESSAGES/okular_poppler.mo
+share/locale/eu/LC_MESSAGES/okular_txt.mo
 share/locale/eu/LC_MESSAGES/okular_xps.mo
+share/locale/eu/LC_MESSAGES/org.kde.active.documentviewer.mo
 share/locale/fa/LC_MESSAGES/okular.mo
 share/locale/fi/LC_MESSAGES/okular.mo
 share/locale/fi/LC_MESSAGES/okular_chm.mo
