@@ -49,6 +49,7 @@
     SUBDIR += colt
     SUBDIR += coot
     SUBDIR += crf++
+    SUBDIR += datawarrior
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dft_tools
@@ -87,6 +88,7 @@
     SUBDIR += hypre
     SUBDIR += iboview
     SUBDIR += isaac-cfd
+    SUBDIR += jdftx
     SUBDIR += jstrack
     SUBDIR += kalzium
     SUBDIR += kalzium-kde4
@@ -100,6 +102,7 @@
     SUBDIR += libgeodecomp
     SUBDIR += libghemical
     SUBDIR += libint
+    SUBDIR += libint2
     SUBDIR += libkml
     SUBDIR += liblinear
     SUBDIR += liboglappth
@@ -109,6 +112,7 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += linsmith
+    SUBDIR += madness
     SUBDIR += massxpert
     SUBDIR += mbdyn
     SUBDIR += mcstas
@@ -126,6 +130,7 @@
     SUBDIR += mpb
     SUBDIR += mpqc
     SUBDIR += mpqc-mpich
+    SUBDIR += multiwfn
     SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
@@ -219,6 +224,7 @@
     SUBDIR += pybrain
     SUBDIR += pycdf
     SUBDIR += pynn
+    SUBDIR += qbox
     SUBDIR += qcl
     SUBDIR += qmcpack
     SUBDIR += qtresistors
