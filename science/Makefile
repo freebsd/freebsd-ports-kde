@@ -64,6 +64,7 @@
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
+    SUBDIR += fleur
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
@@ -243,6 +244,7 @@
     SUBDIR += rubygem-rgeo-shapefile
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
+    SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware
     SUBDIR += sigrok-firmware-fx2lafw
@@ -262,6 +264,7 @@
     SUBDIR += v_sim
     SUBDIR += vmd
     SUBDIR += voro++
+    SUBDIR += wannier90
     SUBDIR += xcrysden
     SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin
