@@ -283,8 +283,8 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			kdeplasma-addons kgamma5 kmenuedit kscreen \
 			kscreenlocker ksshaskpass ksysguard kwallet-pam \
 			kwayland-integration kwin kwrited libkscreen \
-			libksysguard milou oxygen plasma-desktop \
-			plasma-integration plasma-pa \
+			libksysguard milou oxygen plasma-browser-integration \
+			plasma-desktop plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
 			polkit-kde-agent-1 powerdevil systemsettings \
 			user-manager
@@ -705,6 +705,9 @@ milou_LIB=		libmilou.so.5
 
 oxygen_PORT= 		x11-themes/plasma5-oxygen
 oxygen_LIB=		liboxygenstyle5.so
+
+plasma-browser-integration_PORT=	www/plasma5-plasma-browser-integration
+plasma-browser-integration_PATH=	${KDE_PREFIX}/bin/plasma-browser-integration-host		
 
 plasma-desktop_PORT=	x11/plasma5-plasma-desktop
 plasma-desktop_PATH=	${KDE_PREFIX}/bin/krdb
