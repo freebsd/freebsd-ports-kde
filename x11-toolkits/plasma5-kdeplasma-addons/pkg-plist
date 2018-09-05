@@ -745,7 +745,14 @@ share/locale/ia/LC_MESSAGES/plasma_runner_katesessions.mo
 share/locale/ia/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 share/locale/ia/LC_MESSAGES/plasma_runner_mediawiki.mo
 share/locale/ia/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.colorpicker.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.comic.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
 share/locale/is/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 share/locale/is/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
 share/locale/is/LC_MESSAGES/plasma_applet_org.kde.plasma.colorpicker.mo
@@ -871,10 +878,12 @@ share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.comic.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.minimizeall.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
+share/locale/ko/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.private.grouping.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.quicklaunch.mo
 share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.quickshare.mo
@@ -889,6 +898,7 @@ share/locale/ko/LC_MESSAGES/plasma_runner_CharacterRunner.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_converterrunner.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_datetime.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_katesessions.mo
+share/locale/ko/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_mediawiki.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_spellcheckrunner.mo

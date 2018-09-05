@@ -2075,6 +2075,8 @@ share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.battery.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.calendar.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.clipboard.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.devicenotifier.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.digitalclock.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.icon.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.lock_logout.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
 share/locale/id/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
@@ -2429,6 +2431,7 @@ share/locale/ko/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/ko/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/ko/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/ko/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/ko/LC_MESSAGES/plasma_runner_calculatorrunner.mo
