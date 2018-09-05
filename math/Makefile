@@ -722,7 +722,9 @@
     SUBDIR += py-pysym
     SUBDIR += py-pyvtk
     SUBDIR += py-random2
+    SUBDIR += py-rapi
     SUBDIR += py-roman
+    SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
@@ -764,7 +766,6 @@
     SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
-    SUBDIR += rpy2
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3

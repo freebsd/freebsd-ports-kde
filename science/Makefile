@@ -49,6 +49,7 @@
     SUBDIR += colt
     SUBDIR += coot
     SUBDIR += crf++
+    SUBDIR += dalton
     SUBDIR += datawarrior
     SUBDIR += dcl
     SUBDIR += devisor
@@ -63,6 +64,7 @@
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
+    SUBDIR += fleur
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
@@ -186,9 +188,11 @@
     SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
+    SUBDIR += py-ase
     SUBDIR += py-cdo
     SUBDIR += py-coards
     SUBDIR += py-dlib
+    SUBDIR += py-gpaw
     SUBDIR += py-gsd
     SUBDIR += py-h5py
     SUBDIR += py-hcluster
@@ -240,6 +244,7 @@
     SUBDIR += rubygem-rgeo-shapefile
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
+    SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware
     SUBDIR += sigrok-firmware-fx2lafw
@@ -252,12 +257,14 @@
     SUBDIR += step-kde4
     SUBDIR += svmlight
     SUBDIR += szip
+    SUBDIR += teem
     SUBDIR += tfel
     SUBDIR += triqs
     SUBDIR += udunits
     SUBDIR += v_sim
     SUBDIR += vmd
     SUBDIR += voro++
+    SUBDIR += wannier90
     SUBDIR += xcrysden
     SUBDIR += xdrawchem
     SUBDIR += xfce4-equake-plugin

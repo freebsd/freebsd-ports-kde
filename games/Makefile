@@ -567,7 +567,6 @@
     SUBDIR += lexter
     SUBDIR += lgeneral
     SUBDIR += lianliankan
-    SUBDIR += libdungeonmaker
     SUBDIR += libggz
     SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
@@ -723,6 +722,8 @@
     SUBDIR += oneisenough
     SUBDIR += oneko
     SUBDIR += oneko-sakura
+    SUBDIR += onscripter
+    SUBDIR += onscripter-1byte
     SUBDIR += oolite
     SUBDIR += oonsoo
     SUBDIR += open-adventure
@@ -816,6 +817,7 @@
     SUBDIR += pokerth
     SUBDIR += polyglot
     SUBDIR += pongix
+    SUBDIR += ponscripter-sekai
     SUBDIR += popstar
     SUBDIR += pouetchess
     SUBDIR += powder
@@ -900,12 +902,15 @@
     SUBDIR += redeclipse-data
     SUBDIR += redorblack
     SUBDIR += reminiscence
+    SUBDIR += renpy
+    SUBDIR += renpy6
     SUBDIR += rescue
     SUBDIR += residualvm
     SUBDIR += retroarch
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li
+    SUBDIR += rlvm
     SUBDIR += rnd_jue
     SUBDIR += robocode
     SUBDIR += robocode-naval
@@ -1088,6 +1093,7 @@
     SUBDIR += violetland
     SUBDIR += viruskiller
     SUBDIR += vitetris
+    SUBDIR += vkquake
     SUBDIR += vms-empire
     SUBDIR += vodovod
     SUBDIR += volleyball

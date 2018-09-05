@@ -10,6 +10,7 @@
     SUBDIR += abby
     SUBDIR += acidrip
     SUBDIR += aegisub
+    SUBDIR += aom
     SUBDIR += aravis
     SUBDIR += asdcplib
     SUBDIR += assimp
@@ -289,6 +290,7 @@
     SUBDIR += naludump
     SUBDIR += nordlicht
     SUBDIR += nostt
+    SUBDIR += obs-qtwebkit
     SUBDIR += obs-studio
     SUBDIR += oggvideotools
     SUBDIR += ogmrip
