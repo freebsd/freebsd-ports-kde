@@ -26,6 +26,7 @@
     SUBDIR += afni
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
+    SUBDIR += atom
     SUBDIR += atompaw
     SUBDIR += avogadro
     SUBDIR += bddsolve
@@ -48,6 +49,7 @@
     SUBDIR += clipper
     SUBDIR += colt
     SUBDIR += coot
+    SUBDIR += cp2k
     SUBDIR += crf++
     SUBDIR += dalton
     SUBDIR += datawarrior
@@ -103,6 +105,7 @@
     SUBDIR += libefp
     SUBDIR += libgeodecomp
     SUBDIR += libghemical
+    SUBDIR += libgridxc
     SUBDIR += libint
     SUBDIR += libint2
     SUBDIR += libkml
@@ -131,7 +134,6 @@
     SUBDIR += mol2ps
     SUBDIR += mpb
     SUBDIR += mpqc
-    SUBDIR += mpqc-mpich
     SUBDIR += multiwfn
     SUBDIR += ncs
     SUBDIR += netcdf
