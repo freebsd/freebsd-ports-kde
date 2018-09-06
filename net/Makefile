@@ -328,6 +328,7 @@
     SUBDIR += kea
     SUBDIR += kf5-kholidays
     SUBDIR += kf5-kxmlrpcclient
+    SUBDIR += kf5-syndication
     SUBDIR += kget
     SUBDIR += kget-kde4
     SUBDIR += kidentitymanagement
@@ -1418,7 +1419,6 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
-    SUBDIR += syndication
     SUBDIR += tableutil
     SUBDIR += tac_plus4
     SUBDIR += tapidbus
