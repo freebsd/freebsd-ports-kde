@@ -3,7 +3,7 @@
 
 PORTNAME=	totem
 PORTVERSION=	3.18.1
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +13,7 @@ COMMENT=	Gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:misc/gnome-icon-theme \
-		pylint:devel/pylint \
+		pylint:devel/pylint1 \
 		appstream-glib>=0:devel/appstream-glib \
 		itstool:textproc/itstool \
 		grilo-plugins2>=0:net/grilo-plugins2
@@ -36,7 +36,7 @@ USES=		desktop-file-utils gettext gmake gnome libtool \
 		pathfix pkgconfig python:2.7 tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxml2 nautilus3 \
 		pygobject3
-USE_XORG=	x11 xproto xtst ice sm
+USE_XORG=	x11 xorgproto xtst ice sm
 USE_GSTREAMER1=	core good bad soup ugly
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

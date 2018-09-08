@@ -1,15 +1,6 @@
---- net/base/address_tracker_linux.cc.orig	2018-01-21 13:54:41.810603000 +0100
-+++ net/base/address_tracker_linux.cc	2018-01-21 14:00:43.013272000 +0100
-@@ -5,7 +5,7 @@
- #include "net/base/address_tracker_linux.h"
- 
- #include <errno.h>
--#include <linux/if.h>
-+#include <net/if.h>
- #include <stdint.h>
- #include <sys/ioctl.h>
- 
-@@ -18,96 +18,9 @@
+--- net/base/address_tracker_linux.cc.orig	2018-08-01 00:08:53.000000000 +0200
++++ net/base/address_tracker_linux.cc	2018-08-04 20:12:48.684622000 +0200
+@@ -20,96 +20,10 @@
  namespace net {
  namespace internal {
  
@@ -103,11 +94,12 @@
 -  if (ioctl(ioctl_socket.get(), SIOCGIFNAME, &ifr) == 0)
 -    strncpy(buf, ifr.ifr_name, IFNAMSIZ - 1);
 -  return buf;
++  NOTIMPLEMENTED();
 +  return NULL;
  }
  
  AddressTrackerLinux::AddressTrackerLinux()
-@@ -150,93 +63,8 @@
+@@ -152,93 +66,8 @@
  }
  
  void AddressTrackerLinux::Init() {
@@ -190,20 +182,20 @@
 -  }
 -
 -  if (tracking_) {
--    rv = base::MessageLoopForIO::current()->WatchFileDescriptor(
--        netlink_fd_, true, base::MessageLoopForIO::WATCH_READ, &watcher_, this);
+-    rv = base::MessageLoopCurrentForIO::Get()->WatchFileDescriptor(
+-        netlink_fd_, true, base::MessagePumpForIO::WATCH_READ, &watcher_, this);
 -    if (rv < 0) {
 -      PLOG(ERROR) << "Could not watch NETLINK socket";
 -      AbortAndForceOnline();
 -      return;
 -    }
 -  }
-+  NOTIMPLEMENTED();
-+  AbortAndForceOnline();
++NOTIMPLEMENTED();
++AbortAndForceOnline();
  }
  
  void AddressTrackerLinux::AbortAndForceOnline() {
-@@ -247,25 +75,6 @@
+@@ -249,25 +78,6 @@
    connection_type_initialized_cv_.Broadcast();
  }
  
@@ -229,7 +221,7 @@
  NetworkChangeNotifier::ConnectionType
  AddressTrackerLinux::GetCurrentConnectionType() {
    // http://crbug.com/125097
-@@ -316,102 +125,7 @@
+@@ -318,102 +128,7 @@
                                          bool* address_changed,
                                          bool* link_changed,
                                          bool* tunnel_changed) {
@@ -333,7 +325,7 @@
  }
  
  void AddressTrackerLinux::OnFileCanReadWithoutBlocking(int fd) {
-@@ -443,34 +157,7 @@
+@@ -450,34 +165,7 @@
  }
  
  void AddressTrackerLinux::UpdateCurrentConnectionType() {

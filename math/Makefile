@@ -11,13 +11,13 @@
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
+    SUBDIR += R-cran-DoE.base
     SUBDIR += R-cran-Formula
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
     SUBDIR += R-cran-MSwM
     SUBDIR += R-cran-MatchIt
-    SUBDIR += R-cran-magic
     SUBDIR += R-cran-Matching
     SUBDIR += R-cran-MatrixModels
     SUBDIR += R-cran-NMF
@@ -28,8 +28,8 @@
     SUBDIR += R-cran-RcppRoll
     SUBDIR += R-cran-Rmpfr
     SUBDIR += R-cran-Rsolnp
+    SUBDIR += R-cran-SQUAREM
     SUBDIR += R-cran-SparseM
-    SUBDIR += R-cran-uroot
     SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-assertthat
@@ -64,6 +64,7 @@
     SUBDIR += R-cran-lava
     SUBDIR += R-cran-lazyeval
     SUBDIR += R-cran-lme4
+    SUBDIR += R-cran-magic
     SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
@@ -74,9 +75,12 @@
     SUBDIR += R-cran-nnls
     SUBDIR += R-cran-nortest
     SUBDIR += R-cran-numDeriv
+    SUBDIR += R-cran-numbers
     SUBDIR += R-cran-outliers
+    SUBDIR += R-cran-partitions
     SUBDIR += R-cran-pbkrtest
     SUBDIR += R-cran-pls
+    SUBDIR += R-cran-polynom
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
@@ -91,12 +95,12 @@
     SUBDIR += R-cran-sp
     SUBDIR += R-cran-spData
     SUBDIR += R-cran-spdep
-    SUBDIR += R-cran-SQUAREM
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
+    SUBDIR += R-cran-uroot
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
     SUBDIR += SCIP
@@ -131,6 +135,8 @@
     SUBDIR += biggles
     SUBDIR += blacs
     SUBDIR += blas
+    SUBDIR += blaze
+    SUBDIR += blazeiterative
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
@@ -178,6 +184,7 @@
     SUBDIR += eigen2
     SUBDIR += eigen3
     SUBDIR += eispack
+    SUBDIR += elpa
     SUBDIR += emc2
     SUBDIR += ent
     SUBDIR += entropy
@@ -201,7 +208,6 @@
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
-    SUBDIR += freemat
     SUBDIR += fricas
     SUBDIR += fxt
     SUBDIR += g2o
@@ -241,7 +247,6 @@
     SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += hexcalc
-    SUBDIR += hfst
     SUBDIR += hs-Agda
     SUBDIR += hs-Agda-stdlib
     SUBDIR += hs-NumInstances
@@ -272,7 +277,6 @@
     SUBDIR += ised
     SUBDIR += jacal
     SUBDIR += jags
-    SUBDIR += jakarta-commons-math
     SUBDIR += jakarta-commons-math3
     SUBDIR += jama
     SUBDIR += jeuclid
@@ -299,6 +303,7 @@
     SUBDIR += lapacke
     SUBDIR += laspack
     SUBDIR += ldouble
+    SUBDIR += lean
     SUBDIR += levmar
     SUBDIR += libRmath
     SUBDIR += libflame
@@ -307,6 +312,8 @@
     SUBDIR += libmissing
     SUBDIR += libocas
     SUBDIR += liborigin
+    SUBDIR += libpgmath
+    SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
     SUBDIR += librsb
@@ -336,6 +343,7 @@
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
     SUBDIR += miracl
+    SUBDIR += mkl-dnn
     SUBDIR += mlpack
     SUBDIR += moo
     SUBDIR += mosesdecoder
@@ -376,7 +384,6 @@
     SUBDIR += octave-forge-bsltl
     SUBDIR += octave-forge-cgi
     SUBDIR += octave-forge-civil-engineering
-    SUBDIR += octave-forge-communications
     SUBDIR += octave-forge-control
     SUBDIR += octave-forge-data-smoothing
     SUBDIR += octave-forge-database
@@ -594,6 +601,7 @@
     SUBDIR += p5-Set-Window
     SUBDIR += p5-Statistics-Basic
     SUBDIR += p5-Statistics-Benford
+    SUBDIR += p5-Statistics-CaseResampling
     SUBDIR += p5-Statistics-ChiSquare
     SUBDIR += p5-Statistics-Contingency
     SUBDIR += p5-Statistics-Descriptive
@@ -662,6 +670,7 @@
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
+    SUBDIR += py-chaospy
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
@@ -680,6 +689,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-keras
     SUBDIR += py-levmar
+    SUBDIR += py-libpoly
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
@@ -715,7 +725,9 @@
     SUBDIR += py-pysym
     SUBDIR += py-pyvtk
     SUBDIR += py-random2
+    SUBDIR += py-rapi
     SUBDIR += py-roman
+    SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
@@ -723,6 +735,7 @@
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
     SUBDIR += py-spectral
+    SUBDIR += py-spot
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-sym
@@ -734,6 +747,7 @@
     SUBDIR += py-uncertainties
     SUBDIR += py-viper
     SUBDIR += py-yt
+    SUBDIR += py-z3-solver
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
@@ -755,7 +769,6 @@
     SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
-    SUBDIR += rpy2
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
@@ -778,7 +791,9 @@
     SUBDIR += sfft
     SUBDIR += sfst
     SUBDIR += simd-viterbi
+    SUBDIR += singular
     SUBDIR += slatec
+    SUBDIR += sleef
     SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += snns
@@ -790,6 +805,7 @@
     SUBDIR += speedcrunch
     SUBDIR += spooles
     SUBDIR += spooles-mpich
+    SUBDIR += spot
     SUBDIR += stp
     SUBDIR += suitesparse
     SUBDIR += sundials
@@ -818,6 +834,7 @@
     SUBDIR += vtk5
     SUBDIR += vtk5-data
     SUBDIR += vtk6
+    SUBDIR += vtk8
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3
@@ -835,7 +852,9 @@
     SUBDIR += xspread
     SUBDIR += xtensor
     SUBDIR += yacas
+    SUBDIR += yices
     SUBDIR += z3
+    SUBDIR += zegrapher
     SUBDIR += zimpl
 
 .include <bsd.port.subdir.mk>

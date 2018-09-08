@@ -4,12 +4,13 @@
 PORTNAME=	mapnik
 PORTVERSION=	3.0.9
 DISTVERSIONPREFIX=	v
-PORTREVISION=	18
+PORTREVISION=	21
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://mapnik.s3.amazonaws.com/dist/v${PORTVERSION}/
 
 PATCH_SITES=	https://github.com/mapnik/mapnik/commit/
 PATCHFILES=	1ddfe6c31548.patch:-p1
+PATCHFILES+=	aca42e284599.patch:-p1
 
 MAINTAINER=	littlesavage@rambler.ru
 COMMENT=	Free Toolkit For Developing Mapping Applications

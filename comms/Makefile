@@ -79,6 +79,7 @@
     SUBDIR += klog
     SUBDIR += kremotecontrol-kde4
     SUBDIR += kvasd
+    SUBDIR += libbtbb
     SUBDIR += libconcord
     SUBDIR += libfap
     SUBDIR += libfec
@@ -134,7 +135,9 @@
     SUBDIR += picocom
     SUBDIR += pr
     SUBDIR += predict
+    SUBDIR += py-adafruit-ampy
     SUBDIR += py-bulksms
+    SUBDIR += py-esptool
     SUBDIR += py-gammu
     SUBDIR += py-hidapi
     SUBDIR += py-libconcord
@@ -185,11 +188,11 @@
     SUBDIR += twpsk
     SUBDIR += uarduno
     SUBDIR += uartlirc
+    SUBDIR += ubertooth
     SUBDIR += uhd
     SUBDIR += uird
     SUBDIR += unixcw
     SUBDIR += usbmuxd
-    SUBDIR += usrp
     SUBDIR += viewfax
     SUBDIR += vrflash
     SUBDIR += wsjt
@@ -204,7 +207,6 @@
     SUBDIR += xmorse
     SUBDIR += xnec2c
     SUBDIR += xnecview
-    SUBDIR += xwota
     SUBDIR += yaac
     SUBDIR += yagiuda
     SUBDIR += yaps

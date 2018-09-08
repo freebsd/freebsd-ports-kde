@@ -140,6 +140,7 @@ include/armadillo_bits/fn_fft2.hpp
 include/armadillo_bits/fn_find.hpp
 include/armadillo_bits/fn_find_unique.hpp
 include/armadillo_bits/fn_flip.hpp
+include/armadillo_bits/fn_hess.hpp
 include/armadillo_bits/fn_hist.hpp
 include/armadillo_bits/fn_histc.hpp
 include/armadillo_bits/fn_index_max.hpp
@@ -509,6 +510,8 @@ include/armadillo_bits/subview_cube_bones.hpp
 include/armadillo_bits/subview_cube_each_bones.hpp
 include/armadillo_bits/subview_cube_each_meat.hpp
 include/armadillo_bits/subview_cube_meat.hpp
+include/armadillo_bits/subview_cube_slices_bones.hpp
+include/armadillo_bits/subview_cube_slices_meat.hpp
 include/armadillo_bits/subview_each_bones.hpp
 include/armadillo_bits/subview_each_meat.hpp
 include/armadillo_bits/subview_elem1_bones.hpp
@@ -518,6 +521,7 @@ include/armadillo_bits/subview_elem2_meat.hpp
 include/armadillo_bits/subview_field_bones.hpp
 include/armadillo_bits/subview_field_meat.hpp
 include/armadillo_bits/subview_meat.hpp
+include/armadillo_bits/sympd_helper.hpp
 include/armadillo_bits/traits.hpp
 include/armadillo_bits/typedef_elem.hpp
 include/armadillo_bits/typedef_elem_check.hpp
@@ -539,8 +543,8 @@ include/armadillo_bits/xtrans_mat_meat.hpp
 include/armadillo_bits/xvec_htrans_bones.hpp
 include/armadillo_bits/xvec_htrans_meat.hpp
 lib/libarmadillo.so
-lib/libarmadillo.so.8
-lib/libarmadillo.so.8.500.1
+lib/libarmadillo.so.9
+lib/libarmadillo.so.9.100.5
 libdata/pkgconfig/armadillo.pc
 share/Armadillo/CMake/ArmadilloConfig.cmake
 share/Armadillo/CMake/ArmadilloConfigVersion.cmake

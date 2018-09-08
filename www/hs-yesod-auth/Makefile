@@ -2,12 +2,14 @@
 
 PORTNAME=	yesod-auth
 PORTVERSION=	1.6.3
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Authentication for Yesod
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_CABAL=	aeson>=0.7 authenticate>=1.3 base16-bytestring \
 		base64-bytestring blaze-builder blaze-html>=0.5 \

@@ -1,30 +1,40 @@
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc.orig	2017-09-05 21:05:23.000000000 +0200
-+++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc	2017-09-09 15:42:00.563572000 +0200
-@@ -15,6 +15,11 @@
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc.orig	2018-08-01 00:08:55.000000000 +0200
++++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc	2018-08-04 21:00:31.567932000 +0200
+@@ -16,8 +16,10 @@
  #include "build/build_config.h"
  #include "services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h"
  
-+#if defined(OS_BSD)
-+#include <sys/types.h>
-+#include <sys/sysctl.h>
++#if !defined(OS_BSD)
+ // Symbol with virtual address of the start of ELF header of the current binary.
+ extern char __ehdr_start;
 +#endif
-+
+ 
  namespace memory_instrumentation {
  
- namespace {
-@@ -201,7 +206,15 @@
- 
-   const static size_t page_size = base::GetPageSize();
-   uint64_t rss_anon_bytes = (resident_pages - shared_pages) * page_size;
+@@ -101,7 +103,7 @@
+   // Build ID is needed to symbolize heap profiles, and is generated only on
+   // official builds. Build ID is only added for the current library (chrome)
+   // since it is racy to read other libraries which can be unmapped any time.
+-#if defined(OFFICIAL_BUILD)
++#if defined(OFFICIAL_BUILD) && !defined(OS_BSD)
+   uintptr_t addr = reinterpret_cast<uintptr_t>(&ParseSmapsHeader);
+   if (addr >= region->start_address && addr < end_addr) {
+     base::Optional<std::string> buildid =
+@@ -196,6 +198,9 @@
+ // static
+ bool OSMetrics::FillOSMemoryDump(base::ProcessId pid,
+                                  mojom::RawOSMemDump* dump) {
 +#if defined(OS_BSD)
-+  uint64_t retval;
-+  size_t size = sizeof(retval);
-+
-+  sysctlbyname("vm.swap_total", &retval, &size, NULL, 0);
-+  uint64_t vm_swap_bytes = retval;
++  return false;
 +#else
-   uint64_t vm_swap_bytes = process_metrics->GetVmSwapBytes();
-+#endif
+   base::ScopedFD autoclose = OpenStatm(pid);
+   int statm_fd = autoclose.get();
  
-   dump->platform_private_footprint.rss_anon_bytes = rss_anon_bytes;
-   dump->platform_private_footprint.vm_swap_bytes = vm_swap_bytes;
+@@ -221,6 +226,7 @@
+   dump->resident_set_kb = process_metrics->GetResidentSetSize() / 1024;
+ 
+   return true;
++#endif
+ }
+ 
+ // static

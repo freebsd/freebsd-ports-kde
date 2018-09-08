@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	xvid
-PORTVERSION=	1.3.4
+PORTVERSION=	1.3.5
 PORTEPOCH=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	https://downloads.xvid.com/downloads/ \
-		https://source.ipfire.org/source-2.x/
+MASTER_SITES=	https://downloads.xvid.com/downloads/
 DISTNAME=	${PORTNAME}core-${PORTVERSION}
 
 MAINTAINER=	riggs@FreeBSD.org
@@ -15,7 +14,7 @@ COMMENT=	Opensource MPEG-4 codec, based on OpenDivx
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKDIR}/xvidcore/LICENSE
 
-USES=		gmake
+USES=		gmake tar:bz2
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
@@ -37,6 +36,12 @@ OPTIONS_DEFINE=	OPTIMIZED_CFLAGS
 .if ${ARCH} == "amd64"
 CONFIGURE_TARGET=	x86_64-portbld-freebsd${OSREL}
 .endif
+
+.if ${ARCH}=="i386"
+# relocation against symbol in readonly segment
+LLD_UNSAFE=	yes
+.endif
+
 .if ${ARCH} == "amd64" || ${ARCH} == "i386"
 BUILD_DEPENDS+=	nasm:devel/nasm
 .endif

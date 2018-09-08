@@ -2,9 +2,9 @@
 
 PKGNAMESUFFIX=	1
 PORTVERSION=	1.9.6
-PORTREVISION=	3
+PORTREVISION=	4
 
-CONFLICTS=	ansible-* ansible23-* ansible24-*
+CONFLICTS=	ansible-* ansible23-* ansible24-* ansible25-*
 
 MASTERDIR=	${.CURDIR}/../ansible
 DISTINFO_FILE=	${.CURDIR}/distinfo

@@ -3,6 +3,7 @@
 
 PORTNAME=	w3m
 PORTVERSION=	0.5.3.20180520
+PORTREVISION=	1
 CATEGORIES+=	www ipv6
 
 MAINTAINER?=	nobutaka@FreeBSD.org
@@ -12,6 +13,8 @@ LICENSE=	w3m
 LICENSE_NAME=	w3m
 LICENSE_FILE=	${WRKSRC}/doc/README
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+BROKEN_mips64=		fails to build: qemu: uncaught target signal 11 (Segmentation fault) - core dumped
 
 LIB_DEPENDS=	libgc.so:devel/boehm-gc
 

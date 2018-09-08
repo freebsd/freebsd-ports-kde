@@ -7,8 +7,8 @@ CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			3a30dec
-MIT_COMMIT_DATE=	2018.06.20
+HASH=			 88ce983
+MIT_COMMIT_DATE=	2018.09.05
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2

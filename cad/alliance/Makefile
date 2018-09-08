@@ -3,7 +3,7 @@
 
 PORTNAME=	alliance
 DISTVERSION=	5.0-20120515
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	cad
 MASTER_SITES=	http://ftp.lyx.org/lip6/softs/alliance/distribution/5.0/ \
 		http://ftp.jussieu.fr/lip6/softs/alliance/distribution/5.0/ \
@@ -18,6 +18,8 @@ LICENSE_FILE=	${WRKSRC}/LICENCE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BROKEN_aarch64=		fails to link: collect2: error: ld returned 1 exit status
+BROKEN_mips=		fails to build: cc1plus: error: unrecognized command line option "-std=gnu++03"
+BROKEN_mips64=		fails to build: cc1plus: error: unrecognized command line option "-std=gnu++03"
 BROKEN_powerpc64=	fails to build: cc1plus: error: unrecognized command line option "-std=gnu++03"
 
 CONFLICTS_INSTALL=	fspclient-*

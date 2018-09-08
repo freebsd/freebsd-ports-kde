@@ -3,7 +3,7 @@
 
 PORTNAME=	animorph
 PORTVERSION=	0.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	SF/makehuman/MakeHuman%20Source/MakeHuman_091
 
@@ -12,6 +12,8 @@ COMMENT=	Morphing engine for MakeHuman
 
 LICENSE=	LGPL21
 
+BROKEN_mips=		fails to compile: unrecognized command line option "-std=gnu++03"
+BROKEN_mips64=		fails to compile: unrecognized command line option "-std=gnu++03"
 BROKEN_powerpc64=	fails to compile: unrecognized command line option "-std=gnu++03"
 
 GNU_CONFIGURE=	yes

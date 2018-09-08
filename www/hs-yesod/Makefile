@@ -2,12 +2,14 @@
 
 PORTNAME=	yesod
 PORTVERSION=	1.6.0
+PORTREVISION=	1
 CATEGORIES=	www haskell
 
 MAINTAINER=	haskell@FreeBSD.org
 COMMENT=	Creation of type-safe, RESTful web applications
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USE_CABAL=	aeson blaze-html>=0.5 blaze-markup>=0.5.1 conduit-extra \
 		data-default fast-logger monad-control>=0.3 monad-logger \
