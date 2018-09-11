@@ -118,6 +118,7 @@
     SUBDIR += dpf-plugins-lv2
     SUBDIR += dream
     SUBDIR += drumgizmo
+    SUBDIR += drumkv1-lv2
     SUBDIR += drumpiler
     SUBDIR += drumstick
     SUBDIR += dsbmixer
@@ -571,7 +572,6 @@
     SUBDIR += musicpc
     SUBDIR += musicpd
     SUBDIR += mythplugin-mythmusic
-    SUBDIR += napster
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
@@ -723,6 +723,7 @@
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound
+    SUBDIR += rhvoice
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil

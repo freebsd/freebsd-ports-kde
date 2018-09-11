@@ -44,7 +44,7 @@ LDFLAGS+=	`freetype-config --libs`
 
 REDUCE_BINS=	${WRKSRC}/cslbuild/${TARGET_SDIR}
 
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=	DOCS
 
 do-install:
 	${MKDIR} ${STAGEDIR}${DATADIR}

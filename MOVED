@@ -10498,3 +10498,23 @@ x11-themes/qt5-style-Kvantum|x11-themes/Kvantum@qt5|2018-08-26|Moved to flavored
 devel/gps||2018-08-28|Has expired: Depends on obsolete LLVM 3.8.
 net-mgmt/ocsinventory-ng|net-mgmt/ocsinventory-server|2018-08-26|split port
 www/py-buku|www/buku|2018-09-01|Moved to correct directory, port is not a python library
+math/rpy2|math/py-rpy2|2018-09-01|Moved to correct directory, this is a python library
+games/libdungeonmaker||2018-09-02|Has expired: Abandonware. Unused in the ports tree
+net-p2p/lopster||2018-09-02|Has expired: Unmaintained. Napster is dead
+audio/napster||2018-09-02|Has expired: Unmaintained. Napster and OpenNap are dead
+net-p2p/xnap||2018-09-02|Has expired: Unmaintained. Napster, OpenNap, and FastTrack are dead
+russian/napster||2018-09-02|Has expired: Unmaintained. Napster and OpenNap are dead
+devel/mico||2018-09-02|Has expired: unmaintained upstream and unused in the ports tree
+net/rubygem-gitlab_omniauth-ldap1|net/rubygem-gitlab_omniauth-ldap|2018-09-02|Has expired: Use net/rubygem-gitlab_omniauth-ldap instead
+devel/onscripter|games/onscripter|2018-09-03|Moved to better category
+devel/onscripter-1byte|games/onscripter-1byte|2018-09-03|Moved to better category
+devel/ponscripter-sekai|games/ponscripter-sekai|2018-09-03|Moved to better category
+devel/renpy|games/renpy|2018-09-03|Moved to better category
+devel/renpy6|games/renpy6|2018-09-03|Moved to better category
+devel/rlvm|games/rlvm|2018-09-03|Moved to better category
+dns/openmdns|net/openmdns|2018-09-03|Moved to better category
+www/hs-activehs||2018-09-03|Has expired: Doesn't build with recent dependencies
+science/mpqc-mpich|science/mpqc|2018-09-03|MPI option is enabled by default in mpqc, no need for mpqc-mpich
+misc/timediff|misc/tzdiff|2018-09-04|Project was renamed
+www/rubygem-hamlit26|www/rubygem-hamlit|2018-09-06|Has expired: Obsolete by gitlab-ce 11.2.x update, please use www/rubygem-hamlit instead
+games/ppracer|games/etracer|2018-09-10|Has expired: Unmaintained.  Play games/etracer instead

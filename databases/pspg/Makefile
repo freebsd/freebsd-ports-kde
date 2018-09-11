@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pspg
-DISTVERSION=	1.4.2
+DISTVERSION=	1.6.1
 CATEGORIES=	databases
 
 MAINTAINER=	dg@syrec.org

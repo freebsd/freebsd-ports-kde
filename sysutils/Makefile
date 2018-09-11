@@ -603,7 +603,7 @@
     SUBDIR += libieee1284
     SUBDIR += libretto-config
     SUBDIR += libsunacl
-    SUBDIR += libsysstat 
+    SUBDIR += libsysstat
     SUBDIR += liburcu
     SUBDIR += libutempter
     SUBDIR += life-preserver
@@ -1468,6 +1468,7 @@
     SUBDIR += xsysstats
     SUBDIR += xvidcap
     SUBDIR += yadm
+    SUBDIR += yank
     SUBDIR += yum
     SUBDIR += zap
     SUBDIR += zbackup

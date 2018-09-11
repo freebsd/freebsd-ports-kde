@@ -495,6 +495,7 @@
     SUBDIR += outguess
     SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
+    SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd
     SUBDIR += p5-App-Genpass
     SUBDIR += p5-App-TLSMe
@@ -952,6 +953,7 @@
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
     SUBDIR += py-google-auth
+    SUBDIR += py-google-auth-httplib2
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi

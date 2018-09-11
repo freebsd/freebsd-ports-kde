@@ -254,7 +254,6 @@
     SUBDIR += hotcrp
     SUBDIR += hs-DAV
     SUBDIR += hs-HTTP
-    SUBDIR += hs-activehs
     SUBDIR += hs-authenticate
     SUBDIR += hs-cgi
     SUBDIR += hs-cookie
@@ -1586,6 +1585,7 @@
     SUBDIR += py-django-mezzanine-filebrowser
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-model-utils
+    SUBDIR += py-django-modern-rpc
     SUBDIR += py-django-mptt
     SUBDIR += py-django-netfields
     SUBDIR += py-django-openid-auth
@@ -2039,7 +2039,6 @@
     SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
-    SUBDIR += rubygem-hamlit26
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroku
     SUBDIR += rubygem-heroku-api
