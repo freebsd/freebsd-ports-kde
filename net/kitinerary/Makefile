@@ -2,6 +2,7 @@
 
 PORTNAME=	kitinerary
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -9,8 +10,7 @@ COMMENT=	Data Model and Extraction System for Travel Reservation information
 
 LICENSE=	LGPL21
 
-LIB_DEPENDS=	libpoppler.so:graphics/poppler \
-		libzxing.so:textproc/zxing-cpp
+LIB_DEPENDS=	libpoppler.so:graphics/poppler
 
 USES=		cmake:outsource gettext kde:5 pkgconfig qt:5 tar:xz
 USE_KDE=	ecm i18n
@@ -19,6 +19,11 @@ USE_KDE+=	calendarcore contacts kpkpass mime
 USE_QT=		core qml \
 		buildtools_build qmake_build
 USE_LDCONFIG=	yes
+
+OPTIONS_DEFINE=	ZXING
+ZXING_DESC=	Support for Barcode scanning (pulls in opencv)
+ZXING_LIB_DEPENDS=	libzxing.so:textproc/zxing-cpp
+ZXING_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_zxing
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
