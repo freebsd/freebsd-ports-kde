@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	calibre
-PORTVERSION=	3.30.0
+PORTVERSION=	3.31.0
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 

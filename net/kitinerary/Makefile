@@ -28,4 +28,6 @@ ZXING_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_zxing
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
 
+OPTIONS_DEFINE=	DOCS
+
 .include <bsd.port.mk>

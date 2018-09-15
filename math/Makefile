@@ -312,6 +312,7 @@
     SUBDIR += libmissing
     SUBDIR += libocas
     SUBDIR += liborigin
+    SUBDIR += libpgmath
     SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
@@ -544,6 +545,8 @@
     SUBDIR += p5-Math-Polygon
     SUBDIR += p5-Math-Polygon-Tree
     SUBDIR += p5-Math-Polynomial-Solve
+    SUBDIR += p5-Math-Prime-Util
+    SUBDIR += p5-Math-Prime-Util-GMP
     SUBDIR += p5-Math-Prime-XS
     SUBDIR += p5-Math-ProvablePrime
     SUBDIR += p5-Math-RPN
@@ -669,6 +672,7 @@
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
+    SUBDIR += py-chaospy
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
@@ -791,6 +795,7 @@
     SUBDIR += simd-viterbi
     SUBDIR += singular
     SUBDIR += slatec
+    SUBDIR += sleef
     SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += snns

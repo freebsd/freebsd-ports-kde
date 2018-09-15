@@ -56,6 +56,7 @@
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dft_tools
+    SUBDIR += dftbplus
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += dlpoly-classic
@@ -97,6 +98,7 @@
     SUBDIR += kalzium
     SUBDIR += kalzium-kde4
     SUBDIR += kst2
+    SUBDIR += lammps
     SUBDIR += lamprop
     SUBDIR += libaec
     SUBDIR += libccp4
@@ -117,6 +119,8 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += linsmith
+    SUBDIR += lm
+    SUBDIR += luscus
     SUBDIR += madness
     SUBDIR += massxpert
     SUBDIR += mbdyn
@@ -124,6 +128,7 @@
     SUBDIR += mcstas-comps
     SUBDIR += mcxtrace
     SUBDIR += mcxtrace-comps
+    SUBDIR += mdynamix
     SUBDIR += medit
     SUBDIR += meep
     SUBDIR += mei
@@ -134,7 +139,9 @@
     SUBDIR += mol2ps
     SUBDIR += mpb
     SUBDIR += mpqc
+    SUBDIR += msms
     SUBDIR += multiwfn
+    SUBDIR += namd
     SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
@@ -144,6 +151,7 @@
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openkim
+    SUBDIR += openmx
     SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
@@ -202,10 +210,13 @@
     SUBDIR += py-mdp
     SUBDIR += py-mlpy
     SUBDIR += py-mmtf-python
+    SUBDIR += py-molmod
     SUBDIR += py-netCDF4
     SUBDIR += py-obspy
     SUBDIR += py-openpiv
     SUBDIR += py-paida
+    SUBDIR += py-phono3py
+    SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
     SUBDIR += py-pydicom

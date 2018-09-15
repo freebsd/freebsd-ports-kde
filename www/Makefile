@@ -1578,7 +1578,6 @@
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-jsonfield2
     SUBDIR += py-django-ldapdb
-    SUBDIR += py-django-livesettings
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
     SUBDIR += py-django-mezzanine
@@ -2039,7 +2038,6 @@
     SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
-    SUBDIR += rubygem-hamlit26
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroku
     SUBDIR += rubygem-heroku-api

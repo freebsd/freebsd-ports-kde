@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	varnish
-PORTVERSION=	6.0.0
+PORTVERSION=	6.0.1
 DISTVERSIONPREFIX=	varnish-
 PORTREVISION=	0
 CATEGORIES=	www
@@ -43,8 +43,10 @@ BAD_TESTS+=	r00832
 EXTRA_PATCHES+=	${FILESDIR}/no-inet6.patch
 .endif
 
-post-patch:
+OPTIONS_DEFINE=	DOCS
+
 .if defined(BAD_TESTS)
+post-patch:
 	${RM} ${BAD_TESTS:C|.+|${WRKSRC}/bin/varnishtest/tests/\0.vtc|}
 .endif
 

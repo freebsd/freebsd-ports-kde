@@ -4353,6 +4353,7 @@
     SUBDIR += py-aspyct
     SUBDIR += py-astor
     SUBDIR += py-astroid
+    SUBDIR += py-astroid1
     SUBDIR += py-asttokens
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
@@ -4604,6 +4605,7 @@
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
     SUBDIR += py-grpcio
+    SUBDIR += py-grpcio-gcp
     SUBDIR += py-grpcio-tools
     SUBDIR += py-gtfslib
     SUBDIR += py-gyp
@@ -4932,8 +4934,10 @@
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-flake8
+    SUBDIR += py-pytest-flakes
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
@@ -5576,6 +5580,7 @@
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
     SUBDIR += rubygem-docile
+    SUBDIR += rubygem-dry-inflector
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-edavis10-object_daddy
@@ -5807,6 +5812,7 @@
     SUBDIR += rubygem-omniauth_crowd22
     SUBDIR += rubygem-open3_backport
     SUBDIR += rubygem-open4
+    SUBDIR += rubygem-optimist
     SUBDIR += rubygem-orm_adapter
     SUBDIR += rubygem-os
     SUBDIR += rubygem-p4ruby
