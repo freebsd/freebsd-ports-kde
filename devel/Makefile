@@ -1057,7 +1057,6 @@
     SUBDIR += hs-haddock-library
     SUBDIR += hs-happy
     SUBDIR += hs-hashable
-    SUBDIR += hs-hashed-storage
     SUBDIR += hs-hashtables
     SUBDIR += hs-haskell-lexer
     SUBDIR += hs-haskell-src
@@ -4022,6 +4021,7 @@
     SUBDIR += pear-XML_Util
     SUBDIR += pear-channel-doctrine
     SUBDIR += pear-channel-ezc
+    SUBDIR += pear-channel-geshi
     SUBDIR += pear-channel-horde
     SUBDIR += pear-channel-htmlpurifier.org
     SUBDIR += pear-channel-openpear
@@ -6245,7 +6245,6 @@
     SUBDIR += tijmp
     SUBDIR += tinycbor
     SUBDIR += tinylaf
-    SUBDIR += tinyq
     SUBDIR += tkcon
     SUBDIR += tkcvs
     SUBDIR += tkmerge
