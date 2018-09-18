@@ -1,6 +1,6 @@
---- daemon/backends/upower/powerdevilupowerbackend.cpp.orig	2017-12-10 06:14:30 UTC
+--- daemon/backends/upower/powerdevilupowerbackend.cpp.orig	2018-09-13 17:05:32 UTC
 +++ daemon/backends/upower/powerdevilupowerbackend.cpp
-@@ -41,7 +41,7 @@
+@@ -39,7 +39,7 @@
  #include "ddcutilbrightness.h"
  #include "upowersuspendjob.h"
  #include "login1suspendjob.h"
@@ -9,18 +9,18 @@
  
  #define HELPER_ID "org.kde.powerdevil.backlighthelper"
  
-@@ -200,8 +200,10 @@ void PowerDevilUPowerBackend::init()
+@@ -189,8 +189,10 @@ void PowerDevilUPowerBackend::init()
  
-                                     m_isLedBrightnessControl = m_syspath.contains(QLatin1String("/leds/"));
-                                     if (!m_isLedBrightnessControl) {
-+                                    /*
-                                         UdevQt::Client *client =  new UdevQt::Client(QStringList("backlight"), this);
-                                         connect(client, SIGNAL(deviceChanged(UdevQt::Device)), SLOT(onDeviceChanged(UdevQt::Device)));
-+                                        */
-                                     }
+                             m_isLedBrightnessControl = m_syspath.contains(QLatin1String("/leds/"));
+                             if (!m_isLedBrightnessControl) {
++/*
+                                 UdevQt::Client *client =  new UdevQt::Client(QStringList("backlight"), this);
+                                 connect(client, SIGNAL(deviceChanged(UdevQt::Device)), SLOT(onDeviceChanged(UdevQt::Device)));
++*/
+                             }
  
-                                     Q_EMIT brightnessSupportQueried(m_brightnessMax > 0);
-@@ -358,6 +360,7 @@ void PowerDevilUPowerBackend::initWithBr
+                             Q_EMIT brightnessSupportQueried(m_brightnessMax > 0);
+@@ -327,6 +329,7 @@ void PowerDevilUPowerBackend::initWithBrightness(bool 
  
  void PowerDevilUPowerBackend::onDeviceChanged(const UdevQt::Device &device)
  {
@@ -28,7 +28,7 @@
      qCDebug(POWERDEVIL) << "Udev device changed" << m_syspath << device.sysfsPath();
      if (device.sysfsPath() != m_syspath) {
          return;
-@@ -373,6 +376,7 @@ void PowerDevilUPowerBackend::onDeviceCh
+@@ -342,6 +345,7 @@ void PowerDevilUPowerBackend::onDeviceChanged(const Ud
          m_cachedBrightnessMap[Screen] = newBrightness;
          onBrightnessChanged(Screen, newBrightness, maxBrightness);
      }
