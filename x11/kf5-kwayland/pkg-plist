@@ -44,7 +44,7 @@ include/KF5/KWayland/Client/surface.h
 include/KF5/KWayland/Client/textinput.h
 include/KF5/KWayland/Client/touch.h
 include/KF5/KWayland/Client/xdgforeign_v2.h
-include/KF5/KWayland/Server/xdgforeign_interface.h
+include/KF5/KWayland/Client/xdgoutput.h
 include/KF5/KWayland/Client/xdgshell.h
 include/KF5/KWayland/Server/appmenu_interface.h
 include/KF5/KWayland/Server/blur_interface.h
@@ -90,6 +90,8 @@ include/KF5/KWayland/Server/subcompositor_interface.h
 include/KF5/KWayland/Server/surface_interface.h
 include/KF5/KWayland/Server/textinput_interface.h
 include/KF5/KWayland/Server/touch_interface.h
+include/KF5/KWayland/Server/xdgforeign_interface.h
+include/KF5/KWayland/Server/xdgoutput_interface.h
 include/KF5/KWayland/Server/xdgshell_interface.h
 include/KF5/kwayland_version.h
 lib/cmake/KF5Wayland/KF5WaylandConfig.cmake

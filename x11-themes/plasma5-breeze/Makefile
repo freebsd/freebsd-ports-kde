@@ -10,6 +10,8 @@ COMMENT=	Plasma5 artwork, styles and assets for the Breeze visual style
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+LIB_DEPENDS=	libfftw3_threads.so:math/fftw3
+
 USES=		cmake:outsource compiler:c++11-lib cpe \
 		gettext kde:5 pkgconfig qt:5 tar:xz
 USE_KDE=	auth breeze-icons codecs config configwidgets coreaddons \

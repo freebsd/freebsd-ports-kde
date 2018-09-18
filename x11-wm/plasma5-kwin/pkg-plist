@@ -69,6 +69,7 @@ lib/libkwinxrenderutils.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_mousemark_config.so
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_presentwindows_config.so
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_resize_config.so
+%%QT_PLUGINDIR%%/kwin/effects/configs/kwin_scale_config.so
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_showfps_config.so
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_slide_config.so
 %%QT_PLUGINDIR%%/kwin/effects/configs/kwin_thumbnailaside_config.so
@@ -315,6 +316,7 @@ share/icons/hicolor/16x16/apps/kwin.png
 share/icons/hicolor/32x32/apps/kwin.png
 share/icons/hicolor/48x48/apps/kwin.png
 share/icons/hicolor/scalable/apps/kwin.svgz
+share/kconf_update/kwin.upd
 share/knotifications5/kwin.notifyrc
 share/kservices5/desktop.desktop
 share/kservices5/kcmkwineffects.desktop
@@ -333,7 +335,6 @@ share/kservices5/kwin/kwin4_effect_login.desktop
 share/kservices5/kwin/kwin4_effect_logout.desktop
 share/kservices5/kwin/kwin4_effect_maximize.desktop
 share/kservices5/kwin/kwin4_effect_morphingpopups.desktop
-share/kservices5/kwin/kwin4_effect_scalein.desktop
 share/kservices5/kwin/kwin4_effect_translucency.desktop
 share/kservices5/kwin/kwin4_effect_windowaperture.desktop
 share/kservices5/kwinactions.desktop
@@ -389,8 +390,6 @@ share/kservicetypes5/kwinwindowswitcher.desktop
 %%DATADIR%%/effects/kwin4_effect_maximize/metadata.desktop
 %%DATADIR%%/effects/kwin4_effect_morphingpopups/contents/code/morphingpopups.js
 %%DATADIR%%/effects/kwin4_effect_morphingpopups/metadata.desktop
-%%DATADIR%%/effects/kwin4_effect_scalein/contents/code/main.js
-%%DATADIR%%/effects/kwin4_effect_scalein/metadata.desktop
 %%DATADIR%%/effects/kwin4_effect_translucency/contents/code/main.js
 %%DATADIR%%/effects/kwin4_effect_translucency/contents/config/main.xml
 %%DATADIR%%/effects/kwin4_effect_translucency/contents/ui/config.ui

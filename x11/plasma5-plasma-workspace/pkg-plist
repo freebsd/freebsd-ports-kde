@@ -75,7 +75,6 @@ lib/libcolorcorrect.so.5
 lib/libcolorcorrect.so.%%KDE_PLASMA_VERSION%%
 lib/libexec/baloorunner
 lib/libexec/ksmserver-logout-greeter
-lib/libexec/ksmserver-switchuser-greeter
 lib/libexec/ksyncdbusenv
 lib/libexec/startplasma
 lib/libkdeinit5_kcminit.so
@@ -297,12 +296,12 @@ share/doc/HTML/sv/kcontrol/screenlocker/index.cache.bz2
 share/doc/HTML/sv/kcontrol/screenlocker/index.docbook
 share/doc/HTML/sv/klipper/index.cache.bz2
 share/doc/HTML/sv/klipper/index.docbook
-share/doc/HTML/uk/klipper/klipper-widget.png
-share/doc/HTML/uk/klipper/screenshot.png
 share/doc/HTML/uk/kcontrol/screenlocker/index.cache.bz2
 share/doc/HTML/uk/kcontrol/screenlocker/index.docbook
 share/doc/HTML/uk/klipper/index.cache.bz2
 share/doc/HTML/uk/klipper/index.docbook
+share/doc/HTML/uk/klipper/klipper-widget.png
+share/doc/HTML/uk/klipper/screenshot.png
 share/kconf_update/krunnerplugins.upd
 share/kdevappwizard/templates/ion-dataengine.tar.bz2
 share/kio_desktop/directory.desktop
@@ -391,6 +390,7 @@ share/kservices5/plasma-runner-services.desktop
 share/kservices5/plasma-runner-sessions.desktop
 share/kservices5/plasma-runner-shell.desktop
 share/kservices5/plasma-runner-webshortcuts.desktop
+share/kservices5/plasma-runner-webshortcuts_config.desktop
 share/kservices5/plasma-runner-windowedwidgets.desktop
 share/kservices5/plasma-runner-windows.desktop
 share/kservices5/plasma-wallpaper-org.kde.color.desktop
@@ -540,6 +540,7 @@ share/locale/ast/LC_MESSAGES/plasma_engine_weather.mo
 share/locale/ast/LC_MESSAGES/plasma_lookandfeel_org.kde.lookandfeel.mo
 share/locale/ast/LC_MESSAGES/plasma_package_plasmashell.mo
 share/locale/ast/LC_MESSAGES/plasma_runner_activities.mo
+share/locale/ast/LC_MESSAGES/plasma_runner_appstream.mo
 share/locale/ast/LC_MESSAGES/plasma_runner_baloosearch5.mo
 share/locale/ast/LC_MESSAGES/plasma_runner_bookmarksrunner.mo
 share/locale/ast/LC_MESSAGES/plasma_runner_calculatorrunner.mo
@@ -2078,7 +2079,9 @@ share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.devicenotifier.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.digitalclock.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.icon.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.lock_logout.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.mediacontroller.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.notifications.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.private.systemtray.mo
 share/locale/id/LC_MESSAGES/plasma_containmentactions_contextmenu.mo
 share/locale/id/LC_MESSAGES/plasma_containmentactions_switchwindow.mo
 share/locale/id/LC_MESSAGES/plasma_engine_applicationjobs.mo
@@ -2102,7 +2105,10 @@ share/locale/id/LC_MESSAGES/plasma_runner_webshortcuts.mo
 share/locale/id/LC_MESSAGES/plasma_runner_windowedwidgets.mo
 share/locale/id/LC_MESSAGES/plasma_runner_windows.mo
 share/locale/id/LC_MESSAGES/plasma_wallpaper_org.kde.image.mo
+share/locale/id/LC_MESSAGES/plasmashell.mo
+share/locale/id/LC_MESSAGES/plasmashellprivateplugin.mo
 share/locale/id/LC_MESSAGES/soliduiserver5.mo
+share/locale/id/LC_MESSAGES/systemmonitor.mo
 share/locale/is/LC_MESSAGES/freespacenotifier.mo
 share/locale/is/LC_MESSAGES/kcminit.mo
 share/locale/is/LC_MESSAGES/kio5_applications.mo
@@ -4473,7 +4479,6 @@ share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/Splash.qml
 share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/busywidget.svgz
 share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/kde.svgz
 share/plasma/look-and-feel/org.kde.breeze.desktop/contents/splash/images/plasma.svgz
-share/plasma/look-and-feel/org.kde.breeze.desktop/contents/userswitcher/UserSwitcher.qml
 share/plasma/look-and-feel/org.kde.breeze.desktop/contents/windowdecoration/WindowDecoration.qml
 share/plasma/look-and-feel/org.kde.breeze.desktop/contents/windowswitcher/WindowSwitcher.qml
 share/plasma/look-and-feel/org.kde.breeze.desktop/metadata.desktop
