@@ -191,6 +191,7 @@
     SUBDIR += psychopy
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
+    SUBDIR += py-PyFR
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -200,6 +201,7 @@
     SUBDIR += py-abipy
     SUBDIR += py-ase
     SUBDIR += py-cdo
+    SUBDIR += py-chempy
     SUBDIR += py-coards
     SUBDIR += py-dlib
     SUBDIR += py-gpaw
