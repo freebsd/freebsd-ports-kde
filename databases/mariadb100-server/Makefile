@@ -2,7 +2,7 @@
 
 PORTNAME?=	mariadb
 PORTVERSION=	10.0.36
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://ftp.osuosl.org/pub/${SITESDIR}/ \
 		http://mirrors.supportex.net/${SITESDIR}/ \
@@ -123,7 +123,6 @@ OQGRAPH_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 TOKUDB_LIB_DEPENDS=	libsnappy.so:archivers/snappy
 TOKUDB_PORTDOCS=	PATENTS README.md
 TOKUDB_VARS=		LICENSE+=PerconaFT LICENSE_COMB=multi
-TOKUDB_IMPLIES=		DOCS
 
 post-install:
 	# Remove programs to avoid conflict with mariadb100-client
@@ -176,6 +175,11 @@ post-patch:
 		${WRKSRC}/cmake/os/DragonFly.cmake
 	${MV} ${WRKSRC}/storage/tokudb ${WRKSRC}/skip-tokudb
 .endif
+
+# This file is being generated incorrectly for unknown reasons.
+# See https://bugs.freebsd.org/230839 for details.
+post-configure:
+	${REINPLACE_CMD} -e 's|-l-pthread|-pthread|g' ${WRKSRC}/scripts/mysql_config
 
 post-configure-MROONGA-on:
 	${REINPLACE_CMD} 's|-llz4|-L${LOCALBASE}/lib -llz4|' \

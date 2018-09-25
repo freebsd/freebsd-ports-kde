@@ -4737,6 +4737,7 @@
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock
+    SUBDIR += py-molecule
     SUBDIR += py-mondrian
     SUBDIR += py-mongoengine
     SUBDIR += py-mongokit
@@ -4824,6 +4825,7 @@
     SUBDIR += py-path.py
     SUBDIR += py-pathlib
     SUBDIR += py-pathlib2
+    SUBDIR += py-pathspec
     SUBDIR += py-pathtools
     SUBDIR += py-paver
     SUBDIR += py-pbr
@@ -5211,6 +5213,7 @@
     SUBDIR += py-xoltar-toolkit
     SUBDIR += py-xxhash
     SUBDIR += py-yaml
+    SUBDIR += py-yamllint
     SUBDIR += py-yandex-money-sdk
     SUBDIR += py-yappi
     SUBDIR += py-yapps2
@@ -6110,6 +6113,7 @@
     SUBDIR += rudeconfig
     SUBDIR += rudiments
     SUBDIR += runsnakerun
+    SUBDIR += rust-bindgen
     SUBDIR += rust-cbindgen
     SUBDIR += rvi
     SUBDIR += rvm
@@ -6306,6 +6310,7 @@
     SUBDIR += viewvc
     SUBDIR += violet
     SUBDIR += visualparadigm
+    SUBDIR += vitables
     SUBDIR += vstr
     SUBDIR += vulkan-headers
     SUBDIR += vulkan-tools
