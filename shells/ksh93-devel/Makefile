@@ -14,8 +14,8 @@ PORTNAME=	ksh93
 PORTVERSION=	${AST_COMMIT_DATE}
 CATEGORIES=	shells
 PKGNAMESUFFIX=	-devel
-HASH=		b29f796
-AST_COMMIT_DATE=	2018.09.22
+HASH=		 2bb160b
+AST_COMMIT_DATE=	2018.09.25
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Development branch of AT&T KornShell 93
@@ -61,8 +61,5 @@ post-patch:
 .if ${PORT_OPTIONS:MKSH93}
 	@${MV} ${WRKSRC}/src/cmd/ksh93/ksh.1 ${WRKSRC}/src/cmd/ksh93/ksh93.1
 .endif
-
-do-test:
-	cd ${WRKSRC}/src/cmd/ksh93/tests/ && ${SETENV} SHELL=${WRKSRC}/bin/ksh ${WRKSRC}/bin/ksh shtests
 
 .include <bsd.port.post.mk>
