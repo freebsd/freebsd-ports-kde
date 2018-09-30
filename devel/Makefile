@@ -1271,6 +1271,7 @@
     SUBDIR += json-glib
     SUBDIR += jsoncpp
     SUBDIR += jsonnet
+    SUBDIR += jsonrpc-glib
     SUBDIR += judy
     SUBDIR += jwasm
     SUBDIR += k8048
@@ -1588,7 +1589,6 @@
     SUBDIR += libsmraw
     SUBDIR += libsoup
     SUBDIR += libsoup-gnome
-    SUBDIR += libsoup-reference
     SUBDIR += libspark2012
     SUBDIR += libspice-server
     SUBDIR += libstatgrab
@@ -2539,7 +2539,6 @@
     SUBDIR += p5-ExtUtils-AutoInstall
     SUBDIR += p5-ExtUtils-CBuilder
     SUBDIR += p5-ExtUtils-CChecker
-    SUBDIR += p5-ExtUtils-Command
     SUBDIR += p5-ExtUtils-Config
     SUBDIR += p5-ExtUtils-Constant
     SUBDIR += p5-ExtUtils-CppGuess
@@ -3356,7 +3355,6 @@
     SUBDIR += p5-Scope-Guard
     SUBDIR += p5-Scope-Upper
     SUBDIR += p5-Script-isAperlScript
-    SUBDIR += p5-Search-Binary
     SUBDIR += p5-Sentinel
     SUBDIR += p5-Sepia
     SUBDIR += p5-Set-Array
@@ -4396,6 +4394,7 @@
     SUBDIR += py-boto
     SUBDIR += py-botocore
     SUBDIR += py-bsd
+    SUBDIR += py-btest
     SUBDIR += py-buildbot
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
@@ -6246,6 +6245,7 @@
     SUBDIR += tclvfs
     SUBDIR += tclxml
     SUBDIR += tdl
+    SUBDIR += template-glib
     SUBDIR += terminality
     SUBDIR += tevent
     SUBDIR += tex-kpathsea
