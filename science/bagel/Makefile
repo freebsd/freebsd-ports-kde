@@ -13,15 +13,17 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BROKEN_i386=	error: static_assert failed "size_t is assumed to be the same size as unsigned long long"
+BROKEN_FreeBSD_10=	/usr/include/c++/v1/memory:4004:35: error: no viable overloaded '='; __e->__weak_this_ = *this;
 
 LIB_DEPENDS=	libboost_serialization.so:devel/boost-libs \
 		libcblas.so:math/cblas
 
-USES=		autoreconf fortran gmake libtool localbase python:build
+USES=		autoreconf compiler:c++11-lang fortran gmake libtool localbase python:build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datarootdir=${DATADIR}
 USE_GITHUB=	yes
 GH_ACCOUNT=	nubakery
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=			MPI LIBXC SCALAPACK SMITH # SLATER (needs a separate lib)

@@ -4,6 +4,7 @@ PORTNAME=	libyang
 PORTVERSION=	0.16
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-r1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -14,10 +15,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-USES=	cmake
+USES=	cmake pkgconfig
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	CESNET
+
+CMAKE_ARGS+=	-DENABLE_LYD_PRIV=ON
 
 .include <bsd.port.mk>
