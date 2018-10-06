@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ghostscript
-PORTVERSION=	9.24
+PORTVERSION=	9.25
 PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${PORTVERSION:S/.//}/
@@ -67,9 +67,9 @@ IJS_DESC=		Support libijs based Ghostscript devices
 IJS_LIB_DEPENDS=	libijs.so:print/libijs
 
 post-patch:
-	@${RM} -r ${WRKSRC}/freetype ${WRKSRC}/ijs ${WRKSRC}/jbig2dec \
-		${WRKSRC}/jpeg ${WRKSRC}/libpng ${WRKSRC}/openjpeg \
-		${WRKSRC}/zlib
+	@${RM} -r ${WRKSRC}/cups/libs ${WRKSRC}/freetype ${WRKSRC}/ijs \
+		${WRKSRC}/jbig2dec ${WRKSRC}/jpeg ${WRKSRC}/libpng \
+		${WRKSRC}/openjpeg ${WRKSRC}/zlib
 
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/gsc ${STAGEDIR}${PREFIX}/bin/gs

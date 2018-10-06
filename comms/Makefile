@@ -8,6 +8,7 @@
     SUBDIR += aldo
     SUBDIR += amtterm
     SUBDIR += anyremote
+    SUBDIR += apitran
     SUBDIR += aprsd
     SUBDIR += atslog
     SUBDIR += bfhist
@@ -78,7 +79,6 @@
     SUBDIR += kermit
     SUBDIR += klog
     SUBDIR += kremotecontrol-kde4
-    SUBDIR += kvasd
     SUBDIR += libbtbb
     SUBDIR += libconcord
     SUBDIR += libfap
@@ -195,9 +195,7 @@
     SUBDIR += usbmuxd
     SUBDIR += viewfax
     SUBDIR += vrflash
-    SUBDIR += wsjt
     SUBDIR += wsjtx
-    SUBDIR += wspr
     SUBDIR += wwl
     SUBDIR += wy60
     SUBDIR += xastir

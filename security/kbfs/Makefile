@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	kbfs
-PORTVERSION=	2.5.2
+PORTVERSION=	2.6.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security
 
@@ -10,6 +10,8 @@ COMMENT=	Keybase Filesystem (KBFS)
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+PORTSCOUT=	skipv:initial-git-on-android
 
 USES=		go
 

@@ -29,6 +29,7 @@
     SUBDIR += atom
     SUBDIR += atompaw
     SUBDIR += avogadro
+    SUBDIR += bagel
     SUBDIR += bddsolve
     SUBDIR += bft
     SUBDIR += bodr
@@ -56,11 +57,13 @@
     SUBDIR += dcl
     SUBDIR += devisor
     SUBDIR += dft_tools
+    SUBDIR += dftbplus
     SUBDIR += dkh
     SUBDIR += dlib-cpp
     SUBDIR += dlpoly-classic
     SUBDIR += eccodes
     SUBDIR += ecs
+    SUBDIR += elk
     SUBDIR += epte
     SUBDIR += erd
     SUBDIR += fastcap
@@ -118,6 +121,8 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += linsmith
+    SUBDIR += lm
+    SUBDIR += luscus
     SUBDIR += madness
     SUBDIR += massxpert
     SUBDIR += mbdyn
@@ -136,7 +141,9 @@
     SUBDIR += mol2ps
     SUBDIR += mpb
     SUBDIR += mpqc
+    SUBDIR += msms
     SUBDIR += multiwfn
+    SUBDIR += namd
     SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
@@ -146,6 +153,7 @@
     SUBDIR += octopus
     SUBDIR += openbabel
     SUBDIR += openkim
+    SUBDIR += openmx
     SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
@@ -185,6 +193,7 @@
     SUBDIR += psychopy
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
+    SUBDIR += py-PyFR
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -194,6 +203,7 @@
     SUBDIR += py-abipy
     SUBDIR += py-ase
     SUBDIR += py-cdo
+    SUBDIR += py-chempy
     SUBDIR += py-coards
     SUBDIR += py-dlib
     SUBDIR += py-gpaw
@@ -204,10 +214,13 @@
     SUBDIR += py-mdp
     SUBDIR += py-mlpy
     SUBDIR += py-mmtf-python
+    SUBDIR += py-molmod
     SUBDIR += py-netCDF4
     SUBDIR += py-obspy
     SUBDIR += py-openpiv
     SUBDIR += py-paida
+    SUBDIR += py-phono3py
+    SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
     SUBDIR += py-pydicom

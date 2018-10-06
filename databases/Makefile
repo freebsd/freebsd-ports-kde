@@ -37,6 +37,7 @@
     SUBDIR += clickhouse
     SUBDIR += cockroach
     SUBDIR += couchdb
+    SUBDIR += couchdb2
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
     SUBDIR += courier-authlib-userdb
@@ -252,6 +253,7 @@
     SUBDIR += ocaml-mysql
     SUBDIR += ocaml-sqlite3
     SUBDIR += openark-kit
+    SUBDIR += opendbviewer
     SUBDIR += opendbx
     SUBDIR += opentsdb
     SUBDIR += ora2pg
@@ -758,10 +760,13 @@
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += pspg
+    SUBDIR += puppetdb-cli
     SUBDIR += puppetdb-terminus4
     SUBDIR += puppetdb-terminus5
+    SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb4
     SUBDIR += puppetdb5
+    SUBDIR += puppetdb6
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -781,6 +786,7 @@
     SUBDIR += py-bsddb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
+    SUBDIR += py-cassandra-driver
     SUBDIR += py-cdb
     SUBDIR += py-couchdb
     SUBDIR += py-cql
@@ -1006,6 +1012,7 @@
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-tarantool
+    SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
     SUBDIR += skytools

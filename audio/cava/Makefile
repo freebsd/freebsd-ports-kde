@@ -2,6 +2,7 @@
 
 PORTNAME=	cava
 DISTVERSION=	0.6.1
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	tobik@FreeBSD.org
@@ -10,6 +11,7 @@ COMMENT=	Console-based Audio Visualizer for MPD, PulseAudio, and sndio
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	psf2bdf:x11-fonts/psftools
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libiniparser.so:devel/iniparser
 
@@ -18,11 +20,12 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	karlstav
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	ac_cv_lib_asound_snd_pcm_open=no
+CONFIGURE_ENV=	ac_cv_lib_asound_snd_pcm_open=no \
+		FONT_DIR=${DATADIR}
 
 INSTALL_TARGET=	install-strip
 
-PLIST_FILES=	bin/cava
+PLIST_FILES=	bin/cava ${DATADIR}/cava.fnt
 PORTDOCS=	README.md
 PORTEXAMPLES=	config
 
@@ -36,11 +39,12 @@ PULSEAUDIO_LIB_DEPENDS=		libpulse-simple.so:audio/pulseaudio \
 SNDIO_CONFIGURE_ENV_OFF=	ac_cv_lib_sndio_sio_open=no
 SNDIO_LIB_DEPENDS=		libsndio.so:audio/sndio
 
-post-patch:
-	@${REINPLACE_CMD} '/^cava_font/d' ${WRKSRC}/Makefile.am
-
 pre-configure:
 	@${ECHO_CMD} ${DISTVERSION} > ${WRKSRC}/version
+
+pre-build:
+	psf2bdf ${WRKSRC}/cava.psf > ${WRKSRC}/cava.bdf
+	vtfontcvt ${WRKSRC}/cava.bdf ${WRKSRC}/cava.fnt
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

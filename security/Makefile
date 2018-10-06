@@ -64,6 +64,7 @@
     SUBDIR += ca_root_nss
     SUBDIR += calife
     SUBDIR += cardpeek
+    SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
     SUBDIR += certificate-transparency
@@ -395,7 +396,6 @@
     SUBDIR += linux-c7-openssl
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
-    SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
     SUBDIR += luasec
@@ -449,6 +449,7 @@
     SUBDIR += ocaml-ssl
     SUBDIR += oidentd
     SUBDIR += oinkmaster
+    SUBDIR += onionscan
     SUBDIR += op
     SUBDIR += openbsm
     SUBDIR += openca-tools-forked
@@ -466,6 +467,7 @@
     SUBDIR += openssl
     SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
+    SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -495,6 +497,7 @@
     SUBDIR += outguess
     SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
+    SUBDIR += p5-Alt-Crypt-RSA-BigInt
     SUBDIR += p5-Apache-Htpasswd
     SUBDIR += p5-App-Genpass
     SUBDIR += p5-App-TLSMe
@@ -952,6 +955,7 @@
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
     SUBDIR += py-google-auth
+    SUBDIR += py-google-auth-httplib2
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi

@@ -208,6 +208,7 @@ ue*dev.zip		editors/uemacs		Resale allowed for media cost only
 unifi-5*/UniFi.unix.zip	net-mgmt/unifi5		Redistribution of bundled firmware images is not permitted
 uplink-demo*		games/linux-uplink-demo	Redistribution is limited, see license
 uzap.tar.gz		editors/uzap		This software may not be used to make a profit in any way.
+vdbench*.zip		benchmarks/linux-vdbench	Redistribution is not permitted
 vdr-markad-*		multimedia/vdr-plugin-markad	Installs station logos
 vice-*			emulators/vice		ROMs are copyrighted by Commodore Business Machines
 VMware-vSphere-Perl*	net/vmware-vsphere-cli	May not be redistributed.  Must accept license to download.
@@ -239,3 +240,7 @@ snes9x-*		emulators/snes9x-gtk	Commercial users must seek permission from copyri
 rainloop-1.*.zip	mail/rainloop		Redistribution in any form is prohibited
 lha-114i.tar.gz		archivers/lha		Binary only redistribution is prohibited. Non-network redistribution such as CDROM requires prior notification to author. Commercial use whose main purpose is to provide the functions of this program is prohibited.
 atom-*.tgz		science/atom		Redistribution in any form is prohibited
+charm-uiuc-*		net/charm		No commercial use: commercial use requires a commercial license
+namd-*			science/namd		No commercial use: commercial use requires a commercial license
+vmd-*			science/vmd		No commercial use: commercial use requires a commercial license
+msms-*			science/msms		No commercial use, only for use by individuals in scientific research

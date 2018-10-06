@@ -18,8 +18,8 @@ LIB_DEPENDS=	libvorbis.so:audio/libvorbis \
 
 WRKSRC_SUBDIR=	${PORTNAME}
 
-USES=		cmake desktop-file-utils dos2unix gettext gnome iconv libarchive \
-		libtool pkgconfig tar:bzip2
+USES=		cmake desktop-file-utils dos2unix gettext gl gnome iconv \
+		libarchive libtool pkgconfig tar:bzip2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	martymac
@@ -51,7 +51,7 @@ DEFAULT_DVD_DEVICE?=	/dev/cd0
 
 # XXX Gettext support is mandatory and cannot really be disabled.
 # The following option only enables/disables building *additional* translations
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SUB=	yes
 NLS_DESC=	Build additional NLS translations
 NLS_CMAKE_ON=	-DDISABLE_NLS_TRANSLATIONS:BOOL=OFF

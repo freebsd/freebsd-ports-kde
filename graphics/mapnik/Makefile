@@ -18,13 +18,12 @@ COMMENT=	Free Toolkit For Developing Mapping Applications
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_powerpc=		fails to install: runs out of virtual memory
+
 LIB_DEPENDS=	libicuuc.so:devel/icu \
 		libboost_system.so:devel/boost-libs \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz
-
-BROKEN_powerpc=		fails to install: runs out of virtual memory
-BROKEN_powerpc64=	fails to link: libmapnik.so: undefined reference to boost::match_results
 
 USES=		compiler:c++11-lib pkgconfig python scons tar:bzip2
 USE_GNOME=	libxml2
@@ -37,7 +36,7 @@ PORTDOCS=	*
 
 INPUT_PLUGINS=	csv raster shape geojson topojson
 
-OPTIONS_DEFINE=	CAIRO JPEG PNG TIFF WEBP PROJ
+OPTIONS_DEFINE=	DOCS CAIRO JPEG PNG TIFF WEBP PROJ
 OPTIONS_DEFAULT=CAIRO GDAL OGR POSTGIS PGRASTER SQLITE3 JPEG PNG TIFF PROJ WEBP
 OPTIONS_GROUP=	INPUT
 OPTIONS_GROUP_INPUT=	GDAL OGR POSTGIS PGRASTER SQLITE3

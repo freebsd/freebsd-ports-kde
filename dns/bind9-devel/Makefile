@@ -40,13 +40,13 @@ LIB_DEPENDS=	libxml2.so:textproc/libxml2
 # XXX: remove tar:bz2
 USES=	cpe libedit ssl tar:bz2
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.13.1a0.2018.08.31
+ISCVERSION=	9.13.1a0.2018.09.28
 # XXX: Remove gitlab
 USE_GITLAB=	yes
 GL_SITE=	https://gitlab.isc.org
 GL_ACCOUNT=	isc-projects
 GL_PROJECT=	bind9
-GL_COMMIT=	73b26484801af8b34baaa440a8195867a639ead7
+GL_COMMIT=	c93acb99492526a8263ad1afd1fd10a0f41392fe
 
 CPE_VENDOR=	isc
 CPE_VERSION=	${ISCVERSION:C/-.*//}
@@ -75,11 +75,11 @@ CONFLICTS+=		bind9-devel
 USE_RC_SUBR=	named
 SUB_FILES=	pkg-message named.conf
 CONFLICTS+=		bind-tools
+
+PORTDOCS=	*
 .endif	# BIND_TOOLS_SLAVE
 
 MAKE_JOBS_UNSAFE=	yes
-
-PORTDOCS=	*
 
 OPTIONS_DEFAULT=	SIGCHASE IDN GSSAPI_NONE JSON PYTHON
 OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON JSON \

@@ -218,12 +218,14 @@
     SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
+    SUBDIR += ocaml-camlidl
     SUBDIR += ocaml-nox11
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opendylan
+    SUBDIR += ott
     SUBDIR += owl-lisp
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript

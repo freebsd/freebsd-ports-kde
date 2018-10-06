@@ -4,7 +4,7 @@
 PORTNAME=	qcad
 PORTVERSION=	3.21.1.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	cad
 DIST_SUBDIR=	${PORTNAME}
 
@@ -46,6 +46,8 @@ STALIBS=	dxflib stemmer
 SHRDIR=		fonts libraries linetypes patterns plugins scripts themes ts
 #QSCRIPTS should not be installed to avoid conflicts with texlive-base
 QSCRIPTS=	bbox dwg2bmp dwg2pdf dwg2svg
+
+OPTIONS_DEFINE=	EXAMPLES
 
 pre-configure:
 	${REINPLACE_CMD} -e "s|%%DATADIR%%|${DATADIR}|"	\

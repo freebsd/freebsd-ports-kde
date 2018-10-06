@@ -4,6 +4,7 @@
     COMMENT = Archivers
 
     SUBDIR += 9e
+    SUBDIR += R-cran-zip
     SUBDIR += advancecomp
     SUBDIR += amigadepacker
     SUBDIR += arc
@@ -31,7 +32,6 @@
     SUBDIR += fpc-bzip2
     SUBDIR += fpc-unzip
     SUBDIR += freetar
-    SUBDIR += freeze
     SUBDIR += gcab
     SUBDIR += gcpio
     SUBDIR += gnome-autoar

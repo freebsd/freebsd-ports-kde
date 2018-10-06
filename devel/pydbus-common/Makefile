@@ -31,10 +31,11 @@ DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	HTMLDOCS
+OPTIONS_DEFINE=	HTMLDOCS DOCS EXAMPLES
 HTMLDOCS_DESC=	build html documentation
+HTMLDOCS_IMPLIES=	DOCS
 HTMLDOCS_CONFIGURE_ENABLE=	documentation
-HTMLDOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
+HTMLDOCS_BUILD_DEPENDS=		sphinx-build:textproc/py-sphinx
 
 post-patch-DOCS-on:
 	@${REINPLACE_CMD} -e 's|HEADERS install-dist_docDATA|HEADERS|g ; \
@@ -64,7 +65,7 @@ LIB_DEPENDS+=	libdbus-glib-1.so:devel/dbus-glib
 RUN_DEPENDS+=	pydbus-common>=0:devel/pydbus-common
 USE_LDCONFIG=	yes
 USES+=		python
-USE_PYTHON=	flavors
+USE_PYTHON=	flavors py3kplist
 
 post-install:
 	@${RM} -r ${STAGEDIR}${PREFIX}/include/dbus-1.0 \
