@@ -10,8 +10,8 @@ COMMENT=	Qt QML and JavaScript language module
 
 BROKEN_powerpc64=	Does not build
 
-USE_QT=		core network buildtools_build
 USES=		python:build qmake qt-dist:5,declarative
+USE_QT=		core network qlalr buildtools_build
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 BUILD_WRKSRC=	${WRKSRC}/src

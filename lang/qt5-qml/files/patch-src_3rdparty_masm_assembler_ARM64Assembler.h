@@ -1,6 +1,6 @@
---- src/3rdparty/masm/assembler/ARM64Assembler.h.orig	2018-06-15 11:30:15 UTC
+--- src/3rdparty/masm/assembler/ARM64Assembler.h.orig	2018-10-01 23:20:01 UTC
 +++ src/3rdparty/masm/assembler/ARM64Assembler.h
-@@ -3036,6 +3036,8 @@ class ARM64Assembler { (public)
+@@ -3043,6 +3043,8 @@ class ARM64Assembler { (public)
              linuxPageFlush(current, current + page);
  
          linuxPageFlush(current, end);

@@ -1,34 +1,35 @@
 Only enter the directories we want to build, otherwise we might fail due to
 missing dependencies.
---- src/src.pro.orig	2018-06-15 11:30:15 UTC
+--- src/src.pro.orig	2018-10-01 23:20:01 UTC
 +++ src/src.pro
-@@ -1,29 +1,11 @@
- TEMPLATE = subdirs
- CONFIG += ordered
- include($$OUT_PWD/qml/qtqml-config.pri)
--include($$OUT_PWD/quick/qtquick-config.pri)
- QT_FOR_CONFIG += qml quick-private
+@@ -6,30 +6,6 @@ QT_FOR_CONFIG += qml qml-private quick-private
  SUBDIRS += \
      qml
  
--qtHaveModule(gui):qtConfig(animation) {
+-qtHaveModule(gui):qtConfig(qml-animation) {
 -    SUBDIRS += \
--        quick
+-        quick \
+-        quickshapes
 -
--    qtConfig(testlib): SUBDIRS += qmltest
+-    qtConfig(testlib): \
+-        SUBDIRS += qmltest
+-
 -    qtConfig(quick-particles): \
 -        SUBDIRS += particles
 -    qtHaveModule(widgets): SUBDIRS += quickwidgets
 -}
 -
- SUBDIRS += \
+-SUBDIRS += \
 -    plugins \
--    imports \
-     qmldevtools
+-    imports
+-
+ qtConfig(qml-devtools): SUBDIRS += qmldevtools
  
  qmldevtools.depends = qml
 -
 -qtConfig(qml-network) {
 -    QT_FOR_CONFIG += network
--    qtConfig(localserver):qtConfig(qml-debug): SUBDIRS += qmldebug
+-    qtConfig(thread):qtConfig(localserver):qtConfig(qml-debug): SUBDIRS += qmldebug
 -}
+-
+-DISTFILES += sync.profile configure.json
