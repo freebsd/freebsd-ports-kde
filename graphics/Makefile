@@ -239,7 +239,6 @@
     SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
-    SUBDIR += gegl3
     SUBDIR += generic_image_decoder
     SUBDIR += geoapi
     SUBDIR += geomorph
@@ -835,6 +834,8 @@
     SUBDIR += php71-gd
     SUBDIR += php72-exif
     SUBDIR += php72-gd
+    SUBDIR += php73-exif
+    SUBDIR += php73-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
