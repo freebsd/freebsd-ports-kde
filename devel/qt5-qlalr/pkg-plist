@@ -1,4 +1,0 @@
-%%QT_BINDIR%%/qlalr
-@comment %%QT_LIBDIR%%/libQt5Bootstrap.a
-@comment %%QT_LIBDIR%%/libQt5Bootstrap.prl
-@comment %%QT_MKSPECDIR%%/modules/qt_lib_bootstrap_private.pri

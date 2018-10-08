@@ -94,7 +94,6 @@ LUPDATE?=		${QT_BINDIR}/lupdate
 MOC?=			${QT_BINDIR}/moc
 RCC?=			${QT_BINDIR}/rcc
 UIC?=			${QT_BINDIR}/uic
-QLALR?=			${QT_BINDIR}/qlalr
 QMAKE?=			${QT_BINDIR}/qmake
 # Needed to redefine the qmake target for internal Qt configuration.
 _QMAKE?=		${QMAKE}
@@ -154,7 +153,7 @@ _USE_QT4_ONLY=		accessible assistant-adp assistantclient clucene codecs-cn codec
 _USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
 			graphicaleffects location paths phonon4 plugininfo printsupport \
-			qdbus qdoc qdoc-data qev qlalr qml quick quickcontrols \
+			qdbus qdoc qdoc-data qev qml quick quickcontrols \
 			quickcontrols2 scxml sensors serialbus serialport speech \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
 			webengine websockets websockets-qml widgets x11extras
@@ -330,9 +329,6 @@ qdoc3_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qdoc3
 
 qev_PORT=		x11/${_QT_RELNAME}-qev
 qev_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qev
-
-qlalr_PORT=		devel/${_QT_RELNAME}-qlalr
-qlalr_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qlalr
 
 qmake_PORT=		devel/${_QT_RELNAME}-qmake
 qmake_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qmake

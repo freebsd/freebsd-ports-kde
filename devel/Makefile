@@ -5390,7 +5390,6 @@
     SUBDIR += qt5-qdbusviewer
     SUBDIR += qt5-qdoc
     SUBDIR += qt5-qdoc-data
-    SUBDIR += qt5-qlalr
     SUBDIR += qt5-qmake
     SUBDIR += qt5-script
     SUBDIR += qt5-scripttools
