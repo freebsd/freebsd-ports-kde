@@ -78,7 +78,7 @@ MASTER_SITE_SUBDIR?=	archive/qt/${_QT_VERSION:R}/${_QT_VERSION}/
 DISTNAME=		qt-everywhere-opensource-src-${_QT_VERSION}
 DIST_SUBDIR=		KDE
 .  else
-MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+MASTER_SITE_SUBDIR?=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # www/qt5-webengine hackery: The tarballs of 5.9.5 had a different naming scheme.
 .    if ${QT5_VERSION} == "5.9.5"
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-opensource-src-${DISTVERSION},}
