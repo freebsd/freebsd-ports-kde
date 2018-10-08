@@ -1,4 +1,3 @@
-%%QT_INCDIR%%/QtCore/modules/qconfig-quick.h
 %%QT_INCDIR%%/QtPacketProtocol/%%FULLVER%%/QtPacketProtocol/private/qpacket_p.h
 %%QT_INCDIR%%/QtPacketProtocol/%%FULLVER%%/QtPacketProtocol/private/qpacketprotocol_p.h
 %%QT_INCDIR%%/QtPacketProtocol/%%FULLVER%%/QtPacketProtocol/private/qversionedpacket_p.h
@@ -450,7 +449,6 @@
 %%DEBUG%%%%QT_LIBDIR%%/libQt5QuickWidgets.so.%%FULLVER%%.debug
 %%QT_MKSPECDIR%%/features/qmlcache.prf
 %%QT_MKSPECDIR%%/features/qtquickcompiler.prf
-%%QT_MKSPECDIR%%/modules/qt_config_quick.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_packetprotocol_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_qmldebug_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_qmltest.pri
