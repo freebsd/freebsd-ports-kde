@@ -65,6 +65,7 @@
     SUBDIR += mummer
     SUBDIR += muscle
     SUBDIR += ncbi-blast+
+    SUBDIR += ncbi-cxx-toolkit
     SUBDIR += ncbi-toolkit
     SUBDIR += ngs-sdk
     SUBDIR += njplot
@@ -131,7 +132,6 @@
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee
     SUBDIR += tabixpp
-    SUBDIR += tinker
     SUBDIR += treepuzzle
     SUBDIR += trimadap
     SUBDIR += trimmomatic

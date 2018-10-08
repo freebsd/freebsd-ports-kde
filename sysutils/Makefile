@@ -910,6 +910,8 @@
     SUBDIR += php71-posix
     SUBDIR += php72-fileinfo
     SUBDIR += php72-posix
+    SUBDIR += php73-fileinfo
+    SUBDIR += php73-posix
     SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
@@ -1346,6 +1348,7 @@
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine64
+    SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2

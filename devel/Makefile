@@ -348,6 +348,7 @@
     SUBDIR += containers
     SUBDIR += cook
     SUBDIR += courier-unicode
+    SUBDIR += coursier
     SUBDIR += covtool
     SUBDIR += cpan-upload
     SUBDIR += cpan-upload-http
@@ -1370,6 +1371,7 @@
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
+    SUBDIR += libb2
     SUBDIR += libbde
     SUBDIR += libbegemot
     SUBDIR += libbfd
@@ -4157,6 +4159,16 @@
     SUBDIR += php72-sysvsem
     SUBDIR += php72-sysvshm
     SUBDIR += php72-tokenizer
+    SUBDIR += php73-gettext
+    SUBDIR += php73-intl
+    SUBDIR += php73-json
+    SUBDIR += php73-pcntl
+    SUBDIR += php73-readline
+    SUBDIR += php73-shmop
+    SUBDIR += php73-sysvmsg
+    SUBDIR += php73-sysvsem
+    SUBDIR += php73-sysvshm
+    SUBDIR += php73-tokenizer
     SUBDIR += phpbt
     SUBDIR += phpsh
     SUBDIR += phpunit6
@@ -4488,6 +4500,7 @@
     SUBDIR += py-debtcollector
     SUBDIR += py-decorator
     SUBDIR += py-decoratortools
+    SUBDIR += py-deepdiff
     SUBDIR += py-defusedxml
     SUBDIR += py-delfick_error
     SUBDIR += py-deliciousapi
@@ -4669,6 +4682,7 @@
     SUBDIR += py-jsonlib2
     SUBDIR += py-jsonlines
     SUBDIR += py-jsonpatch
+    SUBDIR += py-jsonpickle
     SUBDIR += py-jsonpointer
     SUBDIR += py-jsonref
     SUBDIR += py-jsonrpclib
@@ -5512,6 +5526,7 @@
     SUBDIR += rubygem-bugspots
     SUBDIR += rubygem-builder
     SUBDIR += rubygem-byebug
+    SUBDIR += rubygem-c21e
     SUBDIR += rubygem-cabin
     SUBDIR += rubygem-caesars
     SUBDIR += rubygem-cairo-gobject
@@ -5563,6 +5578,8 @@
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-cucumber-expressions
+    SUBDIR += rubygem-cucumber-formatter-dots
+    SUBDIR += rubygem-cucumber-messages
     SUBDIR += rubygem-cucumber-tag_expressions
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
