@@ -3,9 +3,9 @@
 
 PORTNAME=	cmake
 # Remember to update devel/cmake-doc and devel/cmake-gui as well.
-DISTVERSION=	3.12.2
+DISTVERSION=	3.13.0-rc1
 CATEGORIES=	devel
-MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R}/
+MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R:R}/
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Cross-platform Makefile generator
