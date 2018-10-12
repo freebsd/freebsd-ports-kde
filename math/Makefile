@@ -342,6 +342,7 @@
     SUBDIR += metis
     SUBDIR += metis-edf
     SUBDIR += metis4
+    SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
     SUBDIR += miracl
@@ -656,6 +657,7 @@
     SUBDIR += plplot
     SUBDIR += plplot-ada
     SUBDIR += primegen
+    SUBDIR += primme
     SUBDIR += prng
     SUBDIR += proofgeneral
     SUBDIR += pspp
@@ -689,7 +691,6 @@
     SUBDIR += py-fiat
     SUBDIR += py-fpconst
     SUBDIR += py-gato
-    SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
@@ -719,6 +720,7 @@
     SUBDIR += py-petsc4py
     SUBDIR += py-piranha
     SUBDIR += py-plastex
+    SUBDIR += py-primme
     SUBDIR += py-probstat
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
