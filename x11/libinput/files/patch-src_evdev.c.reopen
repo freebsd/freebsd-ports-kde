@@ -1,0 +1,60 @@
+When a process without full /dev/input access enumerates devices via libudev-devd,
+the udev_device structs do not get udev properties that mark them as inputs, keyboards, etc,
+and get rejected as not being input devices.
+
+libinput reopens devices just to check path equality.
+The udev_devices from reopening do have the right properties,
+so we just use them instead of the original (enumerated) ones.
+
+--- src/evdev.c.orig	2018-01-22 17:01:09.674204000 +0300
++++ src/evdev.c	2018-01-22 17:01:13.622330000 +0300
+@@ -1723,9 +1723,9 @@
+ }
+ 
+ static bool
+-evdev_device_have_same_syspath(struct udev_device *udev_device, int fd)
++evdev_device_have_same_syspath(struct udev_device **udev_device, int fd, bool reopen)
+ {
+-	struct udev *udev = udev_device_get_udev(udev_device);
++	struct udev *udev = udev_device_get_udev(*udev_device);
+ 	struct udev_device *udev_device_new = NULL;
+ 	struct stat st;
+ 	bool rc = false;
+@@ -1738,10 +1738,16 @@
+ 		goto out;
+ 
+ 	rc = streq(udev_device_get_syspath(udev_device_new),
+-		   udev_device_get_syspath(udev_device));
++		   udev_device_get_syspath(*udev_device));
+ out:
+-	if (udev_device_new)
+-		udev_device_unref(udev_device_new);
++	if (udev_device_new) {
++		if (reopen) {
++			udev_device_unref(*udev_device);
++			*udev_device = udev_device_new;
++		} else {
++			udev_device_unref(udev_device_new);
++		}
++	}
+ 	return rc;
+ }
+ 
+@@ -1920,7 +1926,7 @@
+ 		return NULL;
+ 	}
+ 
+-	if (!evdev_device_have_same_syspath(udev_device, fd))
++	if (!evdev_device_have_same_syspath(&udev_device, fd, true))
+ 		goto err;
+ 
+ 	device = zalloc(sizeof *device);
+@@ -2424,7 +2430,7 @@
+ 	if (fd < 0)
+ 		return -errno;
+ 
+-	if (!evdev_device_have_same_syspath(device->udev_device, fd)) {
++	if (!evdev_device_have_same_syspath(&device->udev_device, fd, false)) {
+ 		close_restricted(libinput, fd);
+ 		return -ENODEV;
+ 	}
