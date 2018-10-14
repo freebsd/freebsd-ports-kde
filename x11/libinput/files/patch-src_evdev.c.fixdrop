@@ -1,0 +1,12 @@
+--- src/evdev.c.orig	2018-01-09 14:24:49.267512000 +0100
++++ src/evdev.c	2018-01-09 15:30:29.793735000 +0100
+@@ -1856,7 +1856,7 @@
+ 		evdev_device_dispatch_one(device, &ev);
+ 	} while (rc == LIBEVDEV_READ_STATUS_SYNC);
+ 
+-	return rc == -EAGAIN ? 0 : rc;
++	return (rc == -EAGAIN || rc == -EINVAL)? 0 : rc;
+ }
+ 
+ static void
+
