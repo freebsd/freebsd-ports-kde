@@ -2,9 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	monero-cli
-# To build from an arbitrary git commit comment the following two lines
-PORTVERSION=	0.12.3.0
-PORTREVISION=	3
+# To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
+PORTVERSION=	0.13.0.2
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines
 #PORTVERSION=	0
@@ -33,6 +32,7 @@ LIB_DEPENDS=	\
 		libminiupnpc.so:net/miniupnpc \
 		libnorm.so:net/norm \
 		libpgm.so:net/openpgm \
+		libsodium.so:security/libsodium \
 		libunbound.so:dns/unbound \
 		libunwind.so:devel/libunwind \
 		libzmq.so:net/libzmq4
@@ -41,6 +41,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/rapidjson/document.h:devel/rapidjson \
 
 USES=		cmake compiler:c++11-lib pkgconfig readline ssl
 USE_GITHUB=	yes
+
 GH_ACCOUNT=	monero-project
 GH_PROJECT=	monero
 .if defined(PKGNAMESUFFIX)
@@ -61,7 +62,6 @@ DOXYGEN_CMAKE_BOOL=	BUILD_DOCUMENTATION
 # See Bug 226996 - net-p2p/monero-cli: fails to link with lld as the system linker
 # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=226996
 .if ${OSVERSION} >= 1200000
-ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc powerpc64
 
 .if ${ARCH} == aarch64
 LD_EMULATION=	aarch64elf
@@ -76,7 +76,10 @@ LD_EMULATION=	elf64ppc
 .endif
 
 CMAKE_ARGS+=	-DLD_RAW_FLAGS:STRING=-m${LD_EMULATION}
+
 .endif
+
+CMAKE_ARGS+=	-DMANUAL_SUBMODULES:BOOL=ON
 
 USE_RC_SUBR=	monerod
 
@@ -84,7 +87,9 @@ USERS=		monero
 GROUPS=		monero
 
 PLIST_FILES=	\
+		bin/monero-blockchain-ancestry \
 		bin/monero-blockchain-blackball \
+		bin/monero-blockchain-depth \
 		bin/monero-blockchain-export \
 		bin/monero-blockchain-import \
 		bin/monero-blockchain-usage \

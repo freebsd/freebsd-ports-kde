@@ -8,9 +8,7 @@ PKGNAMEPREFIX=	qt5-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt QML and JavaScript language module
 
-BROKEN_powerpc64=	Does not build
-
-USES=		python:build qmake qt-dist:5,declarative
+USES=		compiler:c++11-lang python:build qmake qt-dist:5,declarative
 USE_QT=		core network buildtools_build
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
