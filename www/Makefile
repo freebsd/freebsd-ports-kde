@@ -53,7 +53,6 @@
     SUBDIR += bluefish
     SUBDIR += boa
     SUBDIR += bolt
-    SUBDIR += bookmarkbridge
     SUBDIR += bozohttpd
     SUBDIR += buku
     SUBDIR += butterfly
@@ -260,7 +259,6 @@
     SUBDIR += hs-css-text
     SUBDIR += hs-fastcgi
     SUBDIR += hs-gitit
-    SUBDIR += hs-hS3
     SUBDIR += hs-happstack
     SUBDIR += hs-happstack-server
     SUBDIR += hs-heist
@@ -397,7 +395,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki127
-    SUBDIR += mediawiki129
     SUBDIR += mediawiki130
     SUBDIR += mediawiki131
     SUBDIR += mergelog
@@ -469,6 +466,7 @@
     SUBDIR += mod_php70
     SUBDIR += mod_php71
     SUBDIR += mod_php72
+    SUBDIR += mod_php73
     SUBDIR += mod_proctitle
     SUBDIR += mod_proxy_xml
     SUBDIR += mod_python35
@@ -1465,6 +1463,9 @@
     SUBDIR += php72-opcache
     SUBDIR += php72-session
     SUBDIR += php72-tidy
+    SUBDIR += php73-opcache
+    SUBDIR += php73-session
+    SUBDIR += php73-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1578,7 +1579,6 @@
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-jsonfield2
     SUBDIR += py-django-ldapdb
-    SUBDIR += py-django-livesettings
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
     SUBDIR += py-django-mezzanine
@@ -1620,12 +1620,14 @@
     SUBDIR += py-django-tables2
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
+    SUBDIR += py-django-taggit-serializer
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-templatetag-sugar
     SUBDIR += py-django-timezone-field
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-treebeard
     SUBDIR += py-django-voting
+    SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django111
     SUBDIR += py-django20
@@ -1857,7 +1859,6 @@
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
     SUBDIR += py-seafobj
-    SUBDIR += py-searx
     SUBDIR += py-selector
     SUBDIR += py-selenium
     SUBDIR += py-slimit
@@ -2227,6 +2228,7 @@
     SUBDIR += rubygem-websocket-driver
     SUBDIR += rubygem-websocket-extensions
     SUBDIR += rubygem-yapra
+    SUBDIR += s
     SUBDIR += sabredav
     SUBDIR += sahi
     SUBDIR += sakai
@@ -2237,6 +2239,7 @@
     SUBDIR += seahub
     SUBDIR += seamonkey
     SUBDIR += seamonkey-i18n
+    SUBDIR += searx
     SUBDIR += selenium
     SUBDIR += serendipity
     SUBDIR += serf
@@ -2444,7 +2447,6 @@
     SUBDIR += w3mir
     SUBDIR += waccess
     SUBDIR += wadcomblog
-    SUBDIR += waterfox
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser

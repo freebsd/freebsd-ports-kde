@@ -65,6 +65,7 @@
     SUBDIR += mummer
     SUBDIR += muscle
     SUBDIR += ncbi-blast+
+    SUBDIR += ncbi-cxx-toolkit
     SUBDIR += ncbi-toolkit
     SUBDIR += ngs-sdk
     SUBDIR += njplot
@@ -103,6 +104,7 @@
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-cutadapt
+    SUBDIR += py-loompy
     SUBDIR += py-macs2
     SUBDIR += py-orange3-bioinformatics
     SUBDIR += py-orange3-single-cell
@@ -130,7 +132,6 @@
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee
     SUBDIR += tabixpp
-    SUBDIR += tinker
     SUBDIR += treepuzzle
     SUBDIR += trimadap
     SUBDIR += trimmomatic

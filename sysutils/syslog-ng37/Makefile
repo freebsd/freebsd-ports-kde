@@ -3,7 +3,7 @@
 
 PORTNAME=	syslog-ng
 PORTVERSION=	3.7.3
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	sysutils
 #MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
 DISTNAME=	syslog-ng-${DISTVERSION}_with_man
@@ -21,6 +21,9 @@ LIB_DEPENDS=	libevtlog.so:sysutils/eventlog \
 		libuuid.so:misc/e2fsprogs-libuuid
 BUILD_DEPENDS=		xsltproc:textproc/libxslt
 
+DEPRECATED=		No longer officially supported by Balabit, does not support openssl111
+EXPIRATION_DATE=	2018-12-31
+BROKEN_FreeBSD_12=	fails to build with openssl111
 BROKEN_powerpc64=	fails to link: Internal error: Segmentation fault (program ld)
 BROKEN_sparc64=		fails to link: Internal error: Segmentation fault (program ld)
 
@@ -99,7 +102,7 @@ JSON_PLIST_FILES=		lib/syslog-ng/libjson-plugin.so
 
 JAVA_CONFIGURE_ENABLE=		java
 JAVA_BROKEN=			Unsupported maven downloads.
-JAVA_USE_JAVA=			yes
+JAVA_USE=			JAVA=yes
 JAVA_BUILD_DEPENDS=		gradle:devel/gradle
 JAVA_BUILD_DEPENDS=		bash:shells/bash
 JAVA_PLIST_FILES=		lib/syslog-ng/libmod-java.so \

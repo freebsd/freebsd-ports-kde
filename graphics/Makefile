@@ -14,7 +14,6 @@
     SUBDIR += ImageMagick7
     SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
-    SUBDIR += OpenEXR
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
     SUBDIR += R-cran-RColorBrewer
@@ -84,7 +83,6 @@
     SUBDIR += cadubi
     SUBDIR += caffe
     SUBDIR += cairo
-    SUBDIR += cairo-reference
     SUBDIR += cairomm
     SUBDIR += cal3d
     SUBDIR += camera
@@ -155,6 +153,7 @@
     SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-devel-kmod
+    SUBDIR += drm-kmod
     SUBDIR += drm-legacy-kmod
     SUBDIR += drm-next-kmod
     SUBDIR += drm-stable-kmod
@@ -240,7 +239,6 @@
     SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
-    SUBDIR += gegl3
     SUBDIR += generic_image_decoder
     SUBDIR += geoapi
     SUBDIR += geomorph
@@ -295,8 +293,6 @@
     SUBDIR += gnofract4d
     SUBDIR += gnome-color-manager
     SUBDIR += gnome-video-effects
-    SUBDIR += gnustep-slideshow
-    SUBDIR += gnustep-slideshowkit
     SUBDIR += gocr
     SUBDIR += goocanvas
     SUBDIR += goocanvas2
@@ -671,6 +667,7 @@
     SUBDIR += opencv-core
     SUBDIR += opencv-java
     SUBDIR += opendx
+    SUBDIR += openexr
     SUBDIR += openfx-arena
     SUBDIR += openfx-io
     SUBDIR += openfx-misc
@@ -837,6 +834,8 @@
     SUBDIR += php71-gd
     SUBDIR += php72-exif
     SUBDIR += php72-gd
+    SUBDIR += php73-exif
+    SUBDIR += php73-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle

@@ -218,12 +218,14 @@
     SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
+    SUBDIR += ocaml-camlidl
     SUBDIR += ocaml-nox11
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opendylan
+    SUBDIR += ott
     SUBDIR += owl-lisp
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript
@@ -278,6 +280,8 @@
     SUBDIR += php71-extensions
     SUBDIR += php72
     SUBDIR += php72-extensions
+    SUBDIR += php73
+    SUBDIR += php73-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pocl

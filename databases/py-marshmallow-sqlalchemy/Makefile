@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	marshmallow-sqlalchemy
-PORTVERSION=	0.13.2
+PORTVERSION=	0.14.1
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	feld@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	SQLAlchemy integration with the marshmallow serialization library
 
 LICENSE=	BSD3CLAUSE

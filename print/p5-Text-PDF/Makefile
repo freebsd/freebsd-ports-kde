@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	Text-PDF
-PORTVERSION=	0.29a
-PORTREVISION=	3
+PORTVERSION=	0.31
 CATEGORIES=	print perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -11,16 +10,16 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	perl@FreeBSD.org
 COMMENT=	PDF manipulation module
 
-WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
+LICENSE=	ART10 GPLv1+
+LICENSE_COMB=	dual
 
 USES=		perl5
 USE_PERL5=	configure
 
-post-patch:
-	@${RM} ${WRKSRC}/pm_to_blib
+NO_ARCH=	yes
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/Text/PDF/examples
-	@${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/Text/PDF/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${STAGEDIR}${PREFIX}/${SITE_PERL_REL}/Text/PDF/examples
 
 .include <bsd.port.mk>

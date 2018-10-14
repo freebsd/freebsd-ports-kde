@@ -34,6 +34,8 @@
     SUBDIR += e16-themes
     SUBDIR += emerald-themes
     SUBDIR += fluxbox-tenr-styles-pack
+    SUBDIR += freebsd-8k-wallpapers
+    SUBDIR += freebsd-8k-wallpapers-kde
     SUBDIR += fvwm-themes
     SUBDIR += gnome-backgrounds
     SUBDIR += gnome-icon-theme-symbolic
@@ -57,8 +59,8 @@
     SUBDIR += gnome-icons-stylish
     SUBDIR += gnome-icons-ximian-south
     SUBDIR += gnome-themes
+    SUBDIR += gnome-themes-extra
     SUBDIR += gnome-themes-extras
-    SUBDIR += gnome-themes-standard
     SUBDIR += greybird-theme
     SUBDIR += gtk-E17-theme
     SUBDIR += gtk-aluminumalloy-cryogenic-theme

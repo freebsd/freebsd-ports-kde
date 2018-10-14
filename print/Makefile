@@ -12,7 +12,6 @@
     SUBDIR += afm
     SUBDIR += alignmargins
     SUBDIR += ansiprint
-    SUBDIR += apsfilter
     SUBDIR += asprint
     SUBDIR += auctex
     SUBDIR += bibcursed
@@ -89,7 +88,6 @@
     SUBDIR += harfbuzz
     SUBDIR += harfbuzz-icu
     SUBDIR += hp2xx
-    SUBDIR += hpijs
     SUBDIR += hplip
     SUBDIR += hplip-plugin
     SUBDIR += hs-hscolour
@@ -157,6 +155,7 @@
     SUBDIR += papersize-default-letter
     SUBDIR += paps
     SUBDIR += pcal
+    SUBDIR += pdf-redact-tools
     SUBDIR += pdf-renderer
     SUBDIR += pdf-tools
     SUBDIR += pdf4tcl
@@ -235,6 +234,7 @@
     SUBDIR += rubygem-rbpdf-font
     SUBDIR += rubygem-ttfunk
     SUBDIR += scribus
+    SUBDIR += scribus-devel
     SUBDIR += sgf2tex
     SUBDIR += splix
     SUBDIR += system-config-printer

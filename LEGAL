@@ -191,7 +191,8 @@ STonX-*			emulators/stonx		Contains ROM (C) by Atari
 stuffit*		archivers/stuffit	Only unmodified original package can be distributed
 susv2.tar.bz2		misc/susv2		Redistribution of the documents is not permitted
 susv3.tar.bz2		misc/susv3		Redistribution of the documents is not permitted
-susv4tc1.tar.bz2	misc/susv4		Redistribution of the documents is not permitted
+susv4tc2.tar.bz2	misc/susv4		Redistribution of the documents is not permitted
+susv4-2018.tar.bz2	misc/susv4		Redistribution of the documents is not permitted
 svm_light.tar.gz	science/svmlight	The software must not be further distributed without prior permission of the author
 taetgen-*		math/tetgen		Academic or personal use only
 tarsnap-*		sysutils/tarsnap	license restricts redistribution of source and binaries
@@ -208,6 +209,7 @@ ue*dev.zip		editors/uemacs		Resale allowed for media cost only
 unifi-5*/UniFi.unix.zip	net-mgmt/unifi5		Redistribution of bundled firmware images is not permitted
 uplink-demo*		games/linux-uplink-demo	Redistribution is limited, see license
 uzap.tar.gz		editors/uzap		This software may not be used to make a profit in any way.
+vdbench*.zip		benchmarks/linux-vdbench	Redistribution is not permitted
 vdr-markad-*		multimedia/vdr-plugin-markad	Installs station logos
 vice-*			emulators/vice		ROMs are copyrighted by Commodore Business Machines
 VMware-vSphere-Perl*	net/vmware-vsphere-cli	May not be redistributed.  Must accept license to download.

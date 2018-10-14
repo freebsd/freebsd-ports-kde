@@ -2,9 +2,12 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.5-866
-DISTVERSIONSUFFIX=	-g3072571a4
+DISTVERSION=	0.0.5-975
+DISTVERSIONSUFFIX=	-g8540399ec
 CATEGORIES=	emulators
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1e28a22860c0.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	PS3 emulator/debugger
@@ -26,7 +29,7 @@ ONLY_FOR_ARCHS_REASON=	requires int128 and SSE2
 USE_GITHUB=	yes
 GH_ACCOUNT=	RPCS3
 GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-26-g4c27501:hidapi/3rdparty/hidapi \
-		RPCS3:llvm:be9f7bfe2068:llvm/llvm \
+		RPCS3:llvm:5c906fd1694e:llvm/llvm \
 		Cyan4973:xxHash:v0.6.5:xxHash/3rdparty/xxHash \
 		jbeder:yaml-cpp:yaml-cpp-0.6.2-8-gc90c08c:yamlcpp/3rdparty/yaml-cpp \
 		kobalicek:asmjit:673dcef:asmjit/asmjit \
@@ -40,6 +43,7 @@ USES=		cmake:outsource compiler:c++17-lang iconv:wchar_t localbase:ldflags \
 USE_GL=		gl glew
 USE_QT=		qmake_build buildtools_build core dbus gui network widgets qml
 USE_XORG=	x11
+LLD_UNSAFE=	yes # XXX ports/219089
 CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS
 CXXFLAGS+=	-Wno-macro-redefined # __STDC_*_MACROS sys/cdefs.h vs. llvm-config

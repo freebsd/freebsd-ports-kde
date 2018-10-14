@@ -11,7 +11,6 @@
     SUBDIR += alpine
     SUBDIR += altermime
     SUBDIR += amavis-logwatch
-    SUBDIR += annoyance-filter
     SUBDIR += anomy-sanitizer
     SUBDIR += antivirus-milter
     SUBDIR += anubis
@@ -262,7 +261,6 @@
     SUBDIR += mu4e-maildirs
     SUBDIR += mulberry
     SUBDIR += mutt
-    SUBDIR += mutt-lite
     SUBDIR += mutt_vc_query
     SUBDIR += muttils
     SUBDIR += nbsmtp
@@ -489,6 +487,7 @@
     SUBDIR += php70-imap
     SUBDIR += php71-imap
     SUBDIR += php72-imap
+    SUBDIR += php73-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
@@ -497,7 +496,6 @@
     SUBDIR += policyd2
     SUBDIR += pop3lite
     SUBDIR += pop3proxy
-    SUBDIR += pop3vscan
     SUBDIR += popa3d
     SUBDIR += popa3d-before-sendmail
     SUBDIR += popcheck

@@ -14,8 +14,10 @@
     SUBDIR += R-cran-highr
     SUBDIR += R-cran-htmltools
     SUBDIR += R-cran-markdown
+    SUBDIR += R-cran-openxlsx
     SUBDIR += R-cran-pystr
     SUBDIR += R-cran-readr
+    SUBDIR += R-cran-rematch
     SUBDIR += R-cran-rmarkdown
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
@@ -278,6 +280,7 @@
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-citeproc
     SUBDIR += hs-pandoc-types
+    SUBDIR += hs-parsec-numbers
     SUBDIR += hs-polyparse
     SUBDIR += hs-pretty-show
     SUBDIR += hs-regex-applicative
@@ -407,6 +410,7 @@
     SUBDIR += libcss
     SUBDIR += libcsv
     SUBDIR += libcue
+    SUBDIR += libdiff
     SUBDIR += libe-book
     SUBDIR += libebml
     SUBDIR += libepubgen
@@ -602,7 +606,6 @@
     SUBDIR += p5-Hailo
     SUBDIR += p5-Hash-Merge
     SUBDIR += p5-Hatena-Keyword
-    SUBDIR += p5-IDNA-Punycode
     SUBDIR += p5-IO-CSVHeaderFile
     SUBDIR += p5-JavaScript-Minifier
     SUBDIR += p5-JavaScript-Minifier-XS
@@ -793,6 +796,7 @@
     SUBDIR += p5-Sphinx-Config
     SUBDIR += p5-Sphinx-Manager
     SUBDIR += p5-Sphinx-Search
+    SUBDIR += p5-Spreadsheet-GenerateXLSX
     SUBDIR += p5-Spreadsheet-ParseExcel
     SUBDIR += p5-Spreadsheet-Read
     SUBDIR += p5-Spreadsheet-ReadSXC
@@ -954,6 +958,7 @@
     SUBDIR += p5-Text-Table-Any
     SUBDIR += p5-Text-Table-Manifold
     SUBDIR += p5-Text-Table-Tiny
+    SUBDIR += p5-Text-Table-XLSX
     SUBDIR += p5-Text-Tabs+Wrap
     SUBDIR += p5-Text-TabularDisplay
     SUBDIR += p5-Text-Tags
@@ -1247,6 +1252,16 @@
     SUBDIR += php72-xmlreader
     SUBDIR += php72-xmlwriter
     SUBDIR += php72-xsl
+    SUBDIR += php73-ctype
+    SUBDIR += php73-dom
+    SUBDIR += php73-enchant
+    SUBDIR += php73-pspell
+    SUBDIR += php73-simplexml
+    SUBDIR += php73-wddx
+    SUBDIR += php73-xml
+    SUBDIR += php73-xmlreader
+    SUBDIR += php73-xmlwriter
+    SUBDIR += php73-xsl
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1428,6 +1443,7 @@
     SUBDIR += py-transpopy
     SUBDIR += py-tvgrab
     SUBDIR += py-ucl
+    SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
@@ -1571,6 +1587,7 @@
     SUBDIR += rubygem-jekyll-sass-converter
     SUBDIR += rubygem-jekyll-sitemap
     SUBDIR += rubygem-jemoji
+    SUBDIR += rubygem-js_regex
     SUBDIR += rubygem-jsmin
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kwalify
@@ -1604,6 +1621,7 @@
     SUBDIR += rubygem-rdiscount
     SUBDIR += rubygem-rdtool
     SUBDIR += rubygem-redcarpet
+    SUBDIR += rubygem-regexp_parser
     SUBDIR += rubygem-representable
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-ri_cal
@@ -1768,6 +1786,7 @@
     SUBDIR += translate-toolkit
     SUBDIR += ts-hunspell
     SUBDIR += tth
+    SUBDIR += tttcmds
     SUBDIR += turboxsl
     SUBDIR += txt2html
     SUBDIR += txt2man

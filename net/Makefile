@@ -210,8 +210,6 @@
     SUBDIR += grdesktop
     SUBDIR += grilo
     SUBDIR += grilo-plugins
-    SUBDIR += grilo-plugins2
-    SUBDIR += grilo2
     SUBDIR += grive2
     SUBDIR += grpcurl
     SUBDIR += grsync
@@ -328,6 +326,7 @@
     SUBDIR += kea
     SUBDIR += kf5-kholidays
     SUBDIR += kf5-kxmlrpcclient
+    SUBDIR += kf5-syndication
     SUBDIR += kget
     SUBDIR += kget-kde4
     SUBDIR += kidentitymanagement
@@ -375,6 +374,7 @@
     SUBDIR += libfixbuf
     SUBDIR += libgnetwork
     SUBDIR += libgravatar
+    SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libilbc
     SUBDIR += libkfbapi
@@ -428,6 +428,7 @@
     SUBDIR += libutp
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
+    SUBDIR += libyang
     SUBDIR += libzapojit
     SUBDIR += libzmq2
     SUBDIR += libzmq3
@@ -545,7 +546,6 @@
     SUBDIR += ntop
     SUBDIR += ntopng
     SUBDIR += ntp
-    SUBDIR += ntp-devel
     SUBDIR += ntpa
     SUBDIR += ntraceroute
     SUBDIR += nusoap
@@ -1000,6 +1000,10 @@
     SUBDIR += php72-soap
     SUBDIR += php72-sockets
     SUBDIR += php72-xmlrpc
+    SUBDIR += php73-ldap
+    SUBDIR += php73-soap
+    SUBDIR += php73-sockets
+    SUBDIR += php73-xmlrpc
     SUBDIR += phpldapadmin
     SUBDIR += pim6-tools
     SUBDIR += pim6dd
@@ -1074,6 +1078,7 @@
     SUBDIR += py-matrix-synapse-ldap3
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
+    SUBDIR += py-mpi4py
     SUBDIR += py-msrplib
     SUBDIR += py-ndg_httpsclient
     SUBDIR += py-netaddr
@@ -1248,11 +1253,11 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
-    SUBDIR += rubygem-fog-google13
     SUBDIR += rubygem-fog-internet-archive
     SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
     SUBDIR += rubygem-fog-openstack
+    SUBDIR += rubygem-fog-openstack02
     SUBDIR += rubygem-fog-ovirt
     SUBDIR += rubygem-fog-powerdns
     SUBDIR += rubygem-fog-profitbricks
@@ -1274,6 +1279,8 @@
     SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap20
+    SUBDIR += rubygem-google-cloud-core
+    SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http_parser.rb
@@ -1419,7 +1426,6 @@
     SUBDIR += sup
     SUBDIR += svnup
     SUBDIR += syncthing
-    SUBDIR += syndication
     SUBDIR += tableutil
     SUBDIR += tac_plus4
     SUBDIR += tapidbus
@@ -1454,7 +1460,6 @@
     SUBDIR += thcrut
     SUBDIR += throttled
     SUBDIR += tigervnc
-    SUBDIR += tigervnc-devel
     SUBDIR += tightvnc
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
@@ -1488,7 +1493,6 @@
     SUBDIR += ulxmlrpcpp
     SUBDIR += unfs3
     SUBDIR += unison
-    SUBDIR += unison-devel
     SUBDIR += unison232
     SUBDIR += unison240
     SUBDIR += unison248
@@ -1550,7 +1554,6 @@
     SUBDIR += xprobe
     SUBDIR += xrdesktop2
     SUBDIR += xrdp
-    SUBDIR += xrdp-devel
     SUBDIR += yami4
     SUBDIR += yaph
     SUBDIR += yate

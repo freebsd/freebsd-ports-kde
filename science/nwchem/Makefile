@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	nwchem
-DISTVERSION=	6.8.1-release-94
-PORTREVISION=	3
-DISTVERSIONSUFFIX=	-g1a262862b
+DISTVERSION=	6.8.1-release-144
+DISTVERSIONSUFFIX=	-gb1062ed2c
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,7 +18,7 @@ BROKEN_i386=	Compiling basis.F...  f951: sorry, unimplemented: 64-bit mode not c
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libblas.so:math/blas \
 		libga.so:devel/ga \
-		libmpich.so:net/mpich2
+		libmpich.so:net/mpich
 
 USES=		fortran gmake shebangfix
 SHEBANG_FILES=	../contrib/distro-tools/build_* ../contrib/add_*
@@ -35,7 +34,11 @@ MAKE_ENV=	NWCHEM_TOP=${WRKSRC}/.. NWCHEM_MODULES=all NWCHEM_LONG_PATHS=Y NWCHEM_
 SUB_FILES=	nwchemrc
 
 WRKSRC_SUBDIR=	src
+
 BINARY_ALIAS=	gcc=${CC}
+
+post-extract:
+	@${RM} ${WRKSRC}/atomscf/src.orig
 
 post-patch:
 	@${REINPLACE_CMD} 's|nwchrc="/etc/nwchemrc"|nwchrc="${PREFIX}/etc/nwchemrc"|' ${WRKSRC}/util/util_nwchemrc.F
@@ -47,12 +50,7 @@ pre-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/nwchemrc ${STAGEDIR}${PREFIX}/etc/nwchemrc
-	${INSTALL_PROGRAM} ${WRKSRC}/../bin/LINUX64/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}.shadow
-	@(echo "#!/bin/sh"; \
-	  echo ""; \
-	  echo "LD_PRELOAD=${PREFIX}/lib/gcc${GCC_DEFAULT}/libgcc_s.so ${PREFIX}/bin/${PORTNAME}.shadow \""$$"@\"" \
-	) > ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-	@${CHMOD} +x ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/../bin/LINUX64/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 	cd ${WRKSRC}/basis && ${COPYTREE_SHARE} libraries ${STAGEDIR}${DATADIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} data ${STAGEDIR}${DATADIR}
 	@${MKDIR} ${STAGEDIR}${DATADIR}/libraryps

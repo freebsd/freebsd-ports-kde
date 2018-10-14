@@ -3,7 +3,7 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.14.0
-PORTREVISION?=	11
+PORTREVISION?=	12
 PORTEPOCH=	2
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/ \
@@ -14,6 +14,9 @@ MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Robust and small WWW server
 
 LICENSE=	BSD2CLAUSE
+
+BROKEN_mips=	error ngx_spinlock() or ngx_atomic_cmp_set() are not defined
+BROKEN_mips64=	error ngx_spinlock() or ngx_atomic_cmp_set() are not defined
 
 CONFLICTS_INSTALL=	nginx-devel
 

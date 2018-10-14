@@ -37,6 +37,7 @@
     SUBDIR += clickhouse
     SUBDIR += cockroach
     SUBDIR += couchdb
+    SUBDIR += couchdb2
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
     SUBDIR += courier-authlib-userdb
@@ -252,6 +253,7 @@
     SUBDIR += ocaml-mysql
     SUBDIR += ocaml-sqlite3
     SUBDIR += openark-kit
+    SUBDIR += opendbviewer
     SUBDIR += opendbx
     SUBDIR += opentsdb
     SUBDIR += ora2pg
@@ -458,6 +460,7 @@
     SUBDIR += p5-Metadata
     SUBDIR += p5-Mojo-Pg
     SUBDIR += p5-MongoDB
+    SUBDIR += p5-Mongoose
     SUBDIR += p5-MySQL-Diff
     SUBDIR += p5-Net-Async-CassandraCQL
     SUBDIR += p5-ORLite
@@ -679,6 +682,19 @@
     SUBDIR += php72-pdo_sqlite
     SUBDIR += php72-pgsql
     SUBDIR += php72-sqlite3
+    SUBDIR += php73-dba
+    SUBDIR += php73-interbase
+    SUBDIR += php73-mysqli
+    SUBDIR += php73-odbc
+    SUBDIR += php73-pdo
+    SUBDIR += php73-pdo_dblib
+    SUBDIR += php73-pdo_firebird
+    SUBDIR += php73-pdo_mysql
+    SUBDIR += php73-pdo_odbc
+    SUBDIR += php73-pdo_pgsql
+    SUBDIR += php73-pdo_sqlite
+    SUBDIR += php73-pgsql
+    SUBDIR += php73-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -758,10 +774,13 @@
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += pspg
+    SUBDIR += puppetdb-cli
     SUBDIR += puppetdb-terminus4
     SUBDIR += puppetdb-terminus5
+    SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb4
     SUBDIR += puppetdb5
+    SUBDIR += puppetdb6
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -781,6 +800,7 @@
     SUBDIR += py-bsddb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
+    SUBDIR += py-cassandra-driver
     SUBDIR += py-cdb
     SUBDIR += py-couchdb
     SUBDIR += py-cql
@@ -1006,6 +1026,7 @@
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-tarantool
+    SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
     SUBDIR += skytools

@@ -3,7 +3,7 @@
 
 PORTNAME=	paraview
 DISTVERSION=	5.5.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	science graphics
 MASTER_SITES=	http://www.paraview.org/files/v${VERMAJORMINOR}/
 DISTNAME=	ParaView-v${PORTVERSION}
@@ -41,6 +41,8 @@ USE_GL=		gl glu
 USE_XORG=	x11 xt xext ice xdmcp xau xcb xfixes xdamage xxf86vm xrender sm xorgproto
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	yes
+
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}pygments
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS="ON" \
 		-DVTK_USE_SYSTEM_PNG="ON" \

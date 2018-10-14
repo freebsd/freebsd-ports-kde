@@ -12,9 +12,7 @@ COMMENT=	Common library for all Osmocom projects
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_powerpc64=	fails to compile: application.c:179: #pragma GCC diagnostic not allowed inside functions
-
-BUILD_DEPENDS=	python:lang/python
+BROKEN_powerpc64=	fails to compile: application.c:179: \#pragma GCC diagnostic not allowed inside functions
 
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
 		libpcsclite.so:devel/pcsc-lite \
@@ -40,7 +38,8 @@ post-patch:
 	${ECHO_CMD} ${PORTVERSION} > ${WRKSRC}/.tarball-version
 	@${REINPLACE_CMD} -e '/#pragma GCC diagnostic/d' \
 		${WRKSRC}/src/application.c
-	${REINPLACE_CMD} -e 's/python2/${PYTHON_VERSION}/' \
+	@${REINPLACE_CMD} -e 's/python2/${PYTHON_VERSION}/' \
+		-e 's,(AM_V_GEN)python ,(AM_V_GEN)${PYTHON_VERSION} ,' \
 		${WRKSRC}/include/Makefile.am \
 		${WRKSRC}/src/gsm/Makefile.am \
 		${WRKSRC}/tests/Makefile.am

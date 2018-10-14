@@ -363,6 +363,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # CXXFLAGS_${ARCH}
 #				 Append the cxxflags to CXXFLAGS only on the specified architecture
 ##
+# LDFLAGS_${ARCH} Append the ldflags to LDFLAGS only on the specified architecture
 # USE_SDL		- If set, this port uses the sdl libraries.
 #				  See bsd.sdl.mk for more information.
 ##
@@ -528,7 +529,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Installs all directories and files from ${WRKSRC}/doc
 #				  to ${DOCSDIR} except sed(1) backup files.
 #
-# MANPREFIX		- The directory prefix for ${MAN<sect>} and ${MLINKS}.
+# MANPREFIX		- The directory prefix for manual pages.
 #				  Default: ${PREFIX}
 # MAN<sect>PREFIX
 #				- If manual pages of some sections install in different
@@ -1179,7 +1180,7 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${SRC
 .endif
 _EXPORTED_VARS+=	OSVERSION
 
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1004000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1101001))) || \
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1004000 || (${OSVERSION} >= 1100000 && ${OSVERSION} < 1102000))) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -2045,10 +2046,10 @@ CFLAGS+=       -fno-strict-aliasing
 ${lang}FLAGS:=	${${lang}FLAGS:N-std=*} -std=${USE_${lang}STD}
 .endif
 
-.if defined(${lang}FLAGS_${ARCH})
 ${lang}FLAGS+=	${${lang}FLAGS_${ARCH}}
-.endif
 .endfor
+
+LDFLAGS+=	${LDFLAGS_${ARCH}}
 
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
