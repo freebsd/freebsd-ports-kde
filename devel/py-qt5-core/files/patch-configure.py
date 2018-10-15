@@ -12,7 +12,7 @@ QtWebEngineWidgets.
 
 Also causes .pyi files to be installed regardless of the Python version to
 simplify plist handling.
---- configure.py.orig   2018-06-29 11:48:34 UTC
+--- configure.py.orig   2018-10-15 14:46:00 UTC
 +++ configure.py
 @@ -102,7 +102,7 @@ MODULE_METADATA = {
      'QtWebEngineCore':      ModuleMetadata(qmake_QT=['webenginecore', '-gui']),
@@ -32,26 +32,17 @@ simplify plist handling.
          self.qmake = self._find_exe('qmake')
          self.qmake_spec = ''
          self.qmake_spec_default = ''
-@@ -644,7 +644,7 @@ class TargetConfiguration:
- 
-         # Check there is a private copy of the sip module already installed.
-         try:
--            from PyQt5 import sip
-+            import sip
-         except ImportError:
-             error(
-                     "Unable to import PyQt5.sip.  Make sure you have "
-@@ -814,7 +814,7 @@ class TargetConfiguration:
+@@ -805,7 +805,7 @@ class TargetConfiguration:
          """
- 
+
          # The platform may have changed so update the default.
 -        if self.py_platform.startswith('linux') or self.py_platform == 'darwin':
 +        if self.py_platform.startswith('linux') or self.py_platform.startswith('freebsd') or self.py_platform == 'darwin':
              self.prot_is_public = True
- 
+
          self.vend_inc_dir = self.py_venv_inc_dir
-@@ -1515,8 +1515,9 @@ def generate_makefiles(target_config, verbose, parts, 
- 
+@@ -1506,8 +1506,9 @@ def generate_makefiles(target_config, verbose, parts,
+
      # Add the internal modules if they are required.
      if not target_config.no_tools:
 -        pyqt_modules.append('pylupdate')
@@ -59,13 +50,13 @@ simplify plist handling.
 +        if "QtXml" in target_config.pyqt_modules:
 +            pyqt_modules.append('pylupdate')
 +            pyqt_modules.append('pyrcc')
- 
+
      for mname in pyqt_modules:
          metadata = MODULE_METADATA[mname]
-@@ -1558,22 +1559,20 @@ def generate_makefiles(target_config, verbose, parts, 
- 
+@@ -1549,22 +1550,20 @@ def generate_makefiles(target_config, verbose, parts,
+
      f.close()
- 
+
 -    generate_sip_module_code(target_config, verbose, parts, tracing, 'Qt',
 -            fatal_warnings, sip_flags, False)
 -    subdirs.append('Qt')
@@ -83,7 +74,7 @@ simplify plist handling.
 +                wrappers.append((tool,
 +                        generate_tool_wrapper(target_config, tool + '5',
 +                                'PyQt5.%s_main' % tool)))
- 
+
 -        # Generate the pyuic5 wrapper.
 -        wrappers.append(('pyuic',
 -                generate_tool_wrapper(target_config, 'pyuic5',
@@ -93,13 +84,13 @@ simplify plist handling.
 +            wrappers.append(('pyuic',
 +                    generate_tool_wrapper(target_config, 'pyuic5',
 +                            'PyQt5.uic.pyuic')))
- 
+
      # Generate the Qt Designer plugin.
      if not target_config.no_designer_plugin and 'QtDesigner' in target_config.pyqt_modules:
-@@ -1589,23 +1588,6 @@ def generate_makefiles(target_config, verbose, parts, 
+@@ -1580,23 +1579,6 @@ def generate_makefiles(target_config, verbose, parts,
                      source_path('examples', 'quick', 'tutorials', 'extending',
                              'chapter6-plugins'))
- 
+
 -    # Generate the QScintilla API file.
 -    if target_config.qsci_api:
 -        inform("Generating the QScintilla API file...")
@@ -120,12 +111,12 @@ simplify plist handling.
      # Generate the Python dbus module.
      if target_config.pydbus_module_dir != '':
          mname = 'dbus'
-@@ -1642,16 +1624,20 @@ def generate_makefiles(target_config, verbose, parts, 
+@@ -1632,16 +1614,20 @@ def generate_makefiles(target_config, verbose, parts,
      out_f.write('''TEMPLATE = subdirs
  CONFIG += ordered nostrip
  SUBDIRS = %s
 +''' % (' '.join(subdirs)))
- 
+
 +    if "QtCore" in target_config.pyqt_modules:
 +        out_f.write('''
  init_py.files = %s
@@ -133,9 +124,9 @@ simplify plist handling.
  INSTALLS += init_py
 -''' % (' '.join(subdirs), source_path('__init__.py'), root_dir))
 +''' % (source_path('__init__.py'), root_dir))
- 
+
      all_installs.append(root_dir + '/__init__.py')
- 
+
 -    # Install the uic module.
 -    out_f.write('''
 +    if not target_config.no_tools:
@@ -144,7 +135,7 @@ simplify plist handling.
  uic_package.files = %s
  uic_package.path = %s
  INSTALLS += uic_package
-@@ -1686,6 +1672,8 @@ INSTALLS += tools
+@@ -1676,6 +1662,8 @@ INSTALLS += tools
      # Install the .sip files.
      if target_config.pyqt_sip_dir:
          for mname, metadata in MODULE_METADATA.items():
@@ -152,66 +143,40 @@ simplify plist handling.
 +                continue
              if metadata.public and mname != 'Qt':
                  sip_files = matching_files(source_path('sip', mname, '*.sip'))
- 
-@@ -1705,7 +1693,7 @@ INSTALLS += sip%s
+
+@@ -1695,7 +1683,7 @@ INSTALLS += sip%s
                      all_installs.append(mdir)
- 
+
      # Install the stub files.
 -    if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
 +    if target_config.pyqt_stubs_dir:
          pyi_names = [mname + '.pyi'
                  for mname in target_config.pyqt_modules if mname[0] != '_']
- 
-@@ -1722,13 +1710,14 @@ INSTALLS += pep484_stubs
- 
-     # Install the QScintilla .api file.
-     if target_config.qsci_api:
-+        api_list = ' '.join(['%s.api' % m for m in target_config.pyqt_modules])
-         api_dir = target_config.qsci_api_dir + '/api/python'
- 
-         out_f.write('''
--qscintilla_api.files = PyQt5.api
-+qscintilla_api.files = %s
- qscintilla_api.path = %s
- INSTALLS += qscintilla_api
--''' % qmake_quote(api_dir))
-+''' % (api_list, qmake_quote(api_dir)))
- 
-         all_installs.append(api_dir + '/PyQt5.api')
- 
-@@ -1982,7 +1971,7 @@ def inform_user(target_config, sip_version):
+
+@@ -1984,7 +1973,7 @@ def inform_user(target_config, sip_version):
                          os.path.join(
                                  target_config.qsci_api_dir, 'api', 'python'))
- 
+
 -    if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
 +    if target_config.pyqt_stubs_dir:
          inform("The PyQt5 PEP 484 stub files will be installed in %s." %
                  target_config.pyqt_stubs_dir)
- 
-@@ -2551,7 +2540,7 @@ def generate_sip_module_code(target_config, verbose, p
+
+@@ -2553,7 +2542,7 @@ def generate_sip_module_code(target_config, verbose, p
              argv.append('-a')
              argv.append(mname + '.api')
- 
+
 -        if target_config.py_version >= 0x030500 and target_config.pyqt_stubs_dir:
 +        if target_config.pyqt_stubs_dir:
              argv.append('-y')
              argv.append(mname + '.pyi')
- 
-@@ -2724,7 +2713,7 @@ target.files = $$PY_MODULE
+
+@@ -2726,7 +2715,7 @@ target.files = $$PY_MODULE
      pro_lines.append('INSTALLS += target')
- 
+
      # This optimisation could apply to other platforms.
 -    if 'linux' in target_config.qmake_spec and not target_config.static:
 +    if not target_config.static:
          if target_config.py_version >= 0x030000:
              entry_point = 'PyInit_%s' % target_name
          else:
-@@ -2916,7 +2905,7 @@ def check_sip(target_config):
- 
-     # Check there is a private copy of the sip module already installed.
-     try:
--        from PyQt5 import sip
-+        import sip
-     except ImportError:
-         error(
-                 "Unable to import PyQt5.sip.  Make sure you have configured "
