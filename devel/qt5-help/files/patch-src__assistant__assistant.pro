@@ -3,9 +3,9 @@ missing dependencies.
 
 assistant/ is built in devel/qt5-assistant.
 
---- src/assistant/assistant.pro.orig	2018-10-02 12:16:14 UTC
+--- src/assistant/assistant.pro.orig	2018-10-12 10:07:26 UTC
 +++ src/assistant/assistant.pro
-@@ -2,13 +2,11 @@ TEMPLATE = subdirs
+@@ -3,13 +3,11 @@ TEMPLATE = subdirs
  
  SUBDIRS += \
             help \

@@ -181,6 +181,7 @@
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4objectproto_p.h
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4persistent_p.h
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4profiling_p.h
+%%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4promiseobject_p.h
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4property_p.h
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4propertykey_p.h
 %%QT_INCDIR%%/QtQml/%%FULLVER%%/QtQml/private/qv4proxy_p.h
