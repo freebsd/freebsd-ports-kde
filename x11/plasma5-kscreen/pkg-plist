@@ -34,6 +34,7 @@ share/locale/da/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/da/LC_MESSAGES/kscreen.mo
 share/locale/de/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/de/LC_MESSAGES/kscreen.mo
+share/locale/de/LC_MESSAGES/plasma_applet_org.kde.kscreen.mo
 share/locale/el/LC_MESSAGES/kcm_displayconfiguration.mo
 share/locale/el/LC_MESSAGES/kscreen.mo
 share/locale/en_GB/LC_MESSAGES/kcm_displayconfiguration.mo

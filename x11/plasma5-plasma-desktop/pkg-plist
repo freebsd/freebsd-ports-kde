@@ -500,6 +500,8 @@ share/doc/HTML/it/kcontrol/splashscreen/index.cache.bz2
 share/doc/HTML/it/kcontrol/splashscreen/index.docbook
 share/doc/HTML/it/kcontrol/translations/index.cache.bz2
 share/doc/HTML/it/kcontrol/translations/index.docbook
+share/doc/HTML/it/kcontrol/workspaceoptions/index.cache.bz2
+share/doc/HTML/it/kcontrol/workspaceoptions/index.docbook
 share/doc/HTML/it/kfontview/index.cache.bz2
 share/doc/HTML/it/kfontview/index.docbook
 share/doc/HTML/it/knetattach/index.cache.bz2
@@ -1811,6 +1813,7 @@ share/locale/de/LC_MESSAGES/plasma_applet_org.kde.kimpanel.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.kicker.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.kickoff.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.pager.mo
+share/locale/de/LC_MESSAGES/plasma_applet_org.kde.panel.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.showActivityManager.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.taskmanager.mo
 share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.trash.mo
@@ -2777,11 +2780,16 @@ share/locale/id/LC_MESSAGES/plasma_applet_org.kde.panel.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.kicker.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.kickoff.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.pager.mo
+share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.showActivityManager.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.taskmanager.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.trash.mo
 share/locale/id/LC_MESSAGES/plasma_applet_org.kde.plasma.windowlist.mo
 share/locale/id/LC_MESSAGES/plasma_applet_touchpad.mo
+share/locale/id/LC_MESSAGES/plasma_runner_kwin.mo
 share/locale/id/LC_MESSAGES/plasma_runner_plasma-desktop.mo
+share/locale/id/LC_MESSAGES/plasma_shell_org.kde.plasma.desktop.mo
+share/locale/id/LC_MESSAGES/plasma_toolbox_org.kde.desktoptoolbox.mo
+share/locale/id/LC_MESSAGES/plasmaactivitymanager.mo
 share/locale/is/LC_MESSAGES/attica_kde_plugin.mo
 share/locale/is/LC_MESSAGES/kaccess.mo
 share/locale/is/LC_MESSAGES/kcm5_componentchooser.mo
