@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qtcreator
-DISTVERSION=	4.6.2
-PORTREVISION=	2
+DISTVERSION=	4.7.2
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
@@ -15,13 +14,13 @@ COMMENT=	C++ and QML IDE for Qt development
 # depend on the split out qbs
 LIB_DEPENDS=	libqbscore.so:devel/qbs
 
-USES=		qmake compiler:c++14-lang qt:5 tar:xz
+USES=		qmake compiler:c++14-lang python:build qt:5 tar:xz
 USE_LDCONFIG=	${LOCALBASE}/lib/${PORTNAME}
 USE_GL=		gl
 USE_QT=		buildtools concurrent core designer gui help \
 		linguist location network printsupport qdoc qmake qml quick \
-		quickcontrols script script sql svg webchannel webengine \
-		widgets xml xmlpatterns
+		quickcontrols script script serialport sql svg webchannel \
+		webengine widgets xml xmlpatterns
 
 # be paranoid and do not extract qbs (devel/qbs) copy from source tree
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/src/shared/qbs'
@@ -57,6 +56,8 @@ DOCS_ALL_TARGET=	docs
 DOCS_INSTALL_TARGET=	install_docs
 
 PLIST_SUB=		SHLIB_VER="${PORTVERSION}"
+
+BINARY_ALIAS=		python=${PYTHON_CMD}
 
 .include <bsd.port.pre.mk>
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
