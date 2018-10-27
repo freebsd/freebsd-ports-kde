@@ -227,7 +227,6 @@
     SUBDIR += hs-HsOpenSSL
     SUBDIR += hs-RSA
     SUBDIR += hs-SHA
-    SUBDIR += hs-certificate
     SUBDIR += hs-cipher-aes
     SUBDIR += hs-cipher-aes128
     SUBDIR += hs-cipher-blowfish
@@ -914,6 +913,7 @@
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
+    SUBDIR += py-bro-pkg
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot

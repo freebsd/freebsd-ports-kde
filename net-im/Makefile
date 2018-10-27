@@ -21,6 +21,7 @@
     SUBDIR += farstream
     SUBDIR += finch
     SUBDIR += folks
+    SUBDIR += fractal
     SUBDIR += freetalk
     SUBDIR += fugu
     SUBDIR += gajim
@@ -28,10 +29,8 @@
     SUBDIR += gitterdone
     SUBDIR += gloox
     SUBDIR += hotot
-    SUBDIR += hs-haskell-xmpp
     SUBDIR += icmpchat
     SUBDIR += icqlib
-    SUBDIR += jabber
     SUBDIR += jabber.el
     SUBDIR += jabberd
     SUBDIR += jarl

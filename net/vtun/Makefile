@@ -12,6 +12,9 @@ COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 
 LICENSE=	GPLv2
 
+DEPRECATED=		No longer supported by upline
+EXPIRATION_DATE=	2021-09-30
+
 BROKEN_SSL=	openssl-devel
 
 LIB_DEPENDS=	liblzo2.so:archivers/lzo2

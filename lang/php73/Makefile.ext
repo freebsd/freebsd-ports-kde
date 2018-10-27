@@ -73,7 +73,6 @@ CONFIGURE_ARGS+=--enable-exif
 .endif
 
 .if ${PHP_MODNAME} == "fileinfo"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 CONFIGURE_ARGS+=--enable-fileinfo \
 		--with-pcre-dir=${LOCALBASE}
 
@@ -81,7 +80,6 @@ PHP_HEADER_DIRS=	libmagic
 .endif
 
 .if ${PHP_MODNAME} == "filter"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 CONFIGURE_ARGS+=--enable-filter \
 		--with-pcre-dir=${LOCALBASE}
 .endif
@@ -133,6 +131,11 @@ CONFIGURE_ARGS+=--with-gmp=${LOCALBASE}
 .if ${PHP_MODNAME} == "hash"
 CONFIGURE_ARGS+=--enable-hash \
 		--with-mhash
+CFLAGS_mips64=		-DHAVE_SLOW_HASH3
+CFLAGS_powerpc64=	-DHAVE_SLOW_HASH3
+CFLAGS_powerpc= 	-DHAVE_SLOW_HASH3
+CFLAGS_powerpcspe=	-DHAVE_SLOW_HASH3
+CFLAGS_sparc64=		-DHAVE_SLOW_HASH3
 .endif
 
 .if ${PHP_MODNAME} == "iconv"
@@ -142,7 +145,6 @@ USES+=	iconv:translit
 .endif
 
 .if ${PHP_MODNAME} == "imap"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 OPTIONS_DEFINE=	PANDA
 PANDA_DESC=	Uses the forked panda-cclient instead of the original cclient
 
@@ -216,7 +218,6 @@ USES+=	ssl
 .if ${PHP_MODNAME} == "opcache"
 # This is needed by Zend extensions, keep before everything.
 PHP_MOD_PRIO=	10
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 CONFIGURE_ARGS+=--enable-opcache
 USES+=	localbase
 .endif
@@ -278,14 +279,12 @@ USE_PHP=	pdo:build
 .endif
 
 .if ${PHP_MODNAME} == "pgsql"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 USES+=		pgsql
 
 CONFIGURE_ARGS+=--with-pgsql=${LOCALBASE}
 .endif
 
 .if ${PHP_MODNAME} == "phar"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 CONFIGURE_ARGS+=--enable-phar \
 		--with-pcre-dir=${LOCALBASE}
 
@@ -323,7 +322,6 @@ CONFIGURE_ARGS+=--enable-shmop
 .endif
 
 .if ${PHP_MODNAME} == "simplexml"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 CONFIGURE_ARGS+=--enable-simplexml \
 		--with-pcre-dir=${LOCALBASE} \
 		--with-libxml-dir=${LOCALBASE}
@@ -439,7 +437,6 @@ USE_PHP=	dom:build xml:build
 .endif
 
 .if ${PHP_MODNAME} == "zip"
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
 LIB_DEPENDS+=	libzip.so:archivers/libzip
 
 CONFIGURE_ARGS+=--enable-zip \

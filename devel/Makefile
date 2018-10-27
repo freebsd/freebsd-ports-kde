@@ -27,6 +27,7 @@
     SUBDIR += R-cran-chron
     SUBDIR += R-cran-classInt
     SUBDIR += R-cran-cli
+    SUBDIR += R-cran-covr
     SUBDIR += R-cran-crayon
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-doParallel
@@ -69,6 +70,7 @@
     SUBDIR += R-cran-rstudioapi
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
+    SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
@@ -936,7 +938,6 @@
     SUBDIR += hs-MonadRandom
     SUBDIR += hs-ObjectName
     SUBDIR += hs-Only
-    SUBDIR += hs-PSQueue
     SUBDIR += hs-QuickCheck
     SUBDIR += hs-ReadArgs
     SUBDIR += hs-STMonadTrans
@@ -944,7 +945,6 @@
     SUBDIR += hs-ShellCheck
     SUBDIR += hs-StateVar
     SUBDIR += hs-Stream
-    SUBDIR += hs-TypeCompose
     SUBDIR += hs-abstract-deque
     SUBDIR += hs-abstract-par
     SUBDIR += hs-activehs-base
@@ -970,7 +970,6 @@
     SUBDIR += hs-bifunctors
     SUBDIR += hs-bits-atomic
     SUBDIR += hs-blaze-builder
-    SUBDIR += hs-blaze-builder-enumerator
     SUBDIR += hs-blaze-textual
     SUBDIR += hs-bloomfilter
     SUBDIR += hs-boxes
@@ -1024,7 +1023,6 @@
     SUBDIR += hs-edit-distance
     SUBDIR += hs-either
     SUBDIR += hs-enclosed-exceptions
-    SUBDIR += hs-enumerator
     SUBDIR += hs-equivalence
     SUBDIR += hs-errors
     SUBDIR += hs-exceptions
@@ -1490,7 +1488,6 @@
     SUBDIR += liblangtag
     SUBDIR += liblas
     SUBDIR += liblas12
-    SUBDIR += libleaftag
     SUBDIR += liblnk
     SUBDIR += liblockfile
     SUBDIR += liblogging
@@ -2173,6 +2170,7 @@
     SUBDIR += p5-Class-Tangram
     SUBDIR += p5-Class-Throwable
     SUBDIR += p5-Class-Tiny
+    SUBDIR += p5-Class-Tiny-Chained
     SUBDIR += p5-Class-Tom
     SUBDIR += p5-Class-Trigger
     SUBDIR += p5-Class-Unload
@@ -2987,6 +2985,7 @@
     SUBDIR += p5-Module-Versions-Report
     SUBDIR += p5-Mojolicious-Plugin-NYTProf
     SUBDIR += p5-Moo
+    SUBDIR += p5-MooX-Aliases
     SUBDIR += p5-MooX-Cmd
     SUBDIR += p5-MooX-ConfigFromFile
     SUBDIR += p5-MooX-File-ConfigDir
@@ -2994,6 +2993,7 @@
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
+    SUBDIR += p5-MooX-Traits
     SUBDIR += p5-MooX-TypeTiny
     SUBDIR += p5-MooX-Types-MooseLike
     SUBDIR += p5-MooX-Types-MooseLike-Numeric
@@ -4094,7 +4094,8 @@
     SUBDIR += pecl-weakref
     SUBDIR += pecl-weakref2
     SUBDIR += pecl-xdebug
-    SUBDIR += pecl-xdebug26
+    SUBDIR += pecl-xdebug-devel
+    SUBDIR += pecl-xdebug25
     SUBDIR += pecl-xhprof
     SUBDIR += pecl-yac
     SUBDIR += pecl-yaconf
@@ -4334,6 +4335,8 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
+    SUBDIR += py-aioice
+    SUBDIR += py-aiortc
     SUBDIR += py-akismet
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
@@ -4924,6 +4927,7 @@
     SUBDIR += py-pykde4-kde4
     SUBDIR += py-pykdeuic4-kde4
     SUBDIR += py-pyke
+    SUBDIR += py-pylibsrtp
     SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pymarc
@@ -5073,6 +5077,7 @@
     SUBDIR += py-selectors2
     SUBDIR += py-selectors34
     SUBDIR += py-semantic_version
+    SUBDIR += py-serializable
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
@@ -5168,6 +5173,7 @@
     SUBDIR += py-twine
     SUBDIR += py-twisted
     SUBDIR += py-txaio
+    SUBDIR += py-typechecks
     SUBDIR += py-typed-ast
     SUBDIR += py-typing
     SUBDIR += py-tzlocal
@@ -5791,6 +5797,7 @@
     SUBDIR += rubygem-method_source
     SUBDIR += rubygem-micromachine
     SUBDIR += rubygem-micromachine2
+    SUBDIR += rubygem-mini_portile2
     SUBDIR += rubygem-minitest
     SUBDIR += rubygem-mixlib-archive
     SUBDIR += rubygem-mixlib-authentication

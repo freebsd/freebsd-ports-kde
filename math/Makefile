@@ -56,6 +56,7 @@
     SUBDIR += R-cran-gpclib
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
+    SUBDIR += R-cran-haven
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
     SUBDIR += R-cran-inline
@@ -150,6 +151,7 @@
     SUBDIR += cbc
     SUBDIR += cblas
     SUBDIR += ccmath
+    SUBDIR += cddlib
     SUBDIR += ceres-solver
     SUBDIR += cgal
     SUBDIR += cgl
@@ -215,6 +217,7 @@
     SUBDIR += galculator
     SUBDIR += gambit
     SUBDIR += gap
+    SUBDIR += gau2grid
     SUBDIR += gdcalc
     SUBDIR += geg
     SUBDIR += geogebra
@@ -342,6 +345,7 @@
     SUBDIR += metis
     SUBDIR += metis-edf
     SUBDIR += metis4
+    SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
     SUBDIR += miracl
@@ -471,6 +475,7 @@
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
+    SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += orpie
     SUBDIR += p5-AI-DecisionTree
@@ -656,6 +661,7 @@
     SUBDIR += plplot
     SUBDIR += plplot-ada
     SUBDIR += primegen
+    SUBDIR += primme
     SUBDIR += prng
     SUBDIR += proofgeneral
     SUBDIR += pspp
@@ -719,6 +725,7 @@
     SUBDIR += py-petsc4py
     SUBDIR += py-piranha
     SUBDIR += py-plastex
+    SUBDIR += py-primme
     SUBDIR += py-probstat
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp

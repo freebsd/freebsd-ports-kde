@@ -5,6 +5,95 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20181022:
+  AFFECTS: users of lang/php71
+  AUTHOR: joneum@FreeBSD.org
+
+  The default version of PHP has been switched from 7.1 to 7.2.
+
+  If you use binary packages you should make a list of php packages
+  before running 'pkg upgrade':
+
+  # pkg info php7\* > ~/installed-php-ports-list
+
+  After the upgrade, check with such list if all your php extensions
+  are still installed, and reinstall them if needed.
+
+  If you use mod_php71 you need to deinstall it and install mod_php72.
+
+20181020:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 2.8 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies. Poudriere and pkg handle this correctly,
+  portmaster and portupgrade users can use the following to rebuild all
+  dependent ports.
+
+  Portmaster users:
+      portmaster -r libressl
+  Portupgrade users:
+      portupgrade -fr security/libressl
+
+20181018:
+  AFFECTS: users of security/hitch
+  AUTHOR: zi@FreeBSD.org
+
+  Hitch has been updated to run as the hitch user/group, instead of the
+  previous default of nobody/nobody.  You should review your hitch
+  configuration to ensure that everything has been updated to reflect
+  this change.
+
+20181014:
+  AFFECTS: users of sysutils/ansible
+  AUTHOR: lifanov@FreeBSD.org
+
+  Ansible has been updated to 2.7.0. Please follow the porting guide
+  to update the rulesets:
+
+  https://docs.ansible.com/ansible/devel/porting_guides/porting_guide_2.7.html
+
+  If you wish to stay with 2.6 version, you can switch
+  to new sysutils/ansible2.6 port, which tracks stable 2.6 branch:
+
+  # pkg set -n ansible:ansible26
+
+20181010:
+  AFFECTS: users of mail/courier-imap and other courier ports
+  AUTHOR: madpilot@FreeBSD.org
+
+  Courier-IMAP 5.0.0 added IMAP UTF8 support, and converted maildir
+  folders' names to Unicode.
+
+  Updating an existing system to Courier-IMAP 5.0, and later,
+  requires a manual one-time conversion of all existing maildirs
+  using the maildirmake command. See the maildirmake(1) manual page
+  for more information.
+
+  All other courier ports accessing maildirs also need to be updated
+  at the same time.
+
+20181009:
+  AFFECTS: users of devel/pecl-xdebug*
+  AUTHOR: pizzamig@FreeBSD.org
+
+  xdebug 2.6.1 (devel/pecl-xdebug) is the new default version and it supports
+  PHP from 7.0 to 7.2 included.
+  If you're using PHP 5.6, the previous compatible xdebug version is still
+  available in devel/pecl-xdebug25
+  If you're using PHP 7.3, the only compatible xdebug version is available
+  in devel/pecl-xdebug-devel
+
 20180930:
   AFFECTS: users of DRM components
   AUTHOR: jmd@FreeBSD.org
@@ -3158,7 +3247,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20160525:
   AFFECTS: users of devel/qtcreator
-  AUTHOR: nolden@kde.org
+  AUTHOR: loise@kde.org
 
   QBS (Qt Build System) was previously shipped as part of qtcreator, now
   it is independently available as devel/qbs. However, on upgrading

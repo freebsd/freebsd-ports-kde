@@ -85,6 +85,7 @@
     SUBDIR += nickleby
     SUBDIR += obapps
     SUBDIR += obconf
+    SUBDIR += obconf-qt
     SUBDIR += obkey
     SUBDIR += obmenu
     SUBDIR += obpager
@@ -112,6 +113,7 @@
     SUBDIR += sawfish
     SUBDIR += selectwm
     SUBDIR += simple-ccsm
+    SUBDIR += skippy-xd
     SUBDIR += spectrwm
     SUBDIR += stumpwm
     SUBDIR += subtle

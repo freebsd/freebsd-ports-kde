@@ -137,6 +137,7 @@
     SUBDIR += linuxlibertine-g
     SUBDIR += lohit
     SUBDIR += manu-gothica
+    SUBDIR += materialdesign-ttf
     SUBDIR += meslo
     SUBDIR += mgopen
     SUBDIR += mkbold
@@ -188,6 +189,7 @@
     SUBDIR += tlwg-ttf
     SUBDIR += tmu
     SUBDIR += tv-fonts
+    SUBDIR += twemoji-color-font-ttf
     SUBDIR += ubuntu-font
     SUBDIR += urwfonts
     SUBDIR += urwfonts-ttf

@@ -291,6 +291,7 @@
     SUBDIR += mime-support
     SUBDIR += mirmon
     SUBDIR += mmv
+    SUBDIR += molequeue
     SUBDIR += morse
     SUBDIR += mtail
     SUBDIR += mtx
@@ -417,6 +418,7 @@
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-kartograph
+    SUBDIR += py-molequeue
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
@@ -444,6 +446,7 @@
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
+    SUBDIR += py-toil
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
     SUBDIR += pylize

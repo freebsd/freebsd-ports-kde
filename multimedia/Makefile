@@ -26,6 +26,7 @@
     SUBDIR += avidemux-qt4
     SUBDIR += avinfo
     SUBDIR += baka-mplayer
+    SUBDIR += bcmatroska2
     SUBDIR += bino
     SUBDIR += bitstream
     SUBDIR += blind
@@ -283,7 +284,7 @@
     SUBDIR += mpv
     SUBDIR += msdl
     SUBDIR += msopenh264
-    SUBDIR += msx264
+    SUBDIR += mswebrtc
     SUBDIR += mxflib
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
@@ -333,6 +334,7 @@
     SUBDIR += pwcbsd
     SUBDIR += pwcview
     SUBDIR += py-PySceneDetect
+    SUBDIR += py-av
     SUBDIR += py-cec
     SUBDIR += py-enzyme
     SUBDIR += py-flvlib
@@ -397,6 +399,7 @@
     SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook
+    SUBDIR += subtitlecomposer
     SUBDIR += subtitlecomposer-kde4
     SUBDIR += subtitleeditor
     SUBDIR += subtitleoffsetmodifier

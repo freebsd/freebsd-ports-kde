@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	php73
-DISTVERSION=	7.3.0RC2
+DISTVERSION=	7.3.0RC4
 PORTREVISION?=	0
 CATEGORIES?=	lang devel www
 MASTER_SITES=	https://downloads.php.net/~cmb/
@@ -17,8 +17,8 @@ CPE_PRODUCT=	php
 NO_OPTIONS_SORT=yes
 
 .if !defined(PKGNAMESUFFIX)
-BUILD_DEPENDS=	pcre2>=2.31:devel/pcre2
-LIB_DEPENDS=	libargon2.so:security/libargon2
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre2 \
+		libargon2.so:security/libargon2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-layout=GNU \
