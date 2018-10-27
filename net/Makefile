@@ -1186,6 +1186,7 @@
     SUBDIR += queso
     SUBDIR += quiterss
     SUBDIR += quoted
+    SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
     SUBDIR += rabbitmq-c-devel
