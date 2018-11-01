@@ -378,6 +378,7 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += kdiff3
+    SUBDIR += kdiff3-kde4
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
