@@ -270,6 +270,7 @@
     SUBDIR += ccache-static
     SUBDIR += cccc
     SUBDIR += ccdoc
+    SUBDIR += ccls
     SUBDIR += ccrtp
     SUBDIR += cctz
     SUBDIR += cdash
@@ -1538,6 +1539,7 @@
     SUBDIR += libpasori
     SUBDIR += libpci
     SUBDIR += libpciaccess
+    SUBDIR += libpcl
     SUBDIR += libpdel
     SUBDIR += libpeak
     SUBDIR += libpeas
@@ -1671,7 +1673,6 @@
     SUBDIR += linux-c7-qt
     SUBDIR += linux-c7-sdl12
     SUBDIR += linux-c7-sdl20
-    SUBDIR += linux-kernel
     SUBDIR += linux_libusb
     SUBDIR += lion
     SUBDIR += listserialc
@@ -4594,6 +4595,7 @@
     SUBDIR += py-futures
     SUBDIR += py-futurist
     SUBDIR += py-fuzzywuzzy
+    SUBDIR += py-fypp
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
@@ -5691,6 +5693,7 @@
     SUBDIR += rubygem-git
     SUBDIR += rubygem-git-version-bump
     SUBDIR += rubygem-github_api
+    SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab-pygments.rb
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta

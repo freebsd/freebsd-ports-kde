@@ -86,6 +86,7 @@
     SUBDIR += ghemical
     SUBDIR += ghmm
     SUBDIR += gnudatalanguage
+    SUBDIR += gpaw-setups
     SUBDIR += gramps
     SUBDIR += grib_api
     SUBDIR += gromacs
@@ -107,6 +108,7 @@
     SUBDIR += kst2
     SUBDIR += lammps
     SUBDIR += lamprop
+    SUBDIR += latte
     SUBDIR += libaec
     SUBDIR += libccp4
     SUBDIR += libcint
