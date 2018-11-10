@@ -33,7 +33,6 @@
     SUBDIR += avogadrolibs
     SUBDIR += bagel
     SUBDIR += bddsolve
-    SUBDIR += bft
     SUBDIR += bodr
     SUBDIR += brian
     SUBDIR += buddy
@@ -50,6 +49,7 @@
     SUBDIR += chrono
     SUBDIR += clhep
     SUBDIR += clipper
+    SUBDIR += code_saturne
     SUBDIR += colt
     SUBDIR += coordgenlibs
     SUBDIR += coot
@@ -65,11 +65,11 @@
     SUBDIR += dlib-cpp
     SUBDIR += dlpoly-classic
     SUBDIR += eccodes
-    SUBDIR += ecs
     SUBDIR += elk
     SUBDIR += epte
     SUBDIR += erd
     SUBDIR += erkale
+    SUBDIR += esys-particle
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
@@ -77,7 +77,6 @@
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
-    SUBDIR += fvm
     SUBDIR += gabedit
     SUBDIR += gamess-us
     SUBDIR += gchemutils
@@ -128,6 +127,7 @@
     SUBDIR += libsvm
     SUBDIR += libsvm-python
     SUBDIR += libxc
+    SUBDIR += liggghts
     SUBDIR += linsmith
     SUBDIR += lm
     SUBDIR += luscus
@@ -142,7 +142,6 @@
     SUBDIR += mdynamix
     SUBDIR += medit
     SUBDIR += meep
-    SUBDIR += mei
     SUBDIR += metaf2xml
     SUBDIR += metaphysicl
     SUBDIR += minc2
@@ -156,7 +155,6 @@
     SUBDIR += msms
     SUBDIR += multiwfn
     SUBDIR += namd
-    SUBDIR += ncs
     SUBDIR += netcdf
     SUBDIR += netcdf-cxx
     SUBDIR += netcdf-fortran

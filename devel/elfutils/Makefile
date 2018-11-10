@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	elfutils
-PORTVERSION=	0.172
+PORTVERSION=	0.174
 PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://sourceware.org/elfutils/ftp/${PORTVERSION}/
@@ -39,6 +39,8 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 CFLAGS+=	-Wno-null-dereference -Wno-unused-value
+# For GCC8:
+CFLAGS+=	-Wno-cast-function-type
 # Give i386 a prayer of building, and we can fix the warnings later:
 CFLAGS_i386+=	-Wno-error
 

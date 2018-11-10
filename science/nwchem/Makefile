@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	nwchem
-DISTVERSION=	6.8.1-release-144
-DISTVERSIONSUFFIX=	-gb1062ed2c
+PORTVERSION=	6.8.1.20181107
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,8 +11,6 @@ LICENSE=	ECL20
 LICENSE_NAME=	Educational Community License (ECL) 2.0
 LICENSE_FILE=	${WRKSRC}/../LICENSE.TXT
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
-
-BROKEN_i386=	Compiling basis.F...  f951: sorry, unimplemented: 64-bit mode not compiled in
 
 BUILD_DEPENDS=	bash:shells/bash
 LIB_DEPENDS=	libblas.so:math/blas \
@@ -25,10 +22,12 @@ SHEBANG_FILES=	../contrib/distro-tools/build_* ../contrib/add_*
 SHEBANG_GLOB=	*.sh
 USE_GITHUB=	yes
 GH_ACCOUNT=	nwchemgit
+GH_TAGNAME=	master-oct22_2018-21-gd3913ef8b
 USE_PERL5=	build
 
 MAKEFILE=	GNUmakefile
-MAKE_ENV=	NWCHEM_TOP=${WRKSRC}/.. NWCHEM_MODULES=all NWCHEM_LONG_PATHS=Y NWCHEM_TARGET=LINUX64 USE_MPI=Y USE_INTERNALBLAS=Y EXTERNAL_GA_PATH=${LOCALBASE} \
+ARCH_64BIT=	${ARCH:C/.*64.*/64/:S/${ARCH}//}
+MAKE_ENV=	NWCHEM_TOP=${WRKSRC}/.. NWCHEM_MODULES=all NWCHEM_LONG_PATHS=Y NWCHEM_TARGET=LINUX${ARCH_64BIT} USE_MPI=Y USE_INTERNALBLAS=Y EXTERNAL_GA_PATH=${LOCALBASE} \
 		BLAS_SIZE=4 USE_64TO32=y
 
 SUB_FILES=	nwchemrc

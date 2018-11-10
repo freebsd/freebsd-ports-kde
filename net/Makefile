@@ -374,6 +374,7 @@
     SUBDIR += libdmapsharing
     SUBDIR += libdnet
     SUBDIR += libexosip2
+    SUBDIR += libfabric
     SUBDIR += libfb
     SUBDIR += libfixbuf
     SUBDIR += libgnetwork

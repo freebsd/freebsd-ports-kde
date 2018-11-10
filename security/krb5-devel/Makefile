@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=		krb5
-PORTVERSION=		1.17.${MIT_COMMIT_DATE}
+PORTVERSION=		1.18.${MIT_COMMIT_DATE}
 CATEGORIES=		security
 .if !defined(MASTERDIR)
 PKGNAMESUFFIX=		-devel
 .endif
-HASH=			fc4a601
-MIT_COMMIT_DATE=	2018.11.01
+HASH=			3e76ea1
+MIT_COMMIT_DATE=	2018.11.08
 
 PATCH_SITES=		http://web.mit.edu/kerberos/advisories/
 PATCH_DIST_STRIP=	-p2
@@ -32,8 +32,7 @@ GNU_CONFIGURE=		yes
 USES=			autoreconf cpe gmake localbase perl5 libtool:build \
 			gssapi:bootstrap,mit pkgconfig:run ssl
 CONFIGURE_ARGS?=	--enable-shared --without-system-verto \
-			--disable-rpath --localstatedir="${PREFIX}/var" \
-			--runstatedir="${PREFIX}/var/run"
+			--disable-rpath --localstatedir="${PREFIX}/var"
 CONFIGURE_ENV=		INSTALL="${INSTALL}" INSTALL_LIB="${INSTALL_LIB}" YACC="${YACC}"
 MAKE_ARGS=		INSTALL="${INSTALL}" INSTALL_LIB="${INSTALL_LIB}"
 

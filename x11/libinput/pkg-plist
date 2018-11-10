@@ -3,6 +3,10 @@ include/libinput.h
 lib/libinput.so
 lib/libinput.so.10
 lib/libinput.so.10.13.0
+lib/udev/libinput-device-group
+lib/udev/libinput-model-quirks
+lib/udev/rules.d/80-libinput-device-groups.rules
+lib/udev/rules.d/90-libinput-model-quirks.rules
 libdata/pkgconfig/libinput.pc
 libexec/libinput/libinput-debug-events
 %%DEBUG_GUI%%libexec/libinput/libinput-debug-gui

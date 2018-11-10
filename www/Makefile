@@ -534,6 +534,7 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
+    SUBDIR += npm-node10
     SUBDIR += npm-node6
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
@@ -2414,6 +2415,7 @@
     SUBDIR += twill
     SUBDIR += twms
     SUBDIR += typo3-8
+    SUBDIR += typo3-9
     SUBDIR += uchiwa
     SUBDIR += udmsearch
     SUBDIR += ufdbguard
