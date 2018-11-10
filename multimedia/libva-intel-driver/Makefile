@@ -3,7 +3,7 @@
 
 PORTNAME=	libva-intel-driver
 PORTVERSION=	2.2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 
 MAINTAINER=	madpilot@FreeBSD.org
@@ -20,10 +20,9 @@ GNU_CONFIGURE=	yes
 USES=		alias autoreconf compiler:c11 gmake libtool localbase \
 		pkgconfig tar:bzip2
 USE_GL=		gl
-USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	01org
+GH_ACCOUNT=	intel
 GH_PROJECT=	intel-vaapi-driver
 
 PLIST_FILES=	lib/dri/i915_drv_video.so lib/dri/i965_drv_video.so
@@ -32,6 +31,7 @@ ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Driver for hardware present only on intel i386 and amd64 CPUs
 
 OPTIONS_DEFINE=	HYBRID
+OPTIONS_DEFAULT=HYBRID
 
 HYBRID_DESC=	Hybrid codec support (e.g., VP9 decoding on Skylake)
 HYBRID_RUN_DEPENDS=	${LOCALBASE}/lib/dri/hybrid_drv_video.so:multimedia/libva-intel-hybrid-driver

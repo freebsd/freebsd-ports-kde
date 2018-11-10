@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	redis
-DISTVERSION=	5.0.0
+DISTVERSION=	5.0.1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 PKGNAMESUFFIX=	-devel
@@ -34,7 +34,7 @@ CFLAGS+=	-march=i586
 .endif
 
 .if ${PORT_OPTIONS:MJEMALLOC}
-MAKE_ENV=	"USE_JEMALLOC=yes"
+MAKE_ENV+=	"USE_JEMALLOC=yes"
 .endif
 
 .if ${PORT_OPTIONS:MTRIB}
