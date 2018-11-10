@@ -791,6 +791,10 @@
 %%DEBUG%%%%QT_QMLDIR%%/Qt/labs/sharedimage/libsharedimageplugin.so.debug
 %%QT_QMLDIR%%/Qt/labs/sharedimage/plugins.qmltypes
 %%QT_QMLDIR%%/Qt/labs/sharedimage/qmldir
+%%QT_QMLDIR%%/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so
+%%DEBUG%%%%QT_QMLDIR%%/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so.debug
+%%QT_QMLDIR%%/Qt/labs/wavefrontmesh/plugins.qmltypes
+%%QT_QMLDIR%%/Qt/labs/wavefrontmesh/qmldir
 %%QT_QMLDIR%%/QtQml/Models.2/libmodelsplugin.so
 %%DEBUG%%%%QT_QMLDIR%%/QtQml/Models.2/libmodelsplugin.so.debug
 %%QT_QMLDIR%%/QtQml/Models.2/plugins.qmltypes
@@ -825,10 +829,6 @@
 %%DEBUG%%%%QT_QMLDIR%%/QtQuick/Window.2/libwindowplugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Window.2/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Window.2/qmldir
-%%QT_QMLDIR%%/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so
-%%DEBUG%%%%QT_QMLDIR%%/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so.debug
-%%QT_QMLDIR%%/QtQuick/XmlListModel/plugins.qmltypes
-%%QT_QMLDIR%%/QtQuick/XmlListModel/qmldir
 %%QT_QMLDIR%%/QtTest/SignalSpy.qml
 %%QT_QMLDIR%%/QtTest/TestCase.qml
 %%QT_QMLDIR%%/QtTest/libqmltestplugin.so
