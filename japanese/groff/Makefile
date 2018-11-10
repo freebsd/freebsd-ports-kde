@@ -19,6 +19,7 @@ COMMENT=	Japanese enhancement of GNU groff
 LICENSE=	GPLv2
 
 USES=		iconv:wchar_t cpe gmake makeinfo shebangfix
+
 SHEBANG_FILES=	src/utils/afmtodit/afmtodit.pl \
 		contrib/mm/mmroff.pl
 CPE_VENDOR=	gnu

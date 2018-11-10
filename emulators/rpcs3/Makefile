@@ -2,8 +2,8 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.5-999
-DISTVERSIONSUFFIX=	-g1cf62e9de
+DISTVERSION=	0.0.5-1030
+DISTVERSIONSUFFIX=	-g7180c1f2d
 CATEGORIES=	emulators
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
@@ -17,8 +17,6 @@ LICENSE_COMB=	multi
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC_cereal}/LICENSE
 LICENSE_FILE_MIT=	${WRKSRC_GSL}/LICENSE
 LICENSE_FILE_ZLIB=	${WRKSRC_asmjit}/LICENSE.md
-
-BROKEN_FreeBSD_10=	libc++ does not support C++17 features
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libavcodec.so:multimedia/ffmpeg
@@ -41,7 +39,7 @@ GH_TUPLE=	RPCS3:hidapi:hidapi-0.8.0-rc1-26-g4c27501:hidapi/3rdparty/hidapi \
 USES=		cmake:outsource compiler:c++17-lang iconv:wchar_t localbase:ldflags \
 		openal:soft pkgconfig qt:5
 USE_GL=		gl glew
-USE_QT=		qmake_build buildtools_build core dbus gui network widgets qml
+USE_QT=		qmake_build buildtools_build core dbus declarative gui network widgets
 USE_XORG=	x11
 LLD_UNSAFE=	yes # XXX ports/219089
 CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG

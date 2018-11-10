@@ -2,7 +2,7 @@
 
 PORTNAME=	gmic
 PORTVERSION=	1.6.9
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	http://gmic.eu/files/source/
 PKGNAMEPREFIX=	gimp-
@@ -18,7 +18,8 @@ LIB_DEPENDS=	libGraphicsMagick++.so:graphics/GraphicsMagick \
 		libMagick++-6.so:graphics/ImageMagick \
 		libavcodec.so:multimedia/ffmpeg \
 		libfftw3.so:math/fftw3 \
-		libgimp-2.0.so:graphics/gimp-app
+		libgimp-2.0.so:graphics/gimp-app \
+		libcurl.so:ftp/curl
 
 OPTIONS_DEFINE=	BASH EXAMPLES
 OPTIONS_SUB=	yes

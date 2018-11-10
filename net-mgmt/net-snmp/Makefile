@@ -77,6 +77,10 @@ TLS_CONFIGURE_ON=	--with-security-modules=tsm --with-transports=TLSTCP,DTLSUDP
 
 .include <bsd.port.options.mk>
 
+.if ${OSVERSION} >= 1200085
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-openssl11
+.endif
+
 .if ${PORT_OPTIONS:MPYTHON}
 PYDISTUTILS_PKGNAME?=		netsnmp-python
 PYDISTUTILS_PKGVERSION?=	1.0a1
@@ -161,11 +165,7 @@ NET_SNMP_LOGFILE?=	/var/log/snmpd.log
 NET_SNMP_PERSISTENTDIR?=/var/net-snmp
 NET_SNMP_WITH_MIB_MODULE_LIST+=	host disman/event-mib mibII/mta_sendmail mibII/tcpTable ucd-snmp/diskio sctp-mib
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100062
-CFLAGS+=	-D_WANT_IFADDR
-.endif
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100062
+.if ${OPSYS} == FreeBSD
 NET_SNMP_WITHOUT_MIB_MODULE_LIST+=	mibII/ipv6
 .endif
 
@@ -252,6 +252,8 @@ post-patch:
 	    ${WRKSRC}/agent/mibgroup/host/hr_system.c
 	@${REINPLACE_CMD} -E -e 's|return pci_lookup_name|disabled broken|g' \
 		${WRKSRC}/configure
+	@${CP} ${WRKSRC}/include/net-snmp/system/freebsd12.h \
+		${WRKSRC}/include/net-snmp/system/freebsd13.h
 
 post-configure:
 	@${FIND} ${WRKSRC} -name Makefile | \

@@ -81,9 +81,10 @@ MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 MOZ_RPATH?=	${MOZILLA}
-USES+=		cpe gmake iconv localbase perl5 pkgconfig \
+USES+=		cpe gl gmake iconv localbase perl5 pkgconfig \
 			python:2.7,build desktop-file-utils
 CPE_VENDOR?=mozilla
+USE_GL=		gl
 USE_PERL5=	build
 USE_XORG=	x11 xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
@@ -162,8 +163,6 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 MOZ_EXPORT+=	MOZ_JEMALLOC4=1
 .if ${MOZILLA_VER:R:R} >= 48
 MOZ_OPTIONS+=	--enable-jemalloc=4
-.elif ${OSVERSION} < 1100079
-MOZ_OPTIONS+=	--enable-jemalloc
 .endif # Mozilla >= 48
 .endif # Mozilla < 55
 
@@ -289,6 +288,7 @@ MOZ_TOOLKIT=	cairo-gtk2
 MOZ_TOOLKIT=	cairo-gtk3-wayland
 .endif
 
+USES+=		gnome
 .if ${MOZ_TOOLKIT:Mcairo-gtk3*}
 BUILD_DEPENDS+=	gtk3>=3.14.6:x11-toolkits/gtk30
 USE_GNOME+=	gdkpixbuf2 gtk20 gtk30
@@ -412,9 +412,6 @@ MOZ_OPTIONS+=	--enable-rust-simd
 .if ${PORT_OPTIONS:MDTRACE}
 MOZ_OPTIONS+=	--enable-dtrace \
 		--disable-gold
-. if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100061
-LIBS+=			-lelf
-. endif
 STRIP=
 .else
 MOZ_OPTIONS+=	--disable-dtrace

@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	postfix
-DISTVERSION=	3.4-20180904
-PORTREVISION?=	1
+DISTVERSION=	3.4-20181105
+PORTREVISION?=	0
 PORTEPOCH=	5
 CATEGORIES=	mail ipv6
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/ \
@@ -198,7 +198,7 @@ POSTFIX_AUXLIBS+=	-L${BDB_LIB_DIR} -l${BDB_LIB_NAME}
 .endif
 
 .if ${PORT_OPTIONS:MBLACKLISTD}
-. if ${OPSYS} == FreeBSD && (${OSVERSION} >= 1100122)
+. if ${OPSYS} == FreeBSD
 POSTFIX_AUXLIBS+=	-lblacklist
 . else
 IGNORE=	blacklistd is only supported on FreeBSD >= 11.0

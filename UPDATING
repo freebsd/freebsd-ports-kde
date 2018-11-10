@@ -5,6 +5,64 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20181109
+  AFFECTS: users of security/ossec-hids-server
+  AUTHOR: dominik.lisiak@bemsoft.pl
+
+  The "ossechids_enable" rc variable has been renamed to "ossec_hids_enable".
+
+  If using database output, you need to recreate database using new schema
+  provided in /usr/local/share/doc/ossec-hids.
+
+20181109
+  AFFECTS: users of security/ossec-hids-local
+  AUTHOR: dominik.lisiak@bemsoft.pl
+
+  The "ossechids_enable" rc variable has been renamed to "ossec_hids_enable".
+
+  If using database output, you need to recreate database using new schema
+  provided in /usr/local/share/doc/ossec-hids.
+
+20181109
+  AFFECTS: users of security/ossec-hids-client
+  AUTHOR: dominik.lisiak@bemsoft.pl
+
+  The ossec-hids-client port has been renamed to ossec-hids-agent.
+  Portmaster users will need to run this command:
+
+  portmaster -o security/ossec-hids-agent security/ossec-hids-client
+
+  If the switch doesn't happen automatically for you, just delete the
+  ossec-hids-client package and install ossec-hids-agent.
+
+  The "ossechids_enable" rc variable has been renamed to "ossec_hids_enable".
+
+20181104:
+  AFFECTS: users of sysutils/ansible*
+  AUTHOR: lifanov@FreeBSD.org
+
+  Default Ansible configuration location changed to LOCALBASE/etc/ansible
+  instead of a per-flavor directory. If you use system-wide Ansible
+  configuration, please migrate from a flavored directory to a common
+  one:
+
+  # mv /usr/local/etc/py27-ansible /usr/local/etc/ansible
+
+20181031:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been updated to Node.js v11.0.0, the latest
+  upstream release. A new port, www/node10, has been created for the
+  v10.x LTS branch. Users wanting to stay on v10.x can replace www/node
+  with www/node8 with one of the following commands:
+
+  # pkg install www/node10
+    or
+  # portmaster -o www/node10 www/node
+    or
+  # portupgrade -o www/node10 www/node
+
 20181022:
   AFFECTS: users of lang/php71
   AUTHOR: joneum@FreeBSD.org
