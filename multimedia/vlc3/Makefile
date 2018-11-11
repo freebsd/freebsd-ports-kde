@@ -3,6 +3,7 @@
 
 PORTNAME=	vlc
 DISTVERSION=	3.0.4
+PORTREVISION=	1
 PORTEPOCH=	4
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/${PORTNAME}/${DISTVERSION:S/a$//}/ \
@@ -25,8 +26,8 @@ BUILD_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg \
 		yasm:devel/yasm
 RUN_DEPENDS=	ffmpeg>=3.4.1,1:multimedia/ffmpeg
 
-USES=		compiler:c++11-lib desktop-file-utils gmake gnome iconv libtool \
-		pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib desktop-file-utils gettext-tools gmake gnome \
+		iconv libtool pathfix pkgconfig tar:xz
 
 # VLC git (post 2.2.4) requires C++11 support and passes the appropriate flag
 # to the compiler. Until the port is updated, we explicitly pass -std=c++11 to

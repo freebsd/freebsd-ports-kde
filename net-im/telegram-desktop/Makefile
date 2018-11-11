@@ -2,7 +2,8 @@
 
 PORTNAME=	telegram-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.0
+DISTVERSION=	1.4.2
+PORTREVISION=	2
 CATEGORIES=	net-im
 
 MAINTAINER=	henry.hu.sh@gmail.com
@@ -65,21 +66,6 @@ GYP_DEFINES:=	${GYP_DEFINES},TDESKTOP_DISABLE_GTK_INTEGRATION
 
 .include <bsd.port.pre.mk>
 
-# This port needs C++17 libs/compiler.
-# Currently, this is not supported by USES=compiler
-# Using clang does not work: libc++ in base does not support C++17.
-# Using gcc does not work: using both libc++ and libstdc++ causes crashes.
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100000
-IGNORE=		need C++17 support in compiler and runtime
-.endif
-
-# Since 1.3.14, the clang compiler provided in 11.1 (4.0.0) gets a segmentation
-# fault.
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1102000
-CXXFLAGS+=	-DGSL_USE_STD_BYTE=0
-QMAKE_COMPILER=	clang
-.endif
-
 post-patch:
 	@cd ${WRKSRC} && \
 		(${SED} -e " \
@@ -96,6 +82,7 @@ post-patch:
 		${FILESDIR}/gyp-patches | \
 		${PATCH} -z .bak -s)
 	@${ECHO} "#define FREEBSD_QT_PLUGINDIR \"${QT_PLUGINDIR}\"" > ${WRKSRC}/Telegram/SourceFiles/FREEBSD_QT_PLUGINDIR.h
+	${SED} -i -e "/Icon=/s|telegram|${PORTNAME}|" ${WRKSRC}/lib/xdg/telegramdesktop.desktop
 
 pre-configure:
 	@cd ${WRKSRC} && gyp \

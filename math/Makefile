@@ -56,6 +56,7 @@
     SUBDIR += R-cran-gpclib
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
+    SUBDIR += R-cran-haven
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
     SUBDIR += R-cran-inline
@@ -150,6 +151,7 @@
     SUBDIR += cbc
     SUBDIR += cblas
     SUBDIR += ccmath
+    SUBDIR += cddlib
     SUBDIR += ceres-solver
     SUBDIR += cgal
     SUBDIR += cgl
@@ -173,11 +175,13 @@
     SUBDIR += cryptominisat
     SUBDIR += cvc3
     SUBDIR += cvc4
+    SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += diehard
     SUBDIR += dieharder
     SUBDIR += djbfft
     SUBDIR += drgeo
+    SUBDIR += dsdp
     SUBDIR += dynare
     SUBDIR += e
     SUBDIR += ecos
@@ -215,6 +219,7 @@
     SUBDIR += galculator
     SUBDIR += gambit
     SUBDIR += gap
+    SUBDIR += gau2grid
     SUBDIR += gdcalc
     SUBDIR += geg
     SUBDIR += geogebra
@@ -348,6 +353,7 @@
     SUBDIR += miracl
     SUBDIR += mkl-dnn
     SUBDIR += mlpack
+    SUBDIR += moab
     SUBDIR += moo
     SUBDIR += mosesdecoder
     SUBDIR += mpc
@@ -472,6 +478,7 @@
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
+    SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += orpie
     SUBDIR += p5-AI-DecisionTree
@@ -691,6 +698,7 @@
     SUBDIR += py-fiat
     SUBDIR += py-fpconst
     SUBDIR += py-gato
+    SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
@@ -738,6 +746,7 @@
     SUBDIR += py-pyodesys
     SUBDIR += py-pysparse
     SUBDIR += py-pysym
+    SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
     SUBDIR += py-random2
     SUBDIR += py-rapi

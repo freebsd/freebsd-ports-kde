@@ -460,6 +460,7 @@
     SUBDIR += p5-Metadata
     SUBDIR += p5-Mojo-Pg
     SUBDIR += p5-MongoDB
+    SUBDIR += p5-Mongoose
     SUBDIR += p5-MySQL-Diff
     SUBDIR += p5-Net-Async-CassandraCQL
     SUBDIR += p5-ORLite
@@ -724,6 +725,14 @@
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
+    SUBDIR += postgresql11-client
+    SUBDIR += postgresql11-contrib
+    SUBDIR += postgresql11-docs
+    SUBDIR += postgresql11-pgtcl
+    SUBDIR += postgresql11-plperl
+    SUBDIR += postgresql11-plpython
+    SUBDIR += postgresql11-pltcl
+    SUBDIR += postgresql11-server
     SUBDIR += postgresql10-client
     SUBDIR += postgresql10-contrib
     SUBDIR += postgresql10-docs

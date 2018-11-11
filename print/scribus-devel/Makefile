@@ -3,6 +3,7 @@
 
 PORTNAME=	scribus
 PORTVERSION=	1.5.4
+PORTREVISION=	1
 CATEGORIES=	print editors
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION}/ \
 		http://www.scribus.net/downloads/${PORTVERSION}/
@@ -36,8 +37,8 @@ LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 		libicuuc.so:devel/icu
 
 USES=		cmake:outsource desktop-file-utils jpeg pkgconfig python qt:5 shared-mime-info ssl tar:xz
-USE_QT=		buildtools_build core gui linguisttools_build network opengl \
-		printsupport qmake_build qml quick widgets xml
+USE_QT=		buildtools_build core declarative gui linguisttools_build network opengl \
+		printsupport qmake_build widgets xml
 USE_GNOME=	libxml2
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

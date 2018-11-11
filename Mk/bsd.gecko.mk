@@ -81,9 +81,10 @@ MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 MOZ_RPATH?=	${MOZILLA}
-USES+=		cpe gmake iconv localbase perl5 pkgconfig \
+USES+=		cpe gl gmake iconv localbase perl5 pkgconfig \
 			python:2.7,build desktop-file-utils
 CPE_VENDOR?=mozilla
+USE_GL=		gl
 USE_PERL5=	build
 USE_XORG=	x11 xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
@@ -118,6 +119,11 @@ USES:=			${USES:Ncompiler\:*} # XXX avoid warnings
 .if ${MOZILLA_VER:R:R} >= 61
 BUILD_DEPENDS+=	${LOCALBASE}/bin/python${PYTHON3_DEFAULT}:lang/python${PYTHON3_DEFAULT:S/.//g}
 MOZ_EXPORT+=	PYTHON3="${LOCALBASE}/bin/python${PYTHON3_DEFAULT}"
+.endif
+
+.if ${MOZILLA_VER:R:R} >= 63
+BUILD_DEPENDS+=	rust-cbindgen>=0.6.2:devel/rust-cbindgen \
+				node:www/node
 .endif
 
 MOZILLA_SUFX?=	none
@@ -157,8 +163,6 @@ RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 MOZ_EXPORT+=	MOZ_JEMALLOC4=1
 .if ${MOZILLA_VER:R:R} >= 48
 MOZ_OPTIONS+=	--enable-jemalloc=4
-.elif ${OSVERSION} < 1100079
-MOZ_OPTIONS+=	--enable-jemalloc
 .endif # Mozilla >= 48
 .endif # Mozilla < 55
 
@@ -280,9 +284,12 @@ MOZ_EXPORT+=	MOZ_GOOGLE_API_KEY=AIzaSyBsp9n41JLW8jCokwn7vhoaMejDFRd1mp8
 
 .if ${PORT_OPTIONS:MGTK2}
 MOZ_TOOLKIT=	cairo-gtk2
+.elif ${PORT_OPTIONS:MWAYLAND}
+MOZ_TOOLKIT=	cairo-gtk3-wayland
 .endif
 
-.if ${MOZ_TOOLKIT:Mcairo-gtk3}
+USES+=		gnome
+.if ${MOZ_TOOLKIT:Mcairo-gtk3*}
 BUILD_DEPENDS+=	gtk3>=3.14.6:x11-toolkits/gtk30
 USE_GNOME+=	gdkpixbuf2 gtk20 gtk30
 .else # gtk2, cairo-gtk2
@@ -383,7 +390,7 @@ post-patch-SNDIO-on:
 .endif
 
 .if ${PORT_OPTIONS:MRUST} || ${MOZILLA_VER:R:R} >= 54
-BUILD_DEPENDS+=	${RUST_PORT:T}>=1.24:${RUST_PORT}
+BUILD_DEPENDS+=	${RUST_PORT:T}>=1.28:${RUST_PORT}
 RUST_PORT?=		lang/rust
 . if ${MOZILLA_VER:R:R} < 54
 MOZ_OPTIONS+=	--enable-rust
@@ -405,9 +412,6 @@ MOZ_OPTIONS+=	--enable-rust-simd
 .if ${PORT_OPTIONS:MDTRACE}
 MOZ_OPTIONS+=	--enable-dtrace \
 		--disable-gold
-. if ${OPSYS} == FreeBSD && ${OSVERSION} < 1100061
-LIBS+=			-lelf
-. endif
 STRIP=
 .else
 MOZ_OPTIONS+=	--disable-dtrace
@@ -568,6 +572,17 @@ gecko-moz-pis-patch:
 .for moz in ${MOZ_PIS_SCRIPTS}
 	@${MOZCONFIG_SED} < ${FILESDIR}/${moz} > ${WRKDIR}/${moz}
 .endfor
+
+pre-configure: gecko-pre-configure
+
+gecko-pre-configure:
+.if ${PORT_OPTIONS:MWAYLAND}
+# .if !exists() evaluates too early before gtk3 has a chance to be installed
+	@if ! pkg-config --exists gtk+-wayland-3.0; then \
+		${ECHO_MSG} "${PKGNAME}: Needs gtk3 with WAYLAND support enabled."; \
+		${FALSE}; \
+	fi
+.endif
 
 pre-install: gecko-moz-pis-pre-install
 post-install-script: gecko-create-plist

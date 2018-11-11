@@ -12,8 +12,8 @@ COMMENT=	Cross platform C++ library, used by OPAL
 
 LICENSE=	MPL10
 
-BROKEN_SSL=	openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	use of undeclared identifier 'BIO_s_file_internal'
+BROKEN_SSL=	openssl111
+BROKEN_SSL_REASON_openssl111=	use of undeclared identifier 'BIO_s_file_internal'
 
 LIB_DEPENDS=	libexpat.so:textproc/expat2
 
@@ -45,6 +45,12 @@ BSDVIDEO_DESC=	BSD video support
 DEBUG_DESC=	Install debug library
 
 .include <bsd.port.options.mk>
+
+.if ${OSVERSION} > 1200085
+EXTRA_PATCHES+= ${FILESDIR}/extra-patch-src_ptclib_pssl.cxx-openssl111
+.else
+EXTRA_PATCHES+= ${FILESDIR}/extra-patch-src_ptclib_pssl.cxx
+.endif
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION} \
 		PVERSION_MAJOR=${PVERSION_MAJOR} \

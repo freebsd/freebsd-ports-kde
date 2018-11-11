@@ -258,8 +258,6 @@
     SUBDIR += hs-cookie
     SUBDIR += hs-css-text
     SUBDIR += hs-fastcgi
-    SUBDIR += hs-gitit
-    SUBDIR += hs-happstack
     SUBDIR += hs-happstack-server
     SUBDIR += hs-heist
     SUBDIR += hs-hjsmin
@@ -529,12 +527,14 @@
     SUBDIR += node
     SUBDIR += node6
     SUBDIR += node8
+    SUBDIR += node10
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
+    SUBDIR += npm-node10
     SUBDIR += npm-node6
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
@@ -1302,6 +1302,7 @@
     SUBDIR += p5-WWW-Myspace
     SUBDIR += p5-WWW-NicoVideo-Download
     SUBDIR += p5-WWW-NioTV
+    SUBDIR += p5-WWW-OAuth
     SUBDIR += p5-WWW-OpenSVN
     SUBDIR += p5-WWW-OpenSearch
     SUBDIR += p5-WWW-Pastebin-PastebinCom-Create
@@ -1517,6 +1518,7 @@
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
+    SUBDIR += py-biscuits
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
     SUBDIR += py-blogofile
@@ -1688,8 +1690,10 @@
     SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-core
+    SUBDIR += py-google-cloud-dlp
     SUBDIR += py-google-cloud-storage
     SUBDIR += py-google-cloud-translate
+    SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
     SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
@@ -1998,7 +2002,6 @@
     SUBDIR += rubygem-deckar01-task_list
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
-    SUBDIR += rubygem-dropzonejs-rails07
     SUBDIR += rubygem-em-http-request
     SUBDIR += rubygem-em-socksify
     SUBDIR += rubygem-em-twitter
@@ -2228,6 +2231,7 @@
     SUBDIR += rubygem-websocket-driver
     SUBDIR += rubygem-websocket-extensions
     SUBDIR += rubygem-yapra
+    SUBDIR += s
     SUBDIR += sabredav
     SUBDIR += sahi
     SUBDIR += sakai
@@ -2282,7 +2286,6 @@
     SUBDIR += surfraw
     SUBDIR += swfdec-plugin
     SUBDIR += swiggle
-    SUBDIR += swish++
     SUBDIR += swish-e
     SUBDIR += sws
     SUBDIR += syndigator
@@ -2411,8 +2414,8 @@
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twill
     SUBDIR += twms
-    SUBDIR += typo3-7
     SUBDIR += typo3-8
+    SUBDIR += typo3-9
     SUBDIR += uchiwa
     SUBDIR += udmsearch
     SUBDIR += ufdbguard

@@ -4,7 +4,7 @@
 PORTNAME=	stepmania
 PORTVERSION=	5.0.11
 DISTVERSIONPREFIX=	v
-PORTREVISION=	6
+PORTREVISION=	7
 PORTEPOCH=	1
 CATEGORIES=	games
 PKGNAMESUFFIX=	-devel
@@ -14,6 +14,8 @@ COMMENT=	Rhythm game simulator
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/Docs/Licenses.txt
+
+BROKEN=		fails to build
 
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libpng.so:graphics/png

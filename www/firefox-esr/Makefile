@@ -2,11 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	60.2.2
+DISTVERSION=	60.3.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build2/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}esr-candidates/build1/source
 PKGNAMESUFFIX=	-esr
 DISTFILES=	${DISTNAME}esr.source${EXTRACT_SUFX}
 
@@ -36,7 +37,6 @@ CONFLICTS_INSTALL=	firefox
 MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	-cairo -soundtouch
 
-USE_GL=		gl
 USES=		tar:xz
 
 FIREFOX_ICON=		${MOZILLA}.png

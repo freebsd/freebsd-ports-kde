@@ -2,22 +2,22 @@
 # $FreeBSD$
 
 PORTNAME=	firefox
-DISTVERSION=	62.0.3
+DISTVERSION=	63.0.1
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build1/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}-candidates/build4/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
 BUILD_DEPENDS=	nspr>=4.19:devel/nspr \
-		nss>=3.38:security/nss \
+		nss>=3.39:security/nss \
 		icu>=59.1,1:devel/icu \
 		libevent>=2.1.8:devel/libevent \
-		harfbuzz>=1.7.6:print/harfbuzz \
-		graphite2>=1.3.11:graphics/graphite2 \
+		harfbuzz>=1.8.8:print/harfbuzz \
+		graphite2>=1.3.12:graphics/graphite2 \
 		png>=1.6.34:graphics/png \
 		libvorbis>=1.3.6,3:audio/libvorbis \
 		libvpx>=1.5.0:multimedia/libvpx \
@@ -34,7 +34,6 @@ CONFLICTS_INSTALL=	firefox-esr
 MOZ_PKGCONFIG_FILES=	# empty
 USE_MOZILLA=	-cairo -hunspell -soundtouch
 
-USE_GL=		gl
 USES=		tar:xz
 
 FIREFOX_ICON=		${MOZILLA}.png

@@ -29,6 +29,7 @@
     SUBDIR += bricons
     SUBDIR += brightside
     SUBDIR += brisk-menu
+    SUBDIR += cde
     SUBDIR += cinnamon
     SUBDIR += cinnamon-desktop
     SUBDIR += cinnamon-menus
@@ -279,6 +280,7 @@
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt4-opengl
     SUBDIR += py-qt5-opengl
+    SUBDIR += py-xcffib
     SUBDIR += py-xdot
     SUBDIR += py-xdot06
     SUBDIR += qimageblitz

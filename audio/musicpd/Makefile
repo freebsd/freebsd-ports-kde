@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.20.21
+PORTVERSION=	0.20.23
 PORTREVISION=	1
 CATEGORIES=	audio ipv6
 MASTER_SITES=	http://www.musicpd.org/download/mpd/${PORTVERSION:R}/
@@ -16,7 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs \
 		libicudata.so:devel/icu
 
-USES=		compiler:c++14-lang gmake pkgconfig tar:xz
+USES=		compiler:c++14-lang gmake gnome pkgconfig tar:xz
+
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
 
@@ -28,8 +29,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib -L${LOCALBASE}/lib/sidplay/builders
 
 #Workaround (transient?) link error with libwrap
 CONFIGURE_ARGS+=--disable-libwrap
-
-BROKEN_powerpc64=	Does not build on powerpc64
 
 PORTDOCS=	AUTHORS README.md NEWS
 
@@ -68,7 +67,8 @@ VORBISENC_DESC=	Ogg Vorbis encoder
 WILDMIDI_DESC=	WildMIDI support (MIDI files)
 YAJL_DESC=	SoundCloud support via libyajl
 
-OPTIONS_DEFAULT=HTTPD ID3TAG MAD OSS FLAC VORBIS WAV FFMPEG SNDFILE CURL
+OPTIONS_DEFAULT=HTTPD ID3TAG MAD OSS FLAC VORBIS WAV FFMPEG SNDFILE \
+		CURL VORBISENC
 
 AAC_CONFIGURE_ENABLE=aac
 AAC_LIB_DEPENDS=libfaad.so:audio/faad

@@ -2,7 +2,7 @@
 
 PORTNAME=	vtk
 DISTVERSION=	8.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math graphics
 MASTER_SITES=	http://www.vtk.org/files/release/${VTK_SHORT_VER}/
 PKGNAMESUFFIX=	8
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libtiff.so:graphics/tiff \
 
 CONFLICTS=	vtk5 vtk6
 
-USES=		alias cmake:outsource jpeg localbase
+USES=		alias cmake:outsource compiler:c++11-lang gl jpeg localbase
 USE_LDCONFIG=	${PREFIX}/lib/vtk-${VTK_SHORT_VER}
 USE_XORG=	ice x11 xt xext sm
 
@@ -40,7 +40,7 @@ DATADIR=	${PREFIX}/share/vtk-${VTK_SHORT_VER}
 
 # Options
 OPTIONS_DEFINE=	DESIGNER DOCS OSMESA EXAMPLES
-OPTIONS_DEFAULT=	QT5
+OPTIONS_DEFAULT=	MPI QT5
 OSMESA_DESC=	Use Mesa for off-screen rendering
 DESIGNER_DESC=	Build the Qt Designer plugin
 OPTIONS_SUB=	yes

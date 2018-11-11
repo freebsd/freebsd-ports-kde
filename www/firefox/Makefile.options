@@ -2,7 +2,7 @@
 
 OPTIONS_DEFINE+= 	BUNDLED_CAIRO CANBERRA DBUS DEBUG DTRACE FFMPEG GCONF \
 			INTEGER_SAMPLES LIBPROXY \
-			OPTIMIZED_CFLAGS PROFILE TEST
+			OPTIMIZED_CFLAGS PROFILE TEST WAYLAND
 
 OPTIONS_DEFAULT+=	DBUS FFMPEG GCONF OPTIMIZED_CFLAGS PROFILE \
 			${OPTIONS_MULTI_AUDIO:NSNDIO} \
@@ -17,11 +17,6 @@ JACK_IMPLIES=		ALSA
 # dragonfly, sparc64, riscv
 .if !exists(/usr/sbin/dtrace)
 OPTIONS_EXCLUDE+=	DTRACE
-.endif
-
-# dtrace -G crashes with clang++70 (conditional from Mk/bsd.gecko.mk)
-.if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
-OPTIONS_EXCLUDE_FreeBSD_10=	DTRACE
 .endif
 
 # opensolaris/lib/libdtrace/common/dt_link.c:

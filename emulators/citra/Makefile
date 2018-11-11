@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20181008
+PORTVERSION=	s20181108
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
@@ -17,18 +17,16 @@ LICENSE_FILE_GPLv2+ =	${WRKSRC}/license.txt
 LICENSE_FILE_MIT=	${WRKSRC}/externals/enet/LICENSE
 LICENSE_FILE_LGPL21+ =	${_LICENSE_STORE}/LGPL21 # soundtouch
 
-BROKEN_FreeBSD_10=	libc++ does not support C++17 features
-
 BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	f40513491
+GH_TAGNAME=	a59920ed3
 GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		MerryMage:dynarmic:r1-992-g4e6848d1:dynarmic/externals/dynarmic \
 		arsenm:sanitizers-cmake:f09151b:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
-		benhoyt:inih:r40:inih/externals/inih/inih \
+		benhoyt:inih:r42-6-g2023872:inih/externals/inih/inih \
 		catchorg:Catch2:v2.3.0:catch/externals/catch \
 		fmtlib:fmt:5.2.1:fmt/externals/fmt \
 		herumi:xbyak:v5.71:xbyak/externals/xbyak \
@@ -41,7 +39,6 @@ GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 
 USES=		cmake:outsource compiler:c++17-lang iconv localbase:ldflags
 USE_SDL=	sdl2
-CMAKE_OFF=	ENABLE_SCRIPTING # XXX #4206 and #4207
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
 TEST_TARGET=	test
 

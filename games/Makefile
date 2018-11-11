@@ -60,6 +60,7 @@
     SUBDIR += assaultcube
     SUBDIR += asteroid
     SUBDIR += asteroids3d
+    SUBDIR += astromenace
     SUBDIR += asylum
     SUBDIR += atanks
     SUBDIR += atomix
@@ -95,7 +96,6 @@
     SUBDIR += blinken-kde4
     SUBDIR += blinkensisters
     SUBDIR += blobby
-    SUBDIR += bloboats
     SUBDIR += blobwars
     SUBDIR += block
     SUBDIR += blockade
@@ -733,7 +733,6 @@
     SUBDIR += openarena-data
     SUBDIR += openarena-oax
     SUBDIR += openarena-server
-    SUBDIR += openastromenace
     SUBDIR += openbor
     SUBDIR += openbor3482
     SUBDIR += openbor3711
@@ -1042,7 +1041,6 @@
     SUBDIR += toycars
     SUBDIR += trackballs
     SUBDIR += tractorgen
-    SUBDIR += traindirector
     SUBDIR += traingame
     SUBDIR += tremulous
     SUBDIR += trenchbroom

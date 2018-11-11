@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	wireguard
-PORTVERSION=	0.0.20181007
+PORTVERSION=	0.0.20181018
 PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://git.zx2c4.com/WireGuard/snapshot/

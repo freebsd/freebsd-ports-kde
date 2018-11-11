@@ -3,7 +3,7 @@
 
 PORTNAME=	efl
 DISTVERSION=	1.20.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel enlightenment
 MASTER_SITES=	http://download.enlightenment.org/rel/libs/${PORTNAME}/
 DIST_SUBDIR=	enlightenment
@@ -85,7 +85,8 @@ PHYSICS_CONFIGURE_ENABLE=	physics
 PULSEAUDIO_LIB_DEPENDS=		libpulse.so:audio/pulseaudio
 PULSEAUDIO_CONFIGURE_ENABLE=	pulseaudio
 
-WAYLAND_BROKEN=			WAYLAND option is broken: https://phab.enlightenment.org/T7116
+WAYLAND_BROKEN=			ERROR: epoll_create() is deprecated, use epoll_create1(EPOLL_CLOEXEC).
+WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.7:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=		libepoll-shim.so:devel/libepoll-shim \
 				libxkbcommon.so:x11/libxkbcommon \
 				libwayland-client.so:graphics/wayland \
@@ -94,7 +95,7 @@ WAYLAND_CFLAGS=			-I${LOCALBASE}/include/libepoll-shim
 WAYLAND_LDFLAGS=		-lepoll-shim
 WAYLAND_CONFIGURE_ENABLE=	wayland
 
-WAYLAND_EGL_LIB_DEPENDS=	libwayland-egl.so:graphics/mesa-libs
+WAYLAND_EGL_LIB_DEPENDS=	libwayland-egl.so:graphics/wayland
 WAYLAND_EGL_CONFIGURE_ENABLE=	egl
 WAYLANG_EGL_USE=		GL=egl
 WAYLAND_EGL_IMPLIES=		WAYLAND OPENGLES

@@ -39,6 +39,7 @@
     SUBDIR += emacs
     SUBDIR += emacs-devel
     SUBDIR += encryptpad
+    SUBDIR += featherpad 
     SUBDIR += fileobj
     SUBDIR += flim
     SUBDIR += focuswriter
@@ -70,6 +71,7 @@
     SUBDIR += jove
     SUBDIR += jucipp
     SUBDIR += jupp
+    SUBDIR += kak-lsp
     SUBDIR += kakoune
     SUBDIR += kate
     SUBDIR += kate-kde4
