@@ -2114,7 +2114,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/IntelVSImplicitPath/detect.cmake
 %%DATADIR%%/Modules/IntelVSImplicitPath/hello.f
 %%DATADIR%%/Modules/Internal/CPack/CPackDeb.cmake
-%%DATADIR%%/Modules/Internal/CPack/CPackExt.cmake
+%%DATADIR%%/Modules/Internal/CPack/CPackExternal.cmake
 %%DATADIR%%/Modules/Internal/CPack/CPackFreeBSD.cmake
 %%DATADIR%%/Modules/Internal/CPack/CPackNuGet.cmake
 %%DATADIR%%/Modules/Internal/CPack/CPackRPM.cmake
@@ -2445,6 +2445,7 @@ share/aclocal/cmake.m4
 %%DATADIR%%/Modules/UsePkgConfig.cmake
 %%DATADIR%%/Modules/UseQt4.cmake
 %%DATADIR%%/Modules/UseSWIG.cmake
+%%DATADIR%%/Modules/UseSWIG/ManageSupportFiles.cmake
 %%DATADIR%%/Modules/Use_wxWindows.cmake
 %%DATADIR%%/Modules/UsewxWidgets.cmake
 %%DATADIR%%/Modules/VTKCompatibility.cmake
