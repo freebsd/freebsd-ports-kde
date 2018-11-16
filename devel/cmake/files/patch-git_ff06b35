@@ -19,7 +19,7 @@ index 48d830ff5..c25363287 100644
 -if(CMAKE_SYSTEM_NAME MATCHES "^(([^k].*)?BSD|DragonFly)$")
 -  _GNUInstallDirs_cache_path_fallback(CMAKE_INSTALL_INFODIR "info"
 -    "Info documentation (info)")
-+if((CMAKE_SYSTEM_NAME MATCHES "^(([^k].*)?BSD|DragonFly)$")
++if(CMAKE_SYSTEM_NAME MATCHES "^(([^k].*)?BSD|DragonFly)$")
 +  if(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
 +    _GNUInstallDirs_cache_path_fallback(CMAKE_INSTALL_INFODIR "${CMAKE_INSTALL_DATAROOTDIR}/info"
 +      "Info documentation (DATAROOTDIR/info)")
