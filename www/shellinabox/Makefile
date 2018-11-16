@@ -4,7 +4,7 @@
 PORTNAME=	shellinabox
 PORTVERSION=	2.20
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	olivier@FreeBSD.org
@@ -20,7 +20,6 @@ NOLOGIN_DESC=	Login through ssh (not through login)
 
 GNU_CONFIGURE=	yes
 USE_GITHUB=	yes
-GH_ACCOUNT=	shellinabox
 
 USE_RC_SUBR=	shellinaboxd
 USERS?=		shellinabox
