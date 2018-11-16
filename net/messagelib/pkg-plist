@@ -485,14 +485,8 @@ share/locale/ar/LC_MESSAGES/libmessagecore.mo
 share/locale/ar/LC_MESSAGES/libmessagelist.mo
 share/locale/ar/LC_MESSAGES/libmessageviewer.mo
 share/locale/ar/LC_MESSAGES/libmimetreeparser.mo
+share/locale/ar/LC_MESSAGES/libtemplateparser.mo
 share/locale/ar/LC_MESSAGES/libwebengineviewer.mo
-share/locale/ast/LC_MESSAGES/libmessagecomposer.mo
-share/locale/ast/LC_MESSAGES/libmessagecore.mo
-share/locale/ast/LC_MESSAGES/libmessagelist.mo
-share/locale/ast/LC_MESSAGES/libmessageviewer.mo
-share/locale/ast/LC_MESSAGES/libmimetreeparser.mo
-share/locale/ast/LC_MESSAGES/libtemplateparser.mo
-share/locale/ast/LC_MESSAGES/libwebengineviewer.mo
 share/locale/bg/LC_MESSAGES/libmessagelist.mo
 share/locale/bg/LC_MESSAGES/libmessageviewer.mo
 share/locale/bg/LC_MESSAGES/libmimetreeparser.mo

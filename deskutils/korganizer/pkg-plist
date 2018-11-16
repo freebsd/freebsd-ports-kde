@@ -91,8 +91,6 @@ share/kservices5/webcal.protocol
 share/kservicetypes5/dbuscalendar.desktop
 share/locale/ar/LC_MESSAGES/korgac.mo
 share/locale/ar/LC_MESSAGES/korganizer.mo
-share/locale/ast/LC_MESSAGES/korgac.mo
-share/locale/ast/LC_MESSAGES/korganizer.mo
 share/locale/bg/LC_MESSAGES/korganizer.mo
 share/locale/bs/LC_MESSAGES/korgac.mo
 share/locale/bs/LC_MESSAGES/korganizer.mo

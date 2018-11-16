@@ -97,12 +97,6 @@ share/locale/ar/LC_MESSAGES/akonadi_followupreminder_agent.mo
 share/locale/ar/LC_MESSAGES/akonadi_mailfilter_agent.mo
 share/locale/ar/LC_MESSAGES/akonadi_sendlater_agent.mo
 share/locale/ar/LC_MESSAGES/kmail.mo
-share/locale/ast/LC_MESSAGES/akonadi_archivemail_agent.mo
-share/locale/ast/LC_MESSAGES/akonadi_followupreminder_agent.mo
-share/locale/ast/LC_MESSAGES/akonadi_mailfilter_agent.mo
-share/locale/ast/LC_MESSAGES/akonadi_sendlater_agent.mo
-share/locale/ast/LC_MESSAGES/kmail.mo
-share/locale/ast/LC_MESSAGES/ktnef.mo
 share/locale/bg/LC_MESSAGES/kmail.mo
 share/locale/bs/LC_MESSAGES/akonadi_archivemail_agent.mo
 share/locale/bs/LC_MESSAGES/akonadi_followupreminder_agent.mo

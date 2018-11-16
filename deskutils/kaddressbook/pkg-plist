@@ -39,7 +39,6 @@ share/kservices5/kaddressbook_config_plugins.desktop
 share/kservices5/kaddressbookpart.desktop
 share/kservices5/kontact/kaddressbookplugin.desktop
 share/locale/ar/LC_MESSAGES/kaddressbook.mo
-share/locale/ast/LC_MESSAGES/kaddressbook.mo
 share/locale/bg/LC_MESSAGES/kaddressbook.mo
 share/locale/bs/LC_MESSAGES/kaddressbook.mo
 share/locale/ca/LC_MESSAGES/kaddressbook.mo
