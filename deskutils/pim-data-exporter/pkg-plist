@@ -50,3 +50,4 @@ share/locale/ug/LC_MESSAGES/pimsettingexporter.mo
 share/locale/uk/LC_MESSAGES/pimsettingexporter.mo
 share/locale/zh_CN/LC_MESSAGES/pimsettingexporter.mo
 share/locale/zh_TW/LC_MESSAGES/pimsettingexporter.mo
+share/metainfo/org.kde.pimsettingexporter.appdata.xml

@@ -52,6 +52,9 @@ share/icons/hicolor/64x64/apps/korg-journal.png
 share/icons/hicolor/64x64/apps/korg-todo.png
 share/icons/hicolor/64x64/apps/korganizer.png
 share/icons/hicolor/64x64/apps/quickview.png
+share/icons/hicolor/scalable/apps/korg-journal.svgz
+share/icons/hicolor/scalable/apps/korg-todo.svg
+share/icons/hicolor/scalable/apps/korganizer.svg
 share/icons/hicolor/scalable/apps/quickview.svgz
 share/icons/oxygen/16x16/actions/smallclock.png
 share/icons/oxygen/16x16/actions/upindicator.png

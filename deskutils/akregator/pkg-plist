@@ -27,10 +27,10 @@ share/icons/hicolor/128x128/apps/akregator.png
 share/icons/hicolor/16x16/apps/akregator.png
 share/icons/hicolor/16x16/apps/akregator_empty.png
 share/icons/hicolor/22x22/apps/akregator.png
-share/icons/hicolor/256x256/apps/akregator.png
 share/icons/hicolor/32x32/apps/akregator.png
 share/icons/hicolor/48x48/apps/akregator.png
 share/icons/hicolor/64x64/apps/akregator.png
+share/icons/hicolor/scalable/apps/akregator.svg
 share/kconf_update/akregator-15.08-kickoff.sh
 share/kconf_update/akregator.upd
 share/knotifications5/akregator.notifyrc
