@@ -106,7 +106,9 @@ share/icons/Breeze_Snow/cursors/left_side
 share/icons/Breeze_Snow/cursors/link
 share/icons/Breeze_Snow/cursors/move
 share/icons/Breeze_Snow/cursors/n-resize
+share/icons/Breeze_Snow/cursors/ne-resize
 share/icons/Breeze_Snow/cursors/no-drop
+share/icons/Breeze_Snow/cursors/nw-resize
 share/icons/Breeze_Snow/cursors/not-allowed
 share/icons/Breeze_Snow/cursors/openhand
 share/icons/Breeze_Snow/cursors/pencil
@@ -123,6 +125,7 @@ share/icons/Breeze_Snow/cursors/row-resize
 share/icons/Breeze_Snow/cursors/s-resize
 share/icons/Breeze_Snow/cursors/sb_h_double_arrow
 share/icons/Breeze_Snow/cursors/sb_v_double_arrow
+share/icons/Breeze_Snow/cursors/se-resize
 share/icons/Breeze_Snow/cursors/size-bdiag
 share/icons/Breeze_Snow/cursors/size-fdiag
 share/icons/Breeze_Snow/cursors/size-hor
@@ -134,6 +137,7 @@ share/icons/Breeze_Snow/cursors/size_hor
 share/icons/Breeze_Snow/cursors/size_ver
 share/icons/Breeze_Snow/cursors/split_h
 share/icons/Breeze_Snow/cursors/split_v
+share/icons/Breeze_Snow/cursors/sw-resize
 share/icons/Breeze_Snow/cursors/text
 share/icons/Breeze_Snow/cursors/top_left_arrow
 share/icons/Breeze_Snow/cursors/top_left_corner
@@ -211,8 +215,10 @@ share/icons/breeze_cursors/cursors/left_side
 share/icons/breeze_cursors/cursors/link
 share/icons/breeze_cursors/cursors/move
 share/icons/breeze_cursors/cursors/n-resize
+share/icons/breeze_cursors/cursors/ne-resize
 share/icons/breeze_cursors/cursors/no-drop
 share/icons/breeze_cursors/cursors/not-allowed
+share/icons/breeze_cursors/cursors/nw-resize
 share/icons/breeze_cursors/cursors/openhand
 share/icons/breeze_cursors/cursors/pencil
 share/icons/breeze_cursors/cursors/pirate
@@ -228,6 +234,7 @@ share/icons/breeze_cursors/cursors/row-resize
 share/icons/breeze_cursors/cursors/s-resize
 share/icons/breeze_cursors/cursors/sb_h_double_arrow
 share/icons/breeze_cursors/cursors/sb_v_double_arrow
+share/icons/breeze_cursors/cursors/se-resize
 share/icons/breeze_cursors/cursors/size-bdiag
 share/icons/breeze_cursors/cursors/size-fdiag
 share/icons/breeze_cursors/cursors/size-hor
@@ -239,6 +246,7 @@ share/icons/breeze_cursors/cursors/size_hor
 share/icons/breeze_cursors/cursors/size_ver
 share/icons/breeze_cursors/cursors/split_h
 share/icons/breeze_cursors/cursors/split_v
+share/icons/breeze_cursors/cursors/sw-resize
 share/icons/breeze_cursors/cursors/text
 share/icons/breeze_cursors/cursors/top_left_arrow
 share/icons/breeze_cursors/cursors/top_left_corner
