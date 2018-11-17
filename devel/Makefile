@@ -1514,6 +1514,7 @@
     SUBDIR += libmsocket
     SUBDIR += libmtdev
     SUBDIR += libmtrie
+    SUBDIR += libmustache
     SUBDIR += libnaji
     SUBDIR += libnfc
     SUBDIR += libnotify
@@ -4068,6 +4069,7 @@
     SUBDIR += pecl-memoize
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-msgpack0
+    SUBDIR += pecl-mustache
     SUBDIR += pecl-ncurses
     SUBDIR += pecl-newt
     SUBDIR += pecl-params
@@ -6007,7 +6009,7 @@
     SUBDIR += rubygem-shoulda-context
     SUBDIR += rubygem-shoulda-matchers
     SUBDIR += rubygem-sidekiq
-    SUBDIR += rubygem-sidekiq-bulk-rails5
+    SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
     SUBDIR += rubygem-sidekiq-cron0
     SUBDIR += rubygem-sidekiq-scheduler
