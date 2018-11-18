@@ -2,6 +2,7 @@
 
 PORTNAME=	kdevelop
 DISTVERSION=	5.3.0
+PORTREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/kdevelop/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libkasten3controllers.so:devel/okteta \
 		libsvn_client-1.so:devel/subversion \
 		libboost_thread.so:devel/boost-libs \
 		libkomparediff2.so:textproc/libkomparediff2 \
-		libclang.so.6:devel/llvm60
+		libclang.so.${LLVM_VERSION:C/([1-9])([0-9])/\1/}:devel/llvm${LLVM_VERSION}
 RUN_DEPENDS=	gmake:devel/gmake
 
 USES=		cmake:outsource compiler:c++11-lib desktop-file-utils \
@@ -43,8 +44,12 @@ WEBENGINE_USE=	QT=location,webchannel,webengine
 WEBENGINE_USE_OFF=	QT=webkit
 WEBENGINE_CMAKE_OFF=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 
+LLVM_VERSION?=	60
+
 SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	/bin/zsh
 zsh_CMD=	${LOCALBASE}/bin/zsh
+
+CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW -DLLVM_ROOT=${LOCALBASE}/llvm${LLVM_VERSION}
 
 .include <bsd.port.mk>
