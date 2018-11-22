@@ -93,7 +93,8 @@
     SUBDIR += cpp-xmms2
     SUBDIR += creox
     SUBDIR += crip
-    SUBDIR += csound6
+    SUBDIR += csound
+    SUBDIR += csoundqt
     SUBDIR += ctronome
     SUBDIR += cue2toc
     SUBDIR += cueplayer
@@ -131,6 +132,7 @@
     SUBDIR += eawpats
     SUBDIR += eawplus
     SUBDIR += ecasound
+    SUBDIR += elisa
     SUBDIR += emms
     SUBDIR += enscribe
     SUBDIR += epos-devel
