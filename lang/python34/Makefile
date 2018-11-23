@@ -15,7 +15,9 @@ COMMENT=	Interpreted object-oriented programming language
 
 LICENSE=	PSFL
 
-BROKEN_SSL=	openssl-devel
+DEPRECATED=	Fails to build with recent OpenSSL
+EXPIRATION_DATE=	2018-12-17
+BROKEN_SSL=	openssl111
 
 USES=		cpe ncurses pathfix pkgconfig readline:port shebangfix ssl tar:xz
 PATHFIX_MAKEFILEIN=	Makefile.pre.in

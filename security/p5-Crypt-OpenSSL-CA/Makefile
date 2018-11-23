@@ -27,11 +27,17 @@ RUN_DEPENDS=	p5-Convert-ASN1>=0.02:converters/p5-Convert-ASN1 \
 TEST_DEPENDS=	p5-Test-Group>=0:devel/p5-Test-Group \
 		p5-Test-Taint>=0:devel/p5-Test-Taint
 
-BROKEN_SSL=	openssl-devel
+BROKEN_SSL=	openssl111
 
 USES=		perl5 ssl
 USE_PERL5=	modbuild
 CONFIGURE_ARGS=	--openssl-cflags=-L${OPENSSLINC} --openssl-ldflags="-I${OPENSSLLIB} ${OPENSSL_LDFLAGS}"
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200085 && ${SSL_DEFAULT} == base
+BROKEN=        Does not support OpenSSL 1.1
+.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Crypt/OpenSSL/CA/*/*.so

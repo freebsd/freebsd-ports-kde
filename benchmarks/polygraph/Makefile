@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	polygraph
-DISTVERSION=	4.12.0
+DISTVERSION=	4.13.0
 DISTVERSIONSUFFIX=	-src
 CATEGORIES=	benchmarks www
 MASTER_SITES=	http://www.web-polygraph.org/downloads/srcs/
@@ -13,8 +13,8 @@ COMMENT=	Benchmarking tool for Web proxies
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_SSL=	openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	configure: error: OpenSSL libraries and/or directories were not found in /usr/local
+BROKEN_SSL=	openssl111
+BROKEN_SSL_REASON_openssl111=	configure: error: OpenSSL libraries and/or directories were not found in /usr/local
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

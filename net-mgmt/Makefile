@@ -229,8 +229,6 @@
     SUBDIR += p5-Cisco-Reconfig
     SUBDIR += p5-Data-Validate-IP
     SUBDIR += p5-FusionInventory-Agent
-    SUBDIR += p5-FusionInventory-Agent-Task-NetDiscovery
-    SUBDIR += p5-FusionInventory-Agent-Task-SNMPQuery
     SUBDIR += p5-GRNOC-Config
     SUBDIR += p5-GRNOC-TL1
     SUBDIR += p5-MRTG-Parse
@@ -389,7 +387,6 @@
     SUBDIR += unifi-lts
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
-    SUBDIR += vidalia
     SUBDIR += virt-viewer
     SUBDIR += wdiag
     SUBDIR += weplab

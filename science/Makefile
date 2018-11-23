@@ -32,6 +32,7 @@
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
     SUBDIR += bagel
+    SUBDIR += berkeleygw
     SUBDIR += bddsolve
     SUBDIR += bodr
     SUBDIR += brian
@@ -164,6 +165,7 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openmx
+    SUBDIR += opensim-core
     SUBDIR += openstructure
     SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
@@ -204,6 +206,7 @@
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
     SUBDIR += py-PyFR
+    SUBDIR += py-lifelines
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -261,6 +264,7 @@
     SUBDIR += qmcpack
     SUBDIR += qtresistors
     SUBDIR += quantum-espresso
+    SUBDIR += quantum-espresso-pseudopotentials
     SUBDIR += qwalk
     SUBDIR += rdkit
     SUBDIR += rmf
@@ -278,9 +282,11 @@
     SUBDIR += sigrok-firmware-fx2lafw
     SUBDIR += sigrok-firmware-utils
     SUBDIR += silo
+    SUBDIR += simbody
     SUBDIR += simint
     SUBDIR += simlib
     SUBDIR += simsmith
+    SUBDIR += sparta
     SUBDIR += spglib
     SUBDIR += step
     SUBDIR += step-kde4

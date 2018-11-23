@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	drm-devel-kmod
-PORTVERSION=	4.16.g20181027
-PORTREVISION=	1
+PORTVERSION=	4.16.g20181119
 CATEGORIES=	graphics kld
 
 MAINTAINER=	jmd@FreeBSD.org
@@ -12,8 +11,8 @@ COMMENT=	DRM modules for the linuxkpi-based KMS components (development version)
 LICENSE=	BSD2CLAUSE MIT GPLv2
 LICENSE_COMB=	multi
 
-ONLY_FOR_ARCHS=	amd64
-ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64
+ONLY_FOR_ARCHS_REASON=	the new KMS components are only supported on amd64 and i386
 
 RUN_DEPENDS=	gpu-firmware-kmod>=g20180319:graphics/gpu-firmware-kmod
 
@@ -21,12 +20,12 @@ CONFLICTS_INSTALL=	drm-next-kmod drm-stable-kmod drm-legacy-kmod
 
 OPTIONS_DEFINE=	DEBUG
 
-USES=		kmod uidfix
+USES=		kmod uidfix compiler:c++11-lang
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreeBSDDesktop
 GH_PROJECT=	kms-drm
-GH_TAGNAME=	96b490e
+GH_TAGNAME=	5f3b167
 
 .include <bsd.port.options.mk>
 
@@ -35,6 +34,28 @@ IGNORE=		not supported on older CURRENT, no kernel support
 .endif
 .if ${OPSYS} != FreeBSD
 IGNORE=		not supported on anything but FreeBSD (missing linuxkpi functionality)
+.endif
+
+.if ${ARCH} == "amd64"
+PLIST_SUB+=	AMDGPU=""
+PLIST_SUB+=	AMDKFD=""
+PLIST_SUB+=	I915=""
+PLIST_SUB+=	VMWGFX=""
+.elif ${ARCH} == "i386"
+PLIST_SUB+=	AMDGPU="@comment "
+PLIST_SUB+=	AMDKFD="@comment "
+PLIST_SUB+=	I915=""
+PLIST_SUB+=     VMWGFX=""
+.elif ${ARCH} == "powerpc64"
+PLIST_SUB+=	AMDGPU=""
+PLIST_SUB+=	AMDKFD="@comment " 
+PLIST_SUB+=	I915="@comment "
+PLIST_SUB+=     VMWGFX="@comment "
+.else
+PLIST_SUB+=	AMDGPU="@comment "
+PLIST_SUB+=	AMDKFD="@comment "
+PLIST_SUB+=	I915="@comment "
+PLIST_SUB+=     VMWGFX="@comment "
 .endif
 
 .include <bsd.port.mk>
