@@ -2777,6 +2777,8 @@
 %%QT_DOCDIR%%/qtcore/qscopedpointer.html
 %%QT_DOCDIR%%/qtcore/qscopedvaluerollback-members.html
 %%QT_DOCDIR%%/qtcore/qscopedvaluerollback.html
+%%QT_DOCDIR%%/qtcore/qscopeguard-members.html
+%%QT_DOCDIR%%/qtcore/qscopeguard.html
 %%QT_DOCDIR%%/qtcore/qsemaphore-members.html
 %%QT_DOCDIR%%/qtcore/qsemaphore.html
 %%QT_DOCDIR%%/qtcore/qsemaphorereleaser-members.html
@@ -5400,7 +5402,6 @@
 %%QT_DOCDIR%%/qtgui/qpixmapcache-members.html
 %%QT_DOCDIR%%/qtgui/qpixmapcache-obsolete.html
 %%QT_DOCDIR%%/qtgui/qpixmapcache.html
-%%QT_DOCDIR%%/qtgui/qplatformgraphicsbufferhelper-sub-qtgui.html
 %%QT_DOCDIR%%/qtgui/qplatformsurfaceevent-members.html
 %%QT_DOCDIR%%/qtgui/qplatformsurfaceevent.html
 %%QT_DOCDIR%%/qtgui/qpointingdeviceuniqueid-members.html
