@@ -12,7 +12,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libpoppler.so:graphics/poppler
 
-USES=		cmake:outsource gettext kde:5 pkgconfig qt:5 tar:xz
+USES=		compiler:c++11-lang cmake:outsource gettext kde:5 pkgconfig qt:5 tar:xz
 USE_KDE=	ecm i18n
 # Pim components
 USE_KDE+=	calendarcore contacts kpkpass mime
@@ -26,7 +26,6 @@ ZXING_LIB_DEPENDS=	libzxing.so:textproc/zxing-cpp
 ZXING_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_zxing
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
-
 
 OPTIONS_DEFINE=	DOCS
 

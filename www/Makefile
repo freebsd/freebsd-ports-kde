@@ -476,7 +476,6 @@
     SUBDIR += mod_rpaf2
     SUBDIR += mod_scgi
     SUBDIR += mod_security
-    SUBDIR += mod_security3
     SUBDIR += mod_setenvifplus
     SUBDIR += mod_tidy
     SUBDIR += mod_tsa
@@ -2204,7 +2203,6 @@
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
     SUBDIR += rubygem-toml-rb
-    SUBDIR += rubygem-toml-rb03
     SUBDIR += rubygem-toml-rb10
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client

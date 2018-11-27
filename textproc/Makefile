@@ -1716,6 +1716,7 @@
     SUBDIR += sgmls
     SUBDIR += sgrep
     SUBDIR += sgrep2
+    SUBDIR += sift
     SUBDIR += sigil
     SUBDIR += silvercity
     SUBDIR += simplexml
