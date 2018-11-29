@@ -3,13 +3,13 @@ From: Laurent Montel <montel@kde.org>
 Date: Fri, 23 Nov 2018 07:37:02 +0100
 Subject: Exclude Refresh from MetaData (Not necessary)
 
---- messageviewer/src/messagepartthemes/default/defaultrenderer.cpp.orig	2018-10-31 06:56:07 UTC
+--- messageviewer/src/messagepartthemes/default/defaultrenderer.cpp.orig	2018-11-15 06:52:14 UTC
 +++ messageviewer/src/messagepartthemes/default/defaultrenderer.cpp
 @@ -308,6 +308,11 @@ QString processHtml(const QString &htmlSource, QString
              return htmlSource;
          }
-         extraHead = s.mid(startIndex + 6 , endIndex - startIndex - 6);
-+        //Don't authorize to refresh content.
+         extraHead = s.mid(startIndex + 6, endIndex - startIndex - 6);
++        //Don't authorize to refresh content. 
 +        if (s.contains(QStringLiteral("http-equiv=\"REFRESH\""), Qt::CaseInsensitive)) {
 +            extraHead.clear();
 +        }
