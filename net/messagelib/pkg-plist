@@ -91,6 +91,7 @@ include/KF5/MessageList/ThemeConfigButton
 include/KF5/MessageList/View
 include/KF5/MessageList/WidgetBase
 include/KF5/MessageViewer/AttachmentStrategy
+include/KF5/MessageViewer/BlockMailTrackingUrlInterceptor
 include/KF5/MessageViewer/BodyPartURLHandler
 include/KF5/MessageViewer/BufferedHtmlWriter
 include/KF5/MessageViewer/CSSHelper
@@ -287,6 +288,7 @@ include/KF5/messagelist/view.h
 include/KF5/messagelist/widgetbase.h
 include/KF5/messagelist_version.h
 include/KF5/messageviewer/attachmentstrategy.h
+include/KF5/messageviewer/blockmailtrackingurlinterceptor.h
 include/KF5/messageviewer/bodyparturlhandler.h
 include/KF5/messageviewer/bufferedhtmlwriter.h
 include/KF5/messageviewer/config-messageviewer.h
