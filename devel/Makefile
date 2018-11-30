@@ -1715,6 +1715,7 @@
     SUBDIR += love
     SUBDIR += love07
     SUBDIR += love08
+    SUBDIR += love10
     SUBDIR += love5
     SUBDIR += lpc21isp
     SUBDIR += lrmi
@@ -2896,6 +2897,7 @@
     SUBDIR += p5-Log-Log4perl
     SUBDIR += p5-Log-Log4perl-Appender-RabbitMQ
     SUBDIR += p5-Log-Log4perl-Appender-Socket-UNIX
+    SUBDIR += p5-Log-Log4perl-Layout-JSON
     SUBDIR += p5-Log-Log4perl-Tiny
     SUBDIR += p5-Log-Message
     SUBDIR += p5-Log-Message-Simple
@@ -4354,6 +4356,7 @@
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
     SUBDIR += py-anonfunc
+    SUBDIR += py-antlr4-python3-runtime
     SUBDIR += py-anyconfig
     SUBDIR += py-anyjson
     SUBDIR += py-apache_conf_parser
@@ -4510,6 +4513,7 @@
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dateutil
     SUBDIR += py-dateutils
+    SUBDIR += py-datrie
     SUBDIR += py-dbus
     SUBDIR += py-ddt
     SUBDIR += py-debtcollector
@@ -4786,6 +4790,7 @@
     SUBDIR += py-mx-experimental
     SUBDIR += py-mygpoclient
     SUBDIR += py-mypy
+    SUBDIR += py-mypy_extensions
     SUBDIR += py-nagioscheck
     SUBDIR += py-naiveBayesClassifier
     SUBDIR += py-natsort
@@ -4800,6 +4805,7 @@
     SUBDIR += py-notifier
     SUBDIR += py-notify
     SUBDIR += py-notify2
+    SUBDIR += py-num2words
     SUBDIR += py-numba
     SUBDIR += py-ocempgui
     SUBDIR += py-odfpy
@@ -5708,8 +5714,8 @@
     SUBDIR += rubygem-git
     SUBDIR += rubygem-git-version-bump
     SUBDIR += rubygem-github_api
-    SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab-pygments.rb
+    SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_git
     SUBDIR += rubygem-gitlab_meta
     SUBDIR += rubygem-glib2
@@ -5720,6 +5726,7 @@
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
+    SUBDIR += rubygem-grape11
     SUBDIR += rubygem-grape-entity
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
@@ -6293,6 +6300,7 @@
     SUBDIR += tex-libtexluajit
     SUBDIR += tex-synctex
     SUBDIR += tex-web2c
+    SUBDIR += thonny
     SUBDIR += thrift
     SUBDIR += thrift-c_glib
     SUBDIR += thrift-cpp
@@ -6315,8 +6323,8 @@
     SUBDIR += tortoisehg
     SUBDIR += tpasm
     SUBDIR += trac-bitten
-    SUBDIR += treepy.el
     SUBDIR += tradcpp
+    SUBDIR += treepy.el
     SUBDIR += trio
     SUBDIR += truc
     SUBDIR += ua_parser-core

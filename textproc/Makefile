@@ -745,6 +745,7 @@
     SUBDIR += p5-Pod-Perldoc
     SUBDIR += p5-Pod-ProjectDocs
     SUBDIR += p5-Pod-Readme
+    SUBDIR += p5-Pod-Section
     SUBDIR += p5-Pod-Simple
     SUBDIR += p5-Pod-Spell
     SUBDIR += p5-Pod-Strip
@@ -1715,6 +1716,7 @@
     SUBDIR += sgmls
     SUBDIR += sgrep
     SUBDIR += sgrep2
+    SUBDIR += sift
     SUBDIR += sigil
     SUBDIR += silvercity
     SUBDIR += simplexml
