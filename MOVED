@@ -4547,7 +4547,6 @@ math/fung-calc||2013-07-26|Has expired: Depends on Qt 3.x
 math/koctave||2013-07-26|Has expired: Depends on Qt 3.x
 math/kseg||2013-07-26|Has expired: Depends on Qt 3.x
 math/pgcalc||2013-07-26|Has expired: Depends on Qt 3.x
-math/qwtplot3d||2013-07-26|Has expired: Depends on Qt 3.x
 math/rkward||2013-07-26|Has expired: Depends on Qt 3.x
 math/xgfe||2013-07-26|Has expired: Depends on Qt 3.x
 misc/gwenview-i18n||2013-07-26|Has expired: Depends on Qt 3.x
@@ -9562,7 +9561,6 @@ databases/cassandra2||2017-11-12|Has expired: Broken for more than 6 months
 graphics/geos35|graphics/geos|2017-11-12|Has expired: legacy version, no longer needed
 astro/gmapcatcher||2017-11-12|Has expired: Unfetchable for more than six months (google code has gone away)
 audio/smasher||2017-11-12|Has expired: Does not build with modern csound
-audio/csound|audio/csound6|2017-11-12|Has expired: Not supported upstream anymore, use csound6
 french/eficas||2017-11-14|Removed with Code_Aster 13.4.0, should be replaced by aster-study in cad/salome
 databases/grass6|databases/grass7|2017-11-18|Removed in favor of grass 7
 news/brag||2017-11-21|Has expired: Tcl/Tk 8.4 is no longer maintained, please use 8.5+
@@ -10621,10 +10619,27 @@ science/bft|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, m
 science/ecs|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
 science/fvm|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
 science/mei|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
-x11-wm/cde|x11/cde|2018-11-03|Recategorise
+x11-wm/cde|x11/cde|2018-11-05|Recategorise
 misc/rumprun||2018-11-06|Has expired: "fails with current compilers"
-security/ossec-hids-client|security/ossec-hids-agent|2018-10-29|Agent is the name used in documentation
+security/ossec-hids-client|security/ossec-hids-agent|2018-11-09|Agent is the name used in documentation
 graphics/ImageMagick|graphics/ImageMagick6|2018-11-10|Port renamed
 graphics/ImageMagick-nox11|graphics/ImageMagick6-nox11|2018-11-10|Port renamed
 lang/gcc6-devel|lang/gcc6|2018-11-11|The GCC 6 branch has been closed, use the final release instead (or a later major version)
 mail/py-email-reply-parser|mail/py-email_reply_parser|2018-11-15|Rename to match upstream naming
+net-mgmt/vidalia||2018-11-16|Has expired: outdated and unmaintained
+german/selfhtml||2018-11-16|Has expired: Project migrated to a Wiki
+sysutils/fastest_cvsup||2018-11-16|Has expired: Obsolete, FreeBSD and OpenBSD switched from cvsup to svn and cvsync, NetBSD only have 2 servers left
+devel/rubygem-sidekiq-bulk-rails5|devel/rubygem-sidekiq-bulk|2018-11-17|Remove -rails5 suffix
+audio/csound6|audio/csound|2018-11-17|Move to audio/csound because this is a stable project, no need to have a versioned package name
+x11-fonts/emojione-color-font-ttf|x11-fonts/twemoji-color-font-ttf|2018-11-19|Has expired: EOL upstream, please use x11-fonts/twemoji-color-font-ttf instead
+editors/coedit|editors/dexed|2018-11-19|Project was renamed
+net-mgmt/p5-FusionInventory-Agent-Task-NetDiscovery||2018-11-20|Has expired: No longer needed
+net-mgmt/p5-FusionInventory-Agent-Task-SNMPQuery||2018-11-20|Removed, no longer needed
+textproc/rubygem-github-linguist53|textproc/rubygem-github-linguist|2018-11-23|Obsolete by www/gitlab-ce 11.5.x upgrade, please use textproc/rubygem-github-linguist
+devel/rubygem-google-protobuf351|devel/rubygem-google-protobuf|2018-11-23|Obsolete by www/gitlab-ce 11.5.x upgrade, please use devel/rubygem-google-protobuf
+devel/giggle|devel/gitg|2018-11-23|Has expired: Development stalled. Please switch to devel/gitg.
+net/rubygem-gitaly-proto094|net/rubygem-gitaly-proto|2018-11-24|Use net/rubygem-gitaly-proto instead
+www/rubygem-toml-rb03|www/rubygem-toml-rb|2018-11-25|Has expired: Obsoleted by update of www/gitlab. Please use www/rubygem-tom-rb instead.
+dns/dnscheck||2018-11-27|Unmaintained upstream over a decade
+www/mod_security3|security/modsecurity3|2018-11-27|Not an Apache module, use correct upstream name
+emulators/qemu-ppcnv|emulators/qemu-powernv|2018-11-28|Use more accurate naming for qemu PowerNV port

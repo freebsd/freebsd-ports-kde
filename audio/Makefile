@@ -93,7 +93,8 @@
     SUBDIR += cpp-xmms2
     SUBDIR += creox
     SUBDIR += crip
-    SUBDIR += csound6
+    SUBDIR += csound
+    SUBDIR += csoundqt
     SUBDIR += ctronome
     SUBDIR += cue2toc
     SUBDIR += cueplayer

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	pgpool-II
-PORTVERSION=	4.0.1
+PORTVERSION=	4.0.2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
 PKGNAMESUFFIX=	40
@@ -11,9 +11,6 @@ COMMENT=	Connection pool server for PostgreSQL
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_SSL=	openssl-devel
-BROKEN_SSL_REASON_openssl-devel=	library 'ssl' is required for OpenSSL
 
 PORTSCOUT=	limit:^4.0.[0-9]*
 

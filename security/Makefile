@@ -423,6 +423,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += minisign
+    SUBDIR += modsecurity3
     SUBDIR += monkeysphere
     SUBDIR += morphis
     SUBDIR += munge
@@ -800,6 +801,7 @@
     SUBDIR += pear-Auth_HTTP
     SUBDIR += pear-Auth_PrefManager
     SUBDIR += pear-Auth_SASL
+    SUBDIR += pear-Auth_SASL2
     SUBDIR += pear-Crypt_Blowfish
     SUBDIR += pear-Crypt_CBC
     SUBDIR += pear-Crypt_CHAP
@@ -1050,6 +1052,8 @@
     SUBDIR += py-sslstrip
     SUBDIR += py-stem
     SUBDIR += py-stix
+    SUBDIR += py-stix2
+    SUBDIR += py-stix2-patterns
     SUBDIR += py-tlslite
     SUBDIR += py-trezor
     SUBDIR += py-trustedpickle
@@ -1132,6 +1136,7 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
+    SUBDIR += rubygem-googleauth06
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -1331,8 +1336,8 @@
     SUBDIR += unhide
     SUBDIR += unicornscan
     SUBDIR += unssh
-    SUBDIR += vault
     SUBDIR += vanguards-tor
+    SUBDIR += vault
     SUBDIR += veracrypt
     SUBDIR += vinetto
     SUBDIR += vlock

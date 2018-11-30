@@ -85,6 +85,7 @@
     SUBDIR += cdiff
     SUBDIR += cgrep
     SUBDIR += chpp
+    SUBDIR += chkascii
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
     SUBDIR += cl-ppcre
@@ -744,6 +745,7 @@
     SUBDIR += p5-Pod-Perldoc
     SUBDIR += p5-Pod-ProjectDocs
     SUBDIR += p5-Pod-Readme
+    SUBDIR += p5-Pod-Section
     SUBDIR += p5-Pod-Simple
     SUBDIR += p5-Pod-Spell
     SUBDIR += p5-Pod-Strip
@@ -1565,7 +1567,6 @@
     SUBDIR += rubygem-gemoji
     SUBDIR += rubygem-gherkin
     SUBDIR += rubygem-github-linguist
-    SUBDIR += rubygem-github-linguist53
     SUBDIR += rubygem-github-markup
     SUBDIR += rubygem-github-markup17
     SUBDIR += rubygem-gitlab-grit
@@ -1715,6 +1716,7 @@
     SUBDIR += sgmls
     SUBDIR += sgrep
     SUBDIR += sgrep2
+    SUBDIR += sift
     SUBDIR += sigil
     SUBDIR += silvercity
     SUBDIR += simplexml

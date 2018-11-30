@@ -87,6 +87,7 @@
     SUBDIR += claroline
     SUBDIR += clearsilver
     SUBDIR += clearsilver-python
+    SUBDIR += cliqz
     SUBDIR += closure-compiler
     SUBDIR += cmsmadesimple
     SUBDIR += cntlm
@@ -475,7 +476,6 @@
     SUBDIR += mod_rpaf2
     SUBDIR += mod_scgi
     SUBDIR += mod_security
-    SUBDIR += mod_security3
     SUBDIR += mod_setenvifplus
     SUBDIR += mod_tidy
     SUBDIR += mod_tsa
@@ -2119,6 +2119,7 @@
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
@@ -2202,7 +2203,6 @@
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
     SUBDIR += rubygem-toml-rb
-    SUBDIR += rubygem-toml-rb03
     SUBDIR += rubygem-toml-rb10
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
