@@ -1,10 +1,10 @@
 # $FreeBSD: head/audio/amarok-kde4/Makefile 478444 2018-08-30 12:24:47Z adridg $
 
 PORTNAME=	amarok
-PORTVERSION=	master
-PORTREVISION=	1
+DISTVERSIONPREFIX=	v
+DISTVERSION=	2.9.0-269
+DISTVERSIONSUFFIX=	-g87a6d7a373
 CATEGORIES=	audio kde
-MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE music player
@@ -18,34 +18,41 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libqjson-qt5.so:devel/qjson@qt5 \
 		libqca-qt5.so:devel/qca@qt5 \
 		libtag.so:audio/taglib \
-		libtag-extras.so:audio/taglib-extras 
+		libtag-extras.so:audio/taglib-extras
 
-USES=		cmake:outsource compiler:c++11-lang desktop-file-utils kde:5 mysql:client,embedded pkgconfig \
-		qt:5 shebangfix ssl zip
-#		qt:5 shared-mime-info shebangfix ssl tar:xz
+USES=		cmake:outsource compiler:c++11-lang desktop-file-utils \
+		kde:5 mysql:client,embedded pkgconfig qt:5 shebangfix ssl
 
-USE_QT=		core concurrent declarative dbus gui location network quickcontrols2 phonon4 \
-		script scripttools sql svg webchannel webengine webkit widgets xml \
+USE_QT=		core concurrent declarative dbus gui location network phonon4 \
+		quickcontrols2 script scripttools sql svg webchannel webengine \
+		webkit widgets xml \
 		buildtools_build qmake_build
 
-USE_KDE=        archive auth attica bookmarks codecs config configwidgets completion coreaddons crash dbusaddons dnssd \
-                globalaccel guiaddons i18n iconthemes itemviews jobwidgets kdeclarative kcmutils kio kirigami2 newstuff \
-                notifications notifyconfig package parts service solid sonnet texteditor textwidgets threadweaver \
-		widgetsaddons windowsystem xmlgui \
+USE_KDE=        archive auth attica bookmarks codecs config configwidgets \
+		completion coreaddons crash dbusaddons dnssd globalaccel \
+		guiaddons i18n iconthemes itemviews jobwidgets kdeclarative \
+		kcmutils kio kirigami2 newstuff notifications notifyconfig \
+		package parts service solid sonnet texteditor textwidgets \
+		threadweaver widgetsaddons windowsystem xmlgui \
 		ecm_build
-
 USE_XORG=	ice sm x11 xext
-SHEBANG_FILES=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
 USE_LDCONFIG=	yes
-CMAKE_ARGS=	-DWITH_FFmpeg:BOOL=off -DOPENSSL_ROOT_DIR=${OPENSSLBASE} -DWITH_DESKTOP_UI:BOOL=on
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	kde
+
+SHEBANG_FILES=	src/kconf_update/amarok-2.4.1-tokens_syntax_update.pl
+CMAKE_ARGS=	-DOPENSSL_ROOT_DIR=${OPENSSLBASE}
+CMAKE_ON=	WITH_DESKTOP_UI
+CMAKE_OFF=	WITH_FFmpeg
 
 BROKEN_sparc64=	does not build (GCC-related error)
 
 # TODO NLS is only in released version; double check options and installed files
 # TODO PLAYGROUND results in errors
-OPTIONS_DEFINE=	IPOD MP3TUNES MTP NLS PLAYGROUND
-OPTIONS_DEFAULT=IPOD MP3TUNES MTP
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		IPOD MP3TUNES MTP NLS PLAYGROUND
+OPTIONS_DEFAULT=	IPOD MP3TUNES MTP
+OPTIONS_SUB=		yes
 
 IPOD_DESC=		Apple iPod support
 IPOD_LIB_DEPENDS=	libgpod.so:audio/libgpod \
@@ -62,7 +69,7 @@ MP3TUNES_USE=		GNOME=glib20,libxml2
 MP3TUNES_USES=		gnome ssl
 
 MP3TUNES_CMAKE_BOOL=	WITH_MP3Tunes
-MP3TUNES_CMAKE_ON=      -DWITH_Libgcrypt:BOOL=OFF
+MP3TUNES_CMAKE_BOOL_OFF=	WITH_Libgcrypt
 
 MTP_LIB_DEPENDS=	libmtp.so:multimedia/libmtp
 MTP_CMAKE_BOOL=		WITH_Mtp
