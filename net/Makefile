@@ -978,7 +978,6 @@
     SUBDIR += pecl-amqp
     SUBDIR += pecl-apn
     SUBDIR += pecl-geoip
-    SUBDIR += pecl-gupnp
     SUBDIR += pecl-ip2location
     SUBDIR += pecl-mosquitto
     SUBDIR += pecl-oauth
