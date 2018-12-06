@@ -12,10 +12,13 @@ DISTNAME=	MagickWandForPHP-${PORTVERSION}-2
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PHP extension to manipulate images
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick6
 
 USES=		php:ext pkgconfig
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 CONFIGURE_ARGS=	--with-magickwand=${LOCALBASE}
 

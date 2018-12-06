@@ -3,7 +3,7 @@
 
 PORTNAME=	mumble
 PORTVERSION=	1.2.19
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 
 MAINTAINER=	feld@FreeBSD.org
@@ -11,6 +11,9 @@ COMMENT=	Voice chat software primarily intended for use while gaming
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS+=	libspeex.so:audio/speex \
 		libspeexdsp.so:audio/speexdsp \
@@ -21,7 +24,8 @@ LIB_DEPENDS+=	libspeex.so:audio/speex \
 
 PLIST_SUB+=	PORTVERSION="${PORTVERSION}"
 
-USES=		compiler cpe desktop-file-utils gmake pkgconfig qmake qt:4 ssl
+USES=		compiler:c++11-lang cpe desktop-file-utils gmake pkgconfig qmake qt:4 ssl
+USE_CXXSTD=	c++11
 USE_GITHUB=	yes
 GH_ACCOUNT=	mumble-voip
 GH_PROJECT=	mumble celt-0.7.0:mumble_celt_0_7 celt-0.11.0:mumble_celt_0_11

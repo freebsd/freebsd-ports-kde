@@ -11,7 +11,10 @@ DISTNAME=	dracMail-${PORTVERSION}_release
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	DracMail is a webmail interface built using PHP
 
-IGNORE_WITH_PHP=	70 71 72 73
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
+IGNORE_WITH_PHP=	71 72 73
 USE_PHP+=	mysql imap dom tidy iconv mbstring
 USE_MYSQL=	yes
 NO_BUILD=	yes

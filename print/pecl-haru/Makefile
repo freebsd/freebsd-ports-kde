@@ -9,6 +9,9 @@ CATEGORIES=	print pear
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	PECL extension to Haru PDF functions
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	PHP301
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
@@ -16,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/hpdf.h:print/libharu
 RUN_DEPENDS:=	${LOCALBASE}/include/hpdf.h:print/libharu
 
 USES=		php:pecl
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 CONFIGURE_ARGS+=	--with-haru=${LOCALBASE}
 CFLAGS+=	-I${LOCALBASE}/include
