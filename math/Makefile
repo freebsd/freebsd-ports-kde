@@ -3,6 +3,7 @@
 
     COMMENT = Mathematics
 
+    SUBDIR += 4ti2
     SUBDIR += GiNaC
     SUBDIR += PDL
     SUBDIR += R
@@ -210,6 +211,7 @@
     SUBDIR += fityk
     SUBDIR += flann
     SUBDIR += flint2
+    SUBDIR += flintqs
     SUBDIR += form
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
@@ -304,6 +306,7 @@
     SUBDIR += kmplot
     SUBDIR += kmplot-kde4
     SUBDIR += labplot
+    SUBDIR += latte-integrale
     SUBDIR += lambda
     SUBDIR += lapack
     SUBDIR += lapack++
@@ -331,10 +334,12 @@
     SUBDIR += libxls
     SUBDIR += libxlsxwriter
     SUBDIR += libxsmm
+    SUBDIR += lidia
     SUBDIR += linpack
     SUBDIR += lll_spect
     SUBDIR += lp_solve
     SUBDIR += lrng
+    SUBDIR += lrslib
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
@@ -652,8 +657,6 @@
     SUBDIR += petiga
     SUBDIR += php56-bcmath
     SUBDIR += php56-gmp
-    SUBDIR += php70-bcmath
-    SUBDIR += php70-gmp
     SUBDIR += php71-bcmath
     SUBDIR += php71-gmp
     SUBDIR += php72-bcmath
@@ -858,6 +861,7 @@
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz
+    SUBDIR += topcom
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
@@ -867,8 +871,6 @@
     SUBDIR += unuran
     SUBDIR += viennacl
     SUBDIR += vowpal_wabbit
-    SUBDIR += vtk5
-    SUBDIR += vtk5-data
     SUBDIR += vtk6
     SUBDIR += vtk8
     SUBDIR += wcalc

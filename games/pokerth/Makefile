@@ -3,7 +3,7 @@
 
 PORTNAME=	pokerth
 PORTVERSION=	1.1.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	SF
 
@@ -12,6 +12,9 @@ COMMENT=	Poker game written in C++/Qt4
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libmikmod.so:audio/libmikmod \
@@ -23,7 +26,8 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 BUILD_DEPENDS=	${LOCALBASE}/include/libircclient.h:irc/libircclient \
 		protoc:devel/protobuf
 
-USES=		iconv gmake qmake qt:4 sqlite ssl
+USES=		compiler:c++11-lang iconv gmake qmake qt:4 sqlite ssl
+USE_CXXSTD=	c++11
 USE_QT=		gui corelib network sql sql-sqlite3 \
 		moc_build rcc_build uic_build
 USE_SDL=	mixer

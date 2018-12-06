@@ -10,6 +10,9 @@ MASTER_SITES=	http://download.revive-adserver.org/
 MAINTAINER=	meritus@innervision.pl
 COMMENT=	Free, opensource ad server in PHP
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
@@ -24,7 +27,7 @@ PLIST_SUB+=	WWWOWN="${WWWOWN}" WWWGRP="${WWWGRP}"
 .if !defined(WITHOUT_PHP_DEPENDS)
 USES+=		php
 USE_PHP=	xml pcre zlib mysql pgsql ftp
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 .endif
 
 do-install:

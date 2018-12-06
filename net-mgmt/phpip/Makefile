@@ -11,6 +11,9 @@ DISTNAME=	${PORTNAME}-4.3.2-build-${SNAPSHOT}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Complete IPv4 IPAM (IP address management) suite
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
@@ -19,7 +22,7 @@ NO_BUILD=	yes
 USE_PHP=	mysql
 USES=		dos2unix php:web
 
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 PHPIP?=		www/phpip
 PLIST_SUB+=	PHPIP=${PHPIP} WWWOWN=${WWWOWN} WWWGRP=${WWWGRP}

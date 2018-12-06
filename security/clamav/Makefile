@@ -1,12 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	clamav
-PORTVERSION=	0.100.2
-PORTREVISION=	3
+PORTVERSION=	0.101.0
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
-MAINTAINER=	ler@FreeBSD.org
+MAINTAINER=	yasu@utahime.org
 COMMENT=	Command line virus scanner written entirely in C
 
 LICENSE=	GPLv2
@@ -149,8 +149,6 @@ post-patch:
 		${WRKSRC}/etc/clamd.conf.sample \
 		${WRKSRC}/etc/freshclam.conf.sample \
 		${WRKSRC}/etc/clamav-milter.conf.sample
-	@${REINPLACE_CMD} -e 's|0x100000000|0x100000000ULL|g' \
-		${WRKSRC}/libclamunrar/unrar.c
 
 pre-configure-TESTS-on:
 	@if ! ${PYTHON_CMD} -c "import thread" >/dev/null 2>&1; then \
@@ -174,6 +172,6 @@ post-install:
 		  ${STAGEDIR}${DBDIR} \
 		  ${STAGEDIR}${LOGDIR} \
 		  ${STAGEDIR}${RUNDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/html/* ${STAGEDIR}${DOCSDIR}/html
+	(cd ${WRKSRC}/docs/html; ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/html)
 
 .include <bsd.port.mk>

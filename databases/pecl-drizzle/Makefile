@@ -9,12 +9,15 @@ CATEGORIES=	databases
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	PHP wrapper for the libdrizzle library
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	PHP301
 
 LIB_DEPENDS=	libdrizzle.so:databases/libdrizzle
 
 USES=		php:pecl
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
