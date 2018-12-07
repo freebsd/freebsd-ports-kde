@@ -7,6 +7,7 @@
     SUBDIR += R-cran-xfun
     SUBDIR += achievo
     SUBDIR += aclgen
+    SUBDIR += actiona
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -399,7 +400,6 @@
     SUBDIR += pecl-timezonedb
     SUBDIR += pfm
     SUBDIR += php56-calendar
-    SUBDIR += php70-calendar
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar

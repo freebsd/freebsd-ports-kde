@@ -9,10 +9,13 @@ MASTER_SITES=	SF/${PORTNAME}/TestLink%201.9/TestLink%20${PORTVERSION}
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Web based test management and test execution system
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 USES=		cpe php:web
 CPE_VENDOR=	teamst

@@ -977,7 +977,6 @@
     SUBDIR += pecl-amqp
     SUBDIR += pecl-apn
     SUBDIR += pecl-geoip
-    SUBDIR += pecl-gupnp
     SUBDIR += pecl-ip2location
     SUBDIR += pecl-mosquitto
     SUBDIR += pecl-oauth
@@ -995,10 +994,6 @@
     SUBDIR += php56-soap
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
-    SUBDIR += php70-ldap
-    SUBDIR += php70-soap
-    SUBDIR += php70-sockets
-    SUBDIR += php70-xmlrpc
     SUBDIR += php71-ldap
     SUBDIR += php71-soap
     SUBDIR += php71-sockets
@@ -1221,6 +1216,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rsplib
     SUBDIR += rsync

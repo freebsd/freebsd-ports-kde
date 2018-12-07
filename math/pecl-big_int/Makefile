@@ -9,13 +9,16 @@ CATEGORIES=	math devel pear
 MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	Functions for calculations with arbitrary length integers and bitsets
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	BIG_INT
 LICENSE_NAME=	BIG_INT license
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		php:pecl
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 CONFIGURE_ARGS=	--enable-big-int=shared
 

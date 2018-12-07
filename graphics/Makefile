@@ -272,7 +272,6 @@
     SUBDIR += gimp-wavelet-decompose-plugin
     SUBDIR += gimp-wavelet-denoise-plugin
     SUBDIR += gimp-wavelet-sharpen-plugin
-    SUBDIR += gimpfx-foundry
     SUBDIR += giram
     SUBDIR += gkrellkam2
     SUBDIR += gle
@@ -833,8 +832,6 @@
     SUBDIR += php5-ffmpeg
     SUBDIR += php56-exif
     SUBDIR += php56-gd
-    SUBDIR += php70-exif
-    SUBDIR += php70-gd
     SUBDIR += php71-exif
     SUBDIR += php71-gd
     SUBDIR += php72-exif

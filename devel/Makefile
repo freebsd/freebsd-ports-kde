@@ -259,6 +259,7 @@
     SUBDIR += c2mdoc
     SUBDIR += caf
     SUBDIR += calibrator
+    SUBDIR += capnproto
     SUBDIR += capstone3
     SUBDIR += capstone4
     SUBDIR += cask
@@ -874,6 +875,7 @@
     SUBDIR += gpsim
     SUBDIR += gputils
     SUBDIR += gradle
+    SUBDIR += gradle4
     SUBDIR += grantlee
     SUBDIR += grantlee5
     SUBDIR += graphql.el
@@ -2196,6 +2198,7 @@
     SUBDIR += p5-Clone-More
     SUBDIR += p5-Clone-PP
     SUBDIR += p5-Code-Perl
+    SUBDIR += p5-Color-ANSI-Util
     SUBDIR += p5-Commandable
     SUBDIR += p5-Commands-Guarded
     SUBDIR += p5-CommitBit
@@ -2268,6 +2271,7 @@
     SUBDIR += p5-Data-Diver
     SUBDIR += p5-Data-Domain
     SUBDIR += p5-Data-Dump
+    SUBDIR += p5-Data-Dump-Color
     SUBDIR += p5-Data-Dump-Streamer
     SUBDIR += p5-Data-DumpXML
     SUBDIR += p5-Data-Dumper
@@ -4144,16 +4148,6 @@
     SUBDIR += php56-sysvsem
     SUBDIR += php56-sysvshm
     SUBDIR += php56-tokenizer
-    SUBDIR += php70-gettext
-    SUBDIR += php70-intl
-    SUBDIR += php70-json
-    SUBDIR += php70-pcntl
-    SUBDIR += php70-readline
-    SUBDIR += php70-shmop
-    SUBDIR += php70-sysvmsg
-    SUBDIR += php70-sysvsem
-    SUBDIR += php70-sysvshm
-    SUBDIR += php70-tokenizer
     SUBDIR += php71-gettext
     SUBDIR += php71-intl
     SUBDIR += php71-json
@@ -4258,6 +4252,7 @@
     SUBDIR += py-BytecodeAssembler
     SUBDIR += py-DateTime
     SUBDIR += py-DocumentTemplate
+    SUBDIR += py-Dumper
     SUBDIR += py-ExtensionClass
     SUBDIR += py-Faker
     SUBDIR += py-IBMQuantumExperience
@@ -4661,7 +4656,6 @@
     SUBDIR += py-initgroups
     SUBDIR += py-instant
     SUBDIR += py-intbitset
-    SUBDIR += py-interface
     SUBDIR += py-intervaltree
     SUBDIR += py-invoke
     SUBDIR += py-ioflo
@@ -4901,6 +4895,7 @@
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
     SUBDIR += py-prompt_toolkit
+    SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
@@ -4910,6 +4905,7 @@
     SUBDIR += py-pudb
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
+    SUBDIR += py-py_interface
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
     SUBDIR += py-pybind11
@@ -5363,6 +5359,7 @@
     SUBDIR += pylint1
     SUBDIR += pymacs
     SUBDIR += pyobfuscate
+    SUBDIR += pyotherside-qt5
     SUBDIR += pypersrc
     SUBDIR += pyrex
     SUBDIR += pyside
@@ -5697,6 +5694,7 @@
     SUBDIR += rubygem-gem-compare
     SUBDIR += rubygem-gem_plugin
     SUBDIR += rubygem-gemcutter
+    SUBDIR += rubygem-gemdiff
     SUBDIR += rubygem-gemnasium-parser
     SUBDIR += rubygem-gems
     SUBDIR += rubygem-generator_spec-rails4
@@ -6420,7 +6418,6 @@
     SUBDIR += zookeeper
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc
-    SUBDIR += ztcl
     SUBDIR += zthread
     SUBDIR += zziplib
 

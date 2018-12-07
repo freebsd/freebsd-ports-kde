@@ -11,6 +11,9 @@ DISTNAME=	Deadlock-${PORTVERSION}-Stable
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Web-based user authentication/password protection system
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING.txt
 
@@ -24,7 +27,7 @@ USE_PHP=	mysql session ctype pcre
 NO_BUILD=	yes
 NO_ARCH=	yes
 
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 SUB_FILES=	pkg-message
 SUB_LIST=	DLURL=${DLURL} DLDIR=${DLDIR}

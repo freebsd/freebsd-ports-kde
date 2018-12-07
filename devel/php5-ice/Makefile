@@ -7,6 +7,9 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 MAINTAINER=	freebsd@grem.de
 COMMENT=	Ice (Internet Communications Engine) language mapping for PHP
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	mcpp:devel/mcpp \
@@ -24,7 +27,7 @@ PLIST=		${.CURDIR}/pkg-plist
 MAKE_ARGS+=	PHP_EXT_DIR=${PHP_EXT_DIR} ICE_HOME=${LOCALBASE} \
 		PHP_HOME=${LOCALBASE} OPTIMIZE=yes
 USES+=	php:build,flavors
-IGNORE_WITH_PHP=70 71 72 73
+IGNORE_WITH_PHP=71 72 73
 BUILD_WRKSRC=	${WRKSRC}/php
 INSTALL_WRKSRC=	${WRKSRC}/php
 
