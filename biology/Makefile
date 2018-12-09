@@ -16,6 +16,7 @@
     SUBDIR += canu
     SUBDIR += cd-hit
     SUBDIR += cdbfasta
+    SUBDIR += checkm
     SUBDIR += chemeq
     SUBDIR += clustal-omega
     SUBDIR += clustalw
@@ -37,10 +38,12 @@
     SUBDIR += fluctuate
     SUBDIR += freebayes
     SUBDIR += garlic
+    SUBDIR += gatk
     SUBDIR += gff2ps
     SUBDIR += gmap
     SUBDIR += gperiodic
     SUBDIR += grappa
+    SUBDIR += groopm
     SUBDIR += hmmer
     SUBDIR += htslib
     SUBDIR += hyphy

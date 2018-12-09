@@ -675,6 +675,7 @@
     SUBDIR += openfx-io
     SUBDIR += openfx-misc
     SUBDIR += opengl-man
+    SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
     SUBDIR += openjpeg
@@ -832,8 +833,6 @@
     SUBDIR += php5-ffmpeg
     SUBDIR += php56-exif
     SUBDIR += php56-gd
-    SUBDIR += php70-exif
-    SUBDIR += php70-gd
     SUBDIR += php71-exif
     SUBDIR += php71-gd
     SUBDIR += php72-exif

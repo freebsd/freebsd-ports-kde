@@ -2,10 +2,10 @@
 
 PORTNAME=		git-lfs
 DISTVERSIONPREFIX=	v
-DISTVERSION=		2.6.0
+DISTVERSION=		2.6.1
 CATEGORIES=		devel
 
-MAINTAINER=	egypcio@googlemail.com
+MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Git extension for versioning large files
 
 LICENSE=	MIT

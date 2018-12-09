@@ -9,11 +9,14 @@ CATEGORIES=	devel
 MAINTAINER=	gasol.wu@gmail.com
 COMMENT=	PHP extension which transparently caches PHP functions
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	PHP301
 
 USES=		php:pecl
 CONFIGURE_ARGS=	--enable-memoize
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 OPTIONS_DEFINE=	MEMCACHED MEMORY
 OPTIONS_DEFAULT=MEMORY

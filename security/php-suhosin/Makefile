@@ -11,13 +11,16 @@ PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 MAINTAINER=	ale@FreeBSD.org
 COMMENT=	PHP extension that implements high-level protections
 
+DEPRECATED=	Works only with EOL php 5.6
+EXPIRATION_DATE=	2018-12-30
+
 LICENSE=	PHP301
 
 OPTIONS_DEFINE=	EXAMPLES
 
 USES=		php:ext
 USE_PHP=	session:build
-IGNORE_WITH_PHP=	70 71 72 73
+IGNORE_WITH_PHP=	71 72 73
 
 CONFIGURE_ARGS=	--enable-suhosin
 
