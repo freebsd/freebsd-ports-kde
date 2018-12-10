@@ -921,6 +921,7 @@
     SUBDIR += pick
     SUBDIR += pidof
     SUBDIR += pipemeter
+    SUBDIR += plasma-pass
     SUBDIR += plasma5-discover
     SUBDIR += plasma5-drkonqi
     SUBDIR += plasma5-kde-cli-tools
