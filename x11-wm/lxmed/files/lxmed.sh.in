@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/x11-wm/lxmed/files/lxmed.sh.in 348945 2014-03-24 11:58:01Z nemysis $
 #
 
 export JAVA_VERSION="%%JAVA_VERSION%%"

@@ -1,0 +1,557 @@
+https://git.archlinux.org/svntogit/community.git/tree/trunk/scribus-poppler-0.70.patch?h=packages/scribus
+
+--- scribus/plugins/import/pdf/importpdf.cpp.orig	2018-12-08 23:56:02 UTC
++++ scribus/plugins/import/pdf/importpdf.cpp
+@@ -87,7 +87,7 @@ QImage PdfPlug::readThumbnail(QString fName)
+ #else
+ 		GooString *fname = new GooString(QFile::encodeName(pdfFile).data());
+ #endif
+-		globalParams->setErrQuiet(gTrue);
++		globalParams->setErrQuiet(true);
+ 		PDFDoc *pdfDoc = new PDFDoc(fname, NULL, NULL, NULL);
+ 		if (pdfDoc)
+ 		{
+@@ -108,11 +108,11 @@ QImage PdfPlug::readThumbnail(QString fName)
+ 				bgColor[0] = 255;
+ 				bgColor[1] = 255;
+ 				bgColor[2] = 255;
+-				SplashOutputDev *dev = new SplashOutputDev(splashModeXBGR8, 4, gFalse, bgColor, gTrue);
+-				dev->setVectorAntialias(gTrue);
+-				dev->setFreeTypeHinting(gTrue, gFalse);
++				SplashOutputDev *dev = new SplashOutputDev(splashModeXBGR8, 4, false, bgColor, true);
++				dev->setVectorAntialias(true);
++				dev->setFreeTypeHinting(true, false);
+ 				dev->startDoc(pdfDoc);
+-				pdfDoc->displayPage(dev, 1, hDPI, vDPI, 0, gTrue, gFalse, gFalse);
++				pdfDoc->displayPage(dev, 1, hDPI, vDPI, 0, true, false, false);
+ 				SplashBitmap *bitmap = dev->getBitmap();
+ 				int bw = bitmap->getWidth();
+ 				int bh = bitmap->getHeight();
+@@ -410,10 +410,10 @@ bool PdfPlug::convert(const QString& fn)
+ #else
+ 		GooString *fname = new GooString(QFile::encodeName(fn).data());
+ #endif
+-		globalParams->setErrQuiet(gTrue);
+-		GBool hasOcg = gFalse;
++		globalParams->setErrQuiet(true);
++		bool hasOcg = false;
+ 		QList<OptionalContentGroup*> ocgGroups;
+-//		globalParams->setPrintCommands(gTrue);
++//		globalParams->setPrintCommands(true);
+ 		PDFDoc *pdfDoc = new PDFDoc(fname, NULL, NULL, NULL);
+ 		if (pdfDoc)
+ 		{
+@@ -458,10 +458,10 @@ bool PdfPlug::convert(const QString& fn)
+ 				double vDPI = 72.0;
+ 				int firstPage = 1;
+ 				int lastPage = pdfDoc->getNumPages();
+-				GBool useMediaBox = gTrue;
+-				GBool crop = gTrue;
+-				GBool printing = gFalse;
+-				PDFRectangle *mediaBox = pdfDoc->getPage(1)->getMediaBox();
++				bool useMediaBox = true;
++				bool crop = true;
++				bool printing = false;
++				const PDFRectangle *mediaBox = pdfDoc->getPage(1)->getMediaBox();
+ 				QRectF mediaRect = QRectF(QPointF(mediaBox->x1, mediaBox->y1), QPointF(mediaBox->x2, mediaBox->y2)).normalized();
+ 				bool boxesAreDifferent = false;
+ 				if (getCBox(Crop_Box, 1) != mediaRect)
+@@ -497,7 +497,7 @@ bool PdfPlug::convert(const QString& fn)
+ 					if (!cropped)
+ 						crop = cropped;
+ 					if (contentRect != Media_Box)
+-						useMediaBox = gFalse;
++						useMediaBox = false;
+ 				/*	if (cb > Media_Box)
+ 					{
+ 						cropped = true;
+@@ -1018,11 +1018,11 @@ QImage PdfPlug::readPreview(int pgNum, int width, int 
+ 	bgColor[0] = 255;
+ 	bgColor[1] = 255;
+ 	bgColor[2] = 255;
+-	SplashOutputDev *dev = new SplashOutputDev(splashModeXBGR8, 4, gFalse, bgColor, gTrue);
+-	dev->setVectorAntialias(gTrue);
+-	dev->setFreeTypeHinting(gTrue, gFalse);
++	SplashOutputDev *dev = new SplashOutputDev(splashModeXBGR8, 4, false, bgColor, true);
++	dev->setVectorAntialias(true);
++	dev->setFreeTypeHinting(true, false);
+ 	dev->startDoc(m_pdfDoc);
+-	m_pdfDoc->displayPage(dev, pgNum, hDPI, vDPI, 0, gTrue, gFalse, gFalse);
++	m_pdfDoc->displayPage(dev, pgNum, hDPI, vDPI, 0, true, false, false);
+ 	SplashBitmap *bitmap = dev->getBitmap();
+ 	int bw = bitmap->getWidth();
+ 	int bh = bitmap->getHeight();
+@@ -1066,7 +1066,7 @@ QImage PdfPlug::readPreview(int pgNum, int width, int 
+ 
+ QRectF PdfPlug::getCBox(int box, int pgNum)
+ {
+-	PDFRectangle *cBox = NULL;
++	const PDFRectangle *cBox = NULL;
+ 	if (box == Media_Box)
+ 		cBox = m_pdfDoc->getPage(pgNum)->getMediaBox();
+ 	else if (box == Bleed_Box)
+@@ -1081,23 +1081,23 @@ QRectF PdfPlug::getCBox(int box, int pgNum)
+ 	return cRect;
+ }
+ 
+-QString PdfPlug::UnicodeParsedString(GooString *s1)
++QString PdfPlug::UnicodeParsedString(const GooString *s1)
+ {
+ 	if ( !s1 || s1->getLength() == 0 )
+ 		return QString();
+-	GBool isUnicode;
++	bool isUnicode;
+ 	int i;
+ 	Unicode u;
+ 	QString result;
+ 	if ((s1->getChar(0) & 0xff) == 0xfe && (s1->getLength() > 1 && (s1->getChar(1) & 0xff) == 0xff))
+ 	{
+-		isUnicode = gTrue;
++		isUnicode = true;
+ 		i = 2;
+ 		result.reserve((s1->getLength() - 2) / 2);
+ 	}
+ 	else
+ 	{
+-		isUnicode = gFalse;
++		isUnicode = false;
+ 		i = 0;
+ 		result.reserve(s1->getLength());
+ 	}
+--- scribus/plugins/import/pdf/slaoutput.cpp.orig	2018-12-08 23:56:02 UTC
++++ scribus/plugins/import/pdf/slaoutput.cpp
+@@ -189,7 +189,7 @@ void AnoOutputDev::drawString(GfxState *state, GooStri
+ 	m_itemText = s->copy();
+ }
+ 
+-QString AnoOutputDev::getColor(GfxColorSpace *color_space, GfxColor *color, int *shade)
++QString AnoOutputDev::getColor(GfxColorSpace *color_space, POPPLER_CONST_070 GfxColor *color, int *shade)
+ {
+ 	QString fNam;
+ 	QString namPrefix = "FromPDF";
+@@ -1604,7 +1604,7 @@ void SlaOutputDev::updateStrokeColor(GfxState *state)
+ void SlaOutputDev::clip(GfxState *state)
+ {
+ //	qDebug() << "Clip";
+-	double *ctm;
++	const double *ctm;
+ 	ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	QString output = convertPath(state->getPath());
+@@ -1641,7 +1641,7 @@ void SlaOutputDev::clip(GfxState *state)
+ void SlaOutputDev::eoClip(GfxState *state)
+ {
+ //	qDebug() << "EoClip";
+-	double *ctm;
++	const double *ctm;
+ 	ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	QString output = convertPath(state->getPath());
+@@ -1678,7 +1678,7 @@ void SlaOutputDev::eoClip(GfxState *state)
+ void SlaOutputDev::stroke(GfxState *state)
+ {
+ //	qDebug() << "Stroke";
+-	double *ctm;
++	const double *ctm;
+ 	ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+@@ -1770,7 +1770,7 @@ void SlaOutputDev::stroke(GfxState *state)
+ void SlaOutputDev::fill(GfxState *state)
+ {
+ //	qDebug() << "Fill";
+-	double *ctm;
++	const double *ctm;
+ 	ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+@@ -1815,7 +1815,7 @@ void SlaOutputDev::fill(GfxState *state)
+ void SlaOutputDev::eoFill(GfxState *state)
+ {
+ //	qDebug() << "EoFill";
+-	double *ctm;
++	const double *ctm;
+ 	ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+@@ -1864,14 +1864,14 @@ GBool SlaOutputDev::axialShadedFill(GfxState *state, G
+ 	double GrEndX;
+ 	double GrEndY;
+ 	int shade = 100;
+-	Function *func = shading->getFunc(0);
++	POPPLER_CONST_070 Function *func = shading->getFunc(0);
+ 	VGradient FillGradient = VGradient(VGradient::linear);
+ 	FillGradient.clearStops();
+ 	GfxColorSpace *color_space = shading->getColorSpace();
+ 	if (func->getType() == 3)
+ 	{
+ 		StitchingFunction *stitchingFunc = (StitchingFunction*)func;
+-		double *bounds = stitchingFunc->getBounds();
++		const double *bounds = stitchingFunc->getBounds();
+ 		int num_funcs = stitchingFunc->getNumFuncs();
+ 		// Add stops from all the stitched functions
+ 		for ( int i = 0 ; i < num_funcs ; i++ )
+@@ -1905,8 +1905,7 @@ GBool SlaOutputDev::axialShadedFill(GfxState *state, G
+ 	state->getClipBBox(&xmin, &ymin, &xmax, &ymax);
+ 	QRectF crect = QRectF(QPointF(xmin, ymin), QPointF(xmax, ymax));
+ 	crect = crect.normalized();
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	FPointArray gr;
+ 	gr.addPoint(GrStartX, GrStartY);
+@@ -1975,14 +1974,14 @@ GBool SlaOutputDev::radialShadedFill(GfxState *state, 
+ 	double GrEndX;
+ 	double GrEndY;
+ 	int shade = 100;
+-	Function *func = shading->getFunc(0);
++	POPPLER_CONST_070 Function *func = shading->getFunc(0);
+ 	VGradient FillGradient = VGradient(VGradient::linear);
+ 	FillGradient.clearStops();
+ 	GfxColorSpace *color_space = shading->getColorSpace();
+ 	if (func->getType() == 3)
+ 	{
+ 		StitchingFunction *stitchingFunc = (StitchingFunction*)func;
+-		double *bounds = stitchingFunc->getBounds();
++		const double *bounds = stitchingFunc->getBounds();
+ 		int num_funcs = stitchingFunc->getNumFuncs();
+ 		// Add stops from all the stitched functions
+ 		for ( int i = 0 ; i < num_funcs ; i++ )
+@@ -2021,8 +2020,7 @@ GBool SlaOutputDev::radialShadedFill(GfxState *state, 
+ 	double GrFocalY = y1;
+ 	GrEndX = GrFocalX + r1;
+ 	GrEndY = GrFocalY;
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	FPointArray gr;
+ 	gr.addPoint(GrStartX, GrStartY);
+@@ -2104,8 +2102,7 @@ GBool SlaOutputDev::gouraudTriangleShadedFill(GfxState
+ 	output += QString("Z");
+ 	pathIsClosed = true;
+ 	Coords = output;
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	int z = m_doc->itemAdd(PageItem::Polygon, PageItem::Rectangle, xCoor + crect.x(), yCoor + crect.y(), crect.width(), crect.height(), 0, CurrColorFill, CommonStrings::None);
+ 	PageItem* ite = m_doc->Items->at(z);
+@@ -2185,8 +2182,7 @@ GBool SlaOutputDev::patchMeshShadedFill(GfxState *stat
+ 	output += QString("Z");
+ 	pathIsClosed = true;
+ 	Coords = output;
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	int z = m_doc->itemAdd(PageItem::Polygon, PageItem::Rectangle, xCoor + crect.x(), yCoor + crect.y(), crect.width(), crect.height(), 0, CurrColorFill, CommonStrings::None);
+ 	PageItem* ite = m_doc->Items->at(z);
+@@ -2211,7 +2207,7 @@ GBool SlaOutputDev::patchMeshShadedFill(GfxState *stat
+ 	for (int i = 0; i < shading->getNPatches(); i++)
+ 	{
+ 		int shade = 100;
+-		GfxPatch *patch = shading->getPatch(i);
++		const GfxPatch *patch = shading->getPatch(i);
+ 		GfxColor color;
+ 		meshGradientPatch patchM;
+ 		int u, v;
+@@ -2339,8 +2335,7 @@ GBool SlaOutputDev::tilingPatternFill(GfxState *state,
+ 	box.y1 = bbox[1];
+ 	box.x2 = bbox[2];
+ 	box.y2 = bbox[3];
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 	QTransform mm = QTransform(mat[0], mat[1], mat[2], mat[3], mat[4], mat[5]);
+ 	QTransform mmx = mm * m_ctm;
+@@ -2512,8 +2507,7 @@ void SlaOutputDev::drawImageMask(GfxState *state, Obje
+ 			t++;
+ 		}
+ 	}
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+ 	QRectF crect = QRectF(0, 0, width, height);
+@@ -2658,8 +2652,7 @@ void SlaOutputDev::drawSoftMaskedImage(GfxState *state
+ 			t++;
+ 		}
+ 	}
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+ 	QRectF crect = QRectF(0, 0, width, height);
+@@ -2808,8 +2801,7 @@ void SlaOutputDev::drawMaskedImage(GfxState *state, Ob
+ 			t++;
+ 		}
+ 	}
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+ 	QRectF crect = QRectF(0, 0, width, height);
+@@ -2973,8 +2965,7 @@ void SlaOutputDev::drawImage(GfxState *state, Object *
+ 		delete image;
+ 		return;
+ 	}
+-	double *ctm;
+-	ctm = state->getCTM();
++	const double *ctm = state->getCTM();
+ 	double xCoor = m_doc->currentPage()->xOffset();
+ 	double yCoor = m_doc->currentPage()->yOffset();
+ 	QRectF crect = QRectF(0, 0, width, height);
+@@ -3326,7 +3317,7 @@ void SlaOutputDev::updateFont(GfxState *state)
+ 	char *tmpBuf;
+ 	int tmpBufLen = 0;
+ 	int *codeToGID;
+-	double *textMat;
++	const double *textMat;
+ 	double m11, m12, m21, m22, fontSize;
+ 	SplashCoord mat[4];
+ 	int n = 0;
+@@ -3793,8 +3784,7 @@ void SlaOutputDev::drawChar(GfxState *state, double x,
+ 				if (f & splashPathLast)
+ 					qPath.closeSubpath();
+ 			}
+-			double *ctm;
+-			ctm = state->getCTM();
++			const double *ctm = state->getCTM();
+ 			m_ctm = QTransform(ctm[0], ctm[1], ctm[2], ctm[3], ctm[4], ctm[5]);
+ 			double xCoor = m_doc->currentPage()->xOffset();
+ 			double yCoor = m_doc->currentPage()->yOffset();
+@@ -3948,7 +3938,7 @@ void SlaOutputDev::endTextObject(GfxState *state)
+ 	}
+ }
+ 
+-QString SlaOutputDev::getColor(GfxColorSpace *color_space, GfxColor *color, int *shade)
++QString SlaOutputDev::getColor(GfxColorSpace *color_space, POPPLER_CONST_070 GfxColor *color, int *shade)
+ {
+ 	QString fNam;
+ 	QString namPrefix = "FromPDF";
+--- scribus/plugins/import/pdf/slaoutput.h.orig	2018-12-08 23:56:02 UTC
++++ scribus/plugins/import/pdf/slaoutput.h
+@@ -49,6 +49,12 @@ for which a new license (GPL+exception) is in place.
+ #include <poppler/splash/SplashPath.h>
+ #include <poppler/splash/SplashGlyphBitmap.h>
+ 
++#if POPPLER_VERSION_MINOR >= 70
++#define POPPLER_CONST_070 const
++#else
++#define POPPLER_CONST_070
++#endif
++
+ //------------------------------------------------------------------------
+ // LinkSubmitData
+ //------------------------------------------------------------------------
+@@ -61,7 +67,7 @@ class LinkSubmitForm: public LinkAction (public)
+ 	// Destructor.
+ 	virtual ~LinkSubmitForm();
+ 	// Was the LinkImportData created successfully?
+-	virtual GBool isOk() { return fileName != NULL; }
++	virtual bool isOk() { return fileName != NULL; }
+ 	// Accessors.
+ 	virtual LinkActionKind getKind() { return actionUnknown; }
+ 	GooString *getFileName() { return fileName; }
+@@ -83,7 +89,7 @@ class LinkImportData: public LinkAction (public)
+ 	// Destructor.
+ 	virtual ~LinkImportData();
+ 	// Was the LinkImportData created successfully?
+-	virtual GBool isOk() { return fileName != NULL; }
++	virtual bool isOk() { return fileName != NULL; }
+ 	// Accessors.
+ 	virtual LinkActionKind getKind() { return actionUnknown; }
+ 	GooString *getFileName() { return fileName; }
+@@ -100,7 +106,7 @@ class SplashOutFontFileID: public SplashFontFileID (pu
+ 
+ 	SplashOutFontFileID(Ref *rA) { r = *rA; }
+ 	~SplashOutFontFileID() {}
+-	GBool matches(SplashFontFileID *id)
++	bool matches(SplashFontFileID *id)
+ 	{
+ 		return ((SplashOutFontFileID *)id)->r.num == r.num && ((SplashOutFontFileID *)id)->r.gen == r.gen;
+ 	}
+@@ -115,14 +121,14 @@ class AnoOutputDev : public OutputDev
+ public:
+ 	AnoOutputDev(ScribusDoc* doc, QStringList *importedColors);
+ 	virtual ~AnoOutputDev();
+-	GBool isOk() { return gTrue; }
+-	virtual GBool upsideDown() { return gTrue; }
+-	virtual GBool useDrawChar() { return gFalse; }
+-	virtual GBool interpretType3Chars() { return gFalse; }
+-	virtual GBool useTilingPatternFill() { return gFalse; }
+-	virtual GBool useShadedFills(int type) { return gFalse; }
+-	virtual GBool useFillColorStop() { return gFalse; }
+-	virtual GBool useDrawForm() { return gFalse; }
++	bool isOk() { return true; }
++	virtual bool upsideDown() { return true; }
++	virtual bool useDrawChar() { return false; }
++	virtual bool interpretType3Chars() { return false; }
++	virtual bool useTilingPatternFill() { return false; }
++	virtual bool useShadedFills(int type) { return false; }
++	virtual bool useFillColorStop() { return false; }
++	virtual bool useDrawForm() { return false; }
+ 	virtual void stroke(GfxState *state);
+ 	virtual void eoFill(GfxState *state);
+ 	virtual void fill(GfxState *state);
+@@ -135,7 +141,7 @@ class AnoOutputDev : public OutputDev
+ 	GooString *m_fontName;
+ 	GooString *m_itemText;
+ private:
+-	QString getColor(GfxColorSpace *color_space, GfxColor *color, int *shade);
++	QString getColor(GfxColorSpace *color_space, POPPLER_CONST_070 GfxColor *color, int *shade);
+ 	ScribusDoc* m_doc;
+ 	QStringList *m_importedColors;
+ };
+@@ -148,7 +154,7 @@ class SlaOutputDev : public OutputDev (public)
+ 	virtual ~SlaOutputDev();
+ 	LinkAction* SC_getAction(AnnotWidget *ano);
+ 	LinkAction* SC_getAdditionalAction(const char *key, AnnotWidget *ano);
+-	static GBool annotations_callback(Annot *annota, void *user_data);
++	static bool annotations_callback(Annot *annota, void *user_data);
+ 	bool handleTextAnnot(Annot* annota, double xCoor, double yCoor, double width, double height);
+ 	bool handleLinkAnnot(Annot* annota, double xCoor, double yCoor, double width, double height);
+ 	bool handleWidgetAnnot(Annot* annota, double xCoor, double yCoor, double width, double height);
+@@ -156,15 +162,15 @@ class SlaOutputDev : public OutputDev (public)
+ 	void handleActions(PageItem* ite, AnnotWidget *ano);
+ 	void startDoc(PDFDoc *doc, XRef *xrefA, Catalog *catA);
+ 
+-	GBool isOk() { return gTrue; }
+-	virtual GBool upsideDown() { return gTrue; }
+-	virtual GBool useDrawChar() { return gTrue; }
+-	virtual GBool interpretType3Chars() { return gTrue; }
+-	virtual GBool useTilingPatternFill() { return gTrue; }
+-	virtual GBool useShadedFills(int type) { return type <= 7; }
+-	virtual GBool useFillColorStop() { return gTrue; }
+-	virtual GBool useDrawForm() { return gFalse; }
+-//	virtual GBool needClipToCropBox() { return gTrue; }
++	bool isOk() { return true; }
++	virtual bool upsideDown() { return true; }
++	virtual bool useDrawChar() { return true; }
++	virtual bool interpretType3Chars() { return true; }
++	virtual bool useTilingPatternFill() { return true; }
++	virtual bool useShadedFills(int type) { return type <= 7; }
++	virtual bool useFillColorStop() { return true; }
++	virtual bool useDrawForm() { return false; }
++//	virtual bool needClipToCropBox() { return true; }
+ 	virtual void startPage(int pageNum, GfxState *, XRef *);
+ 	virtual void endPage();
+ 	// graphics state
+@@ -175,30 +181,30 @@ class SlaOutputDev : public OutputDev (public)
+ 	virtual void stroke(GfxState *state);
+ 	virtual void fill(GfxState *state);
+ 	virtual void eoFill(GfxState *state);
+-	GBool tilingPatternFill(GfxState *state, Gfx *gfx, Catalog *cat, Object *str, double *pmat, int paintType, int tilingType, Dict *resDict, double *mat, double *bbox, int x0, int y0, int x1, int y1, double xStep, double yStep);
+-	virtual GBool functionShadedFill(GfxState * /*state*/, GfxFunctionShading * /*shading*/) { qDebug() << "Function Shaded Fill";  return gFalse; }
+-	virtual GBool axialShadedFill(GfxState *state, GfxAxialShading *shading, double tMin, double tMax);
+-	virtual GBool axialShadedSupportExtend(GfxState *state, GfxAxialShading *shading) { return (shading->getExtend0() == shading->getExtend1()); }
+-	virtual GBool radialShadedFill(GfxState *state, GfxRadialShading *shading, double sMin, double sMax);
+-	virtual GBool radialShadedSupportExtend(GfxState *state, GfxRadialShading *shading) { return (shading->getExtend0() == shading->getExtend1()); }
+-	virtual GBool gouraudTriangleShadedFill(GfxState *state, GfxGouraudTriangleShading *shading);
+-	virtual GBool patchMeshShadedFill(GfxState *state, GfxPatchMeshShading *shading);
++	bool tilingPatternFill(GfxState *state, Gfx *gfx, Catalog *cat, Object *str, double *pmat, int paintType, int tilingType, Dict *resDict, double *mat, double *bbox, int x0, int y0, int x1, int y1, double xStep, double yStep);
++	virtual bool functionShadedFill(GfxState * /*state*/, GfxFunctionShading * /*shading*/) { qDebug() << "Function Shaded Fill";  return false; }
++	virtual bool axialShadedFill(GfxState *state, GfxAxialShading *shading, double tMin, double tMax);
++	virtual bool axialShadedSupportExtend(GfxState *state, GfxAxialShading *shading) { return (shading->getExtend0() == shading->getExtend1()); }
++	virtual bool radialShadedFill(GfxState *state, GfxRadialShading *shading, double sMin, double sMax);
++	virtual bool radialShadedSupportExtend(GfxState *state, GfxRadialShading *shading) { return (shading->getExtend0() == shading->getExtend1()); }
++	virtual bool gouraudTriangleShadedFill(GfxState *state, GfxGouraudTriangleShading *shading);
++	virtual bool patchMeshShadedFill(GfxState *state, GfxPatchMeshShading *shading);
+ 	//----- path clipping
+ 	virtual void clip(GfxState *state);
+ 	virtual void eoClip(GfxState *state);
+ 	virtual void clipToStrokePath(GfxState * /*state*/) { qDebug() << "Clip to StrokePath"; }
+-	virtual GBool deviceHasTextClip(GfxState *state) { return gFalse; }
++	virtual bool deviceHasTextClip(GfxState *state) { return false; }
+ 
+   // If current colorspace is pattern,
+   // does this device support text in pattern colorspace?
+-	virtual GBool supportTextCSPattern(GfxState *state)
++	virtual bool supportTextCSPattern(GfxState *state)
+ 	{
+ 		return state->getFillColorSpace()->getMode() == csPattern;
+ 	}
+ 
+   // If current colorspace is pattern,
+   // need this device special handling for masks in pattern colorspace?
+-	virtual GBool fillMaskCSPattern(GfxState * state)
++	virtual bool fillMaskCSPattern(GfxState * state)
+ 	{
+ 		return state->getFillColorSpace()->getMode() == csPattern;
+ 	}
+@@ -212,30 +218,30 @@ class SlaOutputDev : public OutputDev (public)
+ 	virtual void markPoint(char *name);
+ 	virtual void markPoint(char *name, Dict *properties);
+ 	//----- image drawing
+-	virtual void drawImageMask(GfxState *state, Object *ref, Stream *str, int width, int height, GBool invert, GBool interpolate, GBool inlineImg);
+-	virtual void drawImage(GfxState *state, Object *ref, Stream *str, int width, int height, GfxImageColorMap *colorMap, GBool interpolate, int *maskColors, GBool inlineImg);
++	virtual void drawImageMask(GfxState *state, Object *ref, Stream *str, int width, int height, bool invert, bool interpolate, bool inlineImg);
++	virtual void drawImage(GfxState *state, Object *ref, Stream *str, int width, int height, GfxImageColorMap *colorMap, bool interpolate, int *maskColors, bool inlineImg);
+ 	virtual void drawSoftMaskedImage(GfxState *state, Object *ref, Stream *str,
+ 				   int width, int height,
+ 				   GfxImageColorMap *colorMap,
+-				   GBool interpolate,
++				   bool interpolate,
+ 				   Stream *maskStr,
+ 				   int maskWidth, int maskHeight,
+ 				   GfxImageColorMap *maskColorMap,
+-				   GBool maskInterpolate);
++				   bool maskInterpolate);
+ 
+ 	virtual void drawMaskedImage(GfxState *state, Object *ref, Stream *str,
+ 				   int width, int height,
+ 				   GfxImageColorMap *colorMap,
+-				   GBool interpolate,
++				   bool interpolate,
+ 				   Stream *maskStr,
+ 				   int maskWidth, int maskHeight,
+-				   GBool maskInvert, GBool maskInterpolate); // { qDebug() << "Draw Masked Image"; }
++				   bool maskInvert, bool maskInterpolate); // { qDebug() << "Draw Masked Image"; }
+ 
+ 	//----- transparency groups and soft masks
+-	virtual void beginTransparencyGroup(GfxState *state, double *bbox, GfxColorSpace * /*blendingColorSpace*/, GBool /*isolated*/, GBool /*knockout*/, GBool /*forSoftMask*/);
++	virtual void beginTransparencyGroup(GfxState *state, double *bbox, GfxColorSpace * /*blendingColorSpace*/, bool /*isolated*/, bool /*knockout*/, bool /*forSoftMask*/);
+ 	virtual void paintTransparencyGroup(GfxState *state, double *bbox);
+ 	virtual void endTransparencyGroup(GfxState *state);
+-	virtual void setSoftMask(GfxState * /*state*/, double * /*bbox*/, GBool /*alpha*/, Function * /*transferFunc*/, GfxColor * /*backdropColor*/);
++	virtual void setSoftMask(GfxState * /*state*/, double * /*bbox*/, bool /*alpha*/, Function * /*transferFunc*/, GfxColor * /*backdropColor*/);
+ 	virtual void clearSoftMask(GfxState * /*state*/);
+ 
+ 	virtual void updateFillColor(GfxState *state);
+@@ -245,7 +251,7 @@ class SlaOutputDev : public OutputDev (public)
+ 	virtual void beginTextObject(GfxState *state);
+ 	virtual void endTextObject(GfxState *state);
+ 	virtual void drawChar(GfxState *state, double /*x*/, double /*y*/, double /*dx*/, double /*dy*/, double /*originX*/, double /*originY*/, CharCode /*code*/, int /*nBytes*/, Unicode * /*u*/, int /*uLen*/);
+-	virtual GBool beginType3Char(GfxState * /*state*/, double /*x*/, double /*y*/, double /*dx*/, double /*dy*/, CharCode /*code*/, Unicode * /*u*/, int /*uLen*/);
++	virtual bool beginType3Char(GfxState * /*state*/, double /*x*/, double /*y*/, double /*dx*/, double /*dy*/, CharCode /*code*/, Unicode * /*u*/, int /*uLen*/);
+ 	virtual void endType3Char(GfxState * /*state*/);
+ 	virtual void type3D0(GfxState * /*state*/, double /*wx*/, double /*wy*/);
+ 	virtual void type3D1(GfxState * /*state*/, double /*wx*/, double /*wy*/, double /*llx*/, double /*lly*/, double /*urx*/, double /*ury*/);
+@@ -265,7 +271,7 @@ class SlaOutputDev : public OutputDev (public)
+ 	QString convertPath(GfxPath *path);
+ 	int getBlendMode(GfxState *state);
+ 	void applyMask(PageItem *ite);
+-	void pushGroup(QString maskName = "", GBool forSoftMask = gFalse, GBool alpha = gFalse, bool inverted = false);
++	void pushGroup(QString maskName = "", bool forSoftMask = false, bool alpha = false, bool inverted = false);
+ 	QString UnicodeParsedString(GooString *s1);
+ 	bool checkClip();
+ 	bool pathIsClosed;
+@@ -283,9 +289,9 @@ class SlaOutputDev : public OutputDev (public)
+ 	struct groupEntry
+ 	{
+ 		QList<PageItem*> Items;
+-		GBool forSoftMask;
+-		GBool isolated;
+-		GBool alpha;
++		bool forSoftMask;
++		bool isolated;
++		bool alpha;
+ 		QString maskName;
+ 		bool inverted;
+ 	};
