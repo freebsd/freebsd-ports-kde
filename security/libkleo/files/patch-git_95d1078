@@ -1,0 +1,23 @@
+From 95d1078933d7c3cd6dee5477211aa9486b43cbff Mon Sep 17 00:00:00 2001
+From: Andre Heinecke <aheinecke@intevation.de>
+Date: Mon, 12 Nov 2018 15:49:45 +0100
+Subject: [PATCH] Initialize default keyfilter mIsDeVs variable
+
+Without this it gets random assignment and might filter
+out all keys.
+---
+ src/kleo/defaultkeyfilter.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/kleo/defaultkeyfilter.cpp b/src/kleo/defaultkeyfilter.cpp
+index 00fdde6..a858c59 100644
+--- src/kleo/defaultkeyfilter.cpp
++++ src/kleo/defaultkeyfilter.cpp
+@@ -73,6 +73,7 @@ class DefaultKeyFilter::Private
+         mHasSecret(DoesNotMatter),
+         mIsOpenPGP(DoesNotMatter),
+         mWasValidated(DoesNotMatter),
++        mIsDeVs(DoesNotMatter),
+         mOwnerTrust(LevelDoesNotMatter),
+         mOwnerTrustReferenceLevel(Key::Unknown),
+         mValidity(LevelDoesNotMatter),
