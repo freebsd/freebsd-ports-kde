@@ -16,7 +16,7 @@ LIB_DEPENDS=	libqbscore.so:devel/qbs
 BUILD_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 RUN_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 
-USES=		qmake compiler:c++14-lang qt:5 tar:xz
+USES=		compiler:c++14-lang python:2.7 qmake qt:5 shebangfix tar:xz
 USE_LDCONFIG=	${LOCALBASE}/lib/${PORTNAME}
 USE_GL=		gl
 USE_QT=		buildtools concurrent core declarative designer gui help \
@@ -44,10 +44,8 @@ BROKEN_aarch64=		fails to build: invokes x86 asm
 
 OPTIONS_DEFINE=		DOCS EXAMPLES
 DOCS_DESC=		Install the Qt5 api documentation
-DOCS_USES=	qt:5
 DOCS_USE=		QT=doc_run
 EXAMPLES_DESC=		Install the Qt5 example projects
-EXAMPLES_USES=	qt:5
 EXAMPLES_USE=		QT=examples_run
 OPTIONS_DEFAULT=	${OPTIONS_DEFINE}
 
@@ -59,12 +57,36 @@ DOCS_INSTALL_TARGET=	install_docs
 
 PLIST_SUB=		SHLIB_VER="${PORTVERSION}"
 
-# Fix paths for gnuplot and ant.
+SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
+			tests/system/tools/findUnusedObjects.py \
+			share/qtcreator/templates/wizards/files/python/file.py \
+			share/qtcreator/scripts/openTerminal.py \
+			src/libs/3rdparty/botan/configure.py \
+			src/libs/qmljs/parser/changeLicense.py \
+			src/libs/qt-breakpad/qtbreakpadsymbols \
+			src/tools/icons/export.py \
+			scripts/packagePlugins.py \
+			scripts/ninjawrapper.py \
+			scripts/checkInstalledFiles.py \
+			scripts/generateClangTidyChecks.py \
+			scripts/createDistPackage.py \
+			scripts/createDevPackage.py \
+			scripts/deployqt.py \
+			scripts/dependencyinfo.py \
+			scripts/createSourcePackages.py \
+			scripts/uichanges.py \
+			scripts/makedmg.py
+
 post-patch:
+# Fix paths for gnuplot and ant.
 	${REINPLACE_CMD} -e 's|/usr/bin/gnuplot|${LOCALBASE}/bin/gnuplot|' \
 				${WRKSRC}/share/qtcreator/debugger/dumper.py
 	${REINPLACE_CMD} -e 's|/usr/bin/ant|${LOCALBASE}/bin/ant|' \
 				${WRKSRC}/src/plugins/android/androidsettingswidget.cpp
+# Fix python binary in pro file.
+	${REINPLACE_CMD} -e 's|python|${PYTHON_CMD}|g' \
+				${WRKSRC}/qtcreator.pro \
+				${WRKSRC}/src/libs/botan/botan.pro
 
 pre-configure:
 # We piggyback on QMAKE_LIBDIR_FLAGS to make sure -L${WRKSRC}/lib is passed to
