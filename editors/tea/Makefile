@@ -11,7 +11,7 @@ COMMENT=	Simple and powerful Qt-based text editor
 
 LICENSE=	GPLv3
 
-USES=		compiler:c++11-lang gl pkgconfig:build qmake
+USES=		compiler:c++11-lang gl gmake pkgconfig:build qmake
 
 OPTIONS_SINGLE=	TOOLKITS
 OPTIONS_SINGLE_TOOLKITS=	QT4 QT5

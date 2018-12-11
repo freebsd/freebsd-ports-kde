@@ -38,6 +38,7 @@
 %%QT_LIBDIR%%/libQt5Help.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5Help.so.%%FULLVER%%
 %%DEBUG%%%%QT_LIBDIR%%/libQt5Help.so.%%FULLVER%%.debug
+%%QT_BINDIR%%/qcollectiongenerator
 %%QT_BINDIR%%/qhelpgenerator
 %%QT_MKSPECDIR%%/modules/qt_lib_help.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_help_private.pri
