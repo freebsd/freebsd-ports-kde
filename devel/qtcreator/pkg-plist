@@ -126,7 +126,6 @@ lib/qtcreator/plugins/libWelcome.so
 lib/qtcreator/plugins/libWinRt.so
 lib/qtcreator/plugins/qmldesigner/libcomponentsplugin.so
 lib/qtcreator/plugins/qmldesigner/libqtquickplugin.so
-libdata/ldconfig/qtcreator
 libexec/qtcreator/buildoutputparser
 libexec/qtcreator/clangbackend
 libexec/qtcreator/cpaster
@@ -134,7 +133,6 @@ libexec/qtcreator/qml2puppet
 libexec/qtcreator/qtcreator_process_stub
 libexec/qtcreator/qtpromaker
 libexec/qtcreator/sdktool
-share/applications/usr_local_bin_qtcreator.desktop
 %%PORTDOCS%%%%DOCSDIR%%/qtcreator-dev.qch
 %%PORTDOCS%%%%DOCSDIR%%/qtcreator-dev/abstractsymbolgroupnode-members.html
 %%PORTDOCS%%%%DOCSDIR%%/qtcreator-dev/abstractsymbolgroupnode.html
