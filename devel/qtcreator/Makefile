@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qtcreator
-DISTVERSION=	4.6.2
-PORTREVISION=	3
+DISTVERSION=	4.8.0
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
@@ -14,6 +13,8 @@ COMMENT=	C++ and QML IDE for Qt development
 
 # depend on the split out qbs
 LIB_DEPENDS=	libqbscore.so:devel/qbs
+BUILD_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
+RUN_DEPENDS=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT}
 
 USES=		qmake compiler:c++14-lang qt:5 tar:xz
 USE_LDCONFIG=	${LOCALBASE}/lib/${PORTNAME}
@@ -30,7 +31,7 @@ EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/src/shared/qbs'
 QMAKE_ARGS+=	QBS_INSTALL_DIR=${PREFIX} CONFIG+=qbs_enable_project_file_updates
 
 # Enforce installation to ${PREFIX}.
-QMAKE_ARGS+=	QTC_PREFIX=${PREFIX}
+QMAKE_ARGS+=	QTC_PREFIX=${PREFIX} LLVM_INSTALL_DIR=${PREFIX}/llvm${LLVM_DEFAULT}
 
 # Required for building the port with GCC: the define below is required for
 # std::to_string() to exist. More details in ports/193528.
