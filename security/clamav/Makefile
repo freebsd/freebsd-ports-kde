@@ -149,6 +149,13 @@ post-patch:
 		${WRKSRC}/etc/clamd.conf.sample \
 		${WRKSRC}/etc/freshclam.conf.sample \
 		${WRKSRC}/etc/clamav-milter.conf.sample
+.if exists(/usr/lib/libstdc++.so)
+	@${REINPLACE_CMD} -e 's|-Wno-logical-op-parentheses||' \
+			  -e 's|-Wno-dangling-else||' \
+		${WRKSRC}/libclamav/Makefile.am \
+		${WRKSRC}/libclamav/Makefile.in \
+		${WRKSRC}/libclamunrar/makefile
+.endif
 
 pre-configure-TESTS-on:
 	@if ! ${PYTHON_CMD} -c "import thread" >/dev/null 2>&1; then \
