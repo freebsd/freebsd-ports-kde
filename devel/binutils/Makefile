@@ -3,7 +3,7 @@
 
 PORTNAME=	binutils
 PORTVERSION=	2.30
-PORTREVISION=	6
+PORTREVISION=	7
 PORTEPOCH?=	1
 CATEGORIES?=	devel
 MASTER_SITES=	SOURCEWARE/binutils/releases
@@ -63,7 +63,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-system-zlib \
 			--with-gmp=${LOCALBASE} \
 			--with-mpfr=${LOCALBASE} \
-			--enable-targets=all
+			--enable-targets=all \
+			--enable-threads=yes
 INFO=		as \
 		binutils \
 		gprof \

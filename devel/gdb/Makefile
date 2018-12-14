@@ -3,7 +3,7 @@
 
 PORTNAME=	gdb
 PORTVERSION=	8.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -20,6 +20,7 @@ LIB_DEPENDS=	libmpfr.so:math/mpfr
 TEST_DEPENDS=	runtest:misc/dejagnu
 
 USES=		compiler:c++11-lang cpe gmake libtool tar:xz
+USE_PYTHON=	py3kplist
 
 TEST_TARGET=	check
 
