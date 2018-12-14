@@ -21,8 +21,8 @@ USE_LDCONFIG=	${LOCALBASE}/lib/${PORTNAME}
 USE_GL=		gl
 USE_QT=		buildtools concurrent core declarative designer gui help \
 		linguist location network printsupport qdoc qmake \
-		quickcontrols script script sql svg webchannel webengine \
-		widgets xml xmlpatterns
+		quickcontrols script script serialport sql svg webchannel \
+		webengine widgets xml xmlpatterns
 
 # be paranoid and do not extract qbs (devel/qbs) copy from source tree
 EXTRACT_AFTER_ARGS+=	--exclude '${DISTNAME}/src/shared/qbs'
