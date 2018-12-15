@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/media/audio/BUILD.gn.orig	2018-04-10 14:05:55 UTC
+--- src/3rdparty/chromium/media/audio/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/media/audio/BUILD.gn
-@@ -206,7 +206,7 @@ source_set("audio") {
+@@ -254,7 +254,7 @@ source_set("audio") {
      deps += [ "//media/base/android:media_jni_headers" ]
    }
  
@@ -9,10 +9,10 @@
      sources += [ "linux/audio_manager_linux.cc" ]
    }
  
-@@ -255,10 +255,24 @@ source_set("audio") {
+@@ -302,10 +302,12 @@ source_set("audio") {
+     if (link_pulseaudio) {
        configs += [ ":libpulse" ]
      } else {
-       # TODO(ajwong): Technically, this dl should go in the action.
 -      libs += [ "dl" ]
        deps += [ ":pulse_generate_stubs" ]
        sources += get_target_outputs(":pulse_generate_stubs")
@@ -20,6 +20,14 @@
 +    if (is_linux) {
 +      libs += [ "dl" ]
 +    }
+   }
+ 
+   if (is_fuchsia) {
+@@ -322,6 +324,18 @@ source_set("audio") {
+     sources += [
+       "audio_input_stream_data_interceptor.cc",
+       "audio_input_stream_data_interceptor.h",
++    ]
 +  }
 +
 +  if (use_sndio) {
@@ -31,7 +39,6 @@
 +      "sndio/sndio_input.h",
 +      "sndio/sndio_output.cc",
 +      "sndio/sndio_output.h",
-+    ]
+     ]
    }
  
-   configs += [ "//build/config/compiler:no_size_t_to_int_warning" ]

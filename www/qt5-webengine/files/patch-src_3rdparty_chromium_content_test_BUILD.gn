@@ -1,38 +1,22 @@
---- src/3rdparty/chromium/content/test/BUILD.gn.orig	2017-01-26 00:49:13 UTC
+--- src/3rdparty/chromium/content/test/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/content/test/BUILD.gn
-@@ -748,7 +748,7 @@ test("content_browsertests") {
-     }
-   }
- 
--  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_bsd || is_mac || is_win) {
-     data += [
-       "$root_out_dir/content_shell.pak",
-       "data/",
-@@ -1350,7 +1350,7 @@ test("content_unittests") {
-     sources += [ "../browser/memory/memory_monitor_linux_unittest.cc" ]
-   }
- 
--  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_bsd || is_mac || is_win) {
-     data = [
-       "$root_out_dir/content_shell.pak",
-       "data/",
-@@ -1540,7 +1540,7 @@ test("content_unittests") {
-       "//ui/shell_dialogs:shell_dialogs",
-     ]
- 
--    if (is_linux || is_mac || is_win) {
-+    if (is_linux || is_bsd || is_mac || is_win) {
-       sources +=
-           [ "../browser/media/capture/desktop_capture_device_unittest.cc" ]
-       deps += [ "//third_party/webrtc/modules/desktop_capture" ]
-@@ -1576,7 +1576,7 @@ test("content_unittests") {
-     ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     if (use_dbus) {
-       deps += [ "//dbus:test_support" ]
-     }
+@@ -307,7 +307,8 @@ jumbo_static_library("test_support") {
+     "//components/viz/host",
+     "//components/viz/service",
+     "//content/app:both_for_content_tests",
+-    "//content/browser:for_content_tests",
++    # YYY
++    #"//content/browser:for_content_tests",
+     "//content/browser/speech/proto",
+     "//content/child:for_content_tests",
+     "//content/gpu",
+@@ -529,7 +530,8 @@ jumbo_static_library("browsertest_support") {
+     "//base/test:test_support",
+     "//components/viz/service",
+     "//content/app:both_for_content_tests",
+-    "//content/browser:for_content_tests",
++    # yyy
++    #"//content/browser:for_content_tests",
+     "//content/shell:content_shell_lib",
+     "//gin",
+     "//media",

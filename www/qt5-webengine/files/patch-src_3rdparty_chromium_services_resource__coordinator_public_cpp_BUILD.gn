@@ -1,0 +1,16 @@
+--- src/3rdparty/chromium/services/resource_coordinator/public/cpp/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/services/resource_coordinator/public/cpp/BUILD.gn
+@@ -52,8 +52,12 @@ component("resource_coordinator_cpp") {
+     set_sources_assignment_filter(sources_assignment_filter)
+   }
+ 
+-  if (is_fuchsia) {
++  if (is_fuchsia || is_bsd) {
+     sources += [ "memory_instrumentation/os_metrics_fuchsia.cc" ]
++
++    if (is_bsd) {
++      sources -= [ "memory_instrumentation/os_metrics_linux.cc" ]
++    }
+   }
+ 
+   defines = [ "SERVICES_RESOURCE_COORDINATOR_PUBLIC_CPP_IMPLEMENTATION" ]

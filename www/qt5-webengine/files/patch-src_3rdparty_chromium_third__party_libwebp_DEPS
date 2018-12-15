@@ -1,0 +1,8 @@
+--- src/3rdparty/chromium/third_party/libwebp/DEPS.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/third_party/libwebp/DEPS
+@@ -4,5 +4,4 @@ include_rules = [
+   '+../enc',
+   '+../utils',
+   '+../webp',
+-  '+src',
+ ]

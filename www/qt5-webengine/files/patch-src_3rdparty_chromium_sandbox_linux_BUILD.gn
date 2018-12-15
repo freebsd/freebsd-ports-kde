@@ -1,0 +1,11 @@
+--- src/3rdparty/chromium/sandbox/linux/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/sandbox/linux/BUILD.gn
+@@ -257,7 +257,7 @@ component("seccomp_bpf") {
+     "//base/third_party/dynamic_annotations",
+   ]
+ 
+-  if (is_nacl_nonsfi) {
++  if (is_nacl_nonsfi || is_bsd) {
+     cflags = [ "-fgnu-inline-asm" ]
+     sources -= [
+       "bpf_dsl/bpf_dsl_forward.h",

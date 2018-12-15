@@ -1,8 +1,8 @@
---- src/3rdparty/chromium/media/audio/audio_manager.h.orig	2017-01-26 00:49:15 UTC
+--- src/3rdparty/chromium/media/audio/audio_manager.h.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/media/audio/audio_manager.h
-@@ -84,7 +84,7 @@ class MEDIA_EXPORT AudioManager {
-   // See http://crbug.com/422522
-   static void EnableCrashKeyLoggingForAudioThreadHangs();
+@@ -70,7 +70,7 @@ class MEDIA_EXPORT AudioManager {
+   static void StartHangMonitorIfNeeded(
+       scoped_refptr<base::SingleThreadTaskRunner> task_runner);
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_FREEBSD)

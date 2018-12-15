@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/media/cast/BUILD.gn.orig	2017-01-26 00:49:15 UTC
+--- src/3rdparty/chromium/media/cast/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/media/cast/BUILD.gn
-@@ -356,7 +356,7 @@ test("cast_unittests") {
+@@ -364,7 +364,7 @@ test("cast_unittests") {
    }
  }
  
@@ -9,16 +9,14 @@
    # This is a target for the collection of cast development tools.  They are
    # not built/linked into the Chromium browser.
    group("testing_tools") {
-@@ -410,7 +410,7 @@ if (is_win || is_mac || (is_linux && !is
-       "//ui/gfx/geometry",
+@@ -510,13 +510,13 @@ if (is_win || is_mac || (is_linux && !is_chromeos)) {
+       "//net",
      ]
- 
--    if (is_linux && !is_chromeos && use_x11) {
-+    if ((is_linux || is_bsd) && !is_chromeos && use_x11) {
-       sources += [
-         "test/linux_output_window.cc",
-         "test/linux_output_window.h",
-@@ -513,7 +513,7 @@ if (is_win || is_mac || (is_linux && !is
+   }
+-} else {  # !(is_win || is_mac || (is_linux && !is_chromeos))
++} else {  # !(is_win || is_mac || (is_linux && !is_chromeos) || is_bsd)
+   # The testing tools are only built for the desktop platforms.
+   group("testing_tools") {
    }
  }
  
