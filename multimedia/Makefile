@@ -44,6 +44,7 @@
     SUBDIR += cmrt
     SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
+    SUBDIR += dav1d
     SUBDIR += deforaos-player
     SUBDIR += devede
     SUBDIR += din
@@ -378,6 +379,7 @@
     SUBDIR += quvi
     SUBDIR += quvi09
     SUBDIR += rage
+    SUBDIR += rav1e
     SUBDIR += recmpeg
     SUBDIR += recordmydesktop
     SUBDIR += replex
