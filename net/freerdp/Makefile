@@ -75,7 +75,7 @@ PULSEAUDIO_CMAKE_BOOL=	WITH_PULSE
 SSE_CMAKE_BOOL=		WITH_SSE2
 
 WAYLAND_DESC=		Build FreeRDP Wayland client
-WAYLAND_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:multimedia/v4l_compat
+WAYLAND_BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 			libwayland-cursor.so:graphics/wayland \
 			libxkbcommon.so:x11/libxkbcommon
