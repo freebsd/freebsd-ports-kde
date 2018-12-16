@@ -1,5 +1,4 @@
-malloc.h does not exist on FreeBSD, and neither do memalign(3) and pvalloc(3).
---- src/core/api/qtbug-61521.cpp
+--- src/core/api/qtbug-61521.cpp.orig	2018-11-27 04:10:38 UTC
 +++ src/core/api/qtbug-61521.cpp
 @@ -38,7 +38,7 @@
  ****************************************************************************/
@@ -29,7 +28,7 @@ malloc.h does not exist on FreeBSD, and neither do memalign(3) and pvalloc(3).
  SHIM_SYMBOL_VERSION(posix_memalign);
  int __posix_memalign(void** r, size_t a, size_t s)
      SHIM_ALIAS_SYMBOL(ShimPosixMemalign);
-@@ -102,18 +94,10 @@ SHIM_HIDDEN void ShimCFree(void* ptr) {
+@@ -102,16 +94,8 @@ SHIM_HIDDEN void ShimCFree(void* ptr) {
      free(ptr);
  }
  
@@ -39,12 +38,10 @@ malloc.h does not exist on FreeBSD, and neither do memalign(3) and pvalloc(3).
 -
  SHIM_HIDDEN void* ShimValloc(size_t size) {
      return  valloc(size);
- }
- 
--SHIM_HIDDEN void* ShimPvalloc(size_t size) {
--    return pvalloc(size);
 -}
 -
- SHIM_HIDDEN int ShimPosixMemalign(void** r, size_t a, size_t s) {
-     return posix_memalign(r,a,s);
+-SHIM_HIDDEN void* ShimPvalloc(size_t size) {
+-    return pvalloc(size);
  }
+ 
+ SHIM_HIDDEN int ShimPosixMemalign(void** r, size_t a, size_t s) {

@@ -1,8 +1,8 @@
---- src/3rdparty/chromium/chromecast/browser/BUILD.gn.orig	2017-01-26 00:49:11 UTC
+--- src/3rdparty/chromium/chromecast/browser/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/chromecast/browser/BUILD.gn
-@@ -120,7 +120,7 @@ source_set("browser") {
-     "//ui/gl",
-   ]
+@@ -187,7 +187,7 @@ cast_source_set("browser") {
+     ]
+   }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {

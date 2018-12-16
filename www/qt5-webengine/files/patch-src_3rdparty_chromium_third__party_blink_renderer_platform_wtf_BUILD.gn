@@ -1,0 +1,13 @@
+--- src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/third_party/blink/renderer/platform/wtf/BUILD.gn
+@@ -280,6 +280,10 @@ jumbo_component("wtf") {
+     libs = [ "dl" ]
+   }
+ 
++  if (is_bsd) {
++    libs = [ "execinfo" ]
++  }
++
+   if (is_mac) {
+     libs = [
+       "CoreFoundation.framework",

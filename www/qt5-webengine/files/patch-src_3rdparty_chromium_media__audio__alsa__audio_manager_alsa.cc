@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/media/audio/alsa/audio_manager_alsa.cc.orig	2017-01-26 00:49:15 UTC
+--- src/3rdparty/chromium/media/audio/alsa/audio_manager_alsa.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/media/audio/alsa/audio_manager_alsa.cc
-@@ -135,7 +135,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -93,7 +93,9 @@ void AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
    int card = -1;
  
    // Loop through the sound cards to get ALSA device hints.
@@ -10,7 +10,7 @@
      void** hints = NULL;
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
-@@ -147,7 +149,9 @@ void AudioManagerAlsa::GetAlsaAudioDevic
+@@ -105,7 +107,9 @@ void AudioManagerAlsa::GetAlsaAudioDevices(StreamType 
        DLOG(WARNING) << "GetAlsaAudioDevices: unable to get device hints: "
                      << wrapper_->StrError(error);
      }
@@ -19,20 +19,20 @@
 +#endif
  }
  
- void AudioManagerAlsa::GetAlsaDevicesInfo(
-@@ -230,7 +234,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvail
-     // goes through software conversion if needed (e.g. incompatible
-     // sample rate).
-     // TODO(joi): Should we prefer "hw" instead?
+ void AudioManagerAlsa::GetAlsaDevicesInfo(AudioManagerAlsa::StreamType type,
+@@ -188,7 +192,11 @@ bool AudioManagerAlsa::IsAlsaDeviceAvailable(
+   // goes through software conversion if needed (e.g. incompatible
+   // sample rate).
+   // TODO(joi): Should we prefer "hw" instead?
 +#ifdef OS_LINUX
-     static const char kDeviceTypeDesired[] = "plughw";
+   static const char kDeviceTypeDesired[] = "plughw";
 +#else
-+    static const char kDeviceTypeDesired[] = "plug";
++  static const char kDeviceTypeDesired[] = "plug";
 +#endif
-     return strncmp(kDeviceTypeDesired,
-                    device_name,
-                    arraysize(kDeviceTypeDesired) - 1) == 0;
-@@ -254,7 +262,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+   return strncmp(kDeviceTypeDesired, device_name,
+                  arraysize(kDeviceTypeDesired) - 1) == 0;
+ }
+@@ -210,7 +218,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
    // Loop through the sound cards.
    // Don't use snd_device_name_hint(-1,..) since there is a access violation
    // inside this ALSA API with libasound.so.2.0.0.
@@ -42,7 +42,7 @@
      int error = wrapper_->DeviceNameHint(card, kPcmInterfaceName, &hints);
      if (!error) {
        for (void** hint_iter = hints; *hint_iter != NULL; hint_iter++) {
-@@ -278,7 +288,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDe
+@@ -234,7 +244,9 @@ bool AudioManagerAlsa::HasAnyAlsaAudioDevice(
        DLOG(WARNING) << "HasAnyAudioDevice: unable to get device hints: "
                      << wrapper_->StrError(error);
      }

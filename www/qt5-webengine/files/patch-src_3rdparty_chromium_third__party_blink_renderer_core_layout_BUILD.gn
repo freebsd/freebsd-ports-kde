@@ -1,0 +1,11 @@
+--- src/3rdparty/chromium/third_party/blink/renderer/core/layout/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/third_party/blink/renderer/core/layout/BUILD.gn
+@@ -522,7 +522,7 @@ blink_core_sources("layout") {
+     sources += [ "layout_theme_font_provider_default.cc" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "layout_theme_linux.cc",
+       "layout_theme_linux.h",

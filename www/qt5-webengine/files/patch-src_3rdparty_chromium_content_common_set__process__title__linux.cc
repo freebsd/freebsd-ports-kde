@@ -1,5 +1,5 @@
---- src/3rdparty/chromium/content/common/set_process_title_linux.cc.orig	2017-01-26 00:49:13 UTC
-+++ src/3rdparty/chromium/content/common/set_process_title_linux.cc
+--- src/3rdparty/chromium/services/service_manager/embedder/set_process_title_linux.cc.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/services/service_manager/embedder/set_process_title_linux.cc
 @@ -49,6 +49,8 @@
  extern char** environ;
  
@@ -9,7 +9,7 @@
  static char* g_orig_argv0 = NULL;
  
  void setproctitle(const char* fmt, ...) {
-@@ -101,6 +103,7 @@ void setproctitle(const char* fmt, ...) 
+@@ -101,6 +103,7 @@ void setproctitle(const char* fmt, ...) {
    va_end(ap);
    g_main_argv[1] = NULL;
  }

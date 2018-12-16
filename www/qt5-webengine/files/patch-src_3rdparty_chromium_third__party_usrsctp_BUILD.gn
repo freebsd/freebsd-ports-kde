@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/usrsctp/BUILD.gn.orig	2017-01-26 00:49:31 UTC
+--- src/3rdparty/chromium/third_party/usrsctp/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/third_party/usrsctp/BUILD.gn
-@@ -112,6 +112,12 @@ static_library("usrsctp") {
+@@ -121,6 +121,12 @@ static_library("usrsctp") {
        "__Userspace_os_Linux",
        "_GNU_SOURCE",
      ]
