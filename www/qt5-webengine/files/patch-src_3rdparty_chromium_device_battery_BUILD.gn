@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/device/battery/BUILD.gn.orig	2017-01-26 00:49:14 UTC
-+++ src/3rdparty/chromium/device/battery/BUILD.gn
-@@ -47,7 +47,7 @@ if (!is_android) {
+--- src/3rdparty/chromium/services/device/battery/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/services/device/battery/BUILD.gn
+@@ -51,7 +51,7 @@ if (!is_android) {
        ]
      }
  

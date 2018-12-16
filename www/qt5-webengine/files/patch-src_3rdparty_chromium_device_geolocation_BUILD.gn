@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/device/geolocation/BUILD.gn.orig	2017-01-26 00:49:14 UTC
-+++ src/3rdparty/chromium/device/geolocation/BUILD.gn
-@@ -89,7 +89,7 @@ component("geolocation") {
+--- src/3rdparty/chromium/services/device/geolocation/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/services/device/geolocation/BUILD.gn
+@@ -92,7 +92,7 @@ source_set("geolocation") {
    if (is_android) {
      sources -= [ "wifi_data_provider_common.cc" ]
    }

@@ -1,20 +1,29 @@
---- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2017-01-26 00:49:31 UTC
+--- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/ui/gl/BUILD.gn
-@@ -13,7 +13,7 @@ declare_args() {
-   enable_swiftshader = is_chrome_branded && is_win
- }
- 
--use_egl = is_win || is_android || is_linux
-+use_egl = is_win || is_android || is_linux || is_bsd
- use_glx = use_x11 || ozone_platform_x11
- 
- if (is_android) {
-@@ -170,7 +170,7 @@ component("gl") {
+@@ -182,7 +182,7 @@ component("gl") {
        "gl_surface_egl.h",
      ]
+ 
+-    if (is_linux || use_ozone) {
++    if (is_linux || is_bsd || use_ozone) {
+       sources += [
+         "gl_image_native_pixmap.cc",
+         "gl_image_native_pixmap.h",
+@@ -200,7 +200,7 @@ component("gl") {
+       }
+     }
+ 
+-    if (is_posix && !is_fuchsia && !is_mac) {
++    if (is_posix && !is_fuchsia && !is_mac && !is_bsd) {
+       # Windows has USE_EGL but doesn't support base::FileDescriptor.
+       # libsync isn't supported or needed on MacOSX.
+       # Fuchsia is excluded due to a libsync dependency and because it's
+@@ -222,7 +222,7 @@ component("gl") {
    }
--  if (is_android || is_linux) {
-+  if (is_android || is_linux || is_bsd) {
+ 
+   # TODO(camurcu): Windows/Ozone uses OSMesa for now. Will be updated.
+-  if (is_android || is_linux || is_fuchsia || (is_win && use_ozone)) {
++  if (is_android || is_linux || is_bsd || is_fuchsia || (is_win && use_ozone)) {
      sources += [
        "gl_implementation_osmesa.cc",
        "gl_implementation_osmesa.h",

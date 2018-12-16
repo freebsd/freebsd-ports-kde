@@ -1,14 +1,14 @@
---- src/3rdparty/chromium/net/base/network_interfaces_posix.cc.orig	2017-01-26 00:49:16 UTC
+--- src/3rdparty/chromium/net/base/network_interfaces_posix.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/net/base/network_interfaces_posix.cc
-@@ -20,6 +20,7 @@ namespace net {
- #if !defined(OS_NACL)
+@@ -16,6 +16,7 @@
+ namespace net {
  namespace internal {
  
 +#if !defined(OS_BSD)
  // The application layer can pass |policy| defined in net_util.h to
  // request filtering out certain type of interfaces.
  bool ShouldIgnoreInterface(const std::string& name, int policy) {
-@@ -33,6 +34,7 @@ bool ShouldIgnoreInterface(const std::st
+@@ -29,6 +30,7 @@ bool ShouldIgnoreInterface(const std::string& name, in
  
    return false;
  }
