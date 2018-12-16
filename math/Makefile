@@ -126,6 +126,7 @@
     SUBDIR += ann
     SUBDIR += antic
     SUBDIR += apc
+    SUBDIR += apron
     SUBDIR += arb
     SUBDIR += aribas
     SUBDIR += armadillo
@@ -174,6 +175,7 @@
     SUBDIR += coin-or-data-stochastic
     SUBDIR += coinmp
     SUBDIR += coinutils
+    SUBDIR += combblas
     SUBDIR += concorde
     SUBDIR += convertall
     SUBDIR += coq
@@ -229,7 +231,6 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
-    SUBDIR += gdcalc
     SUBDIR += geg
     SUBDIR += geogebra
     SUBDIR += geogram
@@ -263,6 +264,7 @@
     SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += hexcalc
+    SUBDIR += hipmcl
     SUBDIR += hs-Agda
     SUBDIR += hs-Agda-stdlib
     SUBDIR += hs-NumInstances

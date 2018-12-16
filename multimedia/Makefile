@@ -44,6 +44,7 @@
     SUBDIR += cmrt
     SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
+    SUBDIR += dav1d
     SUBDIR += deforaos-player
     SUBDIR += devede
     SUBDIR += din
@@ -158,6 +159,7 @@
     SUBDIR += gstreamer1-plugins-x265
     SUBDIR += gstreamer1-qt
     SUBDIR += gstreamer1-rtsp-server
+    SUBDIR += gstreamer1-transcoder
     SUBDIR += gstreamer1-vaapi
     SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
@@ -373,11 +375,11 @@
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
     SUBDIR += qt5-multimedia
-    SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09
     SUBDIR += rage
+    SUBDIR += rav1e
     SUBDIR += recmpeg
     SUBDIR += recordmydesktop
     SUBDIR += replex

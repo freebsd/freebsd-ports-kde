@@ -5,6 +5,36 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20181215:
+  AFFECTS: users of sysutils/graylog
+  AUTHOR: dch@FreeBSD.org
+
+  The dependent ports for ElasticSearch and MongoDB have both changed,
+  and upstream changes to the configuration file may require minor
+  changes to work correctly. Refer to the new sample files installed
+  alongside the port for reference:
+
+  server.conf
+  log4j.xml
+  graylog_logging.xml
+
+20181213:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: mat@FreeBSD.org
+
+  The default Perl version has been switched to Perl 5.28.  If you are using
+  binary packages to upgrade your system, you do not have anything to do, pkg
+  upgrade will do the right thing.  For the other people, follow the
+  instructions in entry 20161103, it should still be the same.
+
+20181212:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  There are some new features added in ejabberd 18.12, esp. related to 
+  bookmarks, and XML compression in message archive storage. Please
+  refer to: https://blog.process-one.net/ejabberd-18-12/ 
+
 20181209:
   AFFECTS: users of DRM ports other than graphics/drm-kmod
   AUTHOR: jmd@FreeBSD.org
@@ -46,7 +76,7 @@ you update your ports collection, before attempting any port upgrades.
   AFFECTS: users of misc/openhab2
   AUTHOR: netchild@FreeBSD.org
 
-  If you upgrade from a pevious version, make a backup of
+  If you upgrade from a previous version, make a backup of
        /var/db/openhab2
   and run
        %%PREFIX%%/libexec/openhab2/runtime/bin/update.freebsd

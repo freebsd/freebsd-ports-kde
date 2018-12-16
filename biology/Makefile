@@ -71,7 +71,6 @@
     SUBDIR += ncbi-cxx-toolkit
     SUBDIR += ncbi-toolkit
     SUBDIR += ngs-sdk
-    SUBDIR += njplot
     SUBDIR += p5-AcePerl
     SUBDIR += p5-Bio-ASN1-EntrezGene
     SUBDIR += p5-Bio-Coordinate
@@ -107,6 +106,7 @@
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-cutadapt
+    SUBDIR += py-fastTSNE
     SUBDIR += py-gffutils
     SUBDIR += py-gtfparse
     SUBDIR += py-loompy

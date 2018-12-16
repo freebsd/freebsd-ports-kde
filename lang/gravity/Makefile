@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gravity
-DISTVERSION=	0.5.9
+DISTVERSION=	0.6.1
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-lang
 
@@ -18,8 +18,5 @@ GH_ACCOUNT=	marcobambini
 LDFLAGS+=	-lm
 
 PLIST_FILES=	bin/${PORTNAME}
-
-do-install:
-	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>

@@ -3,11 +3,11 @@
 
 PORTNAME=	l2tpd
 PORTVERSION=	0.69
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	SF/${PORTNAME}/L2TPd/${PORTVERSION}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sobomax@FreeBSD.org
 COMMENT=	Implementation of the layer two tunneling protocol
 
 BROKEN_armv6=	fails to link: undefined reference to check_control

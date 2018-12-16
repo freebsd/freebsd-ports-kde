@@ -3,7 +3,7 @@
 
 PORTNAME=	inkscape
 PORTVERSION=	0.92.3
-PORTREVISION=	5
+PORTREVISION=	7
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://inkscape.org/en/gallery/item/12187/
 

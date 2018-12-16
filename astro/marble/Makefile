@@ -19,7 +19,7 @@ USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		plasma-framework runner service sonnet textwidgets wallet \
 		widgetsaddons xmlgui
 USE_QT=		concurrent core dbus declarative designer gui location network opengl \
-		phonon4 printsupport script sql svg webkit widgets xml \
+		phonon4 printsupport script sql svg webchannel webengine widgets xml \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes

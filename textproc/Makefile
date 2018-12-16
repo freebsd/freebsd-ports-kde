@@ -100,6 +100,7 @@
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
+    SUBDIR += crex
     SUBDIR += crimson
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -223,7 +224,6 @@
     SUBDIR += glark
     SUBDIR += gmetadom
     SUBDIR += gnome-doc-utils
-    SUBDIR += gnome-spell
     SUBDIR += gnugrep
     SUBDIR += go.text
     SUBDIR += goldendict
@@ -1677,7 +1677,6 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
-    SUBDIR += sagasu
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary

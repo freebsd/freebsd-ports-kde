@@ -4,7 +4,7 @@ PORTNAME=	kdiff3
 DISTVERSION=	1.7.90.20181029
 CATEGORIES=	textproc kde
 
-MAINTAINER=	kdeg@FreeBSD.org
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE graphical frontend for diff
 
 LICENSE=	GPLv2
@@ -19,8 +19,6 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		parts service sonnet textwidgets widgetsaddons xmlgui
 USE_QT=		concurrent core dbus gui network printsupport widgets xml \
 		buildtools_build qmake_build
-
-CONFLICTS_INSTALL=	kdiff-kde4
 
 OPTIONS_DEFINE=	DOCS
 DOCSDIR_REL=	share/doc/HTML
