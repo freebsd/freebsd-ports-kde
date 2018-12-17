@@ -29,7 +29,7 @@ COMMENT=	Qt 5 library to render web content
 BUILD_DEPENDS=	bison:devel/bison \
 		ninja:devel/ninja \
 		yasm:devel/yasm \
-		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libdbus-1.so:devel/dbus \
 		libevent.so:devel/libevent \
