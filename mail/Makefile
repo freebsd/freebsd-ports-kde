@@ -135,7 +135,6 @@
     SUBDIR += fetchmail
     SUBDIR += filtermail
     SUBDIR += findmaildirs
-    SUBDIR += gbuffy
     SUBDIR += geary
     SUBDIR += gensig
     SUBDIR += getmail
@@ -497,7 +496,6 @@
     SUBDIR += pine-pgp-filters
     SUBDIR += pm-lib
     SUBDIR += policyd2
-    SUBDIR += pop3lite
     SUBDIR += pop3proxy
     SUBDIR += popa3d
     SUBDIR += popa3d-before-sendmail
@@ -632,7 +630,7 @@
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
     SUBDIR += rubygem-premailer-rails-rails5
-    SUBDIR += rubygem-premailer-rails19
+    SUBDIR += rubygem-premailer-rails19-rails50
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails

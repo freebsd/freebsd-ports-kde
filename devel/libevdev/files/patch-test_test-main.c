@@ -1,6 +1,6 @@
---- test/test-main.c.orig	2017-05-04 00:37:30 UTC
+--- test/test-main.c.orig	2018-03-08 05:27:35 UTC
 +++ test/test-main.c
-@@ -41,6 +41,7 @@ extern Suite *uinput_suite(void);
+@@ -43,6 +43,7 @@ extern Suite *uinput_suite(void);
  static int
  is_debugger_attached(void)
  {
@@ -8,7 +8,7 @@
  	int status;
  	int rc;
  	int pid = fork();
-@@ -64,6 +65,15 @@ is_debugger_attached(void)
+@@ -66,6 +67,15 @@ is_debugger_attached(void)
  	}
  
  	return rc;
@@ -23,4 +23,4 @@
 +#endif
  }
  
- int main(int argc, char **argv)
+ int main(void)

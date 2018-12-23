@@ -24,6 +24,7 @@
     SUBDIR += R-cran-udunits2
     SUBDIR += abinit
     SUBDIR += afni
+    SUBDIR += agrum
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += atom
@@ -95,6 +96,7 @@
     SUBDIR += gtamsanalyzer
     SUBDIR += gwyddion
     SUBDIR += h5utils
+    SUBDIR += h5z-zfp
     SUBDIR += harminv
     SUBDIR += hdf
     SUBDIR += hdf5
@@ -205,6 +207,8 @@
     SUBDIR += psychopy
     SUBDIR += pulseview
     SUBDIR += py-DendroPy
+    SUBDIR += py-GPy
+    SUBDIR += py-GPyOpt
     SUBDIR += py-PyFR
     SUBDIR += py-lifelines
     SUBDIR += py-MDAnalysis
@@ -233,6 +237,7 @@
     SUBDIR += py-obspy
     SUBDIR += py-openpiv
     SUBDIR += py-paida
+    SUBDIR += py-paramz
     SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
@@ -299,6 +304,7 @@
     SUBDIR += triqs
     SUBDIR += udunits
     SUBDIR += v_sim
+    SUBDIR += vipster
     SUBDIR += vmd
     SUBDIR += voro++
     SUBDIR += wannier90

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	freerdp
-DISTVERSION=	2.0.0-rc3
-PORTREVISION=	5
+DISTVERSION=	2.0.0-rc4
 CATEGORIES=	net comms ipv6
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
