@@ -19,7 +19,7 @@ LIB_DEPENDS=	libfftw3_threads.so:math/fftw3
 
 CMAKE_ON=	USE_KDE4
 
-USES=		cmake:outsource compiler:c++11-lang cpe gettext \
+USES=		cmake compiler:c++11-lang cpe gettext \
 		kde:4 pkgconfig qt:4 tar:xz
 USE_KDE=	kdelibs automoc4
 USE_QT=		corelib dbus gui svg \

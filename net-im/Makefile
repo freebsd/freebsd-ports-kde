@@ -118,6 +118,7 @@
     SUBDIR += pidgin-fetion
     SUBDIR += pidgin-guifications
     SUBDIR += pidgin-hotkeys
+    SUBDIR += pidgin-icyque
     SUBDIR += pidgin-latex
     SUBDIR += pidgin-libnotify
     SUBDIR += pidgin-manualsize
@@ -165,6 +166,7 @@
     SUBDIR += qxmpp-qt5
     SUBDIR += ramblercontacts
     SUBDIR += ricochet
+    SUBDIR += rubygem-discordrb-webhooks-blackst0ne
     SUBDIR += rubygem-hipchat
     SUBDIR += rubygem-hipchat15
     SUBDIR += rubygem-lita
