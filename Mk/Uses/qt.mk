@@ -289,7 +289,7 @@ multimedia_LIB=		libQt${_QT_LIBVER}Multimedia.so
 network_PORT=		net/${_QT_RELNAME}-network
 network_LIB=		libQt${_QT_LIBVER}Network.so
 
-networkauth_PORT=		net/${_QT_RELNAME}-network
+networkauth_PORT=		net/${_QT_RELNAME}-networkauth
 networkauth_LIB=		libQt${_QT_LIBVER}NetworkAuth.so
 
 opengl_PORT=		graphics/${_QT_RELNAME}-opengl
