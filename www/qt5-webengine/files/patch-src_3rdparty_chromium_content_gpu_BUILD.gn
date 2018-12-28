@@ -1,14 +1,6 @@
 --- src/3rdparty/chromium/content/gpu/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/content/gpu/BUILD.gn
-@@ -118,6 +118,7 @@ target(link_target_type, "gpu_sources") {
-       "//ui/events/platform/x11",
-       "//ui/gfx/x",
-     ]
-+    configs += [ "//build/config/linux:x11" ]
-   }
- 
-   if (use_ozone) {
-@@ -130,7 +131,7 @@ target(link_target_type, "gpu_sources") {
+@@ -130,7 +130,7 @@ target(link_target_type, "gpu_sources") {
  
    # Use DRI on desktop Linux builds.
    if (current_cpu != "s390x" && current_cpu != "ppc64" && is_desktop_linux &&

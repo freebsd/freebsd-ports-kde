@@ -14,7 +14,7 @@
    return res;
  }
 -#endif  // OS_LINUX && !OS_CHROMEOS && !IS_CHROMECAST
-+#endif  // OS_LINUX && !OS_CHROMEOS && !IS_CHROMECAST && !defined(OS_BSD)
++#endif  // OS_LINUX && !OS_CHROMEOS && !IS_CHROMECAST && !OS_BSD
  
  }  // namespace
  
@@ -27,6 +27,15 @@
    if (gpu_info_.gpu.vendor_id == 0x10de &&  // NVIDIA
        gpu_info_.gpu.driver_vendor == "NVIDIA" && !CanAccessNvidiaDeviceFile())
      return false;
+@@ -121,7 +121,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
+     gpu_feature_info_ = gpu::ComputeGpuFeatureInfo(
+         gpu_info_, gpu_preferences_, command_line, &needs_more_info);
+   }
+-#endif  // !OS_ANDROID && !IS_CHROMECAST
++#endif  // !OS_ANDROID && !IS_CHROMECAST && !OS_BSD
+   gpu_info_.in_process_gpu = false;
+ 
+   bool use_swiftshader = false;
 @@ -194,7 +194,7 @@ bool GpuInit::InitializeAndStartSandbox(base::CommandL
    sandbox_helper_->PreSandboxStartup();
  

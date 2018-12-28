@@ -5,7 +5,7 @@
  #endif
  
 -#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
    void set_app_name(const std::string& app_name) { app_name_ = app_name; }
    const std::string& app_name() const { return app_name_; }
  #endif
@@ -14,7 +14,7 @@
  #endif
  
 -#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
    std::string app_name_;
  #endif
  
@@ -23,7 +23,7 @@
  }
  
 -#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_FREEBSD)
++#if defined(OS_LINUX) || defined(OS_BSD)
  // static
  void AudioManager::SetGlobalAppName(const std::string& app_name) {
    GetHelper()->set_app_name(app_name);
