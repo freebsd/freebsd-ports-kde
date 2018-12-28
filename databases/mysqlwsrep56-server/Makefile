@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	mysqlwsrep
-PORTVERSION?=	5.6.41
+PORTVERSION?=	5.6.42
 DISTVERSIONPREFIX?=	wsrep_
-DISTVERSIONSUFFIX?=	-25.23
+DISTVERSIONSUFFIX?=	-25.24
 CATEGORIES=	databases ipv6
 PKGNAMESUFFIX=	56-server
 
@@ -30,7 +30,7 @@ DATADIR=	${PREFIX}/share/mysql
 ETCDIR=		${PREFIX}/etc/mysql
 
 USES=		bison \
-		cmake:outsource,noninja \
+		cmake:noninja \
 		compiler:c++11-lib \
 		compiler:c11 \
 		libedit \

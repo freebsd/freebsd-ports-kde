@@ -378,6 +378,7 @@
     SUBDIR += jq
     SUBDIR += jrefentry
     SUBDIR += jshon
+    SUBDIR += json-yaml
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
@@ -542,7 +543,6 @@
     SUBDIR += opentoken
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
-    SUBDIR += ots
     SUBDIR += p5-AI-Categorizer
     SUBDIR += p5-Algorithm-CheckDigits
     SUBDIR += p5-Algorithm-RabinKarp

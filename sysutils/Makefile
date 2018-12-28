@@ -100,7 +100,6 @@
     SUBDIR += batmon
     SUBDIR += battmond
     SUBDIR += battray
-    SUBDIR += bbapm
     SUBDIR += bbcp
     SUBDIR += bchunk
     SUBDIR += beadm
@@ -418,7 +417,6 @@
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
-    SUBDIR += gcombust
     SUBDIR += gconf-editor
     SUBDIR += gdisk
     SUBDIR += gdmap
@@ -581,7 +579,7 @@
     SUBDIR += knutclient-kde4
     SUBDIR += kops
     SUBDIR += krename
-    SUBDIR += kshutdown-kde4
+    SUBDIR += kshutdown
     SUBDIR += ksysguardd-kde4
     SUBDIR += ksystemlog
     SUBDIR += ksystemlog-kde4
@@ -730,7 +728,6 @@
     SUBDIR += moosefs3-netdump
     SUBDIR += moreutils
     SUBDIR += most
-    SUBDIR += mount.app
     SUBDIR += mountsmb2
     SUBDIR += mpiexec
     SUBDIR += mping
@@ -1275,6 +1272,7 @@
     SUBDIR += syslog-ng315
     SUBDIR += syslog-ng317
     SUBDIR += syslog-ng318
+    SUBDIR += syslog-ng319
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
@@ -1440,7 +1438,6 @@
     SUBDIR += wmbsdbatt
     SUBDIR += wmcpuload
     SUBDIR += wmcube
-    SUBDIR += wmcube-gdk
     SUBDIR += wmdiskmon
     SUBDIR += wmfire
     SUBDIR += wmflame
@@ -1479,7 +1476,6 @@
     SUBDIR += xfsprogs
     SUBDIR += xin
     SUBDIR += xjobs
-    SUBDIR += xlogmaster
     SUBDIR += xmbmon
     SUBDIR += xorriso
     SUBDIR += xosview

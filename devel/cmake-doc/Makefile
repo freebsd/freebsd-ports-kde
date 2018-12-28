@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cmake
-DISTVERSION=	3.13.1
+DISTVERSION=	3.13.2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R}/
 PKGNAMESUFFIX=	-doc
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 DISTINFO_FILE=	${.CURDIR}/../cmake/distinfo
 
 NO_ARCH=	yes
-USES=		cmake:outsource qt:5
+USES=		cmake qt:5
 USE_QT=		help_build
 
 CMAKE_OFF=	SPHINX_MAN

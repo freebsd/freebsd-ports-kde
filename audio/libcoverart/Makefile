@@ -14,12 +14,17 @@ LICENSE=	LGPL20
 LIB_DEPENDS=	libjansson.so:devel/jansson \
 		libneon.so:www/neon
 
-USES=		compiler:c11 cmake pathfix
+USES=		compiler:c11 cmake:insource pathfix
 USE_CSTD=	c99
 USE_CXXSTD=	c++98
 USE_LDCONFIG=	yes
 
 CXXFLAGS+=	-Wno-implicit-fallthrough
+
+.if exists(/usr/lib/libstdc++.so)
+CXXFLAGS+=	-Wno-unused-function -Wno-class-memaccess -Wno-catch-value
+CFLAGS+=	-Wno-format-overflow
+.endif
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \

@@ -2,8 +2,8 @@
 
 PORTNAME=	aom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.0-1048
-DISTVERSIONSUFFIX=	-g192bcd3ef
+DISTVERSION=	1.0.0-1104
+DISTVERSIONSUFFIX=	-g9b1252eab
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
 BUILD_DEPENDS_amd64=	nasm:devel/nasm
 BUILD_DEPENDS_i386=	nasm:devel/nasm
 
-USES=		cmake:outsource compiler:c++11-lib perl5
+USES=		cmake compiler:c++11-lib perl5
 USE_GITHUB=	yes
 USE_PERL5=	build
 USE_LDCONFIG=	yes

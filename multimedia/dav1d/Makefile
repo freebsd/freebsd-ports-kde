@@ -4,6 +4,10 @@ PORTNAME=	dav1d
 DISTVERSION=	0.1.0
 CATEGORIES=	multimedia
 
+PATCH_SITES=	${GL_SITE}/jbeich/${GL_PROJECT}/commit/
+PATCHFILES+=	d3a03bd9939d.patch:-p1
+PATCHFILES+=	7f01c6166519.patch:-p1
+
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Small and fast AV1 decoder
 
@@ -17,7 +21,7 @@ BUILD_DEPENDS_armv6=	${LOCALBASE}/bin/as:devel/binutils
 BUILD_DEPENDS_armv7=	${LOCALBASE}/bin/as:devel/binutils
 BUILD_DEPENDS_i386=	nasm:devel/nasm
 
-USES=		meson
+USES=		compiler:c11 meson
 USE_GITLAB=	yes
 USE_LDCONFIG=	yes
 GL_SITE=	https://code.videolan.org

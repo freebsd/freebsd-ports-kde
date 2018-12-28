@@ -2,7 +2,7 @@
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	28
+PORTREVISION=	29
 CATEGORIES=	x11 kde kde-applications
 PKGNAMESUFFIX=	-kde4
 
@@ -28,7 +28,8 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms
-BUILD_DEPENDS=	xrdb:x11/xrdb
+BUILD_DEPENDS=	xrdb:x11/xrdb \
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 RUN_DEPENDS=	${KDE_PREFIX}/env/xdg-env.sh:misc/kde4-xdg-env \
 		${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-theme \
 		xprop:x11/xprop \
@@ -44,7 +45,7 @@ RUN_DEPENDS=	${KDE_PREFIX}/env/xdg-env.sh:misc/kde4-xdg-env \
 		${LOCALBASE}/etc/pam.d/kde:security/pam_kde \
 		${KDE_PREFIX}/share/apps/ksplash/Themes/Default/Theme.rc:x11-themes/kde-base-artwork-kde4
 
-USES=		cmake:outsource,noninja compiler:c++11-lib gettext gmake jpeg kde:4 \
+USES=		cmake:noninja compiler:c++11-lib gettext gmake jpeg kde:4 \
 		pkgconfig qt:4 shebangfix tar:xz
 USE_GL=		gl glu
 USE_GNOME=	glib20 libxml2

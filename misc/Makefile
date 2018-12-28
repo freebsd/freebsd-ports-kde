@@ -172,7 +172,6 @@
     SUBDIR += gplink
     SUBDIR += granulate
     SUBDIR += grc
-    SUBDIR += gtkfind
     SUBDIR += gwhich
     SUBDIR += hb
     SUBDIR += hello
@@ -265,6 +264,7 @@
     SUBDIR += lc
     SUBDIR += lesspipe
     SUBDIR += libeatmydata
+    SUBDIR += libemos
     SUBDIR += libisocodes
     SUBDIR += libkdeedu-kde4
     SUBDIR += libkeduvocdocument
@@ -523,7 +523,7 @@
     SUBDIR += tdfiglet
     SUBDIR += team
     SUBDIR += telbook
-    SUBDIR += tellico-kde4
+    SUBDIR += tellico
     SUBDIR += tempcontrol
     SUBDIR += termatrix
     SUBDIR += teseq

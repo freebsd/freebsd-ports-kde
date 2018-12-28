@@ -283,7 +283,6 @@
     SUBDIR += php72-extensions
     SUBDIR += php73
     SUBDIR += php73-extensions
-    SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pocl
     SUBDIR += polyml
@@ -306,7 +305,6 @@
     SUBDIR += python2
     SUBDIR += python27
     SUBDIR += python3
-    SUBDIR += python34
     SUBDIR += python35
     SUBDIR += python36
     SUBDIR += python37

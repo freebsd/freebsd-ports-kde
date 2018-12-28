@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	cmake
-DISTVERSION=	3.13.1
+DISTVERSION=	3.13.2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.cmake.org/files/v${PORTVERSION:R}/
 PKGNAMESUFFIX=	-gui
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		librhash.so:security/rhash
 
 USE_QT=		core gui widgets buildtools_build qmake_build
-USES=		cmake:run desktop-file-utils libarchive \
+USES=		cmake:run,insource desktop-file-utils libarchive \
 		shared-mime-info qt:5
 CMAKE_OFF=	BUILD_CursesDialog \
 		CMake_SPHINX_DEPEND_ON_EXECUTABLES

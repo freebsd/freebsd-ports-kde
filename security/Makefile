@@ -101,7 +101,6 @@
     SUBDIR += cp2fwb
     SUBDIR += cracklib
     SUBDIR += crackpkcs12
-    SUBDIR += crank
     SUBDIR += create-cert
     SUBDIR += cryptlib
     SUBDIR += cryptopp
@@ -191,7 +190,6 @@
     SUBDIR += gorilla
     SUBDIR += govpn
     SUBDIR += gpa
-    SUBDIR += gpasman
     SUBDIR += gpgdir
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
@@ -203,7 +201,6 @@
     SUBDIR += gsasl
     SUBDIR += gss
     SUBDIR += gstreamer1-plugins-dtls
-    SUBDIR += gtk-knocker
     SUBDIR += gtkpasman
     SUBDIR += gwee
     SUBDIR += hackbot
@@ -835,6 +832,7 @@
     SUBDIR += pecl-scrypt
     SUBDIR += pecl-ssh2
     SUBDIR += pecl-ssh2-0
+    SUBDIR += peda
     SUBDIR += pev
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
@@ -1060,7 +1058,6 @@
     SUBDIR += py-vulndb
     SUBDIR += py-yara
     SUBDIR += py-yubikey-manager
-    SUBDIR += py-yubioath-desktop
     SUBDIR += py-zope.app.authentication
     SUBDIR += py-zope.app.localpermission
     SUBDIR += py-zope.app.principalannotation
@@ -1080,6 +1077,7 @@
     SUBDIR += quantis
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
+    SUBDIR += racoon2-legacy
     SUBDIR += radamsa
     SUBDIR += ranpwd
     SUBDIR += ratproxy
@@ -1285,7 +1283,6 @@
     SUBDIR += ssss
     SUBDIR += sst
     SUBDIR += starttls
-    SUBDIR += stegdetect
     SUBDIR += steghide
     SUBDIR += stoken
     SUBDIR += strobe
@@ -1366,6 +1363,7 @@
     SUBDIR += yubico-piv-tool
     SUBDIR += yubikey-personalization-gui
     SUBDIR += yubikey-piv-manager
+    SUBDIR += yubioath-desktop
     SUBDIR += zebedee
     SUBDIR += zenmap
     SUBDIR += zeronet

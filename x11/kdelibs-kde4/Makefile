@@ -13,6 +13,8 @@ COMMENT=	Base set of libraries needed by KDE programs
 DEPRECATED=	KDE4 is EOL upstream
 EXPIRATION_DATE=	2018-12-31
 
+BROKEN_FreeBSD_12=	incompatible with base SSL, wontfix before deprecation
+BROKEN_FreeBSD_13=	incompatible with base SSL, wontfix before deprecation
 BROKEN_SSL=	openssl111
 BROKEN_SSL_REASON_openssl111=	error: member access into incomplete type 'RSA' (aka 'rsa_st')
 
@@ -39,7 +41,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-them
 # kdelibs's last release was as part of KDE Applications 17.08.3
 KDE_APPLICATIONS_VERSION=	17.08.3
 
-USES=		cmake:outsource fam gettext grantlee:4 jpeg kde:4 perl5 \
+USES=		cmake fam gettext grantlee:4 jpeg kde:4 perl5 \
 		qt:4 shared-mime-info shebangfix tar:xz ssl
 USE_GNOME=	libxml2 libxslt
 USE_KDE=	oxygen-icons5 \

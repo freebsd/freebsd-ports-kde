@@ -25,7 +25,6 @@
     SUBDIR += freetalk
     SUBDIR += fugu
     SUBDIR += gajim
-    SUBDIR += gale
     SUBDIR += gitterdone
     SUBDIR += gloox
     SUBDIR += hotot
@@ -119,6 +118,7 @@
     SUBDIR += pidgin-fetion
     SUBDIR += pidgin-guifications
     SUBDIR += pidgin-hotkeys
+    SUBDIR += pidgin-icyque
     SUBDIR += pidgin-latex
     SUBDIR += pidgin-libnotify
     SUBDIR += pidgin-manualsize
@@ -154,6 +154,7 @@
     SUBDIR += py-skype4py
     SUBDIR += py-slackclient
     SUBDIR += py-sleekxmpp
+    SUBDIR += py-slixmpp
     SUBDIR += py-telepot
     SUBDIR += py-toxcore-c
     SUBDIR += py-unmessage
@@ -166,6 +167,7 @@
     SUBDIR += qxmpp-qt5
     SUBDIR += ramblercontacts
     SUBDIR += ricochet
+    SUBDIR += rubygem-discordrb-webhooks-blackst0ne
     SUBDIR += rubygem-hipchat
     SUBDIR += rubygem-hipchat15
     SUBDIR += rubygem-lita

@@ -136,6 +136,7 @@
     SUBDIR += asymptote
     SUBDIR += atlas
     SUBDIR += barvinok
+    SUBDIR += bcal
     SUBDIR += biggles
     SUBDIR += blacs
     SUBDIR += blas
@@ -231,7 +232,6 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
-    SUBDIR += geg
     SUBDIR += geogebra
     SUBDIR += geogram
     SUBDIR += geonext
@@ -261,7 +261,6 @@
     SUBDIR += gretl
     SUBDIR += gri
     SUBDIR += gringo
-    SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += hexcalc
     SUBDIR += hipmcl
@@ -380,7 +379,6 @@
     SUBDIR += mpir
     SUBDIR += mppp
     SUBDIR += mprime
-    SUBDIR += msieve
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
@@ -404,7 +402,6 @@
     SUBDIR += octave
     SUBDIR += octave-forge
     SUBDIR += octave-forge-actuarial
-    SUBDIR += octave-forge-audio
     SUBDIR += octave-forge-base
     SUBDIR += octave-forge-bim
     SUBDIR += octave-forge-bioinfo
@@ -419,11 +416,9 @@
     SUBDIR += octave-forge-divand
     SUBDIR += octave-forge-doctest
     SUBDIR += octave-forge-econometrics
-    SUBDIR += octave-forge-engine
     SUBDIR += octave-forge-fenv
     SUBDIR += octave-forge-financial
     SUBDIR += octave-forge-fits
-    SUBDIR += octave-forge-fl-core
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
     SUBDIR += octave-forge-ga
@@ -465,7 +460,6 @@
     SUBDIR += octave-forge-optiminterp
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
-    SUBDIR += octave-forge-pdb
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
@@ -693,6 +687,7 @@
     SUBDIR += py-CyLP
     SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
+    SUBDIR += py-MutatorMath
     SUBDIR += py-PuLP
     SUBDIR += py-PyMetis
     SUBDIR += py-PySCIPOpt
@@ -757,6 +752,7 @@
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
     SUBDIR += py-pybloom
+    SUBDIR += py-pyclipper
     SUBDIR += py-pycosat
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
@@ -864,7 +860,6 @@
     SUBDIR += sundials
     SUBDIR += superlu
     SUBDIR += superlu_mt
-    SUBDIR += surf
     SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs

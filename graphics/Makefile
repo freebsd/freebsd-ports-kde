@@ -92,7 +92,6 @@
     SUBDIR += cenon
     SUBDIR += cfdg
     SUBDIR += charls
-    SUBDIR += chbg
     SUBDIR += cimg
     SUBDIR += cinepaint
     SUBDIR += cloudcompare
@@ -115,7 +114,6 @@
     SUBDIR += cthumb
     SUBDIR += curator
     SUBDIR += cuttlefish
-    SUBDIR += danpei
     SUBDIR += darknock
     SUBDIR += darktable
     SUBDIR += dataplot
@@ -196,7 +194,6 @@
     SUBDIR += fly
     SUBDIR += fortytwo
     SUBDIR += fotofix
-    SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
     SUBDIR += fpc-graph
@@ -226,13 +223,11 @@
     SUBDIR += fyre
     SUBDIR += g2
     SUBDIR += gauche-gl
-    SUBDIR += gcolor
     SUBDIR += gcolor2
     SUBDIR += gcolor3
     SUBDIR += gd
     SUBDIR += gdal
     SUBDIR += gdchart
-    SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf2
     SUBDIR += gdtclft
     SUBDIR += geeqie
@@ -311,7 +306,6 @@
     SUBDIR += grafx2
     SUBDIR += graphene
     SUBDIR += graphite2
-    SUBDIR += graphopt
     SUBDIR += graphos
     SUBDIR += graphviz
     SUBDIR += grx
@@ -763,6 +757,7 @@
     SUBDIR += p5-Image-Math-Constrain
     SUBDIR += p5-Image-MetaData-GQview
     SUBDIR += p5-Image-MetaData-JPEG
+    SUBDIR += p5-Image-OCR-Tesseract
     SUBDIR += p5-Image-ObjectDetect
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-PNG-Libpng
@@ -948,12 +943,12 @@
     SUBDIR += py-pypillowfight
     SUBDIR += py-pyproj
     SUBDIR += py-pyqtgraph
+    SUBDIR += py-python-poppler-qt5
     SUBDIR += py-qt4-svg
     SUBDIR += py-qt5-svg
     SUBDIR += py-sane
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
-    SUBDIR += py-sk1
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
     SUBDIR += py-stltools
@@ -1071,6 +1066,7 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simpleviewer
+    SUBDIR += sk1
     SUBDIR += sk1libs
     SUBDIR += skanlite
     SUBDIR += skanlite-kde4

@@ -48,7 +48,6 @@
     SUBDIR += deforaos-panel
     SUBDIR += deskmenu
     SUBDIR += deskpaint
-    SUBDIR += dgs
     SUBDIR += dmenu
     SUBDIR += dmenu2
     SUBDIR += docker-tray
@@ -71,7 +70,6 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gcb
-    SUBDIR += gdkxft
     SUBDIR += gdm
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
@@ -92,8 +90,6 @@
     SUBDIR += gstreamer1-plugins-x
     SUBDIR += gstreamer1-plugins-ximagesrc
     SUBDIR += gsynaptics
-    SUBDIR += gtk-launch
-    SUBDIR += gtk-theme-switch
     SUBDIR += gtk-theme-switch2
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
@@ -402,7 +398,6 @@
     SUBDIR += xcursorgen
     SUBDIR += xcut
     SUBDIR += xdbedizzy
-    SUBDIR += xdialog
     SUBDIR += xditview
     SUBDIR += xdm
     SUBDIR += xdotool
@@ -486,7 +481,6 @@
     SUBDIR += xprintidle
     SUBDIR += xprompt
     SUBDIR += xprop
-    SUBDIR += xpyb
     SUBDIR += xrandr
     SUBDIR += xrdb
     SUBDIR += xrefresh

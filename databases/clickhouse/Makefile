@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	clickhouse
-PORTVERSION=	18.14.11
+PORTVERSION=	18.14.18
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-stable
 PORTREVISION=	2
@@ -35,7 +35,7 @@ LIB_DEPENDS=	libtcmalloc.so:devel/google-perftools \
 		libcpuid.so:sysutils/libcpuid \
 		libgtest.so:devel/googletest
 
-USES=		compiler:c++14-lang cmake iconv mysql ssl readline shebangfix
+USES=		compiler:c++14-lang cmake:insource iconv mysql ssl readline shebangfix
 USE_LDCONFIG=	yes
 
 CMAKE_ARGS=	-DUNBUNDLED=1 \

@@ -2,6 +2,7 @@
 
 PORTNAME=	movit
 PORTVERSION=	1.6.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://${PORTNAME}.sesse.net/
 
@@ -13,7 +14,8 @@ LICENSE=	GPLv2+
 LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 		libfftw3.so:math/fftw3
 
-USES=		autoreconf gmake eigen:3,build,run libtool pathfix pkgconfig
+USES=		autoreconf compiler:c++11-lang gmake eigen:3,build,run libtool \
+		pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 

@@ -12,6 +12,9 @@ PKGNAMESUFFIX=	-devel
 MAINTAINER=	amdmi3@FreeBSD.org
 COMMENT=	Open source color profiler
 
+LICENSE=	GPLv3+
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 DEPRECATED=		Qt4 has been EOL since december 2015
 EXPIRATION_DATE=	2019-03-15
 
@@ -19,10 +22,12 @@ LIB_DEPENDS=	liblcms.so:graphics/lcms \
 		libtiff.so:graphics/tiff \
 		libvigraimpex.so:graphics/vigra
 
-USES=		cmake compiler:c++11-lang desktop-file-utils jpeg qt:4 tar:bzip2
+USES=		cmake:insource compiler:c++11-lang desktop-file-utils jpeg qt:4 tar:bzip2
 USE_XORG=	x11 xext sm ice xxf86vm
 USE_QT=		corelib gui qt3support svg assistantclient \
 		linguisttools_build qmake_build moc_build uic_build rcc_build
+
+LLD_UNSAFE=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

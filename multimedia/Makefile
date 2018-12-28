@@ -42,6 +42,7 @@
     SUBDIR += clutter-gst
     SUBDIR += clutter-gst3
     SUBDIR += cmrt
+    SUBDIR += cmrtlib
     SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
     SUBDIR += dav1d
@@ -53,7 +54,6 @@
     SUBDIR += dragon-kde4
     SUBDIR += dtv-scan-tables
     SUBDIR += dumpmpeg
-    SUBDIR += dv2jpg
     SUBDIR += dv2sub
     SUBDIR += dvb-apps
     SUBDIR += dvbcut
@@ -104,7 +104,6 @@
     SUBDIR += gstreamer-plugins-all
     SUBDIR += gstreamer-plugins-annodex
     SUBDIR += gstreamer-plugins-bad
-    SUBDIR += gstreamer-plugins-buzztard
     SUBDIR += gstreamer-plugins-bz2
     SUBDIR += gstreamer-plugins-core
     SUBDIR += gstreamer-plugins-dts
@@ -305,10 +304,7 @@
     SUBDIR += ogmtools
     SUBDIR += omxplayer
     SUBDIR += openh264
-    SUBDIR += openquicktime
     SUBDIR += openshot
-    SUBDIR += oqtencoder
-    SUBDIR += oqtplayer
     SUBDIR += oscam
     SUBDIR += p5-Audio-M4P
     SUBDIR += p5-FFmpeg-Command
@@ -319,7 +315,6 @@
     SUBDIR += p5-Net-UPnP
     SUBDIR += p5-Subtitles
     SUBDIR += p5-Umph-Prompt
-    SUBDIR += p5-Video-OpenQuicktime
     SUBDIR += pHash
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
@@ -478,11 +473,7 @@
     SUBDIR += xawtv
     SUBDIR += xfce4-parole
     SUBDIR += xine
-    SUBDIR += xmms
-    SUBDIR += xmms-skins
-    SUBDIR += xmms-skins-huge
     SUBDIR += xporthdmv
-    SUBDIR += xtheater
     SUBDIR += xvid
     SUBDIR += yamdi
     SUBDIR += zoneminder

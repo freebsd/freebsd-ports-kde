@@ -21,7 +21,7 @@ LIB_DEPENDS=	libnspr4.so:devel/nspr \
 		libfontconfig.so:x11-fonts/fontconfig
 RUN_DEPENDS=	poppler-data>0:graphics/poppler-data
 
-USES=		compiler:c++11-lang cpe cmake gnome jpeg libtool \
+USES=		compiler:c++11-lang cpe cmake:insource gnome jpeg libtool \
 		localbase pathfix pkgconfig tar:xz
 CPE_VENDOR=	freedesktop
 USE_GNOME=	cairo libxml2
@@ -53,9 +53,6 @@ OPTIONS_DEFAULT=	OPENJPEG
 OPTIONS_SUB=		yes
 .else
 PORTSCOUT=		ignore:1
-
-DEPRECATED=		Qt4 has been EOL since december 2015
-EXPIRATION_DATE=	2019-03-15
 
 LIB_DEPENDS+=		libpoppler.so:graphics/poppler
 PKGNAMESUFFIX=		-${_SLAVE_PORT}
