@@ -1,14 +1,5 @@
 --- src/3rdparty/chromium/printing/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/printing/BUILD.gn
-@@ -139,7 +139,7 @@ component("printing") {
-   if (use_cups) {
-     configs += [ ":cups" ]
- 
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       # rebase_path does not accept an empty string
-       if (use_sysroot) {
-         cups_sysroot = rebase_path(sysroot)
 @@ -225,7 +225,7 @@ component("printing") {
      ]
  

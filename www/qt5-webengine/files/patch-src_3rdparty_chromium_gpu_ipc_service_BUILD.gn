@@ -9,11 +9,3 @@
      sources += [
        "gpu_memory_buffer_factory_native_pixmap.cc",
        "gpu_memory_buffer_factory_native_pixmap.h",
-@@ -129,6 +129,7 @@ component("service") {
-   }
-   if (use_x11) {
-     sources += [ "x_util.h" ]
-+    configs += [ "//build/config/linux:x11" ]
-     libs += [ "X11" ]
-   }
-   if (use_ozone) {
