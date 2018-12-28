@@ -334,6 +334,7 @@
     SUBDIR += hs-OpenAL
     SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
+    SUBDIR += hvl2wav
     SUBDIR += hydrogen
     SUBDIR += icecast
     SUBDIR += icecast-kh
@@ -525,6 +526,7 @@
     SUBDIR += mixmos
     SUBDIR += mixxx
     SUBDIR += mixxx20
+    SUBDIR += mixxx21
     SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay

@@ -5,6 +5,13 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20181228:
+  AFFECTS: users of devel/trio
+  AUTHOR: rodrigo@freebsd.org
+
+  Since trio 1.16-1, the shared lib previously misnamed libtrio.so.2.0.0
+  is now named libtrio.so.2 and the symlink libtrio.so is created.
+
 20181222:
   AFFECTS: users of net/ntopng
   AUTHOR: madpilot@FreeBSD.org
@@ -96,6 +103,23 @@ you update your ports collection, before attempting any port upgrades.
   There are some new features added in ejabberd 18.12, esp. related to 
   bookmarks, and XML compression in message archive storage. Please
   refer to: https://blog.process-one.net/ejabberd-18-12/ 
+
+20181211:
+  AFFECTS: users of news/inn when upgrading to FreeBSD 12
+  AUTHOR: naddy@FreeBSD.org
+
+  When upgrading from FreeBSD 11 to 12, a change in the size of the
+  ino_t type causes a binary incompatibility in the overview database
+  if the default tradindexed format is used.
+
+  After upgrading the inn package, remove the overview/group.index
+  file and regenerate the history and overview database with
+  makehistory(8) before starting innd.
+
+  # echo '. /usr/local/news/lib/innshellvars && \
+        rm -f $OVERVIEWDIR/group.index && \
+        $NEWSBIN/makehistory -O -s `wc -l <$HISTORY`' | \
+        su -fm news -c '/bin/sh -s'
 
 20181209:
   AFFECTS: users of DRM ports other than graphics/drm-kmod

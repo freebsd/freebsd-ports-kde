@@ -378,6 +378,7 @@
     SUBDIR += jq
     SUBDIR += jrefentry
     SUBDIR += jshon
+    SUBDIR += json-yaml
     SUBDIR += kdiff3
     SUBDIR += kdiff3-kde4
     SUBDIR += kenlm
