@@ -9,21 +9,3 @@
    return GPUTestConfig::kOsLinux;
  #elif defined(OS_WIN)
    int32_t major_version = 0;
-@@ -253,12 +253,17 @@ bool GPUTestBotConfig::LoadCurrentConfig(const GPUInfo
-     rt = false;
- #else
-     GPUInfo my_gpu_info;
-+#if defined(OS_FREEBSD)
-+    rt = false;
-+    LOG(WARNING) << "CollectGpuID not present on FreeBSD";
-+#else
-     if (!CollectBasicGraphicsInfo(&my_gpu_info)) {
-       LOG(ERROR) << "Fail to identify GPU";
-       rt = false;
-     } else {
-       rt = SetGPUInfo(my_gpu_info);
-     }
-+#endif
- #endif  // OS_ANDROID
-   } else {
-     rt = SetGPUInfo(*gpu_info);

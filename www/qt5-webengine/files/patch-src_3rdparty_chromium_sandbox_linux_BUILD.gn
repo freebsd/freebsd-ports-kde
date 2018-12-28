@@ -9,3 +9,23 @@
      cflags = [ "-fgnu-inline-asm" ]
      sources -= [
        "bpf_dsl/bpf_dsl_forward.h",
+@@ -406,6 +406,8 @@ component("sandbox_services") {
+       "services/init_process_reaper.h",
+       "services/scoped_process.cc",
+       "services/scoped_process.h",
++      "services/syscall_wrappers.cc",
++      "services/syscall_wrappers.h",
+       "services/yama.cc",
+       "services/yama.h",
+       "syscall_broker/broker_channel.cc",
+@@ -424,6 +426,10 @@ component("sandbox_services") {
+       "syscall_broker/broker_process.h",
+       "syscall_broker/broker_simple_message.cc",
+       "syscall_broker/broker_simple_message.h",
++    ]
++    sources += [
++      "services/libc_interceptor.cc",
++      "services/libc_interceptor.h",
+     ]
+   } else if (!is_android) {
+     sources += [
