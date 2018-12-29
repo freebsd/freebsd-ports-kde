@@ -1,0 +1,72 @@
+From 80c47c526e59ec61b87cd12328c1b90c60e9f242 Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@FreeBSD.org>
+Date: Sat, 29 Dec 2018 22:59:57 +0100
+Subject: [PATCH] Add check_linker_flags function
+
+---
+ modules/ECMCheckLinkerFlags.cmake | 53 +++++++++++++++++++++++++++++++
+ 1 file changed, 53 insertions(+)
+ create mode 100644 modules/ECMCheckLinkerFlags.cmake
+
+diff --git modules/ECMCheckLinkerFlags.cmake modules/ECMCheckLinkerFlags.cmake
+new file mode 100644
+index 0000000..e670841
+--- /dev/null
++++ modules/ECMCheckLinkerFlags.cmake
+@@ -0,0 +1,53 @@
++#.rest:
++# CheckLinkerFlags
++# ----------------
++#
++# Check support of a given linker flag
++#
++#   ecm_check_linker_flags(flags, result)
++#
++#  * result will be set to TRUE or FALSE if the linker accepts the flags.
++#
++#=============================================================================
++# Copyright 2018 Tobias C. Berner <tcberner@FreeBSD.org>
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions
++# are met:
++#
++# 1. Redistributions of source code must retain the copyright
++#    notice, this list of conditions and the following disclaimer.
++# 2. Redistributions in binary form must reproduce the copyright
++#    notice, this list of conditions and the following disclaimer in the
++#    documentation and/or other materials provided with the distribution.
++#
++# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
++# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
++# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
++# IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
++# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
++# NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
++# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
++# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
++# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
++# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++#=============================================================================
++
++function(ecm_check_linker_flags linker_flags result)
++    cmake_policy(SET CMP0056 NEW)
++    set(CMAKE_EXE_LINKER_FLAGS "${linker_flags}")
++    set(TEST_PROGRAM "int main() { return 0 ; }")
++    set(TEST_FILE "${CMAKE_CURRENT_BINARY_DIR}/test_linker_flags.cc")
++    file(WRITE "${TEST_FILE}" "${TEST_PROGRAM}")
++    message(STATUS "Checking whether the linker supports '${linker_flags}' ...")
++    try_compile(SUPPORTED
++                "${CMAKE_CURRENT_BINARY_DIR}/test_linker_flags"
++                "${TEST_FILE}"
++    )
++    message(STATUS "  supports '${linker_flags}': ${SUPPORTED}")
++    if(SUPPORTED)
++        set(${result} TRUE)
++    else()
++        set(${result} FALSE)
++    endif()
++endfunction()
+-- 
+2.20.1
+
