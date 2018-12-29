@@ -1,0 +1,53 @@
+From dd05ce7e9ca76ae6db226cdef9b31bf877d416cb Mon Sep 17 00:00:00 2001
+From: Heath Nielson <heathn@gmail.com>
+Date: Fri, 2 Nov 2018 12:19:15 +0100
+Subject: [PATCH] Fix FreeBSD kvm backend.
+
+See: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=178063
+---
+ core/app/CMakeLists.txt                                   | 2 +-
+ core/libs/kmemoryinfo/libstatgrab/kmemoryinfo_backend.cpp | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git core/app/CMakeLists.txt core/app/CMakeLists.txt
+index dd1e19c9f0..a512f251dd 100644
+--- core/app/CMakeLists.txt
++++ core/app/CMakeLists.txt
+@@ -507,7 +507,7 @@ if(WIN32)
+ endif()
+ 
+ if(CMAKE_SYSTEM_NAME STREQUAL FreeBSD)
+-    target_link_libraries(digikamgui PRIVATE ${KVM_LIBRARY})
++    target_link_libraries(digikamcore PRIVATE ${KVM_LIBRARY})
+ endif()
+ 
+ if(Gphoto2_FOUND)
+diff --git core/libs/kmemoryinfo/libstatgrab/kmemoryinfo_backend.cpp core/libs/kmemoryinfo/libstatgrab/kmemoryinfo_backend.cpp
+index aef27cabbb..2dc52005b5 100644
+--- core/libs/kmemoryinfo/libstatgrab/kmemoryinfo_backend.cpp
++++ core/libs/kmemoryinfo/libstatgrab/kmemoryinfo_backend.cpp
+@@ -120,7 +120,7 @@ kvm_t* sg_get_kvm()
+         return kvmd;
+     }
+ 
+-    kvmd = kvm_openfiles(NULL, NULL, NULL, O_RDONLY, NULL);
++    kvmd = kvm_openfiles(NULL, "/dev/null", NULL, O_RDONLY, NULL);
+ 
+     if (kvmd == NULL)
+     {
+@@ -222,9 +222,9 @@ int get_mem_stats(Digikam::KMemoryInfo::KMemoryInfoData* const data)
+     int    mib[2];
+     u_long physmem;
+     size_t size;
+-    u_long free_count;
+-    u_long cache_count;
+-    u_long inactive_count;
++    u_int free_count;
++    u_int cache_count;
++    u_int inactive_count;
+     int    pagesize;
+ #endif // defined(Q_OS_FREEBSD) || defined(Q_OS_DFBSD)
+ 
+-- 
+2.19.1
+

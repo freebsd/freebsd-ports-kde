@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD$
+# $FreeBSD: head/editors/openoffice-devel/files/openoffice-wrapper 397932 2015-09-26 07:40:47Z truckman $
 
 program=`echo $0 | sed -e 's|.*%%EXECBASE%%-||'`
 

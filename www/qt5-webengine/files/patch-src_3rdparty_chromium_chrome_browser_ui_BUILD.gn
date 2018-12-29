@@ -1,11 +1,47 @@
---- src/3rdparty/chromium/chrome/browser/ui/BUILD.gn.orig	2017-01-26 00:49:09 UTC
+--- src/3rdparty/chromium/chrome/browser/ui/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/chrome/browser/ui/BUILD.gn
-@@ -3090,7 +3090,7 @@ split_static_library("ui") {
-       ]
+@@ -2359,7 +2359,7 @@ split_static_library("ui") {
+     ]
+   }
+ 
+-  if (is_win || is_linux) {
++  if (is_win || is_linux || is_bsd) {
+     sources += [
+       "input_method/input_method_engine_base.cc",
+       "input_method/input_method_engine_base.h",
+@@ -2377,7 +2377,7 @@ split_static_library("ui") {
      }
    }
+ 
+-  if (is_mac || is_win || (is_linux && !is_chromeos)) {
++  if (is_mac || is_win || ((is_linux || is_bsd) && !is_chromeos)) {
+     sources += [
+       "confirm_quit.cc",
+       "confirm_quit.h",
+@@ -2743,7 +2743,7 @@ split_static_library("ui") {
+     # to fail on this variant. Since this target is only referenced (but not
+     # compiled) on this variant, it's okay to add this "incorrect" dependency
+     # to Cast Linux builds so that `gn check` passes.
+-    if (toolkit_views || (is_chromecast && is_linux)) {
++    if (toolkit_views || (is_chromecast && (is_linux || is_bsd))) {
+       public_deps += [
+         "//ui/views",
+         "//ui/views/controls/webview",
+@@ -2804,7 +2804,7 @@ split_static_library("ui") {
+     }
+   }
+ 
 -  if (is_linux) {  # Both desktop Linux and ChromeOS.
 +  if (is_linux || is_bsd) {  # Both desktop Linux and ChromeOS.
      sources += [
        "certificate_dialogs.cc",
        "certificate_dialogs.h",
+@@ -3444,7 +3444,7 @@ split_static_library("ui") {
+       sources += [ "views/chrome_views_delegate_linux.cc" ]
+     }
+ 
+-    if (is_linux) {
++    if (is_linux || is_bsd) {
+       sources += [
+         "views/frame/browser_command_handler_linux.cc",
+         "views/frame/browser_command_handler_linux.h",

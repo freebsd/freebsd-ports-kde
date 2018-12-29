@@ -1,17 +1,17 @@
---- src/3rdparty/chromium/v8/src/base/platform/platform-posix.cc.orig	2017-01-26 00:50:20 UTC
+--- src/3rdparty/chromium/v8/src/base/platform/platform-posix.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/v8/src/base/platform/platform-posix.cc
-@@ -27,6 +27,10 @@
+@@ -26,6 +26,10 @@
  #include <sys/sysctl.h>  // NOLINT, for sysctl
  #endif
  
-+#if V8_OS_NETBSD
-+#include <lwp.h>       // for _lwp_self
++#if V8_OS-NETBSD
++#include <lwp.h>	// for _lwp_self
 +#endif
 +
- #undef MAP_TYPE
- 
  #if defined(ANDROID) && !defined(V8_ANDROID_LOG_STDOUT)
-@@ -329,6 +333,12 @@ int OS::GetCurrentThreadId() {
+ #define LOG_TAG "v8"
+ #include <android/log.h>  // NOLINT
+@@ -496,6 +500,12 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -23,4 +23,4 @@
 +  return static_cast<int>(_lwp_self());
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
- #elif V8_OS_SOLARIS
+ #elif V8_OS_FUCHSIA

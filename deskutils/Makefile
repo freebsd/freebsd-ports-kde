@@ -148,6 +148,7 @@
     SUBDIR += kruler
     SUBDIR += kruler-kde4
     SUBDIR += ksshaskpass
+    SUBDIR += kup
     SUBDIR += latte-dock
     SUBDIR += launchy
     SUBDIR += libkdepim

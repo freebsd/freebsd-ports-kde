@@ -1,15 +1,14 @@
---- src/3rdparty/chromium/ui/base/ime/BUILD.gn.orig	2017-01-26 00:49:31 UTC
+--- src/3rdparty/chromium/ui/base/ime/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/ui/base/ime/BUILD.gn
-@@ -123,7 +123,7 @@ component("ime") {
-     ":text_input_types",
+@@ -136,14 +136,14 @@ jumbo_component("ime") {
+     "//skia",
    ]
  
--  if (!use_aura || (!is_linux && !use_ozone)) {
-+  if (!use_aura || (!(is_linux || is_bsd) && !use_ozone) || !is_bsd) {
-     sources -= [
+-  if (is_desktop_linux) {
++  if (is_desktop_linux || is_bsd) {
+     sources += [
        "input_method_auralinux.cc",
        "input_method_auralinux.h",
-@@ -137,7 +137,7 @@ component("ime") {
      ]
    }
  

@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2018-01-15 11:39:43 UTC
+--- src/3rdparty/chromium/build/config/compiler/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/build/config/compiler/BUILD.gn
-@@ -156,7 +156,7 @@ config("compiler") {
+@@ -215,7 +215,7 @@ config("compiler") {
      configs += [ "//build/config/win:compiler" ]
    } else if (is_android) {
      configs += [ "//build/config/android:compiler" ]
@@ -9,74 +9,25 @@
      configs += [ "//build/config/linux:compiler" ]
    } else if (is_nacl) {
      configs += [ "//build/config/nacl:compiler" ]
-@@ -290,7 +290,7 @@ config("compiler") {
+@@ -381,7 +381,7 @@ config("compiler") {
  
-   # Linux/Android common flags setup.
+   # Linux/Android/Fuchsia common flags setup.
    # ---------------------------------
--  if (is_linux || is_android) {
-+  if (is_linux || is_bsd || is_android) {
-     cflags += [
-       "-fPIC",
-       "-pipe",  # Use pipes for communicating between sub-processes. Faster.
-@@ -414,14 +414,14 @@ config("compiler") {
-   # clang-cl (used if is_win) doesn't expose this flag.
-   # Currently disabled for nacl since its toolchain lacks this flag (too old).
-   # TODO(zforman): Once nacl's toolchain is updated, remove check.
--  if (is_clang && is_linux) {
-+  if (is_clang && (is_linux || is_bsd)) {
-     absolute_path = rebase_path("//.")
-     cflags += [ "-fdebug-prefix-map=$absolute_path=." ]
-   }
+-  if (is_linux || is_android || is_fuchsia) {
++  if (is_linux || is_bsd || is_android || is_fuchsia) {
+     if (use_pic) {
+       cflags += [ "-fPIC" ]
+       ldflags += [ "-fPIC" ]
+@@ -553,7 +553,7 @@ config("compiler") {
  
-   # C++11 compiler flags setup.
+   # C11/C++11 compiler flags setup.
    # ---------------------------
--  if (is_linux || is_android || (is_nacl && is_clang)) {
-+  if (is_linux || is_bsd || is_android || (is_nacl && is_clang)) {
-     # gnu++11 instead of c++11 is needed because some code uses typeof() (a
-     # GNU extension).
-     # TODO(thakis): Eventually switch this to c++11 instead,
-@@ -475,7 +475,7 @@ config("compiler") {
-       ]
- 
-       # Apply a lower LTO optimization level as the default is too slow.
--      if (is_linux) {
-+      if (is_linux || is_bsd) {
-         if (use_lld) {
-           ldflags += [ "-Wl,--lto-O1" ]
-         } else {
-@@ -495,7 +495,7 @@ config("compiler") {
-     # targeting ARM, without this flag, LTO produces a .text section that is
-     # larger than the maximum call displacement, preventing the linker from
-     # relocating calls (http://llvm.org/PR22999).
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       ldflags += [ "-Wl,-plugin-opt,-function-sections" ]
-     }
-   }
-@@ -541,11 +541,11 @@ config("compiler_cpu_abi") {
-         ]
-       }
-     } else if (current_cpu == "arm") {
--      if (is_clang && !is_android && !is_nacl) {
-+      if (is_clang && !is_android && !is_nacl && !is_bsd) {
-         cflags += [ "--target=arm-linux-gnueabihf" ]
-         ldflags += [ "--target=arm-linux-gnueabihf" ]
-       }
--      if (!is_nacl) {
-+      if (!is_nacl && !is_bsd) {
-         cflags += [
-           "-march=$arm_arch",
-           "-mfloat-abi=$arm_float_abi",
-@@ -555,7 +555,7 @@ config("compiler_cpu_abi") {
-         cflags += [ "-mtune=$arm_tune" ]
-       }
-     } else if (current_cpu == "arm64") {
--      if (is_clang && !is_android && !is_nacl) {
-+      if (is_clang && !is_android && !is_nacl && !is_bsd) {
-         cflags += [ "--target=aarch64-linux-gnu" ]
-         ldflags += [ "--target=aarch64-linux-gnu" ]
-       }
-@@ -758,7 +758,7 @@ config("compiler_codegen") {
+-  if (is_linux || is_android || (is_nacl && is_clang) || current_os == "aix") {
++  if (is_linux || is_bsd || is_android || (is_nacl && is_clang) || current_os == "aix") {
+     if (target_os == "android") {
+       cxx11_override = use_cxx11_on_android
+     } else {
+@@ -1098,7 +1098,7 @@ config("compiler_codegen") {
  #   configs -= [ "//build/config/compiler:clang_stackrealign" ]
  # See https://crbug.com/556393 for details of where it must be avoided.
  config("clang_stackrealign") {
@@ -85,7 +36,7 @@
      cflags = [
        # Align the stack on 16-byte boundaries, http://crbug.com/418554.
        "-mstack-alignment=16",
-@@ -804,7 +804,7 @@ config("runtime_library") {
+@@ -1184,7 +1184,7 @@ config("runtime_library") {
    # smaller.
    if (is_win) {
      configs += [ "//build/config/win:runtime_library" ]
@@ -94,30 +45,3 @@
      configs += [ "//build/config/linux:runtime_library" ]
    } else if (is_ios) {
      configs += [ "//build/config/ios:runtime_library" ]
-@@ -1054,7 +1054,7 @@ config("default_warnings") {
-         "-Wno-nonportable-include-path",
- 
-         # TODO(hans): https://crbug.com/637306
--        "-Wno-address-of-packed-member",
-+        # "-Wno-address-of-packed-member",
-       ]
-     }
-   }
-@@ -1086,7 +1086,7 @@ config("chromium_code") {
-     ]
- 
-     if (!is_debug && !using_sanitizer &&
--        (!is_linux || !is_clang || is_official_build)) {
-+        (!is_linux || !is_bsd || !is_clang || is_official_build)) {
-       # _FORTIFY_SOURCE isn't really supported by Clang now, see
-       # http://llvm.org/bugs/show_bug.cgi?id=16821.
-       # It seems to work fine with Ubuntu 12 headers though, so use it in
-@@ -1144,7 +1144,7 @@ config("no_chromium_code") {
-     ]
-   }
- 
--  if (is_linux || is_android) {
-+  if (is_linux || is_bsd || is_android) {
-     cflags_cc += [
-       # Don't warn about hash_map in third-party code.
-       "-Wno-deprecated",

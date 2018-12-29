@@ -42,6 +42,7 @@ DVDWIZARD_DESC=	DVD authoring via DVDAuthor and cdrtools
 SCREENCAST_DESC=Screen capture support via recordMyDesktop
 V4L_DESC=	Webcam support via Video4Linux
 XINE_DESC=	DVD preview support via xine
+JOGSHUTTLE_DESC=Jog/Shuttle support
 
 DVDWIZARD_RUN_DEPENDS=	dvdauthor:multimedia/dvdauthor \
 			cdrecord:sysutils/cdrtools

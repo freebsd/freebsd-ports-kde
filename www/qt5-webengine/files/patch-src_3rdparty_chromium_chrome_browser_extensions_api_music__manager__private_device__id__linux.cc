@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2017-01-26 00:49:08 UTC
+--- src/3rdparty/chromium/chrome/browser/extensions/api/music_manager_private/device_id_linux.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/chrome/browser/extensions/api/music_manager_private/device_id_linux.cc
 @@ -4,6 +4,10 @@
  
@@ -11,7 +11,7 @@
  #include <ifaddrs.h>
  #include <net/if.h>
  #include <stddef.h>
-@@ -105,11 +109,33 @@ class MacAddressProcessor {
+@@ -106,11 +110,33 @@ class MacAddressProcessor {
                          const char* const prefixes[],
                          size_t prefixes_count) {
      const int MAC_LENGTH = 6;
@@ -35,7 +35,7 @@
 +        !strncmp(ifinfo->ifa_name, ifaddr->ifa_name,
 +        sizeof(ifinfo->ifa_name) - 1)) { 
 +          result = 0;
-+	  break;
++         break;
 +      }
 +    }
 +
@@ -46,7 +46,7 @@
      int sd = socket(AF_INET, SOCK_DGRAM, 0);
      int result = ioctl(sd, SIOCGIFHWADDR, &ifinfo);
      close(sd);
-@@ -119,11 +145,17 @@ class MacAddressProcessor {
+@@ -120,11 +146,17 @@ class MacAddressProcessor {
  
      const char* mac_address =
          static_cast<const char*>(ifinfo.ifr_hwaddr.sa_data);
@@ -55,7 +55,7 @@
        return true;
  
 +#if defined(OS_FREEBSD)
-+    if (!IsValidPrefix(ifinfo->ifa_name, prefixes, prefixes_count))
++    if (!IsValidPrefix(ifinfo.ifa_name, prefixes, prefixes_count))
 +      return true;
 +#else
      if (!IsValidPrefix(ifinfo.ifr_name, prefixes, prefixes_count))

@@ -1,24 +1,20 @@
---- src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn.orig	2017-01-26 00:49:08 UTC
+--- src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn
-@@ -1024,7 +1024,7 @@ static_library("extensions") {
-     sources -= [ "global_shortcut_listener_ozone.cc" ]
+@@ -1051,7 +1051,7 @@ jumbo_static_library("extensions") {
+     ]
    }
  
 -  if (is_linux) {
 +  if (is_linux || is_bsd) {
-     deps += [ "//build/linux:fontconfig" ]
+     deps += [ "//third_party/fontconfig" ]
  
      if (use_dbus) {
-@@ -1115,6 +1115,12 @@ static_library("extensions") {
-     defines += [ "ENABLE_HOTWORDING" ]
+@@ -1114,7 +1114,7 @@ jumbo_static_library("extensions") {
+     ]
    }
  
-+  if (is_bsd) {
-+    sources -= [
-+      "api/image_writer_private/removable_storage_provider_linux.cc",
-+    ]
-+  }
-+
-   if (enable_service_discovery) {
+-  if (is_win || (is_linux && !is_chromeos)) {
++  if (is_win || ((is_linux || is_bsd) && !is_chromeos)) {
      sources += [
-       "api/gcd_private/gcd_private_api.cc",
+       "api/input_ime/input_ime_api.cc",
+       "api/input_ime/input_ime_api.h",

@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 DEPRECATED=	KDE4 is EOL upstream
 EXPIRATION_DATE=	2018-12-31
 
+LIB_DEPENDS=	libfftw3_threads.so:math/fftw3
+
 CMAKE_ON=	USE_KDE4
 
 USES=		cmake compiler:c++11-lang cpe gettext \

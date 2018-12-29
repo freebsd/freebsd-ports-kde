@@ -27,11 +27,4 @@ USE_XORG=	ice sm x11 xcb xcursor xext xi
 
 SHEBANG_FILES=	updaters/ksreenlocker_5_3_separate_autologin.pl
 
-# Install a generic console kit based program to unlock the screen in the event
-# of a failure.
-SUB_FILES=     ck-unlock-session
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/ck-unlock-session ${STAGEDIR}${PREFIX}/bin
-
 .include <bsd.port.mk>

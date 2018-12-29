@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/device/usb/usb_error.cc.orig	2017-01-26 00:49:14 UTC
+--- src/3rdparty/chromium/device/usb/usb_error.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/device/usb/usb_error.cc
 @@ -4,7 +4,11 @@
  

@@ -1,0 +1,13 @@
+--- src/3rdparty/chromium/components/download/internal/common/BUILD.gn.orig	2018-11-13 18:25:11 UTC
++++ src/3rdparty/chromium/components/download/internal/common/BUILD.gn
+@@ -70,6 +70,10 @@ source_set("internal") {
+   if (is_posix || is_fuchsia) {
+     sources += [ "base_file_posix.cc" ]
+   }
++
++  if (is_bsd) {
++    deps -= [ "//components/download/quarantine" ]
++  }
+ }
+ 
+ # tests need to access both public and internal sources. So in the component

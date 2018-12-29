@@ -1,20 +1,19 @@
---- src/3rdparty/chromium/components/metrics/BUILD.gn.orig	2017-01-26 00:49:12 UTC
+--- src/3rdparty/chromium/components/metrics/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/components/metrics/BUILD.gn
-@@ -107,6 +107,13 @@ static_library("metrics") {
-   if (is_win) {
-     sources -= [ "machine_id_provider_stub.cc" ]
+@@ -139,6 +139,12 @@ static_library("metrics") {
+     libs = [ "wevtapi.lib" ]
    }
-+  
+ 
 +  if (is_bsd) {
 +    sources -= [
 +      "system_memory_stats_recorder_linux.cc"
 +    ]
 +  }
 +
- }
- 
- if (!is_ios) {
-@@ -282,7 +289,7 @@ static_library("test_support") {
+   if (is_fuchsia) {
+     sources += [ "drive_metrics_provider_fuchsia.cc" ]
+   }
+@@ -312,7 +318,7 @@ static_library("test_support") {
    ]
  }
  
@@ -23,7 +22,7 @@
    static_library("serialization") {
      sources = [
        "serialization/metric_sample.cc",
-@@ -341,7 +348,7 @@ source_set("unit_tests") {
+@@ -384,7 +390,7 @@ source_set("unit_tests") {
      "//ui/gfx/geometry",
    ]
  

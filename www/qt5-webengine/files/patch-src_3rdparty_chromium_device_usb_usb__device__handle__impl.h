@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/device/usb/usb_device_handle_impl.h.orig	2017-01-26 00:49:14 UTC
+--- src/3rdparty/chromium/device/usb/usb_device_handle_impl.h.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/device/usb/usb_device_handle_impl.h
 @@ -18,7 +18,12 @@
  #include "base/memory/ref_counted.h"
@@ -12,4 +12,4 @@
 +#endif
  
  namespace base {
- class SequencedTaskRunner;
+ class RefCountedBytes;

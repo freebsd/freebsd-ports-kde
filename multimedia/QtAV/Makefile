@@ -39,7 +39,7 @@ UCHARDET_QMAKE_OFF=	CONFIG+=no-uchardet
 VAAPI_LIB_DEPENDS=	libva.so:multimedia/libva
 VAAPI_QMAKE_OFF=	CONFIG+=no-vaapi
 
-PLIST_SUB=		QT_VERSION="${_QT_VERSION}"
+PLIST_SUB=		QT_VERSION="${_QT_VERSION:C/^([.0-9]+).*/\1/1}"
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		wang-bin

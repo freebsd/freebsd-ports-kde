@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/device/usb/usb_context.cc.orig	2017-01-26 00:49:14 UTC
+--- src/3rdparty/chromium/device/usb/usb_context.cc.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/device/usb/usb_context.cc
 @@ -9,8 +9,13 @@
  #include "base/macros.h"
@@ -14,7 +14,7 @@
  
  namespace device {
  
-@@ -58,7 +63,9 @@ void UsbContext::UsbEventHandler::Run() 
+@@ -58,7 +63,9 @@ void UsbContext::UsbEventHandler::Run() {
  
  void UsbContext::UsbEventHandler::Stop() {
    base::subtle::Release_Store(&running_, 0);

@@ -26,7 +26,7 @@ MAKE_ARGS=	INCSDIR=${PREFIX}/include/libepoll-shim/sys \
 post-patch:
 .if "${CHOSEN_COMPILER_TYPE}" == "gcc"
 	@${REINPLACE_CMD} -e 's|Wno-missing-variable-declarations|Wno-missing-declarations|' \
-		-e 's|-Wno-thread-safety-analysis||' ${WRKSRC}/Makefile
+		-e 's|-Wno-thread-safety-analysis||' -e 's|Weverything|Wall|' ${WRKSRC}/Makefile
 .endif
 
 pre-install:

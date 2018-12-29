@@ -134,7 +134,6 @@
     SUBDIR += devil
     SUBDIR += dia
     SUBDIR += diff-pdf
-    SUBDIR += diffpdf
     SUBDIR += digikam
     SUBDIR += digikam-kde4
     SUBDIR += digikam-kde4-doc
