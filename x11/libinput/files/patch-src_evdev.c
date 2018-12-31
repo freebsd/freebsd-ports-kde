@@ -6,9 +6,9 @@ libinput reopens devices just to check path equality.
 The udev_devices from reopening do have the right properties,
 so we just use them instead of the original (enumerated) ones.
 
---- src/evdev.c.orig	2018-06-09 12:13:43 UTC
+--- src/evdev.c.orig	2018-12-18 05:06:18 UTC
 +++ src/evdev.c
-@@ -895,7 +895,7 @@ evdev_sync_device(struct evdev_device *device)
+@@ -905,7 +905,7 @@ evdev_sync_device(struct evdev_device *device)
  		evdev_device_dispatch_one(device, &ev);
  	} while (rc == LIBEVDEV_READ_STATUS_SYNC);
  
@@ -17,7 +17,7 @@ so we just use them instead of the original (enumerated) ones.
  }
  
  static void
-@@ -933,6 +933,17 @@ evdev_device_dispatch(void *data)
+@@ -943,6 +943,17 @@ evdev_device_dispatch(void *data)
  
  	if (rc != -EAGAIN && rc != -EINTR) {
  		libinput_remove_source(libinput, device->source);
@@ -35,7 +35,7 @@ so we just use them instead of the original (enumerated) ones.
  		device->source = NULL;
  	}
  }
-@@ -1785,9 +1796,9 @@ evdev_notify_added_device(struct evdev_device *device)
+@@ -1835,9 +1846,9 @@ evdev_notify_added_device(struct evdev_device *device)
  }
  
  static bool
@@ -47,7 +47,7 @@ so we just use them instead of the original (enumerated) ones.
  	struct udev_device *udev_device_new = NULL;
  	struct stat st;
  	bool rc = false;
-@@ -1800,10 +1811,16 @@ evdev_device_have_same_syspath(struct udev_device *ude
+@@ -1850,10 +1861,16 @@ evdev_device_have_same_syspath(struct udev_device *ude
  		goto out;
  
  	rc = streq(udev_device_get_syspath(udev_device_new),
@@ -67,7 +67,7 @@ so we just use them instead of the original (enumerated) ones.
  	return rc;
  }
  
-@@ -2003,7 +2020,7 @@ evdev_device_create(struct libinput_seat *seat,
+@@ -2036,7 +2053,7 @@ evdev_device_create(struct libinput_seat *seat,
  		return NULL;
  	}
  
@@ -76,7 +76,7 @@ so we just use them instead of the original (enumerated) ones.
  		goto err;
  
  	device = zalloc(sizeof *device);
-@@ -2559,7 +2576,7 @@ evdev_device_resume(struct evdev_device *device)
+@@ -2592,7 +2609,7 @@ evdev_device_resume(struct evdev_device *device)
  	if (fd < 0)
  		return -errno;
  
