@@ -1,9 +1,9 @@
-# $FreeBSD: head/audio/amarok-kde4/Makefile 478444 2018-08-30 12:24:47Z adridg $
+# $FreeBSD: head/audio/amarok/Makefile 488627 2018-12-28 21:00:55Z tcberner $
 
 PORTNAME=	amarok
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.9.0-269
-DISTVERSIONSUFFIX=	-g87a6d7a373
+DISTVERSION=	2.9.0-277
+DISTVERSIONSUFFIX=	-gd50ecc430c
 CATEGORIES=	audio kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libtag.so:audio/taglib \
 		libtag-extras.so:audio/taglib-extras
 
-USES=		cmake:outsource compiler:c++11-lang desktop-file-utils \
+USES=		cmake compiler:c++11-lang desktop-file-utils \
 		kde:5 mysql:client,embedded pkgconfig qt:5 shebangfix ssl
 
 USE_QT=		core concurrent declarative dbus gui location network phonon4 \
@@ -48,9 +48,7 @@ CMAKE_OFF=	WITH_FFmpeg
 
 BROKEN_sparc64=	does not build (GCC-related error)
 
-# TODO NLS is only in released version; double check options and installed files
-# TODO PLAYGROUND results in errors
-OPTIONS_DEFINE=		IPOD MP3TUNES MTP NLS PLAYGROUND
+OPTIONS_DEFINE=		IPOD MP3TUNES MTP
 OPTIONS_DEFAULT=	IPOD MP3TUNES MTP
 OPTIONS_SUB=		yes
 
@@ -72,13 +70,7 @@ MP3TUNES_CMAKE_BOOL=	WITH_MP3Tunes
 MP3TUNES_CMAKE_BOOL_OFF=	WITH_Libgcrypt
 
 MTP_LIB_DEPENDS=	libmtp.so:multimedia/libmtp
-MTP_CMAKE_BOOL=		WITH_Mtp
-
-NLS_USES=		gettext
-NLS_CMAKE_BOOL=		BUILD_po
-
-PLAYGROUND_DESC=	Playground scripts/applets (might have legal issues)
-PLAYGROUND_CMAKE_BOOL=	WITH_PLAYGROUND
+MTP_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Mtp
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \

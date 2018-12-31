@@ -450,13 +450,7 @@ share/kservices5/amarokitpc.protocol
 share/kservicetypes5/amarok-contextapplet.desktop
 share/kservicetypes5/amarok-plugin.desktop
 share/kservicetypes5/amarok_codecinstall.desktop
-share/metainfo/org.kde.amarok.albums.appdata.xml
-share/metainfo/org.kde.amarok.analyzer.appdata.xml
 share/metainfo/org.kde.amarok.appdata.xml
 share/metainfo/org.kde.amarok.context.appdata.xml
-share/metainfo/org.kde.amarok.currenttrack.appdata.xml
-share/metainfo/org.kde.amarok.lyrics.appdata.xml
-share/metainfo/org.kde.amarok.photos.appdata.xml
-share/metainfo/org.kde.amarok.wikipedia.appdata.xml
 share/solid/actions/amarok-play-audiocd.desktop
 @dir share/mime/packages
