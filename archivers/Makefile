@@ -10,7 +10,6 @@
     SUBDIR += arc
     SUBDIR += arj
     SUBDIR += ark
-    SUBDIR += ark-kde4
     SUBDIR += atool
     SUBDIR += bicom
     SUBDIR += brotli
@@ -148,7 +147,6 @@
     SUBDIR += pear-PHP_Archive
     SUBDIR += peazip
     SUBDIR += pecl-lzf
-    SUBDIR += pecl-phk
     SUBDIR += pecl-rar
     SUBDIR += php-horde_lz4
     SUBDIR += php-snappy

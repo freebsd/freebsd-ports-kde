@@ -5,6 +5,7 @@ lib/libwacom.so
 lib/libwacom.so.2
 lib/libwacom.so.2.6.1
 libdata/pkgconfig/libwacom.pc
+man/man1/libwacom-list-local-devices.1.gz
 %%DATADIR%%/bamboo-0fg-s-p.tablet
 %%DATADIR%%/bamboo-16fg-m-pt.tablet
 %%DATADIR%%/bamboo-16fg-s-p.tablet
@@ -57,11 +58,13 @@ libdata/pkgconfig/libwacom.pc
 %%DATADIR%%/dtu-1031.tablet
 %%DATADIR%%/dtu-1031x.tablet
 %%DATADIR%%/dtu-1141.tablet
+%%DATADIR%%/dtu-1141b.tablet
 %%DATADIR%%/dtu-1631.tablet
 %%DATADIR%%/dtu-1931.tablet
 %%DATADIR%%/dtu-2231.tablet
 %%DATADIR%%/ek-remote.tablet
 %%DATADIR%%/elan-22e2.tablet
+%%DATADIR%%/elan-24db.tablet
 %%DATADIR%%/elan-2537.tablet
 %%DATADIR%%/generic.tablet
 %%DATADIR%%/graphire-usb.tablet
@@ -71,6 +74,7 @@ libdata/pkgconfig/libwacom.pc
 %%DATADIR%%/graphire3-4x5.tablet
 %%DATADIR%%/graphire3-6x8.tablet
 %%DATADIR%%/graphire4-4x5.tablet
+%%DATADIR%%/graphire4-6x8.tablet
 %%DATADIR%%/huion-h610-pro.tablet
 %%DATADIR%%/intuos-12x12.tablet
 %%DATADIR%%/intuos-12x18.tablet
@@ -131,6 +135,7 @@ libdata/pkgconfig/libwacom.pc
 %%DATADIR%%/isdv4-12c.tablet
 %%DATADIR%%/isdv4-4004.tablet
 %%DATADIR%%/isdv4-4800.tablet
+%%DATADIR%%/isdv4-4807.tablet
 %%DATADIR%%/isdv4-4809.tablet
 %%DATADIR%%/isdv4-4814.tablet
 %%DATADIR%%/isdv4-481a.tablet
@@ -139,11 +144,13 @@ libdata/pkgconfig/libwacom.pc
 %%DATADIR%%/isdv4-4831.tablet
 %%DATADIR%%/isdv4-484c.tablet
 %%DATADIR%%/isdv4-485e.tablet
+%%DATADIR%%/isdv4-486a.tablet
 %%DATADIR%%/isdv4-5000.tablet
 %%DATADIR%%/isdv4-5002.tablet
 %%DATADIR%%/isdv4-5010.tablet
 %%DATADIR%%/isdv4-5013.tablet
 %%DATADIR%%/isdv4-5014.tablet
+%%DATADIR%%/isdv4-502a.tablet
 %%DATADIR%%/isdv4-503e.tablet
 %%DATADIR%%/isdv4-503f.tablet
 %%DATADIR%%/isdv4-5040.tablet
@@ -158,8 +165,12 @@ libdata/pkgconfig/libwacom.pc
 %%DATADIR%%/isdv4-50b8.tablet
 %%DATADIR%%/isdv4-50f1.tablet
 %%DATADIR%%/isdv4-50f8.tablet
+%%DATADIR%%/isdv4-50fd.tablet
 %%DATADIR%%/isdv4-5110.tablet
+%%DATADIR%%/isdv4-5122.tablet
 %%DATADIR%%/isdv4-5146.tablet
+%%DATADIR%%/isdv4-5150.tablet
+%%DATADIR%%/isdv4-516b.tablet
 %%DATADIR%%/isdv4-90.tablet
 %%DATADIR%%/isdv4-93.tablet
 %%DATADIR%%/isdv4-e2.tablet

@@ -400,7 +400,6 @@
     SUBDIR += kmflcomp
     SUBDIR += kn-aspell
     SUBDIR += kompare
-    SUBDIR += kompare-kde4
     SUBDIR += kreport
     SUBDIR += ku-aspell
     SUBDIR += ky-aspell
@@ -430,11 +429,9 @@
     SUBDIR += libkmfl
     SUBDIR += libkolabxml
     SUBDIR += libkomparediff2
-    SUBDIR += libkomparediff2-kde4
     SUBDIR += liblingoteach
     SUBDIR += liblrdf
     SUBDIR += libmrss
-    SUBDIR += libmrss-php
     SUBDIR += libmwaw03
     SUBDIR += libnxml
     SUBDIR += libodfgen01
@@ -1205,16 +1202,9 @@
     SUBDIR += pear-XML_HTMLSax
     SUBDIR += pear-XML_Wddx
     SUBDIR += pear-YAML
-    SUBDIR += pecl-ctemplate
-    SUBDIR += pecl-doublemetaphone
-    SUBDIR += pecl-stem
-    SUBDIR += pecl-syck
-    SUBDIR += pecl-wbxml
     SUBDIR += pecl-xdiff
     SUBDIR += pecl-xdiff2
-    SUBDIR += pecl-xslcache
     SUBDIR += pecl-yaml
-    SUBDIR += pecl-yaml1
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += permute
@@ -1796,7 +1786,6 @@
     SUBDIR += uim-el
     SUBDIR += uim-gtk
     SUBDIR += uim-gtk3
-    SUBDIR += uim-kde4
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt4
     SUBDIR += uim-qt5

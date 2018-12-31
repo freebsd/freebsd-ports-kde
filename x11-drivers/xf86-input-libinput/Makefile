@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	xf86-input-libinput
-PORTVERSION=	0.27.1
+PORTVERSION=	0.28.0
 CATEGORIES=	x11-drivers
 
 MAINTAINER=	x11@FreeBSD.org

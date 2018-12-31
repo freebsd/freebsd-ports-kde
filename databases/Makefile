@@ -15,7 +15,6 @@
     SUBDIR += adodb
     SUBDIR += adodb5
     SUBDIR += akonadi
-    SUBDIR += akonadi-kde4
     SUBDIR += apq
     SUBDIR += apq-mysql
     SUBDIR += apq-odbc
@@ -200,8 +199,6 @@
     SUBDIR += memcacheq
     SUBDIR += metakit
     SUBDIR += monetdb
-    SUBDIR += mongodb32
-    SUBDIR += mongodb32-tools
     SUBDIR += mongodb34
     SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
@@ -234,7 +231,6 @@
     SUBDIR += mysqlbackup
     SUBDIR += mysqlbigram
     SUBDIR += mysqldump-secure
-    SUBDIR += mysqldumper
     SUBDIR += mysqlidxchk
     SUBDIR += mysqlreport
     SUBDIR += mysqlsla
@@ -560,22 +556,15 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
     SUBDIR += pecl-cassandra
-    SUBDIR += pecl-chdb
     SUBDIR += pecl-couchbase
-    SUBDIR += pecl-dbase
-    SUBDIR += pecl-drizzle
     SUBDIR += pecl-leveldb
     SUBDIR += pecl-memcache
     SUBDIR += pecl-memcached
     SUBDIR += pecl-memcached2
-    SUBDIR += pecl-mongo
     SUBDIR += pecl-mongodb
-    SUBDIR += pecl-pdo_user
     SUBDIR += pecl-redis
     SUBDIR += pecl-redis3
     SUBDIR += pecl-rrd
-    SUBDIR += pecl-rrd1
-    SUBDIR += pecl-tokyo_tyrant
     SUBDIR += percona-pam-for-mysql
     SUBDIR += percona-toolkit
     SUBDIR += percona55-client
@@ -624,10 +613,8 @@
     SUBDIR += pgtune
     SUBDIR += pguri
     SUBDIR += pgworksheet
-    SUBDIR += php-mdcached
     SUBDIR += php-memcache
     SUBDIR += php-xapian
-    SUBDIR += php5-tarantool
     SUBDIR += php56-dba
     SUBDIR += php56-interbase
     SUBDIR += php56-mssql
@@ -1035,7 +1022,6 @@
     SUBDIR += spatialite_gui
     SUBDIR += speedtables
     SUBDIR += sql-workbench
-    SUBDIR += sqlbuddy
     SUBDIR += sqlcached
     SUBDIR += sqlcipher
     SUBDIR += sqlclient
