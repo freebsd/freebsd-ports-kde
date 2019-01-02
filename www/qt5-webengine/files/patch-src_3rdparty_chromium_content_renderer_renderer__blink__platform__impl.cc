@@ -18,15 +18,6 @@
  class RendererBlinkPlatformImpl::SandboxSupport
      : public blink::WebSandboxSupport {
   public:
-@@ -217,7 +217,7 @@ class RendererBlinkPlatformImpl::SandboxSupport
-   bool LoadFont(CTFontRef src_font,
-                 CGFontRef* container,
-                 uint32_t* font_id) override;
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD) // YYY
-   void GetFallbackFontForCharacter(
-       blink::WebUChar32 character,
-       const char* preferred_locale,
 @@ -238,7 +238,7 @@ class RendererBlinkPlatformImpl::SandboxSupport
    sk_sp<font_service::FontLoader> font_loader_;
  #endif
@@ -36,15 +27,6 @@
  
  //------------------------------------------------------------------------------
  
-@@ -267,7 +267,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
-     web_idb_factory_.reset(new WebIDBFactoryImpl(
-         sync_message_filter_,
-         RenderThreadImpl::current()->GetIOTaskRunner().get()));
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD) // YYY
-     font_loader_ = sk_make_sp<font_service::FontLoader>(connector_.get());
-     SkFontConfigInterface::SetGlobal(font_loader_);
- #endif
 @@ -276,7 +276,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
      connector_ = service_manager::Connector::Create(&request);
    }

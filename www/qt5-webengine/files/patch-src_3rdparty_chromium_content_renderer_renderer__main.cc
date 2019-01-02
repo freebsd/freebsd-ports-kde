@@ -9,18 +9,19 @@
      // Sandbox is enabled before RenderProcess initialization on all platforms,
      // except Windows and Mac.
      // TODO(markus): Check if it is OK to remove ifdefs for Windows and Mac.
-@@ -187,12 +187,14 @@ int RendererMain(const MainFunctionParams& parameters)
+@@ -187,12 +187,15 @@ int RendererMain(const MainFunctionParams& parameters)
      }
  #endif
  
-+#if !defined(OS_BSD)
++// YYY
++//#if !defined(OS_BSD)
      auto render_process = RenderProcessImpl::Create();
      RenderThreadImpl::Create(std::move(main_message_loop),
                               std::move(main_thread_scheduler));
  
      if (need_sandbox)
        run_loop = platform.EnableSandbox();
-+#endif
++//#endif
  
      base::HighResolutionTimerManager hi_res_timer_manager;
  
