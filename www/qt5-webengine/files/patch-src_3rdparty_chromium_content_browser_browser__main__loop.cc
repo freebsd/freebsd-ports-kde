@@ -16,8 +16,8 @@
    // by now since a thread to start the ServiceManager has been created
    // before the browser main loop starts.
    DCHECK(SandboxHostLinux::GetInstance()->IsInitialized());
-+// YYY
-+#elif !defined(OS_BSD)
++// YYY - works now?
++#elif defined(OS_BSD)
 +  SandboxHostLinux::GetInstance()->Init();
 +  base::FileHandleMappingVector fds_to_map;
 +  const int sfd = SandboxHostLinux::GetInstance()->GetChildSocket();

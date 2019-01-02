@@ -1,6 +1,16 @@
 --- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
-@@ -1799,11 +1799,6 @@ jumbo_source_set("browser") {
+@@ -1775,7 +1775,8 @@ jumbo_source_set("browser") {
+     deps += [ "//ui/events" ]
+   }
+ 
+-  if (is_linux) {
++  # YYY
++  if (is_linux || is_bsd) {
+     deps += [
+       "//components/services/font:lib",
+       "//components/services/font/public/interfaces",
+@@ -1799,11 +1800,6 @@ jumbo_source_set("browser") {
        "tracing/cros_tracing_agent.cc",
        "tracing/cros_tracing_agent.h",
      ]
@@ -12,11 +22,12 @@
    }
  
    if (is_chromeos || is_android || is_chromecast) {
-@@ -1820,6 +1815,11 @@ jumbo_source_set("browser") {
+@@ -1820,6 +1816,12 @@ jumbo_source_set("browser") {
  
      defines += [ "CAST_TRACING_AGENT=1" ]
    }
 +  
++  # YYY - works now?
 +  if (is_bsd) {
 +    #sources -= [ "child_process_launcher_helper_linux.cc" ]
 +    deps -= [ "//components/download/quarantine", ]
@@ -24,16 +35,18 @@
  
    if (is_fuchsia) {
      sources += [
-@@ -1847,7 +1847,7 @@ jumbo_source_set("browser") {
+@@ -1847,8 +1849,9 @@ jumbo_source_set("browser") {
      deps += [ "//ui/events:dom_keyboard_layout" ]
    }
  
--  if (!is_mac) {
-+  if (!is_mac && !is_bsd) {
-     deps += [ "//sandbox" ]
++  #YYY
+   if (!is_mac) {
+-    deps += [ "//sandbox" ]
++    deps += [ "//sandbox", "//sandbox/linux:sandbox_services" ]
    }
    if (!is_android && !use_qt) {
-@@ -2099,7 +2099,7 @@ jumbo_source_set("browser") {
+     deps += [
+@@ -2099,7 +2102,7 @@ jumbo_source_set("browser") {
      }
    }
  
@@ -42,7 +55,7 @@
      deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -2209,7 +2209,7 @@ jumbo_source_set("browser") {
+@@ -2209,7 +2212,7 @@ jumbo_source_set("browser") {
      ]
  
      set_sources_assignment_filter([])
@@ -51,7 +64,7 @@
        "memory/swap_metrics_driver_impl_linux.cc",
        "memory/swap_metrics_driver_impl_linux.h",
      ]
-@@ -2427,7 +2427,7 @@ jumbo_source_set("browser") {
+@@ -2427,7 +2430,7 @@ jumbo_source_set("browser") {
      ]
    }
  
