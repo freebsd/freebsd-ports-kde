@@ -1,10 +1,11 @@
 --- src/3rdparty/chromium/services/service_manager/zygote/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/services/service_manager/zygote/BUILD.gn
-@@ -6,7 +6,7 @@ import("//build/buildflag_header.gni")
+@@ -6,7 +6,8 @@ import("//build/buildflag_header.gni")
  import("//build/config/nacl/config.gni")
  import("//services/service_manager/zygote/common/zygote_features.gni")
  
 -if (is_linux) {
++# YYY
 +if (is_linux || is_bsd) {
    component("zygote") {
      if (is_nacl_nonsfi) {

@@ -1,5 +1,5 @@
---- src/3rdparty/chromium/net/base/network_interfaces_freebsd.h.orig	2017-07-04 23:05:05.313339000 +0200
-+++ src/3rdparty/chromium/net/base/network_interfaces_freebsd.h	2017-07-04 23:04:51.039635000 +0200
+--- src/3rdparty/chromium/net/base/network_interfaces_freebsd.h.orig	2018-12-29 13:28:53 UTC
++++ src/3rdparty/chromium/net/base/network_interfaces_freebsd.h
 @@ -0,0 +1,44 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be

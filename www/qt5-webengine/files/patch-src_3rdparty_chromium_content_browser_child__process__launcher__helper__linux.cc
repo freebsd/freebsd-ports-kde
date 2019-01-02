@@ -14,8 +14,8 @@
    options->fds_to_remap = files_to_register.GetMappingWithIDAdjustment(
        base::GlobalDescriptors::kBaseDescriptor);
  
-+/// YYY
-+#if !defined(OS_BSD)
++/// YYY - works now?
++//#if !defined(OS_BSD)
    if (GetProcessType() == switches::kRendererProcess) {
      const int sandbox_fd = SandboxHostLinux::GetInstance()->GetChildSocket();
      options->fds_to_remap.push_back(
@@ -23,7 +23,7 @@
    }
  
    options->environ = delegate_->GetEnvironment();
-+#endif
++//#endif
  
    return true;
  }
