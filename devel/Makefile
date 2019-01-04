@@ -4038,14 +4038,12 @@
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
-    SUBDIR += pecl-APCu4
     SUBDIR += pecl-dio
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
-    SUBDIR += pecl-intl
     SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
     SUBDIR += pecl-jsond
@@ -4078,15 +4076,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php56-gettext
-    SUBDIR += php56-json
-    SUBDIR += php56-pcntl
-    SUBDIR += php56-readline
-    SUBDIR += php56-shmop
-    SUBDIR += php56-sysvmsg
-    SUBDIR += php56-sysvsem
-    SUBDIR += php56-sysvshm
-    SUBDIR += php56-tokenizer
     SUBDIR += php71-gettext
     SUBDIR += php71-intl
     SUBDIR += php71-json
@@ -5290,6 +5279,7 @@
     SUBDIR += py-zope.testing
     SUBDIR += py-zope.traversing
     SUBDIR += py-zope.viewlet
+    SUBDIR += py-zsm-lib
     SUBDIR += py_static_check
     SUBDIR += pybind11
     SUBDIR += pybugz
@@ -6048,6 +6038,7 @@
     SUBDIR += rubygem-trollop
     SUBDIR += rubygem-trollop1
     SUBDIR += rubygem-tty
+    SUBDIR += rubygem-tty-box
     SUBDIR += rubygem-tty-color
     SUBDIR += rubygem-tty-command
     SUBDIR += rubygem-tty-config
@@ -6057,6 +6048,7 @@
     SUBDIR += rubygem-tty-font
     SUBDIR += rubygem-tty-markdown
     SUBDIR += rubygem-tty-pager
+    SUBDIR += rubygem-tty-pie
     SUBDIR += rubygem-tty-platform
     SUBDIR += rubygem-tty-progressbar
     SUBDIR += rubygem-tty-prompt

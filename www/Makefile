@@ -434,7 +434,6 @@
     SUBDIR += mod_gnutls
     SUBDIR += mod_gzip2
     SUBDIR += mod_h264_streaming
-    SUBDIR += mod_http2-devel
     SUBDIR += mod_jk
     SUBDIR += mod_layout22
     SUBDIR += mod_limitipconn2
@@ -447,7 +446,6 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
-    SUBDIR += mod_php56
     SUBDIR += mod_php71
     SUBDIR += mod_php72
     SUBDIR += mod_php73
@@ -1426,9 +1424,6 @@
     SUBDIR += phalcon
     SUBDIR += photo_gallery
     SUBDIR += php-screw
-    SUBDIR += php56-opcache
-    SUBDIR += php56-session
-    SUBDIR += php56-tidy
     SUBDIR += php71-opcache
     SUBDIR += php71-session
     SUBDIR += php71-tidy
@@ -1478,6 +1473,7 @@
     SUBDIR += py-aioh2
     SUBDIR += py-aiohttp
     SUBDIR += py-aiohttp-wsgi
+    SUBDIR += py-aiohttp2
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
@@ -2394,7 +2390,6 @@
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
-    SUBDIR += varnish5
     SUBDIR += varnish6
     SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
