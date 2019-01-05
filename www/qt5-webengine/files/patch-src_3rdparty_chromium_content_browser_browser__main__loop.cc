@@ -12,11 +12,10 @@
  // One of the linux specific headers defines this as a macro.
  #ifdef DestroyAll
  #undef DestroyAll
-@@ -590,6 +595,12 @@ int BrowserMainLoop::EarlyInitialization() {
+@@ -590,6 +595,11 @@ int BrowserMainLoop::EarlyInitialization() {
    // by now since a thread to start the ServiceManager has been created
    // before the browser main loop starts.
    DCHECK(SandboxHostLinux::GetInstance()->IsInitialized());
-+// YYY - works now?
 +#elif defined(OS_BSD)
 +  SandboxHostLinux::GetInstance()->Init();
 +  base::FileHandleMappingVector fds_to_map;

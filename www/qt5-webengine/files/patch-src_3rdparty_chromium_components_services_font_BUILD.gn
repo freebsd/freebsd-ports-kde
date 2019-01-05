@@ -1,6 +1,6 @@
 --- src/3rdparty/chromium/components/services/font/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/components/services/font/BUILD.gn
-@@ -31,16 +31,17 @@ source_set("lib") {
+@@ -31,16 +31,16 @@ source_set("lib") {
      "//skia",
    ]
  
@@ -16,7 +16,6 @@
  }
  
 -if (is_linux && enable_plugins) {
-+# YYY
 +if ((is_linux || is_bsd) && enable_plugins) {
    source_set("ppapi_fontconfig_matching") {
      sources = [

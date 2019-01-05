@@ -9,16 +9,15 @@
  
  void AddV4L2GpuWhitelist(
      std::vector<BrokerFilePermission>* permissions,
-@@ -283,6 +283,8 @@ bool BrokerProcessPreSandboxHook(
+@@ -283,6 +283,7 @@ bool BrokerProcessPreSandboxHook(
  
  }  // namespace
  
-+// YYY - Required for successful debug build?
 +#if !defined(OS_BSD)
  bool GpuProcessPreSandboxHook(service_manager::SandboxLinux::Options options) {
    service_manager::SandboxLinux::GetInstance()->StartBrokerProcess(
        CommandSetForGPU(options), FilePermissionsForGpu(options),
-@@ -296,5 +298,6 @@ bool GpuProcessPreSandboxHook(service_manager::Sandbox
+@@ -296,5 +297,6 @@ bool GpuProcessPreSandboxHook(service_manager::Sandbox
    errno = 0;
    return true;
  }
