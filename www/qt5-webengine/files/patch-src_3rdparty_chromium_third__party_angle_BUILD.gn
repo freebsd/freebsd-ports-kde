@@ -19,7 +19,7 @@
          rebase_path(gles_gypi.libangle_gpu_info_util_linux_sources, ".", "src")
  
 -    if (use_x11) {
-+    # YYY - use_x11 is set to false at this point. Why?
++    # Somewhere "use_x11" is set to false, so we need to add is_bsd here 
 +    if (use_x11 || is_bsd) {
        sources +=
            rebase_path(gles_gypi.libangle_gpu_info_util_x11_sources, ".", "src")

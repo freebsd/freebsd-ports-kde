@@ -22,33 +22,6 @@
  using base::ThreadRestrictions;
  using blink::WebDocument;
  using blink::WebFrame;
-@@ -980,7 +989,7 @@ void RenderThreadImpl::Init(
-   DCHECK(parsed_num_raster_threads) << string_value;
-   DCHECK_GT(num_raster_threads, 0);
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) // || defined(OS_BSD) YYY
-   categorized_worker_pool_->SetBackgroundingCallback(
-       main_thread_scheduler_->DefaultTaskRunner(),
-       base::BindOnce(
-@@ -1021,7 +1030,7 @@ void RenderThreadImpl::Init(
-   GetConnector()->BindInterface(mojom::kBrowserServiceName,
-                                 mojo::MakeRequest(&storage_partition_service_));
- 
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) // || defined(OS_BSD) YYY
-   render_message_filter()->SetThreadPriority(
-       ChildProcess::current()->io_thread_id(), base::ThreadPriority::DISPLAY);
- #endif
-@@ -1227,7 +1236,7 @@ void RenderThreadImpl::InitializeCompositorThread() {
-                      false));
-   GetContentClient()->renderer()->PostCompositorThreadCreated(
-       compositor_task_runner_.get());
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) // || defined(OS_BSD) YYY
-   render_message_filter()->SetThreadPriority(compositor_thread_->ThreadId(),
-                                              base::ThreadPriority::DISPLAY);
- #endif
 @@ -1451,11 +1460,11 @@ media::GpuVideoAcceleratorFactories* RenderThreadImpl:
         gpu::kGpuFeatureStatusEnabled);
    const bool enable_gpu_memory_buffers =
