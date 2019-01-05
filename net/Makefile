@@ -1389,8 +1389,6 @@
     SUBDIR += sshping
     SUBDIR += ssldump
     SUBDIR += sslh
-    SUBDIR += ssltunnel-client
-    SUBDIR += ssltunnel-server
     SUBDIR += ssmping
     SUBDIR += ssspl
     SUBDIR += ssvnc

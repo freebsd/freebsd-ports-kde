@@ -686,6 +686,7 @@
     SUBDIR += p5-PDF-API3
     SUBDIR += p5-PDF-Create
     SUBDIR += p5-PDF-FromHTML
+    SUBDIR += p5-PDF-Reuse
     SUBDIR += p5-PDF-Table
     SUBDIR += p5-PDF-Tiny
     SUBDIR += p5-PDF-WebKit
@@ -802,6 +803,7 @@
     SUBDIR += p5-Sphinx-Search
     SUBDIR += p5-Spreadsheet-GenerateXLSX
     SUBDIR += p5-Spreadsheet-ParseExcel
+    SUBDIR += p5-Spreadsheet-ParseXLSX
     SUBDIR += p5-Spreadsheet-Read
     SUBDIR += p5-Spreadsheet-ReadSXC
     SUBDIR += p5-Spreadsheet-WriteExcel
@@ -887,6 +889,7 @@
     SUBDIR += p5-Text-Diff-HTML
     SUBDIR += p5-Text-Diff-Parser
     SUBDIR += p5-Text-Diff3
+    SUBDIR += p5-Text-Distill
     SUBDIR += p5-Text-DoubleMetaphone
     SUBDIR += p5-Text-Emoticon
     SUBDIR += p5-Text-Emoticon-GoogleTalk
@@ -1159,6 +1162,7 @@
     SUBDIR += p5-YAPE-Regex-Explain
     SUBDIR += p5-ack
     SUBDIR += p5-dTemplate
+    SUBDIR += p5-docx2txt
     SUBDIR += p5-libsoldout
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf

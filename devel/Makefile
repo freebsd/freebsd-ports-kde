@@ -214,6 +214,7 @@
     SUBDIR += binutils
     SUBDIR += bison
     SUBDIR += blame
+    SUBDIR += bloaty
     SUBDIR += blitz
     SUBDIR += bmake
     SUBDIR += bmkdep
@@ -1269,6 +1270,7 @@
     SUBDIR += jenkins-lts
     SUBDIR += jfrog-cli
     SUBDIR += jiic
+    SUBDIR += jiri
     SUBDIR += jline
     SUBDIR += jna
     SUBDIR += jrtplib
@@ -3704,6 +3706,7 @@
     SUBDIR += p5-Time-Local
     SUBDIR += p5-Time-Mock
     SUBDIR += p5-Time-Moment
+    SUBDIR += p5-Time-Moment-Role-TimeZone
     SUBDIR += p5-Time-Object
     SUBDIR += p5-Time-Out
     SUBDIR += p5-Time-ParseDate
