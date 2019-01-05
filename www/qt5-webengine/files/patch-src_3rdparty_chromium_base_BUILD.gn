@@ -35,7 +35,7 @@
      ]
    } else {
 -    # Non-Linux.
-+    # Non-Linux/BSD.
++    # Non-Linux
      sources -= [
        "nix/mime_util_xdg.cc",
        "nix/mime_util_xdg.h",
@@ -63,19 +63,19 @@
 +      "process/process_iterator_freebsd.cc",
 +      "process/process_metrics_freebsd.cc",
 +      "sys_info_freebsd.cc",
-+      #YYY
++      # Required for successful compilation
 +      "nix/mime_util_xdg.cc",
 +      "nix/mime_util_xdg.h",
 +      "nix/xdg_util.cc",
 +      "nix/xdg_util.h",
-+      # Required for debug build?
++      # Required for debug builds
 +      "linux_util.cc",
 +      "linux_util.h",
-+      #"threading/platform_thread_linux.cc",
 +    ]
-+    #YYY
++
++    # Required for debug builds
 +    deps += [
-+      "//base/third_party/xdg_mime",
++      "//base/third_party/xdg_mime", 
 +      "//base/third_party/xdg_user_dirs",
 +    ]
 +    libs = [

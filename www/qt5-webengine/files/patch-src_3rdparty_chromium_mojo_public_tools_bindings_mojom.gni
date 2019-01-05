@@ -1,10 +1,7 @@
 --- src/3rdparty/chromium/mojo/public/tools/bindings/mojom.gni.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/mojo/public/tools/bindings/mojom.gni
-@@ -46,9 +46,10 @@ declare_args() {
- # ARC) we have to explicitly opt out there even when NaCl is enabled (and
- # consequently also when building for NaCl toolchains.) For this reason we
+@@ -48,7 +48,7 @@ declare_args() {
  # check |target_os| explicitly, as it's consistent across all toolchains.
-+# YYY
  enable_scrambled_message_ids =
      enable_mojom_message_id_scrambling &&
 -    (is_mac || is_win || (is_linux && !is_chromeos) ||
@@ -12,7 +9,7 @@
       ((enable_nacl || is_nacl || is_nacl_nonsfi) && target_os != "chromeos"))
  
  mojom_generator_root = "//mojo/public/tools/bindings"
-@@ -393,6 +394,8 @@ template("mojom") {
+@@ -393,6 +393,8 @@ template("mojom") {
        enabled_features += [ "is_ios" ]
      } else if (is_linux) {
        enabled_features += [ "is_linux" ]
@@ -21,7 +18,7 @@
      } else if (is_mac) {
        enabled_features += [ "is_mac" ]
      } else if (is_win) {
-@@ -760,6 +763,8 @@ template("mojom") {
+@@ -760,6 +762,8 @@ template("mojom") {
                  } else if (os == "ios" && is_ios) {
                    enabled = true
                  } else if (os == "linux" && is_linux) {
