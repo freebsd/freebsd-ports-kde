@@ -1047,6 +1047,7 @@
     SUBDIR += vp
     SUBDIR += vulkan-loader
     SUBDIR += vv
+    SUBDIR += wacomtablet
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
     SUBDIR += wayland

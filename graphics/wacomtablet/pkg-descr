@@ -1,0 +1,12 @@
+This module implements a GUI for the Wacom Linux Drivers and extends it with
+profile support to handle different button / pen layouts per profile.
+
+For hardware support have a look at https://linuxwacom.github.io/
+
+Configuration can be located in System Settings -> Input devices -> Tablets
+
+Easy profile switching is supported via hotkeys or a small plasma applet in
+tray notification area. In addition, a daemon running in the background helps
+with hotplug support.
+
+WWW: https://github.com/KDE/wacomtablet
