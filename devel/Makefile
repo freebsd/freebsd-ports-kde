@@ -95,6 +95,7 @@
     SUBDIR += adacurses
     SUBDIR += adaid
     SUBDIR += aegis
+    SUBDIR += agar
     SUBDIR += ahven
     SUBDIR += aifad
     SUBDIR += ald
@@ -973,6 +974,7 @@
     SUBDIR += hs-basement
     SUBDIR += hs-basic-prelude
     SUBDIR += hs-bifunctors
+    SUBDIR += hs-bitarray
     SUBDIR += hs-bits-atomic
     SUBDIR += hs-blaze-builder
     SUBDIR += hs-blaze-textual
@@ -2991,6 +2993,7 @@
     SUBDIR += p5-MooX-ConfigFromFile
     SUBDIR += p5-MooX-File-ConfigDir
     SUBDIR += p5-MooX-HandlesVia
+    SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
@@ -4751,6 +4754,7 @@
     SUBDIR += py-orbit
     SUBDIR += py-ordered-set
     SUBDIR += py-ordereddict
+    SUBDIR += py-orderedmultidict
     SUBDIR += py-os-brick
     SUBDIR += py-os-client-config
     SUBDIR += py-os-service-types
