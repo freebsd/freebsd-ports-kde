@@ -35,13 +35,7 @@
  #endif  // OS_NACL_NONSFI or OS_MACOSX
        ;
    char control_buffer[kControlBufferSize];
-@@ -175,14 +186,14 @@ ssize_t UnixDomainSocket::RecvMsgWithFlags(int fd,
-         wire_fds = reinterpret_cast<int*>(CMSG_DATA(cmsg));
-         wire_fds_len = payload_len / sizeof(int);
-       }
--#if !defined(OS_NACL_NONSFI) && !defined(OS_MACOSX)
-+#if !defined(OS_NACL_NONSFI) && !defined(OS_MACOSX) && !defined(OS_BSD)
-       // The PNaCl toolchain for Non-SFI binary build and macOS do not support
+@@ -180,9 +191,9 @@ ssize_t UnixDomainSocket::RecvMsgWithFlags(int fd,
        // SCM_CREDENTIALS.
        if (cmsg->cmsg_level == SOL_SOCKET &&
            cmsg->cmsg_type == SCM_CREDENTIALS) {
