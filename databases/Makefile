@@ -215,6 +215,7 @@
     SUBDIR += mysql-connector-c
     SUBDIR += mysql-connector-c++
     SUBDIR += mysql-connector-java
+    SUBDIR += mysql-connector-java51
     SUBDIR += mysql-connector-odbc
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
@@ -705,14 +706,6 @@
     SUBDIR += postgresql10-plpython
     SUBDIR += postgresql10-pltcl
     SUBDIR += postgresql10-server
-    SUBDIR += postgresql93-client
-    SUBDIR += postgresql93-contrib
-    SUBDIR += postgresql93-docs
-    SUBDIR += postgresql93-pgtcl
-    SUBDIR += postgresql93-plperl
-    SUBDIR += postgresql93-plpython
-    SUBDIR += postgresql93-pltcl
-    SUBDIR += postgresql93-server
     SUBDIR += postgresql94-client
     SUBDIR += postgresql94-contrib
     SUBDIR += postgresql94-docs
@@ -796,6 +789,7 @@
     SUBDIR += py-leveldb
     SUBDIR += py-lmdb
     SUBDIR += py-marshmallow-sqlalchemy
+    SUBDIR += py-mongoengine
     SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python
