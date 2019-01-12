@@ -2,31 +2,29 @@
 # $FreeBSD$
 
 PORTNAME=	conky
-PORTVERSION=	1.10.8
+PORTVERSION=	1.11.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT?=	Advanced, highly configurable system monitor for X11
 
-LIB_DEPENDS=	libtolua++-5.1.so:lang/tolua++ \
-		libinotify.so:devel/libinotify
+LIB_DEPENDS=	libinotify.so:devel/libinotify
 BUILD_DEPENDS=	db2x_xsltproc:textproc/docbook2X \
 		docbook-xsl>=0:textproc/docbook-xsl \
 		xsltproc:textproc/libxslt
 
-CONFLICTS?=	conky-awesome-[0-9]*
-SLAVEDIRS=	sysutils/conky-awesome
-
 USES=		cpe cmake:noninja compiler:c++11-lib gettext-runtime iconv \
-		localbase lua:51 pkgconfig tar:bzip2
+		localbase lua:53 pkgconfig tar:bzip2
+
 CMAKE_ARGS+=	-DBUILD_PORT_MONITORS:BOOL=false \
 		-DBUILD_IBM:BOOL=false \
 		-DBUILD_HDDTEMP:BOOL=false \
 		-DBUILD_IOSTATS:BOOL=false \
 		-DBUILD_AUDACIOUS:BOOL=false
+CONFLICTS?=	conky-awesome-[0-9]*
 
+SLAVEDIRS=	sysutils/conky-awesome
 PLIST_FILES=	bin/conky man/man1/conky.1.gz
 PORTEXAMPLES=	conky.conf conky_no_x11.conf convert.lua
 PORTDOCS=	html/config_settings.html html/docs.html html/lua.html html/variables.html
@@ -133,8 +131,7 @@ post-patch:
 		-e 's/ -lbsd/ -lintl -linotify/' \
 		${WRKSRC}/cmake/ConkyPlatformChecks.cmake
 	@${REINPLACE_CMD} -e 's,LOCALBASE,${LOCALBASE},' \
-		${WRKSRC}/doc/docgen.sh \
-		${WRKSRC}/doc/docs.xml
+		${WRKSRC}/doc/docgen.sh
 
 post-build:
 	(cd ${WRKSRC}/doc && ${SH} docgen.sh)

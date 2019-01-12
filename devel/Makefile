@@ -1270,6 +1270,7 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
+    SUBDIR += jetbrains-phpstorm
     SUBDIR += jfrog-cli
     SUBDIR += jiic
     SUBDIR += jiri
@@ -1400,6 +1401,7 @@
     SUBDIR += libddoc
     SUBDIR += libdevq
     SUBDIR += libdfui
+    SUBDIR += libdill
     SUBDIR += libdisasm
     SUBDIR += libdisorder
     SUBDIR += libdispatch
@@ -4607,6 +4609,7 @@
     SUBDIR += py-isort
     SUBDIR += py-iterpipes
     SUBDIR += py-itypes
+    SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
@@ -4702,7 +4705,6 @@
     SUBDIR += py-mock
     SUBDIR += py-molecule
     SUBDIR += py-mondrian
-    SUBDIR += py-mongoengine
     SUBDIR += py-mongokit
     SUBDIR += py-monotonic
     SUBDIR += py-monty
@@ -5518,6 +5520,7 @@
     SUBDIR += rubygem-clio
     SUBDIR += rubygem-cliprompt
     SUBDIR += rubygem-cloudfiles
+    SUBDIR += rubygem-cms_scanner
     SUBDIR += rubygem-cocaine
     SUBDIR += rubygem-coercible
     SUBDIR += rubygem-coffee-rails-rails5
@@ -5826,6 +5829,7 @@
     SUBDIR += rubygem-parser
     SUBDIR += rubygem-pastel
     SUBDIR += rubygem-patch_finder
+    SUBDIR += rubygem-pathspec
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-peek
     SUBDIR += rubygem-peek-rails50

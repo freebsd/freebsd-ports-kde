@@ -476,6 +476,7 @@
     SUBDIR += heirloom
     SUBDIR += helm
     SUBDIR += hextools
+    SUBDIR += hexyl
     SUBDIR += hfm
     SUBDIR += hfsexplorer
     SUBDIR += hfsutils
@@ -542,6 +543,7 @@
     SUBDIR += jkill
     SUBDIR += jobd
     SUBDIR += jps
+    SUBDIR += jruls
     SUBDIR += jstest-gtk
     SUBDIR += jtop
     SUBDIR += jtopen
