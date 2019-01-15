@@ -661,6 +661,7 @@
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
+    SUBDIR += pulseaudio-qt
     SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-ao
