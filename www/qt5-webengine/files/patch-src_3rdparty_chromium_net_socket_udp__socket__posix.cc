@@ -74,7 +74,7 @@
          mreq.imr_ifindex = multicast_interface_;
          mreq.imr_address.s_addr = htonl(INADDR_ANY);
 -#endif  //  !defined(OS_MACOSX)
-+#endif  //  !defined(OS_MACOSX) && !defined(OS_BSD)
++#endif  //  !defined(OS_MACOSX) || !defined(OS_BSD)
          int rv = setsockopt(socket_, IPPROTO_IP, IP_MULTICAST_IF,
 +#if defined(OS_BSD)
 +                            reinterpret_cast<const char*>(&mreq.imr_interface.s_addr),

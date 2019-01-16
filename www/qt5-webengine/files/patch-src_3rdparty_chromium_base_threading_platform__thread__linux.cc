@@ -19,12 +19,3 @@
    // On linux we can get the thread names to show up in the debugger by setting
    // the process name for the LWP.  We don't want to do this for the main
    // thread because that would rename the process, causing tools like killall
-@@ -145,7 +147,7 @@ void PlatformThread::SetName(const std::string& name) 
-   // We expect EPERM failures in sandboxed processes, just ignore those.
-   if (err < 0 && errno != EPERM)
-     DPLOG(ERROR) << "prctl(PR_SET_NAME)";
--#endif  //  !defined(OS_NACL) && !defined(OS_AIX)
-+#endif  //  !defined(OS_NACL) && !defined(OS_AIX) && !defined(OS_BSD)
- }
- 
- #if !defined(OS_NACL) && !defined(OS_AIX)

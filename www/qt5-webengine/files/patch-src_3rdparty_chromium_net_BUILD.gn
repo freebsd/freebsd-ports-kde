@@ -1,61 +1,29 @@
 --- src/3rdparty/chromium/net/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/net/BUILD.gn
-@@ -1906,6 +1906,13 @@ component("net") {
-       sources -= [ "disk_cache/blockfile/file_posix.cc" ]
-     }
- 
-+    if (is_bsd) {
-+      sources -= [
-+         "base/network_change_notifier_linux.cc",
-+         "base/network_change_notifier_linux.h",
-+      ]
-+    }
-+
-     if (is_ios || is_mac) {
-       sources += [
-         "base/mac/url_conversions.h",
-@@ -1925,6 +1932,15 @@ component("net") {
-       ]
-     }
- 
-+    if (is_bsd) {
-+      sources -= [
-+        "base/address_tracker_linux.cc",
-+        "base/address_tracker_linux.h",
-+        #"base/network_interfaces_linux.cc",
-+      ]
-+      #sources += [ "base/network_interfaces_freebsd.cc" ]
-+    }
-+
-     if (is_fuchsia) {
-       sources += [
-         "base/network_change_notifier_fuchsia.cc",
-@@ -2932,7 +2948,7 @@ if (is_linux || is_mac) {
-   }
- }
+@@ -95,7 +95,7 @@ net_configs = [
+   "//build/config/compiler:wexit_time_destructors",
+ ]
  
 -if (is_linux) {
-+if (is_linux || is_bsd) {
-   static_library("epoll_server") {
-     sources = [
-       "tools/epoll_server/epoll_server.cc",
-@@ -3035,7 +3051,7 @@ if (is_android) {
-   }
++if (is_linux && !is_bsd) {
+   net_configs += [ "//build/config/linux:libresolv" ]
  }
  
--if (is_android || is_linux) {
-+if (is_android || is_linux || is_bsd) {
-   executable("disk_cache_memory_test") {
-     testonly = true
-     sources = [
-@@ -5320,6 +5336,10 @@ test("net_unittests") {
+@@ -1904,6 +1904,17 @@ component("net") {
+       ]
  
-   if (is_chromeos) {
-     sources -= [ "proxy_resolution/proxy_config_service_linux_unittest.cc" ]
-+  }
+       sources -= [ "disk_cache/blockfile/file_posix.cc" ]
++    }
 +
-+  if (is_bsd) {
-+    sources -= [ "base/address_tracker_linux_unittest.cc" ]
-   }
++    if (is_bsd) {
++      sources -= [
++         "base/address_tracker_linux.cc",
++         "base/address_tracker_linux.h",
++         "base/network_change_notifier_linux.cc",
++         "base/network_change_notifier_linux.h",
++         "base/network_interfaces_linux.cc",
++      ]
++      sources += [ "base/network_interfaces_freebsd.cc" ]
+     }
  
-   if (!is_proto_quic && v8_use_external_startup_data) {
+     if (is_ios || is_mac) {
