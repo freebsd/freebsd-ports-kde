@@ -496,6 +496,7 @@
     SUBDIR += libraw
     SUBDIR += libreatlas
     SUBDIR += librsvg2
+    SUBDIR += librsvg2-rust
     SUBDIR += libsixel
     SUBDIR += libspiro
     SUBDIR += libsvg

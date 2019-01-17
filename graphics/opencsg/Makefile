@@ -3,7 +3,7 @@
 
 PORTNAME=	opencsg
 PORTVERSION=	1.4.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.opencsg.org/
 DISTNAME=	OpenCSG-${PORTVERSION}
@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/../license.txt
 
 USES=		compiler:c++11-lang qmake qt:5
-USE_GL=		gl glew
+USE_GL=		gl glesv2 glew
 USE_QT=		qmake_build
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 PLIST_SUB=      PORTVERSION=${PORTVERSION}

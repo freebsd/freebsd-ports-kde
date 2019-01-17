@@ -105,6 +105,7 @@ DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${EXTRACT_SUFX}:boot
 .if ${ARCH} == aarch64 || ${ARCH} == armv6 || ${ARCH} == armv7
 # CONFIGURE_TARGET must to be the same as the llvm triple
 CONFIGURE_TARGET=	${ARCH}-unknown-freebsd${"${ARCH:Maarch64}" != "":?:-gnueabihf}
+CONFIGURE_ENV+=		STRIP=${LOCALBASE}/bin/strip
 EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-aclocal.m4
 BUILD_DEPENDS+=		ld.gold:devel/binutils \
 			llc${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
@@ -301,6 +302,12 @@ create-bootstrap:
 # Much like create-bootstrap, just different naming and output format
 .PHONY: create-stack-bindist
 create-stack-bindist:
+	${REINPLACE_CMD} -e '/^mandir/d' \
+			-e '/^infodir/d' \
+			-e '/^docdir/d' \
+			-e '/^htmldir/d' \
+		${WRKSRC}/mk/build.mk
+
 	cd ${WRKSRC} \
 		&& gmake binary-dist TAR_COMP=xz \
 		&& ${MV} ${WRKSRC}/ghc-${GHC_VERSION}-${GHC_ARCH}-portbld-freebsd.tar.xz /tmp/

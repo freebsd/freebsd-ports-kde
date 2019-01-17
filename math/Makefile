@@ -130,6 +130,7 @@
     SUBDIR += armadillo
     SUBDIR += arpack++
     SUBDIR += arpack-ng
+    SUBDIR += ascent
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
@@ -721,6 +722,7 @@
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-networkx
+    SUBDIR += py-networkx1
     SUBDIR += py-numarray
     SUBDIR += py-numeric
     SUBDIR += py-numexpr

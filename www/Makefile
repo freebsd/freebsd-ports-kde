@@ -382,6 +382,7 @@
     SUBDIR += mediawiki127
     SUBDIR += mediawiki130
     SUBDIR += mediawiki131
+    SUBDIR += mediawiki132
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -2542,6 +2543,7 @@
     SUBDIR += xshttpd
     SUBDIR += xshttpd-devel
     SUBDIR += xsp
+    SUBDIR += wml
     SUBDIR += yabb
     SUBDIR += yanopaste
     SUBDIR += yarn
