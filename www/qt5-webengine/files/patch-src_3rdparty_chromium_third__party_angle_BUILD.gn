@@ -1,20 +1,6 @@
 --- src/3rdparty/chromium/third_party/angle/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/third_party/angle/BUILD.gn
-@@ -15,7 +15,7 @@ if (is_android) {
- 
- declare_args() {
-   # Use the PCI lib to collect GPU information on Linux.
--  use_libpci = is_linux && (!is_chromecast || is_cast_desktop_build) &&
-+  use_libpci = (is_linux || is_bsd) && (!is_chromecast || is_cast_desktop_build) &&
-                (use_x11 || use_ozone)
- 
-   # Link in system libGL, to work with apitrace.  See doc/DebuggingTips.md.
-@@ -262,11 +262,12 @@ static_library("angle_gpu_info_util") {
-     defines += [ "GPU_INFO_USE_SETUPAPI" ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+@@ -266,7 +266,8 @@ static_library("angle_gpu_info_util") {
      sources +=
          rebase_path(gles_gypi.libangle_gpu_info_util_linux_sources, ".", "src")
  
@@ -32,24 +18,7 @@
        ]
      }
    }
-@@ -517,6 +519,7 @@ static_library("libANGLE") {
-         "Xi",
-         "Xext",
-       ]
-+      configs += [ ":x11" ]
-     }
-     if (is_mac) {
-       sources += rebase_path(gles_gypi.libangle_gl_cgl_sources, ".", "src")
-@@ -812,7 +815,7 @@ util_gypi = exec_script("//build/gypi_to_gn.py",
- 
- config("angle_util_config") {
-   include_dirs = [ "util" ]
--  if (is_linux && use_x11) {
-+  if ((is_linux || is_bsd) && use_x11) {
-     libs = [ "X11" ]
-   }
- }
-@@ -842,10 +845,6 @@ foreach(is_shared_library,
+@@ -842,10 +844,6 @@ foreach(is_shared_library,
      libs = []
      if (is_linux) {
        sources += rebase_path(util_gypi.util_linux_sources, ".", "util")

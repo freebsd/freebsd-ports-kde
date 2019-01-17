@@ -19,7 +19,7 @@
 +  struct kinfo_proc proc;
 +  size_t len = sizeof(struct kinfo_proc);
 +  if (sysctl(mib, arraysize(mib), &proc, &len, NULL, 0) < 0)
-+	  return Time();
++    return Time();
 +#if defined(__DragonFly__)
 +  return Time::FromTimeVal(proc.kp_start);
 +#else

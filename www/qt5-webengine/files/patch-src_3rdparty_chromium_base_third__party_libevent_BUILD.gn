@@ -13,10 +13,10 @@
      ]
      include_dirs = [ "linux" ]
 +  } else if (is_bsd) {
-+    sources += [
-+       "kqueue.c",
-+       "freebsd/config.h",
-+       "freebsd/event-config.h",
++    sources += [ 
++      "kqueue.c",
++      "freebsd/config.h",
++      "freebsd/event-config.h",
 +    ]
 +    include_dirs = [ "freebsd" ]
    } else if (is_android) {

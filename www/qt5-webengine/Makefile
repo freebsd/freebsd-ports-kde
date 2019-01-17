@@ -109,10 +109,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 post-extract:
 # Install FreeBSD's freebsd.pri file.
 	${CP} ${FILESDIR}/freebsd.pri ${WRKSRC}/src/core/config/freebsd.pri
-	#@${CP} ${FILESDIR}/network_interfaces_freebsd.cc \
-		${WRKSRC}/src/3rdparty/chromium/net/base
-	#@${CP} ${FILESDIR}/network_interfaces_freebsd.h \
-		${WRKSRC}/src/3rdparty/chromium/net/base
 
 post-extract-SNDIO-on:
 	@cd ${WRKSRC}/src/3rdparty/chromium/media/audio && ${MKDIR} sndio openbsd

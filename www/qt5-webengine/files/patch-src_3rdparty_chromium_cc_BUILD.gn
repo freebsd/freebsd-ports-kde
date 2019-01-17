@@ -9,14 +9,3 @@
      data_deps = [
        "//third_party/mesa:osmesa",
      ]
-@@ -750,10 +750,6 @@ cc_test("cc_unittests") {
-     "//ui/gfx/geometry",
-     "//ui/gl",
-     "//ui/gl:test_support",
--  ]
--
--  data_deps = [
--    "//third_party/mesa:osmesa",
-   ]
- }
- 

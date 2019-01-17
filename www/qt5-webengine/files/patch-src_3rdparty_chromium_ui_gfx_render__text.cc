@@ -6,7 +6,7 @@
  
 -  int min_offset = 0;
 -  int max_offset = 0;
-+  // avoid collisions with vm_map.h on FreeBSD -- cmt
++  // avoid collisions with vm_map.h on FreeBSD --cmt
 +  int _min_offset = 0;
 +  int _max_offset = 0;
    if (extra_content > 0) {

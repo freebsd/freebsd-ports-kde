@@ -22,12 +22,12 @@
  namespace WTF {
  
  namespace internal {
-@@ -68,6 +73,8 @@ ThreadIdentifier CurrentThreadSyscall() {
-   return pthread_mach_thread_np(pthread_self());
- #elif defined(OS_LINUX)
+@@ -70,6 +75,8 @@ ThreadIdentifier CurrentThreadSyscall() {
    return syscall(__NR_gettid);
-+#elif defined(OS_BSD)
-+  return pthread_getthreadid_np();
  #elif defined(OS_ANDROID)
    return gettid();
++#elif defined(OS_BSD)
++  return pthread_getthreadid_np();
  #else
+   return reinterpret_cast<uintptr_t>(pthread_self());
+ #endif

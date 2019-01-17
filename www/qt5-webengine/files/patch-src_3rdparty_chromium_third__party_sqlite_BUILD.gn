@@ -5,16 +5,7 @@
      cflags += [ "-Wno-unused-function" ]
    }
 -  if (is_linux) {
-+  if (is_linux || is_bsd) {
++  if (is_linux && !is_bsd) {
      cflags += [
        # SQLite doesn"t believe in compiler warnings,
        # preferring testing.
-@@ -283,7 +283,7 @@ group("sqlite") {
-   ]
- }
- 
--if (is_linux) {
-+if (is_linux || is_bsd) {
-   executable("sqlite_shell") {
-     include_dirs = [
-       # shell.c contains an '#include "sqlite3.h", which we want to be

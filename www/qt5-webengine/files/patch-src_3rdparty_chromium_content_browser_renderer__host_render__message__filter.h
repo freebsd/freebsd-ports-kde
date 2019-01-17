@@ -7,8 +7,7 @@
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
    void SetThreadPriority(int32_t ns_tid,
--                         base::ThreadPriority priority) override;
-+                         base::ThreadPriority priority);
+                          base::ThreadPriority priority) override;
  #endif
  
    void OnResolveProxy(const GURL& url, IPC::Message* reply_msg);

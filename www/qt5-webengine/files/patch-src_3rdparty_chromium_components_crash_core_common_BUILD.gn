@@ -9,3 +9,20 @@
  }
  
  group("common") {
+@@ -88,7 +88,6 @@ target(crash_key_target_type, "crash_key") {
+       ]
+     }
+ 
+-    deps += [ "//third_party/breakpad:client" ]
+   }
+ }
+ 
+@@ -143,7 +142,7 @@ source_set("unit_tests") {
+     sources += [ "objc_zombie_unittest.mm" ]
+   }
+ 
+-  if (!is_mac && !is_win && !is_fuchsia) {
++  if (!is_mac && !is_win && !is_fuchsia && !is_bsd) {
+     include_dirs = [ "//third_party/breakpad/breakpad/src/" ]
+     sources += [ "crash_key_breakpad_unittest.cc" ]
+   }
