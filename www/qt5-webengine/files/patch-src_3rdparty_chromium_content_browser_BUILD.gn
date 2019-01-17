@@ -1,14 +1,5 @@
 --- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
-@@ -1775,7 +1775,7 @@ jumbo_source_set("browser") {
-     deps += [ "//ui/events" ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     deps += [
-       "//components/services/font:lib",
-       "//components/services/font/public/interfaces",
 @@ -1799,11 +1799,6 @@ jumbo_source_set("browser") {
        "tracing/cros_tracing_agent.cc",
        "tracing/cros_tracing_agent.h",
@@ -21,50 +12,3 @@
    }
  
    if (is_chromeos || is_android || is_chromecast) {
-@@ -1820,6 +1815,10 @@ jumbo_source_set("browser") {
- 
-     defines += [ "CAST_TRACING_AGENT=1" ]
-   }
-+  
-+  if (is_bsd) {
-+    deps -= [ "//components/download/quarantine", ]
-+  }
- 
-   if (is_fuchsia) {
-     sources += [
-@@ -1848,7 +1847,7 @@ jumbo_source_set("browser") {
-   }
- 
-   if (!is_mac) {
--    deps += [ "//sandbox" ]
-+    deps += [ "//sandbox", "//sandbox/linux:sandbox_services" ]
-   }
-   if (!is_android && !use_qt) {
-     deps += [
-@@ -2099,7 +2098,7 @@ jumbo_source_set("browser") {
-     }
-   }
- 
--  if (is_linux && use_aura) {
-+  if ((is_linux || is_bsd) && use_aura) {
-     deps += [ "//third_party/fontconfig" ]
-   }
- 
-@@ -2209,7 +2208,7 @@ jumbo_source_set("browser") {
-     ]
- 
-     set_sources_assignment_filter([])
--    sources += [
-+    sources -= [
-       "memory/swap_metrics_driver_impl_linux.cc",
-       "memory/swap_metrics_driver_impl_linux.h",
-     ]
-@@ -2427,7 +2426,7 @@ jumbo_source_set("browser") {
-     ]
-   }
- 
--  if (is_linux && use_dbus) {
-+  if ((is_linux || is_bsd) && use_dbus) {
-     deps += [ "//dbus" ]
-   }
- 

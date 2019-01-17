@@ -5,7 +5,7 @@
    }
  
 -  if (is_linux) {
-+  if ((is_linux || is_bsd) && !use_sndio) {
++  if (is_linux && !use_sndio) {
      sources += [ "linux/audio_manager_linux.cc" ]
    }
 +  if (use_sndio) {
@@ -15,22 +15,17 @@
 +      "sndio/sndio_input.cc",
 +      "sndio/sndio_input.h",
 +      "sndio/sndio_output.cc",
-+      "sndio/sndio_output.h",
++      "sndio/sndio_output.h"
 +    ]
 +  }
  
    if (use_alsa) {
      libs += [ "asound" ]
-@@ -302,9 +312,11 @@ source_set("audio") {
+@@ -302,7 +312,6 @@ source_set("audio") {
      if (link_pulseaudio) {
        configs += [ ":libpulse" ]
      } else {
 -      libs += [ "dl" ]
        deps += [ ":pulse_generate_stubs" ]
        sources += get_target_outputs(":pulse_generate_stubs")
-+    }
-+    if (is_linux) {
-+      libs += [ "dl" ]
      }
-   }
- 

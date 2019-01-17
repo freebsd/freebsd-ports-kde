@@ -13,8 +13,8 @@
 +  if(r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, NULL, 0);
 +  if(r == 0)
-+    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
-+  if (r == -1) {
++    r =sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
++  if(r == -1) {
      NOTREACHED();
      return 0;
    }

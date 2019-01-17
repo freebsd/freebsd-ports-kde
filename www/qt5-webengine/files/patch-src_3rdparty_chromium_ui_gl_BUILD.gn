@@ -9,22 +9,3 @@
        # Windows has USE_EGL but doesn't support base::FileDescriptor.
        # libsync isn't supported or needed on MacOSX.
        # Fuchsia is excluded due to a libsync dependency and because it's
-@@ -297,7 +297,6 @@ component("gl") {
-     data_deps += [
-       "//third_party/angle:libEGL",
-       "//third_party/angle:libGLESv2",
--      "//third_party/mesa:osmesa",
-     ]
-     if (enable_swiftshader) {
-       data_deps += [ "//third_party/swiftshader" ]
-@@ -561,10 +560,6 @@ test("gl_unittests") {
-     "//ui/gl/init",
-     "//ui/platform_window",
-     "//ui/platform_window:platform_impls",
--  ]
--
--  data_deps = [
--    "//third_party/mesa:osmesa",
-   ]
- 
-   if (use_x11) {

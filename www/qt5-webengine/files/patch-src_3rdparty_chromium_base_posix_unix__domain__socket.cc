@@ -16,11 +16,11 @@
  const size_t UnixDomainSocket::kMaxFileDescriptors = 16;
  
 +#ifndef SCM_CREDENTIALS
-+#  define SCM_CREDENTIALS	0x9001
++#  define SCM_CREDENTIALS  0x9001
 +#endif
 +
 +#ifndef SO_PASSCRED
-+#  define SO_PASSCRED		0x9002
++#  define SO_PASSCRED      0x9002
 +#endif
 +
  #if !defined(OS_NACL_NONSFI)

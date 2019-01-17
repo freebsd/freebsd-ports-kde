@@ -1,5 +1,21 @@
 --- src/3rdparty/chromium/sandbox/linux/BUILD.gn.orig	2018-11-13 18:25:11 UTC
 +++ src/3rdparty/chromium/sandbox/linux/BUILD.gn
+@@ -12,12 +12,12 @@ if (is_android) {
+ }
+ 
+ declare_args() {
+-  compile_suid_client = is_linux
++  compile_suid_client = is_linux && !is_bsd
+ 
+-  compile_credentials = is_linux
++  compile_credentials = is_linux && !is_bsd
+ 
+   # On Android, use plain GTest.
+-  use_base_test_suite = is_linux
++  use_base_test_suite = is_linux && !is_bsd
+ }
+ 
+ if (is_nacl_nonsfi) {
 @@ -398,7 +398,7 @@ component("sandbox_services") {
      public_deps += [ ":sandbox_services_headers" ]
    }

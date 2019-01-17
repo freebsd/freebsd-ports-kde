@@ -5,7 +5,7 @@
  BASE_EXPORT int GetMaximumPathComponentLength(const base::FilePath& path);
  
 -#if defined(OS_LINUX) || defined(OS_AIX)
-+#if defined(OS_LINUX) || defined(OS_BSD) || defined(OS_AIX)
++#if defined(OS_LINUX) || defined(OS_AIX) || defined(OS_BSD)
  // Broad categories of file systems as returned by statfs() on Linux.
  enum FileSystemType {
    FILE_SYSTEM_UNKNOWN,  // statfs failed.

@@ -5,7 +5,7 @@
  #endif
  
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_BSD)
++#if (defined(OS_BSD) || defined(OS_LINUX)) && !defined(OS_CHROMEOS)
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/linux/text_edit_key_bindings_delegate_auralinux.h"
  #endif
@@ -14,7 +14,7 @@
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_BSD)
++#if (defined(OS_BSD) || defined(OS_LINUX)) && !defined(OS_CHROMEOS)
    return NeedsInputGrab();
  #endif
    return false;
@@ -23,7 +23,7 @@
      return;
  
 -#if defined(OS_LINUX) && !defined(OS_CHROMEOS)
-+#if defined(OS_LINUX) && !defined(OS_CHROMEOS) || defined(OS_BSD)
++#if (defined(OS_BSD) || defined(OS_LINUX)) && !defined(OS_CHROMEOS)
    ui::TextEditKeyBindingsDelegateAuraLinux* keybinding_delegate =
        ui::GetTextEditKeyBindingsDelegate();
    std::vector<ui::TextEditCommandAuraLinux> commands;

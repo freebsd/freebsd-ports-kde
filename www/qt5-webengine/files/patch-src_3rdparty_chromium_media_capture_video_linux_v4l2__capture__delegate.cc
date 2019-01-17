@@ -32,3 +32,15 @@
  
  // TODO(aleksandar.stojiljkovic): Wrap this with kernel version check once the
  // format is introduced to kernel.
+@@ -367,9 +369,9 @@ void V4L2CaptureDelegate::AllocateAndStart(
+   // operation (|errno| == EINVAL in this case) or plain failure.
+   if ((power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_50HZ)
+       || (power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_60HZ)
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,2,0)
++//#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,2,0)
+       || (power_line_frequency_ == V4L2_CID_POWER_LINE_FREQUENCY_AUTO)
+-#endif
++//#endif
+     ) {
+     struct v4l2_control control = {};
+     control.id = V4L2_CID_POWER_LINE_FREQUENCY;

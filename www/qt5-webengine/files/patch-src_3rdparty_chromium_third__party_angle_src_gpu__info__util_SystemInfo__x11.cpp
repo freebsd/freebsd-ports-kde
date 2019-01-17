@@ -13,8 +13,8 @@
  #error SystemInfo_x11.cpp compiled without GPU_INFO_USE_X11
  #endif
  
-+#define GLX_RENDERER_VENDOR_ID_MESA    0x8183
-+#define GLX_RENDERER_DEVICE_ID_MESA    0x8184
++#define GLX_RENDERER_VENDOR_ID_MESA	0x8183
++#define GLX_RENDERER_DEVICE_ID_MESA	0x8184
 +
  namespace angle
  {

@@ -1,8 +1,0 @@
---- src/3rdparty/chromium/ui/base/ui_features.gni.orig	2018-11-13 18:25:11 UTC
-+++ src/3rdparty/chromium/ui/base/ui_features.gni
-@@ -21,4 +21,4 @@ declare_args() {
-   enable_mus = is_chromeos
- }
- 
--enable_hidpi = is_mac || is_win || is_linux
-+enable_hidpi = is_mac || is_win || is_linux || is_bsd

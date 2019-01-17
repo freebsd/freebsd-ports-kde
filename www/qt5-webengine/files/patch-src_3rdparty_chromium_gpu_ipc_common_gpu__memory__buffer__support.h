@@ -5,7 +5,7 @@
  #include "ui/gfx/gpu_memory_buffer.h"
  
 -#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(OS_BSD) ||  defined(USE_OZONE)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(USE_OZONE)
  namespace gfx {
  class ClientNativePixmapFactory;
  }
@@ -14,7 +14,7 @@
   public:
    GpuMemoryBufferSupport();
 -#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(OS_BSD) ||  defined(USE_OZONE)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(USE_OZONE)
    GpuMemoryBufferSupport(std::unique_ptr<gfx::ClientNativePixmapFactory>
                               client_native_pixmap_factory);
  #endif
@@ -23,7 +23,7 @@
                                                       gfx::BufferUsage usage);
  
 -#if defined(OS_LINUX) || defined(USE_OZONE)
-+#if defined(OS_LINUX) || defined(OS_BSD) ||  defined(USE_OZONE)
++#if defined(OS_LINUX) || defined(OS_BSD) || defined(USE_OZONE)
    gfx::ClientNativePixmapFactory* client_native_pixmap_factory() {
      return client_native_pixmap_factory_.get();
    }
