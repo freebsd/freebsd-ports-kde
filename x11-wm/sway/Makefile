@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	sway
-DISTVERSION=	1.0-beta.2-226
-DISTVERSIONSUFFIX=	-g1cce14e7
+DISTVERSION=	1.0-beta.2-274
+DISTVERSIONSUFFIX=	-g5f45a4bb
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 		wayland-protocols>=1.14:graphics/wayland-protocols \
-		wlroots>=0.2.126:x11-toolkits/wlroots
+		wlroots>=0.2.155:x11-toolkits/wlroots
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libevdev.so:devel/libevdev \
 		libpcre.so:devel/pcre \
@@ -53,14 +53,5 @@ post-patch:
 # Let @sample handle default files under etc/
 	@${REINPLACE_CMD} -e '/config\.in/{ N; s/@BASENAME@/&.sample/; }' \
 		${WRKSRC}/meson.build
-# Let terminal chooser pick default
-	@${REINPLACE_CMD} -e 's/urxvt/swayterm/' \
-		${WRKSRC}/config.in
-
-post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/swayterm ${STAGEDIR}${PREFIX}/bin
-	${MKDIR} ${STAGEDIR}${ETCDIR}/config.d
-# x11/libxkbcommon has --with-default-rules="xorg" but x11/libinput expects "evdev"
-	${ECHO_CMD} 'input * xkb_rules evdev' >${STAGEDIR}${ETCDIR}/config.d/evdev
 
 .include <bsd.port.mk>

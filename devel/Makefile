@@ -215,8 +215,8 @@
     SUBDIR += binutils
     SUBDIR += bison
     SUBDIR += blame
-    SUBDIR += bloaty
     SUBDIR += blitz
+    SUBDIR += bloaty
     SUBDIR += bmake
     SUBDIR += bmkdep
     SUBDIR += bnf
@@ -744,8 +744,8 @@
     SUBDIR += geany-plugin-treebrowser
     SUBDIR += geany-plugin-updatechecker
     SUBDIR += geany-plugin-utilslib
-    SUBDIR += geany-plugin-vimode
     SUBDIR += geany-plugin-vc
+    SUBDIR += geany-plugin-vimode
     SUBDIR += geany-plugin-webhelper
     SUBDIR += geany-plugin-workbench
     SUBDIR += geany-plugin-xmlsnippets
@@ -1689,6 +1689,7 @@
     SUBDIR += llvm50
     SUBDIR += llvm60
     SUBDIR += llvm70
+    SUBDIR += llvm80
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -4061,6 +4062,7 @@
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-mustache
     SUBDIR += pecl-propro2
+    SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
     SUBDIR += pecl-pthreads
     SUBDIR += pecl-raphf2
@@ -5591,6 +5593,7 @@
     SUBDIR += rubygem-devise
     SUBDIR += rubygem-devise-rails5
     SUBDIR += rubygem-devise-rails50
+    SUBDIR += rubygem-dig_rb
     SUBDIR += rubygem-directory_watcher
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
@@ -5682,12 +5685,12 @@
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
-    SUBDIR += rubygem-grape11
     SUBDIR += rubygem-grape-entity
     SUBDIR += rubygem-grape-path-helpers
     SUBDIR += rubygem-grape-route-helpers
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape0
+    SUBDIR += rubygem-grape11
     SUBDIR += rubygem-grape_logging
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphql
@@ -5736,10 +5739,10 @@
     SUBDIR += rubygem-jquery-ui-themes
     SUBDIR += rubygem-jruby-jars
     SUBDIR += rubygem-json
+    SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-json1
     SUBDIR += rubygem-json_pure
     SUBDIR += rubygem-json_pure1
-    SUBDIR += rubygem-json-schema
     SUBDIR += rubygem-jsonapi-renderer
     SUBDIR += rubygem-kafo
     SUBDIR += rubygem-kafo_parsers
@@ -5850,11 +5853,11 @@
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
-    SUBDIR += rubygem-peek-rails50
     SUBDIR += rubygem-peek-gc-rails50
     SUBDIR += rubygem-peek-host
     SUBDIR += rubygem-peek-performance_bar
     SUBDIR += rubygem-peek-rails4
+    SUBDIR += rubygem-peek-rails50
     SUBDIR += rubygem-peek-rblineprof-rails50
     SUBDIR += rubygem-peek-redis-rails50
     SUBDIR += rubygem-pkg-config
@@ -6034,6 +6037,7 @@
     SUBDIR += rubygem-strings
     SUBDIR += rubygem-strings-ansi
     SUBDIR += rubygem-strong_migrations
+    SUBDIR += rubygem-strptime
     SUBDIR += rubygem-structured_warnings
     SUBDIR += rubygem-stud
     SUBDIR += rubygem-subexec
@@ -6359,6 +6363,7 @@
     SUBDIR += xtoolchain-llvm50
     SUBDIR += xtoolchain-llvm60
     SUBDIR += xtoolchain-llvm70
+    SUBDIR += xtoolchain-llvm80
     SUBDIR += xwpe
     SUBDIR += xxgdb
     SUBDIR += xxhash

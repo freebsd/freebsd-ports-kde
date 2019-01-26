@@ -84,8 +84,8 @@
     SUBDIR += cdif
     SUBDIR += cdiff
     SUBDIR += cgrep
-    SUBDIR += chpp
     SUBDIR += chkascii
+    SUBDIR += chpp
     SUBDIR += cl-meta
     SUBDIR += cl-meta-sbcl
     SUBDIR += cl-ppcre
@@ -505,6 +505,7 @@
     SUBDIR += mi-aspell
     SUBDIR += mifluz
     SUBDIR += miller
+    SUBDIR += minify
     SUBDIR += minised
     SUBDIR += minixmlto
     SUBDIR += mk-aspell
@@ -560,6 +561,7 @@
     SUBDIR += p5-CSS-Minifier-XS
     SUBDIR += p5-CSS-Packer
     SUBDIR += p5-CSS-SAC
+    SUBDIR += p5-CSS-Sass
     SUBDIR += p5-CSS-Simple
     SUBDIR += p5-CSS-Squish
     SUBDIR += p5-CSS-Tiny
@@ -1317,6 +1319,7 @@
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-hypua2jamo
     SUBDIR += py-jaxml
+    SUBDIR += py-jsonslicer
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
     SUBDIR += py-laserhammer
@@ -1674,8 +1677,8 @@
     SUBDIR += saxon
     SUBDIR += saxon-devel
     SUBDIR += saxon-he
-    SUBDIR += scancode-toolkit
     SUBDIR += sc-aspell
+    SUBDIR += scancode-toolkit
     SUBDIR += scdoc
     SUBDIR += scew
     SUBDIR += scim
