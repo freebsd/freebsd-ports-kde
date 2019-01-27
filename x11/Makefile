@@ -335,6 +335,7 @@
     SUBDIR += wbar
     SUBDIR += wbarconf
     SUBDIR += wdm
+    SUBDIR += wl-clipboard
     SUBDIR += wmappl
     SUBDIR += wmblob
     SUBDIR += wmbutton
@@ -493,6 +494,7 @@
     SUBDIR += xsetmode
     SUBDIR += xsetpointer
     SUBDIR += xsetroot
+    SUBDIR += xsettingsd
     SUBDIR += xskyroot
     SUBDIR += xsm
     SUBDIR += xsnow
