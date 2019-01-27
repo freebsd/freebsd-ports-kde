@@ -1882,6 +1882,7 @@
     SUBDIR += yould
     SUBDIR += zenxml
     SUBDIR += zorba
+    SUBDIR += zsh-autosuggestions
     SUBDIR += zsh-syntax-highlighting
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
