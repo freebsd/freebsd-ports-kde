@@ -1334,6 +1334,7 @@
     SUBDIR += kf5-threadweaver
     SUBDIR += kimwitu
     SUBDIR += kio-extras
+    SUBDIR += kiwix-lib
     SUBDIR += kodi-platform
     SUBDIR += kore
     SUBDIR += kronosnet
@@ -4541,7 +4542,6 @@
     SUBDIR += py-dtfabric
     SUBDIR += py-durus
     SUBDIR += py-dynrules
-    SUBDIR += py-easyconfig
     SUBDIR += py-easyprocess
     SUBDIR += py-editdistance
     SUBDIR += py-efilter
@@ -5005,6 +5005,7 @@
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
     SUBDIR += py-python-dtrace
+    SUBDIR += py-python-easyconfig
     SUBDIR += py-python-editor
     SUBDIR += py-python-engineio
     SUBDIR += py-python-gflags

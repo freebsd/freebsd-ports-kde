@@ -1024,6 +1024,7 @@
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-coherence
+    SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
@@ -1036,6 +1037,7 @@
     SUBDIR += py-haproxy-log-analysis
     SUBDIR += py-haproxyctl
     SUBDIR += py-httpstat
+    SUBDIR += py-ifaddr
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib

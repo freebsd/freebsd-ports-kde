@@ -889,6 +889,7 @@
     SUBDIR += py-traitsui
     SUBDIR += py-wand
     SUBDIR += py-webcolors
+    SUBDIR += py-willow
     SUBDIR += py-yaswfp
     SUBDIR += pygts
     SUBDIR += pymorph
