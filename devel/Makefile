@@ -1202,8 +1202,6 @@
     SUBDIR += hs-utf8-light
     SUBDIR += hs-utf8-string
     SUBDIR += hs-utility-ht
-    SUBDIR += hs-uuagc
-    SUBDIR += hs-uuagc-bootstrap
     SUBDIR += hs-uuagc-cabal
     SUBDIR += hs-uuid
     SUBDIR += hs-uuid-types
@@ -3237,6 +3235,7 @@
     SUBDIR += p5-Perl-OSType
     SUBDIR += p5-Perl-PrereqScanner
     SUBDIR += p5-Perl-PrereqScanner-Lite
+    SUBDIR += p5-Perl-PrereqScanner-NotQuiteLite
     SUBDIR += p5-Perl-Tidy
     SUBDIR += p5-Perl-Unsafe-Signals
     SUBDIR += p5-Perl-Version
@@ -3312,6 +3311,7 @@
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
     SUBDIR += p5-Regexp-Subst-Parallel
+    SUBDIR += p5-Regexp-Trie
     SUBDIR += p5-Religion
     SUBDIR += p5-Reply
     SUBDIR += p5-ResourcePool
@@ -4514,6 +4514,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
+    SUBDIR += py-datatest
     SUBDIR += py-dateutil
     SUBDIR += py-dateutils
     SUBDIR += py-datrie
@@ -4788,6 +4789,7 @@
     SUBDIR += py-mox
     SUBDIR += py-mox3
     SUBDIR += py-msgpack
+    SUBDIR += py-msgpack05
     SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
@@ -4823,7 +4825,6 @@
     SUBDIR += py-oletools
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
-    SUBDIR += py-omniorb-3
     SUBDIR += py-openapi-codec
     SUBDIR += py-opendht
     SUBDIR += py-opengrok-tools

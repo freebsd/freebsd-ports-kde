@@ -76,6 +76,7 @@
     SUBDIR += bmp2html
     SUBDIR += box
     SUBDIR += boxer
+    SUBDIR += bsd-plotutils
     SUBDIR += bugle
     SUBDIR += burplex
     SUBDIR += c-a-i-r
@@ -835,6 +836,7 @@
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
+    SUBDIR += py-glfw
     SUBDIR += py-goocanvas
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
