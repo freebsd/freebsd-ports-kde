@@ -76,6 +76,7 @@
     SUBDIR += bmp2html
     SUBDIR += box
     SUBDIR += boxer
+    SUBDIR += bsd-plotutils
     SUBDIR += bugle
     SUBDIR += burplex
     SUBDIR += c-a-i-r
@@ -490,6 +491,7 @@
     SUBDIR += libpcd
     SUBDIR += libpgf
     SUBDIR += libpillowfight
+    SUBDIR += libplacebo
     SUBDIR += libpotrace
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
@@ -833,6 +835,7 @@
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
+    SUBDIR += py-glfw
     SUBDIR += py-goocanvas
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
@@ -991,6 +994,7 @@
     SUBDIR += seom
     SUBDIR += separate
     SUBDIR += seq2gif
+    SUBDIR += shaderc
     SUBDIR += shared-color-profiles
     SUBDIR += sharpconstruct
     SUBDIR += shotwell

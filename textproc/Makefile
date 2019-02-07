@@ -436,6 +436,7 @@
     SUBDIR += liblrdf
     SUBDIR += libmrss
     SUBDIR += libmwaw03
+    SUBDIR += libnumbertext
     SUBDIR += libnxml
     SUBDIR += libodfgen01
     SUBDIR += libparsifal
@@ -532,6 +533,7 @@
     SUBDIR += nn-aspell
     SUBDIR += no-hunspell
     SUBDIR += nunnimcax
+    SUBDIR += nuspell
     SUBDIR += nux
     SUBDIR += ny-aspell
     SUBDIR += ocaml-csv
@@ -1217,7 +1219,6 @@
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += permute
-    SUBDIR += pict
     SUBDIR += php-mecab
     SUBDIR += php71-ctype
     SUBDIR += php71-dom
@@ -1249,6 +1250,7 @@
     SUBDIR += php73-xmlreader
     SUBDIR += php73-xmlwriter
     SUBDIR += php73-xsl
+    SUBDIR += pict
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1264,6 +1266,7 @@
     SUBDIR += py-Chameleon
     SUBDIR += py-CommonMark
     SUBDIR += py-MarkupSafe
+    SUBDIR += py-QDarkStyle
     SUBDIR += py-Tempita
     SUBDIR += py-acora
     SUBDIR += py-agate
@@ -1369,6 +1372,7 @@
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
+    SUBDIR += py-pyjade
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
@@ -1409,6 +1413,7 @@
     SUBDIR += py-sphinx-hieroglyph
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx_numfig
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia

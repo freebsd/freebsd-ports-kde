@@ -3,6 +3,7 @@
 
 PORTNAME=	virtualbox-ose
 PORTVERSION=	5.2.26
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
@@ -149,7 +150,7 @@ USES+=		python:2.7,build
 CONFIGURE_ARGS+=	--enable-qt5
 PLIST_SUB+=	QT=""
 USES+=		gl qmake:no_env qt:5
-USE_GL=		gl
+USE_GL=		gl glu
 USE_QT=		buildtools_build core dbus gui linguisttools_build opengl
 USE_QT+=	printsupport widgets x11extras
 USE_XORG=	xcb
@@ -315,7 +316,9 @@ do-build:
 .endif
 
 do-install:
+.if ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MWEBSERVICE}
 	${MKDIR} ${STAGEDIR}${DATADIR}/sdk
+.endif
 	cd ${KMK_BUILDDIR}/bin/sdk/bindings/xpcom && \
 	    ${COPYTREE_SHARE} "idl samples" ${STAGEDIR}${DATADIR}
 
@@ -326,7 +329,9 @@ do-install:
 	${MKDIR} ${STAGEDIR}${VBOX_DIR}
 	cd ${KMK_BUILDDIR}/bin && ${COPYTREE_SHARE} \
 	    "*.fd *.r0 *.rc *.so components" ${STAGEDIR}${VBOX_DIR}
+.if ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MWEBSERVICE}
 	${RLN} ${STAGEDIR}${DATADIR}/sdk ${STAGEDIR}${VBOX_DIR}
+.endif
 
 	${INSTALL_SCRIPT} ${WRKSRC}/src/VBox/Installer/freebsd/VBox.sh \
 	    ${STAGEDIR}${VBOX_DIR}

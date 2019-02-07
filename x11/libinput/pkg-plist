@@ -34,6 +34,7 @@ man/man1/libinput.1.gz
 %%DATADIR%%/10-generic-trackball.quirks
 %%DATADIR%%/30-vendor-aiptek.quirks
 %%DATADIR%%/30-vendor-alps.quirks
+%%DATADIR%%/30-vendor-contour.quirks
 %%DATADIR%%/30-vendor-cyapa.quirks
 %%DATADIR%%/30-vendor-elantech.quirks
 %%DATADIR%%/30-vendor-huion.quirks

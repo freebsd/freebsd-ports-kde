@@ -56,7 +56,9 @@
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
-    SUBDIR += atf-allwinner
+    SUBDIR += atf-master
+    SUBDIR += atf-sun50i_a64
+    SUBDIR += atf-rk3399
     SUBDIR += atitvout
     SUBDIR += atop
     SUBDIR += auto-admin
@@ -194,6 +196,7 @@
     SUBDIR += confman
     SUBDIR += conky
     SUBDIR += conky-awesome
+    SUBDIR += conman
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
@@ -215,7 +218,6 @@
     SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
-    SUBDIR += createrepo
     SUBDIR += cronic
     SUBDIR += cronolog
     SUBDIR += cronolog-devel
@@ -395,13 +397,13 @@
     SUBDIR += fusefs-rar2fs
     SUBDIR += fusefs-s3backer
     SUBDIR += fusefs-s3fs
+    SUBDIR += fusefs-sandboxfs
     SUBDIR += fusefs-simple-mtpfs
     SUBDIR += fusefs-smbnetfs
     SUBDIR += fusefs-sqlfs
     SUBDIR += fusefs-squashfuse
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
-    SUBDIR += fusefs-wdfs
     SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
@@ -490,12 +492,9 @@
     SUBDIR += hpacucli
     SUBDIR += hploscripts
     SUBDIR += hptcli
-    SUBDIR += hs-angel
     SUBDIR += hs-cpu
     SUBDIR += hs-disk-free-space
-    SUBDIR += hs-ekg
     SUBDIR += hs-ekg-core
-    SUBDIR += hs-ekg-json
     SUBDIR += hs-mountpoints
     SUBDIR += hstr
     SUBDIR += htop
@@ -606,6 +605,7 @@
     SUBDIR += linux-crashplan
     SUBDIR += linuxfdisk
     SUBDIR += livecd
+    SUBDIR += lizardfs
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -691,6 +691,7 @@
     SUBDIR += mkntpwd
     SUBDIR += mksunbootcd
     SUBDIR += mmc-utils
+    SUBDIR += mmve
     SUBDIR += mnrpes
     SUBDIR += modman
     SUBDIR += modules
@@ -751,6 +752,7 @@
     SUBDIR += npadmin
     SUBDIR += nq
     SUBDIR += nrg2iso
+    SUBDIR += ntfy
     SUBDIR += nut
     SUBDIR += nvclock
     SUBDIR += nvme-cli
@@ -1009,7 +1011,6 @@
     SUBDIR += py-azure-cli-vm
     SUBDIR += py-bcfg2
     SUBDIR += py-cdmi
-    SUBDIR += py-consul
     SUBDIR += py-croniter
     SUBDIR += py-crontab
     SUBDIR += py-diffoscope
@@ -1045,6 +1046,7 @@
     SUBDIR += py-psutil
     SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
+    SUBDIR += py-python-consul
     SUBDIR += py-python-nomad
     SUBDIR += py-pytsk
     SUBDIR += py-pywatchman
@@ -1371,6 +1373,7 @@
     SUBDIR += u-boot-cubox-hummingboard
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-imx-serial-loader
+    SUBDIR += u-boot-firefly-rk3399
     SUBDIR += u-boot-master
     SUBDIR += u-boot-nanopi-a64
     SUBDIR += u-boot-nanopi-m1plus
@@ -1388,6 +1391,7 @@
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine64
+    SUBDIR += u-boot-pine64-lts
     SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rpi
@@ -1519,7 +1523,6 @@
     SUBDIR += xvidcap
     SUBDIR += yadm
     SUBDIR += yank
-    SUBDIR += yum
     SUBDIR += zap
     SUBDIR += zbackup
     SUBDIR += zeitgeist

@@ -78,6 +78,7 @@
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
     SUBDIR += ceph
+    SUBDIR += ceph13
     SUBDIR += cf
     SUBDIR += charm
     SUBDIR += chrony
@@ -345,6 +346,8 @@
     SUBDIR += krfb
     SUBDIR += ksmtp
     SUBDIR += ktnef
+    SUBDIR += kube-controller-manager
+    SUBDIR += kube-scheduler
     SUBDIR += l2tpd
     SUBDIR += ladvd
     SUBDIR += lambdamoo
@@ -468,6 +471,7 @@
     SUBDIR += miruo
     SUBDIR += mlvpn
     SUBDIR += mobile-broadband-provider-info
+    SUBDIR += mod_amd
     SUBDIR += mono-zeroconf
     SUBDIR += mopd
     SUBDIR += morebalance
@@ -910,7 +914,6 @@
     SUBDIR += passlogd
     SUBDIR += pathneck
     SUBDIR += pbnc
-    SUBDIR += pdb
     SUBDIR += pear-Auth_RADIUS
     SUBDIR += pear-File_Bittorrent2
     SUBDIR += pear-Horde_Kolab_Server
@@ -1074,7 +1077,6 @@
     SUBDIR += py-pamqp
     SUBDIR += py-pcap
     SUBDIR += py-pcapy
-    SUBDIR += py-pcs
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pygeoip
@@ -1441,6 +1443,7 @@
     SUBDIR += throttled
     SUBDIR += tigervnc
     SUBDIR += tightvnc
+    SUBDIR += timed
     SUBDIR += tintin++
     SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
