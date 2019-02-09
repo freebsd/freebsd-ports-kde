@@ -3,7 +3,6 @@
 %%QT_INCDIR%%/QtAccessibilitySupport/QtAccessibilitySupportDepends
 %%QT_INCDIR%%/QtAccessibilitySupport/QtAccessibilitySupportVersion
 %%QT_INCDIR%%/QtAccessibilitySupport/qtaccessibilitysupportversion.h
-%%QT_INCDIR%%/QtCore/modules/qconfig-gui.h
 %%QT_INCDIR%%/QtDeviceDiscoverySupport/%%FULLVER%%/QtDeviceDiscoverySupport/private/qdevicediscovery_dummy_p.h
 %%QT_INCDIR%%/QtDeviceDiscoverySupport/%%FULLVER%%/QtDeviceDiscoverySupport/private/qdevicediscovery_p.h
 %%QT_INCDIR%%/QtDeviceDiscoverySupport/%%FULLVER%%/QtDeviceDiscoverySupport/private/qdevicediscovery_static_p.h
@@ -62,6 +61,11 @@
 %%QT_INCDIR%%/QtFontDatabaseSupport/QtFontDatabaseSupportDepends
 %%QT_INCDIR%%/QtFontDatabaseSupport/QtFontDatabaseSupportVersion
 %%QT_INCDIR%%/QtFontDatabaseSupport/qtfontdatabasesupportversion.h
+%%QT_INCDIR%%/QtGlxSupport/%%FULLVER%%/QtGlxSupport/private/qglxconvenience_p.h
+%%QT_INCDIR%%/QtGlxSupport/QtGlxSupport
+%%QT_INCDIR%%/QtGlxSupport/QtGlxSupportDepends
+%%QT_INCDIR%%/QtGlxSupport/QtGlxSupportVersion
+%%QT_INCDIR%%/QtGlxSupport/qtglxsupportversion.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qabstractlayoutstyleinfo_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qabstracttextdocumentlayout_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qaccessiblecache_p.h
@@ -732,6 +736,8 @@
 %%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
 %%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake
 %%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake
+%%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake
+%%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake
 %%QT_CMAKEDIR%%/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 %%QT_CMAKEDIR%%/Qt5OpenGLExtensions/Qt5OpenGLExtensionsConfig.cmake
 %%QT_CMAKEDIR%%/Qt5OpenGLExtensions/Qt5OpenGLExtensionsConfigVersion.cmake
@@ -750,6 +756,8 @@
 %%QT_LIBDIR%%/libQt5FbSupport.prl
 %%QT_LIBDIR%%/libQt5FontDatabaseSupport.a
 %%QT_LIBDIR%%/libQt5FontDatabaseSupport.prl
+%%QT_LIBDIR%%/libQt5GlxSupport.a
+%%QT_LIBDIR%%/libQt5GlxSupport.prl
 %%QT_LIBDIR%%/libQt5Gui.prl
 %%QT_LIBDIR%%/libQt5Gui.so
 %%QT_LIBDIR%%/libQt5Gui.so.5
@@ -774,7 +782,6 @@
 %%QT_LIBDIR%%/libQt5XcbQpa.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5XcbQpa.so.%%FULLVER%%
 %%DEBUG%%%%QT_LIBDIR%%/libQt5XcbQpa.so.%%FULLVER%%.debug
-%%QT_MKSPECDIR%%/modules/qt_config_gui.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_accessibility_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_devicediscovery_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_edid_support_private.pri
@@ -782,6 +789,7 @@
 %%QT_MKSPECDIR%%/modules/qt_lib_eventdispatcher_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_fb_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_fontdatabase_support_private.pri
+%%QT_MKSPECDIR%%/modules/qt_lib_glx_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_gui.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_gui_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_kms_support_private.pri
