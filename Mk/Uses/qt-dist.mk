@@ -318,8 +318,8 @@ qtbase-pre-configure:
 # ports/194088.
 post-patch: qtbase-post-patch
 qtbase-post-patch:
-	${REINPLACE_CMD} -e "/DEFAULT_LIBDIRS=/ s,\\\\\"\\\\n,\\\\n${LOCALBASE}/lib&," \
-		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}//mkspecs/common/bsd/bsd.conf
 
 .      if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
