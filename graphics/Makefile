@@ -76,6 +76,7 @@
     SUBDIR += bmp2html
     SUBDIR += box
     SUBDIR += boxer
+    SUBDIR += bsd-plotutils
     SUBDIR += bugle
     SUBDIR += burplex
     SUBDIR += c-a-i-r
@@ -835,6 +836,7 @@
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
+    SUBDIR += py-glfw
     SUBDIR += py-goocanvas
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
@@ -842,6 +844,7 @@
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
     SUBDIR += py-imageio
+    SUBDIR += py-imageio-ffmpeg
     SUBDIR += py-imagesize
     SUBDIR += py-imgurpython
     SUBDIR += py-leather
@@ -1087,6 +1090,7 @@
     SUBDIR += xnview
     SUBDIR += xoris
     SUBDIR += xournal
+    SUBDIR += xournalpp
     SUBDIR += xpaint
     SUBDIR += xpdf
     SUBDIR += xpdf3
