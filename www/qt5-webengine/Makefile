@@ -29,7 +29,6 @@ COMMENT=	Qt 5 library to render web content
 BUILD_DEPENDS=	bison:devel/bison \
 		ninja:devel/ninja \
 		yasm:devel/yasm \
-		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libdbus-1.so:devel/dbus \
@@ -48,7 +47,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libwebp.so:graphics/webp
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
-QT5_VERSION=	5.12.0
+QT5_VERSION=	5.9.5
 
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -56,7 +55,10 @@ OPTIONS_DEFAULT=	ALSA
 
 AUDIO_DESC=		Audio backend
 
+# Need the alsa plugins to get sound at runtime, otherwise messages
+# that the pcm_oss plugin can't be opened.
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
+ALSA_RUN_DEPENDS=	alsa-plugins>=0:audio/alsa-plugins
 ALSA_VARS=		QMAKE_CONFIGURE_ARGS+=-alsa
 ALSA_VARS_OFF=		QMAKE_CONFIGURE_ARGS+=-no-alsa
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
@@ -69,9 +71,8 @@ SNDIO_VARS_OFF=		QMAKE_CONFIGURE_ARGS+=-no-sndio
 # We pass `norecursive' to USES=qmake because src/plugins/plugins.pro checks
 # whether webenginewidgets is available, which fails when qmake processes all
 # .pro files at once.
-USES=		gnome gperf jpeg python:2.7,build pkgconfig \
+USES=		gperf jpeg python:2.7,build pkgconfig \
 		qmake:norecursive,outsource qt-dist:5,webengine shebangfix
-USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT=		core declarative designer gui location network webchannel \
 		widgets buildtools_build qmake_build printsupport
@@ -80,7 +81,8 @@ USE_XORG=	x11 xcb xcomposite xcursor xext xi xorgproto \
 
 USE_LDCONFIG=	${QT_LIBDIR}
 
-QMAKE_CONFIGURE_ARGS=	-proprietary-codecs -system-ffmpeg -no-webrtc
+
+QMAKE_CONFIGURE_ARGS=	-proprietary-codecs -system-ffmpeg
 
 # We could just set it to an empty string as well. "all" does not account for
 # dependencies correctly in the generated Makefiles, use the right target here.
@@ -103,7 +105,7 @@ CONFIGURE_ENV+=	NINJAFLAGS="-j${MAKE_JOBS_NUMBER}" \
 		NINJA_PATH="${LOCALBASE}/bin/ninja"  \
 		PATH=${CONFIGURE_WRKSRC}/bin:${LOCALBASE}/bin:${PATH}
 MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
-		C_INCLUDE_PATH=${LOCALBASE}/include 	\
+		C_INCLUDE_PATH=${LOCALBASE}/include	\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
