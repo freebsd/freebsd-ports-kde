@@ -1,6 +1,6 @@
---- src/core/config/linux.pri.orig	2018-11-27 04:10:38 UTC
+--- src/core/config/linux.pri.orig	2019-01-16 22:42:58 UTC
 +++ src/core/config/linux.pri
-@@ -162,6 +162,11 @@ host_build {
+@@ -166,6 +166,11 @@ host_build {
      } else {
          gn_args += use_alsa=false
      }
@@ -10,5 +10,5 @@
 +        gn_args += use_sndio=false
 +    }
      !packagesExist(libpci): gn_args += use_libpci=false
-     !packagesExist(xscrnsaver): gn_args += use_xscrnsaver=false
  
+     qtConfig(webengine-system-x11): hasX11Dependencies() {

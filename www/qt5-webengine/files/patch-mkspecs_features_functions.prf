@@ -1,6 +1,6 @@
---- mkspecs/features/functions.prf.orig	2018-11-27 04:10:38 UTC
+--- mkspecs/features/functions.prf.orig	2019-01-16 22:42:58 UTC
 +++ mkspecs/features/functions.prf
-@@ -80,6 +80,7 @@ defineReplace(gnArgs) {
+@@ -82,6 +82,7 @@ defineReplace(gnArgs) {
      linux: include($$QTWEBENGINE_ROOT/src/core/config/linux.pri)
      macos: include($$QTWEBENGINE_ROOT/src/core/config/mac_osx.pri)
      win32: include($$QTWEBENGINE_ROOT/src/core/config/windows.pri)
@@ -8,7 +8,7 @@
      isEmpty(gn_args): error(No gn_args found please make sure you have valid configuration.)
      return($$gn_args)
  }
-@@ -99,6 +100,7 @@ defineReplace(gnOS) {
+@@ -101,6 +102,7 @@ defineReplace(gnOS) {
      macos: return(mac)
      win32: return(win)
      linux: return(linux)

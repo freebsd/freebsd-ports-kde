@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/net/proxy_resolution/proxy_resolution_service.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/net/proxy_resolution/proxy_resolution_service.cc.orig	2019-01-16 10:59:47 UTC
 +++ src/3rdparty/chromium/net/proxy_resolution/proxy_resolution_service.cc
 @@ -47,7 +47,7 @@
  #elif defined(OS_MACOSX)
@@ -18,7 +18,7 @@
  constexpr net::NetworkTrafficAnnotationTag kSystemProxyConfigTrafficAnnotation =
      net::DefineNetworkTrafficAnnotation("proxy_config_system", R"(
        semantics {
-@@ -1530,7 +1530,7 @@ ProxyResolutionService::CreateSystemProxyConfigService
+@@ -1538,7 +1538,7 @@ ProxyResolutionService::CreateSystemProxyConfigService
               << "profile_io_data.cc::CreateProxyConfigService and this should "
               << "be used only for examples.";
    return std::make_unique<UnsetProxyConfigService>();
