@@ -9,7 +9,10 @@
 %%QT_INCDIR%%/QtHelp/QHelpContentWidget
 %%QT_INCDIR%%/QtHelp/QHelpEngine
 %%QT_INCDIR%%/QtHelp/QHelpEngineCore
+%%QT_INCDIR%%/QtHelp/QHelpCollectionDetails
 %%QT_INCDIR%%/QtHelp/QHelpGlobal
+%%QT_INCDIR%%/QtHelp/QHelpFilterData
+%%QT_INCDIR%%/QtHelp/QHelpFilterEngine
 %%QT_INCDIR%%/QtHelp/QHelpIndexModel
 %%QT_INCDIR%%/QtHelp/QHelpIndexWidget
 %%QT_INCDIR%%/QtHelp/QHelpSearchEngine
@@ -21,9 +24,12 @@
 %%QT_INCDIR%%/QtHelp/QtHelpDepends
 %%QT_INCDIR%%/QtHelp/QtHelpVersion
 %%QT_INCDIR%%/QtHelp/qhelp_global.h
+%%QT_INCDIR%%/QtHelp/qhelpcollectiondetails.h
 %%QT_INCDIR%%/QtHelp/qhelpcontentwidget.h
 %%QT_INCDIR%%/QtHelp/qhelpengine.h
 %%QT_INCDIR%%/QtHelp/qhelpenginecore.h
+%%QT_INCDIR%%/QtHelp/qhelpfilterdata.h
+%%QT_INCDIR%%/QtHelp/qhelpfilterengine.h
 %%QT_INCDIR%%/QtHelp/qhelpindexwidget.h
 %%QT_INCDIR%%/QtHelp/qhelpsearchengine.h
 %%QT_INCDIR%%/QtHelp/qhelpsearchquerywidget.h
