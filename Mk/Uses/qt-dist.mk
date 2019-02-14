@@ -22,13 +22,13 @@ qmake_ARGS?=	# empty
 
 # Supported distribution arguments
 _QT4_DISTS=		yes
-_QT5_DISTS=		3d activeqt androidextras base canvas3d charts connectivity \
-			datavis3d declarative doc gamepad graphicaleffects imageformats \
-			location macextras multimedia networkauth purchasing \
-			quickcontrols2 quickcontrols remoteobjects script scxml sensors \
-			serialbus serialport speech svg tools translations \
-			virtualkeyboard wayland webchannel webengine websockets webview \
-			winextras x11extras xmlpatterns
+_QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
+			declarative doc gamepad graphicaleffects imageformats location \
+			lottie macextras multimedia networkauth purchasing quickcontrols \
+			quickcontrols2 remoteobjects script scxml sensors serialbus \
+			serialport speech svg tools translations virtualkeyboard wayland \
+			webchannel webengine webglplugin websockets webview winextras \
+			x11extras xmlpatterns
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
 # We only accept one item as an argument. The fetch target further below works
@@ -78,7 +78,7 @@ MASTER_SITE_SUBDIR?=	archive/qt/${_QT_VERSION:R}/${_QT_VERSION}/
 DISTNAME=		qt-everywhere-opensource-src-${_QT_VERSION}
 DIST_SUBDIR=		KDE
 .  else
-MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+MASTER_SITE_SUBDIR?=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # www/qt5-webengine hackery: The tarballs of 5.9.5 had a different naming scheme.
 .    if ${QT5_VERSION} == "5.9.5"
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-opensource-src-${DISTVERSION},}

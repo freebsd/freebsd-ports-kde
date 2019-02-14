@@ -4,7 +4,7 @@
 PORTNAME=	examples
 DISTVERSION=	${QT5_VERSION}
 CATEGORIES=	misc
-MASTER_SITES=	QT/official_releases/qt/${QT5_VERSION:R}/${QT5_VERSION}/single
+MASTER_SITES=	QT/development_releases/qt/${QT5_VERSION:R}/${QT5_VERSION}/single
 PKGNAMEPREFIX=	qt5-
 DISTNAME=	qt-everywhere-src-${QT5_VERSION}
 DIST_SUBDIR=	KDE/Qt/${QT5_VERSION}
