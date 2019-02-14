@@ -64,6 +64,7 @@
 %%QT_MKSPECDIR%%/common/uikit/qmake.conf
 %%QT_MKSPECDIR%%/common/unix.conf
 %%QT_MKSPECDIR%%/common/watchos.conf
+%%QT_MKSPECDIR%%/common/windows-desktop.conf
 %%QT_MKSPECDIR%%/common/windows-vulkan.conf
 %%QT_MKSPECDIR%%/common/winrt_winphone/assets/logo_150x150.png
 %%QT_MKSPECDIR%%/common/winrt_winphone/assets/logo_30x30.png
@@ -169,6 +170,7 @@
 %%QT_MKSPECDIR%%/features/cmake_functions.prf
 %%QT_MKSPECDIR%%/features/configure.prf
 %%QT_MKSPECDIR%%/features/configure_base.prf
+%%QT_MKSPECDIR%%/features/coverage.prf
 %%QT_MKSPECDIR%%/features/create_cmake.prf
 %%QT_MKSPECDIR%%/features/ctest_testcase.prf
 %%QT_MKSPECDIR%%/features/ctest_testcase_common.prf
@@ -256,6 +258,8 @@
 %%QT_MKSPECDIR%%/features/resolve_config.prf
 %%QT_MKSPECDIR%%/features/resolve_target.prf
 %%QT_MKSPECDIR%%/features/resources.prf
+%%QT_MKSPECDIR%%/features/rtti.prf
+%%QT_MKSPECDIR%%/features/rtti_off.prf
 %%QT_MKSPECDIR%%/features/sanitizer.prf
 %%QT_MKSPECDIR%%/features/silent.prf
 %%QT_MKSPECDIR%%/features/simd.prf
@@ -308,8 +312,6 @@
 %%QT_MKSPECDIR%%/features/win32/msvc_mp.prf
 %%QT_MKSPECDIR%%/features/win32/opengl.prf
 %%QT_MKSPECDIR%%/features/win32/qt_dll.prf
-%%QT_MKSPECDIR%%/features/win32/rtti.prf
-%%QT_MKSPECDIR%%/features/win32/rtti_off.prf
 %%QT_MKSPECDIR%%/features/win32/separate_debug_info.prf
 %%QT_MKSPECDIR%%/features/win32/stl.prf
 %%QT_MKSPECDIR%%/features/win32/stl_off.prf
@@ -342,6 +344,10 @@
 %%QT_MKSPECDIR%%/linux-aarch64-gnu-g++/qplatformdefs.h
 %%QT_MKSPECDIR%%/linux-arm-gnueabi-g++/qmake.conf
 %%QT_MKSPECDIR%%/linux-arm-gnueabi-g++/qplatformdefs.h
+%%QT_MKSPECDIR%%/linux-clang-32/qmake.conf
+%%QT_MKSPECDIR%%/linux-clang-32/qplatformdefs.h
+%%QT_MKSPECDIR%%/linux-clang-libc++-32/qmake.conf
+%%QT_MKSPECDIR%%/linux-clang-libc++-32/qplatformdefs.h
 %%QT_MKSPECDIR%%/linux-clang-libc++/qmake.conf
 %%QT_MKSPECDIR%%/linux-clang-libc++/qplatformdefs.h
 %%QT_MKSPECDIR%%/linux-clang/qmake.conf
@@ -468,6 +474,8 @@
 %%QT_MKSPECDIR%%/winrt-arm-msvc2015/qplatformdefs.h
 %%QT_MKSPECDIR%%/winrt-arm-msvc2017/qmake.conf
 %%QT_MKSPECDIR%%/winrt-arm-msvc2017/qplatformdefs.h
+%%QT_MKSPECDIR%%/winrt-arm64-msvc2017/qmake.conf
+%%QT_MKSPECDIR%%/winrt-arm64-msvc2017/qplatformdefs.h
 %%QT_MKSPECDIR%%/winrt-x64-msvc2015/qmake.conf
 %%QT_MKSPECDIR%%/winrt-x64-msvc2015/qplatformdefs.h
 %%QT_MKSPECDIR%%/winrt-x64-msvc2017/qmake.conf
