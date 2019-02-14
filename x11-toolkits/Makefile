@@ -226,7 +226,6 @@
     SUBDIR += qt4-declarative
     SUBDIR += qt4-gui
     SUBDIR += qt4pas
-    SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative
