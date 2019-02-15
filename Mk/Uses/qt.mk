@@ -155,7 +155,7 @@ _USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
 			graphicaleffects location networkauth paths phonon4 plugininfo printsupport \
 			qdbus qdoc qdoc-data qev quickcontrols \
 			quickcontrols2 remoteobjects scxml sensors serialbus serialport speech \
-			sql-tds uiplugin uitools virtualkeyboard wayland webchannel \
+			sql-tds uiplugin uitools virtualkeyboard wayland webchannel webglplugin \
 			webengine websockets websockets-qml webview widgets x11extras
 
 # Dependency tuples: _LIB should be preferred if possible.
@@ -431,6 +431,9 @@ virtualkeyboard_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/platforminputcontexts/lib
 
 webchannel_PORT=	www/${_QT_RELNAME}-webchannel
 webchannel_LIB=		libQt${_QT_LIBVER}WebChannel.so
+
+webglplugin_PORT=	www/${_QT_RELNAME}-webglplugin
+webglplugin_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/platforms/libqwebgl.so
 
 webengine_PORT=		www/${_QT_RELNAME}-webengine
 webengine_LIB=		libQt${_QT_LIBVER}WebEngine.so
