@@ -108,19 +108,16 @@
 %%QT_LIBDIR%%/libQt5WebEngine.so.5
 %%QT_LIBDIR%%/libQt5WebEngine.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5WebEngine.so.%%FULLVER%%
-%%DEBUG%%%%QT_LIBDIR%%/libQt5WebEngine.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5WebEngineCore.prl
 %%QT_LIBDIR%%/libQt5WebEngineCore.so
 %%QT_LIBDIR%%/libQt5WebEngineCore.so.5
 %%QT_LIBDIR%%/libQt5WebEngineCore.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5WebEngineCore.so.%%FULLVER%%
-%%DEBUG%%%%QT_LIBDIR%%/libQt5WebEngineCore.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5WebEngineWidgets.prl
 %%QT_LIBDIR%%/libQt5WebEngineWidgets.so
 %%QT_LIBDIR%%/libQt5WebEngineWidgets.so.5
 %%QT_LIBDIR%%/libQt5WebEngineWidgets.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5WebEngineWidgets.so.%%FULLVER%%
-%%DEBUG%%%%QT_LIBDIR%%/libQt5WebEngineWidgets.so.%%FULLVER%%.debug
 %%QT_MKSPECDIR%%/modules/qt_lib_webengine.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webengine_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginecore.pri
@@ -129,7 +126,6 @@
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginewidgets.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginewidgets_private.pri
 %%QT_PLUGINDIR%%/designer/libqwebengineview.so
-%%DEBUG%%%%QT_PLUGINDIR%%/designer/libqwebengineview.so.debug
 %%QT_QMLDIR%%/QtWebEngine/Controls1Delegates/AlertDialog.qml
 %%QT_QMLDIR%%/QtWebEngine/Controls1Delegates/AuthenticationDialog.qml
 %%QT_QMLDIR%%/QtWebEngine/Controls1Delegates/ColorDialog.qml
@@ -153,7 +149,6 @@
 %%QT_QMLDIR%%/QtWebEngine/Controls2Delegates/qmldir
 %%QT_QMLDIR%%/QtWebEngine/Controls2Delegates/question.png
 %%QT_QMLDIR%%/QtWebEngine/libqtwebengineplugin.so
-%%DEBUG%%%%QT_QMLDIR%%/QtWebEngine/libqtwebengineplugin.so.debug
 %%QT_QMLDIR%%/QtWebEngine/plugins.qmltypes
 %%QT_QMLDIR%%/QtWebEngine/qmldir
 libdata/pkgconfig/Qt5WebEngine.pc
