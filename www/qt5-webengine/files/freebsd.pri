@@ -6,7 +6,7 @@ gn_args +=   disable_nacl=true		\
              enable_webrtc=false	\
              enable_hidpi=true		\
              use_dbus=true \
-	     use_udev=false
+             use_udev=false
 
 # Once the port works better, we can think about readding the diverse `use_system_<foo>`
 # for bundled libraries.
