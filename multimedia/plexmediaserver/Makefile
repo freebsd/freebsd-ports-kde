@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	plexmediaserver
-PORTVERSION?=	1.14.1.5488
-DISTVERSIONSUFFIX?=cc260c476
-PORTREVISION?=	1
+PORTVERSION?=	1.15.2.793
+DISTVERSIONSUFFIX?=782228f99
+PORTREVISION?=	0
 CATEGORIES=	multimedia
-MASTER_SITES?=	https://downloads.plex.tv/plex-media-server/${DISTVERSION}-${DISTVERSIONSUFFIX}/
-DISTNAME?=	PlexMediaServer-${DISTVERSION}-${DISTVERSIONSUFFIX}-freebsd-${ARCH}
+MASTER_SITES?=	https://downloads.plex.tv/plex-media-server-new/${DISTVERSION}-${DISTVERSIONSUFFIX}/freebsd/
+DISTNAME?=	PlexMediaServer-${DISTVERSION}-${DISTVERSIONSUFFIX}-FreeBSD-${ARCH}
 
 MAINTAINER?=	feld@FreeBSD.org
 COMMENT=	Plex Media Server component
@@ -38,10 +38,6 @@ OPTIONS_SUB=	yes
 RELAY_DESC=	Install Plex Relay daemon
 
 .include <bsd.port.pre.mk>
-
-.if ${OPSYS} == FreeBSD
-RUN_DEPENDS?=	${LOCALBASE}/lib/compat/libstdc++.so.6:misc/compat9x
-.endif
 
 post-patch:
 	# binaries don't come pre-stripped
