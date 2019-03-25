@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/base/process/launch.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/base/process/launch.cc.orig	2017-01-26 00:49:07 UTC
 +++ src/3rdparty/chromium/base/process/launch.cc
-@@ -15,7 +15,7 @@ LaunchOptions::~LaunchOptions() = default;
+@@ -15,7 +15,7 @@ LaunchOptions::~LaunchOptions() = defaul
  
  LaunchOptions LaunchOptionsForTest() {
    LaunchOptions options;

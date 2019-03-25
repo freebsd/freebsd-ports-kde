@@ -1,3 +1,7 @@
+* Do not pass --no-undefined and -z,defs to the linker because of environ(7).
+* Extend some Linux-only compiler arguments to FreeBSD.
+* Generate split out debug files on FreeBSD too.
+
 --- src/core/core_module.pro.orig	2018-11-27 04:10:38 UTC
 +++ src/core/core_module.pro
 @@ -4,6 +4,9 @@ include(core_common.pri)
