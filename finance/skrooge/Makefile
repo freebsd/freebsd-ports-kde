@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	skrooge
-DISTVERSION=	2.17.0
+DISTVERSION=	2.18.0
 PORTREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	xsltproc:textproc/libxslt
 LIB_DEPENDS=	libofx.so:finance/libofx \
-		libqca-qt5.so:devel/qca@qt5 \
+		libqca-qt5.so:devel/qca \
 		libsqlcipher.so:databases/sqlcipher
 
 USES=		cmake compiler:c++11-lib desktop-file-utils \

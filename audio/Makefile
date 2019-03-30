@@ -12,7 +12,6 @@
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
     SUBDIR += abraca
-    SUBDIR += acoustid-fingerprinter
     SUBDIR += adplay
     SUBDIR += afsp
     SUBDIR += aften
@@ -96,7 +95,6 @@
     SUBDIR += csoundqt
     SUBDIR += ctronome
     SUBDIR += cue2toc
-    SUBDIR += cueplayer
     SUBDIR += cuetools
     SUBDIR += cutmp3
     SUBDIR += dagrab
@@ -117,7 +115,6 @@
     SUBDIR += dir2ogg
     SUBDIR += discid
     SUBDIR += dpf-plugins-lv2
-    SUBDIR += dream
     SUBDIR += drumgizmo
     SUBDIR += drumkv1-lv2
     SUBDIR += drumpiler
@@ -138,7 +135,6 @@
     SUBDIR += eq10q-lv2
     SUBDIR += esound
     SUBDIR += espeak
-    SUBDIR += esperanza
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
@@ -151,6 +147,7 @@
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
     SUBDIR += fasttracker2
+    SUBDIR += faudio
     SUBDIR += faust
     SUBDIR += faust-lv2
     SUBDIR += faustlive
@@ -228,7 +225,6 @@
     SUBDIR += gmpc-mdcover
     SUBDIR += gmpc-mserver
     SUBDIR += gmpc-shout
-    SUBDIR += gmpc-wikipedia
     SUBDIR += gmsynth-lv2
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
@@ -376,7 +372,6 @@
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
-    SUBDIR += lastfm-desktop
     SUBDIR += liba52
     SUBDIR += libaacplus
     SUBDIR += libadplug
@@ -410,7 +405,6 @@
     SUBDIR += libinstpatch
     SUBDIR += libkcddb
     SUBDIR += libkcompactdisc
-    SUBDIR += liblastfm
     SUBDIR += liblastfm-qt5
     SUBDIR += liblo
     SUBDIR += liblscp
@@ -512,11 +506,9 @@
     SUBDIR += midipp
     SUBDIR += mikmod
     SUBDIR += milkytracker
-    SUBDIR += minitunes
     SUBDIR += mixer.app
     SUBDIR += mixmos
     SUBDIR += mixxx
-    SUBDIR += mixxx20
     SUBDIR += mixxx21
     SUBDIR += mma
     SUBDIR += moc
@@ -659,10 +651,10 @@
     SUBDIR += praat
     SUBDIR += pragha
     SUBDIR += protracker
-    SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
+    SUBDIR += pulseaudio-qt
     SUBDIR += pulseeffects
     SUBDIR += py-SoundFile
     SUBDIR += py-al
@@ -708,7 +700,6 @@
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl
-    SUBDIR += qmpdclient
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
@@ -764,7 +755,6 @@
     SUBDIR += sidplayer
     SUBDIR += simplemod
     SUBDIR += siren
-    SUBDIR += skype-call-recorder
     SUBDIR += slv2
     SUBDIR += snack
     SUBDIR += snd
@@ -906,6 +896,7 @@
     SUBDIR += zinf
     SUBDIR += zita-convolver
     SUBDIR += zita-resampler
+    SUBDIR += zrythm
     SUBDIR += zynaddsubfx
 
 .include <bsd.port.subdir.mk>

@@ -2,6 +2,7 @@
 
 PORTNAME=	zoneminder
 PORTVERSION=	1.32.3
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	bsd@abinet.ru
@@ -100,6 +101,12 @@ post-extract:
 	${CP} ${FILESDIR}/README.FreeBSD ${PKGMESSAGE}
 	${REINPLACE_CMD} -e 's|/dev/shm|/tmp|g' ${WRKSRC}/scripts/ZoneMinder/lib/ZoneMinder/ConfigData.pm.in
 #	${REINPLACE_CMD} -e 's|E_ALL|E_ALL^E_NOTICE|g' ${WRKSRC}/web/index.php
+
+post-patch:
+# Avoid conflict with C++20 <version> by adding .txt suffix
+	@${MV} ${WRKSRC}/version ${WRKSRC}/version.txt
+	@${REINPLACE_CMD} -i .c++20 's/"version/&.txt/' \
+		${WRKSRC}/CMakeLists.txt
 
 pre-install:
 	${MKDIR} ${STAGEDIR}${WWWDIR}/temp

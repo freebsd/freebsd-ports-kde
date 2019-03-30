@@ -1,9 +1,11 @@
 # $FreeBSD$
 
 # Also update devel/libgit2-glib, devel/rubygem-rugged, devel/py-pygit2
+# Make sure you bump revision of depending ports
+# Tools/scripts/search_lib_depends_and_bump.sh devel/libgit2
 
 PORTNAME=	libgit2
-PORTVERSION=	0.27.8
+PORTVERSION=	0.28.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 

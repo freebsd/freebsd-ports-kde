@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ponyc
-DISTVERSION=	0.26.0
+DISTVERSION=	0.28.0
 CATEGORIES=	lang
 
 MAINTAINER=	greg@unrelenting.technology
@@ -18,8 +18,7 @@ RUN_DEPENDS=	llvm-link${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 
 USES=		gmake ncurses compiler:c++11-lang
 
-LLVM_VERSION=	50
-# LLVM 6 has assertion failures when e.g. optimizing the mandelbrot example
+LLVM_VERSION?=	70
 
 PLIST_SUB=	VERSION="${DISTVERSION}" PONYARCH="${PONYARCH}"
 OPTIONS_SUB=	yes

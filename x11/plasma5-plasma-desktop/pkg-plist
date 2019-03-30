@@ -434,8 +434,6 @@ share/doc/HTML/et/kcontrol/solid-actions/index.cache.bz2
 share/doc/HTML/et/kcontrol/solid-actions/index.docbook
 share/doc/HTML/et/kcontrol/solid-device-automounter/index.cache.bz2
 share/doc/HTML/et/kcontrol/solid-device-automounter/index.docbook
-share/doc/HTML/id/kcontrol/autostart/index.cache.bz2
-share/doc/HTML/id/kcontrol/autostart/index.docbook
 share/doc/HTML/it/kcontrol/autostart/index.cache.bz2
 share/doc/HTML/it/kcontrol/autostart/index.docbook
 share/doc/HTML/it/kcontrol/baloo/index.cache.bz2
@@ -2818,6 +2816,7 @@ share/locale/ja/LC_MESSAGES/kcmkclock.mo
 share/locale/ja/LC_MESSAGES/kcmkeyboard.mo
 share/locale/ja/LC_MESSAGES/kcmkeys.mo
 share/locale/ja/LC_MESSAGES/kcmmouse.mo
+share/locale/ja/LC_MESSAGES/kcmqtquicksettings.mo
 share/locale/ja/LC_MESSAGES/kcmsmserver.mo
 share/locale/ja/LC_MESSAGES/kcmstyle.mo
 share/locale/ja/LC_MESSAGES/kfontinst.mo
@@ -2825,6 +2824,7 @@ share/locale/ja/LC_MESSAGES/knetattach5.mo
 share/locale/ja/LC_MESSAGES/krdb.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.desktopcontainment.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.kimpanel.mo
+share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.panel.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.plasma.kicker.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.plasma.kickoff.mo
 share/locale/ja/LC_MESSAGES/plasma_applet_org.kde.plasma.pager.mo

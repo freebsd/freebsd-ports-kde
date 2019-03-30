@@ -8,12 +8,14 @@
     SUBDIR += PDL
     SUBDIR += R
     SUBDIR += R-cran-Amelia
+    SUBDIR += R-cran-BsMD
     SUBDIR += R-cran-CVST
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
     SUBDIR += R-cran-DoE.base
     SUBDIR += R-cran-Formula
+    SUBDIR += R-cran-FrF2
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
@@ -93,6 +95,7 @@
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-sandwich
+    SUBDIR += R-cran-scatterplot3d
     SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
@@ -169,6 +172,7 @@
     SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
+    SUBDIR += cocoalib
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
@@ -224,6 +228,7 @@
     SUBDIR += fpc-numlib
     SUBDIR += fplll
     SUBDIR += fricas
+    SUBDIR += frobby
     SUBDIR += fxt
     SUBDIR += g2o
     SUBDIR += galculator
@@ -262,6 +267,7 @@
     SUBDIR += gretl
     SUBDIR += gri
     SUBDIR += gringo
+    SUBDIR += grpn
     SUBDIR += gsl
     SUBDIR += hexcalc
     SUBDIR += hipmcl
@@ -328,6 +334,7 @@
     SUBDIR += liblbfgs
     SUBDIR += libmesh
     SUBDIR += libmissing
+    SUBDIR += libnormaliz
     SUBDIR += libocas
     SUBDIR += liborigin
     SUBDIR += libpgmath
@@ -379,8 +386,7 @@
     SUBDIR += mtrxmath
     SUBDIR += multichoose
     SUBDIR += mumps
-    SUBDIR += mumps-edf
-    SUBDIR += mumps-mpich
+    SUBDIR += mumps4
     SUBDIR += muparser
     SUBDIR += nanoflann
     SUBDIR += naturalmath
@@ -687,6 +693,7 @@
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-apgl
+    SUBDIR += py-autograd
     SUBDIR += py-basemap
     SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
@@ -714,6 +721,7 @@
     SUBDIR += py-gmpy
     SUBDIR += py-gmpy2
     SUBDIR += py-gnuplot
+    SUBDIR += py-grandalf
     SUBDIR += py-graphillion
     SUBDIR += py-igakit
     SUBDIR += py-igraph
@@ -721,6 +729,7 @@
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
+    SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
@@ -728,8 +737,10 @@
     SUBDIR += py-matplotlib
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
+    SUBDIR += py-munkres10
     SUBDIR += py-networkx
     SUBDIR += py-networkx1
+    SUBDIR += py-nevergrad
     SUBDIR += py-numarray
     SUBDIR += py-numeric
     SUBDIR += py-numexpr
@@ -764,6 +775,7 @@
     SUBDIR += py-pysym
     SUBDIR += py-python-louvain
     SUBDIR += py-pyvtk
+    SUBDIR += py-quadprog
     SUBDIR += py-random2
     SUBDIR += py-rapi
     SUBDIR += py-roman
@@ -796,11 +808,8 @@
     SUBDIR += qhull5
     SUBDIR += qposases
     SUBDIR += qrupdate
-    SUBDIR += qtiplot
     SUBDIR += qtiplot-doc
-    SUBDIR += qtoctave
     SUBDIR += qwtplot3d
-    SUBDIR += qwtplot3d-qt4
     SUBDIR += randlib
     SUBDIR += rapid
     SUBDIR += reduce
@@ -830,7 +839,6 @@
     SUBDIR += scilab-toolbox-swt
     SUBDIR += scs
     SUBDIR += sdpa
-    SUBDIR += sdpara
     SUBDIR += secp256k1
     SUBDIR += sfft
     SUBDIR += sfst

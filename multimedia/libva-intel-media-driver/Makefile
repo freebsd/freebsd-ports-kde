@@ -2,9 +2,13 @@
 
 PORTNAME=	media-driver
 DISTVERSIONPREFIX=	intel-media-
-DISTVERSION=	18.4.1
+DISTVERSION=	19.1.pre3-2
+DISTVERSIONSUFFIX=	-g3598ba46
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	libva-intel-
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	95549679029d.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	VAAPI driver for Intel HD 5000 (Gen8) or newer
@@ -32,11 +36,14 @@ CMAKE_ARGS=	-DBUILD_TYPE:STRING="${CMAKE_BUILD_TYPE}" \
 		-DUFO_MARCH:STRING="${CPUTYPE}"
 PLIST_FILES=	lib/dri/iHD_drv_video.so
 
-OPTIONS_DEFINE=	TEST
+OPTIONS_DEFINE=	TEST X11
+OPTIONS_DEFAULT=X11
 
 # XXX Unbundle googletest
 TEST_CMAKE_BOOL=	MEDIA_RUN_TEST_SUITE
 TEST_TEST_TARGET=	RunULT
+
+X11_LIB_DEPENDS=	libva-x11.so:multimedia/libva
 
 post-patch:
 	@${REINPLACE_CMD} -e '/-D__linux__/d' \
@@ -48,5 +55,9 @@ post-patch:
 # Silence -Wmacro-redefined
 	@${REINPLACE_CMD} -e '/__fastcall/d' \
 		${WRKSRC}/media_driver/linux/common/cm/cm_mem_os.h
+
+post-patch-X11-off:
+	@${REINPLACE_CMD} -i .nox11 '/find_package.*X11/d' \
+		${WRKSRC}/media_driver/media_top_cmake.cmake
 
 .include <bsd.port.mk>

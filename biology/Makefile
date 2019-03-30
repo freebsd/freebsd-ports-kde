@@ -3,6 +3,7 @@
 
     COMMENT = Biology
 
+    SUBDIR += abyss
     SUBDIR += artemis
     SUBDIR += avida
     SUBDIR += babel
@@ -20,7 +21,6 @@
     SUBDIR += chemeq
     SUBDIR += clustal-omega
     SUBDIR += clustalw
-    SUBDIR += clustalx
     SUBDIR += consed
     SUBDIR += cytoscape
     SUBDIR += ddocent
@@ -77,6 +77,7 @@
     SUBDIR += ngs-sdk
     SUBDIR += p5-AcePerl
     SUBDIR += p5-Bio-ASN1-EntrezGene
+    SUBDIR += p5-Bio-Cluster
     SUBDIR += p5-Bio-Coordinate
     SUBDIR += p5-Bio-Das
     SUBDIR += p5-Bio-Das-Lite
@@ -112,6 +113,7 @@
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-cutadapt
+    SUBDIR += py-dnaio
     SUBDIR += py-fastTSNE
     SUBDIR += py-gffutils
     SUBDIR += py-gtfparse

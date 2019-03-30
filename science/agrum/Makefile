@@ -2,6 +2,7 @@
 
 PORTNAME=	agrum
 DISTVERSION=	0.14.1
+PORTREVISION=	1
 CATEGORIES=	science math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +30,6 @@ ODBC_USES=		localbase:ldflags
 ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC
 
 OPENMP_CMAKE_BOOL=	USE_OPENMP
-OPENMP_LIB_DEPENDS=	libomp.so:devel/openmp
 
 PYTHON_CMAKE_BOOL=	BUILD_PYTHON
 PYTHON_USES=		python

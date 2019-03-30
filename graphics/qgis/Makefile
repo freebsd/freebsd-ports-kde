@@ -3,8 +3,8 @@
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_4_3
-PORTREVISION=	2
+DISTVERSION=	3_6_0
+PORTREVISION=	5
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@gwdg.de
@@ -12,7 +12,7 @@ COMMENT=	Free and Open Source Geographic Information System
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	gpsbabel>=1.5.3:astro/gpsbabel \
+BUILD_DEPENDS=	gpsbabel>=1.5.4:astro/gpsbabel \
 		txt2tags:textproc/txt2tags \
 		${PYTHON_PKGNAMEPREFIX}cycler>=0.10.0:devel/py-cycler@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=2.7.3:devel/py-dateutil@${PY_FLAVOR} \
@@ -25,6 +25,7 @@ BUILD_DEPENDS=	gpsbabel>=1.5.3:astro/gpsbabel \
 		${PYTHON_PKGNAMEPREFIX}OWSLib>=0.17.0:graphics/py-OWSLib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>=3.1.1:devel/py-pbr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pip>=9.0.3:devel/py-pip@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}plotly>=3.0.2:graphics/py-plotly@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pygments>=2.2.0:textproc/py-pygments@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyproj>=1.9.5.1:graphics/py-pyproj@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytz>=2018.7:devel/py-pytz@${PY_FLAVOR} \
@@ -46,6 +47,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}OWSLib>=0.17.0:graphics/py-OWSLib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pbr>=3.1.1:devel/py-pbr@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pip>=9.0.3:devel/py-pip@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}plotly>=3.0.2:graphics/py-plotly@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}psycopg2>=2.7.6.1:databases/py-psycopg2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pygments>=2.2.0:textproc/py-pygments@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyproj>=1.9.5.1:graphics/py-pyproj@${PY_FLAVOR} \
@@ -55,19 +57,19 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=2.7.15:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}termcolor>=1.1.0:devel/py-termcolor@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=3.13:devel/py-yaml@${PY_FLAVOR}
-LIB_DEPENDS=	libexpat.so:textproc/expat2 \
-		libfcgi.so:www/fcgi \
+LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
+		libexpat.so:textproc/expat2 \
 		libgdal.so:graphics/gdal \
 		libgeos.so:graphics/geos \
 		libgsl.so:math/gsl \
 		libhdf5.so:science/hdf5 \
 		libnetcdf.so:science/netcdf \
 		libproj.so:graphics/proj \
-		libqca-qt5.so:devel/qca@qt5 \
-		libqjson-qt5.so:devel/qjson@qt5 \
+		libqca-qt5.so:devel/qca \
+		libqjson-qt5.so:devel/qjson \
 		libqscintilla2_qt5.so:devel/qscintilla2-qt5 \
-		libqt5keychain.so:security/qtkeychain@qt5 \
-		libqwt6.so:x11-toolkits/qwt6@qt5 \
+		libqt5keychain.so:security/qtkeychain \
+		libqwt6.so:x11-toolkits/qwt6 \
 		libspatialindex.so:devel/spatialindex \
 		libspatialite.so:databases/spatialite \
 		libxerces-c.so:textproc/xerces-c3 \
@@ -84,6 +86,8 @@ USE_QT=		3d buildtools_build core concurrent dbus declarative \
 		webengine widgets webkit xml
 USE_PYQT=	core gui network qml qscintilla2 sip sql svg xml webkit_run
 USE_LDCONFIG=	yes
+
+CONFLICTS_INSTALL=	qgis-ltr
 
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tu}

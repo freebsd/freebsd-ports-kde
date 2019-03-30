@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	nwchem
-PORTVERSION=	6.8.1.20190125
-PORTREVISION=	1
+PORTVERSION=	6.8.1.20190319
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,12 +18,12 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libmpich.so:net/mpich
 RUN_DEPENDS=	nwchem-data>0:science/nwchem-data
 
-USES=		fortran gmake ${ARCH_64BIT:S/^$/perl5/:S/64//} shebangfix
+USES=		fortran gmake perl5 shebangfix
 SHEBANG_FILES=	../contrib/distro-tools/build_* ../contrib/add_*
 SHEBANG_GLOB=	*.sh
 USE_GITHUB=	yes
 GH_ACCOUNT=	nwchemgit
-GH_TAGNAME=	master-oct22_2018-71-g3d310890e
+GH_TAGNAME=	master-oct22_2018-159-gc6db09ce9
 USE_PERL5=	build
 
 MAKEFILE=	GNUmakefile
@@ -54,5 +53,8 @@ pre-build:
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/nwchemrc ${STAGEDIR}${PREFIX}/etc/nwchemrc
 	${INSTALL_PROGRAM} ${WRKSRC}/../bin/LINUX${ARCH_64BIT}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
+do-test:
+	@cd ${WRKSRC}/../QA && NWCHEM_TOP=${WRKSRC}/.. NWCHEM_TARGET=LINUX64 ./doqmtests.mpi
 
 .include <bsd.port.mk>

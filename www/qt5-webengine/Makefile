@@ -84,7 +84,6 @@ USE_XORG=	x11 xcb xcomposite xcursor xext xi xorgproto \
 
 USE_LDCONFIG=	${QT_LIBDIR}
 
-
 QMAKE_CONFIGURE_ARGS=	-proprietary-codecs -system-ffmpeg -disable-webrtc
 
 # We could just set it to an empty string as well. "all" does not account for

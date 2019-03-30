@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	conky
-PORTVERSION=	1.11.2
-PORTREVISION=	1
+PORTVERSION=	1.11.3
 DISTVERSIONPREFIX=	v
 CATEGORIES=	sysutils
 
@@ -122,6 +121,11 @@ XOAP_USE=		gnome=libxml2
 
 .if ${PORT_OPTIONS:MLUA_CAIRO} && ${PORT_OPTIONS:MLUA_IMLIB2}
 PLIST_FILES+=		lib/conky/libcairo_imlib2_helper.so
+.endif
+
+# disable apm on non-x86 archs
+.if ${ARCH} != amd64 && ${ARCH} != i386
+EXTRA_PATCHES+=		${PATCHDIR}/extra-patch-src_CMakeLists.txt
 .endif
 
 post-patch:

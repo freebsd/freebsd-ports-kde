@@ -1,8 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	10.15.1
+PORTVERSION=	10.15.3
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	10
@@ -13,7 +14,6 @@ COMMENT=	V8 JavaScript for client and server
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_powerpc64=	fails to build: KeyError: 'action'
 BROKEN_SSL=		openssl libressl libressl-devel
 BROKEN_SSL_REASON=	Node.js 10.x LTS requires OpenSSL 1.1.x or the BUNDLED_SSL option enabled
 ONLY_FOR_ARCHS=		aarch64 amd64 armv6 armv7 i386 powerpc64
@@ -32,6 +32,7 @@ OPTIONS_EXCLUDE_aarch64=	DTRACE
 # dt_modtext:/usr/src/cddl/contrib/opensolaris/lib/libdtrace/common/dt_link.c(820): arm not implemented
 OPTIONS_EXCLUDE_armv6=		DTRACE
 OPTIONS_EXCLUDE_armv7=		DTRACE
+OPTIONS_EXCLUDE_powerpc64=	DTRACE
 
 BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
 BUNDLED_SSL_USES_OFF=		ssl
@@ -39,6 +40,7 @@ BUNDLED_SSL_CONFIGURE_OFF=	--shared-openssl --openssl-use-def-ca-store
 BUNDLED_SSL_RUN_DEPENDS_OFF=	ca_root_nss>=0:security/ca_root_nss
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
+NLS_BUILD_DEPENDS=	icu>=62.1:devel/icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
@@ -61,8 +63,13 @@ SHEBANG_FILES=	tools/specialize_node_d.py tools/genv8constants.py
 
 PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 REINPLACE_ARGS=	-i ''
-MAKE_ENV+=	CC.host=${CC} CXX.host=${CXX} LINK.host=${CXX} LINK.target=${CXX}
+MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
+		CXX.host=${CXX} CXXFLAGS.host="${CXXFLAGS}" \
+		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
+BUILD_DEPENDS+=	c-ares>=1.15.0:dns/c-ares\
+		libuv>=1.23.2:devel/libuv \
+		libnghttp2>=1.34.0:www/libnghttp2
 LIB_DEPENDS+=	libcares.so:dns/c-ares\
 		libuv.so:devel/libuv \
 		libnghttp2.so:www/libnghttp2

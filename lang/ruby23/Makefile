@@ -20,6 +20,8 @@ LICENSE_FILE_RUBY=	${WRKSRC}/COPYING
 
 BROKEN_SSL=	openssl111
 BROKEN_SSL_REASON_openssl111=does not detect and buid the openssl*.rb bits
+DEPRECATED=	Use lang/ruby24 or above
+EXPIRATION_DATE=2019-03-31
 
 # Using LIB_DEPENDS finds the libffi from gcc which causes problems
 BUILD_DEPENDS=	libffi>=0:devel/libffi
@@ -59,6 +61,7 @@ RDOC_DESC=		Build and install Rdoc indexes
 EDIT_DESC=		Which line editing lib to use
 LIBEDIT_DESC=		Use libedit
 READLINE_DESC=		Use libreadline
+CAPIDOCS_BROKEN=	bad plist
 CAPIDOCS_BUILD_DEPENDS=	doxygen>=1.8.13,2:devel/doxygen \
 			dot:graphics/graphviz
 CAPIDOCS_CONFIGURE_ENABLE=	install-capi
@@ -96,6 +99,10 @@ CONFIGURE_ARGS+=--enable-dtrace
 .else
 CONFIGURE_ARGS+=--disable-dtrace
 .endif
+.endif
+
+.if ${OSVERSION} >= 1200085 && ${SSL_DEFAULT} == base
+BROKEN=		does not detect and buid the openssl*.rb bits
 .endif
 
 # keep in sync with all platforms where libunwind is available

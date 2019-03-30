@@ -61,7 +61,6 @@
     SUBDIR += bbe
     SUBDIR += be-aspell
     SUBDIR += bedic-data
-    SUBDIR += beediff
     SUBDIR += belr
     SUBDIR += bg-aspell
     SUBDIR += bg-hyphen
@@ -117,6 +116,7 @@
     SUBDIR += da-aspell
     SUBDIR += da-hyphen
     SUBDIR += dadadodo
+    SUBDIR += datamash
     SUBDIR += db2latex
     SUBDIR += dbacl
     SUBDIR += dblatex
@@ -132,7 +132,6 @@
     SUBDIR += diffutils
     SUBDIR += dikt
     SUBDIR += discount
-    SUBDIR += dixit
     SUBDIR += doc-mode.el
     SUBDIR += docbook
     SUBDIR += docbook-sgml
@@ -167,7 +166,6 @@
     SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
     SUBDIR += elixir-earmark
-    SUBDIR += elixir-ex_doc
     SUBDIR += elixir-funnel
     SUBDIR += elixir-sweet_xml
     SUBDIR += emacs-wiki
@@ -226,7 +224,6 @@
     SUBDIR += gnome-doc-utils
     SUBDIR += gnugrep
     SUBDIR += go.text
-    SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
     SUBDIR += gpp
@@ -234,6 +231,7 @@
     SUBDIR += grc-aspell
     SUBDIR += greple
     SUBDIR += groff
+    SUBDIR += gron
     SUBDIR += groonga
     SUBDIR += gsed
     SUBDIR += gspell
@@ -341,7 +339,6 @@
     SUBDIR += ibus-el
     SUBDIR += ibus-kmfl
     SUBDIR += ibus-m17n
-    SUBDIR += ibus-qt
     SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
     SUBDIR += ibus-uniemoji
@@ -1261,6 +1258,7 @@
     SUBDIR += ppower4
     SUBDIR += print-n-times
     SUBDIR += pugixml
+    SUBDIR += pup
     SUBDIR += pure-csv
     SUBDIR += pure-xml
     SUBDIR += py-Chameleon
@@ -1326,6 +1324,7 @@
     SUBDIR += py-jsonslicer
     SUBDIR += py-jtextfsm
     SUBDIR += py-junit-xml
+    SUBDIR += py-langdetect
     SUBDIR += py-laserhammer
     SUBDIR += py-libtre
     SUBDIR += py-libxml2
@@ -1360,6 +1359,7 @@
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
+    SUBDIR += py-pdftotext
     SUBDIR += py-precis_i18n
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
@@ -1373,6 +1373,7 @@
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
     SUBDIR += py-pyjade
+    SUBDIR += py-pykwalify
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
@@ -1390,8 +1391,6 @@
     SUBDIR += py-pytidylib
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
-    SUBDIR += py-qt4-xml
-    SUBDIR += py-qt4-xmlpatterns
     SUBDIR += py-qt5-xml
     SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
@@ -1418,9 +1417,12 @@
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
+    SUBDIR += py-sphinxcontrib-applehelp
     SUBDIR += py-sphinxcontrib-bitbucket
+    SUBDIR += py-sphinxcontrib-devhelp
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
+    SUBDIR += py-sphinxcontrib-jsmath
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-websupport
@@ -1465,10 +1467,6 @@
     SUBDIR += qprint
     SUBDIR += qrcodegen
     SUBDIR += qstardict
-    SUBDIR += qt4-clucene
-    SUBDIR += qt4-xml
-    SUBDIR += qt4-xmlpatterns
-    SUBDIR += qt4-xmlpatterns-tool
     SUBDIR += qt5-xml
     SUBDIR += qt5-xmlpatterns
     SUBDIR += qu-aspell
@@ -1527,6 +1525,7 @@
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
+    SUBDIR += rubygem-character_set
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-chewy
     SUBDIR += rubygem-citrus
@@ -1601,6 +1600,7 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
+    SUBDIR += rubygem-nokogiri18
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1621,6 +1621,7 @@
     SUBDIR += rubygem-rdtool
     SUBDIR += rubygem-redcarpet
     SUBDIR += rubygem-regexp_parser
+    SUBDIR += rubygem-regexp_property_values
     SUBDIR += rubygem-representable
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-ri_cal
@@ -1665,7 +1666,6 @@
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter
-    SUBDIR += rubygem-version_sorter21
     SUBDIR += rubygem-whatlanguage
     SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-wikicloth081
@@ -1691,16 +1691,15 @@
     SUBDIR += scew
     SUBDIR += scim
     SUBDIR += scim-bridge
-    SUBDIR += scim-bridge-qt4
     SUBDIR += scim-input-pad
     SUBDIR += scim-kmfl-imengine
     SUBDIR += scim-m17n
     SUBDIR += scim-openvanilla
     SUBDIR += scim-table-imengine
     SUBDIR += scr2txt
-    SUBDIR += scrollkeeper
     SUBDIR += scss
     SUBDIR += scws
+    SUBDIR += sd
     SUBDIR += sdcv
     SUBDIR += sdf
     SUBDIR += sdif
@@ -1727,7 +1726,6 @@
     SUBDIR += smu
     SUBDIR += so-hunspell
     SUBDIR += soothsayer
-    SUBDIR += soprano
     SUBDIR += source-highlight
     SUBDIR += sowing
     SUBDIR += spellutils
@@ -1800,7 +1798,6 @@
     SUBDIR += uim-gtk
     SUBDIR += uim-gtk3
     SUBDIR += uim-m17nlib
-    SUBDIR += uim-qt4
     SUBDIR += uim-qt5
     SUBDIR += uml2svg
     SUBDIR += uncle
@@ -1809,6 +1806,7 @@
     SUBDIR += unoconv
     SUBDIR += unroff
     SUBDIR += unrtf
+    SUBDIR += up
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
@@ -1874,8 +1872,6 @@
     SUBDIR += xsv
     SUBDIR += xsv-rs
     SUBDIR += xwindiff
-    SUBDIR += xxdiff
-    SUBDIR += xxdiff-scripts
     SUBDIR += y2l
     SUBDIR += yali
     SUBDIR += yamcha

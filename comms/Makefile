@@ -10,6 +10,7 @@
     SUBDIR += anyremote
     SUBDIR += apitran
     SUBDIR += aprsd
+    SUBDIR += ath3k-firmware
     SUBDIR += atslog
     SUBDIR += bfhist
     SUBDIR += bforce-kst
@@ -26,10 +27,10 @@
     SUBDIR += conserver
     SUBDIR += conserver-com
     SUBDIR += cqrlog
+    SUBDIR += cubicsdr
     SUBDIR += cutecom
     SUBDIR += cwdaemon
     SUBDIR += cwstudio
-    SUBDIR += dabstick-radio
     SUBDIR += dcf77pi
     SUBDIR += deforaos-phone
     SUBDIR += dfu-programmer
@@ -62,7 +63,6 @@
     SUBDIR += gstreamer1-plugins-spandsp
     SUBDIR += gtkmmorse
     SUBDIR += hackrf
-    SUBDIR += hamfax
     SUBDIR += hamlib
     SUBDIR += hcidump
     SUBDIR += hidapi
@@ -87,13 +87,13 @@
     SUBDIR += libticables2
     SUBDIR += libticalcs2
     SUBDIR += libusbmuxd
-    SUBDIR += linpsk
     SUBDIR += linrad
     SUBDIR += liquid-dsp
     SUBDIR += lirc
     SUBDIR += locator
     SUBDIR += lrzsz
     SUBDIR += lysdr
+    SUBDIR += mbelib
     SUBDIR += mgetty+sendfax
     SUBDIR += minicom
     SUBDIR += mlan3
@@ -107,6 +107,7 @@
     SUBDIR += o2sms
     SUBDIR += obexapp
     SUBDIR += openobex
+    SUBDIR += openzwave
     SUBDIR += owfs
     SUBDIR += p5-Cisco-UCS
     SUBDIR += p5-Device-Gsm
@@ -152,6 +153,7 @@
     SUBDIR += qt5-serialport
     SUBDIR += qtel
     SUBDIR += quisk
+    SUBDIR += redsea
     SUBDIR += remserial
     SUBDIR += rtl-sdr
     SUBDIR += rubygem-callsign
@@ -193,7 +195,6 @@
     SUBDIR += twpsk
     SUBDIR += uarduno
     SUBDIR += uartlirc
-    SUBDIR += ubertooth
     SUBDIR += uhd
     SUBDIR += uird
     SUBDIR += unixcw

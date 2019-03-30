@@ -3,7 +3,7 @@
 
 PORTNAME=	codelite
 PORTVERSION=	12.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors devel
 
 MAINTAINER=	mmokhi@FreeBSD.org
@@ -20,7 +20,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	eranif
 
 USES=		cmake:noninja compiler:c++11-lib dos2unix gettext \
-		pathfix shebangfix sqlite
+		pathfix pkgconfig shebangfix sqlite
 USE_GNOME+=	cairo gtk20
 DOS2UNIX_GLOB=	*.cpp *.txt
 SHEBANG_FILES=	Runtime/codelite_xterm

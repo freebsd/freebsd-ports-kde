@@ -3,8 +3,7 @@
 
 PORTNAME=	bambootracker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.4
-PORTREVISION=	2
+DISTVERSION=	0.1.6
 CATEGORIES=	audio
 MASTER_SITES=	LOCAL/ehaupt:extras
 DISTFILES=	${PORTNAME}-extras-${EXTRASVERSION}${EXTRACT_SUFX}:extras
@@ -16,7 +15,8 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		qmake qt:5 gl
-USE_QT=		buildtools core gui multimedia network widgets
+USE_QT=		buildtools core gui linguisttools_build multimedia network \
+		widgets
 USE_GL=		gl
 
 USE_GITHUB=	yes
@@ -26,7 +26,7 @@ GH_PROJECT=	BambooTracker
 CONFIGURE_WRKSRC=	${WRKSRC}/BambooTracker
 BUILD_WRKSRC=		${WRKSRC}/BambooTracker
 
-EXTRASVERSION=	1
+EXTRASVERSION=	2
 
 OPTIONS_DEFINE=	EXAMPLES NLS
 OPTIONS_SUB=	yes
@@ -43,14 +43,13 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/BambooTracker.fr.1 \
 		${STAGEDIR}${MANPREFIX}/man/fr.UTF-8/man1
 	${INSTALL_DATA} ${WRKSRC}/BambooTracker.desktop ${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_DATA} \
-		${WRKDIR}/${PORTNAME}-extras-${EXTRASVERSION}/BambooTracker.png \
-		${STAGEDIR}${PREFIX}/share/icons
+	${INSTALL_DATA} ${WRKSRC}/BambooTracker/res/icon/icon_256x256.png \
+		${STAGEDIR}${PREFIX}/share/icons/BambooTracker.png
 
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	${INSTALL_DATA} \
-		${WRKDIR}/${PORTNAME}-extras-${EXTRASVERSION}/majfant2quieter.btm \
+	${INSTALL_DATA} ${WRKSRC}/demos/*.btm \
+		${WRKDIR}/${PORTNAME}-extras-${EXTRASVERSION}/*.btm \
 		${STAGEDIR}${EXAMPLESDIR}
 
 .include <bsd.port.mk>

@@ -22,9 +22,16 @@ USE_GNOME=	cairo gtk30
 USE_GL=		gl
 
 INSTALLS_ICONS=	yes
-MAKE_ARGS=	debug=0
+MAKE_ARGS=	debug=0 werror=0
 DESKTOP_ENTRIES="Goxel" "${COMMENT}" "${PORTNAME}" \
 	"${PORTNAME}" "Graphics;3DGraphics;" false
+
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} != amd64 && ${ARCH} != i386
+post-patch:
+	${REINPLACE_CMD} -e 's/-msse2 //g' ${WRKSRC}/SConstruct
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/
@@ -34,4 +41,4 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/${SZ}x${SZ}/apps/goxel.png
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

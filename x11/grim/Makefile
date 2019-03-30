@@ -5,6 +5,9 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1
 CATEGORIES=	x11
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	6994df611f55.patch:-p1
+
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Grab images from a Wayland compositor
 
@@ -25,13 +28,10 @@ OPTIONS_DEFINE=	JPEG MANPAGES
 OPTIONS_DEFAULT=JPEG MANPAGES
 
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
+MANPAGES_MESON_ENABLED=	man-pages
 MANPAGES_PLIST_FILES=	man/man1/${PORTNAME}.1.gz
 
 JPEG_USES=	jpeg
-JPEG_MESON_ON=	-Djpeg=enabled
-JPEG_MESON_OFF=	-Djpeg=disabled
-
-post-patch-MANPAGES-off:
-	@${REINPLACE_CMD} -i '' "s/'scdoc/&-disabled/" ${WRKSRC}/meson.build
+JPEG_MESON_ENABLED=	jpeg
 
 .include <bsd.port.mk>

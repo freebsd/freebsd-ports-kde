@@ -12,6 +12,8 @@ DISTNAME=	${PORTNAME}-trunk-r2259
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Simple CAD program
 
+BROKEN=		fails to build
+
 USES=		fpc lazarus:flavors tar:xz
 USE_FPC=	cairo chm fcl-base fcl-image fcl-json fcl-stl fcl-xml opengl \
 		pasjpeg rtl-extra rtl-objpas x11
@@ -43,10 +45,6 @@ OPTIONS_DEFINE=		DOCS
 
 .if ${FLAVOR:Ugtk2:Mgtk2}
 MAKE_ENV+=	GUI=gtk2
-.endif
-
-.if ${FLAVOR:Uqt4:Mqt4}
-MAKE_ENV+=	GUI=qt
 .endif
 
 post-patch:

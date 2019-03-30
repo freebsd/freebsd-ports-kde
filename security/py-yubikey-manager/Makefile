@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yubikey-manager
-PORTVERSION=	2.0.0
+PORTVERSION=	2.1.0
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -27,5 +27,7 @@ RUN_DEPENDS=	${PY_ENUM34} \
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

@@ -111,7 +111,7 @@ MOZ_EXPORT+=	PYTHON3="${LOCALBASE}/bin/python${PYTHON3_DEFAULT}"
 .endif
 
 .if ${MOZILLA_VER:R:R} >= 63
-BUILD_DEPENDS+=	rust-cbindgen>=0.6.2:devel/rust-cbindgen \
+BUILD_DEPENDS+=	rust-cbindgen>=0.6.8:devel/rust-cbindgen \
 				node:www/node
 .endif
 
@@ -138,7 +138,8 @@ MOZ_PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
 				RUSTFLAGS="${RUSTFLAGS}" \
-				PERL="${PERL}"
+				PERL="${PERL}" \
+				ac_cv_clock_monotonic=
 MOZ_OPTIONS+=	--prefix="${PREFIX}"
 MOZ_MK_OPTIONS+=MOZ_OBJDIR="${BUILD_WRKSRC}"
 
@@ -355,7 +356,7 @@ MOZ_OPTIONS+=	--enable-debug --disable-release
 STRIP=	# ports/184285
 .else
 MOZ_OPTIONS+=	--disable-debug --disable-debug-symbols --enable-release
-. if ${MOZILLA_VER:R:R} >= 56 && (${ARCH:Maarch64} || ${MACHINE_CPU:Msse2})
+. if ${MOZILLA_VER:R:R} >= 67 && (${ARCH:Maarch64} || ${MACHINE_CPU:Msse2})
 MOZ_OPTIONS+=	--enable-rust-simd
 . endif
 .endif
