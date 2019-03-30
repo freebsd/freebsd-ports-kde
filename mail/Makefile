@@ -50,7 +50,6 @@
     SUBDIR += claws-mail-bogofilter
     SUBDIR += claws-mail-bsfilter
     SUBDIR += claws-mail-clamd
-    SUBDIR += claws-mail-fancy
     SUBDIR += claws-mail-fetchinfo
     SUBDIR += claws-mail-gdata
     SUBDIR += claws-mail-libravatar
@@ -721,7 +720,6 @@
     SUBDIR += textmail
     SUBDIR += thunderbird
     SUBDIR += thunderbird-dictionaries
-    SUBDIR += thunderbird-i18n
     SUBDIR += tlb
     SUBDIR += tmda
     SUBDIR += tpop3d

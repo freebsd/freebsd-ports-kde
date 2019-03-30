@@ -163,6 +163,7 @@
     SUBDIR += mdh
     SUBDIR += mencal
     SUBDIR += menumaker
+    SUBDIR += meteo
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += myitcrm
@@ -211,7 +212,6 @@
     SUBDIR += qlipper
     SUBDIR += qownnotes
     SUBDIR += recoll
-    SUBDIR += rednotebook
     SUBDIR += remind
     SUBDIR += rolo
     SUBDIR += rox-memo

@@ -446,6 +446,7 @@
     SUBDIR += deheader
     SUBDIR += delta
     SUBDIR += dep
+    SUBDIR += deployer
     SUBDIR += derelict-sdl2
     SUBDIR += derelict-util
     SUBDIR += desktop-file-utils
@@ -460,7 +461,6 @@
     SUBDIR += ding-libs
     SUBDIR += directfb
     SUBDIR += dispy
-    SUBDIR += dissy
     SUBDIR += distcc
     SUBDIR += distel
     SUBDIR += distorm
@@ -709,7 +709,6 @@
     SUBDIR += geany-plugin-ctags
     SUBDIR += geany-plugin-debugger
     SUBDIR += geany-plugin-defineformat
-    SUBDIR += geany-plugin-devhelp
     SUBDIR += geany-plugin-doc
     SUBDIR += geany-plugin-extrasel
     SUBDIR += geany-plugin-geanypy
@@ -743,7 +742,6 @@
     SUBDIR += geany-plugin-utilslib
     SUBDIR += geany-plugin-vc
     SUBDIR += geany-plugin-vimode
-    SUBDIR += geany-plugin-webhelper
     SUBDIR += geany-plugin-workbench
     SUBDIR += geany-plugin-xmlsnippets
     SUBDIR += geany-plugins
@@ -1490,7 +1488,6 @@
     SUBDIR += liblouis
     SUBDIR += libltdl
     SUBDIR += liblxqt
-    SUBDIR += liblxqt-l10n
     SUBDIR += libmaa
     SUBDIR += libmatheval
     SUBDIR += libmba
@@ -2992,12 +2989,14 @@
     SUBDIR += p5-Mojolicious-Plugin-NYTProf
     SUBDIR += p5-Moo
     SUBDIR += p5-MooX-Aliases
+    SUBDIR += p5-MooX-Attribute-ENV
     SUBDIR += p5-MooX-Cmd
     SUBDIR += p5-MooX-ConfigFromFile
     SUBDIR += p5-MooX-File-ConfigDir
     SUBDIR += p5-MooX-HandlesVia
     SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
+    SUBDIR += p5-MooX-Role-Parameterized
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
     SUBDIR += p5-MooX-Traits
@@ -4454,6 +4453,7 @@
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
+    SUBDIR += py-cftime
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
     SUBDIR += py-check-manifest
@@ -5153,6 +5153,7 @@
     SUBDIR += py-sip
     SUBDIR += py-six
     SUBDIR += py-smmap2
+    SUBDIR += py-snakeviz
     SUBDIR += py-sortedcontainers
     SUBDIR += py-sourcemap
     SUBDIR += py-spark
@@ -5190,6 +5191,7 @@
     SUBDIR += py-termcolor
     SUBDIR += py-terminable_thread
     SUBDIR += py-termstyle
+    SUBDIR += py-testfixtures
     SUBDIR += py-testgears
     SUBDIR += py-testinfra
     SUBDIR += py-testoob
@@ -5695,7 +5697,6 @@
     SUBDIR += rubygem-fog-core1
     SUBDIR += rubygem-fog-core210
     SUBDIR += rubygem-fog-json
-    SUBDIR += rubygem-fog-json102
     SUBDIR += rubygem-font-awesome-rails
     SUBDIR += rubygem-font-awesome-rails-rails5
     SUBDIR += rubygem-font-awesome-rails-rails50

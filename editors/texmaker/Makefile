@@ -3,7 +3,7 @@
 
 PORTNAME=	texmaker
 PORTVERSION=	4.5
-PORTREVISION=	15
+PORTREVISION=	16
 PORTEPOCH=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
@@ -17,7 +17,8 @@ LIB_DEPENDS=	libhunspell-1.7.so:textproc/hunspell \
 		libpoppler.so:graphics/poppler \
 		libpoppler-qt5.so:graphics/poppler-qt5
 
-USES=		desktop-file-utils ghostscript:x11,run pkgconfig qmake qt:5 tar:bzip2
+USES=		compiler:c++11-lang desktop-file-utils ghostscript:x11,run \
+		pkgconfig qmake qt:5 tar:bzip2
 USE_QT=		concurrent network printsupport script webkit widgets \
 		xml buildtools_build
 USE_TEX=	latex dvipsk

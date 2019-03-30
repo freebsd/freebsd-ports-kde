@@ -1373,6 +1373,7 @@
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
     SUBDIR += py-pyjade
+    SUBDIR += py-pykwalify
     SUBDIR += py-pylons-sphinx-themes
     SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
@@ -1662,7 +1663,6 @@
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter
-    SUBDIR += rubygem-version_sorter21
     SUBDIR += rubygem-whatlanguage
     SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-wikicloth081
@@ -1803,6 +1803,7 @@
     SUBDIR += unoconv
     SUBDIR += unroff
     SUBDIR += unrtf
+    SUBDIR += up
     SUBDIR += urlview
     SUBDIR += utf8proc
     SUBDIR += uz-aspell
