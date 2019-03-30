@@ -5,7 +5,7 @@
        </if>
  
 -      <if expr="is_win or (is_linux and not chromeos)">
-+      <if expr="is_win or (is_posix and not chromeos)">
++      <if expr="is_win or (is_is_posix and not chromeos)">
          <!-- Confirm to quit panel -->
          <message name="IDS_CONFIRM_TO_QUIT_DESCRIPTION" desc="Instructions for how the user should confirm quitting.">
            Hold |<ph name="ACCELERATOR1">$1<ex>Ctrl</ex></ph>|+|<ph name="ACCELERATOR2">$2<ex>Shift</ex></ph>|+|<ph name="ACCELERATOR3">$3<ex>Q</ex></ph>| to exit
