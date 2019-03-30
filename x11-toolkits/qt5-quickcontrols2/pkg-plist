@@ -136,6 +136,8 @@
 %%QT_INCDIR%%/QtQuickTemplates2/qtquicktemplates2version.h
 %%QT_CMAKEDIR%%/Qt5QuickControls2/Qt5QuickControls2Config.cmake
 %%QT_CMAKEDIR%%/Qt5QuickControls2/Qt5QuickControls2ConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt5QuickTemplates2/Qt5QuickTemplates2Config.cmake
+%%QT_CMAKEDIR%%/Qt5QuickTemplates2/Qt5QuickTemplates2ConfigVersion.cmake
 %%QT_LIBDIR%%/libQt5QuickControls2.prl
 %%QT_LIBDIR%%/libQt5QuickControls2.so
 %%QT_LIBDIR%%/libQt5QuickControls2.so.5
@@ -150,6 +152,7 @@
 %%DEBUG%%%%QT_LIBDIR%%/libQt5QuickTemplates2.so.%%FULLVER%%.debug
 %%QT_MKSPECDIR%%/modules/qt_lib_quickcontrols2.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quickcontrols2_private.pri
+%%QT_MKSPECDIR%%/modules/qt_lib_quicktemplates2.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quicktemplates2_private.pri
 %%QT_QMLDIR%%/Qt/labs/calendar/DayOfWeekRow.qml
 %%QT_QMLDIR%%/Qt/labs/calendar/DayOfWeekRow.qmlc
@@ -581,3 +584,4 @@
 %%QT_QMLDIR%%/QtQuick/Templates.2/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Templates.2/qmldir
 libdata/pkgconfig/Qt5QuickControls2.pc
+libdata/pkgconfig/Qt5QuickTemplates2.pc
