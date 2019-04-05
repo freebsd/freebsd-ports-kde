@@ -177,8 +177,8 @@ _ntp:*:233:
 kafka:*:234:
 openhab:*:235:
 rspamd:*:236:
-# free: 237
-# free: 238
+paperless:*:237:
+sonic:*:238:
 # free: 239
 aprsd:*:240:
 tnc:*:241:

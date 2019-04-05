@@ -3,7 +3,7 @@
 
 PORTNAME=	courier
 PORTVERSION=	0.65.3
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF
 
@@ -257,6 +257,11 @@ SUB_LIST+=	RCCONF="n"
 SUB_LIST+=	PERIODIC="y"
 .else
 SUB_LIST+=	PERIODIC="n"
+.endif
+
+.if ${SSL_DEFAULT} == base
+BROKEN_FreeBSD_12=	pkg-static: Unable to access file /wrkdirs/usr/ports/mail/courier/work/stage/usr/local/bin/couriertls
+BROKEN_FreeBSD_13=	pkg-static: Unable to access file /wrkdirs/usr/ports/mail/courier/work/stage/usr/local/bin/couriertls
 .endif
 
 pre-everything::

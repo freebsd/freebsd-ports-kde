@@ -821,31 +821,13 @@
     SUBDIR += gnulibiberty
     SUBDIR += gnustep
     SUBDIR += gnustep-make
-    SUBDIR += go-bayesian
     SUBDIR += go-bindata
-    SUBDIR += go-cobra
-    SUBDIR += go-codec
-    SUBDIR += go-cpuid
-    SUBDIR += go-crc32
-    SUBDIR += go-faker
-    SUBDIR += go-form
+    SUBDIR += go-git
     SUBDIR += go-glide
-    SUBDIR += go-go.uuid
     SUBDIR += go-gocode
     SUBDIR += go-godef
-    SUBDIR += go-goregen
-    SUBDIR += go-hashicorp-logutils
-    SUBDIR += go-logrus
-    SUBDIR += go-metrics
-    SUBDIR += go-nuid
-    SUBDIR += go-pflag
     SUBDIR += go-protobuf
-    SUBDIR += go-raw
-    SUBDIR += go-runewidth
-    SUBDIR += go-slices
     SUBDIR += go-tools
-    SUBDIR += go-uuid
-    SUBDIR += go-yaml
     SUBDIR += gob2
     SUBDIR += gobject-introspection
     SUBDIR += godep
@@ -1675,7 +1657,6 @@
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
     SUBDIR += llvm35
-    SUBDIR += llvm38
     SUBDIR += llvm40
     SUBDIR += llvm50
     SUBDIR += llvm60
@@ -1781,9 +1762,9 @@
     SUBDIR += mips64-xtoolchain-gcc
     SUBDIR += mir-core
     SUBDIR += mk-configure
-    SUBDIR += mkcmd
     SUBDIR += mm
     SUBDIR += mm-common
+    SUBDIR += modules2tuple
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
@@ -1800,7 +1781,6 @@
     SUBDIR += msgpuck
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
-    SUBDIR += msrc0
     SUBDIR += mtbl
     SUBDIR += myrepos
     SUBDIR += nana
@@ -4128,7 +4108,6 @@
     SUBDIR += phpunit6
     SUBDIR += phpunit7
     SUBDIR += physfs
-    SUBDIR += physfs-devel
     SUBDIR += picp
     SUBDIR += picprog
     SUBDIR += pig
@@ -4289,6 +4268,7 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
+    SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
@@ -4495,7 +4475,6 @@
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-constantly
     SUBDIR += py-construct
-    SUBDIR += py-construct28
     SUBDIR += py-contextlib2
     SUBDIR += py-cookiecutter
     SUBDIR += py-coreapi
@@ -4519,6 +4498,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
+    SUBDIR += py-dataclasses
     SUBDIR += py-datatest
     SUBDIR += py-dateparser
     SUBDIR += py-dateutil
@@ -4960,6 +4940,7 @@
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycompilation
     SUBDIR += py-pycparser
+    SUBDIR += py-pydantic
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
     SUBDIR += py-pydispatcher
@@ -6046,7 +6027,6 @@
     SUBDIR += rubygem-sidekiq
     SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
-    SUBDIR += rubygem-sidekiq-cron0
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
     SUBDIR += rubygem-sidetiq
@@ -6410,8 +6390,6 @@
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
     SUBDIR += xtoolchain-llvm-devel
-    SUBDIR += xtoolchain-llvm40
-    SUBDIR += xtoolchain-llvm50
     SUBDIR += xtoolchain-llvm60
     SUBDIR += xtoolchain-llvm70
     SUBDIR += xtoolchain-llvm80
