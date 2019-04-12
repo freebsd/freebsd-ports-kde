@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/base/strings/safe_sprintf_unittest.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/base/strings/safe_sprintf_unittest.cc.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/base/strings/safe_sprintf_unittest.cc
 @@ -730,6 +730,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  }
@@ -16,7 +16,7 @@
  #if defined(__GCC__)
  #pragma GCC diagnostic pop
  #endif
---- src/3rdparty/chromium/base/threading/thread_local_storage_unittest.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/base/threading/thread_local_storage_unittest.cc.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/base/threading/thread_local_storage_unittest.cc
 @@ -86,7 +86,7 @@ class ThreadLocalStorageRunner : public DelegateSimple
  void ThreadLocalStorageCleanup(void *value) {
@@ -27,7 +27,7 @@
    if (*ptr == kFinalTlsValue)
      return;  // We've been called enough times.
    ASSERT_LT(kFinalTlsValue, *ptr);
---- src/3rdparty/chromium/media/audio/audio_output_proxy_unittest.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/media/audio/audio_output_proxy_unittest.cc.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/media/audio/audio_output_proxy_unittest.cc
 @@ -410,7 +410,7 @@ class AudioOutputProxyTest : public testing::Test {
      // |stream| is closed at this point. Start() should reopen it again.
@@ -38,7 +38,18 @@
  
      EXPECT_CALL(callback_, OnError()).Times(2);
  
---- src/3rdparty/chromium/third_party/sfntly/src/cpp/src/sfntly/table/core/cmap_table.cc.orig	2018-11-13 18:25:11 UTC
+--- src/3rdparty/chromium/third_party/libjingle_xmpp/task_runner/taskrunner.cc.orig	2019-03-07 09:23:57 UTC
++++ src/3rdparty/chromium/third_party/libjingle_xmpp/task_runner/taskrunner.cc
+@@ -95,7 +95,7 @@ void TaskRunner::InternalRunTasks(bool in_destructor) 
+   std::vector<Task *>::iterator it;
+   it = std::remove(tasks_.begin(),
+                    tasks_.end(),
+-                   reinterpret_cast<Task *>(NULL));
++                   static_cast<Task *>(NULL));
+ 
+   tasks_.erase(it, tasks_.end());
+ 
+--- src/3rdparty/chromium/third_party/sfntly/src/cpp/src/sfntly/table/core/cmap_table.cc.orig	2019-03-07 09:23:57 UTC
 +++ src/3rdparty/chromium/third_party/sfntly/src/cpp/src/sfntly/table/core/cmap_table.cc
 @@ -439,7 +439,7 @@ CMapTable::CMapFormat0::Builder::Builder(
  }
