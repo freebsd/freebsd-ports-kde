@@ -75,7 +75,6 @@
     SUBDIR += fastdb
     SUBDIR += firebird25-client
     SUBDIR += firebird25-server
-    SUBDIR += flamerobin
     SUBDIR += fortytwo-bdb
     SUBDIR += foundationdb
     SUBDIR += fpc-dblib
@@ -100,8 +99,6 @@
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
     SUBDIR += gom
-    SUBDIR += gomdb
-    SUBDIR += gosqlite3
     SUBDIR += gqlplus
     SUBDIR += grass7
     SUBDIR += gtksql
@@ -142,7 +139,6 @@
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
-    SUBDIR += levigo
     SUBDIR += libcouchbase
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers
@@ -186,8 +182,6 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
-    SUBDIR += mariadb100-client
-    SUBDIR += mariadb100-server
     SUBDIR += mariadb101-client
     SUBDIR += mariadb101-server
     SUBDIR += mariadb102-client
@@ -853,6 +847,7 @@
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift
     SUBDIR += py-sybase
+    SUBDIR += py-tableschema
     SUBDIR += py-tarantool
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
@@ -876,9 +871,7 @@
     SUBDIR += qt5-sqldrivers-sqlite2
     SUBDIR += qt5-sqldrivers-sqlite3
     SUBDIR += qt5-sqldrivers-tds
-    SUBDIR += radix.v2
     SUBDIR += recutils
-    SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
     SUBDIR += redis_exporter
@@ -892,7 +885,6 @@
     SUBDIR += rrdtool
     SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
-    SUBDIR += ruby-gdbm
     SUBDIR += ruby-odbc
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
@@ -952,6 +944,7 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record013
+    SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
@@ -988,6 +981,7 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
+    SUBDIR += rubygem-state_machines-activerecord05
     SUBDIR += rubygem-tarantool
     SUBDIR += sequeler
     SUBDIR += sfcgal

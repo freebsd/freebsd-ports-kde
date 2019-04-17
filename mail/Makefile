@@ -85,7 +85,6 @@
     SUBDIR += cyrus2dovecot
     SUBDIR += davmail
     SUBDIR += dbmail
-    SUBDIR += dbmail22
     SUBDIR += dcc-dccd
     SUBDIR += deforaos-mailer
     SUBDIR += delatt
@@ -372,6 +371,7 @@
     SUBDIR += p5-Mail-Alias
     SUBDIR += p5-Mail-Audit
     SUBDIR += p5-Mail-Audit-Attach
+    SUBDIR += p5-Mail-AuthenticationResults
     SUBDIR += p5-Mail-Box
     SUBDIR += p5-Mail-Box-IMAP4
     SUBDIR += p5-Mail-Box-IMAP4-SSL
@@ -634,6 +634,7 @@
     SUBDIR += sa-utils
     SUBDIR += scam-backscatter
     SUBDIR += sendmail
+    SUBDIR += sendmail-devel
     SUBDIR += sendok
     SUBDIR += sentinel
     SUBDIR += serialmail

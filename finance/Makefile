@@ -22,9 +22,9 @@
     SUBDIR += R-cran-vars
     SUBDIR += alkimia
     SUBDIR += aqbanking
-    SUBDIR += aqmoney
     SUBDIR += beancount
     SUBDIR += beanie
+    SUBDIR += bitcoinnodestats
     SUBDIR += cbb
     SUBDIR += cointop
     SUBDIR += electrum
@@ -47,7 +47,6 @@
     SUBDIR += moneymanagerex
     SUBDIR += mybudget
     SUBDIR += myphpmoney
-    SUBDIR += openhbci
     SUBDIR += p5-Business-CreditCard
     SUBDIR += p5-Business-MaxMind-CreditCardFraudDetection
     SUBDIR += p5-Business-OCV

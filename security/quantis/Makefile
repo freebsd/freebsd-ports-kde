@@ -3,7 +3,7 @@
 
 PORTNAME=	quantis
 DISTVERSION=	v18.03.08
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security devel java
 MASTER_SITES=	https://www.idquantique.com/wordpress/wp-content/uploads/
 DISTNAME=	Quantis-${DISTVERSION}
@@ -19,6 +19,8 @@ BROKEN=		does not build
 BROKEN_aarch64=		fails to build: Could not find JNI (missing: JAVA_AWT_LIBRARY JAVA_JVM_LIBRARY)
 BROKEN_armv6=		fails to build: Could not find JNI (missing: JAVA_AWT_LIBRARY JAVA_JVM_LIBRARY)
 BROKEN_armv7=		fails to build: Could not find JNI (missing: JAVA_AWT_LIBRARY JAVA_JVM_LIBRARY)
+DEPRECATED=	Broken for more than 6 months
+EXPIRATION_DATE=	2019-05-08
 
 USES=		cmake compiler:c++11-lang zip:infozip
 

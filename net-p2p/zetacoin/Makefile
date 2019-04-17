@@ -4,13 +4,15 @@
 PORTNAME=	zetacoin
 PORTVERSION=	0.11.2.3
 DISTVERSIONPREFIX=	v
-PORTREVISION=	25
+PORTREVISION=	27
 CATEGORIES=	net-p2p finance
 
 MAINTAINER=	daniel@morante.net
 COMMENT=	Peer-to-Peer crypto currency with quick transactions
 
 LICENSE=	MIT
+
+BROKEN=		fails to build with boost 1.70, see bug 237017
 
 LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs
 
@@ -96,6 +98,11 @@ EXPIRATION_DATE=	2019-03-15
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${SSL_DEFAULT} == base
+BROKEN_FreeBSD_12=	checking for RAND_egd in -lcrypto... no
+BROKEN_FreeBSD_13=	checking for RAND_egd in -lcrypto... no
+.endif
 
 .if ${SSL_DEFAULT:Mlibressl*}
 # The configure script will output this message, so save the user the trouble

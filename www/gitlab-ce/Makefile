@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	11.9.1
+PORTVERSION=	11.9.7
+PORTREVISION=	1
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -17,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 # for the options
 MY_DEPENDS=	git>=2.16.2:devel/git \
 	gitlab-shell>=8.7.1:devel/gitlab-shell \
-	gitlab-workhorse>=8.3.1:www/gitlab-workhorse \
+	gitlab-workhorse>=8.3.3:www/gitlab-workhorse \
 	gitaly>=1.27.1:devel/gitaly \
 	gitlab-pages>=1.5.0:www/gitlab-pages \
 	redis>=3.2.12:databases/redis \
@@ -107,7 +108,7 @@ MY_DEPENDS=	git>=2.16.2:devel/git \
 	rubygem-unicorn-worker-killer>=0.4.4:www/rubygem-unicorn-worker-killer \
 	rubygem-puma>=3.12:www/rubygem-puma \
 	rubygem-puma_worker_killer>=0:www/rubygem-puma_worker_killer \
-	rubygem-state_machines-activerecord>=0.5.1:databases/rubygem-state_machines-activerecord \
+	rubygem-state_machines-activerecord05>=0.5.1:databases/rubygem-state_machines-activerecord05 \
 	rubygem-acts-as-taggable-on>=5.0:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq>=5.2.1:devel/rubygem-sidekiq \
 	rubygem-sidekiq-cron>=1.0.0:devel/rubygem-sidekiq-cron \
@@ -220,7 +221,7 @@ USE_RC_SUBR=	gitlab
 USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 # Find the here: https://gitlab.com/gitlab-org/gitlab-ce/tags
-GL_COMMIT=	86f0b5dd4d0ead4978e106e4ef16855fe78bbbdb
+GL_COMMIT=	93e321569a898d9701a251b4bb73ad56b79fc535
 
 USERS=	git
 GROUPS=	git

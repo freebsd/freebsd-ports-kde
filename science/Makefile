@@ -54,6 +54,7 @@
     SUBDIR += coordgenlibs
     SUBDIR += coot
     SUBDIR += cp2k
+    SUBDIR += cp2k-data
     SUBDIR += crf++
     SUBDIR += dalton
     SUBDIR += datawarrior
@@ -255,6 +256,8 @@
     SUBDIR += py-pysal
     SUBDIR += py-pyteomics
     SUBDIR += py-pyteomics.biolccc
+    SUBDIR += py-qcelemental
+    SUBDIR += py-qcengine
     SUBDIR += py-qspin
     SUBDIR += py-quantities
     SUBDIR += py-rmf

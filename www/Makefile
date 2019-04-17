@@ -197,7 +197,6 @@
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += go-appengine-sdk
-    SUBDIR += go-fasthttp
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
@@ -371,8 +370,6 @@
     SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
-    SUBDIR += mediawiki127
-    SUBDIR += mediawiki130
     SUBDIR += mediawiki131
     SUBDIR += mediawiki132
     SUBDIR += mergelog
@@ -432,7 +429,6 @@
     SUBDIR += mod_line_edit
     SUBDIR += mod_log_sql2
     SUBDIR += mod_maxminddb
-    SUBDIR += mod_md-devel
     SUBDIR += mod_memcache
     SUBDIR += mod_memcache_block
     SUBDIR += mod_mono
@@ -1049,6 +1045,7 @@
     SUBDIR += p5-ModPerl-VersionUtil
     SUBDIR += p5-Mojo-IOLoop-ForkCall
     SUBDIR += p5-Mojo-Server-FastCGI
+    SUBDIR += p5-Mojo-Weixin
     SUBDIR += p5-MojoMojo
     SUBDIR += p5-MojoX-Log-Dispatch-Simple
     SUBDIR += p5-MojoX-Renderer-Xslate
@@ -1619,6 +1616,7 @@
     SUBDIR += py-django111
     SUBDIR += py-django20
     SUBDIR += py-django21
+    SUBDIR += py-django22
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1857,6 +1855,7 @@
     SUBDIR += py-slimmer
     SUBDIR += py-slumber
     SUBDIR += py-sockjs-tornado
+    SUBDIR += py-soupsieve
     SUBDIR += py-splinter
     SUBDIR += py-spyne
     SUBDIR += py-sseclient
@@ -2392,7 +2391,6 @@
     SUBDIR += udmsearch
     SUBDIR += ufdbguard
     SUBDIR += unit
-    SUBDIR += unit-go
     SUBDIR += unit-perl
     SUBDIR += unit-php
     SUBDIR += uwsgi
@@ -2425,7 +2423,6 @@
     SUBDIR += webcopy
     SUBDIR += webcrawl
     SUBDIR += webfs
-    SUBDIR += webgo
     SUBDIR += webgrind
     SUBDIR += webhook
     SUBDIR += webinject

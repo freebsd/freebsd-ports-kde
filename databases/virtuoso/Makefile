@@ -3,7 +3,7 @@
 
 PORTNAME=	virtuoso
 PORTVERSION=	7.2.5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-opensource-${PORTVERSION}
@@ -66,6 +66,11 @@ check:
 	${SETENV} -u HOST ${MAKE_ENV} ${MAKE} -C ${WRKSRC} check
 
 .include <bsd.port.options.mk>
+
+.if ${SSL_DEFAULT} == base
+BROKEN_FreeBSD_12=	OpenSSL version 1.1.0 or greater is currently not supported
+BROKEN_FreeBSD_13=	OpenSSL version 1.1.0 or greater is currently not supported
+.endif
 
 .if ${PORT_OPTIONS:MIMAGEMAGICK}
 CONFIGURE_ARGS+=--enable-imagemagick=${LOCALBASE}

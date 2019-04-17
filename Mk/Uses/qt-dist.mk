@@ -170,10 +170,12 @@ CONFIGURE_ARGS+=	-verbose
 .  if ${_QT_DIST} == "base"
 _EXTRA_PATCHES_QT5=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
-			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf
+			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf \
+			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_freebsd-clang_qmake.conf
 .        if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64
 _EXTRA_PATCHES_QT5+=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_g++-base.conf \
-			${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_gcc-base.conf
+			${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_gcc-base.conf \
+			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_freebsd-g++_qmake.conf
 USE_GCC=		yes
 .    endif
 EXTRA_PATCHES?=		${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-configure \
@@ -250,9 +252,14 @@ _QT5_BASE=		core dbus gui network sql widgets
 .if ${_QT_VER:M5}
 post-patch: gcc-post-patch
 gcc-post-patch:
-	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/mkspecs/common/gcc-base.conf
-	${REINPLACE_CMD} 's|%%GCC_DEFAULT%%|${GCC_DEFAULT}|' ${WRKSRC}/mkspecs/common/gcc-base.conf \
-		${WRKSRC}/mkspecs/common/g++-base.conf
+	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		${WRKSRC}/mkspecs/common/gcc-base.conf \
+		${WRKSRC}/mkspecs/freebsd-g++/qmake.conf
+	${REINPLACE_CMD} 's|%%GCC_DEFAULT%%|${GCC_DEFAULT}|g' \
+		${WRKSRC}/mkspecs/common/gcc-base.conf \
+		${WRKSRC}/mkspecs/common/g++-base.conf \
+		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
+		${WRKSRC}/mkspecs/freebsd-g++/qmake.conf
 .endif
 
 pre-configure: qtbase-pre-configure
@@ -293,7 +300,8 @@ qtbase-pre-configure:
 post-patch: qtbase-post-patch
 qtbase-post-patch:
 	${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		${WRKSRC}//mkspecs/common/bsd/bsd.conf
+		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
+		${WRKSRC}/mkspecs/freebsd-clang/qmake.conf
 
 .      if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
@@ -322,8 +330,8 @@ qt5-pre-configure:
 # occurrences of ${WRKSRC}/lib from .pc and .prl files when installing them.
 # See QTBUG-40825 and ports bugs 194088, 195105 and 198720.
 	${ECHO_CMD} 'QMAKE_LIBDIR_FLAGS = -L${CONFIGURE_WRKSRC}/lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
-	${ECHO_CMD} 'QMAKE_DEFAULT_LIBDIRS = ${LOCALBASE}/lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
-	${ECHO_CMD} 'QMAKE_DEFAULT_INCDIRS = ${LOCALBASE}/include' >> ${CONFIGURE_WRKSRC}/.qmake.cache
+	${ECHO_CMD} 'QMAKE_DEFAULT_LIBDIRS += ${LOCALBASE}/lib /usr/lib /lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
+	${ECHO_CMD} 'QMAKE_DEFAULT_INCDIRS += ${LOCALBASE}/include /usr/include' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 
 post-install: qt-post-install
 qt-post-install:

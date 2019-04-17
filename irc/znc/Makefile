@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	znc
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.3
 PORTREVISION=	1
 CATEGORIES=	irc ipv6
 MASTER_SITES=	https://znc.in/releases/ \

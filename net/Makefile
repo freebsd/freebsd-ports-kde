@@ -167,10 +167,9 @@
     SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
-    SUBDIR += frr3
-    SUBDIR += frr4
     SUBDIR += frr5
     SUBDIR += frr6
+    SUBDIR += frr7
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -192,13 +191,8 @@
     SUBDIR += gnome-online-miners
     SUBDIR += gnu-dico
     SUBDIR += gnu-radius
-    SUBDIR += go-amqp
     SUBDIR += go-bapu
     SUBDIR += go-cs
-    SUBDIR += go-httppath
-    SUBDIR += go-httptreemux
-    SUBDIR += go-nats
-    SUBDIR += go.net
     SUBDIR += gobgp
     SUBDIR += gofish
     SUBDIR += gogoc
@@ -869,6 +863,7 @@
     SUBDIR += p5-Sort-Key-IPv4
     SUBDIR += p5-TFTP
     SUBDIR += p5-Test-URI
+    SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
     SUBDIR += p5-URI-FromHash
@@ -1142,6 +1137,7 @@
     SUBDIR += py-wolframalpha
     SUBDIR += py-wsproto
     SUBDIR += py-xmlrpc
+    SUBDIR += py-zeep
     SUBDIR += py-zeroconf
     SUBDIR += py-zope.proxy
     SUBDIR += py-zsi
@@ -1222,10 +1218,8 @@
     SUBDIR += rubygem-epp-client-secdns
     SUBDIR += rubygem-epp-client-smallregistry
     SUBDIR += rubygem-fog-aliyun
-    SUBDIR += rubygem-fog-aliyun02
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
-    SUBDIR += rubygem-fog-aws2
     SUBDIR += rubygem-fog-azure
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-brightbox0
@@ -1235,7 +1229,6 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
-    SUBDIR += rubygem-fog-google17
     SUBDIR += rubygem-fog-internet-archive
     SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
@@ -1258,7 +1251,6 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab_omniauth-ldap
-    SUBDIR += rubygem-gitlab_omniauth-ldap20
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-grpc
@@ -1315,7 +1307,6 @@
     SUBDIR += rubygem-ruby-yadis
     SUBDIR += rubygem-ruby_smb
     SUBDIR += rubygem-rubyntlm
-    SUBDIR += rubygem-rubyntlm05
     SUBDIR += rubygem-rubytter
     SUBDIR += rubygem-rudy
     SUBDIR += rubygem-rye
@@ -1436,6 +1427,8 @@
     SUBDIR += thcrut
     SUBDIR += throttled
     SUBDIR += tigervnc
+    SUBDIR += tigervnc-server
+    SUBDIR += tigervnc-viewer
     SUBDIR += tightvnc
     SUBDIR += timed
     SUBDIR += tintin++

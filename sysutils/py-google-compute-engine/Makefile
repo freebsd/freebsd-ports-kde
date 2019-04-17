@@ -2,10 +2,11 @@
 
 PORTNAME=	google-compute-engine
 DISTVERSION=	2.8.13
+PORTREVISION=	2
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	helen.koike@collabora.com
+MAINTAINER=	lucas.kanashiro@collabora.com
 COMMENT=	Guest Environment for Google Compute Engine
 
 LICENSE=	APACHE20

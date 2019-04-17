@@ -6242,7 +6242,6 @@ textproc/cl-ppcre-clisp||2014-07-28|Has expired: Depends on deprecated lang/clis
 devel/cl-asdf-clisp||2014-07-28|Has expired: Depends on deprecated lang/clisp
 devel/cl-split-sequence-clisp||2014-07-28|Has expired: Depends on deprecated lang/clisp
 devel/cl-trivial-gray-streams-clisp||2014-07-28|Has expired: Depends on deprecated lang/clisp
-lang/clisp||2014-07-28|Has expired: development has ceased, not staged
 print/texpower|print/texlive-texmf|2014-07-28|Has been incorporated in TeXLive
 print/tex-mfpic|print/texlive-texmf|2014-07-28|Has been incorporated in TeXLive
 lang/sml-nj-devel|lang/smlnj|2014-07-30|The -devel was updated and is now production-ready
@@ -9523,7 +9522,6 @@ databases/elixir-ecto_migrate||2017-11-11|Has expired: Broken for more than 6 mo
 audio/gspeakers||2017-11-11|Has expired: Broken for more than 6 months
 net/p5-Filesys-SmbClient||2017-11-11|Has expired: Broken for more than 6 months
 audio/tclmidi||2017-11-11|Has expired: Broken for more than 6 months
-security/py-xmlsec||2017-11-11|Has expired: Broken for more than 6 months
 security/samba-virusfilter||2017-11-11|Has expired: Broken for more than 6 months
 textproc/ocaml-pxp||2017-11-11|Has expired: Broken for more than 6 months
 audio/sooperlooper||2017-11-11|Has expired: Broken for more than 6 months
@@ -10777,7 +10775,6 @@ editors/manedit||2018-12-21|Has expired: Uses obsolete glib12
 misc/gtkfind||2018-12-21|Has expired: Uses obsolete glib12
 games/mindguard||2018-12-21|Has expired: Uses obsolete glib12
 games/xbattle||2018-12-21|Has expired: Uses obsolete glib12
-games/xbill||2018-12-21|Has expired: Uses obsolete glib12
 games/corewars||2018-12-21|Has expired: Uses obsolete glib12
 games/dopewars||2018-12-21|Has expired: Uses obsolete glib12
 games/garith||2018-12-21|Has expired: Uses obsolete glib12
@@ -11545,6 +11542,7 @@ net-mgmt/icinga||2019-02-04|Removed, depends on expired net-mgmt/icinga-core
 net-mgmt/icli||2019-02-04|Removed, depends on expired net-mgmt/icinga-core
 net-mgmt/icinga-classicweb||2019-02-04|Has expired: Upstream EOLed Icinga 1.x from 2018-12-31
 net-mgmt/pnp-icinga||2019-02-04|Removed, depends on expired net-mgmt/icinga-classicweb
+sysutils/atf-allwinner|sysutils/atf-sun50i_a64|2019-02-04|Changed to be a slave port and renamed
 sysutils/yum||2019-02-07|Has expired: Abandoned upstream, does not work with python3
 sysutils/createrepo||2019-02-07|Has expired: Abandoned upstream, does not work with python3
 www/wml||2019-02-08|Removing to be properly added back with svn copy
@@ -11553,6 +11551,7 @@ math/wxMaxima|math/wxmaxima|2019-02-10|rename for consistency
 net-mgmt/py-snmp4|net-mgmt/py-pysnmp|2019-02-11|Renamed to match upstream naming
 net-mgmt/py-snmp4-apps|net-mgmt/py-pysnmp-apps|2019-02-11|Renamed to match upstream naming
 net-mgmt/py-snmp4-mibs|net-mgmt/py-pysnmp-mibs|2019-02-11|Renamed to match upstream naming
+databases/ruby-gdbm|databases/rubygem-gdbm|2019-02-18|Renamed because switch to use gem
 science/mmtf|science/mmtf-cpp|2019-02-16|Rename to match the project name on github
 dns/p5-pgeodns||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
 ftp/proftpd-mod_geoip||2019-02-16|Has expired: Uses legacy GeoIP 1 format which no longer works; switch to GeoIP 2 where possible
@@ -11940,7 +11939,6 @@ www/qt4-webkit||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 www/qupzilla-qt4||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/leechcraft||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/py-qt4-opengl||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-x11/qimageblitz||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qt4-graphicssystems-opengl||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qt4-inputmethods||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qxkb||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -12106,3 +12104,79 @@ www/xpi-wmlbrowser||2019-03-29|Legacy extensions aren't supported after Firefox 
 www/xpi-xhtml-ruby-support||2019-03-29|Legacy extensions aren't supported after Firefox 57
 www/xpi-xmpp4moz||2019-03-29|Legacy extensions aren't supported after Firefox 57
 www/xpi-yslow||2019-03-29|Legacy extensions aren't supported after Firefox 57
+converters/py-pint|devel/py-Pint|2019-03-31|Remove duplicate port
+graphics/py-PyX12|graphics/py-PyX|2019-03-31|Duplicate port
+x11-toolkits/fltk-devel||2019-03-31|Has expired: Older than x11-toolkits/fltk -- there is no point in having old snapshots
+devel/rubygem-sidekiq-cron0|devel/rubygem-sidekiq-cron|2019-03-31|Has expired: Use devel/rubygem-sidekiq-cron instead
+lang/ruby23|lang/ruby24|2019-03-31|Has expired: Use lang/ruby24 or above
+misc/rubygem-mime-types29|misc/rubygem-mime-types|2019-03-31|Has expired: Use misc/rubygem-mime-types instead
+net/rubygem-gitlab_omniauth-ldap20|net/rubygem-gitlab_omniauth-ldap|2019-03-31|Has expired: Use net/rubygem-gitlab_omniauth-ldap instead
+net/rubygem-rubyntlm05|net/rubygem-rubyntlm|2019-03-31|Has expired: Use net/rubygem-rubyntlm instead
+security/kbfs|security/keybase|2019-03-31|Has expired: Merged into security/keybase
+security/rubygem-sshkey1|security/rubygem-sshkey|2019-03-31|Has expired: Use security/rubygem-sshkey instead
+devel/llvm38|devel/llvm80|2019-04-01|Has expired: Use a modern version instead
+archivers/go-compress||2019-04-01|Has expired: Go libraries should not be packaged
+textproc/go.text||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-hashicorp-logutils||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-cpuid||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-nuid||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-yaml||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-raw||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-go.uuid||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-goregen||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-runewidth||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-cobra||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-pflag||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-slices||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-form||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-bayesian||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-uuid||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-logrus||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-metrics||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-codec||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-faker||2019-04-01|Has expired: Go libraries should not be packaged
+devel/go-crc32||2019-04-01|Has expired: Go libraries should not be packaged
+security/goptlib||2019-04-01|Has expired: Go libraries should not be packaged
+security/go.crypto||2019-04-01|Has expired: Go libraries should not be packaged
+net/go-httppath||2019-04-01|Has expired: Go libraries should not be packaged
+net/go-amqp||2019-04-01|Has expired: Go libraries should not be packaged
+net/go.net||2019-04-01|Has expired: Go libraries should not be packaged
+net/go-nats||2019-04-01|Has expired: Go libraries should not be packaged
+net/go-httptreemux||2019-04-01|Has expired: Go libraries should not be packaged
+databases/gosqlite3||2019-04-01|Has expired: Go libraries should not be packaged
+databases/redigo||2019-04-01|Has expired: Go libraries should not be packaged
+databases/gomdb||2019-04-01|Has expired: Go libraries should not be packaged
+databases/radix.v2||2019-04-01|Has expired: Go libraries should not be packaged
+databases/levigo||2019-04-01|Has expired: Go libraries should not be packaged
+www/unit-go||2019-04-01|Has expired: Go libraries should not be packaged
+www/webgo||2019-04-01|Has expired: Go libraries should not be packaged
+www/go-fasthttp||2019-04-01|Has expired: Go libraries should not be packaged
+graphics/llpp||2019-04-01|Has expired: fails to build with mupdf 1.14.0 and unable to update due to outdated lang/ocaml
+chinese/reciteword||2019-04-04|Has expired: depends on audio/esound
+comms/conserver||2019-04-04|Has expired: Superseeded by comms/conserver-com
+databases/flamerobin||2019-04-04|Has expired: Abandonware since 2009, does not work with newer version of wxGTK
+databases/mariadb100-client|databases/mariadb101-client|2019-04-04|Has expired: Upstream End-of-Life March 2019 (https://mariadb.org/about/maintenance-policy/)
+databases/mariadb100-server|databases/mariadb101-server|2019-04-04|Has expired: Upstream End-of-Life March 2019 (https://mariadb.org/about/maintenance-policy/)
+devel/physfs-devel|devel/physfs|2019-04-04|Has expired: is the same as devel/physfs, serving no purpose
+devel/py-construct28|devel/py-construct|2019-04-04|Has expired: Latest upstream version is in ports tree devel/py-construct
+devel/xtoolchain-llvm40||2019-04-04|Has expired: No supported release uses this version
+devel/xtoolchain-llvm50||2019-04-04|Has expired: No supported release uses this version
+finance/aqmoney||2019-04-04|Has expired: no longer maintained upstream
+finance/openhbci||2019-04-04|Has expired: no longer maintained upstream
+graphics/py-exiv2||2019-04-04|Has expired: py-exiv2 has been deprecated in favour of GExiv2
+mail/dbmail22|mail/dbmail|2019-04-04|Has expired: Please use mail/dbmail which uses latest version of 3.X
+net/rubygem-fog-google17|net/rubygem-fog-google|2019-04-04|Has expired: Use net/rubygem-fog-google instead
+ports-mgmt/bsdadminscripts|ports-mgmt/bsdadminscripts2|2019-04-04|Has expired: Upstream stale nearly 10 years, no longer works properly, use ports-mgmt/bsdadminscripts2 instead
+www/mod_md-devel||2019-04-04|Has expired: Use the module that is shipped with Apache 2.4
+x11/xbelld||2019-04-04|Has expired: Depends on audio/esound
+devel/mkcmd||2019-04-04|Removed, depends on expired devel/msrc0
+devel/msrc0||2019-04-04|Has expired: No longer required as comms/conserver is being retired.
+sysutils/curly||2019-04-04|Removed, depends on expired devel/msrc0
+devel/pecl-xdebug25|devel/pecl-xdebug|2019-04-09|Has expired: Please use pecl/xdebug which uses latest version
+devel/pecl-xdebug-devel|devel/pecl-xdebug|2019-04-09|Development version no longer necessary
+net/rubygem-fog-aliyun02|net/rubygem-fog-aliyun|2019-04-14|Has expired: Use net/rubygem-fog-aliyun instead
+net/rubygem-fog-aws2|net/rubygem-fog-aws|2019-04-14|Has expired: Use net/rubygem-fog-aws instead
+www/mediawiki127|www/mediawiki131|2019-04-15|Has expired: Upstream no longer maintained
+www/mediawiki130|www/mediawiki131|2019-04-15|Has expired: Upstream no longer maintained
+net/frr3|net/frr7|2019-04-16|Has expired: Upstream no longer maintained
+net/frr4|net/frr7|2019-04-16|Has expired: Upstream no longer maintained

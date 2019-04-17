@@ -2,6 +2,7 @@
 
 PORTNAME=	rocs
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	math kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -20,11 +21,6 @@ USE_QT=		core dbus declarative gui network script scripttools svg webkit \
 		buildtools_build qmake_build
 
 USE_LDCONFIG=	yes
-
-# clang 6.0 defaults to -std=gnu++14, which breaks the build:
-# /wrkdirs/usr/ports/math/rocs/work/rocs-4.14.3/VisualEditor/Actions/SelectMoveHandAction.cpp:86:52: error: no viable conversion from 'int' to 'QPainter::RenderHints' (aka 'QFlags<QPainter::RenderHint>')
-#         _graphScene->views().at(0)->setRenderHints(QPainter::Antialiasing
-USE_CXXSTD=	gnu++98
 
 OPTIONS_DEFINE=	DOCS
 

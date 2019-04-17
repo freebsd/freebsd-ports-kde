@@ -821,31 +821,13 @@
     SUBDIR += gnulibiberty
     SUBDIR += gnustep
     SUBDIR += gnustep-make
-    SUBDIR += go-bayesian
     SUBDIR += go-bindata
-    SUBDIR += go-cobra
-    SUBDIR += go-codec
-    SUBDIR += go-cpuid
-    SUBDIR += go-crc32
-    SUBDIR += go-faker
-    SUBDIR += go-form
+    SUBDIR += go-git
     SUBDIR += go-glide
-    SUBDIR += go-go.uuid
     SUBDIR += go-gocode
     SUBDIR += go-godef
-    SUBDIR += go-goregen
-    SUBDIR += go-hashicorp-logutils
-    SUBDIR += go-logrus
-    SUBDIR += go-metrics
-    SUBDIR += go-nuid
-    SUBDIR += go-pflag
     SUBDIR += go-protobuf
-    SUBDIR += go-raw
-    SUBDIR += go-runewidth
-    SUBDIR += go-slices
     SUBDIR += go-tools
-    SUBDIR += go-uuid
-    SUBDIR += go-yaml
     SUBDIR += gob2
     SUBDIR += gobject-introspection
     SUBDIR += godep
@@ -1331,6 +1313,7 @@
     SUBDIR += ksql
     SUBDIR += kyra
     SUBDIR += kyua
+    SUBDIR += lab
     SUBDIR += lasi
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
@@ -1675,7 +1658,6 @@
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
     SUBDIR += llvm35
-    SUBDIR += llvm38
     SUBDIR += llvm40
     SUBDIR += llvm50
     SUBDIR += llvm60
@@ -1781,9 +1763,9 @@
     SUBDIR += mips64-xtoolchain-gcc
     SUBDIR += mir-core
     SUBDIR += mk-configure
-    SUBDIR += mkcmd
     SUBDIR += mm
     SUBDIR += mm-common
+    SUBDIR += modules2tuple
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
@@ -1800,7 +1782,6 @@
     SUBDIR += msgpuck
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
-    SUBDIR += msrc0
     SUBDIR += mtbl
     SUBDIR += myrepos
     SUBDIR += nana
@@ -2621,6 +2602,7 @@
     SUBDIR += p5-File-ShareDir-PAR
     SUBDIR += p5-File-ShareDir-PathClass
     SUBDIR += p5-File-ShareDir-ProjectDistDir
+    SUBDIR += p5-File-ShareDir-Tarball
     SUBDIR += p5-File-Slurp
     SUBDIR += p5-File-Slurp-Tiny
     SUBDIR += p5-File-Slurp-Tree
@@ -2997,6 +2979,7 @@
     SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-Role-Parameterized
+    SUBDIR += p5-MooX-Singleton
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
     SUBDIR += p5-MooX-Traits
@@ -3045,6 +3028,7 @@
     SUBDIR += p5-MooseX-MethodAttributes
     SUBDIR += p5-MooseX-MultiInitArg
     SUBDIR += p5-MooseX-MultiMethods
+    SUBDIR += p5-MooseX-MungeHas
     SUBDIR += p5-MooseX-NonMoose
     SUBDIR += p5-MooseX-Object-Pluggable
     SUBDIR += p5-MooseX-OneArgNew
@@ -4078,8 +4062,6 @@
     SUBDIR += pecl-vld
     SUBDIR += pecl-weakref2
     SUBDIR += pecl-xdebug
-    SUBDIR += pecl-xdebug-devel
-    SUBDIR += pecl-xdebug25
     SUBDIR += pecl-yac
     SUBDIR += pecl-yaconf
     SUBDIR += pecl-zookeeper
@@ -4128,7 +4110,6 @@
     SUBDIR += phpunit6
     SUBDIR += phpunit7
     SUBDIR += physfs
-    SUBDIR += physfs-devel
     SUBDIR += picp
     SUBDIR += picprog
     SUBDIR += pig
@@ -4289,6 +4270,7 @@
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
+    SUBDIR += py-addict
     SUBDIR += py-aenum
     SUBDIR += py-aiofiles
     SUBDIR += py-aioice
@@ -4495,7 +4477,6 @@
     SUBDIR += py-confusable_homoglyphs
     SUBDIR += py-constantly
     SUBDIR += py-construct
-    SUBDIR += py-construct28
     SUBDIR += py-contextlib2
     SUBDIR += py-cookiecutter
     SUBDIR += py-coreapi
@@ -4519,6 +4500,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darcsver
     SUBDIR += py-darts.util.lru
+    SUBDIR += py-dataclasses
     SUBDIR += py-datatest
     SUBDIR += py-dateparser
     SUBDIR += py-dateutil
@@ -4670,6 +4652,7 @@
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
+    SUBDIR += py-ijson
     SUBDIR += py-imgkit
     SUBDIR += py-incremental
     SUBDIR += py-inflect
@@ -4701,6 +4684,7 @@
     SUBDIR += py-jaraco.logging
     SUBDIR += py-jaraco.timing
     SUBDIR += py-jaraco.util
+    SUBDIR += py-javaproperties
     SUBDIR += py-jcc
     SUBDIR += py-jdcal
     SUBDIR += py-jedi
@@ -4730,6 +4714,7 @@
     SUBDIR += py-jsonrpclib
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
+    SUBDIR += py-jsonschema2
     SUBDIR += py-jsonsir
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
@@ -4935,6 +4920,7 @@
     SUBDIR += py-proglog
     SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
+    SUBDIR += py-prompt_toolkit1
     SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
@@ -4960,6 +4946,7 @@
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycompilation
     SUBDIR += py-pycparser
+    SUBDIR += py-pydantic
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
     SUBDIR += py-pydispatcher
@@ -5119,6 +5106,7 @@
     SUBDIR += py-rwt
     SUBDIR += py-rx
     SUBDIR += py-sanetime
+    SUBDIR += py-saneyaml
     SUBDIR += py-sarge
     SUBDIR += py-schedule
     SUBDIR += py-schema
@@ -5180,6 +5168,7 @@
     SUBDIR += py-sysv_ipc
     SUBDIR += py-tables
     SUBDIR += py-tabulate
+    SUBDIR += py-tabulator
     SUBDIR += py-tapi
     SUBDIR += py-tarantool-queue
     SUBDIR += py-taskflow
@@ -5489,6 +5478,7 @@
     SUBDIR += rpm-spec-mode.el
     SUBDIR += rsvndump
     SUBDIR += rth
+    SUBDIR += rttr
     SUBDIR += ruby-bsearch
     SUBDIR += ruby-build
     SUBDIR += ruby-gems
@@ -6046,7 +6036,6 @@
     SUBDIR += rubygem-sidekiq
     SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
-    SUBDIR += rubygem-sidekiq-cron0
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
     SUBDIR += rubygem-sidetiq
@@ -6410,8 +6399,6 @@
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
     SUBDIR += xtoolchain-llvm-devel
-    SUBDIR += xtoolchain-llvm40
-    SUBDIR += xtoolchain-llvm50
     SUBDIR += xtoolchain-llvm60
     SUBDIR += xtoolchain-llvm70
     SUBDIR += xtoolchain-llvm80

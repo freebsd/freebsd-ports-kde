@@ -394,6 +394,7 @@
     SUBDIR += jpgtn
     SUBDIR += jslice
     SUBDIR += kamera
+    SUBDIR += kamerka
     SUBDIR += kcolorchooser
     SUBDIR += kdegraphics
     SUBDIR += kdegraphics-mobipocket
@@ -527,7 +528,6 @@
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
     SUBDIR += linux-c7-tiff
-    SUBDIR += llpp
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
     SUBDIR += luxrender
@@ -802,7 +802,6 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-PyX
-    SUBDIR += py-PyX12
     SUBDIR += py-actdiag
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -815,11 +814,11 @@
     SUBDIR += py-editobj
     SUBDIR += py-exif
     SUBDIR += py-exifread
-    SUBDIR += py-exiv2
     SUBDIR += py-fiona
     SUBDIR += py-freeimagepy
     SUBDIR += py-gd
     SUBDIR += py-gdal
+    SUBDIR += py-geomdl
     SUBDIR += py-geopandas
     SUBDIR += py-gimp
     SUBDIR += py-gizeh

@@ -4,6 +4,7 @@ PORTNAME=	gnuradio
 #MASTER_SITES=	http://gnuradio.org/releases/gnuradio/
 # Temporary git version
 DISTVERSION=	3.8.g20190309
+PORTREVISION=	2
 CATEGORIES=	comms astro hamradio
 
 MAINTAINER=	hamradio@FreeBSD.org
