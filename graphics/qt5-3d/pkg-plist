@@ -925,6 +925,7 @@
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/texture_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/texturedatamanager_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/textureimage_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/texturesubmissioncontext_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/transform_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/triangleboundingvolume_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/trianglesextractor_p.h
