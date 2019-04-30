@@ -1,13 +1,5 @@
---- Gemfile.orig	2019-03-20 23:32:21 UTC
+--- Gemfile.orig	2019-04-19 09:51:35 UTC
 +++ Gemfile
-@@ -1,6 +1,6 @@
- source 'https://rubygems.org'
- 
--gem 'rails', '5.0.7.1'
-+gem 'rails', '5.0.7.2'
- gem 'rails-deprecated_sanitizer', '~> 1.0.3'
- 
- # Improves copy-on-write performance for MRI
 @@ -15,7 +15,7 @@ gem 'sprockets', '~> 3.7.0'
  gem 'gitlab-default_value_for', '~> 3.1.1', require: 'default_value_for'
  
@@ -17,31 +9,19 @@
  gem 'pg', '~> 1.1', group: :postgres
  
  gem 'rugged', '~> 0.28'
-@@ -170,7 +170,7 @@ gem 'gitlab-sidekiq-fetcher', '~> 0.4.0', require: 'si
- gem 'fugit', '~> 1.1'
+@@ -202,7 +202,7 @@ gem 'connection_pool', '~> 2.0'
+ gem 'discordrb-webhooks-blackst0ne', '~> 3.3', require: false
  
- # HTTP requests
--gem 'httparty', '~> 0.13.3'
-+gem 'httparty', '>= 0.13.3'
+ # HipChat integration
+-gem 'hipchat', '~> 1.5.0'
++gem 'hipchat', '~> 1.6.0'
  
- # Colored output to console
- gem 'rainbow', '~> 3.0'
-@@ -295,9 +295,6 @@ gem 'peek-redis', '~> 1.2.0'
- 
- # Metrics
- group :metrics do
--  gem 'method_source', '~> 0.8', require: false
--  gem 'influxdb', '~> 0.2', require: false
--
-   # Prometheus
-   gem 'prometheus-client-mmap', '~> 0.9.4'
-   gem 'raindrops', '~> 0.18'
-@@ -307,87 +304,6 @@ group :tracing do
-   # OpenTracing
-   gem 'opentracing', '~> 0.4.3'
+ # JIRA integration
+ gem 'jira-ruby', '~> 1.4'
+@@ -307,87 +307,6 @@ group :tracing do
    gem 'jaeger-client', '~> 0.10.0'
--end
--
+ end
+ 
 -group :development do
 -  gem 'foreman', '~> 0.84.0'
 -  gem 'brakeman', '~> 4.2', require: false
@@ -121,6 +101,17 @@
 -  gem 'concurrent-ruby', '~> 1.1'
 -  gem 'test-prof', '~> 0.2.5'
 -  gem 'rspec_junit_formatter'
+-end
+-
+ gem 'octokit', '~> 4.9'
+ 
+ gem 'mail_room', '~> 0.9.1'
+@@ -419,7 +338,7 @@ group :ed25519 do
  end
  
- gem 'octokit', '~> 4.9'
+ # Gitaly GRPC client
+-gem 'gitaly-proto', '~> 1.19.0', require: 'gitaly'
++gem 'gitaly-proto', '~> 1.22.0', require: 'gitaly'
+ 
+ gem 'grpc', '~> 1.15.0'
+ 

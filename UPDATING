@@ -5,6 +5,154 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20190424:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been udpated to Node.js v12.0.0, the latest
+  upstream release. This is a major release, including many significant
+  changes. Users are encouraged to read the release announcements before
+  upgrading:
+
+  https://nodejs.org/en/blog/release/v12.0.0/
+
+20190423:
+  AFFECTS: users of www/gitlab-ce
+  AUTHOR: mfechner@FreeBSD.org
+
+  The directory where all repositories and ssh permissions are stored
+  was changed from /usr/home/git back to /usr/local/git, to match again the
+  recommended standards on FreeBSD.
+  This will cause now some other git management packages to collide with
+  gitlab. Make sure you migrate all you git repositories to gitlab first,
+  before you continue.
+
+  Make sure /usr/local/git/repositories and /usr/local/git/.ssh are not
+  existing!
+  Otherwise the next commands can break your installation for managing
+  git repositories within gitlab and with your other gitlab management
+  software!
+
+  You must move the old files to the new location with:
+  # service gitlab stop
+  # mv /usr/home/git /usr/local/
+  # pkg upg
+
+  Make sure you update your config files, diff shows you what you maybe
+  must change:
+  # cd /usr/local/www/gitlab-ce
+  # git diff config/gitlab.yml.sample config/gitlab.yml
+  # cd /usr/local/share/gitlab-shell/
+  # git diff config.yml.sample config.yml
+  # cd /usr/local/share/gitaly
+  # git diff config.toml.sample config.toml
+
+  # Change home directory of user git back to /usr/local/git
+  # vipw
+  The line should now looks like:
+  git:*:211:211::0:0:gitosis user:/usr/local/git:/bin/sh
+
+  If you do an upgrade of gitlab follow the upgrade guide.
+  If not, just start gitlab again with:
+  # service gitlab start
+
+20190422:
+  AFFECTS: users of security/libressl
+  AUTHOR: brnrd@FreeBSD.org
+
+  The port has been updated to the latest stable version 2.9 of LibreSSL.
+  The shared library versions of the libraries have been bumped.
+
+  After upgrading, manually update all packages that depend on any of the
+  libraries provided by LibreSSL (libssl, libcrypto and libtls) since the
+  versions of these libraries have changed. Normally, you can obtain the
+  list of dependent software by running the following command:
+
+  # pkg info -r libressl
+
+  Then you should rebuild all ports depending on libressl to avoid dangling
+  shared library dependencies. Poudriere and pkg handle this correctly,
+  portmaster and portupgrade users can use the following to rebuild all
+  dependent ports.
+
+  Portmaster users:
+      portmaster -r libressl
+  Portupgrade users:
+      portupgrade -fr security/libressl
+
+20190421:
+  AFFECTS: users of databases/cego
+  AUTHOR: pi@FreeBSD.org
+
+  To upgrade from cego 2.39.16 to 2.44.1, you need to export to xml before
+  the upgrade and import from xml after the upgrade, because the internal
+  storage has changed for some types.
+
+  Use these steps:
+
+  - export your database while it runs, see
+    http://www.lemke-it.com/litexec?request=pubcegodoc&user=&lang=en&section=cgdoc_database_running.html#tsimpexp_mode
+    for details.
+  - stop the database
+    service cego stop
+  - upgrade the port/package
+  - re-create the database
+    cego --mode=create --tableset=<database> --dbxml=<database>.xml
+  - import the database
+    cego --mode=xmlimport --tableset=<database> \
+	--dbxml=<database>.xml --impfile=export.xml --doLogging
+  - modify /etc/rc.conf by adding
+    cego_<database>_cpdump="YES"
+    cego_<database>_cleanup="YES"
+  - start the database
+    service cego start
+
+20190420:
+  AFFECTS: users of lang/ruby24
+  AUTHOR: mfechner@FreeBSD.org
+
+  The default ruby version has been updated from 2.4 to 2.5.
+
+  If you compile your own ports you may keep 2.4 as the default version by
+  adding the following lines to your /etc/make.conf file:
+
+  #
+  # Keep ruby 2.4 as default version
+  #
+  DEFAULT_VERSIONS+=ruby=2.4
+
+  If you wish to update to the new default version, you need to first stop any
+  software that uses ruby. Then, you will need to follow these steps, depending
+  upon how you manage your system.
+
+  If you use pkgng, simply upgrade:
+  # pkg upgrade
+
+  If you use portmaster, install new ruby, then rebuild all ports that depend
+  on ruby:
+  # portmaster -o lang/ruby25 lang/ruby24
+  # portmaster -R -r ruby-2.5
+
+  If you use portupgrade, install new ruby, then rebuild all ports that depend
+  on ruby:
+
+  # pkg delete -f ruby portupgrade
+  # make -C /usr/ports/ports-mgmt/portupgrade install clean
+  # pkg set -o lang/ruby24:lang/ruby25
+  # portupgrade -x ruby-2.5.\* -fr lang/ruby25
+
+20190419:
+  AFFECTS: users of emulators/qemu
+  AUTHOR: bofh@FreeBSD.org
+
+  qemu 2.X version has been moved to qemu2. If you would like to use
+  2.X you should use qemu2. Otherwise you can use the new stable 
+  upstream branch of 3.0.X.
+
+  Portmaster users will need to run this command:
+
+  portmaster -o emulators/qemu2 emulators/qemu
+
 20190410:
   AFFECTS: users of python
   AUTHOR: antoine@FreeBSD.org

@@ -62,8 +62,8 @@ KDE_FRAMEWORKS_VERSION?=	5.57.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	18.12.3
-KDE_APPLICATIONS_SHLIB_VER?=	5.10.3
+KDE_APPLICATIONS_VERSION?=	19.04.0
+KDE_APPLICATIONS_SHLIB_VER?=	5.11.0
 KDE_APPLICATIONS_BRANCH?=	stable
 # Upstream moves old software to Attic/. Specify the newest applications release there.
 # Only the major version is used for the comparison.
@@ -168,20 +168,6 @@ PLIST_SUB+=		KDE_APPLICATIONS_VERSION="${KDE_APPLICATIONS_VERSION}"
 .    if ${_KDE_VERSION:M*5*}
 PLIST_SUB+=		KDE_PLASMA_VERSION="${KDE_PLASMA_VERSION}" \
 			KDE_FRAMEWORKS_VERSION="${KDE_FRAMEWORKS_VERSION}"
-.    endif
-# ==============================================================================
-
-# === HANDLE PYTHON ============================================================
-# TODO: Keep in sync with cmake/modules/PythonMacros.cmake
-_PYTHON_SHORT_VER=	${PYTHON_VERSION:S/^python//:S/.//}
-.    if ${_PYTHON_SHORT_VER} > 31
-PLIST_SUB+=		PYCACHE="__pycache__/" \
-			PYC_SUFFIX=cpython-${_PYTHON_SHORT_VER}.pyc \
-			PYO_SUFFIX=cpython-${_PYTHON_SHORT_VER}.pyo
-.    else
-PLIST_SUB+=		PYCACHE="" \
-			PYC_SUFFIX=pyc \
-			PYO_SUFFIX=pyo
 .    endif
 # ==============================================================================
 

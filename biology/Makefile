@@ -66,6 +66,7 @@
     SUBDIR += mafft
     SUBDIR += mapm3
     SUBDIR += migrate
+    SUBDIR += minimap2
     SUBDIR += molden
     SUBDIR += mopac
     SUBDIR += mrbayes
@@ -143,6 +144,7 @@
     SUBDIR += slclust
     SUBDIR += smithwaterman
     SUBDIR += stacks
+    SUBDIR += star
     SUBDIR += stringtie
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee

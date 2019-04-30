@@ -105,6 +105,7 @@
     SUBDIR += amd64-binutils
     SUBDIR += amd64-gcc
     SUBDIR += amd64-xtoolchain-gcc
+    SUBDIR += amqp-cpp
     SUBDIR += android-tools-adb
     SUBDIR += android-tools-fastboot
     SUBDIR += android-tools-simpleperf
@@ -286,6 +287,7 @@
     SUBDIR += cervisia
     SUBDIR += cflow
     SUBDIR += cflow2vcg
+    SUBDIR += cfr
     SUBDIR += cgdb
     SUBDIR += cgilib
     SUBDIR += cgit
@@ -614,6 +616,7 @@
     SUBDIR += eventxx
     SUBDIR += evolution-gconf-tools
     SUBDIR += exercisix
+    SUBDIR += f18
     SUBDIR += f77flow
     SUBDIR += fam
     SUBDIR += fastcrc
@@ -824,7 +827,6 @@
     SUBDIR += go-bindata
     SUBDIR += go-git
     SUBDIR += go-glide
-    SUBDIR += go-gocode
     SUBDIR += go-godef
     SUBDIR += go-protobuf
     SUBDIR += go-tools
@@ -839,6 +841,7 @@
     SUBDIR += goffice010
     SUBDIR += gogland-eap
     SUBDIR += gogs
+    SUBDIR += golint
     SUBDIR += google-gdata
     SUBDIR += google-perftools
     SUBDIR += google-styleguide
@@ -2003,6 +2006,7 @@
     SUBDIR += p5-Badger
     SUBDIR += p5-Benchmark-Timer
     SUBDIR += p5-Best
+    SUBDIR += p5-Border-Style
     SUBDIR += p5-Brannigan
     SUBDIR += p5-Bread-Board
     SUBDIR += p5-Bread-Board-Declare
@@ -2163,6 +2167,8 @@
     SUBDIR += p5-Clone-PP
     SUBDIR += p5-Code-Perl
     SUBDIR += p5-Color-ANSI-Util
+    SUBDIR += p5-Color-RGB-Util
+    SUBDIR += p5-Color-Theme-Role
     SUBDIR += p5-Commandable
     SUBDIR += p5-Commands-Guarded
     SUBDIR += p5-CommitBit
@@ -2637,6 +2643,7 @@
     SUBDIR += p5-Form-Sensible
     SUBDIR += p5-FreeBSD-i386-Ptrace
     SUBDIR += p5-FreezeThaw
+    SUBDIR += p5-Function-Fallback-CoreOrPP
     SUBDIR += p5-Function-Parameters
     SUBDIR += p5-Future
     SUBDIR += p5-Gearman
@@ -2878,6 +2885,7 @@
     SUBDIR += p5-Log-Simple
     SUBDIR += p5-Log-Trace
     SUBDIR += p5-Log-TraceMessages
+    SUBDIR += p5-Log-ger
     SUBDIR += p5-Logfile-Rotate
     SUBDIR += p5-Luka
     SUBDIR += p5-Lvalue
@@ -3157,6 +3165,7 @@
     SUBDIR += p5-Package-Constants
     SUBDIR += p5-Package-DeprecationManager
     SUBDIR += p5-Package-Generator
+    SUBDIR += p5-Package-MoreUtil
     SUBDIR += p5-Package-Stash
     SUBDIR += p5-Package-Stash-XS
     SUBDIR += p5-Package-Variant
@@ -3188,6 +3197,7 @@
     SUBDIR += p5-Parse-PerlConfig
     SUBDIR += p5-Parse-PlainConfig
     SUBDIR += p5-Parse-RecDescent
+    SUBDIR += p5-Parse-VarName
     SUBDIR += p5-Parse-Win32Registry
     SUBDIR += p5-Parse-Yapp
     SUBDIR += p5-ParseLex
@@ -3457,12 +3467,15 @@
     SUBDIR += p5-Term-ANSIColor
     SUBDIR += p5-Term-ANSIScreen
     SUBDIR += p5-Term-Animation
+    SUBDIR += p5-Term-App-Roles
     SUBDIR += p5-Term-CallEditor
     SUBDIR += p5-Term-Choose
     SUBDIR += p5-Term-Choose-Util
     SUBDIR += p5-Term-Clui
+    SUBDIR += p5-Term-Detect-Software
     SUBDIR += p5-Term-EditLine
     SUBDIR += p5-Term-Encoding
+    SUBDIR += p5-Term-Form
     SUBDIR += p5-Term-Menus
     SUBDIR += p5-Term-ProgressBar
     SUBDIR += p5-Term-ProgressBar-Quiet
@@ -4109,7 +4122,9 @@
     SUBDIR += phpsh
     SUBDIR += phpunit6
     SUBDIR += phpunit7
+    SUBDIR += phpunit8
     SUBDIR += physfs
+    SUBDIR += picojson
     SUBDIR += picp
     SUBDIR += picprog
     SUBDIR += pig
@@ -4128,7 +4143,6 @@
     SUBDIR += pmd
     SUBDIR += pmdk
     SUBDIR += poco
-    SUBDIR += poco-ssl
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4143,6 +4157,7 @@
     SUBDIR += projectcenter
     SUBDIR += protobuf
     SUBDIR += protobuf-c
+    SUBDIR += protobuf-java
     SUBDIR += protobuf25
     SUBDIR += protozero
     SUBDIR += pructl
@@ -4183,6 +4198,7 @@
     SUBDIR += py-IBMQuantumExperience
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
+    SUBDIR += py-Js2Py
     SUBDIR += py-Missing
     SUBDIR += py-MultiMapping
     SUBDIR += py-PEAK-Rules
@@ -4594,11 +4610,13 @@
     SUBDIR += py-freezegun
     SUBDIR += py-frozendict
     SUBDIR += py-fs
+    SUBDIR += py-fs2
     SUBDIR += py-fsm
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
     SUBDIR += py-funcsigs
     SUBDIR += py-functools32
+    SUBDIR += py-funcy
     SUBDIR += py-fusefs
     SUBDIR += py-fusepy
     SUBDIR += py-future
@@ -4629,6 +4647,7 @@
     SUBDIR += py-gobject
     SUBDIR += py-gobject3
     SUBDIR += py-google-apputils
+    SUBDIR += py-google-i18n-address
     SUBDIR += py-googleapis-common-protos
     SUBDIR += py-grab
     SUBDIR += py-graphene
@@ -4788,6 +4807,7 @@
     SUBDIR += py-monotonic
     SUBDIR += py-monty
     SUBDIR += py-more-itertools
+    SUBDIR += py-more-itertools5
     SUBDIR += py-mox
     SUBDIR += py-mox3
     SUBDIR += py-msgpack
@@ -4918,6 +4938,7 @@
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
     SUBDIR += py-proglog
+    SUBDIR += py-progress
     SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
     SUBDIR += py-prompt_toolkit1
@@ -4929,6 +4950,7 @@
     SUBDIR += py-ptrace
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
+    SUBDIR += py-purl
     SUBDIR += py-py
     SUBDIR += py-py-ubjson
     SUBDIR += py-py_interface
@@ -4970,6 +4992,7 @@
     SUBDIR += py-pyicu
     SUBDIR += py-pyinotify
     SUBDIR += py-pyinstaller
+    SUBDIR += py-pyjsparser
     SUBDIR += py-pyke
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylru
@@ -4990,6 +5013,7 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyrsistent
+    SUBDIR += py-pysdl2
     SUBDIR += py-pyshapelib
     SUBDIR += py-pyshp
     SUBDIR += py-pysparklines
@@ -5112,7 +5136,6 @@
     SUBDIR += py-schema
     SUBDIR += py-schematics-patched
     SUBDIR += py-scripttest
-    SUBDIR += py-sdl2
     SUBDIR += py-selection
     SUBDIR += py-selectors2
     SUBDIR += py-selectors34
@@ -5127,6 +5150,7 @@
     SUBDIR += py-setuptools_hg
     SUBDIR += py-setuptools_scm
     SUBDIR += py-setuptools_scm_git_archive
+    SUBDIR += py-sexpdata
     SUBDIR += py-sh
     SUBDIR += py-shapely
     SUBDIR += py-shellingham
@@ -5928,6 +5952,7 @@
     SUBDIR += rubygem-pry-rails
     SUBDIR += rubygem-pry-remote-em
     SUBDIR += rubygem-ptreloaded
+    SUBDIR += rubygem-puppet-resource_api
     SUBDIR += rubygem-pygments.rb
     SUBDIR += rubygem-r18n-core
     SUBDIR += rubygem-rabl
@@ -5961,7 +5986,6 @@
     SUBDIR += rubygem-react-rails-rails5
     SUBDIR += rubygem-readwritesettings
     SUBDIR += rubygem-recaptcha
-    SUBDIR += rubygem-recaptcha3
     SUBDIR += rubygem-recursive-open-struct
     SUBDIR += rubygem-redis-activesupport
     SUBDIR += rubygem-redis-activesupport-rails5
@@ -6264,6 +6288,7 @@
     SUBDIR += styx
     SUBDIR += subversion
     SUBDIR += subversion-book
+    SUBDIR += subversion-lts
     SUBDIR += subversion19
     SUBDIR += subversive
     SUBDIR += svk

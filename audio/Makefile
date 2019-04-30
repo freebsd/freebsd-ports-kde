@@ -140,7 +140,6 @@
     SUBDIR += etktab
     SUBDIR += exaile
     SUBDIR += exaile-devel
-    SUBDIR += extace
     SUBDIR += ezstream
     SUBDIR += faac
     SUBDIR += faad
@@ -473,7 +472,6 @@
     SUBDIR += linux-c7-pulseaudio-utils
     SUBDIR += linux-c7-sdl_mixer
     SUBDIR += linux-laudio
-    SUBDIR += linux-skype_oss_wrapper
     SUBDIR += linuxsampler
     SUBDIR += listener
     SUBDIR += lmms
@@ -566,11 +564,11 @@
     SUBDIR += noise-repellent-lv2
     SUBDIR += normalize
     SUBDIR += nosefart
+    SUBDIR += noson-app
     SUBDIR += nspmod
     SUBDIR += nuvolaplayer
     SUBDIR += oaml
     SUBDIR += ocp
-    SUBDIR += openal
     SUBDIR += openal-soft
     SUBDIR += opencore-amr
     SUBDIR += openspc
@@ -635,6 +633,7 @@
     SUBDIR += pear-Text_Spell_Audio
     SUBDIR += penguinsap
     SUBDIR += pianobar
+    SUBDIR += pianod2
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pithos
@@ -703,7 +702,6 @@
     SUBDIR += qsampler
     SUBDIR += qsynth
     SUBDIR += quimup
-    SUBDIR += raop_play
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re

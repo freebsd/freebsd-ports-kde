@@ -801,6 +801,7 @@
     SUBDIR += p5-Dancer-Plugin-REST
     SUBDIR += p5-Dancer-Plugin-RPC
     SUBDIR += p5-Dancer-Plugin-SiteMap
+    SUBDIR += p5-Dancer-Plugin-Swagger
     SUBDIR += p5-Dancer-Plugin-ValidationClass
     SUBDIR += p5-Dancer-Session-Cookie
     SUBDIR += p5-Dancer-Template-Xslate
@@ -992,6 +993,7 @@
     SUBDIR += p5-HTTP-Session-State-MobileAgentID
     SUBDIR += p5-HTTP-Session-Store-DBI
     SUBDIR += p5-HTTP-Session2
+    SUBDIR += p5-HTTP-Simple
     SUBDIR += p5-HTTP-SimpleLinkChecker
     SUBDIR += p5-HTTP-Size
     SUBDIR += p5-HTTP-Thin
@@ -1480,6 +1482,7 @@
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
+    SUBDIR += py-beautifulsoup460
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
@@ -1518,6 +1521,9 @@
     SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
+    SUBDIR += py-dj22-django-taggit
+    SUBDIR += py-dj22-django-treebeard
+    SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1532,6 +1538,7 @@
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-braces
     SUBDIR += py-django-bulk-update
+    SUBDIR += py-django-cacheops
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
@@ -1582,6 +1589,7 @@
     SUBDIR += py-django-pipeline
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
+    SUBDIR += py-django-prometheus
     SUBDIR += py-django-pyscss
     SUBDIR += py-django-ranged-response
     SUBDIR += py-django-recaptcha
@@ -1676,6 +1684,7 @@
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-dlp
+    SUBDIR += py-google-cloud-logging
     SUBDIR += py-google-cloud-storage
     SUBDIR += py-google-cloud-translate
     SUBDIR += py-google-cloud-vision
@@ -2047,7 +2056,6 @@
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
-    SUBDIR += rubygem-jquery-atwho-rails13
     SUBDIR += rubygem-jquery-rails
     SUBDIR += rubygem-jquery-rails-rails5
     SUBDIR += rubygem-jquery-rails-rails50
@@ -2167,7 +2175,6 @@
     SUBDIR += rubygem-savon
     SUBDIR += rubygem-sawyer
     SUBDIR += rubygem-select2-rails
-    SUBDIR += rubygem-select2-rails3
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
     SUBDIR += rubygem-simple-rss
@@ -2242,7 +2249,6 @@
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid
-    SUBDIR += squid-devel
     SUBDIR += squid3
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
