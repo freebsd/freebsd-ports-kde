@@ -6028,6 +6028,8 @@
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-playlist.html
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-playlistitem-members.html
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-playlistitem.html
+%%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-qtmultimedia-members.html
+%%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-qtmultimedia.html
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-radio-members.html
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-radio.html
 %%QT_DOCDIR%%/qtmultimedia/qml-qtmultimedia-radiodata-members.html
