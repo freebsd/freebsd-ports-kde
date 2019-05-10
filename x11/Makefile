@@ -306,6 +306,7 @@
     SUBDIR += sterm
     SUBDIR += stjerm
     SUBDIR += swarp
+    SUBDIR += swaybg
     SUBDIR += swayidle
     SUBDIR += swaylock
     SUBDIR += sxhkd
@@ -480,7 +481,6 @@
     SUBDIR += xscreensaver-gnome
     SUBDIR += xscreensaver-gnome-hacks
     SUBDIR += xscreensaver.app
-    SUBDIR += xsel
     SUBDIR += xsel-conrad
     SUBDIR += xset
     SUBDIR += xsetmode

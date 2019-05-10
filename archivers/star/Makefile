@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	star
-DISTVERSION=	1.6
+PORTVERSION=	1.6
+PORTREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	SF/s-tar
 
@@ -13,9 +14,12 @@ LICENSE=	CDDL GPLv2
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/CDDL.Schily.txt
 
+BUILD_DEPENDS=	gm4:devel/m4
+
 USES=		gmake gettext iconv tar:bzip2
 
-MAKE_ARGS=	GMAKE_NOWARN=true DESTDIR=${STAGEDIR} INS_BASE=${PREFIX} MANBASE=
+MAKE_ARGS=	GMAKE_NOWARN=true DESTDIR=${STAGEDIR} INS_BASE=${PREFIX} \
+		MANBASE=
 
 PORTDOCS=	README README.crash README.mtio README.pattern STARvsGNUTAR \
 		README.ACL README.largefiles README.otherbugs \
@@ -24,9 +28,23 @@ PORTDOCS=	README README.crash README.mtio README.pattern STARvsGNUTAR \
 OPTIONS_DEFINE=	DOCS
 
 post-patch:
-	@${FIND} ${WRKSRC} -type f -print \
-		| ${XARGS} ${REINPLACE_CMD} -e "s@/etc/default@${PREFIX}/etc@g"
 	@${MV} ${WRKSRC}/rmt/rmt.1 ${WRKSRC}/rmt/srmt.1
+	@${REINPLACE_CMD} -e "s@/etc/default@${PREFIX}/etc@g" \
+		${WRKSRC}/Mcsw \
+		${WRKSRC}/include/schily/deflts.h \
+		${WRKSRC}/rmt/rmt.c \
+		${WRKSRC}/rmt/rmt.dfl \
+		${WRKSRC}/rmt/srmt.1 \
+		${WRKSRC}/star/Makefile.dfl \
+		${WRKSRC}/star/defaults.c \
+		${WRKSRC}/star/star.1 \
+		${WRKSRC}/star/star.c \
+		${WRKSRC}/star/star.dfl \
+		${WRKSRC}/star/suntar.c
+
+pre-build:
+	@${WRKSRC}/conf/cc-config.sh cc cc ${WRKSRC}/incs/Dcc.${ARCH}-freebsd
+	@cd ${WRKSRC}/RULES && ${SH} ./MKLINKS
 
 post-stage:
 	@${RM} ${STAGEDIR}/${PREFIX}/bin/mt \

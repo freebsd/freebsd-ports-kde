@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	puppetdb
-PORTVERSION=	6.3.1
+PORTVERSION=	6.3.2
 CATEGORIES=	databases java
 MASTER_SITES=	https://downloads.puppetlabs.com/puppetdb/
 PKGNAMESUFFIX=	6
@@ -11,8 +11,7 @@ COMMENT=	PuppetDB storeconfigs backend
 
 LICENSE=	APACHE20
 
-RUN_DEPENDS=	bash:shells/bash \
-		puppet:sysutils/puppet6
+RUN_DEPENDS=	bash:shells/bash
 
 USE_RC_SUBR=	puppetdb
 

@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	blaze
-DISTVERSION=	3.4
-PORTREVISION=	4
+DISTVERSION=	3.5
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/downloads/
 

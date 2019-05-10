@@ -28,7 +28,6 @@
     SUBDIR += dhex
     SUBDIR += diakonos
     SUBDIR += dkns
-    SUBDIR += dlangide
     SUBDIR += drjava
     SUBDIR += dte
     SUBDIR += e3
@@ -254,6 +253,7 @@
     SUBDIR += xcoral
     SUBDIR += xed
     SUBDIR += xi-core
+    SUBDIR += xi-term
     SUBDIR += xmlcopyeditor
     SUBDIR += xvile
     SUBDIR += yudit

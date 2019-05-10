@@ -133,8 +133,8 @@
     SUBDIR += enscribe
     SUBDIR += epos-devel
     SUBDIR += eq10q-lv2
-    SUBDIR += esound
     SUBDIR += espeak
+    SUBDIR += espressivo-lv2
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
@@ -248,7 +248,6 @@
     SUBDIR += gstreamer-plugins-amrwbdec
     SUBDIR += gstreamer-plugins-cdaudio
     SUBDIR += gstreamer-plugins-cdparanoia
-    SUBDIR += gstreamer-plugins-esound
     SUBDIR += gstreamer-plugins-faac
     SUBDIR += gstreamer-plugins-faad
     SUBDIR += gstreamer-plugins-flac
@@ -325,9 +324,6 @@
     SUBDIR += harp
     SUBDIR += herrie
     SUBDIR += hexter
-    SUBDIR += hs-ALUT
-    SUBDIR += hs-OpenAL
-    SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
     SUBDIR += hvl2wav
     SUBDIR += hydrogen
@@ -424,6 +420,7 @@
     SUBDIR += libogg
     SUBDIR += liboggz
     SUBDIR += libopenmpt
+    SUBDIR += libopenshot-audio
     SUBDIR += libopenspc
     SUBDIR += libopusenc
     SUBDIR += libsamplerate
@@ -487,6 +484,7 @@
     SUBDIR += luppp
     SUBDIR += lv2
     SUBDIR += lv2file
+    SUBDIR += lv2lint
     SUBDIR += lvtk
     SUBDIR += lxmusic
     SUBDIR += mac
@@ -694,6 +692,7 @@
     SUBDIR += py-tagpy
     SUBDIR += py-vorbis
     SUBDIR += py-wavio
+    SUBDIR += py-webrtcvad
     SUBDIR += py-xmms2
     SUBDIR += pytone
     SUBDIR += qjackctl
@@ -810,6 +809,7 @@
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
     SUBDIR += thunar-media-tags-plugin
+    SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity
     SUBDIR += timidity++
