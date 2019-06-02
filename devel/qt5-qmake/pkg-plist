@@ -318,6 +318,7 @@
 %%QT_MKSPECDIR%%/features/win32/stl_off.prf
 %%QT_MKSPECDIR%%/features/win32/windeployqt.prf
 %%QT_MKSPECDIR%%/features/win32/windows.prf
+%%QT_MKSPECDIR%%/features/win32/windows_vulkan_sdk.prf
 %%QT_MKSPECDIR%%/features/winrt/console.prf
 %%QT_MKSPECDIR%%/features/winrt/default_pre.prf
 %%QT_MKSPECDIR%%/features/winrt/package_manifest.prf

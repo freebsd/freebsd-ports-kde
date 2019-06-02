@@ -6164,6 +6164,16 @@
 %%QT_EXAMPLEDIR%%/webenginewidgets/minimal/doc/src/minimal.qdoc
 %%QT_EXAMPLEDIR%%/webenginewidgets/minimal/main.cpp
 %%QT_EXAMPLEDIR%%/webenginewidgets/minimal/minimal.pro
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/data/data.qrc
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/data/icon.svg
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/data/index.html
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/data/style.css
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/doc/images/printme-example.png
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/doc/src/printme.qdoc
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/main.cpp
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/printhandler.cpp
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/printhandler.h
+%%QT_EXAMPLEDIR%%/webenginewidgets/printme/printme.pro
 %%QT_EXAMPLEDIR%%/webenginewidgets/simplebrowser/browser.cpp
 %%QT_EXAMPLEDIR%%/webenginewidgets/simplebrowser/browser.h
 %%QT_EXAMPLEDIR%%/webenginewidgets/simplebrowser/browserwindow.cpp
