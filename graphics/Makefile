@@ -65,6 +65,7 @@
     SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
+    SUBDIR += bitmap
     SUBDIR += blender
     SUBDIR += blender-doc
     SUBDIR += bmeps
@@ -88,7 +89,6 @@
     SUBDIR += cfdg
     SUBDIR += charls
     SUBDIR += cimg
-    SUBDIR += cinepaint
     SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
@@ -138,6 +138,7 @@
     SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-current-kmod
+    SUBDIR += drm-devel-kmod
     SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
@@ -403,9 +404,11 @@
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kolourpaint
+    SUBDIR += kooka
     SUBDIR += kphotoalbum
     SUBDIR += krita
     SUBDIR += kudu
+    SUBDIR += kxstitch
     SUBDIR += l2p
     SUBDIR += largetifftools
     SUBDIR += laternamagica
@@ -548,6 +551,7 @@
     SUBDIR += minder
     SUBDIR += ming
     SUBDIR += mirage
+    SUBDIR += mirtk
     SUBDIR += mmrecover
     SUBDIR += movit
     SUBDIR += mozjpeg
@@ -731,6 +735,7 @@
     SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
+    SUBDIR += peruse
     SUBDIR += pfstools
     SUBDIR += pgplot
     SUBDIR += pho

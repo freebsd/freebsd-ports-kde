@@ -1,5 +1,4 @@
 # $FreeBSD$
-PORTREVISION=	1
 #
 
     COMMENT = Instant messaging
@@ -38,6 +37,7 @@ PORTREVISION=	1
     SUBDIR += jitsi
     SUBDIR += kaccounts-integration
     SUBDIR += kaccounts-providers
+    SUBDIR += kaidan
     SUBDIR += kde-telepathy
     SUBDIR += kopete
     SUBDIR += ktp-accounts-kcm
@@ -145,7 +145,6 @@ PORTREVISION=	1
     SUBDIR += py-xmpppy
     SUBDIR += py-xmpppy-irc
     SUBDIR += qTox
-    SUBDIR += qq
     SUBDIR += quaternion
     SUBDIR += qxmpp-qt5
     SUBDIR += ricochet

@@ -43,6 +43,7 @@
     SUBDIR += check_mk_agent
     SUBDIR += check_multi
     SUBDIR += check_mysql_health
+    SUBDIR += check_nwc_health
     SUBDIR += check_ssl_cert
     SUBDIR += chillispot
     SUBDIR += choparp
@@ -94,8 +95,12 @@
     SUBDIR += icingaweb2-module-generictts
     SUBDIR += icingaweb2-module-grafana
     SUBDIR += icingaweb2-module-graphite
+    SUBDIR += icingaweb2-module-idoreports
     SUBDIR += icingaweb2-module-ipl
     SUBDIR += icingaweb2-module-map
+    SUBDIR += icingaweb2-module-pdfexport
+    SUBDIR += icingaweb2-module-reactbundle
+    SUBDIR += icingaweb2-module-reporting
     SUBDIR += icingaweb2-module-vsphere
     SUBDIR += icmpmonitor
     SUBDIR += icmpquery
@@ -203,8 +208,8 @@
     SUBDIR += nsca-ng-client
     SUBDIR += nsca27
     SUBDIR += nsca27-client
-    SUBDIR += nstat
     SUBDIR += nsd_exporter
+    SUBDIR += nstat
     SUBDIR += nstreams
     SUBDIR += nvidia_gpu_prometheus_exporter
     SUBDIR += observium
@@ -343,6 +348,11 @@
     SUBDIR += rubygem-oxidized
     SUBDIR += rubygem-oxidized-script
     SUBDIR += rubygem-oxidized-web
+    SUBDIR += rubygem-riemann-client
+    SUBDIR += rubygem-riemann-dash
+    SUBDIR += rubygem-riemann-rabbitmq
+    SUBDIR += rubygem-riemann-tail
+    SUBDIR += rubygem-riemann-tools
     SUBDIR += rubygem-snmp
     SUBDIR += rubygem-visage-app
     SUBDIR += sblim-wbemcli

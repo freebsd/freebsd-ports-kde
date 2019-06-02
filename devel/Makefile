@@ -56,6 +56,8 @@
     SUBDIR += R-cran-plogr
     SUBDIR += R-cran-plyr
     SUBDIR += R-cran-praise
+    SUBDIR += R-cran-prettyunits
+    SUBDIR += R-cran-progress
     SUBDIR += R-cran-promises
     SUBDIR += R-cran-proto
     SUBDIR += R-cran-purrr
@@ -124,6 +126,7 @@
     SUBDIR += apr2
     SUBDIR += arachne-pnr
     SUBDIR += arcanist
+    SUBDIR += arcanist-lib
     SUBDIR += arduino
     SUBDIR += arduino-avrdude
     SUBDIR += arduino-bsd-mk
@@ -318,11 +321,13 @@
     SUBDIR += cl-trivial-gray-streams-sbcl
     SUBDIR += clanlib
     SUBDIR += clanlib1
+    SUBDIR += clazy
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
     SUBDIR += cligen
     SUBDIR += clinfo
+    SUBDIR += clipp
     SUBDIR += clisp-hyperspec
     SUBDIR += clixon
     SUBDIR += clojure-cider
@@ -431,6 +436,7 @@
     SUBDIR += darts
     SUBDIR += dash.el
     SUBDIR += datadraw
+    SUBDIR += date
     SUBDIR += dbus
     SUBDIR += dbus-c++
     SUBDIR += dbus-glib
@@ -488,6 +494,7 @@
     SUBDIR += dsymbol
     SUBDIR += dub
     SUBDIR += dulwich
+    SUBDIR += dupl
     SUBDIR += duplo
     SUBDIR += dwarfdump
     SUBDIR += dxa65
@@ -505,6 +512,7 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
+    SUBDIR += electron4
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -557,6 +565,7 @@
     SUBDIR += elixir-unsafe
     SUBDIR += embb
     SUBDIR += emscripten
+    SUBDIR += entt
     SUBDIR += epl.el
     SUBDIR += epm
     SUBDIR += epydoc
@@ -605,6 +614,7 @@
     SUBDIR += erlang-syslog
     SUBDIR += erlang-unicode_util_compat
     SUBDIR += es-eric6
+    SUBDIR += estd
     SUBDIR += etcd
     SUBDIR += etcd31
     SUBDIR += etcd32
@@ -779,6 +789,7 @@
     SUBDIR += git-modes
     SUBDIR += git-remote-hg
     SUBDIR += git-review
+    SUBDIR += git-subrepo
     SUBDIR += git-subversion
     SUBDIR += git-town
     SUBDIR += gitaly
@@ -890,6 +901,7 @@
     SUBDIR += hadoop2
     SUBDIR += hapy
     SUBDIR += hcs12mem
+    SUBDIR += heaptrack
     SUBDIR += heimdall
     SUBDIR += hexcompare
     SUBDIR += hexd
@@ -997,6 +1009,8 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
+    SUBDIR += jetbrains-clion
+    SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
     SUBDIR += jfrog-cli
     SUBDIR += jiic
@@ -1105,10 +1119,12 @@
     SUBDIR += libbinio
     SUBDIR += libbonobo
     SUBDIR += libbonobo-reference
+    SUBDIR += libbpfjit
     SUBDIR += libbson
     SUBDIR += libburn
     SUBDIR += libcbor
     SUBDIR += libccid
+    SUBDIR += libcdb
     SUBDIR += libcfg
     SUBDIR += libcfu
     SUBDIR += libchipcard
@@ -1218,6 +1234,7 @@
     SUBDIR += liblangtag
     SUBDIR += liblas
     SUBDIR += liblas12
+    SUBDIR += liblpm
     SUBDIR += liblnk
     SUBDIR += liblockfile
     SUBDIR += liblogging
@@ -1280,6 +1297,7 @@
     SUBDIR += libpthread-stubs
     SUBDIR += libqb
     SUBDIR += libqcow
+    SUBDIR += libqsbr
     SUBDIR += libqtxdg
     SUBDIR += libr3
     SUBDIR += librcc
@@ -1329,7 +1347,9 @@
     SUBDIR += libtar
     SUBDIR += libtecla
     SUBDIR += libtermkey
+    SUBDIR += libtextstyle
     SUBDIR += libthai
+    SUBDIR += libthmap
     SUBDIR += libtifiles2
     SUBDIR += libtool
     SUBDIR += libtpl
@@ -1520,7 +1540,6 @@
     SUBDIR += mk-configure
     SUBDIR += mm
     SUBDIR += mm-common
-    SUBDIR += modules2tuple
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
@@ -4071,6 +4090,7 @@
     SUBDIR += py-asciimatics
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspects
+    SUBDIR += py-aspy.yaml
     SUBDIR += py-aspyct
     SUBDIR += py-astor
     SUBDIR += py-astroid
@@ -4202,6 +4222,7 @@
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
+    SUBDIR += py-cfgv
     SUBDIR += py-cftime
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
@@ -4422,8 +4443,11 @@
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
+    SUBDIR += py-identify
     SUBDIR += py-ijson
     SUBDIR += py-imgkit
+    SUBDIR += py-importlib-metadata
+    SUBDIR += py-importlib-resources
     SUBDIR += py-incremental
     SUBDIR += py-inflect
     SUBDIR += py-inflection
@@ -4581,6 +4605,7 @@
     SUBDIR += py-nbconvert
     SUBDIR += py-nbformat
     SUBDIR += py-ncurses
+    SUBDIR += py-nodeenv
     SUBDIR += py-nose
     SUBDIR += py-nose-cov
     SUBDIR += py-nose-timer
@@ -4667,6 +4692,7 @@
     SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
+    SUBDIR += py-pip-api
     SUBDIR += py-pip-tools
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
@@ -4684,6 +4710,7 @@
     SUBDIR += py-poyo
     SUBDIR += py-pp
     SUBDIR += py-pqueue
+    SUBDIR += py-pre-commit
     SUBDIR += py-pretend
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
@@ -4692,7 +4719,6 @@
     SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
     SUBDIR += py-prompt_toolkit1
-    SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
@@ -4779,6 +4805,7 @@
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-flake8
     SUBDIR += py-pytest-flakes
+    SUBDIR += py-pytest-forked
     SUBDIR += py-pytest-helpers-namespace
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
@@ -4814,12 +4841,14 @@
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
     SUBDIR += py-pyudev
+    SUBDIR += py-pyupgrade
     SUBDIR += py-pyutil
     SUBDIR += py-pyvalid
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
     SUBDIR += py-pyxml2obj
+    SUBDIR += py-q
     SUBDIR += py-qpid
     SUBDIR += py-qserve
     SUBDIR += py-qt5
@@ -4970,6 +4999,7 @@
     SUBDIR += py-tinyarray
     SUBDIR += py-tinyrpc
     SUBDIR += py-tipper
+    SUBDIR += py-tokenize-rt
     SUBDIR += py-toolz
     SUBDIR += py-tooz
     SUBDIR += py-toposort
@@ -5035,6 +5065,7 @@
     SUBDIR += py-wcwidth
     SUBDIR += py-weakrefmethod
     SUBDIR += py-weblib
+    SUBDIR += py-websockets
     SUBDIR += py-websockify
     SUBDIR += py-wheel
     SUBDIR += py-whichcraft
@@ -5076,6 +5107,7 @@
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
+    SUBDIR += py-zipp
     SUBDIR += py-zkpython
     SUBDIR += py-zope.annotation
     SUBDIR += py-zope.app.applicationcontrol
@@ -5208,6 +5240,7 @@
     SUBDIR += qtcreator
     SUBDIR += quickcheck++
     SUBDIR += quilt
+    SUBDIR += rabs
     SUBDIR += racer
     SUBDIR += racerd
     SUBDIR += radare2
@@ -5299,6 +5332,7 @@
     SUBDIR += rubygem-attic
     SUBDIR += rubygem-attr_required
     SUBDIR += rubygem-authlogic
+    SUBDIR += rubygem-avro
     SUBDIR += rubygem-awesome_print
     SUBDIR += rubygem-aws-eventstream
     SUBDIR += rubygem-aws-sdk
@@ -5485,6 +5519,7 @@
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gettext-setup
     SUBDIR += rubygem-gettext_i18n_rails
+    SUBDIR += rubygem-gettext_i18n_rails_js-rails5
     SUBDIR += rubygem-gettext_i18n_rails_js-rails50
     SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
@@ -5493,6 +5528,7 @@
     SUBDIR += rubygem-git-version-bump
     SUBDIR += rubygem-github_api
     SUBDIR += rubygem-gitlab-default_value_for
+    SUBDIR += rubygem-gitlab-labkit
     SUBDIR += rubygem-gitlab-pygments.rb
     SUBDIR += rubygem-gitlab-sidekiq-fetcher
     SUBDIR += rubygem-gitlab_git
@@ -5501,6 +5537,7 @@
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf371
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
@@ -5523,7 +5560,7 @@
     SUBDIR += rubygem-hashie-forbidden_attributes
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
-    SUBDIR += rubygem-health_check26-rails50
+    SUBDIR += rubygem-health_check26-rails5
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
@@ -5543,6 +5580,7 @@
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-iobuffer
+    SUBDIR += rubygem-irb
     SUBDIR += rubygem-iso8601
     SUBDIR += rubygem-jaeger-client
     SUBDIR += rubygem-jammit
@@ -5673,13 +5711,13 @@
     SUBDIR += rubygem-pathutil
     SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
-    SUBDIR += rubygem-peek-gc-rails50
+    SUBDIR += rubygem-peek-gc-rails5
     SUBDIR += rubygem-peek-host
     SUBDIR += rubygem-peek-performance_bar
     SUBDIR += rubygem-peek-rails4
-    SUBDIR += rubygem-peek-rails50
-    SUBDIR += rubygem-peek-rblineprof-rails50
-    SUBDIR += rubygem-peek-redis-rails50
+    SUBDIR += rubygem-peek-rails5
+    SUBDIR += rubygem-peek-rblineprof-rails5
+    SUBDIR += rubygem-peek-redis-rails5
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
     SUBDIR += rubygem-pleaserun
@@ -5715,6 +5753,7 @@
     SUBDIR += rubygem-rails-deprecated_sanitizer-rails50
     SUBDIR += rubygem-rails-i18n
     SUBDIR += rubygem-rails-i18n-4
+    SUBDIR += rubygem-rails-i18n-rails5
     SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
@@ -5920,6 +5959,8 @@
     SUBDIR += rubygem-uuid
     SUBDIR += rubygem-uuidtools
     SUBDIR += rubygem-validatable
+    SUBDIR += rubygem-validate_email
+    SUBDIR += rubygem-validate_url
     SUBDIR += rubygem-versionomy
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-warbler
@@ -5929,6 +5970,7 @@
     SUBDIR += rubygem-web-console-rails50
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-webby
+    SUBDIR += rubygem-webfinger
     SUBDIR += rubygem-webpacker-rails5
     SUBDIR += rubygem-webpacker-rails50
     SUBDIR += rubygem-will_paginate
@@ -5993,7 +6035,6 @@
     SUBDIR += skalibs
     SUBDIR += slf4j
     SUBDIR += slibtool
-    SUBDIR += smack
     SUBDIR += smake
     SUBDIR += smc
     SUBDIR += smv
@@ -6197,6 +6238,7 @@
     SUBDIR += z80asm
     SUBDIR += z80ex
     SUBDIR += zanata-cli
+    SUBDIR += zanata-platform
     SUBDIR += zapcc
     SUBDIR += zeal
     SUBDIR += zfp

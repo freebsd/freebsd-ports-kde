@@ -90,6 +90,7 @@
     SUBDIR += bareos17-client
     SUBDIR += bareos17-client-static
     SUBDIR += bareos17-server
+    SUBDIR += barrier
     SUBDIR += bastille
     SUBDIR += batmon
     SUBDIR += battmond
@@ -251,7 +252,6 @@
     SUBDIR += diskscrub
     SUBDIR += disktool
     SUBDIR += disktype
-    SUBDIR += djmount
     SUBDIR += dmg2img
     SUBDIR += dmidecode
     SUBDIR += docker
@@ -673,6 +673,7 @@
     SUBDIR += mgeupsd
     SUBDIR += minikube
     SUBDIR += minimunin
+    SUBDIR += minipro
     SUBDIR += minirsyslogd
     SUBDIR += mixer
     SUBDIR += mkdesktop
@@ -1003,6 +1004,7 @@
     SUBDIR += py-azure-cli-vm
     SUBDIR += py-bcfg2
     SUBDIR += py-bitrot
+    SUBDIR += py-borgmatic
     SUBDIR += py-cdmi
     SUBDIR += py-cpuinfo
     SUBDIR += py-croniter
@@ -1026,6 +1028,8 @@
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
+    SUBDIR += py-leviathan
+    SUBDIR += py-mitogen
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
     SUBDIR += py-packet-python
@@ -1283,6 +1287,7 @@
     SUBDIR += swapd
     SUBDIR += swapexd
     SUBDIR += swapmon
+    SUBDIR += swapusage
     SUBDIR += sweeper
     SUBDIR += symlinks
     SUBDIR += symon
@@ -1304,6 +1309,7 @@
     SUBDIR += syslog-ng318
     SUBDIR += syslog-ng319
     SUBDIR += syslog-ng320
+    SUBDIR += syslog-ng321
     SUBDIR += syslog-ng39
     SUBDIR += syslogger
     SUBDIR += sysrc
@@ -1371,8 +1377,8 @@
     SUBDIR += u-boot-nanopi-a64
     SUBDIR += u-boot-nanopi-m1plus
     SUBDIR += u-boot-nanopi-neo
-    SUBDIR += u-boot-nanopi-neo2
     SUBDIR += u-boot-nanopi-neo-air
+    SUBDIR += u-boot-nanopi-neo2
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2

@@ -11,7 +11,6 @@ COMMENT=	Common Lisp implementation
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GNU-GPL
 
-BROKEN_ia64=	Does not compile
 BROKEN_powerpc=	Does not compile
 BROKEN_sparc64=	Does not compile
 
@@ -19,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/libavcall.a:devel/libffcall
 LIB_DEPENDS=	libreadline.so:devel/readline \
 		libsigsegv.so:devel/libsigsegv
 
-USES=		gettext ghostscript gnome iconv
+USES=		compiler gettext ghostscript gnome iconv localbase:ldflags
 USE_GCC=	any
 USE_GITLAB=	yes
 
@@ -34,11 +33,11 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" --mandir="${MANPREFIX}/man" \
 		--docdir="${DOCSDIR}" --with-libiconv=${ICONV_PREFIX}
 CONFIGURE_TARGET=	${ARCH:S/amd64/x86_64/}-portbld-freebsd${OSREL}
 # Complaints if the environment changes between build stages.
+LDFLAGS+=	${LDFLAGS_${CHOSEN_COMPILER_TYPE}}
+LDFLAGS_gcc=	-lthr
 MAKE_ENV=	${CONFIGURE_ENV}
 BUILD_WRKSRC=	${WRKSRC}/src
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_JOBS_UNSAFE=yes
 
 OPTIONS_DEFINE=	ASDF BDB CLX_MIT CLX_NEW DBUS FASTCGI GDBM GLIBC GTK2 \

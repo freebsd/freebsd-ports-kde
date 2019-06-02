@@ -1,4 +1,3 @@
-# Created by: mat
 # $FreeBSD$
 
 PORTNAME=	perl
@@ -14,7 +13,6 @@ MASTER_SITES=	LOCAL/mat/perl GH
 #MASTER_SITES=	CPAN/../../src/5.0
 DIST_SUBDIR=	perl
 
-# XXX -> perl@
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	Practical Extraction and Report Language
 
@@ -23,7 +21,7 @@ LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
 LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 
-# Uncomment when the default Perl is switched to 5.2(X+2)
+# Uncomment when the default Perl is switched to 5.3(X+2)
 #DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
 #EXPIRATION_DATE=<Release date of .0 + 3 years>
 
@@ -37,7 +35,7 @@ USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
 USE_GITHUB=	yes
 GH_ACCOUNT=	Perl
 GH_PROJECT=	perl5
-GH_TAGNAME=	v5.29.10-57-g2ede670576
+GH_TAGNAME=	v5.31.0-72-g2324bdb9a8
 
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \
@@ -191,6 +189,10 @@ _PERL5_DEFAULT_FILE=	/tmp/PERL5_DEFAULT
 # Get the default version, and possibly, overwrite it.
 .include <bsd.port.options.mk>
 .sinclude "${_PERL5_DEFAULT_FILE}"
+
+.if ${OSVERSION} >= 1200004
+CONFIGURE_ARGS+=	-Accflags='-DUSE_THREAD_SAFE_LOCALE'
+.endif
 
 # if this port is default due PERL5_DEFAULT
 # change PKGNAME to reflect this

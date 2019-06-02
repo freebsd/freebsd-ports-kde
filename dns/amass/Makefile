@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	amass
-DISTVERSION=	2.9.10
+DISTVERSION=	3.0.3
 CATEGORIES=	dns
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -36,6 +36,7 @@ GH_TUPLE=	OWASP:Amass:${DISTVERSIONFULL}:main/src/github.com/OWASP/Amass \
 		mattn:go-colorable:v0.0.9:colorable/src/github.com/mattn/go-colorable \
 		mattn:go-isatty:v0.0.4:isatty/src/github.com/mattn/go-isatty \
 		miekg:dns:v1.0.8:dns/src/github.com/miekg/dns \
+		mitchellh:go-homedir:v1.1.0:homedir/src/github.com/mitchellh/go-homedir \
 		PuerkitoBio:fetchbot:1f502d6:fetchbot/src/github.com/PuerkitoBio/fetchbot \
 		PuerkitoBio:goquery:v1.4.1:goquery/src/github.com/PuerkitoBio/goquery \
 		qasaur:gremgo:fa23ada:gremgo/src/github.com/qasaur/gremgo \
@@ -52,7 +53,7 @@ GH_TUPLE=	OWASP:Amass:${DISTVERSIONFULL}:main/src/github.com/OWASP/Amass \
 		golang:tools:18207bb:tools/src/golang.org/x/tools \
 		go-sourcemap:sourcemap:b019cc3:sourcemap/src/github.com/go-sourcemap/sourcemap
 
-PROGS=		${PORTNAME} ${PORTNAME}.db ${PORTNAME}.netdomains ${PORTNAME}.viz
+PROGS=		${PORTNAME}
 
 PLIST_FILES=	${PROGS:C/^/bin\//}
 

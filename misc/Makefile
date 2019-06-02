@@ -168,15 +168,16 @@
     SUBDIR += gnome-osd
     SUBDIR += gnome-user-docs
     SUBDIR += gnu-watch
-    SUBDIR += gnuit
     SUBDIR += gnuls
     SUBDIR += gnustep-examples
+    SUBDIR += gobuster
     SUBDIR += gone
     SUBDIR += gonvert
     SUBDIR += gplink
     SUBDIR += granulate
     SUBDIR += grc
     SUBDIR += gwhich
+    SUBDIR += hashdb
     SUBDIR += hb
     SUBDIR += hello
     SUBDIR += help2man
@@ -217,6 +218,7 @@
     SUBDIR += lazyread
     SUBDIR += lc
     SUBDIR += lesspipe
+    SUBDIR += lf
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
@@ -241,6 +243,7 @@
     SUBDIR += lxi-tools
     SUBDIR += magicpoint
     SUBDIR += man.el
+    SUBDIR += mate-user-guide
     SUBDIR += mbuffer
     SUBDIR += mc
     SUBDIR += mc-light
@@ -271,6 +274,7 @@
     SUBDIR += openhmd
     SUBDIR += openmvg
     SUBDIR += openr2
+    SUBDIR += openvdb
     SUBDIR += orange3
     SUBDIR += orion
     SUBDIR += orville-write

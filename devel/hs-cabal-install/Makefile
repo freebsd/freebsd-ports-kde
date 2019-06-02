@@ -2,7 +2,7 @@
 
 PORTNAME=	cabal-install
 PORTVERSION=	2.4.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel haskell
 
 MAINTAINER=	haskell@FreeBSD.org
@@ -39,7 +39,9 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && \
-		${SETENV} EXTRA_CONFIGURE_OPTS="--disable-library-profiling" HOME=${WRKDIR}/home PREFIX=${WRKDIR}/prefix ${WRKSRC}/bootstrap.sh --no-doc --jobs ${MAKE_JOBS_NUMBER}
+		${SETENV} EXTRA_CONFIGURE_OPTS="--disable-library-profiling" \
+			${MAKE_ENV} HOME=${WRKDIR}/home PREFIX=${WRKDIR}/prefix \
+			${WRKSRC}/bootstrap.sh --no-doc --jobs ${MAKE_JOBS_NUMBER}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/prefix/bin/cabal ${STAGEDIR}${PREFIX}/bin/

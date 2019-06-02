@@ -2,6 +2,7 @@
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	1.0.0
+PORTREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi

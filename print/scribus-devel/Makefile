@@ -3,7 +3,7 @@
 
 PORTNAME=	scribus
 PORTVERSION=	1.5.4
-PORTREVISION=	9
+PORTREVISION=	11
 CATEGORIES=	print editors
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION}/ \
 		http://www.scribus.net/downloads/${PORTVERSION}/
@@ -47,10 +47,6 @@ USE_LDCONFIG=	yes
 CMAKE_ARGS+=	-DWANT_HUNSPELL=YES -Wno-ferror-limit -DCMAKE_COLOR_MAKEFILE:BOOL=ON
 
 OPTIONS_DEFINE=	DOCS
-
-DOS2UNIX_FILE=	scribus/plugins/import/pdf/importpdf.cpp \
-		scribus/plugins/import/pdf/slaoutput.cpp \
-		scribus/plugins/import/pdf/slaoutput.h
 
 post-install:
 		${LN} -sf ../share/icons/1_5_1/scribus.png \

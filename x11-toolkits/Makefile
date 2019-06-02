@@ -176,7 +176,6 @@
     SUBDIR += pangomm
     SUBDIR += pangox-compat
     SUBDIR += pangoxsl
-    SUBDIR += phat
     SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += pure-gtk
@@ -184,6 +183,7 @@
     SUBDIR += py-AnyQt
     SUBDIR += py-Pmw
     SUBDIR += py-SquareMap
+    SUBDIR += py-easygui
     SUBDIR += py-fltk
     SUBDIR += py-gnome2
     SUBDIR += py-gtk2

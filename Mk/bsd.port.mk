@@ -119,9 +119,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  ${DISTDIR} (see below).  Also they will be fetched in this
 #				  subdirectory from FreeBSD mirror sites.
 # ALLFILES		- All of ${DISTFILES} and ${PATCHFILES}.
-# NOFETCHFILES	- If set, don't download these files from the ${MASTER_SITES}
-#				  or ${MASTER_SITE_BACKUP} (but do from
-#				  ${MASTER_SITE_OVERRIDE})
 # EXTRACT_ONLY	- If set, a subset of ${DISTFILES} you want to
 #				  actually extract.
 #
@@ -389,17 +386,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 ##
 # USE_WX		- If set, this port uses the WxWidgets library and related
 #				  components. See bsd.wx.mk for more details.
-##
-#
-# USE_QT4		- A list of the Qt 4 dependencies the port has (e.g,
-#				  corelib, webkit).  Implies that the port needs Qt.
-#				  Implies the inclusion of bsd.qt.mk.  See bsd.qt.mk
-#				  for more details.
-#
-# USE_QT5		- A list of the Qt 5 dependencies the port has (e.g,
-#				  core, webkit).  Implies that the port needs Qt.
-#				  Implies the inclusion of bsd.qt.mk.  See bsd.qt.mk
-#				  for more details.
 ##
 # USE_LINUX_PREFIX
 #				- Controls the action of PREFIX (see above).  Only use this
@@ -2422,8 +2408,6 @@ _MASTER_SITE_BACKUP:=	# empty
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE}
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP}
 .endif
-
-NOFETCHFILES?=
 
 # Organize DISTFILES, PATCHFILES, _MASTER_SITES_ALL, _PATCH_SITES_ALL
 # according to grouping rules (:something)

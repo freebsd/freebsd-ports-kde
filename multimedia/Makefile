@@ -81,7 +81,6 @@
     SUBDIR += gdialog
     SUBDIR += gdvrecv
     SUBDIR += gmerlin
-    SUBDIR += gmerlin-avdecoder
     SUBDIR += gmimms
     SUBDIR += gmmlib
     SUBDIR += gmp-api
@@ -145,6 +144,9 @@
     SUBDIR += gstreamer1-plugins-resindvd
     SUBDIR += gstreamer1-plugins-rtmp
     SUBDIR += gstreamer1-plugins-smoothstreaming
+    SUBDIR += gstreamer1-plugins-svt-av1
+    SUBDIR += gstreamer1-plugins-svt-hevc
+    SUBDIR += gstreamer1-plugins-svt-vp9
     SUBDIR += gstreamer1-plugins-theora
     SUBDIR += gstreamer1-plugins-ttml
     SUBDIR += gstreamer1-plugins-ugly
@@ -176,6 +178,7 @@
     SUBDIR += kissdx
     SUBDIR += kmplayer
     SUBDIR += kodi
+    SUBDIR += kodi-addon-inputstream.adaptive-devel
     SUBDIR += kodi-addon-peripheral-joystick
     SUBDIR += kodi-addon-pvr-hts
     SUBDIR += kodi-addon-pvr-iptvsimple
@@ -433,10 +436,8 @@
     SUBDIR += vdr-plugin-remote
     SUBDIR += vdr-plugin-skinenigmang
     SUBDIR += vdr-plugin-sleeptimer
-    SUBDIR += vdr-plugin-softhddevice
     SUBDIR += vdr-plugin-streamdev
     SUBDIR += vdr-plugin-ttxtsubs
-    SUBDIR += vdr-plugin-upnp
     SUBDIR += vdr-plugin-vdrmanager
     SUBDIR += vdr-plugin-vnsiserver
     SUBDIR += vdr-plugin-wirbelscan

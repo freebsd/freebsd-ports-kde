@@ -487,7 +487,6 @@
     SUBDIR += netstrain
     SUBDIR += nettest
     SUBDIR += netwib
-    SUBDIR += neubot
     SUBDIR += nfs-ganesha
     SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
@@ -600,6 +599,7 @@
     SUBDIR += p5-MaxMind-DB-Reader
     SUBDIR += p5-MaxMind-DB-Reader-XS
     SUBDIR += p5-MaxMind-DB-Writer
+    SUBDIR += p5-Mojo-RabbitMQ-Client
     SUBDIR += p5-Net
     SUBDIR += p5-Net-ACME2
     SUBDIR += p5-Net-AMQP
@@ -1186,11 +1186,13 @@
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
+    SUBDIR += rubygem-apollo_upload_server
     SUBDIR += rubygem-asset_sync
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
     SUBDIR += rubygem-azure
     SUBDIR += rubygem-azure-core
+    SUBDIR += rubygem-beefcake
     SUBDIR += rubygem-bunny
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-docker-api
@@ -1270,8 +1272,12 @@
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
     SUBDIR += rubygem-omniauth-openid
+    SUBDIR += rubygem-omniauth_openid_connect
+    SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
+    SUBDIR += rubygem-omniauth-ultraauth
     SUBDIR += rubygem-open-uri-cached
+    SUBDIR += rubygem-openid_connect
     SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-orchestrator_client
     SUBDIR += rubygem-ovirt-engine-sdk

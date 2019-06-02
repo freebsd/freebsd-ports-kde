@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	django-cors-headers
-PORTVERSION=	2.5.3
+PORTVERSION=	3.0.2
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,6 +17,7 @@ USES=		python
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj21-django-cors-headers
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}dj21-django-cors-headers \
+			${PYTHON_PKGNAMEPREFIX}dj22-django-cors-headers
 
 .include <bsd.port.mk>

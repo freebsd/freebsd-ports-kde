@@ -109,6 +109,7 @@
     SUBDIR += libotf
     SUBDIR += libpagemaker
     SUBDIR += libpaper
+    SUBDIR += libraqm
     SUBDIR += libspectre
     SUBDIR += lilypond
     SUBDIR += lilypond-devel
@@ -192,10 +193,10 @@
     SUBDIR += py-qt5-printsupport
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab
-    SUBDIR += py-reportlab1
     SUBDIR += py-rtf
     SUBDIR += py-stapler
     SUBDIR += py-trml2pdf
+    SUBDIR += py-weasyprint
     SUBDIR += qpdf
     SUBDIR += qpdfview
     SUBDIR += qt5-printsupport

@@ -29,6 +29,7 @@
     SUBDIR += apache24
     SUBDIR += apercu
     SUBDIR += apt-cacher-ng
+    SUBDIR += aquatone
     SUBDIR += archiva
     SUBDIR += aria2
     SUBDIR += asql
@@ -346,6 +347,7 @@
     SUBDIR += miniminiweb
     SUBDIR += minio
     SUBDIR += minio-client
+    SUBDIR += miniserve
     SUBDIR += mitmproxy
     SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
@@ -428,6 +430,7 @@
     SUBDIR += mongrel2
     SUBDIR += moodle35
     SUBDIR += moodle36
+    SUBDIR += moodle37
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -466,7 +469,6 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node10
-    SUBDIR += npm-node6
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
@@ -1400,7 +1402,6 @@
     SUBDIR += phproxy
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
-    SUBDIR += pivotx
     SUBDIR += piwigo
     SUBDIR += planet
     SUBDIR += plasma5-plasma-browser-integration
@@ -1481,9 +1482,19 @@
     SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
+    SUBDIR += py-dj22-django-auth-ldap
+    SUBDIR += py-dj22-django-cors-headers
+    SUBDIR += py-dj22-django-debug-toolbar
+    SUBDIR += py-dj22-django-filter
+    SUBDIR += py-dj22-django-js-asset
+    SUBDIR += py-dj22-django-mptt
+    SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
+    SUBDIR += py-dj22-django-taggit-serializer
+    SUBDIR += py-dj22-django-timezone-field
     SUBDIR += py-dj22-django-treebeard
     SUBDIR += py-dj22-djangorestframework
+    SUBDIR += py-dj22-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
@@ -1582,7 +1593,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django111
-    SUBDIR += py-django20
     SUBDIR += py-django21
     SUBDIR += py-django22
     SUBDIR += py-django_compressor
@@ -1769,6 +1779,7 @@
     SUBDIR += py-plonetheme.sunburst
     SUBDIR += py-poster
     SUBDIR += py-praw
+    SUBDIR += py-prawcore
     SUBDIR += py-prewikka
     SUBDIR += py-priority
     SUBDIR += py-puppetboard
@@ -1806,7 +1817,6 @@
     SUBDIR += py-requests-mock
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
-    SUBDIR += py-requests1
     SUBDIR += py-requests_ntlm
     SUBDIR += py-restclient
     SUBDIR += py-rfc3986
@@ -1846,6 +1856,7 @@
     SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlobject
+    SUBDIR += py-urlwatch
     SUBDIR += py-user_agent
     SUBDIR += py-utidylib
     SUBDIR += py-w3lib
@@ -1985,6 +1996,7 @@
     SUBDIR += rubygem-gollum-grit_adapter10
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gollum-rugged_adapter
+    SUBDIR += rubygem-gon-rails5
     SUBDIR += rubygem-gon-rails50
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
@@ -1997,7 +2009,7 @@
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
     SUBDIR += rubygem-hashicorp-checkpoint
-    SUBDIR += rubygem-heroku
+    SUBDIR += rubygem-heroics
     SUBDIR += rubygem-heroku-api
     SUBDIR += rubygem-heroku-nav
     SUBDIR += rubygem-hpricot
@@ -2026,6 +2038,7 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt21
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5
@@ -2068,6 +2081,7 @@
     SUBDIR += rubygem-ostatus2
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
+    SUBDIR += rubygem-platform-api
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -2146,6 +2160,7 @@
     SUBDIR += rubygem-sinatra1
     SUBDIR += rubygem-smashing
     SUBDIR += rubygem-socksify
+    SUBDIR += rubygem-swd
     SUBDIR += rubygem-task_list
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
@@ -2169,7 +2184,7 @@
     SUBDIR += rubygem-vegas
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webmock
-    SUBDIR += rubygem-webpack-rails-rails50
+    SUBDIR += rubygem-webpack-rails-rails5
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-driver
@@ -2192,6 +2207,7 @@
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
     SUBDIR += shttpd
+    SUBDIR += silicon
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
@@ -2426,6 +2442,8 @@
     SUBDIR += yabb
     SUBDIR += yanopaste
     SUBDIR += yarn
+    SUBDIR += yarn-node10
+    SUBDIR += yarn-node8
     SUBDIR += yaws
     SUBDIR += you-get
     SUBDIR += yourls
