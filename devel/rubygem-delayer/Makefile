@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	delayer
-PORTVERSION=	0.0.2
+PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
-MAINTAINER=	sunpoet@FreeBSD.org
+MAINTAINER=	meta@FreeBSD.org
 COMMENT=	Delay any task, similar to a priority-queue
 
 LICENSE=	MIT

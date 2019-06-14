@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	goesimage
-DISTVERSION=	0.1.1-4
-DISTVERSIONSUFFIX=	-gce8f849
+DISTVERSION=	0.1.2
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -35,11 +34,11 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/crontab ${STAGEDIR}${DATADIR}
 	@(echo "#!/bin/sh"; \
 	  echo ""; \
-	  echo "crontab -l | ${GREP} -v '${PREFIX}/libexec/${PORTNAME}' | (cat ; cat ${DATADIR}/crontab) | crontab -"; \
+	  echo "crontab -l | ${GREP} -v '${PREFIX}/bin/${PORTNAME}' | (cat ; cat ${DATADIR}/crontab) | crontab -"; \
 	) > ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-enable
 	@(echo "#!/bin/sh"; \
 	  echo ""; \
-	  echo "crontab -l | ${GREP} -v '${PREFIX}/libexec/${PORTNAME}' | crontab -"; \
+	  echo "crontab -l | ${GREP} -v '${PREFIX}/bin/${PORTNAME}' | crontab -"; \
 	) > ${STAGEDIR}${PREFIX}/bin/${PORTNAME}-disable
 	@(echo "#!/bin/sh"; \
 	  echo ""; \

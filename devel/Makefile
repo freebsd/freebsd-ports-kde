@@ -78,6 +78,7 @@
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
     SUBDIR += R-cran-vcd
+    SUBDIR += R-cran-vctrs
     SUBDIR += R-cran-withr
     SUBDIR += RStudio
     SUBDIR += SpecTcl
@@ -1557,6 +1558,7 @@
     SUBDIR += msp430-debug-stack
     SUBDIR += mspdebug
     SUBDIR += mtbl
+    SUBDIR += mutagen
     SUBDIR += myrepos
     SUBDIR += nana
     SUBDIR += nant
@@ -1600,6 +1602,7 @@
     SUBDIR += ocaml-cmdliner
     SUBDIR += ocaml-cppo
     SUBDIR += ocaml-deriving-ocsigen
+    SUBDIR += ocaml-dune
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
     SUBDIR += ocaml-ipaddr
@@ -3836,7 +3839,6 @@
     SUBDIR += pecl-propro2
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
-    SUBDIR += pecl-pthreads
     SUBDIR += pecl-raphf2
     SUBDIR += pecl-request
     SUBDIR += pecl-swoole
@@ -4256,6 +4258,7 @@
     SUBDIR += py-collective.z3cform.datetimewidget
     SUBDIR += py-colorama
     SUBDIR += py-coloredlogs
+    SUBDIR += py-colorful
     SUBDIR += py-colorlog
     SUBDIR += py-columnize
     SUBDIR += py-conditional
@@ -4369,6 +4372,7 @@
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-quotes
     SUBDIR += py-flask-babel
+    SUBDIR += py-flatbuffers
     SUBDIR += py-flex
     SUBDIR += py-flexmock
     SUBDIR += py-fluent-logger
@@ -4694,6 +4698,7 @@
     SUBDIR += py-pip
     SUBDIR += py-pip-api
     SUBDIR += py-pip-tools
+    SUBDIR += py-pip-tools2
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
     SUBDIR += py-plan
@@ -4712,6 +4717,7 @@
     SUBDIR += py-pqueue
     SUBDIR += py-pre-commit
     SUBDIR += py-pretend
+    SUBDIR += py-prettyprinter
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
     SUBDIR += py-proglog
@@ -4914,6 +4920,7 @@
     SUBDIR += py-schedule
     SUBDIR += py-schema
     SUBDIR += py-schematics-patched
+    SUBDIR += py-scikit-build
     SUBDIR += py-scripttest
     SUBDIR += py-selection
     SUBDIR += py-selectors2
@@ -5240,6 +5247,7 @@
     SUBDIR += qtcreator
     SUBDIR += quickcheck++
     SUBDIR += quilt
+    SUBDIR += R-cran-zeallot
     SUBDIR += rabs
     SUBDIR += racer
     SUBDIR += racerd
@@ -5978,6 +5986,7 @@
     SUBDIR += rubygem-wisper
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
+    SUBDIR += rubygem-xdg2
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-yajl-ruby
     SUBDIR += rubygem-yui-compressor

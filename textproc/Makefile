@@ -81,7 +81,6 @@
     SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
-    SUBDIR += cdiff
     SUBDIR += cgrep
     SUBDIR += chkascii
     SUBDIR += chpp
@@ -803,6 +802,7 @@
     SUBDIR += p5-Term-QRCode
     SUBDIR += p5-Test-Groonga
     SUBDIR += p5-Test-Perl-Critic
+    SUBDIR += p5-Test-Regexp
     SUBDIR += p5-Text-ANSI-Util
     SUBDIR += p5-Text-ANSI-WideUtil
     SUBDIR += p5-Text-ANSITable
@@ -1844,6 +1844,7 @@
     SUBDIR += yali
     SUBDIR += yamcha
     SUBDIR += yaml-mode.el
+    SUBDIR += ydiff
     SUBDIR += yelp-tools
     SUBDIR += yelp-xsl
     SUBDIR += yi-aspell
