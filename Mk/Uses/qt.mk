@@ -134,7 +134,7 @@ _USE_QT_ALL=		assistant dbus declarative designer doc gui help \
 _USE_QT_ALL+=	sql-ibase
 .endif
 
-_USE_QT5_ONLY=		3d buildtools canvas3d charts concurrent connectivity \
+_USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			core datavis3d diag examples gamepad \
 			graphicaleffects location networkauth paths phonon4 plugininfo printsupport \
 			qdbus qdoc qdoc-data qev quickcontrols \
@@ -151,9 +151,6 @@ qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
 
 qt-buildtools_PORT=	devel/${_QT_RELNAME}-buildtools
 qt-buildtools_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/moc
-
-qt-canvas3d_PORT=	x11-toolkits/${_QT_RELNAME}-canvas3d
-qt-canvas3d_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtCanvas3D/qmldir
 
 qt-charts_PORT=		x11-toolkits/${_QT_RELNAME}-charts
 qt-charts_LIB=		libQt${_QT_LIBVER}Charts.so

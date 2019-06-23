@@ -208,7 +208,6 @@
     SUBDIR += py-xlib
     SUBDIR += pypy-tkinter
     SUBDIR += qml-box2d
-    SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative
