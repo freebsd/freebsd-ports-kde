@@ -90,6 +90,7 @@
     SUBDIR += cntlm
     SUBDIR += codeigniter
     SUBDIR += coppermine
+    SUBDIR += colly
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += cpr
@@ -107,6 +108,7 @@
     SUBDIR += ddgr
     SUBDIR += decss
     SUBDIR += demoroniser
+    SUBDIR += devd
     SUBDIR += dfileserver
     SUBDIR += dhttpd
     SUBDIR += dillo2
@@ -159,6 +161,7 @@
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
+    SUBDIR += filtron
     SUBDIR += firefox
     SUBDIR += firefox-esr
     SUBDIR += flashplayer
@@ -431,6 +434,7 @@
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += moodle37
+    SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -738,6 +742,7 @@
     SUBDIR += p5-Catalyst-View-XML-Feed
     SUBDIR += p5-Catalyst-View-XML-Simple
     SUBDIR += p5-Catalyst-View-XSLT
+    SUBDIR += p5-Catalyst-View-vCard
     SUBDIR += p5-CatalystX-AppBuilder
     SUBDIR += p5-CatalystX-Component-Traits
     SUBDIR += p5-CatalystX-InjectComponent
@@ -1159,6 +1164,7 @@
     SUBDIR += p5-Template-Plugin-Clickable-Email
     SUBDIR += p5-Template-Plugin-Comma
     SUBDIR += p5-Template-Plugin-FillInForm
+    SUBDIR += p5-Template-Plugin-Gettext
     SUBDIR += p5-Template-Plugin-JSON
     SUBDIR += p5-Template-Plugin-JavaScript
     SUBDIR += p5-Template-Plugin-MP3
@@ -1483,11 +1489,13 @@
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
     SUBDIR += py-dj22-django-auth-ldap
+    SUBDIR += py-dj22-django-cacheops
     SUBDIR += py-dj22-django-cors-headers
     SUBDIR += py-dj22-django-debug-toolbar
     SUBDIR += py-dj22-django-filter
     SUBDIR += py-dj22-django-js-asset
     SUBDIR += py-dj22-django-mptt
+    SUBDIR += py-dj22-django-prometheus
     SUBDIR += py-dj22-django-tables2
     SUBDIR += py-dj22-django-taggit
     SUBDIR += py-dj22-django-taggit-serializer
@@ -2058,7 +2066,6 @@
     SUBDIR += rubygem-link_header
     SUBDIR += rubygem-lograge
     SUBDIR += rubygem-lograge-rails5
-    SUBDIR += rubygem-lograge-rails50
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets

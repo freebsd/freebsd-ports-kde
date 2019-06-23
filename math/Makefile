@@ -148,7 +148,9 @@
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
+    SUBDIR += boolector
     SUBDIR += bsdnt
+    SUBDIR += btor2tools
     SUBDIR += cadabra2
     SUBDIR += calc
     SUBDIR += calcoo
@@ -336,6 +338,7 @@
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
+    SUBDIR += mandelbulber2
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
@@ -705,6 +708,7 @@
     SUBDIR += py-gnuplot
     SUBDIR += py-grandalf
     SUBDIR += py-graphillion
+    SUBDIR += py-gym
     SUBDIR += py-igakit
     SUBDIR += py-igraph
     SUBDIR += py-intspan

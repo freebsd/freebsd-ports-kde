@@ -189,6 +189,7 @@
     SUBDIR += cutemaze
     SUBDIR += cuyo
     SUBDIR += d2x
+    SUBDIR += dMagnetic
     SUBDIR += dangen
     SUBDIR += dangerdeep
     SUBDIR += dangerdeep-data
@@ -200,7 +201,6 @@
     SUBDIR += diaspora
     SUBDIR += digger-vgl
     SUBDIR += divide-and-succeed
-    SUBDIR += dMagnetic
     SUBDIR += dmjava
     SUBDIR += dodgindiamond2
     SUBDIR += domination
@@ -289,7 +289,6 @@
     SUBDIR += freecell-solver
     SUBDIR += freeciv
     SUBDIR += freeciv-nox11
-    SUBDIR += freeciv-sounds
     SUBDIR += freecol
     SUBDIR += freedink
     SUBDIR += freedink-data
