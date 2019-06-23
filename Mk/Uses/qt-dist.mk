@@ -248,6 +248,7 @@ _QT_TOOLS+=		${UIC}
 # The list of QtBase components that need to be linked into WRKSRC/lib for
 # other QtBase ports. See below.
 _QT5_BASE=		core dbus gui network sql widgets
+_QT5_ADDITIONAL_LINK?=	# Ensure definition
 
 .if ${_QT_VER:M5}
 post-patch: gcc-post-patch
@@ -332,6 +333,16 @@ qt5-pre-configure:
 	${ECHO_CMD} 'QMAKE_LIBDIR_FLAGS = -L${CONFIGURE_WRKSRC}/lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 	${ECHO_CMD} 'QMAKE_DEFAULT_LIBDIRS += ${LOCALBASE}/lib /usr/lib /lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 	${ECHO_CMD} 'QMAKE_DEFAULT_INCDIRS += ${LOCALBASE}/include /usr/include' >> ${CONFIGURE_WRKSRC}/.qmake.cache
+
+# Allow linking of further libraries to the configure direcotry.
+.    if !empty(_QT5_ADDITIONAL_LINK)
+.      for dep in ${_QT5_ADDITIONAL_LINK}
+	${MKDIR} ${CONFIGURE_WRKSRC}/lib
+.        if ! empty(USE_QT:M${dep})
+	${LN} -sf ${QT_LIBDIR}/${qt-${dep}_LIB} ${CONFIGURE_WRKSRC}/lib
+.        endif
+.      endfor
+.    endif
 
 post-install: qt-post-install
 qt-post-install:
