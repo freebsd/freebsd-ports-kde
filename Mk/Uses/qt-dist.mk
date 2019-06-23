@@ -21,7 +21,6 @@ qmake_ARGS?=	# empty
 .include "${USESDIR}/qmake.mk"
 
 # Supported distribution arguments
-_QT4_DISTS=		yes
 _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			declarative doc gamepad graphicaleffects imageformats location \
 			lottie macextras multimedia networkauth purchasing quickcontrols \
