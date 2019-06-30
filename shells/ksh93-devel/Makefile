@@ -12,8 +12,8 @@ LICENSE=	EPL
 
 USES=		compiler:c11 meson ninja python:build
 
-HASH=		9560ca1
-AST_COMMIT_DATE=	2019.06.22
+HASH=		d29ce75
+AST_COMMIT_DATE=	2019.06.29
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	att
@@ -23,9 +23,7 @@ GH_TAGNAME=	${HASH}
 KSH_CONFLICTS=		pdksh-*
 KSH93_CONFLICTS=	ksh93-2* ast-ksh-*
 
-LDFLAGS+=	-lm
 MESON_BUILD_DIR=	build
-MAKE_ENV=	CCFLAGS="${CFLAGS}"
 
 OPTIONS_DEFAULT=	KSH93
 OPTIONS_SINGLE=		BIN_KSH
@@ -34,7 +32,6 @@ KSH_DESC=		Install to ${PREFIX}/bin/ksh
 KSH93_DESC=		Install to ${PREFIX}/bin/ksh93
 
 KSH93_EXTRA_PATCHES=	${FILESDIR}/extra-patch-install-as-ksh93
-KSH93_DESC=	Install to ${PREFIX}/bin/ksh93
 
 KSH_PLIST_SUB=		93=""
 KSH93_PLIST_SUB=	93="93"
