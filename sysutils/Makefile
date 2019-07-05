@@ -148,10 +148,12 @@
     SUBDIR += cfengine-masterfiles311
     SUBDIR += cfengine-masterfiles312
     SUBDIR += cfengine-masterfiles313
+    SUBDIR += cfengine-masterfiles314
     SUBDIR += cfengine310
     SUBDIR += cfengine311
     SUBDIR += cfengine312
     SUBDIR += cfengine313
+    SUBDIR += cfengine314
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -521,6 +523,7 @@
     SUBDIR += javaservicewrapper
     SUBDIR += jdiskreport
     SUBDIR += jdupes
+    SUBDIR += jest
     SUBDIR += jkill
     SUBDIR += jobd
     SUBDIR += jps
@@ -1494,7 +1497,6 @@
     SUBDIR += xe-guest-utilities
     SUBDIR += xen-guest-tools
     SUBDIR += xen-tools
-    SUBDIR += xen-tools47
     SUBDIR += xfburn
     SUBDIR += xfce4-battery-plugin
     SUBDIR += xfce4-bsdcpufreq-plugin

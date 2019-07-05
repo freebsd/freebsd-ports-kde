@@ -2,8 +2,9 @@
 
 PORTNAME=	rpcs3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.6-8314 # git rev-list --count HEAD
-DISTVERSIONSUFFIX=	-g43f919c04
+DISTVERSION=	0.0.6-8329 # git rev-list --count HEAD
+DISTVERSIONSUFFIX=	-gad10eb391
+PORTREVISION=	1
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -41,7 +42,6 @@ USE_XORG=	x11
 LLD_UNSAFE=	yes # XXX ports/219089
 CMAKE_ON=	CMAKE_SKIP_RPATH USE_SYSTEM_FFMPEG USE_SYSTEM_LIBPNG
 CMAKE_OFF=	USE_NATIVE_INSTRUCTIONS
-CXXFLAGS+=	-Wno-macro-redefined # __STDC_*_MACROS sys/cdefs.h vs. llvm-config
 LDFLAGS+=	-Wl,--as-needed # GLU
 
 # XXX Remove after FreeBSD 11.2/12.0 reach EOL i.e., around 2020-02-01

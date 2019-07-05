@@ -92,6 +92,7 @@
     SUBDIR += aarch64-none-elf-gcc
     SUBDIR += aarch64-xtoolchain-gcc
     SUBDIR += abi-compliance-checker
+    SUBDIR += abseil
     SUBDIR += ace
     SUBDIR += ace+tao-doc
     SUBDIR += acsccid
@@ -1141,6 +1142,7 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
+    SUBDIR += libcircllhist
     SUBDIR += libcjson
     SUBDIR += libclc
     SUBDIR += libcli
@@ -2581,6 +2583,7 @@
     SUBDIR += p5-JIRA-REST
     SUBDIR += p5-JQuery
     SUBDIR += p5-JSON-Hyper
+    SUBDIR += p5-JSON-Parse
     SUBDIR += p5-JSON-Path
     SUBDIR += p5-JSON-Pointer
     SUBDIR += p5-JSON-RPC

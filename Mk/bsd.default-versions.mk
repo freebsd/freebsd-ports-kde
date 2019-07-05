@@ -59,11 +59,13 @@ LINUX_DEFAULT?=		c6_64
 LINUX_DEFAULT?=		c6
 .endif
 # Possible values: 60, 70, 80, -devel (to be used when non-base compiler is required)
+# Please give notice to the Graphics Team (x11@FreeBSD.org) in advance before 
+# bumping the LLVM version.
 LLVM_DEFAULT?=		80
 # Possible values: 5.1, 5.2, 5.3
 LUA_DEFAULT?=		5.2
 # Possible values: 5.5, 5.6, 5.7, 8.0, 5.5m, 10.0m, 10.1m, 10.2m, 10.3m, 5.5p, 5.6p, 5.7p, 5.6w
-MYSQL_DEFAULT?=		5.6
+MYSQL_DEFAULT?=		5.7
 # Possible values: 5.26, 5.28, 5.30, devel
 .if !exists(${LOCALBASE}/bin/perl) || (!defined(_PORTS_ENV_CHECK) && \
     defined(PACKAGE_BUILDING))
