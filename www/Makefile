@@ -339,6 +339,7 @@
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki131
     SUBDIR += mediawiki132
+    SUBDIR += mediawiki133
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -2273,7 +2274,6 @@
     SUBDIR += tomcat-native
     SUBDIR += tomcat6
     SUBDIR += tomcat7
-    SUBDIR += tomcat8
     SUBDIR += tomcat85
     SUBDIR += tomcat9
     SUBDIR += tomee
