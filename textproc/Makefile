@@ -43,7 +43,6 @@
     SUBDIR += antiword
     SUBDIR += apache-poi
     SUBDIR += apache-solr
-    SUBDIR += apache-solr3
     SUBDIR += apertium
     SUBDIR += archmage
     SUBDIR += artha
@@ -1302,6 +1301,7 @@
     SUBDIR += py-nltk
     SUBDIR += py-normality
     SUBDIR += py-numpydoc
+    SUBDIR += py-ocrmypdf
     SUBDIR += py-openpyxl
     SUBDIR += py-openpyxl24
     SUBDIR += py-openstackdocstheme
@@ -1320,6 +1320,7 @@
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
     SUBDIR += py-pdftotext
+    SUBDIR += py-pikepdf
     SUBDIR += py-precis_i18n
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
@@ -1348,6 +1349,7 @@
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
     SUBDIR += py-python-slugify
+    SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
@@ -1479,6 +1481,7 @@
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
     SUBDIR += rubygem-asciidoctor-diagram
+    SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml008
     SUBDIR += rubygem-autoprefixer-rails

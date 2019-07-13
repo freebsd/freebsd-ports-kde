@@ -2,7 +2,7 @@
 
 PORTNAME=	c7
 PORTVERSION=	${LINUX_DIST_VER}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators linux
 PKGNAMEPREFIX=	linux_base-
 EXTRACT_ONLY=	${DISTFILES:N*${SRC_SUFX}*:Nfilesystem-*:C/:[^:]+$//}
@@ -21,7 +21,7 @@ BIN_DISTNAMES=	bash-4.2.46-31.el7 \
 		elfutils-0.172-2.el7 \
 		filesystem-3.2-25.el7 \
 		findutils-4.5.11-6.el7 \
-		glibc-common-2.17-260.el7_6.5 \
+		glibc-common-2.17-260.el7_6.6 \
 		grep-2.20-3.el7 \
 		info-5.1-5.el7 \
 		keyutils-1.5.8-3.el7 \
@@ -37,7 +37,7 @@ LIB_DISTNAMES=	bzip2-libs-1.0.6-13.el7 \
 		gamin-0.1.10-16.el7 \
 		gdbm-1.10-8.el7 \
 		glib2-2.56.1-4.el7_6 \
-		glibc-2.17-260.el7_6.5 \
+		glibc-2.17-260.el7_6.6 \
 		gmp-6.0.0-15.el7 \
 		keyutils-libs-1.5.8-3.el7 \
 		krb5-libs-1.15.1-37.el7_6 \
@@ -94,7 +94,7 @@ SRC_DISTFILES=	acl-2.2.51-14.el7${SRC_SUFX}:SOURCE \
 		gcc-4.8.5-36.el7_6.2${SRC_SUFX}:SOURCE \
 		gdbm-1.10-8.el7${SRC_SUFX}:SOURCE \
 		glib2-2.56.1-4.el7_6${SRC_SUFX}:SOURCE \
-		glibc-2.17-260.el7_6.5${SRC_SUFX}:SOURCE \
+		glibc-2.17-260.el7_6.6${SRC_SUFX}:SOURCE \
 		gmp-6.0.0-15.el7${SRC_SUFX}:SOURCE \
 		grep-2.20-3.el7${SRC_SUFX}:SOURCE \
 		keyutils-1.5.8-3.el7${SRC_SUFX}:SOURCE \
@@ -131,9 +131,9 @@ REMOVE_DIRS=	boot home media mnt proc root run sys tmp var/log var/tmp
 REMOVE_FILES=	bin/su etc/exports etc/group etc/gshadow etc/motd \
 		etc/passwd etc/printcap etc/protocols etc/services etc/shadow
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if ${LINUX_ARCH} == x86_64
+.if ${ARCH} == amd64
 SYSCTLMIB=	kern.features.linux64
 .else
 SYSCTLMIB=	compat.linux.osrelease
@@ -148,11 +148,11 @@ post-extract:
 		${FIND} ${d} | ${CPIO} -dumpl --quiet usr && ${RM} -r ${d}; fi)
 .endfor
 	@(cd ${WRKSRC} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} \
-		${DISTDIR}/${DIST_SUBDIR}/filesystem-3.2-25.el7${EXTRACT_SUFX_${LINUX_ARCH:S/x86_64/amd64/}} \
+		${DISTDIR}/${DIST_SUBDIR}/filesystem-3.2-25.el7${EXTRACT_SUFX_${ARCH}} \
 		${EXTRACT_AFTER_ARGS})
-.if ${LINUX_ARCH} == i386
+.if ${ARCH} == i386
 	@${CHMOD} u+w ${WRKSRC}/usr/lib/pm-utils
-.elif ${LINUX_ARCH} == x86_64
+.elif ${ARCH} == amd64
 	@${CHMOD} u+w ${WRKSRC}/usr/lib64/pm-utils
 .endif
 
@@ -161,7 +161,7 @@ post-patch:
 	@${RM} ${REMOVE_FILES:S|^|${WRKSRC}/|}
 	@${FIND} ${WRKSRC}/usr -type d -empty -not -path '*/lib*/gio/*' -delete
 	@${BRANDELF} -t Linux ${WRKSRC}/usr/lib/ld-2.17.so
-.if ${LINUX_ARCH} == x86_64
+.if ${ARCH} == amd64
 	@${BRANDELF} -t Linux ${WRKSRC}/usr/lib64/ld-2.17.so
 .endif
 
@@ -177,4 +177,4 @@ post-install:
 	${LN} -sf /var/run ${STAGEDIR}${PREFIX}/run
 	${LN} -sf /var/tmp ${STAGEDIR}${PREFIX}/usr/tmp
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

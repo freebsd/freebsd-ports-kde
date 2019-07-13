@@ -26,7 +26,7 @@ LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 #EXPIRATION_DATE=<Release date of .0 + 3 years>
 
 # XXX releases are .tar.xz, add: tar:xz
-USES=	compiler:c11 cpe
+USES=	cpe
 
 # Give a hint of where libperl.so can be found.
 USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
@@ -35,7 +35,7 @@ USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
 USE_GITHUB=	yes
 GH_ACCOUNT=	Perl
 GH_PROJECT=	perl5
-GH_TAGNAME=	v5.31.1-120-g0087236851
+GH_TAGNAME=	v5.31.1-138-g256dda502e
 
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \

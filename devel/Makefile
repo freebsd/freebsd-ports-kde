@@ -957,6 +957,7 @@
     SUBDIR += hs-mueval
     SUBDIR += hs-old-locale
     SUBDIR += hs-old-time
+    SUBDIR += hs-profiteur
     SUBDIR += hs-random
     SUBDIR += hs-setlocale
     SUBDIR += hs-shake
@@ -1187,7 +1188,6 @@
     SUBDIR += libev
     SUBDIR += libevdev
     SUBDIR += libevent
-    SUBDIR += libevent-hiphop
     SUBDIR += libevt
     SUBDIR += libevtx
     SUBDIR += libewf
@@ -2682,6 +2682,7 @@
     SUBDIR += p5-Luka
     SUBDIR += p5-Lvalue
     SUBDIR += p5-MCE
+    SUBDIR += p5-MCE-Shared
     SUBDIR += p5-MRO-Compat
     SUBDIR += p5-MRO-Define
     SUBDIR += p5-Mac-FileSpec-Unixish
@@ -3844,6 +3845,7 @@
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
     SUBDIR += pecl-dio
+    SUBDIR += pecl-ds
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
@@ -4075,6 +4077,7 @@
     SUBDIR += py-XStatic-term.js
     SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
+    SUBDIR += py-absl
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
@@ -4427,6 +4430,7 @@
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
+    SUBDIR += py-gast
     SUBDIR += py-gdata
     SUBDIR += py-gdbgui
     SUBDIR += py-gearman
@@ -5668,6 +5672,7 @@
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
+    SUBDIR += rubygem-memory_profiler
     SUBDIR += rubygem-mercenary
     SUBDIR += rubygem-message_bus
     SUBDIR += rubygem-metaclass
@@ -5895,6 +5900,7 @@
     SUBDIR += rubygem-simple_form-rails5
     SUBDIR += rubygem-simple_form-rails50
     SUBDIR += rubygem-simplecov
+    SUBDIR += rubygem-skiptrace
     SUBDIR += rubygem-slack-notifier
     SUBDIR += rubygem-slack-notifier1
     SUBDIR += rubygem-slim
@@ -6129,6 +6135,7 @@
     SUBDIR += synfig
     SUBDIR += sysconftool
     SUBDIR += sysfsutils
+    SUBDIR += systemc
     SUBDIR += t1lib
     SUBDIR += ta-lib
     SUBDIR += tablist
