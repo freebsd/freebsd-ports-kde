@@ -18,7 +18,6 @@
 
 PORTNAME=	webengine
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
 CATEGORIES=	www
 PKGNAMEPREFIX=	qt5-
 
@@ -49,7 +48,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libwebp.so:graphics/webp
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
-QT5_VERSION=	5.12.2
+QT5_VERSION=	5.13.0
 
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -114,6 +113,9 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 post-extract:
 # Install FreeBSD's freebsd.pri file.
 	${CP} ${FILESDIR}/freebsd.pri ${WRKSRC}/src/core/config/freebsd.pri
+# XXX some strange workaound
+	${CP} ${WRKSRC}/src/3rdparty/chromium/base/third_party/libevent/freebsd/config.h \
+		${WRKSRC}/src/3rdparty/chromium/base/third_party/libevent/config.h
 
 post-extract-SNDIO-on:
 	@cd ${WRKSRC}/src/3rdparty/chromium/media/audio && ${MKDIR} sndio openbsd
