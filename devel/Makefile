@@ -950,6 +950,7 @@
     SUBDIR += hs-dlist
     SUBDIR += hs-extensible-exceptions
     SUBDIR += hs-ghc-events
+    SUBDIR += hs-ghcprofview
     SUBDIR += hs-git-annex
     SUBDIR += hs-haddock
     SUBDIR += hs-happy
@@ -957,6 +958,7 @@
     SUBDIR += hs-hasktags
     SUBDIR += hs-hlint
     SUBDIR += hs-hoogle
+    SUBDIR += hs-hpack
     SUBDIR += hs-hspec-discover
     SUBDIR += hs-mtl
     SUBDIR += hs-mueval
@@ -4534,6 +4536,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
+    SUBDIR += py-json5
     SUBDIR += py-json_tricks
     SUBDIR += py-jsondiff
     SUBDIR += py-jsonform
@@ -4552,7 +4555,9 @@
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyter_core
+    SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab_launcher
+    SUBDIR += py-jupyterlab_server
     SUBDIR += py-kaitaistruct
     SUBDIR += py-kaptan
     SUBDIR += py-kayako
@@ -5553,6 +5558,7 @@
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-forwardable-extended
     SUBDIR += rubygem-fugit
+    SUBDIR += rubygem-fugit12
     SUBDIR += rubygem-gdata
     SUBDIR += rubygem-gem-compare
     SUBDIR += rubygem-gem_plugin
@@ -5610,6 +5616,7 @@
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check26-rails5
+    SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
@@ -6133,7 +6140,6 @@
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-lts
-    SUBDIR += subversion19
     SUBDIR += subversive
     SUBDIR += svk
     SUBDIR += svn2git
@@ -6251,6 +6257,7 @@
     SUBDIR += wandio
     SUBDIR += websocketpp
     SUBDIR += websvn
+    SUBDIR += wf-config
     SUBDIR += wininfo
     SUBDIR += wizardkit
     SUBDIR += woff2

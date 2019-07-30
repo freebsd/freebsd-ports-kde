@@ -731,6 +731,7 @@
     SUBDIR += p5-Search-Elasticsearch-Client-0_90
     SUBDIR += p5-Search-Elasticsearch-Client-1_0
     SUBDIR += p5-Search-Elasticsearch-Client-2_0
+    SUBDIR += p5-Search-Elasticsearch-Client-5_0
     SUBDIR += p5-Search-Estraier
     SUBDIR += p5-Search-Odeum
     SUBDIR += p5-Search-QueryParser
@@ -866,6 +867,7 @@
     SUBDIR += p5-Text-Hatena
     SUBDIR += p5-Text-Highlight
     SUBDIR += p5-Text-HikiDoc
+    SUBDIR += p5-Text-Hogan
     SUBDIR += p5-Text-Hyphen
     SUBDIR += p5-Text-LTSV
     SUBDIR += p5-Text-Language-Guess

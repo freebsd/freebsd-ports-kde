@@ -3,6 +3,7 @@
 PORTNAME=	openjdk
 DISTVERSIONPREFIX=	jdk-
 DISTVERSION=	${JDK_MAJOR_VERSION}.${JDK_MINOR_VERSION}.${JDK_PATCH_VERSION}+${JDK_BUILD_NUMBER}-${BSD_JDK_VERSION}
+PORTREVISION=	1
 CATEGORIES=	java devel
 PKGNAMESUFFIX?=	${JDK_MAJOR_VERSION}
 
@@ -25,11 +26,13 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libpng.so:graphics/png
 
 USES=		compiler:features gmake iconv jpeg pkgconfig
-USE_XORG=	x11 xext xi xrender xt xtst
+USE_XORG=	x11 xext xi xrandr xrender xt xtst
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk11u
+
+NO_CCACHE=	yes
 
 _MAKE_JOBS=	#
 MAKE_ENV=	LANG="C" \

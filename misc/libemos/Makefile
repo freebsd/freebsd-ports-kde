@@ -2,7 +2,7 @@
 
 PORTNAME=	libemos
 DISTVERSION=	4.5.9
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONSUFFIX=	-Source
 CATEGORIES=	misc
 MASTER_SITES=	https://confluence.ecmwf.int/download/attachments/3473472/
@@ -12,6 +12,8 @@ COMMENT=	Interpolation library for meteorological software
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		fails to link
 
 LIB_DEPENDS=	libeccodes.so:science/eccodes \
 		libfftw3.so:math/fftw3 \

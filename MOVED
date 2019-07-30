@@ -10875,7 +10875,6 @@ security/py-yubioath-desktop|security/yubioath-desktop|2018-12-27|New Yubikey Oa
 audio/amarok-kde4|audio/amarok|2018-12-28|Renamed as no longer kde4 based
 games/knights-kde|games/knights|2018-12-30|Switch to version from KDE Applications
 multimedia/kmplayer-kde4|multimedia/kmplayer|2018-12-30|Moved to KF5 based version
-net/pecl-mosquitto||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-ip2location||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-yp||2018-12-30|Has expired: Works only with EOL php 5.6
 net/pecl-oauth||2018-12-30|Has expired: Works only with EOL php 5.6
@@ -11423,7 +11422,6 @@ security/pecl-ssh2-0|security/pecl-ssh2|2019-01-01|Has expired: Works only with 
 security/bitwarden-ruby||2019-01-01|Has expired: Expects very specific rubygem versions for new updates. Please follow instructions in git repo
 devel/pecl-intl||2019-01-01|Has expired: Works only with EOL php 5.6
 devel/pecl-APCu4|devel/pecl-APCu|2019-01-01|Has expired: Works only with EOL php 5.6
-databases/pecl-memcache||2019-01-01|Has expired: Works only with EOL php 5.6
 databases/pecl-memcached2|databases/pecl-memcached|2019-01-01|Has expired: Works only with EOL php 5.6
 math/pecl-bitset2|math/pecl-bitset|2019-01-01|Has expired: Works only with EOL php 5.6
 multimedia/zoneminder-h264|multimedia/zoneminder|2019-01-01|Has expired: h264 feature was commited to main branch, please upgrade to www/zoneminder
@@ -12852,3 +12850,7 @@ security/snortreport||2019-07-16|Has expired: Abandonware
 databases/pecl-redis3|databases/pecl-redis|2019-07-19|No longer needed after PHP 5 removal
 www/weblint||2019-07-20|Broken, uses nonexistant perl libraries, and upstream disappeared. Use www/p5-HTML-Lint instead
 www/august||2019-07-20|Uses removed weblint
+misc/bitwise|math/bitwise|2019-07-21|Moved to math category
+devel/gradle46||2019-07-26|Removed because the only user, biology/gatk, doesn't need it any more
+devel/subversion19|devel/subversion|2019-07-27|Has expired: subversion 1.9.x is end of life log time ago. Consider installing devel/subversion or devel/subversion-lts
+www/p5-WebService-MusicBrainz0|www/p5-WebService-MusicBrainz|2019-07-28|0.9x branch is no longer required after audio/abcde was updated to 2.9.1

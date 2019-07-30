@@ -3,6 +3,7 @@
 
 PORTNAME=	cairo
 PORTVERSION=	1.18.1
+PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	https://github.com/pygobject/pycairo/releases/download/v${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +19,7 @@ LICENSE_FILE_MPL11=	${WRKSRC}/COPYING-MPL-1.1
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gnome pkgconfig python
+USES=		compiler:c11 gnome pkgconfig python
 USE_PYTHON=	distutils py3kplist
 USE_GNOME=	cairo
 
