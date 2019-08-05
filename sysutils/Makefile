@@ -97,7 +97,6 @@
     SUBDIR += batmon
     SUBDIR += battmond
     SUBDIR += battray
-    SUBDIR += bbcp
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
@@ -206,6 +205,7 @@
     SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
+    SUBDIR += crate
     SUBDIR += cronic
     SUBDIR += cronolog
     SUBDIR += cronolog-devel
@@ -302,6 +302,7 @@
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += eventlog
+    SUBDIR += evhz
     SUBDIR += evtviewer
     SUBDIR += exa
     SUBDIR += exfat-utils

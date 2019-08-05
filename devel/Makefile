@@ -459,7 +459,6 @@
     SUBDIR += dcd-server
     SUBDIR += dconf
     SUBDIR += dconf-editor
-    SUBDIR += ddd
     SUBDIR += debugedit
     SUBDIR += dee
     SUBDIR += deforaos-libsystem
@@ -3860,6 +3859,7 @@
     SUBDIR += pecl-event
     SUBDIR += pecl-grpc
     SUBDIR += pecl-hrtime
+    SUBDIR += pecl-inotify
     SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
     SUBDIR += pecl-jsond
@@ -4408,6 +4408,7 @@
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-quotes
+    SUBDIR += py-flaky
     SUBDIR += py-flask-babel
     SUBDIR += py-flatbuffers
     SUBDIR += py-flex
@@ -4462,6 +4463,7 @@
     SUBDIR += py-gobject3
     SUBDIR += py-google-apputils
     SUBDIR += py-google-i18n-address
+    SUBDIR += py-google-pasta
     SUBDIR += py-googleapis-common-protos
     SUBDIR += py-grab
     SUBDIR += py-graphene
@@ -4488,6 +4490,7 @@
     SUBDIR += py-identify
     SUBDIR += py-ijson
     SUBDIR += py-imgkit
+    SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
     SUBDIR += py-importlib-resources
     SUBDIR += py-incremental
@@ -4740,7 +4743,7 @@
     SUBDIR += py-pip
     SUBDIR += py-pip-api
     SUBDIR += py-pip-tools
-    SUBDIR += py-pip-tools2
+    SUBDIR += py-pip-tools3
     SUBDIR += py-pipdeptree
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
@@ -5474,6 +5477,7 @@
     SUBDIR += rubygem-cucumber-expressions6
     SUBDIR += rubygem-cucumber-formatter-dots
     SUBDIR += rubygem-cucumber-messages
+    SUBDIR += rubygem-cucumber-rails
     SUBDIR += rubygem-cucumber-tag_expressions
     SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses

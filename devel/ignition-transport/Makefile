@@ -2,7 +2,7 @@
 
 PORTNAME=	ignition-transport
 DISTVERSION=	6.0.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/${BB_ACCOUNT}/${BB_PROJECT}/get/${BB_COMMIT}.tar.gz?dummy=/
 
@@ -12,6 +12,8 @@ COMMENT=	Ignition transport classes and functions for robot applications
 LICENSE=	APACHE20
 
 BROKEN=		fails to build
+DEPRECATED=	Broken for more than 6 months
+EXPIRATION_DATE=	2019-09-04
 
 BUILD_DEPENDS=	ignition-cmake==2:devel/ignition-cmake \
 		ignition-tools>0:devel/ignition-tools \

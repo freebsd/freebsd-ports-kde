@@ -3,7 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	4.1.4
-PORTREVISION=	3
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -14,8 +14,14 @@ COMMENT=	Realtime audio/video encoder/converter and streaming server
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	nasm:devel/nasm \
-		${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
+BUILD_DEPENDS_aarch64=	as:devel/binutils
+BUILD_DEPENDS_amd64=	nasm:devel/nasm
+BUILD_DEPENDS_armv6=	as:devel/binutils
+BUILD_DEPENDS_armv7=	as:devel/binutils
+BUILD_DEPENDS_i386=	nasm:devel/nasm
+BUILD_DEPENDS_powerpc64=as:devel/binutils
+BUILD_DEPENDS_powerpc=	as:devel/binutils
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	ffbuild/config.log
@@ -208,6 +214,9 @@ FDK_AAC_IMPLIES=	NONFREE
 # flite
 FLITE_LIB_DEPENDS=	libflite.so:audio/flite
 FLITE_CONFIGURE_ENABLE=	libflite
+.if exists(/usr/bin/ld.lld) && (${/usr/bin/ld:L:tA} != /usr/bin/ld.lld)
+FLITE_LDFLAGS=		-fuse-ld=lld
+.endif
 
 # fontconfig
 FONTCONFIG_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig
@@ -415,7 +424,7 @@ SRT_CONFIGURE_ENABLE=	libsrt
 # svt-av1
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
 SVTAV1_CONFIGURE_ON=	--enable-libsvtav1
-SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.6.0/ffmpeg_plugin/:svtav1
+SVTAV1_PATCH_SITES=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.6.0-151-gcd79924e/ffmpeg_plugin/:svtav1
 SVTAV1_PATCHFILES=	0001-Add-ability-for-ffmpeg-to-run-svt-av1.patch:-p1:svtav1
 .if make(makesum)
 .MAKEFLAGS:		WITH+=SVTAV1
@@ -561,8 +570,11 @@ INSTALL_TARGET=	install-progs install-doc install-data \
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
-CONFIGURE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
-MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin V=1
+MAKE_ENV+=	V=1
+LDFLAGS_aarch64=-Wl,-z,notext
+LDFLAGS_armv6=	-Wl,-z,notext
+LDFLAGS_armv7=	-Wl,-z,notext
+LDFLAGS_i386=	-Wl,-z,notext
 
 CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--mandir="${PREFIX}/man" \
@@ -577,19 +589,11 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--enable-pthreads \
 		--cc="${CC}"
 
-CONFIGURE_ENV_aarch64_clang=	ASFLAGS=-no-integrated-as
-CONFIGURE_ENV_armv6_clang=	ASFLAGS=-no-integrated-as
-CONFIGURE_ENV_armv7_clang=	ASFLAGS=-no-integrated-as
-
 DOC_FILES=	Changelog CREDITS INSTALL.md LICENSE.md MAINTAINERS \
 		README.md RELEASE_NOTES
 # under doc subdirectory
 DOC_DOCFILES=	APIchanges *.txt
 PORTDOCS=	*
-
-# Custom helpers. FOO_${ARCH} style from bsd.port.mk
-CONFIGURE_ENV+=	${CONFIGURE_ENV_${ARCH}_${CHOSEN_COMPILER_TYPE}}
-CONFIGURE_ARGS+=${CONFIGURE_ARGS_${OPSYS}_${OSREL:R}_${ARCH}}
 
 post-patch:
 # {C,LD}FLAGS safeness

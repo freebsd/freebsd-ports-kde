@@ -503,6 +503,7 @@
     SUBDIR += opera-linuxplugins
     SUBDIR += orangehrm
     SUBDIR += osrm-backend
+    SUBDIR += ot-recorder
     SUBDIR += otrs
     SUBDIR += otter-browser
     SUBDIR += owncloud
@@ -1506,6 +1507,7 @@
     SUBDIR += py-dj22-django-treebeard
     SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-dj22-drf-yasg
+    SUBDIR += py-dj22-swapper
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annotations
