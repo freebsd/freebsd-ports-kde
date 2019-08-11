@@ -112,6 +112,7 @@
     SUBDIR += innerspace
     SUBDIR += ipager
     SUBDIR += j4-dmenu-desktop
+    SUBDIR += kanshi
     SUBDIR += kb2mb2
     SUBDIR += kde-baseapps
     SUBDIR += kde5
@@ -297,6 +298,7 @@
     SUBDIR += simdock
     SUBDIR += simplestroke
     SUBDIR += sisctrl
+    SUBDIR += slick-greeter
     SUBDIR += slim
     SUBDIR += slock
     SUBDIR += slop
