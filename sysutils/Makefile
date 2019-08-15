@@ -757,7 +757,6 @@
     SUBDIR += ohmu
     SUBDIR += omnibackup
     SUBDIR += open
-    SUBDIR += openhpi
     SUBDIR += openipmi
     SUBDIR += openupsd
     SUBDIR += openzfs
@@ -1237,6 +1236,7 @@
     SUBDIR += sdparm
     SUBDIR += seatools
     SUBDIR += sec
+    SUBDIR += sensu-go
     SUBDIR += serf
     SUBDIR += setcdboot
     SUBDIR += setquota

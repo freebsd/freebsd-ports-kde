@@ -330,10 +330,13 @@
     SUBDIR += urxvt-perls
     SUBDIR += vdesk
     SUBDIR += viewres
+    SUBDIR += virtboard
     SUBDIR += virtualgl
+    SUBDIR += waybar
     SUBDIR += wbar
     SUBDIR += wbarconf
     SUBDIR += wdm
+    SUBDIR += wev
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
     SUBDIR += wmappl
