@@ -11676,7 +11676,6 @@ multimedia/phonon-designerplugin@qt4||2019-03-16|Qt4 deprecation
 multimedia/phonon-designerplugin@qt5|multimedia/phonon-designerplugin|2019-03-16|Flavor has been removed
 multimedia/phonon-gstreamer@qt4||2019-03-16|Qt4 deprecation
 multimedia/phonon-gstreamer@qt5|multimedia/phonon-gstreamer|2019-03-16|Flavor has been removed
-devel/git-cola||2019-03-16|Removed
 emulators/gns3||2019-03-16|Removed
 accessibility/qt4-accessible||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 astro/qlandkartegt||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -12858,6 +12857,7 @@ lang/cint|lang/cling|2019-07-31|Has expired: Abandonware; superseded by lang/cli
 emulators/pearpc||2019-08-01|Has expired: Abandonware
 sysutils/bbcp||2019-08-03|Has expired: the port is broken for more than a year
 multimedia/gnome-mpv|multimedia/celluloid|2019-08-08|Renamed upstream
+net/remmina-plugin-telepathy||2019-08-04|Disabled upstream for build Issues
 devel/py-mimeparse|devel/py-python-mimeparse|2019-08-11|Rename to match upstream naming
 devel/rubygem-web-console|devel/rubygem-web-console-rails5|2019-08-11|Rename to match our rubygem- port naming
 devel/rubygem-spring-rails5|devel/rubygem-spring|2019-08-11|Remove unnecessary port after devel/rubygem-spring update
@@ -12868,3 +12868,6 @@ textproc/sphinxsearch-devel|textproc/sphinxsearch|2019-08-11|Has expired: Broken
 lang/dmd2||2019-08-11|Has expired: Broken for more than 6 months and upstream has no fix for statfs64
 cad/elmerfem||2019-08-12|Has expired: Broken for more than 6 months
 sysutils/openhpi||2019-08-12|Has expired: Broken for more than 6 months
+textproc/scim-bridge||2019-08-17|Has expired: Broken for more than 6 months
+devel/py-efilter||2019-08-17|Has expired: No longer maintained
+sysutils/grub2||2019-08-17|Has expired: Unmaintained (more than five years), not updated (one-and-a-half years), does not build with modern compilers
