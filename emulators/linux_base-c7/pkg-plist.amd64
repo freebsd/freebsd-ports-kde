@@ -31,17 +31,10 @@ etc/mke2fs.conf
 etc/mtab
 @sample etc/nsswitch.conf.sample
 etc/os-release
-etc/pam.d/chfn
-etc/pam.d/chsh
-etc/pam.d/login
-etc/pam.d/remote
-etc/pam.d/runuser
-etc/pam.d/runuser-l
-etc/pam.d/su
-etc/pam.d/su-l
 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-Debug-7
 etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-Testing-7
+etc/pki/tls/openssl.cnf
 etc/prelink.conf.d/nss-softokn-prelink.conf
 etc/profile
 etc/profile.d/colorgrep.csh
@@ -109,13 +102,11 @@ usr/bin/catchsegv
 usr/bin/cd
 usr/bin/chattr
 usr/bin/chcon
-usr/bin/chfn
 usr/bin/chgrp
 usr/bin/chmem
 usr/bin/chmod
 usr/bin/chown
 usr/bin/chrt
-usr/bin/chsh
 usr/bin/cksum
 usr/bin/clear
 usr/bin/col
@@ -152,22 +143,6 @@ usr/bin/echo
 usr/bin/egrep
 usr/bin/eject
 usr/bin/env
-usr/bin/eu-addr2line
-usr/bin/eu-ar
-usr/bin/eu-elfcmp
-usr/bin/eu-elfcompress
-usr/bin/eu-elflint
-usr/bin/eu-findtextrel
-usr/bin/eu-make-debug-archive
-usr/bin/eu-nm
-usr/bin/eu-objdump
-usr/bin/eu-ranlib
-usr/bin/eu-readelf
-usr/bin/eu-size
-usr/bin/eu-stack
-usr/bin/eu-strings
-usr/bin/eu-strip
-usr/bin/eu-unstrip
 usr/bin/expand
 usr/bin/expr
 usr/bin/factor
@@ -177,7 +152,6 @@ usr/bin/fc
 usr/bin/fg
 usr/bin/fgrep
 usr/bin/find
-usr/bin/findmnt
 usr/bin/flock
 usr/bin/fmt
 usr/bin/fold
@@ -228,19 +202,12 @@ usr/bin/ln
 usr/bin/locale
 usr/bin/localedef
 usr/bin/logger
-usr/bin/login
 usr/bin/logname
 usr/bin/look
 usr/bin/ls
 usr/bin/lsattr
 usr/bin/lsb_release
-usr/bin/lsblk
-usr/bin/lscpu
-usr/bin/lsipc
 usr/bin/lslocks
-usr/bin/lslogins
-usr/bin/lsmem
-usr/bin/lsns
 usr/bin/makedb
 usr/bin/mcookie
 usr/bin/md5sum
@@ -284,12 +251,10 @@ usr/bin/rm
 usr/bin/rmdir
 usr/bin/rpcgen
 usr/bin/runcon
-usr/bin/script
 usr/bin/scriptreplay
 usr/bin/sed
 usr/bin/seq
 usr/bin/setarch
-usr/bin/setpriv
 usr/bin/setserial
 usr/bin/setsid
 usr/bin/setterm
@@ -355,6 +320,10 @@ usr/bin/write
 usr/bin/x86_64
 usr/bin/xargs
 usr/bin/yes
+usr/lib/.libcrypto.so.1.0.2k.hmac
+usr/lib/.libcrypto.so.10.hmac
+usr/lib/.libssl.so.1.0.2k.hmac
+usr/lib/.libssl.so.10.hmac
 usr/lib/audit/sotruss-lib.so
 usr/lib/db4.7.25/libdb.so
 usr/lib/db4.7.25/libdb_cxx.so
@@ -654,6 +623,8 @@ usr/lib/libcom_err.so.2
 usr/lib/libcom_err.so.2.1
 usr/lib/libcrypt-2.17.so
 usr/lib/libcrypt.so.1
+usr/lib/libcrypto.so.1.0.2k
+usr/lib/libcrypto.so.10
 usr/lib/libdb-4.7.so
 usr/lib/libdb-5.3.so
 usr/lib/libdb-5.so
@@ -782,6 +753,8 @@ usr/lib/libselinux.so.1
 usr/lib/libsepol.so.1
 usr/lib/libslang.so.2
 usr/lib/libslang.so.2.2.4
+usr/lib/libssl.so.1.0.2k
+usr/lib/libssl.so.10
 usr/lib/libstdc++.so.5
 usr/lib/libstdc++.so.5.0.7
 usr/lib/libstdc++.so.6
@@ -802,6 +775,17 @@ usr/lib/locale/locale-archive
 usr/lib/lsb/init-functions
 usr/lib/lsb/install_initd
 usr/lib/lsb/remove_initd
+usr/lib/openssl/engines/lib4758cca.so
+usr/lib/openssl/engines/libaep.so
+usr/lib/openssl/engines/libatalla.so
+usr/lib/openssl/engines/libcapi.so
+usr/lib/openssl/engines/libchil.so
+usr/lib/openssl/engines/libcswift.so
+usr/lib/openssl/engines/libgmp.so
+usr/lib/openssl/engines/libnuron.so
+usr/lib/openssl/engines/libpadlock.so
+usr/lib/openssl/engines/libsureware.so
+usr/lib/openssl/engines/libubsec.so
 usr/lib/rtkaio/i686/nosegneg/librt.so.1
 usr/lib/rtkaio/i686/nosegneg/librtkaio-2.17.so
 usr/lib/rtkaio/librt.so.1
@@ -819,6 +803,10 @@ usr/lib/systemd/system/fstrim.service
 usr/lib/systemd/system/fstrim.timer
 usr/lib/tmpfiles.d/libselinux.conf
 usr/lib/udev/rules.d/60-raw.rules
+usr/lib64/.libcrypto.so.1.0.2k.hmac
+usr/lib64/.libcrypto.so.10.hmac
+usr/lib64/.libssl.so.1.0.2k.hmac
+usr/lib64/.libssl.so.10.hmac
 usr/lib64/audit/sotruss-lib.so
 usr/lib64/db4.7.25/libdb.so
 usr/lib64/db4.7.25/libdb_cxx.so
@@ -1106,6 +1094,8 @@ usr/lib64/libcom_err.so.2
 usr/lib64/libcom_err.so.2.1
 usr/lib64/libcrypt-2.17.so
 usr/lib64/libcrypt.so.1
+usr/lib64/libcrypto.so.1.0.2k
+usr/lib64/libcrypto.so.10
 usr/lib64/libdb-4.7.so
 usr/lib64/libdb-5.3.so
 usr/lib64/libdb-5.so
@@ -1234,6 +1224,8 @@ usr/lib64/libselinux.so.1
 usr/lib64/libsepol.so.1
 usr/lib64/libslang.so.2
 usr/lib64/libslang.so.2.2.4
+usr/lib64/libssl.so.1.0.2k
+usr/lib64/libssl.so.10
 usr/lib64/libstdc++.so.5
 usr/lib64/libstdc++.so.5.0.7
 usr/lib64/libstdc++.so.6
@@ -1250,6 +1242,17 @@ usr/lib64/libuuid.so.1
 usr/lib64/libuuid.so.1.3.0
 usr/lib64/libz.so.1
 usr/lib64/libz.so.1.2.7
+usr/lib64/openssl/engines/lib4758cca.so
+usr/lib64/openssl/engines/libaep.so
+usr/lib64/openssl/engines/libatalla.so
+usr/lib64/openssl/engines/libcapi.so
+usr/lib64/openssl/engines/libchil.so
+usr/lib64/openssl/engines/libcswift.so
+usr/lib64/openssl/engines/libgmp.so
+usr/lib64/openssl/engines/libnuron.so
+usr/lib64/openssl/engines/libpadlock.so
+usr/lib64/openssl/engines/libsureware.so
+usr/lib64/openssl/engines/libubsec.so
 usr/lib64/rtkaio/librt.so.1
 usr/lib64/rtkaio/librtkaio-2.17.so
 usr/lib64/security/pam_cap.so
@@ -1276,9 +1279,7 @@ usr/sbin/capsh
 usr/sbin/cfdisk
 usr/sbin/chcpu
 usr/sbin/chroot
-usr/sbin/clock
 usr/sbin/ctrlaltdel
-usr/sbin/debugfs
 usr/sbin/delpart
 usr/sbin/dumpe2fs
 usr/sbin/e2freefrag
@@ -1303,7 +1304,6 @@ usr/sbin/getcap
 usr/sbin/getpcaps
 usr/sbin/glibc_post_upgrade.i686
 usr/sbin/glibc_post_upgrade.x86_64
-usr/sbin/hwclock
 usr/sbin/iconvconfig
 usr/sbin/iconvconfig.i686
 usr/sbin/iconvconfig.x86_64
@@ -1332,7 +1332,6 @@ usr/sbin/request-key
 usr/sbin/resize2fs
 usr/sbin/resizepart
 usr/sbin/rtcwake
-usr/sbin/runuser
 usr/sbin/sefcontext_compile
 usr/sbin/setcap
 usr/sbin/sfdisk
@@ -1346,7 +1345,6 @@ usr/sbin/tune2fs
 usr/sbin/wipefs
 usr/sbin/zdump
 usr/sbin/zic
-usr/sbin/zramctl
 usr/share/bash-completion/completions/addpart
 usr/share/bash-completion/completions/blkdiscard
 usr/share/bash-completion/completions/blkid
@@ -1463,9 +1461,6 @@ usr/share/centos-release/EULA
 %%PORTDOCS%%usr/share/doc/e2fsprogs-1.42.9/README
 %%PORTDOCS%%usr/share/doc/e2fsprogs-1.42.9/RELEASE-NOTES
 %%PORTDOCS%%usr/share/doc/e2fsprogs-libs-1.42.9/COPYING
-%%PORTDOCS%%usr/share/doc/elfutils-0.172/CONTRIBUTING
-%%PORTDOCS%%usr/share/doc/elfutils-0.172/README
-%%PORTDOCS%%usr/share/doc/elfutils-0.172/TODO
 %%PORTDOCS%%usr/share/doc/findutils-4.5.11/AUTHORS
 %%PORTDOCS%%usr/share/doc/findutils-4.5.11/COPYING
 %%PORTDOCS%%usr/share/doc/findutils-4.5.11/ChangeLog
@@ -2211,9 +2206,6 @@ usr/share/info/rluserman.info.gz
 usr/share/info/sed.info.gz
 usr/share/info/which.info.gz
 usr/share/keyutils/request-key-debug.sh
-usr/share/licenses/elfutils-0.172/COPYING
-usr/share/licenses/elfutils-0.172/COPYING-GPLV2
-usr/share/licenses/elfutils-0.172/COPYING-LGPLV3
 usr/share/licenses/glib2-2.56.1/COPYING
 usr/share/licenses/gmp-6.0.0/COPYING
 usr/share/licenses/gmp-6.0.0/COPYING.LESSERv3
@@ -2221,6 +2213,7 @@ usr/share/licenses/gmp-6.0.0/COPYINGv2
 usr/share/licenses/gmp-6.0.0/COPYINGv3
 usr/share/licenses/krb5-libs-1.15.1/LICENSE
 usr/share/licenses/libsepol-2.5/COPYING
+usr/share/licenses/openssl-libs-1.0.2k/LICENSE
 %%NLS%%usr/share/locale/af/LC_MESSAGES/bash.mo
 %%NLS%%usr/share/locale/af/LC_MESSAGES/coreutils.mo
 %%NLS%%usr/share/locale/af/LC_MESSAGES/glib20.mo
@@ -3174,6 +3167,9 @@ var/mail
 @dir etc/krb5.conf.d
 @dir etc/ld.so.conf.d
 @dir etc/opt
+@dir etc/pki/tls/certs
+@dir etc/pki/tls/misc
+@dir etc/pki/tls/private
 @dir etc/pm/config.d
 @dir etc/pm/power.d
 @dir etc/pm/sleep.d

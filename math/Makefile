@@ -144,11 +144,13 @@
     SUBDIR += bitwise
     SUBDIR += blacs
     SUBDIR += blas
+    SUBDIR += blasfeo
     SUBDIR += blaze
     SUBDIR += blazeiterative
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
+    SUBDIR += bonmin
     SUBDIR += boolector
     SUBDIR += bsdnt
     SUBDIR += btor2tools
@@ -157,6 +159,7 @@
     SUBDIR += calcoo
     SUBDIR += calctool
     SUBDIR += cantor
+    SUBDIR += casadi
     SUBDIR += cbc
     SUBDIR += cblas
     SUBDIR += ccmath
@@ -186,6 +189,8 @@
     SUBDIR += concorde
     SUBDIR += convertall
     SUBDIR += coq
+    SUBDIR += couenne
+    SUBDIR += cppad
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += curv
@@ -276,6 +281,7 @@
     SUBDIR += hexcalc
     SUBDIR += hipmcl
     SUBDIR += hmat-oss
+    SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-semigroups
     SUBDIR += ignition-math
@@ -474,6 +480,7 @@
     SUBDIR += octomap
     SUBDIR += ogdf
     SUBDIR += oleo
+    SUBDIR += onnx
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
@@ -732,6 +739,7 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
+    SUBDIR += py-onnx
     SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
@@ -851,6 +859,7 @@
     SUBDIR += superlu
     SUBDIR += superlu_mt
     SUBDIR += symmetrica
+    SUBDIR += symphony
     SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += tblis
@@ -864,6 +873,7 @@
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
+    SUBDIR += tvm
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units

@@ -1,10 +1,12 @@
 [
-{ type: install
-  message: <<EOM
+{ type: install, message: <<EOM
 on first installation please run:
 
 /usr/local/sbin/sm.setup.sh
-
+EOM
+}
+{ type: remove, message: <<EOM
+---------------------------------------------------
 to clean after permanent removal please run:
 
 rm -rf /usr/local/etc/meta1 /var/spool/meta1

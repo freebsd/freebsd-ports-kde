@@ -81,7 +81,7 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
 # Possible values: 9.4, 9.5, 9.6, 10, 11, 12
-PGSQL_DEFAULT?=		9.5
+PGSQL_DEFAULT?=		11
 # Possible values: 7.1, 7.2, 7.3
 PHP_DEFAULT?=		7.2
 # Possible values: 2.7, 3.5, 3.6, 3.7
@@ -94,7 +94,7 @@ PYTHON3_DEFAULT?=	3.6
 RUBY_DEFAULT?=		2.5
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.6, 4.7, 4.8, 4.10
+# Possible values: 4.8, 4.10
 SAMBA_DEFAULT?=		4.8
 # Possible values: base, openssl, openssl111, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)

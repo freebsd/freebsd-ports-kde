@@ -1179,8 +1179,8 @@
     SUBDIR += remmina-plugin-spice
     SUBDIR += remmina-plugin-st
     SUBDIR += remmina-plugin-vnc
-    SUBDIR += remmina-plugin-xdmcp
     SUBDIR += remmina-plugin-www
+    SUBDIR += remmina-plugin-xdmcp
     SUBDIR += remmina-plugins
     SUBDIR += remotebox
     SUBDIR += remotedesk
@@ -1199,6 +1199,7 @@
     SUBDIR += rtpbreak
     SUBDIR += rtpproxy
     SUBDIR += rtptools
+    SUBDIR += rubygem-activestorage52
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1211,6 +1212,7 @@
     SUBDIR += rubygem-azure-core
     SUBDIR += rubygem-beefcake
     SUBDIR += rubygem-bunny
+    SUBDIR += rubygem-cloudflare
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-docker-api
     SUBDIR += rubygem-dogapi
@@ -1257,8 +1259,10 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab_omniauth-ldap
+    SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
+    SUBDIR += rubygem-google-cloud-logging
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-hangouts-chat
@@ -1324,6 +1328,7 @@
     SUBDIR += rubygem-rye
     SUBDIR += rubygem-serverengine
     SUBDIR += rubygem-simple_oauth
+    SUBDIR += rubygem-stackdriver-core
     SUBDIR += rubygem-stompserver
     SUBDIR += rubygem-t
     SUBDIR += rubygem-tweetstream
@@ -1338,10 +1343,8 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += s3ql
-    SUBDIR += samba46
-    SUBDIR += samba47
-    SUBDIR += samba48
     SUBDIR += samba410
+    SUBDIR += samba48
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd
@@ -1355,6 +1358,7 @@
     SUBDIR += sdl_net
     SUBDIR += seda
     SUBDIR += self-service-password
+    SUBDIR += sems
     SUBDIR += sendemail
     SUBDIR += sendsms
     SUBDIR += sendsnpp
@@ -1405,6 +1409,7 @@
     SUBDIR += ssvnc
     SUBDIR += stone
     SUBDIR += stund
+    SUBDIR += subnetcalc
     SUBDIR += suckblow
     SUBDIR += sup
     SUBDIR += svnup
