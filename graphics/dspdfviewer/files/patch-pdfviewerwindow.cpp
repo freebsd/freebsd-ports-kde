@@ -1,3 +1,12 @@
+ Fix graphics/dspdfviewer build w/ Qt 5.13
+
+ - adjust to deprecated methods
+ - QApplication::flush() hasn't really been a thing since Qt4,
+   just comment it out.
+
+The application looks abandoned upstream.
+
+Patched by adridg@freebsd.org
 --- pdfviewerwindow.cpp.orig	2016-09-13 13:18:47 UTC
 +++ pdfviewerwindow.cpp
 @@ -24,6 +24,7 @@
