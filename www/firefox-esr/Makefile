@@ -3,6 +3,7 @@
 
 PORTNAME=	firefox
 DISTVERSION=	68.1.0
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}esr/source \
@@ -40,8 +41,6 @@ FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/browser/chrome/icons/default/default4
 FIREFOX_DESKTOP=	${MOZSRC}/taskcluster/docker/${MOZILLA}-snap/${MOZILLA}.desktop
 MOZ_OPTIONS=	--enable-application=browser \
 		--enable-official-branding
-
-OPTIONS_EXCLUDE=	WAYLAND
 
 .include "${.CURDIR}/../../www/firefox/Makefile.options"
 

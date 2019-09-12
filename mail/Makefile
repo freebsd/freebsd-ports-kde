@@ -36,6 +36,8 @@
     SUBDIR += bincimap
     SUBDIR += bmf
     SUBDIR += bogofilter
+    SUBDIR += bogofilter-kc
+    SUBDIR += bogofilter-lmdb
     SUBDIR += bogofilter-sqlite
     SUBDIR += bogofilter-tc
     SUBDIR += bsfilter
@@ -96,6 +98,7 @@
     SUBDIR += dma
     SUBDIR += dot-forward
     SUBDIR += dovecot
+    SUBDIR += dovecot-fts-xapian
     SUBDIR += dovecot-pigeonhole
     SUBDIR += dspam
     SUBDIR += ecartis
@@ -378,7 +381,6 @@
     SUBDIR += p5-Mail-Box-Parser-C
     SUBDIR += p5-Mail-Bulkmail
     SUBDIR += p5-Mail-CheckUser
-    SUBDIR += p5-Mail-ClamAV
     SUBDIR += p5-Mail-DKIM
     SUBDIR += p5-Mail-DMARC
     SUBDIR += p5-Mail-DeliveryStatus-BounceParser
@@ -552,7 +554,6 @@
     SUBDIR += qmail-conf
     SUBDIR += qmail-contrib
     SUBDIR += qmail-dk
-    SUBDIR += qmail-ldap
     SUBDIR += qmail-mysql
     SUBDIR += qmail-notify
     SUBDIR += qmail-qfilter

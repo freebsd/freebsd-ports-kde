@@ -88,7 +88,6 @@
     SUBDIR += clamav
     SUBDIR += clamav-milter
     SUBDIR += clamav-unofficial-sigs
-    SUBDIR += clamcour
     SUBDIR += clamd-stream-client
     SUBDIR += clamfs
     SUBDIR += clamsmtp
@@ -218,7 +217,6 @@
     SUBDIR += hlfl
     SUBDIR += hmap
     SUBDIR += hockeypuck
-    SUBDIR += honeybadger
     SUBDIR += honggfuzz
     SUBDIR += hotssh
     SUBDIR += hpenc
@@ -900,6 +898,7 @@
     SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa
     SUBDIR += py-ed25519ll
+    SUBDIR += py-exscript
     SUBDIR += py-fail2ban
     SUBDIR += py-fchksum
     SUBDIR += py-fido2
@@ -1263,6 +1262,7 @@
     SUBDIR += sudoscript
     SUBDIR += super
     SUBDIR += suricata
+    SUBDIR += suricata5
     SUBDIR += swatch
     SUBDIR += switzerland
     SUBDIR += symbion-sslproxy
@@ -1279,6 +1279,7 @@
     SUBDIR += tlswrap
     SUBDIR += tor
     SUBDIR += tor-devel
+    SUBDIR += totp-cli
     SUBDIR += tpm-tools
     SUBDIR += trezord
     SUBDIR += trinokiller

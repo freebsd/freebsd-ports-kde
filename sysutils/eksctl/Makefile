@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eksctl
-PORTVERSION=	0.4.3
+PORTVERSION=	0.5.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -35,7 +35,7 @@ GH_TUPLE=	\
 		alecthomas:template:a0175ee3bccc:alecthomas_template/vendor/github.com/alecthomas/template \
 		alecthomas:units:2efee857e7cf:alecthomas_units/vendor/github.com/alecthomas/units \
 		apex:log:v1.1.0:apex_log/vendor/github.com/apex/log \
-		aws:aws-sdk-go:v1.19.18:aws_aws_sdk_go/vendor/github.com/aws/aws-sdk-go \
+		aws:aws-sdk-go:v1.23.15:aws_aws_sdk_go/vendor/github.com/aws/aws-sdk-go \
 		beorn7:perks:v1.0.0:beorn7_perks/vendor/github.com/beorn7/perks \
 		bep:debounce:v1.2.0:bep_debounce/vendor/github.com/bep/debounce \
 		bep:gitmap:v1.0.0:bep_gitmap/vendor/github.com/bep/gitmap \

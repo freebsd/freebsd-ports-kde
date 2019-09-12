@@ -353,7 +353,6 @@
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
-    SUBDIR += freefilesync
     SUBDIR += freeipmi
     SUBDIR += freesbie
     SUBDIR += froxlor
@@ -583,7 +582,6 @@
     SUBDIR += libsunacl
     SUBDIR += libsysstat
     SUBDIR += liburcu
-    SUBDIR += libutempter
     SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
@@ -602,7 +600,6 @@
     SUBDIR += lmon
     SUBDIR += lnav
     SUBDIR += lockfile-progs
-    SUBDIR += log-courier
     SUBDIR += log_analysis
     SUBDIR += logrotate
     SUBDIR += logstalgia

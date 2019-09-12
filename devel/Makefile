@@ -96,7 +96,6 @@
     SUBDIR += abi-compliance-checker
     SUBDIR += abseil
     SUBDIR += ace
-    SUBDIR += ace+tao-doc
     SUBDIR += acsccid
     SUBDIR += activitymail
     SUBDIR += ada-util
@@ -473,7 +472,6 @@
     SUBDIR += dev86
     SUBDIR += devhelp
     SUBDIR += devtodo
-    SUBDIR += dfmt
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
     SUBDIR += dia2code+
@@ -1000,7 +998,6 @@
     SUBDIR += ignition-msgs
     SUBDIR += ignition-plugin
     SUBDIR += ignition-tools
-    SUBDIR += ignition-transport
     SUBDIR += ikos
     SUBDIR += imake
     SUBDIR += inastemp
@@ -1449,6 +1446,7 @@
     SUBDIR += linux-c7-libsigc++20
     SUBDIR += linux-c7-libthai
     SUBDIR += linux-c7-libunwind
+    SUBDIR += linux-c7-make
     SUBDIR += linux-c7-nspr
     SUBDIR += linux-c7-qt
     SUBDIR += linux-c7-sdl12
@@ -4157,9 +4155,12 @@
     SUBDIR += py-azure-batch
     SUBDIR += py-azure-cosmos
     SUBDIR += py-azure-datalake-store
+    SUBDIR += py-azure-functions-devops-build
     SUBDIR += py-azure-graphrbac
     SUBDIR += py-azure-keyvault
     SUBDIR += py-azure-mgmt-advisor
+    SUBDIR += py-azure-mgmt-apimanagement
+    SUBDIR += py-azure-mgmt-appconfiguration
     SUBDIR += py-azure-mgmt-applicationinsights
     SUBDIR += py-azure-mgmt-authorization
     SUBDIR += py-azure-mgmt-batch
@@ -4177,25 +4178,30 @@
     SUBDIR += py-azure-mgmt-datalake-analytics
     SUBDIR += py-azure-mgmt-datalake-store
     SUBDIR += py-azure-mgmt-datamigration
+    SUBDIR += py-azure-mgmt-deploymentmanager
     SUBDIR += py-azure-mgmt-devtestlabs
     SUBDIR += py-azure-mgmt-dns
     SUBDIR += py-azure-mgmt-eventgrid
     SUBDIR += py-azure-mgmt-eventhub
     SUBDIR += py-azure-mgmt-hdinsight
+    SUBDIR += py-azure-mgmt-imagebuilder
     SUBDIR += py-azure-mgmt-iotcentral
     SUBDIR += py-azure-mgmt-iothub
     SUBDIR += py-azure-mgmt-iothubprovisioningservices
     SUBDIR += py-azure-mgmt-keyvault
     SUBDIR += py-azure-mgmt-kusto
     SUBDIR += py-azure-mgmt-loganalytics
+    SUBDIR += py-azure-mgmt-managedservices
     SUBDIR += py-azure-mgmt-managementgroups
     SUBDIR += py-azure-mgmt-maps
     SUBDIR += py-azure-mgmt-marketplaceordering
     SUBDIR += py-azure-mgmt-media
     SUBDIR += py-azure-mgmt-monitor
     SUBDIR += py-azure-mgmt-msi
+    SUBDIR += py-azure-mgmt-netapp
     SUBDIR += py-azure-mgmt-network
     SUBDIR += py-azure-mgmt-policyinsights
+    SUBDIR += py-azure-mgmt-privatedns
     SUBDIR += py-azure-mgmt-rdbms
     SUBDIR += py-azure-mgmt-recoveryservices
     SUBDIR += py-azure-mgmt-recoveryservicesbackup
@@ -4255,6 +4261,7 @@
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
     SUBDIR += py-bullet3
+    SUBDIR += py-cabby
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-calendar
@@ -4399,6 +4406,7 @@
     SUBDIR += py-extremes
     SUBDIR += py-ezpyinline
     SUBDIR += py-fabric
+    SUBDIR += py-fabric1
     SUBDIR += py-fabric3
     SUBDIR += py-fam
     SUBDIR += py-fastcache
@@ -4445,6 +4453,7 @@
     SUBDIR += py-funcsigs
     SUBDIR += py-functools32
     SUBDIR += py-funcy
+    SUBDIR += py-furl
     SUBDIR += py-fusefs
     SUBDIR += py-fusepy
     SUBDIR += py-future
@@ -4850,6 +4859,7 @@
     SUBDIR += py-pylru-cache
     SUBDIR += py-pymarc
     SUBDIR += py-pymaven-patch
+    SUBDIR += py-pymisp
     SUBDIR += py-pympler
     SUBDIR += py-pymtbl
     SUBDIR += py-pyopencl
@@ -5111,6 +5121,7 @@
     SUBDIR += py-tzlocal
     SUBDIR += py-u-msgpack-python
     SUBDIR += py-ua_parser
+    SUBDIR += py-uhid-freebsd
     SUBDIR += py-ujson
     SUBDIR += py-uncompyle2
     SUBDIR += py-unicodecsv
@@ -5139,6 +5150,7 @@
     SUBDIR += py-virtualenvwrapper
     SUBDIR += py-visitor
     SUBDIR += py-voluptuous
+    SUBDIR += py-vsts
     SUBDIR += py-vsts-cd-manager
     SUBDIR += py-vulture
     SUBDIR += py-wadllib
@@ -5570,6 +5582,8 @@
     SUBDIR += rubygem-aws-sdk-pinpointsmsvoice
     SUBDIR += rubygem-aws-sdk-polly
     SUBDIR += rubygem-aws-sdk-pricing
+    SUBDIR += rubygem-aws-sdk-qldb
+    SUBDIR += rubygem-aws-sdk-qldbsession
     SUBDIR += rubygem-aws-sdk-quicksight
     SUBDIR += rubygem-aws-sdk-ram
     SUBDIR += rubygem-aws-sdk-rds
@@ -5839,6 +5853,7 @@
     SUBDIR += rubygem-grape-swagger
     SUBDIR += rubygem-grape11
     SUBDIR += rubygem-grape_logging
+    SUBDIR += rubygem-grape_logging181
     SUBDIR += rubygem-graphiql-rails
     SUBDIR += rubygem-graphql
     SUBDIR += rubygem-graphql-docs
@@ -6365,7 +6380,6 @@
     SUBDIR += spatialindex
     SUBDIR += spdlog
     SUBDIR += spice-protocol
-    SUBDIR += spin
     SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += spread-sheet-widget

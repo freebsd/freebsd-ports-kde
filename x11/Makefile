@@ -152,6 +152,7 @@
     SUBDIR += libXinerama
     SUBDIR += libXp
     SUBDIR += libXpm
+    SUBDIR += libXpresent
     SUBDIR += libXprintAppUtil
     SUBDIR += libXprintUtil
     SUBDIR += libXrandr
@@ -193,6 +194,7 @@
     SUBDIR += lilyterm
     SUBDIR += linux-c6-pixman
     SUBDIR += linux-c6-xorg-libs
+    SUBDIR += linux-c7-libxkbcommon
     SUBDIR += linux-c7-pixman
     SUBDIR += linux-c7-xorg-libs
     SUBDIR += listres
@@ -225,6 +227,7 @@
     SUBDIR += metisse
     SUBDIR += mkcomposecache
     SUBDIR += mlterm
+    SUBDIR += mons
     SUBDIR += mrxvt
     SUBDIR += mrxvt-devel
     SUBDIR += multi-aterm
@@ -332,6 +335,7 @@
     SUBDIR += viewres
     SUBDIR += virtboard
     SUBDIR += virtualgl
+    SUBDIR += wallutils
     SUBDIR += waybar
     SUBDIR += wbar
     SUBDIR += wbarconf

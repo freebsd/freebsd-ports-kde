@@ -95,6 +95,7 @@
     SUBDIR += corosync3
     SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
+    SUBDIR += courier-sox
     SUBDIR += cppzmq
     SUBDIR += cryptcat
     SUBDIR += csocks
@@ -268,6 +269,7 @@
     SUBDIR += intel-ixl-kmod
     SUBDIR += iodine
     SUBDIR += ip2location
+    SUBDIR += ip2proxy
     SUBDIR += ip6_int
     SUBDIR += ipdecap
     SUBDIR += ipgrab
@@ -1473,7 +1475,6 @@
     SUBDIR += tsocks
     SUBDIR += tucan
     SUBDIR += turnserver
-    SUBDIR += turses
     SUBDIR += twitux
     SUBDIR += u6rd
     SUBDIR += ucarp
