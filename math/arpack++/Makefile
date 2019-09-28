@@ -3,7 +3,7 @@
 
 PORTNAME=	arpack++
 PORTVERSION=	1.2
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	math
 MASTER_SITES=	http://www.ime.unicamp.br/%7echico/arpack++/
 DISTNAME=	${PORTNAME}
@@ -16,6 +16,8 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ARPACK++ is an object-oriented version of the ARPACK package
+
+BROKEN=		unfetchable
 
 LIB_DEPENDS=	libarpack.so:math/arpack-ng \
 		libsuperlu.so:math/superlu \

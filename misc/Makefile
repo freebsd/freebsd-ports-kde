@@ -8,6 +8,7 @@
     SUBDIR += achievo
     SUBDIR += aclgen
     SUBDIR += actiona
+    SUBDIR += adios2
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -27,7 +28,6 @@
     SUBDIR += binclock
     SUBDIR += biosfont-demos
     SUBDIR += birthday
-    SUBDIR += bitwise
     SUBDIR += bogosort
     SUBDIR += bottlerocket
     SUBDIR += box2d
@@ -77,6 +77,7 @@
     SUBDIR += diction
     SUBDIR += digitemp
     SUBDIR += display
+    SUBDIR += dive
     SUBDIR += dnetc
     SUBDIR += dphys-config
     SUBDIR += dtach
@@ -169,7 +170,6 @@
     SUBDIR += gnome-user-docs
     SUBDIR += gnu-watch
     SUBDIR += gnuls
-    SUBDIR += gnustep-examples
     SUBDIR += gobuster
     SUBDIR += gone
     SUBDIR += gonvert
@@ -187,6 +187,7 @@
     SUBDIR += hotkeys
     SUBDIR += hulgalugha
     SUBDIR += ignition-fuel-tools
+    SUBDIR += iio-oscilloscope
     SUBDIR += imerge
     SUBDIR += img2xterm
     SUBDIR += ini_file_manager
@@ -219,6 +220,7 @@
     SUBDIR += lc
     SUBDIR += lesspipe
     SUBDIR += lf
+    SUBDIR += libad9361-iio
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
@@ -307,6 +309,7 @@
     SUBDIR += p5-Data-Buffer
     SUBDIR += p5-File-CounterFile
     SUBDIR += p5-File-Sort
+    SUBDIR += p5-Geo-Address-Formatter
     SUBDIR += p5-Geo-Cache
     SUBDIR += p5-Geo-Coder-Bing
     SUBDIR += p5-Geo-Coder-Google
@@ -473,7 +476,6 @@
     SUBDIR += sword
     SUBDIR += table.el
     SUBDIR += talkfilters
-    SUBDIR += tcb
     SUBDIR += tdfiglet
     SUBDIR += team
     SUBDIR += telbook
@@ -508,6 +510,7 @@
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
     SUBDIR += utftools
+    SUBDIR += utouch-kmod
     SUBDIR += valentina
     SUBDIR += valspeak
     SUBDIR += vdmfec

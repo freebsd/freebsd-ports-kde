@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	impressive
-PORTVERSION=	0.12.0
-PORTREVISION=	1
+PORTVERSION=	0.12.1
 CATEGORIES=	graphics python
 MASTER_SITES=	SF/${PORTNAME}/Impressive/${PORTVERSION}/
 DISTNAME=	Impressive-${PORTVERSION}
@@ -15,7 +14,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/license.txt
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}PyOpenGL>=0:graphics/py-PyOpenGL@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR} \
+		${PYGAME} \
 		${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR}
 
 USES=		python:2.7 sdl shebangfix

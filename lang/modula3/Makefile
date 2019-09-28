@@ -3,7 +3,7 @@
 
 PORTNAME=	modula3
 PORTVERSION=	5.10.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	lang
 MASTER_SITES=	http://downloads.dragonlace.net/m3/:boot
 DISTFILES=	${SRCDISTFILE} ${BOOTDIST}
@@ -15,6 +15,8 @@ LICENSE=	DECM3
 LICENSE_NAME=	CM3 License defined by DEC and Critical Mass copyrights
 LICENSE_FILE=	${WRKSRC}/COM_LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+BROKEN=		unfetchable
 
 LIB_DEPENDS=	libodbc.so:databases/unixODBC
 

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	mariadb
-PORTVERSION=	10.4.6
+PORTVERSION=	10.4.7
 PORTREVISION?=	0
 CATEGORIES=	databases ipv6
 MASTER_SITES=	http://mirrors.supportex.net/${SITESDIR}/ \
@@ -149,6 +149,7 @@ OQGRAPH_LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 ROCKSDB_USES=		python
 SNAPPY_CMAKE_BOOL=	WITH_INNODB_SNAPPY WITH_ROCKSDB_snappy
 SNAPPY_LIB_DEPENDS=	libsnappy.so:archivers/snappy
+TOKUDB_BROKEN=		Error with bundled liblzma
 TOKUDB_IMPLIES=		SNAPPY
 TOKUDB_PORTDOCS=	README.md
 TOKUDB_VARS=		LICENSE+=PerconaFT LICENSE_COMB=multi

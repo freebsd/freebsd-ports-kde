@@ -1,3 +1,3 @@
-TIMESTAMP = 1559457502
-SHA256 (KDE/frameworks/5.59.0/kguiaddons-5.59.0.tar.xz) = 63fcffb06e0c55d44f7c89c6f5052919e39d50412359b783bd9ff861478c8dc6
-SIZE (KDE/frameworks/5.59.0/kguiaddons-5.59.0.tar.xz) = 40296
+TIMESTAMP = 1565017417
+SHA256 (KDE/frameworks/5.61.0/kguiaddons-5.61.0.tar.xz) = 40cefa421b5ad5cf211875a35408ba526a5fb34e5ba19ebbda718dbf6b742520
+SIZE (KDE/frameworks/5.61.0/kguiaddons-5.61.0.tar.xz) = 40576

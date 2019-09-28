@@ -2,6 +2,7 @@
 
 PORTNAME=	butt
 PORTVERSION=	0.1.18
+PORTREVISION=	1
 CATEGORIES=	multimedia graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}-${PORTVERSION}
 
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libmp3lame.so:audio/lame \
 		libogg.so:audio/libogg \
 		libopus.so:audio/opus \
-		libpng16.so:graphics/png \
+		libpng.so:graphics/png \
 		libportaudio.so:audio/portaudio \
 		libsamplerate.so:audio/libsamplerate \
 		libvorbis.so:audio/libvorbis

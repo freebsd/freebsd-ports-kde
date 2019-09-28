@@ -52,8 +52,8 @@
     SUBDIR += apricots
     SUBDIR += aquaria
     SUBDIR += arkanoidsb
+    SUBDIR += armagetronad
     SUBDIR += arx-libertatis
-    SUBDIR += asc
     SUBDIR += ascii-invaders
     SUBDIR += asciiquarium
     SUBDIR += assaultcube
@@ -881,7 +881,6 @@
     SUBDIR += sjeng
     SUBDIR += ski
     SUBDIR += sl
-    SUBDIR += slade
     SUBDIR += slashem-tty
     SUBDIR += slump
     SUBDIR += slune
@@ -1005,6 +1004,7 @@
     SUBDIR += vitetris
     SUBDIR += vkquake
     SUBDIR += vms-empire
+    SUBDIR += voadi
     SUBDIR += vodovod
     SUBDIR += volleyball
     SUBDIR += vor

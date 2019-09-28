@@ -27,6 +27,7 @@
     SUBDIR += calcurse
     SUBDIR += calibre
     SUBDIR += cartotheque
+    SUBDIR += cfiles
     SUBDIR += charmtimetracker
     SUBDIR += chart
     SUBDIR += cherrytree
@@ -40,6 +41,7 @@
     SUBDIR += dailystrips
     SUBDIR += deforaos-todo
     SUBDIR += devd-notifier
+    SUBDIR += dfshow
     SUBDIR += dlume
     SUBDIR += docear
     SUBDIR += dosage

@@ -3,14 +3,13 @@
 
 PORTNAME=	abseil
 PORTVERSION=	g20190703
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Abseil Common Libraries (C++)
 
 LICENSE=	APACHE20
-
-BROKEN_powerpc=	fatal error: sys/platform/ppc.h: No such file or directory
 
 USES=		cmake compiler:c++11-lang
 USE_GITHUB=	yes

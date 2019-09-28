@@ -70,6 +70,7 @@
     SUBDIR += libunrar
     SUBDIR += libunrar5
     SUBDIR += libzip
+    SUBDIR += linux-c7-lz4
     SUBDIR += lizard
     SUBDIR += lrzip
     SUBDIR += lua-lzlib
@@ -115,6 +116,7 @@
     SUBDIR += p5-Compress-Snappy
     SUBDIR += p5-Gzip-Faster
     SUBDIR += p5-IO-Compress
+    SUBDIR += p5-IO-Compress-Brotli
     SUBDIR += p5-IO-Compress-Lzf
     SUBDIR += p5-IO-Compress-Lzma
     SUBDIR += p5-IO-Compress-Lzop
@@ -169,7 +171,6 @@
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-acefile
-    SUBDIR += py-attic
     SUBDIR += py-backports.lzma
     SUBDIR += py-borgbackup
     SUBDIR += py-brotli

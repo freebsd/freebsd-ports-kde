@@ -143,6 +143,7 @@
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm-legacy-kmod
+    SUBDIR += drm_info
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
@@ -198,6 +199,7 @@
     SUBDIR += fpc-rsvg
     SUBDIR += fpc-svgalib
     SUBDIR += fracplanet
+    SUBDIR += fractgen
     SUBDIR += fraqtive
     SUBDIR += freeglut
     SUBDIR += freeimage
@@ -252,7 +254,6 @@
     SUBDIR += gimp-refocus-plugin
     SUBDIR += gimp-resynthesizer
     SUBDIR += gimp-save-for-web
-    SUBDIR += gimp-wavelet-decompose-plugin
     SUBDIR += gimp-wavelet-denoise-plugin
     SUBDIR += gimp-wavelet-sharpen-plugin
     SUBDIR += giram
@@ -357,6 +358,7 @@
     SUBDIR += imc
     SUBDIR += imgtops
     SUBDIR += imgv
+    SUBDIR += imgvtopgm
     SUBDIR += imlib2
     SUBDIR += imlib2-webp
     SUBDIR += imlib2_loaders
@@ -378,6 +380,7 @@
     SUBDIR += jhead
     SUBDIR += jogamp-jogl
     SUBDIR += jogl
+    SUBDIR += jp
     SUBDIR += jp2a
     SUBDIR += jpatch
     SUBDIR += jpeg
@@ -401,7 +404,7 @@
     SUBDIR += kf5-prison
     SUBDIR += kgraphviewer
     SUBDIR += kimagemapeditor
-    SUBDIR += kipiplugins
+    SUBDIR += kipi-plugins
     SUBDIR += kix-kmod
     SUBDIR += klatexformula
     SUBDIR += kludge3d
@@ -491,6 +494,7 @@
     SUBDIR += librsvg2-rust
     SUBDIR += libsixel
     SUBDIR += libspiro
+    SUBDIR += libspng
     SUBDIR += libsvg
     SUBDIR += libsvg-cairo
     SUBDIR += libvisual
@@ -515,6 +519,7 @@
     SUBDIR += linux-c6-sdl_ttf
     SUBDIR += linux-c6-tiff
     SUBDIR += linux-c7-cairo
+    SUBDIR += linux-c7-cairo-gobject
     SUBDIR += linux-c7-dri
     SUBDIR += linux-c7-gdk-pixbuf2
     SUBDIR += linux-c7-glx-utils
@@ -522,6 +527,7 @@
     SUBDIR += linux-c7-jasper
     SUBDIR += linux-c7-jbigkit
     SUBDIR += linux-c7-jpeg
+    SUBDIR += linux-c7-libepoxy
     SUBDIR += linux-c7-libglvnd
     SUBDIR += linux-c7-png
     SUBDIR += linux-c7-sdl_image
@@ -530,8 +536,6 @@
     SUBDIR += linux-c7-wayland
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
-    SUBDIR += luxrender
-    SUBDIR += luxrender14
     SUBDIR += lximage-qt
     SUBDIR += magnum
     SUBDIR += magnum-examples
@@ -773,6 +777,7 @@
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
     SUBDIR += png
+    SUBDIR += png++
     SUBDIR += png2html
     SUBDIR += png2ico
     SUBDIR += pngcheck
@@ -867,6 +872,7 @@
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
     SUBDIR += py-pyembree
+    SUBDIR += py-pyepsg
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pyglet
@@ -951,6 +957,7 @@
     SUBDIR += rubygem-gruff
     SUBDIR += rubygem-image_science
     SUBDIR += rubygem-imagesize
+    SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
     SUBDIR += rubygem-objectdetect
     SUBDIR += rubygem-opengl
@@ -1005,6 +1012,7 @@
     SUBDIR += svg2pdf
     SUBDIR += svg2png
     SUBDIR += svgalib
+    SUBDIR += svgbob
     SUBDIR += swfdec
     SUBDIR += swfmill
     SUBDIR += swftools

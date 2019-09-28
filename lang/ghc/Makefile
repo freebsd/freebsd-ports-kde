@@ -3,7 +3,7 @@
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang haskell
 MASTER_SITES=	https://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		LOCAL/arrowd/:boot \
@@ -93,6 +93,10 @@ LLVM_VERSION=		50
 CONFIGURE_ARGS+=	--enable-dtrace=0
 .else
 LLVM_VERSION=		60
+.endif
+
+.if ${ARCH} == powerpc64
+CONFIGURE_ARGS+=	--enable-dtrace=0
 .endif
 
 .if ${ARCH} == amd64 || ${ARCH} == i386

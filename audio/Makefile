@@ -192,6 +192,7 @@
     SUBDIR += fomp-lv2
     SUBDIR += foo-yc20
     SUBDIR += forked-daapd
+    SUBDIR += fossmixer
     SUBDIR += fpc-a52
     SUBDIR += fpc-mad
     SUBDIR += fpc-modplug
@@ -204,6 +205,7 @@
     SUBDIR += funktrackergold
     SUBDIR += gbemol
     SUBDIR += gbsplay
+    SUBDIR += geonkick-lv2
     SUBDIR += gervill
     SUBDIR += ghostess
     SUBDIR += giada
@@ -241,6 +243,7 @@
     SUBDIR += gqradio
     SUBDIR += gradio
     SUBDIR += gramofile
+    SUBDIR += grip
     SUBDIR += gsequencer
     SUBDIR += gsm
     SUBDIR += gsound
@@ -457,6 +460,7 @@
     SUBDIR += linux-c6-pulseaudio-utils
     SUBDIR += linux-c6-sdl_mixer
     SUBDIR += linux-c7-alsa-lib
+    SUBDIR += linux-c7-alsa-lib-devel
     SUBDIR += linux-c7-alsa-plugins-oss
     SUBDIR += linux-c7-alsa-plugins-pulseaudio
     SUBDIR += linux-c7-alsa-utils
@@ -508,6 +512,7 @@
     SUBDIR += mixmos
     SUBDIR += mixxx
     SUBDIR += mixxx21
+    SUBDIR += mkcue
     SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay
@@ -700,6 +705,7 @@
     SUBDIR += py-webrtcvad
     SUBDIR += py-xmms2
     SUBDIR += pytone
+    SUBDIR += qaudiosonar
     SUBDIR += qjackctl
     SUBDIR += qmidiarp
     SUBDIR += qmidictl
@@ -793,6 +799,7 @@
     SUBDIR += stk
     SUBDIR += streamripper
     SUBDIR += streamtranscoder
+    SUBDIR += string-machine-lv2
     SUBDIR += stymulator
     SUBDIR += suil
     SUBDIR += supercollider

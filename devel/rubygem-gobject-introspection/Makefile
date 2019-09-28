@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	3.3.6
+PORTVERSION=	3.3.7
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
@@ -9,6 +9,7 @@ MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby binding for GObjectIntrospection
 
 LICENSE=	LGPL21+
+LICENSE_FILE=	${WRKSRC}/COPYING.LIB
 
 BROKEN_sparc64=	does not build: fails to compile rb-gi-function-info.c
 

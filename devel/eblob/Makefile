@@ -3,13 +3,15 @@
 
 PORTNAME=	eblob
 PORTVERSION=	0.18.2
-PORTREVISION=	15
+PORTREVISION=	17
 CATEGORIES=	devel
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Append-only low-level I/O library
 
 LICENSE=	GPLv2
+
+BROKEN=		unfetchable
 
 LIB_DEPENDS=	libboost_iostreams.so:devel/boost-libs
 
