@@ -363,6 +363,7 @@
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
+    SUBDIR += php74-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -469,7 +470,6 @@
     SUBDIR += spamcalc
     SUBDIR += sshbuddy
     SUBDIR += sssnips
-    SUBDIR += survex
     SUBDIR += susv2
     SUBDIR += susv3
     SUBDIR += susv4
@@ -546,7 +546,5 @@
     SUBDIR += yaunc
     SUBDIR += ytree
     SUBDIR += zoneinfo
-    SUBDIR += zygrib
-    SUBDIR += zygrib-maps
 
 .include <bsd.port.subdir.mk>

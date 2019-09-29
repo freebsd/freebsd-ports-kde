@@ -143,6 +143,7 @@
     SUBDIR += docbook2X
     SUBDIR += docbook2mdoc
     SUBDIR += docbook2odf
+    SUBDIR += docbookrx
     SUBDIR += doclifter
     SUBDIR += docproj
     SUBDIR += dom4j
@@ -871,6 +872,7 @@
     SUBDIR += p5-Text-Hyphen
     SUBDIR += p5-Text-LTSV
     SUBDIR += p5-Text-Language-Guess
+    SUBDIR += p5-Text-Locus
     SUBDIR += p5-Text-Lorem
     SUBDIR += p5-Text-Markdown
     SUBDIR += p5-Text-MarkdownTable
@@ -1206,6 +1208,15 @@
     SUBDIR += php73-xmlreader
     SUBDIR += php73-xmlwriter
     SUBDIR += php73-xsl
+    SUBDIR += php74-ctype
+    SUBDIR += php74-dom
+    SUBDIR += php74-enchant
+    SUBDIR += php74-pspell
+    SUBDIR += php74-simplexml
+    SUBDIR += php74-xml
+    SUBDIR += php74-xmlreader
+    SUBDIR += php74-xmlwriter
+    SUBDIR += php74-xsl
     SUBDIR += pict
     SUBDIR += plover
     SUBDIR += po4a
@@ -1403,6 +1414,7 @@
     SUBDIR += py-tinycss
     SUBDIR += py-toml
     SUBDIR += py-toronado
+    SUBDIR += py-towncrier
     SUBDIR += py-trans
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring

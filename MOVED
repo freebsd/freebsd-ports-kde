@@ -2903,7 +2903,6 @@ sysutils/rsyslog4-devel-relp||2011-11-02|Is now stable; see sysutils/rsyslog4
 sysutils/rsyslog4-devel-rfc3195||2011-11-02|Is now stable; see sysutils/rsyslog4
 sysutils/rsyslog4-devel-snmp||2011-11-02|Is now stable; see sysutils/rsyslog4
 www/php-yaf|www/pecl-yaf|2011-11-02|The project has been moved to PECL
-sysutils/xfce4-places-plugin||2011-11-06|Removed, integrated in Xfce 4.8 panel
 lang/p5-F77|lang/p5-ExtUtils-F77|2011-11-07|Move to a better place via repocopy
 devel/soup||2011-11-09|Has expired: Unmaintained, use devel/libsoup
 graphics/clutter-qt||2011-11-09|Has expired: upstream distfile disappeared, doesn't build, and doesn't seem to be developed anymore
@@ -11831,7 +11830,6 @@ graphics/qt4-opengl||2019-03-16|Has expired: Qt4 has been EOL since december 201
 graphics/qt4-pixeltool||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/qt4-svg||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/qxv||2019-03-16|Has expired: Qt4 has been EOL since december 2015, qxv is unmaintained
-graphics/scantailor||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/seexpr||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/smillaenlarger||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 graphics/structuresynth||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -11925,7 +11923,6 @@ x11/py-qt4-opengl||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qt4-graphicssystems-opengl||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qt4-inputmethods||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11/qxkb||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-x11-fonts/fontmatrix||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-themes/qt4-style-float||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-themes/qt4-style-phase||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 x11-themes/qt4-style-quantumstyle||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -12800,7 +12797,6 @@ www/rubygem-lograge-rails50|www/rubygem-lograge-rails5|2019-06-21|Obsolete by gi
 devel/rubygem-batch-loader12|devel/rubygem-batch-loader|2019-06-21|Obsolete by gitlab-ce upgrade, use devel/rubygem-batch-loader instead
 security/easy-rsa2|security/easy-rsa|2019-06-23|Has expired: Use easy-rsa 3 instead
 devel/py-robotframework-selenium2library|devel/py-robotframework-seleniumlibrary|2019-06-25|Renamed to match upstream
-net-p2p/zetacoin-nox11|net-p2p/zetacoin|2019-06-26|Slave port folded back into now text-only master port
 net/tigervnc||2019-06-29|Removed: Non-essential meta port
 sysutils/cfengine33|sysutils/cfengine313|2019-06-30|Has expired: No longer supported upstream
 sysutils/cfengine-masterfiles38|sysutils/cfengine-masterfiles313|2019-06-30|Has expired: No longer supported upstream
@@ -12841,6 +12837,7 @@ misc/tcb||2019-07-13|Has expired: Abandonware that uses sys/dir.h
 editors/xed||2019-07-13|Has expired: Abandonware using sys/dir.h
 databases/gtksql||2019-07-13|Has expired: Abandonware using sys/dir.h
 security/snortreport||2019-07-16|Has expired: Abandonware
+net-p2p/zetacoin-nox11|net-p2p/zetacoin-daemon|2019-07-17|Renamed to better align with net-p2p/bitcoin port
 databases/pecl-redis3|databases/pecl-redis|2019-07-19|No longer needed after PHP 5 removal
 www/weblint||2019-07-20|Broken, uses nonexistant perl libraries, and upstream disappeared. Use www/p5-HTML-Lint instead
 www/august||2019-07-20|Uses removed weblint
@@ -12953,3 +12950,34 @@ x11-toolkits/p5-Wx||2019-09-07|Has expired: Broken for more than 6 months
 graphics/luxrender14||2019-09-07|Has expired: Depends on expiring graphics/embree, broken with boost 1.70
 graphics/luxrender||2019-09-07|Has expired: Depends on expiring graphics/embree, broken with boost 1.70
 sysutils/libutempter||2019-09-11|Belong to base in all supported version of FreeBSD
+databases/postgresql-plruby||2019-09-19|Has expired: Abandonware
+databases/tablelog||2019-09-19|Has expired: Abandonware
+databases/skytools||2019-09-19|Has expired: Abandonware
+devel/xfce4-vala||2019-09-20|Deprecated, functionality moved to xfce libraries with option VAPI on (default)
+irc/iroffer-lamm||2019-09-23|obsolete
+java/openjdk6|java/openjdk8|2019-09-23|Has expired: EOLed upstream since December 2018
+java/openjdk6-jre|java/openjdk8-jre|2019-09-23|Has expired: EOLed upstream since December 2018
+deskutils/lumina-xdg-entry||2019-09-22|Deprecated, merged upstream with deskutils/lumina-fileinfo
+deskutils/lumina-notify||2019-09-22|Deprecated, removed upstream
+palm/pilot-link||2019-09-24|Has expired: obsolete technology
+graphics/pixmap||2019-09-24|Has expired: No longer maintained
+japanese/jpilot||2019-09-24|Has expired: obsolete technology
+palm/p5-Palm-PalmDoc||2019-09-24|Has expired: obsolete technology
+palm/pilot_makedoc||2019-09-24|Has expired: obsolete technology
+palm/jpilot||2019-09-24|Has expired: obsolete technology
+sysutils/bibelot||2019-09-24|Has expired: obsolete technology
+databases/mdbconv||2019-09-24|Has expired: obsolete technology
+sysutils/makeztxt||2019-09-24|Has expired: obsolete technology
+databases/palm-db-tools||2019-09-24|Has expired: obsolete technology
+comms/jpilot-picsnvideos||2019-09-24|Has expired: obsolete technology
+devel/libee||2019-09-24|Has expired: No longer required by rsyslog, which was its only consumer.  No longer maintained upstream
+devel/libmal||2019-09-24|Has expired: obsolete technology
+print/py-fonttools-lxml-ufo|print/py-fonttools|2019-09-25|Changed for new way for optional dependencies
+misc/zygrib||2019-09-28|Has expired: Can not build with graphics/proj
+misc/survex||2019-09-28|Has expired: Can not build with graphics/proj
+graphics/proj5||2019-09-28|Has expired: Please use graphics/proj instead
+graphics/p5-Geo-Proj4||2019-09-28|Has expired: Can not build with graphics/proj
+misc/zygrib-maps||2019-09-28|Removed, depends on expired misc/zygrib
+graphics/p5-Geo-Point||2019-09-28|Removed, depends on expired graphics/p5-Geo-Proj4
+x11/rubygem-gnome2|x11/rubygem-gnome|2019-09-28|Upstream changed the project name from Ruby-GNOME2 to Ruby-GNOME
+mail/fetchmail64|mail/fetchmail|2019-09-28|mail/fetchmail now provides the same version

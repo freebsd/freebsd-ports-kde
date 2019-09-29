@@ -3,7 +3,7 @@
 
 PORTNAME=	fontforge
 PORTVERSION=	20190801
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print
 
 MAINTAINER=	cyberbotx@cyberbotx.com
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libfreetype.so:print/freetype2
 
-USES=		autoreconf compiler gettext gmake gnome iconv:wchar_t libtool \
+USES=		autoreconf compiler:c++11-lang gettext gmake gnome iconv:wchar_t libtool \
 		localbase pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	glib20 libxml2

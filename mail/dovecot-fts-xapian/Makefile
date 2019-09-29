@@ -2,6 +2,7 @@
 
 PORTNAME=	fts-xapian
 PORTVERSION=	1.2.1
+PORTREVISION=	1
 CATEGORIES=	mail
 PKGNAMEPREFIX=	dovecot-
 
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libxapian.so:databases/xapian-core \
 BUILD_DEPENDS=	dovecot>=2.3.7:mail/dovecot
 RUN_DEPENDS=	dovecot>=2.3.7:mail/dovecot
 
-USES=		autoreconf libtool pkgconfig
+USES=		autoreconf compiler:c++11-lang libtool pkgconfig
 
 USE_LDCONFIG=	yes
 

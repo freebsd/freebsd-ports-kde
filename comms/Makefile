@@ -39,6 +39,7 @@
     SUBDIR += dump1090
     SUBDIR += ebook2cw
     SUBDIR += ebook2cwgui
+    SUBDIR += ebusd
     SUBDIR += echolinux
     SUBDIR += efax
     SUBDIR += ems-flasher
@@ -72,7 +73,6 @@
     SUBDIR += iwmbt-firmware
     SUBDIR += java-simple-serial-connector
     SUBDIR += jerm
-    SUBDIR += jpilot-picsnvideos
     SUBDIR += kb
     SUBDIR += kermit
     SUBDIR += klog
