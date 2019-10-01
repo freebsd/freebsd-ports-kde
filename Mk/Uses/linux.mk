@@ -39,7 +39,7 @@ linux_ARGS=		${LINUX_DEFAULT}
 .if ${linux_ARGS} == c6
 LINUX_DIST_VER?=	6.10
 .elif ${linux_ARGS} == c7
-LINUX_DIST_VER?=	7.6.1810
+LINUX_DIST_VER?=	7.7.1908
 .else
 IGNORE=			Invalid Linux distribution: ${linux_ARGS}
 .endif
@@ -89,6 +89,7 @@ _linux_${linux_ARGS}_jpeg=		linux-${linux_ARGS}-jpeg>0:graphics/linux-${linux_AR
 _linux_${linux_ARGS}_libasyncns=	linux-${linux_ARGS}-libasyncns>0:dns/linux-${linux_ARGS}-libasyncns
 _linux_c6_libaudiofile=			linux-c6-audiofile>0:audio/linux-c6-libaudiofile
 _linux_c7_libaudiofile=			linux-c7-audiofile>0:audio/linux-c7-audiofile
+_linux_c7_libdrm=			linux-c7-libdrm>0:graphics/linux-c7-libdrm
 _linux_c7_libepoxy=			linux-c7-libepoxy>0:graphics/linux-c7-libepoxy
 _linux_${linux_ARGS}_libgcrypt=		linux-${linux_ARGS}-libgcrypt>0:security/linux-${linux_ARGS}-libgcrypt
 _linux_${linux_ARGS}_libgfortran=	linux-${linux_ARGS}-libgfortran>0:devel/linux-${linux_ARGS}-libgfortran
@@ -145,7 +146,8 @@ _linux_${linux_ARGS}_tk85=		linux-${linux_ARGS}-tk85>0:x11-toolkits/linux-${linu
 _linux_c7_trousers=			linux-c7-trousers>0:security/linux-c7-trousers
 _linux_${linux_ARGS}_userspace-rcu=	linux-${linux_ARGS}-userspace-rcu>0:sysutils/linux-${linux_ARGS}-userspace-rcu
 _linux_c7_wayland=			linux-c7-wayland>0:graphics/linux-c7-wayland
-_linux_${linux_ARGS}_xorglibs=		linux-${linux_ARGS}-xorg-libs>0:x11/linux-${linux_ARGS}-xorg-libs
+_linux_c6_xorglibs=			linux-c6-xorg-libs>0:x11/linux-c6-xorg-libs
+_linux_c7_xorglibs=			linux-c7-xorg-libs>=7.7_7:x11/linux-c7-xorg-libs
 
 USE_LINUX?=		base
 .for i in ${USE_LINUX}

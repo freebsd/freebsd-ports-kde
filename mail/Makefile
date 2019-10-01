@@ -132,7 +132,6 @@
     SUBDIR += fastforward
     SUBDIR += fdm
     SUBDIR += fetchmail
-    SUBDIR += fetchmail64
     SUBDIR += fetchmailconf
     SUBDIR += filtermail
     SUBDIR += findmaildirs
@@ -483,6 +482,7 @@
     SUBDIR += php71-imap
     SUBDIR += php72-imap
     SUBDIR += php73-imap
+    SUBDIR += php74-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6

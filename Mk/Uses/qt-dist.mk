@@ -334,7 +334,7 @@ qt5-pre-configure:
 	${ECHO_CMD} 'QMAKE_DEFAULT_LIBDIRS += ${LOCALBASE}/lib /usr/lib /lib' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 	${ECHO_CMD} 'QMAKE_DEFAULT_INCDIRS += ${LOCALBASE}/include /usr/include' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 
-# Allow linking of further libraries to the configure direcotry.
+# Allow linking of further libraries to the configure directory.
 .    if !empty(_QT5_ADDITIONAL_LINK)
 .      for dep in ${_QT5_ADDITIONAL_LINK}
 	${MKDIR} ${CONFIGURE_WRKSRC}/lib

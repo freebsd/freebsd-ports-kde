@@ -5,6 +5,38 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20190927:
+  AFFECTS: users of emulators/qemu-devel
+  AUTHOR: bofh@FreeBSD.org
+
+  qemu-devel has been updated to 4.1.0 and 4.0.0 has been merged into a new port
+  emulators/qemu40. If you want to stick with 4.0.X branch, simply use:
+  # portmaster -o emulators/qemu-devel emulators/qemu40
+
+20190927:
+  AFFECTS: users of XFCE desktop
+  AUTHOR: madpilot@FreeBSD.org
+
+  Due to changes in the XFCE 4.14 metaport, systems could end up with
+  both xscreensaver and xfce4-screensaver installed and enabled
+  simultaneously.
+
+  This can cause conflicts and problems unlocking the screen.
+
+  To avoid problems, please make sure to have only one enabled by
+  going to the Application Autostart tab of the Session and Startup
+  settings applet and enable only one Screensaver there.
+
+  Some further information can be found in the xfce4-session
+  pkg-message dispolayed on installation and upgrade.
+
+20190920:
+  AFFECTS: users of net-mgmt/pushgateway
+  AUTHOR: 0mp@FreeBSD.org
+
+  The persistent storage format used by pushgateway in the lastest version is
+  not backwards compatible. See the pushgateway changelogs for details.
+
 20190911:
   AFFECTS: users of security/bastillion
   AUTHOR: netchild@FreeBSD.org
@@ -169,6 +201,21 @@ you update your ports collection, before attempting any port upgrades.
   Users that still use the Python 2.7 version of net-im/py-matrix-synapse
   should switch to a newer Python version, e.g. 3.6, which is the default
   Python version since April 2019.
+
+20190717:
+  AFFECTS: users of net-p2p/zetacoin and net-p2p/zetacoin-nox11
+  AUTHOR: daniel@morante.net
+
+  Zetacoin will default to using modern versions of BDB (5.x or 6.x) when
+  the WALLET option is selected.   See pkg-help for explanation.
+
+  The zetacoin-nox11 slave port was renamed to zetacoin-daemon to align
+  with the net-p2p/bitcoin format.
+  
+  The zetacoin-cli and zetacoin-tx utilities have been re-packaged into
+  a separate port. If you require these programs, or use the zetacoin-cli
+  program to access the daemon or the GUI, install net-p2p/zetacoin-utils
+  to reinstall them.
 
 20190717:
   AFFECTS: users of sysutils/py-borgmatic

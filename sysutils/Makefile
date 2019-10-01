@@ -104,7 +104,6 @@
     SUBDIR += bfs
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
-    SUBDIR += bibelot
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
@@ -630,7 +629,6 @@
     SUBDIR += mac_nonet
     SUBDIR += mac_rtprio
     SUBDIR += magicrescue
-    SUBDIR += makeztxt
     SUBDIR += manck
     SUBDIR += mapchan
     SUBDIR += mapdir
@@ -742,6 +740,7 @@
     SUBDIR += no-login
     SUBDIR += node_exporter
     SUBDIR += nomad
+    SUBDIR += nomad-pot-driver
     SUBDIR += npadmin
     SUBDIR += nq
     SUBDIR += nrg2iso
@@ -776,6 +775,7 @@
     SUBDIR += p5-File-Listing
     SUBDIR += p5-File-Log
     SUBDIR += p5-File-Next
+    SUBDIR += p5-File-Rename
     SUBDIR += p5-File-Signature
     SUBDIR += p5-File-Stat-Bits
     SUBDIR += p5-File-Stat-ModeString
@@ -892,10 +892,13 @@
     SUBDIR += php72-posix
     SUBDIR += php73-fileinfo
     SUBDIR += php73-posix
+    SUBDIR += php74-fileinfo
+    SUBDIR += php74-posix
     SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
+    SUBDIR += pies
     SUBDIR += pipemeter
     SUBDIR += plasma-pass
     SUBDIR += plasma5-discover
@@ -1028,6 +1031,7 @@
     SUBDIR += py-google-compute-engine
     SUBDIR += py-halite
     SUBDIR += py-hared
+    SUBDIR += py-hcloud
     SUBDIR += py-honcho
     SUBDIR += py-hpilo
     SUBDIR += py-iowait
@@ -1301,6 +1305,7 @@
     SUBDIR += synergy-1
     SUBDIR += sysadm
     SUBDIR += sysadm-client
+    SUBDIR += sysctlinfo-kmod
     SUBDIR += sysgather
     SUBDIR += sysinfo
     SUBDIR += syslinux
@@ -1518,6 +1523,7 @@
     SUBDIR += xfce4-kbdleds-plugin
     SUBDIR += xfce4-mount-plugin
     SUBDIR += xfce4-netload-plugin
+    SUBDIR += xfce4-places-plugin
     SUBDIR += xfce4-power-manager
     SUBDIR += xfce4-settings
     SUBDIR += xfce4-systemload-plugin

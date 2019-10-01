@@ -1,14 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	yuzu
-PORTVERSION=	s20190909
+PORTVERSION=	s20190925
 PORTREVISION?=	0
 CATEGORIES=	emulators
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo Switch emulator/debugger
 
-LICENSE=	APACHE20 BSD2CLAUSE BSD3CLAUSE BSL GPLv2+ ISCL LGPL21+ MIT OpenSSL UNLICENSE
+LICENSE=	APACHE20 BSD2CLAUSE BSD3CLAUSE BSL GPLv2+ ISCL LGPL21+ LGPL3+ MIT OpenSSL UNLICENSE
 LICENSE_COMB=	multi
 LICENSE_FILE_BSD2CLAUSE=${WRKSRC}/externals/fmt/LICENSE.rst
 LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/externals/inih/inih/LICENSE.txt
@@ -28,12 +28,12 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	07a024253
+GH_TAGNAME=	da0737359
 GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		DarkLordZach:mbedtls:a280e60:mbedtls/externals/mbedtls \
 		KhronosGroup:SPIRV-Headers:2c51218:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		KhronosGroup:Vulkan-Headers:v1.1.103:Vulkan_Headers/externals/Vulkan-Headers \
-		MerryMage:dynarmic:r1-1388-g2683a9a3:dynarmic/externals/dynarmic \
+		KhronosGroup:Vulkan-Headers:v1.1.117:Vulkan_Headers/externals/Vulkan-Headers \
+		MerryMage:dynarmic:r1-1436-g087a7441:dynarmic/externals/dynarmic \
 		ReinUsesLisp:sirit:f7c4b07:sirit/externals/sirit \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		catchorg:Catch2:v2.3.0:catch/externals/catch \
@@ -41,7 +41,7 @@ GH_TUPLE=	yuzu-emu:unicorn:1.0.1-153-g73f45735:unicorn/externals/unicorn \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		facebook:zstd:v1.3.8:zstd/externals/zstd \
 		fmtlib:fmt:6.0.0:fmt/externals/fmt \
-		kinetiknz:cubeb:cubeb-0.2-1098-g6f2420d:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1151-g9eb4c89:cubeb/externals/cubeb \
 		lz4:lz4:v1.8.0-8-g4db65c1:lz4/externals/lz4 \
 		ogniK5377:opus:v1.3-rc-20-g562f8ba5:opus/externals/opus \
 		svn2github:inih:603729d:inih/externals/inih/inih \
