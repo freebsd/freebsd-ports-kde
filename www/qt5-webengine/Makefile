@@ -73,7 +73,7 @@ SNDIO_VARS_OFF=		QMAKE_CONFIGURE_ARGS+=-no-sndio
 # whether webenginewidgets is available, which fails when qmake processes all
 # .pro files at once.
 USES=		gl gnome gperf jpeg python:2.7,build pkgconfig \
-		qmake:norecursive,outsource qt-dist:5,webengine shebangfix
+		qmake:norecursive,outsource qt-dist:5,webengine shebangfix xorg
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT=		core declarative designer gui location network webchannel \
@@ -113,9 +113,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 post-extract:
 # Install FreeBSD's freebsd.pri file.
 	${CP} ${FILESDIR}/freebsd.pri ${WRKSRC}/src/core/config/freebsd.pri
-# XXX some strange workaound
-	${CP} ${WRKSRC}/src/3rdparty/chromium/base/third_party/libevent/freebsd/config.h \
-		${WRKSRC}/src/3rdparty/chromium/base/third_party/libevent/config.h
 
 post-extract-SNDIO-on:
 	@cd ${WRKSRC}/src/3rdparty/chromium/media/audio && ${MKDIR} sndio openbsd
