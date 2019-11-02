@@ -405,6 +405,7 @@
     SUBDIR += ioquake3
     SUBDIR += ioquake3-server
     SUBDIR += iortcw
+    SUBDIR += iqpuzzle
     SUBDIR += irrlamb
     SUBDIR += ishido
     SUBDIR += ivan
@@ -1072,7 +1073,6 @@
     SUBDIR += xpat2
     SUBDIR += xpenguins
     SUBDIR += xpilot
-    SUBDIR += xpilot-ng-client
     SUBDIR += xpilot-ng-server
     SUBDIR += xpipeman
     SUBDIR += xpired

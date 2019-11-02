@@ -46,6 +46,7 @@
     SUBDIR += anvil
     SUBDIR += apache-mesos
     SUBDIR += apachetop
+    SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += aptly
@@ -378,6 +379,7 @@
     SUBDIR += fusefs-hfsfuse
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
+    SUBDIR += fusefs-jmtpfs
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-libs3
     SUBDIR += fusefs-lkl
@@ -462,6 +464,7 @@
     SUBDIR += hare
     SUBDIR += hared
     SUBDIR += hatop
+    SUBDIR += hcloud
     SUBDIR += hdrecover
     SUBDIR += healthd
     SUBDIR += heartbeat
