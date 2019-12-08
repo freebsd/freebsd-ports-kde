@@ -269,6 +269,7 @@
 %%QT_MKSPECDIR%%/features/resolve_config.prf
 %%QT_MKSPECDIR%%/features/resolve_target.prf
 %%QT_MKSPECDIR%%/features/resources.prf
+%%QT_MKSPECDIR%%/features/resources_functions.prf
 %%QT_MKSPECDIR%%/features/rtti.prf
 %%QT_MKSPECDIR%%/features/rtti_off.prf
 %%QT_MKSPECDIR%%/features/sanitizer.prf
