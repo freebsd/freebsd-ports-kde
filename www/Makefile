@@ -42,7 +42,6 @@
     SUBDIR += bareos-webui
     SUBDIR += bareos16-webui
     SUBDIR += bareos17-webui
-    SUBDIR += bigbluebutton
     SUBDIR += bkmrkconv
     SUBDIR += blastbeat
     SUBDIR += bluefish
@@ -209,7 +208,6 @@
     SUBDIR += gpx2map
     SUBDIR += grafana
     SUBDIR += grafana2
-    SUBDIR += grafana3
     SUBDIR += grafana4
     SUBDIR += grafana5
     SUBDIR += grafana6
@@ -340,7 +338,6 @@
     SUBDIR += mimetex
     SUBDIR += mini_httpd
     SUBDIR += miniflux
-    SUBDIR += miniminiweb
     SUBDIR += minio
     SUBDIR += minio-client
     SUBDIR += miniserve
@@ -428,6 +425,7 @@
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += moodle37
+    SUBDIR += moodle38
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -456,9 +454,10 @@
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
     SUBDIR += nibbleblog
+    SUBDIR += nift
     SUBDIR += node
     SUBDIR += node10
-    SUBDIR += node6
+    SUBDIR += node12
     SUBDIR += node8
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -467,6 +466,7 @@
     SUBDIR += npc
     SUBDIR += npm
     SUBDIR += npm-node10
+    SUBDIR += npm-node12
     SUBDIR += npm-node8
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
@@ -1215,7 +1215,6 @@
     SUBDIR += p5-WWW-Mechanize-FormFiller
     SUBDIR += p5-WWW-Mechanize-GZip
     SUBDIR += p5-WWW-Mechanize-Meta
-    SUBDIR += p5-WWW-Mechanize-PhantomJS
     SUBDIR += p5-WWW-Mechanize-Pluggable
     SUBDIR += p5-WWW-Mechanize-Plugin-phpBB
     SUBDIR += p5-WWW-Mechanize-Shell
@@ -1358,7 +1357,6 @@
     SUBDIR += pear-UDDI
     SUBDIR += pear-XML_GRDDL
     SUBDIR += pear-twig
-    SUBDIR += pebble
     SUBDIR += pecl-http
     SUBDIR += pecl-solr
     SUBDIR += pecl-yaf
@@ -1448,6 +1446,7 @@
     SUBDIR += py-collective.easytemplate
     SUBDIR += py-collective.templateengines
     SUBDIR += py-cookies
+    SUBDIR += py-crossplane
     SUBDIR += py-css-parser
     SUBDIR += py-csscompressor
     SUBDIR += py-cssmin
@@ -1458,7 +1457,6 @@
     SUBDIR += py-dj21-django-cors-headers
     SUBDIR += py-dj21-django-crispy-forms
     SUBDIR += py-dj21-django-debug-toolbar
-    SUBDIR += py-dj21-django-extensions
     SUBDIR += py-dj21-django-filter
     SUBDIR += py-dj21-django-js-asset
     SUBDIR += py-dj21-django-mptt
@@ -1466,13 +1464,14 @@
     SUBDIR += py-dj21-django-taggit
     SUBDIR += py-dj21-django-taggit-serializer
     SUBDIR += py-dj21-django-timezone-field
-    SUBDIR += py-dj21-djangoql
     SUBDIR += py-dj21-djangorestframework
     SUBDIR += py-dj21-drf-yasg
     SUBDIR += py-dj22-django-auth-ldap
     SUBDIR += py-dj22-django-cacheops
     SUBDIR += py-dj22-django-cors-headers
+    SUBDIR += py-dj22-django-crispy-forms
     SUBDIR += py-dj22-django-debug-toolbar
+    SUBDIR += py-dj22-django-extensions
     SUBDIR += py-dj22-django-filter
     SUBDIR += py-dj22-django-formset-js-improved
     SUBDIR += py-dj22-django-jquery-js
@@ -1486,6 +1485,7 @@
     SUBDIR += py-dj22-django-timezone-field
     SUBDIR += py-dj22-django-treebeard
     SUBDIR += py-dj22-django_csp
+    SUBDIR += py-dj22-djangoql
     SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-dj22-drf-yasg
     SUBDIR += py-dj22-swapper
@@ -1597,6 +1597,7 @@
     SUBDIR += py-django111
     SUBDIR += py-django21
     SUBDIR += py-django22
+    SUBDIR += py-django30
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1917,6 +1918,7 @@
     SUBDIR += redmine-sidebar_hide
     SUBDIR += redmine-single_auth
     SUBDIR += redmine-wiki_notes
+    SUBDIR += redmine4
     SUBDIR += rejik
     SUBDIR += reportmagic
     SUBDIR += repos-style
@@ -1925,6 +1927,7 @@
     SUBDIR += retawq
     SUBDIR += riot-web
     SUBDIR += roundup
+    SUBDIR += rss-bridge
     SUBDIR += rsskit
     SUBDIR += rssowl
     SUBDIR += rssroll
@@ -2113,7 +2116,6 @@
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept
     SUBDIR += rubygem-rack-attack
-    SUBDIR += rubygem-rack-attack44
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
@@ -2160,7 +2162,6 @@
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
     SUBDIR += rubygem-responders-rails52
-    SUBDIR += rubygem-responders2-rails52
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -2274,6 +2275,7 @@
     SUBDIR += tdom
     SUBDIR += template_
     SUBDIR += templatelite
+    SUBDIR += thirtybees
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache
@@ -2291,7 +2293,6 @@
     SUBDIR += tntnet
     SUBDIR += tokyopromenade
     SUBDIR += tomcat-native
-    SUBDIR += tomcat6
     SUBDIR += tomcat7
     SUBDIR += tomcat85
     SUBDIR += tomcat9
@@ -2470,6 +2471,7 @@
     SUBDIR += yanopaste
     SUBDIR += yarn
     SUBDIR += yarn-node10
+    SUBDIR += yarn-node12
     SUBDIR += yarn-node8
     SUBDIR += yaws
     SUBDIR += you-get

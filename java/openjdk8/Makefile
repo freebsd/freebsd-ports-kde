@@ -24,14 +24,12 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 RUN_DEPENDS=	javavm:java/javavmwrapper \
 		dejavu>0:x11-fonts/dejavu
 
-USES=		compiler:features gmake iconv pkgconfig shebangfix
+USES=		compiler:features gmake iconv pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	battleblow
 GH_PROJECT=	openjdk-jdk8u
 GH_TAGNAME=	jdk${JDK_MAJOR_VERSION}u${JDK_UPDATE_VERSION}-b${JDK_BUILD_NUMBER}.${BSD_JDK_VERSION}
-
-SHEBANG_FILES=	configure
 
 _MAKE_JOBS=	#
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -111,6 +109,7 @@ X11_CONFIGURE_ON=	--with-giflib=system \
 X11_LIB_DEPENDS=	libgif.so:graphics/giflib
 X11_MAKE_ENV_OFF=	BUILD_HEADLESS_ONLY=1 \
 			MAKEFLAGS=X_CFLAGS="-I${LOCALBASE}/include"
+X11_USES=		xorg
 X11_USE=		XORG=x11,xext,xi,xrender,xt,xtst
 FONTCONFIG_EXTRA_PATCHES=	${PATCHDIR}/fontconfig.patch
 FONTCONFIG_IMPLIES=	X11

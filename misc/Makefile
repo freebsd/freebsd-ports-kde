@@ -36,6 +36,7 @@
     SUBDIR += buffer
     SUBDIR += cave
     SUBDIR += cdcollect
+    SUBDIR += cheat
     SUBDIR += chef
     SUBDIR += chmlib
     SUBDIR += cinnamon-translations
@@ -54,7 +55,6 @@
     SUBDIR += compat7x
     SUBDIR += compat8x
     SUBDIR += compat9x
-    SUBDIR += console-bridge
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosti
@@ -228,6 +228,7 @@
     SUBDIR += libutf
     SUBDIR += lifelines
     SUBDIR += lingoteach
+    SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
     SUBDIR += loop
@@ -247,6 +248,7 @@
     SUBDIR += metromap
     SUBDIR += mime-support
     SUBDIR += mirmon
+    SUBDIR += mmdnn
     SUBDIR += mmv
     SUBDIR += molequeue
     SUBDIR += morse
@@ -261,11 +263,14 @@
     SUBDIR += nut
     SUBDIR += ompl
     SUBDIR += ondir
+    SUBDIR += onnx
     SUBDIR += opencyc
     SUBDIR += openhab2
     SUBDIR += openhab2-addons
+    SUBDIR += openhantek
     SUBDIR += openhmd
     SUBDIR += openmvg
+    SUBDIR += opennn
     SUBDIR += openr2
     SUBDIR += openvdb
     SUBDIR += orange3
@@ -350,6 +355,7 @@
     SUBDIR += pear-Services_Weather
     SUBDIR += pear-Text_Figlet
     SUBDIR += pecl-timezonedb
+    SUBDIR += perkeep
     SUBDIR += pfm
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
@@ -382,6 +388,7 @@
     SUBDIR += py-huepy
     SUBDIR += py-kartograph
     SUBDIR += py-molequeue
+    SUBDIR += py-onnx-tf
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational
@@ -407,8 +414,11 @@
     SUBDIR += py-spdx
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
+    SUBDIR += py-tflearn
+    SUBDIR += py-tflite
     SUBDIR += py-toil
     SUBDIR += py-tqdm
+    SUBDIR += py-tvm
     SUBDIR += py-yolk
     SUBDIR += pylize
     SUBDIR += pyobd
@@ -483,6 +493,7 @@
     SUBDIR += ttyrec
     SUBDIR += tudu
     SUBDIR += tvbrowser
+    SUBDIR += tvm
     SUBDIR += typetrainer
     SUBDIR += tzdiff
     SUBDIR += uk-phone
@@ -493,8 +504,6 @@
     SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += urbit
-    SUBDIR += urdfdom
-    SUBDIR += urdfdom-headers
     SUBDIR += urh
     SUBDIR += us-zipcodes
     SUBDIR += usbids

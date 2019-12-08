@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	drm-fbsd11.2-kmod
-PORTVERSION=	4.11g20190906
+PORTVERSION=	4.11g20191204
 CATEGORIES=	graphics
 
 MAINTAINER=	x11@FreeBSD.org
@@ -28,11 +28,11 @@ USES=		kmod uidfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreeBSDDesktop
 GH_PROJECT=	kms-drm
-GH_TAGNAME=	72300db
+GH_TAGNAME=	4050743
 
 .include <bsd.port.options.mk>
 
-.if ${OPSYS} == FreeBSD && (${OSVERSION} < 1102000 || ${OSVERSION} > 1200000)
+.if ${OPSYS} == FreeBSD && ${OSVERSION} > 1200000
 IGNORE=		only supported on FreeBSD 11.
 .endif
 

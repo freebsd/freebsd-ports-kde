@@ -45,6 +45,7 @@
     SUBDIR += cmucl-extra
     SUBDIR += cocor
     SUBDIR += coffeescript
+    SUBDIR += compute-runtime
     SUBDIR += cparser
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
@@ -104,7 +105,6 @@
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc7
-    SUBDIR += gcc7-devel
     SUBDIR += gcc8
     SUBDIR += gcc8-devel
     SUBDIR += gcc9
@@ -270,8 +270,6 @@
     SUBDIR += perl5.30
     SUBDIR += petite-chez
     SUBDIR += pfe
-    SUBDIR += purescript
-    SUBDIR += phantomjs
     SUBDIR += pharo
     SUBDIR += phc
     SUBDIR += php-mode.el
@@ -289,6 +287,7 @@
     SUBDIR += polyml
     SUBDIR += ponyc
     SUBDIR += ptoc
+    SUBDIR += purescript
     SUBDIR += py-hy
     SUBDIR += py-mx-base
     SUBDIR += py-prolog
@@ -309,6 +308,7 @@
     SUBDIR += python35
     SUBDIR += python36
     SUBDIR += python37
+    SUBDIR += python38
     SUBDIR += qmasm
     SUBDIR += qscheme
     SUBDIR += quickjs
@@ -355,6 +355,7 @@
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
     SUBDIR += spidermonkey52
+    SUBDIR += spidermonkey60
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

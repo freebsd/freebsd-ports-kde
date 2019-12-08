@@ -13,12 +13,14 @@ PATCHFILES=	ical-2.3.1-upvar.patch
 MAINTAINER=	fbsd@opal.com
 COMMENT=	Calendar application
 
+BROKEN=		unfetchable
+
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		tk
+USES=		tk xorg
 USE_XORG=	x11 xext xft xrender xscrnsaver
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-tclconfig=${TCL_LIBDIR} \

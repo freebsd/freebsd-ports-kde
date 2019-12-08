@@ -147,7 +147,6 @@
     SUBDIR += libXfixes
     SUBDIR += libXi
     SUBDIR += libXinerama
-    SUBDIR += libXp
     SUBDIR += libXpm
     SUBDIR += libXpresent
     SUBDIR += libXrandr
@@ -157,7 +156,6 @@
     SUBDIR += libXv
     SUBDIR += libXvMC
     SUBDIR += libXxf86dga
-    SUBDIR += libXxf86misc
     SUBDIR += libXxf86vm
     SUBDIR += libdmx
     SUBDIR += libexo
@@ -209,6 +207,7 @@
     SUBDIR += lxqt-globalkeys
     SUBDIR += lxqt-runner
     SUBDIR += lxrandr
+    SUBDIR += ly
     SUBDIR += mate
     SUBDIR += mate-applets
     SUBDIR += mate-base
@@ -265,6 +264,7 @@
     SUBDIR += printscreen
     SUBDIR += props
     SUBDIR += py-caffeine-ng
+    SUBDIR += py-i3ipc
     SUBDIR += py-pyscreenshot
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt5-opengl
@@ -306,6 +306,7 @@
     SUBDIR += slop
     SUBDIR += slurp
     SUBDIR += smproxy
+    SUBDIR += squeekboard
     SUBDIR += sselp
     SUBDIR += stalonetray
     SUBDIR += startup-notification
@@ -421,10 +422,8 @@
     SUBDIR += xfce4-whiskermenu-plugin
     SUBDIR += xfce4-wmdock-plugin
     SUBDIR += xfd
-    SUBDIR += xfindproxy
     SUBDIR += xfishtank
     SUBDIR += xforward
-    SUBDIR += xfwp
     SUBDIR += xgamma
     SUBDIR += xgc
     SUBDIR += xgrab

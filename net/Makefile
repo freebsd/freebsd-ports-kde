@@ -86,6 +86,7 @@
     SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloud-init-azure
+    SUBDIR += cloudflared
     SUBDIR += clusterit
     SUBDIR += cnd
     SUBDIR += concourse-fly
@@ -115,6 +116,7 @@
     SUBDIR += dgd-lpmud
     SUBDIR += dhcp6
     SUBDIR += dhcpcd
+    SUBDIR += dhcpcd-devel
     SUBDIR += dhcpcd-ui
     SUBDIR += dhcpd
     SUBDIR += dhcpd-pools
@@ -140,6 +142,7 @@
     SUBDIR += elixir-kafka_ex
     SUBDIR += elixir-oauth2
     SUBDIR += empty
+    SUBDIR += endlessh
     SUBDIR += enet
     SUBDIR += erlang-ranch
     SUBDIR += erlang-xmlrpc
@@ -209,6 +212,8 @@
     SUBDIR += grilo
     SUBDIR += grilo-plugins
     SUBDIR += grive2
+    SUBDIR += grpcox
+    SUBDIR += grpcui
     SUBDIR += grpcurl
     SUBDIR += grsync
     SUBDIR += gsk
@@ -234,6 +239,7 @@
     SUBDIR += haproxy17
     SUBDIR += haproxy18
     SUBDIR += haproxy19
+    SUBDIR += haproxy21
     SUBDIR += hexinject
     SUBDIR += hinfo
     SUBDIR += hlmaster
@@ -462,6 +468,7 @@
     SUBDIR += mping
     SUBDIR += mptsd
     SUBDIR += mrouted
+    SUBDIR += mrtparse
     SUBDIR += msend
     SUBDIR += mtr
     SUBDIR += mtr-nox11
@@ -973,6 +980,7 @@
     SUBDIR += php74-sockets
     SUBDIR += php74-xmlrpc
     SUBDIR += phpldapadmin
+    SUBDIR += pichi
     SUBDIR += pim6-tools
     SUBDIR += pim6dd
     SUBDIR += pim6sd
@@ -1014,6 +1022,7 @@
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
+    SUBDIR += py-cloudscraper
     SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
@@ -1433,6 +1442,7 @@
     SUBDIR += tcpmssd
     SUBDIR += tcpproxy
     SUBDIR += tcpreen
+    SUBDIR += tcprtt
     SUBDIR += tcpsg
     SUBDIR += tcpshow
     SUBDIR += tcpslice

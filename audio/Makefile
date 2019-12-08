@@ -62,6 +62,7 @@
     SUBDIR += bristol
     SUBDIR += bs2b-lv2
     SUBDIR += bsequencer-lv2
+    SUBDIR += bshapr-lv2
     SUBDIR += cadence
     SUBDIR += calf-lv2
     SUBDIR += cam
@@ -491,11 +492,13 @@
     SUBDIR += madplay
     SUBDIR += malint
     SUBDIR += mate-media
+    SUBDIR += mclk-lv2
     SUBDIR += mctoolame-decoder
     SUBDIR += mctoolame-encoder
     SUBDIR += mda-lv2
     SUBDIR += mhwaveedit
     SUBDIR += midi-matrix-lv2
+    SUBDIR += midiomatic-lv2
     SUBDIR += midipp
     SUBDIR += mikmod
     SUBDIR += milkytracker
@@ -557,6 +560,7 @@
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
+    SUBDIR += ncspot
     SUBDIR += nekobee
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
@@ -760,6 +764,7 @@
     SUBDIR += sndio
     SUBDIR += so-synth-lv2
     SUBDIR += solfege
+    SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
     SUBDIR += sorcer-lv2
@@ -783,11 +788,13 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-tui
     SUBDIR += spotifyd
     SUBDIR += squash
     SUBDIR += sratom
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
+    SUBDIR += stone-phaser-lv2
     SUBDIR += streamripper
     SUBDIR += streamtranscoder
     SUBDIR += string-machine-lv2

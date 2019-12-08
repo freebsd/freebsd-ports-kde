@@ -132,6 +132,7 @@
     SUBDIR += mrtg
     SUBDIR += mrtg-ping-probe
     SUBDIR += mtrace
+    SUBDIR += mysql-snmp
     SUBDIR += mysqld_exporter
     SUBDIR += nagcon
     SUBDIR += nagios
@@ -368,7 +369,6 @@
     SUBDIR += softflowd
     SUBDIR += spectools
     SUBDIR += ssgless
-    SUBDIR += statsd
     SUBDIR += statsite
     SUBDIR += subcalc
     SUBDIR += super_mediator
@@ -393,11 +393,6 @@
     SUBDIR += xymon-client
     SUBDIR += xymon-server
     SUBDIR += yaf
-    SUBDIR += zabbix22-agent
-    SUBDIR += zabbix22-frontend
-    SUBDIR += zabbix22-java
-    SUBDIR += zabbix22-proxy
-    SUBDIR += zabbix22-server
     SUBDIR += zabbix3-agent
     SUBDIR += zabbix3-frontend
     SUBDIR += zabbix3-java

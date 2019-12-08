@@ -10,7 +10,9 @@ MASTER_SITES=	http://www.crynwr.com/piewm/
 MAINTAINER=	david@catwhisker.org
 COMMENT=	tvtwm with pie (circular) menus
 
-USES=		imake
+BROKEN=		unfetchable
+
+USES=		imake xorg
 DISABLE_SIZE=	yes
 USE_XORG=	xbitmaps xpm xmu
 

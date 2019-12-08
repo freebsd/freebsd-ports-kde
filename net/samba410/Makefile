@@ -71,7 +71,6 @@ USES+=				compiler:c++11-lang iconv localbase:ldflags \
 				perl5 pkgconfig shebangfix ssl waf gettext-runtime
 USE_PERL5=			build
 USE_LDCONFIG=			${SAMBA4_LIBDIR}
-LLD_UNSAFE=			yes
 WAF_CMD=			buildtools/bin/waf
 CONFIGURE_LOG=			bin/config.log
 
@@ -345,7 +344,7 @@ QUOTAS_CONFIGURE_WITH=		quotas
 SPOTLIGHT_CONFIGURE_ENABLE=	spotlight
 SPOTLIGHT_BUILD_DEPENDS=	tracker>=1.4.1:sysutils/tracker
 SPOTLIGHT_RUN_DEPENDS=		tracker>=1.4.1:sysutils/tracker
-SPOTLIGHT_USES=			bison
+SPOTLIGHT_USES=			bison gnome
 SPOTLIGHT_USE=			gnome=glib20
 
 SYSLOG_CONFIGURE_WITH=		syslog

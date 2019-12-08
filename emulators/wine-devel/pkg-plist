@@ -155,6 +155,7 @@ include/wine/windows/cmdtxt.idl
 include/wine/windows/cmnquery.h
 include/wine/windows/cmnquery.idl
 include/wine/windows/colinf.idl
+include/wine/windows/colordlg.h
 include/wine/windows/comcat.h
 include/wine/windows/comcat.idl
 include/wine/windows/commctrl.h
@@ -700,8 +701,8 @@ include/wine/windows/raserror.h
 include/wine/windows/reason.h
 include/wine/windows/regstr.h
 include/wine/windows/restartmanager.h
-%%STAGING%%include/wine/windows/restrictederrorinfo.h
-%%STAGING%%include/wine/windows/restrictederrorinfo.idl
+include/wine/windows/restrictederrorinfo.h
+include/wine/windows/restrictederrorinfo.idl
 include/wine/windows/richedit.h
 include/wine/windows/richole.h
 include/wine/windows/richole.idl
@@ -1389,7 +1390,7 @@ lib/wine/dpnsvr.exe.so
 lib/wine/dpvoice.dll.so
 lib/wine/dpwsockx.dll.so
 lib/wine/drmclien.dll.so
-%%STAGING%%lib/wine/dsdmo.dll.so
+lib/wine/dsdmo.dll.so
 lib/wine/dsound.dll.so
 lib/wine/dsquery.dll.so
 lib/wine/dssenh.dll.so
@@ -1841,7 +1842,7 @@ lib/wine/fakedlls/dpnsvr.exe
 lib/wine/fakedlls/dpvoice.dll
 lib/wine/fakedlls/dpwsockx.dll
 lib/wine/fakedlls/drmclien.dll
-%%STAGING%%lib/wine/fakedlls/dsdmo.dll
+lib/wine/fakedlls/dsdmo.dll
 lib/wine/fakedlls/dsound.dll
 lib/wine/fakedlls/dsquery.dll
 lib/wine/fakedlls/dssenh.dll
@@ -2526,6 +2527,7 @@ lib/wine/libdbgeng.def
 lib/wine/libdbghelp.def
 lib/wine/libdciman32.def
 lib/wine/libddraw.def
+lib/wine/libdhcpcsvc.def
 lib/wine/libdinput.a
 lib/wine/libdinput8.a
 lib/wine/libdmoguids.a

@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	inputstream.adaptive
-DISTVERSION=	2.5.1
+DISTVERSION=	2.5.3
 DISTVERSIONSUFFIX=	-Matrix
-PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMEPREFIX=	kodi-addon-
 PKGNAMESUFFIX=	-devel
@@ -14,9 +13,9 @@ COMMENT=	Adaptive stream support for Kodi
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE.GPL
 
-BUILD_DEPENDS=	kodi-devel>=19.0.a20191014:multimedia/kodi-devel
+BUILD_DEPENDS=	kodi-devel>=19.0.a20191112:multimedia/kodi-devel
 LIB_DEPENDS=	libexpat.so:textproc/expat2
-RUN_DEPENDS=	kodi-devel>=19.0.a20191014:multimedia/kodi-devel
+RUN_DEPENDS=	kodi-devel>=19.0.a20191112:multimedia/kodi-devel
 
 USES=		cmake
 USE_GITHUB=	yes

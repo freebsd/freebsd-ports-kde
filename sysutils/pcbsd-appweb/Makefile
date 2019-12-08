@@ -9,7 +9,12 @@ CATEGORIES=	sysutils
 MAINTAINER=	kmoore@FreeBSD.org
 COMMENT=	PC-BSD Web Interface
 
+BROKEN=		unfetchable
+
 LICENSE=	BSD3CLAUSE
+
+DEPRECATED=	Abandoned upstream
+EXPIRATION_DATE=	2019-12-15
 
 RUN_DEPENDS=	syscache:sysutils/pcbsd-syscache \
 		pbi:sysutils/pbi-manager \
@@ -18,7 +23,7 @@ RUN_DEPENDS=	syscache:sysutils/pcbsd-syscache \
 
 USE_PHP=	filter gd json session
 WRKSRC_SUBDIR=	src-webui
-USES=		pkgconfig
+USES=		php pkgconfig
 NO_BUILD=	yes
 NO_ARCH=	yes
 MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}

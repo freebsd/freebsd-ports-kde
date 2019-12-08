@@ -10,6 +10,8 @@ MASTER_SITES=	http://netdot.uoregon.edu/pub/dists/
 MAINTAINER=	nick@foobar.org
 COMMENT=	Open source tool to organize and maintain network information
 
+BROKEN=		unfetchable
+
 LICENSE=	GPLv2
 
 RUN_DEPENDS=	p5-libapreq2>=0:www/p5-libapreq2 \
@@ -41,9 +43,8 @@ RUN_DEPENDS=	p5-libapreq2>=0:www/p5-libapreq2 \
 		rrdtool:databases/rrdtool \
 		netdisco-mibs>=0:net-mgmt/netdisco-mibs
 
-USES=		gmake perl5 shebangfix
+USES=		gmake mysql perl5 shebangfix
 NO_BUILD=	yes
-USE_MYSQL=	yes
 
 SUB_FILES=	pkg-message pkg-install
 SUB_LIST=	WWWDIR="${WWWDIR}"	\

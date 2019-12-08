@@ -45,9 +45,10 @@ AALIB_CONFIGURE_ON=	ac_cv_aalib_ver_ok=yes
 
 GTK2_DESC=		GTK+ User Interface (experimental)
 GTK2_USE=		GNOME=gtk20
-GTK2_USES=		pkgconfig
+GTK2_USES=		gnome pkgconfig
 GTK2_CONFIGURE_WITH=	gtk-driver
 
+X11_USES=		xorg
 X11_USE=		XORG=x11,xext
 X11_CONFIGURE_WITH=	x11-driver x
 

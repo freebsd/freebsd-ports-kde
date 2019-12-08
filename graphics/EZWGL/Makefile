@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}-demo.tgz ${DISTNAME}-doc.tgz ${DISTNAME}-src.tgz
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	EZ Widget and Graphics Library
 
+BROKEN=		unfetchable
+
 LIB_DEPENDS=	libtiff.so:graphics/tiff \
 		libpng.so:graphics/png
 
@@ -19,7 +21,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_sparc64=	does not compile on sparc64
 
-USES=		localbase
+USES=		localbase xorg
 USE_XORG=	x11 xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

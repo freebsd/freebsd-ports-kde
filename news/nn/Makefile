@@ -8,8 +8,10 @@ CATEGORIES=	news
 MASTER_SITES=	http://www.sourcefiles.org/Internet/News/Usenet_Clients/  \
 		http://www.wa.apana.org.au/~dean/sources/
 
-MAINTAINER=	johans@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Newsreader
+
+BROKEN=		unfetchable
 
 BROKEN_aarch64=	Fails to link: missing sbrk
 

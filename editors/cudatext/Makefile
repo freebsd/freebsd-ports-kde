@@ -9,9 +9,11 @@ PKGNAMESUFFIX=	${LAZARUS_PKGNAMESUFFIX}
 MAINTAINER=	acm@FreeBSD.org
 COMMENT=	Cross-platform text editor, written in Lazarus
 
+BROKEN=		unfetchable
+
 LICENSE=	MPL20
 
-USES=		desktop-file-utils dos2unix fpc lazarus:flavors
+USES=		desktop-file-utils dos2unix fpc gnome lazarus:flavors xorg
 USE_FPC=	chm fcl-base fcl-image fcl-json fcl-stl fcl-xml pasjpeg rtl-objpas x11
 USE_XORG=	x11
 USE_GITHUB=	yes

@@ -40,7 +40,6 @@
     SUBDIR += clutter-gst3
     SUBDIR += cmrt
     SUBDIR += cmrtlib
-    SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
     SUBDIR += dav1d
     SUBDIR += deforaos-player
@@ -176,6 +175,7 @@
     SUBDIR += kodi
     SUBDIR += kodi-addon-inputstream.adaptive-devel
     SUBDIR += kodi-addon-peripheral-joystick
+    SUBDIR += kodi-addon-peripheral.joystick-devel
     SUBDIR += kodi-addon-pvr-hts
     SUBDIR += kodi-addon-pvr-iptvsimple
     SUBDIR += kodi-addon-vfs.libarchive-devel
@@ -214,6 +214,7 @@
     SUBDIR += libquvi-scripts
     SUBDIR += libquvi-scripts09
     SUBDIR += libquvi09
+    SUBDIR += librav1e
     SUBDIR += librtmp
     SUBDIR += libsmacker
     SUBDIR += libtheora
@@ -413,6 +414,7 @@
     SUBDIR += vamps
     SUBDIR += vapoursynth
     SUBDIR += vapoursynth-l-smash-works
+    SUBDIR += vapoursynth-vmaf
     SUBDIR += vcdgear
     SUBDIR += vcdimager
     SUBDIR += vcdpad
@@ -451,6 +453,7 @@
     SUBDIR += wf-recorder
     SUBDIR += win32-codecs
     SUBDIR += winff
+    SUBDIR += wlrobs
     SUBDIR += x264
     SUBDIR += x265
     SUBDIR += xanim

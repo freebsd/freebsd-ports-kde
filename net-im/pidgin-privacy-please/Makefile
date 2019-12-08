@@ -10,6 +10,8 @@ CATEGORIES=	net-im
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Privacy plugin for the pidgin instant messenger
 
+BROKEN=		unfetchable
+
 DEPRECATED=	Abandonware
 EXPIRATION_DATE=	2019-12-09
 
@@ -22,7 +24,7 @@ BUILD_DEPENDS=	pidgin:net-im/pidgin
 RUN_DEPENDS=	pidgin:net-im/pidgin
 
 GNU_CONFIGURE=	yes
-USES=		gmake gettext libtool pkgconfig autoreconf
+USES=		autoreconf gettext gmake gnome libtool pkgconfig
 USE_GNOME=	cairo gdkpixbuf2 gtk20 intltool
 USE_LDCONFIG=	yes
 

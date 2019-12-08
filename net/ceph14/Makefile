@@ -48,7 +48,7 @@ RUN_DEPENDS=	\
 	${PYTHON_PKGNAMEPREFIX}virtualenv>=0:devel/py-virtualenv@${PY_FLAVOR} \
 	${PYTHON_PKGNAMEPREFIX}prettytable>=0:devel/py-prettytable@${PY_FLAVOR}
 
-USES=		cmake:noninja fuse gettext-runtime gmake pkgconfig python:3.6 \
+USES=		cmake:noninja fuse gettext-runtime gmake pkgconfig python:3.6+ \
 		shebangfix ssl
 USE_PYTHON=	cython
 USE_OPENLDAP=	yes
@@ -79,7 +79,7 @@ CMAKE_OFF=	WITH_BOOST_CONTEXT WITH_LTTNG WITH_BABELTRACE WITH_KRBD WITH_XFS WITH
 		WITH_SPDK WITH_RDMA WITH_LIBCEPHFS WITH_CEPHFS WITH_RADOSGW_BEAST_FRONTEND \
 		WITH_MGR_DASHBOARD_FRONTEND
 CMAKE_ARGS=	\
-		-D WITH_PYTHON2=OFF -D WITH_PYTHON3=ON -DMGR_PYTHON_VERSION=3.6 \
+		-D WITH_PYTHON2=OFF -D WITH_PYTHON3=ON -DMGR_PYTHON_VERSION=${PYTHON_VER} \
 		-D CEPH_MAN_DIR:STRING=man
 
 SHEBANG_FILES=	src/rbdmap src/ceph-post-file.in src/rbd-replay-many \
