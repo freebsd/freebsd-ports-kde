@@ -110,6 +110,8 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
+QT_BINARIES=	yes
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH:Mmips*} || ${ARCH:Mpowerpc*} || ${ARCH} == sparc64

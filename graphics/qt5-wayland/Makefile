@@ -23,4 +23,6 @@ USE_XORG=       x11 xcomposite
 
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
+QT_BINARIES=	yes
+
 .include <bsd.port.mk>

@@ -19,6 +19,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 MORE_WRKSRCS=	src/tools/uic
 
+QT_BINARIES=	yes
 QT_DEFINES=	ACCESSIBILITY WIDGETS XSYNC
 QT_CONFIG=	accessibility accessibility-atspi-bridge xlib
 

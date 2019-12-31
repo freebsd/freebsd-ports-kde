@@ -21,6 +21,7 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 TOOLS=		qdbuscpp2xml qdbusxml2cpp
 
+QT_BINARIES=	yes
 QT_DEFINES=	DBUS
 QT_CONFIG=	dbus
 

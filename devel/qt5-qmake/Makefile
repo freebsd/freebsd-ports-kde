@@ -32,6 +32,8 @@ INSTALL_TARGET=	sub-qmake-qmake-aux-pro-install_subtargets install_mkspecs
 
 BUILD_WRKSRC=	${WRKSRC}/${PORTNAME}
 
+QT_BINARIES=	yes
+
 post-patch:
 # Clean up files created by patching
 	@${RM} ${WRKSRC}/mkspecs/*/*.orig

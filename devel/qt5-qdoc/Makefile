@@ -23,4 +23,6 @@ PLIST_FILES=	${QT_BINDIR}/qdoc \
 
 CONFIGURE_ENV=	LLVM_INSTALL_DIR=${LOCALBASE}/llvm${LLVM_DEFAULT}
 
+QT_BINARIES=	yes
+
 .include <bsd.port.mk>

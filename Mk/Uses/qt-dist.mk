@@ -380,5 +380,9 @@ qt-post-install:
 		>> ${TMPPLIST}
 .    endif # ${QT_CONFIG:N-*}
 .  endif # M5
-
+# Handle misc/qtchooser wrapper installation and deinstallation
+.  if defined(QT_BINARIES)
+	${ECHO_CMD} '@postexec if type update-qtchooser-wrapper >/dev/null 2>&1; then update-qtchooser-wrapper; fi' >> ${TMPPLIST}
+	${ECHO_CMD} '@postunexec if type update-qtchooser-wrapper >/dev/null 2>&1; then update-qtchooser-wrapper; fi' >> ${TMPPLIST}
+.  endif
 .endif # defined(_QT_DIST_MK_INCLUDED)
