@@ -77,5 +77,3 @@
 %%QT_DOCDIR%%/global/template/style/offline.css
 %%QT_DOCDIR%%/global/template/style/online.css
 %%QT_DOCDIR%%/global/template/style/theqtcompany.png
-%%QT_LIBDIR%%/cmake/Qt5DocTools/Qt5DocToolsConfig.cmake
-%%QT_LIBDIR%%/cmake/Qt5DocTools/Qt5DocToolsConfigVersion.cmake

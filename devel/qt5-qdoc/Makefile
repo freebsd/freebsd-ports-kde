@@ -17,7 +17,9 @@ USE_QT=		core declarative buildtools_build qdoc-data_run
 BUILD_WRKSRC=	${WRKSRC}/src/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
-PLIST_FILES=	${QT_BINDIR}/qdoc
+PLIST_FILES=	${QT_BINDIR}/qdoc \
+		${QT_LIBDIR}/cmake/Qt5DocTools/Qt5DocToolsConfig.cmake \
+		${QT_LIBDIR}/cmake/Qt5DocTools/Qt5DocToolsConfigVersion.cmake
 
 CONFIGURE_ENV=	LLVM_INSTALL_DIR=${LOCALBASE}/llvm${LLVM_DEFAULT}
 
