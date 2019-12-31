@@ -765,6 +765,8 @@
 %%QT_CMAKEDIR%%/Qt5QmlDebug/Qt5QmlDebugConfigVersion.cmake
 %%QT_CMAKEDIR%%/Qt5QmlDevTools/Qt5QmlDevToolsConfig.cmake
 %%QT_CMAKEDIR%%/Qt5QmlDevTools/Qt5QmlDevToolsConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt5QmlImportScanner/Qt5QmlImportScannerConfig.cmake
+%%QT_CMAKEDIR%%/Qt5QmlImportScanner/Qt5QmlImportScannerTemplate.cpp.in
 %%QT_CMAKEDIR%%/Qt5QmlModels/Qt5QmlModelsConfig.cmake
 %%QT_CMAKEDIR%%/Qt5QmlModels/Qt5QmlModelsConfigVersion.cmake
 %%QT_CMAKEDIR%%/Qt5QmlWorkerScript/Qt5QmlWorkerScriptConfig.cmake
@@ -791,8 +793,6 @@
 %%QT_BINDIR%%/qmlprofiler
 %%QT_BINDIR%%/qmlscene
 %%QT_BINDIR%%/qmltestrunner
-%%QT_LIBDIR%%/cmake/Qt5QmlImportScanner/Qt5QmlImportScannerConfig.cmake
-%%QT_LIBDIR%%/cmake/Qt5QmlImportScanner/Qt5QmlImportScannerTemplate.cpp.in
 %%QT_LIBDIR%%/libQt5PacketProtocol.a
 %%QT_LIBDIR%%/libQt5PacketProtocol.prl
 %%QT_LIBDIR%%/libQt5Qml.prl
