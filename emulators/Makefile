@@ -63,10 +63,8 @@
     SUBDIR += lib765
     SUBDIR += libdsk
     SUBDIR += libspectrum
-    SUBDIR += linux-c6
     SUBDIR += linux-c7
     SUBDIR += linux-power9-functional-sim
-    SUBDIR += linux_base-c6
     SUBDIR += linux_base-c7
     SUBDIR += lisaem
     SUBDIR += mame
@@ -140,6 +138,7 @@
     SUBDIR += tuxnes
     SUBDIR += uae
     SUBDIR += ucon64
+    SUBDIR += ukncbtl
     SUBDIR += unicorn
     SUBDIR += vba
     SUBDIR += vboxtool

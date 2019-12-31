@@ -396,9 +396,6 @@
     SUBDIR += libxslt-reference
     SUBDIR += libyaml
     SUBDIR += link-grammar
-    SUBDIR += linux-c6-aspell
-    SUBDIR += linux-c6-expat
-    SUBDIR += linux-c6-libxml2
     SUBDIR += linux-c7-aspell
     SUBDIR += linux-c7-expat
     SUBDIR += linux-c7-libxml2
@@ -959,6 +956,7 @@
     SUBDIR += p5-Unicode-Escape
     SUBDIR += p5-Unicode-LineBreak
     SUBDIR += p5-Unicode-Normalize
+    SUBDIR += p5-Unicode-Tussle
     SUBDIR += p5-Unicode-Unihan
     SUBDIR += p5-Validator-Custom
     SUBDIR += p5-Version-Next
@@ -1167,16 +1165,6 @@
     SUBDIR += perl2html
     SUBDIR += permute
     SUBDIR += php-mecab
-    SUBDIR += php71-ctype
-    SUBDIR += php71-dom
-    SUBDIR += php71-enchant
-    SUBDIR += php71-pspell
-    SUBDIR += php71-simplexml
-    SUBDIR += php71-wddx
-    SUBDIR += php71-xml
-    SUBDIR += php71-xmlreader
-    SUBDIR += php71-xmlwriter
-    SUBDIR += php71-xsl
     SUBDIR += php72-ctype
     SUBDIR += php72-dom
     SUBDIR += php72-enchant
@@ -1244,6 +1232,7 @@
     SUBDIR += py-cmarkgfm
     SUBDIR += py-colorclass
     SUBDIR += py-creole
+    SUBDIR += py-cssselect2
     SUBDIR += py-csvkit
     SUBDIR += py-custom_inherit
     SUBDIR += py-dbfread
@@ -1400,7 +1389,9 @@
     SUBDIR += py-textfsm
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
+    SUBDIR += py-tinycss2
     SUBDIR += py-toml
+    SUBDIR += py-tomlkit
     SUBDIR += py-toronado
     SUBDIR += py-towncrier
     SUBDIR += py-trans
@@ -1414,6 +1405,7 @@
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
     SUBDIR += py-wstools
+    SUBDIR += py-wtf-peewee
     SUBDIR += py-wtforms
     SUBDIR += py-xhtml2pdf
     SUBDIR += py-xlrd
@@ -1831,7 +1823,6 @@
     SUBDIR += xml-format
     SUBDIR += xml-i18n-tools
     SUBDIR += xml-lite.el
-    SUBDIR += xml2
     SUBDIR += xml2rfc
     SUBDIR += xmlada
     SUBDIR += xmlcatmgr

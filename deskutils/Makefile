@@ -32,7 +32,6 @@
     SUBDIR += chart
     SUBDIR += cherrytree
     SUBDIR += clipit
-    SUBDIR += conduit
     SUBDIR += conkyemail
     SUBDIR += conkyforecast
     SUBDIR += copyq
@@ -140,6 +139,7 @@
     SUBDIR += kontact
     SUBDIR += korganizer
     SUBDIR += kruler
+    SUBDIR += ktimetracker
     SUBDIR += latte-dock
     SUBDIR += libkdepim
     SUBDIR += libopensync-plugin-vformat-devel

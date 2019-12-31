@@ -2,7 +2,8 @@
 
 PORTNAME=	amass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.4.1
+DISTVERSION=	3.4.2
+PORTREVISION=	2
 CATEGORIES=	dns
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -46,11 +47,11 @@ GH_TUPLE=	\
 		gogo:protobuf:v1.3.0:gogo_protobuf/vendor/github.com/gogo/protobuf \
 		golang:appengine:v1.6.1:golang_appengine/vendor/google.golang.org/appengine \
 		golang:crypto:34f69633bfdc:golang_crypto/vendor/golang.org/x/crypto \
-		golang:net:aa69164e4478:golang_net/vendor/golang.org/x/net \
+		golang:net:83d349e8ac1a:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:0f29369cfe45:golang_oauth2/vendor/golang.org/x/oauth2 \
 		golang:protobuf:v1.3.1:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:sync:cd5d95a43a6e:golang_sync/vendor/golang.org/x/sync \
-		golang:sys:06d7bd2c5f4f:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:33540a1f6037:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.2:golang_text/vendor/golang.org/x/text \
 		golang:tools:0337d82405ff:golang_tools/vendor/golang.org/x/tools \
 		google:go-querystring:v1.0.0:google_go_querystring/vendor/github.com/google/go-querystring \

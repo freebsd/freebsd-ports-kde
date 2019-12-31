@@ -175,7 +175,6 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openkim-models
-    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
@@ -224,7 +223,6 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
-    SUBDIR += py-PyFR
     SUBDIR += py-PyQuante
     SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
@@ -239,6 +237,7 @@
     SUBDIR += py-coards
     SUBDIR += py-dlib
     SUBDIR += py-eccodes-python
+    SUBDIR += py-geomet
     SUBDIR += py-geometer
     SUBDIR += py-gpaw
     SUBDIR += py-gsd
@@ -256,7 +255,6 @@
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
-    SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi

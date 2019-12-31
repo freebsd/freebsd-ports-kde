@@ -3,6 +3,7 @@
 
 PORTNAME=	bazel
 DISTVERSION=	0.29.0
+PORTREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	https://storage.googleapis.com/bazel/${PORTVERSION}/rc${FINALRC}/
 DISTNAME=	bazel-${PORTVERSION}rc${FINALRC}-dist

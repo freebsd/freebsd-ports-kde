@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.17.6
-PORTREVISION=	1
+PORTVERSION=	1.17.7
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
 		LOCAL/osa
@@ -178,7 +177,7 @@ MAIL_SMTP_CONFIGURE_OFF=	--without-mail_smtp_module
 MAIL_SSL_USES=			ssl
 MAIL_SSL_CONFIGURE_ON=		--with-mail_ssl_module
 STREAM_VARS=			DSO_BASEMODS+=stream
-STREAM_SSL_IMPLIES=		HTTP_SSL
+STREAM_SSL_USES=		ssl
 STREAM_SSL_CONFIGURE_ON=	--with-stream_ssl_module
 STREAM_SSL_PREREAD_CONFIGURE_ON=--with-stream_ssl_preread_module
 

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	neomutt
-PORTVERSION=	20191129
+PORTVERSION=	20191207
 CATEGORIES=	mail
 
 MAINTAINER=	bapt@FreeBSD.org
@@ -17,6 +17,7 @@ USES=		iconv:translit localbase perl5 shebangfix ssl
 
 USE_GITHUB=	yes
 USE_PERL5=	build
+MAKE_JOBS_UNSAFE=	yes
 
 HAS_CONFIGURE=	yes
 

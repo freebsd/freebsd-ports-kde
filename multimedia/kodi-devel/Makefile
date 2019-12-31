@@ -1,21 +1,22 @@
 # $FreeBSD$
 
 PORTNAME=	kodi
-DISTVERSION=	19.0.a20191112
-PORTREVISION=	3
+DISTVERSION=	19.0.a20191216
+PORTREVISION=	1
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/xbmc/xbmc/commit/
-PATCHFILES=	d2922c8e4bb6fcaf5a2b3041da9b6303dd1225d4.patch:-p1 \
-		3bbb9f22e4c1a2a37b7d8e73b55361ca0a660a59.patch:-p1
+PATCHFILES=	88ac771d4fa17e71980f4c8949ba5625f3514349.patch:-p1 \
+		91afd99709d8fb6a496f7dc451bae5bba75fa717.patch:-p1 \
+		ae804ecd9a9e9281b28918d0d21033ea1f285b81.patch:-p1
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Award winning media center application
 
 LICENSE=	GPLv2+
 
-ONLY_FOR_ARCHS=	amd64 armv6 armv7 i386
+ONLY_FOR_ARCHS=	aarch64 amd64 armv6 armv7 i386
 
 BUILD_DEPENDS=	flatbuffers>=0:devel/flatbuffers \
 		rapidjson>=0:devel/rapidjson \
@@ -61,7 +62,7 @@ USES=		autoreconf:build cmake:noninja compiler:c++11-lang gettext gl \
 USE_GITHUB=	yes
 GH_ACCOUNT=	xbmc
 GH_PROJECT=	xbmc
-GH_TAGNAME=	f6311e3c5559ced201fb8ff91846fe4b9b668a9a
+GH_TAGNAME=	c35b70cc2c5618f114ebea905aaacfe96eb15951
 USE_GL=		egl gl glu
 USE_GNOME=	libxml2 libxslt
 USE_JAVA=	yes
@@ -85,18 +86,19 @@ PLIST_SUB=		ARCH=${_KODIARCH_${ARCH}:U${ARCH}} \
 			OPSYS=${OPSYS:tl}
 PORTDATA=		*
 
-OPTIONS_DEFINE=		AVAHI CEC DBUS LIBBLURAY MYSQL NFS SMB SSE UPNP VAAPI \
-			VDPAU WEBSERVER
-OPTIONS_DEFAULT=	DBUS GBM LIBBLURAY SNDIO UPNP VAAPI VDPAU WAYLAND \
-			WEBSERVER X11
-OPTIONS_DEFAULT_amd64=	SSE
-OPTIONS_GROUP=		SOUND
-OPTIONS_GROUP_SOUND=	PULSEAUDIO SNDIO
-OPTIONS_MULTI=		PLATFORM
-OPTIONS_MULTI_PLATFORM=	GBM WAYLAND X11
-OPTIONS_EXCLUDE_armv6=	SSE
-OPTIONS_EXCLUDE_armv7=	SSE
-OPTIONS_SUB=		yes
+OPTIONS_DEFINE=			AVAHI CEC DBUS LIBBLURAY MYSQL NFS SMB SSE \
+				UPNP VAAPI VDPAU WEBSERVER
+OPTIONS_DEFAULT=		AVAHI CEC DBUS GBM LIBBLURAY MYSQL NFS SMB \
+				SNDIO UPNP VAAPI VDPAU WAYLAND WEBSERVER X11
+OPTIONS_DEFAULT_amd64=		SSE
+OPTIONS_GROUP=			SOUND
+OPTIONS_GROUP_SOUND=		PULSEAUDIO SNDIO
+OPTIONS_MULTI=			PLATFORM
+OPTIONS_MULTI_PLATFORM=		GBM WAYLAND X11
+OPTIONS_EXCLUDE_aarch64=	SSE
+OPTIONS_EXCLUDE_armv6=		SSE
+OPTIONS_EXCLUDE_armv7=		SSE
+OPTIONS_SUB=			yes
 
 CEC_DESC=	CEC adapter support
 GBM_DESC=	GBM support (requires a kernel with evdev support)
@@ -184,10 +186,14 @@ post-patch:
 # (see CMAKE_ARGS).
 	@${REINPLACE_CMD} 's@KODI_DEPENDSBUILD@true@' \
 		${WRKSRC}/cmake/modules/FindLibDvd.cmake
-# Make sure freebsd.xml is in sync with linux.xml since the
-# upstream devs do not sync them
-	@${CP} ${WRKSRC}/system/settings/linux.xml \
-		${WRKSRC}/system/settings/freebsd.xml
+# Abort build if freebsd.xml and linux.xml differ again.  The
+# upstream devs forget to sync them.  When that happens it might
+# be time to file a PR again.
+	@cd ${WRKSRC}/system/settings && \
+		if ! /usr/bin/cmp -s freebsd.xml linux.xml; then \
+			${ECHO_MSG} "=> freebsd.xml out of sync with linux.xml again"; \
+			${FALSE}; \
+		fi
 # Make sure Kodi can find keyboard layouts from xkeyboard-config
 	@${REINPLACE_CMD} 's,/usr/share/X11/xkb/rules/,${LOCALBASE}/share/X11/xkb/rules/,g' \
 		${WRKSRC}/xbmc/platform/linux/input/LibInputSettings.cpp

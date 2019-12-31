@@ -268,7 +268,6 @@
     SUBDIR += offlineimap
     SUBDIR += opendkim
     SUBDIR += opendmarc
-    SUBDIR += openemm2013
     SUBDIR += openemm2015
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-devel
@@ -463,7 +462,6 @@
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
-    SUBDIR += php71-imap
     SUBDIR += php72-imap
     SUBDIR += php73-imap
     SUBDIR += php74-imap

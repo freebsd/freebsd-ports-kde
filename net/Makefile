@@ -324,6 +324,7 @@
     SUBDIR += knc
     SUBDIR += knxd
     SUBDIR += kontactinterface
+    SUBDIR += kpeoplevcard
     SUBDIR += kpimtextedit
     SUBDIR += krdc
     SUBDIR += krfb
@@ -414,9 +415,6 @@
     SUBDIR += liferea
     SUBDIR += linknx
     SUBDIR += linphone
-    SUBDIR += linux-c6-avahi-libs
-    SUBDIR += linux-c6-openldap
-    SUBDIR += linux-c6-tcp_wrappers-libs
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
@@ -963,10 +961,6 @@
     SUBDIR += pen
     SUBDIR += pfinger
     SUBDIR += phamm
-    SUBDIR += php71-ldap
-    SUBDIR += php71-soap
-    SUBDIR += php71-sockets
-    SUBDIR += php71-xmlrpc
     SUBDIR += php72-ldap
     SUBDIR += php72-soap
     SUBDIR += php72-sockets
@@ -1076,6 +1070,7 @@
     SUBDIR += py-pcapy
     SUBDIR += py-port-for
     SUBDIR += py-portend
+    SUBDIR += py-pyenet
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
     SUBDIR += py-pynmsg
@@ -1117,7 +1112,6 @@
     SUBDIR += py-smart_open
     SUBDIR += py-smbpasswd
     SUBDIR += py-soap2py
-    SUBDIR += py-soappy
     SUBDIR += py-socketio-client
     SUBDIR += py-softlayer
     SUBDIR += py-speedtest-cli
@@ -1355,7 +1349,6 @@
     SUBDIR += ryu
     SUBDIR += s3ql
     SUBDIR += samba410
-    SUBDIR += samba48
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd

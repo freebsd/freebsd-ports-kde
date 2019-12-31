@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	fasm
-PORTVERSION=	1.73.18
+PORTVERSION=	1.73.21
 CATEGORIES=	lang devel
-MASTER_SITES=	https://flatassembler.net/
+MASTER_SITES=	https://flatassembler.net/ \
+		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Flat, multiple-pass assembler for IA-32 & x86-64 architectures

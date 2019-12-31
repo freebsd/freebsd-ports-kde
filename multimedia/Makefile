@@ -136,6 +136,7 @@
     SUBDIR += gstreamer1-plugins-mpeg2dec
     SUBDIR += gstreamer1-plugins-mpeg2enc
     SUBDIR += gstreamer1-plugins-mplex
+    SUBDIR += gstreamer1-plugins-msdk
     SUBDIR += gstreamer1-plugins-openh264
     SUBDIR += gstreamer1-plugins-resindvd
     SUBDIR += gstreamer1-plugins-rtmp
@@ -162,6 +163,7 @@
     SUBDIR += handbrake
     SUBDIR += harvid
     SUBDIR += imagination
+    SUBDIR += intel-media-sdk
     SUBDIR += iriverter
     SUBDIR += iso2mkv
     SUBDIR += jmref
@@ -235,8 +237,6 @@
     SUBDIR += libxine
     SUBDIR += libxspf
     SUBDIR += libzen
-    SUBDIR += linux-c6-libtheora
-    SUBDIR += linux-c6-libv4l
     SUBDIR += linux-c7-libtheora
     SUBDIR += linux-c7-libv4l
     SUBDIR += linux-tsmuxer
@@ -277,6 +277,7 @@
     SUBDIR += mplex
     SUBDIR += mps-youtube
     SUBDIR += mpv
+    SUBDIR += mpv-mpris
     SUBDIR += msdl
     SUBDIR += msopenh264
     SUBDIR += mswebrtc

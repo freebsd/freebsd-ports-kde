@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	musicpd
-PORTVERSION=	0.21.16
-PORTREVISION=	1
+PORTVERSION=	0.21.18
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PORTVERSION:R}/
 DISTNAME=	mpd-${PORTVERSION}
@@ -159,7 +158,7 @@ SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 
 # Input plugins
 CDPARANOIA_MESON_ENABLED=	cdio_paranoia
-CDPARANOIA_LIB_DEPENDS=	libcdda_paranoia.so:audio/cdparanoia
+CDPARANOIA_LIB_DEPENDS=	libcdio_paranoia.so:sysutils/libcdio-paranoia
 CURL_MESON_ENABLED=	curl
 CURL_LIB_DEPENDS=	libcurl.so:ftp/curl
 MMS_MESON_ENABLED=	mms
@@ -171,7 +170,7 @@ SMB_USES=		samba:lib
 ZZIP_MESON_ENABLED=	zzip
 ZZIP_LIB_DEPENDS=	libzzip.so:devel/zziplib
 ISO9660_MESON_ENABLED=	iso9660
-ISO9660_LIB_DEPENDS=	libcdio_paranoia.so:sysutils/libcdio-paranoia
+ISO9660_LIB_DEPENDS=	libiso9660.so:sysutils/libcdio
 
 # Database plugins
 SQLITE3_MESON_ENABLED=	sqlite

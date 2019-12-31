@@ -5,6 +5,7 @@
 #  devel/kdev-python
 PORTNAME=	kdevelop
 DISTVERSION=	5.4.5
+PORTREVISION=	2
 CATEGORIES=	devel kde
 MASTER_SITES=	KDE/stable/kdevelop/${DISTVERSION}/src
 DIST_SUBDIR=	KDE/kdevelop

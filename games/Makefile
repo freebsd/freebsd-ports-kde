@@ -391,6 +391,7 @@
     SUBDIR += hohlin
     SUBDIR += hoichess
     SUBDIR += holotz-castle
+    SUBDIR += homura
     SUBDIR += hoverboard-sdl
     SUBDIR += hs-scroll
     SUBDIR += hypatia_engine
@@ -854,6 +855,9 @@
     SUBDIR += simplevaders
     SUBDIR += simsu
     SUBDIR += simutrans
+    SUBDIR += simutrans-pak128
+    SUBDIR += simutrans-pak128.german
+    SUBDIR += simutrans-pak64
     SUBDIR += sjeng
     SUBDIR += ski
     SUBDIR += sl
