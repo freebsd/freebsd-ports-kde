@@ -64,11 +64,6 @@
     SUBDIR += erlang-java
     SUBDIR += erlang-man
     SUBDIR += erlang-riak
-    SUBDIR += erlang-runtime15
-    SUBDIR += erlang-runtime16
-    SUBDIR += erlang-runtime17
-    SUBDIR += erlang-runtime18
-    SUBDIR += erlang-runtime19
     SUBDIR += erlang-runtime20
     SUBDIR += erlang-runtime21
     SUBDIR += erlang-runtime22
@@ -119,7 +114,6 @@
     SUBDIR += gnatdroid-binutils-x86
     SUBDIR += gnatdroid-sysroot
     SUBDIR += gnatdroid-sysroot-x86
-    SUBDIR += gnatdroid-x86
     SUBDIR += gnu-apl
     SUBDIR += gnu-cobol
     SUBDIR += gnustep-base
@@ -152,7 +146,6 @@
     SUBDIR += janet
     SUBDIR += jimtcl
     SUBDIR += jruby
-    SUBDIR += js_of_ocaml
     SUBDIR += julia
     SUBDIR += julia06
     SUBDIR += julia07
@@ -318,7 +311,6 @@
     SUBDIR += rexx-regutil
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
-    SUBDIR += rubinius
     SUBDIR += ruby24
     SUBDIR += ruby25
     SUBDIR += ruby26

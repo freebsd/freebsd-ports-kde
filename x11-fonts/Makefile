@@ -123,6 +123,7 @@
     SUBDIR += intlfonts
     SUBDIR += iosevka
     SUBDIR += isabella
+    SUBDIR += jetbrains-mono
     SUBDIR += jmk-x11-fonts
     SUBDIR += junction
     SUBDIR += junicode
@@ -172,6 +173,7 @@
     SUBDIR += oldschool-pc-fonts
     SUBDIR += open-sans
     SUBDIR += orbitron
+    SUBDIR += ots
     SUBDIR += oxygen-fonts
     SUBDIR += p5-Font-AFM
     SUBDIR += p5-Font-TTF
@@ -198,6 +200,7 @@
     SUBDIR += py-glyphsLib
     SUBDIR += py-ufo2ft
     SUBDIR += py-ufoLib
+    SUBDIR += py-ufolint
     SUBDIR += raleway
     SUBDIR += roboto-fonts-ttf
     SUBDIR += sgifonts
@@ -224,6 +227,7 @@
     SUBDIR += urwfonts
     SUBDIR += urwfonts-ttf
     SUBDIR += uw-ttyp0
+    SUBDIR += victor-mono-ttf
     SUBDIR += vollkorn-ttf
     SUBDIR += vtfontcvt-ng
     SUBDIR += webfonts

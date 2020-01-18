@@ -100,6 +100,7 @@
     SUBDIR += mlan3
     SUBDIR += morse
     SUBDIR += multimon-ng
+    SUBDIR += nanovna-saver
     SUBDIR += nasawash
     SUBDIR += ncid
     SUBDIR += nec2c
@@ -198,6 +199,7 @@
     SUBDIR += uartlirc
     SUBDIR += uhd
     SUBDIR += uird
+    SUBDIR += ujprog
     SUBDIR += unixcw
     SUBDIR += usbmuxd
     SUBDIR += viewfax

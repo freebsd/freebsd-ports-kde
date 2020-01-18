@@ -372,6 +372,7 @@
     SUBDIR += libamrnb
     SUBDIR += libamrwb
     SUBDIR += libao
+    SUBDIR += libaudec
     SUBDIR += libaudiofile
     SUBDIR += libbpm
     SUBDIR += libbs2b
@@ -742,7 +743,6 @@
     SUBDIR += sidplayer
     SUBDIR += simplemod
     SUBDIR += siren
-    SUBDIR += slv2
     SUBDIR += snack
     SUBDIR += snd
     SUBDIR += sndio

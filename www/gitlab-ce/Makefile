@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	12.6.1
-PORTREVISION=	1
+PORTVERSION=	12.6.4
+PORTREVISION=	0
 CATEGORIES=	www devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -118,7 +118,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-icalendar>=0:devel/rubygem-icalendar \
 	rubygem-diffy31>=3.1.0<3.2.0:textproc/rubygem-diffy31 \
 	rubygem-diff_match_patch>=0.1.0<0.2.0:textproc/rubygem-diff_match_patch \
-	rubygem-rack>=2.0.7<2.1.0,3:www/rubygem-rack \
+	rubygem-rack20>=2.0.7<2.1.0,3:www/rubygem-rack20 \
 	rubygem-unicorn>=5.4.1<5.5.0:www/rubygem-unicorn \
 	rubygem-unicorn-worker-killer>=0.4.4<0.5.0:www/rubygem-unicorn-worker-killer \
 	rubygem-gitlab-puma>=4.3.1.g.2:www/rubygem-gitlab-puma \
@@ -129,7 +129,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-sidekiq5>=5.2.7<5.3.0:devel/rubygem-sidekiq5 \
 	rubygem-sidekiq-cron>=1.0<2.0:devel/rubygem-sidekiq-cron \
 	rubygem-redis-namespace>=1.6.0<1.7.0:databases/rubygem-redis-namespace \
-	rubygem-gitlab-sidekiq-fetcher=0.5.2:devel/rubygem-gitlab-sidekiq-fetcher \
+	rubygem-gitlab-sidekiq-fetcher=0.5.2_1:devel/rubygem-gitlab-sidekiq-fetcher \
 	rubygem-fugit12>=1.2.1<1.3.0:devel/rubygem-fugit12 \
 	rubygem-httparty>=0.16.4<0.17.0:www/rubygem-httparty \
 	rubygem-rainbow>=3.0<4.0:devel/rubygem-rainbow \
@@ -188,7 +188,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-derailed_benchmarks>0:benchmarks/rubygem-derailed_benchmarks \
 	rubygem-method_source>=0.8<1.0:devel/rubygem-method_source \
 	rubygem-influxdb>=0.2<1.0:databases/rubygem-influxdb \
-	rubygem-prometheus-client-mmap>=0.9.10<0.10.0:devel/rubygem-prometheus-client-mmap \
+	rubygem-prometheus-client-mmap>=0.10.0<0.11.0:devel/rubygem-prometheus-client-mmap \
 	rubygem-raindrops>=0.18<1.0:www/rubygem-raindrops \
 	rubygem-octokit>=4.9<5.0:net/rubygem-octokit \
 	rubygem-mail_room>=0.10.0<0.11.0:mail/rubygem-mail_room \
@@ -240,7 +240,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	a0094541f8725b2f9852086033be08d20caa4f01
+GL_COMMIT=	70900054dfe381ccca7d570d431d96705e6b6473
 
 USERS=	git
 GROUPS=	git

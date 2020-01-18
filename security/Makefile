@@ -209,12 +209,14 @@
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heimdal
+    SUBDIR += helib
     SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl
     SUBDIR += hmap
     SUBDIR += hockeypuck
     SUBDIR += honggfuzz
+    SUBDIR += horcrux
     SUBDIR += hotssh
     SUBDIR += hpenc
     SUBDIR += hydra
@@ -402,8 +404,8 @@
     SUBDIR += openscep
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
+    SUBDIR += openssl
     SUBDIR += openssl-unsafe
-    SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
     SUBDIR += openvas8-cli
@@ -517,6 +519,7 @@
     SUBDIR += p5-Crypt-GeneratePassword
     SUBDIR += p5-Crypt-HCE_MD5
     SUBDIR += p5-Crypt-HCE_SHA
+    SUBDIR += p5-Crypt-HSXKPasswd
     SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Crypt-Imail
     SUBDIR += p5-Crypt-Juniper
@@ -961,6 +964,7 @@
     SUBDIR += py-pyotp
     SUBDIR += py-pyptlib
     SUBDIR += py-pysaml2
+    SUBDIR += py-pysaml24
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-pysodium

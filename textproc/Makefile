@@ -35,6 +35,7 @@
     SUBDIR += af-aspell
     SUBDIR += aft
     SUBDIR += agrep
+    SUBDIR += aha
     SUBDIR += aiksaurus
     SUBDIR += align
     SUBDIR += am-aspell
@@ -91,6 +92,7 @@
     SUBDIR += cmark
     SUBDIR += coccigrep
     SUBDIR += code2html
+    SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
     SUBDIR += confetti
@@ -1199,7 +1201,6 @@
     SUBDIR += po4a
     SUBDIR += pocketreader
     SUBDIR += pod2mdoc
-    SUBDIR += pootle
     SUBDIR += popup
     SUBDIR += popup-stacks
     SUBDIR += ppower4
@@ -1494,6 +1495,7 @@
     SUBDIR += rubygem-coderay
     SUBDIR += rubygem-colorator
     SUBDIR += rubygem-colored
+    SUBDIR += rubygem-colored2
     SUBDIR += rubygem-commonmarker
     SUBDIR += rubygem-compass
     SUBDIR += rubygem-compass-blueprint

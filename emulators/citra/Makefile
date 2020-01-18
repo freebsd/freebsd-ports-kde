@@ -1,13 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	citra
-PORTVERSION=	s20191218
-PORTREVISION?=	2
+PORTVERSION=	s20200115
+PORTREVISION?=	0
 CATEGORIES=	emulators
-
-PATCH_SITES=	https://github.com/kinetiknz/cubeb/commit/:cubeb
-PATCHFILES+=	c0a9ea4cc6e2.patch:-p1:cubeb
-PATCH_DIST_STRIP=	-d ${WRKSRC_cubeb}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Nintendo 3DS emulator/debugger
@@ -27,7 +23,7 @@ BUILD_DEPENDS=	boost-libs>=1.66:devel/boost-libs
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	citra-emu
-GH_TAGNAME=	020cd56ad
+GH_TAGNAME=	cd86c9b04
 GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		citra-emu:ext-soundtouch:060181e:soundtouch/externals/soundtouch \
 		MerryMage:dynarmic:r1-992-g4e6848d1:dynarmic/externals/dynarmic \
@@ -37,7 +33,7 @@ GH_TUPLE=	citra-emu:ext-libressl-portable:7d01cb0:libressl/externals/libressl \
 		catchorg:Catch2:v2.3.0:catch/externals/catch \
 		fmtlib:fmt:6.0.0-56-g4b8f8fac:fmt/externals/fmt \
 		herumi:xbyak:v5.71:xbyak/externals/xbyak \
-		kinetiknz:cubeb:cubeb-0.2-1171-gaa63601:cubeb/externals/cubeb \
+		kinetiknz:cubeb:cubeb-0.2-1172-g3ab5075:cubeb/externals/cubeb \
 		lsalzman:enet:0eaf48e:enet/externals/enet \
 		lvandeve:lodepng:31d9704:lodepng/externals/lodepng/lodepng \
 		neobrain:nihstro:fd69de1:nihstro/externals/nihstro \

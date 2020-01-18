@@ -12,9 +12,9 @@ LIB_DEPENDS+=	libxmmsclient.so:audio/xmms2
 
 MASTERDIR=	${.CURDIR}/../xmms2
 
-USES=		perl5 ssl
+USES=		perl5 python:2.7,build ssl
 
-BROKEN_SSL=	openssl111
+BROKEN_SSL=	openssl
 
 PLIST=		${.CURDIR}/pkg-plist
 

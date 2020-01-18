@@ -208,6 +208,7 @@
     SUBDIR += doom-wolfendoom
     SUBDIR += doomlegacy
     SUBDIR += doomsday
+    SUBDIR += dose-response
     SUBDIR += dreamchess
     SUBDIR += drm
     SUBDIR += duckmaze
@@ -796,6 +797,7 @@
     SUBDIR += redeclipse
     SUBDIR += redeclipse-data
     SUBDIR += redorblack
+    SUBDIR += regoth
     SUBDIR += reminiscence
     SUBDIR += renpy
     SUBDIR += renpy6
@@ -886,7 +888,6 @@
     SUBDIR += stendhal
     SUBDIR += stockfish
     SUBDIR += stonesoup
-    SUBDIR += stonesoup-sdl
     SUBDIR += stormbaancoureur
     SUBDIR += stransball2
     SUBDIR += stratagus
@@ -989,6 +990,7 @@
     SUBDIR += volleyball
     SUBDIR += vor
     SUBDIR += vultures-eye
+    SUBDIR += vvvvvv
     SUBDIR += wanderer
     SUBDIR += wargus
     SUBDIR += warmux
@@ -1111,7 +1113,6 @@
     SUBDIR += xtgyoretsu
     SUBDIR += xtic
     SUBDIR += xtriangles
-    SUBDIR += xtris
     SUBDIR += xtrojka
     SUBDIR += xtron
     SUBDIR += xtruco

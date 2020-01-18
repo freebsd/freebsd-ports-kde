@@ -39,6 +39,7 @@
     SUBDIR += buddy
     SUBDIR += cdcl
     SUBDIR += cdf
+    SUBDIR += cdk
     SUBDIR += cdo
     SUBDIR += cgnslib
     SUBDIR += cgribex
@@ -69,6 +70,7 @@
     SUBDIR += dvc
     SUBDIR += eccodes
     SUBDIR += elk
+    SUBDIR += elmerfem
     SUBDIR += epte
     SUBDIR += erd
     SUBDIR += erkale
@@ -149,7 +151,6 @@
     SUBDIR += mcxtrace-comps
     SUBDIR += mdynamix
     SUBDIR += medit
-    SUBDIR += meep
     SUBDIR += metaphysicl
     SUBDIR += minc2
     SUBDIR += mmdb2
@@ -175,6 +176,7 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += openkim-models
+    SUBDIR += openmx
     SUBDIR += opensim-core
     SUBDIR += opensph
     SUBDIR += opsin
@@ -223,6 +225,7 @@
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
+    SUBDIR += py-PyFR
     SUBDIR += py-PyQuante
     SUBDIR += py-ScientificPython
     SUBDIR += py-SimpleSpectral
@@ -237,6 +240,7 @@
     SUBDIR += py-coards
     SUBDIR += py-dlib
     SUBDIR += py-eccodes-python
+    SUBDIR += py-geolinks
     SUBDIR += py-geomet
     SUBDIR += py-geometer
     SUBDIR += py-gpaw
@@ -255,11 +259,14 @@
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
+    SUBDIR += py-phono3py
     SUBDIR += py-phonopy
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
+    SUBDIR += py-pycsw
     SUBDIR += py-pydicom
     SUBDIR += py-pygeodesy
+    SUBDIR += py-pygeometa
     SUBDIR += py-pymatgen
     SUBDIR += py-pymol
     SUBDIR += py-pyosf

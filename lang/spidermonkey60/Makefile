@@ -2,6 +2,7 @@
 
 PORTNAME=	spidermonkey
 DISTVERSION=	60.9.0
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	MOZILLA/firefox/releases/${DISTVERSION}esr/source
 PKGNAMESUFFIX=	${SP_VER}
@@ -50,6 +51,11 @@ CONFIGURE_ENV=	HOST_CC=${CC} HOST_CXX=${CXX}
 
 .if ${ARCH} == amd64
 CONFIGURE_TARGET=x86_64-portbld-freebsd${OSREL}
+.endif
+
+.if ${ARCH} == i386
+# ld: error: undefined symbol: __atomic_load
+USE_GCC=	9+
 .endif
 
 post-install:

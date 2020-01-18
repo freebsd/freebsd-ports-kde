@@ -188,7 +188,6 @@
     SUBDIR += glflow
     SUBDIR += glib-networking
     SUBDIR += glusterfs
-    SUBDIR += gnatsd
     SUBDIR += gnet2
     SUBDIR += gnetcat
     SUBDIR += gnome-nettool
@@ -474,6 +473,7 @@
     SUBDIR += nakenchat
     SUBDIR += nanomsg
     SUBDIR += nast
+    SUBDIR += nats-server
     SUBDIR += nats-streaming-server
     SUBDIR += nats-top
     SUBDIR += nbd-server
@@ -482,6 +482,7 @@
     SUBDIR += ndisc6
     SUBDIR += ndpi
     SUBDIR += ndproxy
+    SUBDIR += neatvnc
     SUBDIR += nepenthes
     SUBDIR += net6
     SUBDIR += netatalk3
@@ -1017,7 +1018,6 @@
     SUBDIR += py-cloudflare-scrape
     SUBDIR += py-cloudflare-scrape-js2py
     SUBDIR += py-cloudscraper
-    SUBDIR += py-coherence
     SUBDIR += py-confluent-kafka
     SUBDIR += py-cymruwhois
     SUBDIR += py-dpkt
@@ -1073,9 +1073,11 @@
     SUBDIR += py-pyenet
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
+    SUBDIR += py-pynamecheap
     SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
+    SUBDIR += py-pyroute2
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
     SUBDIR += py-pysmb
@@ -1122,11 +1124,10 @@
     SUBDIR += py-suds-jurko
     SUBDIR += py-terminado
     SUBDIR += py-tofu
-    SUBDIR += py-tweepy
+    SUBDIR += py-transip
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
-    SUBDIR += py-upnp-inspector
     SUBDIR += py-uritemplate
     SUBDIR += py-uritools
     SUBDIR += py-urlextract
@@ -1262,6 +1263,7 @@
     SUBDIR += rubygem-google-cloud-bigtable
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
+    SUBDIR += rubygem-google-cloud-errors
     SUBDIR += rubygem-google-cloud-logging
     SUBDIR += rubygem-google-cloud-pubsub
     SUBDIR += rubygem-google-cloud-spanner
@@ -1411,6 +1413,7 @@
     SUBDIR += ssspl
     SUBDIR += ssvnc
     SUBDIR += stone
+    SUBDIR += storj
     SUBDIR += stund
     SUBDIR += subnetcalc
     SUBDIR += suckblow
@@ -1513,6 +1516,7 @@
     SUBDIR += wackamole
     SUBDIR += wakeonlan
     SUBDIR += waypipe
+    SUBDIR += wayvnc
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wireguard

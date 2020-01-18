@@ -39,7 +39,6 @@
     SUBDIR += android-file-transfer-qt5
     SUBDIR += ansible
     SUBDIR += ansible-sysrc
-    SUBDIR += ansible1
     SUBDIR += ansible23
     SUBDIR += ansible24
     SUBDIR += ansible25
@@ -119,7 +118,6 @@
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
-    SUBDIR += bsdploy
     SUBDIR += bsdstats
     SUBDIR += bstack
     SUBDIR += btsixad
@@ -257,7 +255,6 @@
     SUBDIR += docker
     SUBDIR += docker-compose
     SUBDIR += docker-credential-pass
-    SUBDIR += docker-freebsd
     SUBDIR += docker-machine
     SUBDIR += doctl
     SUBDIR += doinkd
@@ -477,7 +474,6 @@
     SUBDIR += helm
     SUBDIR += hextools
     SUBDIR += hexyl
-    SUBDIR += hfm
     SUBDIR += hfsexplorer
     SUBDIR += hfsutils
     SUBDIR += hidesvn
@@ -561,6 +557,7 @@
     SUBDIR += kfloppy
     SUBDIR += khelpcenter
     SUBDIR += kiconvtool
+    SUBDIR += kio-fuse
     SUBDIR += kldfind
     SUBDIR += kldpatch
     SUBDIR += kops
@@ -594,6 +591,7 @@
     SUBDIR += lineakd
     SUBDIR += linrename
     SUBDIR += linux-c7-lttng-ust
+    SUBDIR += linux-c7-numactl-libs
     SUBDIR += linux-c7-userspace-rcu
     SUBDIR += linux-crashplan
     SUBDIR += linux-rkbin
@@ -882,6 +880,7 @@
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
     SUBDIR += personality
+    SUBDIR += perp
     SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx
@@ -963,6 +962,7 @@
     SUBDIR += py-borgmatic
     SUBDIR += py-cdmi
     SUBDIR += py-cpuinfo
+    SUBDIR += py-cron-descriptor
     SUBDIR += py-croniter
     SUBDIR += py-crontab
     SUBDIR += py-diffoscope
@@ -992,7 +992,6 @@
     SUBDIR += py-packet-python
     SUBDIR += py-pkginfo
     SUBDIR += py-ploy
-    SUBDIR += py-ploy_ansible
     SUBDIR += py-ploy_ec2
     SUBDIR += py-ploy_ezjail
     SUBDIR += py-ploy_fabric
@@ -1175,6 +1174,7 @@
     SUBDIR += safe-rm
     SUBDIR += safecat
     SUBDIR += safecopy
+    SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sample
@@ -1368,8 +1368,6 @@
     SUBDIR += u-boot-tools
     SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
-    SUBDIR += u-boot-zedboard
-    SUBDIR += u-boot-zybo
     SUBDIR += ua
     SUBDIR += ucspi-ipc
     SUBDIR += ucspi-proxy

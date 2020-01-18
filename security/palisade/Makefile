@@ -2,7 +2,7 @@
 
 PORTNAME=	palisade
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.7.c.20191227
+DISTVERSION=	1.7.d
 CATEGORIES=	security math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,14 +12,15 @@ LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/License.md
 
 BROKEN_i386=	fails to build: a declaration of 'Mul128' must be available
+BROKEN_powerpc64=	fails to build: math/native_int/binint.h:510:11: error: Architecture not supported for MultD()
 
 BUILD_DEPENDS=	autoconf:devel/autoconf # possibly a mistake in the project
 
-USES=		cmake:noninja localbase
+USES=		cmake:noninja compiler:c++11-lang localbase
 USE_GITLAB=	yes
 USE_GITHUB=	nodefault
 GL_PROJECT=	palisade-development
-GL_COMMIT=	5d4f7a3ff66006966bf16c67f3da2e4e6936e39f
+GL_COMMIT=	1d2912912e31332ccc6e35b0f91280e57e250954
 GH_TUPLE=	\
 		JerryRyan:cereal:181fbcd3:cereal/third-party/cereal \
 		google:benchmark:c50ac68c:benchmark/third-party/google-benchmark \

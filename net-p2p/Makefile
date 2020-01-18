@@ -10,6 +10,11 @@
     SUBDIR += bitcoin-daemon
     SUBDIR += bitcoin-utils
     SUBDIR += bitflu
+    SUBDIR += bitmark
+    SUBDIR += bitmark-cli
+    SUBDIR += bitmark-daemon
+    SUBDIR += bitmark-recorder
+    SUBDIR += btpd
     SUBDIR += c-lightning
     SUBDIR += couchpotato
     SUBDIR += cpuminer

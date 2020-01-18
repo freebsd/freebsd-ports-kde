@@ -284,6 +284,8 @@
     SUBDIR += opensmtpd-extras-table-redis
     SUBDIR += opensmtpd-extras-table-socketmap
     SUBDIR += opensmtpd-extras-table-sqlite
+    SUBDIR += opensmtpd-filter-rspamd
+    SUBDIR += opensmtpd-filter-senderscore
     SUBDIR += openwebmail
     SUBDIR += osbf-lua
     SUBDIR += ovs
@@ -514,6 +516,7 @@
     SUBDIR += py-managesieve3
     SUBDIR += py-milter
     SUBDIR += py-notmuch
+    SUBDIR += py-postfix-mta-sts-resolver
     SUBDIR += py-ppolicy
     SUBDIR += py-premailer
     SUBDIR += py-pymailq
