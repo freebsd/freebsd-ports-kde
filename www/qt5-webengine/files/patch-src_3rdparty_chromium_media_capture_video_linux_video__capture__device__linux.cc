@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/media/capture/video/linux/video_capture_device_linux.cc.orig	2019-03-01 17:04:22 UTC
+--- src/3rdparty/chromium/media/capture/video/linux/video_capture_device_linux.cc.orig	2019-11-27 21:12:25 UTC
 +++ src/3rdparty/chromium/media/capture/video/linux/video_capture_device_linux.cc
 @@ -15,7 +15,7 @@
  
@@ -40,15 +40,15 @@
  
  VideoCaptureDeviceLinux::VideoCaptureDeviceLinux(
      scoped_refptr<V4L2CaptureDevice> v4l2,
-@@ -73,6 +75,7 @@ VideoCaptureDeviceLinux::~VideoCaptureDeviceLinux() {
- void VideoCaptureDeviceLinux::AllocateAndStart(
+@@ -76,6 +78,7 @@ void VideoCaptureDeviceLinux::AllocateAndStart(
      const VideoCaptureParams& params,
      std::unique_ptr<VideoCaptureDevice::Client> client) {
+   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 +#if !defined(OS_FREEBSD)
    DCHECK(!capture_impl_);
    if (v4l2_thread_.IsRunning())
      return;  // Wrong state.
-@@ -100,9 +103,11 @@ void VideoCaptureDeviceLinux::AllocateAndStart(
+@@ -103,10 +106,12 @@ void VideoCaptureDeviceLinux::AllocateAndStart(
    for (auto& request : photo_requests_queue_)
      v4l2_thread_.task_runner()->PostTask(FROM_HERE, std::move(request));
    photo_requests_queue_.clear();
@@ -56,11 +56,12 @@
  }
  
  void VideoCaptureDeviceLinux::StopAndDeAllocate() {
+   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
 +#if !defined(OS_FREEBSD)
    if (!v4l2_thread_.IsRunning())
      return;  // Wrong state.
    v4l2_thread_.task_runner()->PostTask(
-@@ -112,6 +117,7 @@ void VideoCaptureDeviceLinux::StopAndDeAllocate() {
+@@ -116,6 +121,7 @@ void VideoCaptureDeviceLinux::StopAndDeAllocate() {
    v4l2_thread_.Stop();
  
    capture_impl_ = nullptr;
@@ -68,10 +69,10 @@
  }
  
  void VideoCaptureDeviceLinux::TakePhoto(TakePhotoCallback callback) {
-@@ -154,11 +160,13 @@ void VideoCaptureDeviceLinux::SetPhotoOptions(
- }
- 
+@@ -163,11 +169,13 @@ void VideoCaptureDeviceLinux::SetPhotoOptions(
  void VideoCaptureDeviceLinux::SetRotation(int rotation) {
+   DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
+   rotation_ = rotation;
 +#if !defined(OS_FREEBSD)
    if (v4l2_thread_.IsRunning()) {
      v4l2_thread_.task_runner()->PostTask(
