@@ -305,6 +305,7 @@
     SUBDIR += cdecl
     SUBDIR += cdialog
     SUBDIR += cdk
+    SUBDIR += cereal
     SUBDIR += cervisia
     SUBDIR += cflow
     SUBDIR += cflow2vcg
@@ -2354,6 +2355,7 @@
     SUBDIR += p5-File-FcntlLock
     SUBDIR += p5-File-Find-Closures
     SUBDIR += p5-File-Find-Object
+    SUBDIR += p5-File-Find-Object-Rule
     SUBDIR += p5-File-Find-Rule
     SUBDIR += p5-File-Find-Rule-Filesys-Virtual
     SUBDIR += p5-File-Find-Rule-Perl
@@ -3428,6 +3430,7 @@
     SUBDIR += p5-Test-Time
     SUBDIR += p5-Test-Timer
     SUBDIR += p5-Test-TinyMocker
+    SUBDIR += p5-Test-TrailingSpace
     SUBDIR += p5-Test-Trap
     SUBDIR += p5-Test-UNIXSock
     SUBDIR += p5-Test-Unit
@@ -4294,6 +4297,7 @@
     SUBDIR += py-cloudpickle
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
+    SUBDIR += py-cmd208
     SUBDIR += py-cmdtest
     SUBDIR += py-codecov
     SUBDIR += py-codegen
@@ -4515,6 +4519,7 @@
     SUBDIR += py-identify
     SUBDIR += py-ijson
     SUBDIR += py-imgkit
+    SUBDIR += py-immutables
     SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
     SUBDIR += py-importlib-resources
@@ -4647,7 +4652,7 @@
     SUBDIR += py-medikit
     SUBDIR += py-meliae
     SUBDIR += py-memory_profiler
-    SUBDIR += py-microversion-parse
+    SUBDIR += py-microversion_parse
     SUBDIR += py-minimongo
     SUBDIR += py-minio
     SUBDIR += py-mock
@@ -5134,6 +5139,7 @@
     SUBDIR += py-twiggy
     SUBDIR += py-twilio
     SUBDIR += py-twine
+    SUBDIR += py-twine1
     SUBDIR += py-twisted
     SUBDIR += py-txaio
     SUBDIR += py-typechecks
@@ -5847,6 +5853,7 @@
     SUBDIR += rubygem-faker
     SUBDIR += rubygem-faraday-cookie_jar
     SUBDIR += rubygem-faraday_middleware-aws-signers-v4
+    SUBDIR += rubygem-faraday_middleware-aws-sigv4
     SUBDIR += rubygem-faraday_middleware-multi_json
     SUBDIR += rubygem-fast-stemmer
     SUBDIR += rubygem-fast_blank
@@ -6035,6 +6042,7 @@
     SUBDIR += rubygem-method_source
     SUBDIR += rubygem-micromachine
     SUBDIR += rubygem-micromachine2
+    SUBDIR += rubygem-middleware
     SUBDIR += rubygem-mini_portile2
     SUBDIR += rubygem-minitest
     SUBDIR += rubygem-mixlib-archive
@@ -6175,6 +6183,7 @@
     SUBDIR += rubygem-re2
     SUBDIR += rubygem-react-rails
     SUBDIR += rubygem-react-rails-rails5
+    SUBDIR += rubygem-readline-ext
     SUBDIR += rubygem-readwritesettings
     SUBDIR += rubygem-recaptcha
     SUBDIR += rubygem-recursive-open-struct
@@ -6396,6 +6405,7 @@
     SUBDIR += rubygem-wmi-lite
     SUBDIR += rubygem-xdg
     SUBDIR += rubygem-xdg2
+    SUBDIR += rubygem-xdg3
     SUBDIR += rubygem-xpath
     SUBDIR += rubygem-yajl-ruby
     SUBDIR += rubygem-yui-compressor

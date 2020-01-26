@@ -2,6 +2,13 @@
 
 # $FreeBSD$
 
+# If a port installs Qt version-specific binaries (e.g. "designer" which existed as a Qt4 application
+# and exists as a Qt5 application and will probably be a Qt6 application) which should have a
+# qtchooser-based wrapper, the port should set `QT_BINARIES=yes`.
+#
+# When QT_BINARIES is set to yes, compatibility symlinks (designer -> qtchooser, so that
+# qtchooser can run designer-qt5 or whatever is the selected Qt version) are installed by the port.
+
 PREFIX=%%PREFIX%%
 BINDIR=${PREFIX}/bin
 QTCHOOSER=${BINDIR}/qtchooser
@@ -9,12 +16,12 @@ VERSIONS=%%QT_SUPPORTED%%
 
 if [ ! -d ${BINDIR} ] ; then
 	echo "Binary directory '${BINDIR}' missing." >&2
-	return 1
+	exit 1
 fi
 
 if [ ! -x ${QTCHOOSER} ] ; then
 	echo "Qtchooser binary '${QTCHOOSER}' missing." >&2
-	return 2
+	exit 2
 fi
 
 remove_links() {
@@ -23,13 +30,15 @@ remove_links() {
 		if [ ! -L ${file} ] ; then
 			continue
 		fi
+		# If at least one versioned executable is found for this name, keep the
+		# qtchooser compatibility symlink for this name; otherwise, remove it.
 		local found=0
 		for version in ${VERSIONS} ; do
 			version_bin_dir=${PREFIX}/lib/qt${version}/bin
 			target=${version_bin_dir}/$(basename ${file})
 			if [ -x ${target} ] ; then
 				found=1
-				continue
+				break
 			fi
 		done
 		if [ ${found} -eq 0 ] ; then

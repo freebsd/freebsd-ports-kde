@@ -879,8 +879,8 @@
     SUBDIR += pear-Translation2
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
-    SUBDIR += personality
     SUBDIR += perp
+    SUBDIR += personality
     SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx
@@ -1122,6 +1122,7 @@
     SUBDIR += rubygem-httplog
     SUBDIR += rubygem-itamae
     SUBDIR += rubygem-librarian-puppet
+    SUBDIR += rubygem-license-acceptance
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
     SUBDIR += rubygem-mogilefs-client
@@ -1282,6 +1283,7 @@
     SUBDIR += tclsyslog
     SUBDIR += tcplist
     SUBDIR += tdir
+    SUBDIR += tealdeer
     SUBDIR += tenshi
     SUBDIR += tentakel
     SUBDIR += terraform

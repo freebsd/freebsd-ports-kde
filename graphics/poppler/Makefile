@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	poppler
-DISTVERSION=	0.82.0
-PORTREVISION?=	1
+DISTVERSION=	0.84.0
 CATEGORIES=	graphics print
 MASTER_SITES=	https://poppler.freedesktop.org/
 
@@ -34,7 +33,7 @@ CMAKE_ON=	ENABLE_LIBJPEG  \
 		ENABLE_ZLIB \
 		ENABLE_NSS \
 		ENABLE_SPLASH
-
+CMAKE_OFF=	BUILD_GTK_TESTS
 
 # Slave ports.
 _POPPLER_SLAVES=	library glib qt5 utils
