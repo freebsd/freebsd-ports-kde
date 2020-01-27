@@ -316,6 +316,8 @@
 %%QT_MKSPECDIR%%/features/vxworks.prf
 %%QT_MKSPECDIR%%/features/warn_off.prf
 %%QT_MKSPECDIR%%/features/warn_on.prf
+%%QT_MKSPECDIR%%/features/wasm/default_pre.prf
+%%QT_MKSPECDIR%%/features/wasm/emcc_ver.prf
 %%QT_MKSPECDIR%%/features/wasm/wasm.prf
 %%QT_MKSPECDIR%%/features/wayland-scanner.prf
 %%QT_MKSPECDIR%%/features/win32/console.prf
