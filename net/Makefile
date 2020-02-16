@@ -150,6 +150,7 @@
     SUBDIR += etrace
     SUBDIR += eventviews
     SUBDIR += exabgp
+    SUBDIR += exabgp4
     SUBDIR += exaddos
     SUBDIR += fb
     SUBDIR += fiche
@@ -373,6 +374,7 @@
     SUBDIR += libnatpmp
     SUBDIR += libnet
     SUBDIR += libnfs
+    SUBDIR += libngtcp2
     SUBDIR += libnids
     SUBDIR += libnss-cache
     SUBDIR += libnss-mysql
@@ -1134,7 +1136,6 @@
     SUBDIR += py-wmi-query
     SUBDIR += py-wolframalpha
     SUBDIR += py-wsproto
-    SUBDIR += py-xmlrpc
     SUBDIR += py-zeep
     SUBDIR += py-zeroconf
     SUBDIR += py-zope.proxy
@@ -1198,6 +1199,7 @@
     SUBDIR += rtpproxy
     SUBDIR += rtptools
     SUBDIR += rubygem-activestorage52
+    SUBDIR += rubygem-activestorage60
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp

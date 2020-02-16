@@ -200,6 +200,7 @@
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += csdp
+    SUBDIR += ctl-sat
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
@@ -353,7 +354,6 @@
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
-    SUBDIR += mandelbulber2
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl

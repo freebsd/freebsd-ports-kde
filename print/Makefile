@@ -17,6 +17,7 @@
     SUBDIR += bibcursed
     SUBDIR += biblio-py
     SUBDIR += bibview
+    SUBDIR += brlaser
     SUBDIR += c2ps
     SUBDIR += catdvi
     SUBDIR += cdlabelgen
@@ -259,6 +260,7 @@
     SUBDIR += xmbibtex
     SUBDIR += xpdfopen
     SUBDIR += xpp
+    SUBDIR += xreader
     SUBDIR += xtexsh
     SUBDIR += yatex
 
