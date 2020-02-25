@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.1
-PORTREVISION=	1
+DISTVERSION=	5.2
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -27,8 +26,7 @@ LIB_DEPENDS=	libFAudio.so:audio/faudio \
 
 USES=		bison desktop-file-utils gmake localbase shebangfix tar:xz
 
-CONFLICTS_INSTALL=	wine-[0-9]* wine-staging-[0-9]* i386-wine-[0-9]* \
-			i386-wine-staging-[0-9]* i386-wine-devel-[0-9]*
+CONFLICTS_INSTALL=	wine-[0-9]* i386-wine-[0-9]* i386-wine-devel-[0-9]*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--verbose \
@@ -56,7 +54,7 @@ SHEBANG_FILES=	tools/make_requests tools/winemaker/winemaker \
 
 SUB_FILES=	pkg-message
 
-PORTDATA=	l_intl.nls wine.inf
+PORTDATA=	wine.inf
 
 OPTIONS_DEFINE=	CUPS DOCS DOSBOX GCC GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GCC GNUTLS X11
@@ -99,6 +97,14 @@ MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
 
 OPENAL_CONFIGURE_WITH=	openal
 OPENAL_USES=		openal
+
+STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
+COMP_DIST=	v${DISTVERSION}.tar.gz
+STAGING_DISTFILES=	${COMP_DIST}:staging
+STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
+				git:devel/git \
+				autoconf>0:devel/autoconf
+STAGING_LIB_DEPENDS=	libtxc_dxtn.so:graphics/s2tc
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
@@ -148,20 +154,9 @@ post-patch:
 PLIST_SUB+=		WINE32="" WINE64="@comment "
 .endif
 
-.if ${PORT_OPTIONS:MSTAGING}
-MASTER_SITES+=	https://github.com/wine-staging/wine-staging/archive/:cho
-COMP_DIST=	v${DISTVERSION}.tar.gz
-DISTFILES+=	${COMP_DIST}:cho
-
-EXTRACT_DEPENDS=bash:shells/bash \
-		git:devel/git \
-		autoconf>0:devel/autoconf
-LIB_DEPENDS+=	libtxc_dxtn.so:graphics/s2tc
-
-post-extract: fix-shebang
+post-extract-STAGING-on: fix-shebang
 	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${COMP_DIST} --strip-components 1
 	cd ${WRKSRC} && bash ./patches/patchinstall.sh --backend=patch DESTDIR=${WRKSRC} --all
-.endif
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE_CMD} depend

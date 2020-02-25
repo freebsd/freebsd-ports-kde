@@ -272,6 +272,7 @@
     SUBDIR += kannel
     SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
+    SUBDIR += kdsoap
     SUBDIR += kf5-kdewebkit
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
@@ -298,6 +299,7 @@
     SUBDIR += lightsquid
     SUBDIR += lighttpd
     SUBDIR += lighttpd-mod_h264_streaming
+    SUBDIR += limesurvey
     SUBDIR += linkcheck
     SUBDIR += linklint
     SUBDIR += links
@@ -447,6 +449,7 @@
     SUBDIR += nginx-lite
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
+    SUBDIR += nginx-ultimate-bad-bot-blocker
     SUBDIR += nginx-vts-exporter
     SUBDIR += nibbleblog
     SUBDIR += nift
@@ -1383,7 +1386,6 @@
     SUBDIR += phpsysinfo
     SUBDIR += phpvirtualbox
     SUBDIR += piwigo
-    SUBDIR += planet
     SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plugger
     SUBDIR += pmwiki
@@ -1466,6 +1468,7 @@
     SUBDIR += py-dj22-djangoql
     SUBDIR += py-dj22-djangorestframework
     SUBDIR += py-dj22-drf-yasg
+    SUBDIR += py-dj22-jsonfield
     SUBDIR += py-dj22-jsonfield2
     SUBDIR += py-dj22-swapper
     SUBDIR += py-django
@@ -1629,6 +1632,7 @@
     SUBDIR += py-formalchemy
     SUBDIR += py-formencode
     SUBDIR += py-frappe-bench
+    SUBDIR += py-freenit
     SUBDIR += py-frozen-flask
     SUBDIR += py-funkload
     SUBDIR += py-gandi.cli
@@ -1798,7 +1802,6 @@
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
-    SUBDIR += py-zope.app.wsgi
     SUBDIR += pyblosxom
     SUBDIR += pycarddav
     SUBDIR += pyjamas
@@ -1933,6 +1936,7 @@
     SUBDIR += rubygem-gon-rails5
     SUBDIR += rubygem-gon-rails50
     SUBDIR += rubygem-gon-rails52
+    SUBDIR += rubygem-gon-rails60
     SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
@@ -1982,15 +1986,18 @@
     SUBDIR += rubygem-kaminari-actionview-rails5
     SUBDIR += rubygem-kaminari-actionview-rails50
     SUBDIR += rubygem-kaminari-actionview-rails52
+    SUBDIR += rubygem-kaminari-actionview-rails60
     SUBDIR += rubygem-kaminari-activerecord
     SUBDIR += rubygem-kaminari-activerecord-rails5
     SUBDIR += rubygem-kaminari-activerecord-rails50
     SUBDIR += rubygem-kaminari-activerecord-rails52
+    SUBDIR += rubygem-kaminari-activerecord-rails60
     SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kaminari-rails5
     SUBDIR += rubygem-kaminari-rails50
     SUBDIR += rubygem-kaminari-rails52
+    SUBDIR += rubygem-kaminari-rails60
     SUBDIR += rubygem-kensa
     SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
@@ -2000,6 +2007,7 @@
     SUBDIR += rubygem-lograge
     SUBDIR += rubygem-lograge-rails5
     SUBDIR += rubygem-lograge-rails52
+    SUBDIR += rubygem-lograge-rails60
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2079,6 +2087,7 @@
     SUBDIR += rubygem-redis-rails-rails5
     SUBDIR += rubygem-redis-rails-rails50
     SUBDIR += rubygem-redis-rails-rails52
+    SUBDIR += rubygem-redis-rails-rails60
     SUBDIR += rubygem-redmine_acts_as_taggable_on
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
@@ -2135,6 +2144,7 @@
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
     SUBDIR += rubygem-webpack-rails-rails52
+    SUBDIR += rubygem-webpack-rails-rails60
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-driver
@@ -2222,11 +2232,8 @@
     SUBDIR += trac-TracGoogleAnalytics
     SUBDIR += trac-accountmanager
     SUBDIR += trac-advancedticketworkflow
-    SUBDIR += trac-attachmentpolicy
     SUBDIR += trac-autocomplete
-    SUBDIR += trac-bzr
     SUBDIR += trac-ccselector
-    SUBDIR += trac-childtickets
     SUBDIR += trac-customfieldadmin
     SUBDIR += trac-datefield
     SUBDIR += trac-defaultcc
@@ -2239,7 +2246,6 @@
     SUBDIR += trac-fivestarvote
     SUBDIR += trac-fullblog
     SUBDIR += trac-fullblognotification
-    SUBDIR += trac-gantt
     SUBDIR += trac-graphviz
     SUBDIR += trac-iniadmin
     SUBDIR += trac-keywords
@@ -2261,10 +2267,8 @@
     SUBDIR += trac-tickettemplate
     SUBDIR += trac-timingandestimation
     SUBDIR += trac-tocmacro
-    SUBDIR += trac-tracdragdrop
     SUBDIR += trac-tweakui
     SUBDIR += trac-vote
-    SUBDIR += trac-watchlist
     SUBDIR += trac-wikigoodies
     SUBDIR += trac-wikinotification
     SUBDIR += trac-wikitemplates
@@ -2310,7 +2314,6 @@
     SUBDIR += twiki-TwistyContrib
     SUBDIR += twiki-TwistyPlugin
     SUBDIR += twiki-WysiwygPlugin
-    SUBDIR += twill
     SUBDIR += twms
     SUBDIR += typo3-8
     SUBDIR += typo3-9

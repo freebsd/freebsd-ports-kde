@@ -3,7 +3,7 @@
 
 PORTNAME=	ghc
 PORTVERSION=	${GHC_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	lang haskell
 MASTER_SITES=	https://www.haskell.org/ghc/dist/${PORTVERSION}/:source \
 		LOCAL/arrowd/:boot \
@@ -49,9 +49,7 @@ DYNAMIC_DESC=		Add support for dynamic linking
 GMP_DESC=		Use GNU Multi-precision Library for big integers support
 PROFILE_DESC=		Add support for performance profiling
 
-DOCS_BUILD_DEPENDS+=	sphinx-build:textproc/py-sphinx
-DOCS_SUB_LIST=		WITH_DOCS="YES"
-DOCS_SUB_LIST_OFF=	WITH_DOCS="NO"
+DOCS_BUILD_DEPENDS=	sphinx-build:textproc/py-sphinx
 
 DYNAMIC_CONFIGURE_WITH=	system-libffi \
 			ffi-includes=${LOCALBASE}/include \
@@ -128,11 +126,9 @@ _EXECUTABLES=	${GHC_LIBDIR}/bin/unlit \
 		${GHC_LIBDIR}/bin/hsc2hs \
 		${GHC_LIBDIR}/bin/runghc \
 		${GHC_LIBDIR}/bin/ghc \
+		${GHC_LIBDIR}/bin/haddock \
 		${GHC_LIBDIR}/bin/hp2ps
 
-.if ${PORT_OPTIONS:MDOCS}
-_EXECUTABLES+=	${GHC_LIBDIR}/bin/haddock
-.endif
 .if ${PORT_OPTIONS:MPROFILE}
 _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-prof
 .endif
@@ -145,7 +141,10 @@ _EXECUTABLES+=	${GHC_LIBDIR}/bin/ghc-iserv-dyn
 .if empty(PORT_OPTIONS:MBOOT)
 BOOTSTRAPS_SUFFIX?=		${BOOTSTRAPS_SUFFIX_${ARCH}}
 BOOTSTRAPS_SUFFIX_powerpc64?=	-${PPC_ABI:tl}
-DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${BOOTSTRAPS_SUFFIX}${EXTRACT_SUFX}:boot
+.  if ${OSVERSION} < 1200000 && (${ARCH} == amd64 || ${ARCH} == i386)
+ELEVEN_SUFX=		11
+.  endif
+DISTFILES+=		ghc-${BOOT_GHC_VERSION}-boot-${ARCH}-freebsd${BOOTSTRAPS_SUFFIX}${ELEVEN_SUFX}${EXTRACT_SUFX}:boot
 .endif # MBOOT
 
 .if ${ARCH} == aarch64 || ${ARCH} == armv6 || ${ARCH} == armv7
@@ -202,26 +201,20 @@ CONFIGURE_ARGS+=	--with-ghc=${LOCALBASE}/bin/ghc
 SLAVES_PREFIX=		${WRKDIR}/slaves_prefix
 SLAVES_WRKDIRPREFIX=	${WRKDIR}/slaves_wrkdirprefix
 
-post-extract:
-# Use the "wrap" trick on arches that have to use pre-ino64 bootstrap binaries
-.if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200031 && \
-    (${ARCH} == amd64 || ${ARCH} == i386)
-	@${REINPLACE_CMD} -e 's|@SettingsCCompilerLinkFlags@|& -Wl,--wrap=readdir_r,--wrap=stat,--wrap=lstat,--wrap=fstat,--wrap=mknod|' ${BOOT_DIR}/settings.in
-.endif
-
 # %%PORTDOCS%%%%DOCSDIR%%/html/libraries/doc-index-V.html
 post-install-script:
 	${FIND} -ds ${GHC_LIBDIR} -type f -print | ${SED} -E \
 		-e 's,^${STAGEDIR}${PREFIX}/?,,' \
 		-e '/^${GHC_LIBDIR:C/\//\\\//g}\/package.conf.d\/package\.cache/s|^|@comment |g' \
 		>> ${TMPPLIST}
+.if ${PORT_OPTIONS:MDOCS}
 	${FIND} -ds ${STAGEDIR}${DOCSDIR} -type f -print | ${SED} -E \
 		-e 's,^${STAGEDIR}${PREFIX}/?,,' \
 		-e '/^${STAGEDIR:C/\//\\\//g}${DOCSDIR:C/\//\\\//g}\/html\/libraries\/doc-index-[^.]+\.html/s|^|@comment |g' \
 		-e '/^${STAGEDIR:C/\//\\\//g}${DOCSDIR:C/\//\\\//g}\/html\/libraries\/index[^\/.]*\.html/s|^|@comment|g' \
 		-e '/^${STAGEDIR:C/\//\\\//g}${DOCSDIR:C/\//\\\//g}\/html\/libraries\/[^\/]+\.png/s|^|@comment |g' \
 		>> ${TMPPLIST}
-.if ${PORT_OPTIONS:MDOCS}
+
 	# Cleanup the indexen created by gen_contents_index
 	${ECHO} "@postunexec ${RM} %D/${DOCSDIR_REL}/html/libraries/doc-index-*.html" >> ${TMPPLIST}
 	${ECHO} "@postunexec ${RM} %D/${DOCSDIR_REL}/html/libraries/index*.html" >> ${TMPPLIST}
@@ -259,16 +252,6 @@ pre-configure: apply-slist
 	# Copy the subbed build.mk to the proper position
 	${CP} ${WRKDIR}/build.mk ${WRKSRC}/mk/build.mk
 
-# Use the "wrap" trick on arches that have to use pre-ino64 bootstrap binaries
-.if empty(PORT_OPTIONS:MBOOT) && ${OPSYS} == FreeBSD && \
-    ${OSVERSION} >= 1200031 && \
-    (${ARCH} == amd64 || ${ARCH} == i386)
-	${CC} ${CFLAGS} -c -o ${BOOT_DIR}/wrap.o ${PATCHDIR}/wrap.c
-	for x in ${BOOT_DIR}/rts/dist/build/libCffi*.a; do \
-	    ${AR} q $$x ${BOOT_DIR}/wrap.o; ${RANLIB} $$x; \
-	done
-	${RM} ${BOOT_DIR}/wrap.o
-.endif
 # If we are using bootstrap compiler, configure and install it into ${BOOT_DIR}
 .if empty(PORT_OPTIONS:MBOOT)
 	cd ${BOOT_DIR} && ${CONFIGURE_ENV} ${CONFIGURE_CMD} --prefix=${BOOT_DIR}
@@ -291,9 +274,7 @@ pre-configure: apply-slist
 post-install:
 	(for f in ${_EXECUTABLES} $$(${FIND} ${GHC_LIBDIR} -name '*.so*'); do \
 		${STRIP_CMD} $$f; done)
-.if ${PORT_OPTIONS:MDOCS}
-	${MV} ${STAGEDIR}${PREFIX}/bin/haddock ${STAGEDIR}${PREFIX}/bin/haddock-ghc-${GHC_VERSION}
-.endif
+	${RM} ${STAGEDIR}${PREFIX}/bin/haddock
 
 # Create a bootstrap compiler tar ball: run this in an interactive poudriere jail
 .PHONY: create-bootstrap
@@ -301,6 +282,7 @@ create-bootstrap:
 	cd ${WRKSRC} \
 		&& ${ECHO} "BIN_DIST_NAME=ghc-${GHC_VERSION}-boot" >> mk/build.mk \
 		&& ${ECHO} "BIN_DIST_TAR=ghc-${GHC_VERSION}-boot.tar" >> mk/build.mk \
+		&& ${ECHO} "HADDOCK_DOCS=NO" >> mk/build.mk \
 		&& ${GMAKE} binary-dist TAR_COMP=xz \
 		&& ${MV} ${WRKSRC}/ghc-${GHC_VERSION}-boot-${GHC_ARCH}-portbld-freebsd.tar.xz /tmp/ghc-${GHC_VERSION}-boot-${ARCH}-freebsd.tar.xz
 

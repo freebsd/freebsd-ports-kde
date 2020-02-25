@@ -93,7 +93,6 @@
     SUBDIR += gnustep-wrapper
     SUBDIR += go-for-it
     SUBDIR += goesimage
-    SUBDIR += gourmet
     SUBDIR += gpicker
     SUBDIR += grantlee-editor
     SUBDIR += grantleetheme
@@ -212,7 +211,6 @@
     SUBDIR += recoll
     SUBDIR += remind
     SUBDIR += rolo
-    SUBDIR += rox-memo
     SUBDIR += rubrica
     SUBDIR += rubygem-shellplay
     SUBDIR += rubygem-taskjuggler

@@ -97,7 +97,6 @@
     SUBDIR += colord
     SUBDIR += colord-gtk
     SUBDIR += comical
-    SUBDIR += commons-utilities
     SUBDIR += compupic
     SUBDIR += converseen
     SUBDIR += cosmoplayer
@@ -156,6 +155,7 @@
     SUBDIR += eog
     SUBDIR += eog-plugins
     SUBDIR += eom
+    SUBDIR += eos-movrec
     SUBDIR += epdfview
     SUBDIR += ephoto
     SUBDIR += epix
@@ -325,6 +325,7 @@
     SUBDIR += guilib
     SUBDIR += gwenview
     SUBDIR += hdr_tools
+    SUBDIR += heimer
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
@@ -555,7 +556,6 @@
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
     SUBDIR += ocrad
-    SUBDIR += ocre
     SUBDIR += ogre3d
     SUBDIR += ogre3d19
     SUBDIR += oidn
@@ -781,7 +781,6 @@
     SUBDIR += py-OWSLib
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
-    SUBDIR += py-PyX
     SUBDIR += py-actdiag
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -789,7 +788,6 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
-    SUBDIR += py-chart
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -833,6 +831,7 @@
     SUBDIR += py-openimageio
     SUBDIR += py-photocollage
     SUBDIR += py-pillow
+    SUBDIR += py-pillow6
     SUBDIR += py-pivy
     SUBDIR += py-plotly
     SUBDIR += py-png
@@ -858,6 +857,7 @@
     SUBDIR += py-pyrsgis
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
+    SUBDIR += py-pyx
     SUBDIR += py-qt5-svg
     SUBDIR += py-rawkit
     SUBDIR += py-sane

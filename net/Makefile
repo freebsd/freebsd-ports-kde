@@ -10,6 +10,7 @@
     SUBDIR += Sockets
     SUBDIR += activemq
     SUBDIR += adasockets
+    SUBDIR += addrwatch
     SUBDIR += afpfs-ng
     SUBDIR += aget
     SUBDIR += akonadi-calendar
@@ -1044,7 +1045,6 @@
     SUBDIR += py-ldap0
     SUBDIR += py-ldap3
     SUBDIR += py-ldappool
-    SUBDIR += py-ldaptor
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libfte
@@ -1088,6 +1088,7 @@
     SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-python-ceilometerclient
     SUBDIR += py-python-cinderclient
+    SUBDIR += py-python-cinderclient5
     SUBDIR += py-python-designateclient
     SUBDIR += py-python-glanceclient
     SUBDIR += py-python-heatclient
@@ -1477,7 +1478,7 @@
     SUBDIR += tshark
     SUBDIR += tshark-lite
     SUBDIR += tsocks
-    SUBDIR += tucan
+    SUBDIR += tunneller
     SUBDIR += turnserver
     SUBDIR += twitux
     SUBDIR += u6rd

@@ -127,9 +127,6 @@
     SUBDIR += kexi
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
-    SUBDIR += ldb
-    SUBDIR += ldb12
-    SUBDIR += ldb13
     SUBDIR += ldb14
     SUBDIR += ldb15
     SUBDIR += leo_center
@@ -191,7 +188,6 @@
     SUBDIR += mdcached
     SUBDIR += memcached
     SUBDIR += memcacheq
-    SUBDIR += monetdb
     SUBDIR += mongodb34
     SUBDIR += mongodb34-tools
     SUBDIR += mongodb36
@@ -764,7 +760,6 @@
     SUBDIR += py-cassandra-driver
     SUBDIR += py-cdb
     SUBDIR += py-couchdb
-    SUBDIR += py-cql
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
     SUBDIR += py-django-transaction-hooks
@@ -792,6 +787,7 @@
     SUBDIR += py-mysql2pgsql
     SUBDIR += py-mysqlclient
     SUBDIR += py-oursql
+    SUBDIR += py-partd
     SUBDIR += py-peewee
     SUBDIR += py-peewee_migrate
     SUBDIR += py-pg8000
@@ -987,6 +983,7 @@
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
     SUBDIR += rubygem-redis-actionpack-rails52
+    SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
@@ -1029,7 +1026,6 @@
     SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
-    SUBDIR += tdb1
     SUBDIR += tdbc
     SUBDIR += tile38
     SUBDIR += tiledb
@@ -1056,6 +1052,5 @@
     SUBDIR += xrootd
     SUBDIR += xtrabackup
     SUBDIR += zabbix3-libzbxpgsql
-    SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>

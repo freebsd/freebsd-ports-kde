@@ -278,7 +278,6 @@
     SUBDIR += rofi
     SUBDIR += rofi-calc
     SUBDIR += rofi-pass
-    SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
     SUBDIR += rsibreak
@@ -335,7 +334,6 @@
     SUBDIR += wallutils
     SUBDIR += waybar
     SUBDIR += wbar
-    SUBDIR += wbarconf
     SUBDIR += wcm
     SUBDIR += wdisplays
     SUBDIR += wdm

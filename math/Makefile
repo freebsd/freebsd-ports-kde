@@ -108,6 +108,7 @@
     SUBDIR += R-cran-spdep
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
+    SUBDIR += R-cran-statmod
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
@@ -365,7 +366,6 @@
     SUBDIR += mbasecalc
     SUBDIR += mcsim
     SUBDIR += metis
-    SUBDIR += metis4
     SUBDIR += mfem
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
@@ -485,7 +485,6 @@
     SUBDIR += octave-forge-zenity
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
-    SUBDIR += ogdf
     SUBDIR += oleo
     SUBDIR += openblas
     SUBDIR += openfst
@@ -693,7 +692,6 @@
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-autograd
-    SUBDIR += py-basemap
     SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-bitmath
@@ -799,7 +797,6 @@
     SUBDIR += py-ufl
     SUBDIR += py-uncertainties
     SUBDIR += py-vincenty
-    SUBDIR += py-viper
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
     SUBDIR += qalculate

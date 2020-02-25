@@ -2,7 +2,7 @@
 
 PORTNAME=	kivy
 PORTVERSION=	1.10.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,6 +13,9 @@ COMMENT=	Python NUI library for rapid application development
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	Unmaintained, uses EOLed python27
+EXPIRATION_DATE=	2020-03-19
 
 BUILD_DEPENDS=	git:devel/git \
 		${PYTHON_PKGNAMEPREFIX}pygments>=0:textproc/py-pygments@${PY_FLAVOR}
@@ -64,7 +67,7 @@ GSTREAMER_USES=		gettext-runtime gnome pkgconfig
 GSTREAMER_USE=		GNOME=glib20
 OPENCV_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/cv2.so:graphics/py-opencv@${PY_FLAVOR}
 PIL_DESC=		Text and window rendering support via Pillow
-PIL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR}
+PIL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow6>0:graphics/py-pillow6@${PY_FLAVOR}
 PYGAME_DESC=		Window, text and image rendering support via PyGame
 PYGAME_RUN_DEPENDS=	${PYGAME}
 PYGLET_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pyglet>0:graphics/py-pyglet@${PY_FLAVOR}
