@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	10.0.0rc2
-PORTREVISION=	0
+DISTVERSION=	10.0.0rc3
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION:S/rc/-rc/}/ \
 		https://${PRE_}releases.llvm.org/${LLVM_RELEASE}/${RCDIR}

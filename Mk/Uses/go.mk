@@ -114,10 +114,7 @@ GO_ENV+=	GOPATH="${WRKDIR}" \
 		GOBIN=""
 .endif
 
-# Tentatively enable package building for Go ports on aarch64 to catch regressions early.
-# Can be removed after go1.14 is officially released in Jan 2020 and lang/go is updated to 1.14
-GO_PORT_aarch64=	lang/go-devel
-GO_PORT?=	${GO_PORT_${ARCH}:Ulang/go}
+GO_PORT?=	lang/go
 
 BUILD_DEPENDS+=	${GO_CMD}:${GO_PORT}
 .if ${go_ARGS:Mrun}
@@ -179,17 +176,23 @@ do-test:
 
 .if ${go_ARGS:Mmodules}
 _MODULES2TUPLE_CMD=	modules2tuple
-gomod-vendor: patch
-	@if type ${GO_CMD} > /dev/null 2>&1; then \
-		if type ${_MODULES2TUPLE_CMD} > /dev/null 2>&1; then \
-			cd ${WRKSRC}; ${GO_CMD} mod vendor; \
-			[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt; \
-		else \
-			${ECHO_MSG} "===> Please install \"ports-mgmt/modules2tuple\""; \
-		fi \
-	else \
-		${ECHO_MSG} "===> Please install \"${GO_PORT}\""; \
+gomod-vendor-deps:
+	@if ! type ${GO_CMD} > /dev/null 2>&1; then \
+		${ECHO_MSG} "===> Please install \"${GO_PORT}\""; exit 1; \
+	fi; \
+	if ! type ${_MODULES2TUPLE_CMD} > /dev/null 2>&1; then \
+		${ECHO_MSG} "===> Please install \"ports-mgmt/modules2tuple\""; exit 1; \
 	fi
+
+gomod-vendor: gomod-vendor-deps patch
+	@cd ${WRKSRC}; ${SETENV} GOPATH=${WRKDIR}/.gopath GOFLAGS=-modcacherw ${GO_CMD} mod vendor; \
+	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt
+
+gomod-vendor-diff: gomod-vendor-deps patch
+	@cd ${WRKSRC}; ${SETENV} GOPATH=${WRKDIR}/.gopath GOFLAGS=-modcacherw ${GO_CMD} mod vendor; \
+	[ -r vendor/modules.txt ] && ${_MODULES2TUPLE_CMD} vendor/modules.txt | ${GREP} -v "^GH_TUPLE=" | ${SED} 's| \\$$||' > ${WRKDIR}/GH_TUPLE-new.txt && \
+	echo ${GH_TUPLE} | ${TR} -s " " "\n" | ${SED} "s|^|		|" > ${WRKDIR}/GH_TUPLE-old.txt && \
+	${DIFF} ${WRKDIR}/GH_TUPLE-old.txt ${WRKDIR}/GH_TUPLE-new.txt || exit 0
 .endif
 
 .endif # defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_GO_POST_MK)

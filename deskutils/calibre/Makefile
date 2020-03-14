@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	calibre
-PORTVERSION=	4.11.2
+PORTVERSION=	4.12.0
 PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
@@ -11,6 +11,9 @@ MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Ebook management application
 
 LICENSE=	GPLv3
+
+DEPRECATED=	Uses deprecated version of python
+EXPIRATION_DATE=	2020-09-15
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libpoppler-qt5.so:graphics/poppler-qt5 \

@@ -170,6 +170,7 @@
     SUBDIR += fwlogwatch
     SUBDIR += gag
     SUBDIR += gcr
+    SUBDIR += gef
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
     SUBDIR += git-secret
@@ -215,7 +216,6 @@
     SUBDIR += honeytrap
     SUBDIR += honggfuzz
     SUBDIR += horcrux
-    SUBDIR += hotssh
     SUBDIR += hpenc
     SUBDIR += hs-cryptol
     SUBDIR += hydra
@@ -574,6 +574,7 @@
     SUBDIR += p5-Crypt-SKey
     SUBDIR += p5-Crypt-SMIME
     SUBDIR += p5-Crypt-SSLeay
+    SUBDIR += p5-Crypt-SSSS
     SUBDIR += p5-Crypt-Salt
     SUBDIR += p5-Crypt-SaltedHash
     SUBDIR += p5-Crypt-Serpent
@@ -842,9 +843,12 @@
     SUBDIR += py-YubiOTP
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
+    SUBDIR += py-ailment
+    SUBDIR += py-angr
     SUBDIR += py-argon2-cffi
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
+    SUBDIR += py-authlib
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-btchip-python
@@ -961,12 +965,15 @@
     SUBDIR += py-python-pam
     SUBDIR += py-python-registry
     SUBDIR += py-python3-openid
+    SUBDIR += py-python3-saml
+    SUBDIR += py-pyvex
     SUBDIR += py-pywinrm
     SUBDIR += py-rekall
     SUBDIR += py-rekall-core
     SUBDIR += py-rekall_lib
     SUBDIR += py-requests-credssp
     SUBDIR += py-requests-kerberos
+    SUBDIR += py-ropper
     SUBDIR += py-rsa
     SUBDIR += py-safe
     SUBDIR += py-scp
@@ -1051,7 +1058,6 @@
     SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
-    SUBDIR += rubygem-doorkeeper43
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
@@ -1060,6 +1066,7 @@
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-hkdf
+    SUBDIR += rubygem-hrr_rb_ssh
     SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
@@ -1293,7 +1300,6 @@
     SUBDIR += yubioath-desktop
     SUBDIR += zebedee
     SUBDIR += zeek
-    SUBDIR += zenmap
     SUBDIR += zeronet
     SUBDIR += zxid
     SUBDIR += zzuf

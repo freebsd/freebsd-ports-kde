@@ -80,7 +80,6 @@
     SUBDIR += font-ibm-type1
     SUBDIR += font-isas-misc
     SUBDIR += font-jis-misc
-    SUBDIR += font-manager
     SUBDIR += font-micro-misc
     SUBDIR += font-misc-cyrillic
     SUBDIR += font-misc-ethiopic
@@ -169,6 +168,7 @@
     SUBDIR += noto-sc
     SUBDIR += noto-tc
     SUBDIR += nucleus
+    SUBDIR += office-code-pro
     SUBDIR += ohsnap
     SUBDIR += oldschool-pc-fonts
     SUBDIR += open-sans

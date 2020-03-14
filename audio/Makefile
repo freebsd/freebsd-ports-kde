@@ -334,7 +334,6 @@
     SUBDIR += id3ren
     SUBDIR += id3tool
     SUBDIR += id3v2
-    SUBDIR += idjc
     SUBDIR += ifp-line
     SUBDIR += infamous-plugins-lv2
     SUBDIR += invada-studio-plugins-lv2
@@ -724,7 +723,6 @@
     SUBDIR += shntool
     SUBDIR += shorten
     SUBDIR += shout
-    SUBDIR += shout-idjc
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer

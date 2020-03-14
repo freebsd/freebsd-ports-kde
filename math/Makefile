@@ -293,6 +293,7 @@
     SUBDIR += hmat-oss
     SUBDIR += hpipm
     SUBDIR += hs-Agda
+    SUBDIR += hs-penrose
     SUBDIR += hs-semigroups
     SUBDIR += ideep
     SUBDIR += ignition-math
@@ -339,6 +340,7 @@
     SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
+    SUBDIR += librdata
     SUBDIR += librsb
     SUBDIR += libtommath
     SUBDIR += libtsnnls
@@ -354,7 +356,6 @@
     SUBDIR += lrslib
     SUBDIR += ltl
     SUBDIR += ltl2ba
-    SUBDIR += lybniz
     SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathgl
@@ -699,6 +700,7 @@
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
     SUBDIR += py-chaospy
+    SUBDIR += py-claripy
     SUBDIR += py-cma
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
@@ -768,6 +770,7 @@
     SUBDIR += py-pynndescent
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
+    SUBDIR += py-pysmt
     SUBDIR += py-pysparse
     SUBDIR += py-pystan
     SUBDIR += py-pysym

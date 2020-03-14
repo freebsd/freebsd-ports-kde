@@ -23,6 +23,7 @@
     SUBDIR += R-cran-dygraphs
     SUBDIR += R-cran-farver
     SUBDIR += R-cran-ggplot2
+    SUBDIR += R-cran-ggrepel
     SUBDIR += R-cran-gridBase
     SUBDIR += R-cran-gridExtra
     SUBDIR += R-cran-munsell
@@ -66,6 +67,7 @@
     SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
+    SUBDIR += birdfont
     SUBDIR += bitmap
     SUBDIR += blend2d
     SUBDIR += blender
@@ -132,7 +134,6 @@
     SUBDIR += djvusmooth
     SUBDIR += dmtx-utils
     SUBDIR += drawpile
-    SUBDIR += driconf
     SUBDIR += drm-current-kmod
     SUBDIR += drm-devel-kmod
     SUBDIR += drm-fbsd11.2-kmod
@@ -241,7 +242,6 @@
     SUBDIR += gimp-beautify-plugin
     SUBDIR += gimp-data-extras
     SUBDIR += gimp-gmic-plugin
-    SUBDIR += gimp-help
     SUBDIR += gimp-lensfun-plugin
     SUBDIR += gimp-lqr-plugin
     SUBDIR += gimp-refocus-plugin
@@ -545,7 +545,6 @@
     SUBDIR += mypaint
     SUBDIR += mypaint-brushes
     SUBDIR += nanosvg
-    SUBDIR += nathive
     SUBDIR += netpbm
     SUBDIR += nip2
     SUBDIR += nomacs
@@ -695,6 +694,7 @@
     SUBDIR += p5-ming
     SUBDIR += panoglview
     SUBDIR += panomatic
+    SUBDIR += pastel
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
     SUBDIR += pdfpc
@@ -805,7 +805,6 @@
     SUBDIR += py-gizeh
     SUBDIR += py-glewpy
     SUBDIR += py-glfw
-    SUBDIR += py-goocanvas
     SUBDIR += py-gphoto2
     SUBDIR += py-graph-core
     SUBDIR += py-graphviz
@@ -820,7 +819,6 @@
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
-    SUBDIR += py-mcomix
     SUBDIR += py-ming
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
@@ -845,7 +843,6 @@
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
-    SUBDIR += py-pyglet12
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -1021,7 +1018,6 @@
     SUBDIR += tweeny
     SUBDIR += ufraw
     SUBDIR += uniconvertor
-    SUBDIR += uniconvw
     SUBDIR += unpaper
     SUBDIR += urho3d
     SUBDIR += urt

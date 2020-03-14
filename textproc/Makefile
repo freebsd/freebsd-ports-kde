@@ -107,6 +107,7 @@
     SUBDIR += csb-aspell
     SUBDIR += csv2latex
     SUBDIR += csvdiff
+    SUBDIR += csvq
     SUBDIR += ctpl
     SUBDIR += ctpp2
     SUBDIR += cwtext
@@ -314,12 +315,14 @@
     SUBDIR += jrefentry
     SUBDIR += jshon
     SUBDIR += json-yaml
+    SUBDIR += jtc
     SUBDIR += kdiff3
     SUBDIR += kenlm
     SUBDIR += kf5-kcodecs
     SUBDIR += kf5-sonnet
     SUBDIR += kf5-syntax-highlighting
     SUBDIR += kibana6
+    SUBDIR += kibana7
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -392,6 +395,7 @@
     SUBDIR += libxml++26-reference
     SUBDIR += libxml2
     SUBDIR += libxml2-reference
+    SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
     SUBDIR += libxslt-reference
@@ -476,6 +480,7 @@
     SUBDIR += p5-Algorithm-RabinKarp
     SUBDIR += p5-Apache-ParseLog
     SUBDIR += p5-Apache-Solr
+    SUBDIR += p5-Template-AutoFilter
     SUBDIR += p5-BibTeX-Parser
     SUBDIR += p5-BigIP-ParseConfig
     SUBDIR += p5-Bloom-Filter
@@ -1344,6 +1349,7 @@
     SUBDIR += py-python-slugify
     SUBDIR += py-python-xmp-toolkit
     SUBDIR += py-pytidylib
+    SUBDIR += py-pytoml
     SUBDIR += py-pyx12
     SUBDIR += py-qrcode
     SUBDIR += py-qt5-xml
@@ -1432,6 +1438,7 @@
     SUBDIR += re-flex
     SUBDIR += re_graph
     SUBDIR += redet
+    SUBDIR += redisearch
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb
@@ -1461,9 +1468,9 @@
     SUBDIR += ruby-rdtool
     SUBDIR += ruby-rttool
     SUBDIR += ruby-xmlparser
-    SUBDIR += rubygem-actionpack-xml_parser
-    SUBDIR += rubygem-actionpack-xml_parser1
-    SUBDIR += rubygem-actionpack-xml_parser52
+    SUBDIR += rubygem-actionpack-xml_parser-rails5
+    SUBDIR += rubygem-actionpack-xml_parser-rails52
+    SUBDIR += rubygem-actionpack-xml_parser1-rails4
     SUBDIR += rubygem-actiontext60
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
@@ -1471,6 +1478,7 @@
     SUBDIR += rubygem-asciidoctor-diagram
     SUBDIR += rubygem-asciidoctor-include-ext
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
@@ -1739,6 +1747,7 @@
     SUBDIR += texi2html
     SUBDIR += texi2mdoc
     SUBDIR += textogif
+    SUBDIR += textql
     SUBDIR += the_silver_searcher
     SUBDIR += ti-hunspell
     SUBDIR += tidyp

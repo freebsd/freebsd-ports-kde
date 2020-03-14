@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	compute-runtime
-DISTVERSION=	20.07.15711
+DISTVERSION=	20.10.16087
 CATEGORIES=	lang
 PKGNAMEPREFIX=	intel-
 
@@ -25,7 +25,8 @@ CMAKE_ON=	SKIP_UNIT_TESTS
 CMAKE_ARGS=	-DNEO_DRIVER_VERSION:STRING="${DISTVERSIONFULL}"
 PLIST_FILES=	etc/OpenCL/vendors/intel.icd \
 		bin/ocloc \
-		lib/intel-opencl/libigdrcl.so
+		lib/intel-opencl/libigdrcl.so \
+		lib/intel-opencl/libocloc.so
 
 post-patch:
 	@${REINPLACE_CMD} -e '/-Werror/d' \
