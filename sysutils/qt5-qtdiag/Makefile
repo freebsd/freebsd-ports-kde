@@ -11,7 +11,8 @@ COMMENT=	Tool for reporting diagnostic information about Qt and its environment
 USES=		compiler:c++11-lang qmake:outsource qt-dist:5,tools
 USE_QT=		core gui
 
-PLIST_FILES=	${QT_BINDIR}/qtdiag
+PLIST_FILES=	${QT_BINDIR}/qtdiag \
+		${DEBUG}${QT_BINDIR}/qtdiag.debug
 
 # Similarly to x11/qt5-qev, it makes more sense to just run the build system
 # from the qtdiag directory. If we run it from the top of the source tree, it
