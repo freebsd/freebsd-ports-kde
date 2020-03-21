@@ -229,6 +229,7 @@
 %%QT_MKSPECDIR%%/features/mac/sdk.prf
 %%QT_MKSPECDIR%%/features/mac/toolchain.prf
 %%QT_MKSPECDIR%%/features/mac/unsupported/objc_namespace.prf
+%%QT_MKSPECDIR%%/features/metatypes.prf
 %%QT_MKSPECDIR%%/features/moc.prf
 %%QT_MKSPECDIR%%/features/no_debug_info.prf
 %%QT_MKSPECDIR%%/features/plugin_bundle.prf
