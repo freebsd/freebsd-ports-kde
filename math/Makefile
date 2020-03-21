@@ -213,6 +213,17 @@
     SUBDIR += djbfft
     SUBDIR += drgeo
     SUBDIR += dsdp
+    SUBDIR += dune-alugrid
+    SUBDIR += dune-common
+    SUBDIR += dune-functions
+    SUBDIR += dune-geometry
+    SUBDIR += dune-grid
+    SUBDIR += dune-istl
+    SUBDIR += dune-localfunctions
+    SUBDIR += dune-pdelab
+    SUBDIR += dune-spgrid
+    SUBDIR += dune-typetree
+    SUBDIR += dune-uggrid
     SUBDIR += e
     SUBDIR += ecos
     SUBDIR += edenmath
@@ -797,6 +808,7 @@
     SUBDIR += py-symcxx
     SUBDIR += py-sympy
     SUBDIR += py-theano
+    SUBDIR += py-triangle
     SUBDIR += py-ufl
     SUBDIR += py-uncertainties
     SUBDIR += py-vincenty

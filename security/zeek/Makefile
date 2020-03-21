@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	zeek
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.3
 CATEGORIES=	security
-MASTER_SITES=	https://www.zeek.org/downloads/
+MASTER_SITES=	https://old.zeek.org/downloads/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	leres@FreeBSD.org
@@ -15,6 +15,8 @@ LICENSE=	BSD3CLAUSE
 BROKEN_powerpc64=	Does not build: error: zero-size array 'names'
 
 USES=		bison cmake compiler:c++11-lang gettext-runtime ninja perl5 python shebangfix ssl
+
+PORTSCOUT=	limit:0,even
 
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE:PATH=${PYTHON_CMD}
 CXXFLAGS+=	-std=c++11 -Wall

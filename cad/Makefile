@@ -71,9 +71,11 @@
     SUBDIR += magic
     SUBDIR += meshdev
     SUBDIR += netgen
+    SUBDIR += netgen-lvs
     SUBDIR += ngspice_rework
     SUBDIR += nvc
     SUBDIR += opencascade
+    SUBDIR += openctm
     SUBDIR += openscad
     SUBDIR += openscad-devel
     SUBDIR += openvsp
@@ -90,6 +92,7 @@
     SUBDIR += qcad
     SUBDIR += qelectrotech
     SUBDIR += qmls
+    SUBDIR += qrouter
     SUBDIR += repsnapper
     SUBDIR += rubygem-gdsii
     SUBDIR += scotch
