@@ -50,7 +50,9 @@
 %%QT_LIBDIR%%/libQt5Help.so.%%FULLVER%%
 %%DEBUG%%%%QT_LIBDIR%%/libQt5Help.so.%%FULLVER%%.debug
 %%QT_BINDIR%%/qcollectiongenerator
+%%DEBUG%%%%QT_BINDIR%%/qcollectiongenerator.debug
 %%QT_BINDIR%%/qhelpgenerator
+%%DEBUG%%%%QT_BINDIR%%/qhelpgenerator.debug
 %%QT_MKSPECDIR%%/modules/qt_lib_help.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_help_private.pri
 libdata/pkgconfig/Qt5Help.pc
