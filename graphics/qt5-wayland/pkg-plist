@@ -381,6 +381,8 @@
 %%QT_QMLDIR%%/QtWayland/Compositor/TextureSharingExtension/libqwaylandtexturesharingextension.so
 %%DEBUG%%%%QT_QMLDIR%%/QtWayland/Compositor/TextureSharingExtension/libqwaylandtexturesharingextension.so.debug
 %%QT_QMLDIR%%/QtWayland/Compositor/TextureSharingExtension/qmldir
+%%QT_QMLDIR%%/QtWayland/Compositor/WaylandCursorItem.qml
+%%QT_QMLDIR%%/QtWayland/Compositor/WaylandOutputWindow.qml
 %%QT_QMLDIR%%/QtWayland/Compositor/libqwaylandcompositorplugin.so
 %%DEBUG%%%%QT_QMLDIR%%/QtWayland/Compositor/libqwaylandcompositorplugin.so.debug
 %%QT_QMLDIR%%/QtWayland/Compositor/plugins.qmltypes
