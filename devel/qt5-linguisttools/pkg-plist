@@ -12,6 +12,6 @@
 %%QT_BINDIR%%/lupdate
 %%QT_BINDIR%%/lupdate-pro
 %%DEBUG%%%%QT_BINDIR%%/lupdate-pro.debug
-%QT_BINDIR%%/lupdate.debug
+%%DEBUG%%%%QT_BINDIR%%/lupdate.debug
 man/man1/lrelease.1.gz
 man/man1/lupdate.1.gz
