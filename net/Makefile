@@ -305,6 +305,7 @@
     SUBDIR += kdav
     SUBDIR += kdenetwork
     SUBDIR += kdenetwork-filesharing
+    SUBDIR += kdsoap
     SUBDIR += kea
     SUBDIR += kf5-kcalendarcore
     SUBDIR += kf5-kcontacts
@@ -1469,6 +1470,7 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traefik
+    SUBDIR += traefik2
     SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3
