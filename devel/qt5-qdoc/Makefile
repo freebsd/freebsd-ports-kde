@@ -18,6 +18,7 @@ BUILD_WRKSRC=	${WRKSRC}/src/${PORTNAME}
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 PLIST_FILES=	${QT_BINDIR}/qdoc \
+		${DEBUG}${QT_BINDIR}/qdoc.debug \
 		${QT_CMAKEDIR}/Qt5DocTools/Qt5DocToolsConfig.cmake \
 		${QT_CMAKEDIR}/Qt5DocTools/Qt5DocToolsConfigVersion.cmake
 
