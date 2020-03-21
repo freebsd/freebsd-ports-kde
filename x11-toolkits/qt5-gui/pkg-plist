@@ -899,6 +899,7 @@
 %%DEBUG%%%%QT_LIBDIR%%/libQt5XcbQpa.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5XkbCommonSupport.a
 %%QT_LIBDIR%%/libQt5XkbCommonSupport.prl
+%%QT_LIBDIR%%/metatypes/qt5gui_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_accessibility_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_devicediscovery_support_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_edid_support_private.pri
