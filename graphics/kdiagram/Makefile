@@ -7,6 +7,9 @@ CATEGORIES=	graphics kde
 MASTER_SITES=   KDE/stable/${PORTNAME}/${DISTVERSION}/
 DIST_SUBDIR=    KDE/${PORTNAME}
 
+PATCH_SITES=	https://github.com/KDE/kdiagram/commit/
+PATCHFILES=	51164a317088344518c5f1721f8182306afc4abb.patch:-p1
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library to create business diagrams
 
