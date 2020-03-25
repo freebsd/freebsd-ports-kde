@@ -1,5 +1,5 @@
---- src/3rdparty/chromium/third_party/perfetto/include/perfetto/ext/base/time.h.orig	2019-11-27 21:12:25 UTC
-+++ src/3rdparty/chromium/third_party/perfetto/include/perfetto/ext/base/time.h
+--- src/3rdparty/chromium/third_party/perfetto/include/perfetto/base/time.h.orig	2020-03-16 14:04:24 UTC
++++ src/3rdparty/chromium/third_party/perfetto/include/perfetto/base/time.h
 @@ -123,6 +123,9 @@ inline TimeNanos GetTimeInternalNs(clockid_t clk_id) {
  // Return ns from boot. Conversely to GetWallTimeNs, this clock counts also time
  // during suspend (when supported).

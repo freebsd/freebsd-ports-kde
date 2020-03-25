@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc.orig	2019-05-23 12:39:34 UTC
+--- src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc.orig	2020-03-16 14:04:24 UTC
 +++ src/3rdparty/chromium/content/renderer/renderer_blink_platform_impl.cc
-@@ -109,7 +109,7 @@
+@@ -100,7 +100,7 @@
  
  #if defined(OS_MACOSX)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
@@ -9,25 +9,25 @@
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #endif
  
-@@ -204,7 +204,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
-                      ->Clone();
+@@ -185,7 +185,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
+   if (RenderThreadImpl::current()) {
+     io_runner_ = RenderThreadImpl::current()->GetIOTaskRunner();
      thread_safe_sender_ = RenderThreadImpl::current()->thread_safe_sender();
-     blob_registry_.reset(new WebBlobRegistryImpl(thread_safe_sender_.get()));
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
-     font_loader_ = sk_make_sp<font_service::FontLoader>(connector_.get());
-     SkFontConfigInterface::SetGlobal(font_loader_);
+     mojo::PendingRemote<font_service::mojom::FontService> font_service;
+     RenderThreadImpl::current()->BindHostReceiver(
+         font_service.InitWithNewPipeAndPassReceiver());
+@@ -195,7 +195,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
  #endif
-@@ -213,7 +213,7 @@ RendererBlinkPlatformImpl::RendererBlinkPlatformImpl(
-     connector_ = service_manager::Connector::Create(&request);
    }
  
 -#if defined(OS_LINUX) || defined(OS_MACOSX)
 +#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
-   if (g_sandbox_enabled && sandboxEnabled()) {
+   if (sandboxEnabled()) {
  #if defined(OS_MACOSX)
-     sandbox_support_.reset(new WebSandboxSupportMac(connector_.get()));
-@@ -241,7 +241,7 @@ RendererBlinkPlatformImpl::~RendererBlinkPlatformImpl(
+     sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
+@@ -219,7 +219,7 @@ RendererBlinkPlatformImpl::~RendererBlinkPlatformImpl(
  }
  
  void RendererBlinkPlatformImpl::Shutdown() {
@@ -36,7 +36,7 @@
    // SandboxSupport contains a map of OutOfProcessFont objects, which hold
    // WebStrings and WebVectors, which become invalidated when blink is shut
    // down. Hence, we need to clear that map now, just before blink::shutdown()
-@@ -322,7 +322,7 @@ RendererBlinkPlatformImpl::CreateNetworkURLLoaderFacto
+@@ -284,7 +284,7 @@ RendererBlinkPlatformImpl::CreateNetworkURLLoaderFacto
  
  void RendererBlinkPlatformImpl::SetDisplayThreadPriority(
      base::PlatformThreadId thread_id) {
@@ -45,7 +45,7 @@
    if (RenderThreadImpl* render_thread = RenderThreadImpl::current()) {
      render_thread->render_message_filter()->SetThreadPriority(
          thread_id, base::ThreadPriority::DISPLAY);
-@@ -335,7 +335,7 @@ blink::BlameContext* RendererBlinkPlatformImpl::GetTop
+@@ -297,7 +297,7 @@ blink::BlameContext* RendererBlinkPlatformImpl::GetTop
  }
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
