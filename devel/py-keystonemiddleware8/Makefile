@@ -2,10 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	keystonemiddleware
-PORTVERSION=	9.0.0
+PORTVERSION=	8.0.0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	8
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Middleware for OpenStack Identity
@@ -29,9 +30,12 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}keystoneauth1>=3.12.0:devel/py-keystoneauth1
 		${PYTHON_PKGNAMEPREFIX}six>=1.10.0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}webob>=1.7.1:www/py-webob@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
+
+# keystonemiddleware 9.0.0+ requires Python 3.6+
+PORTSCOUT=	limit:^8\.
 
 .include <bsd.port.mk>
