@@ -545,6 +545,7 @@
     SUBDIR += mxp
     SUBDIR += mypaint
     SUBDIR += mypaint-brushes
+    SUBDIR += mypaint-brushes2
     SUBDIR += nanosvg
     SUBDIR += netpbm
     SUBDIR += nip2
@@ -845,6 +846,7 @@
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet150
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -954,7 +956,6 @@
     SUBDIR += sampleicc
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
-    SUBDIR += sane-frontends
     SUBDIR += scale2x
     SUBDIR += scantailor
     SUBDIR += scr2png
@@ -1000,6 +1001,7 @@
     SUBDIR += sxiv
     SUBDIR += synaesthesia
     SUBDIR += synfigstudio
+    SUBDIR += tachyon
     SUBDIR += telak
     SUBDIR += tesseract
     SUBDIR += tesseract-data

@@ -9129,7 +9129,6 @@ security/py-crits||2017-04-19|Has expired: Does not build with py-django18 see p
 www/py-cactus||2017-04-19|Removed, depends on expired Django version
 devel/py-django16-tastypie-mongoengine|devel/py-django-tastypie-mongoengine|2017-04-19|Removed, uses expired Django version
 devel/freeocl|lang/pocl|2017-04-19|Has expired: Unfetchable for more than six months (google code has gone away); use lang/pocl instead
-net/librsync|net/librsync2|2017-04-28|Unmaintained, CVE-2014-8242, use net/librsync2 instead
 devel/stormlib-ghost++||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 devel/py-coil||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
 devel/py-cmdln||2017-04-30|Has expired: Unfetchable for more than six months (google code has gone away)
@@ -13089,7 +13088,6 @@ audio/wmsmixer||2019-10-16|Has expired: Unfetchable, unmaintained
 audio/xmms2-scrobbler||2019-10-16|Has expired: Unfetchable, unmaintained
 benchmarks/filebench||2019-10-16|Has expired: Unfetchable, unmaintained
 biology/chemeq||2019-10-16|Has expired: Unfetchable, unmaintained
-biology/linux-foldingathome||2019-10-16|Has expired: Unfetchable, unmaintained
 cad/dxf2fig||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/gsmlib||2019-10-16|Has expired: Unfetchable, unmaintained
 comms/nokryptia||2019-10-16|Has expired: Unfetchable, unmaintained
@@ -14460,7 +14458,6 @@ textproc/rubygem-actionpack-xml_parser52|textproc/rubygem-actionpack-xml_parser-
 x11-toolkits/py-kivy||2020-03-02|Has expired: Old, uses EOLed python27
 lang/gcc6|lang/gcc|2020-03-07|Has expired: Unsupported by upstream. Use GCC 9 or newer instead.
 www/pycarddav|deskutils/py-khard|2020-03-07|Has expired: Deprecated by upstream, please migrate to deskutils/py-khard
-x11/xpra||2020-03-07|Has expired: Old, uses EOLed python27
 x11-wm/ccsm||2020-03-07|Has expired: Old, uses EOLed python27
 x11-toolkits/py-gtkglext||2020-03-07|Has expired: Old, uses EOLed python27
 deskutils/syncthing-gtk||2020-03-07|Has expired: Old, uses EOLed python27
@@ -14502,3 +14499,27 @@ textproc/pychm||2020-03-20|Has expired: Unmaintained, uses EOLed python27
 x11/rxvt|x11/rxvt-unicode|2020-03-20|Has expired: Abandonware: stable release 2.6.4 / November 1, 2001 and no maintainer
 x11-wm/clementine-wm||2020-03-20|Removed, unmaintained and depends on expired x11/rxvt
 net/kdsoap|www/kdsoap|2020-03-21|Already existed in the tree
+security/openssh-portable@x509||2020-03-23|Has expired: X509 long broken without known users
+devel/py-antlr4-python2-runtime|devel/antlr4-python3-runtime|2020-03-25|Has expired: Uses EoL python27, please use devel/antlr4-python3-runtime instead
+devel/sonarqube|devel/sonarqube-community|2020-03-26|Moved to make it clear that this is the community-edition
+devel/sonar-ant-task|devel/sonarqube-ant-task|2020-03-26|Moved due to name change upstream
+devel/rubygem-slack-notifier1|devel/rubygem-slack-notifier|2020-03-30|Obsolete, please use devel/rubygem-slack-notifier instead
+textproc/rubygem-diffy31|textproc/rubygem-diffy|2020-03-30|Obsolete, please use textproc/rubygem-diffy instead
+sysutils/py-crontab|sysutils/py-python-crontab|2020-03-31|Match canonical/registered (PyPI/CHEESESHOP) name
+security/w3af||2020-03-31|Has expired: Uses deprecated version of Python
+sysutils/duplicity-devel|sysutils/duplicity|2020-03-31|Has expired: Obsolete now, use sysutils/duplicity instead
+net-mgmt/tornova||2020-03-31|Has expired: Use EOL'd Python 2.7
+audio/py-ogg||2020-03-31|Has expired: Unmaintained, uses EOLed python27
+net-mgmt/onionlauncher||2020-03-31|Has expired: Use EOL'd Python 2.7
+databases/mongodb34|databases/mongodb36|2020-03-31|Has expired: EOL January 2020; See https://www.mongodb.com/support-policy
+graphics/sane-frontends||2020-03-31|Has expired: Unmaintained upstream, no consumers left
+lang/ruby24|lang/ruby26|2020-03-31|Has expired: Move to a new version (lang/ruby26 or above). Ruby 2.4 is in security maintenance phase and planned for EOL on March 31, 2020
+databases/pgpool|databases/pgpool-II-35|2020-03-31|Has expired: Reached EOL at 2019-10-31, please use pgpool-II-35 or higher
+net/pygopherd||2020-03-31|Has expired: Unmaintained, uses EOLed python27
+databases/mongodb34-tools|databases/mongodb36-tools|2020-03-31|Removed, part of expired MongoDB 3.4
+databases/py-pypuppetdb03|databases/py-pypuppetdb|2020-04-01|Has expired: Use databases/py-pypuppetdb instead
+www/py-puppetboard02|www/py-puppetboard|2020-04-01|Has expired: Use www/py-puppetboard instead
+www/py-puppetboard03|www/py-puppetboard|2020-04-01|Has expired: Use www/py-puppetboard instead
+net/librsync2|net/librsync|2020-04-02|Remove PKGNAMESUFFIX 3 years after librsync removal
+lang/beignet|lang/intel-compute-runtime|2020-04-02|Has expired: Deprecated upstream, use lang/intel-compute-runtime
+devel/rubygem-cucumber-tag_expressions|devel/rubygem-cucumber-tag-expressions|2020-04-04|Renamed by upstream

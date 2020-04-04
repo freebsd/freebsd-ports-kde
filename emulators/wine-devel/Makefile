@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.4
+DISTVERSION=	5.5
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -43,7 +43,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sane \
 		--without-sdl \
 		--without-tiff \
-		--without-udev
+		--without-udev \
+		--without-unwind 
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
@@ -130,7 +131,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 # Include this only if it has not been already included by the
 # i386-wine-devel slave port.
-.ifndef PKGNAMEPREFIX
+.ifndef WINE_SLAVE_BUILD
 .include <bsd.port.pre.mk>
 .endif
 
@@ -185,6 +186,6 @@ check-wine-devel-vs-staging:
 	  fi \
 	done
 
-.ifndef PKGNAMEPREFIX
+.ifndef WINE_SLAVE_BUILD
 .include <bsd.port.post.mk>
 .endif
