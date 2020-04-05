@@ -9,13 +9,22 @@
          qtwebengine_platformError("Unknown platform. Qt WebEngine only supports Linux, Windows, and macOS.")
      } else {
          linux:qtwebengine_isLinuxPlatformSupported() {
-@@ -125,6 +125,9 @@ defineTest(qtConfTest_detectPlatform) {
-         }
+@@ -126,6 +126,9 @@ defineTest(qtConfTest_detectPlatform) {
          macos:qtwebengine_isMacOsPlatformSupported() {
              $${1}.platform = "macos"
-+        }
+         }
 +        unix:qtwebengine_isLinuxPlatformSupported() {
 +            $${1}.platform = "linux"
-         }
++        }
      }
  
+     !isEmpty(platformError) {
+@@ -163,7 +166,7 @@ defineTest(qtConfTest_detectNinja) {
+     !isEmpty(ninja) {
+         qtLog("Found ninja from path: $$ninja")
+         qtRunLoggedCommand("$$ninja --version", version)|return(false)
+-        contains(version, "1.[7-9].*"): return(true)
++        contains(version, "1\.([7-9]|1[0-9])\..*"): return(true)
+         qtLog("Ninja version too old")
+     }
+     qtLog("Building own ninja")
