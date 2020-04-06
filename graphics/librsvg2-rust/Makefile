@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	librsvg
-PORTVERSION=	2.48.0
+PORTVERSION=	2.48.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2-rust
@@ -17,6 +17,7 @@ BUILD_DEPENDS=	${RUST_DEFAULT}>=1.39.0:lang/${RUST_DEFAULT} \
 		valac:lang/vala
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libharfbuzz.so:print/harfbuzz \
 		libpng.so:graphics/png
 
 USES=		gettext gmake gnome libtool pkgconfig tar:xz
@@ -31,7 +32,8 @@ CONFIGURE_ARGS=	--disable-Bsymbolic \
 # Make sure it uses the Rust toolchain from ports.
 CONFIGURE_ENV=	CARGO=${LOCALBASE}/bin/cargo \
 		RUSTC=${LOCALBASE}/bin/rustc
-MAKE_ENV=	RUSTC=${LOCALBASE}/bin/rustc
+MAKE_ENV=	CARGO_BUILD_JOBS=${MAKE_JOBS_NUMBER} \
+		RUSTC=${LOCALBASE}/bin/rustc
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 

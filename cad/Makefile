@@ -20,12 +20,14 @@
     SUBDIR += cascade
     SUBDIR += cascade-compiler
     SUBDIR += chipvault
+    SUBDIR += cura
     SUBDIR += cura-engine
     SUBDIR += digital
     SUBDIR += dinotrace
     SUBDIR += electric
     SUBDIR += electric-ng
     SUBDIR += fasm
+    SUBDIR += fdm_materials
     SUBDIR += feappv
     SUBDIR += fidocadj
     SUBDIR += freecad
@@ -39,6 +41,7 @@
     SUBDIR += gmsh
     SUBDIR += gnucap
     SUBDIR += gplcver
+    SUBDIR += graywolf
     SUBDIR += gspiceui
     SUBDIR += gtkwave
     SUBDIR += impact
@@ -78,6 +81,7 @@
     SUBDIR += openctm
     SUBDIR += openscad
     SUBDIR += openscad-devel
+    SUBDIR += opensta
     SUBDIR += openvsp
     SUBDIR += oregano
     SUBDIR += p5-GDS2
@@ -91,6 +95,7 @@
     SUBDIR += python-gdsii
     SUBDIR += qcad
     SUBDIR += qelectrotech
+    SUBDIR += qflow
     SUBDIR += qmls
     SUBDIR += qrouter
     SUBDIR += repsnapper
@@ -105,6 +110,7 @@
     SUBDIR += tkgate
     SUBDIR += tochnog
     SUBDIR += transcalc
+    SUBDIR += uranium
     SUBDIR += varkon
     SUBDIR += verilator
     SUBDIR += verilog-mode.el

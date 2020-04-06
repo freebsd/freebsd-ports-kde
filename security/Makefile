@@ -977,6 +977,7 @@
     SUBDIR += py-rsa
     SUBDIR += py-safe
     SUBDIR += py-scp
+    SUBDIR += py-scramp
     SUBDIR += py-scrypt
     SUBDIR += py-securesystemslib
     SUBDIR += py-service_identity
@@ -1050,6 +1051,7 @@
     SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
+    SUBDIR += rubygem-devise-two-factor-rails60
     SUBDIR += rubygem-devise-two-factor30-rails52
     SUBDIR += rubygem-devise-two-factor30-rails60
     SUBDIR += rubygem-devise_pam_authenticatable2
@@ -1158,6 +1160,7 @@
     SUBDIR += secpanel
     SUBDIR += sectok
     SUBDIR += secure_delete
+    SUBDIR += sedutil
     SUBDIR += setaudit
     SUBDIR += sha
     SUBDIR += sha1collisiondetection
@@ -1272,7 +1275,6 @@
     SUBDIR += vuls
     SUBDIR += vuxml
     SUBDIR += vxquery
-    SUBDIR += w3af
     SUBDIR += wapiti
     SUBDIR += wazuh-agent
     SUBDIR += webfwlog

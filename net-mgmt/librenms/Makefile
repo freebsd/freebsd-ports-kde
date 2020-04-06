@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	librenms
-PORTVERSION=	1.61
+PORTVERSION=	1.62.2
 PORTEPOCH=	1
 CATEGORIES=	net-mgmt
 MASTER_SITES=	LOCAL/dvl:vendor
@@ -18,7 +18,7 @@ USES=		python${PY_MYSQL} shebangfix
 # RELEASE_TIMESTAMP is used for a patch inside the vendor code
 # it represents the release date via: git show --pretty='%H|%ct' -s 1.42.01
 # It sits here so you remember to update it with each release
-RELEASE_TIMESTAMP=	1583121812
+RELEASE_TIMESTAMP=	1586016242
 
 # perhaps we also need python-memcache python-mysqldb
 RUN_DEPENDS+=	rrdtool:databases/rrdtool \
@@ -93,7 +93,7 @@ SHEBANG_FILES=	scripts/auth_test.php scripts/deploy-docs.sh scripts/github-remov
 SUB_FILES+=	pkg-message
 SUB_LIST+=	PHP="${PHPBASE}/bin/php" PYTHON=${PYTHON_CMD}
 
-ROOT_FILES=	.env.example addhost.php adduser.php alerts.php artisan billing-calculate.php \
+ROOT_FILES=	addhost.php adduser.php alerts.php artisan billing-calculate.php \
 		build-base.php build.sql check-services.php composer.json \
 		composer.lock config.php.default config_to_json.php cronic daily.php \
 		delhost.php discovery-wrapper.py discovery.php dist-pollers.php irc.php \
@@ -182,7 +182,13 @@ do-install-EXAMPLES-on:
 post-install:
 	@${FIND} -s ${STAGEDIR}${WWWDIR} -type f '(' -name '*.orig' -or -name '*.bak' -or -name '.gitignore' ')' -delete
 	@${FIND} -s ${STAGEDIR}${WWWDIR} -not -type d | ${SORT} | \
-	${SED} -e 's#^${STAGEDIR}${PREFIX}/##' >> ${TMPPLIST}
+		${SED} -e 's#^${STAGEDIR}${PREFIX}/##' >> ${TMPPLIST}
+
+	# we do this file separately because it needs a different chmod/chown
+	# it will eventually contains secrets
+	${INSTALL_DATA} ${WRKSRC}/.env.example ${STAGEDIR}/${WWWDIR}
+	@${ECHO_CMD} "@(root,www,0750) ${WWWDIR}/.env.example" >> ${TMPPLIST}
+
 	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/logs" >> ${TMPPLIST}
 	@${ECHO_CMD} "@dir(www,www,0775) ${WWWDIR}/bootstrap/cache" >> ${TMPPLIST}
 #	@${ECHO_CMD} "@(www,www,0775) ${WWWDIR}/daily.sh" >> ${TMPPLIST}

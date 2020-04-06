@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gym
-PORTVERSION=	0.17.0
+PORTVERSION=	0.17.1
+PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,12 +13,10 @@ COMMENT=	OpenAI toolkit for developing and comparing your reinforcement learning
 
 LICENSE=	MIT
 
-BROKEN=		depends on package: ${PYTHON_PKGNAMEPREFIX}cloudpickle>=1.3.0 - not found
-
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cloudpickle>=1.3.0:devel/py-cloudpickle@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cloudpickle>=1.2.0<1.4.0:devel/py-cloudpickle@${PY_FLAVOR} \
 		${PY_ENUM34} \
 		${PYNUMPY} \
-		${PYTHON_PKGNAMEPREFIX}pyglet>=1.4.0<1.5.1:graphics/py-pyglet@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}pyglet150>=1.4.0<1.5.1:graphics/py-pyglet150@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>=0:science/py-scipy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=0:devel/py-six@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mock>=0:devel/py-mock@${PY_FLAVOR} \

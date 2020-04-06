@@ -191,10 +191,10 @@ prosody:*:242:242::0:0:Prosody Jabber Server:/nonexistent:/usr/sbin/nologin
 ot-recorder:*:243:243::0:0:OwnTracks Recorder:/nonexistent:/usr/sbin/nologin
 mastodon:*:244:244::0:0:Mastodon User:/usr/local/www/mastodon:/bin/sh
 routinator:*:245:245::0:0:Routinator 3000 Pseudo User:/nonexistent:/usr/sbin/nologin
-# free: 246
+fahclient:*:246:246::0:0:Folding@home User:/nonexistent:/usr/sbin/nologin
 fcron:*:247:247::0:0:fcron pseudo-user:/nonexistent:/usr/sbin/nologin
-# free: 248
-# free: 249
+signal-cli:*:248:248::0:0:Signal CLI:/nonexistent:/usr/sbin/nologin
+sonarqube:*:249:249::0:0:SonarQube Server:/nonexistent:/usr/sbin/nologin
 sems:*:250:250::0:0:SIP Express Media Server:/nonexistent:/usr/sbin/nologin
 # free: 251
 # free: 252
@@ -400,7 +400,7 @@ ecartis:*:450:450::0:0:Ecartis Listserver:/usr/local/ecartis:/usr/sbin/nologin
 # free: 452
 # free: 453
 # free: 454
-# free: 455
+inadyn:*:455:455::0:0:inadyn user:/nonexistent:/usr/sbin/nologin
 # free: 456
 # free: 457
 # free: 458
@@ -826,7 +826,7 @@ bitmark-recorder:*:873:873::0:0:Bitmark Property Recorder:/var/lib/recorderd:/us
 # free: 878
 # free: 879
 # free: 880
-# free: 881
+ultimaker:*:881:881::0:0:Ultimaker user:/nonexistent:/usr/sbin/nologin
 midpoint:*:882:882::0:0:midPoint user:/var/db/midpoint:/usr/sbin/nologin
 ipfs-go:*:883:883::0:0:ipfs-go user:/var/db/ipfs-go:/bin/sh
 telegraf:*:884:884::0:0:telegraf user:/nonexistent:/usr/sbin/nologin

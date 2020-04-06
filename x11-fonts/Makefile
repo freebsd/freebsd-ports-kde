@@ -10,6 +10,7 @@
     SUBDIR += alegreya-sans
     SUBDIR += alfont
     SUBDIR += andika
+    SUBDIR += anomaly-mono
     SUBDIR += anonymous-pro
     SUBDIR += apl385
     SUBDIR += artwiz-aleczapka
@@ -123,6 +124,7 @@
     SUBDIR += iosevka
     SUBDIR += isabella
     SUBDIR += jetbrains-mono
+    SUBDIR += jf-openhuninn
     SUBDIR += jmk-x11-fonts
     SUBDIR += junction
     SUBDIR += junicode
@@ -144,6 +146,7 @@
     SUBDIR += linuxlibertine
     SUBDIR += linuxlibertine-g
     SUBDIR += lohit
+    SUBDIR += manrope
     SUBDIR += manu-gothica
     SUBDIR += material-icons-ttf
     SUBDIR += materialdesign-ttf
