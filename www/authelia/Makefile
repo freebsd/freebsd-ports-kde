@@ -2,7 +2,7 @@
 
 PORTNAME=	authelia
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.9.0
+DISTVERSION=	4.13.0
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,7 +29,7 @@ GH_TUPLE=	\
 		fsnotify:fsnotify:v1.4.7:fsnotify_fsnotify/vendor/github.com/fsnotify/fsnotify \
 		go-asn1-ber:asn1-ber:v1.3.1:go_asn1_ber_asn1_ber/vendor/github.com/go-asn1-ber/asn1-ber \
 		go-ini:ini:v1.51.0:go_ini_ini/vendor/gopkg.in/ini.v1 \
-		go-ldap:ldap:v3.1.7:go_ldap_ldap/vendor/github.com/go-ldap/ldap/v3 \
+		go-ldap:ldap:v3.1.8:go_ldap_ldap/vendor/github.com/go-ldap/ldap/v3 \
 		go-redis:redis:v6.15.2:go_redis_redis/vendor/github.com/go-redis/redis \
 		go-sql-driver:mysql:v1.5.0:go_sql_driver_mysql/vendor/github.com/go-sql-driver/mysql \
 		go-stack:stack:v1.8.0:go_stack_stack/vendor/github.com/go-stack/stack \
@@ -48,7 +48,7 @@ GH_TUPLE=	\
 		magiconair:properties:v1.8.1:magiconair_properties/vendor/github.com/magiconair/properties \
 		mattn:go-sqlite3:v1.13.0:mattn_go_sqlite3/vendor/github.com/mattn/go-sqlite3 \
 		mitchellh:mapstructure:v1.1.2:mitchellh_mapstructure/vendor/github.com/mitchellh/mapstructure \
-		mongodb:mongo-go-driver:v1.3.1:mongodb_mongo_go_driver/vendor/go.mongodb.org/mongo-driver \
+		mongodb:mongo-go-driver:v1.3.2:mongodb_mongo_go_driver/vendor/go.mongodb.org/mongo-driver \
 		otiai10:copy:v1.1.1:otiai10_copy/vendor/github.com/otiai10/copy \
 		pelletier:go-toml:v1.4.0:pelletier_go_toml/vendor/github.com/pelletier/go-toml \
 		philhofer:fwd:v1.0.0:philhofer_fwd/vendor/github.com/philhofer/fwd \
@@ -61,7 +61,7 @@ GH_TUPLE=	\
 		sirupsen:logrus:v1.5.0:sirupsen_logrus/vendor/github.com/sirupsen/logrus \
 		spf13:afero:v1.1.2:spf13_afero/vendor/github.com/spf13/afero \
 		spf13:cast:v1.3.0:spf13_cast/vendor/github.com/spf13/cast \
-		spf13:cobra:v0.0.6:spf13_cobra/vendor/github.com/spf13/cobra \
+		spf13:cobra:v0.0.7:spf13_cobra/vendor/github.com/spf13/cobra \
 		spf13:jwalterweatherman:v1.0.0:spf13_jwalterweatherman/vendor/github.com/spf13/jwalterweatherman \
 		spf13:pflag:v1.0.3:spf13_pflag/vendor/github.com/spf13/pflag \
 		spf13:viper:v1.6.2:spf13_viper/vendor/github.com/spf13/viper \

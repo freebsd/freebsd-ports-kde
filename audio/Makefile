@@ -81,6 +81,7 @@
     SUBDIR += chordpack
     SUBDIR += chromaprint
     SUBDIR += clementine-player
+    SUBDIR += cli-visualizer
     SUBDIR += clunk
     SUBDIR += cmp3
     SUBDIR += cmt
@@ -232,6 +233,7 @@
     SUBDIR += gnustep-cdplayer
     SUBDIR += goattracker
     SUBDIR += gogglesmm
+    SUBDIR += gonic
     SUBDIR += goobox
     SUBDIR += gqradio
     SUBDIR += gradio

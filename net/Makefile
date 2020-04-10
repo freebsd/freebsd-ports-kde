@@ -282,6 +282,7 @@
     SUBDIR += ipsvd
     SUBDIR += ipxe
     SUBDIR += irrd
+    SUBDIR += irrd-legacy
     SUBDIR += isboot-kmod
     SUBDIR += isc-dhcp44-client
     SUBDIR += isc-dhcp44-relay
@@ -408,6 +409,7 @@
     SUBDIR += libtrace
     SUBDIR += libunp
     SUBDIR += libusipp
+    SUBDIR += libusrsctp
     SUBDIR += libutp
     SUBDIR += libvncserver
     SUBDIR += libwebsockets
@@ -1075,6 +1077,7 @@
     SUBDIR += py-port-for
     SUBDIR += py-portend
     SUBDIR += py-pyenet
+    SUBDIR += py-pyfixbuf
     SUBDIR += py-pygeoip
     SUBDIR += py-pyicap
     SUBDIR += py-pynamecheap
@@ -1504,6 +1507,7 @@
     SUBDIR += uriparser
     SUBDIR += urlendec
     SUBDIR += usbredir
+    SUBDIR += usockets
     SUBDIR += utftpd
     SUBDIR += v2ray
     SUBDIR += vblade
