@@ -2,13 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	prosody
-PORTVERSION=	0.11.4
-PORTREVISION=	1
+PORTVERSION=	0.11.5
 CATEGORIES=	net-im
-MASTER_SITES=	http://prosody.im/downloads/source/ \
-		http://redundancy.redundancy.org/mirror/
+MASTER_SITES=	https://prosody.im/downloads/source/
 
-MAINTAINER=	lx@FreeBSD.org
+MAINTAINER=	thomas@beingboiled.info
 COMMENT=	Simple extensible XMPP server written in Lua
 
 LICENSE=	MIT

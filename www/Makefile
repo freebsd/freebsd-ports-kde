@@ -88,6 +88,7 @@
     SUBDIR += colly
     SUBDIR += coppermine
     SUBDIR += cplanet
+    SUBDIR += cpp-httplib
     SUBDIR += cpr
     SUBDIR += crawl
     SUBDIR += crp
@@ -297,6 +298,7 @@
     SUBDIR += libnghttp2
     SUBDIR += libnghttp3
     SUBDIR += libresonic-standalone
+    SUBDIR += librtcdcpp
     SUBDIR += libwpe
     SUBDIR += libwww
     SUBDIR += lightsquid
@@ -1507,6 +1509,7 @@
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-cron
     SUBDIR += py-django-datetime-widget
+    SUBDIR += py-django-debreach
     SUBDIR += py-django-debug-toolbar
     SUBDIR += py-django-dpaste
     SUBDIR += py-django-evolution
@@ -1544,6 +1547,7 @@
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
     SUBDIR += py-django-pipeline
+    SUBDIR += py-django-polymorphic
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
     SUBDIR += py-django-prometheus
@@ -1584,7 +1588,6 @@
     SUBDIR += py-django30
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
-    SUBDIR += py-django_polymorphic
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangorestframework
     SUBDIR += py-djangorestframework-csv
@@ -2168,6 +2171,7 @@
     SUBDIR += shellinabox
     SUBDIR += shttpd
     SUBDIR += silicon
+    SUBDIR += simple-web-server
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
@@ -2223,6 +2227,7 @@
     SUBDIR += tivoka
     SUBDIR += tntnet
     SUBDIR += tokyopromenade
+    SUBDIR += tomcat-devel
     SUBDIR += tomcat-native
     SUBDIR += tomcat7
     SUBDIR += tomcat85
@@ -2324,6 +2329,7 @@
     SUBDIR += unit
     SUBDIR += unit-perl
     SUBDIR += unit-php
+    SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
     SUBDIR += validator

@@ -1,12 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=	obs-studio
-DISTVERSION=	25.0.3
-PORTREVISION=	2
+DISTVERSION=	25.0.5
 CATEGORIES=	multimedia
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	e1de4e8a50b5e50f69214d3a4fd39b4b9b03e050.patch:-p1
+PATCHFILES=	e1de4e8a50b5e50f69214d3a4fd39b4b9b03e050.patch:-p1 # obs-studio-25.0.3-fix-compiler-warnings.patch
+PATCHFILES+=	9bd33f6fdebc47d17e3cc1f0122a1f784eebc507.patch:-p1 # https://github.com/obsproject/obs-studio/pull/2663 (Add FreeBSD and Dragonfly support in os_get_executable_path_ptr())
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source streaming/recording software
@@ -40,7 +40,7 @@ LIB_DEPENDS_armv7=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_i386=	libluajit-5.1.so:lang/luajit
 LIB_DEPENDS_powerpc=	libluajit-5.1.so:lang/luajit
 
-USES=		cmake compiler:c++11-lib gl lua pkgconfig python:3.4+ qt:5 xorg
+USES=		cmake gl lua pkgconfig python:3.4+ qt:5 xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	obsproject
 USE_QT=		core gui svg widgets x11extras xml buildtools_build imageformats_run qmake_build
@@ -51,6 +51,14 @@ USE_LDCONFIG=	yes
 CMAKE_ON=	UNIX_STRUCTURE
 CMAKE_ARGS=	-DOBS_VERSION_OVERRIDE:STRING="${PORTVERSION}"
 CFLAGS+=	-D_WITH_GETLINE
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc64
+USES+=		compiler:gcc-c++11-lib
+.else
+USES+=		compiler:c++11-lib
+.endif
 
 .include <bsd.port.pre.mk>
 

@@ -201,7 +201,7 @@
     SUBDIR += avro-c
     SUBDIR += avro-cpp
     SUBDIR += awless
-    SUBDIR += aws-c-commons
+    SUBDIR += aws-c-common
     SUBDIR += aws-c-event-stream
     SUBDIR += aws-checksums
     SUBDIR += aws-sdk-cpp
@@ -701,6 +701,7 @@
     SUBDIR += fuel
     SUBDIR += fuzzylite
     SUBDIR += fxdiv
+    SUBDIR += g-wrap
     SUBDIR += ga
     SUBDIR += gaa
     SUBDIR += gamin
@@ -1091,6 +1092,7 @@
     SUBDIR += leatherman
     SUBDIR += leiningen
     SUBDIR += lemon
+    SUBDIR += level-zero
     SUBDIR += lfcbase
     SUBDIR += lfcxml
     SUBDIR += libCello
@@ -1548,6 +1550,7 @@
     SUBDIR += mspdebug
     SUBDIR += mstch
     SUBDIR += mtbl
+    SUBDIR += mustache
     SUBDIR += mutagen
     SUBDIR += myrepos
     SUBDIR += nana
@@ -2440,8 +2443,8 @@
     SUBDIR += p5-Git-Sub
     SUBDIR += p5-Git-Version-Compare
     SUBDIR += p5-Git-Wrapper
+    SUBDIR += p5-Glib
     SUBDIR += p5-Glib-Object-Introspection
-    SUBDIR += p5-Glib2
     SUBDIR += p5-Gnome2-GConf
     SUBDIR += p5-Goo-Canvas
     SUBDIR += p5-Goo-Canvas2
@@ -3036,6 +3039,7 @@
     SUBDIR += p5-Proc-BackOff
     SUBDIR += p5-Proc-Background
     SUBDIR += p5-Proc-Daemon
+    SUBDIR += p5-Proc-Find-Parents
     SUBDIR += p5-Proc-Fork
     SUBDIR += p5-Proc-Guard
     SUBDIR += p5-Proc-PID-File
@@ -4379,6 +4383,7 @@
     SUBDIR += py-fluent-logger
     SUBDIR += py-flufl.i18n
     SUBDIR += py-flufl.lock
+    SUBDIR += py-flynt
     SUBDIR += py-foolscap
     SUBDIR += py-freebsd
     SUBDIR += py-freebsd-sysctl
@@ -4466,12 +4471,14 @@
     SUBDIR += py-importlib-metadata
     SUBDIR += py-importlib-resources
     SUBDIR += py-incremental
+    SUBDIR += py-infinity
     SUBDIR += py-inflect
     SUBDIR += py-inflection
     SUBDIR += py-inifile
     SUBDIR += py-iniparse
     SUBDIR += py-instant
     SUBDIR += py-intbitset
+    SUBDIR += py-intervals
     SUBDIR += py-intervaltree
     SUBDIR += py-invoke
     SUBDIR += py-ioflo
@@ -4673,7 +4680,9 @@
     SUBDIR += py-osc-lib
     SUBDIR += py-osc-lib1
     SUBDIR += py-oslo.cache
+    SUBDIR += py-oslo.cache1
     SUBDIR += py-oslo.concurrency
+    SUBDIR += py-oslo.concurrency3
     SUBDIR += py-oslo.config
     SUBDIR += py-oslo.context
     SUBDIR += py-oslo.db
@@ -4733,6 +4742,7 @@
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
     SUBDIR += py-pip-api
+    SUBDIR += py-pip-licenses
     SUBDIR += py-pip-run
     SUBDIR += py-pip-tools
     SUBDIR += py-pipdeptree
@@ -4917,6 +4927,7 @@
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxb
     SUBDIR += py-pyxml2obj
+    SUBDIR += py-pyyaml-include
     SUBDIR += py-q
     SUBDIR += py-qpid
     SUBDIR += py-qserve
@@ -5050,6 +5061,7 @@
     SUBDIR += py-tblib
     SUBDIR += py-tconfpy
     SUBDIR += py-tempora
+    SUBDIR += py-tempora1
     SUBDIR += py-tenacity
     SUBDIR += py-termcolor
     SUBDIR += py-terminable_thread
