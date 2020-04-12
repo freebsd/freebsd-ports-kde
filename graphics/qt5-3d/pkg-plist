@@ -830,7 +830,15 @@
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qscissortest_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qsetfence_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderdata_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderformat_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadergenerator_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadergraph_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadergraphloader_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderimage_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderlanguage_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadernode_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadernodeport_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshadernodesloader_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderprogram_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qshaderprogrambuilder_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/qsortpolicy_p.h
