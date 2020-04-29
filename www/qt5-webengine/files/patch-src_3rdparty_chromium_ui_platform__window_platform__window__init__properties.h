@@ -1,8 +1,17 @@
---- src/3rdparty/chromium/ui/platform_window/platform_window_init_properties.h.orig	2020-03-16 14:04:24 UTC
+--- src/3rdparty/chromium/ui/platform_window/platform_window_init_properties.h.orig	2020-04-08 09:41:36 UTC
 +++ src/3rdparty/chromium/ui/platform_window/platform_window_init_properties.h
-@@ -73,7 +73,7 @@ struct PlatformWindowInitProperties {
-   bool remove_standard_frame = false;
-   std::string workspace;
+@@ -41,7 +41,7 @@ enum class PlatformWindowOpacity {
+ 
+ class WorkspaceExtensionDelegate;
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_BSD)
+ class X11ExtensionDelegate;
+ #endif
+ 
+@@ -82,7 +82,7 @@ struct COMPONENT_EXPORT(PLATFORM_WINDOW) PlatformWindo
+ 
+   WorkspaceExtensionDelegate* workspace_extension_delegate = nullptr;
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)
