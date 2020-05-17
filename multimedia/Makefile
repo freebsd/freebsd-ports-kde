@@ -34,7 +34,6 @@
     SUBDIR += celluloid
     SUBDIR += cheese
     SUBDIR += chilitags
-    SUBDIR += clipgrab
     SUBDIR += clive
     SUBDIR += clutter-gst
     SUBDIR += clutter-gst3
@@ -59,6 +58,7 @@
     SUBDIR += dvdstyler
     SUBDIR += emby-server
     SUBDIR += emovix
+    SUBDIR += f3d
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
     SUBDIR += ffmpeg
@@ -215,7 +215,6 @@
     SUBDIR += libquvi09
     SUBDIR += librav1e
     SUBDIR += librtmp
-    SUBDIR += libsmacker
     SUBDIR += libtheora
     SUBDIR += libtuner
     SUBDIR += libuvc
@@ -241,7 +240,6 @@
     SUBDIR += lives
     SUBDIR += livestreamer
     SUBDIR += lsdvd
-    SUBDIR += lxdvdrip
     SUBDIR += m2tstoavi
     SUBDIR += m2vrequantiser
     SUBDIR += makemkv
@@ -250,7 +248,6 @@
     SUBDIR += mimms
     SUBDIR += minitube
     SUBDIR += mjpegtools
-    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
@@ -389,6 +386,7 @@
     SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook
+    SUBDIR += streamlink
     SUBDIR += subsync
     SUBDIR += subtitlecomposer
     SUBDIR += subtitleoffsetmodifier
@@ -420,7 +418,6 @@
     SUBDIR += vapoursynth-vmaf
     SUBDIR += vcdgear
     SUBDIR += vcdimager
-    SUBDIR += vcdpad
     SUBDIR += vdpauinfo
     SUBDIR += vdr
     SUBDIR += vdr-plugin-control

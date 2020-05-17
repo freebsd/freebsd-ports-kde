@@ -2,7 +2,7 @@
 
 PORTNAME=	spotify-tui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.17.1
+DISTVERSION=	0.19.0
 CATEGORIES=	audio
 
 MAINTAINER=	vulcan@wired.sh
@@ -14,11 +14,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 USES=		cargo localbase:ldflags python:3.6+,build ssl xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	Rigellute
+GH_TUPLE=	Rigellute:rspotify:8d15009ea8e457ef5827334f22fef7e55b34c6b3:rspotify
 USE_XORG=	xcb
 
 CARGO_CRATES=	aho-corasick-0.7.10 \
 		ansi_term-0.11.0 \
-		anyhow-1.0.27 \
+		anyhow-1.0.28 \
 		arc-swap-0.4.5 \
 		arrayref-0.3.6 \
 		arrayvec-0.5.1 \
@@ -48,9 +49,7 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		core-foundation-0.7.0 \
 		core-foundation-sys-0.7.0 \
 		crossbeam-utils-0.7.2 \
-		crossterm-0.14.2 \
-		crossterm-0.17.1 \
-		crossterm_winapi-0.5.1 \
+		crossterm-0.17.3 \
 		crossterm_winapi-0.6.1 \
 		darling-0.9.0 \
 		darling_core-0.9.0 \
@@ -82,7 +81,7 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		futures-task-0.3.4 \
 		futures-util-0.3.4 \
 		getrandom-0.1.14 \
-		h2-0.2.3 \
+		h2-0.2.4 \
 		hermit-abi-0.1.10 \
 		http-0.2.1 \
 		http-body-0.3.1 \
@@ -96,6 +95,7 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		indexmap-1.3.2 \
 		iovec-0.1.4 \
 		itertools-0.8.2 \
+		itertools-0.9.0 \
 		itoa-0.4.5 \
 		js-sys-0.3.37 \
 		kernel32-sys-0.2.2 \
@@ -135,10 +135,10 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		pin-utils-0.1.0-alpha.4 \
 		pkg-config-0.3.17 \
 		ppv-lite86-0.2.6 \
-		proc-macro-hack-0.5.14 \
+		proc-macro-hack-0.5.15 \
 		proc-macro-nested-0.1.4 \
 		proc-macro2-0.4.30 \
-		proc-macro2-1.0.9 \
+		proc-macro2-1.0.12 \
 		quick-error-1.2.3 \
 		quote-0.6.13 \
 		quote-1.0.3 \
@@ -164,25 +164,24 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		regex-syntax-0.6.17 \
 		remove_dir_all-0.5.2 \
 		reqwest-0.10.4 \
-		rspotify-0.9.0 \
 		rust-argon2-0.7.0 \
 		rustc-demangle-0.1.16 \
 		rustc-serialize-0.3.24 \
 		ryu-1.0.3 \
 		schannel-0.1.18 \
 		scopeguard-1.1.0 \
-		security-framework-0.4.1 \
-		security-framework-sys-0.4.1 \
-		serde-1.0.105 \
-		serde_derive-1.0.105 \
-		serde_json-1.0.50 \
+		security-framework-0.4.2 \
+		security-framework-sys-0.4.2 \
+		serde-1.0.106 \
+		serde_derive-1.0.106 \
+		serde_json-1.0.52 \
 		serde_urlencoded-0.6.1 \
 		serde_yaml-0.8.11 \
 		signal-hook-0.1.13 \
 		signal-hook-registry-1.2.0 \
 		slab-0.4.2 \
 		smallvec-1.2.0 \
-		socket2-0.3.11 \
+		socket2-0.3.12 \
 		strsim-0.7.0 \
 		strsim-0.8.0 \
 		syn-0.15.44 \
@@ -195,14 +194,14 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		thiserror-impl-1.0.14 \
 		thread_local-1.0.1 \
 		time-0.1.42 \
-		tokio-0.2.13 \
+		tokio-0.2.20 \
 		tokio-macros-0.2.5 \
 		tokio-socks-0.2.2 \
 		tokio-tls-0.3.0 \
-		tokio-util-0.2.0 \
+		tokio-util-0.3.1 \
 		tower-service-0.3.0 \
 		try-lock-0.2.2 \
-		tui-0.8.0 \
+		tui-0.9.1 \
 		unicase-2.6.0 \
 		unicode-bidi-0.3.4 \
 		unicode-normalization-0.1.12 \
@@ -230,13 +229,14 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		winapi-0.3.8 \
 		winapi-build-0.1.1 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
-		winapi-util-0.1.3 \
+		winapi-util-0.1.4 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		winreg-0.6.2 \
 		ws2_32-sys-0.2.1 \
 		x11-clipboard-0.3.3 \
 		xcb-0.8.2 \
 		yaml-rust-0.4.3
+CARGO_USE_GITHUB=	yes
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 

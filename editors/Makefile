@@ -194,7 +194,6 @@
     SUBDIR += mousepad
     SUBDIR += mp
     SUBDIR += nano
-    SUBDIR += nano-devel
     SUBDIR += ne
     SUBDIR += nedit
     SUBDIR += neovim
@@ -202,7 +201,6 @@
     SUBDIR += nvi-devel
     SUBDIR += nvi-m17n
     SUBDIR += o
-    SUBDIR += omegaT
     SUBDIR += openoffice-4
     SUBDIR += openoffice-devel
     SUBDIR += p5-Proc-InvokeEditor

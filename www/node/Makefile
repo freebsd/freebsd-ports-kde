@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	13.10.1
+PORTVERSION=	13.13.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www
@@ -44,7 +44,7 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 DTRACE_CONFIGURE_ON=	--with-dtrace
 
-USES=		compiler:c++11-lib gmake python:2.7,build pkgconfig \
+USES=		compiler:c++11-lib gmake python:build pkgconfig \
 		localbase shebangfix
 
 HAS_CONFIGURE=	yes
@@ -58,7 +58,10 @@ CONFIGURE_ARGS=	--prefix=${PREFIX_RELDEST} \
 		--shared-nghttp2 \
 		--shared-zlib
 
-SHEBANG_FILES=	tools/specialize_node_d.py tools/genv8constants.py
+SHEBANG_FILES=	deps/v8/tools/*.py \
+		deps/v8/third_party/inspector_protocol/*.py \
+		tools/*.py \
+		tools/inspector_protocol/*.py
 
 PREFIX_RELDEST=	${PREFIX:S,^${DESTDIR},,}
 REINPLACE_ARGS=	-i ''
@@ -67,8 +70,9 @@ MAKE_ENV+=	CC.host=${CC} CFLAGS.host="${CFLAGS}" \
 		LINK.host=${CXX} LDFLAGS.host="${LDFLAGS}"
 
 BUILD_DEPENDS+=	c-ares>=1.15.0:dns/c-ares\
-		libuv>=1.34.1:devel/libuv \
-		libnghttp2>=1.40.0:www/libnghttp2
+		libuv>=1.35.0:devel/libuv \
+		libnghttp2>=1.40.0:www/libnghttp2 \
+		objdump:devel/binutils
 LIB_DEPENDS+=	libcares.so:dns/c-ares\
 		libuv.so:devel/libuv \
 		libnghttp2.so:www/libnghttp2
@@ -77,6 +81,10 @@ LIB_DEPENDS+=	libcares.so:dns/c-ares\
 
 .if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
 EXTRA_PATCHES=		${PATCHDIR}/extra-patch-common.gypi
+.endif
+
+.if ${ARCH} == armv6 || ${ARCH} == armv7
+EXTRA_PATCHES=	${PATCHDIR}/extra-patch-tools_v8__gypfiles_v8.gyp
 .endif
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} < 1200085

@@ -241,6 +241,8 @@
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeopolygon_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeopositioninfo_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeopositioninfosource_p.h
+%%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeosatelliteinfo_p.h
+%%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeosatelliteinfosource_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeorectangle_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeosatelliteinfo_p.h
 %%QT_INCDIR%%/QtPositioning/%%FULLVER%%/QtPositioning/private/qgeosatelliteinfosource_p.h

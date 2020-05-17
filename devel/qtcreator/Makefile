@@ -50,8 +50,6 @@ EXAMPLES_USE=		QT=examples_run
 OPTIONS_DEFAULT=	DOCS EXAMPLES
 OPTIONS_DEFAULT_amd64=	QTWEBENGINE
 OPTIONS_DEFAULT_i386=	QTWEBENGINE
-OPTIONS_DEFAULT_powerpc64=	${OPTIONS_DEFAULT_powerpc64_${OSREL:R}}
-OPTIONS_DEFAULT_powerpc64_13=	QTWEBENGINE
 
 QTWEBENGINE_DESC=	Add dependency on qt5-webengine
 QTWEBENGINE_USE=	qt=webengine
@@ -86,7 +84,7 @@ SHEBANG_FILES=		tests/system/tools/objectsToTable.py \
 
 .include <bsd.port.pre.mk>
 
-.if ${LLVM_DEFAULT:S,-devel,990,} >= 90
+.if ${LLVM_DEFAULT:C/[1-5]./&0/:S,-devel,990,} >= 90
 LLVM_DEFAULT=	80
 .endif
 

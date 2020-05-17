@@ -168,7 +168,6 @@
     SUBDIR += cadical
     SUBDIR += calc
     SUBDIR += calcoo
-    SUBDIR += calctool
     SUBDIR += cantor
     SUBDIR += casadi
     SUBDIR += cbc
@@ -212,10 +211,8 @@
     SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
-    SUBDIR += darknet
     SUBDIR += dbcsr
     SUBDIR += deal.ii
-    SUBDIR += diehard
     SUBDIR += dieharder
     SUBDIR += djbfft
     SUBDIR += drgeo
@@ -231,18 +228,17 @@
     SUBDIR += dune-spgrid
     SUBDIR += dune-typetree
     SUBDIR += dune-uggrid
-    SUBDIR += e
     SUBDIR += eclib
     SUBDIR += ecos
     SUBDIR += edenmath
     SUBDIR += eigen2
     SUBDIR += eigen3
     SUBDIR += eispack
+    SUBDIR += elemental
     SUBDIR += elpa
     SUBDIR += emc2
     SUBDIR += ensmallen
     SUBDIR += ent
-    SUBDIR += entropy
     SUBDIR += eprover
     SUBDIR += ess
     SUBDIR += eukleides
@@ -260,6 +256,7 @@
     SUBDIR += fftw3-long
     SUBDIR += fftw3-quad
     SUBDIR += flann
+    SUBDIR += flexfloat
     SUBDIR += flint2
     SUBDIR += flintqs
     SUBDIR += form
@@ -310,6 +307,7 @@
     SUBDIR += gringo
     SUBDIR += grpn
     SUBDIR += gsl
+    SUBDIR += half
     SUBDIR += hexcalc
     SUBDIR += hipmcl
     SUBDIR += hmat-oss
@@ -356,7 +354,7 @@
     SUBDIR += libbraiding
     SUBDIR += libccd
     SUBDIR += libflame
-    SUBDIR += liblbfgs
+    SUBDIR += libhomfly
     SUBDIR += libmesh
     SUBDIR += libmissing
     SUBDIR += libnormaliz
@@ -370,11 +368,11 @@
     SUBDIR += librsb
     SUBDIR += libsemigroups
     SUBDIR += libtommath
-    SUBDIR += libtsnnls
     SUBDIR += libxls
     SUBDIR += libxlsxwriter
     SUBDIR += libxsmm
     SUBDIR += lidia
+    SUBDIR += linbox
     SUBDIR += linpack
     SUBDIR += lis
     SUBDIR += lll_spect
@@ -382,7 +380,6 @@
     SUBDIR += lrcalc
     SUBDIR += lrng
     SUBDIR += lrslib
-    SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += m4ri
     SUBDIR += m4rie
@@ -418,7 +415,6 @@
     SUBDIR += mumps4
     SUBDIR += muparser
     SUBDIR += nanoflann
-    SUBDIR += naturalmath
     SUBDIR += nauty
     SUBDIR += ndiff
     SUBDIR += newmat
@@ -714,7 +710,6 @@
     SUBDIR += primesieve
     SUBDIR += primme
     SUBDIR += prng
-    SUBDIR += proofgeneral
     SUBDIR += pspp
     SUBDIR += py-CyLP
     SUBDIR += py-Diofant
@@ -725,12 +720,12 @@
     SUBDIR += py-PySCIPOpt
     SUBDIR += py-PyWavelets
     SUBDIR += py-Pyomo
+    SUBDIR += py-affine
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-autograd
-    SUBDIR += py-basemap-data
     SUBDIR += py-bayesian-optimization
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
@@ -745,6 +740,7 @@
     SUBDIR += py-cvxopt
     SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
+    SUBDIR += py-cypari2
     SUBDIR += py-deap
     SUBDIR += py-ecos
     SUBDIR += py-fastcluster
@@ -752,6 +748,7 @@
     SUBDIR += py-ffc
     SUBDIR += py-fiat
     SUBDIR += py-fpconst
+    SUBDIR += py-fpylll
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
     SUBDIR += py-gmpy
@@ -760,7 +757,7 @@
     SUBDIR += py-graphillion
     SUBDIR += py-gym
     SUBDIR += py-hdbscan
-    SUBDIR += py-igakit
+    SUBDIR += py-hdmedians
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
@@ -817,7 +814,6 @@
     SUBDIR += py-pyvtk
     SUBDIR += py-quadprog
     SUBDIR += py-random2
-    SUBDIR += py-rapi
     SUBDIR += py-roman
     SUBDIR += py-rpy2
     SUBDIR += py-scientific
@@ -827,6 +823,7 @@
     SUBDIR += py-secp256k1
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
+    SUBDIR += py-snuggs
     SUBDIR += py-spectral
     SUBDIR += py-spot
     SUBDIR += py-statsmodels
@@ -842,6 +839,7 @@
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver
+    SUBDIR += pynac
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
@@ -866,6 +864,7 @@
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
     SUBDIR += rubygem-mathn
+    SUBDIR += rubygem-matrix
     SUBDIR += rubygem-mtrc
     SUBDIR += rubygem-narray
     SUBDIR += rubygem-narray_miss
@@ -884,7 +883,6 @@
     SUBDIR += sdpa
     SUBDIR += secp256k1
     SUBDIR += sfft
-    SUBDIR += sfst
     SUBDIR += simd-viterbi
     SUBDIR += singular
     SUBDIR += sisl
@@ -920,7 +918,6 @@
     SUBDIR += topcom
     SUBDIR += triangle
     SUBDIR += trlan
-    SUBDIR += truthtable
     SUBDIR += tvmet
     SUBDIR += ump
     SUBDIR += units
@@ -931,13 +928,12 @@
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk6
     SUBDIR += vtk8
+    SUBDIR += vtk9
     SUBDIR += wavelib
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3
-    SUBDIR += wingz3
     SUBDIR += wxmaxima
-    SUBDIR += x12arima
     SUBDIR += xblas
     SUBDIR += xfce4-calculator-plugin
     SUBDIR += xgraph
@@ -945,7 +941,6 @@
     SUBDIR += xldlas
     SUBDIR += xlife++
     SUBDIR += xplot
-    SUBDIR += xppaut
     SUBDIR += xspread
     SUBDIR += xtensor
     SUBDIR += yacas
@@ -953,5 +948,6 @@
     SUBDIR += z3
     SUBDIR += zegrapher
     SUBDIR += zimpl
+    SUBDIR += zn_poly
 
 .include <bsd.port.subdir.mk>

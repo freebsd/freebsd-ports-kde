@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab-ce
-PORTVERSION=	12.9.2
+PORTVERSION=	12.9.5
 PORTREVISION=	0
 CATEGORIES=	www devel
 
@@ -14,9 +14,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 # the rubygems of RUN_DEPENDS matches the order of the Gemfile
 # which makes maintaining this long list much easier!
-MY_DEPENDS=	git>=2.22.2:devel/git \
+MY_DEPENDS=	git>=2.24.3:devel/git \
 	gitlab-shell>=12.0.0:devel/gitlab-shell \
-	gitlab-workhorse>=8.25.1:www/gitlab-workhorse \
+	gitlab-workhorse>=8.25.2:www/gitlab-workhorse \
 	gitaly>=${PORTVERSION}:devel/gitaly \
 	gitlab-pages>=1.17.0:www/gitlab-pages \
 	redis>=3.2.12:databases/redis \
@@ -28,7 +28,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-sprockets3>=3.7<3.8:devel/rubygem-sprockets3 \
 	rubygem-default_value_for>=3.3.0<3.4.0:devel/rubygem-default_value_for \
 	rubygem-pg>=1.1<2:databases/rubygem-pg \
-	rubygem-rugged>=0.28<1.0:devel/rubygem-rugged \
+	rubygem-rugged>=0.28:devel/rubygem-rugged \
 	rubygem-grape-path-helpers>=1.2<2.0:devel/rubygem-grape-path-helpers \
 	rubygem-faraday>=0.12<1.0:www/rubygem-faraday \
 	rubygem-marginalia>=1.8.0<1.9:databases/rubygem-marginalia \
@@ -84,7 +84,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-mini_magick>0:graphics/rubygem-mini_magick \
 	rubygem-fog-aws>=3.5<4.0:net/rubygem-fog-aws \
 	rubygem-fog-core210=2.1.0:devel/rubygem-fog-core210 \
-	rubygem-fog-google>=1.9<1.10:net/rubygem-fog-google \
+	rubygem-fog-google19>=1.9<1.10:net/rubygem-fog-google19 \
 	rubygem-fog-local>=0.6<1.0:net/rubygem-fog-local \
 	rubygem-fog-openstack>=1.0<2.0:net/rubygem-fog-openstack \
 	rubygem-fog-rackspace>=0.1.1<1.2.0:net/rubygem-fog-rackspace \
@@ -110,15 +110,15 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-asciidoctor>=2.0.10<2.1.0:textproc/rubygem-asciidoctor \
 	rubygem-asciidoctor-include-ext>=0.3.1<0.4.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml0010=0.0.10:textproc/rubygem-asciidoctor-plantuml0010 \
-	rubygem-rouge>=3.17.0<3.18:textproc/rubygem-rouge \
+	rubygem-rouge317>=3.17.0<3.18:textproc/rubygem-rouge317 \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
-	rubygem-nokogiri>=1.10.8<1.11.0:textproc/rubygem-nokogiri \
+	rubygem-nokogiri>=1.10.9<1.11.0:textproc/rubygem-nokogiri \
 	rubygem-escape_utils>=1.1<2.0:textproc/rubygem-escape_utils \
 	rubygem-icalendar>=0:devel/rubygem-icalendar \
 	rubygem-diffy>=3.3<4:textproc/rubygem-diffy \
 	rubygem-diff_match_patch>=0.1.0<0.2.0:textproc/rubygem-diff_match_patch \
-	rubygem-rack20>=2.0.7<2.1.0,3:www/rubygem-rack20 \
+	rubygem-rack20>=2.0.9<2.1.0,3:www/rubygem-rack20 \
 	rubygem-unicorn>=5.4.1<5.5.0:www/rubygem-unicorn \
 	rubygem-unicorn-worker-killer>=0.4.4<0.5.0:www/rubygem-unicorn-worker-killer \
 	rubygem-gitlab-puma>=4.3.3.g.2:www/rubygem-gitlab-puma \
@@ -176,13 +176,13 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-rack-attack>=6.2.0<6.3.0:www/rubygem-rack-attack \
 	rubygem-sentry-raven>=2.9<3.0:devel/rubygem-sentry-raven \
 	rubygem-premailer-rails-rails60>=1.10.3<1.11.0:mail/rubygem-premailer-rails-rails60 \
-	rubygem-gitlab-labkit=0.11.0:devel/rubygem-gitlab-labkit \
+	rubygem-gitlab-labkit>=0.11.0<0.11.1:devel/rubygem-gitlab-labkit \
 	rubygem-ruby_parser>=3.8<4.0:devel/rubygem-ruby_parser \
 	rubygem-rails-i18n-rails60>=6.0<7.0:devel/rubygem-rails-i18n-rails60 \
 	rubygem-gettext_i18n_rails>=1.8.0<1.9.0:devel/rubygem-gettext_i18n_rails \
 	rubygem-gettext_i18n_rails_js-rails60>=1.3<2.0:devel/rubygem-gettext_i18n_rails_js-rails60 \
 	rubygem-gettext32>=3.2.2<3.3.0:devel/rubygem-gettext32 \
-	rubygem-batch-loader>=1.4.0<1.5.0:devel/rubygem-batch-loader \
+	rubygem-batch-loader14>=1.4.0<1.5.0:devel/rubygem-batch-loader14 \
 	rubygem-peek-rails60>=1.1.0<2.0:devel/rubygem-peek-rails60 \
 	rubygem-snowplow-tracker>=0.6.1<0.7.0:devel/rubygem-snowplow-tracker \
 	rubygem-gitlab-derailed_benchmarks>0:benchmarks/rubygem-gitlab-derailed_benchmarks \
@@ -210,7 +210,7 @@ MY_DEPENDS=	git>=2.22.2:devel/git \
 	rubygem-ed25519>=1.2<2.0:security/rubygem-ed25519 \
 	rubygem-bcrypt_pbkdf>=1.0<2.0:security/rubygem-bcrypt_pbkdf \
 	rubygem-gitaly>=12.9.0.p.r4<12.10.0:net/rubygem-gitaly \
-	rubygem-grpc>=1.24.0<1.25.0:net/rubygem-grpc \
+	rubygem-grpc124>=1.24.0<1.25.0:net/rubygem-grpc124 \
 	rubygem-google-protobuf38>=3.8.0<3.9.0:devel/rubygem-google-protobuf38 \
 	rubygem-toml-rb10>=1.0.0<1.1.0:www/rubygem-toml-rb10 \
 	rubygem-flipper>=0.17.1<0.18.0:devel/rubygem-flipper \
@@ -245,7 +245,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT=	gitlab-org
 GL_PROJECT=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT=	ac5568eb5d8cef68ced7c70729cc47f20d0a84b9
+GL_COMMIT=	58afee038ec5ae1c6e1887238a0d9b3aba9cfb86
 
 USERS=	git
 GROUPS=	git

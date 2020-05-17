@@ -1,3 +1,5 @@
-TIMESTAMP = 1585675932
-SHA256 (KDE/plasma/5.18.4.1/plasma-workspace-5.18.4.1.tar.xz) = 924d8401c3d1fe5d107b6d3facaf96c292f1d4972529831993056982f28b1601
-SIZE (KDE/plasma/5.18.4.1/plasma-workspace-5.18.4.1.tar.xz) = 5696208
+TIMESTAMP = 1589629399
+SHA256 (KDE/plasma/5.18.5/plasma-workspace-5.18.5.tar.xz) = 14e82033be745f4db46a70d319e2c86012295ea31056092bc974004189b92354
+SIZE (KDE/plasma/5.18.5/plasma-workspace-5.18.5.tar.xz) = 5696256
+SHA256 (KDE/plasma/5.18.5/2958702524348e9e4fcbdf490be731e92b353dad.patch) = 2e44fb12c5289d0a376a910ff4afdc24bc8dcf059b31e8124cd7b4e85f31fac4
+SIZE (KDE/plasma/5.18.5/2958702524348e9e4fcbdf490be731e92b353dad.patch) = 3893

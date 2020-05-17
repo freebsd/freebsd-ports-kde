@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	obs-streamfx
-DISTVERSION=	0.8.0b1
+DISTVERSION=	0.8.0b3
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +9,9 @@ COMMENT=	OBS Studio Plugin: Modern effects
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+NOT_FOR_ARCHS=		i386
+NOT_FOR_ARCHS_REASON=	plugin requires a lot of memory for many of the filters to even run, physical or virtual memory can exceed 4GB
 
 LIB_DEPENDS=	libobs.so:multimedia/obs-studio
 

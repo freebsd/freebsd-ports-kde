@@ -57,11 +57,9 @@
     SUBDIR += foomatic-db-engine
     SUBDIR += foomatic-db-hpijs
     SUBDIR += foomatic-filters
-    SUBDIR += foxitreader
     SUBDIR += fpdf
     SUBDIR += freetype
     SUBDIR += freetype2
-    SUBDIR += frescobaldi
     SUBDIR += ft2demos
     SUBDIR += ghostscript7-base
     SUBDIR += ghostscript7-commfont
@@ -150,7 +148,6 @@
     SUBDIR += pdf-tools
     SUBDIR += pdf4tcl
     SUBDIR += pdfbox
-    SUBDIR += pdfcube
     SUBDIR += pdflib
     SUBDIR += pdflib-perl
     SUBDIR += pdfstitch
@@ -166,7 +163,6 @@
     SUBDIR += pkfonts360
     SUBDIR += pkfonts400
     SUBDIR += pkfonts600
-    SUBDIR += pmw
     SUBDIR += pnm2ppa
     SUBDIR += print-manager
     SUBDIR += ps2eps
@@ -181,6 +177,7 @@
     SUBDIR += py-fonttools
     SUBDIR += py-fonttools3
     SUBDIR += py-fpdf
+    SUBDIR += py-frescobaldi
     SUBDIR += py-pdf
     SUBDIR += py-pdf2
     SUBDIR += py-pollyreports
@@ -202,7 +199,6 @@
     SUBDIR += qpdfview
     SUBDIR += qt5-printsupport
     SUBDIR += rlpr
-    SUBDIR += rprint
     SUBDIR += rtf2latex2e
     SUBDIR += rubygem-afm
     SUBDIR += rubygem-color

@@ -5,7 +5,6 @@
 
     SUBDIR += 4va
     SUBDIR += Coin
-    SUBDIR += EZWGL
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
     SUBDIR += IPA
@@ -380,6 +379,7 @@
     SUBDIR += kamera
     SUBDIR += kamerka
     SUBDIR += kcolorchooser
+    SUBDIR += kcolorpicker
     SUBDIR += kdegraphics
     SUBDIR += kdegraphics-mobipocket
     SUBDIR += kdegraphics-svgpart
@@ -390,9 +390,9 @@
     SUBDIR += kf5-kquickcharts
     SUBDIR += kf5-prison
     SUBDIR += kgraphviewer
+    SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
     SUBDIR += kipi-plugins
-    SUBDIR += kix-kmod
     SUBDIR += klatexformula
     SUBDIR += kludge3d
     SUBDIR += kolourpaint
@@ -526,17 +526,16 @@
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += megapov
+    SUBDIR += meh
     SUBDIR += mesa-demos
     SUBDIR += mesa-dri
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
-    SUBDIR += mhgui
     SUBDIR += milton
     SUBDIR += minder
     SUBDIR += ming
     SUBDIR += mirtk
-    SUBDIR += mmrecover
     SUBDIR += movit
     SUBDIR += mozjpeg
     SUBDIR += mscgen
@@ -791,6 +790,7 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
+    SUBDIR += py-cogdumper
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -823,6 +823,7 @@
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
     SUBDIR += py-mayavi
+    SUBDIR += py-mcomix
     SUBDIR += py-ming
     SUBDIR += py-mpl-scatter-density
     SUBDIR += py-nwdiag
@@ -851,6 +852,8 @@
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
+    SUBDIR += py-pymaging
+    SUBDIR += py-pymaging-png
     SUBDIR += py-pyocr
     SUBDIR += py-pypillowfight
     SUBDIR += py-pyproj
@@ -860,7 +863,9 @@
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyx
+    SUBDIR += py-qrencode
     SUBDIR += py-qt5-svg
+    SUBDIR += py-rasterio
     SUBDIR += py-rawkit
     SUBDIR += py-sane
     SUBDIR += py-scikit-image

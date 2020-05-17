@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	clixon
-PORTVERSION=	4.4.0
+PORTVERSION=	4.5.0
 CATEGORIES=	devel
 
 MAINTAINER=	dcornejo@netgate.com
@@ -22,6 +22,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	clicon
 MAKE_ARGS=	wwwdir=${PREFIX}/sbin \
 		wwwuser=${WWWOWN}
+
+GROUPS=		clixon
+USERS=		clixon
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=${ETCDIR} \

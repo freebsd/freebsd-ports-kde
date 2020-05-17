@@ -2,7 +2,7 @@
 
 PORTNAME=	atom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.45.0
+DISTVERSION=	1.46.0
 CATEGORIES=	editors
 MASTER_SITES=	https://nodejs.org/dist/v${APM_NODE_VER}/:node \
 		https://github.com/tagattie/FreeBSD-Atom/releases/download/v1.42.0/:jasmine_tagged \
@@ -13,7 +13,7 @@ DISTFILES=	node-v${APM_NODE_VER}${EXTRACT_SUFX}:node \
 		atom-npm-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache \
 		atom-apm-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache
 
-MAINTAINER=	tagattie@yandex.com
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Hackable text editor for the 21st century
 
 LICENSE=	MIT
@@ -25,8 +25,8 @@ BUILD_DEPENDS=	zip:archivers/zip \
 		electron${ELECTRON_VER_MAJOR}:devel/electron${ELECTRON_VER_MAJOR} \
 		bash:shells/bash \
 		rg:textproc/ripgrep \
-		node:www/node10 \
-		npm:www/npm-node10
+		node10>:www/node10 \
+		npm-node10>0:www/npm-node10
 LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libsnappy.so:archivers/snappy \
 		libasound.so:audio/alsa-lib \
@@ -111,6 +111,9 @@ post-patch:
 
 pre-build: build-apm-node bootstrap-script bootstrap-apm bootstrap-atom clean-backup
 build-apm-node:
+	for p in ${PATCHDIR}/node/patch-*; do \
+		${PATCH} -p0 -d ${WRKDIR}/node-v${APM_NODE_VER} < $${p}; \
+	done
 	cd ${WRKDIR}/node-v${APM_NODE_VER} && \
 		${SETENV} ${CONFIGURE_ENV} CC=${CC} CXX=${CXX} ./configure && \
 		${SETENV} ${MAKE_ENV} ${BSDMAKE} -j ${MAKE_JOBS_NUMBER}

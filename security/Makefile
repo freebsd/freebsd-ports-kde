@@ -60,6 +60,7 @@
     SUBDIR += bruteforceblocker
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
+    SUBDIR += bsmtrace3
     SUBDIR += bugs
     SUBDIR += bzrtp
     SUBDIR += ca_root_nss
@@ -153,7 +154,6 @@
     SUBDIR += fcrackzip
     SUBDIR += fiked
     SUBDIR += find-zlib
-    SUBDIR += firewalk
     SUBDIR += fl0p
     SUBDIR += flawfinder
     SUBDIR += fpc-openssl
@@ -211,7 +211,6 @@
     SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl
-    SUBDIR += hmap
     SUBDIR += hockeypuck
     SUBDIR += honeytrap
     SUBDIR += honggfuzz
@@ -227,7 +226,6 @@
     SUBDIR += ike
     SUBDIR += imds-filterd
     SUBDIR += integrit
-    SUBDIR += ipfcount
     SUBDIR += ipfilter2dshield
     SUBDIR += ipfmeta
     SUBDIR += ipfw2dshield
@@ -279,7 +277,6 @@
     SUBDIR += libadacrypt
     SUBDIR += libargon2
     SUBDIR += libassuan
-    SUBDIR += libbf
     SUBDIR += libcryptui
     SUBDIR += libdecaf
     SUBDIR += libecc
@@ -330,11 +327,9 @@
     SUBDIR += linux-c7-nss
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
-    SUBDIR += log2timeline
     SUBDIR += logcheck
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
-    SUBDIR += luasec-51
     SUBDIR += lxqt-openssh-askpass
     SUBDIR += lxqt-sudo
     SUBDIR += lynis
@@ -392,7 +387,6 @@
     SUBDIR += op
     SUBDIR += openbsm
     SUBDIR += openca-tools-forked
-    SUBDIR += opencdk
     SUBDIR += openconnect
     SUBDIR += openconnect-gui
     SUBDIR += opencryptoki
@@ -405,6 +399,7 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
+    SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas8
@@ -707,12 +702,10 @@
     SUBDIR += p5-openxpki
     SUBDIR += p5-openxpki-i18n
     SUBDIR += p5-plog
-    SUBDIR += pad
     SUBDIR += palisade
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
-    SUBDIR += pam_fprint
     SUBDIR += pam_google_authenticator
     SUBDIR += pam_helper
     SUBDIR += pam_jail
@@ -723,7 +716,6 @@
     SUBDIR += pam_mkhomedir
     SUBDIR += pam_ocra
     SUBDIR += pam_p11
-    SUBDIR += pam_per_user
     SUBDIR += pam_pseudo
     SUBDIR += pam_pwdfile
     SUBDIR += pam_require
@@ -934,6 +926,7 @@
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
     SUBDIR += py-pgpdump
+    SUBDIR += py-pgpy
     SUBDIR += py-plaso
     SUBDIR += py-potr
     SUBDIR += py-pyaes
@@ -950,6 +943,7 @@
     SUBDIR += py-pymacaroons
     SUBDIR += py-pynacl
     SUBDIR += py-pyotp
+    SUBDIR += py-pyotp2289
     SUBDIR += py-pyptlib
     SUBDIR += py-pysaml2
     SUBDIR += py-pysaml24
@@ -1018,7 +1012,6 @@
     SUBDIR += razorback-api
     SUBDIR += razorback-archiveInflate
     SUBDIR += razorback-clamavNugget
-    SUBDIR += razorback-dispatcher
     SUBDIR += razorback-fileInject
     SUBDIR += razorback-fsMonitor
     SUBDIR += razorback-fsWalk
@@ -1041,7 +1034,6 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += ruby-bitwarden
-    SUBDIR += ruby-camellia
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1082,6 +1074,7 @@
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-gateway1
+    SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh4
     SUBDIR += rubygem-net-telnet
@@ -1150,7 +1143,6 @@
     SUBDIR += sandsifter
     SUBDIR += sasp
     SUBDIR += scamp
-    SUBDIR += scanhill
     SUBDIR += scanlogd
     SUBDIR += scanssh
     SUBDIR += scrypt
@@ -1173,7 +1165,6 @@
     SUBDIR += signify
     SUBDIR += signing-party
     SUBDIR += silktools
-    SUBDIR += sinfp
     SUBDIR += sks
     SUBDIR += slurpie
     SUBDIR += slush
@@ -1203,7 +1194,6 @@
     SUBDIR += ssdeep
     SUBDIR += ssh-multiadd
     SUBDIR += ssh-vault
-    SUBDIR += ssh_askpass_gtk2
     SUBDIR += sshguard
     SUBDIR += sshpass
     SUBDIR += ssl-admin
@@ -1218,21 +1208,22 @@
     SUBDIR += sst
     SUBDIR += starttls
     SUBDIR += steghide
+    SUBDIR += step-certificates
+    SUBDIR += step-cli
     SUBDIR += stoken
     SUBDIR += strobe
     SUBDIR += strongswan
     SUBDIR += stud
     SUBDIR += stunnel
     SUBDIR += subversion-gnome-keyring
-    SUBDIR += subweb
     SUBDIR += sudo
     SUBDIR += sudoscript
     SUBDIR += super
     SUBDIR += suricata
-    SUBDIR += suricata5
     SUBDIR += swatchdog
     SUBDIR += switzerland
     SUBDIR += symbion-sslproxy
+    SUBDIR += tailscale
     SUBDIR += tclsasl
     SUBDIR += tcpcrypt
     SUBDIR += teleport
@@ -1263,7 +1254,6 @@
     SUBDIR += u2f-devd
     SUBDIR += unhide
     SUBDIR += unicornscan
-    SUBDIR += unssh
     SUBDIR += vanguards-tor
     SUBDIR += vault
     SUBDIR += veracrypt
@@ -1288,7 +1278,6 @@
     SUBDIR += xml-security
     SUBDIR += xmlsec1
     SUBDIR += xorsearch
-    SUBDIR += xspy
     SUBDIR += yafic
     SUBDIR += yapet
     SUBDIR += yara

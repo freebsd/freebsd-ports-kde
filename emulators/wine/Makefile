@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-alsa --without-capi --without-dbus \
 		--without-gettext --without-gettextpo \
 		--without-gphoto --without-gsm --without-gstreamer \
+		--without-inotify \
 		--without-krb5 \
 		--without-opencl \
 		--without-osmesa \
@@ -41,7 +42,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sane \
 		--without-sdl \
 		--without-tiff \
-		--without-udev
+		--without-udev \
+		--without-unwind 
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)

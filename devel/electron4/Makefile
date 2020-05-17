@@ -3,7 +3,7 @@
 PORTNAME=	electron
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${ELECTRON_VER:S/-beta./.b/}
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-Electron/releases/download/v4.1.0/:chromium \
 		https://commondatastorage.googleapis.com/chromium-browser-official/:chromium_official \
@@ -17,7 +17,7 @@ DISTFILES=	chromium-${CHROMIUM_VER}${EXTRACT_SUFX}:chromium \
 		electron-npm-modules-${ELECTRON_VER}${EXTRACT_SUFX}:prefetch
 DIST_SUBDIR=	${PORTNAME}
 
-MAINTAINER=	tagattie@yandex.com
+MAINTAINER=	tagattie@FreeBSD.org
 COMMENT=	Build cross-platform desktop apps with JavaScript, HTML, and CSS
 
 LICENSE=	MIT

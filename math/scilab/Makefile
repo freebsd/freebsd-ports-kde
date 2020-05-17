@@ -3,7 +3,7 @@
 
 PORTNAME=	scilab
 PORTVERSION=	5.5.2
-PORTREVISION=	24
+PORTREVISION=	25
 CATEGORIES=	math cad java
 MASTER_SITES=	https://www.scilab.org/download/${PORTVERSION}/
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
@@ -15,8 +15,6 @@ LICENSE=	GPLv2 BSD3CLAUSE
 LICENSE_COMB=	dual
 LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_BSD3CLAUSE=	${WRKSRC}/COPYING-BSD
-
-BROKEN=		fails to build
 
 # A partial dependencies list can be found at:
 # http://wiki.scilab.org/Dependencies_of_Scilab_5.X

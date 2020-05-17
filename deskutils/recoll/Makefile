@@ -3,7 +3,7 @@
 
 PORTNAME=	recoll
 DISTVERSION=	1.25.22
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	deskutils
 MASTER_SITES=	https://www.lesbonscomptes.com/recoll/
 
@@ -13,6 +13,7 @@ COMMENT=	Personal full text search package, based on Xapian
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		configure: error: --enable-python-chm is set but libchm is not found
 DEPRECATED=	Uses deprecated version of python
 EXPIRATION_DATE=	2020-08-15
 

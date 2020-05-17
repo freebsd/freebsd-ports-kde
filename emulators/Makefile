@@ -95,6 +95,7 @@
     SUBDIR += ods2reader
     SUBDIR += open-vm-tools
     SUBDIR += open-vm-tools-nox11
+    SUBDIR += openmsx
     SUBDIR += p5-Acme-6502
     SUBDIR += parallels-tools
     SUBDIR += pcem
@@ -113,7 +114,6 @@
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
     SUBDIR += qemu-utils
-    SUBDIR += qemu30
     SUBDIR += qemu31
     SUBDIR += qemu40
     SUBDIR += qmc2
@@ -124,6 +124,7 @@
     SUBDIR += rtc
     SUBDIR += rubygem-fission
     SUBDIR += simh
+    SUBDIR += simh-hpdoc
     SUBDIR += skyeye
     SUBDIR += snes9x-gtk
     SUBDIR += spim

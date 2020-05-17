@@ -6,11 +6,16 @@ PORTVERSION=	20140629
 CATEGORIES=	x11-themes mail
 MASTER_SITES=	http://www.claws-mail.org/themes/
 
-MAINTAINER=	portmaster@BSDforge.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Claws Mail icon themes
 
-LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/license.txt
+LICENSE=	UNKNOWN
+LICENSE_NAME=	@${LICENSE_TEXT}
+LICENSE_TEXT=	Licenses for the themes in this port range from GPLv2 \
+		to Public Domain. In all cases, these themes are free to use. \
+		Please read the licenses, if any, located in the root of each theme \
+		for other possible rescrictions.
+LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
 NO_ARCH=	yes
 NO_BUILD=	yes
