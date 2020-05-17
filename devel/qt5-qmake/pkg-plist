@@ -90,6 +90,8 @@
 %%QT_MKSPECDIR%%/devices/freebsd-generic-clang/qplatformdefs.h
 %%QT_MKSPECDIR%%/devices/freebsd-rasp-pi-clang/qmake.conf
 %%QT_MKSPECDIR%%/devices/freebsd-rasp-pi-clang/qplatformdefs.h
+%%QT_MKSPECDIR%%/devices/integrity-armv8-SA8155P/qmake.conf
+%%QT_MKSPECDIR%%/devices/integrity-armv8-SA8155P/qplatformdefs.h
 %%QT_MKSPECDIR%%/devices/integrity-armv8-drive-cx/qmake.conf
 %%QT_MKSPECDIR%%/devices/integrity-armv8-drive-cx/qplatformdefs.h
 %%QT_MKSPECDIR%%/devices/integrity-armv8-msm8996au/qmake.conf
@@ -409,7 +411,7 @@
 %%QT_MKSPECDIR%%/macx-ios-clang/Info.plist.app
 %%QT_MKSPECDIR%%/macx-ios-clang/Info.plist.dSYM.in
 %%QT_MKSPECDIR%%/macx-ios-clang/Info.plist.lib
-%%QT_MKSPECDIR%%/macx-ios-clang/LaunchScreen.xib
+%%QT_MKSPECDIR%%/macx-ios-clang/LaunchScreen.storyboard
 %%QT_MKSPECDIR%%/macx-ios-clang/features/default_post.prf
 %%QT_MKSPECDIR%%/macx-ios-clang/qmake.conf
 %%QT_MKSPECDIR%%/macx-ios-clang/qplatformdefs.h

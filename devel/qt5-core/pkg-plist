@@ -434,6 +434,7 @@
 %%QT_INCDIR%%/QtCore/QSignalTransition
 %%QT_INCDIR%%/QtCore/QSize
 %%QT_INCDIR%%/QtCore/QSizeF
+%%QT_INCDIR%%/QtCore/QSocketDescriptor
 %%QT_INCDIR%%/QtCore/QSocketNotifier
 %%QT_INCDIR%%/QtCore/QSortFilterProxyModel
 %%QT_INCDIR%%/QtCore/QSpecialInteger

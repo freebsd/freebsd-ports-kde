@@ -731,6 +731,7 @@
 %%QT_INCDIR%%/QtQuickShapes/qquickshapesglobal.h
 %%QT_INCDIR%%/QtQuickShapes/qtquickshapesversion.h
 %%QT_INCDIR%%/QtQuickTest/%%FULLVER%%/QtQuickTest/private/qtestoptions_p.h
+%%QT_INCDIR%%/QtQuickTest/%%FULLVER%%/QtQuickTest/private/quicktest_p.h
 %%QT_INCDIR%%/QtQuickTest/%%FULLVER%%/QtQuickTest/private/quicktestresult_p.h
 %%QT_INCDIR%%/QtQuickTest/QtQuickTest
 %%QT_INCDIR%%/QtQuickTest/QtQuickTestDepends
@@ -936,6 +937,8 @@
 %%DEBUG%%%%QT_QMLDIR%%/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so.debug
 %%QT_QMLDIR%%/Qt/labs/wavefrontmesh/plugins.qmltypes
 %%QT_QMLDIR%%/Qt/labs/wavefrontmesh/qmldir
+%%QT_QMLDIR%%/Qt/test/qtestroot/plugins.qmltypes
+%%QT_QMLDIR%%/Qt/test/qtestroot/qmldir
 %%QT_QMLDIR%%/QtQml/Models.2/libmodelsplugin.so
 %%DEBUG%%%%QT_QMLDIR%%/QtQml/Models.2/libmodelsplugin.so.debug
 %%QT_QMLDIR%%/QtQml/Models.2/plugins.qmltypes

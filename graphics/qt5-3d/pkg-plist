@@ -369,6 +369,7 @@
 %%QT_INCDIR%%/Qt3DExtras/QSpriteSheetItem
 %%QT_INCDIR%%/Qt3DExtras/QText2DEntity
 %%QT_INCDIR%%/Qt3DExtras/QTextureMaterial
+%%QT_INCDIR%%/Qt3DExtras/QTexturedMetalRoughMaterial
 %%QT_INCDIR%%/Qt3DExtras/QTorusGeometry
 %%QT_INCDIR%%/Qt3DExtras/QTorusMesh
 %%QT_INCDIR%%/Qt3DExtras/Qt3DExtras
@@ -917,6 +918,7 @@
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/viewportnode_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/visitorutils_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/vsyncframeadvanceservice_p.h
+%%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/vulkaninstance_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/waitfence_p.h
 %%QT_INCDIR%%/Qt3DRender/FunctorType
 %%QT_INCDIR%%/Qt3DRender/ParameterList
