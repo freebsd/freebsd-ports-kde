@@ -165,19 +165,19 @@
 %%QT_CMAKEDIR%%/Qt5WebEngineWidgets/Qt5WebEngineWidgetsConfig.cmake
 %%QT_CMAKEDIR%%/Qt5WebEngineWidgets/Qt5WebEngineWidgetsConfigVersion.cmake
 %%QT_BINDIR%%/qwebengine_convert_dict
-%%DEBUG%%%%QT_BINDIR%%/qwebengine_convert_dict.debug
+@comment %%DEBUG%%%%QT_BINDIR%%/qwebengine_convert_dict.debug
 %%QT_LIBDIR%%/libQt5Pdf.prl
 %%QT_LIBDIR%%/libQt5Pdf.so
 %%QT_LIBDIR%%/libQt5Pdf.so.5
 %%QT_LIBDIR%%/libQt5Pdf.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5Pdf.so.%%FULLVER%%
-%%DEBUG%%%%QT_LIBDIR%%/libQt5Pdf.so.%%FULLVER%%.debug
+@comment %%DEBUG%%%%QT_LIBDIR%%/libQt5Pdf.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5PdfWidgets.prl
 %%QT_LIBDIR%%/libQt5PdfWidgets.so
 %%QT_LIBDIR%%/libQt5PdfWidgets.so.5
 %%QT_LIBDIR%%/libQt5PdfWidgets.so.%%SHORTVER%%
 %%QT_LIBDIR%%/libQt5PdfWidgets.so.%%FULLVER%%
-%%DEBUG%%%%QT_LIBDIR%%/libQt5PdfWidgets.so.%%FULLVER%%.debug
+@comment %%DEBUG%%%%QT_LIBDIR%%/libQt5PdfWidgets.so.%%FULLVER%%.debug
 %%QT_LIBDIR%%/libQt5WebEngine.prl
 %%QT_LIBDIR%%/libQt5WebEngine.so
 %%QT_LIBDIR%%/libQt5WebEngine.so.5
@@ -210,9 +210,9 @@
 %%QT_PLUGINDIR%%/designer/libqwebengineview.so
 @comment %%DEBUG%%%%QT_PLUGINDIR%%/designer/libqwebengineview.so.debug
 %%QT_PLUGINDIR%%/imageformats/libqpdf.so
-%%DEBUG%%%%QT_PLUGINDIR%%/imageformats/libqpdf.so.debug
+@comment %%DEBUG%%%%QT_PLUGINDIR%%/imageformats/libqpdf.so.debug
 %%QT_QMLDIR%%/QtQuick/Pdf/libpdfplugin.so
-%%DEBUG%%%%QT_QMLDIR%%/QtQuick/Pdf/libpdfplugin.so.debug
+@comment %%DEBUG%%%%QT_QMLDIR%%/QtQuick/Pdf/libpdfplugin.so.debug
 %%QT_QMLDIR%%/QtQuick/Pdf/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Pdf/qml/PdfMultiPageView.qml
 %%QT_QMLDIR%%/QtQuick/Pdf/qml/PdfPageView.qml
@@ -252,7 +252,7 @@ libdata/pkgconfig/Qt5WebEngine.pc
 libdata/pkgconfig/Qt5WebEngineCore.pc
 libdata/pkgconfig/Qt5WebEngineWidgets.pc
 %%QT_LIBEXECDIR%%/QtWebEngineProcess
-%%DEBUG%%%%QT_LIBEXECDIR%%/QtWebEngineProcess.debug
+@comment %%DEBUG%%%%QT_LIBEXECDIR%%/QtWebEngineProcess.debug
 %%BE%%%%QT_DATADIR%%/resources/icudtb.dat
 %%LE%%%%QT_DATADIR%%/resources/icudtl.dat
 %%QT_DATADIR%%/resources/qtwebengine_devtools_resources.pak
