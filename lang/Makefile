@@ -106,7 +106,6 @@
     SUBDIR += gnat_util
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
-    SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-binutils-x86
     SUBDIR += gnatdroid-sysroot
@@ -123,6 +122,7 @@
     SUBDIR += guile
     SUBDIR += guile1
     SUBDIR += guile2
+    SUBDIR += halide
     SUBDIR += harbour
     SUBDIR += haskell-mode.el
     SUBDIR += hla

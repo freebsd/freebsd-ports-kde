@@ -7972,7 +7972,6 @@ www/cakephp21||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp22||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/cakephp23||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/fluxcms||2016-01-25|Has expired: PHP 5.4 EOL reached
-www/fusionpbx||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/jawstats||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/ojs2||2016-01-25|Has expired: PHP 5.4 EOL reached
 www/webcalendar||2016-01-25|Has expired: PHP 5.4 EOL reached
@@ -15013,3 +15012,36 @@ www/py-django-happenings|www/py-django-happenings-update|2020-05-17|Has expired:
 devel/py-django-tastypie-mongoengine||2020-05-17|Has expired: Not necessary anymore, and project unmaintained
 sysutils/py-cpuinfo|sysutils/py-py-cpuinfo|2020-05-18|Rename to match PyPI name
 devel/py-jupyterlab_server|devel/py-jupyterlab-server|2020-05-19|Rename to match upstream naming
+math/py-onnx|misc/py-onnx|2020-05-23|Move to misc category because it's not related to math
+misc/onnx|misc/py-onnx|2020-05-23|Remove duplicate
+net/get_iplayer|multimedia/get_iplayer|2020-05-24|Move to a proper category
+lang/gnatdroid-armv7||2020-05-24|Has expired: Broken for more than 6 months
+devel/breakpad||2020-05-24|Has expired: Broken for more than 6 months
+x11/xcolorsel||2020-05-24|Has expired: Broken for more than 6 months
+textproc/simplexml||2020-05-24|Has expired: Unfetchable, an alternative upstream suggested in bug#235252 only contains the MS C-sharp project which is unbuildable on FreeBSD
+www/py-django-annotations||2020-05-26|Has expired: No longer maintained, not compatible with Django 2.0+
+www/py-django-registration-defaults||2020-05-26|Has expired: No longer maintained, not compatible with newer versions of www/py-django-registration
+devel/py-django-rq-dashboard|devel/py-django-rq|2020-05-26|Has expired: No longer maintained, not compatible with Django 2.0+, please use devel/py-django-rq instead
+www/py-django_openstack_auth||2020-05-26|Has expired: No longer maintained, code was merged into 13.x release of www/py-horizon
+math/hs-semigroups||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+net/hs-network||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-extensible-exceptions||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-random||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-old-time||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-old-locale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-class||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-base||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-dlist||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-setlocale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-hashable||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-transformers-compat||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-dlist||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-unordered-containers||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-mtl||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-old-locale||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-utf8-string||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+devel/hs-data-default-instances-containers||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11-wm/hs-xmonad-contrib||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11/hs-X11||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree
+x11/hs-X11-xft||2020-05-26|Deprecated: Haskell libraries get pushed out of the ports tree

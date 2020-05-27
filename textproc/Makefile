@@ -1264,6 +1264,7 @@
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
+    SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
@@ -1297,6 +1298,7 @@
     SUBDIR += py-pager
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
+    SUBDIR += py-parse
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
@@ -1355,6 +1357,8 @@
     SUBDIR += py-snowballstemmer
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
+    SUBDIR += py-sphinx-autoapi
+    SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-hieroglyph
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-me
@@ -1690,7 +1694,6 @@
     SUBDIR += sgrep2
     SUBDIR += sift
     SUBDIR += sigil
-    SUBDIR += simplexml
     SUBDIR += sk-aspell
     SUBDIR += sk-hunspell
     SUBDIR += sk-hyphen

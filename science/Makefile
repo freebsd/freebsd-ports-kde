@@ -76,6 +76,7 @@
     SUBDIR += erkale
     SUBDIR += erkale-pseudopotentials
     SUBDIR += fastcap
+    SUBDIR += fastjet
     SUBDIR += fasthenry
     SUBDIR += fisicalab
     SUBDIR += fleur
@@ -103,6 +104,7 @@
     SUBDIR += hdf5
     SUBDIR += hdf5-18
     SUBDIR += healpix
+    SUBDIR += hepmc3
     SUBDIR += highfive
     SUBDIR += hypre
     SUBDIR += iboview
