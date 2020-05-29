@@ -487,6 +487,7 @@
     SUBDIR += dmlc-core
     SUBDIR += dmucs
     SUBDIR += docopt.cpp
+    SUBDIR += doctest
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins
     SUBDIR += dotconf
@@ -4469,6 +4470,7 @@
     SUBDIR += py-humanize
     SUBDIR += py-hvac
     SUBDIR += py-hypothesis
+    SUBDIR += py-hypothesmith
     SUBDIR += py-icalendar
     SUBDIR += py-ice
     SUBDIR += py-ice37
@@ -6243,9 +6245,7 @@
     SUBDIR += rubygem-peek-rails5
     SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rails60
-    SUBDIR += rubygem-peek-rblineprof-rails5
     SUBDIR += rubygem-peek-rblineprof-rails52
-    SUBDIR += rubygem-peek-redis-rails5
     SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
