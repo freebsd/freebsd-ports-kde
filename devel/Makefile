@@ -875,7 +875,6 @@
     SUBDIR += gradle5
     SUBDIR += gradle62
     SUBDIR += grantlee5
-    SUBDIR += graphql.el
     SUBDIR += grpc
     SUBDIR += grumpy
     SUBDIR += grv
@@ -5419,6 +5418,7 @@
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
     SUBDIR += rubygem-algorithms
+    SUBDIR += rubygem-aliyun-sdk
     SUBDIR += rubygem-allison
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
