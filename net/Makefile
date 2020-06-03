@@ -852,6 +852,7 @@
     SUBDIR += p5-Text-Authinfo
     SUBDIR += p5-Twitter-API
     SUBDIR += p5-URI
+    SUBDIR += p5-URI-Based
     SUBDIR += p5-URI-Encode-XS
     SUBDIR += p5-URI-Fast
     SUBDIR += p5-URI-FromHash
@@ -989,6 +990,7 @@
     SUBDIR += ptpd2
     SUBDIR += ptunnel
     SUBDIR += pvm
+    SUBDIR += pwnat
     SUBDIR += pwhois
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
