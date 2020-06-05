@@ -1,10 +1,5 @@
 # $FreeBSD$
 
-# TODO: The patch
-# 		* files/patch-src_corelib_time_qtimezoneprivate__tz.cpp
-# 	needs to be remoddeled and made to work with the new sources.
-# 	
-
 PORTNAME=	core
 DISTVERSION=	${QT5_VERSION}
 CATEGORIES=	devel
