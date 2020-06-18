@@ -30,6 +30,8 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
+_QT6_DISTS=		core gui widgets network qml quick quickcontrols svg network_authorization sql test
+
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
 # We only accept one item as an argument. The fetch target further below works
