@@ -30,7 +30,7 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		core gui widgets network qml quick quickcontrols svg network_authorization sql test
+_QT6_DISTS=		base
 
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
@@ -49,9 +49,7 @@ IGNORE=		cannot be installed: different Qt dists specified via qt-dist:[${qt-dis
 
 # Fall back to sensible defaults for _QT_DIST
 .  if empty(_QT_DIST)
-.    if ${_QT_VER:M5}
 _QT_DIST=		${PORTNAME} # don't force qt-dist to be set for Qt5 ports which 75% of time are ${PORTNAME}
-.    endif
 .  endif
 
 # Check validitiy
@@ -61,8 +59,14 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 ################################################################################
 
 # Set standard bsd.port.mk variables
+.  if ${_QT_VER:M6}
+USE_GITHUB=		yes
+GH_ACCOUNT=		qt
+GH_PROJECT=		qt${_QT_DIST}
+.  else
 MASTER_SITES=		${MASTER_SITE_QT}
 DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
+.  endif
 
 LICENSE?=		LGPL21
 
@@ -171,20 +175,22 @@ QMAKE_ARGS+=		QT_CONFIG+="release" \
 CONFIGURE_ARGS+=	-verbose
 .  endif
 
-.  if ${_QT_DIST} == "base"
+.  if ${_QT_VER:M5}
+.    if ${_QT_DIST} == "base"
 _EXTRA_PATCHES_QT5=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_freebsd-clang_qmake.conf
-.        if ${ARCH:Mmips*} || (${ARCH:Mpowerpc*} && !exists(/usr/bin/clang)) || ${ARCH} == sparc64
+.      if ${ARCH:Mmips*} || (${ARCH:Mpowerpc*} && !exists(/usr/bin/clang)) || ${ARCH} == sparc64
 _EXTRA_PATCHES_QT5+=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_g++-base.conf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_gcc-base.conf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_freebsd-g++_qmake.conf
 USE_GCC=		yes
-.    endif
+.      endif
 EXTRA_PATCHES?=		${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-configure \
 			${_EXTRA_PATCHES_QT5}
-.  endif #  ${_QT_DIST} == "base"
+.    endif #  ${_QT_DIST} == "base"
+.  endif
 
 # Override settings installed in qconfig.h and *.pri files. The flags will be
 # installed along with the port, but have to be passed as arguments while
@@ -254,7 +260,7 @@ _QT_TOOLS+=		${UIC}
 _QT5_BASE=		core dbus gui network sql widgets
 _QT5_ADDITIONAL_LINK?=	# Ensure definition
 
-.if ${_QT_VER:M5}
+.      if ${_QT_VER:M5}
 post-patch: gcc-post-patch
 gcc-post-patch:
 	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
@@ -265,7 +271,7 @@ gcc-post-patch:
 		${WRKSRC}/mkspecs/common/g++-base.conf \
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-g++/qmake.conf
-.endif
+.      endif
 
 pre-configure: qtbase-pre-configure
 qtbase-pre-configure:
