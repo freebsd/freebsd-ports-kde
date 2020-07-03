@@ -223,6 +223,7 @@
     SUBDIR += scribus-devel
     SUBDIR += sgf2tex
     SUBDIR += shrinkpdf
+    SUBDIR += simple-fb2-reader
     SUBDIR += splix
     SUBDIR += system-config-printer
     SUBDIR += t1utils
@@ -257,7 +258,6 @@
     SUBDIR += xfce4-print
     SUBDIR += xmbibtex
     SUBDIR += xpdfopen
-    SUBDIR += xpp
     SUBDIR += xreader
     SUBDIR += xtexsh
     SUBDIR += yatex

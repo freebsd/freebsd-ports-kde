@@ -31,6 +31,7 @@
     SUBDIR += dynamips-community
     SUBDIR += e-uae
     SUBDIR += edumips64
+    SUBDIR += elliott-803
     SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += fceux
@@ -61,6 +62,7 @@
     SUBDIR += klh10
     SUBDIR += lib765
     SUBDIR += libdsk
+    SUBDIR += libretro-ppsspp
     SUBDIR += libspectrum
     SUBDIR += linux-c7
     SUBDIR += linux-power9-functional-sim

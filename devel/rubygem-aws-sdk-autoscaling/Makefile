@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	aws-sdk-autoscaling
-PORTVERSION=	1.38.1
+PORTVERSION=	1.41.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

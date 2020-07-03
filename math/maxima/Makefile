@@ -3,11 +3,11 @@
 
 PORTNAME=	maxima
 PORTVERSION=	5.43.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	math lisp tk
 MASTER_SITES=	SF/maxima/Maxima-source/${PORTVERSION}-source
 
-MAINTAINER=	salvadore@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Symbolic mathematics program
 
 LICENSE=				GPLv2 MAXIMAEXTRACLAUSE
@@ -15,6 +15,8 @@ LICENSE_COMB=				multi
 LICENSE_NAME_MAXIMAEXTRACLAUSE=		Maxima extra clause
 LICENSE_FILE_MAXIMAEXTRACLAUSE=		${FILESDIR}/license-extra-clause.txt
 LICENSE_PERMS_MAXIMAEXTRACLAUSE=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+
+BROKEN_FreeBSD_13_powerpc64=	fails to build: unhandled lisp initialization error
 
 RUN_DEPENDS=	gnuplot:math/gnuplot \
 		rlwrap:devel/rlwrap

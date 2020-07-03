@@ -3,6 +3,7 @@
 
 PORTNAME=	ffmpeg
 PORTVERSION=	4.3
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio net
 MASTER_SITES=	https://ffmpeg.org/releases/
@@ -37,7 +38,7 @@ NOPRECIOUSMAKEVARS=	yes # ARCH
 PORTSCOUT=	limit:^4\.
 
 # Option CHROMAPRINT disabled, it cannot work and people are baffled.
-OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ARIBB24 ASS BS2B CACA CDIO CELT \
+OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ARIBB24 ASM ASS BS2B CACA CDIO CELT \
 		CODEC2 DAV1D DAVS2 DC1394 DEBUG DOCS DRM FDK_AAC FLITE \
 		FONTCONFIG FREETYPE FREI0R FRIBIDI GLSLANG GME GSM ICONV ILBC JACK \
 		KLVANC KVAZAAR LADSPA LAME LENSFUN LIBBLURAY LIBRSVG2 LIBXML2 \
@@ -48,7 +49,7 @@ OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB AOM ARIBB24 ASS BS2B CACA CDIO CELT \
 		VAAPI VAPOURSYNTH VDPAU VIDSTAB VMAF VO_AMRWBENC VORBIS VPX VULKAN \
 		WAVPACK WEBP X264 X265 XAVS2 XCB XVID XVIDEO ZIMG ZMQ ZVBI
 
-OPTIONS_DEFAULT=	AOM ASS DAV1D DRM FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
+OPTIONS_DEFAULT=	AOM ASM ASS DAV1D DRM FONTCONFIG FREETYPE FREI0R GMP GNUTLS ICONV \
 			LIBXML2 OPENCV OPTIMIZED_CFLAGS OPUS RTCPU THEORA V4L VAAPI VDPAU \
 			VORBIS VPX X264 X265 XCB XVID
 
@@ -88,12 +89,6 @@ OPTIONS_RADIO_SSL=	GNUTLS MBEDTLS OPENSSL
 OPTIONS_GROUP=	LICENSE
 OPTIONS_GROUP_LICENSE=	GPL3 NONFREE
 
-OPTIONS_DEFINE_amd64=	MMX SSE
-OPTIONS_DEFINE_armv6=	VFP NEON
-OPTIONS_DEFINE_i386=	MMX SSE
-OPTIONS_DEFAULT_amd64=	MMX SSE
-OPTIONS_DEFAULT_i386=	MMX SSE
-
 ASS_DESC=	Subtitles rendering via libass
 AOM_DESC=	AV1 video encoding/decoding via libaom
 ARIBB24_DESC=	ARIB text and caption decoding via libaribb24
@@ -117,7 +112,6 @@ LTO_DESC=	Use Link-Time Optimization
 LV2_DESC=	LV2 audio filtering
 MFX_DESC=	Intel MediaSDK (aka Quick Sync Video)
 MYSOFA_DESC=	SOFAlizer binaural filter
-NEON_DESC=	Media Processing Engine instructions
 NONFREE_DESC=	Allow use of nonfree code
 OPENMPT_DESC=	Decoding tracked files via libopenmpt
 OPENH264_DESC=	H.264 video codec support via OpenH264
@@ -135,7 +129,6 @@ LIBRTMP_DESC=	${RTMP_DESC} via librtmp
 TENSORFLOW_DESC=TensorFlow as a DNN module backend for DNN based filters like sr
 TESSERACT_DESC=	Optical Character Recognition via Tesseract
 VAPOURSYNTH_DESC=	VapourSynth demuxer
-VFP_DESC=	Vector Floating Point instructions
 VIDSTAB_DESC=	Video stabilization filter
 VMAF_DESC=	VMAF filter via libvmaf
 VULKAN_DESC=	Vulkan filters
@@ -168,6 +161,9 @@ AOM_CONFIGURE_ENABLE=	libaom
 # arib
 ARIBB24_LIB_DEPENDS=	libaribb24.so:multimedia/aribb24
 ARIBB24_CONFIGURE_ENABLE=	libaribb24
+
+# asm support
+ASM_CONFIGURE_ENABLE=	asm
 
 # ass
 ASS_LIB_DEPENDS=	libass.so:multimedia/libass
@@ -346,9 +342,6 @@ MBEDTLS_CONFIGURE_ENABLE=	mbedtls
 MFX_LIB_DEPENDS=	libmfx.so:multimedia/intel-media-sdk
 MFX_CONFIGURE_ENABLE=	libmfx
 
-# mmx support
-MMX_CONFIGURE_ENABLE=	mmx
-
 # modplug
 MODPLUG_LIB_DEPENDS=	libmodplug.so:audio/libmodplug
 MODPLUG_CONFIGURE_ENABLE=	libmodplug
@@ -453,10 +446,6 @@ SOXR_CONFIGURE_ENABLE=	libsoxr
 SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex
 SPEEX_CONFIGURE_ENABLE=	libspeex
 
-# sse support
-SSE_CONFIGURE_ENABLE=	sse
-SSE_IMPLIES=		MMX
-
 # ssh
 SSH_LIB_DEPENDS=	libssh.so:security/libssh
 SSH_CONFIGURE_ENABLE=	libssh
@@ -468,7 +457,7 @@ SRT_CONFIGURE_ENABLE=	libsrt
 # svt-av1
 SVTAV1_LIB_DEPENDS=	libSvtAv1Enc.so:multimedia/svt-av1
 SVTAV1_CONFIGURE_ENABLE=	libsvtav1
-SVTAV1_PATCH_SITES_=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.8.3-52-gc40ee2492/ffmpeg_plugin/:svtav1
+SVTAV1_PATCH_SITES_=	https://github.com/OpenVisualCloud/SVT-AV1/raw/v0.8.4/ffmpeg_plugin/:svtav1
 SVTAV1_PATCHFILES_=	0001-Add-ability-for-ffmpeg-to-run-svt-av1-with-svt-hevc.patch:-p1:svtav1
 .if exists(/usr/bin/ld.lld) && (${/usr/bin/ld:L:tA} != /usr/bin/ld.lld)
 # https://github.com/OpenVisualCloud/SVT-AV1/issues/691
@@ -526,13 +515,6 @@ VDPAU_CONFIGURE_ENABLE=	vdpau
 # vmaf
 VMAF_LIB_DEPENDS=	libvmaf.so:multimedia/vmaf
 VMAF_CONFIGURE_ENABLE=	libvmaf
-
-# armv6/armv7
-VFP_CONFIGURE_ENABLE=	vfp
-NEON_CONFIGURE_ENABLE=	neon
-.if ! ${CFLAGS:M-march*}
-NEON_CONFIGURE_ON=	--cpu=armv7-a
-.endif
 
 # vo-amrwbenc
 VO_AMRWBENC_LIB_DEPENDS=	libvo-amrwbenc.so:audio/vo-amrwbenc

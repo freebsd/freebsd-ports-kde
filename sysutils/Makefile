@@ -274,7 +274,6 @@
     SUBDIR += dunst
     SUBDIR += dupd
     SUBDIR += duplicity
-    SUBDIR += duplicity07
     SUBDIR += duply
     SUBDIR += dupmerge
     SUBDIR += dvd+rw-tools
@@ -391,6 +390,7 @@
     SUBDIR += fusefs-s3backer
     SUBDIR += fusefs-s3fs
     SUBDIR += fusefs-sandboxfs
+    SUBDIR += fusefs-securefs
     SUBDIR += fusefs-simple-mtpfs
     SUBDIR += fusefs-smbnetfs
     SUBDIR += fusefs-sqlfs
@@ -746,6 +746,7 @@
     SUBDIR += nvramtool
     SUBDIR += oak
     SUBDIR += obliterate
+    SUBDIR += oc
     SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += ohmu
@@ -756,6 +757,7 @@
     SUBDIR += openipmi
     SUBDIR += opensbi
     SUBDIR += openseachest
+    SUBDIR += openshift-install
     SUBDIR += openupsd
     SUBDIR += openzfs
     SUBDIR += openzfs-kmod
@@ -1260,6 +1262,7 @@
     SUBDIR += syslog-ng325
     SUBDIR += syslog-ng326
     SUBDIR += syslog-ng327
+    SUBDIR += syslog-ng328
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends

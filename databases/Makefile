@@ -174,10 +174,6 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
-    SUBDIR += mariadb101-client
-    SUBDIR += mariadb101-server
-    SUBDIR += mariadb102-client
-    SUBDIR += mariadb102-server
     SUBDIR += mariadb103-client
     SUBDIR += mariadb103-server
     SUBDIR += mariadb104-client
@@ -191,6 +187,7 @@
     SUBDIR += mongodb40-tools
     SUBDIR += mongodb42
     SUBDIR += mongodb42-tools
+    SUBDIR += mongodb44
     SUBDIR += mroonga
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
@@ -486,7 +483,6 @@
     SUBDIR += p5-Search-InvertedIndex
     SUBDIR += p5-Search-Namazu
     SUBDIR += p5-Search-Xapian
-    SUBDIR += p5-Search-Xapian10
     SUBDIR += p5-Search-Xapian12
     SUBDIR += p5-Store-CouchDB
     SUBDIR += p5-T2
@@ -746,7 +742,6 @@
     SUBDIR += py-couchdb
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
-    SUBDIR += py-django-transaction-hooks
     SUBDIR += py-fakeredis
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
@@ -930,6 +925,7 @@
     SUBDIR += rubygem-em-redis-unified
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
+    SUBDIR += rubygem-flipper-active_record017
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
@@ -1029,7 +1025,6 @@
     SUBDIR += xapian-bindings
     SUBDIR += xapian-bindings12
     SUBDIR += xapian-core
-    SUBDIR += xapian-core10
     SUBDIR += xapian-core12
     SUBDIR += xrootd
     SUBDIR += xtrabackup

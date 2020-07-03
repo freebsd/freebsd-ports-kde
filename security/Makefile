@@ -849,6 +849,7 @@
     SUBDIR += py-certbot-apache
     SUBDIR += py-certbot-dns-cloudflare
     SUBDIR += py-certbot-dns-cloudxns
+    SUBDIR += py-certbot-dns-cpanel
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
     SUBDIR += py-certbot-dns-dnsmadeeasy
@@ -997,6 +998,7 @@
     SUBDIR += py-volatility
     SUBDIR += py-volatility3
     SUBDIR += py-vulndb
+    SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
     SUBDIR += py-yubikey-manager

@@ -2,11 +2,11 @@
 
 PORTNAME=	gh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.10.0
+DISTVERSION=	0.10.1
 CATEGORIES=	devel
 
 MAINTAINER=	vulcan@wired.sh
-COMMENT=	GitHub command-line tool
+COMMENT=	GitHub's official command line tool
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -60,8 +60,8 @@ GH_TUPLE=	AlecAivazis:survey:v2.0.7:alecaivazis_survey/vendor/github.com/AlecAiv
 		stretchr:testify:v1.5.1:stretchr_testify/vendor/github.com/stretchr/testify \
 		yuin:goldmark:v1.1.24:yuin_goldmark/vendor/github.com/yuin/goldmark
 
-_BUILD_DATE=	$$(date +%Y-%m-%d)
 _BUILD_VERSION=	${DISTVERSION}
+_BUILD_DATE=	$$(date +%Y-%m-%d)
 
 GO_TARGET=	./cmd/${PORTNAME}
 GO_BUILDFLAGS=	-ldflags "\
