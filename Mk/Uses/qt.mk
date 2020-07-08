@@ -146,6 +146,8 @@ _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel webglplugin \
 			webengine websockets websockets-qml webview widgets x11extras
 
+_USE_QT6_ONLY=		base
+
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
 qt-3d_LIB=		libQt${_QT_LIBVER}3DCore.so
@@ -155,6 +157,9 @@ qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
 
 qt-buildtools_PORT=	devel/${_QT_RELNAME}-buildtools
 qt-buildtools_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/moc
+
+qt-base_PORT=		devel/${_QT_RELNAME}-base
+qt-base_LIB=		libQt${_QT_LIBVER}Core.so
 
 qt-charts_PORT=		x11-toolkits/${_QT_RELNAME}-charts
 qt-charts_LIB=		libQt${_QT_LIBVER}Charts.so
