@@ -1,6 +1,6 @@
 bin/qtchooser
 bin/update-qtchooser-wrapper
 etc/xdg/qtchooser/default.conf
-etc/xdg/qtchooser/qt4.conf
 etc/xdg/qtchooser/qt5.conf
+etc/xdg/qtchooser/qt6.conf
 man/man1/qtchooser.1.gz

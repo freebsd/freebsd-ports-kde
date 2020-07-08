@@ -2,7 +2,7 @@
 
 PORTNAME=	qtchooser
 PORTVERSION=	66
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc
 MASTER_SITES=	QT/official_releases/${PORTNAME}
 DIST_SUBDIR=	KDE/Qt/qtchooser
@@ -41,7 +41,7 @@ post-install:
 #    properly (this will probably change with qt.mk).
 # Always make sure the following is in sync with bsd.qt.mk for now.
 	${MKDIR} ${STAGEDIR}${QT_QTCHOOSERDIR}
-.for qt_version in 4 5
+.for qt_version in 5 6
 	${ECHO} ${PREFIX}/lib/qt${qt_version}/bin > ${STAGEDIR}${QT_QTCHOOSERDIR}/qt${qt_version}.conf
 	${ECHO} ${PREFIX}/lib/qt${qt_version} >> ${STAGEDIR}${QT_QTCHOOSERDIR}/qt${qt_version}.conf
 .endfor
