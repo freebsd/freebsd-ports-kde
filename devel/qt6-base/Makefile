@@ -23,10 +23,10 @@ LIB_DEPENDS=	libcups.so:print/cups \
 		libudev.so:devel/libudev-devd \
 		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 qt-dist:6
-CMAKE_ARGS=	-DQT_QMAKE_TARGET_MKSPEC:String=freebsd-clang
+USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 qt-dist:6 xorg
 USE_GL=		gl egl
 USE_GNOME=	glib20 gtk30 pango
 USE_XORG=	x11
+CMAKE_OFF=	QT_FEATURE_eglfs
 
 .include <bsd.port.mk>
