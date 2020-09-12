@@ -2,7 +2,6 @@
 
 PORTNAME=	declarative
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 PKGNAMEPREFIX=	qt5-
 
@@ -17,6 +16,8 @@ USE_QT=		core gui network sql testlib \
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 CONFLICTS=	qt5-declarative-render2d-* qt5-qml qt5-quick
+
+BINARY_ALIAS=	python=${PYTHON_CMD}
 
 QT_BINARIES=	yes
 QT_DEFINES=	ACCESSIBILITY
