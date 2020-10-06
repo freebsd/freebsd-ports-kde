@@ -2,7 +2,7 @@
 
 PORTNAME=	glx-utils
 DISTVERSIONPREFIX=	${GL_ACCOUNT}-${GL_PROJECT}-
-DISTVERSION=	8.4.0-43
+DISTVERSION=	8.4.0-53
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,14 +13,13 @@ LICENSE=	MIT
 CONFLICTS_INSTALL=	mesa-demos
 
 USES=		gl localbase:ldflags xorg
-USE_CSTD=	c99
 USE_GITLAB=	yes
 USE_GL=		gl
 USE_XORG=	x11
 GL_SITE=	https://gitlab.freedesktop.org
 GL_ACCOUNT=	mesa
 GL_PROJECT=	demos
-GL_COMMIT=	0de7436be906b720f503668609404c97ea3a124b
+GL_COMMIT=	5435fc7fbd332e171da9a71e33a9b190e9462cf0
 WRKSRC_SUBDIR=	src/xdemos
 PLIST_FILES=	bin/glxgears \
 		bin/glxinfo \

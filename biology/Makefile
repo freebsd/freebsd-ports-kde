@@ -51,7 +51,6 @@
     SUBDIR += graphlan
     SUBDIR += grappa
     SUBDIR += groopm
-    SUBDIR += haplohseq
     SUBDIR += hhsuite
     SUBDIR += hisat2
     SUBDIR += hmmer
@@ -121,6 +120,7 @@
     SUBDIR += protomol
     SUBDIR += psi88
     SUBDIR += py-Genesis-PyAPI
+    SUBDIR += py-biom-format
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
     SUBDIR += py-cutadapt
@@ -166,7 +166,6 @@
     SUBDIR += subread
     SUBDIR += tRNAscan-SE
     SUBDIR += tabixpp
-    SUBDIR += tophat
     SUBDIR += treekin
     SUBDIR += treepuzzle
     SUBDIR += trimadap

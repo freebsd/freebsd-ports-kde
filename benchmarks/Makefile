@@ -3,6 +3,7 @@
 
     COMMENT = Benchmarking tools
 
+    SUBDIR += ali
     SUBDIR += apib
     SUBDIR += autobench
     SUBDIR += blogbench
@@ -16,6 +17,7 @@
     SUBDIR += dhrystone
     SUBDIR += dkftpbench
     SUBDIR += fhourstones
+    SUBDIR += filebench
     SUBDIR += fio
     SUBDIR += flamegraph
     SUBDIR += flops
@@ -38,6 +40,7 @@
     SUBDIR += iperf3
     SUBDIR += libcelero
     SUBDIR += libmicro
+    SUBDIR += linux-gputest
     SUBDIR += linux-vdbench
     SUBDIR += lmbench
     SUBDIR += lzbench

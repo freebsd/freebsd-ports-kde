@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ardour6
-PORTVERSION=	6.2.0
+PORTVERSION=	6.3.0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/beerml/ardour_releases/raw/master/
 # The original master side points to the latest release only:
@@ -14,6 +15,8 @@ COMMENT=	Multichannel digital audio workstation
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BROKEN_aarch64=		fails to configure: Could not find the program gas,as,gcc
 
 BUILD_DEPENDS=	lv2>=1.18.0:audio/lv2 \
 		itstool>2.0.0:textproc/itstool
@@ -49,8 +52,6 @@ USE_GNOME=	atk cairo cairomm gdkpixbuf2 glib20 glibmm gtk20 gtkmm24 pango
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 BINARY_ALIAS+=	gas=${CC}
-
-BROKEN_aarch64=		fails to configure: Could not find the program gas,as,gcc
 
 PLIST_SUB=	ARDOURVERSION=${PORTVERSION}
 
@@ -107,7 +108,7 @@ post-install:
 WITH_ARCH_FLAGS=	--arch='-msse -mfpmath=sse' --dist-target=i386
 .elif ${ARCH} == "amd64"
 WITH_ARCH_FLAGS=	--arch='-msse -mfpmath=sse' --dist-target=x86_64
-.elif ${ARCH} == "powerpc64"
+.elif ${ARCH:Mpowerpc*}
 LLD_UNSAFE=	yes
 .endif
 

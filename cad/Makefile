@@ -24,6 +24,7 @@
     SUBDIR += cura-engine
     SUBDIR += digital
     SUBDIR += dinotrace
+    SUBDIR += ecpprog
     SUBDIR += electric
     SUBDIR += electric-ng
     SUBDIR += fasm
@@ -83,9 +84,9 @@
     SUBDIR += opencascade
     SUBDIR += openctm
     SUBDIR += openfpgaloader
+    SUBDIR += openroad
     SUBDIR += openscad
     SUBDIR += openscad-devel
-    SUBDIR += opensta
     SUBDIR += openvsp
     SUBDIR += oregano
     SUBDIR += p5-GDS2

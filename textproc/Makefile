@@ -68,6 +68,7 @@
     SUBDIR += bg-hyphen
     SUBDIR += bg-mythes
     SUBDIR += bib2html
+    SUBDIR += bibclean
     SUBDIR += bibtex2html
     SUBDIR += bibtool
     SUBDIR += bibutils
@@ -145,7 +146,6 @@
     SUBDIR += docbook2mdoc
     SUBDIR += docbook2odf
     SUBDIR += docbookrx
-    SUBDIR += doclifter
     SUBDIR += docproj
     SUBDIR += dom4j
     SUBDIR += domc
@@ -202,6 +202,7 @@
     SUBDIR += fldiff
     SUBDIR += flex
     SUBDIR += flip
+    SUBDIR += fmtlatex
     SUBDIR += fo-aspell
     SUBDIR += foiltex
     SUBDIR += fop
@@ -236,7 +237,6 @@
     SUBDIR += gspell
     SUBDIR += gtk-doc
     SUBDIR += gtkspell
-    SUBDIR += gtkspell-reference
     SUBDIR += gtkspell3
     SUBDIR += gu-aspell
     SUBDIR += gutenmark
@@ -272,7 +272,6 @@
     SUBDIR += hyphen
     SUBDIR += ia-aspell
     SUBDIR += ibus
-    SUBDIR += ibus-el
     SUBDIR += ibus-kmfl
     SUBDIR += ibus-m17n
     SUBDIR += ibus-table
@@ -390,11 +389,9 @@
     SUBDIR += libxdiff
     SUBDIR += libxml++26
     SUBDIR += libxml2
-    SUBDIR += libxml2-reference
     SUBDIR += libxmlbird
     SUBDIR += libxode
     SUBDIR += libxslt
-    SUBDIR += libxslt-reference
     SUBDIR += libyaml
     SUBDIR += link-grammar
     SUBDIR += linux-c7-aspell
@@ -426,6 +423,7 @@
     SUBDIR += markdown-mode.el
     SUBDIR += markdownfmt
     SUBDIR += mathml-xsd
+    SUBDIR += mdbook
     SUBDIR += mdocml
     SUBDIR += meld
     SUBDIR += metauml
@@ -973,7 +971,6 @@
     SUBDIR += p5-Version-Next
     SUBDIR += p5-Vroom
     SUBDIR += p5-WDDX
-    SUBDIR += p5-WWW-Google-SiteMap
     SUBDIR += p5-WWW-Wordnik-API
     SUBDIR += p5-WordNet-QueryData
     SUBDIR += p5-WordNet-Similarity
@@ -1202,7 +1199,6 @@
     SUBDIR += php74-xmlwriter
     SUBDIR += php74-xsl
     SUBDIR += pict
-    SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pod2mdoc
     SUBDIR += popup
@@ -1255,7 +1251,6 @@
     SUBDIR += py-elasticsearch6
     SUBDIR += py-empy
     SUBDIR += py-enchant
-    SUBDIR += py-esmre
     SUBDIR += py-et_xmlfile
     SUBDIR += py-fastavro
     SUBDIR += py-feedparser
@@ -1289,7 +1284,6 @@
     SUBDIR += py-langdetect
     SUBDIR += py-laserhammer
     SUBDIR += py-libxml2
-    SUBDIR += py-libxslt
     SUBDIR += py-license-expression
     SUBDIR += py-line-protocol-parser
     SUBDIR += py-m2r
@@ -1313,6 +1307,7 @@
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
+    SUBDIR += py-pallets-sphinx-themes
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parse
@@ -1320,7 +1315,6 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-patiencediff
-    SUBDIR += py-pdfminer
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
@@ -1334,6 +1328,7 @@
     SUBDIR += py-pycountry
     SUBDIR += py-pygccxml
     SUBDIR += py-pygments
+    SUBDIR += py-pygments-25
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyjade
@@ -1364,6 +1359,7 @@
     SUBDIR += py-regex
     SUBDIR += py-reno
     SUBDIR += py-reverend
+    SUBDIR += py-rich
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2html5
@@ -1376,9 +1372,11 @@
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autodoc-typehints
     SUBDIR += py-sphinx-intl
+    SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-me
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx18
+    SUBDIR += py-sphinx_press_theme
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
@@ -1389,6 +1387,7 @@
     SUBDIR += py-sphinxcontrib-htmlhelp
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-jsmath
+    SUBDIR += py-sphinxcontrib-log-cabinet
     SUBDIR += py-sphinxcontrib-napoleon
     SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
@@ -1577,6 +1576,7 @@
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
+    SUBDIR += rubygem-minima
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
@@ -1816,6 +1816,7 @@
     SUBDIR += website
     SUBDIR += weka
     SUBDIR += wiggle
+    SUBDIR += wikiman
     SUBDIR += word2x
     SUBDIR += wordnet
     SUBDIR += words

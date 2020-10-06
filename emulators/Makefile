@@ -28,7 +28,6 @@
     SUBDIR += dosbox
     SUBDIR += dosbox-staging
     SUBDIR += dtcyber
-    SUBDIR += dynagen
     SUBDIR += dynamips-community
     SUBDIR += e-uae
     SUBDIR += edumips64
@@ -113,12 +112,12 @@
     SUBDIR += qemu-cheri
     SUBDIR += qemu-devel
     SUBDIR += qemu-powernv
-    SUBDIR += qemu-sbruno
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
     SUBDIR += qemu-utils
     SUBDIR += qemu31
     SUBDIR += qemu41
+    SUBDIR += qemu42
     SUBDIR += qemu50
     SUBDIR += qmc2
     SUBDIR += quasi88
@@ -169,7 +168,6 @@
     SUBDIR += wine-mono
     SUBDIR += wine-mono-devel
     SUBDIR += winetricks
-    SUBDIR += wxmupen64plus
     SUBDIR += x16-emulator
     SUBDIR += x16-rom
     SUBDIR += x48

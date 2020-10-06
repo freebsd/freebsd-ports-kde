@@ -3,8 +3,12 @@
 PORTNAME=	lavalauncher
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://git.sr.ht/~leon_plickat/${PORTNAME}/archive/${DISTVERSIONFULL}${EXTRACT_SUFX}?dummy=/
+
+PATCH_SITES=	https://git.sr.ht/~leon_plickat/${PORTNAME}/commit/
+PATCHFILES+=	542e8c948889.patch:-p1
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Simple launcher panel for Wayland desktops

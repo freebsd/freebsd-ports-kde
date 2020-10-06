@@ -55,7 +55,7 @@ GCC_DEFAULT?=		9
 .endif
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
-# Possible values: 7, 8, 11, 12, 13
+# Possible values: 7, 8, 11, 12, 13, 14, 15
 JAVA_DEFAULT?=		8
 # Possible values: 0.6, 0.7, 1.0, 1.1
 JULIA_DEFAULT?=		1.0
@@ -87,20 +87,20 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
 # Possible values: 9.5, 9.6, 10, 11, 12
-PGSQL_DEFAULT?=		11
+PGSQL_DEFAULT?=		12
 # Possible values: 7.2, 7.3, 7.4
-PHP_DEFAULT?=		7.2
-# Possible values: 2.7, 3.5, 3.6, 3.7, 3.8
+PHP_DEFAULT?=		7.4
+# Possible values: 2.7, 3.6, 3.7, 3.8
 PYTHON_DEFAULT?=	3.7
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
-# Possible values: 3.5, 3.6, 3.7, 3.8
+# Possible values: 3.6, 3.7, 3.8
 PYTHON3_DEFAULT?=	3.7
 # Possible values: 2.5, 2.6, 2.7
 RUBY_DEFAULT?=		2.6
 # Possible values: rust, rust-nightly
 RUST_DEFAULT?=		rust
-# Possible values: 4.10, 4.11
+# Possible values: 4.10, 4.11, 4.12, 4.13
 SAMBA_DEFAULT?=		4.10
 # Possible values: base, openssl, libressl, libressl-devel
 .if !defined(SSL_DEFAULT)

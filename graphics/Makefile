@@ -78,7 +78,6 @@
     SUBDIR += bsd-plotutils
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
-    SUBDIR += caffe
     SUBDIR += cairo
     SUBDIR += cairomm
     SUBDIR += cal3d
@@ -90,7 +89,6 @@
     SUBDIR += cfdg
     SUBDIR += charls
     SUBDIR += cimg
-    SUBDIR += cloudcompare
     SUBDIR += clutter
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
@@ -108,6 +106,7 @@
     SUBDIR += cuttlefish
     SUBDIR += darktable
     SUBDIR += dataplot
+    SUBDIR += dbow2
     SUBDIR += dc20pack
     SUBDIR += dcmtk
     SUBDIR += dcp2icc
@@ -141,6 +140,7 @@
     SUBDIR += drm-legacy-kmod
     SUBDIR += drm_info
     SUBDIR += dspdfviewer
+    SUBDIR += dssim
     SUBDIR += duhdraw
     SUBDIR += dynamechs
     SUBDIR += ebsynth
@@ -164,7 +164,6 @@
     SUBDIR += epstool
     SUBDIR += eterm-bg
     SUBDIR += evince
-    SUBDIR += evince-lite
     SUBDIR += evolvotron
     SUBDIR += exif
     SUBDIR += exifprobe
@@ -327,6 +326,7 @@
     SUBDIR += guile-cairo
     SUBDIR += guilib
     SUBDIR += gwenview
+    SUBDIR += h3
     SUBDIR += hdr_tools
     SUBDIR += heimer
     SUBDIR += hiptext
@@ -405,7 +405,6 @@
     SUBDIR += kqtquickcharts
     SUBDIR += krita
     SUBDIR += ksnip
-    SUBDIR += kudu
     SUBDIR += kxstitch
     SUBDIR += l2p
     SUBDIR += largetifftools
@@ -448,7 +447,6 @@
     SUBDIR += libgltf
     SUBDIR += libglvnd
     SUBDIR += libgnomecanvas
-    SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
     SUBDIR += libgphoto2
     SUBDIR += libgxps
@@ -704,6 +702,7 @@
     SUBDIR += p5-ming
     SUBDIR += panoglview
     SUBDIR += panomatic
+    SUBDIR += partio
     SUBDIR += pastel
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
@@ -721,7 +720,6 @@
     SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
-    SUBDIR += pecomato
     SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
@@ -803,7 +801,6 @@
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
     SUBDIR += py-djvulibre
-    SUBDIR += py-editobj
     SUBDIR += py-exifread
     SUBDIR += py-face_recognition
     SUBDIR += py-face_recognition_models
@@ -812,7 +809,6 @@
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
-    SUBDIR += py-gimp
     SUBDIR += py-gizeh
     SUBDIR += py-glfw
     SUBDIR += py-glooey
@@ -821,6 +817,7 @@
     SUBDIR += py-graphviz
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
+    SUBDIR += py-h3
     SUBDIR += py-hiplot
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
@@ -829,7 +826,6 @@
     SUBDIR += py-img2pdf
     SUBDIR += py-leather
     SUBDIR += py-mapclassify
-    SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-ming
     SUBDIR += py-mpl-scatter-density
@@ -838,6 +834,7 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-opencv
     SUBDIR += py-openimageio
+    SUBDIR += py-openshadinglanguage
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -871,6 +868,7 @@
     SUBDIR += py-qt5-svg
     SUBDIR += py-rasterio
     SUBDIR += py-rawkit
+    SUBDIR += py-s2
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
@@ -887,7 +885,6 @@
     SUBDIR += py-willow
     SUBDIR += py-yaswfp
     SUBDIR += py-zbar-py
-    SUBDIR += pymorph
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot-qt5
     SUBDIR += qgis
@@ -963,6 +960,7 @@
     SUBDIR += rubygem-scruffy
     SUBDIR += rx
     SUBDIR += s10sh
+    SUBDIR += s2
     SUBDIR += s2tc
     SUBDIR += sage
     SUBDIR += sam2p
@@ -1024,7 +1022,6 @@
     SUBDIR += tiffgt
     SUBDIR += tifmerge
     SUBDIR += tikzit
-    SUBDIR += tilecache
     SUBDIR += tiled
     SUBDIR += timeless
     SUBDIR += timg
