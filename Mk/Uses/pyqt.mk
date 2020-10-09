@@ -53,11 +53,11 @@ PYQT_MAINTAINER=	kde@FreeBSD.org
 
 MASTER_SITE_RIVERBANK=	https://www.riverbankcomputing.com/static/Downloads/%SUBDIR%/
 
-#MASTER_SITES_SIP=	https://pypi.python.org/packages/source/s/sip/
+MASTER_SITES_SIP=	https://pypi.python.org/packages/source/s/sip/
 # https://www.riverbankcomputing.com/static/Downloads/sip/4.19.15/sip-4.19.15.tar.gz
-MASTER_SITES_SIP=       RIVERBANK/sip/${PORTVERSION} \
-                        SF/pyqt/sip/sip-${PORTVERSION} \
-                        GENTOO
+#MASTER_SITES_SIP=       RIVERBANK/sip/${PORTVERSION} \
+#                        SF/pyqt/sip/sip-${PORTVERSION} \
+#                        GENTOO
 MASTER_SITES_PYQT5=	https://pypi.python.org/packages/source/P/PyQt5/
 MASTER_SITES_PYQTSIP=	https://pypi.python.org/packages/source/P/PyQt5-sip/
 MASTER_SITES_PYQTCHART=	https://pypi.python.org/packages/source/P/PyQtChart/
@@ -66,7 +66,7 @@ MASTER_SITES_QSCI2=	RIVERBANK/QScintilla/${PORTVERSION} \
 			SF/pyqt/QScintilla2/QScintilla-${PORTVERSION} \
 			GENTOO
 
-SIP_VERSION=		4.19.24
+SIP_VERSION=		5.3.0
 QSCI2_VERSION=		2.11.5
 PYQT5_VERSION=		5.15.1
 PYQTSIP_VERSION=	12.8.0
@@ -109,7 +109,7 @@ _USE_PYQT_ALL=		${_USE_PYQT_COMMS} \
 			${_USE_PYQT_WWW} \
 			${_USE_PYQT_X11} \
 			${_USE_PYQT_X11-TOOLKITS}
-_USE_SIP_ALL=		sip # pysip
+_USE_SIP_ALL=		sip pysip
 _USE_QSCINTILLA=	qscintilla2
 
 # Unversioned variables for the rest of the file
@@ -123,7 +123,7 @@ PYQT_LICENSE=		${PYQT${_PYQT_VERSION}_LICENSE}
 
 # PATH
 py-sip_PATH=			${PYTHON_PKGNAMEPREFIX}sip>=${SIP_VERSION}
-# py-pysip_PATH=			${PYQT_PY_RELNAME}-sip>=${PYQTSIP_VERSION}
+py-pysip_PATH=			${PYQT_PY_RELNAME}-sip>=${PYQTSIP_VERSION}
 py-qscintilla2_PATH=		${PYQT_PY_RELNAME}-qscintilla2>=${QSCI2_VERSION}
 
 .  for _component in ${_USE_PYQT_ALL}
@@ -132,7 +132,7 @@ py-${_component}_PATH?=${PYQT_PY_RELNAME}-${_component}>=${PYQT_VERSION}
 
 # PORT
 py-sip_PORT=			devel/py-sip
-# py-pysip_PORT=			devel/${PYQT_RELNAME}-sip
+py-pysip_PORT=			devel/${PYQT_RELNAME}-sip
 py-qscintilla2_PORT=		devel/${PYQT_RELNAME}-qscintilla2
 
 .  for _categorie in comms databases devel graphics lang misc multimedia net print textproc www x11 x11-toolkits
@@ -179,7 +179,7 @@ py-xml_DESC=			Python bindings for QtXml module
 py-xmlpatterns_DESC=		Python bindings for QtXmlPatterns module
 
 # The versionned executable of sip
-SIP=		${LOCALBASE}/bin/sip-${PYTHON_VER}
+SIP=		${LOCALBASE}/bin/sip5-${PYTHON_VER}
 
 # Relative directories
 _VERSION_SUBDIR_REL=	PyQt${_PYQT_VERSION}/${PYTHON_VER}
