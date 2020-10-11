@@ -160,9 +160,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|"-mllvm -inline-threshold=128"|"-O1"|g' \
 		${WRKSRC}/src/core/CMakeLists.txt
 .endif
-	@${REINPLACE_CMD} -e 's|%%PYQT_SIPDIR%%|${PYQT_SIPDIR}|' \
-		${WRKSRC}/cmake/FindPyQt5.py \
-		${WRKSRC}/cmake/FindSIP.py
 
 pre-configure:
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python3
