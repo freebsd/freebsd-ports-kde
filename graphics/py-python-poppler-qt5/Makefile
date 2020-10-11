@@ -7,24 +7,33 @@ PORTREVISION=	11
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
+#PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+#PATCHFILES=	6cc4d83b172f.patch:-p1 \
+#		4ee58b6ee027.patch:-p1
+
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Python bindings for the Poppler-Qt PDF rendering library
 
 LICENSE=	LGPL21 LGPL3
 LICENSE_COMB=	dual
 
+BUILD_DEPENDS=	pyqt-bundle:devel/py-qtbuilder@${PY_FLAVOR} \
+		qmake:devel/qt5-qmake
 LIB_DEPENDS=	libpoppler-qt5.so:graphics/poppler-qt5
 
-USES=		compiler:c++11-lang pkgconfig pyqt:5 python:3.4+ qmake qt:5
+USES=		compiler:c++11-lang pkgconfig pyqt:5 python:3.5+ qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	frescobaldi
 USE_PYQT=	gui xml sip_build
-USE_PYTHON=	autoplist distutils
 
-PYDISTUTILS_BUILD_TARGET=	build_ext
-PYDISTUTILS_BUILDARGS+=	--pyqt-sip-dir=${PYQT_SIPDIR}
+do-build:
+	(cd ${WRKSRC} ; sip-build  --verbose --no-make --build-dir build ; ${MAKE} -C ./build )
+
+do-install:
+	(cd ${WRKSRC} ; ${MAKE} -C ./build install INSTALL_ROOT=${STAGEDIR} )
 
 post-install:
-	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/popplerqt5.so
+	${RLN} ${STAGEDIR}${PYTHON_SITELIBDIR}/popplerqt5.cpython-${PYTHON_SUFFIX}m.so ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/popplerqt5.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/popplerqt5.cpython-${PYTHON_SUFFIX}m.so
 
 .include <bsd.port.mk>
