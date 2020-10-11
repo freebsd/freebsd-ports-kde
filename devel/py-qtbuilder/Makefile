@@ -10,7 +10,7 @@ DISTNAME=	PyQt-builder-${PORTVERSION} # ${QTBUILDER_DISTNAME}
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	The PEP 517 compliant PyQt build system
 
-USES=		python
+USES=		python:3.5+
 USE_PYTHON=	autoplist concurrent distutils flavors py3kplist
 USE_PYQT=	#
 
