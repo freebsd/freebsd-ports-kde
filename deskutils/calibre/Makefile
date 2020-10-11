@@ -30,7 +30,8 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVO
 		${PYTHON_PKGNAMEPREFIX}regex>=0:textproc/py-regex@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5-parser>=0.4.3:www/py-html5-parser@${PY_FLAVOR} \
 		${PY_PILLOW} \
-		pyqt-bundle:devel/py-qtbuilder@${PY_FLAVOR}
+		pyqt-bundle:devel/py-qtbuilder@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}zeroconf>0:net/py-zeroconf
 RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}css-parser>=1.0.4:www/py-css-parser@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dnspython>=0:dns/py-dnspython@${PY_FLAVOR} \
@@ -49,7 +50,8 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		${PYTHON_PKGNAMEPREFIX}chardet>=0:textproc/py-chardet@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}html5-parser>=0.4.3:www/py-html5-parser@${PY_FLAVOR} \
 		${PY_PILLOW} \
-		pdftohtml:graphics/poppler-utils
+		pdftohtml:graphics/poppler-utils \
+		${PYTHON_PKGNAMEPREFIX}zeroconf>0:net/py-zeroconf
 
 USES=		desktop-file-utils gettext-runtime gl gnome localbase:ldflags \
 		pkgconfig pyqt:5 python:3.5+ qt:5 shared-mime-info shebangfix \
@@ -110,6 +112,6 @@ do-install:
 	@${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall \
 		${STAGEDIR}${PREFIX}/share/applications/defaults.list
 	@${RMDIR} ${STAGEDIR}${PREFIX}/share/desktop-directories
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/calibre/calibre/plugins/3/*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/calibre/calibre/plugins/*
 
 .include <bsd.port.mk>
