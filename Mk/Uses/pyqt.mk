@@ -61,6 +61,7 @@ MASTER_SITES_SIP=	https://pypi.python.org/packages/source/s/sip/
 MASTER_SITES_PYQT5=	https://pypi.python.org/packages/source/P/PyQt5/
 MASTER_SITES_PYQTSIP=	https://pypi.python.org/packages/source/P/PyQt5-sip/
 MASTER_SITES_PYQTCHART=	https://pypi.python.org/packages/source/P/PyQtChart/
+MASTER_SITES_PYQTBUILDER=	https://pypi.io/packages/source/P/PyQt-builder/
 #https://www.riverbankcomputing.com/static/Downloads/QScintilla/2.11.4/QScintilla-2.11.4.tar.gz
 MASTER_SITES_QSCI2=	RIVERBANK/QScintilla/${PORTVERSION} \
 			SF/pyqt/QScintilla2/QScintilla-${PORTVERSION} \
@@ -70,11 +71,13 @@ SIP_VERSION=		5.3.0
 QSCI2_VERSION=		2.11.5
 PYQT5_VERSION=		5.15.1
 PYQTSIP_VERSION=	12.8.0
+PYQTBUILDER_VERSION=	1.4.0
 
 SIP_DISTNAME=		sip-${SIP_VERSION}
 PYQT5_DISTNAME=		PyQt5-${PYQT5_VERSION}
 PYQTSIP_DISTNAME=	PyQt5_sip-${PYQTSIP_VERSION}
 PYQTCHART_DISTNAME=	PyQtChart-${PYQT_VERSION}
+PYQTBUILDER_DISTNAME=	PyQt-builder-${PYQTBUILDER_VERSION}
 PYQT5_DISTINFO_FILE=	${.CURDIR:H:H}/devel/${PYQT_RELNAME}/distinfo
 QSCI2_DISTNAME=		QScintilla-${QSCI2_VERSION}
 PYQT5_LICENSE=		GPLv3
@@ -111,6 +114,7 @@ _USE_PYQT_ALL=		${_USE_PYQT_COMMS} \
 			${_USE_PYQT_X11-TOOLKITS}
 _USE_SIP_ALL=		sip pysip
 _USE_QSCINTILLA=	qscintilla2
+_USE_PYQTBUILDER=	qtbuilder
 
 # Unversioned variables for the rest of the file
 PYQT_VERSION=		${PYQT${_PYQT_VERSION}_VERSION}
@@ -125,6 +129,7 @@ PYQT_LICENSE=		${PYQT${_PYQT_VERSION}_LICENSE}
 py-sip_PATH=			${PYTHON_PKGNAMEPREFIX}sip>=${SIP_VERSION}
 py-pysip_PATH=			${PYQT_PY_RELNAME}-sip>=${PYQTSIP_VERSION}
 py-qscintilla2_PATH=		${PYQT_PY_RELNAME}-qscintilla2>=${QSCI2_VERSION}
+py-qtbuilder_PATH=		${PYTHON_PKGNAMEPREFIX}qtbuilder>=${PYQTBUILDER_VERSION}
 
 .  for _component in ${_USE_PYQT_ALL}
 py-${_component}_PATH?=${PYQT_PY_RELNAME}-${_component}>=${PYQT_VERSION}
@@ -132,6 +137,7 @@ py-${_component}_PATH?=${PYQT_PY_RELNAME}-${_component}>=${PYQT_VERSION}
 
 # PORT
 py-sip_PORT=			devel/py-sip
+py-qtbuilder_PORT=		devel/py-qtbuilder
 py-pysip_PORT=			devel/${PYQT_RELNAME}-sip
 py-qscintilla2_PORT=		devel/${PYQT_RELNAME}-qscintilla2
 
@@ -256,7 +262,8 @@ do-configure:
 # Set build, run and test depends -- we need to prefix them internally with "py-"
 # else we conflict with the ones defined in bsd.qt.mk with the same name
 _USE_PYQT_ALL+=				${_USE_SIP_ALL} \
-					${_USE_QSCINTILLA}
+					${_USE_QSCINTILLA} \
+					${_USE_PYQTBUILDER}
 .  for comp in ${_USE_PYQT_ALL:O:u}
 _USE_PYQT_ALL_SUFFIXED+=		py-${comp} py-${comp}_build py-${comp}_run py-${comp}_test
 py-${comp}_BUILD_DEPENDS?=		${py-${comp}_PATH}:${py-${comp}_PORT}@${PY_FLAVOR}
