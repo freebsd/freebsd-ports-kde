@@ -63,10 +63,8 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 # Set standard bsd.port.mk variables -- for Qt5 just set up master sites and the shared distinfo file.
 # For Qt6 for the moment use github, as there are no proper snapshots releases provided by upstream.
 .  if ${_QT_VER:M6}
-USE_GITHUB=		yes
-GH_ACCOUNT=		qt
-GH_PROJECT=		qt${_QT_DIST}
-GH_TAGNAME=		${_QT6_DIST_${_QT_DIST}_TAGNAME}
+MASTER_SITES=		${MASTER_SITE_QT}
+#DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
 .  else
 MASTER_SITES=		${MASTER_SITE_QT}
 DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
@@ -86,6 +84,10 @@ DESTDIRNAME=		INSTALL_ROOT
 DESTDIRNAME=		DESTDIR
 .endif
 
+.  if ${_QT_VER:M6}
+DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+MASTER_SITE_SUBDIR?=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+.  endif
 .  if ${_QT_VER:M5}
 MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # www/qt5-webengine hackery: The tarballs of 5.9.5 had a different naming scheme.
@@ -94,8 +96,8 @@ DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-opensource-src-${DISTVERSION},}
 .    else
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
 .    endif
-DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 .  endif
+DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 
 # Qt (at least when used with qmake) has a tendency to overlink: some libraries
@@ -118,12 +120,12 @@ _QT_DIST=		${_QT5_DISTS}
 .  endif
 
 
-# Qt5's tarballs are xz compressed.
-.  if ${_QT_VER:M5}
-.    if empty(USES:Mtar)
+# Qt's tarballs are xz compressed.
+. if empty(USES:Mtar)
 EXTRACT_SUFX?=		.tar.xz
-.    endif
+.  endif
 
+.  if ${_QT_VER:M5}
 .    if ${_QT_DIST} == "base" && ${PORTNAME} != "qmake"
 # Qt configure requires pkg-config to detect dependencies.
 .include "${USESDIR}/pkgconfig.mk"
