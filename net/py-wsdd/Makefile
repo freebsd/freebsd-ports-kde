@@ -2,7 +2,8 @@
 
 PORTNAME=	wsdd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6
+DISTVERSION=	0.6.1
+PORTREVISION=	2
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -19,9 +20,15 @@ SHEBANG_FILES=	src/${PORTNAME}.py
 NO_ARCH=	yes
 NO_BUILD=	yes
 
+USERS=		_wsdd
+GROUPS=		_wsdd
+
 PLIST_FILES=	bin/${PORTNAME} \
 		etc/rc.d/${PORTNAME} \
 		man/man1/${PORTNAME}.1.gz
+
+post-patch:
+	${REINPLACE_CMD} 's|PYTHON|${PYTHON_CMD}|' ${WRKSRC}/etc/rc.d/${PORTNAME}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/${PORTNAME}.py \

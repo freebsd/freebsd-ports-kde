@@ -3,6 +3,7 @@
 PORTNAME=	cufflinks
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.2.1-89
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-gdc3b0cb
 CATEGORIES=	biology
 
@@ -18,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
 		libhts.so:biology/htslib
 
-USES=		autoreconf eigen:3 gmake python shebangfix
+USES=		autoreconf compiler:c++11-lang eigen:3 gmake python shebangfix
 SHEBANG_FILES=	src/cuffmerge
 GNU_CONFIGURE=	yes
 USE_GITHUB=	yes

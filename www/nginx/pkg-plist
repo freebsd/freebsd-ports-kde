@@ -16,7 +16,8 @@
 %%DSO%%%%CT%%libexec/nginx/ngx_ssl_ct_module.so
 %%DSO%%%%CT%%libexec/nginx/ngx_http_ssl_ct_module.so
 %%DSO%%%%ECHO%%libexec/nginx/ngx_http_echo_module.so
-%%DSO%%%%DYNAMIC_UPSTREAM%%libexec/nginx/ngx_dynamic_upstream_module.so
+%%DSO%%%%DYNAMIC_HC%%libexec/nginx/ngx_http_dynamic_healthcheck_module.so
+%%DSO%%%%DYNAMIC_UPSTREAM%%libexec/nginx/ngx_http_dynamic_upstream_module.so
 %%DSO%%%%DEVEL_KIT%%libexec/nginx/ndk_http_module.so
 %%DSO%%%%DRIZZLE%%libexec/nginx/ngx_http_drizzle_module.so
 %%DSO%%%%ENCRYPTSESSION%%libexec/nginx/ngx_http_encrypted_session_module.so
@@ -51,7 +52,6 @@
 %%DSO%%%%HTTP_TARANTOOL%%libexec/nginx/ngx_http_tnt_module.so
 %%DSO%%%%HTTP_UPLOAD%%libexec/nginx/ngx_http_upload_module.so
 %%DSO%%%%HTTP_UPLOAD_PROGRESS%%libexec/nginx/ngx_http_uploadprogress_module.so
-%%DSO%%%%HTTP_UPSTREAM_CHECK%%libexec/nginx/ngx_http_upstream_check_module.so
 %%DSO%%%%HTTP_UPSTREAM_FAIR%%libexec/nginx/ngx_http_upstream_fair_module.so
 %%DSO%%%%HTTP_UPSTREAM_STICKY%%libexec/nginx/ngx_http_sticky_module.so
 %%DSO%%%%HTTP_VIDEO_THUMBEXTRACTOR%%libexec/nginx/ngx_http_video_thumbextractor_module.so
@@ -67,6 +67,7 @@
 %%DSO%%%%NAXSI%%libexec/nginx/ngx_http_naxsi_module.so
 %%DSO%%%%HTTP%%%%NJS%%libexec/nginx/ngx_http_js_module.so
 %%DSO%%%%STREAM%%%%NJS%%libexec/nginx/ngx_stream_js_module.so
+%%DSO%%%%OPENTRACING%%libexec/nginx/ngx_http_opentracing_module.so
 %%DSO%%%%PASSENGER%%libexec/nginx/ngx_http_passenger_module.so
 %%DSO%%%%POSTGRES%%libexec/nginx/ngx_postgres_module.so
 %%DSO%%%%RDS_CSV%%libexec/nginx/ngx_http_rds_csv_filter_module.so

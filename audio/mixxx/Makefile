@@ -4,6 +4,7 @@
 PORTNAME=	mixxx
 DISTVERSIONPREFIX=	release-
 DISTVERSION=	2.2.4
+PORTREVISION=	2
 CATEGORIES=	audio
 
 MAINTAINER=	acm@FreeBSD.org
@@ -11,6 +12,8 @@ COMMENT=	DJ mixing application
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		ERROR:root:Build had unmet dependencies. Exiting.
 
 BUILD_DEPENDS=	lv2>=1.14.0:audio/lv2
 LIB_DEPENDS=	libchromaprint.so:audio/chromaprint \

@@ -2,16 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	emacs
-DISTVERSION=	28.0.50.20200701
+DISTVERSION=	28.0.50.20201014
 PORTEPOCH=	2
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	emacs@FreeBSD.org
-COMMENT=	GNU editing macros
-.if ${FLAVOR:U} == nox
-COMMENT+=	(No X flavor)
-.endif
+COMMENT=	GNU editing macros ${COMMENT_${FLAVOR}}
+COMMENT_nox=	(No X flavor)
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -28,7 +26,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	e98ddd6
+GH_TAGNAME=	051d31c
 
 .if ${FLAVOR:U} != nox
 USES+=		desktop-file-utils gnome xorg
@@ -38,7 +36,9 @@ USE_XORG=	ice sm x11 xcb xext xfixes xinerama xmu xrandr xrender xt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
-			--localstatedir=/var
+			--localstatedir=/var \
+			--without-libsystemd \
+			--without-selinux
 .if ${FLAVOR:U} == nox
 CONFIGURE_ARGS+=	--with-sound=no \
 			--with-x-toolkit=no \
@@ -195,7 +195,8 @@ XFT_LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 XFT_USE=			XORG=xft,xrender
 XFT_CONFIGURE_WITH=		xft
 XIM_CONFIGURE_WITH=		xim
-XML_USES=			gnome # portlint complains, but use for nox
+# keep XML_USES=gnome, because nox flavor does not have USES=gnome
+XML_USES=			gnome
 XML_USE=			GNOME=libxml2
 XML_CONFIGURE_WITH=		xml2
 XPM_USE=			XORG=xpm

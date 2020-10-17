@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	zeek
-PORTVERSION=	3.0.7
+PORTVERSION=	3.0.11
 CATEGORIES=	security
 MASTER_SITES=	https://old.zeek.org/downloads/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -45,7 +45,7 @@ CMAKE_ARGS+=	-GNinja \
 
 ZEEKUSER?=	zeek
 ZEEKGROUP?=	zeek
-PLIST_SUB+=	ARCH=${ARCH} \
+PLIST_SUB+=	ARCH=${ARCH:S/aarch64/arm64/} \
 		ZEEKUSER=${ZEEKUSER} \
 		ZEEKGROUP=${ZEEKGROUP} \
 		LCASE_OPSYS=${OPSYS:tl}

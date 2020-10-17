@@ -3,7 +3,6 @@
 
 PORTNAME=	certbot
 PORTVERSION=	${ACME_VERSION}
-PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
@@ -29,12 +28,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}acme>=${ACME_VERSION},1:security/py-acme@${P
 		${PYTHON_PKGNAMEPREFIX}zope.component>0:devel/py-zope.component@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}zope.interface>0:devel/py-zope.interface@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>=0:devel/py-pytest@${PY_FLAVOR}
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
-SUB_FILES=	500.certbot
+SUB_FILES=	500.certbot pkg-message
 PLIST_FILES=	etc/periodic/weekly/500.certbot-${PYTHON_VER}
 SUB_LIST=	PYTHON_VER=${PYTHON_VER}
 
@@ -71,7 +71,7 @@ post-install-MANPAGES-on:
 		${STAGEDIR}${PREFIX}/share/man/man7
 
 do-test:
-	@cd ${WRKSRC} && ${PYTHON_CMD} ${PYDISTUTILS_SETUP} test
+	@cd ${WRKSRC} && ${PYTHON_CMD} -m pytest
 
 .include "${.CURDIR}/../py-acme/version.mk"
 .include <bsd.port.mk>

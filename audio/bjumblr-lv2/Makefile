@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	bjumblr
-DISTVERSION=	1.2.2
+DISTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	audio
 PKGNAMESUFFIX=	-lv2
 
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libsndfile.so:audio/libsndfile
 
-USES=		gmake gnome pkgconfig xorg
+USES=		compiler:c++11-lang gmake gnome pkgconfig xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	sjaehn
 GH_PROJECT=	BJumblr
@@ -24,13 +25,6 @@ USE_GNOME=	cairo
 USE_XORG=	x11
 
 MAKEFILE=	makefile
-
-PLIST_FILES=	lib/lv2/BJumblr.lv2/BJumblr.so \
-		lib/lv2/BJumblr.lv2/BJumblr.ttl \
-		lib/lv2/BJumblr.lv2/BJumblr_GUI.so \
-		lib/lv2/BJumblr.lv2/inc/surface.png \
-		lib/lv2/BJumblr.lv2/manifest.ttl \
-		lib/lv2/BJumblr.lv2/surface.png
 
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/lib/lv2/BJumblr.lv2/LICENSE

@@ -3,6 +3,7 @@
 
 PORTNAME=	audacity
 PORTVERSION=	2.4.2
+PORTREVISION=	2
 DISTVERSIONPREFIX=	Audacity-
 CATEGORIES=	audio
 
@@ -125,6 +126,14 @@ VORBIS_LIB_DEPENDS=	libogg.so:audio/libogg \
 			libvorbis.so:audio/libvorbis
 
 VST_CMAKE_BOOL=		audacity_use_vst
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} != amd64 && ${ARCH} != i386
+CMAKE_ARGS+=	-DHAVE_MMX:BOOL=OFF \
+		-DHAVE_SSE:BOOL=OFF \
+		-DHAVE_SSE2:BOOL=OFF
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,Python2,Python${PYTHON_MAJOR_VER}, ; \

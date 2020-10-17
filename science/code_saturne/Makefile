@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	code_saturne
-PORTVERSION=	6.1.1
+PORTVERSION=	6.1.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	science parallel
 
@@ -25,12 +26,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}
 USE_GITHUB=	yes
 GH_ACCOUNT=	code-saturne
 
-USES=		autoreconf bison fortran gettext gnome gmake iconv libtool	\
-		pyqt:5 python:3.6+ shebangfix
+USES=		autoreconf bison compiler:c11 fortran gettext gnome gmake \
+		iconv libtool pyqt:5 python:3.6+ shebangfix
 
 USE_GNOME=	libxml2
 USE_PYQT=	core gui sip widgets xml_build
 SHEBANG_FILES=	install_saturne.py tests/unittests.py bin/*.py build-aux/*.py
+CFLAGS+=	-D__XSI_VISIBLE
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-salome --without-salome-yacs --without-salome-kernel	\

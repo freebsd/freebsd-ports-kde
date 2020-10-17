@@ -2,13 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	mahotas
-PORTVERSION=	1.4.5
-PORTREVISION=	1
+PORTVERSION=	1.4.11
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	sawp@sawp.com.br
+MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Computer vision and image processing library for Python
 
 BUILD_DEPENDS=	${PYNUMPY}

@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	saga
-PORTVERSION=	7.6.3
-PORTREVISION=	1
+PORTVERSION=	7.8.0
 CATEGORIES=	math
 MASTER_SITES=	SF/saga-gis/SAGA%20-%20${PORTVERSION:C/\.[[:digit:]]\.[[:digit:]]*$//}/SAGA%20-%20${PORTVERSION}
 
-MAINTAINER=	rhurlin@gwdg.de
+MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	System for Automated Geoscientific Analyses
 
 LICENSE=	GPLv2 LGPL21
@@ -90,8 +89,6 @@ post-extract:
 		${WRKSRC}/src/tools/pointcloud/pointcloud_viewer/Makefile.am \
 		${WRKSRC}/src/tools/statistics/statistics_kriging/Makefile.am \
 		${WRKSRC}/src/tools/tin/tin_viewer/Makefile.am
-	@${REINPLACE_CMD} -e 's|/usr/include/opencv|${LOCALBASE}/include/opencv ${LOCALBASE}/include|g' \
-		${WRKSRC}/src/tools/imagery/imagery_opencv/Makefile.am
 
 post-patch:
 .if ${ARCH} == "powerpc"
@@ -103,8 +100,6 @@ post-patch:
 
 post-patch-OPENMP-on:
 	@${REINPLACE_CMD} -e 's|-lgomp|-lomp|' \
-		${WRKSRC}/configure.ac \
-		${WRKSRC}/configure \
 		${WRKSRC}/src/accessories/templates/template4saga-tools/my_tool_library/Makefile
 
 post-configure:
@@ -119,7 +114,6 @@ post-install:
 # toolchains dir was moved in r2805 (and followups r2810,r2811,r2820)
 	(cd ${WRKSRC}/src/accessories && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR})
 	${RM} -R ${STAGEDIR}${DATADIR}/CMakeLists.txt
-	${RM} -R ${STAGEDIR}${DATADIR}/accessories/toolchains
 	${RM} -R ${STAGEDIR}${DATADIR}/templates/template4saga-tools/my_tool_library/Makefile.bak
 	${INSTALL_DATA} ${WRKSRC}/src/saga_core/saga_gui/res/saga.desktop \
 		${STAGEDIR}${PREFIX}/share/applications/

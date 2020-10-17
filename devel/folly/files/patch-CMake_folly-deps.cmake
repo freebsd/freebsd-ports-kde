@@ -1,11 +1,11 @@
---- CMake/folly-deps.cmake.orig	2020-05-29 02:22:17 UTC
+--- CMake/folly-deps.cmake.orig	2020-10-10 00:44:38 UTC
 +++ CMake/folly-deps.cmake
-@@ -155,7 +155,7 @@ endif()
- find_package(Backtrace)
+@@ -169,7 +169,7 @@ find_package(Backtrace)
  set(FOLLY_HAVE_BACKTRACE ${Backtrace_FOUND})
- if (FOLLY_HAVE_ELF_H AND FOLLY_HAVE_BACKTRACE AND LIBDWARF_FOUND)
+ set(FOLLY_HAVE_DWARF ${LIBDWARF_FOUND})
+ if (NOT WIN32)
 -  set(FOLLY_USE_SYMBOLIZER ON)
 +  set(FOLLY_USE_SYMBOLIZER ${FREEBSD_FOLLY_USE_SYMBOLIZER})
  endif()
  message(STATUS "Setting FOLLY_USE_SYMBOLIZER: ${FOLLY_USE_SYMBOLIZER}")
- 
+ message(STATUS "Setting FOLLY_HAVE_ELF: ${FOLLY_HAVE_ELF}")

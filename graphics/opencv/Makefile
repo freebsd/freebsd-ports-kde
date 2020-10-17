@@ -3,10 +3,10 @@
 
 PORTNAME=	opencv
 PORTVERSION=	3.4.1
-PORTREVISION=	33
+PORTREVISION=	36
 CATEGORIES=	graphics
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	tcberner@FreeBSD.org
 COMMENT=	Open Source Computer Vision library
 
 LICENSE=	BSD3CLAUSE

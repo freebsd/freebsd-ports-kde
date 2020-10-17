@@ -1,4 +1,4 @@
---- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c.orig	2019-10-10 18:06:51 UTC
+--- src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c.orig	2020-07-09 16:50:11 UTC
 +++ src/VBox/Additions/freebsd/vboxvfs/vboxvfs_vnops.c
 @@ -1,10 +1,6 @@
 -/* $Id: vboxvfs_vnops.c $ */
@@ -12,7 +12,7 @@
   *
   * This file is part of VirtualBox Open Source Edition (OSE), as
   * available from http://www.virtualbox.org. This file is free software;
-@@ -14,228 +10,1338 @@
+@@ -14,228 +10,1347 @@
   * VirtualBox OSE distribution. VirtualBox OSE is distributed in the
   * hope that it will be useful, but WITHOUT ANY WARRANTY of any kind.
   */
@@ -272,7 +272,11 @@
 +			goto loop1;
 +		}
 +		VBOXFS_NODE_UNLOCK(node);
++#if __FreeBSD_version < 1300109
 +		error = vget(vp, lkflag | LK_INTERLOCK, curthread);
++#else
++		error = vget(vp, lkflag | LK_INTERLOCK);
++#endif
 +		if (error == ENOENT)
 +			goto loop;
 +		if (error != 0) {
@@ -502,8 +506,13 @@
 +		error = vsfnode_update_stat_cache(node);
 +	m = (error == 0) ? node->sf_stat.sf_mode : 0;
 +
++#if __FreeBSD_version < 1300105
 +	return (vaccess(vp->v_type, m, node->vboxfsmp->sf_uid,
 +	    node->vboxfsmp->sf_gid, accmode, ap->a_cred, NULL));
++#else
++	return (vaccess(vp->v_type, m, node->vboxfsmp->sf_uid,
++	    node->vboxfsmp->sf_gid, accmode, ap->a_cred));
++#endif
  }
  
 -static int vboxvfs_link(struct vop_link_args *ap)

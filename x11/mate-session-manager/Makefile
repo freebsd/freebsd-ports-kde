@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-session-manager
-PORTVERSION=	1.24.0
+PORTVERSION=	1.24.1
 CATEGORIES=	x11 mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -28,6 +28,7 @@ USE_XORG=	ice sm x11 xau xext xrandr xrender xtrans xtst
 USE_GNOME=	cairo gtk30 intlhack librsvg2 libxslt pango
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs \
+		--with-default-wm=mate-wm \
 		--enable-upower \
 		--with-systemd=no
 INSTALLS_ICONS=	yes

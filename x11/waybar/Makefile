@@ -1,24 +1,13 @@
 # $FreeBSD$
 
 PORTNAME=	waybar
-DISTVERSION=	0.9.2
-PORTREVISION=	3
+DISTVERSION=	0.9.4
+PORTREVISION=	1
 CATEGORIES=	x11
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-# https://github.com/Alexays/Waybar/pull/425
-PATCHFILES+=	903b8a9ceb9f.patch:-p1
-PATCHFILES+=	db1d7e4dc8e9.patch:-p1
-PATCHFILES+=	f9bcb7ecc4c4.patch:-p1
-PATCHFILES+=	e704078a2203.patch:-p1
-PATCHFILES+=	11ce516b45ba.patch:-p1
-PATCHFILES+=	d2ba72fb4ec7.patch:-p1
-PATCHFILES+=	3281701b98ae.patch:-p1
-PATCHFILES+=	ff6decbf39ca.patch:-p1
-PATCHFILES+=	f74df748da05.patch:-p1
-PATCHFILES+=	212195c96548.patch:-p1
-PATCHFILES+=	f73e03b563af.patch:-p1
-PATCHFILES+=	83f3cb042457.patch:-p1
+PATCHFILES+=	e4427cb017f2.patch:-p1 # https://github.com/Alexays/Waybar/pull/849
+PATCHFILES+=	22e46ea6cc64.patch:-p1 # https://github.com/Alexays/Waybar/pull/849
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Highly customizable Wayland bar for Sway and wlroots-based compositors
@@ -50,8 +39,8 @@ SUB_FILES+=	date.pc
 post-patch:	apply-slist
 .endif
 
-OPTIONS_DEFINE=	DBUS GLS MANPAGES MPD PULSEAUDIO UDEV
-OPTIONS_DEFAULT=DBUS GLS MANPAGES MPD PULSEAUDIO UDEV
+OPTIONS_DEFINE=	DBUS GLS ICONSFONT MANPAGES MPD PULSEAUDIO SNDIO UDEV
+OPTIONS_DEFAULT=DBUS GLS ICONSFONT MANPAGES MPD PULSEAUDIO SNDIO UDEV
 
 DBUS_LIB_DEPENDS=	libdbusmenu-gtk3.so:devel/libdbusmenu
 DBUS_MESON_ENABLED=	dbusmenu-gtk
@@ -60,10 +49,14 @@ GLS_DESC=		Use gtk-layer-shell library for popups support
 GLS_LIB_DEPENDS=	libgtk-layer-shell.so:x11-toolkits/gtk-layer-shell
 GLS_MESON_ENABLED=	gtk-layer-shell
 
+ICONSFONT_DESC=		Install Font Awesome to properly render icons
+ICONSFONT_RUN_DEPENDS=	font-awesome>0:x11-fonts/font-awesome
+
 MANPAGES_BUILD_DEPENDS=	scdoc:textproc/scdoc
 MANPAGES_MESON_ENABLED=	man-pages
 MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-battery.5.gz \
+			man/man5/${PORTNAME}-bluetooth.5.gz \
 			man/man5/${PORTNAME}-clock.5.gz \
 			man/man5/${PORTNAME}-cpu.5.gz \
 			man/man5/${PORTNAME}-custom.5.gz \
@@ -73,13 +66,17 @@ MANPAGES_PLIST_FILES=	man/man5/${PORTNAME}-backlight.5.gz \
 			man/man5/${PORTNAME}-mpd.5.gz \
 			man/man5/${PORTNAME}-network.5.gz \
 			man/man5/${PORTNAME}-pulseaudio.5.gz \
+			man/man5/${PORTNAME}-river-tags.5.gz \
+			man/man5/${PORTNAME}-sndio.5.gz \
 			man/man5/${PORTNAME}-states.5.gz \
 			man/man5/${PORTNAME}-sway-mode.5.gz \
 			man/man5/${PORTNAME}-sway-window.5.gz \
 			man/man5/${PORTNAME}-sway-workspaces.5.gz \
 			man/man5/${PORTNAME}-temperature.5.gz \
 			man/man5/${PORTNAME}-tray.5.gz \
+			man/man5/${PORTNAME}-wlr-taskbar.5.gz \
 			man/man5/${PORTNAME}.5.gz \
+			${NULL}
 
 MPD_DESC=		Music Player Daemon support
 MPD_LIB_DEPENDS=	libmpdclient.so:audio/libmpdclient
@@ -87,6 +84,10 @@ MPD_MESON_ENABLED=	mpd
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_MESON_ENABLED=	pulseaudio
+
+SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
+SNDIO_USES=		localbase:ldflags
+SNDIO_MESON_ENABLED=	sndio
 
 UDEV_DESC=		Monitor backlight level via libudev
 UDEV_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \

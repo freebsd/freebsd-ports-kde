@@ -1,3 +1,3 @@
-TIMESTAMP = 1591712789
-SHA256 (KDE/applications/20.04.2/libgravatar-20.04.2.tar.xz) = 58c87e5a158604f0c37c31f328ebb0fd1e83995ab888ca55483ced0a0d42737d
-SIZE (KDE/applications/20.04.2/libgravatar-20.04.2.tar.xz) = 31452
+TIMESTAMP = 1602011233
+SHA256 (KDE/release-service/20.08.2/libgravatar-20.08.2.tar.xz) = 4c0a2eb073ef42a26813b93bd76aaa9e26a040a966329e6e3cf371d7de1e55f7
+SIZE (KDE/release-service/20.08.2/libgravatar-20.08.2.tar.xz) = 33556

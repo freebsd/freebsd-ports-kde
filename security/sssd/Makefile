@@ -3,7 +3,7 @@
 
 PORTNAME=	sssd
 PORTVERSION=	1.11.7
-PORTREVISION=	20
+PORTREVISION=	22
 CATEGORIES=	security
 MASTER_SITES=	https://releases.pagure.org/SSSD/${PORTNAME}/
 
@@ -72,6 +72,12 @@ PORTDATA=	*
 
 OPTIONS_DEFINE=	DOCS SMB
 OPTIONS_SUB=	yes
+
+# If the port fails to package with SMB=on due to some missing files from
+# pkg-plist, check if there was a version bump of security/krb5 and
+# update files/patch-src__external__krb5.m4 accordingly.
+#
+# See: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=244778
 
 SMB_DESC=		Install IPA and AD providers (requires Samba4)
 SMB_USES=		samba:lib # libndr-krb5pac libndr-nbt libndr libsamba-util

@@ -1,6 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	fetchmailconf
+PORTREVISION=	0
 DISTNAME=	fetchmail-${DISTVERSIONPREFIX}${DISTVERSION}${DISTVERSIONSUFFIX}
 # NOTE: MASTER_SITES in ../fetchmail must NOT use the $PORTNAME variable,
 # else _this_ port (fetchmailconf) becomes unfetchable
@@ -18,7 +19,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>=0:x11-toolkits/py-tkinter@${PY_FL
 		fetchmail>=${PORTVERSION}:mail/fetchmail
 RUN_DEPENDS+=	${BUILD_DEPENDS}
 
-USES=		python shebangfix tar:lz
+USES=		python shebangfix tar:xz
 USE_PYTHON=	py3kplist
 
 FILESDIR=	${.CURDIR}/files

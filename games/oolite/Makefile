@@ -1,9 +1,8 @@
-# Created by: Andriy Gapon <avg@icyb.net.ua>
 # $FreeBSD$
 
 PORTNAME=		oolite
 PORTVERSION=		1.88
-PORTREVISION=	1
+PORTREVISION=		2
 CATEGORIES=		games gnustep
 MASTER_SITES=		https://github.com/OoliteProject/oolite/releases/download/1.88/
 DISTNAME=		${PORTNAME}-source-${PORTVERSION}

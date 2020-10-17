@@ -25,7 +25,14 @@ RUN_DEPENDS=	${PYNUMPY} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=0.19.1:science/py-scikit-learn@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
 
-USES=		python:3.5+
+USES=		python:3.7+
 USE_PYTHON=	autoplist distutils
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == i386
+CFLAGS+=	-msse2 # workaround for https://github.com/biocore/scikit-bio/issues/1727
+CXXFLAGS+=	-msse2
+.endif
+
+.include <bsd.port.post.mk>

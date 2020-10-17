@@ -1,23 +1,23 @@
 # $FreeBSD$
 
 PORTNAME=	sonarqube
-DISTVERSION=	8.3.0.34182
-PORTREVISION=	1
+DISTVERSION=	8.5.0.37579
+PORTREVISION=	0
 CATEGORIES=	devel security www java
 MASTER_SITES=	https://binaries.sonarsource.com/Distribution/sonarqube/:m_core \
 		https://binaries.sonarsource.com/Distribution/sonar-csharp-plugin/:m_csharp \
 		https://binaries.sonarsource.com/Distribution/sonar-java-plugin/:m_java \
 		https://binaries.sonarsource.com/Distribution/sonar-javascript-plugin/:m_javascript \
+		https://binaries.sonarsource.com/Distribution/sonar-php-plugin/:m_php \
 		https://binaries.sonarsource.com/Distribution/sonar-python-plugin/:m_python \
-		https://binaries.sonarsource.com/Distribution/sonar-scm-git-plugin/:m_scmgit \
 		https://binaries.sonarsource.com/Distribution/sonar-vbnet-plugin/:m_vbnet
 PKGNAMESUFFIX=	-community
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:m_core \
 		sonar-csharp-plugin-${SONARCSHARP_VER}.jar:m_csharp \
 		sonar-java-plugin-${SONARJAVA_VER}.jar:m_java \
 		sonar-javascript-plugin-${SONARJAVASCRIPT_VER}.jar:m_javascript \
+		sonar-php-plugin-${SONARPHP_VER}.jar:m_php \
 		sonar-python-plugin-${SONARPYTHON_VER}.jar:m_python \
-		sonar-scm-git-plugin-${SONARSCMGIT_VER}.jar:m_scmgit \
 		sonar-vbnet-plugin-${SONARVBNET_VER}.jar:m_vbnet
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -51,12 +51,12 @@ DBBASE_DIR=	/var/db/${PORTNAME}
 DATA_DIR=	${DBBASE_DIR}/data
 TEMP_DIR=	${DBBASE_DIR}/temp
 
-SONARCSHARP_VER=	8.6.1.17183
-SONARJAVA_VER=		6.3.0.21585
-SONARJAVASCRIPT_VER=	6.2.1.12157
-SONARPYTHON_VER=	2.9.0.6410
-SONARSCMGIT_VER=	1.11.1.2008
-SONARVBNET_VER=		8.6.1.17183
+SONARCSHARP_VER=	8.14.0.22654
+SONARJAVA_VER=		6.9.0.23563
+SONARJAVASCRIPT_VER=	6.5.0.13383
+SONARPHP_VER=		3.10.0.6474
+SONARPYTHON_VER=	3.1.0.7619
+SONARVBNET_VER=		8.14.0.22654
 
 USERS=		sonarqube
 GROUPS=		sonarqube
@@ -87,8 +87,10 @@ PLIST_SUB=	APP_NAME=${APP_NAME} \
 		SONARCSHARP_VER=${SONARCSHARP_VER} \
 		SONARJAVA_VER=${SONARJAVA_VER} \
 		SONARJAVASCRIPT_VER=${SONARJAVASCRIPT_VER} \
+		SONARPHP_VER=${SONARPHP_VER} \
 		SONARPYTHON_VER=${SONARPYTHON_VER} \
 		SONARSCMGIT_VER=${SONARSCMGIT_VER} \
+		SONARSCMSVN_VER=${SONARSCMSVN_VER} \
 		SONARVBNET_VER=${SONARVBNET_VER}
 
 post-extract:
@@ -97,18 +99,18 @@ post-extract:
 .for plugin in sonar-csharp-plugin \
     sonar-java-plugin \
     sonar-javascript-plugin \
+    sonar-php-plugin \
     sonar-python-plugin \
-    sonar-scm-git-plugin \
     sonar-vbnet-plugin
-	${RM} ${WRKSRC}/extensions/plugins/${plugin}-*.jar
+	${RM} ${WRKSRC}/lib/extensions/${plugin}-*.jar
 .endfor
 .for plugin in sonar-csharp-plugin-${SONARCSHARP_VER}.jar \
     sonar-java-plugin-${SONARJAVA_VER}.jar \
     sonar-javascript-plugin-${SONARJAVASCRIPT_VER}.jar \
+    sonar-php-plugin-${SONARPHP_VER}.jar \
     sonar-python-plugin-${SONARPYTHON_VER}.jar \
-    sonar-scm-git-plugin-${SONARSCMGIT_VER}.jar \
     sonar-vbnet-plugin-${SONARVBNET_VER}.jar
-	${CP} ${DISTDIR}/${plugin} ${WRKSRC}/extensions/plugins/
+	${CP} ${DISTDIR}/${plugin} ${WRKSRC}/lib/extensions/
 .endfor
 
 post-patch:
@@ -133,6 +135,12 @@ gen-plist:
 	${FIND} ${STAGEDIR}${PREFIX}/${APP_DIR}/${dir} -type f |  \
 	    ${SED} -e "s:${STAGEDIR}${PREFIX}/::g ; \
 		s:${JAR_VERSION}:%%JAR_VERSION%%:g ; \
+		s:sonar-csharp-plugin-[0-9.]*.jar:sonar-csharp-plugin-%%SONARCSHARP_VER%%.jar:g ; \
+		s:sonar-java-plugin-[0-9.]*.jar:sonar-java-plugin-%%SONARJAVA_VER%%.jar:g ; \
+		s:sonar-javascript-plugin-[0-9.]*.jar:sonar-javascript-plugin-%%SONARJAVASCRIPT_VER%%.jar:g ; \
+		s:sonar-php-plugin-[0-9.]*.jar:sonar-php-plugin-%%SONARPHP_VER%%.jar:g ; \
+		s:sonar-python-plugin-[0-9.]*.jar:sonar-python-plugin-%%SONARPYTHON_VER%%.jar:g ; \
+		s:sonar-vbnet-plugin-[0-9.]*.jar:sonar-vbnet-plugin-%%SONARVBNET_VER%%.jar:g ; \
 		s:\(.*elasticsearch/bin.*\):@(,,755) \1:g" | \
 	    ${GREP} -v conf/sonar.properties.sample | ${SORT} >> ${PLIST}.new
 .endfor
@@ -144,13 +152,7 @@ gen-plist:
 	    ${SORT} >> ${PLIST}.new
 	${FIND} ${STAGEDIR}${PREFIX}/${APP_DIR}/${dir} -type f | \
 	    ${SED} -e "s:${STAGEDIR}${PREFIX}/::g ; \
-		s:${JAR_VERSION}:%%JAR_VERSION%%:g ; \
-		s:sonar-csharp-plugin-[0-9.]*.jar:sonar-csharp-plugin-%%SONARCSHARP_VER%%.jar:g ; \
-		s:sonar-java-plugin-[0-9.]*.jar:sonar-java-plugin-%%SONARJAVA_VER%%.jar:g ; \
-		s:sonar-javascript-plugin-[0-9.]*.jar:sonar-javascript-plugin-%%SONARJAVASCRIPT_VER%%.jar:g ; \
-		s:sonar-python-plugin-[0-9.]*.jar:sonar-python-plugin-%%SONARPYTHON_VER%%.jar:g ; \
-		s:sonar-scm-git-plugin-[0-9.]*.jar:sonar-scm-git-plugin-%%SONARSCMGIT_VER%%.jar:g ; \
-		s:sonar-vbnet-plugin-[0-9.]*.jar:sonar-vbnet-plugin-%%SONARVBNET_VER%%.jar:g" | \
+		s:${JAR_VERSION}:%%JAR_VERSION%%:g" | \
 	    ${SORT} >> ${PLIST}.new
 .endfor
 	${ECHO} '@dir(sonarqube,sonarqube,755) %%LOG_DIR%%' >> ${PLIST}.new

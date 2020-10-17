@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	racket
-PORTVERSION=	7.7
+PORTVERSION=	7.8
 CATEGORIES=	lang scheme
 MASTER_SITES=	http://mirror.racket-lang.org/installers/${PORTVERSION}/ \
 		http://www.cs.utah.edu/plt/installers/${PORTVERSION}/ \
@@ -19,8 +19,6 @@ COMMENT=	Interactive, integrated, graphical Scheme programming environment
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
-
-IGNORE_armv6=		fails to compile: ./lightning/lightning.h:81:2: error: GNU lightning does not support the current target
 
 LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libffi.so:devel/libffi \
@@ -40,13 +38,12 @@ REINPLACE_ARGS=	-i ""
 MAKE_JOBS_UNSAFE=	yes
 CONFLICTS=	racket-minimal-[0-9]*
 
-OPTIONS_DEFINE=		DOCS FUTURES
-OPTIONS_DEFAULT=	FUTURES
+OPTIONS_DEFINE=	DOCS
 
-OPTIONS_DEFINE_amd64=	JIT
-OPTIONS_DEFINE_i386=	JIT
-OPTIONS_DEFAULT_amd64=	JIT
-OPTIONS_DEFAULT_i386=	JIT
+OPTIONS_DEFINE_amd64=	FUTURES JIT
+OPTIONS_DEFINE_i386=	FUTURES JIT
+OPTIONS_DEFAULT_amd64=	FUTURES JIT
+OPTIONS_DEFAULT_i386=	FUTURES JIT
 
 FUTURES_DESC=	Enable futures
 JIT_DESC=	Enable JIT compiler
@@ -58,7 +55,7 @@ JIT_CONFIGURE_ENABLE=		jit
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJIT} && ${ARCH} == "amd64"
-CFLAGS+=	-msse -msse2 -mfpmath=sse
+CFLAGS+=	-mfpmath=sse -msse -msse2
 .endif
 
 post-install:

@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	xorg-server
-PORTVERSION?=	1.20.8
-PORTREVISION?=	2
+PORTVERSION?=	1.20.9
+PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	x11-servers
 MASTER_SITES=	XORG/individual/xserver
@@ -11,9 +11,6 @@ DISTNAME=	xorg-server-${PORTVERSION}
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT?=	X.Org X server and related programs
-
-PATCH_SITES=	https://gitlab.freedesktop.org/xorg/xserver/-/commit/
-PATCHFILES=	271934db9f3b1297754b29855646e0a4ee01db59.diff:-p1
 
 LICENSE=	MIT
 

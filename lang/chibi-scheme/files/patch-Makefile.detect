@@ -1,10 +1,10 @@
---- Makefile.detect.orig	2018-02-16 11:08:45 UTC
+--- Makefile.detect.orig	2020-10-16 13:28:43 UTC
 +++ Makefile.detect
-@@ -70,6 +70,7 @@ EXE =
- CLIBFLAGS = -fPIC
- CLINKFLAGS = -shared
- LIBDL = 
+@@ -9,6 +9,7 @@ PLATFORM=macosx
+ else
+ ifeq ($(shell uname),FreeBSD)
+ PLATFORM=bsd
 +LIBCHIBI_FLAGS = -Wl,-soname,libchibi-scheme$(SO).$(SOVERSION_MAJOR)
  else
- ifeq ($(PLATFORM),windows)
- SO  = .dll
+ ifeq ($(shell uname),NetBSD)
+ PLATFORM=bsd

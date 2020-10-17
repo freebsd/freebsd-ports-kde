@@ -110,6 +110,7 @@ share/locale/ca/LC_MESSAGES/purpose_youtube.mo
 share/locale/ca@valencia/LC_MESSAGES/libpurpose_quick.mo
 share/locale/ca@valencia/LC_MESSAGES/libpurpose_widgets.mo
 share/locale/ca@valencia/LC_MESSAGES/purpose-fileitemaction.mo
+share/locale/ca@valencia/LC_MESSAGES/purpose_bluetooth.mo
 share/locale/ca@valencia/LC_MESSAGES/purpose_email.mo
 share/locale/ca@valencia/LC_MESSAGES/purpose_imgur.mo
 share/locale/ca@valencia/LC_MESSAGES/purpose_kdeconnect.mo
@@ -609,3 +610,4 @@ share/locale/zh_TW/LC_MESSAGES/purpose_youtube.mo
 %%DATADIR%%/saveasplugin_config.qml
 %%DATADIR%%/youtubeplugin_config.qml
 share/qlogging-categories5/purpose.categories
+share/qlogging-categories5/purpose.renamecategories

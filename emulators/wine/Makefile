@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.0.1
+DISTVERSION=	5.0.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -43,7 +44,8 @@ CONFIGURE_ARGS+=--verbose \
 		--without-sdl \
 		--without-tiff \
 		--without-udev \
-		--without-unwind
+		--without-unwind \
+		--without-usb
 CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
@@ -141,10 +143,9 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
 PLIST_SUB+=		WINE32="@comment " WINE64=""
 
-# Wine assumes a WoW64 package is available, however WoW64 is not yet
-# available on FreeBSD. Also fix the desktop file.
+# Wine assumes a WoW64 package is available, which is not the case on
+# FreeBSD yet.
 post-patch:
-	${REINPLACE_CMD} 's|/wine|/wine64|g' ${WRKSRC}/tools/wineapploader.in
 	${REINPLACE_CMD} '/Exec/s|wine|wine64|g' ${WRKSRC}/loader/wine.desktop
 
 .else

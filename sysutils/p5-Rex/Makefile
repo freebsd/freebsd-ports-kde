@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	Rex
-PORTVERSION=	1.11.0
+PORTVERSION=	1.13.0
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:FERKI
@@ -13,7 +13,8 @@ COMMENT=	Friendly automation framework
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${RUN_DEPENDS}
+BUILD_DEPENDS=	p5-File-ShareDir-Install>=0.06:devel/p5-File-ShareDir-Install \
+		${RUN_DEPENDS}
 RUN_DEPENDS=	p5-AWS-Signature4>=0:devel/p5-AWS-Signature4 \
 		p5-Data-Validate-IP>=0:net-mgmt/p5-Data-Validate-IP \
 		p5-Devel-Caller>=0:devel/p5-Devel-Caller \
@@ -23,7 +24,7 @@ RUN_DEPENDS=	p5-AWS-Signature4>=0:devel/p5-AWS-Signature4 \
 		p5-IO-String>=0:devel/p5-IO-String \
 		p5-IO-Tty>=0:devel/p5-IO-Tty \
 		p5-JSON-MaybeXS>=0:converters/p5-JSON-MaybeXS \
-		p5-List-MoreUtils>=0:lang/p5-List-MoreUtils \
+		p5-List-MoreUtils>=0.416:lang/p5-List-MoreUtils \
 		p5-Net-OpenSSH>=0:net/p5-Net-OpenSSH \
 		p5-Net-SFTP-Foreign>=0:net/p5-Net-SFTP-Foreign \
 		p5-Parallel-ForkManager>=0:devel/p5-Parallel-ForkManager \
@@ -37,6 +38,7 @@ RUN_DEPENDS=	p5-AWS-Signature4>=0:devel/p5-AWS-Signature4 \
 		p5-libwww>=0:www/p5-libwww
 TEST_DEPENDS=	p5-String-Escape>=0:textproc/p5-String-Escape \
 		p5-Test-Deep>=0:devel/p5-Test-Deep \
+		p5-Test-Output>=0:devel/p5-Test-Output \
 		p5-Test-UseAllModules>=0.15:devel/p5-Test-UseAllModules
 
 USES=		perl5 shebangfix

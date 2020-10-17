@@ -17,11 +17,12 @@ TEST_DEPENDS=	${LOCALBASE}/share/fonts/freefont-ttf/FreeMono.ttf:x11-fonts/freef
 		zbarimg:graphics/zbar
 
 USES=		gmake
+USE_CSTD=	c99
 USE_GITHUB=	yes
 GH_ACCOUNT=	Y2Z
 GH_TAGNAME=	20713de
 
-MAKE_ARGS=	LIBS="-I${LOCALBASE}/include -L${LOCALBASE}/lib -lqrencode"
+MAKE_ARGS=	LIBS="-I${LOCALBASE}/include -L${LOCALBASE}/lib -lqrencode -lm"
 TEST_TARGET=	test
 
 PLIST_FILES=	bin/${PORTNAME}

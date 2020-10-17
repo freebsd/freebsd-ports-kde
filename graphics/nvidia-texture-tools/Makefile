@@ -3,7 +3,7 @@
 
 PORTNAME=	nvidia-texture-tools
 PORTVERSION=	2.0.8.1 # needed to not bump PORTEPOCH; remove on next update
-PORTREVISION=	16
+PORTREVISION=	18
 CATEGORIES=	graphics
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -13,7 +13,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/NVIDIA_Texture_Tools_LICENSE.txt
 
 # see src/nvcore/nvcore.h
-ONLY_FOR_ARCHS=		amd64 i386 powerpc powerpc64
+ONLY_FOR_ARCHS=		amd64 i386 powerpc powerpc64 powerpc64le
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libtiff.so:graphics/tiff \

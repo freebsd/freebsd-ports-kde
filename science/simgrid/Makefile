@@ -2,6 +2,7 @@
 
 PORTNAME=	SimGrid
 DISTVERSION=	3.25
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE-LGPL-2.1
 
 LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
 		libcgraph.so:graphics/graphviz \
-		libunwind-ptrace.so:devel/libunwind
+		${LIB_DEPENDS_${ARCH}}
+
+LIB_DEPENDS_aarch64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_amd64=	libunwind.so:devel/libunwind
+LIB_DEPENDS_i386=	libunwind.so:devel/libunwind
+LIB_DEPENDS_powerpc64=	libunwind.so:devel/libunwind
 
 USES=		cmake:noninja compiler:c++11-lang perl5 python:3.6+ shebangfix
 USE_GITLAB=	yes

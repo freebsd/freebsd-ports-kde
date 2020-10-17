@@ -3,7 +3,7 @@
 
 PORTNAME=	pHash
 PORTVERSION=	0.9.6
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://phash.org/releases/ \
 		http://www.cyberbotx.com/pHash/
@@ -13,7 +13,7 @@ COMMENT=	Open source perceptual hash library
 
 LICENSE=	GPLv3+
 
-USES=		gmake libtool pathfix
+USES=		compiler:c11 gmake libtool pathfix
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_LIBS="-lpthread"
 INSTALL_TARGET=	install-strip

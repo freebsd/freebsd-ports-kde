@@ -19,6 +19,7 @@ USES=		charsetfix compiler cpe gmake readline tar:bzip2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-camellia \
 		--enable-noexecstack
+CFLAGS+=	-fcommon
 
 INFO=		gnupg1
 DOCSDIR=	${PREFIX}/share/doc/gnupg1
@@ -58,7 +59,7 @@ CFLAGS+=	-fheinous-gnu-extensions
 .endif
 
 post-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in doc/DETAILS doc/FAQ doc/HACKING doc/OpenPGP \
 	ABOUT-NLS AUTHORS BUGS COPYING INSTALL NEWS PROJECTS \
 	README THANKS TODO VERSION

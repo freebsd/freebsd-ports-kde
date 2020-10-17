@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	libsndfile
-PORTVERSION=	1.0.28
-PORTREVISION=	2
+DISTVERSION=	1.0.30
 CATEGORIES=	audio
-MASTER_SITES=	http://www.mega-nerd.com/libsndfile/files/
+MASTER_SITES=	https://github.com/erikd/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Reading and writing files containing sampled sound (like WAV or AIFF)
@@ -13,37 +12,48 @@ COMMENT=	Reading and writing files containing sampled sound (like WAV or AIFF)
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe gmake libtool localbase pkgconfig
+USES=		cmake cpe dos2unix localbase pkgconfig python:build,test shebangfix \
+		tar:bz2
+SHEBANG_FILES=	programs/test-sndfile-metadata-set.py \
+		src/binheader_writef_check.py \
+		src/create_symbols_file.py
+
 CPE_VENDOR=	${CPE_PRODUCT}_project
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-gcc-pipe \
-		--disable-sqlite \
-		--disable-alsa \
-		--disable-octave \
-		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig
+
 USE_LDCONFIG=	yes
-TEST_TARGET=	check
-INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	CPU_CLIP EXTERNAL DOCS
+CMAKE_ARGS=	-DCMAKE_DISABLE_FIND_PACKAGE_ALSA:BOOL=True \
+		-DCMAKE_DISABLE_FIND_PACKAGE_Sndio:BOOL=True \
+		-DCMAKE_DISABLE_FIND_PACKAGE_Speex:BOOL=True \
+		-DCMAKE_DISABLE_FIND_PACKAGE_SQLite3:BOOL=True
+
+OPTIONS_DEFINE=	DOCS EXTERNAL MANPAGES STATIC TEST
+OPTIONS_SUB=	yes
 OPTIONS_DEFAULT=	EXTERNAL
-CPU_CLIP_DESC=	Allow machine-dependent clipping
-EXTERNAL_DESC=	Enable FLAC and Ogg Vorbis support
-
-CPU_CLIP_VARS=	MANUAL_PACKAGE_BUILD="WITH_CPU_CLIP may customize the package for the build machine"
-CPU_CLIP_CONFIGURE_OFF=	--disable-cpu-clip
+EXTERNAL_DESC=	Enable FLAC, Ogg Vorbis, Opus support
+TEST_DESC=	Build tests (forces static library only)
+TEST_IMPLIES=	STATIC
 
 EXTERNAL_LIB_DEPENDS=	libFLAC.so:audio/flac \
 			libogg.so:audio/libogg \
+			libopus.so:audio/opus \
 			libvorbis.so:audio/libvorbis
-EXTERNAL_CONFIGURE_OFF=	--disable-external-libs
 
-post-patch:
-	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/ doc / /g' ${WRKSRC}/Makefile.in
+MANPAGES_CMAKE_ON=	-DINSTALL_MANPAGES:BOOL=ON
+MANPAGES_CMAKE_OFF=	-DINSTALL_MANPAGES:BOOL=OFF
 
-post-install-DOCS-on:
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@${TAR} -C ${WRKSRC}/doc --exclude "*Makefile*" --exclude "*.in" \
-		-cf - . | ${TAR} -C ${STAGEDIR}${DOCSDIR} --unlink -xf -
+STATIC_CMAKE_OFF=	-DBUILD_SHARED_LIBS:BOOL=ON
+
+TEST_CMAKE_ON=	-DBUILD_TESTING:BOOL=ON
+TEST_CMAKE_OFF=	-DBUILD_TESTING:BOOL=OFF
+
+.include <bsd.port.options.mk>
+
+.if ! ${PORT_OPTIONS:MEXTERNAL}
+EXTRA_PATCHES=	${FILESDIR}/extrapatch-cmake_SndFileChecks.cmake-disableexternallibs
+.endif
+
+do-test:
+	(cd ${TEST_WRKSRC} && CTEST_OUTPUT_ON_FAILURE=1 ctest -V)
 
 .include <bsd.port.mk>

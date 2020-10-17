@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	grass
-PORTVERSION=	7.8.3
+PORTVERSION=	7.8.4
 CATEGORIES=	databases geography
 MASTER_SITES=	https://grass.osgeo.org/%SUBDIR%/ \
 		http://grass.cict.fr/%SUBDIR%/ \
@@ -65,6 +65,8 @@ CONFIGURE_ARGS=	--with-includes=${LOCALBASE}/include \
 		--enable-largefile \
 		--with-wxwidgets=${WX_CONFIG} \
 		--with-proj-share=${LOCALBASE}/share/proj \
+		--with-proj-includes=${LOCALBASE}/include \
+		--with-proj-libs=${LOCALBASE}/lib \
 		--with-geos=${LOCALBASE}/bin/geos-config \
 		--with-gdal=${LOCALBASE}/bin/gdal-config \
 		--with-pthread=yes \
@@ -135,8 +137,16 @@ ZSTD_LIB_DEPENDS=	libzstd.so:archivers/zstd
 PLIST_SUB+=	WOSBRK="@comment "
 .else
 PLIST_SUB+=	WOSBRK=""
-
 .endif
+
+.if ${ARCH} == "i386" && ${OSVERSION} < 1200000
+# clang 7.x and 8.x do not build properly on 11i386
+CPP=		clang-cpp${LLVM_DEFAULT}
+CC=		clang${LLVM_DEFAULT}
+CXX=		clang++${LLVM_DEFAULT}
+BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+.endif
+
 .if !defined (GRASS_INST_DIR)
 GRASS_INST_DIR=	${PORTNAME}${VER}
 .endif
@@ -144,10 +154,6 @@ GRASS_INST_DIR=	${PORTNAME}${VER}
 MANDIRS=	${PREFIX}/grass${VER}/docs/man/man1
 
 post-patch:
-#	${REINPLACE_CMD} -e \
-#		's|-lblas|${BLASLIB}|g ; \
-#		 s|-llapack|${LAPACKLIB}|g ; \
-#		 s|g2c|f2c|g' ${WRKSRC}/configure
 	${REINPLACE_CMD} -e \
 		's|make -C|$$(MAKE) -C| ; \
 		 /^BINDIR/s|=.*|=	$${DESTDIR}$${UNIX_BIN}| ; \

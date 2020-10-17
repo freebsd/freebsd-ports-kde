@@ -31,11 +31,11 @@
     SUBDIR += atompaw
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
+    SUBDIR += axom
     SUBDIR += bagel
     SUBDIR += bddsolve
     SUBDIR += berkeleygw
     SUBDIR += bodr
-    SUBDIR += brian
     SUBDIR += buddy
     SUBDIR += cdcl
     SUBDIR += cdf
@@ -53,6 +53,7 @@
     SUBDIR += clipper
     SUBDIR += code_saturne
     SUBDIR += colt
+    SUBDIR += conduit
     SUBDIR += coordgenlibs
     SUBDIR += cp2k
     SUBDIR += cp2k-data
@@ -79,7 +80,6 @@
     SUBDIR += fasthenry
     SUBDIR += fastjet
     SUBDIR += fisicalab
-    SUBDIR += fleur
     SUBDIR += fsom
     SUBDIR += fvcom
     SUBDIR += fvcom-mpi
@@ -139,7 +139,6 @@
     SUBDIR += libvdwxc
     SUBDIR += libxc
     SUBDIR += liggghts
-    SUBDIR += lm
     SUBDIR += luscus
     SUBDIR += madness
     SUBDIR += maeparser
@@ -211,7 +210,6 @@
     SUBDIR += packmol
     SUBDIR += pagmo2
     SUBDIR += paje
-    SUBDIR += paraview
     SUBDIR += pcmsolver
     SUBDIR += plumed
     SUBDIR += pnetcdf
@@ -223,7 +221,6 @@
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
     SUBDIR += py-PyFR
-    SUBDIR += py-PyQuante
     SUBDIR += py-SimpleSpectral
     SUBDIR += py-abipy
     SUBDIR += py-asdf
@@ -239,6 +236,7 @@
     SUBDIR += py-geolinks
     SUBDIR += py-geomet
     SUBDIR += py-geometer
+    SUBDIR += py-geometric
     SUBDIR += py-gpaw
     SUBDIR += py-gsd
     SUBDIR += py-h5json
@@ -249,7 +247,6 @@
     SUBDIR += py-liac-arff
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
-    SUBDIR += py-mlpy
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
     SUBDIR += py-moltemplate
@@ -290,7 +287,6 @@
     SUBDIR += py-spglib
     SUBDIR += py-tensorflow
     SUBDIR += py-veusz
-    SUBDIR += py-ws2300
     SUBDIR += pybrain
     SUBDIR += pynn
     SUBDIR += qbox

@@ -17,9 +17,6 @@ LICENSE_FILE_LLVM2=	${LICENSE_DIR}/LICENSE.TXT
 LICENSE_NAME_LLVM2=	Apache License 2.0 with LLVM Exceptions
 LICENSE_PERMS_LLVM2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-DEPRECATED=	Uses deprecated version of python
-EXPIRATION_DATE=	2020-09-15
-
 NOT_FOR_ARCHS=		i386 armv6 armv7 powerpc mips
 NOT_FOR_ARCHS_REASON=	No one will develop CHERI from 32-bit
 BROKEN_powerpc64=	Does not build
@@ -47,10 +44,6 @@ SHEBANG_FILES=	llvm/utils/lit/lit.py \
 SUB_FILES=	llvm-wrapper.sh
 SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
 
-SUB_FILES+=	mips-cheri-clang.mk
-SUB_LIST+=	STACK_ALIGN=${STACK_ALIGN}
-STACK_ALIGN?=	-mstack-alignment=32
-
 CMAKE_INSTALL_PREFIX=	${LLVM_PREFIX}
 CMAKE_SOURCE_PATH=	${WRKSRC}/llvm
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON
@@ -70,8 +63,10 @@ OPTIONS_DEFINE=	CLANG DOCS LIT LLD
 OPTIONS_DEFAULT=	CLANG LIT LLD
 OPTIONS_SUB=	yes
 
-CLANG_DESC=	Build clang
+CLANG_DESC=		Build clang
 CLANG_PORTDOCS=		clang
+PLIST_FILES+=		share/toolchains/llvm${LLVM_SUFFIX}.mk
+SUB_FILES+=		xtoolchain.mk
 CLANG_USE=		GNOME=libxml2
 DOCS_BUILD_DEPENDS=	${PY_SPHINX} \
 			${PYTHON_PKGNAMEPREFIX}recommonmark>=0.0.20180530:textproc/py-recommonmark@${PY_FLAVOR}
@@ -115,6 +110,7 @@ COMMANDS=	bugpoint \
 		llvm-dwp \
 		llvm-exegesis \
 		llvm-extract \
+		llvm-gsymutil \
 		llvm-ifs \
 		llvm-install-name-tool \
 		llvm-jitlink \
@@ -125,6 +121,7 @@ COMMANDS=	bugpoint \
 		llvm-lto2 \
 		llvm-mc \
 		llvm-mca \
+		llvm-ml \
 		llvm-modextract \
 		llvm-mt \
 		llvm-nm \
@@ -170,7 +167,10 @@ COMMANDS+=	clang \
 		clang++ \
 		clang-check \
 		clang-cpp \
+		clang-extdef-mapping \
 		clang-format \
+		clang-offload-bundler \
+		clang-offload-wrapper \
 		clang-refactor \
 		clang-rename \
 		clang-scan-deps \
@@ -186,7 +186,7 @@ USES+=		gnome
 
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=	lit.1 FileCheck.1
-_USES_PYTHON=	python:2.7
+_USES_PYTHON=	python:3.6+
 LIT_COMMANDS=	lit llvm-lit FileCheck
 .endif
 
@@ -203,14 +203,14 @@ COMMANDS+=	argdumper \
 		lldb \
 		lldb-mi \
 		lldb-server
-_USES_PYTHON=	python:2.7
+_USES_PYTHON=	python:3.6+
 .endif
 
 .if defined(LLVM_ENABLE_PROJECTS)
 CMAKE_ARGS+=	-DLLVM_ENABLE_PROJECTS="${LLVM_ENABLE_PROJECTS:ts;}"
 .endif
 
-_USES_PYTHON?=	python:2.7,build
+_USES_PYTHON?=	python:3.6+,build
 USES+=		${_USES_PYTHON}
 
 MAN1SRCS+=	bugpoint.1 \
@@ -271,8 +271,8 @@ post-patch-LLD-on:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/toolchains/
-	${INSTALL_DATA} ${WRKDIR}/mips-cheri-clang.mk \
-	    ${STAGEDIR}${PREFIX}/share/toolchains/mips${LLVM_SUFFIX}-clang.mk
+	${INSTALL_DATA} ${WRKDIR}/xtoolchain.mk \
+	    ${STAGEDIR}${PREFIX}/share/toolchains/llvm${LLVM_SUFFIX}.mk
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${COMMAND_PREFIX}${FIRST_COMMAND}${COMMAND_SUFFIX}
 .for command in ${COMMANDS:C/^/XXXX/1:NXXXX*}
@@ -334,7 +334,6 @@ do-test:
 
 build-plist:
 	${RM} ${PLIST} ${PLIST}.tmp
-	${ECHO_CMD} share/toolchains/mips%%LLVM_SUFFIX%%-clang.mk >> ${PLIST}.tmp
 .for command in ${COMMANDS}
 	${ECHO_CMD} bin/${COMMAND_PREFIX}${command}%%COMMAND_SUFFIX%% >> ${PLIST}.tmp
 .endfor

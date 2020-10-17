@@ -3,7 +3,7 @@
 
 PORTNAME=	gnaural
 PORTVERSION=	1.0.20110606
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	SF/${PORTNAME}/Gnaural/ \
 		LOCAL/martymac
@@ -21,5 +21,7 @@ GNU_CONFIGURE=	yes
 USES=		desktop-file-utils gnome pkgconfig
 USE_CSTD=	gnu89
 USE_GNOME=	libglade2
+
+LDFLAGS+=	-lm
 
 .include <bsd.port.mk>
