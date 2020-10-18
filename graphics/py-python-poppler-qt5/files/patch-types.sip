@@ -1,3 +1,5 @@
+From https://github.com/frescobaldi/python-poppler-qt5/pull/33/commits/6cc4d83b172ffb2d206e696ce508e508cd46b7c3
+
 --- types.sip.orig	2019-11-22 05:56:45 UTC
 +++ types.sip
 @@ -182,7 +182,7 @@ template <TYPE>

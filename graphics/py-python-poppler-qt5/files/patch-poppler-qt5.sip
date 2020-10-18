@@ -1,3 +1,5 @@
+From https://github.com/frescobaldi/python-poppler-qt5/pull/41/commits/4ee58b6ee02772db915fdc5e70e336e0e5b2f34c
+
 --- poppler-qt5.sip.orig	2019-11-22 05:56:45 UTC
 +++ poppler-qt5.sip
 @@ -19,7 +19,7 @@

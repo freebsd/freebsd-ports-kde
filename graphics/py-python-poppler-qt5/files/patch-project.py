@@ -1,3 +1,5 @@
+From https://github.com/frescobaldi/python-poppler-qt5/pull/41/commits/4ee58b6ee02772db915fdc5e70e336e0e5b2f34c
+
 --- project.py.orig	2020-10-11 18:59:42 UTC
 +++ project.py
 @@ -0,0 +1,89 @@

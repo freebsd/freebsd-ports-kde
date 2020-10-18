@@ -3,13 +3,9 @@
 PORTNAME=	python-poppler-qt5
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.75.0
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-
-#PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-#PATCHFILES=	6cc4d83b172f.patch:-p1 \
-#		4ee58b6ee027.patch:-p1
 
 MAINTAINER=	m.ne@gmx.net
 COMMENT=	Python bindings for the Poppler-Qt PDF rendering library

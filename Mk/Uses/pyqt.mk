@@ -54,10 +54,6 @@ PYQT_MAINTAINER=	kde@FreeBSD.org
 MASTER_SITE_RIVERBANK=	https://www.riverbankcomputing.com/static/Downloads/%SUBDIR%/
 
 MASTER_SITES_SIP=	https://pypi.python.org/packages/source/s/sip/
-# https://www.riverbankcomputing.com/static/Downloads/sip/4.19.15/sip-4.19.15.tar.gz
-#MASTER_SITES_SIP=       RIVERBANK/sip/${PORTVERSION} \
-#                        SF/pyqt/sip/sip-${PORTVERSION} \
-#                        GENTOO
 MASTER_SITES_PYQT5=	https://pypi.python.org/packages/source/P/PyQt5/
 MASTER_SITES_PYQTSIP=	https://pypi.python.org/packages/source/P/PyQt5-sip/
 MASTER_SITES_PYQTCHART=	https://pypi.python.org/packages/source/P/PyQtChart/

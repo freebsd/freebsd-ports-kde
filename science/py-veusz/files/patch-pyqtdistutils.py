@@ -1,3 +1,5 @@
+Patch from https://github.com/veusz/veusz/pull/433
+
 --- pyqtdistutils.py.orig	2020-10-11 07:18:07 UTC
 +++ pyqtdistutils.py
 @@ -10,9 +10,8 @@ import sys
