@@ -18,6 +18,7 @@
     SUBDIR += R-cran-markdown
     SUBDIR += R-cran-openxlsx
     SUBDIR += R-cran-pystr
+    SUBDIR += R-cran-rbibutils
     SUBDIR += R-cran-readr
     SUBDIR += R-cran-readxl
     SUBDIR += R-cran-rematch
@@ -1218,6 +1219,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
     SUBDIR += py-asonic
     SUBDIR += py-autopep8
