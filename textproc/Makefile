@@ -1199,6 +1199,15 @@
     SUBDIR += php74-xmlreader
     SUBDIR += php74-xmlwriter
     SUBDIR += php74-xsl
+    SUBDIR += php80-ctype
+    SUBDIR += php80-dom
+    SUBDIR += php80-enchant
+    SUBDIR += php80-pspell
+    SUBDIR += php80-simplexml
+    SUBDIR += php80-xml
+    SUBDIR += php80-xmlreader
+    SUBDIR += php80-xmlwriter
+    SUBDIR += php80-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1251,6 +1260,7 @@
     SUBDIR += py-elasticsearch-dsl
     SUBDIR += py-elasticsearch5
     SUBDIR += py-elasticsearch6
+    SUBDIR += py-elementpath
     SUBDIR += py-empy
     SUBDIR += py-enchant
     SUBDIR += py-et_xmlfile
@@ -1313,6 +1323,7 @@
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parse
+    SUBDIR += py-parse-type
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
@@ -1413,6 +1424,7 @@
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
     SUBDIR += py-transpopy
+    SUBDIR += py-ttp
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
@@ -1658,6 +1670,7 @@
     SUBDIR += rubygem-syntax
     SUBDIR += rubygem-termcolor
     SUBDIR += rubygem-terminal-table
+    SUBDIR += rubygem-terser
     SUBDIR += rubygem-text
     SUBDIR += rubygem-tidy_ffi
     SUBDIR += rubygem-toml

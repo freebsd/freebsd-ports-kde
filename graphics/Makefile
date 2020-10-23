@@ -494,7 +494,6 @@
     SUBDIR += libwmf
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg03
-    SUBDIR += libxatracker
     SUBDIR += libyuv
     SUBDIR += libzmf
     SUBDIR += lightzone
@@ -535,6 +534,9 @@
     SUBDIR += mesa-demos
     SUBDIR += mesa-devel
     SUBDIR += mesa-dri
+    SUBDIR += mesa-gallium-va
+    SUBDIR += mesa-gallium-vdpau
+    SUBDIR += mesa-gallium-xa
     SUBDIR += mesa-libs
     SUBDIR += metacam
     SUBDIR += metapixel
@@ -741,6 +743,8 @@
     SUBDIR += php73-gd
     SUBDIR += php74-exif
     SUBDIR += php74-gd
+    SUBDIR += php80-exif
+    SUBDIR += php80-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle

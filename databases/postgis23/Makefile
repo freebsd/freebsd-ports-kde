@@ -13,6 +13,10 @@ COMMENT=	Geographic objects support for PostgreSQL databases
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN=		Does not build with graphics/gdal default (pgsql conflicts)
+DEPRECATED=	Upstream no longer maintained
+EXPIRATION_DATE=	2020-11-15
+
 LIB_DEPENDS=	libproj.so:graphics/proj \
 		libgeos.so:graphics/geos \
 		libjson-c.so:devel/json-c \
