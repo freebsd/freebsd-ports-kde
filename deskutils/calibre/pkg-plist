@@ -802,6 +802,7 @@ lib/calibre/calibre/gui2/dialogs/drm_error_ui.py
 lib/calibre/calibre/gui2/dialogs/duplicates.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog_ui.py
+lib/calibre/calibre/gui2/dialogs/enum_values_edit.py
 lib/calibre/calibre/gui2/dialogs/exim.py
 lib/calibre/calibre/gui2/dialogs/jobs_ui.py
 lib/calibre/calibre/gui2/dialogs/match_books.py
@@ -858,6 +859,7 @@ lib/calibre/calibre/gui2/library/delegates.py
 lib/calibre/calibre/gui2/library/models.py
 lib/calibre/calibre/gui2/library/views.py
 lib/calibre/calibre/gui2/linux_file_dialogs.py
+lib/calibre/calibre/gui2/listener.py
 lib/calibre/calibre/gui2/lrf_renderer/__init__.py
 lib/calibre/calibre/gui2/lrf_renderer/bookview.py
 lib/calibre/calibre/gui2/lrf_renderer/config_ui.py
@@ -1334,6 +1336,7 @@ lib/calibre/calibre/utils/unicode_names.py
 lib/calibre/calibre/utils/unrar.py
 lib/calibre/calibre/utils/unsmarten.py
 lib/calibre/calibre/utils/windows/__init__.py
+lib/calibre/calibre/utils/windows/winsapi.py
 lib/calibre/calibre/utils/windows/wintest.py
 lib/calibre/calibre/utils/winreg/__init__.py
 lib/calibre/calibre/utils/winreg/dde.py
@@ -1443,6 +1446,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/catalog/section_list_templates.conf
 %%DATADIR%%/catalog/stylesheet.css
 %%DATADIR%%/catalog/template.xhtml
+%%DATADIR%%/changelog.json
 %%DATADIR%%/content-server/calibre.png
 %%DATADIR%%/content-server/empty.html
 %%DATADIR%%/content-server/index-generated.html
@@ -1797,9 +1801,9 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/viewer.html
 %%DATADIR%%/viewer.js
 %%PYTHON_SITELIBDIR%%/init_calibre.py
-share/appdata/calibre-ebook-edit.appdata.xml
-share/appdata/calibre-ebook-viewer.appdata.xml
-share/appdata/calibre-gui.appdata.xml
+share/appdata/calibre-ebook-edit.metainfo.xml
+share/appdata/calibre-ebook-viewer.metainfo.xml
+share/appdata/calibre-gui.metainfo.xml
 share/applications/calibre-ebook-edit.desktop
 share/applications/calibre-ebook-viewer.desktop
 share/applications/calibre-gui.desktop
