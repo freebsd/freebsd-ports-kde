@@ -7,6 +7,11 @@ DISTVERSION=	3_10_11
 CATEGORIES=	graphics geography
 PKGNAMESUFFIX=	-ltr
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES=	33192f38bc7d.patch:-p1 \
+		12203f0ce527.patch:-p1 \
+		6e9d42d70099.patch:-p1
+
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Free and Open Source Geographic Information System
 

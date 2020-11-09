@@ -6,6 +6,8 @@ DISTVERSIONPREFIX=	final-
 DISTVERSION=	3_16_0
 CATEGORIES=	graphics geography
 
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+
 MAINTAINER=	rhurlin@FreeBSD.org
 COMMENT=	Free and Open Source Geographic Information System
 
@@ -106,7 +108,7 @@ USE_QT=		3d buildtools_build core concurrent dbus declarative \
 		network printsupport qmake_build script serialport \
 		sql sql-pgsql sql-sqlite3 svg testlib uitools \
 		webengine widgets webkit xml
-USE_PYQT=	core gui network qml quickwidgets qscintilla2 \
+USE_PYQT=	core gui network qml quickwidgets qscintilla2 pysip \
 		sip sql svg webkit_run webkitwidgets_run xml
 
 CONFLICTS_INSTALL=	qgis-ltr
@@ -156,9 +158,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|"-mllvm -inline-threshold=128"|"-O1"|g' \
 		${WRKSRC}/src/core/CMakeLists.txt
 .endif
-	@${REINPLACE_CMD} -e 's|%%PYQT_SIPDIR%%|${PYQT_SIPDIR}|' \
-		${WRKSRC}/cmake/FindPyQt5.py \
-		${WRKSRC}/cmake/FindSIP.py
 
 pre-configure:
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python3
