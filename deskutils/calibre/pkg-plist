@@ -1332,6 +1332,7 @@ lib/calibre/calibre/utils/test_lock.py
 lib/calibre/calibre/utils/text2int.py
 lib/calibre/calibre/utils/threadpool.py
 lib/calibre/calibre/utils/titlecase.py
+lib/calibre/calibre/utils/tts/__init__.py
 lib/calibre/calibre/utils/unicode_names.py
 lib/calibre/calibre/utils/unrar.py
 lib/calibre/calibre/utils/unsmarten.py
@@ -1801,9 +1802,9 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/viewer.html
 %%DATADIR%%/viewer.js
 %%PYTHON_SITELIBDIR%%/init_calibre.py
-share/appdata/calibre-ebook-edit.metainfo.xml
-share/appdata/calibre-ebook-viewer.metainfo.xml
-share/appdata/calibre-gui.metainfo.xml
+share/metainfo/calibre-ebook-edit.metainfo.xml
+share/metainfo/calibre-ebook-viewer.metainfo.xml
+share/metainfo/calibre-gui.metainfo.xml
 share/applications/calibre-ebook-edit.desktop
 share/applications/calibre-ebook-viewer.desktop
 share/applications/calibre-gui.desktop
