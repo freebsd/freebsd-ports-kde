@@ -15,7 +15,7 @@ CONFIGURE_ARGS=	${PYQT5_MODULES_ALL:N${PYQT_MODULE}:C/.*/--disable=&/} \
 
 PYQT_DIST=	yes
 
-USES=		python pyqt:5 qt:5
+USES=		python:3.5+ pyqt:5 qt:5
 USE_PYTHON=	concurrent flavors py3kplist
 USE_PYQT=	sip pysip
 USE_QT=		core buildtools_build qmake_build
