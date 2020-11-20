@@ -1,4 +1,4 @@
---- src/src.pro.orig	2020-09-12 16:53:06 UTC
+--- src/src.pro.orig	2020-11-20 20:05:53 UTC
 +++ src/src.pro
 @@ -1,55 +1,3 @@
  TEMPLATE = subdirs
@@ -12,7 +12,7 @@
 -            SUBDIRS = designer \
 -                      pixeltool
 -
--            !static|contains(QT_PLUGINS, qtsqlite): SUBDIRS += assistant
+-            !static|contains(QT_PLUGINS, qsqlite): SUBDIRS += assistant
 -
 -            linguist.depends = designer
 -        }

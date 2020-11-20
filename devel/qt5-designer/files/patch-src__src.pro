@@ -1,7 +1,7 @@
 Only enter the directories we want to build, otherwise we might fail due to
 missing dependencies.
 
---- src/src.pro.orig	2020-09-12 17:46:52 UTC
+--- src/src.pro.orig	2020-11-20 20:19:40 UTC
 +++ src/src.pro
 @@ -1,55 +1,3 @@
  TEMPLATE = subdirs
@@ -15,7 +15,7 @@ missing dependencies.
 -            SUBDIRS = designer \
 -                      pixeltool
 -
--            !static|contains(QT_PLUGINS, qtsqlite): SUBDIRS += assistant
+-            !static|contains(QT_PLUGINS, qsqlite): SUBDIRS += assistant
 -
 -            linguist.depends = designer
 -        }
