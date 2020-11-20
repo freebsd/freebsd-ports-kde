@@ -15,9 +15,12 @@ COMMENT=	Tools for complex networks / Backported version
 
 LICENSE=	BSD3CLAUSE
 
+DEPRECATED=	Obsolete, please use math/py-networkx instead
+EXPIRATION_DATE=	2020-11-15
+
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}decorator>=3.4.0:devel/py-decorator@${PY_FLAVOR}
 
-USES=		python shebangfix
+USES=		python:3.6+ shebangfix
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes

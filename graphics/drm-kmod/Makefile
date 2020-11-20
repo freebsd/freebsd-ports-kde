@@ -18,7 +18,7 @@ IGNORE=		not supported on anything but FreeBSD (missing linuxkpi functionality)
 .if ${ARCH} != "amd64"
 .if ${OSVERSION} >= 1200080
 RUN_DEPENDS=	${KMODDIR}/drm.ko:graphics/drm-legacy-kmod
-.elif ${OSVERSION} < 1200080
+.else
 IGNORE=		legacy kmod not required on less than 12.0
 .endif
 .else
@@ -26,9 +26,9 @@ IGNORE=		legacy kmod not required on less than 12.0
 RUN_DEPENDS=	${KMODDIR}/drm.ko:graphics/drm-fbsd11.2-kmod
 .elif ${OSVERSION} >= 1200058 && ${OSVERSION} < 1300000
 RUN_DEPENDS=	${KMODDIR}/drm.ko:graphics/drm-fbsd12.0-kmod
-.elif ${OSVERSION} >= 1300000 && ${OSVERSION} < 1300029
+.elif ${OSVERSION} >= 1300000 && ${OSVERSION} < 1300108
 IGNORE=		not supported on older 13, no kernel support
-.elif ${OSVERSION} >= 1300029
+.elif ${OSVERSION} >= 1300108
 RUN_DEPENDS=	${KMODDIR}/drm.ko:graphics/drm-current-kmod
 .else
 IGNORE=		not supported for this configuration

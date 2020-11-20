@@ -63,7 +63,7 @@ MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
 MOZILLA_EXEC_NAME?=${MOZILLA}
 USES+=		compiler:c++17-lang cpe gl gmake gnome iconv localbase perl5 pkgconfig \
-			python:2.7,build desktop-file-utils
+			python:3.6+,build desktop-file-utils
 CPE_VENDOR?=mozilla
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 gtk20 gtk30
@@ -72,24 +72,26 @@ USE_XORG=	x11 xcb xcomposite xdamage xext xfixes xrender xt
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
 LDFLAGS+=		-Wl,--as-needed
-BINARY_ALIAS+=	python3=python${PYTHON3_DEFAULT}
+BINARY_ALIAS+=	python3=${PYTHON_CMD}
 
 BUNDLE_LIBS=	yes
 
 BUILD_DEPENDS+=	llvm${LLVM_DEFAULT}>0:devel/llvm${LLVM_DEFAULT} \
 				rust-cbindgen>=0.14.3:devel/rust-cbindgen \
 				${RUST_DEFAULT}>=1.41:lang/${RUST_DEFAULT} \
-				${LOCALBASE}/bin/python${PYTHON3_DEFAULT}:lang/python${PYTHON3_DEFAULT:S/.//g} \
 				node:www/node
 LIB_DEPENDS+=	libdrm.so:graphics/libdrm
 MOZ_EXPORT+=	${CONFIGURE_ENV} \
-				LLVM_CONFIG=llvm-config${LLVM_DEFAULT} \
 				PERL="${PERL}" \
-				PYTHON3="${LOCALBASE}/bin/python${PYTHON3_DEFAULT}" \
+				PYTHON3="${PYTHON_CMD}" \
 				RUSTFLAGS="${RUSTFLAGS}"
 MOZ_OPTIONS+=	--prefix="${PREFIX}"
 MOZ_MK_OPTIONS+=MOZ_OBJDIR="${BUILD_WRKSRC}"
 
+MOZ_OPTIONS+=	--with-libclang-path="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib"
+.if !exists(/usr/bin/llvm-objdump)
+MOZ_EXPORT+=	LLVM_OBJDUMP="${LOCALBASE}/bin/llvm-objdump${LLVM_DEFAULT}"
+.endif
 # Require newer Clang than what's in base system unless user opted out
 . if ${CC} == cc && ${CXX} == c++ && exists(/usr/lib/libc++.so)
 BUILD_DEPENDS+=	${LOCALBASE}/bin/clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
@@ -108,6 +110,8 @@ MOZILLA_PLIST_DIRS?=	bin lib share/pixmaps share/applications
 # Adjust -C target-cpu if -march/-mcpu is set by bsd.cpu.mk
 .if ${ARCH} == amd64 || ${ARCH} == i386
 RUSTFLAGS+=	${CFLAGS:M-march=*:S/-march=/-C target-cpu=/}
+.elif ${ARCH} == powerpc64
+RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/:S/power/pwr/}
 .else
 RUSTFLAGS+=	${CFLAGS:M-mcpu=*:S/-mcpu=/-C target-cpu=/}
 .endif
@@ -312,9 +316,6 @@ BUILD_DEPENDS+=	as:devel/binutils
 . if ${ARCH} == "powerpc64"
 MOZ_EXPORT+=	UNAME_m="${ARCH}"
 . endif
-.elif ${ARCH} == "sparc64"
-# Work around miscompilation/mislinkage of the sCanonicalVTable hacks.
-MOZ_OPTIONS+=	--disable-v1-string-abi
 .endif
 
 .else # bsd.port.post.mk

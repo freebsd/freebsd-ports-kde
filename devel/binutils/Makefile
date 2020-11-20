@@ -3,19 +3,19 @@
 
 PORTNAME=	binutils
 PORTVERSION=	2.33.1
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH?=	1
 CATEGORIES?=	devel
 MASTER_SITES=	SOURCEWARE/binutils/releases
 
-MAINTAINER?=	bapt@FreeBSD.org
+MAINTAINER?=	ports@FreeBSD.org
 COMMENT?=	GNU binary tools
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
 
 FLAVORS=	native aarch64 aarch64_none_elf amd64 arm_gnueabi arm_none_eabi \
-		avr i386 mingw32 mips mips64 powerpc powerpc64 riscv64 \
+		avr i386 mingw32 mips mips64 powerpc powerpc64 powerpc64le riscv64 \
 		riscv64_none_elf s390x sparc64 riscv32_unknown_elf
 FLAVOR?=	native
 

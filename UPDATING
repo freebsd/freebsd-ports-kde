@@ -5,6 +5,239 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20201106:
+  AFFECTS: users of www/samdruckerserver
+  AUTHOR: dvl@FreeBSD.org
+
+  If upgrading from < 0.2.4, the database schema has changed.
+
+  Run these scripts to update your database:
+
+  * PostgreSQL/updates-2020.08.28.sql
+  * PostgreSQL/procedures.sql
+
+  These scripts are in /usr/local/share/samdrucker/PostgreSQL
+
+20201030:
+  AFFECTS: users of security/openvpn
+  AUTHOR: mandree@FreeBSD.org
+
+  The security/openvpn port has been updated to v2.5.0, which brings a
+  change to the default ciphersuite, which no longer contains BF-CBC.
+
+  Some options have been removed. Also, if you need to support very old (v2.3)
+  and unsupported clients or servers, you will need to adjust the
+  configuration. For details, see:
+  https://github.com/OpenVPN/openvpn/blob/release/2.5/Changes.rst#overview-of-changes-in-25
+
+20201029:
+  AFFECTS: users of www/node
+  AUTHOR: bhughes@FreeBSD.org
+
+  The www/node port has been updated to Node.js v15.0.0, the latest
+  upstream release. A new port, www/node14, has been created for the
+  v14.x LTS branch. Users wanting to stay on v14.x can replace www/node
+  with www/node14 with one of the following commands:
+
+  # pkg install www/node14
+    or
+  # portmaster -o www/node14 www/node
+    or
+  # portupgrade -o www/node14 www/node
+
+20201026:
+  AFFECTS: users of emulators/qemu
+  AUTHOR: bofh@FreeBSD.org
+
+  emulators/qemu has been updated to 5.0.1. Previous 4.2.X branch has
+  been repocopied to emulators/qemu42. If someone wants to stick with 4.2.X
+  branch please use one of the following command:
+
+  # pkg install emulators/qemu42
+    or
+  # portmaster -o emulators/qemu42 emulators/qemu
+    or
+  # portupgrade -o emulators/qemu42 emulators/qemu
+
+20201021:
+  AFFECTS: users of www/py-unit
+  AUTHOR: osa@FreeBSD.org
+
+  The www/py-unit port has been renamed to www/unit-python.
+
+20201012:
+  AFFECTS: Users of mesa-dri with VAAPI or VDPAU options
+  AUTHOR: manu@FreeBSD.org
+
+  The nondefault options VAAPI and VDPAU were removed from the mesa-dri
+  port and two new ports, mesa-gallium-va and mesa-gallium-vdpau now contain
+  the necessary libraries for using VAAPI or VDPAU on AMD hardware.
+
+20201012:
+  AFFECTS: users of devel/libsoup-gnome
+  AUTHOR: bapt@FreeBSD.org
+
+  libsoup-gnome has been merged back into libsoup for people building locally:
+  first delete libsoup-gnome before installing the new libsoup
+
+  $ pkg delete -f libsoup-gnome
+
+20201011:
+  AFFECTS: users of sysutils/rundeck3 who use MySQL as database
+  AUTHOR: daniel.tihanyi@tetragir.com
+
+  Please note that the MySQL JDBC driver is no longer bundled with Rundeck.
+  Please make sure that you migrate to the MariaDB Connector or copy the
+  driver yourself. More instructions:
+
+  https://docs.rundeck.com/docs/upgrading/upgrading-to-rundeck-3.3.4.html
+
+20201006:
+  AFFECTS: users of sysutils/tenshi
+  AUTHOR: 0mp@FreeBSD.org
+
+  The default location for tenshi's configuration file has changed.  It was
+  moved to /usr/local/etc/tenshi/tenshi.conf from /usr/local/etc/tenshi.conf
+  in order to follow upstream defaults.
+
+20201002:
+  AFFECTS: users of mail/fetchmail beginning with 6.4.12_1
+  AUTHOR:  mandree@FreeBSD.org
+
+  Note that if you are using fetchmail in a multi-user setup, i. e. with the
+  fetchmail_users (mind the -s!) variable set, the $fetchmail_home_prefix +
+  user second-guess work has been replaced by a real lookup of the user's home
+  directory. In the majority of configurations, this should not make a
+  difference, in some setups, it may open up some flexibility.
+
+  The fetchmail_home_prefix variable is ignored from 6.4.12_1 onwards.
+
+  Also, the rc script redirects its input from /dev/null so that passwords
+  will not be interactively queried from an rcfile.  Put passwords into
+  the [.]fetchmailrc or into a .netrc file.
+
+20201002:
+  AFFECTS: users of sysutils/modules
+  AUTHOR: 0mp@FreeBSD.org
+
+  The upstream developers of the Modules port encourage users to consult
+  the MIGRATING document, which describes the major changes occurring between
+  versions of Modules. It provides an overview of the new features and changed
+  behaviors that will be encountered when upgrading:
+
+  https://modules.readthedocs.io/en/v4.6.0/MIGRATING.html
+
+20200930:
+  AFFECTS: users of sysutils/syslog-ng32[789]
+  AUTHOR: cy@FreeBSD.org
+
+  rc.conf variables syslog_ng_config and syslog_ng_pid have been replaced
+  by syslog_ng_flags and syslog_ng_pidfile respecively, making them
+  consistent with the rest of the ports tree. syslog_ng_config and
+  syslog_ng_pid will continue to work until syslog-ng331 has been
+  released and imported into ports.
+  
+20200924:
+  AFFECTS: users of net/freeradius3, who need python support
+  AUTHOR: zi@FreeBSD.org
+
+  FreeRADIUS 3.x currently uses python 2.7 for rlm_python support, which has
+  been deprecated and will be removed from the tree at the end of this year.
+
+  Starting in 3.0.21_2, the PYTHON option has been converted to use python 3.x.
+
+  Users should verify their python scripts are 3.x compatible and upgrade to
+  3.0.21_2 (or higher) to bring in python 3.x support.
+
+20200921:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 11 to 12.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 11.9, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql11-server postgresql11-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql11-server-11.9.txz -C /tmp/pg-upgrade
+  # tar xf postgresql11-contrib-11.9.txz -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql11-server databases/postgresql11-contrib databases/postgresql11-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql12-server databases/postgresql12-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql12-server databases/postgresql12-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql12-server databases/postgresql12-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data12 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data11/ -B /usr/local/bin/ -D /var/db/postgres/data12/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) The default user changed from "pgsql" to "postgres" in 11. The migration steps above now assume
+     the "postgres" database user and FreeBSD user.
+  2) See the updating entry 20190829 if you are updating from a release prior to 11.
+  3) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
+20200918:
+  AFFECTS: users of mail/thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  Thunderbird has been updated to the 78esr series. Thunderbird will
+  try to convert old profiles on first start, but conversion may fail
+  especially on old profiles. Also, older versions of Thunderbird will
+  not be able to use a profile once it has been converted. It is
+  strongly recommended to move any ~/.thunderbird folder away before
+  starting Thunderbird 78 for the first time, thus creating a new and
+  empty profile.
+  Also note that OpenPGP functionality has been integrated into Thunderbird,
+  obsoleting the Enigmail extension.
+  Check https://wiki.mozilla.org/Thunderbird:OpenPGP for details, and
+  especially https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
+  if your private key lives on a smartcard.
+
+20200914:
+  AFFECTS: users of lang/php72
+  AUTHOR: tz@FreeBSD.org
+
+  The default version of PHP has been switched from 7.2 to 7.4.
+
+  If you use binary packages you should make a list of php packages
+  before running 'pkg upgrade':
+
+  # pkg info php7\* > ~/installed-php-ports-list
+
+  After the upgrade, check with such list if all your php extensions
+  are still installed, and reinstall them if needed.
+
+  If you use mod_php72 you need to deinstall it and install mod_php74.
+
 20200811:
   AFFECTS: users of *-emacs26-* packages
   AUTHOR: jrm@FreeBSD.org
@@ -615,7 +848,7 @@ you update your ports collection, before attempting any port upgrades.
     pkill -F /usr/local/var/lib/prosody/prosody.pid
 
     # copy the data directory
-    cp -a /usr/local/var/lib/prosody /var/db/prosody
+    cp -a /usr/local/var/lib/prosody /var/db/
     rm -f /var/db/prosody/prosody.pid
 
   Make sure your prosody config has the following option set:
@@ -1068,7 +1301,7 @@ leave you without networking.
   https://gitlab.fechner.net/mfechner/Gitlab-docu/blob/master/update/12.0-12.1-freebsd.md
 
 20190829:
-  AFFECTS: users of database/postgresql* and other software using PostgreSQL to run
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
   AUTHOR: tz@FreeBSD.org
 
   The default version of PostgreSQL has been switched from 9.5 to 11.
@@ -3771,7 +4004,7 @@ leave you without networking.
   they can lead to data corruption due to changes in Erlang 20.
 
 20170622:
-  AFFECTS: users of database/postgresql* and other software using PostgreSQL to run
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
   AUTHOR: tz@FreeBSD.org
 
   The default version of PostgreSQL has been switched from 9.3 to 9.5.
@@ -4662,7 +4895,7 @@ leave you without networking.
   # chown 0600 /var/heimdal/heimdal.db.new
   # mv /var/heimdal/heimdal.db.new /var/heimdal/heimdal.db
 
-  db_dump and db_load utilitites are installed by database/db5 as
+  db_dump and db_load utilitites are installed by databases/db5 as
   dependency of security/heimdal.
 
   If you want to switch from security/heimdal to Heimdal in the base
@@ -6045,7 +6278,7 @@ leave you without networking.
   AFFECTS: users of net/samba4, net/samba41, net/samba42
   AUTHOR: timur@FreeBSD.org
 
-  Recent versions of devel/talloc, devel/tevent, database/tdb, database/ldb
+  Recent versions of devel/talloc, devel/tevent, databases/tdb, databases/ldb
   contained infinit recursive call to the strtol* set of replacement functions,
   which lead to coredumps. Unofficial patch was added meanwhile, but now
   official version of the fixed libs were released. If your version of
@@ -8991,7 +9224,7 @@ leave you without networking.
       perl5.12-.
 
 20140211:
-  AFFECTS: users of lang/php* database/postgresql* database/mysql* www/apache*
+  AFFECTS: users of lang/php* databases/postgresql* databases/mysql* www/apache*
   AUTHOR: mat@FreeBSD.org
 
   The default versions of lang/php*, databases/postgresql*,

@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	verilator
-DISTVERSION=	4.040
-PORTREVISION=	2
+DISTVERSION=	4.102
 CATEGORIES=	cad
 MASTER_SITES=	https://www.veripool.org/ftp/
 
@@ -13,6 +12,7 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libsystemc.so:devel/systemc
+RUN_DEPENDS=	gmake:devel/gmake # verilator runs gmake for the --hierarchical option when the 'gmake' method is chosen
 
 USES=		bison compiler:c++14-lang gmake localbase:ldflags pathfix perl5 python:build,test tar:tgz
 

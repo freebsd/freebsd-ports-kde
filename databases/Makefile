@@ -50,6 +50,7 @@
     SUBDIR += courier-authlib-usergdbm
     SUBDIR += cppdb
     SUBDIR += credis
+    SUBDIR += cutelyst-asql
     SUBDIR += dalmp
     SUBDIR += datamodeler
     SUBDIR += db
@@ -130,6 +131,8 @@
     SUBDIR += ldb14
     SUBDIR += ldb15
     SUBDIR += ldb20
+    SUBDIR += ldb21
+    SUBDIR += ldb22
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
@@ -184,6 +187,7 @@
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
+    SUBDIR += mongodb-tools
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
@@ -192,9 +196,7 @@
     SUBDIR += mongodb42-tools
     SUBDIR += mongodb44
     SUBDIR += mroonga
-    SUBDIR += mtools-mongodb
     SUBDIR += mtop
-    SUBDIR += mydbf2mysql
     SUBDIR += mydumper
     SUBDIR += mysac
     SUBDIR += mysql-connector-c
@@ -229,7 +231,6 @@
     SUBDIR += nagios-check_redis
     SUBDIR += namazu2
     SUBDIR += neo4j
-    SUBDIR += ntdb
     SUBDIR += ocaml-dbm
     SUBDIR += ocaml-mysql
     SUBDIR += ocaml-sqlite3
@@ -462,6 +463,7 @@
     SUBDIR += p5-Redis
     SUBDIR += p5-Redis-Fast
     SUBDIR += p5-Redis-JobQueue
+    SUBDIR += p5-Redis-RateLimit
     SUBDIR += p5-Redis-hiredis
     SUBDIR += p5-RedisDB
     SUBDIR += p5-RedisDB-Parser
@@ -574,7 +576,6 @@
     SUBDIR += pgdbf
     SUBDIR += pgespresso
     SUBDIR += pgfouine
-    SUBDIR += pgloader
     SUBDIR += pgloader3
     SUBDIR += pglogical
     SUBDIR += pgmetrics
@@ -591,7 +592,6 @@
     SUBDIR += pgsphere
     SUBDIR += pgtcl
     SUBDIR += pgtop
-    SUBDIR += pgtune
     SUBDIR += pguri
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
@@ -633,6 +633,18 @@
     SUBDIR += php74-pdo_sqlite
     SUBDIR += php74-pgsql
     SUBDIR += php74-sqlite3
+    SUBDIR += php80-dba
+    SUBDIR += php80-mysqli
+    SUBDIR += php80-odbc
+    SUBDIR += php80-pdo
+    SUBDIR += php80-pdo_dblib
+    SUBDIR += php80-pdo_firebird
+    SUBDIR += php80-pdo_mysql
+    SUBDIR += php80-pdo_odbc
+    SUBDIR += php80-pdo_pgsql
+    SUBDIR += php80-pdo_sqlite
+    SUBDIR += php80-pgsql
+    SUBDIR += php80-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -650,8 +662,6 @@
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
     SUBDIR += postgresql-libpqxx
-    SUBDIR += postgresql-libpqxx3
-    SUBDIR += postgresql-libpqxx4
     SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-ogr_fdw
@@ -688,6 +698,14 @@
     SUBDIR += postgresql12-plpython
     SUBDIR += postgresql12-pltcl
     SUBDIR += postgresql12-server
+    SUBDIR += postgresql13-client
+    SUBDIR += postgresql13-contrib
+    SUBDIR += postgresql13-docs
+    SUBDIR += postgresql13-pgtcl
+    SUBDIR += postgresql13-plperl
+    SUBDIR += postgresql13-plpython
+    SUBDIR += postgresql13-pltcl
+    SUBDIR += postgresql13-server
     SUBDIR += postgresql95-client
     SUBDIR += postgresql95-contrib
     SUBDIR += postgresql95-docs
@@ -798,6 +816,7 @@
     SUBDIR += py-redis2
     SUBDIR += py-sispy
     SUBDIR += py-south
+    SUBDIR += py-sqlalchemy-json
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy-utils
     SUBDIR += py-sqlalchemy10
@@ -805,10 +824,8 @@
     SUBDIR += py-sqlalchemy12
     SUBDIR += py-sqlalchemy13
     SUBDIR += py-sqlite3
-    SUBDIR += py-sqlite3dbm
     SUBDIR += py-sqlobject
     SUBDIR += py-sqlparse
-    SUBDIR += py-sqlparse020
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift
     SUBDIR += py-tableschema
@@ -820,11 +837,9 @@
     SUBDIR += py-whisper
     SUBDIR += py-xapian
     SUBDIR += py-zodbpickle
-    SUBDIR += pydbx
     SUBDIR += pymongo
     SUBDIR += pypy-gdbm
     SUBDIR += pypy-sqlite3
-    SUBDIR += pyspatialite
     SUBDIR += qdbm
     SUBDIR += qdbm-plus
     SUBDIR += qof
@@ -1018,6 +1033,7 @@
     SUBDIR += xapian-core12
     SUBDIR += xrootd
     SUBDIR += xtrabackup
+    SUBDIR += xtrabackup8
     SUBDIR += zabbix3-libzbxpgsql
 
 .include <bsd.port.subdir.mk>

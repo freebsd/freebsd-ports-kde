@@ -17,6 +17,7 @@
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
     SUBDIR += NBlood
+    SUBDIR += OpenDiablo2
     SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
@@ -187,7 +188,6 @@
     SUBDIR += defendguin
     SUBDIR += devilutionX
     SUBDIR += dhewm3
-    SUBDIR += diameter
     SUBDIR += diaspora
     SUBDIR += digger-vgl
     SUBDIR += divide-and-succeed
@@ -430,7 +430,6 @@
     SUBDIR += kgoldrunner
     SUBDIR += khangman
     SUBDIR += kigo
-    SUBDIR += kiki
     SUBDIR += killbots
     SUBDIR += kiriki
     SUBDIR += kjumpingcube
@@ -537,7 +536,6 @@
     SUBDIR += libshhcards
     SUBDIR += libtmcg
     SUBDIR += lightsoff
-    SUBDIR += lightyears
     SUBDIR += lincity
     SUBDIR += lincity-ng
     SUBDIR += linux-doom3
@@ -628,6 +626,7 @@
     SUBDIR += narcissu2
     SUBDIR += nazghul
     SUBDIR += nehquake
+    SUBDIR += neo-cowsay
     SUBDIR += nethack32
     SUBDIR += nethack33
     SUBDIR += nethack33-nox11
@@ -679,6 +678,7 @@
     SUBDIR += openbor3979
     SUBDIR += openbor4432
     SUBDIR += openbubbles
+    SUBDIR += openbve
     SUBDIR += opencity
     SUBDIR += openclaw
     SUBDIR += openclonk
@@ -707,7 +707,6 @@
     SUBDIR += orbital_eunuchs_sniper
     SUBDIR += orthorobot
     SUBDIR += osgg
-    SUBDIR += outerspace
     SUBDIR += p5-Acme-GuessNumber
     SUBDIR += p5-Algorithm-Pair-Best2
     SUBDIR += p5-Algorithm-Pair-Swiss
@@ -721,7 +720,6 @@
     SUBDIR += p5-Games-GuessWord
     SUBDIR += p5-Games-Tournament-RoundRobin
     SUBDIR += pachi
-    SUBDIR += pachi-game-engine
     SUBDIR += pacmanarena
     SUBDIR += palapeli
     SUBDIR += palomino

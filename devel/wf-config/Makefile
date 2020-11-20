@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	wf-config
-DISTVERSION=	0.5.0
+DISTVERSION=	0.6.0
 CATEGORIES=	devel
 
 MAINTAINER=	jbeich@FreeBSD.org

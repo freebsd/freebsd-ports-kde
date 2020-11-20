@@ -3,7 +3,7 @@
 
 PORTNAME=		libgeodecomp
 PORTVERSION=		0.4.0
-PORTREVISION=		19
+PORTREVISION=		20
 CATEGORIES=		science devel
 MASTER_SITES=		http://www.libgeodecomp.org/archive/
 
@@ -12,8 +12,6 @@ COMMENT=		LibGeoDecomp is an auto-parallelizing library for computer simulations
 
 LICENSE=		BSL
 LICENSE_FILE=		${WRKSRC}/LICENSE
-
-BROKEN=			WITH_SCOTCH selected but no installation of Scotch could be found
 
 LIB_DEPENDS=		libboost_system.so:devel/boost-libs libboost_date_time.so:devel/boost-libs \
 			libboost_filesystem.so:devel/boost-libs
@@ -29,7 +27,7 @@ CMAKE_ARGS=		-DWITH_CUDA:BOOL=FALSE -DWITH_VISIT:BOOL=FALSE \
 OPTIONS_DEFINE=		MPI SILO SCOTCH
 OPTIONS_DEFAULT=	MPI SILO SCOTCH
 
-MPI_LIB_DEPENDS=	libmpich.so:net/mpich2
+MPI_LIB_DEPENDS=	libmpich.so:net/mpich
 MPI_CMAKE_BOOL=		WITH_MPI
 
 SILO_DESC=		Enable Silo dependend output

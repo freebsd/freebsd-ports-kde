@@ -61,9 +61,9 @@
     SUBDIR += calamaris
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
-    SUBDIR += calendarserver
     SUBDIR += carbonapi
     SUBDIR += castget
+    SUBDIR += castor
     SUBDIR += cgi-lib
     SUBDIR += cgi-lib.pl
     SUBDIR += cgicc
@@ -102,6 +102,7 @@
     SUBDIR += ddgr
     SUBDIR += decss
     SUBDIR += demoroniser
+    SUBDIR += deno
     SUBDIR += devd
     SUBDIR += dfileserver
     SUBDIR += dhttpd
@@ -180,7 +181,6 @@
     SUBDIR += gauche-makiki
     SUBDIR += gecko-mediaplayer
     SUBDIR += geckodriver
-    SUBDIR += geeknote
     SUBDIR += geneweb
     SUBDIR += geolizer
     SUBDIR += geronimo
@@ -195,11 +195,9 @@
     SUBDIR += glassfish4
     SUBDIR += glpi
     SUBDIR += gnome-user-share
-    SUBDIR += go-appengine-sdk
     SUBDIR += go-www
     SUBDIR += gobuffalo
     SUBDIR += gohugo
-    SUBDIR += google-appengine
     SUBDIR += googlebook_dl
     SUBDIR += googler
     SUBDIR += goose
@@ -292,7 +290,6 @@
     SUBDIR += libepc
     SUBDIR += libevhtp
     SUBDIR += libgtkhtml
-    SUBDIR += libhpack
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -333,6 +330,7 @@
     SUBDIR += mediawiki131
     SUBDIR += mediawiki133
     SUBDIR += mediawiki134
+    SUBDIR += mediawiki135
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -345,7 +343,6 @@
     SUBDIR += minio-client
     SUBDIR += miniserve
     SUBDIR += mitmproxy
-    SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
     SUBDIR += mod_amazon_proxy
@@ -387,14 +384,13 @@
     SUBDIR += mod_memcache_block
     SUBDIR += mod_mono
     SUBDIR += mod_mpm_itk
-    SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
     SUBDIR += mod_php72
     SUBDIR += mod_php73
     SUBDIR += mod_php74
+    SUBDIR += mod_php80
     SUBDIR += mod_proctitle
     SUBDIR += mod_proxy_xml
-    SUBDIR += mod_python35
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
     SUBDIR += mod_reproxy
@@ -416,6 +412,7 @@
     SUBDIR += mongoose
     SUBDIR += mongrel2
     SUBDIR += monolith
+    SUBDIR += moodle310
     SUBDIR += moodle35
     SUBDIR += moodle37
     SUBDIR += moodle38
@@ -459,6 +456,7 @@
     SUBDIR += node
     SUBDIR += node10
     SUBDIR += node12
+    SUBDIR += node14
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -467,6 +465,7 @@
     SUBDIR += npm
     SUBDIR += npm-node10
     SUBDIR += npm-node12
+    SUBDIR += npm-node14
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
     SUBDIR += oneshot
@@ -1377,6 +1376,9 @@
     SUBDIR += php74-opcache
     SUBDIR += php74-session
     SUBDIR += php74-tidy
+    SUBDIR += php80-opcache
+    SUBDIR += php80-session
+    SUBDIR += php80-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1596,6 +1598,7 @@
     SUBDIR += py-folium
     SUBDIR += py-forcediphttpsadapter
     SUBDIR += py-formencode
+    SUBDIR += py-fqdn
     SUBDIR += py-freenit
     SUBDIR += py-frozen-flask
     SUBDIR += py-gandi.cli
@@ -1629,8 +1632,10 @@
     SUBDIR += py-httpcore
     SUBDIR += py-httpie
     SUBDIR += py-httplib2
+    SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx013
     SUBDIR += py-hyper
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
@@ -1677,7 +1682,6 @@
     SUBDIR += py-python-multipart
     SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
-    SUBDIR += py-qp
     SUBDIR += py-qpy
     SUBDIR += py-qt5-webchannel
     SUBDIR += py-qt5-webengine
@@ -1709,6 +1713,7 @@
     SUBDIR += py-secure-cookie
     SUBDIR += py-selector
     SUBDIR += py-selenium
+    SUBDIR += py-sentinelhub
     SUBDIR += py-slimit
     SUBDIR += py-slumber
     SUBDIR += py-sockjs-tornado
@@ -1727,8 +1732,6 @@
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-txrequests
-    SUBDIR += py-unit
-    SUBDIR += py-url
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -1755,8 +1758,6 @@
     SUBDIR += py-wsaccel
     SUBDIR += py-wsgidav
     SUBDIR += py-yarl
-    SUBDIR += pyblosxom
-    SUBDIR += pyjamas
     SUBDIR += qdecoder
     SUBDIR += qhttpengine
     SUBDIR += qt5-webchannel
@@ -1769,7 +1770,6 @@
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
-    SUBDIR += radicale2
     SUBDIR += redmine4
     SUBDIR += rejik
     SUBDIR += reportmagic
@@ -1778,7 +1778,6 @@
     SUBDIR += restbed
     SUBDIR += retawq
     SUBDIR += riot-web
-    SUBDIR += roundup
     SUBDIR += rss-bridge
     SUBDIR += rsskit
     SUBDIR += rssroll
@@ -1815,6 +1814,7 @@
     SUBDIR += rubygem-async-http
     SUBDIR += rubygem-async-pool
     SUBDIR += rubygem-async-rest
+    SUBDIR += rubygem-async-websocket
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-atlassian-jwt
     SUBDIR += rubygem-best_in_place
@@ -1904,6 +1904,7 @@
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
+    SUBDIR += rubygem-jekyll-seo-tag
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-jekyll3
     SUBDIR += rubygem-journey
@@ -1973,6 +1974,7 @@
     SUBDIR += rubygem-protocol-http
     SUBDIR += rubygem-protocol-http1
     SUBDIR += rubygem-protocol-http2
+    SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -1994,6 +1996,7 @@
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rack20
+    SUBDIR += rubygem-rack21
     SUBDIR += rubygem-rack_csrf
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
@@ -2073,17 +2076,16 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
-    SUBDIR += rubygem-uglifier27
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
     SUBDIR += rubygem-url_escape
     SUBDIR += rubygem-url_mount
+    SUBDIR += rubygem-vcr
     SUBDIR += rubygem-vegas
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webdrivers
     SUBDIR += rubygem-webmock
-    SUBDIR += rubygem-webpack-rails-rails60
     SUBDIR += rubygem-webrick
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
@@ -2260,18 +2262,21 @@
     SUBDIR += uchiwa
     SUBDIR += ufdbguard
     SUBDIR += unit
+    SUBDIR += unit-java
     SUBDIR += unit-perl
     SUBDIR += unit-php
+    SUBDIR += unit-python
+    SUBDIR += unit-ruby
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
     SUBDIR += validator
     SUBDIR += varnish-ip2location
     SUBDIR += varnish-ip2proxy
-    SUBDIR += varnish-libvmod-awsrest
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
     SUBDIR += varnish-libvmod-maxminddb
+    SUBDIR += varnish-libvmod-querystring
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
@@ -2286,11 +2291,8 @@
     SUBDIR += w3m
     SUBDIR += w3m-img
     SUBDIR += w3mir
-    SUBDIR += waccess
-    SUBDIR += wadcomblog
     SUBDIR += webalizer
     SUBDIR += webbrowser
-    SUBDIR += webcheck
     SUBDIR += webcopy
     SUBDIR += webcrawl
     SUBDIR += webfs
@@ -2309,7 +2311,6 @@
     SUBDIR += webtrees
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
-    SUBDIR += woof
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
     SUBDIR += wsdlpull
@@ -2335,6 +2336,7 @@
     SUBDIR += you-get
     SUBDIR += yourls
     SUBDIR += youtube_dl
+    SUBDIR += youtube_dlc
     SUBDIR += ytdl
     SUBDIR += yuicompressor
     SUBDIR += zend-framework

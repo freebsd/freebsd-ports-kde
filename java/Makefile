@@ -34,7 +34,6 @@
     SUBDIR += eclipse-drjava
     SUBDIR += eclipse-ecj
     SUBDIR += eclipse-findbugs
-    SUBDIR += eclipse-pydev
     SUBDIR += eclipse-shelled
     SUBDIR += hamcrest
     SUBDIR += icedtea-web
@@ -101,6 +100,7 @@
     SUBDIR += openjdk7-jre
     SUBDIR += openjdk8
     SUBDIR += openjdk8-jre
+    SUBDIR += openjfx14
     SUBDIR += openjfx8-devel
     SUBDIR += openjfx8-scenebuilder
     SUBDIR += phpeclipse

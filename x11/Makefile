@@ -42,7 +42,6 @@
     SUBDIR += conlecterm
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
-    SUBDIR += decurs
     SUBDIR += deforaos-desktop
     SUBDIR += deforaos-keyboard
     SUBDIR += deforaos-libdesktop
@@ -67,7 +66,6 @@
     SUBDIR += fireflies
     SUBDIR += florence
     SUBDIR += flruler
-    SUBDIR += fluxbg
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gdm
@@ -82,7 +80,6 @@
     SUBDIR += gnome-shell-extensions
     SUBDIR += gnome-terminal
     SUBDIR += gnome3
-    SUBDIR += gnome3-lite
     SUBDIR += gnustep-app
     SUBDIR += grabc
     SUBDIR += grim
@@ -91,11 +88,13 @@
     SUBDIR += gstreamer1-plugins-x
     SUBDIR += gstreamer1-plugins-ximagesrc
     SUBDIR += gsynaptics
+    SUBDIR += gtk-app-menu
     SUBDIR += gtk-theme-switch2
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
     SUBDIR += guake
     SUBDIR += gxkb
+    SUBDIR += havoc
     SUBDIR += hhpc
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
@@ -107,6 +106,7 @@
     SUBDIR += idesk
     SUBDIR += imwheel
     SUBDIR += innerspace
+    SUBDIR += inputplug
     SUBDIR += j4-dmenu-desktop
     SUBDIR += jgmenu
     SUBDIR += kanshi
@@ -163,9 +163,7 @@
     SUBDIR += libfm-extra
     SUBDIR += libfm-qt
     SUBDIR += libgnome
-    SUBDIR += libgnome-reference
     SUBDIR += libgnomekbd
-    SUBDIR += libgnomemm26
     SUBDIR += libinput
     SUBDIR += libmatekbd
     SUBDIR += libsx
@@ -213,6 +211,7 @@
     SUBDIR += mate-applets
     SUBDIR += mate-base
     SUBDIR += mate-desktop
+    SUBDIR += mate-dock-applet
     SUBDIR += mate-menus
     SUBDIR += mate-panel
     SUBDIR += mate-screensaver
@@ -264,6 +263,7 @@
     SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma5-plasma-workspace
+    SUBDIR += pmenu
     SUBDIR += polybar
     SUBDIR += printscreen
     SUBDIR += py-caffeine-ng
@@ -325,6 +325,7 @@
     SUBDIR += thinglaunch
     SUBDIR += thingylaunch
     SUBDIR += tilda
+    SUBDIR += tilix
     SUBDIR += tint
     SUBDIR += trayer
     SUBDIR += tycoon
@@ -345,6 +346,7 @@
     SUBDIR += wf-shell
     SUBDIR += wl-clipboard
     SUBDIR += wlogout
+    SUBDIR += wlrctl
     SUBDIR += wmappl
     SUBDIR += wmblob
     SUBDIR += wmbutton
@@ -390,6 +392,7 @@
     SUBDIR += xcb-util-wm
     SUBDIR += xcb-util-xrm
     SUBDIR += xcbautolock
+    SUBDIR += xclickroot
     SUBDIR += xclip
     SUBDIR += xclipboard
     SUBDIR += xcm
@@ -465,6 +468,7 @@
     SUBDIR += xmsg
     SUBDIR += xmx
     SUBDIR += xnee
+    SUBDIR += xnotify
     SUBDIR += xob
     SUBDIR += xorg
     SUBDIR += xorg-apps

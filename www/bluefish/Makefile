@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	bluefish
-PORTVERSION=	2.2.10
-PORTREVISION=	3
+PORTVERSION=	2.2.11
 CATEGORIES=	www editors
 MASTER_SITES=	http://www.bennewitz.com/bluefish/stable/source/ \
 		http://bluefish.mrball.net/stable/source/
@@ -14,17 +13,33 @@ COMMENT=	HTML editor designed for the experienced web designer
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-DEPRECATED=	Uses deprecated version of python
-EXPIRATION_DATE=	2020-09-15
-
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libenchant.so:textproc/enchant
 
 USES=		desktop-file-utils gettext gmake gnome libtool localbase \
-		pkgconfig python:2.7 shared-mime-info shebangfix tar:bzip2
-SHEBANG_FILES=	data/css_decompressor data/cssmin.py data/jsbeautify \
-		data/jsmin.py data/lorem-ipsum-generator
-python_OLD_CMD=	/usr/bin/python2.7
+		pkgconfig python:3.0-3.8 shared-mime-info shebangfix tar:bzip2
+SHEBANG_FILES=	data/css_decompressor \
+		data/cssmin.py \
+		data/jsbeautify \
+		data/jsmin.py \
+		data/lorem-ipsum-generator \
+		src/plugin_zencoding/zencoding/actions/__init__.py \
+		src/plugin_zencoding/zencoding/actions/basic.py \
+		src/plugin_zencoding/zencoding/actions/token.py \
+		src/plugin_zencoding/zencoding/filters/__init__.py \
+		src/plugin_zencoding/zencoding/filters/comment.py \
+		src/plugin_zencoding/zencoding/filters/css.py \
+		src/plugin_zencoding/zencoding/filters/escape.py \
+		src/plugin_zencoding/zencoding/filters/format-css.py \
+		src/plugin_zencoding/zencoding/filters/format.py \
+		src/plugin_zencoding/zencoding/filters/haml.py \
+		src/plugin_zencoding/zencoding/filters/html.py \
+		src/plugin_zencoding/zencoding/filters/single-line.py \
+		src/plugin_zencoding/zencoding/filters/trim.py \
+		src/plugin_zencoding/zencoding/filters/xsl.py \
+		src/plugin_zencoding/zencoding/html_matcher.py \
+		src/plugin_zencoding/zencoding/resources.py \
+		src/plugin_zencoding/zencoding/utils.py
 USE_GNOME=	cairo intltool libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-freedesktop_org-menu=${PREFIX}/share/applications \

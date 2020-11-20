@@ -57,6 +57,7 @@
     SUBDIR += compat7x
     SUBDIR += compat8x
     SUBDIR += compat9x
+    SUBDIR += concourse
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosti
@@ -161,7 +162,6 @@
     SUBDIR += grc
     SUBDIR += gwhich
     SUBDIR += hashdb
-    SUBDIR += hb
     SUBDIR += hello
     SUBDIR += help2man
     SUBDIR += heyu2
@@ -207,15 +207,19 @@
     SUBDIR += lesspipe
     SUBDIR += lf
     SUBDIR += libad9361-iio
+    SUBDIR += libcomps
     SUBDIR += libeatmydata
     SUBDIR += libemos
     SUBDIR += libiio
     SUBDIR += libkeduvocdocument
     SUBDIR += liblxi
     SUBDIR += libmetalink
+    SUBDIR += libmodulemd
     SUBDIR += libpostal
     SUBDIR += libpredict
     SUBDIR += libpri
+    SUBDIR += librepo
+    SUBDIR += libsolv
     SUBDIR += libsupertone
     SUBDIR += libsweep-lidar
     SUBDIR += libutf
@@ -244,7 +248,6 @@
     SUBDIR += mnn
     SUBDIR += molequeue
     SUBDIR += morse
-    SUBDIR += mtail
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
@@ -353,6 +356,7 @@
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
     SUBDIR += php74-calendar
+    SUBDIR += php80-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += pnpids
@@ -480,6 +484,7 @@
     SUBDIR += tkinfo
     SUBDIR += tkregexp
     SUBDIR += tkrunit
+    SUBDIR += tlci
     SUBDIR += toilet
     SUBDIR += translate
     SUBDIR += ttyrec
@@ -518,7 +523,6 @@
     SUBDIR += wmtunlo
     SUBDIR += wmweather+
     SUBDIR += wmwork
-    SUBDIR += wotsap
     SUBDIR += xdelta
     SUBDIR += xdelta3
     SUBDIR += xfce4-appfinder

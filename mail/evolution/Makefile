@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.28.5
-PORTREVISION=	7
+PORTVERSION=	3.38.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Integrated mail, calendar and address book distributed suite
@@ -21,7 +20,7 @@ BUILD_DEPENDS=	itstool:textproc/itstool \
 		iso-codes>=0:misc/iso-codes \
 		highlight:textproc/highlight
 LIB_DEPENDS=	libnss3.so:security/nss \
-		libgcr-3.so:security/gcr \
+		libgcr-base-3.so:security/gcr \
 		libgtkspell3-3.so:textproc/gtkspell3 \
 		libgnome-autoar-gtk-0.so:archivers/gnome-autoar \
 		libsoup-2.4.so:devel/libsoup \
@@ -37,7 +36,8 @@ LIB_DEPENDS=	libnss3.so:security/nss \
 		libcryptui.so:security/libcryptui \
 		libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
-		libnotify.so:devel/libnotify
+		libnotify.so:devel/libnotify \
+		libgspell-1.so:textproc/gspell
 RUN_DEPENDS=	highlight:textproc/highlight \
 		iso-codes>=0:misc/iso-codes
 

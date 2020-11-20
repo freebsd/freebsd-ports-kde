@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.16
+DISTVERSION=	5.20
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=--verbose \
 		--with-oss \
 		--without-pulse \
 		--without-sane \
-		--without-sdl \
 		--without-tiff \
 		--without-udev \
 		--without-unwind \
@@ -59,12 +58,13 @@ SUB_FILES=	pkg-message
 
 PORTDATA=	wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GCC GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GCC GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL SDL STAGING V4L VKD3D VULKAN WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GCC GNUTLS X11
 OPTIONS_SUB=	yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
+SDL_DESC=	Use SDL for gamepad support (XInput only)
 STAGING_DESC=	Include the Wine Staging patchset (experimental)
 VKD3D_DESC=	Direct3D 12 support via Vulkan
 VULKAN_DESC=	Vulkan API support
@@ -94,13 +94,17 @@ LDAP_USE=		OPENLDAP=yes
 LIBXSLT_CONFIGURE_WITH=	xslt
 LIBXSLT_LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-5.1.0-x86.msi:emulators/wine-mono-devel
+MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-5.1.1-x86.msi:emulators/wine-mono-devel
 
 MPG123_CONFIGURE_WITH=	mpg123
 MPG123_LIB_DEPENDS=	libmpg123.so:audio/mpg123
 
 OPENAL_CONFIGURE_WITH=	openal
 OPENAL_USES=		openal
+
+SDL_CONFIGURE_WITH=	sdl
+SDL_USES=		sdl
+SDL_USE=		SDL=sdl2
 
 STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
 STAGING_DIST=		v${DISTVERSION}.tar.gz
@@ -109,6 +113,8 @@ STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
 				git:devel/git \
 				autoconf>0:devel/autoconf
 STAGING_LIB_DEPENDS=	libtxc_dxtn.so:graphics/s2tc
+STAGING_EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-dlls-ntdll-unix-file.c \
+			${PATCHDIR}/extrapatch-server-file.c
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
@@ -151,10 +157,9 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
 PLIST_SUB+=		WINE32="@comment " WINE64=""
 
-# Wine assumes a WoW64 package is available, however WoW64 is not yet
-# available on FreeBSD. Also fix the desktop file.
+# Wine assumes a WoW64 package is available, which is not the case on
+# FreeBSD yet.
 post-patch:
-	${REINPLACE_CMD} 's|/wine|/wine64|g' ${WRKSRC}/tools/wineapploader.in
 	${REINPLACE_CMD} '/Exec/s|wine|wine64|g' ${WRKSRC}/loader/wine.desktop
 
 .else

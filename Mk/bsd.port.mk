@@ -1047,7 +1047,7 @@ _FLAVOR:=	${FLAVOR}
 .if !defined(PORTS_FEATURES) && empty(${PORTS_FEATURES:MFLAVORS})
 PORTS_FEATURES+=	FLAVORS
 .endif
-MINIMAL_PKG_VERSION=	1.13.0
+MINIMAL_PKG_VERSION=	1.15.9
 
 _PORTS_DIRECTORIES+=	${PKG_DBDIR} ${PREFIX} ${WRKDIR} ${EXTRACT_WRKDIR} \
 						${STAGEDIR}${PREFIX} ${WRKDIR}/pkg ${BINARY_LINKDIR}
@@ -1177,7 +1177,7 @@ OSVERSION!=	${AWK} '/^\#define[[:blank:]]__FreeBSD_version/ {print $$3}' < ${SRC
 .endif
 _EXPORTED_VARS+=	OSVERSION
 
-.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1103000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1201000))) || \
+.if (${OPSYS} == FreeBSD && (${OSVERSION} < 1104000 || (${OSVERSION} >= 1200000 && ${OSVERSION} < 1201000))) || \
     (${OPSYS} == DragonFly && ${DFLYVERSION} < 400400)
 _UNSUPPORTED_SYSTEM_MESSAGE=	Ports Collection support for your ${OPSYS} version has ended, and no ports\
 								are guaranteed to build on this system. Please upgrade to a supported release.
@@ -1381,7 +1381,7 @@ USES+=	php
 .include "${PORTSDIR}/Mk/bsd.java.mk"
 .endif
 
-.if defined(USE_RUBY) || defined(USE_LIBRUBY)
+.if defined(USE_RUBY)
 .include "${PORTSDIR}/Mk/bsd.ruby.mk"
 .endif
 
@@ -2018,7 +2018,9 @@ CONFIGURE_ENV+=	LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
 MAKE_ENV+=		LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
 .endif
 
-# Macro for doing in-place file editing using regexps
+# Macro for doing in-place file editing using regexps.  REINPLACE_ARGS may only
+# be used to set or override the -i argument.  Any other use is considered
+# invalid.
 REINPLACE_ARGS?=	-i.bak
 .if defined(DEVELOPER)
 REINPLACE_CMD?=	${SETENV} WRKSRC=${WRKSRC} REWARNFILE=${REWARNFILE} ${SCRIPTSDIR}/sed_checked.sh
@@ -2038,6 +2040,10 @@ STAGE_COOKIE?=		${WRKDIR}/.stage_done.${PORTNAME}.${PREFIX:S/\//_/g}
 
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
+# In general, however, DO_NADA is a relic of the past in the ports
+# infrastructure, and most of its usage has been removed. If you need to define
+# a target with DO_NADA, then there is a high chance that the ports
+# infrastructure should be fixed instead.
 DO_NADA?=		${TRUE}
 
 # Use this as the first operand to always build dependency.
@@ -3160,6 +3166,7 @@ do-extract: ${EXTRACT_WRKDIR}
 	@for file in ${EXTRACT_ONLY}; do \
 		if ! (cd ${EXTRACT_WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS});\
 		then \
+			${ECHO_MSG} "===>  Failed to extract \"${_DISTDIR}/$$file\"."; \
 			exit 1; \
 		fi; \
 	done
@@ -5133,7 +5140,12 @@ install-desktop-entries:
 .if !target(create-binary-alias)
 create-binary-alias: ${BINARY_LINKDIR}
 .for target src in ${BINARY_ALIAS:C/=/ /}
-	@${RLN} `which ${src}` ${BINARY_LINKDIR}/${target}
+	@if srcpath=`which -- ${src}`; then \
+		${RLN} $${srcpath} ${BINARY_LINKDIR}/${target}; \
+	else \
+		${ECHO_MSG} "===>  Missing \"${src}\" to create a binary alias at \"${BINARY_LINKDIR}/${target}\""; \
+		${FALSE}; \
+	fi
 .endfor
 .endif
 .endif

@@ -38,6 +38,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
     SUBDIR += asterisk16
+    SUBDIR += asterisk18
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -75,7 +76,6 @@
     SUBDIR += calendarsupport
     SUBDIR += ccxstream
     SUBDIR += ceph12
-    SUBDIR += ceph13
     SUBDIR += ceph14
     SUBDIR += cf
     SUBDIR += charm
@@ -84,7 +84,6 @@
     SUBDIR += cjdns
     SUBDIR += clash
     SUBDIR += cloud-init
-    SUBDIR += cloud-init-azure
     SUBDIR += cloudflared
     SUBDIR += clusterit
     SUBDIR += cnd
@@ -96,6 +95,7 @@
     SUBDIR += courier-authlib-ldap
     SUBDIR += courier-sox
     SUBDIR += cppzmq
+    SUBDIR += croc
     SUBDIR += cryptcat
     SUBDIR += csocks
     SUBDIR += ctrace
@@ -145,18 +145,14 @@
     SUBDIR += eternalterminal
     SUBDIR += evans
     SUBDIR += eventviews
-    SUBDIR += exabgp
     SUBDIR += exabgp4
-    SUBDIR += exaddos
-    SUBDIR += fb
+    SUBDIR += fb303
     SUBDIR += fbzmq
     SUBDIR += fiche
     SUBDIR += file2pcap
     SUBDIR += findmtu
     SUBDIR += findomain
-    SUBDIR += flent
     SUBDIR += flower
-    SUBDIR += flowgrep
     SUBDIR += foreman-proxy
     SUBDIR += fpc-ldap
     SUBDIR += fpc-pcap
@@ -196,7 +192,6 @@
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
     SUBDIR += google-cloud-sdk-app-engine-go
-    SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += goreplay
     SUBDIR += gotthard
@@ -211,6 +206,7 @@
     SUBDIR += grsync
     SUBDIR += gscloud
     SUBDIR += gsk
+    SUBDIR += gsocket
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gstreamer-plugins-libmms
@@ -373,6 +369,7 @@
     SUBDIR += libnfs
     SUBDIR += libngtcp2
     SUBDIR += libnids
+    SUBDIR += libnpupnp
     SUBDIR += libnss-cache
     SUBDIR += libnss-mysql
     SUBDIR += libnss-pgsql
@@ -383,7 +380,6 @@
     SUBDIR += libpcap
     SUBDIR += libpcapnav
     SUBDIR += libproxy
-    SUBDIR += libproxy-gnome2
     SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
     SUBDIR += libproxy-mozjs
@@ -432,6 +428,7 @@
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
+    SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
     SUBDIR += mgen
@@ -439,7 +436,6 @@
     SUBDIR += micro_proxy
     SUBDIR += microsocks
     SUBDIR += minidlna
-    SUBDIR += mininet
     SUBDIR += minisapserver
     SUBDIR += minissdpd
     SUBDIR += miniupnpc
@@ -493,7 +489,6 @@
     SUBDIR += netselect
     SUBDIR += netstrain
     SUBDIR += netwib
-    SUBDIR += nfs-ganesha
     SUBDIR += nfs-ganesha-kmod
     SUBDIR += nfsshell
     SUBDIR += ng_mikrotik_eoip
@@ -545,7 +540,6 @@
     SUBDIR += opennx
     SUBDIR += openpgm
     SUBDIR += openradius
-    SUBDIR += opensips
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -966,6 +960,9 @@
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
     SUBDIR += php74-xmlrpc
+    SUBDIR += php80-ldap
+    SUBDIR += php80-soap
+    SUBDIR += php80-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1010,8 +1007,10 @@
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
+    SUBDIR += py-errbot
     SUBDIR += py-eventlet
     SUBDIR += py-flask-xml-rpc
+    SUBDIR += py-gdown
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-h11
@@ -1079,13 +1078,14 @@
     SUBDIR += py-python-neutronclient
     SUBDIR += py-python-novaclient
     SUBDIR += py-python-novaclient16
-    SUBDIR += py-python-ntlm
     SUBDIR += py-python-openstackclient
+    SUBDIR += py-python-socks
     SUBDIR += py-python-twitter
     SUBDIR += py-pytradfri
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt5-network
+    SUBDIR += py-qt5-networkauth
     SUBDIR += py-rabbitpy
     SUBDIR += py-radix
     SUBDIR += py-raet
@@ -1099,6 +1099,7 @@
     SUBDIR += py-siosocks
     SUBDIR += py-smart-open
     SUBDIR += py-smbpasswd
+    SUBDIR += py-smbprotocol
     SUBDIR += py-soap2py
     SUBDIR += py-socketio-client
     SUBDIR += py-softlayer
@@ -1108,6 +1109,7 @@
     SUBDIR += py-stomp.py
     SUBDIR += py-suds
     SUBDIR += py-suds-jurko
+    SUBDIR += py-tacacs_plus
     SUBDIR += py-terminado
     SUBDIR += py-tofu
     SUBDIR += py-transip
@@ -1119,6 +1121,7 @@
     SUBDIR += py-uritools
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
+    SUBDIR += py-whois
     SUBDIR += py-wmi-query
     SUBDIR += py-wsdd
     SUBDIR += py-wsproto
@@ -1172,7 +1175,6 @@
     SUBDIR += remotebox
     SUBDIR += remotedesk
     SUBDIR += repeater
-    SUBDIR += reposado
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
@@ -1251,12 +1253,19 @@
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
+    SUBDIR += rubygem-google-cloud-bigtable-admin-v2
+    SUBDIR += rubygem-google-cloud-bigtable-v2
     SUBDIR += rubygem-google-cloud-core
     SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-google-cloud-errors
     SUBDIR += rubygem-google-cloud-logging
+    SUBDIR += rubygem-google-cloud-logging-v2
     SUBDIR += rubygem-google-cloud-pubsub
+    SUBDIR += rubygem-google-cloud-pubsub-v1
     SUBDIR += rubygem-google-cloud-spanner
+    SUBDIR += rubygem-google-cloud-spanner-admin-database-v1
+    SUBDIR += rubygem-google-cloud-spanner-admin-instance-v1
+    SUBDIR += rubygem-google-cloud-spanner-v1
     SUBDIR += rubygem-google-cloud-storage
     SUBDIR += rubygem-grpc
     SUBDIR += rubygem-grpc124
@@ -1345,8 +1354,9 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += sacc
-    SUBDIR += samba410
     SUBDIR += samba411
+    SUBDIR += samba412
+    SUBDIR += samba413
     SUBDIR += samplicator
     SUBDIR += savvycan
     SUBDIR += sbd
@@ -1391,7 +1401,6 @@
     SUBDIR += socketw
     SUBDIR += sofia-sip
     SUBDIR += spideroak
-    SUBDIR += splatd
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j

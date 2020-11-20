@@ -2,10 +2,11 @@
 
 PORTNAME=	zola
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.0
+DISTVERSION=	0.12.2
+PORTREVISION=	1
 CATEGORIES=	www
 
-MAINTAINER=	tobik@FreeBSD.org
+MAINTAINER=	mikael@FreeBSD.org
 COMMENT=	Fast static site generator
 
 LICENSE=	MIT
@@ -206,6 +207,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		regex-automata-0.1.9 \
 		regex-syntax-0.4.2 \
 		regex-syntax-0.6.18 \
+		relative-path-1.3.2 \
 		remove_dir_all-0.5.3 \
 		reqwest-0.10.8 \
 		ring-0.16.15 \

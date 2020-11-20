@@ -3,7 +3,7 @@
 
 PORTNAME=	mldonkey
 PORTVERSION=	3.1.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES+=	net-p2p
 MASTER_SITES=	SF
 
@@ -95,7 +95,7 @@ ALL_TARGET+=	\
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH} == powerpc64
+.if ${ARCH:Mpowerpc*}
 USE_GCC=	yes
 .endif
 

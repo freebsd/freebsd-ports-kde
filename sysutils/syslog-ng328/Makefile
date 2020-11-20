@@ -3,7 +3,7 @@
 
 PORTNAME=	syslog-ng
 DISTVERSION=	3.28.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/balabit/syslog-ng/releases/download/syslog-ng-${DISTVERSION}/
 .if !defined(MASTERDIR)
@@ -14,6 +14,9 @@ MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Powerful syslogd replacement
 
 BROKEN_sparc64=		fails to link: Internal error: Segmentation fault (program ld)
+
+DEPRECATED=	Reduction of syslog-ng ports to one
+EXPIRATION_DATE=	2020-12-31
 
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libuuid.so:misc/e2fsprogs-libuuid

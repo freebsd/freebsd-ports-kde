@@ -15,7 +15,6 @@
     SUBDIR += asprint
     SUBDIR += auctex
     SUBDIR += bibcursed
-    SUBDIR += biblio-py
     SUBDIR += bibview
     SUBDIR += brlaser
     SUBDIR += c2ps
@@ -118,6 +117,7 @@
     SUBDIR += magicfilter
     SUBDIR += makeindex
     SUBDIR += mftrace
+    SUBDIR += miktex
     SUBDIR += min12xxw
     SUBDIR += mp-a4
     SUBDIR += mp-letter

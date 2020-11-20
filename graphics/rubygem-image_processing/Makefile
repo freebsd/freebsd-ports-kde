@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	image_processing
-PORTVERSION=	1.11.0
+PORTVERSION=	1.12.1
 CATEGORIES=	graphics rubygems
 MASTER_SITES=	RG
 

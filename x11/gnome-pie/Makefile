@@ -4,7 +4,7 @@
 PORTNAME=	gnome-pie
 PORTVERSION=	0.5.7
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -42,13 +42,13 @@ OPTIONS_SUB=	yes
 
 PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR}
 
-REINPLACE_ARGS=	-e 's,%%DATADIR%%,${DATADIR},1' \
-		-e 's,%%DESKTOPDIR%%,${DESKTOPDIR},1' \
-		-e 's,%%PREFIX%%,${PREFIX},1' -i.bak \
-		-e '/has_resize_grip/d' -i ''
+REINPLACE_ARGS=	 -i ''
 
 post-patch:
-	${REINPLACE_CMD} ${WRKSRC}/src/actions/actionRegistry.vala \
+	${REINPLACE_CMD} -e 's,%%DATADIR%%,${DATADIR},1' \
+		-e 's,%%DESKTOPDIR%%,${DESKTOPDIR},1' \
+		-e 's,%%PREFIX%%,${PREFIX},1' \
+		-e '/has_resize_grip/d' ${WRKSRC}/src/actions/actionRegistry.vala \
 		${WRKSRC}/src/gui/indicator.vala \
 		${WRKSRC}/src/utilities/paths.vala \
 		${WRKSRC}/resources/ui/*.ui

@@ -31,11 +31,11 @@
     SUBDIR += atompaw
     SUBDIR += avogadro2
     SUBDIR += avogadrolibs
+    SUBDIR += axom
     SUBDIR += bagel
     SUBDIR += bddsolve
     SUBDIR += berkeleygw
     SUBDIR += bodr
-    SUBDIR += brian
     SUBDIR += buddy
     SUBDIR += cdcl
     SUBDIR += cdf
@@ -53,6 +53,7 @@
     SUBDIR += clipper
     SUBDIR += code_saturne
     SUBDIR += colt
+    SUBDIR += conduit
     SUBDIR += coordgenlibs
     SUBDIR += cp2k
     SUBDIR += cp2k-data
@@ -209,7 +210,6 @@
     SUBDIR += packmol
     SUBDIR += pagmo2
     SUBDIR += paje
-    SUBDIR += paraview
     SUBDIR += pcmsolver
     SUBDIR += plumed
     SUBDIR += pnetcdf
@@ -236,6 +236,7 @@
     SUBDIR += py-geolinks
     SUBDIR += py-geomet
     SUBDIR += py-geometer
+    SUBDIR += py-geometric
     SUBDIR += py-gpaw
     SUBDIR += py-gsd
     SUBDIR += py-h5json
@@ -283,6 +284,7 @@
     SUBDIR += py-scimath
     SUBDIR += py-scipy
     SUBDIR += py-scoria
+    SUBDIR += py-segyio
     SUBDIR += py-spglib
     SUBDIR += py-tensorflow
     SUBDIR += py-veusz
@@ -306,6 +308,7 @@
     SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
     SUBDIR += scidavis
+    SUBDIR += segyio
     SUBDIR += siesta
     SUBDIR += sigrok-cli
     SUBDIR += sigrok-firmware

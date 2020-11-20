@@ -13,18 +13,19 @@ LICENSE=	APACHE20
 USES=		compiler go:modules
 
 USE_GITHUB=	yes
-GHTAG=		RELEASE.2020-09-08T23-05-18Z
-COMMIT_ID=	0987069e373f6ae4f7391c3d2a00f76e416f2000
+GHTAG=		RELEASE.2020-11-06T23-17-07Z
+COMMIT_ID=	54120107ce6fdbb4c34e9b1901f57a19a3c40e2c
 
 GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		Azure:azure-pipeline-go:v0.2.2:azure_azure_pipeline_go/vendor/github.com/Azure/azure-pipeline-go \
 		Azure:azure-storage-blob-go:v0.10.0:azure_azure_storage_blob_go/vendor/github.com/Azure/azure-storage-blob-go \
+		Azure:go-autorest:8f84370b53ea:azure_go_autorest_adal/vendor/github.com/Azure/go-autorest \
 		Shopify:sarama:v1.24.1:shopify_sarama/vendor/github.com/Shopify/sarama \
 		StackExchange:wmi:cbe66965904d:stackexchange_wmi/vendor/github.com/StackExchange/wmi \
 		alecthomas:participle:v0.2.1:alecthomas_participle/vendor/github.com/alecthomas/participle \
 		apache:thrift:v0.13.0:apache_thrift/vendor/git.apache.org/thrift.git \
 		bcicen:jstream:16c1f8af81c2:bcicen_jstream/vendor/github.com/bcicen/jstream \
-		beevik:ntp:v0.2.0:beevik_ntp/vendor/github.com/beevik/ntp \
+		beevik:ntp:v0.3.0:beevik_ntp/vendor/github.com/beevik/ntp \
 		beorn7:perks:v1.0.0:beorn7_perks/vendor/github.com/beorn7/perks \
 		census-instrumentation:opencensus-go:v0.22.3:census_instrumentation_opencensus_go/vendor/go.opencensus.io \
 		cespare:xxhash:v2.1.1:cespare_xxhash_v2/vendor/github.com/cespare/xxhash/v2 \
@@ -37,6 +38,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		dchest:siphash:v1.2.1:dchest_siphash/vendor/github.com/dchest/siphash \
 		dgrijalva:jwt-go:v3.2.0:dgrijalva_jwt_go/vendor/github.com/dgrijalva/jwt-go \
 		djherbis:atime:v1.0.0:djherbis_atime/vendor/github.com/djherbis/atime \
+		dswarbrick:smart:909a45200d6d:dswarbrick_smart/vendor/github.com/dswarbrick/smart \
 		dustin:go-humanize:v1.0.0:dustin_go_humanize/vendor/github.com/dustin/go-humanize \
 		eapache:go-resiliency:v1.1.0:eapache_go_resiliency/vendor/github.com/eapache/go-resiliency \
 		eapache:go-xerial-snappy:776d5712da21:eapache_go_xerial_snappy/vendor/github.com/eapache/go-xerial-snappy \
@@ -54,18 +56,18 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		go-yaml:yaml:v2.2.8:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
 		gogo:protobuf:v1.3.1:gogo_protobuf/vendor/github.com/gogo/protobuf \
 		golang:appengine:v1.4.0:golang_appengine/vendor/google.golang.org/appengine \
-		golang:crypto:948cd5f35899:golang_crypto/vendor/golang.org/x/crypto \
+		golang:crypto:5c72a883971a:golang_crypto/vendor/golang.org/x/crypto \
 		golang:groupcache:869f871628b6:golang_groupcache/vendor/github.com/golang/groupcache \
 		golang:mod:v0.3.0:golang_mod/vendor/golang.org/x/mod \
-		golang:net:ab3426394381:golang_net/vendor/golang.org/x/net \
+		golang:net:62affa334b73:golang_net/vendor/golang.org/x/net \
 		golang:oauth2:e64efc72b421:golang_oauth2/vendor/golang.org/x/oauth2 \
 		golang:protobuf:v1.4.0:golang_protobuf/vendor/github.com/golang/protobuf \
 		golang:snappy:v0.0.1:golang_snappy/vendor/github.com/golang/snappy \
-		golang:sys:ddb9806d33ae:golang_sys/vendor/golang.org/x/sys \
+		golang:sys:288bc346aa39:golang_sys/vendor/golang.org/x/sys \
 		golang:text:v0.3.3:golang_text/vendor/golang.org/x/text \
 		golang:time:9d24e82272b4:golang_time/vendor/golang.org/x/time \
-		golang:tools:c4923e618c08:golang_tools/vendor/golang.org/x/tools \
-		golang:xerrors:9bdfabe68543:golang_xerrors/vendor/golang.org/x/xerrors \
+		golang:tools:bf155c11ec6f:golang_tools/vendor/golang.org/x/tools \
+		golang:xerrors:5ec99f83aff1:golang_xerrors/vendor/golang.org/x/xerrors \
 		gomodule:redigo:v2.0.0:gomodule_redigo/vendor/github.com/gomodule/redigo \
 		google:go-genproto:24fa4b261c55:google_go_genproto/vendor/google.golang.org/genproto \
 		google:uuid:v1.1.1:google_uuid/vendor/github.com/google/uuid \
@@ -75,6 +77,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		gorilla:handlers:v1.4.2:gorilla_handlers/vendor/github.com/gorilla/handlers \
 		gorilla:mux:v1.8.0:gorilla_mux/vendor/github.com/gorilla/mux \
 		gorilla:rpc:v1.2.0:gorilla_rpc/vendor/github.com/gorilla/rpc \
+		gorilla:websocket:v1.4.2:gorilla_websocket/vendor/github.com/gorilla/websocket \
 		grpc:grpc-go:v1.26.0:grpc_grpc_go/vendor/google.golang.org/grpc \
 		hashicorp:errwrap:v1.0.0:hashicorp_errwrap/vendor/github.com/hashicorp/errwrap \
 		hashicorp:go-cleanhttp:v0.5.1:hashicorp_go_cleanhttp/vendor/github.com/hashicorp/go-cleanhttp \
@@ -98,7 +101,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		klauspost:pgzip:v1.2.1:klauspost_pgzip/vendor/github.com/klauspost/pgzip \
 		klauspost:readahead:v1.3.1:klauspost_readahead/vendor/github.com/klauspost/readahead \
 		klauspost:reedsolomon:v1.9.9:klauspost_reedsolomon/vendor/github.com/klauspost/reedsolomon \
-		lib:pq:v1.7.0:lib_pq/vendor/github.com/lib/pq \
+		lib:pq:v1.8.0:lib_pq/vendor/github.com/lib/pq \
 		mailru:easyjson:v0.7.1:mailru_easyjson/vendor/github.com/mailru/easyjson \
 		mattn:go-colorable:v0.1.4:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
 		mattn:go-ieproxy:v0.0.1:mattn_go_ieproxy/vendor/github.com/mattn/go-ieproxy \
@@ -109,11 +112,11 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		minio:cli:v1.22.0:minio_cli/vendor/github.com/minio/cli \
 		minio:highwayhash:v1.0.0:minio_highwayhash/vendor/github.com/minio/highwayhash \
 		minio:md5-simd:v1.1.0:minio_md5_simd/vendor/github.com/minio/md5-simd \
-		minio:minio-go:14ed05478889:minio_minio_go_v7/vendor/github.com/minio/minio-go/v7 \
+		minio:minio-go:755b5633803a:minio_minio_go_v7/vendor/github.com/minio/minio-go/v7 \
 		minio:selfupdate:v0.3.1:minio_selfupdate/vendor/github.com/minio/selfupdate \
 		minio:sha256-simd:v0.1.1:minio_sha256_simd/vendor/github.com/minio/sha256-simd \
 		minio:simdjson-go:v0.1.5:minio_simdjson_go/vendor/github.com/minio/simdjson-go \
-		minio:sio:v0.2.0:minio_sio/vendor/github.com/minio/sio \
+		minio:sio:v0.2.1:minio_sio/vendor/github.com/minio/sio \
 		mitchellh:go-homedir:v1.1.0:mitchellh_go_homedir/vendor/github.com/mitchellh/go-homedir \
 		mitchellh:mapstructure:v1.1.2:mitchellh_mapstructure/vendor/github.com/mitchellh/mapstructure \
 		mmcloughlin:avo:443f81d77104:mmcloughlin_avo/vendor/github.com/mmcloughlin/avo \
@@ -122,6 +125,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		montanaflynn:stats:v0.5.0:montanaflynn_stats/vendor/github.com/montanaflynn/stats \
 		nats-io:jwt:v0.3.2:nats_io_jwt/vendor/github.com/nats-io/jwt \
 		nats-io:nats-server:v2.1.7:nats_io_nats_server_v2/vendor/github.com/nats-io/nats-server/v2 \
+		nats-io:nats-streaming-server:v0.18.0:nats_io_nats_streaming_server/vendor/github.com/nats-io/nats-streaming-server \
 		nats-io:nats.go:v1.10.0:nats_io_nats_go/vendor/github.com/nats-io/nats.go \
 		nats-io:nkeys:v0.1.4:nats_io_nkeys/vendor/github.com/nats-io/nkeys \
 		nats-io:nuid:v1.0.1:nats_io_nuid/vendor/github.com/nats-io/nuid \
@@ -129,7 +133,7 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		ncw:directio:v1.0.5:ncw_directio/vendor/github.com/ncw/directio \
 		nsqio:go-nsq:v1.0.7:nsqio_go_nsq/vendor/github.com/nsqio/go-nsq \
 		olivere:elastic:v5.0.86:olivere_elastic/vendor/gopkg.in/olivere/elastic.v5 \
-		philhofer:fwd:v1.0.0:philhofer_fwd/vendor/github.com/philhofer/fwd \
+		philhofer:fwd:v1.1.0:philhofer_fwd/vendor/github.com/philhofer/fwd \
 		pierrec:lz4:v2.4.0:pierrec_lz4/vendor/github.com/pierrec/lz4 \
 		pkg:errors:v0.9.1:pkg_errors/vendor/github.com/pkg/errors \
 		prometheus:client_golang:v1.0.0:prometheus_client_golang/vendor/github.com/prometheus/client_golang \
@@ -151,7 +155,8 @@ GH_TUPLE=	${PORTNAME}:${PORTNAME}:${GHTAG}:DEFAULT \
 		tidwall:match:v1.0.1:tidwall_match/vendor/github.com/tidwall/match \
 		tidwall:pretty:v1.0.0:tidwall_pretty/vendor/github.com/tidwall/pretty \
 		tidwall:sjson:v1.0.4:tidwall_sjson/vendor/github.com/tidwall/sjson \
-		tinylib:msgp:v1.1.2:tinylib_msgp/vendor/github.com/tinylib/msgp \
+		tinylib:msgp:7dcb1f1e923b:tinylib_msgp/vendor/github.com/tinylib/msgp \
+		ttacon:chalk:22c06c80ed31:ttacon_chalk/vendor/github.com/ttacon/chalk \
 		uber-go:atomic:v1.6.0:uber_go_atomic/vendor/go.uber.org/atomic \
 		uber-go:multierr:v1.5.0:uber_go_multierr/vendor/go.uber.org/multierr \
 		uber-go:zap:v1.14.1:uber_go_zap/vendor/go.uber.org/zap \

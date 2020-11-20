@@ -1,9 +1,10 @@
 # $FreeBSD$
 
 PORTNAME=	jamulus
-DISTVERSION=	3.5.10
+DISTVERSIONPREFIX=	r
+DISTVERSION=	3_6_0
 CATEGORIES=	audio
-MASTER_SITES=	SF/llcon/${NAME}/${DISTVERSION}/
+#MASTER_SITES=	SF/llcon/${NAME}/${DISTVERSION}/ # it is unclear whether SF or GH should be used because SF doesn't have 3.6.0, but README on GH claims that it is hosted on SF
 DISTNAME=	${NAME}-${PORTVERSION}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,12 +15,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libjack.so:audio/jack
 
-USES=		compiler:c++11-lang pkgconfig qmake qt:5
-USE_QT=		core gui network widgets xml buildtools_build linguisttools_build
+USES=		compiler:c++11-lang gl pkgconfig qmake qt:5
+USE_QT=		concurrent core gui network widgets xml buildtools_build linguisttools_build
+USE_GL=		gl
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	corrados
 
 NAME=		Jamulus
-
-WRKSRC=		${WRKDIR}/${NAME}${PORTVERSION}
 
 DESKTOP_ENTRIES=	"${NAME}" "${COMMENT}" "${NAME}" \
 			"${PORTNAME}" "AudioVideo;Audio;Mixer;Qt;" true

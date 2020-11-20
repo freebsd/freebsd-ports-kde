@@ -11,12 +11,12 @@
     SUBDIR += abcde
     SUBDIR += abcselect
     SUBDIR += abgate-lv2
-    SUBDIR += abraca
     SUBDIR += adplay
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
     SUBDIR += alienwah
+    SUBDIR += alo-lv2
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
     SUBDIR += alsa-sndio
@@ -28,7 +28,6 @@
     SUBDIR += amsynth
     SUBDIR += aqualung
     SUBDIR += ardour
-    SUBDIR += ardour5
     SUBDIR += ardour6
     SUBDIR += ario
     SUBDIR += arss
@@ -91,8 +90,6 @@
     SUBDIR += cmus
     SUBDIR += codec2
     SUBDIR += cpige
-    SUBDIR += cplay
-    SUBDIR += cpp-xmms2
     SUBDIR += crip
     SUBDIR += csound
     SUBDIR += csoundqt
@@ -100,6 +97,7 @@
     SUBDIR += cue2toc
     SUBDIR += cuetools
     SUBDIR += cutmp3
+    SUBDIR += cyanrip
     SUBDIR += dagrab
     SUBDIR += darkice
     SUBDIR += dcd
@@ -326,6 +324,7 @@
     SUBDIR += gxmms2
     SUBDIR += gxplugins-lv2
     SUBDIR += harp
+    SUBDIR += headsetcontrol
     SUBDIR += herrie
     SUBDIR += hexter
     SUBDIR += hts_engine-API
@@ -539,8 +538,10 @@
     SUBDIR += mpg321
     SUBDIR += mpiosh
     SUBDIR += mps
+    SUBDIR += mpz
     SUBDIR += mumble
     SUBDIR += murmur
+    SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
     SUBDIR += musepack
     SUBDIR += musescore
@@ -552,6 +553,7 @@
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
+    SUBDIR += ncpamixer
     SUBDIR += ncspot
     SUBDIR += nekobi-lv2
     SUBDIR += noise-repellent-lv2
@@ -611,7 +613,6 @@
     SUBDIR += p5-Test-Corpus-Audio-MPD
     SUBDIR += p5-libvorbis
     SUBDIR += p5-tagged
-    SUBDIR += p5-xmms2
     SUBDIR += pacpl
     SUBDIR += padthv1-lv2
     SUBDIR += paman
@@ -764,6 +765,7 @@
     SUBDIR += spiralsynthmodular
     SUBDIR += splay
     SUBDIR += splaytk
+    SUBDIR += spotify-qt
     SUBDIR += spotify-tui
     SUBDIR += spotifyd
     SUBDIR += squash
@@ -843,6 +845,7 @@
     SUBDIR += wavpack
     SUBDIR += wavplay
     SUBDIR += webrtc-audio-processing
+    SUBDIR += welle.io
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmix
@@ -854,7 +857,6 @@
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
-    SUBDIR += xfce4-mixer
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc
@@ -873,7 +875,6 @@
     SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
-    SUBDIR += zinf
     SUBDIR += zita-convolver
     SUBDIR += zita-resampler
     SUBDIR += zrythm

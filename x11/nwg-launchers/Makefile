@@ -2,7 +2,7 @@
 
 PORTNAME=	nwg-launchers
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.2
+DISTVERSION=	0.4.2
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -20,6 +20,8 @@ GH_ACCOUNT=	nwg-piotr
 
 post-patch:
 # Respect PREFIX when looking for .desktop files
-	@${REINPLACE_CMD} 's,/usr/local,${PREFIX},' ${WRKSRC}/grid/grid_tools.cc
+	@${REINPLACE_CMD} 's,/usr/local,${PREFIX},' \
+		${WRKSRC}/common/nwg_tools.cc \
+		${WRKSRC}/grid/grid_tools.cc
 
 .include <bsd.port.mk>

@@ -150,6 +150,7 @@
     SUBDIR += aspcud
     SUBDIR += asymptote
     SUBDIR += atlas
+    SUBDIR += barvinok
     SUBDIR += bcal
     SUBDIR += bitwise
     SUBDIR += blacs
@@ -158,7 +159,6 @@
     SUBDIR += blaze
     SUBDIR += blazeiterative
     SUBDIR += blis
-    SUBDIR += blitz++
     SUBDIR += blocksolve95
     SUBDIR += bonmin
     SUBDIR += boolector
@@ -198,6 +198,7 @@
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
     SUBDIR += coinmp
+    SUBDIR += coinmumps
     SUBDIR += coinutils
     SUBDIR += combblas
     SUBDIR += concorde
@@ -522,7 +523,6 @@
     SUBDIR += oleo
     SUBDIR += onednn
     SUBDIR += openblas
-    SUBDIR += openfst
     SUBDIR += openlibm
     SUBDIR += opensolaris-libm
     SUBDIR += openturns
@@ -702,6 +702,8 @@
     SUBDIR += php73-gmp
     SUBDIR += php74-bcmath
     SUBDIR += php74-gmp
+    SUBDIR += php80-bcmath
+    SUBDIR += php80-gmp
     SUBDIR += physcalc
     SUBDIR += picosat
     SUBDIR += piranha
@@ -734,6 +736,7 @@
     SUBDIR += py-arviz
     SUBDIR += py-autograd
     SUBDIR += py-bayesian-optimization
+    SUBDIR += py-benford_py
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
@@ -753,7 +756,6 @@
     SUBDIR += py-fastcluster
     SUBDIR += py-fastdtw
     SUBDIR += py-flax
-    SUBDIR += py-fpconst
     SUBDIR += py-fpylll
     SUBDIR += py-gau2grid
     SUBDIR += py-gimmik
@@ -766,6 +768,7 @@
     SUBDIR += py-hdbscan
     SUBDIR += py-hdmedians
     SUBDIR += py-intspan
+    SUBDIR += py-iohexperimenter
     SUBDIR += py-jax
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
@@ -776,7 +779,9 @@
     SUBDIR += py-luminol
     SUBDIR += py-matplotlib
     SUBDIR += py-matplotlib-scalebar
+    SUBDIR += py-matplotlib2
     SUBDIR += py-mip
+    SUBDIR += py-mixsimulator
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-munkres10
@@ -787,6 +792,7 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
+    SUBDIR += py-numpy-stl
     SUBDIR += py-opt-einsum
     SUBDIR += py-or-tools
     SUBDIR += py-osqp
@@ -837,6 +843,7 @@
     SUBDIR += py-snuggs
     SUBDIR += py-spectral
     SUBDIR += py-spot
+    SUBDIR += py-ssm
     SUBDIR += py-statsmodels
     SUBDIR += py-statsmodels010
     SUBDIR += py-svgmath

@@ -21,6 +21,7 @@
     SUBDIR += bgpq4
     SUBDIR += bgpuma
     SUBDIR += blackbox_exporter
+    SUBDIR += bosun
     SUBDIR += bpft
     SUBDIR += braa
     SUBDIR += bsnmp-regex
@@ -55,7 +56,6 @@
     SUBDIR += coovachilli
     SUBDIR += cowpatty
     SUBDIR += cricket
-    SUBDIR += crmsh
     SUBDIR += darkstat
     SUBDIR += devmon
     SUBDIR += devmon-templates
@@ -119,7 +119,6 @@
     SUBDIR += klg
     SUBDIR += lg
     SUBDIR += librenms
-    SUBDIR += librenms-agent
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mbrowse
@@ -280,6 +279,8 @@
     SUBDIR += php72-snmp
     SUBDIR += php73-snmp
     SUBDIR += php74-snmp
+    SUBDIR += php80-snmp
+    SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += phpweathermap
     SUBDIR += ping_exporter
@@ -373,6 +374,7 @@
     SUBDIR += unifi-lts
     SUBDIR += unifi-poller
     SUBDIR += unifi5
+    SUBDIR += unifi6
     SUBDIR += virt-viewer
     SUBDIR += wdiag
     SUBDIR += whatmask
@@ -401,5 +403,10 @@
     SUBDIR += zabbix5-java
     SUBDIR += zabbix5-proxy
     SUBDIR += zabbix5-server
+    SUBDIR += zabbix52-agent
+    SUBDIR += zabbix52-frontend
+    SUBDIR += zabbix52-java
+    SUBDIR += zabbix52-proxy
+    SUBDIR += zabbix52-server
 
 .include <bsd.port.subdir.mk>

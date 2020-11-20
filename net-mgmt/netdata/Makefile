@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	netdata
-PORTVERSION=	1.24.0
 DISTVERSIONPREFIX=	v
+DISTVERSION=	1.26.0
 CATEGORIES=	net-mgmt
-MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${PORTVERSION}/
+MASTER_SITES=	https://github.com/${PORTNAME}/${PORTNAME}/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Scalable distributed realtime performance and health monitoring
@@ -15,7 +15,6 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libjson-c.so:devel/json-c \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libuv.so:devel/libuv
-
 RUN_DEPENDS=	bash:shells/bash \
 		curl:ftp/curl \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
@@ -86,7 +85,7 @@ LTO_USES=		compiler:c11
 BROKEN=		Link-Time Optimization breaks compilation on FreeBSD 11
 .endif
 
-.if ${PORT_OPTIONS:MLTO} && ${ARCH} == powerpc64
+.if ${PORT_OPTIONS:MLTO} && ${ARCH:Mpowerpc*}
 USE_GCC=	yes
 .endif
 
@@ -109,8 +108,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${NETDATA_CACHE}
 	${MKDIR} ${STAGEDIR}${NETDATA_LOG}
 	${MKDIR} ${STAGEDIR}${NETDATA_PERST}
-	(for fi in ${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*.conf \
-			${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*/*.conf; do \
+	(for fi in 	${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*.conf \
+			${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*/*.conf \
+			${STAGEDIR}${LOCALBASE}/lib/${PORTNAME}/conf.d/*.txt ; do \
 		${MV} $$fi $$fi".sample"; \
 	done)
 
