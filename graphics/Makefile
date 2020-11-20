@@ -55,6 +55,7 @@
     SUBDIR += apngasm
     SUBDIR += apngdis
     SUBDIR += argyllcms
+    SUBDIR += art
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -64,6 +65,7 @@
     SUBDIR += aview
     SUBDIR += avir
     SUBDIR += azpainter
+    SUBDIR += azpainterb
     SUBDIR += barbecue
     SUBDIR += barcode
     SUBDIR += batik
@@ -588,6 +590,7 @@
     SUBDIR += openimageio
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
+    SUBDIR += openjph
     SUBDIR += openjump
     SUBDIR += opennurbs
     SUBDIR += openorienteering-mapper
@@ -649,6 +652,11 @@
     SUBDIR += p5-GraphViz-Data-Structure
     SUBDIR += p5-GraphViz-Traverse
     SUBDIR += p5-GraphViz2
+    SUBDIR += p5-GraphViz2-DBI
+    SUBDIR += p5-GraphViz2-Data-Grapher
+    SUBDIR += p5-GraphViz2-Parse-ISA
+    SUBDIR += p5-GraphViz2-Parse-RecDescent
+    SUBDIR += p5-GraphViz2-Parse-XML
     SUBDIR += p5-Graphics-Color
     SUBDIR += p5-Graphics-ColorNames
     SUBDIR += p5-Graphics-ColorNames-WWW

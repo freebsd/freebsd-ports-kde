@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME?=	gitlab-ce
-PORTVERSION?=	13.5.2
-PORTREVISION?=	1
+PORTVERSION?=	13.5.4
+PORTREVISION?=	0
 CATEGORIES=	www devel
 
 MAINTAINER?=	mfechner@FreeBSD.org
@@ -122,7 +122,7 @@ MY_DEPENDS=	git>=2.26:devel/git \
 	rubygem-asciidoctor>=2.0.10<2.1.0:textproc/rubygem-asciidoctor \
 	rubygem-asciidoctor-include-ext>=0.3.1<0.4.0:textproc/rubygem-asciidoctor-include-ext \
 	rubygem-asciidoctor-plantuml>=0.0.12<0.1:textproc/rubygem-asciidoctor-plantuml \
-	rubygem-rouge>=3.24.0<3.25:textproc/rubygem-rouge \
+	rubygem-rouge324>=3.24.0<3.25:textproc/rubygem-rouge324 \
 	rubygem-truncato>=0.7.11<0.8.0:textproc/rubygem-truncato \
 	rubygem-bootstrap_form>=4.2.0<4.3.0:devel/rubygem-bootstrap_form \
 	rubygem-nokogiri>=1.10.10<1.11.0:textproc/rubygem-nokogiri \
@@ -264,7 +264,7 @@ USE_GITLAB=	yes
 GL_ACCOUNT?=	gitlab-org
 GL_PROJECT?=	gitlab-foss
 # Find the here: https://gitlab.com/gitlab-org/gitlab-foss/-/tags
-GL_COMMIT?=	187cae1b32bdbb01d70ad09a341dfc372bb559b7
+GL_COMMIT?=	7f5f940041c8d1ee074be96cc64bdccdd95649b1
 
 USERS=	git
 GROUPS=	git

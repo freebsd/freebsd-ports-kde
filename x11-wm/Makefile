@@ -40,6 +40,7 @@
     SUBDIR += fluxter
     SUBDIR += flwm
     SUBDIR += fvwm2
+    SUBDIR += gamescope
     SUBDIR += gcompmgr
     SUBDIR += herbstluftwm
     SUBDIR += hikari
@@ -84,6 +85,7 @@
     SUBDIR += qtile
     SUBDIR += ratmen
     SUBDIR += ratpoison
+    SUBDIR += river
     SUBDIR += rubygem-uh-layout
     SUBDIR += rubygem-uh-wm
     SUBDIR += sawfish

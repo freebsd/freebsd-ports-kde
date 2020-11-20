@@ -71,6 +71,7 @@
     SUBDIR += cgiwrap
     SUBDIR += checkbot
     SUBDIR += chems
+    SUBDIR += chisel
     SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chrome-gnome-shell
@@ -314,6 +315,7 @@
     SUBDIR += ljdeps
     SUBDIR += logswan
     SUBDIR += logtools
+    SUBDIR += ls-qpack
     SUBDIR += lua-resty-core
     SUBDIR += lua-resty-lrucache
     SUBDIR += luakit
@@ -1413,6 +1415,7 @@
     SUBDIR += py-aiohttp-wsgi
     SUBDIR += py-aiohttp2
     SUBDIR += py-aiohttp_cors
+    SUBDIR += py-aioquic
     SUBDIR += py-arxiv
     SUBDIR += py-asgiref
     SUBDIR += py-autobahn
@@ -1420,7 +1423,6 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
-    SUBDIR += py-beautifulsoup32
     SUBDIR += py-beautifulsoup448
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
@@ -1443,6 +1445,20 @@
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-dj31-django-auth-ldap
+    SUBDIR += py-dj31-django-cacheops
+    SUBDIR += py-dj31-django-cors-headers
+    SUBDIR += py-dj31-django-debug-toolbar
+    SUBDIR += py-dj31-django-filter
+    SUBDIR += py-dj31-django-js-asset
+    SUBDIR += py-dj31-django-mptt
+    SUBDIR += py-dj31-django-prometheus
+    SUBDIR += py-dj31-django-redis
+    SUBDIR += py-dj31-django-tables2
+    SUBDIR += py-dj31-django-taggit
+    SUBDIR += py-dj31-django-timezone-field
+    SUBDIR += py-dj31-djangorestframework
+    SUBDIR += py-dj31-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-allauth
     SUBDIR += py-django-annoying
@@ -1558,7 +1574,6 @@
     SUBDIR += py-draftjs_exporter
     SUBDIR += py-drf-yasg
     SUBDIR += py-dtflickr
-    SUBDIR += py-evernote
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-feedgenerator
@@ -1637,6 +1652,7 @@
     SUBDIR += py-httpx
     SUBDIR += py-httpx013
     SUBDIR += py-hyper
+    SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
@@ -1652,7 +1668,6 @@
     SUBDIR += py-livereload
     SUBDIR += py-mechanicalsoup
     SUBDIR += py-mechanize
-    SUBDIR += py-meld3
     SUBDIR += py-multidict
     SUBDIR += py-mwoauth
     SUBDIR += py-nevow
@@ -1673,6 +1688,7 @@
     SUBDIR += py-py-restclient
     SUBDIR += py-pyjwt
     SUBDIR += py-pylons
+    SUBDIR += py-pylsqpack
     SUBDIR += py-pyocclient
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
@@ -1690,7 +1706,6 @@
     SUBDIR += py-qt5-websockets
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
-    SUBDIR += py-requestbuilder
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
@@ -2099,6 +2114,7 @@
     SUBDIR += samdruckerserver
     SUBDIR += sarg
     SUBDIR += scloader
+    SUBDIR += screego
     SUBDIR += script4rss
     SUBDIR += seahub
     SUBDIR += searx
@@ -2149,6 +2165,7 @@
     SUBDIR += templatelite
     SUBDIR += thirtybees
     SUBDIR += threejs
+    SUBDIR += threema-web
     SUBDIR += thttpd
     SUBDIR += thumbnail_index
     SUBDIR += thundercache

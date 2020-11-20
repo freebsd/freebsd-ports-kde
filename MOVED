@@ -15674,10 +15674,38 @@ devel/py-twext||2020-11-03|Has expired: Uses deprecated version of python
 databases/py-sqlparse020|databases/py-sqlparse|2020-11-03|Dependency of removed www/calendarserver
 devel/nimble|lang/nim|2020-11-06|Integrated in lang/nim
 net-im/zephyr||2020-11-07|Has expired: Broken for more than 6 months
-net/samba410|net/samba411|2020-11-08|Has expired: yes
+net/samba410|net/samba412|2020-11-08|Has expired: yes
 audio/xfce4-mixer|audio/xfce4-pulseaudio-plugin|2020-11-08|Unsupported upstream since 2015. Try using audio/xfce4-pulseaudio-plugin
 multimedia/swfdec-gnome||2020-11-09|Depends on the expired gstreamer 0.10
-grapihcs/swfdec||2020-11-09|Depends on the expired gstreamer 0.10
+graphics/swfdec||2020-11-09|Depends on the expired gstreamer 0.10
 multimedia/py-openlp||2020-11-09|Depends on the expired gstreamer 0.10
 multimedia/p5-GStreamer||2020-11-09|Depends on the expired gstreamer 0.10
 emulators/riscv-fesvr||2020-11-09|Now bundled with emulators/riscv-isa-sim
+databases/py-python-rrdtool||2020-11-10|Has expired: Uses deprecated version of python
+net/spideroak||2020-11-10|Has expired: Uses deprecated version of python
+emulators/playonbsd||2020-11-10|Has expired: Uses deprecated version of python
+net/xorp||2020-11-10|Has expired: Uses deprecated version of python
+archivers/py-pyliblzma||2020-11-15|Has expired: Uses deprecated version of python
+databases/postgis23|databases/postgis24|2020-11-15|Has expired: Upstream no longer maintained
+databases/py-htsql||2020-11-15|Has expired: Uses deprecated version of python
+devel/bzr-fastimport||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-ToscaWidgets||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-calendar||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-distorm||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-fabric1|devel/py-fabric|2020-11-15|Has expired: Uses deprecated version of python
+devel/py-rcsparse||2020-11-15|Has expired: Uses deprecated version of python
+devel/pyrex||2020-11-15|Has expired: Uses deprecated version of python
+japanese/py-tegaki||2020-11-15|Has expired: Uses deprecated version of python
+math/py-networkx1|math/py-networkx|2020-11-15|Has expired: Obsolete, please use math/py-networkx instead
+misc/py-progressbar231|misc/py-progressbar|2020-11-15|Has expired: Uses deprecated version of python
+multimedia/py-kaa-imlib2||2020-11-15|Has expired: Uses deprecated version of python
+multimedia/py-kaa-metadata||2020-11-15|Has expired: Uses deprecated version of python
+net-im/libtelepathy||2020-11-15|Has expired: Uses deprecated version of python
+security/py-mcrypt||2020-11-15|Has expired: Uses deprecated version of python
+www/py-beautifulsoup32|www/py-beautifulsoup|2020-11-15|Has expired: Uses deprecated version of python
+www/py-evernote||2020-11-15|Has expired: Uses deprecated version of python
+www/py-meld3||2020-11-15|Has expired: EOLed upstream
+www/py-requestbuilder||2020-11-15|Has expired: Uses deprecated version of python
+x11-toolkits/py-SquareMap||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-utils||2020-11-16|Removed on maintainers request, uses EOLed python27
+net-mgmt/cnagios4|net-mgmt/cnagio|2020-11-17|Moved to nagios4 flavored version

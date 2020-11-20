@@ -1242,6 +1242,7 @@
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
+    SUBDIR += py-collective.checkdocs
     SUBDIR += py-colorclass
     SUBDIR += py-creole
     SUBDIR += py-cssselect2
@@ -1371,6 +1372,7 @@
     SUBDIR += py-qt5-xml
     SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
+    SUBDIR += py-readchar
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reno
@@ -1641,6 +1643,7 @@
     SUBDIR += rubygem-rouge318
     SUBDIR += rubygem-rouge319
     SUBDIR += rubygem-rouge321
+    SUBDIR += rubygem-rouge324
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
