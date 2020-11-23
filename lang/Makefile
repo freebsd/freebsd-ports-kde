@@ -116,6 +116,7 @@
     SUBDIR += go
     SUBDIR += go-devel
     SUBDIR += gomacro
+    SUBDIR += gprolog
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
@@ -361,6 +362,7 @@
     SUBDIR += visualworks
     SUBDIR += voc
     SUBDIR += yabasic
+    SUBDIR += yap
     SUBDIR += yorick
     SUBDIR += ypsilon
     SUBDIR += zig
