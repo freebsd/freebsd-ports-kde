@@ -1029,6 +1029,14 @@ lib/calibre/calibre/gui2/toc/__init__.py
 lib/calibre/calibre/gui2/toc/location.py
 lib/calibre/calibre/gui2/toc/main.py
 lib/calibre/calibre/gui2/tools.py
+lib/calibre/calibre/gui2/tts/__init__.py
+lib/calibre/calibre/gui2/tts/common.py
+lib/calibre/calibre/gui2/tts/develop.py
+lib/calibre/calibre/gui2/tts/errors.py
+lib/calibre/calibre/gui2/tts/implementation.py
+lib/calibre/calibre/gui2/tts/linux.py
+lib/calibre/calibre/gui2/tts/macos.py
+lib/calibre/calibre/gui2/tts/windows.py
 lib/calibre/calibre/gui2/tweak_book/__init__.py
 lib/calibre/calibre/gui2/tweak_book/boss.py
 lib/calibre/calibre/gui2/tweak_book/char_select.py
@@ -1332,7 +1340,6 @@ lib/calibre/calibre/utils/test_lock.py
 lib/calibre/calibre/utils/text2int.py
 lib/calibre/calibre/utils/threadpool.py
 lib/calibre/calibre/utils/titlecase.py
-lib/calibre/calibre/utils/tts/__init__.py
 lib/calibre/calibre/utils/unicode_names.py
 lib/calibre/calibre/utils/unrar.py
 lib/calibre/calibre/utils/unsmarten.py
