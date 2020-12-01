@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	shiboken2
-DISTVERSION=	5.15.1
+DISTVERSION=	5.15.2
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/QtForPython/shiboken2/PySide2-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -34,10 +34,29 @@ CMAKE_ARGS+=	"-DCMAKE_CXX_FLAGS=-lexecinfo" \
 		"-DUSE_PYTHON_VERSION=${PYTHON_VER}"
 
 .include <bsd.port.pre.mk>
+#CPYVER=		.cpython-${PYTHON_SUFFIX}
 
 PLIST_SUB+=	DISTVERSION=${DISTVERSION}
+#PLIST_SUB+=	CPYVER=${CPYVER}
 PLIST_SUB+=	PYVERSTR=.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}
 
 WRKSRC=		${WRKDIR}/pyside-setup-opensource-src-${DISTVERSION:C/^([0-9].[0-9]+.[0-9])(.[0-9])?/\1/}/sources/shiboken2
+
+#post-build:
+#	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/__pycache__
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/__pycache__/__feature__${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/__pycache__/__init__${CPYVER}.pyc
+#	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/importhandler${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/layout${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/__init__${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/errorhandler${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/loader${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/mapping${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/__pycache__/parser${CPYVER}.pyc
+#	${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/lib/__pycache__
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/lib/__pycache__/enum_sig${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/lib/__pycache__/__init__${CPYVER}.pyc
+#	${TOUCH} ${STAGEDIR}${PYTHON_SITELIBDIR}/shiboken2/files.dir/shibokensupport/signature/lib/__pycache__/tool${CPYVER}.pyc
 
 .include <bsd.port.post.mk>
