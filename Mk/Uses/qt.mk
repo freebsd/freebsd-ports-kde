@@ -128,12 +128,7 @@ _USES_POST+=		qt
 _QT_MK_POST_INCLUDED=	qt.mk
 
 # The Qt components supported by qt.mk: list of shared, and version specific ones
-_USE_QT_ALL=		assistant dbus declarative designer doc gui help \
-			imageformats l10n linguist linguisttools multimedia \
-			network opengl pixeltool qdbusviewer qmake script \
-			scripttools sql sql-mysql sql-odbc sql-pgsql \
-			sql-sqlite2 sql-sqlite3 svg testlib webkit \
-			xml xmlpatterns
+_USE_QT_ALL=		# TODO: filter common components out again
 .if ${ARCH} == amd64 || ${ARCH} == i386
 _USE_QT_ALL+=	sql-ibase
 .endif
@@ -144,9 +139,15 @@ _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			qdbus qdoc qdoc-data qev quick3d quickcontrols quickcontrols2 \
 			quicktimeline remoteobjects scxml sensors serialbus serialport speech \
 			sql-tds uiplugin uitools virtualkeyboard wayland webchannel webglplugin \
-			webengine websockets websockets-qml webview widgets x11extras
+			webengine websockets websockets-qml webview widgets x11extras \
+			assistant dbus declarative designer doc gui help \
+			imageformats l10n linguist linguisttools multimedia \
+			network opengl pixeltool qdbusviewer qmake script \
+			scripttools sql sql-mysql sql-odbc sql-pgsql \
+			sql-sqlite2 sql-sqlite3 svg testlib webkit \
+			xml xmlpatterns
 
-_USE_QT6_ONLY=		base
+_USE_QT6_ONLY=		5compat base declarative doc quick3d quickcontrols2 quicktimeline shadertools svg tools translations wayland
 
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d

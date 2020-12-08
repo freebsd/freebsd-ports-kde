@@ -1,4 +1,4 @@
---- src/corelib/CMakeLists.txt.orig	2020-07-03 14:02:11 UTC
+--- src/corelib/CMakeLists.txt.orig	2020-12-04 10:14:27 UTC
 +++ src/corelib/CMakeLists.txt
 @@ -4,6 +4,7 @@
  qt_find_package(Threads PROVIDED_TARGETS Threads::Threads)
@@ -8,9 +8,9 @@
  
  # compute the reverse relative path from QtCoreConfigExtras to the install prefix
  # this is used in QtCoreConfigExtras to make its install paths relocatable
-@@ -295,6 +296,8 @@ target_include_directories(Core_qobject PRIVATE "${CMA
+@@ -310,6 +311,8 @@ target_include_directories(Core_qobject PRIVATE "${CMA
  target_link_libraries(Core_qobject PRIVATE Qt::Platform Qt::GlobalConfig)
- extend_target(Core LIBRARIES Qt::Core_qobject)
+ qt_internal_extend_target(Core LIBRARIES Qt::Core_qobject)
  add_dependencies(Core_qobject ${QT_CMAKE_EXPORT_NAMESPACE}::moc)
 +
 +target_link_libraries(Core PRIVATE ${Backtrace_LIBRARY})

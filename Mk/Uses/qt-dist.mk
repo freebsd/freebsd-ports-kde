@@ -30,7 +30,8 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		base declarative
+_QT6_DISTS=		5compat base declarative doc quick3d quickcontrols2 quicktimeline shadertools svg tools translations wayland
+
 _QT6_DIST_base_TAGNAME=	39d99c7
 _QT6_DIST_declarative_TAGNAME=	0efc634
 
@@ -392,38 +393,39 @@ qt5-pre-configure:
 
 post-install: qt-post-install
 qt-post-install:
+	${ECHO_CMD} "MIIIIIP"
 .        if ${QT_DEFINES:N-*}
 # We can't use SUB_FILES with a shared pkg-deinstall.in.
 # We need it to be a script instead of a group of @unexecs, otherwise
 # qconfig-modules.h cleanup will be run in pre-deinstall stage, which is
 # useless. This will probably be replaced by a Keywords/ script in the future.
-	@${SED} -e 's,%%QT_MODNAME%%,${QT_MODNAME},g' \
+	${SED} -e 's,%%QT_MODNAME%%,${QT_MODNAME},g' \
 		-e 's,%%QT_INCDIR%%,${QT_INCDIR},g' \
 		${PORTSDIR}/devel/${_QT_RELNAME}/${FILESDIR:T}/${PKGDEINSTALL:T}.in > \
 		${PKGDEINSTALL}
-	@${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
-	@${ECHO_CMD} -n \
+	${MKDIR} ${STAGEDIR}${QT_INCDIR}/QtCore/modules
+	${ECHO_CMD} -n \
 		> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .          for def in ${QT_DEFINES:N-*:O:u:C/=.*$//}
-	@${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
+	${ECHO_CMD} "#if !defined(QT_${def}) && !defined(QT_NO_${def})" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 	${ECHO_CMD} "# define QT_${def}" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} "#endif" \
+	${ECHO_CMD} "#endif" \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
-	@${ECHO_CMD} \
+	${ECHO_CMD} \
 		>> ${STAGEDIR}${QT_INCDIR}/QtCore/modules/qconfig-${QT_MODNAME}.h
 .          endfor
-	@${ECHO_CMD} "${PREFIX}/${QT_INCDIR_REL}/QtCore/modules/qconfig-${QT_MODNAME}.h" \
+	${ECHO_CMD} "${PREFIX}/${QT_INCDIR_REL}/QtCore/modules/qconfig-${QT_MODNAME}.h" \
 		>> ${TMPPLIST}
-	@${ECHO_CMD} "@exec echo '#include <QtCore/modules/qconfig-${QT_MODNAME}.h>' >> ${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig-modules.h" \
+	${ECHO_CMD} "@exec echo '#include <QtCore/modules/qconfig-${QT_MODNAME}.h>' >> ${PREFIX}/${QT_INCDIR_REL}/QtCore/qconfig-modules.h" \
 		>> ${TMPPLIST}
 .        endif # ${QT_DEFINES:N-*}
 .        if ${QT_CONFIG:N-*}
-	@${MKDIR} ${STAGEDIR}${QT_MKSPECDIR}/modules
+	${MKDIR} ${STAGEDIR}${QT_MKSPECDIR}/modules
 	${ECHO_CMD} "QT_CONFIG += ${QT_CONFIG:N-*:O:u}" \
 		> ${STAGEDIR}${QT_MKSPECDIR}/modules/qt_config_${QT_MODNAME}.pri
-	@${ECHO_CMD} "${PREFIX}/${QT_MKSPECDIR_REL}/modules/qt_config_${QT_MODNAME}.pri" \
+	${ECHO_CMD} "${PREFIX}/${QT_MKSPECDIR_REL}/modules/qt_config_${QT_MODNAME}.pri" \
 		>> ${TMPPLIST}
 .        endif # ${QT_CONFIG:N-*}
 .      endif # M5
