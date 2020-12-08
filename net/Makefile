@@ -38,6 +38,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
     SUBDIR += asterisk16
+    SUBDIR += asterisk18
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -154,6 +155,7 @@
     SUBDIR += flower
     SUBDIR += foreman-proxy
     SUBDIR += fpc-ldap
+    SUBDIR += fpc-libenet
     SUBDIR += fpc-pcap
     SUBDIR += fping
     SUBDIR += freebsd-uucp
@@ -173,6 +175,7 @@
     SUBDIR += geoclue
     SUBDIR += geocode-glib
     SUBDIR += geoipupdate
+    SUBDIR += gerbera
     SUBDIR += gfbgraph
     SUBDIR += glflow
     SUBDIR += glib-networking
@@ -205,6 +208,7 @@
     SUBDIR += grsync
     SUBDIR += gscloud
     SUBDIR += gsk
+    SUBDIR += gsocket
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gstreamer-plugins-libmms
@@ -228,6 +232,7 @@
     SUBDIR += haproxy19
     SUBDIR += haproxy20
     SUBDIR += haproxy21
+    SUBDIR += haproxy23
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -426,6 +431,7 @@
     SUBDIR += measurement-kit
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
+    SUBDIR += megacmd
     SUBDIR += megatools
     SUBDIR += messagelib
     SUBDIR += mgen
@@ -957,6 +963,9 @@
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
     SUBDIR += php74-xmlrpc
+    SUBDIR += php80-ldap
+    SUBDIR += php80-soap
+    SUBDIR += php80-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1001,8 +1010,10 @@
     SUBDIR += py-dpkt
     SUBDIR += py-dugong
     SUBDIR += py-ec2-cli-tools
+    SUBDIR += py-errbot
     SUBDIR += py-eventlet
     SUBDIR += py-flask-xml-rpc
+    SUBDIR += py-gdown
     SUBDIR += py-gntp
     SUBDIR += py-gspread
     SUBDIR += py-h11
@@ -1029,7 +1040,7 @@
     SUBDIR += py-miniupnpc
     SUBDIR += py-mpi4py
     SUBDIR += py-msrplib
-    SUBDIR += py-ndg_httpsclient
+    SUBDIR += py-ndg-httpsclient
     SUBDIR += py-netaddr
     SUBDIR += py-netif
     SUBDIR += py-netifaces
@@ -1086,11 +1097,13 @@
     SUBDIR += py-ripe.atlas.tools
     SUBDIR += py-s3cmd
     SUBDIR += py-s3transfer
+    SUBDIR += py-saltyrtc.server
     SUBDIR += py-sbws
     SUBDIR += py-shodan
     SUBDIR += py-siosocks
     SUBDIR += py-smart-open
     SUBDIR += py-smbpasswd
+    SUBDIR += py-smbprotocol
     SUBDIR += py-soap2py
     SUBDIR += py-socketio-client
     SUBDIR += py-softlayer
@@ -1112,6 +1125,7 @@
     SUBDIR += py-uritools
     SUBDIR += py-urlextract
     SUBDIR += py-urllib3
+    SUBDIR += py-whois
     SUBDIR += py-wmi-query
     SUBDIR += py-wsdd
     SUBDIR += py-wsproto
@@ -1152,20 +1166,9 @@
     SUBDIR += redir
     SUBDIR += relayd
     SUBDIR += remmina
-    SUBDIR += remmina-plugin-exec
-    SUBDIR += remmina-plugin-nx
-    SUBDIR += remmina-plugin-rdp
-    SUBDIR += remmina-plugin-secret
-    SUBDIR += remmina-plugin-spice
-    SUBDIR += remmina-plugin-st
-    SUBDIR += remmina-plugin-vnc
-    SUBDIR += remmina-plugin-www
-    SUBDIR += remmina-plugin-xdmcp
-    SUBDIR += remmina-plugins
     SUBDIR += remotebox
     SUBDIR += remotedesk
     SUBDIR += repeater
-    SUBDIR += reposado
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
@@ -1270,6 +1273,7 @@
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db
     SUBDIR += rubygem-mqtt
+    SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
@@ -1345,7 +1349,6 @@
     SUBDIR += rude
     SUBDIR += ryu
     SUBDIR += sacc
-    SUBDIR += samba410
     SUBDIR += samba411
     SUBDIR += samba412
     SUBDIR += samba413
@@ -1392,7 +1395,6 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
-    SUBDIR += spideroak
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j
@@ -1537,7 +1539,6 @@
     SUBDIR += xisp
     SUBDIR += xmlrpc-c
     SUBDIR += xmlrpc-epi
-    SUBDIR += xorp
     SUBDIR += xprobe
     SUBDIR += xrdesktop2
     SUBDIR += xrdp

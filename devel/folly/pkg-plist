@@ -308,9 +308,11 @@ include/folly/experimental/coro/UnboundedQueue.h
 include/folly/experimental/coro/Utils.h
 include/folly/experimental/coro/ViaIfAsync.h
 include/folly/experimental/coro/Wait.h
+include/folly/experimental/coro/WithAsyncStack.h
 include/folly/experimental/coro/WithCancellation.h
 include/folly/experimental/coro/detail/Barrier.h
 include/folly/experimental/coro/detail/BarrierTask.h
+include/folly/experimental/coro/detail/CurrentAsyncFrame.h
 include/folly/experimental/coro/detail/Helpers.h
 include/folly/experimental/coro/detail/InlineTask.h
 include/folly/experimental/coro/detail/Malloc.h
@@ -468,6 +470,8 @@ include/folly/io/async/AsyncTransport.h
 include/folly/io/async/AsyncTransportCertificate.h
 include/folly/io/async/AsyncUDPServerSocket.h
 include/folly/io/async/AsyncUDPSocket.h
+include/folly/io/async/AtomicNotificationQueue.h
+include/folly/io/async/AtomicNotificationQueue-inl.h
 include/folly/io/async/CertificateIdentityVerifier.h
 include/folly/io/async/DecoratedAsyncTransportWrapper.h
 include/folly/io/async/DelayedDestruction.h
@@ -626,6 +630,7 @@ include/folly/portability/Windows.h
 include/folly/python/AsyncioExecutor.h
 include/folly/python/async_generator.h
 include/folly/python/coro.h
+include/folly/python/executor.h
 include/folly/python/futures.h
 include/folly/python/iobuf.h
 include/folly/small_vector.h
@@ -727,9 +732,15 @@ lib/cmake/folly/folly-config.cmake
 lib/cmake/folly/folly-targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/folly/folly-targets.cmake
 lib/libfolly.so
+lib/libfolly.so.0.58.0-dev
 lib/libfolly_exception_counter.so
+lib/libfolly_exception_counter.so.0.58.0-dev
 lib/libfolly_exception_tracer.so
+lib/libfolly_exception_tracer.so.0.58.0-dev
 lib/libfolly_exception_tracer_base.so
+lib/libfolly_exception_tracer_base.so.0.58.0-dev
 lib/libfolly_test_util.so
+lib/libfolly_test_util.so.0.58.0-dev
 lib/libfollybenchmark.so
+lib/libfollybenchmark.so.0.58.0-dev
 libdata/pkgconfig/libfolly.pc

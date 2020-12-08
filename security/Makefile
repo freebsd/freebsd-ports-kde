@@ -157,6 +157,7 @@
     SUBDIR += fizz
     SUBDIR += fl0p
     SUBDIR += flawfinder
+    SUBDIR += fpc-gnutls
     SUBDIR += fpc-openssl
     SUBDIR += fprint_demo
     SUBDIR += fprintd
@@ -489,6 +490,7 @@
     SUBDIR += p5-Cisco-Hash
     SUBDIR += p5-Crypt-Anubis
     SUBDIR += p5-Crypt-AppleTwoFish
+    SUBDIR += p5-Crypt-Argon2
     SUBDIR += p5-Crypt-Blowfish
     SUBDIR += p5-Crypt-Blowfish_PP
     SUBDIR += p5-Crypt-CAST5
@@ -791,6 +793,9 @@
     SUBDIR += php74-filter
     SUBDIR += php74-openssl
     SUBDIR += php74-sodium
+    SUBDIR += php80-filter
+    SUBDIR += php80-openssl
+    SUBDIR += php80-sodium
     SUBDIR += phpsecinfo
     SUBDIR += picosha2
     SUBDIR += pidentd
@@ -911,7 +916,6 @@
     SUBDIR += py-libnacl
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
-    SUBDIR += py-mcrypt
     SUBDIR += py-merkletools
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
@@ -953,6 +957,7 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-pysodium
+    SUBDIR += py-pyspnego
     SUBDIR += py-python-axolotl
     SUBDIR += py-python-axolotl-curve25519
     SUBDIR += py-python-gnupg
@@ -984,6 +989,7 @@
     SUBDIR += py-spake2
     SUBDIR += py-ssh
     SUBDIR += py-ssh-audit
+    SUBDIR += py-sshpubkeys
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-stix2
@@ -999,6 +1005,7 @@
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility3
     SUBDIR += py-vulndb
+    SUBDIR += py-webauthn
     SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
@@ -1147,6 +1154,7 @@
     SUBDIR += rubygem-twitter_oauth
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
+    SUBDIR += rustscan
     SUBDIR += s2n
     SUBDIR += safesh
     SUBDIR += samhain
@@ -1199,6 +1207,7 @@
     SUBDIR += sops
     SUBDIR += spass
     SUBDIR += spass-qt5
+    SUBDIR += spectre-meltdown-checker
     SUBDIR += spm
     SUBDIR += spybye
     SUBDIR += sqlmap

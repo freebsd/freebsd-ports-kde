@@ -1,3 +1,3 @@
-TIMESTAMP = 1601028041
-SHA256 (elasticsearch-7.9.2-no-jdk-linux-x86_64.tar.gz) = 76725052ca1f9c9a3cc103952d5c3f29abd68ab2e1422e6b174e0dcd3ba6fc60
-SIZE (elasticsearch-7.9.2-no-jdk-linux-x86_64.tar.gz) = 162795379
+TIMESTAMP = 1605452048
+SHA256 (elasticsearch-7.10.0-no-jdk-linux-x86_64.tar.gz) = 446e810113f51c048212b9b89b1e7f35ea37ce6292312d60f678266fdd43409a
+SIZE (elasticsearch-7.10.0-no-jdk-linux-x86_64.tar.gz) = 164353416

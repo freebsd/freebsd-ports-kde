@@ -15,6 +15,7 @@
     SUBDIR += bochs
     SUBDIR += bsvc
     SUBDIR += cannonball
+    SUBDIR += cemu
     SUBDIR += cinc
     SUBDIR += cingb
     SUBDIR += citra
@@ -61,6 +62,7 @@
     SUBDIR += kcemu
     SUBDIR += klh10
     SUBDIR += lib765
+    SUBDIR += libc6-shim
     SUBDIR += libdsk
     SUBDIR += libretro-ppsspp
     SUBDIR += libspectrum
@@ -104,7 +106,6 @@
     SUBDIR += pcem
     SUBDIR += pcemu
     SUBDIR += pcsxr
-    SUBDIR += playonbsd
     SUBDIR += ppsspp
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
@@ -122,7 +123,6 @@
     SUBDIR += qemu50
     SUBDIR += qmc2
     SUBDIR += quasi88
-    SUBDIR += riscv-fesvr
     SUBDIR += riscv-isa-sim
     SUBDIR += rpcs3
     SUBDIR += rtc
@@ -168,6 +168,7 @@
     SUBDIR += wine-gecko-devel
     SUBDIR += wine-mono
     SUBDIR += wine-mono-devel
+    SUBDIR += wine-proton
     SUBDIR += winetricks
     SUBDIR += x16-emulator
     SUBDIR += x16-rom

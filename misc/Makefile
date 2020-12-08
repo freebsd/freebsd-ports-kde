@@ -356,6 +356,7 @@
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
     SUBDIR += php74-calendar
+    SUBDIR += php80-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += pnpids
@@ -395,7 +396,6 @@
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2
-    SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
     SUBDIR += py-pyprind
@@ -522,6 +522,7 @@
     SUBDIR += wmtunlo
     SUBDIR += wmweather+
     SUBDIR += wmwork
+    SUBDIR += xd-rust
     SUBDIR += xdelta
     SUBDIR += xdelta3
     SUBDIR += xfce4-appfinder

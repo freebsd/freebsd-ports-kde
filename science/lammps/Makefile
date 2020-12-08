@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3
 
 USES=		blaslapack:openblas cmake:noninja compiler:c++11-lang eigen:3 fortran localbase:ldflags shebangfix
 USE_GITHUB=	yes
-GH_TAGNAME=	patch_18Sep2020
+GH_TAGNAME=	patch_30Nov2020
 USE_LDCONFIG=	yes
 
 SHEBANG_GLOB=	*.sh *.bash
@@ -42,7 +42,7 @@ CMAKE_ON+=	PKG_USER-UEF PKG_USER-QMMM PKG_USER-YAFF
 
 OPTIONS_DEFINE=		EXCEPTIONS JPEG PNG GZIP FFMPEG
 OPTIONS_GROUP=		PARALLEL PACKAGES
-OPTIONS_DEFAULT=	EXCEPTIONS MPI OPENMP JPEG PNG GZIP FFMPEG H5MD KIM KOKKOS LATTE PLUMED VORONOI ${OPTIONS_DEFAULT_${CHOSEN_COMPILER_TYPE}}
+OPTIONS_DEFAULT=	EXCEPTIONS MPI OPENMP JPEG PNG GZIP FFMPEG H5MD KOKKOS LATTE PLUMED VORONOI ${OPTIONS_DEFAULT_${CHOSEN_COMPILER_TYPE}} # KIM is broken
 OPTIONS_SUB=		yes
 PARALLEL_DESC=		Enable parallelizations:
 PACKAGES_DESC=		Enable packages:
@@ -81,6 +81,7 @@ KIM_CMAKE_ON=		-DDOWNLOAD_KIM:BOOL=OFF
 KIM_LIB_DEPENDS=	libkim-api.so:science/kim-api \
 			libcurl.so:ftp/curl
 KIM_RUN_DEPENDS=	openkim-models>0:science/openkim-models
+KIM_BROKEN=		https://github.com/lammps/lammps/issues/2489
 
 KOKKOS_DESC=		kokkos package based on the libkokkos library
 KOKKOS_CMAKE_BOOL=	PKG_KOKKOS EXTERNAL_KOKKOS

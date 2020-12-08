@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	puppet
-PORTVERSION=	6.18.0
+PORTVERSION=	6.19.1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	6
 
@@ -11,9 +11,8 @@ COMMENT=	Configuration management framework written in Ruby
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=		fails to install: Could not load facter; cannot install
-
-BUILD_DEPENDS=	rubygem-deep_merge>=1.0:devel/rubygem-deep_merge \
+BUILD_DEPENDS=	rubygem-concurrent-ruby>0:devel/rubygem-concurrent-ruby \
+		rubygem-deep_merge>=1.0:devel/rubygem-deep_merge \
 		rubygem-hiera>=2.0:sysutils/rubygem-hiera \
 		rubygem-json_pure>=0:devel/rubygem-json_pure \
 		rubygem-semantic_puppet>=1:devel/rubygem-semantic_puppet
@@ -31,7 +30,7 @@ CPE_VENDOR=	puppetlabs
 USE_GITHUB=	yes
 GH_ACCOUNT=	puppetlabs
 
-CONFLICTS_INSTALL=	puppet4-* puppet5-*
+CONFLICTS_INSTALL=	puppet5-* puppet7-*
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 NO_ARCH=	yes
 NO_BUILD=	yes

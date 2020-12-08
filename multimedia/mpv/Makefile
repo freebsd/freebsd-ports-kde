@@ -3,12 +3,17 @@
 
 PORTNAME=	mpv
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.32.0
-PORTREVISION=	5
+DISTVERSION=	0.33.0
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	https://waf.io/:waf
 DISTFILES=	${WAF_RELEASE}${EXTRACT_SUFX}:waf
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1bb2665e3d09.patch:-p1 59c32a04b04d.patch:-p1 62fb374349e0.patch:-p1
+PATCHFILES+=	24525e4ef9ba.patch:-p1 4dd5fdc0876e.patch:-p1 4d80314c5c88.patch:-p1
+PATCHFILES+=	62e566dbcd8f.patch:-p1 # https://github.com/mpv-player/mpv/pull/8312
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Free and open-source general-purpose video player
@@ -17,7 +22,8 @@ LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	ffmpeg>=4.0.2,1:multimedia/ffmpeg
-LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
+LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
+		libass.so:multimedia/libass
 
 USES=		compiler:c11 desktop-file-utils iconv jpeg localbase:ldflags \
 		pkgconfig python:build tar:bz2 waf
@@ -28,7 +34,7 @@ GH_ACCOUNT=	mpv-player
 
 # Keep in sync with bootstrap.py to avoid regressions
 WAF_CMD=	${WRKDIR}/${WAF_RELEASE}/waf-light
-WAF_RELEASE=	waf-2.0.9
+WAF_RELEASE=	waf-2.0.20
 
 CONFIGURE_ENV=	BIN_PYTHON="${PYTHON_CMD}"
 CONFIGURE_ARGS=	--docdir="${EXAMPLESDIR}" \
@@ -42,18 +48,18 @@ CONFIGURE_ARGS=	--docdir="${EXAMPLESDIR}" \
 		--disable-vapoursynth \
 		--enable-libmpv-shared
 
-OPTIONS_DEFINE=		ARCHIVE ASS DOCS LCMS2 LUAJIT MANPAGES TEST UCHARDET EXAMPLES ZIMG
-OPTIONS_DEFAULT=	ARCHIVE ASS DVDNAV MANPAGES OPENGL UCHARDET \
+OPTIONS_DEFINE=		ARCHIVE DOCS LCMS2 LUAJIT MANPAGES TEST UCHARDET EXAMPLES ZIMG
+OPTIONS_DEFAULT=	ARCHIVE DVDNAV MANPAGES OPENGL UCHARDET \
 			V4L VAAPI VDPAU VULKAN WAYLAND X11 YTDL
 OPTIONS_GROUP=		IN VO AO
-OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L YTDL SMB
-OPTIONS_GROUP_VO=	CACA OPENGL VAAPI VDPAU VULKAN WAYLAND X11
-OPTIONS_GROUP_AO=	ALSA JACK OPENAL PULSEAUDIO SDL SNDIO
+OPTIONS_GROUP_IN=	CDIO DVDNAV LIBBLURAY V4L YTDL
+OPTIONS_GROUP_VO=	CACA OPENGL SIXEL VAAPI VDPAU VULKAN WAYLAND X11
+OPTIONS_GROUP_AO=	ALSA JACK OPENAL PULSEAUDIO SDL
 OPTIONS_SUB=		yes
 
-ASS_DESC=		ASS/SSA subtitle and OSD rendering
 DVDNAV_DESC=		DVD menu navigation
 LUAJIT_DESC=		Use LuaJIT instead of Lua scripting language support
+SIXEL_DESC=		Sixel graphics support
 UCHARDET_DESC=		Guess subtitle encoding via uchardet
 VULKAN_DESC=		Vulkan output support
 WAYLAND_DESC=		Wayland (graphics) support
@@ -68,9 +74,6 @@ ALSA_CONFIGURE_OFF=		--disable-alsa
 
 ARCHIVE_USES=			libarchive
 ARCHIVE_CONFIGURE_ON=		--enable-libarchive
-
-ASS_LIB_DEPENDS=		libass.so:multimedia/libass
-ASS_CONFIGURE_OFF=		--disable-libass
 
 CACA_LIB_DEPENDS=		libcaca.so:graphics/libcaca
 CACA_CONFIGURE_OFF=		--disable-caca
@@ -109,7 +112,7 @@ OPENAL_LDFLAGS=			${_OPENAL_LDFLAGS_${ARCH}}
 _OPENAL_LDFLAGS_i386=		-Wl,-znotext
 
 OPENGL_USES=			gl
-OPENGL_USE=			GL=egl,gbm,gl
+OPENGL_USE=			GL=egl,gbm
 OPENGL_CONFIGURE_OFF=		--disable-gl
 OPENGL_IMPLIES=			X11
 
@@ -120,12 +123,8 @@ SDL_USES=			sdl
 SDL_USE=			SDL=sdl2
 SDL_CONFIGURE_ON=		--enable-sdl2
 
-SNDIO_LIB_DEPENDS=		libsndio.so:audio/sndio
-SNDIO_CONFIGURE_ON=		--enable-sndio
-SNDIO_CONFIGURE_OFF=		--disable-sndio
-
-SMB_USES=			samba:lib
-SMB_CONFIGURE_ON=		--enable-libsmbclient
+SIXEL_LIB_DEPENDS=		libsixel.so:graphics/libsixel
+SIXEL_CONFIGURE_OFF=		--disable-sixel
 
 TEST_CONFIGURE_ON=		--enable-tests
 
@@ -148,7 +147,7 @@ VULKAN_CONFIGURE_OFF=		--disable-vulkan --disable-libplacebo
 VULKAN_IMPLIES=			X11
 
 WAYLAND_BUILD_DEPENDS=		wayland-protocols>=1.14:graphics/wayland-protocols \
-				${LOCALBASE}/include/linux/input.h:devel/evdev-proto
+				${LOCALBASE}/include/linux/input-event-codes.h:devel/evdev-proto
 WAYLAND_LIB_DEPENDS=		libwayland-client.so:graphics/wayland \
 				libwayland-cursor.so:graphics/wayland \
 				libxkbcommon.so:x11/libxkbcommon
@@ -174,9 +173,6 @@ CONFIGURE_ARGS+=	--disable-vaapi-wayland
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|sys/vt.h|sys/consio.h|g' \
-		${WRKSRC}/video/out/drm_common.c \
-		${WRKSRC}/wscript
 	@${REINPLACE_CMD} -e 's|/pkgconfig/mpv.pc|data/pkgconfig/mpv.pc|g' \
 		${WRKSRC}/wscript_build.py
 

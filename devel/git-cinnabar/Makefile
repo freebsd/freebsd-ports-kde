@@ -1,10 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	git-cinnabar
-DISTVERSION=	0.5.5
-PORTREVISION=	4
+DISTVERSION=	0.5.6
 CATEGORIES=	devel
-PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX:N-py27}
+py27_PKGNAMESUFFIX=	${PYTHON_PKGNAMESUFFIX}
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Git remote helper to interact with Mercurial repositories
@@ -13,7 +12,6 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${NONEXISTENT}:devel/git:configure
 RUN_DEPENDS=	git:devel/git
-py27_RUN_DEPENDS=	${PY_MERCURIAL} # XXX bug 242463
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	glandium

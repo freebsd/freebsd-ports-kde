@@ -192,6 +192,7 @@
     SUBDIR += linux-sublime3
     SUBDIR += madedit
     SUBDIR += mg
+    SUBDIR += mg-static
     SUBDIR += micro
     SUBDIR += mined
     SUBDIR += mle
@@ -203,7 +204,6 @@
     SUBDIR += nedit
     SUBDIR += neovim
     SUBDIR += neovim-qt
-    SUBDIR += nvi-devel
     SUBDIR += nvi-m17n
     SUBDIR += nvi2
     SUBDIR += o
@@ -227,6 +227,7 @@
     SUBDIR += scite
     SUBDIR += se
     SUBDIR += semi
+    SUBDIR += setzer
     SUBDIR += shed
     SUBDIR += slime
     SUBDIR += ssed

@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	gdal
-PORTVERSION=	3.1.3
+PORTVERSION=	3.1.4
+PORTREVISION=	2
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://download.osgeo.org/gdal/${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -14,7 +15,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.TXT
 
 BUILD_DEPENDS=	libgeotiff>=1.5.0:graphics/libgeotiff \
-		proj>=6:graphics/proj
+		proj>=6,1:graphics/proj
 LIB_DEPENDS=	libgeotiff.so:graphics/libgeotiff \
 		libgif.so:graphics/giflib \
 		libjson-c.so:devel/json-c \
@@ -23,9 +24,7 @@ LIB_DEPENDS=	libgeotiff.so:graphics/libgeotiff \
 		libqhull.so.7:math/qhull \
 		libtiff.so:graphics/tiff
 
-OPTIONS_DEFINE=	ARMADILLO CFITSIO CURL ECW EXPAT FREEXL GEOS GTA HDF5 JASPER \
-		KML LIBXML2 MYSQL NETCDF ODBC OPENJPEG PCRE PGSQL SFCGAL \
-		SPATIALITE SQLITE WEBP XERCES ZSTD
+OPTIONS_DEFINE=	ARMADILLO CFITSIO CURL ECW EXPAT FREEXL GEOS GTA HDF5 JASPER KML LIBXML2 MYSQL NETCDF ODBC OPENJPEG PCRE PGSQL SFCGAL SPATIALITE SQLITE WEBP XERCES ZSTD
 OPTIONS_RADIO=	PDF
 OPTIONS_RADIO_PDF=	PODOFO POPPLER
 OPTIONS_DEFAULT=JASPER

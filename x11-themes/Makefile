@@ -30,6 +30,7 @@
     SUBDIR += cursor-neutral-white-theme
     SUBDIR += e16-themes
     SUBDIR += emerald-themes
+    SUBDIR += flat-remix-icon-themes
     SUBDIR += fluxbox-tenr-styles-pack
     SUBDIR += freebsd-8k-wallpapers
     SUBDIR += freebsd-8k-wallpapers-kde
@@ -120,6 +121,7 @@
     SUBDIR += metacity-theme-microgui
     SUBDIR += metacity-themes
     SUBDIR += mint-themes
+    SUBDIR += nordic-theme
     SUBDIR += numix-gtk-theme
     SUBDIR += numix-icon-theme
     SUBDIR += openbox-arc-theme

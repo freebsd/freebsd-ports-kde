@@ -2,7 +2,7 @@
 
 PORTNAME=	phosh
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.4.5
+DISTVERSION=	0.6.0
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -22,13 +22,14 @@ LIB_DEPENDS=	libfeedback-0.0.so:accessibility/feedbackd \
 RUN_DEPENDS=	phoc:x11-wm/phoc \
 		gnome-session:x11/gnome-session
 
-USES=		compiler:c11 gettext gnome meson pkgconfig
+USES=		compiler:c11 gettext gnome meson pkgconfig python:build shebangfix
 USE_GITLAB=	yes
 USE_GNOME=	cairo gdkpixbuf2 gnomedesktop3
 GL_SITE=	https://source.puri.sm
 GL_ACCOUNT=	Librem5
-GL_COMMIT=	098eff0076011213dfaaa112236cc2a21eeea6b9
+GL_COMMIT=	6c873426a8f74a4ee0bcd0c2746636ae7f85928e
 GL_TUPLE=	https://gitlab.gnome.org:GNOME:libgnome-volume-control:ae1a34aafce7026b8c0f65a43c9192d756fe1057:gvc/subprojects/gvc
+SHEBANG_FILES=	build-aux/post_install.py
 MESON_ARGS=	-Dgvc:alsa=false
 GLIB_SCHEMAS=	sm.puri.phosh.enums.xml \
 		sm.puri.phosh.gschema.xml

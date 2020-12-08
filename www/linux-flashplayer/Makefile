@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	flashplayer
-PORTVERSION=	32.0.0.445
+PORTVERSION=	32.0.0.453
 CATEGORIES=	www multimedia linux
 MASTER_SITES=	https://fpdownload.macromedia.com/get/flashplayer/pdc/${PORTVERSION}/
 PKGNAMEPREFIX=	linux-
@@ -11,6 +11,9 @@ DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	emulation@FreeBSD.org
 COMMENT=	Adobe Flash Player NPAPI Plugin
+
+DEPRECATED=	Deprecated by upstream
+EXPIRATION_DATE=2020-12-31
 
 ONLY_FOR_ARCHS=	amd64 i386
 USES=		cpe linux webplugin:linux

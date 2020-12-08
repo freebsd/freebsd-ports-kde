@@ -788,7 +788,6 @@ devel/p5-MooseX-Policy-SemiAffordanceAccessor|devel/p5-MooseX-SemiAffordanceAcce
 www/mediawiki12|www/mediawiki112|2009-08-19|Renamed
 lang/gcc42-withgcjawt|lang/gcc42|2009-08-19|Not needed any longer, still an option for the regular lang/gcc ports
 math/octave-forge-windows||2009-08-23|Abandoned upstream
-math/freefem++||2009-08-23|Has expired: unmaintained and consistently unportable
 math/it++||2009-08-23|Has expired: unmaintained and consistently unportable
 databases/firebird-client||2009-09-03|Removed: no longer under development
 databases/firebird-server||2009-09-03|Removed: no longer under development
@@ -9785,7 +9784,6 @@ audio/linux-mbrola||2018-01-28|Has expired: Depends on expiring audio/mbrolavox
 audio/gigedit||2018-01-28|Has expired: Broken for more than 6 months
 audio/gnomoradio||2018-01-28|Has expired: Broken for more than 6 months
 math/asir2000||2018-01-28|Has expired: Broken for more than 6 months
-multimedia/librespot||2018-01-28|Has expired: Broken for more than 6 months
 multimedia/bombono||2018-01-28|Has expired: Broken for more than 6 months
 lang/gcl||2018-01-28|Has expired: Broken for more than 6 months
 lang/pike78||2018-01-28|Has expired: Broken for more than 6 months
@@ -12846,7 +12844,6 @@ textproc/rubygem-gitlab-linguist|textproc/rubygem-github-linguist|2019-08-31|Has
 textproc/rubygem-html-pipeline1|textproc/rubygem-html-pipeline|2019-08-31|Has expired: Use textproc/rubygem-html-pipeline instead
 devel/pure-stldict||2019-09-01|Has expired: Depends on expiring devel/llvm35
 lang/dmd1||2019-09-01|Has expired: No longer supported upstream
-lang/gprolog||2019-09-01|Has expired: Abandonware upstream (more than five years), fails in various ways with remotely recent compilers
 math/pure-mpfr||2019-09-01|Has expired: Depends on expiring devel/llvm35
 math/pure-rational||2019-09-01|Has expired: Depends on expiring devel/llvm35
 net/pure-sockets||2019-09-01|Has expired: Depends on expiring devel/llvm35
@@ -12873,7 +12870,6 @@ editors/dexed||2019-09-05|Has expired: Depends on expiring devel/dfmt
 editors/p5-Padre||2019-09-05|Has expired: Depends on expiring x11-toolkits/p5-Wx
 emulators/qemu2||2019-09-05|Has expired: Latest 3.X branch is in ports tree
 games/asc||2019-09-05|Has expired: Broken for more than 6 months
-games/slade||2019-09-05|Has expired: Broken for more than 6 months
 graphics/gimp-wavelet-decompose-plugin||2019-09-05|Has expired: Broken for more than 6 months
 irc/irssi-otr||2019-09-05|Has expired: Broken for more than 6 months
 mail/p5-Mail-ClamAV||2019-09-05|Has expired: Broken for more than 6 months
@@ -13716,7 +13712,6 @@ net/py-upnp-inspector||2020-01-18|Missing dependency: net/py-coherence is python
 security/py-pymacaroons-pynacl|security/py-pymacaroons|2020-01-20|Rename to match upstream naming
 math/jakarta-commons-math3|math/apache-commons-math|2020-01-24|Renamed upstream
 audio/py-mpd2|audio/py-python-mpd2|2020-01-25|Rename to match upstream naming
-devel/py-microversion-parse|devel/py-microversion_parse|2020-01-25|Rename to match upstream naming
 audio/gstreamer1-plugins-spc|audio/gstreamer1-plugins-gme|2020-01-26|spc was removed inflavour for the gme plugin
 accessibility/py-papi||2020-01-27|Has expired: Unmaintained, uses EOLed python27
 archivers/py-czipfile||2020-01-27|Has expired: Unmaintained, uses EOLed python27
@@ -14679,7 +14674,6 @@ lang/ohugs||2020-05-05|Has expired: Broken for more than 6 months
 lang/opendylan||2020-05-05|Has expired: Broken for more than 6 months
 lang/phc||2020-05-05|Has expired: Broken for more than 6 months
 lang/starlogo||2020-05-05|Has expired: Broken for more than 6 months
-lang/yap||2020-05-05|Has expired: Broken for more than 6 months
 lang/yap-devel||2020-05-05|Has expired: Broken for more than 6 months
 mail/chk4mail||2020-05-05|Has expired: Broken for more than 6 months
 mail/librfc822||2020-05-05|Has expired: Broken for more than 6 months
@@ -15547,7 +15541,6 @@ misc/hb||2020-09-19|Has expired: Uses deprecated version of python
 misc/mtail||2020-09-19|Has expired: Uses deprecated version of python
 misc/wotsap||2020-09-19|Has expired: Uses deprecated version of python
 multimedia/freevo||2020-09-19|Has expired: Uses deprecated version of python
-multimedia/quodlibet||2020-09-19|Has expired: Uses deprecated version of python
 multimedia/tovid||2020-09-19|Has expired: Uses deprecated version of python
 net/ceph13|net/ceph14|2020-09-19|Has expired: Uses deprecated version of python
 net/cloud-init-azure||2020-09-19|Has expired: Uses deprecated version of python
@@ -15594,7 +15587,6 @@ textproc/plover||2020-09-19|Has expired: Uses deprecated version of python
 textproc/py-esmre||2020-09-19|Has expired: Uses deprecated version of python
 textproc/py-libxslt||2020-09-19|Has expired: Uses deprecated version of python
 textproc/py-pdfminer||2020-09-19|Has expired: Uses deprecated version of python
-www/bluefish||2020-09-19|Has expired: Uses deprecated version of python
 www/calendarserver||2020-09-19|Has expired: Uses deprecated version of python
 www/geeknote||2020-09-19|Has expired: Uses deprecated version of python
 www/go-appengine-sdk||2020-09-19|Has expired: Uses deprecated version of python
@@ -15653,3 +15645,131 @@ sysutils/plasma5-user-manager|x11/plasma5-plasma-desktop|2020-10-13|Reintegrated
 devel/geany-plugin-geanypy||2020-10-15|Has expired: Uses deprecated version of python
 comms/chirp||2020-10-16|Use deprecated version of python
 x11-toolkits/py-gtk2||2020-10-16|Remove deprecated binding replace by py-gobject
+www/py-unit|www/unit-python|2020-10-21|Rename to be more consistent with the naming convention
+sysutils/phpfpm_exporter|net-mgmt/phpfpm_exporter|2020-10-24|Move to net-mgmt category
+www/rubygem-uglifier27|www/rubygem-uglifier|2020-10-25|Obsolete, please use www/rubygem-uglifier instead
+www/rubygem-webpack-rails-rails60|devel/rubygem-webpacker-rails60|2020-10-25|Has expired: Upstream no longer maintained, use devel/rubygem-webpacker-rails* instead
+misc/calendar-data|deskutils/calendar-data|2020-10-25|Move to the same category as the program
+converters/zbase32||2020-10-26|Has expired: does not build with python3
+devel/py-PEAK-Rules||2020-10-26|Has expired: does not build with python3
+editors/nvi-devel|editors/nvi2|2020-10-26|Has expired: Unsupported upstream since 2015, please switch to editors/nvi2
+devel/py-repoze.what||2020-10-27|Has expired: does not build with python3
+net/reposado||2020-10-27|Has expired: Uses deprecated version of python
+devel/py-setuptools_darcs||2020-10-27|Has expired: Uses Python 2.7 which is EOLed upstream
+devel/py-darcsver||2020-10-27|Has expired: does not build with python3
+devel/py-gdata|www/py-google-api-python-client|2020-10-27|Has expired: Unmaintained upstream, superseded by www/py-google-api-python-client
+devel/libsigc++12|devel/libsigc++20|2020-10-31|Has expired: Use newer version
+x11/decurs||2020-11-01|Depends on removed x11-toolkits/gtkmm20
+x11/fluxbg||2020-11-01|Depends on removed x11-toolkits/gtkmm20
+x11-toolkits/gtkmm20|x11-toolkits/gtkmm24|2020-11-01|Broken after libsigc++12 removal
+www/radicale2|www/radicale|2020-11-01|Has expired: Please migrate to Radicale 3.x which you can find at www/radicale
+devel/pccts|devel/antlr|2020-11-01|Has expired: abandonedware, superseded by devel/antlr
+devel/gitg0|devel/gitg|2020-11-01|Has expired: ancient version of gitg not maintained
+devel/py-twext||2020-11-03|Has expired: Uses deprecated version of python
+databases/py-sqlparse020|databases/py-sqlparse|2020-11-03|Dependency of removed www/calendarserver
+devel/nimble|lang/nim|2020-11-06|Integrated in lang/nim
+net-im/zephyr||2020-11-07|Has expired: Broken for more than 6 months
+net/samba410|net/samba412|2020-11-08|Has expired: yes
+audio/xfce4-mixer|audio/xfce4-pulseaudio-plugin|2020-11-08|Unsupported upstream since 2015. Try using audio/xfce4-pulseaudio-plugin
+multimedia/swfdec-gnome||2020-11-09|Depends on the expired gstreamer 0.10
+graphics/swfdec||2020-11-09|Depends on the expired gstreamer 0.10
+multimedia/py-openlp||2020-11-09|Depends on the expired gstreamer 0.10
+multimedia/p5-GStreamer||2020-11-09|Depends on the expired gstreamer 0.10
+emulators/riscv-fesvr||2020-11-09|Now bundled with emulators/riscv-isa-sim
+databases/py-python-rrdtool||2020-11-10|Has expired: Uses deprecated version of python
+net/spideroak||2020-11-10|Has expired: Uses deprecated version of python
+emulators/playonbsd||2020-11-10|Has expired: Uses deprecated version of python
+net/xorp||2020-11-10|Has expired: Uses deprecated version of python
+archivers/py-pyliblzma||2020-11-15|Has expired: Uses deprecated version of python
+databases/postgis23|databases/postgis24|2020-11-15|Has expired: Upstream no longer maintained
+databases/py-htsql||2020-11-15|Has expired: Uses deprecated version of python
+devel/bzr-fastimport||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-ToscaWidgets||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-calendar||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-distorm||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-fabric1|devel/py-fabric|2020-11-15|Has expired: Uses deprecated version of python
+devel/py-rcsparse||2020-11-15|Has expired: Uses deprecated version of python
+devel/pyrex||2020-11-15|Has expired: Uses deprecated version of python
+japanese/py-tegaki||2020-11-15|Has expired: Uses deprecated version of python
+math/py-networkx1|math/py-networkx|2020-11-15|Has expired: Obsolete, please use math/py-networkx instead
+misc/py-progressbar231|misc/py-progressbar|2020-11-15|Has expired: Uses deprecated version of python
+multimedia/py-kaa-imlib2||2020-11-15|Has expired: Uses deprecated version of python
+multimedia/py-kaa-metadata||2020-11-15|Has expired: Uses deprecated version of python
+net-im/libtelepathy||2020-11-15|Has expired: Uses deprecated version of python
+security/py-mcrypt||2020-11-15|Has expired: Uses deprecated version of python
+www/py-beautifulsoup32|www/py-beautifulsoup|2020-11-15|Has expired: Uses deprecated version of python
+www/py-evernote||2020-11-15|Has expired: Uses deprecated version of python
+www/py-meld3||2020-11-15|Has expired: EOLed upstream
+www/py-requestbuilder||2020-11-15|Has expired: Uses deprecated version of python
+x11-toolkits/py-SquareMap||2020-11-15|Has expired: Uses deprecated version of python
+devel/py-utils||2020-11-16|Removed on maintainers request, uses EOLed python27
+net-mgmt/cnagios4|net-mgmt/cnagios|2020-11-17|Moved to nagios4 flavored version
+net/remmina-plugin-exec|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-nx|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-rdp|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-secret|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-spice|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-st|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-vnc|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-www|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugin-xdmcp|net/remmina|2020-11-24|Moved to remmina flavored version
+net/remmina-plugins|net/remmina|2020-11-24|Moved to remmina flavored version
+graphics/jpeg|graphics/jpeg-turbo|2020-12-01|Has expired: Outdated and vulnerable, new version breaks API and ABI
+databases/datamodeler||2020-12-01|Has expired: depends on expiring java/openjfx8-devel
+devel/gradle4||2020-12-01|Has expired: only needed for expiring java/openjfx8-devel
+devel/py-astroid1|devel/py-astroid|2020-12-01|Has expired: Use devel/py-astroid instead
+devel/pylint1|devel/pylint|2020-12-01|Has expired: Use devel/pylint instead
+german/mediathekview||2020-12-01|Has expired: depends on expiring java/openjfx8-devel
+java/openjfx8-devel||2020-12-01|Has expired: No longer maintained upstream
+java/openjfx8-scenebuilder||2020-12-01|Has expired: depends on expiring java/openjfx8-devel
+net-im/py-sleekxmpp|net-im/py-slixmpp|2020-12-01|Has expired: Upstream archived and advices to use net-im/py-slixmpp
+net-mgmt/zabbix44-agent|net-mgmt/zabbix5-agent|2020-12-01|Has expired: End of Life
+net-mgmt/zabbix44-frontend|net-mgmt/zabbix5-frontend|2020-12-01|Has expired: End of Life
+net-mgmt/zabbix44-java|net-mgmt/zabbix5-java|2020-12-01|Has expired: End of Life
+net-mgmt/zabbix44-proxy|net-mgmt/zabbix5-proxy|2020-12-01|Has expired: End of Life
+net-mgmt/zabbix44-server|net-mgmt/zabbix5-server|2020-12-01|Has expired: End of Life
+print/jabref||2020-12-01|Has expired: depends on expiring java/openjfx8-devel
+science/datawarrior||2020-12-01|Has expired: depends on expiring java/openjfx8-devel
+www/rubygem-dashing||2020-12-03|Has expired: Unmaintained by upstream, use www/rubygem-smashing instead
+www/rubygem-redmine_acts_as_taggable_on||2020-12-03|Has expired: Unmaintained by upstream
+www/rubygem-gitlab-grack||2020-12-03|Has expired: Deprecated by upstream
+databases/db6||2020-12-03|Has expired: latest 6.2.x version and newer not downloadable without registration
+graphics/geeqie-devel|graphics/geeqie|2020-12-04|Development version no longer necessary
+devel/py-microversion_parse|devel/py-microversion-parse|2020-12-05|Rename to match upstream naming
+devel/py-semantic_version|devel/py-semantic-version|2020-12-05|Rename to match upstream naming
+devel/py-wsgi_intercept|devel/py-wsgi-intercept|2020-12-05|Rename to match upstream naming
+net/py-ndg_httpsclient|net/py-ndg-httpsclient|2020-12-05|Rename to match upstream naming
+www/py-draftjs_exporter|www/py-draftjs-exporter|2020-12-05|Rename to match upstream naming
+devel/py-XStatic|devel/py-xstatic|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular|devel/py-xstatic-angular|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular-Bootstrap|devel/py-xstatic-angular-bootstrap|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular-FileUpload|devel/py-xstatic-angular-fileupload|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular-Gettext|devel/py-xstatic-angular-gettext|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular-Schema-Form|devel/py-xstatic-angular-schema-form|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Angular-lrdragndrop|devel/py-xstatic-angular-lrdragndrop|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Bootstrap-Datepicker|devel/py-xstatic-bootstrap-datepicker|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Bootstrap-SCSS|devel/py-xstatic-bootstrap-scss|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-D3|devel/py-xstatic-d3|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Font-Awesome|devel/py-xstatic-font-awesome|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Hogan|devel/py-xstatic-hogan|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-JQuery-Migrate|devel/py-xstatic-jquery-migrate|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-JQuery.TableSorter|devel/py-xstatic-jquery.tablesorter|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-JQuery.quicksearch|devel/py-xstatic-jquery.quicksearch|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-JSEncrypt|devel/py-xstatic-jsencrypt|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Jasmine|devel/py-xstatic-jasmine|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Rickshaw|devel/py-xstatic-rickshaw|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-Spin|devel/py-xstatic-spin|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-bootswatch|devel/py-xstatic-bootswatch|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-jQuery|devel/py-xstatic-jquery|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-jquery-ui|devel/py-xstatic-jquery-ui|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-mdi|devel/py-xstatic-mdi|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-objectpath|devel/py-xstatic-objectpath|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-roboto-fontface|devel/py-xstatic-roboto-fontface|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-smart-table|devel/py-xstatic-smart-table|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-term.js|devel/py-xstatic-term.js|2020-12-05|Use lowercase PORTNAME and path
+devel/py-XStatic-tv4|devel/py-xstatic-tv4|2020-12-05|Use lowercase PORTNAME and path
+textproc/py-MarkupSafe|textproc/py-markupsafe|2020-12-05|Use lowercase PORTNAME and path
+devel/py-git_semver|devel/py-git-semver|2020-12-05|Rename to match upstream naming
+devel/py-readme_renderer|devel/py-readme-renderer|2020-12-05|Rename to match upstream naming
+sysutils/datadog|sysutils/datadog-agent|2020-12-06|Renamed
+devel/py-libpeas@py27||2020-12-07|Removed flavor

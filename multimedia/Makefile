@@ -10,6 +10,7 @@
     SUBDIR += aegisub
     SUBDIR += aom
     SUBDIR += aravis
+    SUBDIR += arcan
     SUBDIR += assimp
     SUBDIR += atomicparsley
     SUBDIR += audacious
@@ -204,6 +205,7 @@
     SUBDIR += libmpeg2
     SUBDIR += libmpeg3
     SUBDIR += libmtp
+    SUBDIR += libndi
     SUBDIR += libopenshot
     SUBDIR += libquicktime
     SUBDIR += libquicktime-lame
@@ -212,6 +214,7 @@
     SUBDIR += libquvi-scripts09
     SUBDIR += libquvi09
     SUBDIR += librav1e
+    SUBDIR += librespot
     SUBDIR += librtmp
     SUBDIR += libtheora
     SUBDIR += libtuner
@@ -270,6 +273,7 @@
     SUBDIR += mps-youtube
     SUBDIR += mpv
     SUBDIR += mpv-mpris
+    SUBDIR += mpvpaper
     SUBDIR += msdl
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
@@ -301,7 +305,6 @@
     SUBDIR += p5-FFmpeg-Command
     SUBDIR += p5-FLV-Info
     SUBDIR += p5-File-Format-RIFF
-    SUBDIR += p5-GStreamer
     SUBDIR += p5-MP4-Info
     SUBDIR += p5-Net-UPnP
     SUBDIR += p5-Subtitles
@@ -334,13 +337,10 @@
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
     SUBDIR += py-kaa-base
-    SUBDIR += py-kaa-imlib2
-    SUBDIR += py-kaa-metadata
     SUBDIR += py-librtmp
     SUBDIR += py-mido
     SUBDIR += py-mlt
     SUBDIR += py-moviepy
-    SUBDIR += py-openlp
     SUBDIR += py-periscope
     SUBDIR += py-pretty_midi
     SUBDIR += py-pymediainfo
@@ -353,6 +353,7 @@
     SUBDIR += qmmp-qt5
     SUBDIR += qt-faststart
     SUBDIR += qt5-multimedia
+    SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09
     SUBDIR += rage
@@ -391,7 +392,6 @@
     SUBDIR += svt-av1
     SUBDIR += svt-hevc
     SUBDIR += svt-vp9
-    SUBDIR += swfdec-gnome
     SUBDIR += syncplay
     SUBDIR += szap-s2
     SUBDIR += tautulli

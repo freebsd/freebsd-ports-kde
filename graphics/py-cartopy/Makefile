@@ -3,6 +3,7 @@
 
 PORTNAME=	cartopy
 PORTVERSION=	0.18.0
+PORTREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +16,7 @@ LICENSE=	LGPL3+
 LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
 BUILD_DEPENDS=	geos>=3.3.3:graphics/geos \
-		proj>=4.9.0:graphics/proj \
+		proj>=4.9.0,1:graphics/proj \
 		${PYNUMPY}
 LIB_DEPENDS=	libgeos.so:graphics/geos \
 		libproj.so:graphics/proj

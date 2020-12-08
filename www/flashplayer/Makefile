@@ -2,12 +2,15 @@
 
 PORTNAME=	flashplayer
 PORTVERSION=	32.0
-PORTREVISION=	22
+PORTREVISION=	23
 CATEGORIES=	www multimedia
 DISTFILES=
 
 MAINTAINER=	emulation@FreeBSD.org
 COMMENT=	Native wrapper around Linux Flash Player
+
+DEPRECATED=	Depends on a deprecated port
+EXPIRATION_DATE=2020-12-31
 
 RUN_DEPENDS=	${LOCALBASE}/lib/browser_plugins/linux-flashplayer/libflashplayer.so:www/linux-flashplayer \
 		nspluginwrapper:www/nspluginwrapper

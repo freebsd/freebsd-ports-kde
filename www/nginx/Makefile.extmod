@@ -50,7 +50,7 @@ DYNAMIC_HC_IMPLIES=	DYNAMIC_UPSTREAM
 DEVEL_KIT_GH_TUPLE=		simpl:ngx_devel_kit:v0.3.1:devel_kit
 DEVEL_KIT_VARS=			FIRST_DSO_EXTMODS+=devel_kit
 
-ECHO_GH_TUPLE=		openresty:echo-nginx-module:996412d:echo
+ECHO_GH_TUPLE=		openresty:echo-nginx-module:5a402aa:echo
 ECHO_VARS=		DSO_EXTMODS+=echo
 
 ENCRYPTSESSION_IMPLIES=		DEVEL_KIT
@@ -78,7 +78,7 @@ HTTP_AUTH_JWT_GH_TUPLE=		TeslaGov:ngx-http-auth-jwt-module:80d89d9:http_auth_jwt
 HTTP_AUTH_JWT_VARS=			DSO_EXTMODS+=http_auth_jwt
 HTTP_AUTH_JWT_LIB_DEPENDS=	libjwt.so:www/libjwt libjansson.so:devel/jansson
 
-HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:21bb963:auth_krb5
+HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:72c8ee0:auth_krb5
 HTTP_AUTH_KRB5_VARS=		DSO_EXTMODS+=auth_krb5
 HTTP_AUTH_KRB5_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
 
@@ -213,7 +213,7 @@ ICONV_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-calio-iconv-nginx-module-config
 LET_GH_TUPLE=		baysao:nginx-let-module:c1f23aa:let
 LET_VARS=		DSO_EXTMODS+=let
 
-LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.3:link
+LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.4:link
 LINK_EXTRA_PATCHES=     ${PATCHDIR}/extra-patch-nginx-link-function-config \
 				${PATCHDIR}/extra-patch-ngx_link_func_module.c
 LINK_VARS=		DSO_EXTMODS+=link
@@ -223,7 +223,7 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.17:lua
+LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.19:lua
 LUA_VARS=		DSO_EXTMODS+=lua
 
 MEMC_GH_TUPLE=		openresty:memc-nginx-module:v0.18:memc
@@ -234,11 +234,11 @@ MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
 MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.1:modsec
 MODSECURITY3_VARS=		DSO_EXTMODS+=modsec
 
-NAXSI_NGINX_VER=	0.56
+NAXSI_NGINX_VER=	1.3
 NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 
-NJS_GH_TUPLE=		nginx:njs:0.4.4:njs
+NJS_GH_TUPLE=		nginx:njs:0.5.0:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
 NJS_USES=		libedit
 
@@ -247,7 +247,7 @@ OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing
 OPENTRACING_VARS=	DSO_EXTMODS+=opentracing OPENTRACING_SUBDIR=/opentracing
 OPENTRACING_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-nginx-opentracing-opentracing-config
 
-PASSENGER_NGINX_VER=	6.0.6
+PASSENGER_NGINX_VER=	6.0.7
 PASSENGER_CATEGORIES=	ruby
 PASSENGER_USE=		ruby=yes
 PASSENGER_BUILD_DEPENDS=${LOCALBASE}/bin/rake:devel/rubygem-rake

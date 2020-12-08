@@ -2,8 +2,7 @@
 
 PORTNAME=	deno
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.6
-PORTREVISION=	1
+DISTVERSION=	1.5.4
 CATEGORIES=	www
 
 MAINTAINER=	mikael@FreeBSD.org
@@ -31,8 +30,10 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	denoland
 USE_GNOME=	glib20
 
+MAKE_JOBS_UNSAFE=	yes
+
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
-RUSTY_VERS=	0.11.0
+RUSTY_VERS=	0.13.0
 
 CARGO_ENV+=	CLANG_BASE_PATH=/usr \
 		GN=${PREFIX}/bin/gn \
@@ -69,6 +70,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		brotli-3.3.0 \
 		brotli-decompressor-2.3.1 \
 		buf_redux-0.8.4 \
+		build_const-0.2.1 \
 		bumpalo-3.4.0 \
 		byte-tools-0.3.1 \
 		byteorder-1.3.4 \
@@ -82,6 +84,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		const-random-0.1.8 \
 		const-random-macro-0.1.8 \
 		cpuid-bool-0.1.2 \
+		crc-1.8.1 \
 		crc32fast-1.2.0 \
 		crossbeam-channel-0.4.4 \
 		crossbeam-utils-0.7.2 \
@@ -89,15 +92,16 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		darling_core-0.10.2 \
 		darling_macro-0.10.2 \
 		dashmap-3.11.10 \
-		deno_doc-0.1.11 \
-		deno_lint-0.2.3 \
+		deno_doc-0.1.16 \
+		deno_lint-0.2.11 \
+		derive_more-0.99.11 \
 		digest-0.8.1 \
 		digest-0.9.0 \
 		dissimilar-1.0.2 \
 		dlopen-0.1.8 \
 		dlopen_derive-0.1.4 \
 		dprint-core-0.31.0 \
-		dprint-plugin-typescript-0.32.4 \
+		dprint-plugin-typescript-0.32.9 \
 		dtoa-0.4.6 \
 		either-1.6.0 \
 		encoding_rs-0.8.24 \
@@ -106,6 +110,7 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		errno-0.1.8 \
 		fake-simd-0.1.2 \
 		filetime-0.2.12 \
+		fixedbitset-0.2.0 \
 		flate2-1.0.17 \
 		fnv-1.0.7 \
 		from_variant-0.1.2 \
@@ -114,15 +119,15 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		fuchsia-cprng-0.1.1 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
-		futures-0.3.5 \
-		futures-channel-0.3.5 \
-		futures-core-0.3.5 \
-		futures-executor-0.3.5 \
-		futures-io-0.3.5 \
-		futures-macro-0.3.5 \
-		futures-sink-0.3.5 \
-		futures-task-0.3.5 \
-		futures-util-0.3.5 \
+		futures-0.3.8 \
+		futures-channel-0.3.8 \
+		futures-core-0.3.8 \
+		futures-executor-0.3.8 \
+		futures-io-0.3.8 \
+		futures-macro-0.3.8 \
+		futures-sink-0.3.8 \
+		futures-task-0.3.8 \
+		futures-util-0.3.8 \
 		fwdansi-1.1.0 \
 		fxhash-0.2.1 \
 		generic-array-0.12.3 \
@@ -151,13 +156,13 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		is-macro-0.1.8 \
 		itoa-0.4.6 \
 		js-sys-0.3.45 \
-		jsdoc-0.6.0 \
+		jsdoc-0.11.0 \
 		jsonc-parser-0.14.0 \
 		kernel32-sys-0.2.2 \
 		lazy_static-1.4.0 \
 		lazycell-1.3.0 \
 		lexical-core-0.7.4 \
-		libc-0.2.77 \
+		libc-0.2.80 \
 		log-0.4.11 \
 		matches-0.1.8 \
 		maybe-uninit-2.0.0 \
@@ -181,32 +186,36 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		num-integer-0.1.43 \
 		num-traits-0.2.12 \
 		num_cpus-1.13.0 \
-		once_cell-1.4.1 \
+		once_cell-1.5.2 \
 		opaque-debug-0.2.3 \
 		opaque-debug-0.3.0 \
 		ordered-float-1.1.0 \
 		os_pipe-0.9.2 \
 		owning_ref-0.4.1 \
 		percent-encoding-2.1.0 \
+		petgraph-0.5.1 \
 		phf-0.8.0 \
 		phf_generator-0.8.0 \
 		phf_macros-0.8.0 \
 		phf_shared-0.8.0 \
 		pin-project-0.4.23 \
+		pin-project-1.0.2 \
 		pin-project-internal-0.4.23 \
+		pin-project-internal-1.0.2 \
 		pin-project-lite-0.1.7 \
 		pin-utils-0.1.0 \
 		pmutil-0.5.3 \
 		ppv-lite86-0.2.9 \
 		precomputed-hash-0.1.1 \
-		proc-macro-hack-0.5.18 \
+		proc-macro-hack-0.5.19 \
 		proc-macro-nested-0.1.6 \
 		proc-macro2-0.4.30 \
-		proc-macro2-1.0.21 \
+		proc-macro2-1.0.24 \
 		pty-0.2.2 \
 		quick-error-1.2.3 \
 		quote-0.6.13 \
 		quote-1.0.7 \
+		radix_fmt-1.0.0 \
 		rand-0.6.5 \
 		rand-0.7.3 \
 		rand_chacha-0.1.1 \
@@ -224,15 +233,16 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		rand_xorshift-0.1.1 \
 		rdrand-0.4.0 \
 		redox_syscall-0.1.57 \
-		regex-1.3.9 \
-		regex-syntax-0.6.18 \
+		regex-1.4.2 \
+		regex-syntax-0.6.21 \
+		relative-path-1.3.2 \
 		remove_dir_all-0.5.3 \
 		reqwest-0.10.8 \
 		retain_mut-0.1.1 \
 		ring-0.16.15 \
 		rustc_version-0.2.3 \
 		rustls-0.18.1 \
-		rusty_v8-0.11.0 \
+		rusty_v8-0.13.0 \
 		rustyline-6.3.0 \
 		rustyline-derive-0.3.1 \
 		ryu-1.0.5 \
@@ -244,12 +254,13 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		semver-0.9.0 \
 		semver-parser-0.7.0 \
 		semver-parser-0.9.0 \
-		serde-1.0.116 \
-		serde_derive-1.0.116 \
-		serde_json-1.0.57 \
+		serde-1.0.117 \
+		serde_derive-1.0.117 \
+		serde_json-1.0.59 \
 		serde_urlencoded-0.6.1 \
 		sha-1-0.8.2 \
 		sha-1-0.9.1 \
+		shell-escape-0.1.5 \
 		signal-hook-registry-1.2.1 \
 		siphasher-0.3.3 \
 		slab-0.4.2 \
@@ -264,24 +275,25 @@ CARGO_CRATES=	Inflector-0.11.4 \
 		string_enum-0.3.0 \
 		strsim-0.8.0 \
 		strsim-0.9.3 \
-		swc_atoms-0.2.4 \
-		swc_common-0.10.3 \
-		swc_ecma_ast-0.32.0 \
-		swc_ecma_codegen-0.36.0 \
+		swc_atoms-0.2.5 \
+		swc_bundler-0.17.1 \
+		swc_common-0.10.5 \
+		swc_ecma_ast-0.35.0 \
+		swc_ecma_codegen-0.41.1 \
 		swc_ecma_codegen_macros-0.5.0 \
-		swc_ecma_dep_graph-0.4.0 \
-		swc_ecma_parser-0.38.0 \
+		swc_ecma_dep_graph-0.9.0 \
+		swc_ecma_parser-0.43.1 \
 		swc_ecma_parser_macros-0.4.1 \
-		swc_ecma_transforms-0.25.2 \
+		swc_ecma_transforms-0.30.1 \
 		swc_ecma_transforms_macros-0.1.1 \
-		swc_ecma_utils-0.22.0 \
-		swc_ecma_visit-0.18.0 \
-		swc_ecmascript-0.9.1 \
+		swc_ecma_utils-0.25.0 \
+		swc_ecma_visit-0.21.0 \
+		swc_ecmascript-0.14.1 \
 		swc_macros_common-0.3.1 \
-		swc_visit-0.2.0 \
-		swc_visit_macros-0.2.0 \
+		swc_visit-0.2.2 \
+		swc_visit_macros-0.2.1 \
 		syn-0.15.44 \
-		syn-1.0.41 \
+		syn-1.0.48 \
 		sys-info-0.7.0 \
 		tempfile-3.1.0 \
 		termcolor-1.1.0 \

@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	puppet
-PORTVERSION=	5.5.21
+PORTVERSION=	5.5.22
 CATEGORIES=	sysutils
 MASTER_SITES=	https://downloads.puppetlabs.com/puppet/
 PKGNAMESUFFIX=	5
@@ -12,7 +12,8 @@ COMMENT=	Configuration management framework written in Ruby
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_aarch64=		fails to install: Could not load facter; cannot install
+# maybe a newer version like puppet 6.x or 7.x must be used to work with ruby 2.7
+BROKEN_RUBY27=	yes
 
 BUILD_DEPENDS=	rubygem-hiera>=2.0:sysutils/rubygem-hiera \
 		rubygem-json_pure>=0:devel/rubygem-json_pure
@@ -24,7 +25,7 @@ RUN_DEPENDS=	rubygem-gettext-setup>=0:devel/rubygem-gettext-setup \
 
 USES=		cpe
 CPE_VENDOR=	puppetlabs
-CONFLICTS_INSTALL=	puppet4-* puppet6-*
+CONFLICTS_INSTALL=	puppet6-* puppet7-*
 NO_ARCH=	yes
 NO_BUILD=	yes
 USE_RUBY=	yes

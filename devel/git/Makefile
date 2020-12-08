@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	git
-DISTVERSION=	2.28.0
+DISTVERSION=	2.29.2
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG/software/scm/git
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
@@ -12,12 +12,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} \
 		${PORTNAME}-manpages-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	garga@FreeBSD.org
-COMMENT=	Distributed source code management tool
-.if ${FLAVOR:U} == gui
-COMMENT+=	(GUI enabled flavor)
-.elif ${FLAVOR:U} == lite
-COMMENT+=	(lite flavor)
-.endif
+COMMENT=	Distributed source code management tool ${COMMENT_${FLAVOR}}
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -32,6 +27,9 @@ lite_DESCR=			${.CURDIR}/pkg-descr-lite
 lite_PKGNAMESUFFIX=		-lite
 
 USES=		autoreconf gmake iconv shebangfix ssl tar:xz
+
+COMMENT_gui=	(GUI enabled flavor)
+COMMENT_lite=	(lite flavor)
 
 USERS=		git_daemon
 GROUPS=		git_daemon
@@ -57,7 +55,6 @@ SHEBANG_FILES=	*.perl */*.perl */*/*.perl */*.pl */*/*.pl */*/*/*.pl \
 		contrib/remote-helpers/git-remote-hg \
 		contrib/credential/netrc/git-credential-netrc.perl \
 		contrib/buildsystems/generate contrib/contacts/git-contacts \
-		contrib/svn-fe/svnrdump_sim.py \
 		templates/hooks--fsmonitor-watchman.sample
 TEST_TARGET=	test
 
@@ -70,12 +67,16 @@ OPTIONS_DEFINE=	GUI SVN GITWEB CONTRIB P4 CVS HTMLDOCS PERL ICONV CURL \
 OPTIONS_DEFAULT=	CONTRIB P4 CVS PERL GITWEB ICONV CURL SEND_EMAIL PCRE \
 			SUBTREE SVN
 .if ${FLAVOR:U} == gui
-OPTIONS_DEFAULT+=	GUI
+OPTIONS_SLAVE+=		GUI
 .elif ${FLAVOR:U} == lite
 OPTIONS_EXCLUDE=	GUI SVN GITWEB CONTRIB P4 CVS PERL
 .endif
 
 OPTIONS_SUB=	yes
+
+.if !empty(FLAVOR) && ${FLAVOR:U} != default
+OPTIONS_FILE=		${PORT_DBDIR}/${OPTIONS_NAME}/${FLAVOR}-options
+.endif
 
 CONTRIB_DESC=	Install contributed scripts
 CURL_DESC=	Install curl support (provides HTTPS transport)

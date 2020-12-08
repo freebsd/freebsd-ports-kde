@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wine
-DISTVERSION=	5.19
+DISTVERSION=	6.0-rc1
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=--verbose \
 		--without-gphoto --without-gsm --without-gstreamer \
 		--without-inotify \
 		--without-krb5 \
+		--without-mingw \
 		--without-opencl \
 		--without-osmesa \
 		--with-oss \
@@ -65,7 +66,7 @@ OPTIONS_SUB=	yes
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
 SDL_DESC=	Use SDL for gamepad support (XInput only)
-STAGING_DESC=	Include the Wine Staging patchset (experimental)
+STAGING_DESC=	Include Wine Staging patchset (experimental&unsupported)
 VKD3D_DESC=	Direct3D 12 support via Vulkan
 VULKAN_DESC=	Vulkan API support
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
@@ -80,7 +81,7 @@ DOSBOX_RUN_DEPENDS=	dosbox:emulators/dosbox
 GCC_USE=		gcc=yes
 GCC_USES_OFF=		compiler:c11
 
-GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.1-x86.msi:emulators/wine-gecko-devel
+GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine-gecko-2.47.2-x86.msi:emulators/wine-gecko-devel
 
 GNUTLS_CONFIGURE_WITH=	gnutls
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
@@ -107,13 +108,14 @@ SDL_USES=		sdl
 SDL_USE=		SDL=sdl2
 
 STAGING_MASTER_SITES=	https://github.com/wine-staging/wine-staging/archive/:staging
-STAGING_DIST=		v${DISTVERSION}.tar.gz
+STAGING_DIST=		v${DISTVERSION:S/-//}.tar.gz
 STAGING_DISTFILES=	${STAGING_DIST}:staging
 STAGING_EXTRACT_DEPENDS=	bash:shells/bash \
 				git:devel/git \
 				autoconf>0:devel/autoconf
 STAGING_LIB_DEPENDS=	libtxc_dxtn.so:graphics/s2tc
-STAGING_BROKEN=		fails to compile: file.c:237:37: error: 'EXTATTR_NAMESPACE_USER' undeclared
+STAGING_EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-dlls-ntdll-unix-file.c \
+			${PATCHDIR}/extrapatch-staging-server-fd.c
 
 V4L_CONFIGURE_WITH=	v4l2
 V4L_BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat

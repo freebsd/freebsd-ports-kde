@@ -1,11 +1,11 @@
---- synapse/python_dependencies.py.orig	2020-07-15 20:12:36 UTC
+--- synapse/python_dependencies.py.orig	2020-11-18 13:34:04 UTC
 +++ synapse/python_dependencies.py
-@@ -66,7 +66,7 @@ REQUIREMENTS = [
-     "pymacaroons>=0.13.0",
-     "msgpack>=0.5.2",
-     "phonenumbers>=8.2.0",
--    "prometheus_client>=0.0.18,<0.9.0",
-+    "prometheus_client>=0.0.18",
-     # we use attr.validators.deep_iterable, which arrived in 19.1.0
-     "attrs>=19.1.0",
-     "netaddr>=0.7.18",
+@@ -76,7 +76,7 @@ REQUIREMENTS = [
+     # Note that we replicate these constraints in the Synapse Dockerfile while
+     # pre-installing dependencies. If these constraints are updated here, the
+     # same change should be made in the Dockerfile.
+-    "prometheus_client>=0.4.0,<0.9.0",
++    "prometheus_client>=0.4.0",
+     # we use attr.validators.deep_iterable, which arrived in 19.1.0 (Note:
+     # Fedora 31 only has 19.1, so if we want to upgrade we should wait until 33
+     # is out in November.)

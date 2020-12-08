@@ -1,7 +1,8 @@
+# Created by: Juraj Lutter <juraj@lutter.sk>
 # $FreeBSD$
 
 PORTNAME=	unifi6
-PORTVERSION=	6.0.23
+PORTVERSION=	6.0.41
 CATEGORIES=	net-mgmt java
 MASTER_SITES=	http://dl.ubnt.com/unifi/%SUBDIR%/:unifi \
 		https://repo1.maven.org/maven2/%SUBDIR%/:jax
@@ -26,7 +27,7 @@ SUB_LIST+=	GROUPS=${GROUPS} \
 		JAVASHAREDIR=${JAVASHAREDIR} \
 		USERS=${USERS}
 
-EXTRACT_CMD=	/usr/bin/ar
+EXTRACT_CMD=	${AR}
 EXTRACT_BEFORE_ARGS=	-p
 EXTRACT_AFTER_ARGS=	data.tar.xz | ${TAR} -xf -
 

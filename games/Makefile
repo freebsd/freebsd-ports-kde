@@ -14,9 +14,11 @@
     SUBDIR += 7kaa
     SUBDIR += 90secondportraits
     SUBDIR += CaribbeanStud
+    SUBDIR += DDNet
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
     SUBDIR += NBlood
+    SUBDIR += OpenDiablo2
     SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
@@ -236,6 +238,7 @@
     SUBDIR += epiphany-game
     SUBDIR += etracer
     SUBDIR += euchre
+    SUBDIR += eureka
     SUBDIR += evilfinder
     SUBDIR += evq3
     SUBDIR += excido
@@ -515,6 +518,7 @@
     SUBDIR += libretro-paralleln64
     SUBDIR += libretro-pcsx_rearmed
     SUBDIR += libretro-picodrive
+    SUBDIR += libretro-play
     SUBDIR += libretro-prboom
     SUBDIR += libretro-prosystem
     SUBDIR += libretro-quicknes
@@ -625,6 +629,7 @@
     SUBDIR += narcissu2
     SUBDIR += nazghul
     SUBDIR += nehquake
+    SUBDIR += neo-cowsay
     SUBDIR += nethack32
     SUBDIR += nethack33
     SUBDIR += nethack33-nox11
@@ -676,6 +681,7 @@
     SUBDIR += openbor3979
     SUBDIR += openbor4432
     SUBDIR += openbubbles
+    SUBDIR += openbve
     SUBDIR += opencity
     SUBDIR += openclaw
     SUBDIR += openclonk
@@ -878,6 +884,7 @@
     SUBDIR += sjeng
     SUBDIR += ski
     SUBDIR += sl
+    SUBDIR += slade
     SUBDIR += slashem-tty
     SUBDIR += slump
     SUBDIR += sokoban

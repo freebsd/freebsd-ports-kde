@@ -75,9 +75,11 @@
     SUBDIR += fpc-base
     SUBDIR += fpc-docs
     SUBDIR += fpc-lua
+    SUBDIR += fpc-pastojs
     SUBDIR += fpc-rexx
     SUBDIR += fpc-rtl-console
     SUBDIR += fpc-rtl-extra
+    SUBDIR += fpc-rtl-generics
     SUBDIR += fpc-rtl-objpas
     SUBDIR += fpc-rtl-unicode
     SUBDIR += fpc-source
@@ -116,6 +118,7 @@
     SUBDIR += go
     SUBDIR += go-devel
     SUBDIR += gomacro
+    SUBDIR += gprolog
     SUBDIR += gravity
     SUBDIR += groovy
     SUBDIR += gscheme
@@ -258,6 +261,8 @@
     SUBDIR += php73-extensions
     SUBDIR += php74
     SUBDIR += php74-extensions
+    SUBDIR += php80
+    SUBDIR += php80-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl
@@ -359,6 +364,7 @@
     SUBDIR += visualworks
     SUBDIR += voc
     SUBDIR += yabasic
+    SUBDIR += yap
     SUBDIR += yorick
     SUBDIR += ypsilon
     SUBDIR += zig

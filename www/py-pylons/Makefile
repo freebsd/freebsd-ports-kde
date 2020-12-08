@@ -3,6 +3,7 @@
 
 PORTNAME=	pylons
 PORTVERSION=	1.0.3
+PORTREVISION=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +15,10 @@ COMMENT=	Python based web framework
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MarkupSafe>=0.15:textproc/py-MarkupSafe@${PY_FLAVOR} \
+DEPRECATED=	Uses deprecated version of python
+EXPIRATION_DATE=	2020-12-12
+
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}markupsafe>=0.15:textproc/py-markupsafe@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}Paste>=1.7.5.1:www/py-paste@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pastedeploy>=1.5.0:www/py-pastedeploy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}PasteScript>=1.7.4.2:www/py-pastescript@${PY_FLAVOR} \

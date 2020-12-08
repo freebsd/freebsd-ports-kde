@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	fldigi
-PORTVERSION=	4.1.14
-PORTREVISION=	1
+PORTVERSION=	4.1.17
 CATEGORIES=	comms hamradio
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}
 
@@ -13,7 +12,8 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	asciidoc:textproc/asciidoc\
 		docbook-xsl>=1.0:textproc/docbook-xsl\
-		xsltproc:textproc/libxslt
+		xsltproc:textproc/libxslt \
+		gsed:textproc/gsed
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs\
 		libpng.so:graphics/png \
 		libfltk.so:x11-toolkits/fltk \
@@ -39,7 +39,7 @@ OSS_DESC=		Support OSS
 PULSEAUDIO_DESC=	PulseAudio support
 HAMLIB_DESC=		Support rig control via hamlib
 
-OPTIONS_DEFAULT=	FLARQ OSS HAMLIB
+OPTIONS_DEFAULT=	FLARQ OSS HAMLIB NATIVE_OPT
 OPTIONS_SUB=		yes
 
 NATIVE_OPT_CONFIGURE_ON=	--enable-optimizations=native

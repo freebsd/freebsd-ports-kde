@@ -2,6 +2,7 @@
 
 PORTNAME=	kiwix-lib
 DISTVERSION=	9.3.1
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	me@int19h.org
@@ -32,6 +33,7 @@ GH_TUPLE=	kiwix:${PORTNAME}:${PORTVERSION}:DEFAULT \
 MESON_ARGS=	-Dctpp2-install-prefix=${LOCALBASE}
 CPPFLAGS+=	-I${WRKSRC_mustache}
 CXXFLAGS+=	-I${WRKSRC_mustache}
+LDFLAGS+=	-lz
 SHEBANG_FILES=	scripts/kiwix-compile-resources
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION} PORTMAJ=${PORTVERSION:C/\..*//}

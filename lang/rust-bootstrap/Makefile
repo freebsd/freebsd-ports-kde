@@ -1,11 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	rust
-PORTVERSION=	1.47.0
+PORTVERSION=	1.48.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:rust \
-		LOCAL/tobik:armbase \
-		LOCAL/tobik:base \
+		LOCAL/mikael:armbase \
+		LOCAL/mikael:base \
 		LOCAL/bdragon:ppc64lebase \
 		https://download.freebsd.org/ftp/${_RUST_FBSD_SUBDIR_${FLAVOR}}/:base \
 		LOCAL/tobik:powerpc64_gcc
@@ -28,6 +28,7 @@ ONLY_FOR_ARCHS_REASON=	untested on other archs
 
 BUILD_DEPENDS=	cmake:devel/cmake \
 		gmake:devel/gmake \
+		ninja:devel/ninja \
 		rust>=${PORTVERSION}:lang/rust
 
 FLAVORS=	aarch64 amd64 armv6 armv7 i386 powerpc64_elfv1 powerpc64_elfv2 powerpc64le
@@ -62,9 +63,9 @@ _RUST_FBSD_DIST_armv7=			FreeBSD-${_RUST_FBSD_VER}-arm-armv7${EXTRACT_SUFX}:armb
 _RUST_FBSD_DIST_i386=			FreeBSD-${_RUST_FBSD_VER}-i386${EXTRACT_SUFX}:base
 _RUST_FBSD_DIST_powerpc64_elfv1=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1${EXTRACT_SUFX}:base \
 					FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv1-gcc9-9.2.0${EXTRACT_SUFX}:powerpc64_gcc
-_RUST_FBSD_DIST_powerpc64_elfv2=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv2-r356261${EXTRACT_SUFX}:base
+_RUST_FBSD_DIST_powerpc64_elfv2=	FreeBSD-${_RUST_FBSD_VER}-powerpc64-elfv2-v1300123${EXTRACT_SUFX}:base
 _RUST_FBSD_DIST_powerpc64le=		FreeBSD-${_RUST_FBSD_VER}-powerpc64le-r366300${EXTRACT_SUFX}:ppc64lebase
-_RUST_FBSD_VER=				${_RUST_FBSD_VER_${FLAVOR}:U11.3-RELEASE}
+_RUST_FBSD_VER=				${_RUST_FBSD_VER_${FLAVOR}:U11.4-RELEASE}
 _RUST_FBSD_VER_armv7=			12.1-RELEASE
 _RUST_FBSD_VER_powerpc64_elfv1=		12.1-RELEASE
 _RUST_FBSD_VER_powerpc64_elfv2=		13.0-CURRENT
@@ -104,6 +105,9 @@ IGNORE=	is only for FreeBSD
 .elif ${OSVERSION} < 1200502
 IGNORE=	will not build on 12.0 due to old toolchain; 11.x untested
 .endif
+.if ${FLAVOR} == powerpc64le && ${OSVERSION} < 1300116
+IGNORE=	will not build on 12.x due to old system
+.endif
 
 .if exists(${PATCHDIR}/${FLAVOR:S/_/-/})
 EXTRA_PATCHES+=	${PATCHDIR}/${FLAVOR:S/_/-/}
@@ -115,11 +119,11 @@ post-patch:
 		${_CARGO_VENDOR_DIR}/*/.cargo-checksum.json
 .if ${FLAVOR} == powerpc64_elfv1
 	@${REINPLACE_CMD} -e 's,"c++","stdc++",g' \
-		${WRKSRC}/src/librustc_llvm/build.rs
+		${WRKSRC}/compiler/rustc_llvm/build.rs
 .endif
 	@${REINPLACE_CMD} -e 's,%CC%,${CC},g' \
 		-e 's,%WRKDIR%,${WRKDIR},g' \
-		${WRKSRC}/src/librustc_llvm/build.rs \
+		${WRKSRC}/compiler/rustc_llvm/build.rs \
 		${WRKSRC}/src/bootstrap/native.rs
 
 do-configure:
@@ -210,7 +214,7 @@ do-build:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR}
-	${INSTALL_DATA} ${WRKSRC}/build/dist/*-unknown-${OPSYS:tl}${EXTRACT_SUFX} \
+	${INSTALL_DATA} ${WRKSRC}/build/dist/*-${_RUST_ARCH_${FLAVOR}:U${FLAVOR}}-unknown-${OPSYS:tl}${EXTRACT_SUFX} \
 		${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR}
 .if ${FLAVOR:Mpowerpc64_*}
 	@cd ${STAGEDIR}${PREFIX}/rust-bootstrap/${FLAVOR} && for f in *${EXTRACT_SUFX}; do \
