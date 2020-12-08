@@ -86,7 +86,7 @@ DESTDIRNAME=		DESTDIR
 
 .  if ${_QT_VER:M6}
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
-MASTER_SITE_SUBDIR?=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 .  endif
 .  if ${_QT_VER:M5}
 MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
