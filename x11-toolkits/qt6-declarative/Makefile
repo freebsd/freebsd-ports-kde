@@ -16,9 +16,6 @@ USE_GL=		gl
 USE_QT=		base
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH=${PREFIX}/lib/qt6/cmake \
-		-DCMAKE_MODULE_PATH=${PREFIX}/lib/qt6/cmake 
-
 post-patch:
 	${REINPLACE_CMD} -e "s#python3#${PYTHON_CMD}#g" ${WRKSRC}/cmake/QtDeclarativeSetup.cmake
 .include <bsd.port.mk>
