@@ -917,6 +917,7 @@
     SUBDIR += qt5-pixeltool
     SUBDIR += qt5-svg
     SUBDIR += qt5-wayland
+    SUBDIR += qt6-svg
     SUBDIR += qtawesome
     SUBDIR += qtpbfimageplugin
     SUBDIR += qtqr

@@ -153,6 +153,9 @@ _USE_QT6_ONLY=		5compat base declarative doc quick3d quickcontrols2 quicktimelin
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
 qt-3d_LIB=		libQt${_QT_LIBVER}3DCore.so
 
+qt-5compat_PORT=	devel/${_QT_RELNAME}-5compat
+qt-5compat_LIB=		libQt${_QT_LIBVER}Core5Compat.so
+
 qt-assistant_PORT=	devel/${_QT_RELNAME}-assistant
 qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
 
@@ -299,6 +302,9 @@ qt-serialbus_LIB=	libQt${_QT_LIBVER}SerialBus.so
 
 qt-serialport_PORT=	comms/${_QT_RELNAME}-serialport
 qt-serialport_LIB=	libQt${_QT_LIBVER}SerialPort.so
+
+qt-shadertools_PORT=	x11-toolkits/${_QT_RELNAME}-shadertools
+qt-shadertools_LIB=	libQt${_QT_LIBVER}ShaderTools.so
 
 qt-speech_PORT=		accessibility/${_QT_RELNAME}-speech
 qt-speech_LIB=		libQt${_QT_LIBVER}TextToSpeech.so
