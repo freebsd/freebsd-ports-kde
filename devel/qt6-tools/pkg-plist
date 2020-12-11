@@ -254,6 +254,7 @@
 %%QT_BINDIR%%/pixeltool
 %%QT_BINDIR%%/qdbus
 %%QT_BINDIR%%/qdbusviewer
+%%QT_BINDIR%%/qdoc
 %%QT_BINDIR%%/qhelpgenerator
 %%QT_BINDIR%%/qtattributionsscanner
 %%QT_BINDIR%%/qtdiag
