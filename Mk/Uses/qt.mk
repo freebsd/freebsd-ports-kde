@@ -147,11 +147,14 @@ _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			sql-sqlite2 sql-sqlite3 svg testlib webkit \
 			xml xmlpatterns
 
-_USE_QT6_ONLY=		5compat base declarative doc quick3d quickcontrols2 quicktimeline shadertools svg tools translations wayland
+_USE_QT6_ONLY=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations wayland
 
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
 qt-3d_LIB=		libQt${_QT_LIBVER}3DCore.so
+
+qt-5compat_PORT=	devel/${_QT_RELNAME}-5compat
+qt-5compat_LIB=		libQt${_QT_LIBVER}Core5Compat.so
 
 qt-assistant_PORT=	devel/${_QT_RELNAME}-assistant
 qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
@@ -299,6 +302,9 @@ qt-serialbus_LIB=	libQt${_QT_LIBVER}SerialBus.so
 
 qt-serialport_PORT=	comms/${_QT_RELNAME}-serialport
 qt-serialport_LIB=	libQt${_QT_LIBVER}SerialPort.so
+
+qt-shadertools_PORT=	x11-toolkits/${_QT_RELNAME}-shadertools
+qt-shadertools_LIB=	libQt${_QT_LIBVER}ShaderTools.so
 
 qt-speech_PORT=		accessibility/${_QT_RELNAME}-speech
 qt-speech_LIB=		libQt${_QT_LIBVER}TextToSpeech.so

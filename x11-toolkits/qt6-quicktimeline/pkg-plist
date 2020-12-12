@@ -1,0 +1,9 @@
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginAdditionalTargetInfo.cmake
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginConfig.cmake
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginConfigVersion.cmake
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginDependencies.cmake
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
+%%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins/Qt6qtquicktimelinepluginTargets.cmake
+%%QT_QMLDIR%%/QtQuick/Timeline/libqtquicktimelineplugin.so
+%%QT_QMLDIR%%/QtQuick/Timeline/plugins.qmltypes
+%%QT_QMLDIR%%/QtQuick/Timeline/qmldir

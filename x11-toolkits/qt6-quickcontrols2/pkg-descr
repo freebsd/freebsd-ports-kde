@@ -1,0 +1,8 @@
+Qt is a cross-platform application and UI framework for developers
+using C++ or QML, a CSS/JavaScript-like language.
+
+Provides lightweight QML types for creating performant user interfaces for
+desktop, embedded, and mobile devices. These types employ a simple styling
+architecture and are very efficient.
+
+WWW: http://qt-project.org

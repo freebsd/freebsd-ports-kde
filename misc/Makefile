@@ -422,6 +422,7 @@
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
+    SUBDIR += qt6-doc
     SUBDIR += qtchooser
     SUBDIR += raspberrypi-gpioshutdown
     SUBDIR += raspberrypi-userland
