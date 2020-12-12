@@ -192,6 +192,8 @@
     SUBDIR += qt5pas
     SUBDIR += qt6-declarative
     SUBDIR += qt6-quick3d
+    SUBDIR += qt6-quickcontrols2
+    SUBDIR += qt6-quicktimeline
     SUBDIR += qtermwidget
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6
