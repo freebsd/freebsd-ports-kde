@@ -1,4 +1,7 @@
 # $FreeBSD$
+#
+# TODO:
+# - How should Database backend be handled in Qt6?
 
 PORTNAME=	base
 DISTVERSION=	${QT6_VERSION}
@@ -37,5 +40,10 @@ SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
+
+# TODO: do this cleaner
+post-install:
+	${RM} -vr ${STAGEDIR}${PREFIX}/${QT_LIBDIR_REL}/cmake
+
 
 .include <bsd.port.mk>
