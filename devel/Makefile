@@ -5301,6 +5301,8 @@
     SUBDIR += pyotherside-qt5
     SUBDIR += pyside2
     SUBDIR += pyside2-tools
+    SUBDIR += pyside6
+    SUBDIR += pyside6-tools
     SUBDIR += pystring
     SUBDIR += pysvn
     SUBDIR += pythk
@@ -6658,6 +6660,7 @@
     SUBDIR += shflags
     SUBDIR += shfmt
     SUBDIR += shiboken2
+    SUBDIR += shiboken6
     SUBDIR += shmap
     SUBDIR += shtk
     SUBDIR += shtool
