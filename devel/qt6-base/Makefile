@@ -35,7 +35,8 @@ USE_GL=		gl egl
 USE_GNOME=	glib20 gtk30 pango
 USE_XORG=	x11
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API
-CMAKE_OFF=	QT_FEATURE_eglfs
+CMAKE_OFF=	QT_FEATURE_eglfs \
+		QT_FEATURE_gssapi
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh
