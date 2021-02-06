@@ -2,7 +2,7 @@
 # $FreeBSD: head/emulators/virtualbox-ose/Makefile 501855 2019-05-17 11:56:47Z jkim $
 
 PORTNAME=	virtualbox6-ose
-PORTVERSION=	6.1.16
+PORTVERSION=	6.1.18
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
