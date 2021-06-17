@@ -1,5 +1,5 @@
 PORTNAME=	mlt
-PKGNAMESUFFIX=	-7
+PKGNAMESUFFIX=	7
 DISTVERSION=	7.0.1
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
