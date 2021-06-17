@@ -1,5 +1,5 @@
 PORTNAME=	mlt
-DISTVERSION=	7.0.0
+DISTVERSION=	7.0.1
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
 MASTER_SITES=	https://github.com/mltframework/${PORTNAME}/releases/download/v${DISTVERSION}/
@@ -19,7 +19,8 @@ DATADIR=	${PREFIX}/share/${PORTNAME}-7
 .ifndef(SLAVEPORT) # Master port.
 
 # They both install bin/melt.
-CONFLICTS_INSTALL=	freeze-[0-9]*
+CONFLICTS_INSTALL=	freeze-[0-9]* \
+			mlt-6*
 
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libfreetype.so:print/freetype2 \
