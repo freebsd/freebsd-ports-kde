@@ -234,7 +234,7 @@
     SUBDIR += mkvtoolnix
     SUBDIR += mkxvcd
     SUBDIR += mlt
-    SUBDIR += mlt-7
+    SUBDIR += mlt7
     SUBDIR += mlt-qt5
     SUBDIR += mmsclient
     SUBDIR += mmsrip
