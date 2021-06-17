@@ -81,6 +81,7 @@ lib/mlt-7/libmltnormalize.so
 lib/mlt-7/libmltoldfilm.so
 lib/mlt-7/libmltplus.so
 lib/mlt-7/libmltplusgpl.so
+%%QT%%lib/mlt-7/libmltqt.so
 lib/mlt-7/libmltrtaudio.so
 %%SAMPLERATE%%lib/mlt-7/libmltresample.so
 lib/mlt-7/libmltsdl2.so
@@ -398,6 +399,18 @@ man/man1/melt-7.1.gz
 %%DATADIR%%/presets/consumer/avformat/FLAC
 %%DATADIR%%/presets/consumer/avformat/intermediate/DNxHR-HQ
 %%DATADIR%%/presets/consumer/avformat/intermediate/ProRes HQ
+%%QT%%%%DATADIR%%/qt/filter_audiospectrum.yml
+%%QT%%%%DATADIR%%/qt/filter_audiowaveform.yml
+%%QT%%%%DATADIR%%/qt/filter_lightshow.yml
+%%QT%%%%DATADIR%%/qt/filter_qtblend.yml
+%%QT%%%%DATADIR%%/qt/filter_qtcrop.yml
+%%QT%%%%DATADIR%%/qt/filter_qtext.yml
+%%QT%%%%DATADIR%%/qt/filter_typewriter.yml
+%%QT%%%%DATADIR%%/qt/producer_kdenlivetitle.yml
+%%QT%%%%DATADIR%%/qt/producer_qimage.yml
+%%QT%%%%DATADIR%%/qt/producer_qtext.yml
+%%QT%%%%DATADIR%%/qt/transition_qtblend.yml
+%%QT%%%%DATADIR%%/qt/transition_vqm.yml
 %%DATADIR%%/vorbis/producer_vorbis.yml
 %%DATADIR%%/xml/consumer_xml.yml
 %%DATADIR%%/xml/mlt-xml.dtd
