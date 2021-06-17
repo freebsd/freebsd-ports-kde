@@ -1,4 +1,5 @@
 PORTNAME=	mlt
+PKGNAMESUFFIX=	-7
 DISTVERSION=	7.0.1
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
@@ -156,6 +157,8 @@ common-post-install:
 .endif
 
 post-install: common-post-install
+	# Unversioned melt is removed (reduces conflicts a tiny bit)
+	${RM} ${STAGEDIR}${PREFIX}/bin/melt
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/* 2>/dev/null || ${TRUE}
 	@${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/${PORTNAME} 2>/dev/null || ${TRUE}
 
