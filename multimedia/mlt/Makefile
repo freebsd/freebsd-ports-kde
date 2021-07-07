@@ -11,7 +11,7 @@ COMMENT?=	Multimedia framework for TV broadcasting
 LICENSE?=	GPLv2 GPLv3 LGPL21
 LICENSE_COMB?=	multi
 
-USES+=		alias cmake compiler:c++11-lang eigen:3 pkgconfig
+USES+=		alias cmake compiler:c++11-lang eigen:3 gnome pkgconfig
 
 # It's still mlt, but installs support files to mlt-7
 DATADIR=	${PREFIX}/share/${PORTNAME}-7
@@ -63,7 +63,8 @@ FREI0R_BUILD_DEPENDS=	${LOCALBASE}/include/frei0r.h:graphics/frei0r
 FREI0R_CMAKE_BOOL=	MOD_FREI0R
 
 GDK_LIB_DEPENDS=	libexif.so:graphics/libexif \
-			libfontconfig.so:x11-fonts/fontconfig
+			libfontconfig.so:x11-fonts/fontconfig \
+			libharfbuzz.so:print/harfbuzz
 GDK_USE=		GNOME=gdkpixbuf2,pango
 GDK_CMAKE_BOOL=		MOD_GDK
 
@@ -101,9 +102,6 @@ post-install-EXAMPLES-on:
 .endfor
 
 post-install:
-	# Unversioned melt is removed (reduces conflicts a tiny bit)
-	${RM} ${STAGEDIR}${PREFIX}/bin/melt
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/* 2>/dev/null || ${TRUE}
-	@${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/${PORTNAME} 2>/dev/null || ${TRUE}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/melt-7
 
 .include <bsd.port.mk>

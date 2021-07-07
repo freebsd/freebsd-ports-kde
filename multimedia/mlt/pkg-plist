@@ -1,3 +1,4 @@
+bin/melt
 bin/melt-7
 include/mlt-7/framework/mlt.h
 include/mlt-7/framework/mlt_animation.h
