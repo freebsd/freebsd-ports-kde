@@ -233,9 +233,9 @@
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix
     SUBDIR += mkxvcd
+    SUBDIR += mlt
     SUBDIR += mlt6
     SUBDIR += mlt6-qt5
-    SUBDIR += mlt7
     SUBDIR += mmsclient
     SUBDIR += mmsrip
     SUBDIR += motion
