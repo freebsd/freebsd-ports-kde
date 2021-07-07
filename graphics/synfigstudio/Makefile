@@ -3,7 +3,7 @@
 PORTNAME=	synfigstudio
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=v
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	graphics multimedia
 
 MAINTAINER=	ports@FreeBSD.org
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libImath.so:math/Imath \
 		libfftw3.so:math/fftw3 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libmlt.so:multimedia/mlt \
+		libmlt.so:multimedia/mlt6 \
 		libsynfig.so:devel/synfig
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 

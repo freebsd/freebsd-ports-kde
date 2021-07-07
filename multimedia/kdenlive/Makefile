@@ -1,5 +1,6 @@
 PORTNAME=	kdenlive
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	multimedia kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -7,12 +8,12 @@ COMMENT=	KDE professional quality non-linear video editing suite
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libmlt.so:multimedia/mlt \
+LIB_DEPENDS=	libmlt.so:multimedia/mlt6 \
 		librttr_core.so:devel/rttr
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat
 RUN_DEPENDS=	ffmpeg${FFMPEG_SUFX}:multimedia/ffmpeg${FFMPEG_SUFX} \
-		${LOCALBASE}/lib/mlt/libmltqt.so:multimedia/mlt-qt5
+		${LOCALBASE}/lib/mlt/libmltqt.so:multimedia/mlt6-qt5
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext-tools \
 		gl pkgconfig qt:5 shared-mime-info kde:5 tar:xz xorg

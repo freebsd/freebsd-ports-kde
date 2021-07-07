@@ -1,4 +1,5 @@
 PORTNAME=	mlt
+PKGNAMESUFFIX=	6
 DISTVERSION=	6.26.1
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
@@ -25,7 +26,8 @@ CONFIGURE_ARGS+=--enable-debug
 .ifndef(SLAVEPORT) # Master port.
 
 # They both install bin/melt.
-CONFLICTS_INSTALL=	freeze-[0-9]*
+CONFLICTS_INSTALL=	freeze-[0-9]* \
+			mlt-7*
 
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libogg.so:audio/libogg \

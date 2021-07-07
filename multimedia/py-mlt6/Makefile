@@ -1,12 +1,11 @@
 # Created by: Charlie Kester <corky1951@comcast.net>
 
-PORTREVISION=	1
 CATEGORIES=	multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 USES=		gettext-runtime python:3.5+ shebangfix
 USE_PYTHON=	flavors
-MASTERDIR=	${.CURDIR:H}/mlt
+MASTERDIR=	${.CURDIR:H}/mlt6
 SLAVEPORT=	swig Python
 
 PORTEXAMPLES=	*

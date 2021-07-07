@@ -2,7 +2,7 @@ USES=	qt:5 xorg
 USE_CXXSTD=	c++11
 USE_QT=		core gui svg widgets xml
 USE_XORG=	x11
-MASTERDIR=	${.CURDIR:H}/mlt
+MASTERDIR=	${.CURDIR:H}/mlt6
 SLAVEPORT=	qt5
 
 .include "${MASTERDIR}/Makefile"

@@ -1,6 +1,6 @@
 PORTNAME=	webvfx
 DISTVERSION=	0.4.4-20160823
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	multimedia
 PKGNAMESUFFIX=	-qt5
 
@@ -10,7 +10,7 @@ COMMENT=	Video effects library based on HTML/QML
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-LIB_DEPENDS=	libmlt.so:multimedia/mlt
+LIB_DEPENDS=	libmlt.so:multimedia/mlt6
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mltframework
