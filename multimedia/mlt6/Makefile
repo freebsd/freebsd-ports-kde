@@ -132,7 +132,7 @@ LIB_DEPENDS+=	libmlt.so:${MASTER_PORT}
 PLIST?=		${.CURDIR}/pkg-plist
 
 . if ${SLAVEPORT:Mqt*} # Qt slave port.
-PKGNAMESUFFIX=	-${SLAVEPORT}
+PKGNAMESUFFIX=	6-${SLAVEPORT}
 
 COMMENT=	Qt ${SLAVEPORT:C/[^0-9]//g} plugin for the MLT multimedia framework
 
