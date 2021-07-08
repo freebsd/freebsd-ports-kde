@@ -3,7 +3,7 @@
 PORTNAME=	synfig
 PORTVERSION=	1.2.2
 DISTVERSIONPREFIX=v
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	devel graphics multimedia
 
 MAINTAINER=	ports@FreeBSD.org
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libImath.so:math/Imath \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libltdl.so:devel/libltdl \
-		libmlt.so:multimedia/mlt \
+		libmlt.so:multimedia/mlt6 \
 		libmng.so:graphics/libmng \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff

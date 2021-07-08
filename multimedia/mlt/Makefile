@@ -1,5 +1,5 @@
 PORTNAME=	mlt
-DISTVERSION=	6.26.1
+DISTVERSION=	7.0.1
 # Don't use GitHub "fake" downloads that are auto-generated from a
 # tag; the project uploads tarballs for each release.
 MASTER_SITES=	https://github.com/mltframework/${PORTNAME}/releases/download/v${DISTVERSION}/
@@ -11,27 +11,19 @@ COMMENT?=	Multimedia framework for TV broadcasting
 LICENSE?=	GPLv2 GPLv3 LGPL21
 LICENSE_COMB?=	multi
 
-USES+=		alias compiler:c++11-lang eigen:3 gmake gnome localbase \
-		pkgconfig
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-gpl --enable-gpl3 --target-os=FreeBSD
+USES+=		alias cmake compiler:c++11-lang eigen:3 gnome pkgconfig
 
-.ifndef(WITH_DEBUG)
-CONFIGURE_ARGS+=--disable-debug
-.else
-CONFIGURE_ARGS+=--enable-debug
-.endif
-
-.ifndef(SLAVEPORT) # Master port.
+# It's still mlt, but installs support files to mlt-7
+DATADIR=	${PREFIX}/share/${PORTNAME}-7
 
 # They both install bin/melt.
-CONFLICTS_INSTALL=	freeze-[0-9]*
+CONFLICTS_INSTALL=	freeze-[0-9]* \
+			mlt-6*
 
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
+		libfreetype.so:print/freetype2 \
 		libogg.so:audio/libogg \
 		libvorbis.so:audio/libvorbis
-
-BROKEN_sparc64=		does not compile on sparc64 (invokes i386 asm)
 
 USE_GL=		gl
 USE_GNOME=	libxml2
@@ -39,77 +31,65 @@ USE_SDL=	image2
 USE_XORG=	x11
 USES+=		gl iconv pathfix sdl xorg
 PATHFIX_MAKEFILEIN=	Makefile
-CONFIGURE_ARGS+=--disable-qt --swig-languages=none
 USE_LDCONFIG=	yes
+
+# Explicitly disabled modules, and explicitly always-enabled
+CMAKE_OFF=	MOD_NDI MOD_OPENCV MOD_RUBBERBAND MOD_SDL1
+CMAKE_ON=	\
+		MOD_DECKLINK MOD_KDENLIVE MOD_NORMALIZE \
+		MOD_OLDFILM MOD_PLUS MOD_PLUSGPL \
+		MOD_RTAUDIO MOD_SDL2 MOD_VORBIS MOD_XINE MOD_XML
 
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"
 
-PORTDOCS=	AUTHORS NEWS README docs
+PORTDOCS=	AUTHORS NEWS README.md docs
 PORTEXAMPLES=	demo
 
 OPTIONS_DEFINE=	DOCS EXAMPLES FFMPEG FREI0R GDK JACK OPENGL \
-		SAMPLERATE SOX VIDSTAB
+		QT SAMPLERATE SOX VIDSTAB
 OPTIONS_DEFAULT=FFMPEG FREI0R GDK OPENGL SAMPLERATE SOX VIDSTAB
 OPTIONS_SUB=	yes
 
 GDK_DESC=	Images and text rendering via GDK
+QT_DESC=	Qt UI support
 SOX_DESC=	SoX audio effects support
 VIDSTAB_DESC=	Video stabilization support via Vid.Stab
 
 FFMPEG_SUFX=		# Currently empty.
 FFMPEG_LIB_DEPENDS=	libavformat${FFMPEG_SUFX}.so:multimedia/ffmpeg${FFMPEG_SUFX}
-FFMPEG_CONFIGURE_ENABLE=avformat
-FFMPEG_CONFIGURE_ON=	--avformat-suffix="${FFMPEG_SUFX}"
+FFMPEG_CMAKE_BOOL=	MOD_AVFORMAT
 
 FREI0R_BUILD_DEPENDS=	${LOCALBASE}/include/frei0r.h:graphics/frei0r
-FREI0R_CONFIGURE_ENABLE=frei0r
+FREI0R_CMAKE_BOOL=	MOD_FREI0R
 
 GDK_LIB_DEPENDS=	libexif.so:graphics/libexif \
-			libfontconfig.so:x11-fonts/fontconfig
+			libfontconfig.so:x11-fonts/fontconfig \
+			libharfbuzz.so:print/harfbuzz
 GDK_USE=		GNOME=gdkpixbuf2,pango
-GDK_CONFIGURE_ENABLE=	gdk
+GDK_CMAKE_BOOL=		MOD_GDK
 
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 JACK_BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:audio/ladspa
-JACK_CONFIGURE_ENABLE=	jackrack
 JACK_USE=		GNOME=glib20
-
-# Prepare for OpenCV 3 port.
-CONFIGURE_ARGS+=	--disable-opencv
-OPENCV_CONFIGURE_ENABLE=opencv
+JACK_CMAKE_BOOL=	MOD_JACKRACK
 
 OPENGL_LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 			libmovit.so:graphics/movit
 OPENGL_USE=		GL=gl
-OPENGL_CONFIGURE_ENABLE=opengl
+OPENGL_CMAKE_BOOL=	MOD_MOVIT
+
+QT_USES=		qt
+QT_USE=			QT=core
+QT_CMAKE_BOOL=		MOD_QT
 
 SAMPLERATE_LIB_DEPENDS=	libsamplerate.so:audio/libsamplerate
-SAMPLERATE_CONFIGURE_ENABLE=resample
+SAMPLERATE_CMAKE_BOOL=	MOD_RESAMPLE
 
 SOX_LIB_DEPENDS=	libsox.so:audio/sox
-SOX_CONFIGURE_ENABLE=	sox
+SOX_CMAKE_BOOL=		MOD_SOX
 
 VIDSTAB_LIB_DEPENDS=	libvidstab.so:multimedia/vid.stab
-VIDSTAB_CONFIGURE_ENABLE=vid.stab
-
-pre-configure:
-	# Remove sdl1 support
-	${RM} -r ${WRKSRC}/src/modules/sdl
-	@${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},' \
-		${WRKSRC}/src/modules/frei0r/factory.c \
-		${WRKSRC}/src/modules/jackrack/plugin_mgr.c
-	@${REINPLACE_CMD} -e 's,-lpthread,-pthread,' \
-			-e 's,-liconv,${ICONV_LIB},' \
-		${WRKSRC}/src/framework/Makefile \
-		${WRKSRC}/src/melt/Makefile \
-		${WRKSRC}/src/modules/*/Makefile
-
-common-post-install:
-	${INSTALL_MAN} ${WRKSRC}/docs/melt.1 ${STAGEDIR}${MANPREFIX}/man/man1/melt.1
-	@${RM} ${WRKSRC}/docs/melt.1
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/melt
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmlt.so.${PORTVERSION}
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libmlt++.so.${PORTVERSION}
+VIDSTAB_CMAKE_BOOL=	MOD_VIDSTAB
 
 post-install-DOCS-on:
 .for f in ${PORTDOCS}
@@ -121,61 +101,7 @@ post-install-EXAMPLES-on:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} ${f} ${STAGEDIR}${EXAMPLESDIR}
 .endfor
 
-.else # Slave port.
-
-PORTSCOUT=	ignore:1
-
-LIB_DEPENDS+=	libmlt.so:${MASTER_PORT}
-
-PLIST?=		${.CURDIR}/pkg-plist
-
-. if ${SLAVEPORT:Mqt*} # Qt slave port.
-PKGNAMESUFFIX=	-${SLAVEPORT}
-
-COMMENT=	Qt ${SLAVEPORT:C/[^0-9]//g} plugin for the MLT multimedia framework
-
-LICENSE=	GPLv2 GPLv3
-LICENSE_COMB=	multi
-
-LIB_DEPENDS+=	libexif.so:graphics/libexif
-
-CONFIGURE_ARGS+=--enable-qt \
-		--qt-libdir="${QT_LIBDIR}" \
-		--qt-includedir="${QT_INCDIR}"
-BUILD_WRKSRC=	${WRKSRC}/src/modules/qt
-. elif ${SLAVEPORT:Mswig} # SWIG slave port.
-LANGUAGE=	${SLAVEPORT:Nswig}
-
-COMMENT=	${LANGUAGE} bindings for the MLT multimedia framework
-
-LICENSE=	LGPL21
-LICENSE_COMB=	single
-
-BUILD_DEPENDS+=	swig:devel/swig
-
-_CFLAGS=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
-CFLAGS+=	${_CFLAGS}
-CXXFLAGS+=	${_CFLAGS}
-CONFIGURE_ARGS+=--swig-languages=${LANGUAGE:tl}
-BUILD_WRKSRC=	${WRKSRC}/src/swig
-INSTALL_WRKSRC=	${BUILD_WRKSRC}/${LANGUAGE:tl}
-
-EXAMPLESDIR=	${PREFIX}/share/examples/${PORTNAME}/${LANGUAGE:tl}
-. endif
-
-INSTALL_WRKSRC?=${BUILD_WRKSRC}
-
-pre-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}
-
-# Dummy placeholder target.
-common-post-install:
-	@${TRUE}
-
-.endif
-
-post-install: common-post-install
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/* 2>/dev/null || ${TRUE}
-	@${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/${PORTNAME} 2>/dev/null || ${TRUE}
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/melt-7
 
 .include <bsd.port.mk>

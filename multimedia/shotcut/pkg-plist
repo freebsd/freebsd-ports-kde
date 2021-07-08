@@ -254,6 +254,8 @@ share/mime/packages/org.shotcut.Shotcut.xml
 %%DATADIR%%/qml/filters/tcolor/ui.qml
 %%DATADIR%%/qml/filters/threshold/meta.qml
 %%DATADIR%%/qml/filters/threshold/ui.qml
+%%DATADIR%%/qml/filters/time_remap/meta.qml
+%%DATADIR%%/qml/filters/time_remap/ui.qml
 %%DATADIR%%/qml/filters/timer/ClockSpinner.qml
 %%DATADIR%%/qml/filters/timer/meta.qml
 %%DATADIR%%/qml/filters/timer/ui.qml
@@ -282,6 +284,7 @@ share/mime/packages/org.shotcut.Shotcut.xml
 %%DATADIR%%/qml/modules/Shotcut/Controls/ColorPicker.qml
 %%DATADIR%%/qml/modules/Shotcut/Controls/ComboBox.qml
 %%DATADIR%%/qml/modules/Shotcut/Controls/DoubleSpinBox.qml
+%%DATADIR%%/qml/modules/Shotcut/Controls/EditMenu.qml
 %%DATADIR%%/qml/modules/Shotcut/Controls/Gauge.qml
 %%DATADIR%%/qml/modules/Shotcut/Controls/GradientControl.qml
 %%DATADIR%%/qml/modules/Shotcut/Controls/HoverTip.qml
@@ -352,6 +355,7 @@ share/mime/packages/org.shotcut.Shotcut.xml
 %%NLS%%%%DATADIR%%/translations/shotcut_pl.qm
 %%NLS%%%%DATADIR%%/translations/shotcut_pt_BR.qm
 %%NLS%%%%DATADIR%%/translations/shotcut_pt_PT.qm
+%%NLS%%%%DATADIR%%/translations/shotcut_ro.qm
 %%NLS%%%%DATADIR%%/translations/shotcut_ru.qm
 %%NLS%%%%DATADIR%%/translations/shotcut_sk.qm
 %%NLS%%%%DATADIR%%/translations/shotcut_sl.qm

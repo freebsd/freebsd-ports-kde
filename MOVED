@@ -16398,3 +16398,5 @@ databases/pg_reorg||2021-06-13|Removed, abandonware only for PostgreSQL 9.5
 databases/pgespresso||2021-06-13|Removed, functionality part of PostgreSQL 9.6 and later.
 x11-fonts/urw-core35-fonts|x11-fonts/urw-base35-fonts|2021-06-15|Project was renamed upstream
 graphics/jpeg-xl|graphics/libjxl|2021-06-16|Project was renamed upstream
+multimedia/mlt-qt5|multimedia/mlt6-qt5|2021-07-07|multimedia/mlt 6 moved to multimedia/mlt6
+multimedia/py-mlt|multimedia/py-mlt6|2021-07-07|multimedia/mlt 6 moved to multimedia/mlt6
