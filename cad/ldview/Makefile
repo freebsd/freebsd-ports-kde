@@ -1,7 +1,6 @@
 PORTNAME=	ldview
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.4_Beta5
-PORTREVISION=	1
+DISTVERSION=	4.4
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -36,7 +35,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|"/usr/share/ldraw"|"${PREFIX}/share/ldraw"|' ${WRKSRC}/ModelViewerWidget.cpp
 
 pre-configure:
-	@cd ${WRKSRC} && lrelease LDView.pro
+	@cd ${WRKSRC} && ${LRELEASE} LDView.pro
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/LDView

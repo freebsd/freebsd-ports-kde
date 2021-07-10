@@ -382,6 +382,7 @@
     SUBDIR += lean
     SUBDIR += lemon
     SUBDIR += levmar
+    SUBDIR += lib2geom
     SUBDIR += libRmath
     SUBDIR += libbraiding
     SUBDIR += libccd
@@ -558,6 +559,7 @@
     SUBDIR += octave-forge-zeromq
     SUBDIR += octomap
     SUBDIR += ogdf
+    SUBDIR += oink
     SUBDIR += oleo
     SUBDIR += onednn
     SUBDIR += openblas

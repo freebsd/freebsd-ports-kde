@@ -40,11 +40,11 @@ USE_KDE=	activities activities attica auth breeze codecs \
 		newstuff notifications package plasma-framework runner service sonnet \
 		textwidgets widgetsaddons windowsystem xmlgui \
 		kwayland-integration kwayland-server wayland \
-		doctools_build
+		doctools_build ecm_build
 USE_LDCONFIG=	yes
 USE_QT=		concurrent core dbus declarative gui multimedia network script \
-		sensors testlib uiplugin uitools widgets x11extras xml \
-		buildtools_build qmake_build \
+		sensors uiplugin uitools widgets x11extras xml \
+		buildtools_build qmake_build testlib_build \
 		quickcontrols2_run virtualkeyboard_run
 USE_XORG=	ice sm x11 xcb xext xi
 SHEBANG_FILES=	kconf_update/*.py \
