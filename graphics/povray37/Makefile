@@ -1,10 +1,10 @@
 PORTNAME=	povray
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.7.0.9
+DISTVERSION=	3.7.0.10
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	37
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bsd@philippost.de
 COMMENT=	Persistence of Vision Ray Tracer
 
 LICENSE=	AGPLv3+
