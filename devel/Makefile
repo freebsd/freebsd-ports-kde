@@ -4837,6 +4837,7 @@
     SUBDIR += py-pockets
     SUBDIR += py-podcastparser
     SUBDIR += py-poetry-core
+    SUBDIR += py-poetry2setup
     SUBDIR += py-polib
     SUBDIR += py-pooch
     SUBDIR += py-pop
@@ -5212,6 +5213,7 @@
     SUBDIR += py-typed-ast
     SUBDIR += py-typer
     SUBDIR += py-types-PyYAML
+    SUBDIR += py-types-futures
     SUBDIR += py-types-protobuf
     SUBDIR += py-types-requests
     SUBDIR += py-typing-extensions
@@ -6173,6 +6175,7 @@
     SUBDIR += rubygem-flipper-ui
     SUBDIR += rubygem-flipper-ui017
     SUBDIR += rubygem-flipper017
+    SUBDIR += rubygem-flipper021
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
