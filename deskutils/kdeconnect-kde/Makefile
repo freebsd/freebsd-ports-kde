@@ -20,7 +20,8 @@ USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons dbusaddons doctools ecm i18n iconthemes \
 		itemviews jobwidgets kcmutils kio kirigami2 notifications \
-		people service solid wayland widgetsaddons xmlgui
+		people qqc2-desktop-style service solid wayland widgetsaddons \
+		xmlgui
 USE_QT=		concurrent core dbus declarative gui multimedia network \
 		testlib widgets x11extras xml \
 		buildtools_build qmake_build

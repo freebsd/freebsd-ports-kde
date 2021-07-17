@@ -6,7 +6,6 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE universal document viewer
 
 LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	markdown:textproc/discount
 RUN_DEPENDS=	markdown:textproc/discount

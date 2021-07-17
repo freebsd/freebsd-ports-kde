@@ -23,7 +23,8 @@ USE_KDE=	attica auth archive bookmarks codecs completion config \
 		newstuff parts pty service solid sonnet syntaxhighlighting \
 		texteditor textwidgets widgetsaddons xmlgui \
 		ecm_build
-USE_QT=		concurrent core dbus gui network printsupport svg widgets xml xmlpatterns \
+USE_QT=		concurrent core dbus gui network printsupport svg webengine \
+		widgets xml xmlpatterns \
 		buildtools_build qmake_build testlib_build
 USE_LDCONFIG=	yes
 
