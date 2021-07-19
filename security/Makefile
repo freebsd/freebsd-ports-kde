@@ -31,6 +31,7 @@
     SUBDIR += apkid
     SUBDIR += arirang
     SUBDIR += arpCounterattack
+    SUBDIR += arti
     SUBDIR += asignify
     SUBDIR += assh
     SUBDIR += autossh
@@ -905,6 +906,7 @@
     SUBDIR += py-gnutls
     SUBDIR += py-google-auth
     SUBDIR += py-google-auth-httplib2
+    SUBDIR += py-google-auth-oauthlib
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
     SUBDIR += py-gssapi
@@ -1080,6 +1082,7 @@
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-hkdf
+    SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh
     SUBDIR += rubygem-lockbox
     SUBDIR += rubygem-metasploit-aggregator
@@ -1091,7 +1094,9 @@
     SUBDIR += rubygem-metasploit_payloads-mettle
     SUBDIR += rubygem-nessus_rest
     SUBDIR += rubygem-net-scp
+    SUBDIR += rubygem-net-scp1
     SUBDIR += rubygem-net-sftp
+    SUBDIR += rubygem-net-sftp2
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-gateway1

@@ -1059,6 +1059,7 @@
     SUBDIR += p5-Plack-Middleware-AutoRefresh
     SUBDIR += p5-Plack-Middleware-ConsoleLogger
     SUBDIR += p5-Plack-Middleware-CrossOrigin
+    SUBDIR += p5-Plack-Middleware-DBIx-DisconnectAll
     SUBDIR += p5-Plack-Middleware-Debug
     SUBDIR += p5-Plack-Middleware-Deflater
     SUBDIR += p5-Plack-Middleware-Expires
@@ -1689,6 +1690,7 @@
     SUBDIR += py-protego
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
+    SUBDIR += py-pygsheets
     SUBDIR += py-pyjwt
     SUBDIR += py-pylsqpack
     SUBDIR += py-pyocclient
@@ -2313,6 +2315,7 @@
     SUBDIR += wikicalc
     SUBDIR += wordpress
     SUBDIR += wpebackend-fdo
+    SUBDIR += writeas-cli
     SUBDIR += wsdlpull
     SUBDIR += wslay
     SUBDIR += wsmake
