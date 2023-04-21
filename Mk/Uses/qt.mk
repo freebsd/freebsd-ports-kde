@@ -148,7 +148,7 @@ _USE_QT5_ONLY=		assistant buildtools concurrent connectivity core dbus \
 _USE_QT5_ONLY+=		sql-ibase
 .  endif
 
-_USE_QT6_ONLY=		5compat base languageserver lottie positioning shadertools \
+_USE_QT6_ONLY=		5compat base httpserver languageserver lottie positioning shadertools \
 			tools translations
 
 # Dependency tuples: _LIB should be preferred if possible.
@@ -215,6 +215,9 @@ qt-gui_LIB=		libQt${_QT_LIBVER}Gui.so
 
 qt-help_PORT=		devel/${_QT_RELNAME}-help
 qt-help_LIB=		libQt${_QT_LIBVER}Help.so
+
+qt-httpserver_PORT=	www/${_QT_RELNAME}-httpserver
+qt-httpserver_LIB=	libQt${_QT_LIBVER}HttpServer.so
 
 qt-imageformats_PORT=	graphics/${_QT_RELNAME}-imageformats
 qt-imageformats_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/imageformats/libqtiff.so
