@@ -1323,6 +1323,7 @@
     SUBDIR += py-cssselect2
     SUBDIR += py-csvkit
     SUBDIR += py-custom_inherit
+    SUBDIR += py-cyclonedx-python-lib
     SUBDIR += py-dbfread
     SUBDIR += py-dialect
     SUBDIR += py-dict2xml
@@ -1399,6 +1400,7 @@
     SUBDIR += py-libxml2
     SUBDIR += py-license-expression
     SUBDIR += py-line-protocol-parser
+    SUBDIR += py-linkify-it-py
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
@@ -1601,6 +1603,7 @@
     SUBDIR += py-ttp
     SUBDIR += py-ttp-templates
     SUBDIR += py-typogrify
+    SUBDIR += py-uc-micro-py
     SUBDIR += py-ucl
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
@@ -1798,7 +1801,6 @@
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-nokogiri111
-    SUBDIR += rubygem-nokogiri114
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml
@@ -1998,6 +2000,7 @@
     SUBDIR += tn-aspell
     SUBDIR += tn-hunspell
     SUBDIR += tnef2txt
+    SUBDIR += tokay
     SUBDIR += tokyodystopia
     SUBDIR += toml-f
     SUBDIR += tr-aspell

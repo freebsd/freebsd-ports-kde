@@ -1,6 +1,5 @@
 PORTNAME=	geoalchemy2
-PORTVERSION=	0.13.3
-PORTREVISION=	1
+PORTVERSION=	0.14.0
 CATEGORIES=	databases geography python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +12,7 @@ WWW=		https://github.com/geoalchemy/geoalchemy2
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.rst
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=42:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}setuptools_scm>=3.4:devel/py-setuptools_scm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}packaging>=0:devel/py-packaging@${PY_FLAVOR} \
@@ -23,5 +22,10 @@ USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+
+OPTIONS_DEFINE=	SHAPELY
+SHAPELY_DESC=	Shapely integration
+
+SHAPELY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}shapely>=1.7:devel/py-shapely@${PY_FLAVOR}
 
 .include <bsd.port.mk>

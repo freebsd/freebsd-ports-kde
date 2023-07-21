@@ -48,7 +48,7 @@ CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW \
 
 # Versioning values, to reduce plist churn
 SO_VER=		511
-SO_VER_LONG=	5.11.230402
+SO_VER_LONG=	5.11.230403
 PLIST_SUB+=	SO_VER=${SO_VER} SO_VER_LONG=${SO_VER_LONG}
 
 OPTIONS_DEFINE=	WEBENGINE
@@ -62,11 +62,4 @@ SHEBANG_LANG=	zsh
 zsh_OLD_CMD=	/bin/zsh
 zsh_CMD=	${LOCALBASE}/bin/zsh
 
-.include <bsd.port.pre.mk>
-
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160
-# Reported upstream: https://bugs.kde.org/show_bug.cgi?id=471995
-CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

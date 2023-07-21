@@ -552,7 +552,6 @@
     SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
-    SUBDIR += nuster
     SUBDIR += nxproxy
     SUBDIR += nyancat
     SUBDIR += nylon
@@ -1332,7 +1331,6 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
-    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping

@@ -79,14 +79,14 @@ KDE_PLASMA_VERSION?=		5.27.6
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
-KDE_FRAMEWORKS_VERSION?=	5.107.0
+KDE_FRAMEWORKS_VERSION?=	5.108.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
-KDE_APPLICATIONS_VERSION?=	23.04.2
-KDE_APPLICATIONS_SHLIB_VER?=	5.23.2
+KDE_APPLICATIONS_VERSION?=	23.04.3
+KDE_APPLICATIONS_SHLIB_VER?=	5.23.3
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
-KDE_APPLICATIONS_SHLIB_G_VER?=	23.4.2
+KDE_APPLICATIONS_SHLIB_G_VER?=	23.4.3
 KDE_APPLICATIONS_BRANCH?=	stable
 
 # Extended KDE universe applications.
@@ -134,7 +134,7 @@ USE_GITLAB=		yes
 GL_SITE=		https://invent.kde.org
 GL_ACCOUNT=		${_invent_category}
 GL_PROJECT=		${_invent_name}
-GL_COMMIT=		${_invent_hash}
+GL_TAGNAME=		${_invent_hash}
 .      endif
 .    endif
 
