@@ -26,8 +26,6 @@ USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
 USE_QT=		5compat base declarative doc imageformats quick3d quicktimeline networkauth shadertools svg tools translations wayland
 
-#SHEBANG_FILES=	shiboken_tool.py
-
 CMAKE_ARGS+=	-DClang_DIR:PATH="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/cmake/clang" \
 		-DLLVM_DIR:PATH="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/cmake/llvm" \
 		-DCMAKE_CXX_FLAGS=-lexecinfo \
@@ -39,8 +37,9 @@ CMAKE_ARGS+=	-DClang_DIR:PATH="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/cmake/clang"
 
 PLIST_SUB+=	DISTVERSION=${DISTVERSION}
 PLIST_SUB+=	PYVERSTR=.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${DISTVERSION}/sources/shiboken6
+WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${DISTVERSION:R}/sources/shiboken6
 
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/bin/shiboken_tool.py
+
 .include <bsd.port.post.mk>
