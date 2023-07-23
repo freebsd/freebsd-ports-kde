@@ -50,14 +50,12 @@
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += coreterminal
-    SUBDIR += deforaos-desktop
     SUBDIR += deforaos-keyboard
     SUBDIR += deforaos-libdesktop
-    SUBDIR += deforaos-locker
-    SUBDIR += deforaos-panel
     SUBDIR += deskmenu
     SUBDIR += disman
     SUBDIR += dmenu
+    SUBDIR += dmenu2
     SUBDIR += docker-tray
     SUBDIR += dsbautostart
     SUBDIR += dsbxinput
@@ -112,6 +110,7 @@
     SUBDIR += gtkterm2
     SUBDIR += guake
     SUBDIR += gxkb
+    SUBDIR += habak
     SUBDIR += hamclock
     SUBDIR += hhpc
     SUBDIR += hs-xmobar
@@ -183,7 +182,7 @@
     SUBDIR += libXxf86dga
     SUBDIR += libXxf86vm
     SUBDIR += libclipboard
-    SUBDIR += libdmx
+    SUBDIR += libei
     SUBDIR += libexo
     SUBDIR += libfakekey
     SUBDIR += libfm
@@ -273,6 +272,7 @@
     SUBDIR += nvidia-xconfig
     SUBDIR += nwg-bar
     SUBDIR += nwg-dock
+    SUBDIR += nwg-dock-hyprland
     SUBDIR += nwg-drawer
     SUBDIR += nwg-launchers
     SUBDIR += nwg-look
@@ -312,8 +312,11 @@
     SUBDIR += py-caffeine-ng
     SUBDIR += py-i3-quickterm
     SUBDIR += py-i3ipc
+    SUBDIR += py-mouseinfo
+    SUBDIR += py-pyautogui
     SUBDIR += py-pynput
     SUBDIR += py-pyscreenshot
+    SUBDIR += py-pyscreeze
     SUBDIR += py-python-xapp
     SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-screeninfo
@@ -323,10 +326,10 @@
     SUBDIR += qt5-qev
     SUBDIR += qt5-x11extras
     SUBDIR += qterminal
-    SUBDIR += radare-cutter
     SUBDIR += remontoire
     SUBDIR += rendercheck
     SUBDIR += rgb
+    SUBDIR += rio
     SUBDIR += rlaunch
     SUBDIR += rofi
     SUBDIR += rofi-calc
@@ -352,6 +355,7 @@
     SUBDIR += setlayout
     SUBDIR += setxkbmap
     SUBDIR += sfwbar
+    SUBDIR += shikane
     SUBDIR += shotman
     SUBDIR += showkeys
     SUBDIR += showmethekey
@@ -363,6 +367,7 @@
     SUBDIR += slop
     SUBDIR += slurp
     SUBDIR += smproxy
+    SUBDIR += somebar
     SUBDIR += sprop
     SUBDIR += squeekboard
     SUBDIR += srandrd
@@ -392,7 +397,6 @@
     SUBDIR += terminal.app
     SUBDIR += terminator
     SUBDIR += terminology
-    SUBDIR += thinglaunch
     SUBDIR += thingylaunch
     SUBDIR += tilda
     SUBDIR += tilix
@@ -411,6 +415,7 @@
     SUBDIR += wapanel
     SUBDIR += way-displays
     SUBDIR += waybar
+    SUBDIR += wayidle
     SUBDIR += wayland-logout
     SUBDIR += waylock
     SUBDIR += wayout
@@ -539,6 +544,7 @@
     SUBDIR += xlogo
     SUBDIR += xlsatoms
     SUBDIR += xlsclients
+    SUBDIR += xlupe
     SUBDIR += xmag
     SUBDIR += xman
     SUBDIR += xmangekyou

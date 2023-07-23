@@ -1,5 +1,5 @@
 PORTNAME=	qmmp
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://qmmp.ylsoftware.com/files/${PORTNAME}/${PORTVERSION:R}/ \
 	SF/qmmp-dev/${PORTNAME}/${PORTVERSION:R}/
@@ -96,7 +96,6 @@ HISTORY_DESC=	Information about listened tracks
 HISTORY_USE=	QT=base
 HISTORY_CMAKE_BOOL=	USE_HISTORY
 
-PIPEWIRE_DESC=		Audio out via PipeWire
 PIPEWIRE_LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
 PIPEWIRE_CMAKE_BOOL=	USE_PIPEWIRE
 

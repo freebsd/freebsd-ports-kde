@@ -1,6 +1,5 @@
 PORTNAME=	picocrypt
-DISTVERSION=	1.31
-PORTREVISION=	7
+DISTVERSION=	1.33
 CATEGORIES=	security
 
 MAINTAINER=	eduardo@FreeBSD.org
@@ -10,7 +9,7 @@ WWW=		https://github.com/HACKERALERT/Picocrypt
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../LICENSE
 
-ONLY_FOR_ARCHS=	amd64 arm64 mips64 powerpc64 powerpc64le riscv64 sparc64
+ONLY_FOR_ARCHS=	aarch64 amd64 mips64 powerpc64 powerpc64le riscv64 sparc64
 ONLY_FOR_ARCHS_REASON=	upstream only supports 64-bit
 # https://github.com/HACKERALERT/Picocrypt/issues/127
 

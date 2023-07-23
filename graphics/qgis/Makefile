@@ -1,5 +1,6 @@
 PORTNAME=	qgis
-DISTVERSION=	3.30.1
+DISTVERSION=	3.32.0
+PORTREVISION=	1
 CATEGORIES=	graphics geography
 MASTER_SITES=	https://qgis.org/downloads/
 
@@ -91,7 +92,7 @@ RUN_DEPENDS=	astyle:devel/astyle \
 		${PYTHON_PKGNAMEPREFIX}requests>=2.28.0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-image>=0.19.3:graphics/py-scikit-image@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-learn>=1.1.3:science/py-scikit-learn@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}Shapely>=1.8.5:devel/py-shapely@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}shapely>=1.8.5:devel/py-shapely@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}six>=1.16.0:devel/py-six@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=3.7.16:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}termcolor>=2.1.0:devel/py-termcolor@${PY_FLAVOR} \
@@ -101,31 +102,36 @@ RUN_DEPENDS=	astyle:devel/astyle \
 
 ### Fortran is needed by numpy, GRASS, etc.
 USES=		bison cmake compiler:features desktop-file-utils \
-		fortran gl gmake gnome pgsql pyqt:5 python:3.8+ qca qt:5 \
+		fortran gl gmake gnome pgsql pyqt:5 python qca qt:5 \
 		shebangfix sqlite:3 tar:bz2
+# math/pdal fails in pdal_wrench() with "undefined reference to symbol 'pthread_create@@FBSD_1.0'"
+CXXFLAGS+=	-pthread
 USE_GL=		gl
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_PYQT=	pyqt5 qscintilla2 pysip sip
 USE_QT=		3d buildtools:build core concurrent dbus declarative \
 		designer:build qdoc:build gamepad gui linguist:build location \
-		network printsupport qmake:build script serialport \
-		sql sql-pgsql sql-sqlite3 svg uitools:build \
+		multimedia network printsupport qmake:build script serialport \
+		sql sql-pgsql sql-sqlite3 svg testlib uitools:build \
 		webengine webkit widgets xml
 
 SHEBANG_FILES=	src/plugins/grass/scripts/*.py
 
+# Python_EXECUTABLE: Use the default version if multiple Pythons are available
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE:STRING=Release \
+		-DHAVE_PGCONFIG=1 \
 		-DPYRCC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyrcc5-${PYTHON_VER} \
 		-DPYUIC_PROGRAM:FILEPATH=${LOCALBASE}/bin/pyuic5-${PYTHON_VER} \
+		-DPython_EXECUTABLE=${PYTHON_CMD} \
 		-DQSCI_SIP_DIR:PATH=${PYQT_SIPDIR}/Qsci \
 		-DQWT_INCLUDE_DIR:PATH=${LOCALBASE}/include/qt5/qwt6 \
 		-DQWT_LIBRARY:FILEPATH=${LOCALBASE}/lib/qt5/libqwt6.so \
 		-DQGIS_MANUAL_SUBDIR:PATH=share/man
 CMAKE_ON=	USE_OPENCL WITH_3D WITH_ASTYLE WITH_BINDINGS \
 		WITH_COPC WITH_CUSTOM_WIDGETS WITH_EPT  WITH_INTERNAL_LAZPERF \
-		WITH_POSTGRESQL WITH_PDAL
-CMAKE_OFF=	ENABLE_TESTS WITH_INTERNAL_MDAL WITH_QWTPOLAR
+		WITH_POSTGRESQL
+CMAKE_OFF=	ENABLE_TESTING WITH_INTERNAL_MDAL WITH_QWTPOLAR
 
 CONFLICTS_INSTALL=	qgis-ltr
 
@@ -157,6 +163,11 @@ SERVER_CMAKE_BOOL=	WITH_SERVER WITH_SERVER_PLUGINS WITH_QSPATIALITE
 BUILD_DEPENDS+=	${LOCALBASE}/bin/flex:textproc/flex
 CMAKE_ARGS+=	-DFLEX_EXECUTABLE:FILEPATH=${LOCALBASE}/bin/flex
 .endif
+
+pre-patch:
+	# Only PostgreSQL Client headers, not Server
+	@${REINPLACE_CMD} -e 's|set(POSTGRES_INCLUDE_DIR \$${PostgreSQL_INCLUDE_DIRS})|set(POSTGRES_INCLUDE ${LOCALBASE}/include)|g' \
+		${WRKSRC}/cmake/FindPostgres.cmake
 
 post-patch:
 # On i386, '-mllvm -inline-threshold=128' does not build under all circumstances

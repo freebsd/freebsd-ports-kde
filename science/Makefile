@@ -42,7 +42,6 @@
     SUBDIR += buddy
     SUBDIR += cantera
     SUBDIR += cardioid
-    SUBDIR += cdcl
     SUBDIR += cdf
     SUBDIR += cdk
     SUBDIR += cdo
@@ -314,6 +313,7 @@
     SUBDIR += py-cirq-pasqal
     SUBDIR += py-cirq-rigetti
     SUBDIR += py-coards
+    SUBDIR += py-dftbplus
     SUBDIR += py-dimod
     SUBDIR += py-dipy
     SUBDIR += py-dlib
@@ -331,6 +331,7 @@
     SUBDIR += py-dwavebinarycsp
     SUBDIR += py-earthpy
     SUBDIR += py-eccodes
+    SUBDIR += py-emmet-core
     SUBDIR += py-esda
     SUBDIR += py-fresnel
     SUBDIR += py-gemmi
@@ -362,6 +363,8 @@
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
     SUBDIR += py-moltemplate
+    SUBDIR += py-mp-api
+    SUBDIR += py-mpcontribs-client
     SUBDIR += py-mrchem
     SUBDIR += py-netCDF4
     SUBDIR += py-netcdf-flattener
@@ -388,6 +391,7 @@
     SUBDIR += py-pygmo2
     SUBDIR += py-pyked
     SUBDIR += py-pymatgen
+    SUBDIR += py-pymatgen-analysis-alloys
     SUBDIR += py-pymbd
     SUBDIR += py-pymol
     SUBDIR += py-pyosf
@@ -424,6 +428,7 @@
     SUBDIR += py-sdf
     SUBDIR += py-segregation
     SUBDIR += py-segyio
+    SUBDIR += py-signac
     SUBDIR += py-sklearn-pandas
     SUBDIR += py-skrebate
     SUBDIR += py-spaghetti
@@ -455,8 +460,9 @@
     SUBDIR += rubygem-rgeo-geojson
     SUBDIR += rubygem-rgeo-proj4
     SUBDIR += rubygem-rgeo-shapefile
-    SUBDIR += rubygem-ruby-dcl
     SUBDIR += rubygem-ruby-netcdf
+    SUBDIR += salome-configuration
+    SUBDIR += salome-kernel
     SUBDIR += scidavis
     SUBDIR += sciplot
     SUBDIR += segyio

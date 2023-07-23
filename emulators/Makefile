@@ -74,7 +74,6 @@
     SUBDIR += mastergear
     SUBDIR += mednafen
     SUBDIR += mesen
-    SUBDIR += mess
     SUBDIR += mgba
     SUBDIR += mtools
     SUBDIR += mupen64plus
@@ -114,8 +113,7 @@
     SUBDIR += qemu-powernv
     SUBDIR += qemu-user-static
     SUBDIR += qemu-user-static-devel
-    SUBDIR += qemu6
-    SUBDIR += qemu70
+    SUBDIR += qemu7
     SUBDIR += qmc2
     SUBDIR += quasi88
     SUBDIR += reicast
@@ -129,12 +127,12 @@
     SUBDIR += simh-hp2100
     SUBDIR += simh-hp3000
     SUBDIR += simh-hpdoc
-    SUBDIR += skyeye
     SUBDIR += snes9x-gtk
     SUBDIR += spim
     SUBDIR += stella
     SUBDIR += stonx
     SUBDIR += teo
+    SUBDIR += tic-80
     SUBDIR += tiemu3
     SUBDIR += tilem
     SUBDIR += tme

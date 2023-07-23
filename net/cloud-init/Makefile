@@ -1,5 +1,5 @@
 PORTNAME=	cloud-init
-DISTVERSION=	23.1.1
+DISTVERSION=	23.1.2
 CATEGORIES=	net python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto>0:devel/py-boto@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>0:devel/py-yaml@${PY_FLAVOR} \
 		sudo>0:security/sudo
 
-USES=		python:3.6+ shebangfix
+USES=		python shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	canonical
 USE_PYTHON=	autoplist distutils

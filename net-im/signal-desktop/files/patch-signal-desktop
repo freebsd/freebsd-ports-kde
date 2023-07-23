@@ -18,26 +18,6 @@
      if (shouldIncludeEmoji) {
        return window.i18n('message--getNotificationText--text-with-emoji', {
          text: modifiedText,
---- ts/OS.ts.orig	2023-02-02 21:51:07.000000000 +0100
-+++ ts/OS.ts	2023-02-03 18:15:27.645364000 +0100
-@@ -22,6 +22,7 @@ export const isWindows = createIsPlatform('win32');
- export const isMacOS = createIsPlatform('darwin');
- export const isLinux = createIsPlatform('linux');
- export const isWindows = createIsPlatform('win32');
-+export const isFreeBSD = createIsPlatform('freebsd');
- 
- // Windows 10 and above
- export const hasCustomTitleBar = (): boolean =>
-@@ -33,6 +34,9 @@ export const getName = (): string => {
-   }
-   if (isWindows()) {
-     return 'Windows';
-+  }
-+  if (isFreeBSD()) {
-+    return 'FreeBSD';
-   }
-   return 'Linux';
- };
 --- ts/services/notifications.ts	2022-02-12 02:48:01.000000000 +0100
 +++ ts/services/notifications.ts	2022-02-18 20:39:11.725928000 +0100
 @@ -143,7 +143,7 @@ class NotificationService extends EventEmitter {
@@ -61,15 +41,6 @@
  export function getUserAgent(appVersion: string): string {
 --- ts/types/Settings.ts.orig	2022-02-16 16:11:39.000000000 +0100
 +++ ts/types/Settings.ts	2022-02-19 22:18:16.945135000 +0100
-@@ -19,7 +19,7 @@ export function getAudioNotificationSupport(): AudioNo
-   if (OS.isWindows(MIN_WINDOWS_VERSION) || OS.isMacOS()) {
-     return AudioNotificationSupport.Native;
-   }
--  if (OS.isLinux()) {
-+  if (OS.isLinux() || OS.isFreeBSD) {
-     return AudioNotificationSupport.Custom;
-   }
-   return AudioNotificationSupport.None;
 @@ -60,7 +60,7 @@ export const getTitleBarVisibility = (): TitleBarVisib
   */
  export const isSystemTraySupported = (appVersion: string): boolean =>
@@ -150,3 +121,40 @@
    }
  
    return {
+--- ts/util/os/shared.ts.orig	2023-05-11 11:10:27.504955000 +0200
++++ ts/util/os/shared.ts	2023-05-11 11:11:17.326542000 +0200
+@@ -32,6 +32,7 @@ export function getOSFunctions(osRelease: string): OST
+   const isMacOS = createIsPlatform('darwin', osRelease);
+   const isLinux = createIsPlatform('linux', osRelease);
+   const isWindows = createIsPlatform('win32', osRelease);
++  const isFreeBSD = createIsPlatform('freebsd', osRelease);
+ 
+   // Windows 10 and above
+   const hasCustomTitleBar = (): boolean =>
+@@ -44,6 +45,9 @@ export function getOSFunctions(osRelease: string): OST
+     if (isWindows()) {
+       return 'Windows';
+     }
++    if (isFreeBSD()) {
++      return 'FreeBSD';
++    }
+     return 'Linux';
+   };
+ 
+@@ -54,6 +58,9 @@ export function getOSFunctions(osRelease: string): OST
+     if (isWindows()) {
+       return 'os-windows';
+     }
++    if (isFreeBSD()) {
++      return 'os-freebsd';
++    }
+     return 'os-linux';
+   };
+ 
+@@ -64,5 +71,6 @@ export function getOSFunctions(osRelease: string): OST
+     isLinux,
+     isMacOS,
+     isWindows,
++    isFreeBSD,
+   };
+ }

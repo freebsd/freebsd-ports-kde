@@ -23,7 +23,8 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.8
-QT6_VERSION?=		6.4.2
+QT6_VERSION?=		6.5.2
+PYSIDE6_VERSION?=	6.5.1.1
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -149,7 +150,8 @@ _USE_QT5_ONLY+=		sql-ibase
 .  endif
 
 _USE_QT6_ONLY=		5compat base httpserver languageserver lottie positioning shadertools \
-			tools translations
+			tools translations \
+			sqldriver-sqlite sqldriver-mysql sqldriver-psql sqldriver-odbc
 
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
@@ -338,6 +340,11 @@ qt-sql-sqlite3_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsqlite.so
 .  for db in ibase mysql odbc pgsql sqlite2 sqlite3 tds
 qt-sql-${db}_PORT=	databases/${_QT_RELNAME}-sqldrivers-${db}
 qt-sql-${db}_PATH?=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsql${db:C/^sql//}.so
+.  endfor
+
+.  for db in sqlite mysql psql odbc
+qt-sqldriver-${db}_PORT=	databases/${_QT_RELNAME}-base_sqldriver@${db}
+qt-sqldriver-${db}_PATH?=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsql${db:C/^sql//}.so
 .  endfor
 
 qt-svg_PORT=		graphics/${_QT_RELNAME}-svg

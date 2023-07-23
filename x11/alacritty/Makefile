@@ -1,6 +1,7 @@
 PORTNAME=	alacritty
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.0
+DISTVERSION=	0.12.2
+PORTREVISION=	1
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	mikael@FreeBSD.org
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libxkbcommon.so:x11/libxkbcommon
 TEST_DEPENDS=	dejavu>0:x11-fonts/dejavu
 
-USES=		cargo localbase:ldflags python:3.6+,build ssl:build
+USES=		cargo localbase:ldflags python:build ssl:build
 USE_GITHUB=	yes
 
 CARGO_CRATES=	adler-1.0.2 \
@@ -81,8 +82,8 @@ CARGO_CRATES=	adler-1.0.2 \
 		gethostname-0.2.3 \
 		getrandom-0.2.7 \
 		gl_generator-0.14.0 \
-		glutin-0.30.7 \
-		glutin_egl_sys-0.4.0 \
+		glutin-0.30.9 \
+		glutin_egl_sys-0.5.0 \
 		glutin_glx_sys-0.4.0 \
 		glutin_wgl_sys-0.4.0 \
 		hashbrown-0.12.3 \
@@ -164,7 +165,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		same-file-1.0.6 \
 		scoped-tls-1.0.0 \
 		scopeguard-1.1.0 \
-		sctk-adwaita-0.5.3 \
+		sctk-adwaita-0.5.4 \
 		semver-1.0.14 \
 		serde-1.0.144 \
 		serde_derive-1.0.144 \
@@ -238,7 +239,7 @@ CARGO_CRATES=	adler-1.0.2 \
 		windows_x86_64_gnullvm-0.42.1 \
 		windows_x86_64_msvc-0.36.1 \
 		windows_x86_64_msvc-0.42.1 \
-		winit-0.28.3 \
+		winit-0.28.6 \
 		winreg-0.10.1 \
 		wio-0.2.2 \
 		ws2_32-sys-0.2.1 \

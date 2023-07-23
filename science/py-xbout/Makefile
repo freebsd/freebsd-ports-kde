@@ -1,5 +1,6 @@
 PORTNAME=	xbout
 DISTVERSION=	0.3.5
+PORTREVISION=	2
 CATEGORIES=	science education
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,7 +26,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@$
 		${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.8+
+USES=		python
 USE_PYTHON=	autoplist distutils pytest
 
 NO_ARCH=	yes

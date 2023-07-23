@@ -5,17 +5,23 @@ PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	SF/s11n/s11n/${PORTVERSION}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	C++ library for easily serializing a wide variety of objects
 WWW=		http://s11n.net/
 
 LICENSE=	PD
 
 USES=		uidfix zip
-WRKSRC_SUBDIR=	src
+USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 
-.if defined(NO_PROFILE)
+PORTSCOUT=	limitw:1,even
+
+WRKSRC_SUBDIR=	src
+
+.include <bsd.port.pre.mk>
+
+.if defined(NO_PROFILE) || ( ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 )))
 PLIST_SUB+=	PROFILE="@comment "
 .else
 PLIST_SUB+=	PROFILE=""
@@ -23,6 +29,14 @@ PLIST_SUB+=	PROFILE=""
 
 post-extract:
 	@${CP} ${PATCHDIR}/Makefile.bsd ${WRKSRC}/Makefile
+
+post-patch:
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+	@${REINPLACE_CMD} -e 's|auto_ptr|unique_ptr|' \
+		${WRKSRC}/../include/s11n.net/s11n/algo.tpp \
+		${WRKSRC}/../include/s11n.net/s11n/io/data_node_format.hpp \
+		${WRKSRC}/../include/s11n.net/s11n/io/data_node_io.hpp
+.endif
 
 pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/s11n.net
@@ -34,4 +48,4 @@ pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/s11n.net/s11n/proxy/pod
 	${MKDIR} ${STAGEDIR}${PREFIX}/include/s11n.net/s11n/proxy/std
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

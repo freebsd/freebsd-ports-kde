@@ -100,7 +100,6 @@
     SUBDIR += font-plemoljp
     SUBDIR += font-plemoljp-hs
     SUBDIR += font-plemoljp-nf
-    SUBDIR += font-plemoljp-nfj
     SUBDIR += font-ricty
     SUBDIR += font-ricty-discord
     SUBDIR += font-rounded-mgenplus
@@ -145,7 +144,6 @@
     SUBDIR += kiten
     SUBDIR += kon2-14dot
     SUBDIR += kon2-16dot
-    SUBDIR += kterm
     SUBDIR += latex-jlisting
     SUBDIR += leafrogue
     SUBDIR += less

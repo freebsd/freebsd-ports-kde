@@ -43,6 +43,7 @@
     SUBDIR += audacity
     SUBDIR += audiere
     SUBDIR += audiocd-kio
+    SUBDIR += audiowmark
     SUBDIR += aumix
     SUBDIR += autocd
     SUBDIR += autotalent
@@ -131,6 +132,7 @@
     SUBDIR += eawpats
     SUBDIR += eawplus
     SUBDIR += ebumeter
+    SUBDIR += ebur128
     SUBDIR += ecasound
     SUBDIR += elisa
     SUBDIR += emms
@@ -211,12 +213,10 @@
     SUBDIR += funktrackergold
     SUBDIR += furnace
     SUBDIR += ganv
-    SUBDIR += gbemol
     SUBDIR += gbsplay
     SUBDIR += geonkick-lv2
     SUBDIR += ggwave
     SUBDIR += giada
-    SUBDIR += glurp
     SUBDIR += gmsynth-lv2
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
@@ -292,7 +292,6 @@
     SUBDIR += hexter
     SUBDIR += hpsjam
     SUBDIR += hts_engine-API
-    SUBDIR += hvl2wav
     SUBDIR += hydrogen
     SUBDIR += icecast
     SUBDIR += icecast-kh
@@ -365,7 +364,6 @@
     SUBDIR += libgig
     SUBDIR += libgme
     SUBDIR += libgpod
-    SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libinstpatch
     SUBDIR += libkcddb
@@ -393,6 +391,7 @@
     SUBDIR += libopenshot-audio
     SUBDIR += libopenspc
     SUBDIR += libopusenc
+    SUBDIR += libremidi
     SUBDIR += libsamplerate
     SUBDIR += libshairport
     SUBDIR += libshout
@@ -626,7 +625,6 @@
     SUBDIR += pulseaudio-module-sndio
     SUBDIR += pulseaudio-module-xrdp
     SUBDIR += pulseaudio-qt
-    SUBDIR += pulseeffects
     SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-apetag
@@ -645,6 +643,7 @@
     SUBDIR += py-musicbrainzngs
     SUBDIR += py-mutagen
     SUBDIR += py-opuslib
+    SUBDIR += py-playsound
     SUBDIR += py-pocketsphinx
     SUBDIR += py-pulsectl
     SUBDIR += py-pyacoustid
@@ -658,6 +657,7 @@
     SUBDIR += py-pyradio
     SUBDIR += py-pysndfile
     SUBDIR += py-python-mpd2
+    SUBDIR += py-pyttsx3
     SUBDIR += py-resampy
     SUBDIR += py-simpleaudio
     SUBDIR += py-soundcloud
@@ -733,6 +733,7 @@
     SUBDIR += sidplay
     SUBDIR += sidplay2
     SUBDIR += sidplayer
+    SUBDIR += sidplayfp
     SUBDIR += simplemod
     SUBDIR += siren
     SUBDIR += snack
@@ -820,6 +821,7 @@
     SUBDIR += toccata-lv2
     SUBDIR += tosha
     SUBDIR += traverso
+    SUBDIR += triceratops-lv2
     SUBDIR += tse3
     SUBDIR += tta
     SUBDIR += tuner
@@ -832,6 +834,7 @@
     SUBDIR += vamp-plugin-sdk
     SUBDIR += vban
     SUBDIR += vgmplay
+    SUBDIR += vgmtools
     SUBDIR += vimpc
     SUBDIR += virtual_oss
     SUBDIR += virtual_oss_ctl
@@ -867,6 +870,7 @@
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
+    SUBDIR += xfce4-mixer
     SUBDIR += xfce4-mpc-plugin
     SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc

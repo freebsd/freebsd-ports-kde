@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	5.0.16
+DISTVERSION=	5.0.18
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -31,8 +31,10 @@ LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libyaml-cpp.so:devel/yaml-cpp \
 		libzstd.so:archivers/zstd
 
-USES=		compiler:c++17-lang cpe python:3.5+,build scons shebangfix
+USES=		compiler:c++17-lang cpe python:build scons shebangfix
 USE_RC_SUBR=	mongod
+
+CFLAGS+=	-DBOOST_NO_CXX98_FUNCTION_BASE
 
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@

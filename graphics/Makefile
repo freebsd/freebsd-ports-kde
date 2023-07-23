@@ -1,14 +1,12 @@
     COMMENT = Graphics tools and libraries
 
+    SUBDIR += 3d-ascii-viewer
     SUBDIR += 4va
     SUBDIR += Coin
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
-    SUBDIR += IPA
     SUBDIR += ImageMagick6
-    SUBDIR += ImageMagick6-nox11
     SUBDIR += ImageMagick7
-    SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
     SUBDIR += R-cran-DiagrammeR
     SUBDIR += R-cran-GDD
@@ -63,6 +61,7 @@
     SUBDIR += appleseed
     SUBDIR += argyllcms
     SUBDIR += art
+    SUBDIR += asciinema-agg
     SUBDIR += asciio
     SUBDIR += aseprite
     SUBDIR += atril
@@ -93,8 +92,8 @@
     SUBDIR += cairo
     SUBDIR += cairomm
     SUBDIR += cal3d
-    SUBDIR += camera
     SUBDIR += camerakit
+    SUBDIR += catimg
     SUBDIR += cbonsai
     SUBDIR += cbviewer
     SUBDIR += cegui
@@ -201,7 +200,6 @@
     SUBDIR += flphoto
     SUBDIR += fly
     SUBDIR += fortytwo
-    SUBDIR += fotofix
     SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
@@ -225,6 +223,7 @@
     SUBDIR += freetype-gl
     SUBDIR += frei0r
     SUBDIR += frei0r-plugins
+    SUBDIR += frei0r-plugins-cairo
     SUBDIR += frei0r-plugins-gavl
     SUBDIR += frei0r-plugins-opencv
     SUBDIR += frogr
@@ -362,7 +361,6 @@
     SUBDIR += iec16022
     SUBDIR += igt-gpu-tools
     SUBDIR += iiview
-    SUBDIR += ikona
     SUBDIR += imageindex
     SUBDIR += imageviewer
     SUBDIR += imageworsener
@@ -428,6 +426,7 @@
     SUBDIR += kqtquickcharts
     SUBDIR += kquickimageeditor
     SUBDIR += krita
+    SUBDIR += krita-gmic-plugin
     SUBDIR += ksanecore
     SUBDIR += kseexpr
     SUBDIR += ksnip
@@ -555,6 +554,7 @@
     SUBDIR += maim
     SUBDIR += mandelbulber
     SUBDIR += mapcache
+    SUBDIR += mapnik
     SUBDIR += mapserver
     SUBDIR += mapyrus
     SUBDIR += matplotlib-cpp
@@ -763,7 +763,6 @@
     SUBDIR += pear-Image_GraphViz
     SUBDIR += pear-Image_Transform
     SUBDIR += pecl-imagick
-    SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecl-vips
     SUBDIR += pencil2d
@@ -786,6 +785,8 @@
     SUBDIR += php81-gd
     SUBDIR += php82-exif
     SUBDIR += php82-gd
+    SUBDIR += php83-exif
+    SUBDIR += php83-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -812,6 +813,7 @@
     SUBDIR += pngrewrite
     SUBDIR += pngwriter
     SUBDIR += podofo
+    SUBDIR += podofo09
     SUBDIR += polyclipping
     SUBDIR += poppler
     SUBDIR += poppler-data
@@ -850,8 +852,11 @@
     SUBDIR += py-cairocffi
     SUBDIR += py-cairosvg
     SUBDIR += py-cartopy
+    SUBDIR += py-chart-studio
     SUBDIR += py-cogdumper
     SUBDIR += py-colorcet
+    SUBDIR += py-colorthief
+    SUBDIR += py-colorz
     SUBDIR += py-colour
     SUBDIR += py-descartes
     SUBDIR += py-django-easy-thumbnails
@@ -863,6 +868,7 @@
     SUBDIR += py-fiona
     SUBDIR += py-fotokilof
     SUBDIR += py-freeimagepy
+    SUBDIR += py-fury
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
@@ -878,6 +884,7 @@
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
     SUBDIR += py-h3
+    SUBDIR += py-haishoku
     SUBDIR += py-hiplot
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
@@ -922,6 +929,7 @@
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
     SUBDIR += py-pyglet1
+    SUBDIR += py-pygltflib
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -934,6 +942,7 @@
     SUBDIR += py-pyqtgraph
     SUBDIR += py-pyrsgis
     SUBDIR += py-pytesseract
+    SUBDIR += py-python-barcode
     SUBDIR += py-python-poppler-qt5
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
@@ -949,6 +958,7 @@
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-spectra
+    SUBDIR += py-sqlalchemy-imageattach
     SUBDIR += py-svg.path
     SUBDIR += py-svgwrite
     SUBDIR += py-termtosvg
@@ -1072,6 +1082,7 @@
     SUBDIR += scrot
     SUBDIR += scwm-icons
     SUBDIR += sdl2_gfx
+    SUBDIR += sdl2_gpu
     SUBDIR += sdl2_image
     SUBDIR += sdl2_ttf
     SUBDIR += sdl_gfx
@@ -1128,6 +1139,7 @@
     SUBDIR += timg
     SUBDIR += tintfu
     SUBDIR += tinyows
+    SUBDIR += tippecanoe
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += tslib

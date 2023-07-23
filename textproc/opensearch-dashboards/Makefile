@@ -1,6 +1,7 @@
 PORTNAME=	opensearch-dashboards
-DISTVERSION=	2.6.0
+DISTVERSION=	2.8.0
 DISTVERSIONSUFFIX=	-linux-x64
+PORTREVISION=	1
 CATEGORIES=	textproc www
 MASTER_SITES=	https://artifacts.opensearch.org/releases/bundle/${PORTNAME}/${DISTVERSION}/
 
@@ -11,11 +12,9 @@ WWW=		https://opensearch.org
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	npm-node14>0:www/npm-node14
+BUILD_DEPENDS=	npm-node16>0:www/npm-node16
 
-CONFLICTS=	opensearch-dashboard13
-
-USES=		nodejs:14,build,run python:build
+USES=		nodejs:16,build,run python:build
 USE_RC_SUBR=	${PORTNAME}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -25,15 +24,12 @@ OPTIONS_DEFINE=	CHROME
 CHROME_DESC=	Add dependency on www/chromium (required for PDF reports)
 CHROME_RUN_DEPENDS=chrome:www/chromium
 
-NODE_VER=	14.21.1
+NODE_VER=	16.20.0
 
 _DEVDIR=	${WRKDIR}/.devdir
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|' -e 's|%%LOCALBASE%%|${LOCALBASE}|' -e 's|%%WRKSRC%%|${WRKSRC}|' \
-		${WRKSRC}/bin/opensearch-dashboards \
-		${WRKSRC}/bin/opensearch-dashboards-keystore \
-		${WRKSRC}/bin/opensearch-dashboards-plugin \
 		${WRKSRC}/node_modules/re2/binding.gyp
 	@${REINPLACE_CMD} -e 's|14.20.1|${NODE_VER}|g' ${WRKSRC}/package.json
 	${RM} \
@@ -47,7 +43,7 @@ post-patch:
 do-configure:
 	(cd ${WRKSRC}/node_modules/re2 && \
 		${SETENV} HOME=${WRKDIR} PYTHONDONTWRITEBYTECODE=1 \
-		${LOCALBASE}/lib/node_modules/npm/bin/node-gyp-bin/node-gyp configure \
+		${LOCALBASE}/lib/node_modules/npm/node_modules/.bin/node-gyp configure \
 		--python=${PYTHON_CMD} \
 		--nodedir ${LOCALBASE} \
 		--devdir=${_DEVDIR})
@@ -55,7 +51,7 @@ do-configure:
 do-build:
 	(cd ${WRKSRC}/node_modules/re2 && \
 		${SETENV} HOME=${WRKDIR} PYTHONDONTWRITEBYTECODE=1 \
-		${LOCALBASE}/lib/node_modules/npm/bin/node-gyp-bin/node-gyp build \
+		${LOCALBASE}/lib/node_modules/npm/node_modules/.bin/node-gyp build \
 		--devdir=${_DEVDIR})
 	${RM} -r ${WRKSRC}/node_modules/re2/build/Release/.deps \
 		${WRKSRC}/node_modules/re2/build/Release/obj.target

@@ -1,12 +1,12 @@
 PORTNAME=	rack
-PORTVERSION=	2.2.6.4
+PORTVERSION=	2.2.7
 PORTEPOCH=	3
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 PKGNAMESUFFIX=	22
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Rack, a Ruby Webserver Interface
+COMMENT=	Rack, a Ruby Web server Interface
 WWW=		https://github.com/rack/rack
 
 LICENSE=	MIT

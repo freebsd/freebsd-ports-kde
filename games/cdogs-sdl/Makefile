@@ -1,5 +1,5 @@
 PORTNAME=	cdogs-sdl
-PORTVERSION=	1.4.1
+PORTVERSION=	1.4.2
 CATEGORIES=	games
 
 MAINTAINER=	bofh@FreeBSD.org
@@ -14,7 +14,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}protobuf>=3,1:devel/py-protobuf@${PY_FLAVO
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gl gnome localbase:ldflags pkgconfig \
-		python:3.6+ sdl
+		python sdl
 
 USE_SDL=	image2 mixer2 sdl2
 USE_GNOME=	cairo gdkpixbuf2 gtk30

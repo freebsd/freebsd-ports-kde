@@ -1,5 +1,6 @@
 PORTNAME=	dirac
 DISTVERSION=	22.0
+PORTREVISION=	1
 CATEGORIES=	science # chemistry
 MASTER_SITES=	https://zenodo.org/record/6010450/files/
 PKGNAMESUFFIX=	-quantum-chemistry-software
@@ -23,7 +24,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 USES=		cmake:noninja,testing fortran python shebangfix
 
 #USE_GITLAB=	yes
-#GL_COMMIT=	37b755410d9fdcd9b5e7bba6e43ceb7d5c7b9dae
+#GL_TAGNAME=	37b755410d9fdcd9b5e7bba6e43ceb7d5c7b9dae
 
 SHEBANG_FILES=	pam.in \
 		utils/process_schema.py \

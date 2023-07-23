@@ -1,7 +1,6 @@
 PORTNAME=	grafana
 DISTVERSIONPREFIX=	v
-DISTVERSION=	9.4.7
-PORTREVISION=	1
+DISTVERSION=	9.5.5
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/:public \
 		https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/${DISTVERSIONFULL}/:gomod
@@ -26,7 +25,7 @@ USES=		cpe go:modules
 USE_GITHUB=	yes
 
 USE_RC_SUBR=	grafana
-TAG=		4add91f
+TAG=		284c43c
 
 GO_MODULE=	github.com/grafana/grafana
 GO_TARGET=	./pkg/cmd/grafana \
@@ -88,7 +87,7 @@ post-patch:
 pre-build:
 	@(cd ${GO_WRKSRC}; \
 	${ECHO_MSG} "===>  Generating wire_gen.go"; \
-	${SETENV} ${MAKE_ENV} ${GO_ENV} wire gen -tags "oss" ./pkg/server ./pkg/cmd/grafana-cli/runner )
+	${SETENV} ${MAKE_ENV} ${GO_ENV} wire gen -tags "oss" ./pkg/server )
 
 post-install:
 	${MKDIR} ${STAGEDIR}${GRAFANA_HOMEDIR}

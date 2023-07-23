@@ -1,5 +1,5 @@
 PORTNAME=		sogo
-PORTVERSION=		5.8.0
+PORTVERSION=		5.8.4
 CATEGORIES=		www gnustep
 MASTER_SITES=		https://packages.sogo.nu/sources/
 DISTNAME=		SOGo-${PORTVERSION}
@@ -57,6 +57,12 @@ SUB_FILES+=		pkg-message
 SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
 			GNUSTEP_MAKEFILES=${GNUSTEP_MAKEFILES}
 
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CPPFLAGS+=       -Wno-error=int-conversion
+.endif
+
 post-patch:
 	@${GREP} -rlF '/etc/sogo' ${WRKSRC} \
 		| ${XARGS} ${REINPLACE_CMD} 's#/etc/sogo#${PREFIX}/etc/sogo#g'
@@ -81,4 +87,4 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/cron-ealarms-notify.sample ${STAGEDIR}${PREFIX}/GNUstep/Local/Tools/Admin/
 	${INSTALL_DATA} ${FILESDIR}/cron-expire-autoreply.sample ${STAGEDIR}${PREFIX}/GNUstep/Local/Tools/Admin/
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

@@ -45,7 +45,6 @@
     SUBDIR += check_ups_health
     SUBDIR += chillispot
     SUBDIR += choparp
-    SUBDIR += chronograf
     SUBDIR += cidr
     SUBDIR += ciscoconf
     SUBDIR += clog
@@ -130,6 +129,7 @@
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mac-telnet
+    SUBDIR += makenl
     SUBDIR += mbrowse
     SUBDIR += mdata-client
     SUBDIR += metronome
@@ -172,7 +172,6 @@
     SUBDIR += nagios4
     SUBDIR += nagiosgraph
     SUBDIR += nagiosql
-    SUBDIR += nagircbot
     SUBDIR += nagnu
     SUBDIR += nagstamon
     SUBDIR += nagtail
@@ -205,7 +204,7 @@
     SUBDIR += nfsen
     SUBDIR += ng_ipacct
     SUBDIR += nitpicker
-    SUBDIR += nrpe3
+    SUBDIR += nrpe
     SUBDIR += nsca
     SUBDIR += nsca-client
     SUBDIR += nsca-ng
@@ -291,6 +290,7 @@
     SUBDIR += php80-snmp
     SUBDIR += php81-snmp
     SUBDIR += php82-snmp
+    SUBDIR += php83-snmp
     SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += phpweathermap
@@ -370,7 +370,6 @@
     SUBDIR += seafile-gui
     SUBDIR += seafile-server
     SUBDIR += semaphore
-    SUBDIR += send
     SUBDIR += sendip
     SUBDIR += sipcalc
     SUBDIR += sjitter
@@ -416,11 +415,6 @@
     SUBDIR += zabbix6-java
     SUBDIR += zabbix6-proxy
     SUBDIR += zabbix6-server
-    SUBDIR += zabbix62-agent
-    SUBDIR += zabbix62-frontend
-    SUBDIR += zabbix62-java
-    SUBDIR += zabbix62-proxy
-    SUBDIR += zabbix62-server
     SUBDIR += zabbix64-agent
     SUBDIR += zabbix64-frontend
     SUBDIR += zabbix64-java

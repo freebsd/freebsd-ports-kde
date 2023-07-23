@@ -1,6 +1,6 @@
---- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2023-04-08 11:38:38 UTC
+--- third_party/blink/renderer/modules/webgpu/gpu_queue.cc.orig	2023-06-05 19:39:05 UTC
 +++ third_party/blink/renderer/modules/webgpu/gpu_queue.cc
-@@ -707,7 +707,7 @@ bool GPUQueue::CopyFromCanvasSourceImage(
+@@ -679,7 +679,7 @@ bool GPUQueue::CopyFromCanvasSourceImage(
  // platform requires interop supported. According to the bug, this change will
  // be a long time task. So disable using webgpu mailbox texture uploading path
  // on linux platform.

@@ -129,6 +129,7 @@
     SUBDIR += bsp
     SUBDIR += bstone
     SUBDIR += bubble-chains
+    SUBDIR += bucklespring
     SUBDIR += bugsquish
     SUBDIR += bugsx
     SUBDIR += bumprace
@@ -137,6 +138,7 @@
     SUBDIR += bzflag
     SUBDIR += bzflag-server
     SUBDIR += cake
+    SUBDIR += candycrisis
     SUBDIR += caph
     SUBDIR += cardpics
     SUBDIR += cataclysm-dda
@@ -646,7 +648,6 @@
     SUBDIR += mvdsv
     SUBDIR += nInvaders
     SUBDIR += naev
-    SUBDIR += naev-data
     SUBDIR += narcissu2
     SUBDIR += nazghul
     SUBDIR += nbsdgames
@@ -773,7 +774,6 @@
     SUBDIR += pipewalker
     SUBDIR += pmars
     SUBDIR += pmars-sdl
-    SUBDIR += poker-eval
     SUBDIR += pokerth
     SUBDIR += polyglot
     SUBDIR += pongix
@@ -926,7 +926,6 @@
     SUBDIR += solarus-quest-editor
     SUBDIR += solver
     SUBDIR += spacejunk
-    SUBDIR += spacezero
     SUBDIR += speak
     SUBDIR += species
     SUBDIR += spellcast
@@ -995,7 +994,6 @@
     SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxkart
-    SUBDIR += tuxmath
     SUBDIR += tuxpaint
     SUBDIR += tuxpaint-config
     SUBDIR += tuxpaint-fonts

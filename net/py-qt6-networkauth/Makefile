@@ -1,6 +1,6 @@
 PORTNAME=	networkauth
 PORTVERSION=	${PYQTNETWORKAUTH_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITES_PYQTNETWORKAUTH}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -14,7 +14,7 @@ WWW=		https://riverbankcomputing.com/software/pyqt
 
 LIB_DEPENDS=	libqscintilla2_qt6.so:devel/qscintilla2-qt6
 
-USES=		gl pyqt:6 python:3.8+ qt:6
+USES=		gl pyqt:6 python qt:6
 USE_GL=		gl
 USE_PYQT=	sip:build pyqt6 qtbuilder
 USE_PYTHON=	concurrent flavors py3kplist

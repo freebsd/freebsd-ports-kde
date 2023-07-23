@@ -1,5 +1,6 @@
 PORTNAME=	hiphive
 DISTVERSION=	1.1
+PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +23,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ase>0:science/py-ase@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sympy>=1.1:math/py-sympy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}trainstation>=0.2:science/py-trainstation@${PY_FLAVOR}
 
-USES=		python:3.6+
+USES=		python
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

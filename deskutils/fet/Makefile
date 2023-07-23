@@ -1,5 +1,5 @@
 PORTNAME=	fet
-DISTVERSION=	6.9.0
+DISTVERSION=	6.9.2
 CATEGORIES=	deskutils education
 MASTER_SITES=	https://lalescu.ro/liviu/fet/download/ \
 		https://lalescu.ro/liviu/fet/download/old/ \
@@ -14,15 +14,16 @@ WWW=		https://lalescu.ro/liviu/fet/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-FLAVORS=	qt5 qt6
+FLAVORS=	qt6 qt5
 FLAVOR?=	qt6
-CONFLICTS_INSTALL=	${FLAVORS:@fl@fet-${fl}@}
 
 USES=		compiler:c++14-lang gl qmake qt:${FLAVOR:S/qt//} tar:bzip2
 USE_GL=		gl
 _USE_QT5=	core gui network printsupport widgets buildtools:build
 _USE_QT6=	base
 USE_QT=		${_USE_QT${FLAVOR:S/qt//}}
+
+CONFLICTS_INSTALL=	${FLAVORS:@fl@fet-${fl}@}
 
 DESKTOP_ENTRIES=	"FET" \
 			"Free timetable software" \

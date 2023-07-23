@@ -1,5 +1,6 @@
 PORTNAME=	alephone
 DISTVERSION=	20230119
+PORTREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/Aleph-One-Marathon/${PORTNAME}/releases/download/release-${DISTVERSION}/
 DISTNAME=	AlephOne-${DISTVERSION}
@@ -44,6 +45,12 @@ SPEEX_CONFIGURE_WITH=	speex
 
 ZZIP_LIB_DEPENDS=	libzzip.so:devel/zziplib
 ZZIP_CONFIGURE_WITH=	zzip
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

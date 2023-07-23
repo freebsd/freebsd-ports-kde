@@ -1,5 +1,5 @@
 PORTNAME=	fotoxx
-PORTVERSION=	23.32
+PORTVERSION=	23.50
 CATEGORIES=	graphics
 MASTER_SITES=	https://kornelix.net/downloads/downloads/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
@@ -22,7 +22,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 USES=		desktop-file-utils gmake gnome jpeg pkgconfig
 USE_GNOME=	cairo glib20 gdkpixbuf2 gtk30
 ALL_TARGET=	fotoxx
-CXXFLAGS+=	-Wno-writable-strings
+CXXFLAGS+=	-Wno-register -Wno-writable-strings
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

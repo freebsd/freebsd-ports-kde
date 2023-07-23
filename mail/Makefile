@@ -84,8 +84,10 @@
     SUBDIR += cyrus-imapd32
     SUBDIR += cyrus-imapd34
     SUBDIR += cyrus-imapd36
+    SUBDIR += cyrus-imapd38
     SUBDIR += cyrus2courier
     SUBDIR += cyrus2dovecot
+    SUBDIR += datovka
     SUBDIR += davmail
     SUBDIR += dbmail
     SUBDIR += dcc-dccd
@@ -95,6 +97,7 @@
     SUBDIR += dkfilter
     SUBDIR += dkimproxy
     SUBDIR += dma
+    SUBDIR += dmarcts-report-parser
     SUBDIR += dot-forward
     SUBDIR += dovecot
     SUBDIR += dovecot-coi
@@ -111,7 +114,6 @@
     SUBDIR += enma
     SUBDIR += eps
     SUBDIR += epstools
-    SUBDIR += esmtp
     SUBDIR += evolution
     SUBDIR += evolution-ews
     SUBDIR += exilog
@@ -457,6 +459,7 @@
     SUBDIR += php80-imap
     SUBDIR += php81-imap
     SUBDIR += php82-imap
+    SUBDIR += php83-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
@@ -516,6 +519,7 @@
     SUBDIR += py-offlineimap3
     SUBDIR += py-postfix-mta-sts-resolver
     SUBDIR += py-premailer
+    SUBDIR += py-pyisemail
     SUBDIR += py-pymailq
     SUBDIR += py-pysasl
     SUBDIR += py-pyspf
@@ -652,7 +656,6 @@
     SUBDIR += spambnc
     SUBDIR += spamcup
     SUBDIR += spamd
-    SUBDIR += spamdyke
     SUBDIR += spamguard
     SUBDIR += spamilter
     SUBDIR += spampd

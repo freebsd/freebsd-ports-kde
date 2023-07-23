@@ -1,6 +1,7 @@
 PORTNAME=	kdisplay
 DISTVERSIONPREFIX=	${PORTNAME}@
 DISTVERSION=	5.27.0
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -23,7 +24,6 @@ USE_LDCONFIG=	yes
 USE_QT=		qmake:build buildtools:build core dbus declarative gui \
 		sensors widgets
 GL_ACCOUNT=	kwinft
-GL_COMMIT=	9a4e585dfa1324310ee9b96ea58173e84a815843
 PLIST_SUB=	VERSION=${PORTVERSION}
 LDFLAGS+=	-Wl,--as-needed # Qt5*, KF5*
 

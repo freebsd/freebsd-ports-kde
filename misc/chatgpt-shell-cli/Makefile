@@ -1,5 +1,6 @@
 PORTNAME=	chatgpt-shell-cli
-DISTVERSION=	g20230411
+DISTVERSION=	g20230516
+PORTREVISION=	0
 CATEGORIES=	misc
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -14,12 +15,17 @@ RUN_DEPENDS=	bash:shells/bash \
 		jq:textproc/jq \
 		xdg-open:devel/xdg-utils
 
-USES=		magick:run shebangfix
+FLAVORS=	x11 nox11
+FLAVOR?=	${FLAVORS:[1]}
+
+nox11_PKGNAMESUFFIX=	-nox11
+
+USES=		magick:${FLAVOR},run shebangfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	0xacx
 GH_PROJECT=	chatGPT-shell-cli
-GH_TAGNAME=	42d82b9
+GH_TAGNAME=	926587a
 
 SHEBANG_FILES=	${WRKSRC}/chatgpt.sh
 
@@ -29,7 +35,7 @@ NO_BUILD=	yes
 PLIST_FILES=	bin/chatgpt
 
 post-patch:
-		  ${REINPLACE_CMD} 's/open \("$${image_url}"\)/xdg-open \1/g' ${WRKSRC}/chatgpt.sh
+		${REINPLACE_CMD} 's/open \("$${image_url}"\)/xdg-open \1/g' ${WRKSRC}/chatgpt.sh
 
 do-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/chatgpt.sh ${STAGEDIR}${PREFIX}/bin/chatgpt

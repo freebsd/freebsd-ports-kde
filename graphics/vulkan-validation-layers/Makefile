@@ -1,6 +1,6 @@
 PORTNAME=	vulkan-validation-layers
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.3.247
+DISTVERSION=	1.3.257
 CATEGORIES=	graphics
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -13,12 +13,12 @@ BUILD_DEPENDS=	robin-hood-hashing>0:devel/robin-hood-hashing \
 		spirv-tools>0:graphics/spirv-tools \
 		vulkan-headers>0:graphics/vulkan-headers
 
-USES=		alias cmake compiler:c++11-lib pkgconfig python:3.4+,build
+USES=		alias cmake compiler:c++11-lib pkgconfig python:build
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	KhronosGroup
 GH_PROJECT=	Vulkan-ValidationLayers
-GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-245-g1feaf44:headers/external/spirv-headers
+GH_TUPLE=	KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-284-g3469b16:headers/external/spirv-headers
 CMAKE_OFF=	BUILD_TESTS
 CMAKE_ON=	BUILD_LAYER_SUPPORT_FILES
 CMAKE_ARGS=	-DSPIRV_HEADERS_INSTALL_DIR:PATH="${WRKSRC_headers}"
@@ -38,5 +38,8 @@ XLIB_DESC=		${X11_DESC} via libX11
 XLIB_USES=		xorg
 XLIB_USE=		XORG=x11,xrandr
 XLIB_CMAKE_BOOL=	BUILD_WSI_XLIB_SUPPORT
+
+post-install:
+	@${RMDIR} ${STAGEDIR}${PREFIX}/include/vulkan/external/vma
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 PORTNAME=	flake8-pyi
-PORTVERSION=	23.4.1
+PORTVERSION=	23.6.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,10 +13,10 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatchling>=0:devel/py-hatchling@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flake8>=3.2.1<7.0.0:devel/py-flake8@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flake8>=6.0.0<7.0.0:devel/py-flake8@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pyflakes>=2.1.1:devel/py-pyflakes@${PY_FLAVOR} \
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
@@ -24,7 +24,7 @@ NO_ARCH=	yes
 .include <bsd.port.pre.mk>
 
 .if ${PYTHON_REL} < 30900
-RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ast-decompiler>=0.7.0<1.0:deve/py-ast-decompiler@${PY_FLAVOR}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}ast-decompiler>=0.7.0<1.0:devel/py-ast-decompiler@${PY_FLAVOR}
 .endif
 
 .include <bsd.port.post.mk>

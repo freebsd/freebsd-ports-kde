@@ -1,4 +1,4 @@
---- src/vs/base/node/ps.ts.orig	2023-03-29 09:14:46 UTC
+--- src/vs/base/node/ps.ts.orig	2023-07-04 10:23:33 UTC
 +++ src/vs/base/node/ps.ts
 @@ -214,7 +214,7 @@ export function listProcesses(rootPid: number): Promis
  

@@ -1,5 +1,5 @@
 PORTNAME=	libddwaf
-PORTVERSION=	1.9.0
+PORTVERSION=	1.11.0
 CATEGORIES=	devel
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -23,12 +23,12 @@ LIB_DEPENDS=	libac.so:devel/libac \
 USES=		cmake compiler:c++17-lang localbase:ldflags
 
 CMAKE_OFF=	LIBDDWAF_KEEP_SYMBOL_FILE LIBDDWAF_TESTING
-CMAEK_ON=	LIBDDWAF_BUILD_SHARED LIBDDWAF_BUILD_STATIC
+CMAKE_ON=	LIBDDWAF_BUILD_SHARED LIBDDWAF_BUILD_STATIC
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	DataDog
-GH_TUPLE=	DataDog:appsec-event-rules:1.6.0:DataDog_appsec_event_rules/third_party/proj_event_rules \
-		Tencent:rapidjson:949c771:Tencent_rapidjson/third_party/rapidjson
+GH_TUPLE=	DataDog:appsec-event-rules:1.7.1:DataDog_appsec_event_rules/third_party/proj_event_rules \
+		Tencent:rapidjson:973dc9c:Tencent_rapidjson/third_party/rapidjson
 
 post-patch:
 # Clean up bundled libraries

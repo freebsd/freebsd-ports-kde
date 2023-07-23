@@ -1,5 +1,5 @@
 PORTNAME=	emacs
-DISTVERSION=	30.0.50.20230408
+DISTVERSION=	30.0.50.20230717
 PORTEPOCH=	3
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -24,7 +24,7 @@ USES=		autoreconf:build cpe gmake localbase:ldflags ncurses pkgconfig
 CPE_VENDOR=	gnu
 USE_GITHUB=	yes
 GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	9848ae1
+GH_TAGNAME=	207cd4c
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-build-details \
@@ -115,7 +115,7 @@ M17N_DESC=		M17N support for text-shaping [implies XFT]
 MAGICK_DESC=		ImageMagick image processing support (deprecated)
 MAILUTILS_DESC=		Mail framework via GNU Mailutils
 MODULES_DESC=		Dynamic modules support
-NATIVECOMP_DESC=	Emacs Lisp native compiler support (experimental)
+NATIVECOMP_DESC=	Emacs Lisp native compiler support
 OTF_DESC=		Opentype fonts [implies XFT]
 PGTK_DESC=		Pure GTK GUI [implies CAIRO, GTK3]
 SCROLLBARS_DESC=	Toolkit scroll-bars
@@ -134,6 +134,8 @@ ALSA_CONFIGURE_ON=		--with-sound=alsa
 CAIRO_IMPLIES=			PNG
 CAIRO_PREVENTS=			XFT
 CAIRO_USE=			GNOME=cairo
+CAIRO_LIB_DEPENDS=		libfreetype.so:print/freetype2 \
+				libfontconfig.so:x11-fonts/fontconfig
 CAIRO_CONFIGURE_WITH=		cairo
 DBUS_LIB_DEPENDS=		libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_WITH=		dbus
@@ -174,8 +176,7 @@ MAILUTILS_CONFIGURE_ENV_OFF=	ac_cv_lib_lockfile_maillock=no \
 				ac_cv_prog_liblockfile=no
 MODULES_CONFIGURE_WITH=		modules
 NATIVECOMP_USE=			GCC=yes
-NATIVECOMP_CONFIGURE_WITH=	native-compilation
-NATIVECOMP_MAKE_ARGS=		NATIVE_FULL_AOT=1
+NATIVECOMP_CONFIGURE_WITH=	native-compilation=aot
 OSS_CONFIGURE_ON=		--with-sound=oss
 OTF_LIB_DEPENDS=		libotf.so:print/libotf
 OTF_CONFIGURE_WITH=		libotf

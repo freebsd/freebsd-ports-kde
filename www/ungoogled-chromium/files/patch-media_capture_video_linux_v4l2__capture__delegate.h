@@ -1,4 +1,4 @@
---- media/capture/video/linux/v4l2_capture_delegate.h.orig	2023-04-08 11:38:38 UTC
+--- media/capture/video/linux/v4l2_capture_delegate.h.orig	2023-05-20 06:21:07 UTC
 +++ media/capture/video/linux/v4l2_capture_delegate.h
 @@ -87,10 +87,10 @@ class CAPTURE_EXPORT V4L2CaptureDelegate final {
    // device file descriptor or (re)starting streaming, can fail but works after

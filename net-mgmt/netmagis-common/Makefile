@@ -1,6 +1,6 @@
 PORTNAME?=	netmagis
-PORTVERSION?=	2.3.4
-PORTREVISION=	2
+PORTVERSION?=	2.3.6
+PORTREVISION=	1
 CATEGORIES?=	net-mgmt
 MASTER_SITES=	http://netmagis.org/files/
 PKGNAMESUFFIX?=	-common
@@ -30,8 +30,8 @@ SLAVEDIRS=	net-mgmt/netmagis-common \
 	net-mgmt/netmagis-www
 
 # Variables used in netmagis Makefiles
-MAKE_ARGS+=	DESTDIR=${STAGEDIR}${DESTDIR} PREFIX=${PREFIX}
-MAKE_ARGS+=	TCLSH=${TCLSH} TCLCONF=${TCL_LIBDIR}/tclConfig.sh
+MAKE_ARGS+=	PREFIX=${PREFIX} TCLSH=${TCLSH} \
+		TCLCONF=${TCL_LIBDIR}/tclConfig.sh
 
 .if ${PKGNAMESUFFIX} == -topo || ${PKGNAMESUFFIX} == -www
 ALL_TARGET=build${PKGNAMESUFFIX?=}

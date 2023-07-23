@@ -1,15 +1,12 @@
 PORTNAME=	monero-cli
-# To build from an arbitrary git commit comment PORTVERSION and PORTREVISION (if present)
-PORTVERSION=	0.18.1.2
-PORTREVISION=	2
+# To build from an arbitrary git commit comment DISTVERSION and PORTREVISION (if present)
+DISTVERSION=	0.18.2.2
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 # and uncomment the following two lines (use for example -git-HEAD or -git-b6420e1)
 #PORTVERSION=	0
 #PKGNAMESUFFIX=	-git-HEAD
 CATEGORIES=	net-p2p finance
-
-PATCH_SITES+=	https://github.com/monero-project/monero/commit/
-PATCHFILES+=	ac87d8dac95bb7777898479ded1de3e53422a3e9.patch:-p1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Private, secure, untraceable, decentralised digital currency (CLI)
@@ -82,7 +79,7 @@ LD_EMULATION=	elf64lppc
 CMAKE_ARGS+=	-DLD_RAW_FLAGS:STRING=-m${LD_EMULATION}
 
 # keep in sync with all platforms where libunwind is available
-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
+.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
 .else
 CMAKE_ARGS+=	-DSTACK_TRACE:BOOL=OFF

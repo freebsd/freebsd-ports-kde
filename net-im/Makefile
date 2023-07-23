@@ -120,7 +120,6 @@
     SUBDIR += purple-discord
     SUBDIR += purple-facebook
     SUBDIR += purple-googlechat
-    SUBDIR += purple-hangouts
     SUBDIR += purple-mattermost
     SUBDIR += purple-plugin-pack
     SUBDIR += purple-rocketchat
@@ -137,7 +136,7 @@
     SUBDIR += py-unmessage
     SUBDIR += qTox
     SUBDIR += quaternion
-    SUBDIR += qxmpp-qt5
+    SUBDIR += qxmpp
     SUBDIR += ricochet
     SUBDIR += rubygem-discordrb-webhooks
     SUBDIR += rubygem-discordrb-webhooks-blackst0ne
@@ -164,6 +163,7 @@
     SUBDIR += telegram-desktop
     SUBDIR += telegram-purple
     SUBDIR += telegramqml
+    SUBDIR += teleirc
     SUBDIR += telepathy-accounts-signon
     SUBDIR += telepathy-farstream
     SUBDIR += telepathy-gabble
@@ -190,7 +190,6 @@
     SUBDIR += twirssi
     SUBDIR += uTox
     SUBDIR += vqcc-gtk
-    SUBDIR += webinar
     SUBDIR += xmpp-client
     SUBDIR += yume
     SUBDIR += zkgroup

@@ -1,6 +1,7 @@
 PORTNAME=	freeorion
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -15,7 +16,7 @@ LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 
 USE_GITHUB=	yes
 
-USES=		cmake compiler:c++17-lang python:3.8+
+USES=		cmake compiler:c++17-lang python
 CMAKE_ARGS=	-Wno-dev
 
 LDFLAGS_i386=	-Wl,-znotext

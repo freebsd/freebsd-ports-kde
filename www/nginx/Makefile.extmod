@@ -7,7 +7,7 @@ OPTIONS_GROUP_THIRDPARTYGRP=	AJP AWS_AUTH BROTLI CACHE_PURGE CLOJURE COOKIE_FLAG
 	FIPS_CHECK FORMINPUT GRIDFS HEADERS_MORE HTTP_ACCEPT_LANGUAGE HTTP_AUTH_DIGEST \
 	HTTP_AUTH_KRB5 HTTP_AUTH_LDAP HTTP_AUTH_PAM HTTP_DAV_EXT HTTP_EVAL \
 	HTTP_FANCYINDEX HTTP_FOOTER HTTP_GEOIP2 HTTP_IP2LOCATION HTTP_IP2PROXY \
-	HTTP_JSON_STATUS HTTP_MOGILEFS HTTP_MP4_H264 HTTP_NOTICE HTTP_PUSH \
+	HTTP_JSON_STATUS HTTP_MOGILEFS HTTP_MP4_H264 HTTP_NOTICE HTTP_PROXY_CONNECT HTTP_PUSH \
 	HTTP_PUSH_STREAM HTTP_REDIS HTTP_SLICE_AHEAD HTTP_SUBS_FILTER HTTP_TARANTOOL \
 	HTTP_UPLOAD HTTP_UPLOAD_PROGRESS HTTP_UPSTREAM_CHECK HTTP_UPSTREAM_FAIR \
 	HTTP_UPSTREAM_STICKY HTTP_VIDEO_THUMBEXTRACTOR HTTP_ZIP ICONV LET LINK LUA MEMC \
@@ -35,10 +35,9 @@ CACHE_PURGE_VARS=	DSO_EXTMODS+=cache_purge
 CLOJURE_CATEGORIES+=	java
 CLOJURE_USE=		JAVA=yes JAVA_OS=native JAVA_VERSION=1.8 \
 			JAVA_VENDOR=openjdk JAVA_BUILD=yes JAVA_RUN=yes
-CLOJURE_GH_TUPLE=	nginx-clojure:nginx-clojure:4347955:clojure
+CLOJURE_GH_TUPLE=	nginx-clojure:nginx-clojure:v0.6.0:clojure
 CLOJURE_CONFIGURE_ENV=	"JNI_INCS=-I${LOCALBASE}/openjdk8/include -I${LOCALBASE}/openjdk8/include/freebsd"
 CLOJURE_VARS=		DSO_EXTMODS+=clojure CLOJURE_SUBDIR=/src/c
-CLOJURE_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_http_clojure_mem.h
 
 COOKIE_FLAG_GH_TUPLE=	AirisX:nginx_cookie_flag_module:c4ff449:cookie_flag
 COOKIE_FLAG_VARS=	DSO_EXTMODS+=cookie_flag
@@ -62,7 +61,7 @@ DYNAMIC_UPSTREAM_IMPLIES=	STREAM
 DYNAMIC_UPSTREAM_GH_TUPLE=	ZigzagAK:ngx_dynamic_upstream:960eef2:dynamic_upstream
 DYNAMIC_UPSTREAM_VARS=		DSO_EXTMODS+=dynamic_upstream
 
-DEVEL_KIT_GH_TUPLE=		simpl:ngx_devel_kit:v0.3.1:devel_kit
+DEVEL_KIT_GH_TUPLE=		vision5:ngx_devel_kit:v0.3.2:devel_kit
 DEVEL_KIT_VARS=			FIRST_DSO_EXTMODS+=devel_kit
 
 ENCRYPTSESSION_IMPLIES=		DEVEL_KIT
@@ -90,11 +89,9 @@ HTTP_ACCEPT_LANGUAGE_VARS=	DSO_EXTMODS+=accept_language
 HTTP_AUTH_DIGEST_GH_TUPLE=	atomx:nginx-http-auth-digest:274490c:auth_digest
 HTTP_AUTH_DIGEST_VARS=		DSO_EXTMODS+=auth_digest
 
-HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:c626163:auth_krb5
+HTTP_AUTH_KRB5_GH_TUPLE=	stnoonan:spnego-http-auth-nginx-module:3575542:auth_krb5
 HTTP_AUTH_KRB5_VARS=		DSO_EXTMODS+=auth_krb5
-HTTP_AUTH_KRB5_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config \
-				${PATCHDIR}/extra-patch-ngx_http_auth_spnego_module.c
-HTTP_AUTH_KRB5_USES=		gssapi:mit
+HTTP_AUTH_KRB5_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-spnego-http-auth-nginx-module-config
 
 HTTP_AUTH_LDAP_GH_TUPLE=	kvspb:nginx-auth-ldap:83c059b:http_auth_ldap
 HTTP_AUTH_LDAP_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-ngx_http_auth_ldap_module.c
@@ -103,6 +100,10 @@ HTTP_AUTH_LDAP_USES=		ldap
 
 HTTP_AUTH_PAM_GH_TUPLE=		sto:ngx_http_auth_pam_module:v1.5.3:auth_pam
 HTTP_AUTH_PAM_VARS=		DSO_EXTMODS+=auth_pam
+
+HTTP_PROXY_CONNECT_GH_TUPLE=		chobits:ngx_http_proxy_connect_module:75febef:mod_https_connect
+HTTP_PROXY_CONNECT_EXTRA_PATCHES=	${WRKSRC_mod_https_connect}/patch/proxy_connect_rewrite_102101.patch:-p1
+HTTP_PROXY_CONNECT_VARS=		DSO_EXTMODS+=mod_https_connect
 
 HTTP_DAV_EXT_IMPLIES=		HTTP_DAV
 HTTP_DAV_EXT_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
@@ -205,7 +206,7 @@ HTTP_VIDEO_THUMBEXTRACTOR_LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 					libavutil.so:multimedia/ffmpeg \
 					libswscale.so:multimedia/ffmpeg
 HTTP_VIDEO_THUMBEXTRACTOR_USES=		jpeg
-HTTP_VIDEO_THUMBEXTRACTOR_GH_TUPLE=	Novetta:nginx-video-thumbextractor-module:f5b5bae:vte
+HTTP_VIDEO_THUMBEXTRACTOR_GH_TUPLE=	Novetta:nginx-video-thumbextractor-module:28861f2:vte
 HTTP_VIDEO_THUMBEXTRACTOR_VARS=		DSO_EXTMODS+=vte
 
 HTTP_ZIP_GH_TUPLE=	vince2678:mod_zip:5b2604b:mod_zip
@@ -225,7 +226,7 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.24:lua
+LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.25:lua
 LUA_VARS=		DSO_EXTMODS+=lua
 
 LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.4:link
@@ -241,17 +242,18 @@ MODSECURITY3_LIB_DEPENDS=	libmodsecurity.so:security/modsecurity3
 MODSECURITY3_GH_TUPLE=		SpiderLabs:ModSecurity-nginx:v1.0.3:modsecurity3
 MODSECURITY3_VARS=		DSO_EXTMODS+=modsecurity3
 
-NAXSI_NGINX_VER=	29793dc
-NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
+NAXSI_NGINX_VER=	1.4
+NAXSI_MASTER_SITES=	https://www.github.com/wargio/naxsi/releases/download/1.4/:naxsi
+NAXSI_DISTFILES=	naxsi-${NAXSI_NGINX_VER}-src-with-deps.tar.gz:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
-NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi_runtime.c
+WRKSRC_naxsi=		${WRKDIR}/naxsi-${NAXSI_NGINX_VER}
 
-NJS_GH_TUPLE=		nginx:njs:0.7.12:njs
+NJS_GH_TUPLE=		nginx:njs:0.8.0:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
-NJS_USES=		libedit
 
 NJS_XML_IMPLIES=	NJS
-NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2
+NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
+			libxslt.so:textproc/libxslt
 
 OPENTRACING_GH_TUPLE=		opentracing-contrib:nginx-opentracing:v0.24.0:opentracing
 OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing
@@ -317,7 +319,7 @@ VOD_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 VOD_USES=		iconv
 VOD_VARS=		DSO_EXTMODS+=vod
 
-VTS_GH_TUPLE=		vozlt:nginx-module-vts:v0.2.1:vts
+VTS_GH_TUPLE=		vozlt:nginx-module-vts:bf64dbf:vts
 VTS_VARS=		DSO_EXTMODS+=vts
 
 XSS_GH_TUPLE=		openresty:xss-nginx-module:v0.06:xss

@@ -12,12 +12,12 @@ WWW=		https://pygments.org/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>61:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0.40.0:devel/py-wheel@${PY_FLAVOR}
 # test: 4035 passed, 3 skipped, 8076 warnings
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}wcag-contrast-ratio>=0.9:www/py-wcag-contrast-ratio@${PY_FLAVOR}
 
-USES=		cpe python:3.7+
+USES=		cpe python
 USE_PYTHON=	autoplist concurrent pep517 pytest
 
 CONFLICTS_INSTALL=	py??-pygments-25

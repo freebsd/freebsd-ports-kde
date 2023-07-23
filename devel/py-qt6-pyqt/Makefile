@@ -1,5 +1,6 @@
 PORTNAME=	pyqt
 PORTVERSION=	${PYQT_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITES_PYQT}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libqscintilla2_qt6.so:devel/qscintilla2-qt6 \
 BUILD_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
 RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}dbus>1:devel/py-dbus@${PY_FLAVOR}
 
-USES=		gl pkgconfig python:3.7+ pyqt:6 qt:6
+USES=		gl pkgconfig python pyqt:6 qt:6
 USE_GL+=	gl opengl
 USE_PYTHON=	concurrent flavors py3kplist
 USE_PYQT=	qtbuilder sip pysip

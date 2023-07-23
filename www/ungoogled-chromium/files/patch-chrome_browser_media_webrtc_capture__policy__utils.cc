@@ -1,6 +1,6 @@
---- chrome/browser/media/webrtc/capture_policy_utils.cc.orig	2023-03-10 11:01:21 UTC
+--- chrome/browser/media/webrtc/capture_policy_utils.cc.orig	2023-06-05 19:39:05 UTC
 +++ chrome/browser/media/webrtc/capture_policy_utils.cc
-@@ -118,7 +118,7 @@ AllowedScreenCaptureLevel GetAllowedCaptureLevel(const
+@@ -125,7 +125,7 @@ AllowedScreenCaptureLevel GetAllowedCaptureLevel(const
  
  bool IsGetDisplayMediaSetSelectAllScreensAllowedForAnySite(
      content::BrowserContext* context) {
@@ -9,12 +9,12 @@
    Profile* profile = Profile::FromBrowserContext(context);
    if (!profile) {
      return false;
-@@ -145,7 +145,7 @@ bool IsGetDisplayMediaSetSelectAllScreensAllowedForAny
+@@ -162,7 +162,7 @@ bool IsGetDisplayMediaSetSelectAllScreensAllowedForAny
  bool IsGetDisplayMediaSetSelectAllScreensAllowed(
      content::BrowserContext* context,
      const GURL& url) {
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    Profile* profile = Profile::FromBrowserContext(context);
-   if (!profile)
+   if (!profile) {
      return false;

@@ -1,6 +1,5 @@
 PORTNAME=	ocp
-PORTVERSION=	0.2.103
-PORTREVISION=	2
+PORTVERSION=	0.2.105
 PORTEPOCH=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://stian.cubic.org/ocp/
@@ -88,6 +87,12 @@ X11_PLIST_SUB_OFF=	DESKTOP='@comment ' \
 			XORG='@comment '
 
 TIMIDITY_CFG=	${LOCALBASE}/share/timidity/timidity.cfg
+
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1400091
+CFLAGS+=	-Wno-error=incompatible-function-pointer-types
+.endif
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ocp

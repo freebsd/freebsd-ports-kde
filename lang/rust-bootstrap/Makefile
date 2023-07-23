@@ -2,7 +2,7 @@
 # to upload them to ~/public_distfiles on freefall in preparation
 # for the next lang/rust update.
 PORTNAME=	rust
-PORTVERSION=	1.68.0
+PORTVERSION=	1.71.0
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 PKGNAMEPREFIX=	${FLAVOR:S/_/-/g}-
@@ -30,7 +30,7 @@ BUILD_DEPENDS=	${FLAVOR:S/_/-/g}-freebsd-sysroot>=a2021.09.14:devel/freebsd-sysr
 FLAVORS=	aarch64 amd64 armv7 i386 powerpc powerpc64 powerpc64le riscv64
 FLAVOR?=	${FLAVORS:[1]}
 
-USES=		cpe ninja:build perl5 python:3.6+,build tar:xz
+USES=		cpe ninja:build perl5 python:build tar:xz
 CPE_VENDOR=	${PORTNAME}-lang
 # for openssl-src crate
 USE_PERL5=	build

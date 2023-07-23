@@ -9,7 +9,7 @@ WWW=		https://www.datadoghq.com/
 LICENSE=	BSD4CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR}
+BUILD_DEPENDS=	${PY_SETUPTOOLS}
 
 RUN_DEPENDS=	datadog-agent>=7.24.1:sysutils/datadog-agent \
 		${PYTHON_PKGNAMEPREFIX}botocore>0:devel/py-botocore@${PY_FLAVOR} \
@@ -26,7 +26,7 @@ RUN_DEPENDS=	datadog-agent>=7.24.1:sysutils/datadog-agent \
 		${PYTHON_PKGNAMEPREFIX}uptime>0:sysutils/py-uptime@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>0:devel/py-typing-extensions@${PY_FLAVOR}
 
-USES=		python:3.7+
+USES=		python
 USE_GITHUB=	yes
 GH_ACCOUNT=	DataDog
 GH_PROJECT=	integrations-core

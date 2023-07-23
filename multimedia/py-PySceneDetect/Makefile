@@ -1,5 +1,6 @@
 PORTNAME=	PySceneDetect
 PORTVERSION=	0.6.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,7 +18,7 @@ RUN_DEPENDS=	${PYNUMPY} \
 		opencv>=0:graphics/opencv \
 		mkvmerge:multimedia/mkvtoolnix
 
-USES=		python:3.6+
+USES=		python
 USE_GITHUB=	yes
 GH_ACCOUNT=	Breakthrough
 USE_PYTHON=	autoplist distutils

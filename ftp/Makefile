@@ -22,7 +22,6 @@
     SUBDIR += ftpcopy
     SUBDIR += ftpfind
     SUBDIR += ftplib
-    SUBDIR += ftpmirror
     SUBDIR += ftpproxy
     SUBDIR += ftpsesame
     SUBDIR += ftpsync
@@ -52,12 +51,15 @@
     SUBDIR += pavuk
     SUBDIR += pear-Net_FTP
     SUBDIR += pftpd
+    SUBDIR += pget
     SUBDIR += php80-curl
     SUBDIR += php80-ftp
     SUBDIR += php81-curl
     SUBDIR += php81-ftp
     SUBDIR += php82-curl
     SUBDIR += php82-ftp
+    SUBDIR += php83-curl
+    SUBDIR += php83-ftp
     SUBDIR += phpwebftp
     SUBDIR += proftpd
     SUBDIR += proftpd-mod_vroot
@@ -65,6 +67,7 @@
     SUBDIR += pure-ftpd
     SUBDIR += py-aioftp
     SUBDIR += py-ftputil
+    SUBDIR += py-parfive
     SUBDIR += py-pycurl
     SUBDIR += py-pyftpdlib
     SUBDIR += py-requests-ftp

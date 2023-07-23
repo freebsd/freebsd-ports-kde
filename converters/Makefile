@@ -20,6 +20,7 @@
     SUBDIR += cmios9
     SUBDIR += cocot
     SUBDIR += convmv
+    SUBDIR += dos2unix
     SUBDIR += dosunix
     SUBDIR += drg2sbg
     SUBDIR += dumpasn1
@@ -142,6 +143,8 @@
     SUBDIR += php81-mbstring
     SUBDIR += php82-iconv
     SUBDIR += php82-mbstring
+    SUBDIR += php83-iconv
+    SUBDIR += php83-mbstring
     SUBDIR += psiconv
     SUBDIR += py-bencode.py
     SUBDIR += py-bencoder

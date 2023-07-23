@@ -2,7 +2,7 @@
 
 OPTIONS_GROUP+=	THIRDPARTYGRP
 # External modules (arrayvar MUST appear after devel_kit for build-dep)
-OPTIONS_GROUP_THIRDPARTYGRP=	AJP AWS_AUTH BROTLI CACHE_PURGE CLOJURE COOKIE_FLAG CT \
+OPTIONS_GROUP_THIRDPARTYGRP=	AJP AWS_AUTH BROTLI CACHE_PURGE COOKIE_FLAG CT \
 	DEVEL_KIT ARRAYVAR DRIZZLE DYNAMIC_UPSTREAM ECHO ENCRYPTSESSION \
 	FIPS_CHECK FORMINPUT GRIDFS HEADERS_MORE HTTP_ACCEPT_LANGUAGE HTTP_AUTH_DIGEST \
 	HTTP_AUTH_KRB5 HTTP_AUTH_LDAP HTTP_AUTH_PAM HTTP_DAV_EXT HTTP_EVAL \
@@ -32,13 +32,6 @@ BROTLI_VARS=		DSO_EXTMODS+=brotli
 CACHE_PURGE_GH_TUPLE=	torden:ngx_cache_purge:2b977cf:cache_purge
 CACHE_PURGE_VARS=	DSO_EXTMODS+=cache_purge
 
-CLOJURE_CATEGORIES+=	java
-CLOJURE_USE=		JAVA=yes JAVA_OS=native JAVA_VERSION=1.8 \
-			JAVA_VENDOR=openjdk JAVA_BUILD=yes JAVA_RUN=yes
-CLOJURE_GH_TUPLE=	nginx-clojure:nginx-clojure:v0.6.0:clojure
-CLOJURE_CONFIGURE_ENV=	"JNI_INCS=-I${LOCALBASE}/openjdk8/include -I${LOCALBASE}/openjdk8/include/freebsd"
-CLOJURE_VARS=		DSO_EXTMODS+=clojure CLOJURE_SUBDIR=/src/c
-
 COOKIE_FLAG_GH_TUPLE=	AirisX:nginx_cookie_flag_module:c4ff449:cookie_flag
 COOKIE_FLAG_VARS=	DSO_EXTMODS+=cookie_flag
 
@@ -61,7 +54,7 @@ DYNAMIC_UPSTREAM_IMPLIES=	STREAM
 DYNAMIC_UPSTREAM_GH_TUPLE=	ZigzagAK:ngx_dynamic_upstream:960eef2:dynamic_upstream
 DYNAMIC_UPSTREAM_VARS=		DSO_EXTMODS+=dynamic_upstream
 
-DEVEL_KIT_GH_TUPLE=		simpl:ngx_devel_kit:v0.3.1:devel_kit
+DEVEL_KIT_GH_TUPLE=		vision5:ngx_devel_kit:v0.3.2:devel_kit
 DEVEL_KIT_VARS=			FIRST_DSO_EXTMODS+=devel_kit
 
 ENCRYPTSESSION_IMPLIES=		DEVEL_KIT
@@ -202,7 +195,7 @@ HTTP_VIDEO_THUMBEXTRACTOR_LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 					libavutil.so:multimedia/ffmpeg \
 					libswscale.so:multimedia/ffmpeg
 HTTP_VIDEO_THUMBEXTRACTOR_USES=		jpeg
-HTTP_VIDEO_THUMBEXTRACTOR_GH_TUPLE=	Novetta:nginx-video-thumbextractor-module:f5b5bae:vte
+HTTP_VIDEO_THUMBEXTRACTOR_GH_TUPLE=	Novetta:nginx-video-thumbextractor-module:28861f2:vte
 HTTP_VIDEO_THUMBEXTRACTOR_VARS=		DSO_EXTMODS+=vte
 
 HTTP_ZIP_GH_TUPLE=	vince2678:mod_zip:5b2604b:mod_zip
@@ -222,7 +215,7 @@ LUA_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit-openresty
 LUA_RUN_DEPENDS=	lua-resty-core>0:www/lua-resty-core
 LUA_CONFIGURE_ENV=	LUAJIT_INC=${LOCALBASE}/include/luajit-2.1 \
 			LUAJIT_LIB=${LOCALBASE}/lib
-LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.24:lua
+LUA_GH_TUPLE=		openresty:lua-nginx-module:v0.10.25:lua
 LUA_VARS=		DSO_EXTMODS+=lua
 
 LINK_GH_TUPLE=		Taymindis:nginx-link-function:3.2.4:link
@@ -243,12 +236,12 @@ NAXSI_GH_TUPLE=		nbs-system:naxsi:${NAXSI_NGINX_VER}:naxsi
 NAXSI_VARS=		DSO_EXTMODS+=naxsi NAXSI_SUBDIR=/naxsi_src
 NAXSI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-naxsi_runtime.c
 
-NJS_GH_TUPLE=		nginx:njs:0.7.12:njs
+NJS_GH_TUPLE=		nginx:njs:0.8.0:njs
 NJS_VARS=		DSO_EXTMODS+=njs NJS_SUBDIR=/nginx
-NJS_USES=		libedit
 
 NJS_XML_IMPLIES=	NJS
-NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2
+NJS_XML_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
+			libxslt.so:textproc/libxslt
 
 OPENTRACING_GH_TUPLE=		opentracing-contrib:nginx-opentracing:v0.24.0:opentracing
 OPENTRACING_LIB_DEPENDS=	libopentracing.so:devel/libopentracing

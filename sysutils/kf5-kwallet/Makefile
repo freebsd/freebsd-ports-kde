@@ -9,7 +9,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgcrypt.so:security/libgcrypt \
 		libgpg-error.so:security/libgpg-error \
 		libgpgme.so:security/gpgme \
-		libqgpgme.so:security/gpgme-qt5 \
+		libqgpgme.so:security/gpgme-qt@qt5 \
 		libgpgmepp.so:security/gpgme-cpp
 
 USES=		cmake compiler:c++11-lib gettext kde:5 qca qt:5 tar:xz xorg

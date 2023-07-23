@@ -1,12 +1,8 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	6.0.4
-PORTREVISION=	2
+DISTVERSION=	6.0.7
 CATEGORIES=	databases net
 PKGNAMESUFFIX=	${DISTVERSION:R:S/.//}
-
-PATCH_SITES=	https://github.com/mongodb/mongo/commit/
-PATCHFILES=	c419698b577f7924d2d6fc6bd3f7bd922f1d0dd7.patch:-p1
 
 MAINTAINER=	ronald@FreeBSD.org
 COMMENT=	Distributed document-oriented "NoSQL" database (6.0.x Branch)
@@ -50,6 +46,8 @@ GH_ACCOUNT=	mongodb mongodb-forks:mozjs
 GH_PROJECT=	mongo spidermonkey:mozjs
 GH_TAGNAME=	${MOZJS_TAG}:mozjs
 USE_RC_SUBR=	mongod
+
+CFLAGS+=	-DBOOST_NO_CXX98_FUNCTION_BASE
 
 SHEBANG_FILES=	buildscripts/scons.py
 python_OLD_CMD=	@python_interpreter@

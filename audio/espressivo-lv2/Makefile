@@ -18,10 +18,16 @@ USES=		compiler:c11 meson pkgconfig
 USE_GITLAB=	yes
 GL_ACCOUNT=	OpenMusicKontrollers
 GL_PROJECT=	${PORTNAME}.lv2
-GL_COMMIT=	8df30bc1ecf55be98ccf9a8b1ffc63d09dfa6895
+GL_TAGNAME=	8df30bc1ecf55be98ccf9a8b1ffc63d09dfa6895
 
 PLIST_FILES=	lib/lv2/espressivo.lv2/espressivo.so \
 		lib/lv2/espressivo.lv2/espressivo.ttl \
 		lib/lv2/espressivo.lv2/manifest.ttl
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
+
+.include <bsd.port.post.mk>

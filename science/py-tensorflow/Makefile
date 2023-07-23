@@ -1,7 +1,7 @@
 PORTNAME=	tensorflow
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.9.1
-PORTREVISION=	7
+PORTREVISION=	10
 CATEGORIES=	science python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DIST_SUBDIR=	${PORTNAME}
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${RUN_DEPENDS} \
 		bash:shells/bash \
 		cython:lang/cython \
 		swig:devel/swig \
-		bazel:devel/bazel \
+		bazel:devel/bazel5 \
 		git:devel/git
 LIB_DEPENDS=	libnsync.so:devel/nsync \
 		libgpr.so:devel/grpc \
@@ -60,7 +60,7 @@ RUN_DEPENDS=	pybind11>=2.6.2:devel/pybind11 \
 		${PYTHON_PKGNAMEPREFIX}packaging>=21.3:devel/py-packaging@${PY_FLAVOR} \
 		pybind11>=2.6.2:devel/pybind11
 
-USES=		jpeg llvm:16 python:3.7+ shebangfix ssl
+USES=		jpeg llvm:16 python shebangfix ssl
 USE_CXXSTD=     c++17
 USE_GITHUB=	yes
 USE_PYTHON=	distutils
@@ -75,7 +75,7 @@ OPTIONS_DEFINE=			CPU_OPTS XLA
 OPTIONS_RADIO=			PARALLEL_JOBS
 OPTIONS_RADIO_PARALLEL_JOBS=	JOBS_1 JOBS_HALF JOBS_ALL
 PARALLEL_JOBS_DESC=		How many jobs to run during build?
-OPTIONS_DEFAULT=		JOBS_1
+OPTIONS_DEFAULT=		JOBS_HALF
 
 JOBS_1_DESC=			Run one job
 JOBS_1_VARS=			TF_JOBS_NUMBER=1

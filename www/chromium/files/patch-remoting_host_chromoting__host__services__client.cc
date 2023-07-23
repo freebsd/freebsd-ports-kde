@@ -1,6 +1,6 @@
---- remoting/host/chromoting_host_services_client.cc.orig	2023-02-08 09:03:45 UTC
+--- remoting/host/chromoting_host_services_client.cc.orig	2023-07-16 15:47:57 UTC
 +++ remoting/host/chromoting_host_services_client.cc
-@@ -51,7 +51,7 @@ mojo::PendingRemote<mojom::ChromotingHostServices> Con
+@@ -65,7 +65,7 @@ mojo::PendingRemote<mojom::ChromotingHostServices> Con
  
  }  // namespace
  
@@ -9,7 +9,7 @@
  
  // static
  constexpr char
-@@ -129,7 +129,7 @@ bool ChromotingHostServicesClient::EnsureSessionServic
+@@ -144,7 +144,7 @@ bool ChromotingHostServicesClient::EnsureSessionServic
    if (session_services_remote_.is_bound()) {
      return true;
    }

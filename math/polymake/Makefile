@@ -1,5 +1,5 @@
 PORTNAME=	polymake
-DISTVERSION=	4.9
+DISTVERSION=	4.10
 CATEGORIES=	math
 MASTER_SITES=	https://polymake.org/lib/exe/fetch.php/download/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-minimal

@@ -1,8 +1,7 @@
 PORTNAME=	nbdime
-PORTVERSION=	3.1.1
-PORTREVISION=	1
+PORTVERSION=	3.2.1
 CATEGORIES=	devel python
-#MASTER_SITES=	PYPI
+MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
@@ -22,15 +21,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}colorama>=0:devel/py-colorama@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tornado>=0:www/py-tornado@${PY_FLAVOR}
 
-USES=		cpe python:3.7+
+USES=		cpe python
 USE_PYTHON=	autoplist concurrent distutils
 
 NO_ARCH=	yes
 
 CPE_VENDOR=	jupyter
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	jupyter
-GH_TAGNAME=	9fbfd46
 
 .include <bsd.port.mk>

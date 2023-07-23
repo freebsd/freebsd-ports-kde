@@ -1,6 +1,7 @@
 PORTNAME=	SimGrid
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.32-20230223
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -14,7 +15,7 @@ LIB_DEPENDS=	libboost_context.so:devel/boost-libs \
 		libcgraph.so:graphics/graphviz \
 		${LIB_DEPENDS_${ARCH}}
 
-USES=		cmake:testing compiler:c++14-lang perl5 python:3.6+ shebangfix
+USES=		cmake:testing compiler:c++14-lang perl5 python shebangfix
 SHEBANG_FILES=	tools/simgrid_convert_TI_traces.py
 USE_LDCONFIG=	yes
 
@@ -22,7 +23,7 @@ USE_GITLAB=	yes
 GL_SITE=	https://framagit.org/
 GL_ACCOUNT=	simgrid
 GL_PROJECT=	simgrid
-GL_COMMIT=	93ba9586352a457e9795a66ccd6f45f8525cb03f
+GL_TAGNAME=	93ba9586352a457e9795a66ccd6f45f8525cb03f
 
 CMAKE_OFF=	enable_python
 

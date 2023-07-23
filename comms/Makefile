@@ -16,6 +16,7 @@
     SUBDIR += bluegps
     SUBDIR += bluez-firmware
     SUBDIR += bpl+
+    SUBDIR += chirp
     SUBDIR += chu
     SUBDIR += comserv
     SUBDIR += concordance
@@ -27,7 +28,6 @@
     SUBDIR += cwstudio
     SUBDIR += cyclonedds
     SUBDIR += dcf77pi
-    SUBDIR += deforaos-phone
     SUBDIR += dfu-programmer
     SUBDIR += dfu-util
     SUBDIR += digiham

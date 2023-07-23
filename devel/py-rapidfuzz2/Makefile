@@ -1,5 +1,6 @@
 PORTNAME=	rapidfuzz
 DISTVERSION=	2.15.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,14 +24,14 @@ BUILD_DEPENDS=	cmake:devel/cmake-core \
 		taskflow>=0:devel/taskflow
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}jarowinkler>=1.0.3:textproc/py-jarowinkler@${PY_FLAVOR}
 
-USES=		compiler:c++14-lang python:3.6+
+USES=		compiler:c++14-lang python
 USE_PYTHON=	autoplist concurrent distutils
+
+NO_ARCH=	yes
 
 PORTSCOUT=	limit:^2\.
 
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +
-#	${PYTHON_CMD} -m compileall -d ${PYTHON_SITELIBDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
-#	${PYTHON_CMD} -O -m compileall -d ${PYTHON_SITELIBDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 
 .include <bsd.port.mk>

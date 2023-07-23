@@ -1,5 +1,5 @@
 PORTNAME=	slepc4py
-DISTVERSION=	3.18.3
+DISTVERSION=	3.19.1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,8 +20,8 @@ LIB_DEPENDS=	libmpich.so:net/mpich \
 		libslepc.so:math/slepc
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		fortran python:3.6+
-USE_PYTHON=	distutils autoplist pytest
+USES=		fortran python
+USE_PYTHON=	distutils cython autoplist pytest
 
 MAKE_ENV=	PETSC_DIR=${LOCALBASE} SLEPC_DIR=${LOCALBASE}
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}

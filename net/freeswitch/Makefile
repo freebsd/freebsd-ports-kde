@@ -1,5 +1,6 @@
 PORTNAME=	freeswitch
 PORTVERSION=	1.10.9
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://files.freeswitch.org/releases/freeswitch/ \
 		https://files.freeswitch.org/releases/sounds/:sounds
@@ -11,6 +12,7 @@ WWW=		https://freeswitch.org
 
 LICENSE=	MPL11
 
+BROKEN_i386=	error: expected ')'
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 
 BUILD_DEPENDS=	gdiff:textproc/diffutils \
@@ -32,7 +34,6 @@ LIB_DEPENDS=	libsqlite3.so:databases/sqlite3 \
 		libjbig.so:graphics/jbigkit \
 		libtiff.so:graphics/tiff \
 		libuuid.so:misc/e2fsprogs-libuuid \
-		libpq.so:databases/postgresql12-client \
 		libmariadb.so:databases/mariadb-connector-c \
 		libspandsp.so:comms/spandsp \
 		libsofia-sip-ua.so:net/sofia-sip

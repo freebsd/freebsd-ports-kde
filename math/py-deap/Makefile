@@ -1,5 +1,5 @@
 PORTNAME=	deap
-DISTVERSION=	1.3.3
+DISTVERSION=	1.4.0
 CATEGORIES=	math biology science devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,11 +11,10 @@ WWW=		https://github.com/DEAP/deap
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYNUMPY}
 
-USES=		python:3.5+
-USE_PYTHON=	distutils autoplist pytest # tests fail, see https://github.com/DEAP/deap/issues/668
+USES=		python
+USE_PYTHON=	distutils autoplist pytest
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 

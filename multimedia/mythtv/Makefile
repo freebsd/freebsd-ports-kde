@@ -1,6 +1,7 @@
 PORTNAME=	mythtv
 DISTVERSIONPREFIX=	v
 DISTVERSION=	33.1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	multimedia
 
@@ -10,7 +11,7 @@ WWW=		https://www.mythtv.org/
 
 LICENSE=	GPLv2+
 
-ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
+ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc powerpc64 powerpc64le
 .if ${/usr/bin/ld:L:tA} == /usr/bin/ld.lld
 BROKEN_i386=	ld: error: can't create dynamic relocation R_386_32 against local symbol in readonly segment
 .endif
@@ -43,7 +44,7 @@ BUILD_DEPENDS=	yasm:devel/yasm \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
 USES=		compiler:c++17-lang gmake gl iconv libtool pkgconfig pathfix \
-		perl5 python:3.5+ qmake:no_env qt:5 shebangfix ssl xorg
+		perl5 python qmake:no_env qt:5 shebangfix ssl xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	MythTV

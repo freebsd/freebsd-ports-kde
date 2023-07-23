@@ -1,7 +1,7 @@
 PORTNAME=	rustypaste-cli
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.0
-PORTREVISION=	2
+DISTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	DtxdF@disroot.org
@@ -15,9 +15,16 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	orhun
 
+CARGO_FEATURES=	--no-default-features
+
 PLIST_DIRS=	${EXAMPLESDIR}
 PLIST_FILES=	${EXAMPLESDIR}/config.toml \
 		bin/rpaste
+
+OPTIONS_DEFINE=	NATIVE_CERTS
+
+NATIVE_CERTS_DESC=	Support using the OS TLS trust store
+NATIVE_CERTS_VARS=	CARGO_FEATURES+=use-native-certs
 
 post-install:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

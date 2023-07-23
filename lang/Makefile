@@ -14,6 +14,7 @@
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
+    SUBDIR += cairo
     SUBDIR += cbmbasic
     SUBDIR += ccl
     SUBDIR += ceylon
@@ -59,6 +60,7 @@
     SUBDIR += erlang-runtime23
     SUBDIR += erlang-runtime24
     SUBDIR += erlang-runtime25
+    SUBDIR += erlang-runtime26
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -93,7 +95,9 @@
     SUBDIR += gcc11-devel
     SUBDIR += gcc12
     SUBDIR += gcc12-devel
+    SUBDIR += gcc13
     SUBDIR += gcc13-devel
+    SUBDIR += gcc14-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
     SUBDIR += gcc8
@@ -101,6 +105,7 @@
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
+    SUBDIR += ghc92
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
@@ -186,6 +191,7 @@
     SUBDIR += micropython
     SUBDIR += mit-scheme
     SUBDIR += mixal
+    SUBDIR += mlkit
     SUBDIR += mlton
     SUBDIR += mmix
     SUBDIR += mono
@@ -258,6 +264,7 @@
     SUBDIR += perl5.32
     SUBDIR += perl5.34
     SUBDIR += perl5.36
+    SUBDIR += perl5.38
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += pharo
@@ -268,11 +275,14 @@
     SUBDIR += php81-extensions
     SUBDIR += php82
     SUBDIR += php82-extensions
+    SUBDIR += php83
+    SUBDIR += php83-extensions
     SUBDIR += picoc
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
     SUBDIR += pomsky
+    SUBDIR += prql
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-hy
@@ -290,7 +300,6 @@
     SUBDIR += python3
     SUBDIR += python310
     SUBDIR += python311
-    SUBDIR += python37
     SUBDIR += python38
     SUBDIR += python39
     SUBDIR += qmasm
@@ -310,6 +319,8 @@
     SUBDIR += ruby30
     SUBDIR += ruby31
     SUBDIR += ruby32
+    SUBDIR += ruby33
+    SUBDIR += rubygem-rb_sys
     SUBDIR += rubygem-ruby_language_server
     SUBDIR += runawk
     SUBDIR += rust
@@ -322,6 +333,7 @@
     SUBDIR += scala
     SUBDIR += scheme48
     SUBDIR += scm
+    SUBDIR += scratch
     SUBDIR += sdcc
     SUBDIR += see
     SUBDIR += seed7

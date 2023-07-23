@@ -1,6 +1,5 @@
 PORTNAME=	psycopg-c
-PORTVERSION=	3.1.8
-PORTREVISION=	1
+PORTVERSION=	3.1.9
 CATEGORIES=	databases python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,11 +12,11 @@ WWW=		https://www.psycopg.org/ \
 LICENSE=	LGPL3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=49.2.0:devel/py-setuptools@${PY_FLAVOR} \
+BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}tomli>=2.0.1:textproc/py-tomli@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0.37:devel/py-wheel@${PY_FLAVOR}
 
-USES=		pgsql python:3.7+
+USES=		pgsql python
 USE_PYTHON=	autoplist concurrent cython pep517
 
 post-install:

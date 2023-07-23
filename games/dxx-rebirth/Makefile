@@ -1,6 +1,7 @@
 PORTNAME=	dxx-rebirth
 PORTVERSION=	20220929
 DISTVERSIONSUFFIX=	-src
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://www.dxx-rebirth.com/download/dxx/rebirth/
 DISTNAME=	${PORTNAME}_${PORTVERSION}${DISTVERSIONSUFFIX}
@@ -38,6 +39,10 @@ PLIST_FILES=	bin/d1x-rebirth \
 
 .if ${ARCH} != powerpc64 && ${ARCH} != riscv64
 MAKE_ARGS+=	lto=1
+.endif
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CPPFLAGS+=	-Wno-error=unused-but-set-parameter -Wno-error=unused-but-set-variable
 .endif
 
 post-install:

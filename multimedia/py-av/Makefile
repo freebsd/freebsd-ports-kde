@@ -1,5 +1,6 @@
 PORTNAME=	av
 PORTVERSION=	10.0.0
+PORTREVISION=	2
 CATEGORIES=	multimedia python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libavutil.so:multimedia/ffmpeg
 
-USES=		python:3.7+ pkgconfig
+USES=		python pkgconfig
 USE_PYTHON=	autoplist concurrent cython distutils
 
 post-install:

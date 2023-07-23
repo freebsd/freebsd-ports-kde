@@ -1,5 +1,5 @@
 PORTNAME=	${MPORTNAME:tl}
-PORTVERSION=	6.1.0
+PORTVERSION=	6.1.1
 CATEGORIES=	math
 
 COMMENT=	Sparse multifrontal LU factorization

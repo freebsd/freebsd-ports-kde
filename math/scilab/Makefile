@@ -1,6 +1,6 @@
 PORTNAME=	scilab
 PORTVERSION=	6.1.1
-PORTREVISION=	7
+PORTREVISION=	10
 CATEGORIES=	math cad java
 MASTER_SITES=	https://cgit.scilab.org/scilab/snapshot/
 
@@ -131,6 +131,10 @@ CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=int-conversion
+.endif
 
 .if ${GCC_DEFAULT} >= 10
 # workaround for Rank mismatch between actual argument at (1) and actual argument at (2) (rank-1 and scalar)

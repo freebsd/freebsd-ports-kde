@@ -1,6 +1,6 @@
 PORTNAME=	abyss
 DISTVERSION=	2.3.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	biology
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -42,4 +42,10 @@ PORTDOCS=	*
 
 PORTSCOUT=	limit:^[0-9\.]*$$ # to ignore alpha-numeric tags
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400079 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ))
+CFLAGS+=	-Wno-error=unused-but-set-variable
+.endif
+
+.include <bsd.port.post.mk>

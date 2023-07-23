@@ -10,6 +10,7 @@ include/proxygen/httpserver/HTTPServer.h
 include/proxygen/httpserver/HTTPServerAcceptor.h
 include/proxygen/httpserver/HTTPServerOptions.h
 include/proxygen/httpserver/HTTPTransactionHandlerAdaptor.h
+include/proxygen/httpserver/Mocks.h
 include/proxygen/httpserver/PushHandler.h
 include/proxygen/httpserver/RequestHandler.h
 include/proxygen/httpserver/RequestHandlerAdaptor.h
@@ -136,7 +137,7 @@ include/proxygen/lib/http/session/HQByteEventTracker.h
 include/proxygen/lib/http/session/HQDownstreamSession.h
 include/proxygen/lib/http/session/HQSession.h
 include/proxygen/lib/http/session/HQStreamBase.h
-include/proxygen/lib/http/session/HQUnidirectionalCallbacks.h
+include/proxygen/lib/http/session/HQStreamDispatcher.h
 include/proxygen/lib/http/session/HQUpstreamSession.h
 include/proxygen/lib/http/session/HTTP2PriorityQueue.h
 include/proxygen/lib/http/session/HTTPDefaultSessionCodecFactory.h
@@ -163,7 +164,6 @@ include/proxygen/lib/http/session/TTLBAStats.h
 include/proxygen/lib/http/session/TransactionByteEvents.h
 include/proxygen/lib/http/sink/HTTPSink.h
 include/proxygen/lib/http/sink/HTTPTransactionSink.h
-include/proxygen/lib/http/sink/NullHTTPSink.h
 include/proxygen/lib/http/stats/ConnectionStats.h
 include/proxygen/lib/http/stats/HeaderCodecStats.h
 include/proxygen/lib/http/stats/HTTPCodecStats.h
@@ -190,6 +190,7 @@ include/proxygen/lib/sampling/SamplingFunctions.h
 include/proxygen/lib/services/AcceptorConfiguration.h
 include/proxygen/lib/services/HTTPAcceptor.h
 include/proxygen/lib/services/RequestWorkerThread.h
+include/proxygen/lib/services/RequestWorkerThreadNoExecutor.h
 include/proxygen/lib/services/Service.h
 include/proxygen/lib/services/ServiceConfiguration.h
 include/proxygen/lib/services/ServiceWorker.h

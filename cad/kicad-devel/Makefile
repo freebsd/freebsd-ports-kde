@@ -1,6 +1,6 @@
 PORTNAME=	kicad
 DISTVERSION=	r${GIT_SRC_DATE}
-PORTREVISION=	1
+PORTREVISION=	4
 #PORTREVISION=	1
 CATEGORIES=	cad
 PKGNAMESUFFIX=	-devel
@@ -37,12 +37,12 @@ PLIST_SUB=	OPSYS=${OPSYS}	\
 		DESKTOPDIR=${DESKTOPDIR:S|^${PREFIX}/||}
 
 USES=		cmake:noninja compiler:c++11-lib desktop-file-utils gl \
-		gettext gnome pkgconfig python:3.5+ shared-mime-info shebangfix ssl \
+		gettext gnome pkgconfig python shared-mime-info shebangfix ssl \
 		tar:bzip2 xorg 
 USE_GITLAB=	yes
 GL_ACCOUNT=	kicad/code
 GL_PROJECT=	kicad
-GL_COMMIT=	${GIT_SRC_HASH}
+GL_TAGNAME=	${GIT_SRC_HASH}
 USE_GL=		gl glu glut
 USE_WX=		3.2
 WX_COMPS=	wx python:lib

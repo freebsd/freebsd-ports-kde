@@ -1,6 +1,6 @@
 PORTNAME=	ocp
 DISTVERSION=	7.4-RC2
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	cad
 # Direct access to github is needed because the release added an extra archive which
 # we need to build from, rather than the initial release.
@@ -23,7 +23,7 @@ LIB_DEPENDS=	libTKernel.so:cad/opencascade
 BUILD_DEPENDS=	${LOCALBASE}/share/cmake/pybind11/pybind11Config.cmake:devel/pybind11 \
 		${PYTHON_SITELIBDIR}/pybind11:devel/py-pybind11@${PY_FLAVOR}
 
-USES=		cmake compiler:c++11-lang gl python:3.6+ zip
+USES=		cmake compiler:c++11-lang gl python zip
 USE_GL=		gl glu glut
 
 WRKSRC=		${WRKDIR}/OCP_src_Ubuntu-16.04

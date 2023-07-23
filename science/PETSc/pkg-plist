@@ -131,6 +131,7 @@ include/petsc/private/viewercgnsimpl.h
 include/petsc/private/viewerexodusiiimpl.h
 include/petsc/private/viewerhdf5impl.h
 include/petsc/private/viewerimpl.h
+include/petsc_kokkos.hpp
 include/petscaijdevice.h
 include/petscao.h
 include/petscao.mod
@@ -201,6 +202,7 @@ include/petscds.h
 include/petscdstypes.h
 include/petscdt.h
 include/petscdt.mod
+include/petscdualspace.h
 include/petscerror.h
 include/petscfe.h
 include/petscfeceed.h
@@ -251,6 +253,7 @@ include/petscsnes.h
 include/petscsnes.mod
 include/petscsnesdef.mod
 include/petscsnesdefdummy.mod
+include/petscspace.h
 include/petscstring.h
 include/petscsys.h
 include/petscsys.mod
@@ -652,6 +655,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex5.c
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex50.c
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex51.c
+%%DATADIR%%/examples/src/dm/impls/plex/tests/ex52.c
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex55.c
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex56.c
 %%DATADIR%%/examples/src/dm/impls/plex/tests/ex57.c
@@ -723,9 +727,11 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex15_alt.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex15_alt_2.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_0.out
+%%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_0_vtk.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_1.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_2.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_3.out
+%%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_3_vtk.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_surface_2d.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_surface_2d_2.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex16_surface_3d.out
@@ -1391,6 +1397,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex51_0_nsize-1.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex51_0_nsize-2.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex51_0_nsize-4.out
+%%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex52_0.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex55_10-v3.16.0-v1.0.0_a.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex55_10-v3.16.0-v1.0.0_c.out
 %%DATADIR%%/examples/src/dm/impls/plex/tests/output/ex55_10-v3.16.0-v1.0.0_d.out
@@ -3015,6 +3022,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_4d.out
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_4e.out
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_4f.out
+%%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_4f_nonzero.out
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_4g.out
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_5.out
 %%DATADIR%%/examples/src/ksp/ksp/tutorials/output/ex27_6_hdf5.out
@@ -3891,6 +3899,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/mat/tests/output/ex12_2.out
 %%DATADIR%%/examples/src/mat/tests/output/ex12_3.out
 %%DATADIR%%/examples/src/mat/tests/output/ex12_4.out
+%%DATADIR%%/examples/src/mat/tests/output/ex12_5.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_1.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_1_par.out
 %%DATADIR%%/examples/src/mat/tests/output/ex132_2.out
@@ -5016,6 +5025,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_3d_q3_trig_vlap.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_0.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_gdsw.out
+%%DATADIR%%/examples/src/snes/tutorials/output/ex17_ge_q1_gmg.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_1.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_2.out
 %%DATADIR%%/examples/src/snes/tutorials/output/ex18_3.out
@@ -5631,6 +5641,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/sys/tests/ex14.c
 %%DATADIR%%/examples/src/sys/tests/ex15.c
 %%DATADIR%%/examples/src/sys/tests/ex16.c
+%%DATADIR%%/examples/src/sys/tests/ex17.c
 %%DATADIR%%/examples/src/sys/tests/ex17f.F90
 %%DATADIR%%/examples/src/sys/tests/ex18.c
 %%DATADIR%%/examples/src/sys/tests/ex19.c
@@ -5783,6 +5794,7 @@ libdata/pkgconfig/petsc.pc
 %%DATADIR%%/examples/src/sys/tests/output/ex13f_0.out
 %%DATADIR%%/examples/src/sys/tests/output/ex14_1.out
 %%DATADIR%%/examples/src/sys/tests/output/ex15_1.out
+%%DATADIR%%/examples/src/sys/tests/output/ex17_1.out
 %%DATADIR%%/examples/src/sys/tests/output/ex17f_1.out
 %%DATADIR%%/examples/src/sys/tests/output/ex18_1.out
 %%DATADIR%%/examples/src/sys/tests/output/ex19_1.out

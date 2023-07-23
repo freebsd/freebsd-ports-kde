@@ -53,6 +53,7 @@
     SUBDIR += apcpwr
     SUBDIR += apcupsd
     SUBDIR += appjail
+    SUBDIR += appjail-devel
     SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
@@ -82,6 +83,7 @@
     SUBDIR += b2sum
     SUBDIR += b3sum
     SUBDIR += b43-fwcutter
+    SUBDIR += backdown
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
@@ -103,9 +105,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos18-client
-    SUBDIR += bareos18-server
-    SUBDIR += bareos18-traymonitor
     SUBDIR += bareos19-client
     SUBDIR += bareos19-server
     SUBDIR += bareos19-traymonitor
@@ -138,7 +137,6 @@
     SUBDIR += blisp
     SUBDIR += boot-extract
     SUBDIR += bottom
-    SUBDIR += boxbackup-devel
     SUBDIR += bpytop
     SUBDIR += brasero
     SUBDIR += brename
@@ -166,6 +164,7 @@
     SUBDIR += byobu
     SUBDIR += calamares
     SUBDIR += catfish
+    SUBDIR += catsit
     SUBDIR += cbsd
     SUBDIR += cbsd-mq-api
     SUBDIR += cbsd-mq-router
@@ -184,14 +183,12 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles318
-    SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine-masterfiles321
-    SUBDIR += cfengine318
-    SUBDIR += cfengine319
+    SUBDIR += cfengine-masterfiles322
     SUBDIR += cfengine320
     SUBDIR += cfengine321
+    SUBDIR += cfengine322
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -281,6 +278,8 @@
     SUBDIR += devcpu-data-amd
     SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
+    SUBDIR += devd-mount
+    SUBDIR += devedeng
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -329,6 +328,7 @@
     SUBDIR += duply
     SUBDIR += dupmerge
     SUBDIR += dust
+    SUBDIR += dutree
     SUBDIR += dvd+rw-tools
     SUBDIR += dvdbackup
     SUBDIR += dvdimagecmp
@@ -358,6 +358,7 @@
     SUBDIR += envconsul
     SUBDIR += epazote
     SUBDIR += equinix-metal-cli
+    SUBDIR += erdtree
     SUBDIR += etc_os-release
     SUBDIR += etcmerge
     SUBDIR += ethname
@@ -375,6 +376,7 @@
     SUBDIR += faketty
     SUBDIR += fand
     SUBDIR += fanout
+    SUBDIR += fastfetch
     SUBDIR += fatback
     SUBDIR += fcode-utils
     SUBDIR += fconfig
@@ -485,6 +487,7 @@
     SUBDIR += getdelta
     SUBDIR += geteltorito
     SUBDIR += getssl
+    SUBDIR += gh-md-toc
     SUBDIR += gigolo
     SUBDIR += gitwatch
     SUBDIR += gkfreq
@@ -560,11 +563,15 @@
     SUBDIR += i7z
     SUBDIR += iat
     SUBDIR += iichid
+    SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
     SUBDIR += inotify-tools
     SUBDIR += installwatch
-    SUBDIR += intel-nvmupdate
+    SUBDIR += intel-epct
+    SUBDIR += intel-nvmupdate-100g
+    SUBDIR += intel-nvmupdate-10g
+    SUBDIR += intel-nvmupdate-40g
     SUBDIR += intel-pcm
     SUBDIR += intel-undervolt
     SUBDIR += inxi
@@ -673,6 +680,7 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
+    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -725,22 +733,6 @@
     SUBDIR += mbgtools
     SUBDIR += mcelog
     SUBDIR += mcfly
-    SUBDIR += mcollective
-    SUBDIR += mcollective-actionpolicy-auth
-    SUBDIR += mcollective-nettest-agent
-    SUBDIR += mcollective-nettest-client
-    SUBDIR += mcollective-nettest-common
-    SUBDIR += mcollective-nrpe-agent
-    SUBDIR += mcollective-nrpe-client
-    SUBDIR += mcollective-nrpe-common
-    SUBDIR += mcollective-puppet-agent
-    SUBDIR += mcollective-puppet-client
-    SUBDIR += mcollective-puppet-common
-    SUBDIR += mcollective-service-agent
-    SUBDIR += mcollective-service-client
-    SUBDIR += mcollective-service-common
-    SUBDIR += mcollective-shell-agent
-    SUBDIR += mcollective-shell-client
     SUBDIR += mcron
     SUBDIR += mcweject
     SUBDIR += mdf2iso
@@ -765,7 +757,6 @@
     SUBDIR += mkntpwd
     SUBDIR += mmc-utils
     SUBDIR += mmve
-    SUBDIR += mnrpes
     SUBDIR += modman
     SUBDIR += modules
     SUBDIR += mog
@@ -816,6 +807,7 @@
     SUBDIR += namefix
     SUBDIR += nbosd
     SUBDIR += ncdu
+    SUBDIR += ncdu2
     SUBDIR += ndmpd
     SUBDIR += neofetch
     SUBDIR += nerdctl
@@ -830,10 +822,12 @@
     SUBDIR += nomad
     SUBDIR += nomad-pot-driver
     SUBDIR += npadmin
+    SUBDIR += npmount
     SUBDIR += nq
     SUBDIR += nrg2iso
     SUBDIR += nss_ndb
     SUBDIR += nsysctl
+    SUBDIR += ntfs2btrfs
     SUBDIR += ntfy
     SUBDIR += ntpstat
     SUBDIR += nut
@@ -958,7 +952,6 @@
     SUBDIR += pacman
     SUBDIR += paicc
     SUBDIR += paladin
-    SUBDIR += pam_mount
     SUBDIR += pam_xdg
     SUBDIR += panicmail
     SUBDIR += parafly
@@ -1006,6 +999,8 @@
     SUBDIR += php81-posix
     SUBDIR += php82-fileinfo
     SUBDIR += php82-posix
+    SUBDIR += php83-fileinfo
+    SUBDIR += php83-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1026,6 +1021,7 @@
     SUBDIR += plasma5-powerdevil
     SUBDIR += plasma5-systemsettings
     SUBDIR += plconfig
+    SUBDIR += plocate
     SUBDIR += pmt
     SUBDIR += pnscan
     SUBDIR += podman
@@ -1053,10 +1049,10 @@
     SUBDIR += pstree
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet6
     SUBDIR += puppet7
-    SUBDIR += puppetserver6
+    SUBDIR += puppet8
     SUBDIR += puppetserver7
+    SUBDIR += puppetserver8
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -1114,7 +1110,6 @@
     SUBDIR += py-power
     SUBDIR += py-prometheus-zfs
     SUBDIR += py-psutil
-    SUBDIR += py-psutil121
     SUBDIR += py-ptyprocess
     SUBDIR += py-puremagic
     SUBDIR += py-py-cpuinfo
@@ -1215,12 +1210,16 @@
     SUBDIR += rubygem-capistrano-harrow
     SUBDIR += rubygem-chef
     SUBDIR += rubygem-chef-bin
+    SUBDIR += rubygem-chef-bin17
     SUBDIR += rubygem-chef-cleanroom
     SUBDIR += rubygem-chef-config
+    SUBDIR += rubygem-chef-config17
     SUBDIR += rubygem-chef-telemetry
     SUBDIR += rubygem-chef-utils
+    SUBDIR += rubygem-chef-utils17
     SUBDIR += rubygem-chef-vault
     SUBDIR += rubygem-chef-zero
+    SUBDIR += rubygem-chef17
     SUBDIR += rubygem-choria-mcorpc-support
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -1256,6 +1255,7 @@
     SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
+    SUBDIR += rubygem-ohai17
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
     SUBDIR += rubygem-puppetfile-resolver
@@ -1291,7 +1291,6 @@
     SUBDIR += rubygem-winrm-elevated
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
-    SUBDIR += rundeck2
     SUBDIR += rundeck3
     SUBDIR += runiq
     SUBDIR += runit
@@ -1300,6 +1299,7 @@
     SUBDIR += runwhen
     SUBDIR += rush
     SUBDIR += rust-coreutils
+    SUBDIR += rust-findutils
     SUBDIR += rw
     SUBDIR += s-tui
     SUBDIR += s6
@@ -1307,6 +1307,7 @@
     SUBDIR += safe-rm
     SUBDIR += safecat
     SUBDIR += safecopy
+    SUBDIR += sake
     SUBDIR += samdruckerclientshell
     SUBDIR += samefile
     SUBDIR += samesame
@@ -1317,6 +1318,7 @@
     SUBDIR += savelogs
     SUBDIR += scalpel
     SUBDIR += scan_ffs
+    SUBDIR += scanbd
     SUBDIR += scanbuttond
     SUBDIR += scanmem
     SUBDIR += scct
@@ -1515,7 +1517,6 @@
     SUBDIR += u-boot-sopine
     SUBDIR += u-boot-sopine-spi
     SUBDIR += u-boot-tools
-    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc

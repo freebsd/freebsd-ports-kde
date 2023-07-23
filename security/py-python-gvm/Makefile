@@ -1,5 +1,5 @@
 PORTNAME=	python-gvm
-DISTVERSION=	23.2.0
+DISTVERSION=	23.5.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -16,7 +16,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	greenbone
 GH_PROJECT=	${PORTNAME}
 
-USES=		python:3.7+
+USES=		python
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

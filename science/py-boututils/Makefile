@@ -1,6 +1,6 @@
 PORTNAME=	boututils
 DISTVERSION=	0.1.9
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	science education
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools_scm>0:devel/py-setuptools_scm@$
 		${PY_DEPENDS}
 RUN_DEPENDS=	${PY_DEPENDS}
 
-USES=		python:3.6+ pyqt:5
+USES=		python pyqt:5
 USE_PYTHON=	distutils autoplist pytest
 USE_PYQT=	pyqt5
 

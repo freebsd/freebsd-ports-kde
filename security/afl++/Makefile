@@ -1,5 +1,5 @@
 PORTNAME=	afl
-PORTVERSION=	4.05c
+PORTVERSION=	4.07c
 CATEGORIES=	security
 PKGNAMESUFFIX=	++-${FLAVOR}
 
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	ginstall:sysutils/coreutils
 FLAVORS=	llvm gcc
 FLAVOR?=	${FLAVORS:[1]}
 
-_LLVM_VER=		13
+_LLVM_VER=		16
 llvm_BUILD_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 llvm_RUN_DEPENDS=	clang${_LLVM_VER}:devel/llvm${_LLVM_VER}
 

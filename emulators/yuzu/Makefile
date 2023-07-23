@@ -1,12 +1,12 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20230419
+PORTVERSION=	s20230719
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
 .else
 MASTER_SITES=	LOCAL/jbeich:gamedb
 .endif
-DISTFILES=	${PORTNAME}-${DISTVERSIONFULL}/compatibility_list.json:gamedb
+DISTFILES=	${PORTNAME}-s20230424/compatibility_list.json:gamedb
 EXTRACT_ONLY=	${DISTFILES:N*\:gamedb:C/\:.*//}
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -46,15 +46,18 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	0cfeb2e8d
+GH_TAGNAME=	014ca709c9
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
+		GPUOpen-LibrariesAndSDKs:VulkanMemoryAllocator:v3.0.1-94-g9b0fc3e:VulkanMemoryAllocator/externals/VulkanMemoryAllocator \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		MerryMage:dynarmic:6.4.6:dynarmic/externals/dynarmic \
+		MerryMage:dynarmic:6.4.7-2-g7da37803:dynarmic/externals/dynarmic \
 		arun11299:cpp-jwt:v1.4-14-ge12ef06:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		benhoyt:inih:r52:inih/externals/inih/inih \
-		kinetiknz:cubeb:cubeb-0.2-1350-gf79e0cf:cubeb/externals/cubeb \
+		eggert:tz:2022c:tz/externals/nx_tzdb/tzdb_to_nx/externals/tz/tz \
+		kinetiknz:cubeb:cubeb-0.2-1452-g48689ae:cubeb/externals/cubeb \
+		lat9nq:tzdb_to_nx:220816-27-g212afa2:tzdb_to_nx/externals/nx_tzdb/tzdb_to_nx \
 		yhirose:cpp-httplib:v0.12.0-3-g6d963fb:cpp_httplib/externals/cpp-httplib
 
 USES=		cmake:testing elfctl localbase:ldflags pkgconfig sdl ssl

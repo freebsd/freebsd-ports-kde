@@ -1,5 +1,6 @@
 PORTNAME=	gdb
 DISTVERSION=	13.1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	GNU
 
@@ -35,6 +36,7 @@ CFLAGS+=	-DRL_NO_COMPAT
 EXCLUDE=	dejagnu expect sim texinfo intl
 EXTRACT_AFTER_ARGS=	${EXCLUDE:S/^/--exclude /}
 EXTRA_PATCHES=	${FILESDIR}/commit-a980a7d24b9
+EXTRA_PATCHES+=	${FILESDIR}/commit-ae61525fcf4
 
 VER=		${DISTVERSION:S/.//g}
 PLIST_SUB=	VER=${VER}
@@ -72,7 +74,7 @@ PORT_READLINE_USES=	readline
 PORT_ICONV_USES=	iconv:wchar_t
 PYTHON_CONFIGURE_ON=	--with-python=${PYTHON_CMD}
 PYTHON_CONFIGURE_OFF=	--without-python
-PYTHON_USES=		python:3.6+
+PYTHON_USES=		python
 SOURCE_HIGHLIGHT_CONFIGURE_ENABLE=	source-highlight
 SOURCE_HIGHLIGHT_LIB_DEPENDS=	\
 	libsource-highlight.so:textproc/source-highlight

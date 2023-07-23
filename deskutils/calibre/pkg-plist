@@ -61,9 +61,9 @@ lib/calibre/calibre/db/cli/cmd_show_metadata.py
 lib/calibre/calibre/db/cli/main.py
 lib/calibre/calibre/db/cli/tests.py
 lib/calibre/calibre/db/cli/utils.py
+lib/calibre/calibre/db/constants.py
 lib/calibre/calibre/db/copy_to_library.py
 lib/calibre/calibre/db/covers.py
-lib/calibre/calibre/db/delete_service.py
 lib/calibre/calibre/db/errors.py
 lib/calibre/calibre/db/fields.py
 lib/calibre/calibre/db/fts/__init__.py
@@ -669,6 +669,7 @@ lib/calibre/calibre/gui2/actions/embed.py
 lib/calibre/calibre/gui2/actions/fetch_news.py
 lib/calibre/calibre/gui2/actions/fts.py
 lib/calibre/calibre/gui2/actions/help.py
+lib/calibre/calibre/gui2/actions/layout_actions.py
 lib/calibre/calibre/gui2/actions/manage_categories.py
 lib/calibre/calibre/gui2/actions/mark_books.py
 lib/calibre/calibre/gui2/actions/match_books.py
@@ -855,6 +856,7 @@ lib/calibre/calibre/gui2/dialogs/trim_image.py
 lib/calibre/calibre/gui2/dnd.py
 lib/calibre/calibre/gui2/ebook_download.py
 lib/calibre/calibre/gui2/email.py
+lib/calibre/calibre/gui2/extra_files_watcher.py
 lib/calibre/calibre/gui2/filename_pattern_ui.py
 lib/calibre/calibre/gui2/flow_toolbar.py
 lib/calibre/calibre/gui2/font_family_chooser.py
@@ -893,6 +895,8 @@ lib/calibre/calibre/gui2/lrf_renderer/main_ui.py
 lib/calibre/calibre/gui2/lrf_renderer/text.py
 lib/calibre/calibre/gui2/main.py
 lib/calibre/calibre/gui2/main_window.py
+lib/calibre/calibre/gui2/markdown_editor.py
+lib/calibre/calibre/gui2/markdown_syntax_highlighter.py
 lib/calibre/calibre/gui2/metadata/__init__.py
 lib/calibre/calibre/gui2/metadata/basic_widgets.py
 lib/calibre/calibre/gui2/metadata/bulk_download.py
@@ -1053,6 +1057,7 @@ lib/calibre/calibre/gui2/toc/__init__.py
 lib/calibre/calibre/gui2/toc/location.py
 lib/calibre/calibre/gui2/toc/main.py
 lib/calibre/calibre/gui2/tools.py
+lib/calibre/calibre/gui2/trash.py
 lib/calibre/calibre/gui2/tts/__init__.py
 lib/calibre/calibre/gui2/tts/common.py
 lib/calibre/calibre/gui2/tts/develop.py
@@ -1311,6 +1316,7 @@ lib/calibre/calibre/utils/fonts/sfnt/maxp.py
 lib/calibre/calibre/utils/fonts/sfnt/merge.py
 lib/calibre/calibre/utils/fonts/sfnt/metrics.py
 lib/calibre/calibre/utils/fonts/sfnt/subset.py
+lib/calibre/calibre/utils/fonts/subset.py
 lib/calibre/calibre/utils/fonts/utils.py
 lib/calibre/calibre/utils/fonts/win_fonts.py
 lib/calibre/calibre/utils/formatter.py
@@ -1677,6 +1683,7 @@ lib/calibre/tinycss/version.py
 %%DATADIR%%/images/insert-link.png
 %%DATADIR%%/images/jobs.png
 %%DATADIR%%/images/keyboard-prefs.png
+%%DATADIR%%/images/layout.png
 %%DATADIR%%/images/languages.png
 %%DATADIR%%/images/library.png
 %%DATADIR%%/images/list_remove.png

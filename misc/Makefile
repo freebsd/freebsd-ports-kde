@@ -222,6 +222,7 @@
     SUBDIR += lesspipe
     SUBDIR += lf
     SUBDIR += libad9361-iio
+    SUBDIR += libartnet
     SUBDIR += libcomps
     SUBDIR += libeatmydata
     SUBDIR += libemos
@@ -246,6 +247,7 @@
     SUBDIR += localedata
     SUBDIR += logsurfer
     SUBDIR += lscolors
+    SUBDIR += lsix
     SUBDIR += lv
     SUBDIR += lxde-common
     SUBDIR += lxi-tools
@@ -278,6 +280,7 @@
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
+    SUBDIR += ola
     SUBDIR += ompl
     SUBDIR += ondir
     SUBDIR += onnx
@@ -378,6 +381,7 @@
     SUBDIR += php80-calendar
     SUBDIR += php81-calendar
     SUBDIR += php82-calendar
+    SUBDIR += php83-calendar
     SUBDIR += pinfo
     SUBDIR += pipe
     SUBDIR += posixtestsuite
@@ -419,6 +423,7 @@
     SUBDIR += py-ipyfastscape
     SUBDIR += py-kartograph
     SUBDIR += py-lightgbm
+    SUBDIR += py-lightning-utilities
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-molequeue
@@ -448,8 +453,11 @@
     SUBDIR += py-pykml
     SUBDIR += py-pypatent
     SUBDIR += py-pyprind
+    SUBDIR += py-pyqir
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
+    SUBDIR += py-pytorch
+    SUBDIR += py-pytorch-lightning
     SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
@@ -460,11 +468,15 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-spdx-tools
     SUBDIR += py-spinners
+    SUBDIR += py-synced-collections
     SUBDIR += py-tes
     SUBDIR += py-tflearn
     SUBDIR += py-tflite
     SUBDIR += py-tflite-support
     SUBDIR += py-toil
+    SUBDIR += py-torch-geometric
+    SUBDIR += py-torchmetrics
+    SUBDIR += py-torchvision
     SUBDIR += py-tqdm
     SUBDIR += py-tvm
     SUBDIR += py-uhi
@@ -475,6 +487,7 @@
     SUBDIR += pytorch
     SUBDIR += qbrew
     SUBDIR += qlas
+    SUBDIR += qlcplus
     SUBDIR += qt5-doc
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
@@ -556,6 +569,7 @@
     SUBDIR += tlci
     SUBDIR += toilet
     SUBDIR += translate
+    SUBDIR += trurl
     SUBDIR += ttyrec
     SUBDIR += tudu
     SUBDIR += tvbrowser

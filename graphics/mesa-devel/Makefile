@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	23.1-branchpoint-319
-DISTVERSIONSUFFIX=	-gcf181fef68d
+DISTVERSION=	23.2.0-branchpoint-320
+DISTVERSIONSUFFIX=	-g539bf3929b0
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -8,7 +8,6 @@ PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	3043f16d66bf.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
-PATCHFILES+=	04cc4092cbf7.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22484
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenCL, OpenGL, Vulkan)
@@ -30,7 +29,7 @@ LIB_DEPENDS=	libdrm.so:graphics/libdrm \
 LIB_DEPENDS+=	libelf.so:devel/libelf
 .endif
 
-USES=		bison cpe compiler:c++11-lib meson pkgconfig python:3.6+,build shebangfix
+USES=		bison cpe compiler:c++11-lib meson pkgconfig python:build shebangfix
 CPE_VENDOR=	mesa3d
 USE_GITHUB=	yes
 GH_ACCOUNT=	mesa3d
@@ -45,6 +44,7 @@ MESON_ARGS=	-Dgallium-omx=disabled \
 		-Dvalgrind=disabled \
 		-Dglvnd=true \
 		-Dplatforms=${PLATFORMS:O:[-1..1]:ts,} \
+		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
 		${NULL}
 PLIST_SUB=	ARCH=${ARCH:S/amd/x86_/}
 
@@ -99,7 +99,7 @@ LIBUNWIND_LIB_DEPENDS=	libunwind.so:devel/libunwind
 LIBUNWIND_MESON_ENABLED=	libunwind
 
 LLVM_DESC=		Build with LLVM support (see implies)
-LLVM_USES=		llvm:min=11,lib
+LLVM_USES=		llvm:min=15,lib
 LLVM_CONFIGURE_ENV=	LLVM_CONFIG=${LLVM_CONFIG}
 LLVM_MESON_ENABLED=	llvm
 .for i in r600 radeonsi radv
@@ -129,7 +129,6 @@ OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIO
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
 VAAPI_BUILD_DEPENDS=	libva>0:multimedia/libva
 VAAPI_MESON_ENABLED=	gallium-va
-VAAPI_MESON_ON=		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
 
 VDPAU_DESC=		Hardware decoding (only r600, radeonsi) (implies X11)
 VDPAU_BUILD_DEPENDS=	libvdpau>0:multimedia/libvdpau
@@ -176,6 +175,6 @@ post-patch-COINST-on:
 
 post-install-COINST-on:
 	@${INSTALL_DATA} ${WRKDIR}/libmap.conf \
-		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf.sample
+		${STAGEDIR}${PREFIX}/etc/libmap.d/${PKGBASE}.conf
 
 .include <bsd.port.mk>
