@@ -106,9 +106,6 @@
     SUBDIR += bareos-client
     SUBDIR += bareos-server
     SUBDIR += bareos-traymonitor
-    SUBDIR += bareos19-client
-    SUBDIR += bareos19-server
-    SUBDIR += bareos19-traymonitor
     SUBDIR += bareos20-client
     SUBDIR += bareos20-server
     SUBDIR += bareos20-traymonitor
@@ -600,7 +597,6 @@
     SUBDIR += ipsc
     SUBDIR += isc-cron
     SUBDIR += isomaster
-    SUBDIR += istatserver
     SUBDIR += istio
     SUBDIR += jadm
     SUBDIR += jail-primer
@@ -677,6 +673,7 @@
     SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
+    SUBDIR += limine
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
@@ -696,7 +693,6 @@
     SUBDIR += loganalyzer
     SUBDIR += logrotate
     SUBDIR += logstalgia
-    SUBDIR += logstash-forwarder
     SUBDIR += logstash7
     SUBDIR += logstash8
     SUBDIR += logtool
@@ -820,7 +816,6 @@
     SUBDIR += nerdctl
     SUBDIR += netevent
     SUBDIR += nfcutils
-    SUBDIR += nfs-over-tls
     SUBDIR += nitrogen
     SUBDIR += nix
     SUBDIR += nmrpflash
@@ -1199,7 +1194,6 @@
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
     SUBDIR += rset
-    SUBDIR += rsfetch
     SUBDIR += rshim-user-space
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
@@ -1410,7 +1404,6 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
-    SUBDIR += sysrc
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac

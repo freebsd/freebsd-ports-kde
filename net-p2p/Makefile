@@ -93,11 +93,13 @@
     SUBDIR += rtorrent
     SUBDIR += shx
     SUBDIR += sonarr
+    SUBDIR += sonarr-devel
     SUBDIR += tooth
     SUBDIR += torrent-file-editor
     SUBDIR += torrentcheck
     SUBDIR += torrentsniff
     SUBDIR += transmission
+    SUBDIR += transmission-components
     SUBDIR += transmission-remote-gui
     SUBDIR += twitch-tui
     SUBDIR += udpt
