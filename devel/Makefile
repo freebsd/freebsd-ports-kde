@@ -155,6 +155,7 @@
     SUBDIR += aifad
     SUBDIR += aixlog
     SUBDIR += ald
+    SUBDIR += alire
     SUBDIR += allegro
     SUBDIR += allegro5
     SUBDIR += amber
@@ -1003,6 +1004,7 @@
     SUBDIR += ignition-tools
     SUBDIR += ikos
     SUBDIR += imake
+    SUBDIR += immer
     SUBDIR += imtui
     SUBDIR += inastemp
     SUBDIR += include-what-you-use
@@ -1119,6 +1121,7 @@
     SUBDIR += kyra
     SUBDIR += kyua
     SUBDIR += lab
+    SUBDIR += lager
     SUBDIR += lasi
     SUBDIR += lattice-ice40-examples-hx1k
     SUBDIR += lattice-ice40-examples-hx8k
@@ -5299,6 +5302,7 @@
     SUBDIR += py-pyjsparser
     SUBDIR += py-pykdtree
     SUBDIR += py-pylama
+    SUBDIR += py-pyleri
     SUBDIR += py-pylev
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylint-django
@@ -5497,6 +5501,7 @@
     SUBDIR += py-rebulk
     SUBDIR += py-recordclass
     SUBDIR += py-recurring-ical-events
+    SUBDIR += py-red-black-tree-mod
     SUBDIR += py-rednose
     SUBDIR += py-reedsolo
     SUBDIR += py-referencing
@@ -5575,6 +5580,7 @@
     SUBDIR += py-setuptools-declarative-requirements
     SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
+    SUBDIR += py-setuptools-git-versioning
     SUBDIR += py-setuptools-pkg
     SUBDIR += py-setuptools-rust
     SUBDIR += py-setuptools44
@@ -7858,6 +7864,7 @@
     SUBDIR += zls
     SUBDIR += zookeeper
     SUBDIR += zthread
+    SUBDIR += zug
     SUBDIR += zycore-c
     SUBDIR += zydis
     SUBDIR += zziplib

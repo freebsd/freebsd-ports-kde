@@ -5,9 +5,6 @@ MASTER_SITES=	QT/official_releases/qtcreator/${DISTVERSION:R}/${DISTVERSION}
 DISTNAME=	qt-creator-opensource-src-${DISTVERSION}
 DIST_SUBDIR=	KDE/Qt/qtcreator
 
-PATCH_SITES=	https://github.com/qt-creator/qt-creator/commit/
-PATCHFILES=	87a3d9e063230dfb678ee3f427baba7ab63c7d1e.patch:-p1 # Fix build with Qt 6.6.0
-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	C++ and QML IDE for Qt development
 WWW=		https://qt-project.org/wiki/Category:Tools::QtCreator

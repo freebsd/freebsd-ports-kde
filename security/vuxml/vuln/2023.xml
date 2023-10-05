@@ -1,3 +1,199 @@
+  <vuln vid="4f254817-6318-11ee-b2ff-080027de9982">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py39-django32</name>
+	<name>py310-django32</name>
+	<name>py311-django32</name>
+	<range><lt>3.2.22</lt></range>
+      </package>
+      <package>
+	<name>py39-django41</name>
+	<name>py310-django41</name>
+	<name>py311-django41</name>
+	<range><lt>4.1.12</lt></range>
+      </package>
+      <package>
+	<name>py39-django42</name>
+	<name>py310-django42</name>
+	<name>py311-django42</name>
+	<range><lt>4.2.6</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Django reports:</p>
+       <blockquote cite="https://www.djangoproject.com/weblog/2023/oct/04/security-releases/">
+	<p>CVE-2023-43665: Denial-of-service possibility in django.utils.text.Truncator.</p>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-43665</cvename>
+      <url>https://www.djangoproject.com/weblog/2023/oct/04/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2023-10-01</discovery>
+      <entry>2023-10-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="915855ad-283d-4597-b01e-e0bf611db78b">
+    <topic>libspf2 -- Integer Underflow Remote Code Execution</topic>
+    <affects>
+      <package>
+	<name>libspf2</name>
+	<range><le>1.2.11</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Trendmicro ZDI reports:</p>
+	<blockquote cite="https://www.zerodayinitiative.com/advisories/ZDI-23-1472/">
+	<p>Integer Underflow Remote Code Execution Vulnerability</p>
+	<p>The specific flaw exists within the parsing of SPF macros.
+	When parsing SPF macros, the process does not properly
+	validate user-supplied data, which can result in an integer
+	underflow before writing to memory. An attacker can leverage
+	this vulnerability to execute code in the context of the
+	service account.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-42118</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-42118</url>
+    </references>
+    <dates>
+      <discovery>2022-06-06</discovery>
+      <entry>2023-10-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4e45c45b-629e-11ee-8290-a8a1599412c6">
+    <topic>chromium -- type confusion in v8</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>117.0.5938.149</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>117.0.5938.149</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop.html">
+	 <p>This update includes 1 security fix:</p>
+	 <ul>
+	    <li>[1485829] High CVE-2023-5346: Type Confusion in V8. Reported by Amit Kumar on 2023-09-22</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5346</cvename>
+      <url>https://chromereleases.googleblog.com/2023/10/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2023-10-03</discovery>
+      <entry>2023-10-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="162a675b-6251-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- arm64 boot CPUs may lack speculative execution protections</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.2</ge><lt>13.2_4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>On CPU 0 the check for the SMCCC workaround is called before
+	SMCCC support has been initialized.</p>
+	<h1>Impact:</h1>
+	<p>No speculative execution workarounds are installed on CPU 0.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5370</cvename>
+      <freebsdsa>SA-23:14.smccc</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-10-03</discovery>
+      <entry>2023-10-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e261e71c-6250-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- copy_file_range insufficient capability rights check</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.2</ge><lt>13.2_4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>The syscall checked only for the CAP_READ and CAP_WRITE
+	capabilities on the input and output file descriptors, respectively.
+	Using an offset is logically equivalent to seeking, and the syscall
+	must additionally require the CAP_SEEK capability.</p>
+	<h1>Impact:</h1>
+	<p>A sandboxed process with only read or write but no seek capability
+	on a file descriptor may be able to read data from or write data
+	to an arbitrary location within the file corresponding to that file
+	descriptor.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5369</cvename>
+      <freebsdsa>SA-23:13.capsicum</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-10-03</discovery>
+      <entry>2023-10-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fefcd340-624f-11ee-8e38-002590c1f29c">
+    <topic>FreeBSD -- msdosfs data disclosure</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>13.2</ge><lt>13.2_4</lt></range>
+	<range><ge>12.4</ge><lt>12.4_6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>In certain cases using the truncate or ftruncate system call
+	to extend a file size populates the additional space in the file
+	with unallocated data from the underlying disk device, rather than
+	zero bytes.</p>
+	<h1>Impact:</h1>
+	<p>A user with write access to files on a msdosfs file system may
+	be able to read unintended data (for example, from a previously
+	deleted file).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5368</cvename>
+      <freebsdsa>SA-23:12.msdosfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2023-10-03</discovery>
+      <entry>2023-10-04</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="e59fed96-60da-11ee-9102-000c29de725b">
     <topic>mediawiki -- multiple vulnerabilities</topic>
     <affects>
@@ -202,23 +398,23 @@
     </affects>
     <description>
       <body>
-	<p>Attacker can add other projects policy bot as member to their own project and use that bot to trigger pipelines in victims project</p>	
-	<p>Group import allows impersonation of users in CI pipelines</p>	
-	<p>Developers can bypass code owners approval by changing a MR's base branch</p>	
-  	<p>Leaking source code of restricted project through a fork</p>	
-	<p>Third party library Consul requires enable-script-checks to be False to enable patch</p>	
-	<p>Service account not deleted when namespace is deleted allowing access to internal projects</p>	
-	<p>Enforce SSO settings bypassed for public projects for Members without identity</p>	
-	<p>Removed project member can write to protected branches</p>	
-	<p>Unauthorised association of CI jobs for Machine Learning experiments</p>	
-	<p>Force pipelines to not have access to protected variables and will likely fail using tags</p>	
-	<p>Maintainer can create a fork relationship between existing projects</p>	
-	<p>Disclosure of masked CI variables via processing CI/CD configuration of forks</p>	
-	<p>Asset Proxy Bypass using non-ASCII character in asset URI</p>	
-	<p>Unauthorized member can gain Allowed to push and merge access and affect integrity of protected branches</p>	
-	<p>Removed Developer can continue editing the source code of a public project</p>	
-	<p>A project reporter can leak owner's Sentry instance projects</p>	
-	<p>Math rendering in markdown can escape container and hijack clicks</p>	
+	<p>Attacker can add other projects policy bot as member to their own project and use that bot to trigger pipelines in victims project</p>
+	<p>Group import allows impersonation of users in CI pipelines</p>
+	<p>Developers can bypass code owners approval by changing a MR's base branch</p>
+	<p>Leaking source code of restricted project through a fork</p>
+	<p>Third party library Consul requires enable-script-checks to be False to enable patch</p>
+	<p>Service account not deleted when namespace is deleted allowing access to internal projects</p>
+	<p>Enforce SSO settings bypassed for public projects for Members without identity</p>
+	<p>Removed project member can write to protected branches</p>
+	<p>Unauthorised association of CI jobs for Machine Learning experiments</p>
+	<p>Force pipelines to not have access to protected variables and will likely fail using tags</p>
+	<p>Maintainer can create a fork relationship between existing projects</p>
+	<p>Disclosure of masked CI variables via processing CI/CD configuration of forks</p>
+	<p>Asset Proxy Bypass using non-ASCII character in asset URI</p>
+	<p>Unauthorized member can gain Allowed to push and merge access and affect integrity of protected branches</p>
+	<p>Removed Developer can continue editing the source code of a public project</p>
+	<p>A project reporter can leak owner's Sentry instance projects</p>
+	<p>Math rendering in markdown can escape container and hijack clicks</p>
       </body>
     </description>
     <references>
