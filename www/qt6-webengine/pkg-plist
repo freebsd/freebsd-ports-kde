@@ -5,6 +5,7 @@
 %%QT_INCDIR%%/QtPdf/%%FULLVER%%/QtPdf/private/qpdfsearchmodel_p.h
 %%QT_INCDIR%%/QtPdf/%%FULLVER%%/QtPdf/private/qpdfselection_p.h
 %%QT_INCDIR%%/QtPdf/%%FULLVER%%/QtPdf/private/qtpdf-config_p.h
+%%QT_INCDIR%%/QtPdf/%%FULLVER%%/QtPdf/private/qtpdfexports_p.h
 %%QT_INCDIR%%/QtPdf/QPdfBookmarkModel
 %%QT_INCDIR%%/QtPdf/QPdfDocument
 %%QT_INCDIR%%/QtPdf/QPdfDocumentRenderOptions
@@ -27,6 +28,7 @@
 %%QT_INCDIR%%/QtPdf/qpdfsearchmodel.h
 %%QT_INCDIR%%/QtPdf/qpdfselection.h
 %%QT_INCDIR%%/QtPdf/qtpdf-config.h
+%%QT_INCDIR%%/QtPdf/qtpdfexports.h
 %%QT_INCDIR%%/QtPdf/qtpdfglobal.h
 %%QT_INCDIR%%/QtPdf/qtpdfversion.h
 %%QT_INCDIR%%/QtPdfQuick/%%FULLVER%%/QtPdfQuick/private/qquickpdfbookmarkmodel_p.h

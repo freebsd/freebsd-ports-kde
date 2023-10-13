@@ -1,3 +1,3 @@
-TIMESTAMP = 1695764966
-SHA256 (KDE/Qt/6.6.0-rc/qtscxml-everywhere-src-6.6.0-rc.tar.xz) = a71c6194934c5d0dd37667752d083677552db5bdfb11ed8433fb73c003102f08
-SIZE (KDE/Qt/6.6.0-rc/qtscxml-everywhere-src-6.6.0-rc.tar.xz) = 1175036
+TIMESTAMP = 1697049705
+SHA256 (KDE/Qt/6.6.0/qtscxml-everywhere-src-6.6.0.tar.xz) = 57ecd0db5d8b063d0334c4b21461585b4904d4884c88de125bd72e967e8a1043
+SIZE (KDE/Qt/6.6.0/qtscxml-everywhere-src-6.6.0.tar.xz) = 1175844

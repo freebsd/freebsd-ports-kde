@@ -1,3 +1,3 @@
-TIMESTAMP = 1695765049
-SHA256 (KDE/Qt/6.6.0-rc/qtwayland-everywhere-src-6.6.0-rc.tar.xz) = beec3f9f785ee33446658650e8a333fbd79743c6c19d36521e9236fbdb94b245
-SIZE (KDE/Qt/6.6.0-rc/qtwayland-everywhere-src-6.6.0-rc.tar.xz) = 1126036
+TIMESTAMP = 1697049798
+SHA256 (KDE/Qt/6.6.0/qtwayland-everywhere-src-6.6.0.tar.xz) = 30c3d82d85d050c83370710a26d12c802199c51eba5c2726e9d6243edd03b7e8
+SIZE (KDE/Qt/6.6.0/qtwayland-everywhere-src-6.6.0.tar.xz) = 1125748

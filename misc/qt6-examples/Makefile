@@ -1,8 +1,7 @@
 PORTNAME=	examples
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	misc
-#MASTER_SITES=	QT/official_releases/qt/${QT6_VERSION:R}/${QT6_VERSION}/single
-MASTER_SITES=	QT/development_releases/qt/${QT6_VERSION:R}/${QT6_VERSION}/single
+MASTER_SITES=	QT/official_releases/qt/${QT6_VERSION:R}/${QT6_VERSION}/single
 PKGNAMEPREFIX=	qt6-
 DISTNAME=	qt-everywhere-src-${QT6_VERSION}
 #WRKSRC=		${WRKDIR}/qt-everywhere-src-${QT5_VERSION}

@@ -494,6 +494,7 @@
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/bindablesubscription/main.cpp
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/doc/images/bindable_properties_example.png
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/doc/src/bindableproperties.qdoc
+%%QT_EXAMPLEDIR%%/corelib/bindableproperties/shared/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/shared/countries.qrc
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/shared/finland.png
 %%QT_EXAMPLEDIR%%/corelib/bindableproperties/shared/germany.png
@@ -4257,7 +4258,7 @@
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/customrender.cpp
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/customrender.h
-%%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/doc/images/customrendernode-example.gif
+%%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/doc/images/customrendernode-example.jpg
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/doc/src/customrendernode.qdoc
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/main.cpp
 %%QT_EXAMPLEDIR%%/quick/scenegraph/customrendernode/main.qml
