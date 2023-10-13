@@ -329,6 +329,7 @@
     SUBDIR += links1
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-opera
+    SUBDIR += linux-widevine-cdm
     SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += llhttp
@@ -439,6 +440,7 @@
     SUBDIR += monolith
     SUBDIR += moodle41
     SUBDIR += moodle42
+    SUBDIR += moodle43
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -1475,16 +1477,19 @@
     SUBDIR += py-cachecontrol
     SUBDIR += py-cachelib
     SUBDIR += py-caldav
+    SUBDIR += py-channels
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
     SUBDIR += py-cinemagoer
     SUBDIR += py-cookies
     SUBDIR += py-crossplane
+    SUBDIR += py-css-html-js-minify
     SUBDIR += py-css-parser
     SUBDIR += py-csscompressor
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
+    SUBDIR += py-daphne
     SUBDIR += py-dj-database-url
     SUBDIR += py-dj41-django-auth-ldap
     SUBDIR += py-dj41-django-cors-headers

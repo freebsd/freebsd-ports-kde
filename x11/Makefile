@@ -496,6 +496,7 @@
     SUBDIR += xdg-desktop-portal-gnome
     SUBDIR += xdg-desktop-portal-gtk
     SUBDIR += xdg-desktop-portal-hyprland
+    SUBDIR += xdg-desktop-portal-luminous
     SUBDIR += xdg-desktop-portal-wlr
     SUBDIR += xdialog
     SUBDIR += xditview
@@ -609,6 +610,7 @@
     SUBDIR += xtrans
     SUBDIR += xtrlock
     SUBDIR += xtset
+    SUBDIR += xvattr
     SUBDIR += xvidtune
     SUBDIR += xvinfo
     SUBDIR += xvkbd

@@ -4433,7 +4433,6 @@ x11/sisctrl||2020-05-05|Has expired: Broken for more than 6 months
 x11/xaniroc||2020-05-05|Has expired: Broken for more than 6 months
 x11/xmove||2020-05-05|Has expired: Broken for more than 6 months
 x11/xnodecor||2020-05-05|Has expired: Broken for more than 6 months
-x11/xvattr||2020-05-05|Has expired: Broken for more than 6 months
 x11-clocks/tktz||2020-05-05|Has expired: Broken for more than 6 months
 x11-clocks/xtimer||2020-05-05|Has expired: Broken for more than 6 months
 x11-themes/gnome-icons-dropline-neu||2020-05-05|Has expired: Broken for more than 6 months
@@ -7930,3 +7929,19 @@ sysutils/nfs-over-tls||2023-10-01|Has expired: All supported releases of FreeBSD
 x11/antimicro|x11/antimicrox|2023-10-01|Has expired: Replaced by x11/antimicrox upstream no longer maintained
 security/krb5-appl||2023-10-01|Has expired: Desupported by upstream, uses old ciphers
 sysutils/mstflint-lite|sysutils/mstflint|2023-10-05|Parent port is now lite by default
+net/frr7|net/frr8|2023-10-05|Keeping only the 2 last major branches in port tree
+devel/rubygem-gitlab-license_finder||2023-10-06|Removed
+devel/rubygem-thor10|devel/rubygem-thor|2023-10-06|Removed
+devel/rubygem-gitlab-sidekiq-fetcher||2023-10-06|Removed
+devel/rubygem-aws-sdk-s31126|devel/rubygem-aws-sdk-s3|2023-10-06|Use devel/rubygem-aws-sdk-s3
+devel/rubygem-aws-sdk-core3175|devel/rubygem-aws-sdk-core|2023-10-06|Use devel/rubygem-aws-sdk-core
+devel/gitlab-metrics-exporter||2023-10-06|Removed
+net/rubygem-octokit5|net/rubygem-octokit|2023-10-06|Use net/rubygem-octokit
+games/minilens||2023-10-08|Has expired: Depends on expired devel/godot2 (use devel/godot instead)
+games/tanks-of-freedom||2023-10-08|Has expired: Depends on expired devel/godot2 (use devel/godot instead)
+devel/godot2|devel/godot|2023-10-08|Has expired: Requires legacy OpenSSL 1.1.1 so use devel/godot
+devel/py-jupyter-server-ydoc|devel/py-jupyter-collaboration|2023-10-11|Remove obsoleted port. Use devel/py-jupyter-collaboration instead
+devel/py-packaging21|devel/py-packaging|2023-10-11|Remove obsoleted port. Use devel/py-packaging instead
+devel/rubygem-google-protobuf323|devel/rubygem-google-protobuf|2023-10-11|Remove obsoleted port. Use devel/rubygem-google-protobuf instead
+audio/rem||2023-10-12|Has expired: Deprecated, replaced by libre
+net/openmpi3|net/openmpi|2023-10-12|Has expired: OpenMPI 3 is not maintained by the upstream project anymore and will be removed

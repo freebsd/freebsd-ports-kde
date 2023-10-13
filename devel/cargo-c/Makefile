@@ -1,7 +1,6 @@
 PORTNAME=	cargo-c
-DISTVERSION=	0.9.24
-DISTVERSIONSUFFIX=	+cargo-0.73.0
-PORTREVISION=	2
+DISTVERSION=	0.9.27
+DISTVERSIONSUFFIX=	+cargo-0.74.0
 CATEGORIES=	devel
 MASTER_SITES=	CRATESIO
 # XXX Teach USES=cargo to have proper default
@@ -25,8 +24,15 @@ PLIST_FILES=	bin/cargo-capi \
 		bin/cargo-ctest \
 		${NULL}
 
+.include <bsd.port.pre.mk>
+
+# prevent address space exhaustion on armv6/armv7
+.if ${ARCH:Marmv?}
+LTO_UNSAFE=	yes
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's,libdir.join("pkgconfig,prefix.join("libdata/pkgconfig,' \
 		${WRKSRC}/src/install.rs
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

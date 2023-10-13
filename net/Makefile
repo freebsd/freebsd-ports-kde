@@ -172,10 +172,10 @@
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
-    SUBDIR += frr7
-    SUBDIR += frr7-pythontools
     SUBDIR += frr8
     SUBDIR += frr8-pythontools
+    SUBDIR += frr9
+    SUBDIR += frr9-pythontools
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -577,7 +577,6 @@
     SUBDIR += openldap26-server
     SUBDIR += openmdns
     SUBDIR += openmpi
-    SUBDIR += openmpi3
     SUBDIR += openntpd
     SUBDIR += openpgm
     SUBDIR += openradius
@@ -1350,7 +1349,6 @@
     SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octokit4
-    SUBDIR += rubygem-octokit5
     SUBDIR += rubygem-octokit6
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0

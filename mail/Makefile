@@ -33,6 +33,7 @@
     SUBDIR += bogofilter-bdb
     SUBDIR += bogofilter-kc
     SUBDIR += bogofilter-sqlite
+    SUBDIR += bsd-vacation
     SUBDIR += bsfilter
     SUBDIR += bsmtp
     SUBDIR += bulk_mailer
