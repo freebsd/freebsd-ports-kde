@@ -120,6 +120,7 @@
     SUBDIR += kbibtex
     SUBDIR += kdb
     SUBDIR += kexi
+    SUBDIR += keydb
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ldb15
@@ -647,6 +648,7 @@
     SUBDIR += postgis31
     SUBDIR += postgis32
     SUBDIR += postgis33
+    SUBDIR += postgis34
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
@@ -755,6 +757,10 @@
     SUBDIR += py-couchdb
     SUBDIR += py-databases
     SUBDIR += py-dbf
+    SUBDIR += py-dbt-core
+    SUBDIR += py-dbt-duckdb
+    SUBDIR += py-dbt-semantic-interfaces
+    SUBDIR += py-dbt-snowflake
     SUBDIR += py-dbutils
     SUBDIR += py-duckdb
     SUBDIR += py-fakeredis
@@ -823,7 +829,10 @@
     SUBDIR += py-redis3
     SUBDIR += py-redis4
     SUBDIR += py-rrdtool
+    SUBDIR += py-schemachange
     SUBDIR += py-sispy
+    SUBDIR += py-snowddl
+    SUBDIR += py-snowflake-connector-python
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-json
     SUBDIR += py-sqlalchemy-migrate
@@ -899,6 +908,7 @@
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-session_store
+    SUBDIR += rubygem-activerecord-trilogy-adapter
     SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord5
     SUBDIR += rubygem-activerecord50
@@ -1014,6 +1024,7 @@
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
+    SUBDIR += rubygem-trilogy
     SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
@@ -1059,6 +1070,7 @@
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
+    SUBDIR += trilogy
     SUBDIR += tsearch_extras
     SUBDIR += tuning-primer
     SUBDIR += twemproxy

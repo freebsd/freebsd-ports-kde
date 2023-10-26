@@ -5,6 +5,15 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20231017:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: delphij@FreeBSD.org
+
+  The default Perl version has been switched to Perl 5.36.  If you are using
+  binary packages to upgrade your system, you do not have anything to do, pkg
+  upgrade will do the right thing.  For the other people, follow the
+  instructions in entry 20181213, it should still be the same.
+
 20231011:
   AFFECTS: users of www/caddy
   AUTHOR:  adamw@FreeBSD.org
@@ -5214,7 +5223,7 @@ leave you without networking.
 	  Then you will need to rebuild everything that uses libperl.so, you
 	  can do so with:
 
-	portmaster -f `pkg shlib -qR libperl.so.5.26`
+	portmaster `pkg shlib -qR libperl.so.5.26`
 
 	  If, for some reason, this command fails at one point, it is safe to
 	  run it again, it will not rebuild what it already rebuilt, as the
