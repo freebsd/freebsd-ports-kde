@@ -410,6 +410,7 @@
     SUBDIR += flasher
     SUBDIR += flashrom
     SUBDIR += flexbackup
+    SUBDIR += flipperbit
     SUBDIR += flock
     SUBDIR += flog
     SUBDIR += flowgger
@@ -1047,6 +1048,7 @@
     SUBDIR += procenv
     SUBDIR += process-viewer
     SUBDIR += procmap
+    SUBDIR += procs
     SUBDIR += progsreiserfs
     SUBDIR += pslist
     SUBDIR += psmisc
