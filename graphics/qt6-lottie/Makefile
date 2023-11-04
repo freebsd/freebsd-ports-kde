@@ -12,7 +12,6 @@ LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
 USES=		cmake compiler:c++11-lang gl pkgconfig qt-dist:6
 USE_GL=		gl opengl
-USE_LOCALE=	C.UTF-8
 USE_QT=		base declarative websockets
 
 .include <bsd.port.mk>
