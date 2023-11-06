@@ -1,6 +1,6 @@
---- src/pdf/CMakeLists.txt.orig	2023-08-16 19:50:41 UTC
+--- src/pdf/CMakeLists.txt.orig	2023-10-03 19:49:54 UTC
 +++ src/pdf/CMakeLists.txt
-@@ -69,7 +69,7 @@ add_dependencies(docs generate_pdf_attributions)
+@@ -71,7 +71,7 @@ add_dependencies(docs generate_pdf_attributions)
  #   TOOLCHAIN SETUP
  ##
  
@@ -9,7 +9,7 @@
      setup_toolchains()
  endif()
  
-@@ -132,7 +132,7 @@ foreach(arch ${archs})
+@@ -134,7 +134,7 @@ foreach(arch ${archs})
            strip_absolute_paths_from_debug_symbols=false
          )
  

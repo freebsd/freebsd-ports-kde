@@ -1,4 +1,4 @@
---- configure.cmake.orig	2023-08-16 19:50:41 UTC
+--- configure.cmake.orig	2023-10-03 19:49:54 UTC
 +++ configure.cmake
 @@ -67,7 +67,7 @@ endif()
  endif()
@@ -33,7 +33,21 @@
     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android(on non-Windows hosts only)."
  )
  if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -586,8 +586,8 @@ add_check_for_support(
+@@ -502,13 +502,6 @@ add_check_for_support(
+    MESSAGE "node.js version 14 or later is required."
+ )
+ add_check_for_support(
+-    MODULES QtWebEngine
+-    CONDITION NOT (Nodejs_ARCH STREQUAL ia32) AND
+-              NOT (Nodejs_ARCH STREQUAL x86) AND
+-              NOT (Nodejs_ARCH STREQUAL arm)
+-    MESSAGE "32bit version of Nodejs is not supported."
+-)
+-add_check_for_support(
+    MODULES QtWebEngine QtPdf
+    CONDITION Python3_EXECUTABLE
+    MESSAGE "Python version 3.6 or later is required."
+@@ -586,8 +579,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtWebEngine
     CONDITION MSVC OR
@@ -44,7 +58,7 @@
         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL AppleClang)
     MESSAGE
         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -596,8 +596,8 @@ add_check_for_support(
+@@ -596,8 +589,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtPdf
     CONDITION MSVC OR
