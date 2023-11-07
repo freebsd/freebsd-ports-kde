@@ -606,7 +606,6 @@
     SUBDIR += efl
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += electron22
     SUBDIR += electron24
     SUBDIR += electron25
     SUBDIR += electron26
@@ -3869,6 +3868,7 @@
     SUBDIR += pam_wrapper
     SUBDIR += papi
     SUBDIR += papilio-loader
+    SUBDIR += paq-nvim
     SUBDIR += parallel-hashmap
     SUBDIR += parol
     SUBDIR += parol-ls
@@ -5025,6 +5025,7 @@
     SUBDIR += py-msgpack
     SUBDIR += py-mulpyplexer
     SUBDIR += py-multi_key_dict
+    SUBDIR += py-multipart
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
     SUBDIR += py-multiset
@@ -6638,6 +6639,7 @@
     SUBDIR += rubygem-blockenspiel
     SUBDIR += rubygem-bones
     SUBDIR += rubygem-bootsnap
+    SUBDIR += rubygem-bootsnap116
     SUBDIR += rubygem-bootstrap_form
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-buftok
@@ -6791,6 +6793,7 @@
     SUBDIR += rubygem-et-orbi
     SUBDIR += rubygem-etc
     SUBDIR += rubygem-event_emitter
+    SUBDIR += rubygem-event_stream_parser
     SUBDIR += rubygem-eventmachine
     SUBDIR += rubygem-excon
     SUBDIR += rubygem-execjs
@@ -7860,7 +7863,6 @@
     SUBDIR += xtensa-esp32-elf
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
-    SUBDIR += xtoolchain-llvm-devel
     SUBDIR += xwpe
     SUBDIR += xxgdb
     SUBDIR += xxhash
