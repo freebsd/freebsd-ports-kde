@@ -6,7 +6,7 @@ PKGNAMEPREFIX=	qt6-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibilty features for Qt6
 
-USES=		cmake gl pkgconfig qt-dist:6
+USES=		cmake compiler:c++17-lang gl pkgconfig qt-dist:6
 USE_GL=		gl opengl
 USE_QT=		base declarative multimedia
 
