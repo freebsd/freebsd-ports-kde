@@ -155,7 +155,7 @@ _USE_QT5_ONLY=		assistant buildtools concurrent core dbus \
 _USE_QT5_ONLY+=		sql-ibase
 .  endif
 
-_USE_QT6_ONLY=		5compat base graphs httpserver languageserver lottie positioning \
+_USE_QT6_ONLY=		5compat base coap graphs httpserver languageserver lottie positioning \
 			quick3dphysics quickeffectmaker shadertools tools translations \
 			sqldriver-sqlite sqldriver-mysql sqldriver-psql sqldriver-odbc
 
@@ -178,6 +178,9 @@ qt-base_LIB=		libQt${_QT_LIBVER}Core.so
 
 qt-charts_PORT=		x11-toolkits/${_QT_RELNAME}-charts
 qt-charts_LIB=		libQt${_QT_LIBVER}Charts.so
+
+qt-coap_PORT=		net/${_QT_RELNAME}-coap
+qt-coap_LIB=		libQt${_QT_LIBVER}Coap.so
 
 qt-concurrent_PORT=	devel/${_QT_RELNAME}-concurrent
 qt-concurrent_LIB=	libQt${_QT_LIBVER}Concurrent.so
