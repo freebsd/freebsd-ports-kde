@@ -32,7 +32,7 @@
              )
          endif()
 -        if(DEFINED QT_FEATURE_stdlib_libcpp AND LINUX)
-+	if(DEFINED QT_FEATURE_stdlib_libcpp AND (LINUX OR FREEBSD))
++        if(DEFINED QT_FEATURE_stdlib_libcpp AND (LINUX OR FREEBSD))
              extend_gn_list(gnArgArg ARGS use_libcxx
                  CONDITION QT_FEATURE_stdlib_libcpp
              )
