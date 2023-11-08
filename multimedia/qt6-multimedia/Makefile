@@ -12,7 +12,7 @@ LIB_DEPENDS=	libxkbcommon.so:x11/libxkbcommon
 
 USES=		cmake compiler:c++17-lang gl localbase:ldflags pkgconfig qt-dist:6
 USE_GL=		gl opengl
-USE_QT=		base declarative quick3d shadertools svg
+USE_QT=		base declarative quick3d shadertools
 
 CXXFLAGS_powerpc64=	-mvsx
 CFLAGS_powerpc=	-DPFFFT_SIMD_DISABLE
