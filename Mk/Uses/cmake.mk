@@ -74,8 +74,7 @@ CMAKE_BUILD_TYPE?=	Debug
 CMAKE_BUILD_TYPE?=	Release
 .    endif #defined(WITH_DEBUG)
 
-PLIST_SUB+=		CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:tl}" \
-			CMAKE_BUILD_TYPE_CAMELCASE="${CMAKE_BUILD_TYPE}"
+PLIST_SUB+=		CMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE:tl}"
 
 .    if defined(STRIP) && ${STRIP} != "" && !defined(WITH_DEBUG)
 INSTALL_TARGET?=	install/strip

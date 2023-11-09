@@ -307,6 +307,13 @@ QMAKE_ARGS+=		QT_CONFIG-="${QT_CONFIG:M-*:O:u:C/^-//}"
 
 PLIST_SUB+=		SHORTVER=${_QT_VERSION:R} \
 			FULLVER=${_QT_VERSION:C/-.*//}
+.  if defined(WITH_DEBUG)
+PLIST_SUB+=		DEBUG="" \
+			NO_DEBUG="@comment "
+.  else
+PLIST_SUB+=		DEBUG="@comment " \
+			NO_DEBUG=""
+.  endif
 
 # Handle additional PLIST directories, which should only be used for Qt-dist ports.
 .  for dir in ETC
