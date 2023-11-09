@@ -184,12 +184,6 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME:S,$,/examples,:S,^,--exclude ,} \
 			--no-same-owner --no-same-permissions
 .  endif # ! ${_QT_VER:M5}
 
-# Environment setup for Qt6
-.  if ${_QT_VER:M6}
-# Suppress warnings from rcc about not using a UTF-8 locale.
-USE_LOCALE?=		C.UTF-8
-.  endif
-
 # Build setup for Qt6
 .  if ${_QT_VER:M6}
 CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX} \
