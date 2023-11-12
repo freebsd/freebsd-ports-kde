@@ -1030,6 +1030,7 @@
     SUBDIR += isfreedesktop
     SUBDIR += isl
     SUBDIR += ispc
+    SUBDIR += ittapi
     SUBDIR += ivykis
     SUBDIR += jam
     SUBDIR += jansson
@@ -5905,6 +5906,7 @@
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pylyzer
     SUBDIR += pymsteams
     SUBDIR += pyobfuscate
     SUBDIR += pyotherside-qt5

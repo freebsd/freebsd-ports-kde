@@ -276,6 +276,7 @@
     SUBDIR += dionysus
     SUBDIR += disco
     SUBDIR += dqfun
+    SUBDIR += dsfmt
     SUBDIR += drgeo
     SUBDIR += dsdp
     SUBDIR += dune-alugrid
@@ -880,10 +881,12 @@
     SUBDIR += py-GridDataFormats
     SUBDIR += py-MutatorMath
     SUBDIR += py-PuLP
+    SUBDIR += py-Py-BOBYQA
     SUBDIR += py-PyMetis
     SUBDIR += py-PySCIPOpt
     SUBDIR += py-PyWavelets
     SUBDIR += py-Pyomo
+    SUBDIR += py-SQNomad
     SUBDIR += py-affine
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
