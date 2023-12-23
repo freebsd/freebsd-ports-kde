@@ -104,10 +104,10 @@
 %%QT_INCDIR%%/QtMultimedia/qscreencapture.h
 %%QT_INCDIR%%/QtMultimedia/qsoundeffect.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimedia-config.h
-%%QT_INCDIR%%/QtMultimedia/qtmultimediadefs.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaexports.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaglobal.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaversion.h
+%%QT_INCDIR%%/QtMultimedia/qvideo.h
 %%QT_INCDIR%%/QtMultimedia/qvideoframe.h
 %%QT_INCDIR%%/QtMultimedia/qvideoframeformat.h
 %%QT_INCDIR%%/QtMultimedia/qvideosink.h
@@ -135,7 +135,6 @@
 %%QT_INCDIR%%/QtMultimediaWidgets/QtMultimediaWidgetsDepends
 %%QT_INCDIR%%/QtMultimediaWidgets/QtMultimediaWidgetsVersion
 %%QT_INCDIR%%/QtMultimediaWidgets/qgraphicsvideoitem.h
-%%QT_INCDIR%%/QtMultimediaWidgets/qtmultimediawidgetdefs.h
 %%QT_INCDIR%%/QtMultimediaWidgets/qtmultimediawidgetsexports.h
 %%QT_INCDIR%%/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 %%QT_INCDIR%%/QtMultimediaWidgets/qtmultimediawidgetsversion.h

@@ -11,6 +11,7 @@
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineprofile_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginescriptcollection_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineurlrequestinfo_p.h
+%%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginewebauthuxrequest_p.h
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineCertificateError
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineClientCertificateSelection
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineClientCertificateStore
@@ -41,6 +42,8 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlRequestJob
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlScheme
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlSchemeHandler
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthPINRequest
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthUXRequest
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCore
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreDepends
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreVersion
@@ -75,6 +78,7 @@
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlrequestjob.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlscheme.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlschemehandler.h
+%%QT_INCDIR%%/QtWebEngineCore/qwebenginewebauthuxrequest.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineaction_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineaction_p_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineclientcertificateselection_p.h

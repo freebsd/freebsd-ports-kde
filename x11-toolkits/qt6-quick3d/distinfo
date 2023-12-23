@@ -1,3 +1,3 @@
-TIMESTAMP = 1701102991
-SHA256 (KDE/Qt/6.6.1/qtquick3d-everywhere-src-6.6.1.tar.xz) = 151500ee2223d61b5f83a3a033323812a5438eef9703546f6dbb837db8ce8422
-SIZE (KDE/Qt/6.6.1/qtquick3d-everywhere-src-6.6.1.tar.xz) = 59170016
+TIMESTAMP = 1703162526
+SHA256 (KDE/Qt/6.7.0-beta1/qtquick3d-everywhere-src-6.7.0-beta1.tar.xz) = d2a3785ee20d871c37e3a17f6bbd6c5c910097c7d5c1db4dc8dc988a30ee2e86
+SIZE (KDE/Qt/6.7.0-beta1/qtquick3d-everywhere-src-6.7.0-beta1.tar.xz) = 59248736
