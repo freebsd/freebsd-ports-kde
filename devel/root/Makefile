@@ -1,5 +1,6 @@
 PORTNAME=	root
 DISTVERSION=	6.30.02
+PORTREVISION=	1
 CATEGORIES=	devel science math parallel python
 MASTER_SITES=	https://root.cern/download/
 DISTFILES=	${PORTNAME}_v${DISTVERSION}.source${EXTRACT_SUFX}
@@ -17,6 +18,7 @@ BUILD_DEPENDS=	${BUILD_AND_RUN_DEPENDS}
 LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 		libcurl.so:ftp/curl \
 		libfreetype.so:print/freetype2 \
+		libgsl.so:math/gsl \
 		liblz4.so:archivers/liblz4 \
 		libopenblas.so:math/openblas \
 		libpcre.so:devel/pcre \
@@ -38,7 +40,7 @@ SHEBANG_FILES=	config/rootssh etc/dictpch/makepch.py etc/proof/utils/circle.sh \
 
 # Flags and environment variables for building
 CMAKE_ARGS=	-DCMAKE_CXX_STANDARD=17
-CMAKE_ON=	gnuinstall soversion
+CMAKE_ON=	gnuinstall soversion mathmore
 CMAKE_OFF=	builtin_gtest clad
 CONFIGURE_WRKSRC?=	${WRKDIR}/.build
 MAKE_ENV+=		ROOTSYS=${CONFIGURE_WRKSRC}
@@ -97,14 +99,6 @@ PLIST_SUB+=	SHLIB_SHVER="${DISTVERSION:R}" \
 PLIST_SUB+=	NOT_INSTALLED_ON_AARCH64="@comment " ONLY_INSTALLED_ON_AARCH64="" AARCH64_PCM_PREFIX="lib" AARCH64_PCM_SUFFIX="_rdict"
 .else
 PLIST_SUB+=	NOT_INSTALLED_ON_AARCH64="" ONLY_INSTALLED_ON_AARCH64="@comment " AARCH64_PCM_PREFIX="" AARCH64_PCM_SUFFIX=""
-.endif
-
-# Some files only installed with LLVM/Clang 13 (used on FreeBSD 12.4, 13.0 and 13.1)
-# TODO: Introduce USES+=llvm:min=14 instead when this can be deemed not too obtrusive on supported releases
-.if 1204000 <= ${OSVERSION} && ${OSVERSION} < 1302000 && ${OSVERSION} != 1301507
-PLIST_SUB+=	ONLY_INSTALLED_WITH_LLVM_CLANG_13=""
-.else
-PLIST_SUB+=	ONLY_INSTALLED_WITH_LLVM_CLANG_13="@comment "
 .endif
 
 # The following two files should not be staged. This happens even when PYROOT option is OFF.

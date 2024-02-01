@@ -1,7 +1,6 @@
 PORTNAME=	pytorch
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.1.0
-PORTREVISION=	1
+DISTVERSION=	2.1.2
 CATEGORIES=	misc # machine-learning
 MASTER_SITES=	https://github.com/pytorch/pytorch/releases/download/v${DISTVERSION}/
 DIST_SUBDIR=	${PORTNAME}
@@ -13,13 +12,13 @@ WWW=		https://pytorch.org/
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-#BROKEN_aarch64=	configure fails: CMake Error at third_party/XNNPACK/CMakeLists.txt:94 (MESSAGE): Unrecognized CMAKE_SYSTEM_NAME = FreeBSD
-#BROKEN_i386=	compilation fails: error: use of undeclared identifier 'AVX2'
-#BROKEN_FreeBSD_14=	fails to compile calling a private constructor of class
+BROKEN_i386=	compilation fails: error: use of undeclared identifier 'AVX2'
 
 BUILD_DEPENDS=	gmake:devel/gmake \
 		${LOCALBASE}/include/fxdiv.h:devel/fxdiv
-LIB_DEPENDS=	libopenblas.so:math/openblas \
+LIB_DEPENDS=	libabsl_base.so:devel/abseil \
+		libblis.so:math/blis \
+		libopenblas.so:math/openblas \
 		libmpi.so:net/openmpi \
 		libonnx.so:misc/onnx \
 		libpthreadpool.so:devel/pthreadpool \
@@ -33,8 +32,9 @@ CMAKE_OFF=	BUILD_CUSTOM_PROTOBUF USE_CUDA USE_ROCM  USE_NNPACK USE_QNNPACK USE_P
 CMAKE_ON=	USE_SYSTEM_PYBIND11 \
 		USE_SYSTEM_SLEEF \
 		USE_SYSTEM_ONNX # see other USE_SYSTEM_xx in CMakeLists.txt
+CMAKE_ON+=	ONNX_USE_LITE_PROTO # workaround for the protobuf-related failure described here: https://github.com/onnx/optimizer/issues/38
 CMAKE_ARGS=	-DPSIMD_SOURCE_DIR=${WRKSRC}/third_party/psimd \
-		-DFREEBSD_PYTHON_VER=${PYTHON_VER}
+		-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
 MAKE_ENV=	USE_NINJA=no # ninja breaks for some reason
 LDFLAGS+=	-lexecinfo

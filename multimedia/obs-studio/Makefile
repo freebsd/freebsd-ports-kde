@@ -1,5 +1,6 @@
 PORTNAME=	obs-studio
 DISTVERSION=	30.0.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -8,8 +9,6 @@ WWW=		https://obsproject.com/
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
-
-BROKEN_FreeBSD_12=	fatal error: 'sys/eventfd.h' file not found
 
 BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat \
 		swig:devel/swig

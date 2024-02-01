@@ -159,10 +159,6 @@
     SUBDIR += php-lz4
     SUBDIR += php-snappy
     SUBDIR += php-zstd
-    SUBDIR += php80-bz2
-    SUBDIR += php80-phar
-    SUBDIR += php80-zip
-    SUBDIR += php80-zlib
     SUBDIR += php81-bz2
     SUBDIR += php81-phar
     SUBDIR += php81-zip
@@ -211,6 +207,7 @@
     SUBDIR += py-warctools
     SUBDIR += py-xopen
     SUBDIR += py-zipstream-ng
+    SUBDIR += py-zlib-ng
     SUBDIR += py-zopfli
     SUBDIR += py-zstandard
     SUBDIR += py-zstd
@@ -221,6 +218,7 @@
     SUBDIR += rpm4
     SUBDIR += rubygem-archive-tar-minitar
     SUBDIR += rubygem-archive-zip
+    SUBDIR += rubygem-bzip2-ffi
     SUBDIR += rubygem-bzip2-ruby
     SUBDIR += rubygem-fpm
     SUBDIR += rubygem-libarchive

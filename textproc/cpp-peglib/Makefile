@@ -1,6 +1,6 @@
 PORTNAME=	cpp-peglib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.8.4
+DISTVERSION=	1.8.6
 CATEGORIES=	textproc devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,13 +10,15 @@ WWW=		https://github.com/yhirose/cpp-peglib
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+TEST_DEPENDS=	googletest>0:devel/googletest
+
 USES=		cmake:testing compiler:c++17-lang localbase:ldflags
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yhirose
 
 CMAKE_OFF=	BUILD_TESTS
-CMAKE_TESTING_ON=	BUILD_TESTS # tests fail to link, see https://github.com/yhirose/cpp-peglib/issues/281
+CMAKE_TESTING_ON=	BUILD_TESTS # tests fail to link, see https://github.com/yhirose/cpp-peglib/issues/281#issuecomment-1869064489
 
 NO_ARCH=	yes
 

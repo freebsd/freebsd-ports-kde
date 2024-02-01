@@ -10,8 +10,6 @@ WWW=		https://brlcad.org/
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_sparc64=	does not compile: invokes i386 assembler
-
 BUILD_DEPENDS=	xsltproc:textproc/libxslt
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libdrm.so:graphics/libdrm \
@@ -35,7 +33,7 @@ TEST_TARGET=	check
 
 CONFLICTS_INSTALL=	py[23][0-9]-epsilon
 
-MANPREFIX=	${PREFIX}/${PORTNAME}/share
+MANDIRS=	${PREFIX}/${PORTNAME}/share/man
 NO_MTREE=	yes
 
 WRKSRC=${WRKDIR}/${PORTNAME}-${PORTVERSION}

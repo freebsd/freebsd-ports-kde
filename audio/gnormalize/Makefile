@@ -1,12 +1,15 @@
 PORTNAME=	gnormalize
 PORTVERSION=	0.63
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	SF
 
 MAINTAINER=	darcsis@gmail.com
 COMMENT=	Alternative for replaygain
 WWW=		https://gnormalize.sourceforge.net/
+
+DEPRECATED=	Last release in 2008, upstream is dead, depends on deprecated library GTK2 and uses legacy workarounds that can potentially cause lossy conversions. Consider using audio/rsgain and audio/cyanrip
+EXPIRATION_DATE=2024-02-29
 
 RUN_DEPENDS+=	p5-Gtk2>=0:x11-toolkits/p5-Gtk2 \
 		wavegain:audio/wavegain
@@ -45,7 +48,7 @@ RUN_DEPENDS+=	cdparanoia:audio/cdparanoia
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,^PREFIX=.*,PREFIX=${PREFIX},; \
-		s,^MANDIR=.*,MANDIR=${MANPREFIX}/man,; \
+		s,^MANDIR=.*,MANDIR=${PREFIX}/share/man,; \
 		s,^BASE=.*,BASE=${DATADIR},' \
 		${WRKSRC}/Makefile
 	@${REINPLACE_CMD} -e 's,/usr/share/gnormalize,${DATADIR},' \

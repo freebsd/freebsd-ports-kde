@@ -1,5 +1,6 @@
 PORTNAME=	radare2
 DISTVERSION=	5.8.8
+PORTREVISION=	1
 PORTEVISION=	1
 CATEGORIES=	devel
 
@@ -10,7 +11,7 @@ WWW=		https://www.radare.org
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-NOT_FOR_ARCHS=	armv6 armv7 mips mips64 powerpcspe sparc64
+NOT_FOR_ARCHS=	armv6 armv7 mips mips64 powerpcspe
 NOT_FOR_ARCHS_REASON=	does not build: Unsupported BSD architecture
 
 LIB_DEPENDS=	libcapstone.so:devel/capstone
@@ -26,6 +27,7 @@ GH_SUBDIR=	libr/arch/p/arm/v35/arch-arm64:arm64 \
 		libr/arch/p/arm/v35/arch-armv7:armv7
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--with-syscapstone
 
 MAKE_ENV+=	HOST_CC=${CC}

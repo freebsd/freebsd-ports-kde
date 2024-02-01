@@ -1,6 +1,6 @@
 PORTNAME=	luakit
 DISTVERSION=	2.3.3
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www
 
@@ -10,9 +10,6 @@ WWW=		https://luakit.github.io
 
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING.GPLv3
-
-NOT_FOR_ARCHS=	sparc64
-NOT_FOR_ARCHS_REASON_sparc64=	Does not install on sparc64
 
 BUILD_DEPENDS=	help2man:misc/help2man \
 		${LUA_MODLIBDIR}/lfs.so:devel/luafilesystem@${LUA_FLAVOR}
@@ -28,6 +25,8 @@ USES=		compiler:c++11-lang desktop-file-utils gettext-runtime gmake \
 USE_GITHUB=	yes
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30
 
+MAKE_ARGS=     MANPREFIX=${PREFIX}/share/man
+
 OPTIONS_DEFINE=	DOCS LUAJIT
 LUAJIT_DESC=	Use the Just-In-Time compiler for lua
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
@@ -39,7 +38,7 @@ CONFLICTS_INSTALL=	luakit-devel
 post-extract:
 	@${REINPLACE_CMD} -e \
 		's|share/man|man| ; s|luakit/doc|doc/luakit| ; \
-		s|/etc/xdg|${PREFIX}/etc/xdg| ; /MANPREFIX */s|?=|=| ; \
+		s|/etc/xdg|${PREFIX}/etc/xdg| ; \
 		s|gnu99|gnu11| ; s|-ggdb||' \
 		${WRKSRC}/config.mk
 	@${REINPLACE_CMD} -e 's|bin/env lua|&${LUA_VER_STR}|' \

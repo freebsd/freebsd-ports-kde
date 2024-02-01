@@ -25,7 +25,6 @@ OPTIONS_SUB=		yes
 FFMPEG_LIB_DEPENDS=		libavcodec.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_ENABLE=	libav
 
-JACK_IMPLIES=		SAMPLERATE
 JACK_LIB_DEPENDS=	libjack.so:audio/jack
 JACK_CONFIGURE_ENABLE=	jack
 
@@ -35,8 +34,7 @@ PULSEAUDIO_CONFIGURE_ENABLE=	pulseaudio
 SAMPLERATE_LIB_DEPENDS=		libsamplerate.so:audio/libsamplerate
 SAMPLERATE_CONFIGURE_ENABLE=	samplerate
 
-SPEEX_LIB_DEPENDS=	libspeex.so:audio/speex \
-			libspeexdsp.so:audio/speexdsp
+SPEEX_LIB_DEPENDS=	libspeexdsp.so:audio/speexdsp
 SPEEX_CONFIGURE_ON=	--with-speex=lib
 SPEEX_CONFIGURE_OFF=	--without-speex
 

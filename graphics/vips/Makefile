@@ -1,11 +1,8 @@
 PORTNAME=	vips
-PORTVERSION=	8.15.0
-PORTREVISION=	1
+PORTVERSION=	8.15.1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://github.com/libvips/libvips/releases/download/v${PORTVERSION}/
-
-PATCH_SITES=	https://github.com/libvips/libvips/commit/
-PATCHFILES+=	83b155909eb8.patch:-p1 # https://github.com/libvips/libvips/pull/3774
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Free image processing system

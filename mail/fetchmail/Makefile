@@ -1,6 +1,6 @@
 PORTNAME?=	fetchmail
 DISTVERSION=	6.4.37
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	mail
 # The next line is inherited by the fetchmailconf dependent port,
 # do NOT replace fetchmail by ${PORTNAME}
@@ -23,6 +23,7 @@ IGNORE_SSL_REASON=	incompatible license/no GPLv2 clause 2b exception for LibreSS
 USE_RC_SUBR=	fetchmail
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 
 # the added PYTHON=: suppresses python builds,
 # see ../../mail/fetchmailconf/ for the configuration tool
@@ -91,7 +92,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/fetchmailrc.sample \
 		${STAGEDIR}${PREFIX}/etc/fetchmailrc.sample
 	${RM} ${STAGEDIR}${PREFIX}/bin/fetchmailconf
-	${RM} ${STAGEDIR}${PREFIX}/man/man1/fetchmailconf.1*
+	${RM} ${STAGEDIR}${PREFIX}/share/man/man1/fetchmailconf.1*
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
@@ -103,12 +104,6 @@ post-install-DOCS-on:
 
 .if (${OPSYS} == FreeBSD && ${OSVERSION} < 1400072) || ${OPSYS} != FreeBSD
 CONFIGURE_ARGS+=	--enable-opie
-.endif
-
-.if ${OPSYS} == FreeBSD && (${ARCH:Mpowerpc*} && ${OSREL:R} < 13)
-# as of 2019-10-02, powerpc's base compiler does not yield a working fetchmail.
-# https://svnweb.freebsd.org/ports?view=revision&revision=513614 -- pkubaj@
-USE_GCC=	yes
 .endif
 
 .include <bsd.port.post.mk>

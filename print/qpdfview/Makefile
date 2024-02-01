@@ -1,10 +1,11 @@
 PORTNAME=	qpdfview
 DISTVERSION=	0.5.0
+PORTREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/trunk/${DISTVERSION}/+download/
 DISTNAME=	${PORTNAME}-0.5
 
-MAINTAINER=	salvadore@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Tabbed DjVu/PDF/PS document viewer
 WWW=		https://launchpad.net/qpdfview
 
@@ -18,7 +19,6 @@ USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_QT=		concurrent core dbus gui imageformats linguisttools \
 		printsupport sql sql-sqlite3 svg widgets xml buildtools:build
-USE_CXXSTD=	c++17
 
 QMAKE_SOURCE_PATH=	${PORTNAME}.pro
 

@@ -1,5 +1,6 @@
 PORTNAME=	pcre2
 PORTVERSION=	10.42
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/PCRE2Project/${PORTNAME}/releases/download/${PORTNAME}-${PORTVERSION}/
 
@@ -16,6 +17,7 @@ CPE_VENDOR=	pcre
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--enable-pcre2-16 \
 		--enable-pcre2-32
 INSTALL_TARGET=	install-strip
@@ -36,7 +38,7 @@ READLINE_CONFIGURE_ENABLE=	pcre2test-libreadline
 
 .include <bsd.port.options.mk>
 
-.if ${ARCH} != "sparc64" && ${ARCH:Mmips64*} == "" && ${ARCH:Mriscv64*} == ""
+.if ${ARCH:Mmips64*} == "" && ${ARCH:Mriscv64*} == ""
 CONFIGURE_ARGS+=	--enable-jit
 .else
 CONFIGURE_ARGS+=	--disable-jit

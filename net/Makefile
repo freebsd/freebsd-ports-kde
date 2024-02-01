@@ -29,11 +29,11 @@
     SUBDIR += arping
     SUBDIR += arpoison
     SUBDIR += arprelease
+    SUBDIR += arrowdl
     SUBDIR += asio
     SUBDIR += aslookup
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
-    SUBDIR += asterisk16
     SUBDIR += asterisk18
     SUBDIR += astron
     SUBDIR += avahi
@@ -127,10 +127,8 @@
     SUBDIR += dico
     SUBDIR += dictd
     SUBDIR += dimes
-    SUBDIR += downzemall
     SUBDIR += dpdk
     SUBDIR += dpdk-20.11
-    SUBDIR += dpdk-22.11
     SUBDIR += dpinger
     SUBDIR += drawterm
     SUBDIR += drive
@@ -147,6 +145,7 @@
     SUBDIR += endlessh
     SUBDIR += enet
     SUBDIR += eternalterminal
+    SUBDIR += eturnal
     SUBDIR += evans
     SUBDIR += eventviews
     SUBDIR += exabgp4
@@ -167,6 +166,7 @@
     SUBDIR += freeradius-client
     SUBDIR += freeradius3
     SUBDIR += freerdp
+    SUBDIR += freerdp3
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
@@ -210,7 +210,6 @@
     SUBDIR += gorss
     SUBDIR += gost
     SUBDIR += gotthard
-    SUBDIR += gq
     SUBDIR += graphpath
     SUBDIR += grilo
     SUBDIR += grilo-plugins
@@ -244,6 +243,7 @@
     SUBDIR += haproxy25
     SUBDIR += haproxy26
     SUBDIR += haproxy27
+    SUBDIR += haproxy28
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -285,7 +285,6 @@
     SUBDIR += ipgrab
     SUBDIR += ipinfo-cli
     SUBDIR += ipsumdump
-    SUBDIR += ipsvd
     SUBDIR += ipxe
     SUBDIR += irrd
     SUBDIR += isboot-kmod
@@ -499,6 +498,7 @@
     SUBDIR += mvfst
     SUBDIR += nakenchat
     SUBDIR += nanomsg
+    SUBDIR += narrowlink
     SUBDIR += nast
     SUBDIR += nats-nkeys
     SUBDIR += nats-nsc
@@ -640,7 +640,6 @@
     SUBDIR += p5-MaxMind-DB-Common
     SUBDIR += p5-MaxMind-DB-Reader
     SUBDIR += p5-MaxMind-DB-Reader-XS
-    SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Mojo-RabbitMQ-Client
     SUBDIR += p5-Net
     SUBDIR += p5-Net-ACME2
@@ -991,9 +990,6 @@
     SUBDIR += pecl-smbclient
     SUBDIR += pecl-xmlrpc
     SUBDIR += pen
-    SUBDIR += php80-ldap
-    SUBDIR += php80-soap
-    SUBDIR += php80-sockets
     SUBDIR += php81-ldap
     SUBDIR += php81-soap
     SUBDIR += php81-sockets
@@ -1039,6 +1035,7 @@
     SUBDIR += py-avahi
     SUBDIR += py-blobfile
     SUBDIR += py-bonsai
+    SUBDIR += py-casttube
     SUBDIR += py-cepa
     SUBDIR += py-cjdns
     SUBDIR += py-cloudflare-scrape
@@ -1095,6 +1092,7 @@
     SUBDIR += py-pcapy-ng
     SUBDIR += py-port-for
     SUBDIR += py-portend
+    SUBDIR += py-pychromecast
     SUBDIR += py-pyenet
     SUBDIR += py-pyfixbuf
     SUBDIR += py-pygeoip
@@ -1191,7 +1189,6 @@
     SUBDIR += qt6-networkauth
     SUBDIR += quagga
     SUBDIR += quiche
-    SUBDIR += quiterss
     SUBDIR += quoted
     SUBDIR += rabbiteer
     SUBDIR += rabbitmq
@@ -1227,7 +1224,6 @@
     SUBDIR += rosenpass
     SUBDIR += rospo
     SUBDIR += routinator
-    SUBDIR += rp-pppoe
     SUBDIR += rpki-client
     SUBDIR += rscsi
     SUBDIR += rsplib
@@ -1433,6 +1429,7 @@
     SUBDIR += rude
     SUBDIR += rustdesk-server
     SUBDIR += ryu
+    SUBDIR += s3m
     SUBDIR += s5cmd
     SUBDIR += sacc
     SUBDIR += sakisafecli
@@ -1467,7 +1464,6 @@
     SUBDIR += sing-box
     SUBDIR += siproxd
     SUBDIR += sipsak
-    SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slackcat
     SUBDIR += slurm
@@ -1494,7 +1490,6 @@
     SUBDIR += spoofer
     SUBDIR += spread
     SUBDIR += spread-j
-    SUBDIR += spread4
     SUBDIR += sqtop
     SUBDIR += srelay
     SUBDIR += ss5
@@ -1546,7 +1541,6 @@
     SUBDIR += tdetect
     SUBDIR += termshark
     SUBDIR += tftpgrab
-    SUBDIR += thcrut
     SUBDIR += throttled
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
@@ -1584,7 +1578,6 @@
     SUBDIR += ulxmlrpcpp
     SUBDIR += unfs3
     SUBDIR += unison
-    SUBDIR += unison232
     SUBDIR += unison240
     SUBDIR += unison248
     SUBDIR += unison251
@@ -1624,9 +1617,7 @@
     SUBDIR += wifibox
     SUBDIR += wifibox-alpine
     SUBDIR += wifibox-core
-    SUBDIR += wireguard
     SUBDIR += wireguard-go
-    SUBDIR += wireguard-kmod
     SUBDIR += wireguard-tools
     SUBDIR += wireproxy
     SUBDIR += wireshark
@@ -1638,7 +1629,6 @@
     SUBDIR += wmping
     SUBDIR += wmwave
     SUBDIR += wmwifi
-    SUBDIR += wmwlmon
     SUBDIR += wol
     SUBDIR += wpa_supplicant_gui
     SUBDIR += wping

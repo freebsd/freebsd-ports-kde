@@ -1,6 +1,6 @@
 PORTNAME=	f-prot
 PORTVERSION=	6.5.1.5927
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.i-scream.org/pub/ftp.f-prot.com/pub/bsd/
 DISTNAME=	fp-FreeBSD-x86_32-ws-${PORTVERSION}
@@ -14,6 +14,9 @@ LICENSE=	f-prot-license
 LICENSE_NAME=	f-prot
 LICENSE_TEXT=	Free for personal users on personal workstations only
 LICENSE_PERMS=	auto-accept
+
+DEPRECATED=	F-Prot Antivirus reached end-of-life on July 31, 2021
+EXPIRATION_DATE=2024-02-29
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
@@ -40,9 +43,9 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/periodic/daily
 	${INSTALL_SCRIPT} ${WRKDIR}/900.fpupdate ${STAGEDIR}${PREFIX}/etc/periodic/daily
 
-	${INSTALL_MAN} ${WRKSRC}/doc/man/fpscan.1 ${STAGEDIR}${MANPREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man/f-prot.conf.5 ${STAGEDIR}${MANPREFIX}/man/man5
-	${INSTALL_MAN} ${WRKSRC}/doc/man/fpupdate.8 ${STAGEDIR}${MANPREFIX}/man/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/man/fpscan.1 ${STAGEDIR}${PREFIX}/share/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/man/f-prot.conf.5 ${STAGEDIR}${PREFIX}/share/man/man5
+	${INSTALL_MAN} ${WRKSRC}/doc/man/fpupdate.8 ${STAGEDIR}${PREFIX}/share/man/man8
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

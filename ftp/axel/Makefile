@@ -1,7 +1,6 @@
 PORTNAME=	axel
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.17.11-21
-DISTVERSIONSUFFIX=	-gd65dffa
+DISTVERSION=	2.17.12
 CATEGORIES=	ftp
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,11 +20,7 @@ GH_ACCOUNT=	axel-download-accelerator
 
 GNU_CONFIGURE=	yes
 
-.if exists(/usr/libdata/pkgconfig/openssl.pc)
 CONFIGURE_ARGS=	--with-ssl=openssl
-.else
-CONFIGURE_ARGS=	--without-ssl # no easy workaround
-.endif
 
 PLIST_FILES=	bin/axel \
 		man/man1/axel.1.gz

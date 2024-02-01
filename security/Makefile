@@ -55,6 +55,7 @@
     SUBDIR += bfbtester
     SUBDIR += binwalk
     SUBDIR += bitwarden-cli
+    SUBDIR += blst
     SUBDIR += boringssl
     SUBDIR += botan2
     SUBDIR += botan3
@@ -73,6 +74,7 @@
     SUBDIR += ccrypt
     SUBDIR += ccsrch
     SUBDIR += certmgr
+    SUBDIR += certspotter
     SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
@@ -497,6 +499,7 @@
     SUBDIR += p5-Bytes-Random-Secure
     SUBDIR += p5-Bytes-Random-Secure-Tiny
     SUBDIR += p5-CACertOrg-CA
+    SUBDIR += p5-CPAN-Audit
     SUBDIR += p5-CSP
     SUBDIR += p5-Cisco-Hash
     SUBDIR += p5-Crypt-Anubis
@@ -801,8 +804,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php80-filter
-    SUBDIR += php80-sodium
     SUBDIR += php81-filter
     SUBDIR += php81-sodium
     SUBDIR += php82-filter
@@ -1034,7 +1035,6 @@
     SUBDIR += py-secure
     SUBDIR += py-securesystemslib
     SUBDIR += py-service-identity
-    SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
@@ -1074,6 +1074,7 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
+    SUBDIR += rage-encryption
     SUBDIR += ratproxy
     SUBDIR += rats
     SUBDIR += rcracki_mt
@@ -1086,6 +1087,7 @@
     SUBDIR += rndpassw
     SUBDIR += rnp
     SUBDIR += rotate
+    SUBDIR += rpm-sequoia
     SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
@@ -1327,6 +1329,7 @@
     SUBDIR += tpm-quote-tools
     SUBDIR += tpm-tools
     SUBDIR += tpm2-abrmd
+    SUBDIR += tpm2-pkcs11
     SUBDIR += tpm2-tools
     SUBDIR += tpm2-tss
     SUBDIR += transcrypt

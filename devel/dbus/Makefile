@@ -1,6 +1,6 @@
 PORTNAME=	dbus
 DISTVERSION=	1.14.10
-PORTREVISION=	1
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	https://dbus.freedesktop.org/releases/dbus/
@@ -21,12 +21,14 @@ USE_RC_SUBR=	dbus
 SHEBANG_FILES=	tools/GetAllMatchRules.py
 
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--disable-apparmor \
 		--disable-doxygen-docs \
 		--disable-selinux \
 		--disable-systemd \
 		--with-session-socket-dir=/tmp \
 		--with-test-socket-dir=${WRKDIR}
+CONFIGURE_ENV=	have_ld_version_script=yes
 
 INSTALL_TARGET=	install-strip
 

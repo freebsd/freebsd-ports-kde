@@ -1,6 +1,6 @@
 PORTNAME?=		mysql
 PORTVERSION=		8.0.35
-PORTREVISION?=		0
+PORTREVISION?=		1
 CATEGORIES=		databases
 MASTER_SITES=		MYSQL/MySQL-8.0
 PKGNAMESUFFIX?=		80-server
@@ -198,14 +198,9 @@ USES+=		compiler:c++17-lang
 post-extract:
 	@${RM} -rv ${WRKSRC}/sql/sql_hints.yy.cc ${WRKSRC}/sql/sql_hints.yy.h
 
-# This can be removed after FreeBSD 12.4 and 13.1 EoL
-.if defined(CLIENT_ONLY) && !exists(${OPENSSLBASE}/libdata/pkgconfig/openssl.pc)
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-scripts_CMakeLists.txt
-.endif
-
 # XXX MBi alignment issue
 .if ${ARCH} == i386
-EXTRA_PATCHES+=	files/extra-patch-boost-boost_1_77_0-boost-move-detail-type_traits.hpp
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-boost-boost_1_77_0-boost-move-detail-type_traits.hpp
 .endif
 
 .if !defined(CLIENT_ONLY)

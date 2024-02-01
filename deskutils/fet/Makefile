@@ -1,5 +1,6 @@
 PORTNAME=	fet
-DISTVERSION=	6.14.0
+DISTVERSION=	6.15.0
+PORTREVISION=	1
 CATEGORIES=	deskutils education
 MASTER_SITES=	https://lalescu.ro/liviu/fet/download/ \
 		https://lalescu.ro/liviu/fet/download/old/ \
@@ -7,7 +8,7 @@ MASTER_SITES=	https://lalescu.ro/liviu/fet/download/ \
 		https://timetabling.de/download/old/
 PKGNAMESUFFIX=	-${FLAVOR}
 
-MAINTAINER=	uzsolt@uzsolt.hu
+MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Free timetabling software
 WWW=		https://lalescu.ro/liviu/fet/
 
@@ -44,7 +45,7 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fet ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/fet-cl ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/fet*.gz ${STAGEDIR}${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/fet*.gz ${STAGEDIR}${PREFIX}/share/man/man1
 
 do-install-EXAMPLES-on:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}

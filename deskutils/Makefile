@@ -99,6 +99,7 @@
     SUBDIR += gnome-utils
     SUBDIR += gnome-weather
     SUBDIR += gnote
+    SUBDIR += gnotime
     SUBDIR += gnustep-wrapper
     SUBDIR += go-for-it
     SUBDIR += goesimage
@@ -189,6 +190,7 @@
     SUBDIR += nanonote
     SUBDIR += nautilus-sendto
     SUBDIR += nextcloudclient
+    SUBDIR += normcap
     SUBDIR += note
     SUBDIR += notekit
     SUBDIR += notes

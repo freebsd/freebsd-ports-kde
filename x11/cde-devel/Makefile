@@ -12,8 +12,8 @@ WWW=		https://sourceforge.net/p/cdesktopenv/wiki/Home/
 USE_GITHUB=	yes
 GH_ACCOUNT=	cschuber
 GH_PROJECT=	cdesktopenv-code
-GH_TAGNAME=	e97d56562
-COMMIT_DATE=	2023.10.18
+GH_TAGNAME=	76812a911
+COMMIT_DATE=	2023.12.01
 
 LICENSE=	LGPL21
 
@@ -58,7 +58,8 @@ USE_XORG=	ice sm x11 xau xdmcp xext xinerama xmu xscrnsaver xt
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_PREFIX=	${DT_PREFIX}
-MANPREFIX=	${DT_PREFIX}/share
+GNU_CONFIGURE_MANPREFIX=	${DT_PREFIX}/share
+MANDIRS=	${DT_PREFIX}/share/man
 INFODIR=	${DT_PREFIX}/share/info
 CONFIGURE_ARGS=	--with-tcl=${LOCALBASE}/lib/tcl8.6 MAKE="gmake"
 MAKE_ARGS+=	PERL=${PERL} "LOCAL_LDFLAGS=${LDFLAGS}"

@@ -1,6 +1,6 @@
 PORTNAME=	hugo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.120.3
+DISTVERSION=	0.121.2
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
@@ -61,7 +61,7 @@ do-build-MANPAGES-on:
 
 do-install-MANPAGES-on:
 .for i in ${PORTMANS}
-	${INSTALL_MAN} ${WRKSRC}/man/man1/$i ${STAGEDIR}/${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/$i ${STAGEDIR}/${PREFIX}/share/man/man1
 .endfor
 
 .include <bsd.port.post.mk>

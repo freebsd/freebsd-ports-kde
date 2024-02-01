@@ -3,7 +3,6 @@
     SUBDIR += Bento4
     SUBDIR += ab-av1
     SUBDIR += ab25
-    SUBDIR += acidrip
     SUBDIR += aegisub
     SUBDIR += alass
     SUBDIR += aom
@@ -24,7 +23,6 @@
     SUBDIR += bino
     SUBDIR += bitstream
     SUBDIR += blind
-    SUBDIR += bsdbktr_tvtune
     SUBDIR += butt
     SUBDIR += camserv
     SUBDIR += celluloid
@@ -69,12 +67,10 @@
     SUBDIR += flvstreamer
     SUBDIR += flvtool++
     SUBDIR += fswebcam
-    SUBDIR += fxtv
     SUBDIR += gaupol
     SUBDIR += gavl
     SUBDIR += gdialog
     SUBDIR += get_iplayer
-    SUBDIR += gmerlin
     SUBDIR += gmmlib
     SUBDIR += gmp-api
     SUBDIR += gmtk
@@ -193,7 +189,6 @@
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
-    SUBDIR += libva-glx
     SUBDIR += libva-intel-driver
     SUBDIR += libva-intel-hybrid-driver
     SUBDIR += libva-intel-media-driver
@@ -241,6 +236,7 @@
     SUBDIR += mpv
     SUBDIR += mpv-mpris
     SUBDIR += mpvpaper
+    SUBDIR += mpvqt
     SUBDIR += msdl
     SUBDIR += msopenh264
     SUBDIR += mswebrtc
@@ -265,7 +261,6 @@
     SUBDIR += ogmrip
     SUBDIR += ogmtools
     SUBDIR += olive
-    SUBDIR += omxplayer
     SUBDIR += onevpl
     SUBDIR += openh264
     SUBDIR += openshot
@@ -282,7 +277,6 @@
     SUBDIR += peek
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
-    SUBDIR += phonon-gstreamer
     SUBDIR += phonon-vlc
     SUBDIR += photofilmstrip
     SUBDIR += pipe-viewer
@@ -295,7 +289,6 @@
     SUBDIR += plexmediaserver-plexpass
     SUBDIR += podcastdl
     SUBDIR += poe
-    SUBDIR += ppm2fli
     SUBDIR += projectx
     SUBDIR += ptx-kmod
     SUBDIR += pwcbsd
@@ -317,6 +310,7 @@
     SUBDIR += py-pretty_midi
     SUBDIR += py-pymediainfo
     SUBDIR += py-pysubs2
+    SUBDIR += py-python-mpv
     SUBDIR += py-soco
     SUBDIR += py-srt
     SUBDIR += py-subliminal
@@ -353,7 +347,6 @@
     SUBDIR += smplayer
     SUBDIR += smplayer-skins
     SUBDIR += smplayer-themes
-    SUBDIR += smtube
     SUBDIR += snapcast
     SUBDIR += spook
     SUBDIR += streamlink

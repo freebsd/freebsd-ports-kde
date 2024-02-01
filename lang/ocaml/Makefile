@@ -2,6 +2,7 @@
 
 PORTNAME=	ocaml
 PORTVERSION=	4.08.1
+PORTREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/${DISTNAME:R}/ GENTOO \
 		http://caml.inria.fr/pub/distrib/${DISTNAME:R}/:docs
@@ -20,7 +21,6 @@ LICENSE_FILE_QPL10=	${WRKSRC}/LICENSE
 LICENSE_PERMS_QPL10=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BROKEN_riscv64=		fails to build: hasgot.c:3:12: use of undeclared identifier 'secure_getenv'
-BROKEN_sparc64=	No rule to make target 'none.o', needed by 'libasmrun.a'
 BROKEN_mips64=	No ASM support
 BROKEN_mips=	No ASM support
 
@@ -31,6 +31,7 @@ USES=		cpe compiler:c11 gmake shebangfix tar:xz
 USE_LDCONFIG=	yes
 CPE_VENDOR=	inria
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 ALL_TARGET=	world.opt
 STRIP=
 PIE_UNSAFE=	yes
@@ -94,10 +95,6 @@ CONFIGURE_ENV+=		AS="${AS} ${ASFLAGS}" \
 PLIST_SUB+=	PROF="@comment "
 .else
 PLIST_SUB+=	PROF=""
-.endif
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv2
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-asmcomp_power_arch.ml
 .endif
 
 post-patch:

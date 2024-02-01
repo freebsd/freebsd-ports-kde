@@ -1,5 +1,5 @@
 PORTNAME=	data.table
-DISTVERSION=	1.14.10
+DISTVERSION=	1.15.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -18,10 +18,6 @@ OPTIONS_DEFINE=		OPENMP
 OPTIONS_DEFAULT=	OPENMP
 
 OPENMP_CONFIGURE_ENABLE=	openmp
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-USE_GCC=	yes
-.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/R/library/data.table/libs/data_table.so

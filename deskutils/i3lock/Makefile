@@ -1,6 +1,6 @@
 PORTNAME=	i3lock
 PORTVERSION=	2.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils x11
 MASTER_SITES=	http://i3wm.org/${PORTNAME}/
 
@@ -22,12 +22,8 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 
 RUN_DEPENDS=	unix-selfauth-helper>0:security/unix-selfauth-helper
 
-MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
-		X11INC="${LOCALBASE}/include" CC="${CC}" \
-		MANDIR="${MANPREFIX}/man"
-
 PLIST_FILES=	bin/i3lock \
-		man/man1/i3lock.1.gz \
+		share/man/man1/i3lock.1.gz \
 		etc/pam.d/i3lock
 
 USES=		gmake iconv localbase pkgconfig tar:bzip2 xorg
@@ -35,6 +31,7 @@ LDFLAGS+=	${ICONV_LIB}
 USE_XORG=	x11 xcb xt xorgproto xext
 USE_CSTD=	c99
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 
 CONFLICTS_INSTALL=	i3lock-color
 

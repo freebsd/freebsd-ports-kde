@@ -1,5 +1,6 @@
 PORTNAME=	sssd
 PORTVERSION=	2.9.2
+PORTREVISION=	1
 CATEGORIES=	security
 PKGNAMESUFFIX=	-devel
 
@@ -56,13 +57,8 @@ LIB_DEPENDS=	libcares.so:dns/c-ares \
 RUN_DEPENDS=	cyrus-sasl-gssapi>0:security/cyrus-sasl2-gssapi \
 		sudo>0:security/sudo
 
-.include <bsd.port.options.mk>
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1300076
-IGNORE=SSSD is only supported on FreeBSD 13.1 and above
-.endif
-
 USES=	autoreconf cpe gettext gmake gssapi:bootstrap,flags,mit iconv ldap \
-	libtool pathfix pkgconfig python:3.9+ shebangfix ssl
+	libtool localbase:ldflags pathfix pkgconfig python:3.9+ shebangfix ssl
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -105,8 +101,6 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-gpo-cache-path=/var/db/sss/gpo_cache  \
 		--without-semanage \
 		--with-app-libs=${LOCALBASE}/lib/sssd/modules \
-		--with-sudo \
-		--with-sudo-lib-path=${LOCALBASE}/lib \
 		--without-autofs \
 		--with-files-provider \
 		--with-passkey \
@@ -127,7 +121,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-unicode-lib=libunistring
 
 CFLAGS+=	-fstack-protector-all
-CFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/samba4
+CFLAGS+=	-I${LOCALBASE}/include/samba4
 
 LIBS+=	-L${LOCALBASE}/lib \
 	-L${LOCALBASE}/lib/samba4/private \
@@ -142,7 +136,6 @@ KRB5_LIBS=	-L${LOCALBASE}/lib -lkrb5
 LDFLAGS+=       -lgssapi
 LDFLAGS_SL+=    -lgssapi
 
-LDFLAGS+=       -L${LOCALBASE}/lib
 INCLUDES+=      -I${LOCALBASE}/include
 CONFIGURE_ENV+= INCLUDES="${INCLUDES}" \
 		LDFLAGS_SL="${LDFLAGS_SL}"

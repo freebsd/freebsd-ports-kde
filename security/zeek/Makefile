@@ -1,5 +1,5 @@
 PORTNAME=	zeek
-DISTVERSION=	6.0.2
+DISTVERSION=	6.0.3
 CATEGORIES=	security
 MASTER_SITES=	https://download.zeek.org/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -9,8 +9,6 @@ COMMENT=	System for detecting network intruders in real-time
 WWW=		https://www.zeek.org/
 
 LICENSE=	CC-BY-4.0
-
-BROKEN_FreeBSD_12_powerpc64=	does not build: error: zero-size array 'names'
 
 BUILD_DEPENDS=	bison>=3.3:devel/bison \
 		flex>=2.6:textproc/flex \
@@ -44,7 +42,6 @@ CMAKE_ARGS=	-DCARES_ROOT_DIR:PATH=${PREFIX} \
 		-DINSTALL_ZKG:BOOL=OFF \
 		-DPY_MOD_INSTALL_DIR:PATH=${PREFIX}/lib/zeekctl \
 		-DZEEK_ETC_INSTALL_DIR:PATH=${PREFIX}/etc \
-		-DZEEK_MAN_INSTALL_PATH=${MANPREFIX}/man \
 		-DZEEK_ROOT_DIR:PATH=${PREFIX} \
 		-DZEEK_SCRIPT_INSTALL_PATH:PATH=${PREFIX}/share/zeek
 

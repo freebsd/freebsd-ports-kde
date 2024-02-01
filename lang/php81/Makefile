@@ -1,6 +1,6 @@
 PORTNAME=	php81
 DISTVERSION=	8.1.27
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${DISTVERSION}
@@ -10,6 +10,9 @@ COMMENT=	PHP Scripting Language (8.1.X branch)
 WWW=		https://www.php.net/
 
 LICENSE=	PHP301
+
+DEPRECATED=	Upstream EOL reaches on 2024-11-25
+EXPIRATION_DATE=	2024-11-26
 
 USES+=		compiler:c11 cpe gnome localbase pkgconfig tar:xz
 CPE_PRODUCT=	php
@@ -22,6 +25,7 @@ LIB_DEPENDS=	libargon2.so:security/libargon2 \
 		libpcre2-8.so:devel/pcre2
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS+=	--disable-all \
 			--program-prefix="" \
 			--with-config-file-scan-dir=${PREFIX}/etc/php \
@@ -49,10 +53,7 @@ OPTIONS_EXCLUDE_armv7=	DTRACE
 # Bug 197128:  No ASM code for MIPS/MIPS64, disable FPM
 OPTIONS_EXCLUDE_mips=	DTRACE FPM
 OPTIONS_EXCLUDE_mips64=	DTRACE FPM
-OPTIONS_EXCLUDE_powerpc64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_powerpc64_12=	DTRACE
 OPTIONS_EXCLUDE_riscv64=	DTRACE
-OPTIONS_EXCLUDE_sparc64=	DTRACE
 NO_OPTIONS_SORT=	yes
 OPTIONS_SUB=			yes
 
@@ -178,7 +179,7 @@ COMMENT=	The ${PHP_MODNAME} shared extension for php
 USES+=		php:ext,noflavors
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_VER=	81
-IGNORE_WITH_PHP=	80 82 83
+IGNORE_WITH_PHP=	82 83
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}

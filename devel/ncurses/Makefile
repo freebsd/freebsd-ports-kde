@@ -1,5 +1,6 @@
 PORTNAME=	ncurses
 DISTVERSION=	6.4
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.invisible-island.net/${PORTNAME}/ \
 		https://invisible-mirror.net/archives/ncurses/
@@ -12,8 +13,6 @@ WWW=		https://invisible-island.net/ncurses/
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_sparc64=	cannot build: coredump: illegal instruction
-
 USES=		cpe pkgconfig shebangfix
 CPE_VENDOR=	gnu
 USE_LDCONFIG=	yes
@@ -21,6 +20,7 @@ USE_LDCONFIG=	yes
 SHEBANG_FILES=	test/tracemunch
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=		--datadir=${PREFIX}/share \
 			--with-terminfo-dirs="${PREFIX}/share/terminfo:${LOCALBASE}/share/site-terminfo" \
 			--disable-home-terminfo \

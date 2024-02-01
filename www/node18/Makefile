@@ -1,8 +1,7 @@
 PORTNAME=	node
 PORTVERSION=	${NODEJS_PORTVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nodejs.org/dist/v${PORTVERSION}/
 PKGNAMESUFFIX=	18
@@ -31,6 +30,7 @@ LIB_DEPENDS=	libbrotlidec.so:archivers/brotli \
 
 USES=		compiler:c++11-lib gmake localbase pkgconfig python:build shebangfix tar:xz
 
+GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
 CONFIGURE_ARGS=	--prefix=${PREFIX:S|^${DESTDIR}||} \
 		--shared-brotli \
 		--shared-cares \
@@ -70,10 +70,6 @@ NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
 
 .if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 160 && (${ARCH} == aarch64 || ${ARCH} == armv7 || ${ARCH:Mpowerpc64*})
 CXXFLAGS+=	-Wno-error=enum-constexpr-conversion
-.endif
-
-.if (defined(PPC_ABI) && ${PPC_ABI} == ELFv2) || ${ARCH} == powerpc64le
-EXTRA_PATCHES=	${PATCHDIR}/extra-patch-common.gypi
 .endif
 
 .if ${PORT_OPTIONS:MBUNDLED_SSL} && ${ARCH} != amd64

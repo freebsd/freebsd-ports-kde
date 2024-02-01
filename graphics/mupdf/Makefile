@@ -1,11 +1,11 @@
 PORTNAME=	mupdf
-DISTVERSION=	1.23.6
+DISTVERSION=	1.23.9
 DISTVERSIONSUFFIX=	-source
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.mupdf.com/downloads/archive/
 
-MAINTAINER=	uzsolt@uzsolt.hu
+MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Lightweight PDF viewer and toolkit
 WWW=		https://www.mupdf.com/
 

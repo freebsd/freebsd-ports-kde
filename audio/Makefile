@@ -53,7 +53,6 @@
     SUBDIR += bamp-lv2
     SUBDIR += bangr-lv2
     SUBDIR += baresip
-    SUBDIR += baudline
     SUBDIR += bcg729
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
@@ -398,6 +397,7 @@
     SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libspecbleach
+    SUBDIR += libvgm
     SUBDIR += libvorbis
     SUBDIR += libxmp
     SUBDIR += lilv
@@ -480,14 +480,12 @@
     SUBDIR += mp3ck
     SUBDIR += mp3gain
     SUBDIR += mp3guessenc
-    SUBDIR += mp3info
     SUBDIR += mp3lint
     SUBDIR += mp3mover
     SUBDIR += mp3plot
     SUBDIR += mp3rename
     SUBDIR += mp3riot
     SUBDIR += mp3splt
-    SUBDIR += mp3splt-gtk
     SUBDIR += mp3stat
     SUBDIR += mp3unicode
     SUBDIR += mp3val
@@ -501,6 +499,7 @@
     SUBDIR += mps
     SUBDIR += mpz
     SUBDIR += mumble
+    SUBDIR += mumble-server
     SUBDIR += murmur
     SUBDIR += murmur-cli
     SUBDIR += muse-sequencer
@@ -764,9 +763,6 @@
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
-    SUBDIR += sphinx
-    SUBDIR += sphinx3
-    SUBDIR += sphinxbase
     SUBDIR += spiralloops
     SUBDIR += spiralsynth
     SUBDIR += spiralsynthmodular
@@ -780,7 +776,6 @@
     SUBDIR += ssr-lv2
     SUBDIR += stegosaurus-lv2
     SUBDIR += stk
-    SUBDIR += stmp
     SUBDIR += stone-phaser-lv2
     SUBDIR += strawberry
     SUBDIR += streamripper
@@ -828,7 +823,6 @@
     SUBDIR += tse3
     SUBDIR += tta
     SUBDIR += tuner
-    SUBDIR += tuneradio
     SUBDIR += twolame
     SUBDIR += uade
     SUBDIR += umix
@@ -883,7 +877,6 @@
     SUBDIR += xmixer
     SUBDIR += xmmix
     SUBDIR += xmp
-    SUBDIR += xmradio
     SUBDIR += xoscope
     SUBDIR += xsynth-dssi
     SUBDIR += xuidesigner

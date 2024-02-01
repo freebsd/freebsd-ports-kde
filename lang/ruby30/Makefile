@@ -37,6 +37,7 @@ CONFIGURE_ARGS=	${RUBY_CONFIGURE_ARGS} \
 		--with-vendordir="${PREFIX}/lib/ruby/vendor_ruby"
 CONFIGURE_ENV=	debugflags=
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 # Keep this, else ruby will fail to load libraries dependent of libpthread.
 LIBS+=		-lpthread
 USE_LDCONFIG=	yes
@@ -97,10 +98,6 @@ _SUF2=	,${PORTEPOCH}
 # keep in sync with all platforms where libunwind is available
 .if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH} == powerpc64 || ${ARCH} == powerpc64le
 LIB_DEPENDS+=	libunwind.so:devel/libunwind
-.endif
-
-.if defined(PPC_ABI) && ${PPC_ABI} == ELFv1
-USE_GCC=	yes
 .endif
 
 .if ${ARCH} == armv6 || ${ARCH} == armv7 || ${ARCH} == powerpc
@@ -178,7 +175,7 @@ post-install:
 # Link "ruby.1.gz" to "ruby30.1.gz", etc.
 #
 . for FILE in ${INSTALLED_MANUALS}
-	${LN} -fs ${FILE}${RUBY_SUFFIX}.1.gz ${STAGEDIR}${MANPREFIX}/man/man1/${FILE}.1.gz
+	${LN} -fs ${FILE}${RUBY_SUFFIX}.1.gz ${STAGEDIR}${PREFIX}/share/man/man1/${FILE}.1.gz
 . endfor
 .endif
 

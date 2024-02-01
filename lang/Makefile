@@ -6,6 +6,7 @@
     SUBDIR += angelscript
     SUBDIR += antimony
     SUBDIR += apache-commons-jelly
+    SUBDIR += asm-lsp
     SUBDIR += asn1c
     SUBDIR += atlast
     SUBDIR += awka
@@ -43,6 +44,7 @@
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
+    SUBDIR += dotnet
     SUBDIR += duktape
     SUBDIR += duktape-lib
     SUBDIR += ecl
@@ -94,7 +96,6 @@
     SUBDIR += gcc14-devel
     SUBDIR += gcc48
     SUBDIR += gcc6-aux
-    SUBDIR += gcc8
     SUBDIR += gcc9
     SUBDIR += gforth
     SUBDIR += ghc
@@ -103,6 +104,7 @@
     SUBDIR += gir-to-d
     SUBDIR += gjs
     SUBDIR += gleam
+    SUBDIR += gluon
     SUBDIR += gnat12
     SUBDIR += gnatcross-binutils-aarch64
     SUBDIR += gnatcross-sysroot-aarch64
@@ -135,6 +137,7 @@
     SUBDIR += hla
     SUBDIR += hs-brainfuck
     SUBDIR += hs-futhark
+    SUBDIR += hs-koka
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += icc
@@ -205,6 +208,7 @@
     SUBDIR += nawk
     SUBDIR += nbfc
     SUBDIR += neko
+    SUBDIR += neocmakelsp
     SUBDIR += nesasm
     SUBDIR += newlisp
     SUBDIR += nhc98
@@ -266,8 +270,6 @@
     SUBDIR += pfe
     SUBDIR += pharo
     SUBDIR += php-mode.el
-    SUBDIR += php80
-    SUBDIR += php80-extensions
     SUBDIR += php81
     SUBDIR += php81-extensions
     SUBDIR += php82
@@ -324,6 +326,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification
@@ -367,6 +370,7 @@
     SUBDIR += tolua++
     SUBDIR += tuareg-mode.el
     SUBDIR += twelf
+    SUBDIR += typstfmt
     SUBDIR += ucc
     SUBDIR += urweb
     SUBDIR += v
@@ -380,5 +384,6 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
+    SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>

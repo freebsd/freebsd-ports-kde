@@ -1,6 +1,6 @@
 PORTNAME=	pstoedit
 DISTVERSION=	4.00
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics print
 MASTER_SITES=	SF
 
@@ -17,6 +17,7 @@ LIB_DEPENDS=	libgd.so:graphics/gd \
 USES=		ghostscript gmake libtool localbase pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
 CONFIGURE_ARGS=	--enable-docs=no
 MAKE_ENV=	INSTALL_STRIP_FLAG="${STRIP}"
 CPPFLAGS+=	-isystem ${LOCALBASE}/include/ming
@@ -54,7 +55,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' ${WRKSRC}/src/Makefile.in
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${STAGEDIR}${PREFIX}/man/man1/
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

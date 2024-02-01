@@ -22,7 +22,7 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
-QT5_VERSION?=		5.15.11
+QT5_VERSION?=		5.15.12
 QT6_VERSION?=		6.7.0-beta1
 PYSIDE6_VERSION?=	6.6.1
 
@@ -163,11 +163,8 @@ _USE_QT5_ONLY=		assistant buildtools concurrent core dbus \
 			qdbus qdbusviewer qdoc qdoc-data qev qmake quickcontrols \
 			quickcontrols2 script scripttools sql sql-mysql sql-odbc \
 			sql-pgsql sql-sqlite2 sql-sqlite3 sql-tds testlib uiplugin \
-			uitools webglplugin webkit websockets-qml \
+			uitools webglplugin websockets-qml \
 			widgets x11extras xml xmlpatterns
-.  if ${ARCH} == amd64 || ${ARCH} == i386
-_USE_QT5_ONLY+=		sql-ibase
-.  endif
 
 _USE_QT6_ONLY=		5compat base coap graphs httpserver languageserver lottie pdf positioning \
 			quick3dphysics quickeffectmaker shadertools tools translations \
@@ -369,7 +366,7 @@ qt-sql-pgsql_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsqlpsql.so
 
 qt-sql-sqlite3_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsqlite.so
 
-.  for db in ibase mysql odbc pgsql sqlite2 sqlite3 tds
+.  for db in mysql odbc pgsql sqlite2 sqlite3 tds
 qt-sql-${db}_PORT=	databases/${_QT_RELNAME}-sqldrivers-${db}
 qt-sql-${db}_PATH?=	${LOCALBASE}/${QT_PLUGINDIR_REL}/sqldrivers/libqsql${db:C/^sql//}.so
 .  endfor
@@ -417,9 +414,6 @@ qt-websockets_LIB=	libQt${_QT_LIBVER}WebSockets.so
 
 qt-websockets-qml_PORT=	www/${_QT_RELNAME}-websockets-qml
 qt-websockets-qml_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtWebSockets/qmldir
-
-qt-webkit_PORT=		www/${_QT_RELNAME}-webkit
-qt-webkit_LIB=		libQt${_QT_LIBVER}WebKit.so
 
 qt-webview_PORT=	www/${_QT_RELNAME}-webview
 qt-webview_LIB=		libQt${_QT_LIBVER}WebView.so

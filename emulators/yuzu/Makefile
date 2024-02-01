@@ -1,5 +1,5 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20231220
+PORTVERSION=	s20240131
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -28,7 +28,8 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		simpleini>0:devel/simpleini \
 		xbyak>0:devel/xbyak \
 		glslangValidator:graphics/glslang \
-		vulkan-headers>0:graphics/vulkan-headers
+		vulkan-headers>0:graphics/vulkan-headers \
+		vulkan-utility-libraries>0:graphics/vulkan-utility-libraries
 LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libzstd.so:archivers/zstd \
 		libopus.so:audio/opus \
@@ -46,18 +47,18 @@ qt6_OPTIONS_EXCLUDE=	QT5
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	bedc758fe7
+GH_TAGNAME=	7cc7d027f7
 GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
 		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
 		GPUOpen-LibrariesAndSDKs:VulkanMemoryAllocator:v3.0.1-114-g2f382df:VulkanMemoryAllocator/externals/VulkanMemoryAllocator \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		merryhime:dynarmic:6.5.0-11-g0df09e2f:dynarmic/externals/dynarmic \
-		merryhime:oaknut:1.2.1-18-g918bd94:oaknut/externals/oaknut \
+		merryhime:dynarmic:6.6.1:dynarmic/externals/dynarmic \
+		merryhime:oaknut:2.0.1:oaknut/externals/oaknut \
 		arun11299:cpp-jwt:v1.4-18-g10ef573:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
 		eggert:tz:2022g-11-g16ce126a:tz/externals/nx_tzdb/tzdb_to_nx/externals/tz/tz \
 		kinetiknz:cubeb:cubeb-0.2-1452-g48689ae:cubeb/externals/cubeb \
-		lat9nq:tzdb_to_nx:221202-4-gf668009:tzdb_to_nx/externals/nx_tzdb/tzdb_to_nx \
+		lat9nq:tzdb_to_nx:221202-6-g404d390:tzdb_to_nx/externals/nx_tzdb/tzdb_to_nx \
 		yhirose:cpp-httplib:v0.14.1:cpp_httplib/externals/cpp-httplib
 
 USES=		cmake:testing elfctl localbase:ldflags pkgconfig sdl ssl
@@ -65,7 +66,8 @@ USE_SDL=	sdl2
 CMAKE_ON=	Boost_USE_STATIC_LIBS
 CMAKE_ON+=	BUNDLE_SPEEX # only used by cubeb tests
 CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_LLVM # only need Demangle but llvm* is huge
-CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2 YUZU_USE_EXTERNAL_VULKAN_HEADERS
+CMAKE_OFF=	YUZU_CHECK_SUBMODULES YUZU_USE_EXTERNAL_SDL2
+CMAKE_OFF+=	YUZU_USE_EXTERNAL_VULKAN_HEADERS YUZU_USE_EXTERNAL_VULKAN_UTILITY_LIBRARIES
 CMAKE_OFF+=	HTTPLIB_USE_BROTLI_IF_AVAILABLE # unused by ENABLE_WEB_SERVICE
 CMAKE_OFF+=	${ARCH:Maarch64:C/.+/YUZU_USE_PRECOMPILED_HEADERS DYNARMIC_USE_PRECOMPILED_HEADERS/}
 CMAKE_OFF+=	${CMAKE_TESTING_ON}

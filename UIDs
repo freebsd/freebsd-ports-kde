@@ -274,9 +274,9 @@ dkfilter:*:325:325::0:0:DK Filter Owner:/nonexistent:/usr/sbin/nologin
 smfs:*:326:326::0:0:SMFSAV Owner:/nonexistent:/usr/sbin/nologin
 _reticulum:*:327:327::0:0:Reticulum Daemon:/nonexistent:/usr/sbin/nologin
 galene:*:328:328::0:0:Galene Visioconference server:/nonexistent:/usr/sbin/nologin
-# free: 329
+certspotter:*:329:329::0:0:Cert Spotter user:/nonexistent:/usr/sbin/nologin
 orthanc:*:330:330::0:0:Orthanc Daemon:/nonexistent:/usr/sbin/nologin
-# free: 331
+svxlink:*:331:331::0:0:svxlink server:/nonexistent:/usr/sbin/nologin
 # free: 332
 honeytrap:*:333:333::0:0:HoneyTrap Daemon:/nonexistent:/usr/sbin/nologin
 # free: 334
@@ -284,7 +284,7 @@ honeytrap:*:333:333::0:0:HoneyTrap Daemon:/nonexistent:/usr/sbin/nologin
 _pma:*:336:80::0:0:phpMyAdmin Owner:/nonexistent:/usr/sbin/nologin
 daapd:*:337:337::0:0:daapd User:/nonexistent:/usr/sbin/nologin
 murmur:*:338:338::0:0:& User:/nonexistent:/usr/sbin/nologin
-# free: 339
+mumble-server:*:339:339::0:0:& User:/nonexistent:/usr/sbin/nologin
 wildfire:*:340:340::0:0:Wildfire Daemon:/nonexistent:/usr/sbin/nologin
 stunnel:*:341:341::0:0:Stunnel Daemon:/nonexistent:/usr/sbin/nologin
 openfire:*:342:342::0:0:Openfire IM Daemon:/nonexistent:/usr/sbin/nologin
@@ -292,7 +292,7 @@ openfire:*:342:342::0:0:Openfire IM Daemon:/nonexistent:/usr/sbin/nologin
 # free: 344
 # free: 345
 # free: 346
-# free: 347
+eturnal:*:347:347::0:0:eturnal User:/var/spool/eturnal:/bin/sh
 # free: 348
 # free: 349
 _sabnzbd:*:350:350::0:0:sabnzb Daemon:/nonexistent:/usr/sbin/nologin
@@ -813,7 +813,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 864
 # free: 865
 # free: 866
-# free: 867
+sqlpage:*:867:867::0:0:SQLPage:/nonexistent:/usr/sbin/nologin
 jellyfin:*:868:868::0:0:Jellyfin:/nonexistent:/usr/sbin/nologin
 keyd:*:869:869::0:0:Key remapping daemon for evdev:/nonexistent:/usr/sbin/nologin
 buildbot:*:870:870::0:0:Buildbot user:/var/db/buildbot:/usr/sbin/nologin

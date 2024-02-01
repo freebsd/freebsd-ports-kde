@@ -1,5 +1,5 @@
 PORTNAME=	maxminddb
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net python geography
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,5 +20,7 @@ GH_ACCOUNT=	maxmind
 GH_PROJECT=	MaxMind-DB-Reader-python
 
 USE_PYTHON=	autoplist distutils
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

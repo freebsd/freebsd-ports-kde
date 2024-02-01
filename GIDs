@@ -269,9 +269,9 @@ dkfilter:*:325:
 smfs:*:326:
 _reticulum:*:327:
 galene:*:328:
-# free: 329
+certspotter:*:329:
 orthanc:*:330:
-# free: 331
+svxlink:*:331:
 # free: 332
 # free: 333
 honeytrap:*:333:
@@ -279,7 +279,7 @@ honeytrap:*:333:
 # free: 336
 daapd:*:337:
 murmur:*:338:
-# free: 339
+mumble-server:*:339:
 wildfire:*:340:
 stunnel:*:341:
 openfire:*:342:
@@ -287,7 +287,7 @@ openfire:*:342:
 # free: 344
 # free: 345
 # free: 346
-# free: 347
+eturnal:*:347:
 # free: 348
 # free: 349
 _sabnzbd:*:350:
@@ -808,7 +808,7 @@ plocate:*:860:
 # free: 864
 # free: 865
 # free: 866
-# free: 867
+sqlpage:*:867:
 jellyfin:*:868:
 keyd:*:869:
 buildbot:*:870:
