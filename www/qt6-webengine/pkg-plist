@@ -1,7 +1,7 @@
-%%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qtwebenginecore-config_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qtwebenginecoreglobal_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginecontextmenurequest_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginecookiestore_p.h
+%%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginedesktopmediarequest_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginedownloadrequest_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineglobalsettings_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginehistory_p.h
@@ -17,6 +17,7 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineClientCertificateStore
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineContextMenuRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineCookieStore
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineDesktopMediaRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineDownloadRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineFileSystemAccessRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineFindTextResult
@@ -27,6 +28,7 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineHistoryModel
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineHttpRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineLoadingInfo
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineMediaSourceModel
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNavigationRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNewWindowRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNotification
@@ -42,8 +44,8 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlRequestJob
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlScheme
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlSchemeHandler
-%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthPINRequest
-%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthUXRequest
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthPinRequest
+%%QT_INCDIR%%/QtWebEngineCore/QWebEngineWebAuthUxRequest
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCore
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreDepends
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreVersion
@@ -55,6 +57,7 @@
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineclientcertificatestore.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginecontextmenurequest.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginecookiestore.h
+%%QT_INCDIR%%/QtWebEngineCore/qwebenginedesktopmediarequest.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginedownloadrequest.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginefilesystemaccessrequest.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginefindtextresult.h
@@ -156,6 +159,7 @@ lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfig.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersion.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreConfigVersionImpl.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreDependencies.cmake
+lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreDeploySupport.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreMacros.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets.cmake
@@ -246,6 +250,7 @@ libdata/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 libdata/pkgconfig/Qt6WebEngineWidgets.pc
 %%QT_TOOLDIR%%/QtWebEngineProcess
 %%QT_TOOLDIR%%/qwebengine_convert_dict
+%%QT_TOOLDIR%%/webenginedriver
 %%QT_DATADIR%%/modules/WebEngineCore.json
 %%QT_DATADIR%%/modules/WebEngineQuick.json
 %%QT_DATADIR%%/modules/WebEngineQuickDelegatesQml.json

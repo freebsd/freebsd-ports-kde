@@ -829,6 +829,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/qtversion.h
 %%QT_INCDIR%%/QtCore/qtversionchecks.h
 %%QT_INCDIR%%/QtCore/qtypeinfo.h
+%%QT_INCDIR%%/QtCore/qtyperevision.h
 %%QT_INCDIR%%/QtCore/qtypes.h
 %%QT_INCDIR%%/QtCore/qurl.h
 %%QT_INCDIR%%/QtCore/qurlquery.h
@@ -1558,6 +1559,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhostinfo_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhsts_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhstsstore_p.h
+%%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhttp2connection_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhttp2protocolhandler_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhttpheaderparser_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qhttpmultipart_p.h
