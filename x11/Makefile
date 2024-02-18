@@ -428,6 +428,7 @@
     SUBDIR += terminal.app
     SUBDIR += terminator
     SUBDIR += terminology
+    SUBDIR += tessen
     SUBDIR += thingylaunch
     SUBDIR += tilda
     SUBDIR += tilix
@@ -458,6 +459,7 @@
     SUBDIR += wev
     SUBDIR += wezterm
     SUBDIR += wf-shell
+    SUBDIR += windowtolayer
     SUBDIR += wl-clipboard
     SUBDIR += wl-mirror
     SUBDIR += wlogout
@@ -665,5 +667,6 @@
     SUBDIR += yeahconsole
     SUBDIR += yelp
     SUBDIR += zenity
+    SUBDIR += zutty
 
 .include <bsd.port.subdir.mk>

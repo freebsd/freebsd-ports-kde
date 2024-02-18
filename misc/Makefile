@@ -245,6 +245,7 @@
     SUBDIR += lifelines
     SUBDIR += lightgbm
     SUBDIR += lingoteach
+    SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
     SUBDIR += logsurfer
@@ -426,6 +427,7 @@
     SUBDIR += py-hist
     SUBDIR += py-histoprint
     SUBDIR += py-huepy
+    SUBDIR += py-huggingface-hub
     SUBDIR += py-icoextract
     SUBDIR += py-instructor
     SUBDIR += py-ipyfastscape
@@ -434,6 +436,7 @@
     SUBDIR += py-lazrs
     SUBDIR += py-lightgbm
     SUBDIR += py-lightning-utilities
+    SUBDIR += py-litellm
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
     SUBDIR += py-mmcv
@@ -458,6 +461,7 @@
     SUBDIR += py-palettable
     SUBDIR += py-papermill
     SUBDIR += py-pexpect
+    SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
     SUBDIR += py-powerline-status
@@ -580,6 +584,7 @@
     SUBDIR += team
     SUBDIR += tellico
     SUBDIR += tempcontrol
+    SUBDIR += tenere
     SUBDIR += termatrix
     SUBDIR += terminfo-db
     SUBDIR += teseq

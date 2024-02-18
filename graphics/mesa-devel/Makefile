@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	24.0-branchpoint-919
-DISTVERSIONSUFFIX=	-g4f6e4ae3d6b
+DISTVERSION=	24.0-branchpoint-1761
+DISTVERSIONSUFFIX=	-g893780b3625
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -8,7 +8,6 @@ PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
 PATCHFILES+=	700efacda59c.patch:-p1:github
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
 PATCHFILES+=	72f7e51d22b3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
-PATCHFILES+=	7c565db35d39.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/27184
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -73,12 +72,16 @@ ${j}_VARS+=		${i}_DRIVERS+=${j:S/anv/intel/:S/hasvk/intel_&/:S/radv/amd/}
 GALLIUM_DESC=		Unified OpenGL drivers
 crocus_DESC=		Broadwater, Eaglelake, Ironlake, Sandybridge, Ivybridge, Haswell
 iris_DESC=		Broadwell and newer
+iris_IMPLIES=		OPENCL
 panfrost_DESC=		Midgard, Bifrost
 r600_DESC=		R600, R700, Evergreen, Northern Islands (implies LLVM)
 radeonsi_DESC=		Southern Islands and newer (implies LLVM)
 
 VULKAN_DESC=		Vulkan drivers
 anv_DESC=		Skylake and newer
+anv_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>0:devel/py-ply@${PY_FLAVOR}
+anv_MESON_ON=		${"${ARCH:Mamd64}":?:-Dintel-rt=disabled} # https://gitlab.freedesktop.org/mesa/mesa/-/issues/10629
+anv_IMPLIES=		OPENCL
 hasvk_DESC=		Ivy Bridge, Haswell, Broadwell
 radv_DESC=		Southern Islands and newer (implies LLVM)
 radv_BUILD_DEPENDS=	glslangValidator:graphics/glslang

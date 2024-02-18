@@ -80,6 +80,7 @@
     SUBDIR += hesiod
     SUBDIR += hetzner_ddns
     SUBDIR += hostdb
+    SUBDIR += https_dns_proxy
     SUBDIR += idnkit
     SUBDIR += idnkit2
     SUBDIR += inadyn
@@ -168,6 +169,7 @@
     SUBDIR += p5-POE-Filter-DNS-TCP
     SUBDIR += p5-Tie-DNS
     SUBDIR += p5-URBL-Prepare
+    SUBDIR += p5-Zonemaster-LDNS
     SUBDIR += packetq
     SUBDIR += pdnsd
     SUBDIR += pear-File_DNS

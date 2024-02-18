@@ -138,6 +138,7 @@
     SUBDIR += devd
     SUBDIR += dezoomify-rs
     SUBDIR += dillo2
+    SUBDIR += dmarcts-report-viewer
     SUBDIR += dojo
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
@@ -2496,6 +2497,7 @@
     SUBDIR += xist
     SUBDIR += xoops
     SUBDIR += xsp
+    SUBDIR += xurls
     SUBDIR += yabb
     SUBDIR += yarn
     SUBDIR += yarn-node16

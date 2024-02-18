@@ -1453,6 +1453,7 @@
     SUBDIR += libvirt-java
     SUBDIR += libvmdk
     SUBDIR += libvolume_id
+    SUBDIR += libvsapm
     SUBDIR += libvsgpt
     SUBDIR += libvshadow
     SUBDIR += libvslvm
@@ -4210,6 +4211,7 @@
     SUBDIR += py-about-time
     SUBDIR += py-absl
     SUBDIR += py-absl-py
+    SUBDIR += py-acstore
     SUBDIR += py-adb
     SUBDIR += py-addict
     SUBDIR += py-aenum
@@ -4479,16 +4481,19 @@
     SUBDIR += py-click-creds
     SUBDIR += py-click-default-group
     SUBDIR += py-click-default-group-wheel
+    SUBDIR += py-click-didyoumean
     SUBDIR += py-click-help-colors
     SUBDIR += py-click-log
     SUBDIR += py-click-option-group
     SUBDIR += py-click-plugins
+    SUBDIR += py-click-repl
     SUBDIR += py-click-threading
     SUBDIR += py-click7
     SUBDIR += py-cliff
     SUBDIR += py-cligj
     SUBDIR += py-clikit
     SUBDIR += py-clint
+    SUBDIR += py-clldutils
     SUBDIR += py-cloudpickle
     SUBDIR += py-cluster
     SUBDIR += py-cmd2
@@ -4648,6 +4653,7 @@
     SUBDIR += py-exceptiongroup
     SUBDIR += py-executing
     SUBDIR += py-expandvars
+    SUBDIR += py-expecttest
     SUBDIR += py-expiringdict
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4675,6 +4681,7 @@
     SUBDIR += py-findlibs
     SUBDIR += py-findpython
     SUBDIR += py-fire
+    SUBDIR += py-fireREST
     SUBDIR += py-first
     SUBDIR += py-fixtures
     SUBDIR += py-flake8
@@ -5292,6 +5299,7 @@
     SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
     SUBDIR += py-pydash
+    SUBDIR += py-pydbus
     SUBDIR += py-pydecor
     SUBDIR += py-pydenticon
     SUBDIR += py-pydevd
@@ -5641,6 +5649,7 @@
     SUBDIR += py-speg
     SUBDIR += py-spyder-kernels
     SUBDIR += py-spyder-unittest
+    SUBDIR += py-sqids
     SUBDIR += py-squint
     SUBDIR += py-sre-yield
     SUBDIR += py-srsly
@@ -7851,6 +7860,7 @@
     SUBDIR += utf8cpp3
     SUBDIR += uthash
     SUBDIR += util-linux
+    SUBDIR += uv
     SUBDIR += valgrind
     SUBDIR += valgrind-devel
     SUBDIR += vasm

@@ -1,4 +1,3 @@
-# hyphen
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
 DISTVERSION=	7.5.1.23
@@ -41,7 +40,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}supervisor>0:sysutils/py-supervisor@${PY_FLA
 		rabbitmq>0:net/rabbitmq \
 		webfonts>=0:x11-fonts/webfonts
 
-USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv localbase nodejs:16,build pkgconfig \
+USES=		autoreconf:build dos2unix fakeroot gmake gnome iconv localbase nodejs:18,build pkgconfig \
 		python:3.9+,build qt:5 trigger
 USE_QT=		qmake:build
 USE_GITHUB=	yes
@@ -110,6 +109,17 @@ MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
 DOS2UNIX_FILES=	document-server-package/common/documentserver/nginx/includes/http-common.conf.m4
 
 CONFLICTS_BUILD=devel/googletest
+
+.include <bsd.port.pre.mk>
+.if ${ARCH} == aarch64
+BUILD_DEPENDS+=	clang${LLVM_DEFAULT}:devel/llvm${LLVM_DEFAULT}
+BINARY_ALIAS+=	cpp=${LOCALBASE}/bin/clang-cpp${LLVM_DEFAULT} \
+		cc=${LOCALBASE}/bin/clang${LLVM_DEFAULT} \
+		c++=${LOCALBASE}/bin/clang++${LLVM_DEFAULT} \
+		ar=${LOCALBASE}/bin/llvm-ar${LLVM_DEFAULT} \
+		nm=${LOCALBASE}/bin/llvm-nm${LLVM_DEFAULT} \
+		ld=${LOCALBASE}/bin/ld.lld${LLVM_DEFAULT}
+.endif
 
 post-extract:
 	@${MV} ${WRKDIR}/v8 ${WRKSRC}/core/Common/3dParty/v8_89
@@ -239,4 +249,4 @@ create-caches-tarball:
 	cd ${WRKDIR} && \
 		${TAR} czf ${PORTNAME}-${DISTVERSION}-npm-cache.tar.gz .npm .pkg-cache
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

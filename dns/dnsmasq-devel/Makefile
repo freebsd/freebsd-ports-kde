@@ -1,5 +1,5 @@
 PORTNAME=	dnsmasq
-DISTVERSION=	2.90test3 # remember to bump PORTEPOCH when going from test to rc!
+DISTVERSION=	2.90test4 # remember to bump PORTEPOCH when going from test to rc!
 # Leave the PORTREVISION in even if 0 to avoid accidental PORTEPOCH bumps:
 PORTREVISION=	0
 PORTEPOCH=	5
@@ -17,7 +17,7 @@ WWW=		https://www.thekelleys.org.uk/dnsmasq/doc.html
 LICENSE=	GPLv2
 
 DEPRECATED=	Short-lived test branch, to be removed after v2.90 release
-#IGNORE=		please use dns/dnsmasq, which is newer
+IGNORE=		please use dns/dnsmasq, which is newer
 
 USES=		cpe shebangfix tar:xz
 CPE_VENDOR=	thekelleys
@@ -106,7 +106,7 @@ USE_RC_SUBR=	dnsmasq
 LDFLAGS+=	-L${LOCALBASE}/lib ${_intllibs} ${ICONV_LIB}
 
 post-patch:
-	${REINPLACE_CMD} -e '/^lua_/s/lua5\.2/lua-${LUA_VER}/' ${WRKSRC}/Makefile
+	${REINPLACE_CMD} -e '/^lua_/s/lua/lua-${LUA_VER}/' ${WRKSRC}/Makefile
 
 pre-configure: pretty-print-config
 .if ${PORT_OPTIONS:MIDN}

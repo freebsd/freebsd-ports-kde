@@ -1,3 +1,753 @@
+  <vuln vid="e15ba624-cca8-11ee-84ca-b42e991fc52e">
+    <topic>powerdns-recursor -- Multiple Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>5.0.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://access.redhat.com/security/cve/CVE-2023-50868">
+	  <p>CVE-2023-50868: The Closest Encloser Proof aspect of the DNS protocol (in RFC 5155
+	  when RFC 9276 guidance is skipped) allows remote attackers to cause
+	  a denial of service (CPU consumption for SHA-1 computations) via
+	    DNSSEC responses in a random subdomain attack, aka the &quot;NSEC3&quot;
+	  issue.  The RFC 5155 specification implies that an algorithm must
+	  perform thousands of iterations of a hash function in certain
+	situations.</p>
+      <p>CVE-2023-50387: Certain DNSSEC aspects of the DNS protocol (in RFC 4033, 4034, 4035,
+      6840, and related RFCs) allow remote attackers to cause a denial
+      of service (CPU consumption) via one or more DNSSEC responses, aka
+      the &quot;KeyTrap&quot; issue.  One of the concerns is that, when
+      there is a zone with many DNSKEY and RRSIG records, the protocol
+      specification implies that an algorithm must evaluate all combinations
+	of DNSKEY and RRSIG records.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-50868</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-50868</url>
+      <cvename>CVE-2023-50387</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-50387</url>
+    </references>
+    <dates>
+      <discovery>2024-02-14</discovery>
+      <entry>2024-02-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c97a4ecf-cc25-11ee-b0ee-0050569f0b83">
+    <topic>nginx-devel -- Multiple Vulnerabilities in HTTP/3</topic>
+    <affects>
+      <package>
+	<name>nginx-devel</name>
+	<range><ge>1.25.0</ge><lt>1.25.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The nginx development team reports:</p>
+	<blockquote cite="http://nginx.org/en/security_advisories.html">
+	  <p>When using HTTP/3 a segmentation fault might occur in a
+	  worker process while processing a specially crafted QUIC session.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24989</cvename>
+      <cvename>CVE-2024-24990</cvename>
+    </references>
+    <dates>
+      <discovery>2024-02-14</discovery>
+      <entry>2024-02-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="46a29f83-cb47-11ee-b609-002590c1f29c">
+    <topic>FreeBSD -- jail(2) information leak</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>14.0</ge><lt>14.0_5</lt></range>
+	<range><ge>13.2</ge><lt>13.2_10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>The jail(2) system call has not limited a visiblity of allocated
+	TTYs (the kern.ttys sysctl).  This gives rise to an information
+	leak about processes outside the current jail.</p>
+	<h1>Impact:</h1>
+	<p>Attacker can get information about TTYs allocated on the host
+	or in other jails.  Effectively, the information printed by "pstat
+	-t" may be leaked.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-25941</cvename>
+      <freebsdsa>SA-24:02.tty</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2024-02-14</discovery>
+      <entry>2024-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c62285cb-cb46-11ee-b609-002590c1f29c">
+    <topic>FreeBSD -- bhyveload(8) host file access</topic>
+    <affects>
+      <package>
+	<name>FreeBSD</name>
+	<range><ge>14.0</ge><lt>14.0_5</lt></range>
+	<range><ge>13.2</ge><lt>13.2_10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>`bhyveload -h &lt;host-path&gt;` may be used to grant loader access
+	to the &lt;host-path&gt; directory tree on the host.  Affected versions
+	of bhyveload(8) do not make any attempt to restrict loader's access
+	to &lt;host-path&gt;, allowing the loader to read any file the host user
+	has access to.</p>
+	<h1>Impact:</h1>
+	<p>In the bhyveload(8) model, the host supplies a userboot.so to
+	boot with, but the loader scripts generally come from the guest
+	image.  A maliciously crafted script could be used to exfiltrate
+	sensitive data from the host accessible to the user running
+	bhyhveload(8), which is often the system root.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-25940</cvename>
+      <freebsdsa>SA-24:01.bhyveload</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2024-02-14</discovery>
+      <entry>2024-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4edbea45-cb0c-11ee-86bb-a8a1599412c6">
+    <topic>chromium -- security fix</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>121.0.6167.184</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>121.0.6167.184</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html">
+	 <p>This update includes 1 security fix.</p>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop_13.html</url>
+    </references>
+    <dates>
+      <discovery>2024-02-13</discovery>
+      <entry>2024-02-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="21a854cc-cac1-11ee-b7a7-353f1e043d9a">
+    <topic>DNSSEC validators -- denial-of-service/CPU exhaustion from KeyTrap and NSEC3 vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>bind916</name>
+	<range><lt>9.16.48</lt></range>
+      </package>
+      <package>
+	<name>bind918</name>
+	<range><lt>9.18.24</lt></range>
+      </package>
+      <package>
+	<name>bind9-devel</name>
+	<range><lt>9.19.21</lt></range>
+      </package>
+      <package>
+	<name>dnsmasq</name>
+	<range><lt>2.90</lt></range>
+      </package>
+      <package>
+	<name>dnsmasq-devel</name>
+	<range><lt>2.90</lt></range>
+      </package>
+      <package>
+	<name>powerdns-recursor</name>
+	<range><lt>5.0.2</lt></range>
+      </package>
+      <package>
+	<name>unbound</name>
+	<range><lt>1.19.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon Kelley reports:</p>
+	<blockquote cite="https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2024q1/017430.html">
+	  <p>If DNSSEC validation is enabled, then an attacker who can force a
+	    DNS server to validate a specially crafted signed domain can use a
+	    lot of CPU in the validator. This only affects dnsmasq installations
+	    with DNSSEC enabled.</p>
+	</blockquote>
+	<p>Stichting NLnet Labs reports:</p>
+	<blockquote cite="https://nlnetlabs.nl/news/2024/Feb/13/unbound-1.19.1-released/">
+	  <p>
+	    The KeyTrap [CVE-2023-50387] vulnerability works by using a
+	    combination of Keys (also colliding Keys), Signatures and number of
+	    RRSETs on a malicious zone. Answers from that zone can force a
+	    DNSSEC validator down a very CPU intensive and time costly
+	    validation path.
+	  </p>
+	  <p>
+	    The NSEC3 [CVE-2023-50868] vulnerability uses specially crafted responses on a
+	    malicious zone with multiple NSEC3 RRSETs to force a DNSSEC
+	    validator down a very CPU intensive and time costly NSEC3 hash
+	    calculation path.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-50387</cvename>
+      <cvename>CVE-2023-50868</cvename>
+      <url>https://kb.isc.org/docs/cve-2023-50387</url>
+      <url>https://kb.isc.org/docs/cve-2023-50868</url>
+      <url>https://lists.thekelleys.org.uk/pipermail/dnsmasq-discuss/2024q1/017430.html</url>
+      <url>https://blog.powerdns.com/2024/02/13/powerdns-recursor-4-8-6-4-9-3-5-0-2-released</url>
+      <url>https://nlnetlabs.nl/news/2024/Feb/13/unbound-1.19.1-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-02-06</discovery>
+      <entry>2024-02-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cbfc1591-c8c0-11ee-b45a-589cfc0f81b0">
+    <topic>phpmyfaq -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpmyfaq-php81</name>
+	<name>phpmyfaq-php82</name>
+	<name>phpmyfaq-php83</name>
+	<range><lt>3.2.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>phpMyFAQ team reports:</p>
+	<blockquote cite="https://www.phpmyfaq.de/security/advisory-2024-02-05">
+	  <p>phpMyFAQ doesn't implement sufficient checks to avoid XSS when
+	    storing on attachments filenames. The 'sharing FAQ' functionality
+	    allows any unauthenticated actor to misuse the phpMyFAQ application
+	    to send arbitrary emails to a large range of targets. phpMyFAQ's
+	    user removal page allows an attacker to spoof another user's
+	    detail, and in turn make a compelling phishing case for removing
+	    another user's account.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-7m8g-fprr-47fx</url>
+      <url>https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-9hhf-xmcw-r3xg</url>
+      <url>https://github.com/thorsten/phpMyFAQ/security/advisories/GHSA-6648-6g96-mg35</url>
+    </references>
+    <dates>
+      <discovery>2024-02-05</discovery>
+      <entry>2024-02-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f161a5ad-c9bd-11ee-b7a7-353f1e043d9a">
+    <topic>openexr -- Heap Overflow in Scanline Deep Data Parsing</topic>
+    <affects>
+      <package>
+	<name>openexr</name>
+	<range><lt>3.1.12</lt></range>
+	<range><ge>3.2.0</ge><lt>3.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Austin Hackers Anonymous report:</p>
+	<blockquote cite="https://takeonme.org/cves/CVE-2023-5841.html">
+	  <p>Due to a failure in validating the number of scanline samples of a OpenEXR file containing deep scanline data, Academy Software Foundation OpenEXR image parsing library version 3.2.1 and prior is susceptible to a heap-based buffer overflow vulnerability.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2">
+	  <p>[...] it is in a routine that is predominantly used for development and
+	    testing. It is not likely to appear in production code.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-5841</cvename>
+      <url>https://takeonme.org/cves/CVE-2023-5841.html</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.2.2</url>
+    </references>
+    <dates>
+      <discovery>2023-10-26</discovery>
+      <entry>2024-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="388eefc0-c93f-11ee-92ce-4ccc6adda413">
+    <topic>readstat -- Heap buffer overflow in readstat_convert</topic>
+    <affects>
+      <package>
+	<name>readstat</name>
+	<range><lt>1.1.9</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google reports:</p>
+	<blockquote cite="https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=33991">
+	  <p>A heap buffer overflow exists in readstat_convert.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=33991</url>
+      <url>https://osv.dev/vulnerability/OSV-2021-732</url>
+      <url>https://github.com/WizardMac/ReadStat/issues/285</url>
+    </references>
+    <dates>
+      <discovery>2021-05-05</discovery>
+      <entry>2024-02-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cb22a9a6-c907-11ee-8d1c-40b034429ecf">
+    <topic>p5-Spreadsheet-ParseExcel -- Remote Code Execution Vulnerability</topic>
+    <affects>
+      <package>
+	<name>p5-Spreadsheet-ParseExcel</name>
+	<range><lt>0.66</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Spreadsheet-ParseExcel reports:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2023-7101">
+	  <p>
+	    Spreadsheet::ParseExcel version 0.65 is a Perl module used for parsing Excel files.
+	    Spreadsheet::ParseExcel is vulnerable to an arbitrary code execution (ACE) vulnerability
+	    due to passing unvalidated input from a file into a string-type eval "eval".
+	    Specifically, the issue stems from the evaluation of Number format strings
+	    (not to be confused with printf-style format strings) within the Excel parsing logic.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-7101</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-7101</url>
+    </references>
+    <dates>
+      <discovery>2023-12-29</discovery>
+      <entry>2024-02-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="19e6dd1b-c6a5-11ee-9cd0-6cc21735f730">
+    <topic>postgresql-server -- non-owner REFRESH MATERIALIZED VIEW CONCURRENTLY executes arbitrary SQL</topic>
+    <affects>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>15.6</lt></range>
+	<range><lt>14.11</lt></range>
+	<range><lt>13.14</lt></range>
+	<range><lt>12.18</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL Project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2024-0985/">
+	  <p>
+	    One step of a concurrent refresh command was run under
+	    weak security restrictions. If a materialized view's
+	    owner could persuade a superuser or other
+	    high-privileged user to perform a concurrent refresh on
+	    that view, the view's owner could control code executed
+	    with the privileges of the user running REFRESH. The fix
+	    for the vulnerability makes is so that all
+	    user-determined code is run as the view's owner, as
+	    expected.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0985</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2024-0985/</url>
+    </references>
+    <dates>
+      <discovery>2024-02-08</discovery>
+      <entry>2024-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6b2cba6a-c6a5-11ee-97d0-001b217b3468">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<range><ge>16.8.0</ge><lt>16.8.2</lt></range>
+	<range><ge>16.7.0</ge><lt>16.7.5</lt></range>
+	<range><ge>13.3.0</ge><lt>16.6.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/02/07/security-release-gitlab-16-8-2-released/">
+	  <p>Restrict group access token creation for custom roles</p>
+	  <p>Project maintainers can bypass group's scan result policy block_branch_modification setting</p>
+	  <p>ReDoS in CI/CD Pipeline Editor while verifying Pipeline syntax</p>
+	  <p>Resource exhaustion using GraphQL vulnerabilitiesCountByDay</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1250</cvename>
+      <cvename>CVE-2023-6840</cvename>
+      <cvename>CVE-2023-6386</cvename>
+      <cvename>CVE-2024-1066</cvename>
+      <url>https://about.gitlab.com/releases/2024/02/07/security-release-gitlab-16-8-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-02-07</discovery>
+      <entry>2024-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="33ba2241-c68e-11ee-9ef3-001999f8d30b">
+    <topic>Composer -- Code execution and possible privilege escalation</topic>
+    <affects>
+      <package>
+	<name>php81-composer</name>
+	<range><lt>2.7.0</lt></range>
+      </package>
+      <package>
+	<name>php82-composer</name>
+	<range><lt>2.7.0</lt></range>
+      </package>
+      <package>
+	<name>php83-composer</name>
+	<range><lt>2.7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Copmposer reports:</p>
+	<blockquote cite="https://github.com/composer/composer/security/advisories/GHSA-7c6p-848j-wh5h">
+	  <p>Code execution and possible privilege escalation via
+	  compromised InstalledVersions.php or installed.php.</p>
+	  <p>Several files within the local working directory are
+	  included during the invocation of Composer and in the
+	  context of the executing user.</p>
+	  <p>As such, under certain conditions arbitrary code
+	  execution may lead to local privilege escalation, provide
+	  lateral user movement or malicious code execution when
+	  Composer is invoked within a directory with tampered
+	  files.</p>
+	  <p>All Composer CLI commands are affected, including
+	  composer.phar's self-update.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24821</cvename>
+      <url>https://github.com/composer/composer/security/advisories/GHSA-7c6p-848j-wh5h</url>
+    </references>
+    <dates>
+      <discovery>2024-02-08</discovery>
+      <entry>2024-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="43768ff3-c683-11ee-97d0-001b217b3468">
+    <topic>Libgit2 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>eza</name>
+	<range><lt>0.18.2</lt></range>
+      </package>
+      <package>
+	<name>libgit2</name>
+	<range><ge>1.7.0</ge><lt>1.7.2</lt></range>
+	<range><lt>1.6.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Git community reports:</p>
+	<blockquote cite="https://github.com/libgit2/libgit2/releases/tag/v1.7.2">
+	  <p>A bug in git_revparse_single is fixed that could have caused the function to enter an infinite loop given well-crafted inputs, potentially causing a Denial of Service attack in the calling application</p>
+	  <p>A bug in git_revparse_single is fixed that could have caused the function to enter an infinite loop given well-crafted inputs, potentially causing a Denial of Service attack in the calling application</p>
+	  <p>A bug in the smart transport negotiation could have caused an out-of-bounds read when a remote server did not advertise capabilities</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24577</cvename>
+      <url>https://github.com/libgit2/libgit2/releases/tag/v1.7.2</url>
+    </references>
+    <dates>
+      <discovery>2024-02-06</discovery>
+      <entry>2024-02-08</entry>
+      <modified>2024-02-14</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="19047673-c680-11ee-86bb-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>121.0.6167.160</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>121.0.6167.160</lt></range>
+      </package>
+      <package>
+       <name>qt5-webengine</name>
+       <range><lt>5.15.16.p5_5</lt></range>
+      </package>
+      <package>
+       <name>qt6-webengine</name>
+       <range><lt>6.6.1_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[41494539] High CVE-2024-1284: Use after free in Mojo. Reported by Anonymous on 2024-01-25</li>
+	    <li>[41494860] High CVE-2024-1283: Heap buffer overflow in Skia. Reported by Jorge Buzeti (@r3tr074) on 2024-01-25</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1284</cvename>
+      <cvename>CVE-2024-1283</cvename>
+      <url>https://chromereleases.googleblog.com/2024/02/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-02-06</discovery>
+      <entry>2024-02-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="68ae70c5-c5e5-11ee-9768-08002784c58d">
+    <topic>clamav -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>clamav</name>
+	<range><lt>1.2.2,1</lt></range>
+      </package>
+      <package>
+	<name>clamav-lts</name>
+	<range><lt>1.0.5,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ClamAV project reports:</p>
+	<blockquote cite="https://blog.clamav.net/2023/11/clamav-130-122-105-released.html">
+	  <dl>
+	    <dt>CVE-2024-20290</dt>
+	    <dd>
+	      A vulnerability in the OLE2 file format parser of ClamAV
+	      could allow an unauthenticated, remote attacker to cause
+	      a denial of service (DoS) condition on an affected
+	      device. This vulnerability is due to an incorrect check
+	      for end-of-string values during scanning, which may
+	      result in a heap buffer over-read. An attacker could
+	      exploit this vulnerability by submitting a crafted file
+	      containing OLE2 content to be scanned by ClamAV on an
+	      affected device. A successful exploit could allow the
+	      attacker to cause the ClamAV scanning process to
+	      terminate, resulting in a DoS condition on the affected
+	      software and consuming available system resources.
+	    </dd>
+	    <dt>CVE-2024-20328</dt>
+	    <dd>
+	      Fixed a possible command injection vulnerability in the
+	      &quot;VirusEvent&quot; feature of ClamAV's ClamD
+	      service. To fix this issue, we disabled the '%f' format
+	      string parameter.	 ClamD administrators may continue to
+	      use the `CLAM_VIRUSEVENT_FILENAME` environment variable,
+	      instead of '%f'. But you should do so only from within
+	      an executable, such as a Python script, and not directly
+	      in the clamd.conf &quot;VirusEvent&quot; command.
+	    </dd>
+	  </dl>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-20290</cvename>
+      <cvename>CVE-2024-20328</cvename>
+      <url>https://blog.clamav.net/2023/11/clamav-130-122-105-released.html</url>
+    </references>
+    <dates>
+      <discovery>2024-02-07</discovery>
+      <entry>2024-02-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e0f6215b-c59e-11ee-a6db-080027a5b8e9">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py39-django32</name>
+	<name>py310-django32</name>
+	<name>py311-django32</name>
+	<range><lt>3.2.24</lt></range>
+      </package>
+      <package>
+	<name>py39-django42</name>
+	<name>py310-django42</name>
+	<name>py311-django42</name>
+	<range><lt>4.2.8</lt></range>
+      </package>
+      <package>
+	<name>py311-django50</name>
+	<range><lt>5.0.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2024/feb/06/security-releases/">
+	  <p>CVE-2024-24680:Potential denial-of-service in intcomma template filter.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24680</cvename>
+      <url>https://www.djangoproject.com/weblog/2024/feb/06/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2024-01-09</discovery>
+      <entry>2024-02-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="dc9e5237-c197-11ee-86bb-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>121.0.6167.139</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>121.0.6167.139</lt></range>
+      </package>
+      <package>
+       <name>qt5-webengine</name>
+       <range><lt>5.15.16.p5_5</lt></range>
+      </package>
+      <package>
+       <name>qt6-webengine</name>
+       <range><lt>6.6.1_5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_30.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[1511567] High CVE-2024-1060: Use after free in Canvas. Reported by Anonymous on 2023-12-14</li>
+	    <li>[1514777] High CVE-2024-1059: Use after free in WebRTC. Reported by Cassidy Kim(@cassidy6564) on 2023-12-29</li>
+	    <li>[1511085] High CVE-2024-1077: Use after free in Network. Reported by Microsoft Security Research Center on 2023-12-13</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-1060</cvename>
+      <cvename>CVE-2024-1059</cvename>
+      <cvename>CVE-2024-1077</cvename>
+      <url>https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_30.html</url>
+    </references>
+    <dates>
+      <discovery>2024-01-30</discovery>
+      <entry>2024-02-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="72d6d757-c197-11ee-86bb-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>121.0.6167.85</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>121.0.6167.85</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_23.html">
+	 <p>This update includes 17 security fixes:</p>
+	 <ul>
+	    <li>[1484394] High CVE-2024-0812: Inappropriate implementation in Accessibility. Reported by Anonymous on 2023-09-19</li>
+	    <li>[1504936] High CVE-2024-0808: Integer underflow in WebUI. Reported by Lyra Rebane (rebane2001) on 2023-11-24</li>
+	    <li>[1496250] Medium CVE-2024-0810: Insufficient policy enforcement in DevTools. Reported by Shaheen Fazim on 2023-10-26</li>
+	    <li>[1463935] Medium CVE-2024-0814: Incorrect security UI in Payments. Reported by Muneaki Nishimura (nishimunea) on 2023-07-11</li>
+	    <li>[1477151] Medium CVE-2024-0813: Use after free in Reading Mode. Reported by @retsew0x01 on 2023-08-30</li>
+	    <li>[1505176] Medium CVE-2024-0806: Use after free in Passwords. Reported by 18楼梦想改造家 on 2023-11-25</li>
+	    <li>[1514925] Medium CVE-2024-0805: Inappropriate implementation in Downloads. Reported by Om Apip on 2024-01-01</li>
+	    <li>[1515137] Medium CVE-2024-0804: Insufficient policy enforcement in iOS Security UI. Reported by Narendra Bhati of Suma Soft Pvt. Ltd. Pune (India)  on 2024-01-03</li>
+	    <li>[1494490] Low CVE-2024-0811: Inappropriate implementation in Extensions API. Reported by Jann Horn of Google Project Zero on 2023-10-21</li>
+	    <li>[1497985] Low CVE-2024-0809: Inappropriate implementation in Autofill. Reported by Ahmed ElMasry on 2023-10-31</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-0812</cvename>
+      <cvename>CVE-2024-0808</cvename>
+      <cvename>CVE-2024-0810</cvename>
+      <cvename>CVE-2024-0814</cvename>
+      <cvename>CVE-2024-0813</cvename>
+      <cvename>CVE-2024-0806</cvename>
+      <cvename>CVE-2024-0805</cvename>
+      <cvename>CVE-2024-0804</cvename>
+      <cvename>CVE-2024-0811</cvename>
+      <cvename>CVE-2024-0809</cvename>
+      <url>https://chromereleases.googleblog.com/2024/01/stable-channel-update-for-desktop_23.html</url>
+    </references>
+    <dates>
+      <discovery>2024-01-23</discovery>
+      <entry>2024-02-02</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="13a8c4bf-cb2b-48ec-b49c-a3875c72b3e8">
     <topic>electron{26,27,28} -- Use after free in Web Audio</topic>
     <affects>
@@ -38,6 +788,10 @@
   <vuln vid="bbcb1584-c068-11ee-bdd6-4ccc6adda413">
     <topic>qt6-webengine -- Multiple vulnerabilities</topic>
     <affects>
+      <package>
+	<name>qt5-webengine</name>
+	<range><lt>5.15.16.p5_5</lt></range>
+      </package>
       <package>
 	<name>qt6-webengine</name>
 	<range><lt>6.6.1_4</lt></range>
@@ -979,5 +1733,31 @@
     <dates>
       <discovery>2023-12-19</discovery>
       <entry>2024-01-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bd7592a1-cbfd-11ee-a42a-5404a6f3ca32">
+    <topic>gitea -- Prevent anonymous container access</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.21.5</lt></range>
+      </package>
+    </affects>
+    <description>
+       <body xmlns="http://www.w3.org/1999/xhtml">
+       <h1>Problem Description:</h1>
+    <p>
+      Even with RequireSignInView enabled, anonymous users can use docker pull
+      to fetch public images.
+    </p>
+      </body>
+    </description>
+    <references>
+      <url>https://blog.gitea.com/release-of-1.21.5/</url>
+    </references>
+    <dates>
+      <discovery>2024-01-24</discovery>
+      <entry>2024-02-15</entry>
     </dates>
   </vuln>
