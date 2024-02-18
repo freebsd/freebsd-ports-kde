@@ -123,6 +123,7 @@
 %%QT_DOCDIR%%/qtdoc/images/colorpalette_editing.png
 %%QT_DOCDIR%%/qtdoc/images/colorpalette_listing.png
 %%QT_DOCDIR%%/qtdoc/images/colorpalette_urlselection.png
+%%QT_DOCDIR%%/qtdoc/images/colorpalette_userlisting.png
 %%QT_DOCDIR%%/qtdoc/images/controls.png
 %%QT_DOCDIR%%/qtdoc/images/deployment-mac-application.png
 %%QT_DOCDIR%%/qtdoc/images/deployment-mac-bundlestructure.png
@@ -158,6 +159,7 @@
 %%QT_DOCDIR%%/qtdoc/images/nmvurCcsWos.jpg
 %%QT_DOCDIR%%/qtdoc/images/ok.png
 %%QT_DOCDIR%%/qtdoc/images/open-project.png
+%%QT_DOCDIR%%/qtdoc/images/osmbuildings.jpg
 %%QT_DOCDIR%%/qtdoc/images/piemenu.gif
 %%QT_DOCDIR%%/qtdoc/images/project-structure.png
 %%QT_DOCDIR%%/qtdoc/images/project_structure.png
@@ -339,6 +341,7 @@
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-hangman-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-lightningviewer-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-mediaplayer-example.html
+%%QT_DOCDIR%%/qtdoc/qtdoc-demos-osmbuildings-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-photosurface-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-robotarm-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-rssnews-example.html

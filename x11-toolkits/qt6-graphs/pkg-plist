@@ -89,6 +89,7 @@
 %%QT_INCDIR%%/QtGraphs/QCustom3DItem
 %%QT_INCDIR%%/QtGraphs/QCustom3DLabel
 %%QT_INCDIR%%/QtGraphs/QCustom3DVolume
+%%QT_INCDIR%%/QtGraphs/QGraphTheme
 %%QT_INCDIR%%/QtGraphs/QHeightMapSurfaceDataProxy
 %%QT_INCDIR%%/QtGraphs/QItemModelBarDataProxy
 %%QT_INCDIR%%/QtGraphs/QItemModelScatterDataProxy
@@ -99,6 +100,7 @@
 %%QT_INCDIR%%/QtGraphs/QScatterDataItem
 %%QT_INCDIR%%/QtGraphs/QScatterDataProxy
 %%QT_INCDIR%%/QtGraphs/QScatterSeries
+%%QT_INCDIR%%/QtGraphs/QSeriesTheme
 %%QT_INCDIR%%/QtGraphs/QSurface3DSeries
 %%QT_INCDIR%%/QtGraphs/QSurfaceDataItem
 %%QT_INCDIR%%/QtGraphs/QSurfaceDataProxy
@@ -110,7 +112,6 @@
 %%QT_INCDIR%%/QtGraphs/QtGraphs
 %%QT_INCDIR%%/QtGraphs/QtGraphsDepends
 %%QT_INCDIR%%/QtGraphs/QtGraphsVersion
-%%QT_INCDIR%%/QtGraphs/graphtheme.h
 %%QT_INCDIR%%/QtGraphs/q3dbars.h
 %%QT_INCDIR%%/QtGraphs/q3dinputhandler.h
 %%QT_INCDIR%%/QtGraphs/q3dscatter.h
@@ -136,6 +137,7 @@
 %%QT_INCDIR%%/QtGraphs/qcustom3dlabel.h
 %%QT_INCDIR%%/QtGraphs/qcustom3dvolume.h
 %%QT_INCDIR%%/QtGraphs/qgraphsglobal.h
+%%QT_INCDIR%%/QtGraphs/qgraphtheme.h
 %%QT_INCDIR%%/QtGraphs/qheightmapsurfacedataproxy.h
 %%QT_INCDIR%%/QtGraphs/qitemmodelbardataproxy.h
 %%QT_INCDIR%%/QtGraphs/qitemmodelscatterdataproxy.h
@@ -146,6 +148,7 @@
 %%QT_INCDIR%%/QtGraphs/qscatterdataitem.h
 %%QT_INCDIR%%/QtGraphs/qscatterdataproxy.h
 %%QT_INCDIR%%/QtGraphs/qscatterseries.h
+%%QT_INCDIR%%/QtGraphs/qseriestheme.h
 %%QT_INCDIR%%/QtGraphs/qsurface3dseries.h
 %%QT_INCDIR%%/QtGraphs/qsurfacedataitem.h
 %%QT_INCDIR%%/QtGraphs/qsurfacedataproxy.h
@@ -157,7 +160,6 @@
 %%QT_INCDIR%%/QtGraphs/qvalue3daxisformatter.h
 %%QT_INCDIR%%/QtGraphs/qvalueaxis.h
 %%QT_INCDIR%%/QtGraphs/qxyseries.h
-%%QT_INCDIR%%/QtGraphs/seriestheme.h
 lib/cmake/Qt6BuildInternals/StandaloneTests/QtGraphsTestsConfig.cmake
 lib/cmake/Qt6Graphs/Qt6GraphsAdditionalTargetInfo.cmake
 lib/cmake/Qt6Graphs/Qt6GraphsConfig.cmake
@@ -181,6 +183,10 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_graphs.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_graphs_private.pri
 %%QT_QMLDIR%%/QtGraphs/Graphs.qmltypes
+%%QT_QMLDIR%%/QtGraphs/graphs2d/qml/designer/GraphsViewSpecifics.qml
+%%QT_QMLDIR%%/QtGraphs/graphs2d/qml/designer/default/BarSeries.qml
+%%QT_QMLDIR%%/QtGraphs/graphs2d/qml/designer/default/LineSeries.qml
+%%QT_QMLDIR%%/QtGraphs/graphs2d/qml/designer/default/ScatterSeries.qml
 %%QT_QMLDIR%%/QtGraphs/graphs3d/qml/designer/Bars3DSpecifics.qml
 %%QT_QMLDIR%%/QtGraphs/graphs3d/qml/designer/GraphsCameraSection.qml
 %%QT_QMLDIR%%/QtGraphs/graphs3d/qml/designer/GraphsSection.qml

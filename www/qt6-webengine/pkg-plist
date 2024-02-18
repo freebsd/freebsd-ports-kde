@@ -29,7 +29,6 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineHistoryModel
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineHttpRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineLoadingInfo
-%%QT_INCDIR%%/QtWebEngineCore/QWebEngineMediaSourceModel
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNavigationRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNewWindowRequest
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineNotification

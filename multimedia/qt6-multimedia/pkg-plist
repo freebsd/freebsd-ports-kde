@@ -45,7 +45,6 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsamplecache_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qtmultimedia-config_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qtmultimediaglobal_p.h
-%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideo_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideoframeconversionhelper_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideoframeconverter_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideooutputorientationhandler_p.h
@@ -110,7 +109,7 @@
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaexports.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaglobal.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaversion.h
-%%QT_INCDIR%%/QtMultimedia/qvideo.h
+%%QT_INCDIR%%/QtMultimedia/qtvideo.h
 %%QT_INCDIR%%/QtMultimedia/qvideoframe.h
 %%QT_INCDIR%%/QtMultimedia/qvideoframeformat.h
 %%QT_INCDIR%%/QtMultimedia/qvideosink.h
