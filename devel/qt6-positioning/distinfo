@@ -1,3 +1,3 @@
-TIMESTAMP = 1708119681
-SHA256 (KDE/Qt/6.7.0-beta3/qtpositioning-everywhere-src-6.7.0-beta3.tar.xz) = deb706b6e6174c00648e1789079e5bd5cf36197f0b11b4fa64ce7bd3595d4729
-SIZE (KDE/Qt/6.7.0-beta3/qtpositioning-everywhere-src-6.7.0-beta3.tar.xz) = 1505192
+TIMESTAMP = 1712112802
+SHA256 (KDE/Qt/6.7.0/qtpositioning-everywhere-src-6.7.0.tar.xz) = 1d601ba43c26c8a01db81eeaaeea5943c015da98caa59d7905b86e0e9d609ddf
+SIZE (KDE/Qt/6.7.0/qtpositioning-everywhere-src-6.7.0.tar.xz) = 658368

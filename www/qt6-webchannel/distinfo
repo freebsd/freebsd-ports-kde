@@ -1,3 +1,3 @@
-TIMESTAMP = 1708125153
-SHA256 (KDE/Qt/6.7.0-beta3/qtwebchannel-everywhere-src-6.7.0-beta3.tar.xz) = a866171c820ca954ba9ec081c28db8c04ee5610ca3f79b3be72debd41be11831
-SIZE (KDE/Qt/6.7.0-beta3/qtwebchannel-everywhere-src-6.7.0-beta3.tar.xz) = 206640
+TIMESTAMP = 1712114594
+SHA256 (KDE/Qt/6.7.0/qtwebchannel-everywhere-src-6.7.0.tar.xz) = 26bfbd404e0c82bfbeeaef81796eb7a7cf931c5c1a5e942a315ca7126322efff
+SIZE (KDE/Qt/6.7.0/qtwebchannel-everywhere-src-6.7.0.tar.xz) = 206600

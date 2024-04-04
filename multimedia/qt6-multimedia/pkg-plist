@@ -45,6 +45,7 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsamplecache_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qtmultimedia-config_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qtmultimediaglobal_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideoframe_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideoframeconversionhelper_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideoframeconverter_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qvideooutputorientationhandler_p.h
@@ -79,6 +80,7 @@
 %%QT_INCDIR%%/QtMultimedia/QVideoSink
 %%QT_INCDIR%%/QtMultimedia/QWaveDecoder
 %%QT_INCDIR%%/QtMultimedia/QWindowCapture
+%%QT_INCDIR%%/QtMultimedia/QtAudio
 %%QT_INCDIR%%/QtMultimedia/QtMultimedia
 %%QT_INCDIR%%/QtMultimedia/QtMultimediaDepends
 %%QT_INCDIR%%/QtMultimedia/QtMultimediaVersion
@@ -105,6 +107,7 @@
 %%QT_INCDIR%%/QtMultimedia/qmediatimerange.h
 %%QT_INCDIR%%/QtMultimedia/qscreencapture.h
 %%QT_INCDIR%%/QtMultimedia/qsoundeffect.h
+%%QT_INCDIR%%/QtMultimedia/qtaudio.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimedia-config.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaexports.h
 %%QT_INCDIR%%/QtMultimedia/qtmultimediaglobal.h

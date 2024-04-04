@@ -1,3 +1,3 @@
-TIMESTAMP = 1708126663
-SHA256 (KDE/Qt/6.7.0-beta3/qtwebsockets-everywhere-src-6.7.0-beta3.tar.xz) = bb416fe1b87719b078a5fb7602896c6f76a0cb0e77da0846e360f1ddef7c2a99
-SIZE (KDE/Qt/6.7.0-beta3/qtwebsockets-everywhere-src-6.7.0-beta3.tar.xz) = 454940
+TIMESTAMP = 1712115502
+SHA256 (KDE/Qt/6.7.0/qtwebsockets-everywhere-src-6.7.0.tar.xz) = 5ffc77da6b36cdf18e04c975a0fbf243968806a93a6291bcd2e9cd0b26139736
+SIZE (KDE/Qt/6.7.0/qtwebsockets-everywhere-src-6.7.0.tar.xz) = 454868

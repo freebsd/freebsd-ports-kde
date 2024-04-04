@@ -594,6 +594,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/q20chrono.h
 %%QT_INCDIR%%/QtCore/q20functional.h
 %%QT_INCDIR%%/QtCore/q20iterator.h
+%%QT_INCDIR%%/QtCore/q20map.h
 %%QT_INCDIR%%/QtCore/q20memory.h
 %%QT_INCDIR%%/QtCore/q20type_traits.h
 %%QT_INCDIR%%/QtCore/q20vector.h
@@ -1658,7 +1659,6 @@ bin/qmake6
 %%QT_INCDIR%%/QtNetwork/QNetworkRequestFactory
 %%QT_INCDIR%%/QtNetwork/QOcspResponse
 %%QT_INCDIR%%/QtNetwork/QPasswordDigestor
-%%QT_INCDIR%%/QtNetwork/QRestAccessManager
 %%QT_INCDIR%%/QtNetwork/QRestReply
 %%QT_INCDIR%%/QtNetwork/QSsl
 %%QT_INCDIR%%/QtNetwork/QSslCertificate
