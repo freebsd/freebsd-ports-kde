@@ -1,7 +1,7 @@
 PORTNAME=	pyside6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
+#MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-tools
 DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
@@ -19,6 +19,10 @@ LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR}
 		libzstd.so:archivers/zstd
 
 USES=		cmake gl llvm:lib python qt:6 shebangfix tar:xz
+USE_GITHUB=	yes
+GH_ACCOUNT=	qtproject
+GH_PROJECT=	pyside-pyside-setup
+GH_TAGNAME=	d621c6d
 USE_GL=		gl
 USE_PYTHON=	flavors
 USE_QT=		base declarative languageserver tools
@@ -26,7 +30,7 @@ USE_QT=		base declarative languageserver tools
 SHEBANG_FILES=	pyside_tool.py qtpy2cpp_lib/tests/baseline/basic_test.py
 
 PLIST_SUB=	PYSIDE_BINDIR_REL=${PYSIDE_BINDIR_REL}
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${PYSIDE6_VERSION}/sources/pyside-tools
+WRKSRC_SUBDIR=	sources/pyside-tools
 
 PYSIDE_RELNAME=		${PORTNAME}
 PYSIDE_BINDIR_REL?=	bin/${PYSIDE_RELNAME}

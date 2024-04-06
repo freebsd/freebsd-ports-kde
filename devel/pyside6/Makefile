@@ -1,7 +1,7 @@
 PORTNAME=	pyside6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
+#MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
@@ -14,7 +14,11 @@ LICENSE=	LGPL3
 LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR} \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake gl llvm:lib python qt:6 tar:xz
+USES=		cmake gl llvm:lib,noexport python qt:6 tar:xz
+USE_GITHUB=	yes
+GH_ACCOUNT=	qtproject
+GH_PROJECT=	pyside-pyside-setup
+GH_TAGNAME=	d621c6d
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
@@ -26,8 +30,8 @@ USE_QT=		3d base charts connectivity datavis3d declarative doc graphs \
 
 CMAKE_ARGS=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${PYSIDE6_VERSION}/sources/pyside6
-PLIST_SUB=	DISTVERSION=${DISTVERSION}
+WRKSRC_SUBDIR=	sources/pyside6
+PLIST_SUB=	DISTVERSION=${DISTVERSION:R}
 
 .include <bsd.port.pre.mk>
 

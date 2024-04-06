@@ -1,7 +1,7 @@
 PORTNAME=	shiboken6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	QT/official_releases/QtForPython/${PORTNAME}/PySide6-${DISTVERSION}-src
+#MASTER_SITES=	QT/official_releases/QtForPython/${PORTNAME}/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
@@ -14,8 +14,12 @@ LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-USES=		cmake compiler:c++17-lang gnome llvm:lib pathfix python qt:6 \
-		tar:xz
+USES=		cmake compiler:c++17-lang gnome llvm:lib,noexport pathfix \
+		python qt:6 tar:xz
+USE_GITHUB=	yes
+GH_ACCOUNT=	qtproject
+GH_PROJECT=	pyside-pyside-setup
+GH_TAGNAME=	d621c6d
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
@@ -29,8 +33,8 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DUSE_PYTHON_VERSION=${PYTHON_VER} \
 		-DBUILD_TESTS:BOOL=false
 
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${PYSIDE6_VERSION}/sources/shiboken6
-PLIST_SUB=	DISTVERSION=${DISTVERSION}
+WRKSRC_SUBDIR=	sources/shiboken6
+PLIST_SUB=	DISTVERSION=${DISTVERSION:R}
 
 OPTIONS_DEFINE=	DOCS
 
