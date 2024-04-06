@@ -1,5 +1,5 @@
 PORTNAME=	wolfssh
-DISTVERSION=	1.4.15
+PORTVERSION=	1.4.15
 CATEGORIES=	security
 MASTER_SITES=	https://www.wolfssl.com/
 
@@ -11,15 +11,11 @@ WWW=		https://www.wolfssl.com/products/wolfssh/ \
 LICENSE=	GPLv3
 
 LIB_DEPENDS=	libwolfssl.so:security/wolfssl
+TEST_DEPENDS=	bash:shells/bash
 
-USES=		libtool localbase zip
-USE_LDCONFIG=	yes
+USES=		libtool localbase shebangfix
 
-GNU_CONFIGURE=	yes
-
-INSTALL_TARGET=	install-strip
-
-CONFIGURE_ARGS=	--disable-examples \
+CONFIGURE_ARGS=	--enable-examples \
 		--enable-fwd \
 		--enable-keygen \
 		--enable-scp \
@@ -27,5 +23,11 @@ CONFIGURE_ARGS=	--disable-examples \
 		--enable-shared=yes \
 		--enable-shell \
 		--enable-static=yes
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+TEST_TARGET=	check
+USE_LDCONFIG=	yes
+
+SHEBANG_FILES=	scripts/get-put.test
 
 .include <bsd.port.mk>

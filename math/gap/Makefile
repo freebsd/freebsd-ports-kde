@@ -1,5 +1,5 @@
 PORTNAME=	gap
-DISTVERSION=	4.12.2
+DISTVERSION=	4.13.0
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/gap-system/gap/releases/download/v${DISTVERSION}/
 
@@ -20,7 +20,7 @@ USES=		gmake libtool localbase perl5 readline shebangfix
 USE_PERL5=	run
 USE_LDCONFIG=	yes
 
-SHEBANG_FILES=	.
+SHEBANG_FILES=	. -not -name '*.ac' -not -name '*.am' -not -name '*.m4'
 
 GNU_CONFIGURE=	yes
 
@@ -60,7 +60,7 @@ post-install:
 	# strip binaries
 	@${STRIP_CMD} \
 		${STAGEDIR}${PREFIX}/lib/gap/gap \
-		${STAGEDIR}${PREFIX}/lib/libgap.so.8.0.0
+		${STAGEDIR}${PREFIX}/lib/libgap.so.9
 
 do-test:
 	@cd ${WRKSRC} && ./gap ${FILESDIR}/test.g

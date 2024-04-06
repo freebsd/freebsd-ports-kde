@@ -1,6 +1,6 @@
 PORTNAME=	fb303
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.02.12.00
+DISTVERSION=	2024.04.01.00
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -36,13 +36,13 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	facebook
 
 CXXFLAGS+=	-fPIC
+CXXFLAGS+=	-DGLOG_USE_GLOG_EXPORT
 
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_OFF=	PYTHON_EXTENSIONS
 
 post-install:
 	@${RMDIR} \
-		${STAGEDIR}${PREFIX}/include/fb303/test \
-		${STAGEDIR}${PREFIX}/include/fb303/thrift/types # see https://github.com/facebook/fb303/issues/37
+		${STAGEDIR}${PREFIX}/include/fb303/test
 
 .include <bsd.port.mk>

@@ -1,6 +1,6 @@
 PORTNAME=	oidn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.2.0
+DISTVERSION=	2.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://freebsd.org/:weights # bogus URL to make the framework happy, the fetch uses Git URL below
 DISTFILES=	${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX}:weights
@@ -65,7 +65,7 @@ pre-fetch:
 		) && \
 		${FIND} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} -and -exec ${TOUCH} -h -d 1970-01-01T00:00:00Z {} \; && \
 		${FIND} ${PORTNAME}-weights-${WEIGHTS_GIT_HASH} -print0 | LC_ALL=C ${SORT} -z | \
-		${TAR} czf ${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX} --format=bsdtar --gid 0 --uid 0 --options gzip:!timestamp --no-recursion --null -T - && \
+		${TAR} czf ${PORTNAME}-weights-${WEIGHTS_GIT_HASH}${EXTRACT_SUFX} --format=ustar --gid 0 --uid 0 --options gzip:!timestamp --no-recursion --null -T - && \
 		${RM} -r ${PORTNAME}-weights-${WEIGHTS_GIT_HASH}; \
 	fi
 

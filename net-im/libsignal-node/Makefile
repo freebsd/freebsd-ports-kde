@@ -1,11 +1,12 @@
 PORTNAME=	libsignal
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.39.1
+PORTREVISION=	2
 CATEGORIES=	net-im
 PKGNAMESUFFIX=	-node
 DISTFILES=	libsignal-node-${DISTVERSION}-yarn-cache.tar.gz
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Platform-agnostic APIs used by the official Signal clients and servers
 WWW=		https://github.com/signalapp/libsignal
 

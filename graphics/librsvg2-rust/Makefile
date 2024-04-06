@@ -1,6 +1,6 @@
 PORTNAME=	librsvg
-PORTVERSION=	2.56.4
-PORTREVISION=	4
+PORTVERSION=	2.58.0
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2-rust
@@ -46,6 +46,8 @@ OPTIONS_DEFINE=	DOCS
 
 DOCS_BUILD_DEPENDS=	gi-docgen:textproc/py-gi-docgen
 DOCS_CONFIGURE_ENABLE=	gtk-doc
+
+TESTING_UNSAFE=	ld: error: undefined symbol: pthread_condattr_init
 
 post-patch:
 # Add explicit <triple> subdir for --target from USES=cargo

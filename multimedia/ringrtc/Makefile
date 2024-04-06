@@ -1,6 +1,7 @@
 PORTNAME=	ringrtc
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.37.0
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	LOCAL/mikael/ringrtc/:base \
 		LOCAL/mikael/ringrtc/:boringssl \
@@ -31,7 +32,7 @@ DISTFILES=	base-${BASE_REV}.tar.gz:base \
 		testing-${TESTING_REV}.tar.gz:testing \
 		opus-${OPUS_REV}.tar.gz:opus
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Middleware library for Signal-Desktop
 WWW=		https://github.com/signalapp/ringrtc
 

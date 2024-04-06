@@ -1,5 +1,5 @@
 PORTNAME=	stellarium
-PORTVERSION=	23.4
+PORTVERSION=	24.1
 CATEGORIES=	astro
 MASTER_SITES=	https://github.com/Stellarium/stellarium/releases/download/v${PORTVERSION}/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -11,6 +11,7 @@ WWW=		https://stellarium.org/
 
 LICENSE=	GPLv2+
 
+BUILD_DEPENDS=	${LOCALBASE}/include/fast_float/fast_float.h:math/fast_float
 LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libnlopt.so:math/nlopt@minimal
 
@@ -75,7 +76,7 @@ TEXTURES_DISTFILES=	textures-1K.zip:gfx
 WEBENGINE_USE=		QT=declarative,webchannel,webengine
 WEBENGINE_CMAKE_OFF=	-DENABLE_QTWEBENGINE:BOOL=OFF
 
-XLSX_LIB_DEPENDS=	libQXlsx.so:devel/qxlsx
+XLSX_LIB_DEPENDS=	libQXlsxQt5.so:devel/qxlsx@qt5
 XLSX_CMAKE_OFF=		-DENABLE_XLSX:BOOL=OFF
 
 .include <bsd.port.options.mk>

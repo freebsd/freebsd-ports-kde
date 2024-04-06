@@ -1,5 +1,6 @@
 PORTNAME=	caldera
 DISTVERSION=	5.0.0
+PORTREVISION=	4
 CATEGORIES=	security python
 
 MAINTAINER=	acm@FreeBSD.org
@@ -11,6 +12,7 @@ CONFLICTS=	caldera4
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	npm-node18>0:www/npm-node18
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>0:www/py-aiohttp@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiohttp-jinja2>0:www/py-aiohttp-jinja2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}aiohttp-session>0:www/py-aiohttp-session@${PY_FLAVOR} \
@@ -109,11 +111,14 @@ post-build:
 	@${ECHO} "(!!!) Please upload the cache archive: ${DISTDIR}/${DIST_SUBDIR}/${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}"
 .else
 MASTER_SITES+=	LOCAL/acm/caldera/:npm_cache
-DISTFILES+=	${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache
+DISTFILES+=	${PORTNAME}-cache-${DISTVERSION}${EXTRACT_SUFX}:npm_cache \
+		${PORTNAME}-freebsd-logos.tar.gz:npm_cache
 NPM_ARGS=	run build
 
 post-extract:
 	@${MV} ${WRKDIR}/node_modules ${WRKSRC}/plugins/magma/
+	@${MV} ${WRKDIR}/freebsd.red.svg ${WRKSRC}/plugins/magma/src/assets/img/graph/freebsd-icon-privileged.svg
+	@${MV} ${WRKDIR}/freebsd.black.svg ${WRKSRC}/plugins/magma/src/assets/img/graph/freebsd-icon.svg
 	${RM} -R ${WRKSRC}/.github
 	cd ${WRKSRC} && ${RM} .coveragerc .dockerignore .eslintrc.js .flake8 \
 		.git* .pre* .stylelintrc.json Dockerfile

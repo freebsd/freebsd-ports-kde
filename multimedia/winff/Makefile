@@ -1,5 +1,5 @@
 PORTNAME=	WinFF
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/WinFF/winff/archive/refs/tags/
@@ -32,7 +32,7 @@ DESKTOP_ENTRIES=	"${PORTNAME}"	\
 			true
 
 LAZARUS_PROJECT_FILES=	winff.lpr
-LAZBUILD_ARGS=		-d
+LAZBUILD_ARGS=		-d --pcp=${WRKSRC} --scp=${WRKDIR}
 
 WRKSRC=		${WRKDIR}/${_PORTNAME}-${_PORTNAME}-${PORTVERSION}
 BUILD_WRKSRC=	${WRKSRC}/${_PORTNAME}
@@ -49,6 +49,9 @@ pre-configure:
 .for fp in unit1.pas unit4.pas scripts/check_presets.sh
 	${REINPLACE_CMD} -e 's|/usr/bin/|${LOCALBASE}/bin/|g' ${BUILD_WRKSRC}/${fp}
 .endfor
+
+pre-build:
+	${CP} -p ${LOCALBASE}/etc/fppkg.cfg ${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/${PORTNAME:tl} ${STAGEDIR}${PREFIX}/bin

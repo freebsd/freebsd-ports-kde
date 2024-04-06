@@ -1,7 +1,7 @@
 PORTNAME=	signal-desktop
 DISTVERSIONPREFIX=	v
-DISTVERSION=	6.47.0
-PORTREVISION=	1
+DISTVERSION=	6.48.1
+PORTREVISION=	5
 CATEGORIES=	net-im
 MASTER_SITES=	LOCAL/mikael/signal-desktop/:npm \
 		LOCAL/mikael/signal-desktop/:sqlite \
@@ -11,7 +11,7 @@ DISTFILES=	signal-desktop-${DISTVERSION}-yarn-cache.tar.gz:yarn \
 		signal-desktop-6.37.0-npm-cache.tar.gz:npm \
 		${SQLCIPHER}.tar.gz:sqlcipher
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cross-platform centralized encrypted messaging service
 WWW=		https://signal.org/
 

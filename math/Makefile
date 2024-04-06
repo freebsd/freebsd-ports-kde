@@ -615,6 +615,7 @@
     SUBDIR += octave-forge-octave-pool
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
+    SUBDIR += octave-forge-odbc
     SUBDIR += octave-forge-odebvp
     SUBDIR += octave-forge-onsas
     SUBDIR += octave-forge-optics
@@ -907,6 +908,7 @@
     SUBDIR += py-benford_py
     SUBDIR += py-bitmath
     SUBDIR += py-bitvector
+    SUBDIR += py-blis
     SUBDIR += py-bottleneck
     SUBDIR += py-brial
     SUBDIR += py-chaospy
@@ -989,7 +991,6 @@
     SUBDIR += py-moarchiving
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
-    SUBDIR += py-munkres10
     SUBDIR += py-ndindex
     SUBDIR += py-networkx
     SUBDIR += py-nevergrad
@@ -1034,6 +1035,7 @@
     SUBDIR += py-pynndescent
     SUBDIR += py-pyodeint
     SUBDIR += py-pyodesys
+    SUBDIR += py-pyprobables
     SUBDIR += py-pyreadr
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt

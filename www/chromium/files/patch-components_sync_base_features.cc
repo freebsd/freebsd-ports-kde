@@ -1,6 +1,6 @@
---- components/sync/base/features.cc.orig	2024-01-30 07:53:34 UTC
+--- components/sync/base/features.cc.orig	2024-03-22 08:19:40 UTC
 +++ components/sync/base/features.cc
-@@ -101,7 +101,7 @@ BASE_FEATURE(kEnablePreferencesAccountStorage,
+@@ -122,7 +122,7 @@ BASE_FEATURE(kEnablePreferencesAccountStorage,
  BASE_FEATURE(kSyncPollImmediatelyOnEveryStartup,
               "SyncPollImmediatelyOnEveryStartup2",
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

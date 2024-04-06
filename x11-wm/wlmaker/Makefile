@@ -1,7 +1,7 @@
 PORTNAME=	wlmaker
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1-444
-DISTVERSIONSUFFIX=	-ga388205
+DISTVERSION=	0.1-454
+DISTVERSIONSUFFIX=	-g6723df1
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -18,11 +18,12 @@ LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
 		libxkbcommon.so:x11/libxkbcommon
 RUN_DEPENDS=	foot:x11/foot
 
-USES=		cmake compiler:c11 gnome pkgconfig
+USES=		cmake compiler:c11 gnome pkgconfig xorg
 USE_GITHUB=	yes
 USE_GNOME=	cairo
+USE_XORG=	xcb
 GH_ACCOUNT=	phkaeser
-GH_TUPLE=	phkaeser:libbase:66a3992:libbase/submodules/libbase
+GH_TUPLE=	phkaeser:libbase:27aae18:libbase/submodules/libbase
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/wlmclock \
 		share/icons/${PORTNAME}/chrome-48x48.png \

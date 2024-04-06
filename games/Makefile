@@ -19,6 +19,7 @@
     SUBDIR += KnightCap
     SUBDIR += LibreMines
     SUBDIR += NBlood
+    SUBDIR += Nanosaur
     SUBDIR += OpenLara
     SUBDIR += OpenTomb
     SUBDIR += SRB2
@@ -601,6 +602,7 @@
     SUBDIR += lugaru
     SUBDIR += luola
     SUBDIR += lwjgl
+    SUBDIR += lwjgl3
     SUBDIR += macopix
     SUBDIR += madbomber
     SUBDIR += maelstrom
@@ -1058,7 +1060,6 @@
     SUBDIR += wyrmgus
     SUBDIR += wyrmsun
     SUBDIR += xasteroids
-    SUBDIR += xataxx
     SUBDIR += xbat
     SUBDIR += xbill
     SUBDIR += xbl

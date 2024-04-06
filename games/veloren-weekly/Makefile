@@ -1,5 +1,5 @@
 PORTNAME=	veloren
-PORTVERSION=	s20240215
+PORTVERSION=	s20240403
 CATEGORIES=	games wayland
 PKGNAMESUFFIX=	-weekly
 
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-pl
 USES=		cargo xorg
 USE_XORG=	xcb
 USE_GITLAB=	yes
-GL_TAGNAME=	v0.15.0-1162-g99c997fab # git describe --match='v[0-9]*' weekly
+GL_TAGNAME=	v0.16.0-22-g2f0c83992 # git describe --match='v[0-9]*' weekly
 CARGO_ENV=	VELOREN_USERDATA_STRATEGY=system SHADERC_LIB_DIR="${LOCALBASE}/lib"
 PLIST_FILES=	bin/${PORTNAME}-server-cli \
 		bin/${PORTNAME}-voxygen \
@@ -41,7 +41,7 @@ CONFLICTS_INSTALL=	${PORTNAME}
 CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
 .endif
 # Fixes error "Instruction does not dominate all uses!"
-LTO_UNSAFE=	yes
+WITHOUT_LTO=	yes # XXX bug 277333
 
 # https://gitlab.com/veloren/veloren/issues/264
 CARGO_ENV+=		RUSTC_BOOTSTRAP=1

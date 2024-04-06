@@ -105,6 +105,7 @@
     SUBDIR += neXtaw
     SUBDIR += ntk
     SUBDIR += nuklear
+    SUBDIR += ocaml-graphics
     SUBDIR += ocaml-lablgtk2
     SUBDIR += ocaml-lablgtk3
     SUBDIR += ocaml-labltk
@@ -240,6 +241,7 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
+    SUBDIR += wlroots-devel
     SUBDIR += wlroots015
     SUBDIR += wlroots016
     SUBDIR += wmapp

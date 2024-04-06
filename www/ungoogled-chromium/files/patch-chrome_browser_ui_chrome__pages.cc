@@ -1,6 +1,6 @@
---- chrome/browser/ui/chrome_pages.cc.orig	2024-02-03 15:42:55 UTC
+--- chrome/browser/ui/chrome_pages.cc.orig	2024-03-22 14:16:19 UTC
 +++ chrome/browser/ui/chrome_pages.cc
-@@ -79,7 +79,7 @@
+@@ -80,7 +80,7 @@
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

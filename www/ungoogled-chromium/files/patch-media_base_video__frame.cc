@@ -1,4 +1,4 @@
---- media/base/video_frame.cc.orig	2024-02-03 15:42:55 UTC
+--- media/base/video_frame.cc.orig	2024-03-22 14:16:19 UTC
 +++ media/base/video_frame.cc
 @@ -80,7 +80,7 @@ std::string VideoFrame::StorageTypeToString(
        return "OWNED_MEMORY";
@@ -18,7 +18,7 @@
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -306,7 +306,7 @@ static absl::optional<VideoFrameLayout> GetDefaultLayo
+@@ -306,7 +306,7 @@ static std::optional<VideoFrameLayout> GetDefaultLayou
    return VideoFrameLayout::CreateWithPlanes(format, coded_size, planes);
  }
  
@@ -60,10 +60,10 @@
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- const std::vector<base::ScopedFD>& VideoFrame::DmabufFds() const {
-   DCHECK_EQ(storage_type_, STORAGE_DMABUFS);
- 
-@@ -1425,7 +1425,7 @@ VideoFrame::VideoFrame(const VideoFrameLayout& layout,
+ size_t VideoFrame::NumDmabufFds() const {
+   return dmabuf_fds_->size();
+ }
+@@ -1429,7 +1429,7 @@ VideoFrame::VideoFrame(const VideoFrameLayout& layout,
        storage_type_(storage_type),
        visible_rect_(Intersection(visible_rect, gfx::Rect(layout.coded_size()))),
        natural_size_(natural_size),

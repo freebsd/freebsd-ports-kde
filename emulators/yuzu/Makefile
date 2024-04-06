@@ -1,5 +1,6 @@
 PORTNAME=	yuzu
-PORTVERSION=	s20240217
+PORTVERSION=	s20240301
+PORTREVISION=	2
 CATEGORIES=	emulators wayland
 .if make(makesum)
 MASTER_SITES=	https://api.yuzu-emu.org/gamedb/?dummy=/:gamedb
@@ -22,6 +23,8 @@ LICENSE_FILE_MIT=	${WRKSRC}/externals/sirit/externals/SPIRV-Headers/LICENSE
 
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	requires int128 and dynarmic backend
+# XXX Need Ryujinx or a Yuzu fork that regularly improves game compatibility
+DEPRECATED=	Project discontinued
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		nlohmann-json>0:devel/nlohmann-json \
@@ -38,21 +41,21 @@ LIB_DEPENDS=	liblz4.so:archivers/liblz4 \
 		libenet.so:net/enet
 TEST_DEPENDS=	catch2>0:devel/catch2
 
-FLAVORS=	qt5 qt6
-qt5_CONFLICTS_INSTALL=	${PORTNAME}-qt6
-qt6_PKGNAMESUFFIX=	-qt6
-qt6_CONFLICTS_INSTALL=	${PORTNAME}
-qt6_OPTIONS_SLAVE=	QT6
-qt6_OPTIONS_EXCLUDE=	QT5
+FLAVORS=	qt6 qt5
+qt5_PKGNAMESUFFIX=	-qt5
+qt5_CONFLICTS_INSTALL=	${PORTNAME}
+qt5_OPTIONS_SLAVE=	QT5
+qt5_OPTIONS_EXCLUDE=	QT6
+qt6_CONFLICTS_INSTALL=	${PORTNAME}-qt5
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	yuzu-emu
-GH_TAGNAME=	53f8383354
-GH_TUPLE=	yuzu-emu:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
-		yuzu-emu:sirit:ab75463:sirit/externals/sirit \
+GH_ACCOUNT=	yuzu-mirror
+GH_TAGNAME=	15e6e48bef
+GH_TUPLE=	yuzu-mirror:mbedtls:v2.16.9-115-g8c88150ca:mbedtls/externals/mbedtls \
+		yuzu-mirror:sirit:ab75463:sirit/externals/sirit \
 		GPUOpen-LibrariesAndSDKs:VulkanMemoryAllocator:v3.0.1-114-g2f382df:VulkanMemoryAllocator/externals/VulkanMemoryAllocator \
 		KhronosGroup:SPIRV-Headers:1.5.4.raytracing.fixed-201-gc214f6f:SPIRV_Headers/externals/sirit/externals/SPIRV-Headers \
-		merryhime:dynarmic:6.6.2-15-gba8192d8:dynarmic/externals/dynarmic \
+		yuzu-mirror:dynarmic:6.6.2-15-gba8192d8:dynarmic/externals/dynarmic \
 		merryhime:oaknut:2.0.1:oaknut/externals/oaknut \
 		arun11299:cpp-jwt:v1.4-18-g10ef573:cpp_jwt/externals/cpp-jwt \
 		arsenm:sanitizers-cmake:aab6948:sanitizers_cmake/externals/cubeb/cmake/sanitizers-cmake \
@@ -78,7 +81,7 @@ PLIST_FILES=	bin/${PORTNAME}-cmd \
 		bin/${PORTNAME}-room
 
 OPTIONS_DEFINE=	ALSA GUI PULSEAUDIO JACK LTO NLS SNDIO VAAPI VULKAN WEBENGINE
-OPTIONS_DEFAULT=PULSEAUDIO JACK LTO QT5 SNDIO VAAPI VULKAN WEBENGINE
+OPTIONS_DEFAULT=PULSEAUDIO JACK LTO QT6 SNDIO VAAPI VULKAN WEBENGINE
 OPTIONS_SINGLE=	GUI
 OPTIONS_SINGLE_GUI=	QT5 QT6
 OPTIONS_SLAVE=		${${FLAVOR}_OPTIONS_SLAVE}
@@ -138,23 +141,24 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/@GIT_BRANCH@/master/' \
 		-e 's/@GIT_DESC@/${GH_TAGNAME}/' \
 		${WRKSRC}/src/common/scm_rev.cpp.in
-# Temporarily use ConsoleKit2 like sysutils/gnome-settings-daemon
+# https://github.com/ConsoleKit2/ConsoleKit2/issues/150
 	@${REINPLACE_CMD} -e 's,/login1,/ConsoleKit/Manager,' \
 		-e 's,login1,ConsoleKit,' \
 		${WRKSRC}/src/${PORTNAME}/main.cpp
+.ifdef DEPRECATED
+	@${GREP} -Flr 'yuzu-emu' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
+		-e 's,${WWW:S,/$,,},https://web.archive.org/web/20240304190805/&,g' \
+		-e 's,https://api.yuzu-emu.org,,g' \
+		-e 's,https://profile.yuzu-emu.org/,,g' \
+		-e 's,\(https://github.com\)/\(yuzu-emu\),\1/${GH_ACCOUNT},g'
+.endif
 
 post-patch-VAAPI-off:
 	@${REINPLACE_CMD} -i .nova '/pkg_check.*libva/d' \
 		${WRKSRC}/CMakeLists.txt
 
-# XXX Drop after FreeBSD 13.2 EOL around 2024-05-01 (don't forget distinfo)
+# XXX Drop after FreeBSD 13.2 EOL around 2024-07-01 (don't forget distinfo)
 .if !exists(/usr/include/c++/v1/__ranges/as_rvalue_view.h) || make(makesum) || make(fetch)
-. if !exists(/usr/include/c++/v1/__memory/concepts.h)
-USES+=		llvm:min=14,build,export
-PATH:=		${LLVM_PREFIX}/bin:${PATH} # XXX _CMAKE_TOOLCHAIN_SUFFIX vs. devel/llvm*
-CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CPP="${CPP}"
-. endif
-
 # XXX Move into separate port and standardize via USES
 GH_TUPLE+=	llvm:llvm-project:llvmorg-16.0.1:libcxx
 CXXFLAGS+=	-nostdinc++ -isystem${WRKDIR}/libcxx_prefix/include/c++/v1

@@ -1,7 +1,6 @@
 PORTNAME=	mvfst
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.02.12.00
-PORTREVISION=	1
+DISTVERSION=	2024.04.01.00
 CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -40,5 +39,6 @@ CMAKE_OFF=	BUILD_TESTS
 CMAKE_TESTING_ON=	BUILD_TESTS # several tests fail, see https://github.com/facebookincubator/mvfst/issues/275
 
 CXXFLAGS+=	-fPIC
+CXXFLAGS+=	-DGLOG_USE_GLOG_EXPORT
 
 .include <bsd.port.mk>

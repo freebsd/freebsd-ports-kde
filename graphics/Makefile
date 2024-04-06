@@ -39,7 +39,6 @@
     SUBDIR += a2png
     SUBDIR += aalib
     SUBDIR += aaphoto
-    SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
     SUBDIR += aeskulap
     SUBDIR += agg
@@ -200,7 +199,7 @@
     SUBDIR += flphoto
     SUBDIR += fly
     SUBDIR += fortytwo
-    SUBDIR += fotoxx
+    SUBDIR += fotocx
     SUBDIR += founts
     SUBDIR += fracplanet
     SUBDIR += fractgen
@@ -243,7 +242,6 @@
     SUBDIR += gifski
     SUBDIR += giftool
     SUBDIR += gimageview
-    SUBDIR += gimmage
     SUBDIR += gimp
     SUBDIR += gimp-app
     SUBDIR += gimp-beautify-plugin
@@ -406,6 +404,7 @@
     SUBDIR += kf6-prison
     SUBDIR += kgeotag
     SUBDIR += kgraphviewer
+    SUBDIR += khronos-texture
     SUBDIR += kimageannotator
     SUBDIR += kimagemapeditor
     SUBDIR += kipi-plugins
@@ -594,6 +593,7 @@
     SUBDIR += nurbs++
     SUBDIR += nvidia-drm-510-kmod
     SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-61-kmod
     SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
@@ -634,6 +634,7 @@
     SUBDIR += openslide
     SUBDIR += opensubdiv
     SUBDIR += openvkl
+    SUBDIR += openxr
     SUBDIR += optar
     SUBDIR += optipng
     SUBDIR += osg
@@ -810,7 +811,6 @@
     SUBDIR += png2html
     SUBDIR += png2ico
     SUBDIR += pngcheck
-    SUBDIR += pngcrush
     SUBDIR += pnglite
     SUBDIR += pngnq
     SUBDIR += pngquant
@@ -916,6 +916,7 @@
     SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
+    SUBDIR += py-pdf2image
     SUBDIR += py-photocollage
     SUBDIR += py-piexif
     SUBDIR += py-pillow
@@ -954,6 +955,7 @@
     SUBDIR += py-pyvips
     SUBDIR += py-pyvista
     SUBDIR += py-pyx
+    SUBDIR += py-pyzbar
     SUBDIR += py-qpageview
     SUBDIR += py-qrencode
     SUBDIR += py-qt6-3d
@@ -988,7 +990,7 @@
     SUBDIR += py-zbar-py
     SUBDIR += pywal
     SUBDIR += qcomicbook
-    SUBDIR += qcustomplot-qt5
+    SUBDIR += qcustomplot
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
@@ -1118,6 +1120,7 @@
     SUBDIR += skanpage
     SUBDIR += spectacle
     SUBDIR += spectacle-devel
+    SUBDIR += spirv-cross
     SUBDIR += spirv-tools
     SUBDIR += springgraph
     SUBDIR += squish

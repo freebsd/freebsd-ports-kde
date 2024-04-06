@@ -1,13 +1,12 @@
 PORTNAME=	mesa
-DISTVERSION=	24.0-branchpoint-1761
-DISTVERSIONSUFFIX=	-g893780b3625
+DISTVERSION=	24.0-branchpoint-4226
+DISTVERSIONSUFFIX=	-g5fa70730da1
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/mesa3d/${GL_PROJECT}/commit/:github
 PATCHFILES+=	700efacda59c.patch:-p1:github
 PATCH_SITES+=	${GL_SITE}/${GL_ACCOUNT}/${GL_PROJECT}/-/commit/
-PATCHFILES+=	72f7e51d22b3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
 PATCHFILES+=	2930dcbb3329.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/22246
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -113,14 +112,14 @@ OPENCL_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
 			libclc>0:devel/libclc \
 			spirv-tools>0:graphics/spirv-tools \
 			rustc:lang/${RUST_DEFAULT}
-OPENCL_LIB_DEPENDS=	libLLVMSPIRVLib.so.${LLVM_VERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
+OPENCL_LIB_DEPENDS=	libLLVMSPIRVLib.so.${OPENCL_SOVERSION}:devel/spirv-llvm-translator@${LLVM_PORT:T}
 OPENCL_RUN_DEPENDS=	libclc>0:devel/libclc
+OPENCL_SOVERSION=	${LLVM_VERSION}${${LLVM_VERSION}>=18:?.1:}
 OPENCL_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 OPENCL_MESON_FALSE=	b_lundef # environ
 OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
 OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
-OPENCL_VARS=		LLVM_USES=llvm:15,lib,noexport # chase libclc + rust (LTO)
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
 OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIONS_GROUP_GALLIUM
 

@@ -3,7 +3,6 @@
     SUBDIR += Bento4
     SUBDIR += ab-av1
     SUBDIR += ab25
-    SUBDIR += aegisub
     SUBDIR += alass
     SUBDIR += aom
     SUBDIR += aravis
@@ -24,7 +23,6 @@
     SUBDIR += bitstream
     SUBDIR += blind
     SUBDIR += butt
-    SUBDIR += camserv
     SUBDIR += celluloid
     SUBDIR += cheese
     SUBDIR += chilitags
@@ -64,7 +62,6 @@
     SUBDIR += ffsubsync
     SUBDIR += filebot
     SUBDIR += flvmeta
-    SUBDIR += flvstreamer
     SUBDIR += flvtool++
     SUBDIR += fswebcam
     SUBDIR += gaupol
@@ -102,7 +99,6 @@
     SUBDIR += gstreamer1-plugins-msdk
     SUBDIR += gstreamer1-plugins-openh264
     SUBDIR += gstreamer1-plugins-resindvd
-    SUBDIR += gstreamer1-plugins-rtmp
     SUBDIR += gstreamer1-plugins-rust
     SUBDIR += gstreamer1-plugins-smoothstreaming
     SUBDIR += gstreamer1-plugins-svt-av1
@@ -200,6 +196,7 @@
     SUBDIR += libvdpau-va-gl
     SUBDIR += libvlcpp
     SUBDIR += libvpx
+    SUBDIR += libwebm
     SUBDIR += libx264
     SUBDIR += libxine
     SUBDIR += libxspf
@@ -392,6 +389,7 @@
     SUBDIR += webcamoid
     SUBDIR += wf-recorder
     SUBDIR += winff
+    SUBDIR += wireplumber
     SUBDIR += wl-screenrec
     SUBDIR += wlrobs
     SUBDIR += x264

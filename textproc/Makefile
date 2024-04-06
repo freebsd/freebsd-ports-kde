@@ -1307,7 +1307,6 @@
     SUBDIR += py-arabic-reshaper
     SUBDIR += py-asciinema
     SUBDIR += py-asonic
-    SUBDIR += py-atoml
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
     SUBDIR += py-bibtexparser
@@ -1381,7 +1380,6 @@
     SUBDIR += py-hjson
     SUBDIR += py-html2json
     SUBDIR += py-html2text
-    SUBDIR += py-html2text2018
     SUBDIR += py-htmlmin2
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
@@ -1403,8 +1401,10 @@
     SUBDIR += py-junit-xml
     SUBDIR += py-jupyter_sphinx
     SUBDIR += py-jupyterlab-pygments
+    SUBDIR += py-langcodes
     SUBDIR += py-langdetect
     SUBDIR += py-langid
+    SUBDIR += py-language-data
     SUBDIR += py-laserhammer
     SUBDIR += py-latexcodec
     SUBDIR += py-libxml2
@@ -1466,6 +1466,7 @@
     SUBDIR += py-pager
     SUBDIR += py-paginate
     SUBDIR += py-pallets-sphinx-themes
+    SUBDIR += py-pandoc-plantuml-filter
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parse
@@ -1550,10 +1551,15 @@
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
     SUBDIR += py-scour
+    SUBDIR += py-sense2vec
     SUBDIR += py-sentencepiece
     SUBDIR += py-simplebayes
     SUBDIR += py-smartypants
     SUBDIR += py-snowballstemmer
+    SUBDIR += py-spacy
+    SUBDIR += py-spacy-legacy
+    SUBDIR += py-spacy-llm
+    SUBDIR += py-spacy-loggers
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-argparse
@@ -1616,6 +1622,7 @@
     SUBDIR += py-textual
     SUBDIR += py-textwrap3
     SUBDIR += py-three-merge
+    SUBDIR += py-tika-client
     SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
@@ -1637,6 +1644,7 @@
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
+    SUBDIR += py-wasabi
     SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
@@ -1726,7 +1734,6 @@
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
-    SUBDIR += rubygem-autoprefixer-rails1025
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
@@ -1747,7 +1754,7 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
-    SUBDIR += rubygem-cucumber-gherkin26
+    SUBDIR += rubygem-cucumber-gherkin27
     SUBDIR += rubygem-cucumber-html-formatter
     SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
@@ -1781,8 +1788,10 @@
     SUBDIR += rubygem-gepub
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markup
+    SUBDIR += rubygem-gitlab-glfm-markdown
     SUBDIR += rubygem-gitlab-grit
     SUBDIR += rubygem-gitlab-markup
+    SUBDIR += rubygem-google-cloud-artifact_registry-v1
     SUBDIR += rubygem-google-cloud-profiler-v2
     SUBDIR += rubygem-google-cloud-translate
     SUBDIR += rubygem-google-cloud-translate-v2
@@ -1824,7 +1833,6 @@
     SUBDIR += rubygem-liquid4
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
-    SUBDIR += rubygem-loofah221
     SUBDIR += rubygem-ltsv
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-mdl
@@ -1931,7 +1939,6 @@
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef
-    SUBDIR += rubygem-zmq
     SUBDIR += rw-aspell
     SUBDIR += rxp
     SUBDIR += s5

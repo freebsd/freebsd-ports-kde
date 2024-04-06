@@ -83,7 +83,6 @@
     SUBDIR += lziprecover
     SUBDIR += lzlib
     SUBDIR += lzma
-    SUBDIR += lzmalib
     SUBDIR += lzo2
     SUBDIR += lzop
     SUBDIR += lzsa
@@ -178,6 +177,7 @@
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-acefile
+    SUBDIR += py-bitshuffle
     SUBDIR += py-blosc2
     SUBDIR += py-borgbackup
     SUBDIR += py-borgbackup11
@@ -271,7 +271,6 @@
     SUBDIR += urbackup-server
     SUBDIR += v1541commander
     SUBDIR += vbz-compression
-    SUBDIR += xar
     SUBDIR += xarchive
     SUBDIR += xarchiver
     SUBDIR += xdms

@@ -1,6 +1,5 @@
 PORTNAME=	curl
-PORTVERSION=	8.5.0
-PORTREVISION=	1
+PORTVERSION=	8.7.1
 CATEGORIES=	ftp net www
 MASTER_SITES=	https://curl.se/download/ \
 		https://github.com/curl/curl/releases/download/curl-${PORTVERSION:S|.|_|g}/
@@ -26,10 +25,10 @@ CONFIGURE_ARGS=	--disable-werror \
 		--enable-netrc \
 		--enable-openssl-auto-load-config \
 		--enable-progress-meter \
-		--with-fish-functions-dir=${LOCALBASE}/share/fish/completions \
 		--with-zsh-functions-dir=${LOCALBASE}/share/zsh/site-functions \
 		--without-ca-bundle \
-		--without-ca-path
+		--without-ca-path \
+		--without-fish-functions-dir
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE} \
 		ac_cv_func_SSLv2_client_method=no
 GNU_CONFIGURE=	yes
@@ -61,6 +60,7 @@ HTTP2_DESC=	HTTP/2 support (requires HTTP)
 HTTP2_IMPLIES=	HTTP
 IMAP_DESC=	IMAP/IMAPS support
 LDAPS_IMPLIES=	LDAP
+LDAPS_DESC=	LDAP protocol over SSL support (requires GNUTLS/OPENSSL/WOLFSSL)
 LIBSSH_DESC=	SCP/SFTP support via libssh (requires OPENSSL)
 LIBSSH_IMPLIES=	OPENSSL
 LIBSSH2_DESC=	SCP/SFTP support via libssh2 (requires OPENSSL)
@@ -158,7 +158,7 @@ IGNORE=		only supports TLS-SRP with either OpenSSL or GnuTLS
 .endif
 
 .if ${PORT_OPTIONS:MLDAPS} && !${PORT_OPTIONS:MGNUTLS} && !${PORT_OPTIONS:MOPENSSL} && !${PORT_OPTIONS:MWOLFSSL}
-IGNORE=		only supports LDAPS with SSL
+IGNORE=		only supports LDAPS with GNUTLS/OPENSSL/WOLFSSL enabled
 .endif
 
 post-install:

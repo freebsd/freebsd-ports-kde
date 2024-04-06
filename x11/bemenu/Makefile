@@ -1,6 +1,7 @@
 PORTNAME=	bemenu
-DISTVERSION=	0.6.19
+DISTVERSION=	0.6.21
 CATEGORIES=	x11
+MASTER_SITES=	https://github.com/Cloudef/${PORTNAME}/releases/download/${DISTVERSION}/
 
 MAINTAINER=	uzsolt@FreeBSD.org
 COMMENT=	Dynamic menu library and client program inspired by dmenu
@@ -15,8 +16,6 @@ BUILD_DEPENDS=	scdoc:textproc/scdoc
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 
 USES=		gmake
-USE_GITHUB=	yes
-GH_ACCOUNT=	Cloudef
 USE_LDCONFIG=	yes
 MAKEFILE=	GNUmakefile
 ALL_TARGET=	clients
@@ -34,8 +33,7 @@ NCURSES_ALL_TARGET=	curses
 WAYLAND_CATEGORIES=	wayland
 WAYLAND_BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
 			wayland-protocols>0:graphics/wayland-protocols
-WAYLAND_LIB_DEPENDS=	libepoll-shim.so:devel/libepoll-shim \
-			libwayland-client.so:graphics/wayland \
+WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
 			libxkbcommon.so:x11/libxkbcommon
 WAYLAND_USES=		gnome pkgconfig
 WAYLAND_USE=		GNOME=cairo,glib20,pango

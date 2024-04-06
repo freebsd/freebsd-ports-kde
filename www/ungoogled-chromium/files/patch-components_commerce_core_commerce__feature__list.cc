@@ -1,4 +1,4 @@
---- components/commerce/core/commerce_feature_list.cc.orig	2024-02-03 15:42:55 UTC
+--- components/commerce/core/commerce_feature_list.cc.orig	2024-03-22 14:16:19 UTC
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -168,7 +168,7 @@ BASE_FEATURE(kPriceInsights,
               "PriceInsights",
@@ -9,7 +9,7 @@
  BASE_FEATURE(kPriceInsightsRegionLaunched,
               "PriceInsightsRegionLaunched",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -249,7 +249,7 @@ BASE_FEATURE(kShoppingCollection,
+@@ -244,7 +244,7 @@ const base::FeatureParam<bool> kDeleteAllMerchantsOnCl
  
  BASE_FEATURE(kShoppingList, "ShoppingList", base::FEATURE_DISABLED_BY_DEFAULT);
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \

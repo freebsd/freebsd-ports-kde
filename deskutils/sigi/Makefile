@@ -1,6 +1,7 @@
 PORTNAME=	sigi
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.6.3
+PORTREVISION=	3
 CATEGORIES=	deskutils
 
 MAINTAINER=	hiljusti@so.dang.cool
@@ -17,10 +18,10 @@ GH_ACCOUNT=	sigi-cli
 CARGO_BUILD_ARGS=	--all
 
 PLIST_FILES=	bin/sigi \
-		man/man1/sigi.1.gz
+		share/man/man1/sigi.1.gz
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
 
 .include <bsd.port.mk>

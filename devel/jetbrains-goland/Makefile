@@ -1,6 +1,6 @@
 PORTNAME=	goland
-DISTVERSION=	2023.3.3
-CATEGORIES=	devel java
+PORTVERSION=	2023.3.6
+CATEGORIES=	devel
 MASTER_SITES=	https://download-cdn.jetbrains.com/go/
 PKGNAMEPREFIX=	jetbrains-
 DIST_SUBDIR=	jetbrains
@@ -56,8 +56,7 @@ do-install:
 		${WRKSRC}/lib/native \
 		${WRKSRC}/lib/pty4j \
 		${WRKSRC}/plugins/cwm-plugin \
-		${WRKSRC}/plugins/cwm-plugin-projector \
-		${WRKSRC}/plugins/gateway-plugin/lib/remote-dev-workers \
+		${WRKSRC}/plugins/gateway-plugin \
 		${WRKSRC}/plugins/go-plugin/lib/dlv \
 		${WRKSRC}/plugins/remote-dev-server
 	${MKDIR} ${STAGEDIR}${DATADIR}
@@ -66,7 +65,7 @@ do-install:
 	@(cd ${WRKSRC}/bin && ${COPYTREE_BIN} . ${STAGEDIR}${DATADIR}/bin/ \
 		"-name *\.sh -o -name *\.py")
 	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
-	${INSTALL_MAN} ${FILESDIR}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/man/man1/
+	${INSTALL_MAN} ${FILESDIR}/${PORTNAME}.1 ${STAGEDIR}${PREFIX}/share/man/man1/
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${STAGEDIR}${PREFIX}/share/applications/
 # Use fsnotifier replacement provided by java/intellij-fsnotifier
 	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" >> ${STAGEDIR}${DATADIR}/bin/idea.properties

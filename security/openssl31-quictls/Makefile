@@ -1,5 +1,8 @@
 PORTNAME=	openssl
-PORTVERSION=	3.1.5
+DISTVERSIONPREFIX=	${PORTNAME}-
+DISTVERSION=	3.1.5
+PORTREVISION=	1
+DISTVERSIONSUFFIX=	-quic1
 CATEGORIES=	security devel
 PKGNAMESUFFIX=	31-quictls
 
@@ -10,7 +13,7 @@ WWW=		https://www.github.com/quictls/openssl
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3[12]
+CONFLICTS_INSTALL=	boringssl libressl libressl-devel openssl openssl111 openssl3* openssl-quictls
 
 BROKEN_i386=	ld: error: undefined symbol: __atomic_is_lock_free
 
@@ -24,7 +27,6 @@ USES=		cpe perl5
 USE_PERL5=	build
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PKGNAMESUFFIX:C/.*-//}
-GH_TAGNAME=	opernssl-${PORTVERSION}-quic1
 
 TEST_TARGET=	test
 
@@ -32,6 +34,8 @@ LDFLAGS_i386=	-Wl,-znotext
 
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive CNF_LDFLAGS="${LDFLAGS}"
 MAKE_ENV+=	LIBRPATH="${PREFIX}/lib" GREP_OPTIONS=
+
+EXTRA_PATCHES+=	${.CURDIR}/../openssl/files/patch-crypto_async_arch_async__posix.h
 
 OPTIONS_GROUP=		CIPHERS HASHES MODULES OPTIMIZE PROTOCOLS
 OPTIONS_GROUP_CIPHERS=	ARIA DES GOST IDEA SM4 RC2 RC4 RC5 WEAK-SSL-CIPHERS
