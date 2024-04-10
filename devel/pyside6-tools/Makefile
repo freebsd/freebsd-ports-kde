@@ -1,10 +1,8 @@
 PORTNAME=	pyside6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-#MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-tools
-DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	PySide6 development tools
@@ -22,7 +20,6 @@ USES=		cmake gl llvm:lib python qt:6 shebangfix tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	qtproject
 GH_PROJECT=	pyside-pyside-setup
-GH_TAGNAME=	d621c6d
 USE_GL=		gl
 USE_PYTHON=	flavors
 USE_QT=		base declarative languageserver tools

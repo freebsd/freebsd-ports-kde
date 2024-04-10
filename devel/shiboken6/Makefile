@@ -1,9 +1,7 @@
 PORTNAME=	shiboken6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-#MASTER_SITES=	QT/official_releases/QtForPython/${PORTNAME}/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python binding generator for C++ libraries
@@ -19,12 +17,12 @@ USES=		cmake compiler:c++17-lang gnome llvm:lib,noexport pathfix \
 USE_GITHUB=	yes
 GH_ACCOUNT=	qtproject
 GH_PROJECT=	pyside-pyside-setup
-GH_TAGNAME=	d621c6d
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
 USE_QT=		base
 
+CONFIGURE_ENV=	LLVM_INSTALL_DIR="${LLVM_PREFIX}/lib/cmake/llvm"
 CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DLLVM_DIR:PATH="${LLVM_PREFIX}/lib/cmake/llvm" \
 		-DCMAKE_CXX_FLAGS=-lexecinfo \
@@ -34,7 +32,7 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DBUILD_TESTS:BOOL=false
 
 WRKSRC_SUBDIR=	sources/shiboken6
-PLIST_SUB=	DISTVERSION=${DISTVERSION:R}
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 OPTIONS_DEFINE=	DOCS
 

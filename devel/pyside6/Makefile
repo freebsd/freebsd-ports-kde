@@ -1,9 +1,7 @@
 PORTNAME=	pyside6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
-#MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python Qt bindings for Qt 6
@@ -18,7 +16,6 @@ USES=		cmake gl llvm:lib,noexport python qt:6 tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	qtproject
 GH_PROJECT=	pyside-pyside-setup
-GH_TAGNAME=	d621c6d
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
@@ -28,10 +25,11 @@ USE_QT=		3d base charts connectivity datavis3d declarative doc graphs \
 		serialbus serialport shadertools speech svg tools translations \
 		wayland webchannel websockets
 
+CONFIGURE_ENV=	LLVM_INSTALL_DIR="${LLVM_PREFIX}/lib/cmake/llvm"
 CMAKE_ARGS=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
 WRKSRC_SUBDIR=	sources/pyside6
-PLIST_SUB=	DISTVERSION=${DISTVERSION:R}
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.pre.mk>
 
