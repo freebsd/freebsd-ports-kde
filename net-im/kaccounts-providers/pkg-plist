@@ -17,12 +17,10 @@ share/kpackage/genericqml/org.kde.kaccounts.nextcloud/contents/ui/Services.qml
 share/kpackage/genericqml/org.kde.kaccounts.nextcloud/contents/ui/WebLogin.qml
 share/kpackage/genericqml/org.kde.kaccounts.nextcloud/contents/ui/main.qml
 share/kpackage/genericqml/org.kde.kaccounts.nextcloud/metadata.desktop
-share/kpackage/genericqml/org.kde.kaccounts.nextcloud/metadata.json
 share/kpackage/genericqml/org.kde.kaccounts.owncloud/contents/ui/Server.qml
 share/kpackage/genericqml/org.kde.kaccounts.owncloud/contents/ui/Services.qml
 share/kpackage/genericqml/org.kde.kaccounts.owncloud/contents/ui/main.qml
 share/kpackage/genericqml/org.kde.kaccounts.owncloud/metadata.desktop
-share/kpackage/genericqml/org.kde.kaccounts.owncloud/metadata.json
 share/locale/ar/LC_MESSAGES/kaccounts-providers.mo
 share/locale/az/LC_MESSAGES/kaccounts-providers.mo
 share/locale/bg/LC_MESSAGES/kaccounts-providers.mo
@@ -34,6 +32,7 @@ share/locale/da/LC_MESSAGES/kaccounts-providers.mo
 share/locale/de/LC_MESSAGES/kaccounts-providers.mo
 share/locale/el/LC_MESSAGES/kaccounts-providers.mo
 share/locale/en_GB/LC_MESSAGES/kaccounts-providers.mo
+share/locale/eo/LC_MESSAGES/kaccounts-providers.mo
 share/locale/es/LC_MESSAGES/kaccounts-providers.mo
 share/locale/et/LC_MESSAGES/kaccounts-providers.mo
 share/locale/eu/LC_MESSAGES/kaccounts-providers.mo
@@ -63,9 +62,8 @@ share/locale/sr@ijekavian/LC_MESSAGES/kaccounts-providers.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/kaccounts-providers.mo
 share/locale/sr@latin/LC_MESSAGES/kaccounts-providers.mo
 share/locale/sv/LC_MESSAGES/kaccounts-providers.mo
+share/locale/ta/LC_MESSAGES/kaccounts-providers.mo
 share/locale/tr/LC_MESSAGES/kaccounts-providers.mo
 share/locale/uk/LC_MESSAGES/kaccounts-providers.mo
 share/locale/zh_CN/LC_MESSAGES/kaccounts-providers.mo
 share/locale/zh_TW/LC_MESSAGES/kaccounts-providers.mo
-share/metainfo/org.kde.kaccounts.nextcloud.appdata.xml
-share/metainfo/org.kde.kaccounts.owncloud.appdata.xml

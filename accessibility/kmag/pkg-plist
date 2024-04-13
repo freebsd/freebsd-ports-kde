@@ -2,10 +2,12 @@ bin/kmag
 share/applications/org.kde.kmag.desktop
 share/icons/hicolor/16x16/apps/kmag.png
 share/icons/hicolor/32x32/apps/kmag.png
+share/icons/hicolor/scalable/apps/kmag.svg
 %%DATADIR%%/icons/hicolor/16x16/actions/followmouse.png
 %%DATADIR%%/icons/hicolor/16x16/actions/hidemouse.png
 %%DATADIR%%/icons/hicolor/16x16/actions/window.png
 share/locale/ar/LC_MESSAGES/kmag.mo
+share/locale/ast/LC_MESSAGES/kmag.mo
 share/locale/be/LC_MESSAGES/kmag.mo
 share/locale/bg/LC_MESSAGES/kmag.mo
 share/locale/br/LC_MESSAGES/kmag.mo

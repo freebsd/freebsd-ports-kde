@@ -12,10 +12,11 @@ BUILD_DEPENDS=	kdev-pg-qt:devel/kdevelop-pg-qt
 LIB_DEPENDS=	libKDevPlatformInterfaces.so:devel/kdevelop
 
 USES=		cmake compiler:c++11-lib kde:5 qt:5 tar:xz xorg
-USE_KDE=	auth codecs completion config configwidgets coreaddons ecm:build \
-		i18n itemmodels jobwidgets kcmutils kio parts service solid \
-		sonnet syntaxhighlighting texteditor textwidgets threadweaver \
-		widgetsaddons windowsystem xmlgui
+USE_KDE=	auth codecs completion config configwidgets coreaddons i18n \
+		itemmodels jobwidgets kcmutils kio parts service solid sonnet \
+		syntaxhighlighting texteditor textwidgets threadweaver \
+		widgetsaddons windowsystem xmlgui \
+		ecm:build
 USE_QT=		concurrent core dbus gui network widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11

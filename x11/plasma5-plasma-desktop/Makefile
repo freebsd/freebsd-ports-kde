@@ -58,7 +58,7 @@ SHEBANG_FILES=	kcms/ksmserver/kconf_update/*.py \
 OPTIONS_SUB=	yes
 
 OPTIONS_DEFINE=		ACCOUNTS PIPEWIRE
-OPTIONS_DEFAULT=	ACCOUNTS PIPEWIRE
+OPTIONS_DEFAULT=	PIPEWIRE
 OPTIONS_GROUP=		IM
 OPTIONS_GROUP_IM=	IBUS SCIM
 IM_DESC=		Input Method Support
@@ -72,6 +72,7 @@ SCIM_DESC=		Enable SCIM backend for input dialog
 ACCOUNTS_LIB_DEPENDS=	libkaccounts.so:net-im/kaccounts-integration \
 			libaccounts-qt5.so:net-im/libaccounts-qt@qt5
 ACCOUNTS_USE=		gnome=intltool
+ACCOUNTS_BROKEN=	accounts-integration is now Qt6 based (maybe flavorize)
 ACCOUNTS_DESC=		Accounts management library support
 PIPEWIRE_DESC=		Use runtime dependency QML module 'org.kde.pipewire'
 PIPEWIRE_USE=		KDE=kpipewire

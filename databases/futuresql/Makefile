@@ -8,10 +8,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Non-blocking database framework for Qt
 WWW=		https://api.kde.org/futuresql/html/index.html
 
-USES=		cmake kde:5 qt:5 tar:xz
+USES=		cmake kde:6 qt:6 tar:xz
 
 USE_KDE=	ecm:build
-USE_QT=		core sql \
-		buildtools:build qmake:build
+USE_QT=		base
 
 .include <bsd.port.mk>

@@ -465,6 +465,7 @@
     SUBDIR += micro_inetd
     SUBDIR += micro_proxy
     SUBDIR += microsocks
+    SUBDIR += mimetreeparser
     SUBDIR += minidlna
     SUBDIR += minissdpd
     SUBDIR += miniupnpc

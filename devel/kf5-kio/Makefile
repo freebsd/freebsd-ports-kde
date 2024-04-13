@@ -6,6 +6,8 @@ CATEGORIES=	devel kde kde-frameworks
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 resource and network access abstraction
 
+RUN_DEPENDS=	kio-extras>0:devel/kio-extras
+
 USES=		cmake compiler:c++11-lib desktop-file-utils \
 		gettext gnome kde:5 cpe qt:5 ssl tar:xz xorg
 USE_GNOME=	libxml2 libxslt
@@ -19,5 +21,7 @@ USE_QT=		concurrent core dbus declarative gui network \
 		widgets x11extras xml \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
+
+CMAKE_ON=	KF6_COMPAT_BUILD
 
 .include <bsd.port.mk>

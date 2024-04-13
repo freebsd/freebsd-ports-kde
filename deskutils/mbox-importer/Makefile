@@ -12,16 +12,16 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpgmepp.so:security/gpgme-cpp \
 		libqgpgme.so:security/gpgme-qt@qt5
 
-USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:5 qt:5 tar:xz
+USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:6 qt:6 \
+		tar:xz
 USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 		crash i18n itemmodels kio service widgetsaddons \
 		ecm:build
 # pim components
-USE_KDE+=	akonadi akonadicontacts akonadimime contacts \
-		grantleetheme identitymanagement imap libkdepim libkleo mailcommon \
+USE_KDE+=	akonadi akonadicontacts akonadimime contacts grantleetheme \
+		identitymanagement imap libkdepim libkleo mailcommon \
 		mailimporter messagelib mime pimcommon pimtextedit
-USE_QT=		concurrent core dbus gui network widgets xml \
-		buildtools:build qmake:build
+USE_QT=		base
 USE_LDCONFIG=	yes
 
 DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr

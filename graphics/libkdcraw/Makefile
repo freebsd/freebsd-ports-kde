@@ -31,4 +31,6 @@ CMAKE_ARGS=	-DENABLE_RAWSPEED=True \
 
 PLIST=		${.CURDIR}/pkg-plist.${FLAVOR}
 
+PLIST=		pkg-plist.${FLAVOR}
+
 .include <bsd.port.mk>

@@ -1,25 +1,25 @@
 PORTNAME=	breeze-icons
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-CATEGORIES=	x11-themes kde kde-frameworks
+CATEGORIES=	x11-themes kde
+PKGNAMEPREFIX=	kf5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Breeze icon theme for KDE
 
-LICENSE=	LGPL3+
-LICENSE_FILE=	${WRKSRC}/COPYING-ICONS
+RUN_DEPENDS=	kf6-breeze-icons>0:x11-themes/kf6-breeze-icons
 
-BUILD_DEPENDS=	bash:shells/bash \
-		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
+USES=		kde:5
 
-USES=		compiler:c++11-lang cmake kde:5 python:build qt:5 shebangfix tar:xz
-USE_KDE=	ecm:build
-USE_QT=		buildtools:build qmake:build testlib:build
-
-SHEBANG_FILES=	 svg-xml-script-template.py generate-24px-versions.py
-
+# work around limitations in kde.mk
+NO_BUILD=       yes
 NO_ARCH=	yes
-CMAKE_ARGS=	-DXMLLINT_EXE:PATH='' \
-		-DPython3_EXECUTABLE:PATH=${PYTHON_CMD}
-CMAKE_ON=	WITH_ICON_GENERATION
+DISTFILES=	#
+EXTRACT_ONLY=	#
+_DUMMY=		${PKGNAMEPREFIX}${PORTNAME}-dummy
+PLIST_FILES=	${DATADIR}/${_DUMMY}
+
+do-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${TOUCH} ${STAGEDIR}${DATADIR}/${_DUMMY}
 
 .include <bsd.port.mk>

@@ -45,7 +45,4 @@ KTIMER_RUN_DEPENDS=		ktimer>=${KDE_APPLICATIONS_VERSION}:x11-clocks/ktimer
 KWALLETMANAGER_DESC=		Password manager for KDE
 KWALLETMANAGER_RUN_DEPENDS=	kwalletmanager>=${KDE_APPLICATIONS_VERSION}:security/kwalletmanager
 
-PRINTMANAGER_DESC=		Printer manager for KDE
-PRINTMANAGER_RUN_DEPENDS=	print-manager>=${KDE_APPLICATIONS_VERSION}:print/print-manager
-
 .include <bsd.port.mk>

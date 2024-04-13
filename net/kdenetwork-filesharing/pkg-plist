@@ -1,6 +1,6 @@
-lib/libexec/kauth/authhelper
-%%QT_PLUGINDIR%%/kf5/propertiesdialog/SambaAcl.so
-%%QT_PLUGINDIR%%/kf5/propertiesdialog/sambausershareplugin.so
+lib/libexec/kf6/kauth/authhelper
+%%QT_PLUGINDIR%%/kf6/propertiesdialog/SambaAcl.so
+%%QT_PLUGINDIR%%/kf6/propertiesdialog/sambausershareplugin.so
 share/dbus-1/system-services/org.kde.filesharing.samba.service
 share/dbus-1/system.d/org.kde.filesharing.samba.conf
 share/locale/ar/LC_MESSAGES/kfileshare.mo
@@ -79,4 +79,3 @@ share/locale/zh_CN/LC_MESSAGES/kfileshare.mo
 share/locale/zh_HK/LC_MESSAGES/kfileshare.mo
 share/locale/zh_TW/LC_MESSAGES/kfileshare.mo
 share/metainfo/org.kde.kdenetwork-filesharing.metainfo.xml
-share/polkit-1/actions/org.kde.filesharing.samba.policy

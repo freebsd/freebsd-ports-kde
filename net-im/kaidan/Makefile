@@ -11,10 +11,10 @@ WWW=		https://apps.kde.org/kaidan/
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/doc/licenses/gpl-3.0.txt
 
-BUILD_DEPENDS=	kquickimageeditor>0:graphics/kquickimageeditor
+BUILD_DEPENDS=	kquickimageeditor-qt5>0:graphics/kquickimageeditor@qt5
 LIB_DEPENDS=	libQXmppQt5.so:net-im/qxmpp@qt5 \
 		libZXing.so:textproc/zxing-cpp
-RUN_DEPENDS=	kquickimageeditor>0:graphics/kquickimageeditor
+RUN_DEPENDS=	kquickimageeditor-qt5>0:graphics/kquickimageeditor@qt5
 
 USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 pkgconfig \
 		qt:5 tar:xz xorg

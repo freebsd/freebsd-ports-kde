@@ -44,7 +44,7 @@ USE_KDE=	activities activities-stats activitymanagerd archive attica \
 		xmlgui xmlrpcclient \
 		doctools:build ecm:build \
 		breeze-icons:run breeze:run kded:run kquickcharts:run \
-		milou:run oxygen-icons5:run
+		milou:run oxygen-icons:run
 USE_QT=		concurrent core dbus declarative graphicaleffects gui network \
 		printsupport qdbus script sql svg wayland \
 		widgets x11extras xml \

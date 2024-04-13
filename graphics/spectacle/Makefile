@@ -9,19 +9,18 @@ WWW=		https://projects.kde.org/projects/kde/kdegraphics/spectacle
 
 LIB_DEPENDS=	libxcb-cursor.so:x11/xcb-util-cursor \
 		libxcb-image.so:x11/xcb-util-image \
-		libxcb-util.so:x11/xcb-util
+		libxcb-util.so:x11/xcb-util \
+		libkImageAnnotator-Qt6.so:graphics/kimageannotator@qt6
 RUN_DEPENDS=	kipi-plugins>=0:graphics/kipi-plugins
 
-USES=		cmake compiler:c++11-lang gettext kde:5 pkgconfig qt:5 tar:xz \
+USES=		cmake compiler:c++11-lang gettext kde:6 pkgconfig qt:6 tar:xz \
 		xorg
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		dbusaddons globalaccel guiaddons i18n jobwidgets kdeclarative \
-		kio libkipi newstuff notifications package purpose \
+		kio layer-shell-qt newstuff notifications package purpose \
 		service solid wayland widgetsaddons windowsystem xmlgui \
 		doctools:build ecm:build plasma-wayland-protocols:build
-USE_QT=		concurrent core dbus declarative gui network printsupport \
-		quickcontrols svg widgets x11extras xml \
-		buildtools:build qmake:build testlib:build
+USE_QT=		base multimedia
 USE_XORG=	x11 xcb xext xfixes
 
 OPTIONS_DEFINE=			DOCS PIPEWIRE

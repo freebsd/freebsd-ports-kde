@@ -13,9 +13,9 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib
 
 USES=		cmake compiler:c++11-lang gettext kde:5 qt:5 tar:xz xorg
 USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
-		emoticons globalaccel i18n iconthemes init itemmodels \
-		itemviews kcmutils kdelibs4support notifications package \
-		plasma-framework service solid widgetsaddons windowsystem xmlgui \
+		globalaccel i18n iconthemes init itemmodels itemviews kcmutils \
+		notifications package plasma-framework service solid \
+		widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_QT=		core dbus gui widgets xml \
 		buildtools:build qmake:build

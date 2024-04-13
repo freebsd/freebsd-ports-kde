@@ -1,9 +1,11 @@
 bin/kdenlive
 bin/kdenlive_render
-%%QT_PLUGINDIR%%/kf5/thumbcreator/mltpreview.so
+%%QT_PLUGINDIR%%/kf6/thumbcreator/mltpreview.so
 share/applications/org.kde.kdenlive.desktop
 share/config.kcfg/kdenlivesettings.kcfg
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/Apache-2.0.txt
+%%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/BSD-2-Clause.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/BSD-3-Clause.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/BSL-1.0.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/CC-BY-SA-4.0.txt
@@ -11,9 +13,12 @@ share/config.kcfg/kdenlivesettings.kcfg
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/GPL-2.0-only.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/GPL-3.0-only.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/GPL-3.0-or-later.txt
+%%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/LGPL-2.1-only.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/LGPL-3.0-only.txt
+%%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/LGPL-3.0-or-later.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/LicenseRef-KDE-Accepted-GPL.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt
+%%PORTDOCS%%%%DOCSDIR%%/Kdenlive/LICENSES/MIT.txt
 %%PORTDOCS%%%%DOCSDIR%%/Kdenlive/README.md
 share/icons/hicolor/128x128/apps/kdenlive.png
 share/icons/hicolor/128x128/mimetypes/application-x-kdenlivetitle.png
@@ -49,6 +54,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-kdenlivetitle.svgz
 share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/clipjobsettings.rc
 %%DATADIR%%/effect-templates/secondary_color_correction.xml
+%%DATADIR%%/effect-templates/secondary_color_correction_v2.xml
 %%DATADIR%%/effect-templates/shut_off.xml
 %%DATADIR%%/effects/acompressor.xml
 %%DATADIR%%/effects/aecho.xml
@@ -94,6 +100,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/effects/avfilter_crossfeed.xml
 %%DATADIR%%/effects/avfilter_crystalizer.xml
 %%DATADIR%%/effects/avfilter_datascope.xml
+%%DATADIR%%/effects/avfilter_dblur.xml
 %%DATADIR%%/effects/avfilter_dcshift.xml
 %%DATADIR%%/effects/avfilter_dctdnoiz.xml
 %%DATADIR%%/effects/avfilter_deband.xml
@@ -208,6 +215,9 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/effects/frei0r_G.xml
 %%DATADIR%%/effects/frei0r_R.xml
 %%DATADIR%%/effects/frei0r_alpha0ps.xml
+%%DATADIR%%/effects/frei0r_alpha0ps_alpha0ps.xml
+%%DATADIR%%/effects/frei0r_alpha0ps_alphagrad.xml
+%%DATADIR%%/effects/frei0r_alpha0ps_alphaspot.xml
 %%DATADIR%%/effects/frei0r_alphagrad.xml
 %%DATADIR%%/effects/frei0r_alphaspot.xml
 %%DATADIR%%/effects/frei0r_balanc0r.xml
@@ -507,7 +517,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/transitions/slide.xml
 %%DATADIR%%/transitions/vqm.xml
 %%DATADIR%%/transitions/wipe.xml
-share/knotifications5/kdenlive.notifyrc
+share/knotifications6/kdenlive.notifyrc
 share/knsrcfiles/kdenlive_effects.knsrc
 share/knsrcfiles/kdenlive_keyboardschemes.knsrc
 share/knsrcfiles/kdenlive_luts.knsrc
@@ -563,4 +573,4 @@ share/man/man1/kdenlive_render.1.gz
 share/metainfo/org.kde.kdenlive.appdata.xml
 share/mime/packages/org.kde.kdenlive.xml
 share/mime/packages/westley.xml
-share/qlogging-categories5/kdenlive.categories
+share/qlogging-categories6/kdenlive.categories

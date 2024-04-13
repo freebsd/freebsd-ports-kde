@@ -2,6 +2,8 @@ PORTNAME=	krdc
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
+BROKEN=		net/freerdp2 has broken cmake files
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDP and VNC client for KDE
 WWW=		https://kde.org/applications/internet/krdc/
@@ -9,15 +11,14 @@ WWW=		https://kde.org/applications/internet/krdc/
 LIB_DEPENDS=	libvncserver.so:net/libvncserver \
 		libssh.so:security/libssh
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gettext \
-		kde:5 qt:5 tar:xz xorg
+USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
+		qt:6 tar:xz xorg
 USE_KDE=	auth bookmarks codecs completion config configwidgets \
 		coreaddons dnssd doctools i18n iconthemes kcmutils \
-		notifications notifyconfig service wallet widgetsaddons \
-		windowsystem xmlgui \
+		notifications notifyconfig service statusnotifieritem wallet \
+		widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_QT=		core dbus gui network widgets xml \
-		buildtools:build qmake:build
+USE_QT=		base
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 

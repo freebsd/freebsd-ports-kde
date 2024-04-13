@@ -8,6 +8,7 @@ share/icons/hicolor/48x48/apps/lskat.png
 share/icons/hicolor/64x64/apps/lskat.png
 share/locale/af/LC_MESSAGES/lskat.mo
 share/locale/ar/LC_MESSAGES/lskat.mo
+share/locale/ast/LC_MESSAGES/lskat.mo
 share/locale/be/LC_MESSAGES/lskat.mo
 share/locale/bg/LC_MESSAGES/lskat.mo
 share/locale/br/LC_MESSAGES/lskat.mo
@@ -88,4 +89,4 @@ share/locale/zh_TW/LC_MESSAGES/lskat.mo
 %%DATADIR%%/grafix/oxygen.rc
 %%DATADIR%%/grafix/oxygen.svg
 share/metainfo/org.kde.lskat.appdata.xml
-share/qlogging-categories5/lskat.categories
+share/qlogging-categories6/lskat.categories

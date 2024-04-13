@@ -26,8 +26,8 @@ share/icons/hicolor/64x64/apps/knights.png
 %%DATADIR%%/themes/xboard2.png
 %%DATADIR%%/themes/xboard2.svgz
 share/knsrcfiles/knights.knsrc
-share/kxmlgui5/knights/knightsui.rc
 share/locale/ar/LC_MESSAGES/knights.mo
+share/locale/ast/LC_MESSAGES/knights.mo
 share/locale/bg/LC_MESSAGES/knights.mo
 share/locale/bs/LC_MESSAGES/knights.mo
 share/locale/ca/LC_MESSAGES/knights.mo
@@ -47,6 +47,7 @@ share/locale/fr/LC_MESSAGES/knights.mo
 share/locale/ga/LC_MESSAGES/knights.mo
 share/locale/gl/LC_MESSAGES/knights.mo
 share/locale/hu/LC_MESSAGES/knights.mo
+share/locale/ia/LC_MESSAGES/knights.mo
 share/locale/id/LC_MESSAGES/knights.mo
 share/locale/it/LC_MESSAGES/knights.mo
 share/locale/ja/LC_MESSAGES/knights.mo
@@ -78,4 +79,4 @@ share/locale/uk/LC_MESSAGES/knights.mo
 share/locale/zh_CN/LC_MESSAGES/knights.mo
 share/locale/zh_TW/LC_MESSAGES/knights.mo
 share/metainfo/org.kde.knights.appdata.xml
-share/qlogging-categories5/knights.categories
+share/qlogging-categories6/knights.categories

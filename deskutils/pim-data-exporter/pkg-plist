@@ -1,10 +1,11 @@
 bin/pimdataexporter
 bin/pimdataexporterconsole
-lib/libpimdataexporterprivate.so.5
-lib/libpimdataexporterprivate.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libpimdataexporterprivate.so.6
+lib/libpimdataexporterprivate.so.6.0.1
 share/applications/org.kde.pimdataexporter.desktop
 share/config.kcfg/pimdataexporterglobalconfig.kcfg
 share/locale/ar/LC_MESSAGES/pimdataexporter.mo
+share/locale/ast/LC_MESSAGES/pimdataexporter.mo
 share/locale/az/LC_MESSAGES/pimdataexporter.mo
 share/locale/bg/LC_MESSAGES/pimdataexporter.mo
 share/locale/bs/LC_MESSAGES/pimdataexporter.mo
@@ -55,5 +56,5 @@ share/locale/uk/LC_MESSAGES/pimdataexporter.mo
 share/locale/zh_CN/LC_MESSAGES/pimdataexporter.mo
 share/locale/zh_TW/LC_MESSAGES/pimdataexporter.mo
 share/metainfo/org.kde.pimdataexporter.appdata.xml
-share/qlogging-categories5/pimdataexporter.categories
-share/qlogging-categories5/pimdataexporter.renamecategories
+share/qlogging-categories6/pimdataexporter.categories
+share/qlogging-categories6/pimdataexporter.renamecategories

@@ -12,6 +12,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpgme.so:security/gpgme \
 		libqgpgme.so:security/gpgme-qt@qt5 \
 		libgpgmepp.so:security/gpgme-cpp
+RUN_DEPENDS=	kf6-kwallet>0:sysutils/kf6-kwallet
 
 USES=		cmake compiler:c++11-lib gettext kde:5 qca qt:5 tar:xz xorg
 USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
@@ -21,6 +22,9 @@ USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
 USE_QT=		core dbus gui testlib widgets xml \
 		buildtools:build qmake:build
 USE_XORG=	x11
+
+CMAKE_OFF=	BUILD_KWALLETD \
+		BUILD_KWALLET_QUERY 
 
 OPTIONS_DEFINE=		PINENTRY
 OPTIONS_DEFAULT=	PINENTRY

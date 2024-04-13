@@ -18,7 +18,7 @@ lib/cmake/Pala/PalaTargets.cmake
 lib/libpala.so
 lib/libpala.so.0
 lib/libpala.so.0.2.0
-%%QT_PLUGINDIR%%/kf5/thumbcreator/palathumbcreator.so
+%%QT_PLUGINDIR%%/kf6/thumbcreator/palathumbcreator.so
 %%QT_PLUGINDIR%%/palapelislicers/palapeli_goldbergslicer.so
 %%QT_PLUGINDIR%%/palapelislicers/palapeli_jigsawslicer.so
 %%QT_PLUGINDIR%%/palapelislicers/palapeli_rectslicer.so
@@ -36,7 +36,8 @@ share/icons/hicolor/48x48/mimetypes/application-x-palapeli.png
 share/icons/hicolor/64x64/apps/palapeli.png
 share/icons/hicolor/64x64/mimetypes/application-x-palapeli.png
 share/kio/servicemenus/palapeli_servicemenu.desktop
-share/knotifications5/palapeli.notifyrc
+share/knotifications6/palapeli.notifyrc
+share/locale/ast/LC_MESSAGES/palapeli.mo
 share/locale/bg/LC_MESSAGES/palapeli.mo
 share/locale/bs/LC_MESSAGES/palapeli.mo
 share/locale/ca/LC_MESSAGES/palapeli.mo
@@ -110,4 +111,4 @@ share/mime/packages/palapeli-mimetypes.xml
 %%DATADIR%%/collection/panther-chameleon-female.desktop
 %%DATADIR%%/collection/panther-chameleon-female.jpg
 %%DATADIR%%/palapeli.kcfg
-share/qlogging-categories5/palapeli.categories
+share/qlogging-categories6/palapeli.categories

@@ -179,10 +179,10 @@ lib/cmake/Marble/MarbleTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Marble/MarbleTargets.cmake
 lib/libastro.so
 lib/libastro.so.1
-lib/libastro.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libastro.so.%%KDE_APPLICATIONS_VERSION_SHORT%%.2.2
 lib/libmarbledeclarative.so
 lib/libmarblewidget-qt5.so
-lib/libmarblewidget-qt5.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libmarblewidget-qt5.so.%%KDE_APPLICATIONS_VERSION_SHORT%%.2.2
 lib/libmarblewidget-qt5.so.28
 lib/marble/plugins/AnnotatePlugin.so
 lib/marble/plugins/AprsPlugin.so
@@ -1811,3 +1811,4 @@ share/plasma/wallpapers/org.kde.plasma.worldmap/contents/ui/config.qml
 share/plasma/wallpapers/org.kde.plasma.worldmap/contents/ui/main.qml
 share/plasma/wallpapers/org.kde.plasma.worldmap/metadata.desktop
 share/plasma/wallpapers/org.kde.plasma.worldmap/metadata.json
+share/qlogging-categories5/marble.categories

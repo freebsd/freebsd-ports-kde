@@ -18,15 +18,15 @@ BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
 		pkgconfig python qt:5 shared-mime-info tar:xz xorg
-USE_KDE=	attica auth archive bookmarks codecs completion config \
-		configwidgets coreaddons crash emoticons i18n iconthemes \
-		itemmodels itemviews init jobwidgets kdelibs4support kio \
-		newstuff parts pty service solid sonnet syntaxhighlighting \
-		texteditor textwidgets widgetsaddons windowsystem xmlgui \
+USE_KDE=	archive attica auth bookmarks codecs completion config \
+		configwidgets coreaddons crash i18n iconthemes init itemmodels \
+		itemviews jobwidgets kio newstuff parts pty service solid \
+		sonnet syntaxhighlighting texteditor textwidgets widgetsaddons \
+		windowsystem xmlgui \
 		ecm:build
 USE_QT=		concurrent core dbus declarative gui help location network \
-		printsupport sql svg webchannel webengine \
-		widgets xml xmlpatterns \
+		printsupport sql svg webchannel webengine widgets xml \
+		xmlpatterns \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes

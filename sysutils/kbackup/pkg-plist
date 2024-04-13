@@ -1,5 +1,6 @@
 bin/kbackup
 share/applications/org.kde.kbackup.desktop
+share/icons/hicolor/128x128/apps/kbackup.png
 share/icons/hicolor/16x16/apps/kbackup.png
 share/icons/hicolor/16x16/mimetypes/text-x-kbp.png
 share/icons/hicolor/22x22/actions/kbackup_cancel.png
@@ -7,8 +8,8 @@ share/icons/hicolor/22x22/actions/kbackup_runs.png
 share/icons/hicolor/22x22/actions/kbackup_start.png
 share/icons/hicolor/32x32/apps/kbackup.png
 share/icons/hicolor/32x32/mimetypes/text-x-kbp.png
-share/kxmlgui5/kbackup/kbackupui.rc
 share/locale/ar/LC_MESSAGES/kbackup.mo
+share/locale/ast/LC_MESSAGES/kbackup.mo
 share/locale/ca/LC_MESSAGES/kbackup.mo
 share/locale/ca@valencia/LC_MESSAGES/kbackup.mo
 share/locale/cs/LC_MESSAGES/kbackup.mo
@@ -16,6 +17,7 @@ share/locale/da/LC_MESSAGES/kbackup.mo
 share/locale/de/LC_MESSAGES/kbackup.mo
 share/locale/el/LC_MESSAGES/kbackup.mo
 share/locale/en_GB/LC_MESSAGES/kbackup.mo
+share/locale/eo/LC_MESSAGES/kbackup.mo
 share/locale/es/LC_MESSAGES/kbackup.mo
 share/locale/et/LC_MESSAGES/kbackup.mo
 share/locale/eu/LC_MESSAGES/kbackup.mo
@@ -49,6 +51,7 @@ share/man/it/man1/kbackup.1.gz
 share/man/man1/kbackup.1.gz
 share/man/nl/man1/kbackup.1.gz
 share/man/sv/man1/kbackup.1.gz
+share/man/tr/man1/kbackup.1.gz
 share/man/uk/man1/kbackup.1.gz
 share/metainfo/org.kde.kbackup.appdata.xml
 share/mime/packages/kbackup.xml

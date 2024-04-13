@@ -1,21 +1,27 @@
 PORTNAME=	plasma-workspace-wallpapers
 DISTVERSION=	${KDE_PLASMA_VERSION}
-CATEGORIES=	x11-themes kde kde-plasma
+PORTREVISION=	2
+CATEGORIES=	x11-themes kde
+PKGNAMEPREFIX=	plasma5-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 wallpapers
 WWW=		https://www.kde.org/plasma-desktop
 
-LICENSE=	GPLv2 LGPL3
-LICENSE_COMB=	multi
-LICENSE_FILE=	${WRKSRC}/COPYING
-LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LGPL3
+RUN_DEPENDS=	plasma6-plasma-workspace-wallpapers>0:x11-themes/plasma6-plasma-workspace-wallpapers
 
-USES=		cmake kde:5 qt:5 tar:xz
-USE_KDE=	ecm:build
-USE_QT=		buildtools:build \
-		qmake:build
+USES=		kde:5 
 
+# work around limitations in kde.mk
+NO_BUILD=       yes
 NO_ARCH=	yes
+DISTFILES=	#
+EXTRACT_ONLY=	#
+_DUMMY=		${PKGNAMEPREFIX}${PORTNAME}-dummy
+PLIST_FILES=	${DATADIR}/${_DUMMY}
+
+do-install:
+	${MKDIR} ${STAGEDIR}${DATADIR}
+	${TOUCH} ${STAGEDIR}${DATADIR}/${_DUMMY}
 
 .include <bsd.port.mk>

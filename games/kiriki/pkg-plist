@@ -14,6 +14,7 @@ share/icons/hicolor/64x64/apps/kiriki.png
 %%DATADIR%%/images/dice-6.png
 %%DATADIR%%/images/dice-none.png
 share/locale/ar/LC_MESSAGES/kiriki.mo
+share/locale/ast/LC_MESSAGES/kiriki.mo
 share/locale/be/LC_MESSAGES/kiriki.mo
 share/locale/bg/LC_MESSAGES/kiriki.mo
 share/locale/bs/LC_MESSAGES/kiriki.mo
@@ -37,6 +38,7 @@ share/locale/hi/LC_MESSAGES/kiriki.mo
 share/locale/hne/LC_MESSAGES/kiriki.mo
 share/locale/hr/LC_MESSAGES/kiriki.mo
 share/locale/hu/LC_MESSAGES/kiriki.mo
+share/locale/ia/LC_MESSAGES/kiriki.mo
 share/locale/id/LC_MESSAGES/kiriki.mo
 share/locale/is/LC_MESSAGES/kiriki.mo
 share/locale/it/LC_MESSAGES/kiriki.mo

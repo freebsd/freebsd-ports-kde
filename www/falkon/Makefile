@@ -9,12 +9,11 @@ WWW=		https://www.falkon.org/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cmake desktop-file-utils kde:5 qt:5 ssl tar:xz xorg
+USES=		cmake desktop-file-utils gettext kde:6 qt:6 ssl tar:xz xorg
 USE_KDE=	archive i18n \
 		ecm:build
-USE_QT=		concurrent core dbus declarative gui location network printsupport \
-		sql webchannel webengine widgets x11extras sql-sqlite3:run \
-		buildtools:build qmake:build
+USE_QT=		base webchannel webengine \
+		sqldriver-sqlite:run
 USE_XORG=	x11 xcb
 
 USE_LDCONFIG=	yes
@@ -30,9 +29,11 @@ qtonly_CONFLICTS_INSTALL=	${PORTNAME}
 
 .if ${FLAVOR} != qtonly
 CMAKE_ON+=	ENABLE_KDE_FRAMEWORKS_INTEGRATION_PLUGIN
-USE_KDE+=	completion config coreaddons crash jobwidgets kio purpose service solid wallet widgetsaddons windowsystem
+USE_KDE+=	completion config coreaddons crash jobwidgets kio purpose \
+		service solid wallet widgetsaddons windowsystem
 PLIST_SUB=	KDEINTEGRATION=""
 .else
+USE_QT+=	5compat
 PLIST_SUB=	KDEINTEGRATION="@comment "
 COMMENT=	Web browser based on WebEngine (no integration with KDE Plasma)
 .endif
