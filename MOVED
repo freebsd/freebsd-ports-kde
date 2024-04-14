@@ -3183,3 +3183,5 @@ x11/xdtm||2024-04-13|Has expired: Unmaintained, last upstream release was in 200
 x11/multi-aterm||2024-04-13|Has expired: Unmaintained, last upstream release in 2004
 devel/py-dateutil|devel/py-python-dateutil|2024-04-13|Move devel/py-dateutil to devel/py-python-dateutil
 x11-toolkits/kirigami-addons|x11-toolkits/kirigami-addons-qt5|2024-04-13|Moved to have symmetric names with Qt6
+x11/kde5|x11/kde|2024-04-14|Remove version from KDE metaport
+x11/kde6|x11/kde|2024-04-14|Remove version from KDE metaport

@@ -1,6 +1,5 @@
-PORTNAME=	kde5
+PORTNAME=	kde
 DISTVERSION=	${KDE_PLASMA_VERSION}.${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	2
 CATEGORIES=	x11 kde
 
 MAINTAINER=	kde@FreeBSD.org
@@ -9,15 +8,14 @@ WWW=		https://www.kde.org
 
 RUN_DEPENDS=	kde-baseapps>=0:x11/kde-baseapps \
 		kwalletmanager5:security/kwalletmanager \
-		plasma5-plasma>=0:x11/plasma5-plasma
+		plasma6-plasma>=0:x11/plasma6-plasma \
+		kf6-frameworks>=0:x11/kf6-frameworks
 
-USES=		kde:5 metaport qt:5
+USES=		kde:6 metaport qt:6
 USE_QT=		# empty
 
-OPTIONS_DEFINE=	KDEADMIN KDEEDU \
-		KDEGAMES KDEGRAPHICS KDEMULTIMEDIA KDENETWORK \
-		KDEPIM KDEUTILS \
-		PULSEAUDIO
+OPTIONS_DEFINE=	KDEADMIN KDEEDU KDEGAMES KDEGRAPHICS KDEMULTIMEDIA KDENETWORK \
+		KDEPIM KDEUTILS PULSEAUDIO
 
 OPTIONS_DEFAULT=${OPTIONS_DEFINE:NPULSEAUDIO}
 
