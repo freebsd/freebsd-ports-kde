@@ -1,10 +1,10 @@
 bin/korganizer
 lib/libkorganizer_core.so.6
-lib/libkorganizer_core.so.6.0.1
+lib/libkorganizer_core.so.6.0.2
 lib/libkorganizer_interfaces.so.6
-lib/libkorganizer_interfaces.so.6.0.1
+lib/libkorganizer_interfaces.so.6.0.2
 lib/libkorganizerprivate.so.6
-lib/libkorganizerprivate.so.6.0.1
+lib/libkorganizerprivate.so.6.0.2
 %%QT_PLUGINDIR%%/korganizerpart.so
 %%QT_PLUGINDIR%%/pim6/kcms/korganizer/korganizer_configcolorsandfonts.so
 %%QT_PLUGINDIR%%/pim6/kcms/korganizer/korganizer_configdesignerfields.so

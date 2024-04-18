@@ -9,7 +9,7 @@ WWW=		https://www.kde.org/
 LICENSE=	LGPL21
 
 LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2 \
-		libqt5keychain.so:security/qtkeychain@qt5
+		libqt6keychain.so:security/qtkeychain@qt6
 
 USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 tar:xz xorg
 USE_KDE=	auth codecs completion config configwidgets coreaddons i18n \

@@ -10,7 +10,7 @@ LIB_DEPENDS=	libassuan.so:security/libassuan \
 		libgpg-error.so:security/libgpg-error \
 		libgpgme.so:security/gpgme \
 		libgpgmepp.so:security/gpgme-cpp \
-		libqgpgme.so:security/gpgme-qt@qt5
+		libqgpgmeqt6.so:security/gpgme-qt@qt6
 
 USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:6 qt:6 \
 		tar:xz
