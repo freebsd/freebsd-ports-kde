@@ -99,5 +99,6 @@ share/locale/xh/LC_MESSAGES/kalarm.mo
 share/locale/zh_CN/LC_MESSAGES/kalarm.mo
 share/locale/zh_TW/LC_MESSAGES/kalarm.mo
 share/metainfo/org.kde.kalarm.appdata.xml
+share/polkit-1/actions/org.kde.kalarm.rtcwake.policy
 share/qlogging-categories6/kalarm.categories
 share/qlogging-categories6/kalarm.renamecategories

@@ -568,6 +568,7 @@ share/locale/zh_TW/LC_MESSAGES/libk3b.mo
 share/locale/zh_TW/LC_MESSAGES/libk3bdevice.mo
 share/metainfo/org.kde.k3b.appdata.xml
 share/mime/packages/x-k3b.xml
+share/polkit-1/actions/org.kde.k3b.policy
 share/qlogging-categories6/k3b.categories
 share/solid/actions/k3b_audiocd_rip.desktop
 share/solid/actions/k3b_copy_disc.desktop

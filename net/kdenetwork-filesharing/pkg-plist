@@ -79,3 +79,4 @@ share/locale/zh_CN/LC_MESSAGES/kfileshare.mo
 share/locale/zh_HK/LC_MESSAGES/kfileshare.mo
 share/locale/zh_TW/LC_MESSAGES/kfileshare.mo
 share/metainfo/org.kde.kdenetwork-filesharing.metainfo.xml
+share/polkit-1/actions/org.kde.filesharing.samba.policy
