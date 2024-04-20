@@ -5769,6 +5769,7 @@
     SUBDIR += py-testtools
     SUBDIR += py-thefuzz
     SUBDIR += py-thinc
+    SUBDIR += py-thinc8
     SUBDIR += py-threadpoolctl
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
