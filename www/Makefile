@@ -2369,6 +2369,7 @@
     SUBDIR += tdom
     SUBDIR += template_
     SUBDIR += templatelite
+    SUBDIR += tgpt
     SUBDIR += thirtybees
     SUBDIR += threejs
     SUBDIR += threema-web
