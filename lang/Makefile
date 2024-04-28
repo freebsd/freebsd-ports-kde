@@ -40,7 +40,6 @@
     SUBDIR += crystal
     SUBDIR += csharp-mode.el
     SUBDIR += cython
-    SUBDIR += cython-devel
     SUBDIR += cython3
     SUBDIR += dhall
     SUBDIR += dlang-tools
@@ -119,7 +118,6 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go-devel
-    SUBDIR += go119
     SUBDIR += go120
     SUBDIR += go121
     SUBDIR += go122
@@ -228,7 +226,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-camlidl
-    SUBDIR += ocaml-nox11
     SUBDIR += oo2c
     SUBDIR += opencoarrays
     SUBDIR += opensycl
@@ -307,7 +304,6 @@
     SUBDIR += python38
     SUBDIR += python39
     SUBDIR += qmasm
-    SUBDIR += qscheme
     SUBDIR += quickjs
     SUBDIR += quilc
     SUBDIR += racket
@@ -368,7 +364,6 @@
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper
-    SUBDIR += tcl85
     SUBDIR += tcl86
     SUBDIR += tcl87
     SUBDIR += tcl9

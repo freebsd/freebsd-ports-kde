@@ -112,6 +112,8 @@ bin/3dKruskalWallis
 bin/3dLFCD
 bin/3dLME
 bin/3dLME.R
+bin/3dLME2
+bin/3dLME2.R
 bin/3dLMEr
 bin/3dLMEr.R
 bin/3dLRflip
@@ -318,6 +320,7 @@ bin/@Install_MBM_Marmoset
 bin/@Install_MEICA_Demo
 bin/@Install_NIH_Marmoset
 bin/@Install_NMT
+bin/@Install_RAT_DEMO_REST
 bin/@Install_RSFMRI_Motion_Group_Demo
 bin/@Install_SAM_marmoset
 bin/@Install_SURFLAYERS_DEMO1
@@ -493,12 +496,14 @@ bin/abids_json_info.py
 bin/abids_json_tool.py
 bin/abids_tool.py
 bin/adjunct_apqc_tsnr_general
+bin/adjunct_atlas_points_to_labeltable
 bin/adjunct_aw_tableize_roi_info.py
 bin/adjunct_calc_mont_dims.py
 bin/adjunct_combine_str.py
 bin/adjunct_deob_around_origin
 bin/adjunct_is_label.py
 bin/adjunct_make_script_and_rst.py
+bin/adjunct_middle_pair_mask
 bin/adjunct_select_str.py
 bin/adjunct_simplify_cost.py
 bin/adjunct_suma_fs_mask_and_qc
@@ -582,6 +587,7 @@ bin/fim2
 bin/find_variance_lines.tcsh
 bin/float_scan
 bin/from3d
+bin/gen_cluster_table
 bin/gen_epi_review.py
 bin/gen_group_command.py
 bin/gen_ss_review_scripts.py

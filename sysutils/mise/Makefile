@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.4.0
+DISTVERSION=	2024.4.8
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -27,9 +27,10 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		anstyle-parse-0.2.3 \
 		anstyle-query-1.0.2 \
 		anstyle-wincon-3.0.2 \
+		arbitrary-1.3.2 \
 		arrayvec-0.5.2 \
 		assert_cmd-2.0.14 \
-		async-compression-0.4.7 \
+		async-compression-0.4.8 \
 		autocfg-1.2.0 \
 		backtrace-0.3.71 \
 		base64-0.21.7 \
@@ -39,16 +40,16 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		bitflags-2.5.0 \
 		block-buffer-0.10.4 \
 		bstr-1.9.1 \
-		built-0.7.1 \
-		bumpalo-3.15.4 \
-		bytecount-0.6.7 \
+		built-0.7.2 \
+		bumpalo-3.16.0 \
+		bytecount-0.6.8 \
 		byteorder-1.5.0 \
 		bytes-1.6.0 \
 		calm_io-0.1.1 \
 		calmio_filters-0.1.0 \
-		cc-1.0.90 \
+		cc-1.0.95 \
 		cfg-if-1.0.0 \
-		chrono-0.4.37 \
+		chrono-0.4.38 \
 		ci_info-0.14.14 \
 		clap-4.5.4 \
 		clap_builder-4.5.2 \
@@ -73,12 +74,13 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		crossbeam-epoch-0.9.18 \
 		crossbeam-utils-0.8.19 \
 		crypto-common-0.1.6 \
-		ctor-0.2.7 \
+		ctor-0.2.8 \
 		curve25519-dalek-4.1.2 \
 		curve25519-dalek-derive-0.1.1 \
 		demand-1.1.0 \
 		der-0.7.9 \
 		deranged-0.3.11 \
+		derive_arbitrary-1.3.2 \
 		diff-0.1.13 \
 		difflib-0.4.0 \
 		digest-0.10.7 \
@@ -88,9 +90,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		dunce-1.0.4 \
 		ed25519-2.2.3 \
 		ed25519-dalek-2.1.1 \
-		either-1.10.0 \
+		either-1.11.0 \
 		encode_unicode-0.3.6 \
-		encoding_rs-0.8.33 \
+		encoding_rs-0.8.34 \
 		envmnt-0.10.4 \
 		equivalent-1.0.1 \
 		errno-0.2.8 \
@@ -100,7 +102,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		eyre-0.6.12 \
 		fastrand-1.9.0 \
 		fastrand-2.0.2 \
-		fiat-crypto-0.2.7 \
+		fiat-crypto-0.2.8 \
 		filetime-0.2.23 \
 		fixedbitset-0.4.2 \
 		flate2-1.0.28 \
@@ -118,13 +120,13 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		futures-task-0.3.30 \
 		futures-util-0.3.30 \
 		generic-array-0.14.7 \
-		getrandom-0.2.12 \
+		getrandom-0.2.14 \
 		gimli-0.28.1 \
 		git2-0.18.3 \
 		globset-0.4.14 \
 		globwalk-0.8.1 \
 		globwalk-0.9.1 \
-		h2-0.3.25 \
+		h2-0.3.26 \
 		hashbrown-0.12.3 \
 		hashbrown-0.14.3 \
 		heck-0.3.3 \
@@ -154,7 +156,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		ipnet-2.9.0 \
 		itertools-0.12.1 \
 		itoa-1.0.11 \
-		jobserver-0.1.28 \
+		jobserver-0.1.31 \
 		js-sys-0.3.69 \
 		kdl-4.6.0 \
 		lazy_static-1.4.0 \
@@ -192,10 +194,10 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		path-absolutize-3.1.1 \
 		path-dedot-3.1.1 \
 		percent-encoding-2.3.1 \
-		pest-2.7.8 \
-		pest_derive-2.7.8 \
-		pest_generator-2.7.8 \
-		pest_meta-2.7.8 \
+		pest-2.7.9 \
+		pest_derive-2.7.9 \
+		pest_generator-2.7.9 \
+		pest_meta-2.7.9 \
 		petgraph-0.6.4 \
 		pin-project-lite-0.2.14 \
 		pin-utils-0.1.0 \
@@ -211,9 +213,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		pretty_assertions-1.4.0 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
-		proc-macro2-1.0.79 \
+		proc-macro2-1.0.81 \
 		quick-xml-0.23.1 \
-		quote-1.0.35 \
+		quote-1.0.36 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \
@@ -225,17 +227,17 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		regex-syntax-0.8.3 \
 		reqwest-0.11.27 \
 		ring-0.17.8 \
-		rmp-0.8.12 \
-		rmp-serde-1.1.2 \
+		rmp-0.8.14 \
+		rmp-serde-1.2.0 \
 		roff-0.2.1 \
 		rustc-demangle-0.1.23 \
 		rustc_version-0.4.0 \
-		rustix-0.38.32 \
-		rustls-0.21.10 \
+		rustix-0.38.34 \
+		rustls-0.21.11 \
 		rustls-native-certs-0.6.3 \
 		rustls-pemfile-1.0.4 \
 		rustls-webpki-0.101.7 \
-		rustversion-1.0.14 \
+		rustversion-1.0.15 \
 		ryu-1.0.17 \
 		same-file-1.0.6 \
 		schannel-0.1.23 \
@@ -245,9 +247,9 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		self-replace-1.3.7 \
 		self_update-0.39.0 \
 		semver-1.0.22 \
-		serde-1.0.197 \
-		serde_derive-1.0.197 \
-		serde_json-1.0.115 \
+		serde-1.0.198 \
+		serde_derive-1.0.198 \
+		serde_json-1.0.116 \
 		serde_spanned-0.6.5 \
 		serde_urlencoded-0.7.1 \
 		sha2-0.10.8 \
@@ -256,7 +258,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		shell-escape-0.1.5 \
 		shell-words-1.1.0 \
 		signal-hook-0.3.17 \
-		signal-hook-registry-1.4.1 \
+		signal-hook-registry-1.4.2 \
 		signature-2.2.0 \
 		similar-2.5.0 \
 		simplelog-0.12.2 \
@@ -264,12 +266,12 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		socket2-0.5.6 \
 		spin-0.9.8 \
 		spki-0.7.3 \
-		strsim-0.11.0 \
+		strsim-0.11.1 \
 		strum-0.26.2 \
 		strum_macros-0.26.2 \
 		subtle-2.5.0 \
 		syn-1.0.109 \
-		syn-2.0.57 \
+		syn-2.0.60 \
 		sync_wrapper-0.1.2 \
 		sys-info-0.9.1 \
 		system-configuration-0.5.1 \
@@ -285,12 +287,12 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		test-case-3.3.1 \
 		test-case-core-3.3.1 \
 		test-case-macros-3.3.1 \
-		thiserror-1.0.58 \
-		thiserror-impl-1.0.58 \
+		thiserror-1.0.59 \
+		thiserror-impl-1.0.59 \
 		thread_local-1.1.8 \
-		time-0.3.34 \
+		time-0.3.36 \
 		time-core-0.1.2 \
-		time-macros-0.2.17 \
+		time-macros-0.2.18 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
 		tokio-1.37.0 \
@@ -299,7 +301,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		tokio-util-0.7.10 \
 		toml-0.8.12 \
 		toml_datetime-0.6.5 \
-		toml_edit-0.22.9 \
+		toml_edit-0.22.12 \
 		tower-service-0.3.2 \
 		tracing-0.1.40 \
 		tracing-core-0.1.32 \
@@ -322,7 +324,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		untrusted-0.9.0 \
 		url-2.5.0 \
 		urlencoding-2.1.3 \
-		usage-lib-0.1.17 \
+		usage-lib-0.1.18 \
 		utf8parse-0.2.1 \
 		valuable-0.1.0 \
 		vcpkg-0.2.15 \
@@ -351,29 +353,30 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows-sys-0.48.0 \
 		windows-sys-0.52.0 \
 		windows-targets-0.48.5 \
-		windows-targets-0.52.4 \
+		windows-targets-0.52.5 \
 		windows_aarch64_gnullvm-0.48.5 \
-		windows_aarch64_gnullvm-0.52.4 \
+		windows_aarch64_gnullvm-0.52.5 \
 		windows_aarch64_msvc-0.48.5 \
-		windows_aarch64_msvc-0.52.4 \
+		windows_aarch64_msvc-0.52.5 \
 		windows_i686_gnu-0.48.5 \
-		windows_i686_gnu-0.52.4 \
+		windows_i686_gnu-0.52.5 \
+		windows_i686_gnullvm-0.52.5 \
 		windows_i686_msvc-0.48.5 \
-		windows_i686_msvc-0.52.4 \
+		windows_i686_msvc-0.52.5 \
 		windows_x86_64_gnu-0.48.5 \
-		windows_x86_64_gnu-0.52.4 \
+		windows_x86_64_gnu-0.52.5 \
 		windows_x86_64_gnullvm-0.48.5 \
-		windows_x86_64_gnullvm-0.52.4 \
+		windows_x86_64_gnullvm-0.52.5 \
 		windows_x86_64_msvc-0.48.5 \
-		windows_x86_64_msvc-0.52.4 \
-		winnow-0.6.5 \
+		windows_x86_64_msvc-0.52.5 \
+		winnow-0.6.6 \
 		winreg-0.50.0 \
 		winsafe-0.0.19 \
 		xattr-1.3.1 \
 		xx-0.2.5 \
 		yansi-0.5.1 \
 		zeroize-1.7.0 \
-		zip-0.6.6 \
+		zip-1.1.1 \
 		zipsign-api-0.1.1
 
 OPENSSLINC=	/usr/include

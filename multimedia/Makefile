@@ -37,6 +37,7 @@
     SUBDIR += deforaos-player
     SUBDIR += dirac
     SUBDIR += dragon
+    SUBDIR += droidcam
     SUBDIR += dtv-scan-tables
     SUBDIR += dumpmpeg
     SUBDIR += dv2sub
@@ -62,7 +63,6 @@
     SUBDIR += ffsubsync
     SUBDIR += filebot
     SUBDIR += flvmeta
-    SUBDIR += flvtool++
     SUBDIR += fswebcam
     SUBDIR += gaupol
     SUBDIR += gavl
@@ -183,6 +183,7 @@
     SUBDIR += librtmp
     SUBDIR += libtheora
     SUBDIR += libtuner
+    SUBDIR += libudfread
     SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
@@ -217,7 +218,6 @@
     SUBDIR += minisatip
     SUBDIR += minitube
     SUBDIR += mjpegtools
-    SUBDIR += mjpg-streamer
     SUBDIR += mkclean
     SUBDIR += mkvalidator
     SUBDIR += mkvtoolnix

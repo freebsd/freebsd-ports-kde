@@ -132,6 +132,7 @@
     SUBDIR += R-cran-scatterplot3d
     SUBDIR += R-cran-sets
     SUBDIR += R-cran-sf
+    SUBDIR += R-cran-slam
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
     SUBDIR += R-cran-spData
@@ -438,7 +439,6 @@
     SUBDIR += ldouble
     SUBDIR += lean
     SUBDIR += lean4
-    SUBDIR += lean4-std
     SUBDIR += leangz
     SUBDIR += lemon
     SUBDIR += levmar
@@ -962,6 +962,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-iohexperimenter
     SUBDIR += py-ipyopt
+    SUBDIR += py-islpy
     SUBDIR += py-isosurfaces
     SUBDIR += py-jacobi
     SUBDIR += py-jax

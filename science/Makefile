@@ -230,7 +230,6 @@
     SUBDIR += orthanc-mysql
     SUBDIR += orthanc-postgresql
     SUBDIR += orthanc-webviewer
-    SUBDIR += p5-Algorithm-SVMLight
     SUBDIR += p5-Chemistry-3DBuilder
     SUBDIR += p5-Chemistry-Bond-Find
     SUBDIR += p5-Chemistry-Canonicalize
@@ -279,6 +278,7 @@
     SUBDIR += py-GPy
     SUBDIR += py-GPyOpt
     SUBDIR += py-HepMC3
+    SUBDIR += py-HofstadterTools
     SUBDIR += py-MDAnalysis
     SUBDIR += py-MDAnalysisTests
     SUBDIR += py-OpenFermion
@@ -345,6 +345,7 @@
     SUBDIR += py-gsd
     SUBDIR += py-h5json
     SUBDIR += py-h5py
+    SUBDIR += py-h5pyd
     SUBDIR += py-hiphive
     SUBDIR += py-hoomd-blue
     SUBDIR += py-inequality
@@ -482,7 +483,6 @@
     SUBDIR += spglib
     SUBDIR += spheral
     SUBDIR += step
-    SUBDIR += svmlight
     SUBDIR += tblite
     SUBDIR += teem
     SUBDIR += tfel

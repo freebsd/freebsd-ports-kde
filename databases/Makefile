@@ -5,6 +5,8 @@
     SUBDIR += R-cran-RPostgreSQL
     SUBDIR += R-cran-RSQLite
     SUBDIR += R-cran-cachem
+    SUBDIR += R-cran-dbplyr
+    SUBDIR += R-cran-dtplyr
     SUBDIR += R-cran-fastmap
     SUBDIR += R-cran-sqldf
     SUBDIR += WWWdb
@@ -298,6 +300,7 @@
     SUBDIR += p5-DBD-XBase
     SUBDIR += p5-DBD-cego
     SUBDIR += p5-DBD-mysql
+    SUBDIR += p5-DBD-mysql4
     SUBDIR += p5-DBI
     SUBDIR += p5-DBI-Shell
     SUBDIR += p5-DBICx-Deploy
