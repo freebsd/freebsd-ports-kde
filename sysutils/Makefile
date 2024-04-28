@@ -39,6 +39,7 @@
     SUBDIR += and
     SUBDIR += android-file-transfer
     SUBDIR += android-file-transfer-qt5
+    SUBDIR += android-ota-payload-extractor
     SUBDIR += angrysearch
     SUBDIR += ansible
     SUBDIR += ansible-iocage
@@ -1679,6 +1680,7 @@
     SUBDIR += zbackup
     SUBDIR += zeitgeist
     SUBDIR += zellij
+    SUBDIR += zelta
     SUBDIR += zeroer
     SUBDIR += zetaback
     SUBDIR += zetaback-devel

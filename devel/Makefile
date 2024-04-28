@@ -813,6 +813,7 @@
     SUBDIR += git-modes
     SUBDIR += git-p4
     SUBDIR += git-prev-next
+    SUBDIR += git-repo-manager
     SUBDIR += git-review
     SUBDIR += git-subrepo
     SUBDIR += git-svn
@@ -5095,6 +5096,7 @@
     SUBDIR += py-mypy_extensions
     SUBDIR += py-mystic
     SUBDIR += py-naiveBayesClassifier
+    SUBDIR += py-nanobind
     SUBDIR += py-nanotime
     SUBDIR += py-natsort
     SUBDIR += py-natural
@@ -5210,6 +5212,7 @@
     SUBDIR += py-pbr
     SUBDIR += py-pbs-installer
     SUBDIR += py-pcodedmp
+    SUBDIR += py-pcpp
     SUBDIR += py-pdm
     SUBDIR += py-pdm-autoexport
     SUBDIR += py-pdm-backend
@@ -5398,6 +5401,7 @@
     SUBDIR += py-pymsgbox
     SUBDIR += py-pymtbl
     SUBDIR += py-pynest2d
+    SUBDIR += py-pynvml
     SUBDIR += py-pyopencl
     SUBDIR += py-pyparsing
     SUBDIR += py-pyparsing2
