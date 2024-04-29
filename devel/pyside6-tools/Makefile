@@ -1,8 +1,10 @@
 PORTNAME=	pyside6
 DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
+MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-tools
+DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	PySide6 development tools
@@ -16,11 +18,8 @@ LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR}
 		libxkbcommon.so:x11/libxkbcommon \
 		libzstd.so:archivers/zstd
 
-USES=		cmake gl llvm:lib python qt:6 shebangfix tar:xz
-USE_GITHUB=	yes
-GH_ACCOUNT=	qtproject
-GH_PROJECT=	pyside-pyside-setup
-USE_GL=		gl
+USES=		cmake gl llvm:lib,noexport python qt:6 shebangfix tar:xz
+USE_GL=		opengl
 USE_PYTHON=	flavors
 USE_QT=		base declarative languageserver tools
 
@@ -42,6 +41,7 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${PYSIDE_BINDIR_REL}
 	@${MV} ${STAGEDIR}${PREFIX}/${PYSIDE_RELNAME} ${STAGEDIR}${PREFIX}/bin
 # These directories contain templates that should not be byte-compiled.
+# Temporarily relocate them to avoid errors.
 	@${MV} ${STAGEDIR}${PREFIX}/${PYSIDE_BINDIR_REL}/deploy_lib/android/recipes ${WRKDIR}
 
 .for d in deploy_lib project qtpy2cpp_lib
@@ -53,6 +53,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/${PYSIDE_BINDIR_REL}/${d}
 .endfor
 
+# Move the aforementioned templates back into STAGEDIR after the byte-compiling
+# operation has finished.
 	@${MV} ${WRKDIR}/recipes ${STAGEDIR}${PREFIX}/${PYSIDE_BINDIR_REL}/deploy_lib/android
 
 .include <bsd.port.mk>
