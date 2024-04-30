@@ -14,6 +14,7 @@ WWW=		https://wiki.qt.io/Qt_for_Python
 
 LICENSE=	LGPL3
 
+BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR} \
 		libxkbcommon.so:x11/libxkbcommon
 
