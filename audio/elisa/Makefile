@@ -13,9 +13,9 @@ USES=		cmake compiler:c++14-lang desktop-file-utils gettext kde:6 \
 		pkgconfig qt:6 tar:xz xorg
 USE_KDE=	auth baloo bookmarks codecs completion config configwidgets \
 		coreaddons crash dbusaddons filemetadata i18n iconthemes \
-		itemviews jobwidgets kcmutils kdeclarative kio kirigami2 \
-		package qqc2-desktop-style service solid widgetsaddons \
-		windowsystem xmlgui \
+		itemviews jobwidgets kcmutils kdeclarative kio kirigami-addons \
+		kirigami2 package qqc2-desktop-style service solid \
+		widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_QT=		base multimedia
 USE_XORG=	x11

@@ -16,5 +16,5 @@ lib/cmake/KPim6PkPass/KPim6PkPassTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6PkPass/KPim6PkPassTargets.cmake
 lib/libKPim6PkPass.so
 lib/libKPim6PkPass.so.6
-lib/libKPim6PkPass.so.6.0.2
+lib/libKPim6PkPass.so.6.0.80
 share/qlogging-categories6/org_kde_kpkpass.categories

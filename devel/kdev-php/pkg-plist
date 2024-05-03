@@ -18,10 +18,10 @@ lib/cmake/KDevPHP/KDevPHPTargets.cmake
 lib/libkdevphpcompletion.so
 lib/libkdevphpduchain.so
 lib/libkdevphpparser.so
-%%QT_PLUGINDIR%%/kdevplatform/513/kcm/kcm_kdevphpdocs.so
-%%QT_PLUGINDIR%%/kdevplatform/513/kdevphpdocs.so
-%%QT_PLUGINDIR%%/kdevplatform/513/kdevphplanguagesupport.so
-%%QT_PLUGINDIR%%/kdevplatform/513/kdevphpunitprovider.so
+%%QT_PLUGINDIR%%/kdevplatform/514/kcm/kcm_kdevphpdocs.so
+%%QT_PLUGINDIR%%/kdevplatform/514/kdevphpdocs.so
+%%QT_PLUGINDIR%%/kdevplatform/514/kdevphplanguagesupport.so
+%%QT_PLUGINDIR%%/kdevplatform/514/kdevphpunitprovider.so
 share/kdevappwizard/templates/simple_phpapp.tar.bz2
 share/kdevphpsupport/phpfunctions.php
 share/kdevphpsupport/phpunitdeclarations.php

@@ -1,9 +1,11 @@
 include/KOSM/Datatypes
 include/KOSM/Element
+include/KOSM/Languages
 include/KOSMIndoorMap/EquipmentModel
 include/KOSMIndoorMap/FloorLevelModel
 include/KOSMIndoorMap/GateModel
 include/KOSMIndoorMap/HitDetector
+include/KOSMIndoorMap/MapCSSElementState
 include/KOSMIndoorMap/MapCSSParser
 include/KOSMIndoorMap/MapCSSProperty
 include/KOSMIndoorMap/MapCSSResult
@@ -23,12 +25,14 @@ include/kosm/datatypes.h
 include/kosm/element.h
 include/kosm/internal.h
 include/kosm/kosm_export.h
+include/kosm/languages.h
 include/kosm/stringpool.h
 include/kosmindoormap/equipmentmodel.h
 include/kosmindoormap/floorlevelmodel.h
 include/kosmindoormap/gatemodel.h
 include/kosmindoormap/hitdetector.h
 include/kosmindoormap/kosmindoormap_export.h
+include/kosmindoormap/mapcsselementstate.h
 include/kosmindoormap/mapcssparser.h
 include/kosmindoormap/mapcssproperty.h
 include/kosmindoormap/mapcssresult.h
@@ -70,6 +74,8 @@ lib/libKOSMIndoorMap.so.%%KDE_APPLICATIONS_VERSION%%
 %%QT_QMLDIR%%/org/kde/osm/editorcontroller/kosmeditorcontrollerplugin.qmltypes
 %%QT_QMLDIR%%/org/kde/osm/editorcontroller/libkosmeditorcontrollerplugin.so
 %%QT_QMLDIR%%/org/kde/osm/editorcontroller/qmldir
+share/locale/ar/LC_MESSAGES/kosmindoormap.mo
+share/locale/ast/LC_MESSAGES/kosmindoormap.mo
 share/locale/ca/LC_MESSAGES/kosmindoormap.mo
 share/locale/ca@valencia/LC_MESSAGES/kosmindoormap.mo
 share/locale/cs/LC_MESSAGES/kosmindoormap.mo
@@ -80,6 +86,7 @@ share/locale/es/LC_MESSAGES/kosmindoormap.mo
 share/locale/eu/LC_MESSAGES/kosmindoormap.mo
 share/locale/fi/LC_MESSAGES/kosmindoormap.mo
 share/locale/fr/LC_MESSAGES/kosmindoormap.mo
+share/locale/he/LC_MESSAGES/kosmindoormap.mo
 share/locale/ia/LC_MESSAGES/kosmindoormap.mo
 share/locale/it/LC_MESSAGES/kosmindoormap.mo
 share/locale/ja/LC_MESSAGES/kosmindoormap.mo

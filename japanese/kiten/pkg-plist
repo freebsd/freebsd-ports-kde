@@ -33,6 +33,7 @@ share/icons/hicolor/scalable/apps/kiten.svgz
 %%DATADIR%%/vconj
 share/locale/af/LC_MESSAGES/kiten.mo
 share/locale/ar/LC_MESSAGES/kiten.mo
+share/locale/ast/LC_MESSAGES/kiten.mo
 share/locale/be/LC_MESSAGES/kiten.mo
 share/locale/bg/LC_MESSAGES/kiten.mo
 share/locale/br/LC_MESSAGES/kiten.mo

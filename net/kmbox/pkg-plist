@@ -10,6 +10,6 @@ lib/cmake/KPim6Mbox/KPim6MboxTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6Mbox/KPim6MboxTargets.cmake
 lib/libKPim6Mbox.so
 lib/libKPim6Mbox.so.6
-lib/libKPim6Mbox.so.6.0.2
+lib/libKPim6Mbox.so.6.0.80
 share/qlogging-categories6/kmbox.categories
 share/qlogging-categories6/kmbox.renamecategories

@@ -20,8 +20,8 @@ share/icons/hicolor/64x64/apps/kmines.png
 %%DATADIR%%/themes/green.desktop
 %%DATADIR%%/themes/green.png
 %%DATADIR%%/themes/kmines_classic.svgz
-%%DATADIR%%/themes/kmines_clean_blue.svg
-%%DATADIR%%/themes/kmines_clean_blue_dark.svg
+%%DATADIR%%/themes/kmines_clean_blue.svgz
+%%DATADIR%%/themes/kmines_clean_blue_dark.svgz
 %%DATADIR%%/themes/kmines_green.svgz
 %%DATADIR%%/themes/kmines_oxygen.svgz
 share/locale/af/LC_MESSAGES/kmines.mo

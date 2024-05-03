@@ -25,12 +25,13 @@ lib/cmake/KPim6Libkdepim/KPim6LibkdepimTargets.cmake
 lib/cmake/KPim6MailTransportDBusService/KPim6MailTransportDBusServiceConfig.cmake
 lib/libKPim6Libkdepim.so
 lib/libKPim6Libkdepim.so.6
-lib/libKPim6Libkdepim.so.6.0.2
+lib/libKPim6Libkdepim.so.6.0.80
 %%QT_PLUGINDIR%%/designer/kdepim6widgets.so
 share/dbus-1/interfaces/org.kde.addressbook.service.xml
 share/dbus-1/interfaces/org.kde.mailtransport.service.xml
 share/locale/af/LC_MESSAGES/libkdepim6.mo
 share/locale/ar/LC_MESSAGES/libkdepim6.mo
+share/locale/ast/LC_MESSAGES/libkdepim6.mo
 share/locale/be/LC_MESSAGES/libkdepim6.mo
 share/locale/bg/LC_MESSAGES/libkdepim6.mo
 share/locale/br/LC_MESSAGES/libkdepim6.mo

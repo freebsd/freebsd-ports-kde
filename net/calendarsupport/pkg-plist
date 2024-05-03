@@ -54,7 +54,7 @@ lib/cmake/KPim6CalendarSupport/KPim6CalendarSupportTargets-%%CMAKE_BUILD_TYPE%%.
 lib/cmake/KPim6CalendarSupport/KPim6CalendarSupportTargets.cmake
 lib/libKPim6CalendarSupport.so
 lib/libKPim6CalendarSupport.so.6
-lib/libKPim6CalendarSupport.so.6.0.2
+lib/libKPim6CalendarSupport.so.6.0.80
 share/locale/af/LC_MESSAGES/calendarsupport6.mo
 share/locale/ar/LC_MESSAGES/calendarsupport6.mo
 share/locale/ast/LC_MESSAGES/calendarsupport6.mo

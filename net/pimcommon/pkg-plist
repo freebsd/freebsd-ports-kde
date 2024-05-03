@@ -115,10 +115,10 @@ lib/cmake/KPim6PimCommonAkonadi/KPim6PimCommonAkonadiTargets-%%CMAKE_BUILD_TYPE%
 lib/cmake/KPim6PimCommonAkonadi/KPim6PimCommonAkonadiTargets.cmake
 lib/libKPim6PimCommon.so
 lib/libKPim6PimCommon.so.6
-lib/libKPim6PimCommon.so.6.0.2
+lib/libKPim6PimCommon.so.6.0.80
 lib/libKPim6PimCommonAkonadi.so
 lib/libKPim6PimCommonAkonadi.so.6
-lib/libKPim6PimCommonAkonadi.so.6.0.2
+lib/libKPim6PimCommonAkonadi.so.6.0.80
 %%QT_PLUGINDIR%%/designer/pimcommon6akonadiwidgets.so
 %%QT_PLUGINDIR%%/designer/pimcommon6widgets.so
 share/locale/ar/LC_MESSAGES/libpimcommon6.mo
@@ -163,6 +163,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libpimcommon6.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libpimcommon6.mo
 share/locale/sr@latin/LC_MESSAGES/libpimcommon6.mo
 share/locale/sv/LC_MESSAGES/libpimcommon6.mo
+share/locale/ta/LC_MESSAGES/libpimcommon6.mo
 share/locale/tr/LC_MESSAGES/libpimcommon6.mo
 share/locale/ug/LC_MESSAGES/libpimcommon6.mo
 share/locale/uk/LC_MESSAGES/libpimcommon6.mo

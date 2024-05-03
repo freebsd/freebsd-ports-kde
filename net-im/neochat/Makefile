@@ -23,8 +23,9 @@ USES=		cmake compiler:c++20-lang desktop-file-utils gettext kde:6 \
 		pkgconfig qt:6 tar:xz xorg
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		dbusaddons i18n itemmodels jobwidgets kio kirigami-addons \
-		kirigami2 notifications qqc2-desktop-style service solid \
-		sonnet statusnotifieritem widgetsaddons windowsystem \
+		kirigami2 notifications purpose qqc2-desktop-style service \
+		solid sonnet statusnotifieritem syntaxhighlighting \
+		widgetsaddons windowsystem \
 		ecm:build \
 		kquickcharts:run syntaxhighlighting:run
 USE_QT=		base multimedia webview \

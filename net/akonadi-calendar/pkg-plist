@@ -1,6 +1,8 @@
 bin/kalendarac
 etc/xdg/autostart/org.kde.kalendarac.desktop
 include/KPim6/AkonadiCalendar/Akonadi/BlockAlarmsAttribute
+include/KPim6/AkonadiCalendar/Akonadi/CalFilterPartStatusProxyModel
+include/KPim6/AkonadiCalendar/Akonadi/CalFilterProxyModel
 include/KPim6/AkonadiCalendar/Akonadi/CalendarBase
 include/KPim6/AkonadiCalendar/Akonadi/CalendarClipboard
 include/KPim6/AkonadiCalendar/Akonadi/CalendarUtils
@@ -26,6 +28,8 @@ include/KPim6/AkonadiCalendar/akonadi/calendarbase.h
 include/KPim6/AkonadiCalendar/akonadi/calendarclipboard.h
 include/KPim6/AkonadiCalendar/akonadi/calendarsettings.h
 include/KPim6/AkonadiCalendar/akonadi/calendarutils.h
+include/KPim6/AkonadiCalendar/akonadi/calfilterpartstatusproxymodel.h
+include/KPim6/AkonadiCalendar/akonadi/calfilterproxymodel.h
 include/KPim6/AkonadiCalendar/akonadi/collectioncalendar.h
 include/KPim6/AkonadiCalendar/akonadi/etmcalendar.h
 include/KPim6/AkonadiCalendar/akonadi/fetchjobcalendar.h
@@ -47,7 +51,7 @@ lib/cmake/KPim6AkonadiCalendar/KPim6AkonadiCalendarTargets-%%CMAKE_BUILD_TYPE%%.
 lib/cmake/KPim6AkonadiCalendar/KPim6AkonadiCalendarTargets.cmake
 lib/libKPim6AkonadiCalendar.so
 lib/libKPim6AkonadiCalendar.so.6
-lib/libKPim6AkonadiCalendar.so.6.0.2
+lib/libKPim6AkonadiCalendar.so.6.0.80
 %%QT_PLUGINDIR%%/akonadi_serializer_kcalcore.so
 %%QT_PLUGINDIR%%/kf6/org.kde.kcalendarcore.calendars/libakonadicalendarplugin.so
 share/akonadi/plugins/serializer/akonadi_serializer_kcalcore.desktop
@@ -118,6 +122,8 @@ share/locale/ia/LC_MESSAGES/libakonadi-calendar6.mo
 share/locale/id/LC_MESSAGES/kalendarac.mo
 share/locale/id/LC_MESSAGES/libakonadi-calendar6-serializer.mo
 share/locale/id/LC_MESSAGES/libakonadi-calendar6.mo
+share/locale/is/LC_MESSAGES/kalendarac.mo
+share/locale/is/LC_MESSAGES/libakonadi-calendar6-serializer.mo
 share/locale/it/LC_MESSAGES/kalendarac.mo
 share/locale/it/LC_MESSAGES/libakonadi-calendar6-serializer.mo
 share/locale/it/LC_MESSAGES/libakonadi-calendar6.mo
@@ -137,7 +143,9 @@ share/locale/ko/LC_MESSAGES/libakonadi-calendar6.mo
 share/locale/lt/LC_MESSAGES/kalendarac.mo
 share/locale/lt/LC_MESSAGES/libakonadi-calendar6-serializer.mo
 share/locale/lt/LC_MESSAGES/libakonadi-calendar6.mo
+share/locale/lv/LC_MESSAGES/kalendarac.mo
 share/locale/lv/LC_MESSAGES/libakonadi-calendar6-serializer.mo
+share/locale/lv/LC_MESSAGES/libakonadi-calendar6.mo
 share/locale/mai/LC_MESSAGES/libakonadi-calendar6.mo
 share/locale/mr/LC_MESSAGES/libakonadi-calendar6-serializer.mo
 share/locale/mr/LC_MESSAGES/libakonadi-calendar6.mo

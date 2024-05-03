@@ -1,12 +1,12 @@
 bin/bovo
 share/applications/org.kde.bovo.desktop
-%%DATADIR%%/themes/gomoku/theme.svg
+%%DATADIR%%/themes/gomoku/theme.svgz
 %%DATADIR%%/themes/gomoku/themerc
-%%DATADIR%%/themes/highcontrast/theme.svg
+%%DATADIR%%/themes/highcontrast/theme.svgz
 %%DATADIR%%/themes/highcontrast/themerc
-%%DATADIR%%/themes/scribble/theme.svg
+%%DATADIR%%/themes/scribble/theme.svgz
 %%DATADIR%%/themes/scribble/themerc
-%%DATADIR%%/themes/spacy/theme.svg
+%%DATADIR%%/themes/spacy/theme.svgz
 %%DATADIR%%/themes/spacy/themerc
 share/icons/hicolor/128x128/apps/bovo.png
 share/icons/hicolor/16x16/apps/bovo.png
@@ -35,6 +35,7 @@ share/locale/fi/LC_MESSAGES/bovo.mo
 share/locale/fr/LC_MESSAGES/bovo.mo
 share/locale/ga/LC_MESSAGES/bovo.mo
 share/locale/gl/LC_MESSAGES/bovo.mo
+share/locale/he/LC_MESSAGES/bovo.mo
 share/locale/hi/LC_MESSAGES/bovo.mo
 share/locale/hne/LC_MESSAGES/bovo.mo
 share/locale/hr/LC_MESSAGES/bovo.mo

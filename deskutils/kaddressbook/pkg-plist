@@ -25,9 +25,9 @@ lib/cmake/KPim6AddressbookImportExport/KPim6AddressbookImportExportTargets-%%CMA
 lib/cmake/KPim6AddressbookImportExport/KPim6AddressbookImportExportTargets.cmake
 lib/libKPim6AddressbookImportExport.so
 lib/libKPim6AddressbookImportExport.so.6
-lib/libKPim6AddressbookImportExport.so.6.0.2
+lib/libKPim6AddressbookImportExport.so.6.0.80
 lib/libkaddressbookprivate.so.6
-lib/libkaddressbookprivate.so.6.0.2
+lib/libkaddressbookprivate.so.6.0.80
 %%QT_PLUGINDIR%%/kaddressbookpart.so
 %%QT_PLUGINDIR%%/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
 %%QT_PLUGINDIR%%/pim6/kontact/kontact_kaddressbookplugin.so

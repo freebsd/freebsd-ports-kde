@@ -9,7 +9,7 @@ lib/cmake/KPim6AkonadiNotes/KPim6AkonadiNotesTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6AkonadiNotes/KPim6AkonadiNotesTargets.cmake
 lib/libKPim6AkonadiNotes.so
 lib/libKPim6AkonadiNotes.so.6
-lib/libKPim6AkonadiNotes.so.6.0.2
+lib/libKPim6AkonadiNotes.so.6.0.80
 share/locale/ar/LC_MESSAGES/akonadinotes6.mo
 share/locale/ast/LC_MESSAGES/akonadinotes6.mo
 share/locale/az/LC_MESSAGES/akonadinotes6.mo
@@ -44,6 +44,7 @@ share/locale/kk/LC_MESSAGES/akonadinotes6.mo
 share/locale/km/LC_MESSAGES/akonadinotes6.mo
 share/locale/ko/LC_MESSAGES/akonadinotes6.mo
 share/locale/lt/LC_MESSAGES/akonadinotes6.mo
+share/locale/lv/LC_MESSAGES/akonadinotes6.mo
 share/locale/mr/LC_MESSAGES/akonadinotes6.mo
 share/locale/nb/LC_MESSAGES/akonadinotes6.mo
 share/locale/nds/LC_MESSAGES/akonadinotes6.mo

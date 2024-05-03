@@ -83,6 +83,7 @@ share/knsrcfiles/parley-themes.knsrc
 share/knsrcfiles/parley.knsrc
 share/locale/af/LC_MESSAGES/parley.mo
 share/locale/ar/LC_MESSAGES/parley.mo
+share/locale/ast/LC_MESSAGES/parley.mo
 share/locale/be/LC_MESSAGES/parley.mo
 share/locale/bg/LC_MESSAGES/parley.mo
 share/locale/bn/LC_MESSAGES/parley.mo

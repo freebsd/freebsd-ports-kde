@@ -54,7 +54,7 @@ lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets.cmake
 lib/libKPim6AkonadiMime.so
 lib/libKPim6AkonadiMime.so.6
-lib/libKPim6AkonadiMime.so.6.0.2
+lib/libKPim6AkonadiMime.so.6.0.80
 %%QT_PLUGINDIR%%/akonadi_serializer_mail.so
 share/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 share/config.kcfg/specialmailcollections.kcfg
@@ -78,6 +78,7 @@ share/locale/fi/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/fr/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/ga/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/gl/LC_MESSAGES/libakonadi-kmime6.mo
+share/locale/he/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/hu/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/ia/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/ie/LC_MESSAGES/libakonadi-kmime6.mo
@@ -88,6 +89,7 @@ share/locale/kk/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/km/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/ko/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/lt/LC_MESSAGES/libakonadi-kmime6.mo
+share/locale/lv/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/mai/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/mr/LC_MESSAGES/libakonadi-kmime6.mo
 share/locale/nb/LC_MESSAGES/libakonadi-kmime6.mo

@@ -1,6 +1,7 @@
 bin/alligator
 share/applications/org.kde.alligator.desktop
 share/icons/hicolor/scalable/apps/alligator.svg
+share/locale/ar/LC_MESSAGES/alligator.mo
 share/locale/ast/LC_MESSAGES/alligator.mo
 share/locale/ca/LC_MESSAGES/alligator.mo
 share/locale/ca@valencia/LC_MESSAGES/alligator.mo
@@ -14,6 +15,7 @@ share/locale/eu/LC_MESSAGES/alligator.mo
 share/locale/fi/LC_MESSAGES/alligator.mo
 share/locale/fr/LC_MESSAGES/alligator.mo
 share/locale/gl/LC_MESSAGES/alligator.mo
+share/locale/he/LC_MESSAGES/alligator.mo
 share/locale/hu/LC_MESSAGES/alligator.mo
 share/locale/ia/LC_MESSAGES/alligator.mo
 share/locale/it/LC_MESSAGES/alligator.mo

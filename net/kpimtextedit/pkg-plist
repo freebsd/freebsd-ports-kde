@@ -30,8 +30,9 @@ lib/cmake/KPim6TextEdit/KPim6TextEditTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6TextEdit/KPim6TextEditTargets.cmake
 lib/libKPim6TextEdit.so
 lib/libKPim6TextEdit.so.6
-lib/libKPim6TextEdit.so.6.0.2
+lib/libKPim6TextEdit.so.6.0.80
 share/locale/ar/LC_MESSAGES/libkpimtextedit6.mo
+share/locale/ast/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/az/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/bs/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/ca/LC_MESSAGES/libkpimtextedit6.mo
@@ -49,6 +50,7 @@ share/locale/fi/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/fr/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/ga/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/gl/LC_MESSAGES/libkpimtextedit6.mo
+share/locale/he/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/hu/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/ia/LC_MESSAGES/libkpimtextedit6.mo
 share/locale/it/LC_MESSAGES/libkpimtextedit6.mo

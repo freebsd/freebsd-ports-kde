@@ -16,8 +16,6 @@ share/icons/hicolor/256x256/apps/kleopatra.png
 share/icons/hicolor/32x32/apps/kleopatra.png
 share/icons/hicolor/48x48/apps/kleopatra.png
 share/icons/hicolor/64x64/apps/kleopatra.png
-share/kconf_update/kleopatra-15.08-kickoff.sh
-share/kconf_update/kleopatra.upd
 share/kio/servicemenus/kleopatra_decryptverifyfiles.desktop
 share/kio/servicemenus/kleopatra_decryptverifyfolders.desktop
 share/kio/servicemenus/kleopatra_signencryptfiles.desktop
@@ -78,6 +76,7 @@ share/locale/ga/LC_MESSAGES/kwatchgnupg.mo
 share/locale/gl/LC_MESSAGES/kleopatra.mo
 share/locale/gl/LC_MESSAGES/kwatchgnupg.mo
 share/locale/he/LC_MESSAGES/kleopatra.mo
+share/locale/he/LC_MESSAGES/kwatchgnupg.mo
 share/locale/hi/LC_MESSAGES/kleopatra.mo
 share/locale/hi/LC_MESSAGES/kwatchgnupg.mo
 share/locale/hne/LC_MESSAGES/kleopatra.mo

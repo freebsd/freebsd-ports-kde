@@ -31,6 +31,7 @@ share/kio/servicemenus/kget_plugin.desktop
 share/knotifications6/kget.notifyrc
 share/locale/af/LC_MESSAGES/kget.mo
 share/locale/ar/LC_MESSAGES/kget.mo
+share/locale/ast/LC_MESSAGES/kget.mo
 share/locale/be/LC_MESSAGES/kget.mo
 share/locale/bg/LC_MESSAGES/kget.mo
 share/locale/br/LC_MESSAGES/kget.mo

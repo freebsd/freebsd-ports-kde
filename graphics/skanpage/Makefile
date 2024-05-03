@@ -21,6 +21,6 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
 		i18n jobwidgets kio kirigami2 purpose service widgetsaddons \
 		xmlgui \
 		doctools:build ecm:build
-USE_QT=		base
+USE_QT=		base pdf
 
 .include <bsd.port.mk>

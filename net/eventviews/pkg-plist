@@ -40,7 +40,7 @@ lib/cmake/KPim6EventViews/KPim6EventViewsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6EventViews/KPim6EventViewsTargets.cmake
 lib/libKPim6EventViews.so
 lib/libKPim6EventViews.so.6
-lib/libKPim6EventViews.so.6.0.2
+lib/libKPim6EventViews.so.6.0.80
 share/locale/ar/LC_MESSAGES/libeventviews6.mo
 share/locale/ast/LC_MESSAGES/libeventviews6.mo
 share/locale/bg/LC_MESSAGES/libeventviews6.mo

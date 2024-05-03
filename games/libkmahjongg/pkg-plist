@@ -12,7 +12,7 @@ lib/cmake/KMahjongglib6/KMahjongglib6Targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KMahjongglib6/KMahjongglib6Targets.cmake
 lib/libKMahjongg6.so
 lib/libKMahjongg6.so.6
-lib/libKMahjongg6.so.6.0.%%KDE_APPLICATIONS_VERSION_SHORT%%0202
+lib/libKMahjongg6.so.6.0.%%KDE_APPLICATIONS_VERSION_SHORT%%0480
 share/kmahjongglib/backgrounds/chinese_landscape.desktop
 share/kmahjongglib/backgrounds/chinese_landscape.svgz
 share/kmahjongglib/backgrounds/color_plain.desktop
@@ -58,6 +58,7 @@ share/locale/fr/LC_MESSAGES/libkmahjongg6.mo
 share/locale/ga/LC_MESSAGES/libkmahjongg6.mo
 share/locale/gl/LC_MESSAGES/libkmahjongg6.mo
 share/locale/gu/LC_MESSAGES/libkmahjongg6.mo
+share/locale/he/LC_MESSAGES/libkmahjongg6.mo
 share/locale/hi/LC_MESSAGES/libkmahjongg6.mo
 share/locale/hne/LC_MESSAGES/libkmahjongg6.mo
 share/locale/hr/LC_MESSAGES/libkmahjongg6.mo

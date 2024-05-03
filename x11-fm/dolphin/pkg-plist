@@ -32,6 +32,8 @@ share/dbus-1/services/org.kde.dolphin.FileManager1.service
 %%DATADIR%%/dolphinpartactions.desktop
 share/icons/hicolor/scalable/apps/org.kde.dolphin.svg
 share/kconf_update/dolphin_detailsmodesettings.upd
+share/kconf_update/dolphin_directorysizemode.py
+share/kconf_update/dolphin_directorysizemode.upd
 share/kglobalaccel/org.kde.dolphin.desktop
 share/knsrcfiles/servicemenu.knsrc
 share/locale/ar/LC_MESSAGES/dolphin.mo

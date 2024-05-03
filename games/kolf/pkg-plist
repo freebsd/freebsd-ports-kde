@@ -16,7 +16,6 @@ share/icons/hicolor/scalable/apps/kolf.svgz
 %%DATADIR%%/courses/ReallyEasy
 %%DATADIR%%/courses/USApro
 %%DATADIR%%/intro
-%%DATADIR%%/pics/default_theme.svgz
 %%DATADIR%%/sounds/blackhole.wav
 %%DATADIR%%/sounds/blackholeeject.wav
 %%DATADIR%%/sounds/blackholeputin.wav
@@ -27,6 +26,7 @@ share/icons/hicolor/scalable/apps/kolf.svgz
 %%DATADIR%%/sounds/puddle.wav
 %%DATADIR%%/sounds/wall.wav
 %%DATADIR%%/sounds/woohoo.wav
+%%DATADIR%%/themes/default.svgz
 %%DATADIR%%/tutorial.kolf
 %%DATADIR%%/tutorial.kolfgame
 share/locale/af/LC_MESSAGES/kolf.mo

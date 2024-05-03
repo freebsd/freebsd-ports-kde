@@ -1,6 +1,6 @@
 bin/akonadiconsole
 lib/libakonadiconsole.so.6
-lib/libakonadiconsole.so.6.0.2
+lib/libakonadiconsole.so.6.0.80
 share/applications/org.kde.akonadiconsole.desktop
 share/icons/hicolor/128x128/apps/akonadiconsole.png
 share/icons/hicolor/16x16/apps/akonadiconsole.png

@@ -10,7 +10,9 @@ WWW=		https://projects.kde.org/projects/kde/kdegraphics/spectacle
 LIB_DEPENDS=	libxcb-cursor.so:x11/xcb-util-cursor \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-util.so:x11/xcb-util \
-		libkImageAnnotator-Qt6.so:graphics/kimageannotator@qt6
+		libkImageAnnotator-Qt6.so:graphics/kimageannotator@qt6 \
+		libZXing.so:textproc/zxing-cpp \
+		libopencv_core.so:graphics/opencv
 RUN_DEPENDS=	kipi-plugins>=0:graphics/kipi-plugins
 
 USES=		cmake compiler:c++11-lang gettext kde:6 pkgconfig qt:6 tar:xz \

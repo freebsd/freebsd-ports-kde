@@ -6,6 +6,7 @@ include/KPublicTransport/KPublicTransport/CoverageArea
 include/KPublicTransport/KPublicTransport/Datatypes
 include/KPublicTransport/KPublicTransport/Disruption
 include/KPublicTransport/KPublicTransport/Equipment
+include/KPublicTransport/KPublicTransport/Feature
 include/KPublicTransport/KPublicTransport/IndividualTransport
 include/KPublicTransport/KPublicTransport/Journey
 include/KPublicTransport/KPublicTransport/JourneyQueryModel
@@ -42,6 +43,7 @@ include/KPublicTransport/kpublictransport/coveragearea.h
 include/KPublicTransport/kpublictransport/datatypes.h
 include/KPublicTransport/kpublictransport/disruption.h
 include/KPublicTransport/kpublictransport/equipment.h
+include/KPublicTransport/kpublictransport/feature.h
 include/KPublicTransport/kpublictransport/individualtransport.h
 include/KPublicTransport/kpublictransport/journey.h
 include/KPublicTransport/kpublictransport/journeyquerymodel.h

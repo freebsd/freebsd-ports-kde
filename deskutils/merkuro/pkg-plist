@@ -10,6 +10,7 @@ bin/merkuro-mail
 %%QT_QMLDIR%%/org/kde/akonadi/libakonadi_quick_plugin.so
 %%QT_QMLDIR%%/org/kde/akonadi/qmldir
 %%QT_QMLDIR%%/org/kde/merkuro/calendar/BottomToolBar.qml
+%%QT_QMLDIR%%/org/kde/merkuro/calendar/DatePopupSingleton.qml
 %%QT_QMLDIR%%/org/kde/merkuro/calendar/MenuBar.qml
 %%QT_QMLDIR%%/org/kde/merkuro/calendar/PriorityComboBox.qml
 %%QT_QMLDIR%%/org/kde/merkuro/calendar/ReminderDelegate.qml
