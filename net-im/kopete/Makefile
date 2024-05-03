@@ -1,5 +1,6 @@
 PORTNAME=	kopete
 PORTVERSION=	${KDE_APPLICATIONS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	net-im kde kde-applications
 
 IGNORE=		No longer shipped as part of KDE Gear from 24.x on
