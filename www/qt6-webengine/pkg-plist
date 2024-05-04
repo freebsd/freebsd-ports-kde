@@ -250,7 +250,7 @@ libdata/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 libdata/pkgconfig/Qt6WebEngineWidgets.pc
 %%QT_TOOLDIR%%/QtWebEngineProcess
 %%QT_TOOLDIR%%/qwebengine_convert_dict
-%%QT_TOOLDIR%%/webenginedriver
+%%DRIVER%%%%QT_TOOLDIR%%/webenginedriver
 %%QT_DATADIR%%/modules/WebEngineCore.json
 %%QT_DATADIR%%/modules/WebEngineQuick.json
 %%QT_DATADIR%%/modules/WebEngineQuickDelegatesQml.json
