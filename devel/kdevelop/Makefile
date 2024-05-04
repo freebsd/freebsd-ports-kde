@@ -3,7 +3,7 @@
 #  devel/kdev-python
 PORTNAME=	kdevelop
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -27,8 +27,8 @@ USES=		cmake compiler:c++11-lib desktop-file-utils gettext grantlee:5 \
 USE_KDE=	archive attica auth bookmarks codecs completion config \
 		configwidgets coreaddons crash guiaddons i18n iconthemes init \
 		itemmodels itemviews jobwidgets kcmutils kdeclarative kio \
-		libksysguard newstuff notifications notifyconfig package parts \
-		plasma-framework purpose runner service solid sonnet \
+		newstuff notifications notifyconfig package parts \
+		runner service solid sonnet \
 		syntaxhighlighting texteditor textwidgets threadweaver \
 		widgetsaddons windowsystem xmlgui
 USE_QT=		concurrent core dbus declarative gui help network printsupport \
