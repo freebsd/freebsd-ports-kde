@@ -255,6 +255,7 @@ libdata/pkgconfig/Qt6WebEngineWidgets.pc
 %%QT_DATADIR%%/modules/WebEngineQuick.json
 %%QT_DATADIR%%/modules/WebEngineQuickDelegatesQml.json
 %%QT_DATADIR%%/modules/WebEngineWidgets.json
+@dir %%QT_DATADIR%%/resources/locales
 %%QT_DATADIR%%/resources/icudtl.dat
 %%QT_DATADIR%%/resources/qtwebengine_devtools_resources.pak
 %%QT_DATADIR%%/resources/qtwebengine_resources.pak

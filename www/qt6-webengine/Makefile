@@ -171,8 +171,14 @@ pre-configure:
 		${SYS_LIBS} || ${FALSE}
 
 .if !defined(BUILD_QTPDF)
+post-install:
+# Fix for deskutils/calibre, perhaps others, where this empty directory
+# is created during build causing a fs-violation.
+	${MKDIR} ${STAGEDIR}${QT_DATADIR}/resources/locales
+
 post-install-DRIVER-on:
 	${STRIP_CMD} ${STAGEDIR}${QT_TOOLDIR}/webenginedriver
+
 .endif
 
 .include <bsd.port.post.mk>
