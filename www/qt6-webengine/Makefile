@@ -171,7 +171,7 @@ pre-configure:
 		${SYS_LIBS} || ${FALSE}
 
 .if !defined(BUILD_QTPDF)
-post-install:
+post-install-DRIVER-on:
 	${STRIP_CMD} ${STAGEDIR}${QT_TOOLDIR}/webenginedriver
 .endif
 
