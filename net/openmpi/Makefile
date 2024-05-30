@@ -1,9 +1,10 @@
 PORTNAME=	openmpi
-PORTVERSION=	5.0.2
+PORTVERSION=	5.0.3
+PORTREVISION=	1
 CATEGORIES=	net parallel
 MASTER_SITES=	https://download.open-mpi.org/release/open-mpi/v${PORTVERSION:R}/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	laurent.chardon@gmail.com
 COMMENT=	High Performance Message Passing Library
 WWW=		https://www.open-mpi.org/
 
@@ -13,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 NOT_FOR_ARCHS=	armv6 armv7 i386 powerpc
 NOT_FOR_ARCHS_REASON=	Not supported on 32-bits - see net/openmpi4
 
-LIB_DEPENDS=	libhwloc.so.15:devel/hwloc2 \
+LIB_DEPENDS=	libhwloc.so:devel/hwloc2 \
 		libevent.so:devel/libevent \
 		libmunge.so:security/munge \
 		libze_loader.so:devel/level-zero
@@ -83,6 +84,8 @@ DEBUG_INSTALL_TARGET_OFF=	install-strip
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR}	\
 			${PYTHON_PKGNAMEPREFIX}recommonmark>0:textproc/py-recommonmark@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}sphinx_rtd_theme>0:textproc/py-sphinx_rtd_theme@${PY_FLAVOR}
+DOCSDIR=		${PREFIX}/${MPIDIR}/share/doc
+PORTDOCS=		*
 
 IPV6_CONFIGURE_ENABLE=	ipv6
 
@@ -104,7 +107,7 @@ PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE="@comment "
 PLIST_SUB+=	NO_MCA_PATCHER_OVERWRITE=""
 .endif
 
-.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 170
+.if ${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 170 && !${ARCH:Mpowerpc*}
 PLIST_SUB+=	SHORTFLOAT=""
 .else
 PLIST_SUB+=	SHORTFLOAT="@comment "

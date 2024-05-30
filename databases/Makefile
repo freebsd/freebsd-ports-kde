@@ -69,7 +69,10 @@
     SUBDIR += firebird40-client
     SUBDIR += firebird40-server
     SUBDIR += fortytwo-bdb
-    SUBDIR += foundationdb
+    SUBDIR += foundationdb71-client
+    SUBDIR += foundationdb71-server
+    SUBDIR += foundationdb73-client
+    SUBDIR += foundationdb73-server
     SUBDIR += frece
     SUBDIR += freetds
     SUBDIR += freetds-devel
@@ -154,6 +157,8 @@
     SUBDIR += linux-c7-unixODBC
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
+    SUBDIR += linux-rl9-libtracker-sparql
+    SUBDIR += linux-rl9-sqlite3
     SUBDIR += liquibase
     SUBDIR += litestream
     SUBDIR += lmdb
@@ -200,6 +205,8 @@
     SUBDIR += mysql80-server
     SUBDIR += mysql81-client
     SUBDIR += mysql81-server
+    SUBDIR += mysql84-client
+    SUBDIR += mysql84-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqldump-secure
     SUBDIR += mysqlreport
@@ -698,6 +705,7 @@
     SUBDIR += proftpd-mod_sql_postgres
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
+    SUBDIR += prometheus-postgres-exporter
     SUBDIR += prometheus-postgresql-adapter
     SUBDIR += proxysql
     SUBDIR += pspg
@@ -819,7 +827,9 @@
     SUBDIR += py-sqlalchemy20
     SUBDIR += py-sqlcipher3
     SUBDIR += py-sqlglot
+    SUBDIR += py-sqlite-anyio
     SUBDIR += py-sqlite-fts4
+    SUBDIR += py-sqlite-migrate
     SUBDIR += py-sqlite-utils
     SUBDIR += py-sqlite3
     SUBDIR += py-sqlobject
@@ -913,6 +923,7 @@
     SUBDIR += rubygem-dbd-pg
     SUBDIR += rubygem-dbd-sqlite3
     SUBDIR += rubygem-dbf
+    SUBDIR += rubygem-dbf4
     SUBDIR += rubygem-dbi
     SUBDIR += rubygem-dbm
     SUBDIR += rubygem-discard-rails61
@@ -939,7 +950,6 @@
     SUBDIR += rubygem-fabrication
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
-    SUBDIR += rubygem-flipper-active_record-rails61
     SUBDIR += rubygem-flipper-active_record-rails70
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
@@ -963,6 +973,7 @@
     SUBDIR += rubygem-mario-redis-lock
     SUBDIR += rubygem-memcache
     SUBDIR += rubygem-memcache-client
+    SUBDIR += rubygem-microscope
     SUBDIR += rubygem-mysql
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-neighbor
@@ -1005,6 +1016,7 @@
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
+    SUBDIR += rubygem-sqlite31
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-state_machines-activerecord08

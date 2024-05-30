@@ -418,6 +418,19 @@
     SUBDIR += linux-c7-pulseaudio-utils
     SUBDIR += linux-c7-sdl_mixer
     SUBDIR += linux-laudio
+    SUBDIR += linux-rl9-alsa-lib
+    SUBDIR += linux-rl9-alsa-lib-devel
+    SUBDIR += linux-rl9-alsa-plugins-oss
+    SUBDIR += linux-rl9-alsa-plugins-pulseaudio
+    SUBDIR += linux-rl9-flac
+    SUBDIR += linux-rl9-gsm
+    SUBDIR += linux-rl9-libogg
+    SUBDIR += linux-rl9-libsndfile
+    SUBDIR += linux-rl9-libvorbis
+    SUBDIR += linux-rl9-openal-soft
+    SUBDIR += linux-rl9-opus
+    SUBDIR += linux-rl9-pulseaudio-libs
+    SUBDIR += linux-rl9-pulseaudio-utils
     SUBDIR += linuxsampler
     SUBDIR += linuxwave
     SUBDIR += liquidsfz
@@ -659,6 +672,7 @@
     SUBDIR += py-python-mpd2
     SUBDIR += py-pyttsx3
     SUBDIR += py-resampy
+    SUBDIR += py-samplerate
     SUBDIR += py-simpleaudio
     SUBDIR += py-soundcloud
     SUBDIR += py-sounddevice

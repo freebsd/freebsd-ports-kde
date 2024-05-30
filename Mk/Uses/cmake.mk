@@ -62,7 +62,7 @@ _INCLUDE_USES_CMAKE_MK=	yes
 
 _valid_ARGS=		indirect insource noninja run testing _internal
 
-_CMAKE_VERSION=		3.28.3
+_CMAKE_VERSION=		3.29.3
 CMAKE_BIN=		${LOCALBASE}/bin/cmake
 
 # Sanity check
@@ -192,7 +192,7 @@ do-test:
 	@cd ${BUILD_WRKSRC} && \
 		${SETENVI} ${WRK_ENV} ${CONFIGURE_ENV} ${CMAKE_BIN} ${CMAKE_ARGS} ${CMAKE_TESTING_ARGS} ${CMAKE_SOURCE_PATH} && \
 		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${_MAKE_JOBS} ${MAKE_ARGS} ${ALL_TARGET} && \
-		${SETENVI} ${WRK_ENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_ARGS} ${CMAKE_TESTING_TARGET}
+		${SETENVI} ${WRK_ENV} ${TEST_ENV} CTEST_PARALLEL_LEVEL=${_MAKE_JOBS_NUMBER} ${MAKE_CMD} ${MAKE_ARGS} ${CMAKE_TESTING_TARGET}
 .    endif
 .  endif
 

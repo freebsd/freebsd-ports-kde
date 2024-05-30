@@ -21,9 +21,14 @@ USE_PYTHON=	autoplist concurrent pep517 unittest
 MAKE_ARGS=	--no-bundle --with-cython --with-lua-checks
 TEST_ARGS=	lupa.tests.test
 
-post-patch:
 # Clean up bundled libraries
+.if !defined(MAINTAINER_MODE)
+EXTRACT_AFTER_ARGS=	--exclude ${DISTNAME}/third-party \
+			--no-same-owner --no-same-permissions
+.else
+post-patch:
 	@${RM} -r ${WRKSRC}/third-party/
+.endif
 
 post-install:
 	${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -name '*.so' -exec ${STRIP_CMD} {} +

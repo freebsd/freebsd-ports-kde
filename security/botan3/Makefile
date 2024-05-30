@@ -12,11 +12,9 @@ WWW=		https://botan.randombit.net/
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/license.txt
 
-BROKEN_armv6=	include/arm_neon.h:28:2: error: "NEON support not enabled"
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/asio.hpp:devel/boost-libs
 
-LIB_DEPENDS=	libboost_filesystem.so:devel/boost-libs
-
-USES=		compiler:c++20-lang cpe gmake shebangfix tar:xz
+USES=		compiler:c++20-lang cpe gmake llvm shebangfix tar:xz # llvm fixes build failure, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=279136
 CPE_VENDOR=	${PORTNAME}_project
 USE_LDCONFIG=	yes
 
@@ -25,6 +23,7 @@ SHEBANG_GLOB=	*.py
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	configure.py
 CONFIGURE_ARGS=		--cc=${CHOSEN_COMPILER_TYPE} \
+			${"${CCACHE_BIN}" != "":?--compiler-cache=${CCACHE_BIN}:} \
 			--prefix=${PREFIX:Q} \
 			--with-boost \
 			--with-bzip2 \
@@ -33,6 +32,7 @@ CONFIGURE_ARGS=		--cc=${CHOSEN_COMPILER_TYPE} \
 			--with-lzma \
 			--with-zlib \
 			--program-suffix=${_BOTANMAJOR}
+TEST_TARGET=		check
 LDFLAGS+=		-pthread
 
 DOCSDIR=	${LOCALBASE}/share/doc/${PORTNAME}-${PORTVERSION}
@@ -82,9 +82,10 @@ PLIST_SUB+=	HAS_PROCESSOR_RNG=""
 PLIST_SUB+=	HAS_PROCESSOR_RNG="@comment "
 .endif
 
-#.if ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302505 && ${OSVERSION} < 1400000 ) || ${OSVERSION} < 1300000 )
-#USES+=	llvm:max=15,min=14
-#.endif
+.if ${OPSYS} == FreeBSD && ( ( ${OSVERSION} >= 1400000 && ${OSVERSION} < 1400091 ) || ( ${OSVERSION} < 1302507 ) )
+# libc++ does not carry std::ranges::find, redirect to boost::range::find:
+EXTRA_PATCHES+= ${FILESDIR}/extrapatch-src_tests_unit__x509.cpp
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^optimization_flags .*|optimization_flags "${CXXFLAGS}"|' \

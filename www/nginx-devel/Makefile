@@ -1,6 +1,5 @@
 PORTNAME?=	nginx
-PORTVERSION=	1.26.0
-PORTREVISION=	1
+PORTVERSION=	1.27.0
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/ \
 		LOCAL/osa
@@ -16,7 +15,7 @@ LICENSE_FILE?=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx
 
-PORTSCOUT=	limit:^1\.2[6-7]\.[0-9]*
+PORTSCOUT=	limit:^1\.2[7-8]\.[0-9]*
 
 USES=		cpe
 
@@ -188,6 +187,7 @@ MAIL_SMTP_CONFIGURE_OFF=	--without-mail_smtp_module
 MAIL_SSL_USES=			ssl
 MAIL_SSL_CONFIGURE_ON=		--with-mail_ssl_module
 STREAM_VARS=			DSO_BASEMODS+=stream
+STREAM_CONFIGURE_ON=		--with-stream
 STREAM_REALIP_CONFIGURE_ON=	--with-stream_realip_module
 STREAM_SSL_USES=		ssl
 STREAM_SSL_CONFIGURE_ON=	--with-stream_ssl_module

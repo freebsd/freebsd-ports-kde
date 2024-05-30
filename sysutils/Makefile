@@ -287,6 +287,7 @@
     SUBDIR += ddh
     SUBDIR += ddpt
     SUBDIR += ddrescue
+    SUBDIR += ddrescueview
     SUBDIR += debhelper
     SUBDIR += debootstrap
     SUBDIR += deltarpm
@@ -366,6 +367,7 @@
     SUBDIR += egress-monitor
     SUBDIR += eject
     SUBDIR += eksctl
+    SUBDIR += elfx86exts
     SUBDIR += endian
     SUBDIR += enteruser
     SUBDIR += entr
@@ -619,6 +621,7 @@
     SUBDIR += jdupes
     SUBDIR += jest
     SUBDIR += jkill
+    SUBDIR += joshuto
     SUBDIR += jps
     SUBDIR += jruls
     SUBDIR += jstest-gtk
@@ -1208,6 +1211,7 @@
     SUBDIR += retail
     SUBDIR += rex
     SUBDIR += rhc
+    SUBDIR += rkbin
     SUBDIR += rinse
     SUBDIR += rmlint
     SUBDIR += rocinante
@@ -1404,6 +1408,7 @@
     SUBDIR += stowES
     SUBDIR += stress
     SUBDIR += stressdisk
+    SUBDIR += superfile
     SUBDIR += superiotool
     SUBDIR += swapd
     SUBDIR += swapexd
@@ -1422,6 +1427,7 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslogger
+    SUBDIR += systeroid
     SUBDIR += sysvbanner
     SUBDIR += szyszka
     SUBDIR += tai64nfrac
@@ -1506,6 +1512,7 @@
     SUBDIR += u-boot-nanopi-neo2
     SUBDIR += u-boot-nanopi-r2s
     SUBDIR += u-boot-nanopi-r4s
+    SUBDIR += u-boot-nanopi-r5s
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-olinuxino-lime2
@@ -1583,7 +1590,6 @@
     SUBDIR += vbetool
     SUBDIR += vchanger
     SUBDIR += vcp
-    SUBDIR += vector
     SUBDIR += viddy
     SUBDIR += videogen
     SUBDIR += vii
@@ -1615,6 +1621,7 @@
     SUBDIR += whowatch
     SUBDIR += wiimms
     SUBDIR += wimlib
+    SUBDIR += wiper
     SUBDIR += wmapmload
     SUBDIR += wmbluecpu
     SUBDIR += wmbsdbatt

@@ -1,6 +1,5 @@
 PORTNAME=	django
-PORTVERSION=	5.0.4
-PORTREVISION=	1
+PORTVERSION=	5.0.6
 CATEGORIES=	www python
 MASTER_SITES=	PYPI \
 		https://media.djangoproject.com/releases/${PORTVERSION:R}/
@@ -60,7 +59,7 @@ IGNORE=		requires Python 3.10 or later
 .endif
 
 post-build-HTMLDOCS-on:
-	cd ${WRKSRC}/docs && ${GMAKE} html SPHINXBUILD=sphinx-build-${PYTHON_VER}
+	cd ${WRKSRC}/docs && ${MAKE_CMD} html SPHINXBUILD=sphinx-build-${PYTHON_VER}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/man/* ${STAGEDIR}/${PREFIX}/share/man/man1

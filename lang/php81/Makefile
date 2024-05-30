@@ -12,7 +12,7 @@ WWW=		https://www.php.net/
 LICENSE=	PHP301
 
 DEPRECATED=	Upstream EOL reaches on 2024-11-25
-EXPIRATION_DATE=	2024-11-26
+EXPIRATION_DATE=	2025-12-31
 
 USES+=		compiler:c11 cpe gnome localbase pkgconfig tar:xz
 CPE_PRODUCT=	php
@@ -567,18 +567,6 @@ CONFIGURE_ARGS+=	--enable-xmlreader
 USE_GNOME=	libxml2
 
 USE_PHP=	dom:build
-.endif
-
-.if ${PHP_MODNAME} == "xmlrpc"
-CONFIGURE_ARGS+=	--with-iconv-dir=${LOCALBASE} \
-			--with-xmlrpc
-
-USES+=		iconv:translit
-USE_GNOME=	libxml2
-
-PHP_HEADER_DIRS=	libxmlrpc
-
-USE_PHP=	xml:build
 .endif
 
 .if ${PHP_MODNAME} == "xmlwriter"
