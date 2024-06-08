@@ -1,10 +1,9 @@
 %%EXAMPLES%%bin/baby-llama
 %%EXAMPLES%%bin/batched
 %%EXAMPLES%%bin/batched-bench
-%%EXAMPLES%%bin/beam-search
 %%EXAMPLES%%bin/benchmark
+%%EXAMPLES%%bin/convert-hf-to-gguf.py
 %%EXAMPLES%%bin/convert-llama2c-to-ggml
-%%EXAMPLES%%bin/convert.py
 %%EXAMPLES%%bin/embedding
 %%EXAMPLES%%bin/eval-callback
 %%EXAMPLES%%bin/export-lora
@@ -43,3 +42,4 @@ lib/cmake/Llama/LlamaConfigVersion.cmake
 lib/libggml_shared.so
 lib/libllama.so
 %%EXAMPLES%%lib/libllava_shared.so
+libdata/pkgconfig/llama.pc

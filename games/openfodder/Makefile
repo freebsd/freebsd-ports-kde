@@ -1,5 +1,5 @@
 PORTNAME=	OpenFodder
-DISTVERSION=	1.8.0
+DISTVERSION=	1.9.2
 CATEGORIES=	games
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -14,14 +14,11 @@ LICENSE_FILE_LGPL21+ =	${WRKSRC}/COPYING.LGPLv2.1.txt
 LICENSE_FILE_MIT=	${WRKSRC}/COPYING.MIT.txt
 LICENSE_FILE_ZLIB=	${WRKSRC}/COPYING.ZLIB.txt
 
-BROKEN_armv6=	https://github.com/OpenFodder/openfodder/issues/89
-BROKEN_armv7=	https://github.com/OpenFodder/openfodder/issues/89
-
 USES=		compiler:c++14-lang sdl
 USE_GITHUB=	yes
 USE_SDL=	mixer2
-GH_TUPLE=	${PORTNAME}:data:1.7.0:data/Run \
-		${PORTNAME}:scripts:c6f3076:scripts/Run/Scripts
+GH_TUPLE=	${PORTNAME}:data:1.8.0-1-g070a608:data/Run \
+		${PORTNAME}:scripts:dad0473:scripts/Run/Scripts
 GH_PROJECT=	${PORTNAME:tl}
 PLIST_FILES=	bin/${PORTNAME} \
 		share/applications/${PORTNAME:tl}.desktop \

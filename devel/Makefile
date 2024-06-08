@@ -626,6 +626,7 @@
     SUBDIR += electron27
     SUBDIR += electron28
     SUBDIR += electron29
+    SUBDIR += electron30
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -826,6 +827,7 @@
     SUBDIR += git-subrepo
     SUBDIR += git-svn
     SUBDIR += git-town
+    SUBDIR += git-tui
     SUBDIR += git-workspace
     SUBDIR += gitaly
     SUBDIR += gitflow
@@ -1722,6 +1724,7 @@
     SUBDIR += ocaml-cppo
     SUBDIR += ocaml-csexp
     SUBDIR += ocaml-cstruct
+    SUBDIR += ocaml-curses
     SUBDIR += ocaml-domain-name
     SUBDIR += ocaml-dune
     SUBDIR += ocaml-extlib
@@ -6619,6 +6622,7 @@
     SUBDIR += rubygem-aws-sdk-supportapp
     SUBDIR += rubygem-aws-sdk-swf
     SUBDIR += rubygem-aws-sdk-synthetics
+    SUBDIR += rubygem-aws-sdk-taxsettings
     SUBDIR += rubygem-aws-sdk-textract
     SUBDIR += rubygem-aws-sdk-timestreaminfluxdb
     SUBDIR += rubygem-aws-sdk-timestreamquery
@@ -7909,6 +7913,7 @@
     SUBDIR += stxxl
     SUBDIR += stylua
     SUBDIR += styx
+    SUBDIR += subprocess
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-lts

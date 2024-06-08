@@ -1,6 +1,6 @@
 PORTNAME=	mise
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2024.5.25
+DISTVERSION=	2024.6.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -28,12 +28,12 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		anstream-0.6.14 \
 		anstyle-1.0.7 \
 		anstyle-parse-0.2.4 \
-		anstyle-query-1.0.3 \
+		anstyle-query-1.1.0 \
 		anstyle-wincon-3.0.3 \
 		arbitrary-1.3.2 \
 		arrayvec-0.5.2 \
 		assert_cmd-2.0.14 \
-		async-compression-0.4.10 \
+		async-compression-0.4.11 \
 		autocfg-1.3.0 \
 		backtrace-0.3.71 \
 		base64-0.21.7 \
@@ -56,11 +56,11 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		chrono-tz-0.9.0 \
 		chrono-tz-build-0.3.0 \
 		ci_info-0.14.14 \
-		clap-4.5.4 \
-		clap_builder-4.5.2 \
-		clap_derive-4.5.4 \
-		clap_lex-0.7.0 \
-		clap_mangen-0.2.20 \
+		clap-4.5.6 \
+		clap_builder-4.5.6 \
+		clap_derive-4.5.5 \
+		clap_lex-0.7.1 \
+		clap_mangen-0.2.21 \
 		color-eyre-0.6.3 \
 		color-print-0.3.6 \
 		color-print-proc-macro-0.3.6 \
@@ -82,7 +82,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		ctor-0.2.8 \
 		curve25519-dalek-4.1.2 \
 		curve25519-dalek-derive-0.1.1 \
-		demand-1.2.3 \
+		demand-1.2.4 \
 		der-0.7.9 \
 		deranged-0.3.11 \
 		derive_arbitrary-1.3.2 \
@@ -208,7 +208,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.1.5 \
 		openssl-sys-0.9.102 \
-		os_pipe-1.1.5 \
+		os_pipe-1.2.0 \
 		overload-0.1.1 \
 		owo-colors-3.5.0 \
 		papergrid-0.11.0 \
@@ -242,7 +242,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		pretty_assertions-1.4.0 \
 		proc-macro-error-1.0.4 \
 		proc-macro-error-attr-1.0.4 \
-		proc-macro2-1.0.84 \
+		proc-macro2-1.0.85 \
 		quick-xml-0.23.1 \
 		quote-1.0.36 \
 		rand-0.8.5 \
@@ -303,7 +303,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		spki-0.7.3 \
 		strsim-0.11.1 \
 		strum-0.26.2 \
-		strum_macros-0.26.2 \
+		strum_macros-0.26.4 \
 		subtle-2.5.0 \
 		syn-1.0.109 \
 		syn-2.0.66 \
@@ -311,7 +311,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		sys-info-0.9.1 \
 		tabled-0.15.0 \
 		tabled_derive-0.7.0 \
-		tar-0.4.40 \
+		tar-0.4.41 \
 		tempfile-3.10.1 \
 		tera-1.20.0 \
 		termcolor-1.4.1 \
@@ -330,13 +330,13 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		time-macros-0.2.18 \
 		tinyvec-1.6.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.37.0 \
+		tokio-1.38.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.25.0 \
 		tokio-util-0.7.11 \
-		toml-0.8.13 \
+		toml-0.8.14 \
 		toml_datetime-0.6.6 \
-		toml_edit-0.22.13 \
+		toml_edit-0.22.14 \
 		tower-0.4.13 \
 		tower-layer-0.3.2 \
 		tower-service-0.3.2 \
@@ -358,7 +358,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		unicode-ident-1.0.12 \
 		unicode-normalization-0.1.23 \
 		unicode-segmentation-1.11.0 \
-		unicode-width-0.1.12 \
+		unicode-width-0.1.13 \
 		untrusted-0.9.0 \
 		url-2.5.0 \
 		urlencoding-2.1.3 \
@@ -381,7 +381,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		wasm-bindgen-macro-support-0.2.92 \
 		wasm-bindgen-shared-0.2.92 \
 		web-sys-0.3.69 \
-		webpki-roots-0.26.1 \
+		webpki-roots-0.26.2 \
 		which-6.0.1 \
 		widestring-1.1.0 \
 		winapi-0.3.9 \
@@ -411,7 +411,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		windows_x86_64_gnullvm-0.52.5 \
 		windows_x86_64_msvc-0.48.5 \
 		windows_x86_64_msvc-0.52.5 \
-		winnow-0.6.9 \
+		winnow-0.6.13 \
 		winreg-0.52.0 \
 		winsafe-0.0.19 \
 		wmi-0.13.3 \
@@ -419,7 +419,7 @@ CARGO_CRATES=	addr2line-0.21.0 \
 		xx-1.1.5 \
 		yansi-0.5.1 \
 		zeroize-1.8.1 \
-		zip-2.1.1 \
+		zip-2.1.3 \
 		zipsign-api-0.1.1 \
 		zopfli-0.8.1
 

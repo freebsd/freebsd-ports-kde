@@ -1053,6 +1053,7 @@
     SUBDIR += polkit
     SUBDIR += polkit-gnome
     SUBDIR += polkit-qt-1
+    SUBDIR += popeye
     SUBDIR += pot
     SUBDIR += potnet
     SUBDIR += poweralertd
@@ -1211,8 +1212,8 @@
     SUBDIR += retail
     SUBDIR += rex
     SUBDIR += rhc
-    SUBDIR += rkbin
     SUBDIR += rinse
+    SUBDIR += rkbin
     SUBDIR += rmlint
     SUBDIR += rocinante
     SUBDIR += rocr

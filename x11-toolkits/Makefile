@@ -222,6 +222,7 @@
     SUBDIR += rubygem-vte4
     SUBDIR += scenefx
     SUBDIR += scintilla
+    SUBDIR += sdl2_pango
     SUBDIR += sdl_pango
     SUBDIR += shared-desktop-ontologies
     SUBDIR += skinlf
