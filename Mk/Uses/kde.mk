@@ -99,7 +99,7 @@ KDE_FRAMEWORKS5_VERSION?=	5.115.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
-KDE_FRAMEWORKS6_VERSION?=	6.2.0
+KDE_FRAMEWORKS6_VERSION?=	6.3.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications.
@@ -406,7 +406,6 @@ kde-breeze-icons_PORT=		x11-themes/kf${_KDE_VERSION}-breeze-icons
 kde-breeze-icons_PATH5=		${KDE_PREFIX}/share/breeze-icons/kf${_KDE_VERSION}-breeze-icons-dummy
 kde-breeze-icons_PATH6=		${KDE_PREFIX}/share/icons/breeze/index.theme
 kde-breeze-icons_PATH=		${kde-breeze-icons_PATH${_KDE_VERSION}}
-kde-breeze-icons_TYPE=		run
 
 kde-codecs_PORT=		textproc/kf${_KDE_VERSION}-kcodecs
 kde-codecs_LIB=			libKF${_KDE_VERSION}Codecs.so
