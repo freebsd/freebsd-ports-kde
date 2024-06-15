@@ -21,7 +21,7 @@ lib/cmake/KPim6ImportWizard/KPim6ImportWizardTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6ImportWizard/KPim6ImportWizardTargets.cmake
 lib/libKPim6ImportWizard.so
 lib/libKPim6ImportWizard.so.6
-lib/libKPim6ImportWizard.so.6.0.80
+lib/libKPim6ImportWizard.so.6.1.1
 %%QT_PLUGINDIR%%/pim6/importwizard/balsaimporterplugin.so
 %%QT_PLUGINDIR%%/pim6/importwizard/clawsmailimporterplugin.so
 %%QT_PLUGINDIR%%/pim6/importwizard/evolutionv3importerplugin.so

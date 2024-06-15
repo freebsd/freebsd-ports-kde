@@ -54,7 +54,7 @@ lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6AkonadiMime/KPim6AkonadiMimeTargets.cmake
 lib/libKPim6AkonadiMime.so
 lib/libKPim6AkonadiMime.so.6
-lib/libKPim6AkonadiMime.so.6.0.80
+lib/libKPim6AkonadiMime.so.6.1.1
 %%QT_PLUGINDIR%%/akonadi_serializer_mail.so
 share/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 share/config.kcfg/specialmailcollections.kcfg

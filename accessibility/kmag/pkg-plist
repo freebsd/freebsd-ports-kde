@@ -92,4 +92,4 @@ share/man/pt_BR/man1/kmag.1.gz
 share/man/ru/man1/kmag.1.gz
 share/man/sv/man1/kmag.1.gz
 share/man/uk/man1/kmag.1.gz
-share/metainfo/org.kde.kmag.appdata.xml
+share/metainfo/org.kde.kmag.metainfo.xml

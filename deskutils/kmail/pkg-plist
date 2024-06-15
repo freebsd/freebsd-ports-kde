@@ -8,9 +8,9 @@ bin/kmail
 bin/kmail-refresh-settings
 bin/ktnef
 lib/libkmailprivate.so.6
-lib/libkmailprivate.so.6.0.80
+lib/libkmailprivate.so.6.1.1
 lib/libmailfilteragentprivate.so.6
-lib/libmailfilteragentprivate.so.6.0.80
+lib/libmailfilteragentprivate.so.6.1.1
 %%QT_PLUGINDIR%%/kmailpart.so
 %%QT_PLUGINDIR%%/pim6/akonadi/config/archivemailagentconfig.so
 %%QT_PLUGINDIR%%/pim6/akonadi/config/followupreminderagentconfig.so

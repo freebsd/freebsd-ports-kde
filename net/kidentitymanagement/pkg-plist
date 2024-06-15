@@ -44,13 +44,13 @@ lib/cmake/KPim6IdentityManagementWidgets/KPim6IdentityManagementWidgetsTargets-%
 lib/cmake/KPim6IdentityManagementWidgets/KPim6IdentityManagementWidgetsTargets.cmake
 lib/libKPim6IdentityManagementCore.so
 lib/libKPim6IdentityManagementCore.so.6
-lib/libKPim6IdentityManagementCore.so.6.0.80
+lib/libKPim6IdentityManagementCore.so.6.1.1
 lib/libKPim6IdentityManagementQuick.so
 lib/libKPim6IdentityManagementQuick.so.6
-lib/libKPim6IdentityManagementQuick.so.6.0.80
+lib/libKPim6IdentityManagementQuick.so.6.1.1
 lib/libKPim6IdentityManagementWidgets.so
 lib/libKPim6IdentityManagementWidgets.so.6
-lib/libKPim6IdentityManagementWidgets.so.6.0.80
+lib/libKPim6IdentityManagementWidgets.so.6.1.1
 %%QT_QMLDIR%%/org/kde/kidentitymanagement/BasicIdentityEditorCard.qml
 %%QT_QMLDIR%%/org/kde/kidentitymanagement/CryptographyEditorCard.qml
 %%QT_QMLDIR%%/org/kde/kidentitymanagement/IdentityConfigurationForm.qml
@@ -113,6 +113,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libkpimidentities6.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libkpimidentities6.mo
 share/locale/sr@latin/LC_MESSAGES/libkpimidentities6.mo
 share/locale/sv/LC_MESSAGES/libkpimidentities6.mo
+share/locale/ta/LC_MESSAGES/libkpimidentities6.mo
 share/locale/th/LC_MESSAGES/libkpimidentities6.mo
 share/locale/tr/LC_MESSAGES/libkpimidentities6.mo
 share/locale/ug/LC_MESSAGES/libkpimidentities6.mo

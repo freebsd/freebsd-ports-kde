@@ -52,10 +52,10 @@ lib/cmake/KPim6LdapWidgets/KPim6LdapWidgetsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6LdapWidgets/KPim6LdapWidgetsTargets.cmake
 lib/libKPim6LdapCore.so
 lib/libKPim6LdapCore.so.6
-lib/libKPim6LdapCore.so.6.0.80
+lib/libKPim6LdapCore.so.6.1.1
 lib/libKPim6LdapWidgets.so
 lib/libKPim6LdapWidgets.so.6
-lib/libKPim6LdapWidgets.so.6.0.80
+lib/libKPim6LdapWidgets.so.6.1.1
 %%QT_PLUGINDIR%%/kf6/kio/ldap.so
 share/locale/af/LC_MESSAGES/kio_ldap.mo
 share/locale/ar/LC_MESSAGES/kio_ldap.mo
@@ -175,6 +175,7 @@ share/locale/sr@latin/LC_MESSAGES/libkldap6.mo
 share/locale/sv/LC_MESSAGES/kio_ldap.mo
 share/locale/sv/LC_MESSAGES/libkldap6.mo
 share/locale/ta/LC_MESSAGES/kio_ldap.mo
+share/locale/ta/LC_MESSAGES/libkldap6.mo
 share/locale/th/LC_MESSAGES/kio_ldap.mo
 share/locale/th/LC_MESSAGES/libkldap6.mo
 share/locale/tr/LC_MESSAGES/kio_ldap.mo

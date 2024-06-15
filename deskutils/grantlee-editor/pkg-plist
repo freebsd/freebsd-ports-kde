@@ -2,7 +2,7 @@ bin/contactprintthemeeditor
 bin/contactthemeeditor
 bin/headerthemeeditor
 lib/libgrantleethemeeditor.so.6
-lib/libgrantleethemeeditor.so.6.0.80
+lib/libgrantleethemeeditor.so.6.1.1
 share/applications/org.kde.contactprintthemeeditor.desktop
 share/applications/org.kde.contactthemeeditor.desktop
 share/applications/org.kde.headerthemeeditor.desktop
@@ -160,6 +160,7 @@ share/locale/sv/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/sv/LC_MESSAGES/contactthemeeditor.mo
 share/locale/sv/LC_MESSAGES/headerthemeeditor.mo
 share/locale/sv/LC_MESSAGES/libgrantleethemeeditor.mo
+share/locale/ta/LC_MESSAGES/libgrantleethemeeditor.mo
 share/locale/tr/LC_MESSAGES/contactprintthemeeditor.mo
 share/locale/tr/LC_MESSAGES/contactthemeeditor.mo
 share/locale/tr/LC_MESSAGES/headerthemeeditor.mo

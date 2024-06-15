@@ -7,7 +7,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Library to compare files and strings
 WWW=		https://www.kde.org
 
-FLAVORS=	qt5 qt6
+FLAVORS=	qt5 # qt6
 FLAVOR?=	qt5
 
 USES=		cmake compiler:c++11-lang gettext kde:${FLAVOR:S/qt//} \

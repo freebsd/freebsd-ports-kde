@@ -1,9 +1,9 @@
 bin/akonadi_notes_agent
 bin/knotes
 lib/libknotesprivate.so.6
-lib/libknotesprivate.so.6.0.80
+lib/libknotesprivate.so.6.1.1
 lib/libnotesharedprivate.so.6
-lib/libnotesharedprivate.so.6.0.80
+lib/libnotesharedprivate.so.6.1.1
 %%QT_PLUGINDIR%%/pim6/kcms/knotes/kcm_knote_action.so
 %%QT_PLUGINDIR%%/pim6/kcms/knotes/kcm_knote_collection.so
 %%QT_PLUGINDIR%%/pim6/kcms/knotes/kcm_knote_display.so
@@ -186,6 +186,7 @@ share/locale/sv/LC_MESSAGES/akonadi_notes_agent.mo
 share/locale/sv/LC_MESSAGES/knotes.mo
 share/locale/sv/LC_MESSAGES/libnoteshared.mo
 share/locale/ta/LC_MESSAGES/knotes.mo
+share/locale/ta/LC_MESSAGES/libnoteshared.mo
 share/locale/tg/LC_MESSAGES/knotes.mo
 share/locale/th/LC_MESSAGES/knotes.mo
 share/locale/tr/LC_MESSAGES/akonadi_notes_agent.mo
