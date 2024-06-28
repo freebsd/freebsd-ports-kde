@@ -1,6 +1,6 @@
 PORTNAME=	gwenview
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -16,7 +16,6 @@ LIB_DEPENDS=	libexiv2.so:graphics/exiv2 \
 		libtiff.so:graphics/tiff \
 		libkImageAnnotator-Qt6.so:graphics/kimageannotator@qt6 \
 		libwayland-client.so:graphics/wayland
-RUN_DEPENDS=	kipi-plugins>=0:graphics/kipi-plugins
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext jpeg \
 		kde:6 pkgconfig qt:6 tar:xz xorg
