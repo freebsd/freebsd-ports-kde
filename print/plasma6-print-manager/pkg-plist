@@ -45,6 +45,7 @@ share/locale/de/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo
 share/locale/de/LC_MESSAGES/print-manager.mo
 share/locale/el/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo
 share/locale/el/LC_MESSAGES/print-manager.mo
+share/locale/en_GB/LC_MESSAGES/kcm_printer_manager.mo
 share/locale/en_GB/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo
 share/locale/en_GB/LC_MESSAGES/print-manager.mo
 share/locale/eo/LC_MESSAGES/kcm_printer_manager.mo

@@ -250,6 +250,7 @@ lib/cmake/KWinDBusInterface/KWinDBusInterfaceConfig.cmake
 lib/kconf_update_bin/kwin-6.0-delete-desktop-switching-shortcuts
 lib/kconf_update_bin/kwin-6.0-remove-breeze-tabbox-default
 lib/kconf_update_bin/kwin-6.0-reset-active-mouse-screen
+lib/kconf_update_bin/kwin-6.1-remove-gridview-expose-shortcuts
 lib/kconf_update_bin/kwin5_update_default_rules
 lib/libexec/kwin-applywindowdecoration
 lib/libexec/kwin_killer_helper
