@@ -1,5 +1,6 @@
 PORTNAME=	plasma-integration
 DISTVERSION=	${KDE_PLASMA_VERSION}
+KDE_PLASMA_VERSION=	${KDE_PLASMA6_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
@@ -22,10 +23,8 @@ USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
 		buildtools:build qmake:build
 USE_XORG=	x11 xcb xcursor
 
-SHEBANG_FILES=	src/platformtheme/fonts_akregator.pl \
-		src/platformtheme/fonts_global.pl \
-		src/platformtheme/fonts_kate.pl \
-		src/platformtheme/mono_font.pl
+CMAKE_ON=	BUILD_QT5
+CMAKE_OFF=	BUILD_QT6
 
 OPTIONS_SINGLE=	NOTO
 OPTIONS_SINGLE_NOTO=	LIGHT BIG
@@ -36,5 +35,7 @@ BIG_DESC=	Use complete noto
 
 LIGHT_RUN_DEPENDS=	noto-basic>=0:x11-fonts/noto-basic
 BIG_RUN_DEPENDS=	noto>=0:x11-fonts/noto
+
+PLIST_FILES=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme5.so
 
 .include <bsd.port.mk>
