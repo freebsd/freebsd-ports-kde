@@ -95,6 +95,7 @@
     SUBDIR += gcc12-devel
     SUBDIR += gcc13
     SUBDIR += gcc13-devel
+    SUBDIR += gcc14
     SUBDIR += gcc14-devel
     SUBDIR += gcc15-devel
     SUBDIR += gcc6-aux
@@ -284,6 +285,7 @@
     SUBDIR += php83-extensions
     SUBDIR += picoc
     SUBDIR += picolisp
+    SUBDIR += pkl
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
@@ -291,6 +293,7 @@
     SUBDIR += prql
     SUBDIR += ptoc
     SUBDIR += purescript
+    SUBDIR += py-dhall
     SUBDIR += py-hy
     SUBDIR += py-lupa
     SUBDIR += py-textX
@@ -378,6 +381,7 @@
     SUBDIR += tuareg-mode.el
     SUBDIR += twelf
     SUBDIR += typstfmt
+    SUBDIR += typstyle
     SUBDIR += ucc
     SUBDIR += urweb
     SUBDIR += v

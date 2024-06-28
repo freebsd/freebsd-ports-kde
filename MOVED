@@ -23,6 +23,7 @@
 # This file can be linted with Tools/scripts/MOVEDlint.awk
 #
 # Port|Moved to|Date|Why
+x11/wmctrl|x11/wmctrl-fork|2024-05-18|Forked due to the upstream being no longer available; the port had no maintainer
 www/wt3|www/wt|2021-01-03|Has expired: Upstream end of life, switch to www/wt instead
 archivers/ecm|archivers/cmdpack|2021-01-04|ECM is now included in cmdpack
 math/qhull5|math/qhull|2021-01-04|Has expired: Legacy version of port no longer required by math/octave
@@ -3310,3 +3311,41 @@ devel/py-ZopeUndo||2024-06-13|No consumers in ports
 multimedia/audacious-qt6|multimedia/audacious|2024-06-13|qt6 flavor is now the default flavor, following upstream change
 multimedia/audacious-plugins-qt6|multimedia/audacious-plugins|2024-06-13|qt6 flavor is now the default flavor, following upstream change
 lang/zig-devel||2024-06-13|Older than lang/zig and no consumers in ports
+www/ctemplate||2024-06-15|Has expired: Abandonware and obsolete, last release in 2008 and never gained any traction
+graphics/electricsheep||2024-06-15|Has expired: Broken for more than 6 months and fails to compile bumping it to latest commit
+www/apt-cacher-ng||2024-06-15|Has expired: Outdated and unsupported version, current version was released in 2020 and upstream is still active
+audio/taglookup||2024-06-15|Has expired: Obsolete, depends on legacy service that is defunct once again
+www/vieb||2024-06-15|Has expired: Outdated and depends on expired (and blacklisted) devel/electron25
+devel/electron25||2024-06-15|Has expired: EOLed upstream, switch to newer version
+devel/py-dj42-django-rq|devel/py-django-rq|2024-06-15|Has expired: Obsolete, please use devel/py-django-rq instead
+www/py-dj42-django-taggit|www/py-django-taggit|2024-06-15|Has expired: Obsolete, please use www/py-django-taggit instead
+www/py-dj42-djangoql|www/py-djangoql|2024-06-15|Has expired: Obsolete, please use www/py-djangoql instead
+www/py-dj42-django-mptt|www/py-django-mptt|2024-06-15|Has expired: Obsolete, please use www/py-django-mptt instead
+www/py-dj42-django-js-asset|www/py-django-js-asset|2024-06-15|Has expired: Obsolete, please use www/py-django-js-asset instead
+www/py-dj42-django-guardian|www/py-django-guardian|2024-06-15|Has expired: Obsolete, please use www/py-django-guardian instead
+www/py-dj42-django-tables2|www/py-django-tables2|2024-06-15|Has expired: Obsolete, please use www/py-django-tables2 instead
+www/py-dj42-django-auth-ldap|www/py-django-auth-ldap|2024-06-15|Has expired: Obsolete, please use www/py-django-auth-ldap instead
+www/py-dj42-django-permissionedforms|www/py-django-permissionedforms|2024-06-15|Has expired: Obsolete, please use www/py-django-permissionedforms instead
+www/py-dj42-django-cors-headers|www/py-django-cors-headers|2024-06-15|Has expired: Obsolete, please use www/py-django-cors-headers instead
+www/py-dj42-django-treebeard|www/py-django-treebeard|2024-06-15|Has expired: Obsolete, please use www/py-django-treebeard instead
+www/py-dj42-django-otp|www/py-django-otp|2024-06-15|Has expired: Obsolete, please use www/py-django-otp instead
+www/py-dj42-django-prometheus|www/py-django-prometheus|2024-06-15|Has expired: Obsolete, please use www/py-django-prometheus instead
+www/py-dj42-channels|www/py-channels|2024-06-15|Has expired: Obsolete, please use www/py-channels instead
+www/py-dj42-django-filter|www/py-django-filter|2024-06-15|Has expired: Obsolete, please use www/py-django-filter instead
+www/py-dj42-drf-spectacular|www/py-drf-spectacular|2024-06-15|Has expired: Obsolete, please use www/py-drf-spectacular instead
+www/py-dj42-drf-spectacular-sidecar|www/py-drf-spectacular-sidecar|2024-06-15|Has expired: Obsolete, please use www/py-drf-spectacular-sidecar instead
+www/py-dj42-django-timezone-field|www/py-django-timezone-field|2024-06-15|Has expired: Obsolete, please use www/py-django-timezone-field instead
+www/py-dj42-django-graphiql-debug-toolbar|www/py-django-graphiql-debug-toolbar|2024-06-15|Has expired: Obsolete, please use www/py-django-graphiql-debug-toolbar instead
+www/py-dj42-django-rich|www/py-django-rich|2024-06-15|Has expired: Obsolete, please use www/py-django-rich instead
+www/py-dj42-django-redis|www/py-django-redis|2024-06-15|Has expired: Obsolete, please use www/py-django-redis instead
+www/py-dj42-django-allauth|www/py-django-allauth|2024-06-15|Has expired: Obsolete, please use www/py-django-allauth instead
+www/py-dj42-django-crispy-forms|www/py-django-crispy-forms|2024-06-15|Has expired: Obsolete, please use www/py-django-crispy-forms instead
+www/py-dj42-django-modelcluster|www/py-django-modelcluster|2024-06-15|Has expired: Obsolete, please use www/py-django-modelcluster instead
+www/py-dj42-django-extensions|www/py-django-extensions|2024-06-15|Has expired: Obsolete, please use www/py-django-extensions instead
+www/py-dj42-djangorestframework|www/py-djangorestframework|2024-06-15|Has expired: Obsolete, please use www/py-djangorestframework instead
+www/py-dj42-django-debug-toolbar|www/py-django-debug-toolbar|2024-06-15|Has expired: Obsolete, please use www/py-django-debug-toolbar instead
+devel/rubygem-ddtrace|devel/rubygem-datadog|2024-06-18|Move devel/rubygem-ddtrace to devel/rubygem-datadog
+databases/py-sqlalchemy13||2024-06-24|Has expired: Upstream makred EOL in Release Status
+chinese/oicq||2024-06-27|ICQ Service closed in 2024-06-24
+security/p5-Crypt-OICQ||2024-06-27|ICQ Service closed in 2024-06-24
+net-im/climm||2024-06-27|ICQ Service closed in 2024-06-24

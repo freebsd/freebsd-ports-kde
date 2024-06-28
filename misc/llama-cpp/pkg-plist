@@ -6,6 +6,7 @@
 %%EXAMPLES%%bin/llama-bench-matmult
 %%EXAMPLES%%bin/llama-cli
 %%EXAMPLES%%bin/llama-convert-llama2c-to-ggml
+%%EXAMPLES%%bin/llama-cvector-generator
 %%EXAMPLES%%bin/llama-embedding
 %%EXAMPLES%%bin/llama-eval-callback
 %%EXAMPLES%%bin/llama-export-lora
@@ -38,9 +39,9 @@ include/ggml-alloc.h
 include/ggml-backend.h
 include/ggml.h
 include/llama.h
-lib/cmake/Llama/LlamaConfig.cmake
-lib/cmake/Llama/LlamaConfigVersion.cmake
-lib/libggml_shared.so
+lib/cmake/llama/llama-config.cmake
+lib/cmake/llama/llama-version.cmake
+lib/libggml.so
 lib/libllama.so
 %%EXAMPLES%%lib/libllava_shared.so
 libdata/pkgconfig/llama.pc
