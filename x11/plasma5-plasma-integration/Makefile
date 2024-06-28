@@ -1,40 +1,32 @@
 PORTNAME=	plasma-integration
 DISTVERSION=	${KDE_PLASMA_VERSION}
+KDE_PLASMA_VERSION=	${KDE_PLASMA6_VERSION}
 CATEGORIES=	x11 kde kde-plasma
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt Platform Theme integration plugins for the Plasma workspaces
 WWW=		https://www.kde.org/plasma-desktop
 
-LIB_DEPENDS=	libwayland-client.so:graphics/wayland
-RUN_DEPENDS=	hack-font>=0:x11-fonts/hack-font
+LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
+		libxkbcommon.so:x11/libxkbcommon
+RUN_DEPENDS=	hack-font>0:x11-fonts/hack-font \
+		noto-basic>0:x11-fonts/noto-basic \
+		noto-emoji>0:x11-fonts/noto-emoji
 
-USES=		cmake compiler:c++11-lib gettext kde:5 pkgconfig qt:5 \
-		shebangfix tar:xz xorg
-USE_KDE=	auth bookmarks breeze codecs completion config configwidgets \
-		coreaddons i18n iconthemes itemviews jobwidgets kio \
-		notifications service solid widgetsaddons windowsystem \
-		xdg-desktop-portal-kde xmlgui \
-		ecm:build plasma-wayland-protocols:build \
-		qqc2-desktop-style:run
-USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
-		wayland widgets x11extras xml \
-		buildtools:build qmake:build
+USES=		cmake gettext gl kde:5 pkgconfig qt:5 tar:xz xorg
+USE_KDE=	config guiaddons i18n iconthemes kio notifications wayland \
+		windowsystem xdg-desktop-portal-kde xmlgui \
+		ecm:build plasma-wayland-protocols:build
+USE_GL=		gl opengl
 USE_XORG=	x11 xcb xcursor
+USE_QT=		core gui wayland \
+		buildtools:build qmake:build
 
-SHEBANG_FILES=	src/platformtheme/fonts_akregator.pl \
-		src/platformtheme/fonts_global.pl \
-		src/platformtheme/fonts_kate.pl \
-		src/platformtheme/mono_font.pl
+CMAKE_ON=	BUILD_QT5
+CMAKE_OFF=	BUILD_QT6
 
-OPTIONS_SINGLE=	NOTO
-OPTIONS_SINGLE_NOTO=	LIGHT BIG
-OPTIONS_DEFAULT=	LIGHT
-NOTO_DESC=	KDE default font
-LIGHT_DESC=	Use noto-light
-BIG_DESC=	Use complete noto
+DESCR=		${.CURDIR:H:H}/x11/plasma6-plasma/pkg-descr
 
-LIGHT_RUN_DEPENDS=	noto-basic>=0:x11-fonts/noto-basic
-BIG_RUN_DEPENDS=	noto>=0:x11-fonts/noto
+PLIST_FILES=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme5.so
 
 .include <bsd.port.mk>
