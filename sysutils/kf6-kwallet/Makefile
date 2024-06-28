@@ -1,5 +1,6 @@
 PORTNAME=	kwallet
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils kde kde-frameworks
 
 COMMENT=	Safe desktop-wide storage for passwords
@@ -14,5 +15,10 @@ USE_KDE=	colorscheme config configwidgets coreaddons dbusaddons i18n \
 		ecm:build
 USE_QT=		base
 USE_XORG=	x11
+
+# fix conflict with sysutils/kf5-kwallet
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/share/dbus-1/services/org.kde.kwalletd5.service
+
 
 .include <bsd.port.mk>
