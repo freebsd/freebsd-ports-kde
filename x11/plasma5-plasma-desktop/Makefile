@@ -6,6 +6,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 plasma desktop
 WWW=		https://www.kde.org/plasma-desktop
 
+IGNORE=		Use x11/plasma6-plasma-desktop
+
 # TODO: update packagekit-qt5
 #LIB_DEPENDS=    libpackagekit-qt.so:ports-mgmt/packagekit-qt5
 LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
