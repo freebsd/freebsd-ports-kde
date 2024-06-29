@@ -3,6 +3,8 @@ DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11 kde
 PKGNAMEPREFIX=	plasma5-
 
+IGNORE=		Use x11/plasma6-plasma instead
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE5 plasma meta port
 WWW=		https://www.kde.org/plasma-desktop
