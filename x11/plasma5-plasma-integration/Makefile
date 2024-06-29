@@ -13,10 +13,13 @@ RUN_DEPENDS=	plasma6-plasma-integration>=0:x11/plasma6-plasma-integration
 
 USES=		cmake compiler:c++11-lib gettext kde:5 pkgconfig qt:5 tar:xz \
 		xorg
-USE_KDE=	config configwidgets guiaddons i18n iconthemes kio \
-		notifications wayland windowsystem xmlgui \
+USE_KDE=	auth bookmarks codecs completion config configwidgets \
+		coreaddons guiaddons i18n iconthemes itemviews jobwidgets kio \
+		notifications service solid wayland widgetsaddons windowsystem \
+		xmlgui \
 		ecm:build plasma-wayland-protocols:build
-USE_QT=		core dbus gui network quickcontrols2 wayland \
+USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
+		wayland widgets x11extras xml \
 		buildtools:build qmake:build
 USE_XORG=	x11 xcb xcursor
 
