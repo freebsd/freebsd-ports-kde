@@ -8,33 +8,18 @@ COMMENT=	Qt Platform Theme integration plugins for the Plasma workspaces
 WWW=		https://www.kde.org/plasma-desktop
 
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland
-RUN_DEPENDS=	hack-font>=0:x11-fonts/hack-font
+RUN_DEPENDS=	plasma6-plasma-integration>=0:x11/plasma6-plasma-integration
 
-USES=		cmake compiler:c++11-lib gettext kde:5 pkgconfig qt:5 \
-		shebangfix tar:xz xorg
-USE_KDE=	auth bookmarks breeze codecs completion config configwidgets \
-		coreaddons i18n iconthemes itemviews jobwidgets kio \
-		notifications service solid widgetsaddons windowsystem \
-		xdg-desktop-portal-kde xmlgui \
-		ecm:build plasma-wayland-protocols:build \
-		qqc2-desktop-style:run
-USE_QT=		concurrent core dbus declarative gui network quickcontrols2 \
-		wayland widgets x11extras xml \
+USES=		cmake compiler:c++11-lib gettext kde:5 pkgconfig qt:5 tar:xz \
+		xorg
+USE_KDE=	config configwidgets guiaddons i18n iconthemes kio \
+		notifications wayland windowsystem xmlgui
+USE_QT=		core dbus gui network quickcontrols2 wayland \
 		buildtools:build qmake:build
 USE_XORG=	x11 xcb xcursor
 
 CMAKE_ON=	BUILD_QT5
 CMAKE_OFF=	BUILD_QT6
-
-OPTIONS_SINGLE=	NOTO
-OPTIONS_SINGLE_NOTO=	LIGHT BIG
-OPTIONS_DEFAULT=	LIGHT
-NOTO_DESC=	KDE default font
-LIGHT_DESC=	Use noto-light
-BIG_DESC=	Use complete noto
-
-LIGHT_RUN_DEPENDS=	noto-basic>=0:x11-fonts/noto-basic
-BIG_RUN_DEPENDS=	noto>=0:x11-fonts/noto
 
 PLIST_FILES=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme5.so
 
