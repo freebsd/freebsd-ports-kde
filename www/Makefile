@@ -21,7 +21,6 @@
     SUBDIR += UniversalFeedCreator
     SUBDIR += adguardhome
     SUBDIR += adjuster
-    SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amfora
     SUBDIR += amphetadesk
@@ -75,7 +74,6 @@
     SUBDIR += bareos22-webui
     SUBDIR += beehive
     SUBDIR += bluefish
-    SUBDIR += bolt
     SUBDIR += bozohttpd
     SUBDIR += browsh
     SUBDIR += bugzilla2atom
@@ -251,7 +249,6 @@
     SUBDIR += html2wml
     SUBDIR += htmlcompressor
     SUBDIR += htmlcxx
-    SUBDIR += httest
     SUBDIR += http-parser
     SUBDIR += http_get
     SUBDIR += http_load
@@ -267,9 +264,7 @@
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
-    SUBDIR += interchange
     SUBDIR += iridium
-    SUBDIR += itop
     SUBDIR += janus
     SUBDIR += jericho-html
     SUBDIR += jesred
@@ -467,7 +462,6 @@
     SUBDIR += node
     SUBDIR += node18
     SUBDIR += node20
-    SUBDIR += node21
     SUBDIR += node22
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -1473,7 +1467,6 @@
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
     SUBDIR += py-cinemagoer
-    SUBDIR += py-cookies
     SUBDIR += py-crossplane
     SUBDIR += py-css-html-js-minify
     SUBDIR += py-css-parser
@@ -1495,7 +1488,6 @@
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bleach
-    SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
@@ -1536,7 +1528,6 @@
     SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
     SUBDIR += py-django-jsonview
-    SUBDIR += py-django-ldapdb
     SUBDIR += py-django-libsass
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
@@ -1591,7 +1582,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django32
     SUBDIR += py-django42
     SUBDIR += py-django50
     SUBDIR += py-django_compressor
@@ -2522,7 +2512,6 @@
     SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor
-    SUBDIR += zend-framework
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
     SUBDIR += zgrab2

@@ -99,7 +99,6 @@
     SUBDIR += gcc14-devel
     SUBDIR += gcc15-devel
     SUBDIR += gcc6-aux
-    SUBDIR += gcc9
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += ghc810
@@ -269,7 +268,6 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.34
     SUBDIR += perl5.36
     SUBDIR += perl5.38
     SUBDIR += perl5.40

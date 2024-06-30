@@ -772,7 +772,6 @@
     SUBDIR += p5-VCG
     SUBDIR += p5-Visio
     SUBDIR += p5-feedgnuplot
-    SUBDIR += p5-ming
     SUBDIR += panoglview
     SUBDIR += panomatic
     SUBDIR += partio
@@ -925,7 +924,6 @@
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
-    SUBDIR += py-ming
     SUBDIR += py-moderngl
     SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
@@ -1215,7 +1213,6 @@
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils
     SUBDIR += waylandpp
-    SUBDIR += wdune
     SUBDIR += webp
     SUBDIR += webp-pixbuf-loader
     SUBDIR += wings
