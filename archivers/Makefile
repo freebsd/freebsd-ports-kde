@@ -10,7 +10,6 @@
     SUBDIR += arc
     SUBDIR += arj
     SUBDIR += ark
-    SUBDIR += ark-devel
     SUBDIR += atool
     SUBDIR += bicom
     SUBDIR += brotli
