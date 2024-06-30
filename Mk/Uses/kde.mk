@@ -347,7 +347,8 @@ _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			akonadi \
 			libkexiv2 \
 			libkdcraw \
-			libkipi
+			libkipi \
+			okular
 
 # TODO: fix
 _USE_KDE6_ALL=		ecm colorscheme \
@@ -366,7 +367,8 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			libkdcraw \
 			${_USE_KDEPIM_ALL} \
 			libkeduvocdocument \
-			libkexiv2
+			libkexiv2 \
+			okular
 
 # ====================== frameworks components =================================
 kde-activities_PORT5=		x11/kf${_KDE_VERSION}-kactivities
@@ -1010,7 +1012,9 @@ kde-kpublictransport_LIB=	libKPublicTransport.so
 kde-kosm_PORT=			astro/kosmindoormap
 kde-kosm_LIB=			libKOSM.so
 
-kde-okular_PORT=		graphics/okular
+kde-okular_PORT5=		graphics/okular
+kde-okular_PORT6=		graphics/okular
+kde-okular_PORT=		${kde-okular_PORT{_KDE_VERSION}}
 kde-okular_LIB=			libOkular${_KDE_VERSION}Core.so
 
 kde-phonon_PORT=		multimedia/phonon@${_QT_RELNAME}
