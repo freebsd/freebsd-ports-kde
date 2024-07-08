@@ -185,6 +185,7 @@
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
     SUBDIR += freenginx
+    SUBDIR += freenginx-devel
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows
@@ -269,6 +270,7 @@
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty10
+    SUBDIR += jetty12
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
@@ -345,6 +347,7 @@
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mediawiki141
+    SUBDIR += mediawiki142
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -471,7 +474,6 @@
     SUBDIR += npm
     SUBDIR += npm-node18
     SUBDIR += npm-node20
-    SUBDIR += npm-node21
     SUBDIR += npm-node22
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -1945,6 +1947,7 @@
     SUBDIR += rubygem-circuitbox
     SUBDIR += rubygem-cloudinary
     SUBDIR += rubygem-cookiejar
+    SUBDIR += rubygem-coverband
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-rails70
@@ -2502,7 +2505,6 @@
     SUBDIR += yarn
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
-    SUBDIR += yarn-node21
     SUBDIR += yarn-node22
     SUBDIR += yarr
     SUBDIR += yaws

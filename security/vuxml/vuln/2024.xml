@@ -1,3 +1,283 @@
+  <vuln vid="767dfb2d-3c9e-11ef-a829-5404a68ad561">
+    <topic>traefik -- Bypassing IP allow-lists via HTTP/3 early data requests</topic>
+    <affects>
+      <package>
+	<name>traefik</name>
+	<range><lt>2.11.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The traefik authors report:</p>
+	<blockquote cite="https://github.com/traefik/traefik/security/advisories/GHSA-gxrv-wf35-62w9">
+		<p>There is a vulnerability in Traefik that allows bypassing IP allow-lists via HTTP/3 early
+		   data requests in QUIC 0-RTT handshakes sent with spoofed IP addresses.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-39321</cvename>
+      <url>https://github.com/traefik/traefik/security/advisories/GHSA-gxrv-wf35-62w9</url>
+    </references>
+    <dates>
+      <discovery>2024-07-02</discovery>
+      <entry>2024-07-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5d921a8c-3a43-11ef-b611-84a93843eb75">
+    <topic>Apache httpd -- source code disclosure</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><ge>2.4.60</ge><lt>2.4.61</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <p>isource code disclosure with handlers configured via AddType
+	    (CVE-2024-39884) (Important). A regression in the core of Apache HTTP
+	    Server 2.4.60 ignores some use of the legacy content-type based
+	    configuration of handlers. "AddType" and similar configuration,
+	    under some circumstances where files are requested indirectly, result
+	    in source code disclosure of local content. For example, PHP scripts
+	    may be served instead of interpreted.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-39884</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2024-07-04</discovery>
+      <entry>2024-07-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="51498ee4-39a1-11ef-b609-002590c1f29c">
+    <topic>Request Tracker -- information exposure vulnerability</topic>
+    <affects>
+      <package>
+       <name>rt50</name>
+       <range><lt>5.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Request Tracker reports:</p>
+	<p>CVE-2024-3262 describes previously viewed pages being stored in the
+	browser cache, which is the typical default behavior of most browsers to
+	enable the "back" button. Someone who gains access to a host computer could
+	potentially view ticket data using the back button, even after logging out
+	of RT. The CVE specifically references RT version 4.4.1, but this behavior
+	is present in most browsers viewing all versions of RT before 5.0.6.</p>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3262</cvename>
+      <url>https://github.com/advisories/GHSA-6426-p644-ffcf</url>
+    </references>
+    <dates>
+      <discovery>2024-04-04</discovery>
+      <entry>2024-07-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b0374722-3912-11ef-a77e-901b0e9408dc">
+    <topic>go -- net/http: denial of service due to improper 100-continue handling</topic>
+    <affects>
+      <package>
+	<name>go122</name>
+	<range><lt>1.22.5</lt></range>
+      </package>
+      <package>
+	<name>go121</name>
+	<range><lt>1.21.12</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/67555">
+	  <p>net/http: denial of service due to improper 100-continue handling</p>
+	  <p>The net/http HTTP/1.1 client mishandled the case where a
+	  server responds to a request with an "Expect: 100-continue"
+	  header with a non-informational (200 or higher) status. This
+	  mishandling could leave a client connection in an invalid
+	  state, where the next request sent on the connection will
+	  fail.</p>
+	  <p>An attacker sending a request to a
+	  net/http/httputil.ReverseProxy proxy can exploit this
+	  mishandling to cause a denial of service by sending "Expect:
+	  100-continue" requests which elicit a non-informational
+	  response from the backend. Each such request leaves the
+	  proxy with an invalid connection, and causes one subsequent
+	  request using that connection to fail.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-24791</cvename>
+      <url>https://go.dev/issue/67555</url>
+    </references>
+    <dates>
+      <discovery>2024-07-02</discovery>
+      <entry>2024-07-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d7efc2ad-37af-11ef-b611-84a93843eb75">
+    <topic>Apache httpd -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>apache24</name>
+	<range><lt>2.4.60</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <p>DoS by Null pointer in websocket over HTTP/2 (CVE-2024-36387) (Low).
+	    Serving WebSocket protocol upgrades over a HTTP/2 connection could
+	    result in a Null Pointer dereference, leading to a crash of the server
+	    process, degrading performance.</p>
+	  <p>Proxy encoding problem (CVE-2024-38473) (Moderate).
+	    Encoding problem in mod_proxy in Apache HTTP Server 2.4.59 and earlier
+	    allows request URLs with incorrect encoding to be sent to backend
+	    services, potentially bypassing authentication via crafted requests.</p>
+	  <p>Weakness with encoded question marks in backreferences
+	    (CVE-2024-38474) (Important). Substitution encoding issue in
+	    mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows attacker
+	    to execute scripts in directories permitted by the configuration but
+	    not directly reachable by any URL or source disclosure of scripts
+	    meant to only to be executed as CGI.</p>
+	  <p>Weakness in mod_rewrite when first segment of substitution matches
+	    filesystem path (CVE-2024-38475) (Important). Improper escaping of
+	    output in mod_rewrite in Apache HTTP Server 2.4.59 and earlier allows
+	    an attacker to map URLs to filesystem locations that are permitted to
+	    be served by the server but are not intentionally/directly reachable
+	    by any URL, resulting in code execution or source code disclosure.
+	    Substitutions in server context that use a backreferences or variables
+	    as the first segment of the substitution are affected. Some unsafe
+	    RewiteRules will be broken by this change and the rewrite flag
+	    "UnsafePrefixStat" can be used to opt back in once ensuring the
+	    substitution is appropriately constrained.</p>
+	  <p>may use exploitable/malicious backend application output to run local
+	    handlers via internal redirect (CVE-2024-38476) (Important).
+	    Vulnerability in core of Apache HTTP Server 2.4.59 and earlier are
+	    vulnerable to information disclosure, SSRF or local script execution
+	    via backend applications whose response headers are malicious or
+	    exploitable.</p>
+	  <p>Crash resulting in Denial of Service in mod_proxy via a malicious
+	    request (CVE-2024-38477) (Important). Null pointer dereference in
+	    mod_proxy in Apache HTTP Server 2.4.59 and earlier allows an attacker
+	    to crash the server via a malicious request.</p>
+	  <p>mod_rewrite proxy handler substitution (CVE-2024-39573) (Moderate).
+	    Potential SSRF in mod_rewrite in Apache HTTP Server 2.4.59 and earlier
+	    allows an attacker to cause unsafe RewriteRules to unexpectedly setup
+	    URL's to be handled by mod_proxy.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-36387</cvename>
+      <cvename>CVE-2024-38473</cvename>
+      <cvename>CVE-2024-38474</cvename>
+      <cvename>CVE-2024-38475</cvename>
+      <cvename>CVE-2024-38476</cvename>
+      <cvename>CVE-2024-38477</cvename>
+      <cvename>CVE-2024-39573</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2024-07-01</discovery>
+      <entry>2024-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f1a00122-3797-11ef-b611-84a93843eb75">
+    <topic>OpenSSH -- Race condition resulting in potential remote code execution</topic>
+    <affects>
+      <package>
+	<name>openssh-portable</name>
+	<range><lt>9.7.p1_2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSH project reports:</p>
+	<blockquote cite="https://www.openssh.com/security.html">
+	  <p>A race condition in sshd(8) could allow remote code execution as root on non-OpenBSD systems.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-6387</cvename>
+      <url>https://www.openssh.com/security.html</url>
+    </references>
+    <dates>
+      <discovery>2024-07-01</discovery>
+      <entry>2024-07-01</entry>
+      <modified>2024-07-03</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="c742dbe8-3704-11ef-9e6e-b42e991fc52e">
+    <topic>netatalk3 -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>netatalk3</name>
+	<range><lt>3.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://github.com/Netatalk/netatalk/blob/90d91a9ac9a7d6132ab7620d31c8c23400949206/etc/afpd/directory.c#L2333">
+	  <p>This entry documents the following three vulnerabilities:</p>
+	  <ul>
+	    <li>Netatalk before 3.2.1 has an off-by-one error and resultant heap-based
+	buffer overflow because of setting ibuf[len] to &apos;\0&apos; in
+	FPMapName in afp_mapname in etc/afpd/directory.c.  2.4.1 and 3.1.19
+	are also fixed versions.</li>
+	    <li>Netatalk before 3.2.1 has an off-by-one error, and resultant
+	heap-based buffer overflow and segmentation violation, because of
+	incorrectly using FPLoginExt in BN_bin2bn in etc/uams/uams_dhx_pam.c.
+	The original issue 1097 report stated: &apos;The latest version of
+	Netatalk (v3.2.0) contains a security vulnerability.  This vulnerability
+	arises due to a lack of validation for the length field after parsing
+	user-provided data, leading to an out-of-bounds heap write of one
+	byte (\0).  Under specific configurations, this can result in reading
+	metadata of the next heap block, potentially causing a Denial of
+	Service (DoS) under certain heap layouts or with ASAN enabled.  ...
+	    </li>
+	    <li>Netatalk before 3.2.1 has an off-by-one error and resultant heap-based
+	buffer overflow because of setting ibuf[PASSWDLEN] to &apos;\0&apos;
+	in FPLoginExt in login in etc/uams/uams_pam.c.  2.4.1 and 3.1.19
+	are also fixed versions.
+	    </li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-38440</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-38440</url>
+      <cvename>CVE-2024-38441</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-38441</url>
+      <cvename>CVE-2024-38439</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-38439</url>
+    </references>
+    <dates>
+      <discovery>2024-06-16</discovery>
+      <entry>2024-06-30</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="0e73964d-053a-481a-bf1c-202948d68484">
     <topic>electron29 -- multiple vulnerabilities</topic>
     <affects>
@@ -70,8 +350,8 @@
     <topic>frr - Multiple vulnerabilities</topic>
     <affects>
       <package>
-        <name>frr9</name>
-        <range><lt>9.1.1</lt></range>
+	<name>frr9</name>
+	<range><lt>9.1.1</lt></range>
       </package>
       <package>
       <name>frr8</name>

@@ -3376,3 +3376,12 @@ security/p5-Protocol-ACME||2024-06-30|Has expired: upstream maintainer indicated
 graphics/wdune||2024-06-30|Has expired: upstream no longer maintained
 www/zend-framework||2024-06-30|Has expired: Deprecated by upstream, and moved to Laminas Project
 sysutils/torque||2024-06-30|Has expired: unfetchable, upstream no longer open source
+lang/icc||2024-07-01|Has expired: This version is EOL since a long time, i386 only, and the current clang based Intel oneAPI DPC++/C++ seems to work
+graphics/intel-backlight||2024-07-01|Has expired: Use backlight(8)
+www/yarn-node21||2024-07-02|Removed, part of www/node21
+www/npm-node21||2024-07-02|Removed, part of www/node21
+security/bcrypt||2024-07-02|Has expired: Hasn't seen updates in 15 years, insecure Blowfish ECB mode, unauthenticated encryption
+devel/py-stackexchange|devel/py-py-stackexchange|2024-07-06|Move devel/py-stackexchange to devel/py-py-stackexchange
+devel/py-xcaplib|devel/py-python-xcaplib|2024-07-06|Move devel/py-xcaplib to devel/py-python-xcaplib
+devel/py-yaml|devel/py-pyyaml|2024-07-07|Move devel/py-yaml to devel/py-pyyaml
+devel/py-pyyaml5|devel/py-pyyaml|2024-07-07|Remove obsoleted port. Use devel/py-pyyaml instead
