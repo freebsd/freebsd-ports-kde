@@ -110,8 +110,8 @@ KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.5
 KDE_APPLICATIONS5_BRANCH?=	stable
 
 # Next KDE applications.
-KDE_APPLICATIONS6_VERSION?=	24.05.1
-KDE_APPLICATIONS6_SHLIB_VER?=	5.24.7
+KDE_APPLICATIONS6_VERSION?=	24.05.2
+KDE_APPLICATIONS6_SHLIB_VER?=	6.1.2
 KDE_APPLICATIONS6_SHLIB_G_VER?=	24.05.1
 KDE_APPLICATIONS6_BRANCH?=	stable
 
@@ -1012,9 +1012,9 @@ kde-kpublictransport_LIB=	libKPublicTransport.so
 kde-kosm_PORT=			astro/kosmindoormap
 kde-kosm_LIB=			libKOSM.so
 
-kde-okular_PORT5=		graphics/okular
+kde-okular_PORT5=		graphics/okularpart5
 kde-okular_PORT6=		graphics/okular
-kde-okular_PORT=		${kde-okular_PORT{_KDE_VERSION}}
+kde-okular_PORT=		${kde-okular_PORT${_KDE_VERSION}}
 kde-okular_LIB=			libOkular${_KDE_VERSION}Core.so
 
 kde-phonon_PORT=		multimedia/phonon@${_QT_RELNAME}

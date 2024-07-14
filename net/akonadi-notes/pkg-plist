@@ -9,7 +9,7 @@ lib/cmake/KPim6AkonadiNotes/KPim6AkonadiNotesTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6AkonadiNotes/KPim6AkonadiNotesTargets.cmake
 lib/libKPim6AkonadiNotes.so
 lib/libKPim6AkonadiNotes.so.6
-lib/libKPim6AkonadiNotes.so.6.1.1
+lib/libKPim6AkonadiNotes.so.%%KDE_PLASMA_VERSION%%
 share/locale/ar/LC_MESSAGES/akonadinotes6.mo
 share/locale/ast/LC_MESSAGES/akonadinotes6.mo
 share/locale/az/LC_MESSAGES/akonadinotes6.mo

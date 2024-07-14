@@ -14,13 +14,13 @@ lib/cmake/KPipeWire/KPipeWireTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPipeWire/KPipeWireTargets.cmake
 lib/libKPipeWire.so
 lib/libKPipeWire.so.5
-lib/libKPipeWire.so.%%KDE_PLASMA_VERSION%%
+lib/libKPipeWire.so.6.1.2
 lib/libKPipeWireDmaBuf.so
 lib/libKPipeWireDmaBuf.so.5
-lib/libKPipeWireDmaBuf.so.%%KDE_PLASMA_VERSION%%
+lib/libKPipeWireDmaBuf.so.6.1.2
 lib/libKPipeWireRecord.so
 lib/libKPipeWireRecord.so.5
-lib/libKPipeWireRecord.so.%%KDE_PLASMA_VERSION%%
+lib/libKPipeWireRecord.so.6.1.2
 %%QT_QMLDIR%%/org/kde/pipewire/libKPipeWireDeclarative.so
 %%QT_QMLDIR%%/org/kde/pipewire/qmldir
 %%QT_QMLDIR%%/org/kde/pipewire/record/libKPipeWireRecordDeclarative.so

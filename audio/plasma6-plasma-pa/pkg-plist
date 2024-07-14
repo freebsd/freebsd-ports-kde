@@ -1,5 +1,5 @@
 lib/libplasma-volume.so.6
-lib/libplasma-volume.so.%%KDE_PLASMA_VERSION%%
+lib/libplasma-volume.so.6.1.2
 %%QT_PLUGINDIR%%/kf6/kded/audioshortcutsservice.so
 %%QT_PLUGINDIR%%/plasma/kcms/systemsettings/kcm_pulseaudio.so
 %%QT_QMLDIR%%/org/kde/plasma/private/volume/PulseObjectFilterModel.qml
