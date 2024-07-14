@@ -307,6 +307,7 @@
     SUBDIR += prometheus1
     SUBDIR += prometheus2
     SUBDIR += promscale
+    SUBDIR += promxy
     SUBDIR += pushgateway
     SUBDIR += py-adal
     SUBDIR += py-aggregate6
@@ -398,6 +399,7 @@
     SUBDIR += unbound_exporter
     SUBDIR += unifi8
     SUBDIR += victoria-metrics
+    SUBDIR += victoria-logs
     SUBDIR += virt-viewer
     SUBDIR += vmutils
     SUBDIR += wdiag

@@ -1,5 +1,5 @@
 PORTNAME=	freenginx
-PORTVERSION=	1.27.1
+PORTVERSION=	1.27.2
 PORTREVISION?=	0
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/ \
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER?=	joneum@FreeBSD.org
 COMMENT?=	Robust and small WWW server
-WWW=		https://nginx.com/
+WWW=		https://freenginx.org/
 
 LICENSE?=	BSD2CLAUSE
 LICENSE_FILE?=	${WRKSRC}/LICENSE

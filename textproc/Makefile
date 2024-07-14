@@ -1480,6 +1480,7 @@
     SUBDIR += py-paragrep
     SUBDIR += py-parse
     SUBDIR += py-parse-type
+    SUBDIR += py-parsec
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
@@ -1553,6 +1554,7 @@
     SUBDIR += py-restructuredtext-lint
     SUBDIR += py-reverend
     SUBDIR += py-rich
+    SUBDIR += py-rich-argparse
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
     SUBDIR += py-rich12
