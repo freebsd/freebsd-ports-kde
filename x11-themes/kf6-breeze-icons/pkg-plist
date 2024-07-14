@@ -3019,6 +3019,8 @@ share/icons/breeze-dark/actions/16/transform-skew-horizontal-symbolic.svg
 share/icons/breeze-dark/actions/16/transform-skew-horizontal.svg
 share/icons/breeze-dark/actions/16/transform-skew-vertical-symbolic.svg
 share/icons/breeze-dark/actions/16/transform-skew-vertical.svg
+share/icons/breeze-dark/actions/16/translate-symbolic.svg
+share/icons/breeze-dark/actions/16/translate.svg
 share/icons/breeze-dark/actions/16/transsearch-symbolic.svg
 share/icons/breeze-dark/actions/16/transsearch.svg
 share/icons/breeze-dark/actions/16/trash-empty-symbolic.svg
@@ -9130,6 +9132,7 @@ share/icons/breeze-dark/devices/16/network-wired-unavailable-symbolic.svg
 share/icons/breeze-dark/devices/16/network-wired-unavailable.svg
 share/icons/breeze-dark/devices/16/network-wired.svg
 share/icons/breeze-dark/devices/16/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze-dark/devices/16/network-wireless-bluetooth.svg
 share/icons/breeze-dark/devices/16/network-wireless-connected-00-symbolic.svg
 share/icons/breeze-dark/devices/16/network-wireless-connected-00.svg
 share/icons/breeze-dark/devices/16/network-wireless-connected-100-symbolic.svg
@@ -9281,6 +9284,7 @@ share/icons/breeze-dark/devices/22/network-vpn.svg
 share/icons/breeze-dark/devices/22/network-wired-symbolic.svg
 share/icons/breeze-dark/devices/22/network-wired.svg
 share/icons/breeze-dark/devices/22/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze-dark/devices/22/network-wireless-bluetooth.svg
 share/icons/breeze-dark/devices/22/network-wireless-hotspot-symbolic.svg
 share/icons/breeze-dark/devices/22/network-wireless-hotspot.svg
 share/icons/breeze-dark/devices/22/network-wireless-symbolic.svg
@@ -13591,6 +13595,7 @@ share/icons/breeze-dark/status/22/network-wireless-acquiring-symbolic.svg
 share/icons/breeze-dark/status/22/network-wireless-acquiring.svg
 share/icons/breeze-dark/status/22/network-wireless-available.svg
 share/icons/breeze-dark/status/22/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze-dark/status/22/network-wireless-bluetooth.svg
 share/icons/breeze-dark/status/22/network-wireless-connected-00-symbolic.svg
 share/icons/breeze-dark/status/22/network-wireless-connected-00.svg
 share/icons/breeze-dark/status/22/network-wireless-connected-100-symbolic.svg
@@ -16867,6 +16872,8 @@ share/icons/breeze/actions/16/transform-skew-horizontal-symbolic.svg
 share/icons/breeze/actions/16/transform-skew-horizontal.svg
 share/icons/breeze/actions/16/transform-skew-vertical-symbolic.svg
 share/icons/breeze/actions/16/transform-skew-vertical.svg
+share/icons/breeze/actions/16/translate-symbolic.svg
+share/icons/breeze/actions/16/translate.svg
 share/icons/breeze/actions/16/transsearch-symbolic.svg
 share/icons/breeze/actions/16/transsearch.svg
 share/icons/breeze/actions/16/trash-empty-symbolic.svg
@@ -22986,6 +22993,7 @@ share/icons/breeze/devices/16/network-wired-unavailable-symbolic.svg
 share/icons/breeze/devices/16/network-wired-unavailable.svg
 share/icons/breeze/devices/16/network-wired.svg
 share/icons/breeze/devices/16/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze/devices/16/network-wireless-bluetooth.svg
 share/icons/breeze/devices/16/network-wireless-connected-00-symbolic.svg
 share/icons/breeze/devices/16/network-wireless-connected-00.svg
 share/icons/breeze/devices/16/network-wireless-connected-100-symbolic.svg
@@ -23139,6 +23147,7 @@ share/icons/breeze/devices/22/network-vpn.svg
 share/icons/breeze/devices/22/network-wired-symbolic.svg
 share/icons/breeze/devices/22/network-wired.svg
 share/icons/breeze/devices/22/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze/devices/22/network-wireless-bluetooth.svg
 share/icons/breeze/devices/22/network-wireless-hotspot-symbolic.svg
 share/icons/breeze/devices/22/network-wireless-hotspot.svg
 share/icons/breeze/devices/22/network-wireless-symbolic.svg
@@ -27467,6 +27476,7 @@ share/icons/breeze/status/22/network-wireless-acquiring-symbolic.svg
 share/icons/breeze/status/22/network-wireless-acquiring.svg
 share/icons/breeze/status/22/network-wireless-available.svg
 share/icons/breeze/status/22/network-wireless-bluetooth-symbolic.svg
+share/icons/breeze/status/22/network-wireless-bluetooth.svg
 share/icons/breeze/status/22/network-wireless-connected-00-symbolic.svg
 share/icons/breeze/status/22/network-wireless-connected-00.svg
 share/icons/breeze/status/22/network-wireless-connected-100-symbolic.svg
