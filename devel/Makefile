@@ -4693,6 +4693,8 @@
     SUBDIR += py-diskcache
     SUBDIR += py-distlib
     SUBDIR += py-distributed
+    SUBDIR += py-dj50-django-rq
+    SUBDIR += py-dj50-strawberry-graphql
     SUBDIR += py-django-rq
     SUBDIR += py-dm-tree
     SUBDIR += py-docformatter
@@ -5731,6 +5733,7 @@
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
     SUBDIR += py-setuptools-declarative-requirements
+    SUBDIR += py-setuptools-dso
     SUBDIR += py-setuptools-gettext
     SUBDIR += py-setuptools-git
     SUBDIR += py-setuptools-git-versioning
@@ -6126,6 +6129,7 @@
     SUBDIR += quantum
     SUBDIR += quickcheck++
     SUBDIR += quickcpplib
+    SUBDIR += quill
     SUBDIR += quilt
     SUBDIR += qxlsx
     SUBDIR += rabs
