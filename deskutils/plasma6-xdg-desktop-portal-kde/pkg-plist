@@ -1,5 +1,5 @@
 lib/libexec/xdg-desktop-portal-kde
-@ignore lib/systemd/user/plasma-xdg-desktop-portal-kde.service
+@comment lib/systemd/user/plasma-xdg-desktop-portal-kde.service
 share/applications/org.freedesktop.impl.portal.desktop.kde.desktop
 share/dbus-1/services/org.freedesktop.impl.portal.desktop.kde.service
 share/knotifications6/xdg-desktop-portal-kde.notifyrc
