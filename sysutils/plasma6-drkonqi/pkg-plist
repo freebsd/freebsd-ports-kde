@@ -1,13 +1,13 @@
 bin/drkonqi-sentry-data
 lib/libexec/drkonqi
 lib/libexec/drkonqi-sentry-postman
-lib/systemd/user/default.target.wants/drkonqi-sentry-postman.path
-lib/systemd/user/drkonqi-sentry-postman.path
-lib/systemd/user/drkonqi-sentry-postman.service
-lib/systemd/user/drkonqi-sentry-postman.timer
-lib/systemd/user/plasma-core.target.wants/drkonqi-sentry-postman.path
-lib/systemd/user/plasma-core.target.wants/drkonqi-sentry-postman.timer
-lib/systemd/user/timers.target.wants/drkonqi-sentry-postman.timer
+@ignore lib/systemd/user/default.target.wants/drkonqi-sentry-postman.path
+@ignore lib/systemd/user/drkonqi-sentry-postman.path
+@ignore lib/systemd/user/drkonqi-sentry-postman.service
+@ignore lib/systemd/user/drkonqi-sentry-postman.timer
+@ignore lib/systemd/user/plasma-core.target.wants/drkonqi-sentry-postman.path
+@ignore lib/systemd/user/plasma-core.target.wants/drkonqi-sentry-postman.timer
+@ignore lib/systemd/user/timers.target.wants/drkonqi-sentry-postman.timer
 share/applications/org.kde.drkonqi.desktop
 %%DATADIR%%/debuggers/external.mac/lldbrc
 %%DATADIR%%/debuggers/external/gdbrc

@@ -42,7 +42,7 @@ lib/libexec/kf6/baloo_file_extractor
 %%QT_QMLDIR%%/org/kde/baloo/kde-qmlmodule.version
 %%QT_QMLDIR%%/org/kde/baloo/libbalooplugin.so
 %%QT_QMLDIR%%/org/kde/baloo/qmldir
-lib/systemd/user/kde-baloo.service
+@ignore lib/systemd/user/kde-baloo.service
 libdata/pkgconfig/KF6Baloo.pc
 share/dbus-1/interfaces/org.kde.BalooWatcherApplication.xml
 share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
