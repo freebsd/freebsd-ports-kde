@@ -101,7 +101,7 @@ LUAJIT_DEFAULT?=	luajit-devel
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 8.0, 8.1, 8.4, 10.5m, 10.6m, 10.11m
+# Possible values: 8.0, 8.1, 8.4, 10.5m, 10.6m, 10.11m, 11.4m
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
@@ -127,7 +127,7 @@ _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
 # Possible values: 12, 13, 14, 15, 16
-PGSQL_DEFAULT?=		15
+PGSQL_DEFAULT?=		16
 # Possible values: 8.1, 8.2, 8.3
 PHP_DEFAULT?=		8.2
 # Possible values: rust, legacy

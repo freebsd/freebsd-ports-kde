@@ -34,6 +34,7 @@
     SUBDIR += cmrtlib
     SUBDIR += cx88
     SUBDIR += dav1d
+    SUBDIR += decord
     SUBDIR += deforaos-player
     SUBDIR += dirac
     SUBDIR += dragon
@@ -301,6 +302,7 @@
     SUBDIR += py-PySceneDetect
     SUBDIR += py-av
     SUBDIR += py-cec
+    SUBDIR += py-decord
     SUBDIR += py-enzyme
     SUBDIR += py-ffmpeg-python
     SUBDIR += py-gstreamer1

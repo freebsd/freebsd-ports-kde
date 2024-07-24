@@ -88,6 +88,7 @@
     SUBDIR += dijo
     SUBDIR += dive
     SUBDIR += dlib-models
+    SUBDIR += dlpack
     SUBDIR += dnetc
     SUBDIR += dotenv-linter
     SUBDIR += dtach
@@ -246,7 +247,6 @@
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
-    SUBDIR += lingoteach
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -277,6 +277,7 @@
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
+    SUBDIR += navi
     SUBDIR += ncnn
     SUBDIR += netron
     SUBDIR += nms
@@ -453,6 +454,7 @@
     SUBDIR += py-mmsegmentation
     SUBDIR += py-molequeue
     SUBDIR += py-mxnet
+    SUBDIR += py-natten
     SUBDIR += py-npTDMS
     SUBDIR += py-numcodecs
     SUBDIR += py-onnx

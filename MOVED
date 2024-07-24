@@ -3375,7 +3375,7 @@ lang/gcc9||2024-06-30|Has expired: Unsupported by upstream. Use GCC 10 or newer 
 security/p5-Protocol-ACME||2024-06-30|Has expired: upstream maintainer indicated that it is no longer suitable for use
 graphics/wdune||2024-06-30|Has expired: upstream no longer maintained
 www/zend-framework||2024-06-30|Has expired: Deprecated by upstream, and moved to Laminas Project
-sysutils/torque||2024-06-30|Has expired: unfetchable, upstream no longer open source
+sysutils/torque||2024-06-30|Has been removed: may be resurrected with GH_TUPLE=adaptivecomputing:torque:4decc71
 lang/icc||2024-07-01|Has expired: This version is EOL since a long time, i386 only, and the current clang based Intel oneAPI DPC++/C++ seems to work
 graphics/intel-backlight||2024-07-01|Has expired: Use backlight(8)
 www/yarn-node21||2024-07-02|Removed, part of www/node21
@@ -3394,3 +3394,14 @@ converters/tuc||2024-07-13|Has expired: Dead upstream and unfetchable
 sysutils/ipfs-go|sysutils/kubo-go|2024-07-13|Project was renamed upstream
 chinese/tin||2024-07-14|Removed, unmaintained and broken for months
 x11-wm/afterstep|x11-wm/afterstep1|2024-07-14|Port renamed
+textproc/p5-XML-DifferenceMarkup||2024-07-16|Has expired: Depends on deprecated port textproc/diffmark (PR 279705)
+textproc/diffmark||2024-07-16|Has expired: Fails to build with libxml2 2.13.0 (PR 279705)
+misc/lingoteach||2024-07-16|Has expired: Depends on deprecated port textproc/liblingoteach (PR 279705)
+textproc/liblingoteach||2024-07-16|Has expired: Abandonware, last activity 18+ years ago and fails to build with libxml2 2.13.0 (PR 279705)
+devel/dia2code+||2024-07-16|Has expired: Fails to build with libxml2 2.13.0 (PR 279759)
+devel/libiqxmlrpc||2024-07-16|Has expired: Fails to build with libxml2 2.13.0 (PR 279705)
+textproc/rubygem-nokogiri111|textproc/rubygem-nokogiri|2024-07-17|Obsolete, use textproc/rubygem-nokogiri instead
+devel/rubygem-google-gax||2024-07-21|Remove obsoleted port. This gem is officially end-of-life
+audio/strawberry@qt5|audio/strawberry|2024-07-21|Unflavor. Qt5 is obsolete
+audio/strawberry@qt6|audio/strawberry|2024-07-21|Unflavor. Qt5 is obsolete
+archivers/py-borgbackup|archivers/py-borgbackup12|2024-07-21|Borgbackup released a new stable version 1.4.0

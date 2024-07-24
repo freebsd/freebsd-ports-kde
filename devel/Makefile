@@ -11,6 +11,7 @@
     SUBDIR += R-cran-Rcpp
     SUBDIR += R-cran-RcppProgress
     SUBDIR += R-cran-Rdpack
+    SUBDIR += R-cran-TH.data
     SUBDIR += R-cran-abind
     SUBDIR += R-cran-bindr
     SUBDIR += R-cran-bindrcpp
@@ -576,7 +577,6 @@
     SUBDIR += devtodo
     SUBDIR += dfuife-curses
     SUBDIR += dia2code
-    SUBDIR += dia2code+
     SUBDIR += dill
     SUBDIR += ding-libs
     SUBDIR += dispy
@@ -628,6 +628,7 @@
     SUBDIR += electron28
     SUBDIR += electron29
     SUBDIR += electron30
+    SUBDIR += electron31
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -1322,7 +1323,6 @@
     SUBDIR += libindicator
     SUBDIR += libinjection
     SUBDIR += libinotify
-    SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
     SUBDIR += libixp
     SUBDIR += libjitterentropy
@@ -1698,6 +1698,7 @@
     SUBDIR += ninja
     SUBDIR += nlohmann-json
     SUBDIR += node-thrift
+    SUBDIR += nodeeditor
     SUBDIR += notcurses
     SUBDIR += notify-sharp
     SUBDIR += nox
@@ -2173,6 +2174,7 @@
     SUBDIR += p5-Const-Fast
     SUBDIR += p5-Context-Preserve
     SUBDIR += p5-Contextual-Return
+    SUBDIR += p5-Convert-Age
     SUBDIR += p5-Convert-Scalar
     SUBDIR += p5-Coro
     SUBDIR += p5-Curses
@@ -4651,6 +4653,7 @@
     SUBDIR += py-dal
     SUBDIR += py-darts.util.lru
     SUBDIR += py-dask
+    SUBDIR += py-dask-awkward
     SUBDIR += py-dask-expr
     SUBDIR += py-dask-histogram
     SUBDIR += py-dataclass-array
@@ -4812,6 +4815,7 @@
     SUBDIR += py-fs
     SUBDIR += py-fs2
     SUBDIR += py-fsspec
+    SUBDIR += py-fsspec-xrootd
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
     SUBDIR += py-funcsigs
@@ -5271,6 +5275,7 @@
     SUBDIR += py-pdm
     SUBDIR += py-pdm-autoexport
     SUBDIR += py-pdm-backend
+    SUBDIR += py-pdm-build-locked
     SUBDIR += py-pdm-pep517
     SUBDIR += py-pdoc
     SUBDIR += py-pebble
@@ -5925,6 +5930,7 @@
     SUBDIR += py-unpaddedbase64
     SUBDIR += py-untokenize
     SUBDIR += py-update_checker
+    SUBDIR += py-uproot
     SUBDIR += py-urlimport
     SUBDIR += py-urwid
     SUBDIR += py-urwid-readline
@@ -6263,6 +6269,7 @@
     SUBDIR += rubygem-ast
     SUBDIR += rubygem-astrolabe
     SUBDIR += rubygem-async
+    SUBDIR += rubygem-async212
     SUBDIR += rubygem-async-io
     SUBDIR += rubygem-atomic
     SUBDIR += rubygem-attic
@@ -7138,11 +7145,11 @@
     SUBDIR += rubygem-google-apis-sqladmin_v1beta4_041
     SUBDIR += rubygem-google-apis-storage_v1
     SUBDIR += rubygem-google-cloud-common
-    SUBDIR += rubygem-google-gax
     SUBDIR += rubygem-google-iam-credentials
     SUBDIR += rubygem-google-iam-credentials-v1
     SUBDIR += rubygem-google-iam-v1
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-google-protobuf4
     SUBDIR += rubygem-googleapis-common-protos
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
@@ -7858,6 +7865,7 @@
     SUBDIR += serdisplib
     SUBDIR += sfml
     SUBDIR += sfml1
+    SUBDIR += sfml251
     SUBDIR += sfsexp
     SUBDIR += sgb
     SUBDIR += shadered
