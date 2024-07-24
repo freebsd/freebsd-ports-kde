@@ -14,12 +14,12 @@ RUN_DEPENDS=	hack-font>0:x11-fonts/hack-font \
 		noto-emoji>0:x11-fonts/noto-emoji
 
 USES=		cmake gettext gl kde:5 pkgconfig qt:5 tar:xz xorg
-USE_KDE=	config guiaddons i18n iconthemes kio notifications wayland \
-		windowsystem xdg-desktop-portal-kde xmlgui \
+USE_KDE=	config configwidgets guiaddons i18n iconthemes kio \
+		notifications wayland windowsystem xmlgui \
 		ecm:build plasma-wayland-protocols:build
 USE_GL=		gl opengl
 USE_XORG=	x11 xcb xcursor
-USE_QT=		core gui wayland \
+USE_QT=		core gui quickcontrols2 wayland x11extras \
 		buildtools:build qmake:build
 
 CMAKE_ON=	BUILD_QT5
