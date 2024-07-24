@@ -5,6 +5,115 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20240723:
+  AFFECTS: users of databases/postgresql* and other software using PostgreSQL to run
+  AUTHOR: kbowling@FreeBSD.org
+
+  The default version of PostgreSQL has been switched from 15 to 16.
+  The upgrade procedure can use up twice the space the databases
+  currently needs. If you have a big amount of stored data take a
+  closer look at the manpage of pg_upgrade for avoidance and/or
+  speedup of the upgrade.
+
+  The upgrade instructions consider a basic usage and do not match
+  complex scenarios like replication, sharding, or similar.
+
+  Upgrade instructions:
+
+  First stop your PostgreSQL, create PostgreSQL-binaries and backup your data.
+  If you have another Version of PostgreSQL installed, for example 15, your
+  files are named according to this.
+
+  # service postgresql stop
+  # pkg create postgresql15-server postgresql15-contrib
+  # mkdir /tmp/pg-upgrade
+  # tar xf postgresql15-server-15.7.pkg -C /tmp/pg-upgrade
+  # tar xf postgresql15-contrib-15.7.pkg -C /tmp/pg-upgrade
+  # pkg delete -f databases/postgresql15-server databases/postgresql15-contrib databases/postgresql15-client
+
+  Now update PostgreSQL:
+
+    pkg user:
+    # pkg install databases/postgresql16-server databases/postgresql16-contrib
+    # pkg upgrade
+
+    Portmaster users:
+    # portmaster databases/postgresql16-server databases/postgresql16-contrib
+    # portmaster -a
+
+    Portupgrade users:
+    # portinstall databases/postgresql16-server databases/postgresql16-contrib
+    # portupgrade -a
+
+  After installing the new PostgreSQL version you need to convert
+  all your databases to new version:
+
+  # su -l postgres -c "/usr/local/bin/initdb --encoding=utf-8 --lc-collate=C -D /var/db/postgres/data16 -U postgres"
+  # su -l postgres -c "pg_upgrade -b /tmp/pg-upgrade/usr/local/bin/ -d /var/db/postgres/data15/ -B /usr/local/bin/ -D /var/db/postgres/data16/ -U postgres "
+
+  Now the migration is finished. You can start PostgreSQL again with:
+
+  # service postgresql start
+
+  ATTENTION:
+  1) If you use non-default initdb options, you have to adjust the initdb-command accordingly
+
+20240715:
+  AFFECTS: net-mgmt/netbox
+  AUTHOR: kai@FreeBSD.org
+
+  The NetBox 4.0 release contains major changes, so at least the following
+  items must be checked before proceeding with the upgrade:
+
+  1. NetBox v4.0 requires Python 3.10 or later.
+
+  2. Please also check the pkg-message and the changelogs for further info.
+
+20240705:
+  AFFECTS: sysutils/bacula*-{client,server}
+  AUTHOR: netchildFreeBSD.org
+
+  The start scripts of bacula have been renamed to bacula_fd, bacula_dir and
+  bacula_sd for improved compatibility with other parts of the
+  system. The automatic start at boot (rc.conf variable settings) is
+  not affected, but if you have some other automatism you may want to
+  change
+    ".../etc/rc.d/bacula-fd"  to ".../etc/rc.d/bacula_fd"
+    ".../etc/rc.d/bacula-dir" to ".../etc/rc.d/bacula_dir"
+    ".../etc/rc.d/bacula-sd"  to ".../etc/rc.d/bacula_sd"
+  or
+    "service bacula-fd ..."  to "service bacula_fd ..."
+    "service bacula-dir ..." to "service bacula_dir ..."
+    "service bacula-sd ..."  to "service bacula_sd ..."
+
+20240704:
+  AFFECTS: net/xrdp and x11-drivers/xorgxrdp
+  AUTHOR: meta@FreeBSD.org
+
+  xrdp has been updated to the releases of the latest stable branch v0.10.
+  This version significantly improves performance improvement especially if the
+  client is Windows 11. There are to things to be careful about when updating.
+
+  1) Make sure to update both net/xrdp and x11-drivers/xorgxrdp ports
+     simultaneously.
+  2) Config files require manual migration (follow the steps below).
+
+  Review and backup changes you made to xrdp.ini and sesman.ini before updating
+  xrdp. The following example only mentions xrdp.ini however make sure to do the
+  same review, backup and migration for sesman.ini as well.
+
+  Before updating xrdp, review and backup your changes.
+
+  # cd /usr/local/etc/xrdp
+  # diff -u xrdp.ini.sample xrdp.ini > xrdp.ini.diff
+
+  After updating xrdp, migrate your changes to new configuration files.
+  xrdp.ini.sample is replaced with new version at this point. See diff and
+  manually apply changes.
+
+  # cp xrdp.ini.sample xrdp.ini
+  # vi xrdp.ini
+
 20240620:
   AFFECTS: net-mgmt/net-snmp
   AUTHOR: markj@FreeBSD.org
@@ -55,6 +164,10 @@ you update your ports collection, before attempting any port upgrades.
   For an in-place upgrade it is important that the MongoDB
   'featureCompatibilityVersion' is set to 5.0.
   See: https://www.mongodb.com/docs/v6.0/release-notes/6.0-upgrade-standalone/#feature-compatibility-version
+  Run these commands in mongodb50 before upgrading (e.g. while unifi is running):
+  $ mongo --port 27117
+  > db.adminCommand( { setFeatureCompatibilityVersion: "5.0" } )
+  > exit
 
   See updating entry 20230310 for a backup/restore upgrade.
 

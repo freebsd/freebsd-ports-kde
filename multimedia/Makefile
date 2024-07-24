@@ -34,6 +34,7 @@
     SUBDIR += cmrtlib
     SUBDIR += cx88
     SUBDIR += dav1d
+    SUBDIR += decord
     SUBDIR += deforaos-player
     SUBDIR += dirac
     SUBDIR += dragon
@@ -51,7 +52,6 @@
     SUBDIR += dvdstyler
     SUBDIR += elementary-videos
     SUBDIR += emby-server
-    SUBDIR += emby-server-devel
     SUBDIR += emovix
     SUBDIR += ffaudioconverter
     SUBDIR += ffdec
@@ -289,7 +289,6 @@
     SUBDIR += pipe-viewer
     SUBDIR += pipewire
     SUBDIR += pitivi
-    SUBDIR += plasma5-plank-player
     SUBDIR += plasmatube
     SUBDIR += playerctl
     SUBDIR += plexmediaserver
@@ -303,6 +302,7 @@
     SUBDIR += py-PySceneDetect
     SUBDIR += py-av
     SUBDIR += py-cec
+    SUBDIR += py-decord
     SUBDIR += py-enzyme
     SUBDIR += py-ffmpeg-python
     SUBDIR += py-gstreamer1
@@ -406,6 +406,7 @@
     SUBDIR += xporthdmv
     SUBDIR += xvid
     SUBDIR += yamdi
+    SUBDIR += youtui
     SUBDIR += ytfzf
     SUBDIR += zart
     SUBDIR += zoneminder

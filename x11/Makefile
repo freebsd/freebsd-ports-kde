@@ -171,7 +171,6 @@
     SUBDIR += kickoff
     SUBDIR += kitty
     SUBDIR += konsole
-    SUBDIR += konsole-devel
     SUBDIR += lavalauncher
     SUBDIR += lemonbar
     SUBDIR += lemonbar-xft
@@ -315,17 +314,7 @@
     SUBDIR += pixman
     SUBDIR += plank
     SUBDIR += plasma-wayland-protocols
-    SUBDIR += plasma5-kactivitymanagerd
-    SUBDIR += plasma5-kgamma5
-    SUBDIR += plasma5-kscreen
-    SUBDIR += plasma5-kwayland-integration
-    SUBDIR += plasma5-layer-shell-qt
-    SUBDIR += plasma5-libkscreen
-    SUBDIR += plasma5-plasma
-    SUBDIR += plasma5-plasma-bigscreen
-    SUBDIR += plasma5-plasma-desktop
     SUBDIR += plasma5-plasma-integration
-    SUBDIR += plasma5-plasma-workspace
     SUBDIR += plasma6-kactivitymanagerd
     SUBDIR += plasma6-kgamma
     SUBDIR += plasma6-kglobalacceld

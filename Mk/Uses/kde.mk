@@ -91,7 +91,7 @@ KDE_PLASMA5_VERSION?=		5.27.11
 KDE_PLASMA5_BRANCH?=		stable
 
 # Next KDE Plasma desktop
-KDE_PLASMA6_VERSION?=		6.1.1
+KDE_PLASMA6_VERSION?=		6.1.3
 KDE_PLASMA6_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -99,7 +99,7 @@ KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Next KDE Frameworks (Qt6 based)
-KDE_FRAMEWORKS6_VERSION?=	6.3.0
+KDE_FRAMEWORKS6_VERSION?=	6.4.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications.
@@ -110,8 +110,8 @@ KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.5
 KDE_APPLICATIONS5_BRANCH?=	stable
 
 # Next KDE applications.
-KDE_APPLICATIONS6_VERSION?=	24.05.1
-KDE_APPLICATIONS6_SHLIB_VER?=	5.24.7
+KDE_APPLICATIONS6_VERSION?=	24.05.2
+KDE_APPLICATIONS6_SHLIB_VER?=	6.1.2
 KDE_APPLICATIONS6_SHLIB_G_VER?=	24.05.1
 KDE_APPLICATIONS6_BRANCH?=	stable
 
@@ -347,7 +347,8 @@ _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			akonadi \
 			libkexiv2 \
 			libkdcraw \
-			libkipi
+			libkipi \
+			okular
 
 # TODO: fix
 _USE_KDE6_ALL=		ecm colorscheme \
@@ -366,7 +367,8 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			libkdcraw \
 			${_USE_KDEPIM_ALL} \
 			libkeduvocdocument \
-			libkexiv2
+			libkexiv2 \
+			okular
 
 # ====================== frameworks components =================================
 kde-activities_PORT5=		x11/kf${_KDE_VERSION}-kactivities
@@ -438,7 +440,8 @@ kde-dnssd_LIB=			libKF${_KDE_VERSION}DNSSD.so
 kde-doctools_PORT=		devel/kf${_KDE_VERSION}-kdoctools
 kde-doctools_PATH=		${KDE_PREFIX}/bin/meinproc${_KDE_VERSION}
 
-kde-ecm_PORT=			devel/kf${_KDE_VERSION}-extra-cmake-modules
+# Use ECM from KDE Frameworks 6 for everything
+kde-ecm_PORT=			devel/kf6-extra-cmake-modules
 kde-ecm_PATH=			${LOCALBASE}/share/ECM/cmake/ECMConfig.cmake
 
 kde-emoticons_PORT=		x11-themes/kf${_KDE_VERSION}-kemoticons
@@ -1009,7 +1012,9 @@ kde-kpublictransport_LIB=	libKPublicTransport.so
 kde-kosm_PORT=			astro/kosmindoormap
 kde-kosm_LIB=			libKOSM.so
 
-kde-okular_PORT=		graphics/okular
+kde-okular_PORT5=		graphics/okularpart5
+kde-okular_PORT6=		graphics/okular
+kde-okular_PORT=		${kde-okular_PORT${_KDE_VERSION}}
 kde-okular_LIB=			libOkular${_KDE_VERSION}Core.so
 
 kde-phonon_PORT=		multimedia/phonon@${_QT_RELNAME}

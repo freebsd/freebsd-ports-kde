@@ -1,7 +1,7 @@
     COMMENT = X11 window managers
 
-    SUBDIR += afterstep
     SUBDIR += afterstep-stable
+    SUBDIR += afterstep1
     SUBDIR += amiwm
     SUBDIR += aphelia
     SUBDIR += awesome
@@ -85,7 +85,6 @@
     SUBDIR += picom
     SUBDIR += piewm
     SUBDIR += plasma5-kdecoration
-    SUBDIR += plasma5-kwin
     SUBDIR += plasma6-kdecoration
     SUBDIR += plasma6-kwin
     SUBDIR += pwm

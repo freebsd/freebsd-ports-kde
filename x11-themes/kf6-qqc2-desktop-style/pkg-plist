@@ -35,6 +35,7 @@ lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfigVersion.cmake
 %%QT_QMLDIR%%/org/kde/desktop/ScrollView.qml
 %%QT_QMLDIR%%/org/kde/desktop/Slider.qml
 %%QT_QMLDIR%%/org/kde/desktop/SpinBox.qml
+%%QT_QMLDIR%%/org/kde/desktop/SplitView.qml
 %%QT_QMLDIR%%/org/kde/desktop/StackView.qml
 %%QT_QMLDIR%%/org/kde/desktop/Switch.qml
 %%QT_QMLDIR%%/org/kde/desktop/SwitchDelegate.qml
@@ -91,7 +92,9 @@ share/locale/ka/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/lv/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/nl/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/pl/LC_MESSAGES/qqc2desktopstyle_qt.qm
+share/locale/ro/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/sl/LC_MESSAGES/qqc2desktopstyle_qt.qm
+share/locale/sv/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/ta/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/tr/LC_MESSAGES/qqc2desktopstyle_qt.qm
 share/locale/uk/LC_MESSAGES/qqc2desktopstyle_qt.qm

@@ -112,7 +112,7 @@ lib/cmake/KPim6MailCommon/KPim6MailCommonTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6MailCommon/KPim6MailCommonTargets.cmake
 lib/libKPim6MailCommon.so
 lib/libKPim6MailCommon.so.6
-lib/libKPim6MailCommon.so.6.1.1
+lib/libKPim6MailCommon.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/designer/mailcommon6widgets.so
 share/locale/ar/LC_MESSAGES/libmailcommon6.mo
 share/locale/ast/LC_MESSAGES/libmailcommon6.mo

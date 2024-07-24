@@ -4,6 +4,7 @@
     SUBDIR += Xaw3d
     SUBDIR += Xmt
     SUBDIR += amtk
+    SUBDIR += aquamarine
     SUBDIR += blt
     SUBDIR += bwidget
     SUBDIR += color-widgets-qt5
@@ -160,7 +161,6 @@
     SUBDIR += pangolin
     SUBDIR += pangomm
     SUBDIR += pangox-compat
-    SUBDIR += plasma5-kdeplasma-addons
     SUBDIR += plasma6-kdeplasma-addons
     SUBDIR += plib
     SUBDIR += py-AnyQt
@@ -245,10 +245,10 @@
     SUBDIR += vte
     SUBDIR += vte3
     SUBDIR += wlroots
-    SUBDIR += wlroots-devel
     SUBDIR += wlroots-hyprland
     SUBDIR += wlroots015
     SUBDIR += wlroots016
+    SUBDIR += wlroots017
     SUBDIR += wmapp
     SUBDIR += wxgtk30
     SUBDIR += wxgtk32

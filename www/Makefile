@@ -21,7 +21,6 @@
     SUBDIR += UniversalFeedCreator
     SUBDIR += adguardhome
     SUBDIR += adjuster
-    SUBDIR += adzap
     SUBDIR += alef-webfont
     SUBDIR += amfora
     SUBDIR += amphetadesk
@@ -75,7 +74,6 @@
     SUBDIR += bareos22-webui
     SUBDIR += beehive
     SUBDIR += bluefish
-    SUBDIR += bolt
     SUBDIR += bozohttpd
     SUBDIR += browsh
     SUBDIR += bugzilla2atom
@@ -187,6 +185,7 @@
     SUBDIR += foswiki
     SUBDIR += free-sa-devel
     SUBDIR += freenginx
+    SUBDIR += freenginx-devel
     SUBDIR += fswiki
     SUBDIR += fusionpbx
     SUBDIR += g-cows
@@ -251,7 +250,6 @@
     SUBDIR += html2wml
     SUBDIR += htmlcompressor
     SUBDIR += htmlcxx
-    SUBDIR += httest
     SUBDIR += http-parser
     SUBDIR += http_get
     SUBDIR += http_load
@@ -267,13 +265,12 @@
     SUBDIR += igal2
     SUBDIR += ikiwiki
     SUBDIR += ilias
-    SUBDIR += interchange
     SUBDIR += iridium
-    SUBDIR += itop
     SUBDIR += janus
     SUBDIR += jericho-html
     SUBDIR += jesred
     SUBDIR += jetty10
+    SUBDIR += jetty12
     SUBDIR += jira-cli
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
@@ -350,6 +347,7 @@
     SUBDIR += mediawiki139
     SUBDIR += mediawiki140
     SUBDIR += mediawiki141
+    SUBDIR += mediawiki142
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -467,7 +465,6 @@
     SUBDIR += node
     SUBDIR += node18
     SUBDIR += node20
-    SUBDIR += node21
     SUBDIR += node22
     SUBDIR += nostromo
     SUBDIR += novnc
@@ -477,7 +474,6 @@
     SUBDIR += npm
     SUBDIR += npm-node18
     SUBDIR += npm-node20
-    SUBDIR += npm-node21
     SUBDIR += npm-node22
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -1416,7 +1412,6 @@
     SUBDIR += phpvirtualbox
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
-    SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += plasma6-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews
@@ -1473,7 +1468,6 @@
     SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
     SUBDIR += py-cinemagoer
-    SUBDIR += py-cookies
     SUBDIR += py-crossplane
     SUBDIR += py-css-html-js-minify
     SUBDIR += py-css-parser
@@ -1483,6 +1477,24 @@
     SUBDIR += py-cssutils
     SUBDIR += py-daphne
     SUBDIR += py-dj-database-url
+    SUBDIR += py-dj50-django-auth-ldap
+    SUBDIR += py-dj50-django-choices-field
+    SUBDIR += py-dj50-django-cors-headers
+    SUBDIR += py-dj50-django-debug-toolbar
+    SUBDIR += py-dj50-django-filter
+    SUBDIR += py-dj50-django-htmx
+    SUBDIR += py-dj50-django-js-asset
+    SUBDIR += py-dj50-django-mptt
+    SUBDIR += py-dj50-django-prometheus
+    SUBDIR += py-dj50-django-redis
+    SUBDIR += py-dj50-django-rich
+    SUBDIR += py-dj50-django-tables2
+    SUBDIR += py-dj50-django-taggit
+    SUBDIR += py-dj50-django-timezone-field
+    SUBDIR += py-dj50-djangorestframework
+    SUBDIR += py-dj50-drf-spectacular
+    SUBDIR += py-dj50-drf-spectacular-sidecar
+    SUBDIR += py-dj50-strawberry-graphql-django
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
     SUBDIR += py-django-allauth
@@ -1495,7 +1507,6 @@
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bleach
-    SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
     SUBDIR += py-django-bootstrap4
     SUBDIR += py-django-braces
@@ -1536,7 +1547,6 @@
     SUBDIR += py-django-jquery-js
     SUBDIR += py-django-js-asset
     SUBDIR += py-django-jsonview
-    SUBDIR += py-django-ldapdb
     SUBDIR += py-django-libsass
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
@@ -1573,6 +1583,7 @@
     SUBDIR += py-django-simple-captcha
     SUBDIR += py-django-simple-history
     SUBDIR += py-django-smart-selects
+    SUBDIR += py-django-soft-delete
     SUBDIR += py-django-solo
     SUBDIR += py-django-sortedm2m
     SUBDIR += py-django-star-ratings
@@ -1591,7 +1602,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
-    SUBDIR += py-django32
     SUBDIR += py-django42
     SUBDIR += py-django50
     SUBDIR += py-django_compressor
@@ -1956,6 +1966,7 @@
     SUBDIR += rubygem-circuitbox
     SUBDIR += rubygem-cloudinary
     SUBDIR += rubygem-cookiejar
+    SUBDIR += rubygem-coverband
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-rails70
@@ -2467,6 +2478,7 @@
     SUBDIR += w3mir
     SUBDIR += wabt
     SUBDIR += wasm-pack
+    SUBDIR += waterfox
     SUBDIR += web2ldap
     SUBDIR += webalizer
     SUBDIR += webbrowser
@@ -2513,7 +2525,6 @@
     SUBDIR += yarn
     SUBDIR += yarn-node18
     SUBDIR += yarn-node20
-    SUBDIR += yarn-node21
     SUBDIR += yarn-node22
     SUBDIR += yarr
     SUBDIR += yaws
@@ -2522,7 +2533,6 @@
     SUBDIR += yt-dlp
     SUBDIR += ytdl
     SUBDIR += yuicompressor
-    SUBDIR += zend-framework
     SUBDIR += zenphoto
     SUBDIR += zerowait-httpd
     SUBDIR += zgrab2

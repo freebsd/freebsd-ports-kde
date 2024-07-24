@@ -12,6 +12,7 @@
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
+    SUBDIR += R-cran-Deriv
     SUBDIR += R-cran-DoE.base
     SUBDIR += R-cran-FNN
     SUBDIR += R-cran-Formula
@@ -54,6 +55,7 @@
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
     SUBDIR += R-cran-dlmodeler
+    SUBDIR += R-cran-doBy
     SUBDIR += R-cran-dplyr
     SUBDIR += R-cran-eRm
     SUBDIR += R-cran-energy
@@ -583,6 +585,7 @@
     SUBDIR += octave-forge-geometry
     SUBDIR += octave-forge-gnuplot
     SUBDIR += octave-forge-gsl
+    SUBDIR += octave-forge-hdf5oct
     SUBDIR += octave-forge-ident
     SUBDIR += octave-forge-image
     SUBDIR += octave-forge-informationtheory

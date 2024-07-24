@@ -32,6 +32,7 @@
     SUBDIR += R-cran-tth
     SUBDIR += R-cran-utf8
     SUBDIR += R-cran-vroom
+    SUBDIR += R-cran-writexl
     SUBDIR += R-cran-xml2
     SUBDIR += R-cran-xmlparsedata
     SUBDIR += R-cran-xtable
@@ -147,7 +148,6 @@
     SUBDIR += dictfmt
     SUBDIR += dictionary
     SUBDIR += diff-so-fancy
-    SUBDIR += diffmark
     SUBDIR += diffsplit
     SUBDIR += diffstat
     SUBDIR += difftastic
@@ -382,6 +382,7 @@
     SUBDIR += lasem
     SUBDIR += latex-service
     SUBDIR += latex2html
+    SUBDIR += lexilla
     SUBDIR += libabw
     SUBDIR += libcroco
     SUBDIR += libcss
@@ -401,7 +402,6 @@
     SUBDIR += libkmfl
     SUBDIR += libkolabxml
     SUBDIR += libkomparediff2
-    SUBDIR += liblingoteach
     SUBDIR += liblrdf
     SUBDIR += libmrss
     SUBDIR += libmwaw03
@@ -1084,7 +1084,6 @@
     SUBDIR += p5-XML-DTDParser
     SUBDIR += p5-XML-Declare
     SUBDIR += p5-XML-Descent
-    SUBDIR += p5-XML-DifferenceMarkup
     SUBDIR += p5-XML-Directory
     SUBDIR += p5-XML-DoubleEncodedEntities
     SUBDIR += p5-XML-Driver-HTML
@@ -1478,6 +1477,7 @@
     SUBDIR += py-paragrep
     SUBDIR += py-parse
     SUBDIR += py-parse-type
+    SUBDIR += py-parsec
     SUBDIR += py-parsel
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
@@ -1551,6 +1551,7 @@
     SUBDIR += py-restructuredtext-lint
     SUBDIR += py-reverend
     SUBDIR += py-rich
+    SUBDIR += py-rich-argparse
     SUBDIR += py-rich-cli
     SUBDIR += py-rich-rst
     SUBDIR += py-rich12
@@ -1850,7 +1851,6 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
-    SUBDIR += rubygem-nokogiri111
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opml

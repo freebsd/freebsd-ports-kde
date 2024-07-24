@@ -51,7 +51,7 @@ lib/cmake/KPim6AkonadiCalendar/KPim6AkonadiCalendarTargets-%%CMAKE_BUILD_TYPE%%.
 lib/cmake/KPim6AkonadiCalendar/KPim6AkonadiCalendarTargets.cmake
 lib/libKPim6AkonadiCalendar.so
 lib/libKPim6AkonadiCalendar.so.6
-lib/libKPim6AkonadiCalendar.so.6.1.1
+lib/libKPim6AkonadiCalendar.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/akonadi_serializer_kcalcore.so
 %%QT_PLUGINDIR%%/kf6/org.kde.kcalendarcore.calendars/libakonadicalendarplugin.so
 share/akonadi/plugins/serializer/akonadi_serializer_kcalcore.desktop

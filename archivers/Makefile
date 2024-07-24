@@ -10,7 +10,6 @@
     SUBDIR += arc
     SUBDIR += arj
     SUBDIR += ark
-    SUBDIR += ark-devel
     SUBDIR += atool
     SUBDIR += bicom
     SUBDIR += brotli
@@ -183,6 +182,7 @@
     SUBDIR += py-blosc2
     SUBDIR += py-borgbackup
     SUBDIR += py-borgbackup11
+    SUBDIR += py-borgbackup12
     SUBDIR += py-brotli
     SUBDIR += py-brotlicffi
     SUBDIR += py-brotlipy

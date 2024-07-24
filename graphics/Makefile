@@ -329,7 +329,6 @@
     SUBDIR += guile-cairo
     SUBDIR += guilib
     SUBDIR += gwenview
-    SUBDIR += gwenview-devel
     SUBDIR += h3
     SUBDIR += halftone
     SUBDIR += hdr_tools
@@ -363,7 +362,6 @@
     SUBDIR += inkscape
     SUBDIR += inkscape-open-symbols
     SUBDIR += instant-meshes
-    SUBDIR += intel-backlight
     SUBDIR += intergif
     SUBDIR += ipe
     SUBDIR += jalbum
@@ -480,7 +478,6 @@
     SUBDIR += libjxr
     SUBDIR += libkdcraw
     SUBDIR += libkexiv2
-    SUBDIR += libkexiv2-devel
     SUBDIR += libkipi
     SUBDIR += libksane
     SUBDIR += libliftoff
@@ -625,7 +622,7 @@
     SUBDIR += ogre3d19
     SUBDIR += oidn
     SUBDIR += okular
-    SUBDIR += okular-devel
+    SUBDIR += okularpart5
     SUBDIR += open3d
     SUBDIR += opencollada
     SUBDIR += opencolorio
@@ -772,7 +769,6 @@
     SUBDIR += p5-VCG
     SUBDIR += p5-Visio
     SUBDIR += p5-feedgnuplot
-    SUBDIR += p5-ming
     SUBDIR += panoglview
     SUBDIR += panomatic
     SUBDIR += partio
@@ -867,6 +863,7 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-actdiag
+    SUBDIR += py-albucore
     SUBDIR += py-albumentations
     SUBDIR += py-altair
     SUBDIR += py-asciitree
@@ -925,7 +922,6 @@
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-mgwr
-    SUBDIR += py-ming
     SUBDIR += py-moderngl
     SUBDIR += py-moderngl-window
     SUBDIR += py-momepy
@@ -1088,6 +1084,7 @@
     SUBDIR += rubygem-imagesize
     SUBDIR += rubygem-invisible_captcha
     SUBDIR += rubygem-mini_magick
+    SUBDIR += rubygem-mini_magick4
     SUBDIR += rubygem-opengl
     SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png
@@ -1141,7 +1138,6 @@
     SUBDIR += skanlite
     SUBDIR += skanpage
     SUBDIR += spectacle
-    SUBDIR += spectacle-devel
     SUBDIR += spirv-cross
     SUBDIR += spirv-tools
     SUBDIR += springgraph
@@ -1215,7 +1211,6 @@
     SUBDIR += wayland-protocols
     SUBDIR += wayland-utils
     SUBDIR += waylandpp
-    SUBDIR += wdune
     SUBDIR += webp
     SUBDIR += webp-pixbuf-loader
     SUBDIR += wings
