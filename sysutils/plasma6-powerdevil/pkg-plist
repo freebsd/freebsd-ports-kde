@@ -19,8 +19,8 @@ lib/libpowerdevilcore.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/powerdevil/action/powerdevil_powerprofileaction.so
 %%QT_PLUGINDIR%%/powerdevil/action/powerdevil_runscriptaction.so
 %%QT_PLUGINDIR%%/powerdevil/action/powerdevil_suspendsessionaction.so
-@ignore lib/systemd/user/plasma-powerdevil.service
-@ignore lib/systemd/user/plasma-powerprofile-osd.service
+@comment lib/systemd/user/plasma-powerdevil.service
+@comment lib/systemd/user/plasma-powerprofile-osd.service
 share/applications/kcm_powerdevilprofilesconfig.desktop
 share/dbus-1/services/org.kde.powerdevil.powerProfileOsdService.service
 share/dbus-1/system-services/org.kde.powerdevil.backlighthelper.service

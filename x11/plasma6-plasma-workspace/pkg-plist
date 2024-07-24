@@ -343,16 +343,16 @@ lib/libweather_ion.so.7.0.0
 %%QT_QMLDIR%%/org/kde/plasma/workspace/trianglemousefilter/trianglemousefilterplugin.qmltypes
 %%QT_QMLDIR%%/org/kde/taskmanager/libtaskmanagerplugin.so
 %%QT_QMLDIR%%/org/kde/taskmanager/qmldir
-@ignore lib/systemd/user/plasma-baloorunner.service
-@ignore lib/systemd/user/plasma-gmenudbusmenuproxy.service
-@ignore lib/systemd/user/plasma-kcminit-phase1.service
-@ignore lib/systemd/user/plasma-kcminit.service
-@ignore lib/systemd/user/plasma-krunner.service
-@ignore lib/systemd/user/plasma-ksmserver.service
-@ignore lib/systemd/user/plasma-ksplash.service
-@ignore lib/systemd/user/plasma-plasmashell.service
-@ignore lib/systemd/user/plasma-restoresession.service
-@ignore lib/systemd/user/plasma-xembedsniproxy.service
+@comment lib/systemd/user/plasma-baloorunner.service
+@comment lib/systemd/user/plasma-gmenudbusmenuproxy.service
+@comment lib/systemd/user/plasma-kcminit-phase1.service
+@comment lib/systemd/user/plasma-kcminit.service
+@comment lib/systemd/user/plasma-krunner.service
+@comment lib/systemd/user/plasma-ksmserver.service
+@comment lib/systemd/user/plasma-ksplash.service
+@comment lib/systemd/user/plasma-plasmashell.service
+@comment lib/systemd/user/plasma-restoresession.service
+@comment lib/systemd/user/plasma-xembedsniproxy.service
 share/applications/kcm_autostart.desktop
 share/applications/kcm_colors.desktop
 share/applications/kcm_cursortheme.desktop

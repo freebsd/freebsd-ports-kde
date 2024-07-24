@@ -324,8 +324,8 @@ lib/libkwin.so.%%KDE_PLASMA_VERSION%%
 %%QT_QMLDIR%%/org/kde/kwin/private/kdecoration/kdecorationprivatedeclarative.qmltypes
 %%QT_QMLDIR%%/org/kde/kwin/private/kdecoration/libkdecorationprivatedeclarative.so
 %%QT_QMLDIR%%/org/kde/kwin/private/kdecoration/qmldir
-@ignore lib/systemd/user/plasma-kwin_wayland.service
-@ignore lib/systemd/user/plasma-kwin_x11.service
+@comment lib/systemd/user/plasma-kwin_wayland.service
+@comment lib/systemd/user/plasma-kwin_x11.service
 share/applications/kcm_kwin_effects.desktop
 share/applications/kcm_kwin_scripts.desktop
 share/applications/kcm_kwin_virtualdesktops.desktop
