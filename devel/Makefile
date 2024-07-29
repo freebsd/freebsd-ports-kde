@@ -4208,6 +4208,16 @@
     SUBDIR += php83-sysvsem
     SUBDIR += php83-sysvshm
     SUBDIR += php83-tokenizer
+    SUBDIR += php84-ffi
+    SUBDIR += php84-gettext
+    SUBDIR += php84-intl
+    SUBDIR += php84-pcntl
+    SUBDIR += php84-readline
+    SUBDIR += php84-shmop
+    SUBDIR += php84-sysvmsg
+    SUBDIR += php84-sysvsem
+    SUBDIR += php84-sysvshm
+    SUBDIR += php84-tokenizer
     SUBDIR += phpunit10
     SUBDIR += phpunit11
     SUBDIR += phpunit8
@@ -4502,6 +4512,7 @@
     SUBDIR += py-btest
     SUBDIR += py-build
     SUBDIR += py-buildbot
+    SUBDIR += py-buildbot-badges
     SUBDIR += py-buildbot-console-view
     SUBDIR += py-buildbot-grid-view
     SUBDIR += py-buildbot-pkg
@@ -5412,6 +5423,7 @@
     SUBDIR += py-pydantic
     SUBDIR += py-pydantic-core
     SUBDIR += py-pydantic-extra-types
+    SUBDIR += py-pydantic-settings
     SUBDIR += py-pydantic-vault
     SUBDIR += py-pydantic-yaml
     SUBDIR += py-pydantic2
@@ -5517,6 +5529,7 @@
     SUBDIR += py-pytest-drop-dup-tests
     SUBDIR += py-pytest-enabler
     SUBDIR += py-pytest-env
+    SUBDIR += py-pytest-examples
     SUBDIR += py-pytest-factoryboy
     SUBDIR += py-pytest-fixture-config
     SUBDIR += py-pytest-flake8
@@ -5546,6 +5559,7 @@
     SUBDIR += py-pytest-parallel
     SUBDIR += py-pytest-pep8
     SUBDIR += py-pytest-plus
+    SUBDIR += py-pytest-pretty
     SUBDIR += py-pytest-profiling
     SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-qt
@@ -6269,8 +6283,8 @@
     SUBDIR += rubygem-ast
     SUBDIR += rubygem-astrolabe
     SUBDIR += rubygem-async
-    SUBDIR += rubygem-async212
     SUBDIR += rubygem-async-io
+    SUBDIR += rubygem-async212
     SUBDIR += rubygem-atomic
     SUBDIR += rubygem-attic
     SUBDIR += rubygem-attr_required
@@ -7081,6 +7095,7 @@
     SUBDIR += rubygem-generator_spec-rails5
     SUBDIR += rubygem-georuby
     SUBDIR += rubygem-get_process_mem
+    SUBDIR += rubygem-get_process_mem0
     SUBDIR += rubygem-getopt
     SUBDIR += rubygem-getoptlong
     SUBDIR += rubygem-gettext

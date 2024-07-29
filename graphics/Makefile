@@ -809,6 +809,8 @@
     SUBDIR += php82-gd
     SUBDIR += php83-exif
     SUBDIR += php83-gd
+    SUBDIR += php84-exif
+    SUBDIR += php84-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -911,6 +913,7 @@
     SUBDIR += py-haishoku
     SUBDIR += py-hiplot
     SUBDIR += py-hsluv
+    SUBDIR += py-imagecodecs
     SUBDIR += py-imageio
     SUBDIR += py-imageio-ffmpeg
     SUBDIR += py-imagesize
@@ -1012,6 +1015,7 @@
     SUBDIR += qcustomplot
     SUBDIR += qgis
     SUBDIR += qgis-ltr
+    SUBDIR += qimgv
     SUBDIR += qiv
     SUBDIR += qr-code-generator
     SUBDIR += qt5-3d

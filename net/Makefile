@@ -999,6 +999,9 @@
     SUBDIR += php83-ldap
     SUBDIR += php83-soap
     SUBDIR += php83-sockets
+    SUBDIR += php84-ldap
+    SUBDIR += php84-soap
+    SUBDIR += php84-sockets
     SUBDIR += phpldapadmin
     SUBDIR += pichi
     SUBDIR += pimcommon
@@ -1085,6 +1088,7 @@
     SUBDIR += py-netaddr
     SUBDIR += py-netif
     SUBDIR += py-netifaces
+    SUBDIR += py-netifaces-plus
     SUBDIR += py-netsnmpagent
     SUBDIR += py-nnpy
     SUBDIR += py-ntplib
