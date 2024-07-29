@@ -103,3 +103,4 @@ share/locale/zh_CN/LC_MESSAGES/kmines.mo
 share/locale/zh_TW/LC_MESSAGES/kmines.mo
 share/metainfo/org.kde.kmines.appdata.xml
 share/qlogging-categories6/kmines.categories
+share/qlogging-categories6/kmines.renamecategories

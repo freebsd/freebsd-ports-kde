@@ -90,3 +90,4 @@ share/locale/zh_TW/LC_MESSAGES/lskat.mo
 %%DATADIR%%/themes/oxygen.svgz
 share/metainfo/org.kde.lskat.appdata.xml
 share/qlogging-categories6/lskat.categories
+share/qlogging-categories6/lskat.renamecategories

@@ -82,3 +82,4 @@ share/locale/zh_CN/LC_MESSAGES/kblocks.mo
 share/locale/zh_TW/LC_MESSAGES/kblocks.mo
 share/metainfo/org.kde.kblocks.appdata.xml
 share/qlogging-categories6/kblocks.categories
+share/qlogging-categories6/kblocks.renamecategories

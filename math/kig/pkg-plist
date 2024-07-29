@@ -299,7 +299,6 @@ share/katepart5/syntax/python-kig.xml
 %%DATADIR%%/icons/hicolor/scalable/actions/vectordifference.svgz
 %%DATADIR%%/icons/hicolor/scalable/actions/vectorsum.svgz
 %%DATADIR%%/icons/hicolor/scalable/actions/w.svgz
-%%DATADIR%%/tips
 share/locale/ar/LC_MESSAGES/kig.mo
 share/locale/be/LC_MESSAGES/kig.mo
 share/locale/bg/LC_MESSAGES/kig.mo

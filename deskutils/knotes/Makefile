@@ -8,6 +8,8 @@ WWW=		https://www.kde.org/
 
 LICENSE=	LGPL21
 
+IGNORE=		No longer part of KDE Gear 24.08
+
 LIB_DEPENDS=	libical.so:devel/libical
 
 USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 tar:xz xorg

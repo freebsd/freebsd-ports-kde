@@ -91,3 +91,4 @@ share/locale/zh_CN/LC_MESSAGES/knavalbattle.mo
 share/locale/zh_TW/LC_MESSAGES/knavalbattle.mo
 share/metainfo/org.kde.knavalbattle.appdata.xml
 share/qlogging-categories6/knavalbattle.categories
+share/qlogging-categories6/knavalbattle.renamecategories

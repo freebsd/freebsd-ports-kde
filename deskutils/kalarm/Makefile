@@ -6,7 +6,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Personal alarm scheduler
 WWW=		https://www.kde.org/
 
-LIB_DEPENDS=	libical.so:devel/libical
+LIB_DEPENDS=	libical.so:devel/libical \
+		libvlc.so:multimedia/vlc
 
 USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 shebangfix tar:xz \
 		xorg

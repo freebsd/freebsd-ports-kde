@@ -1,6 +1,5 @@
 PORTNAME=	spectacle
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	3
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -18,8 +17,9 @@ USES=		cmake compiler:c++11-lang gettext kde:6 pkgconfig qt:6 tar:xz \
 		xorg
 USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 		dbusaddons globalaccel guiaddons i18n jobwidgets kdeclarative \
-		kio layer-shell-qt newstuff notifications package purpose \
-		service solid wayland widgetsaddons windowsystem xmlgui \
+		kio layer-shell-qt newstuff notifications package prison \
+		purpose service solid statusnotifieritem wayland \
+		widgetsaddons windowsystem xmlgui \
 		doctools:build ecm:build plasma-wayland-protocols:build
 USE_QT=		base multimedia
 USE_XORG=	x11 xcb xext xfixes

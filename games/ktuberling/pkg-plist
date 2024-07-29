@@ -2265,3 +2265,4 @@ share/locale/zh_CN/LC_MESSAGES/ktuberling.mo
 share/locale/zh_TW/LC_MESSAGES/ktuberling.mo
 share/metainfo/org.kde.ktuberling.appdata.xml
 share/qlogging-categories6/ktuberling.categories
+share/qlogging-categories6/ktuberling.renamecategories

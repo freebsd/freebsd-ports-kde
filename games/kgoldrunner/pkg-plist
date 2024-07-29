@@ -148,3 +148,4 @@ share/locale/zh_CN/LC_MESSAGES/kgoldrunner.mo
 share/locale/zh_TW/LC_MESSAGES/kgoldrunner.mo
 share/metainfo/org.kde.kgoldrunner.appdata.xml
 share/qlogging-categories6/kgoldrunner.categories
+share/qlogging-categories6/kgoldrunner.renamecategories

@@ -397,6 +397,13 @@ share/locale/he/LC_MESSAGES/kdeconnect-settings.mo
 share/locale/he/LC_MESSAGES/kdeconnect-sms.mo
 share/locale/he/LC_MESSAGES/kdeconnect-urlhandler.mo
 share/locale/he/LC_MESSAGES/plasma_applet_org.kde.kdeconnect.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-app.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-cli.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-core.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-fileitemaction.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-indicator.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-interfaces.mo
+share/locale/hi/LC_MESSAGES/kdeconnect-kcm.mo
 share/locale/hu/LC_MESSAGES/kdeconnect-app.mo
 share/locale/hu/LC_MESSAGES/kdeconnect-cli.mo
 share/locale/hu/LC_MESSAGES/kdeconnect-core.mo

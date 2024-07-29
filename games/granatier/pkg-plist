@@ -174,3 +174,4 @@ share/locale/zh_CN/LC_MESSAGES/granatier.mo
 share/locale/zh_TW/LC_MESSAGES/granatier.mo
 share/metainfo/org.kde.granatier.appdata.xml
 share/qlogging-categories6/granatier.categories
+share/qlogging-categories6/granatier.renamecategories

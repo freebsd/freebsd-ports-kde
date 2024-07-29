@@ -1,8 +1,8 @@
 bin/kompare
 include/kompare/kompareinterface.h
-lib/libkomparedialogpages.so.5
+lib/libkomparedialogpages.so.6
 lib/libkompareinterface.so
-lib/libkompareinterface.so.5
+lib/libkompareinterface.so.6
 %%QT_PLUGINDIR%%/kf6/parts/komparenavtreepart.so
 %%QT_PLUGINDIR%%/kf6/parts/komparepart.so
 share/applications/org.kde.kompare.desktop

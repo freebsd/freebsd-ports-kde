@@ -86,3 +86,4 @@ share/locale/zh_CN/LC_MESSAGES/kjumpingcube.mo
 share/locale/zh_TW/LC_MESSAGES/kjumpingcube.mo
 share/metainfo/org.kde.kjumpingcube.appdata.xml
 share/qlogging-categories6/kjumpingcube.categories
+share/qlogging-categories6/kjumpingcube.renamecategories

@@ -1,11 +1,12 @@
 PORTNAME=	libkipi
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	graphics kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Image Plugin Interface
 WWW=		https://www.digikam.org/
+
+IGNORE=		No longer shipped in KDE Release Service 24.08
 
 LICENSE=	GPLv2+
 

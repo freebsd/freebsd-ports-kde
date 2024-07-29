@@ -10,7 +10,7 @@ LIB_DEPENDS=	libQCoro6Core.so:devel/qcoro@qt6 \
 		libfuturesql6.so:databases/futuresql
 
 USES=		cmake compiler:c++11-lang gettext kde:6 pkgconfig qt:6 tar:xz
-USE_KDE=	coreaddons i18n kirigami2 \
+USE_KDE=	coreaddons i18n kirigami-addons kirigami2 \
 		ecm:build
 USE_QT=		base
 

@@ -68,6 +68,7 @@ include/KPim6/Libkleo/Libkleo/TreeView
 include/KPim6/Libkleo/Libkleo/TreeWidget
 include/KPim6/Libkleo/Libkleo/UniqueLock
 include/KPim6/Libkleo/Libkleo/UserIDListModel
+include/KPim6/Libkleo/Libkleo/UserIDListProxyModel
 include/KPim6/Libkleo/Libkleo/UserIDProxyModel
 include/KPim6/Libkleo/Libkleo/UserIDSelectionCombo
 include/KPim6/Libkleo/libkleo/adjustingscrollarea.h
@@ -142,6 +143,7 @@ include/KPim6/Libkleo/libkleo/treeview.h
 include/KPim6/Libkleo/libkleo/treewidget.h
 include/KPim6/Libkleo/libkleo/uniquelock.h
 include/KPim6/Libkleo/libkleo/useridlistmodel.h
+include/KPim6/Libkleo/libkleo/useridlistproxymodel.h
 include/KPim6/Libkleo/libkleo/useridproxymodel.h
 include/KPim6/Libkleo/libkleo/useridselectioncombo.h
 include/KPim6/Libkleo/libkleo_version.h
@@ -151,7 +153,7 @@ lib/cmake/KPim6Libkleo/KPim6LibkleoTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/KPim6Libkleo/KPim6LibkleoTargets.cmake
 lib/libKPim6Libkleo.so
 lib/libKPim6Libkleo.so.6
-lib/libKPim6Libkleo.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libKPim6Libkleo.so.6.1.81
 %%DATADIR%%patra/pics/chiasmus_chi.png
 %%DATADIR%%patra/pics/hi16-app-gpg.png
 %%DATADIR%%patra/pics/hi16-app-gpgsm.png

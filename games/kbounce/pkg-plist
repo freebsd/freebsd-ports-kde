@@ -108,3 +108,4 @@ share/locale/zh_CN/LC_MESSAGES/kbounce.mo
 share/locale/zh_TW/LC_MESSAGES/kbounce.mo
 share/metainfo/org.kde.kbounce.appdata.xml
 share/qlogging-categories6/kbounce.categories
+share/qlogging-categories6/kbounce.renamecategories

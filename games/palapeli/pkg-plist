@@ -55,6 +55,7 @@ share/locale/fi/LC_MESSAGES/palapeli.mo
 share/locale/fr/LC_MESSAGES/palapeli.mo
 share/locale/ga/LC_MESSAGES/palapeli.mo
 share/locale/gl/LC_MESSAGES/palapeli.mo
+share/locale/he/LC_MESSAGES/palapeli.mo
 share/locale/hr/LC_MESSAGES/palapeli.mo
 share/locale/hsb/LC_MESSAGES/palapeli.mo
 share/locale/hu/LC_MESSAGES/palapeli.mo
@@ -113,3 +114,4 @@ share/mime/packages/palapeli-mimetypes.xml
 %%DATADIR%%/collection/panther-chameleon-female.jpg
 %%DATADIR%%/palapeli.kcfg
 share/qlogging-categories6/palapeli.categories
+share/qlogging-categories6/palapeli.renamecategories

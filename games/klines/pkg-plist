@@ -100,3 +100,4 @@ share/locale/zh_CN/LC_MESSAGES/klines.mo
 share/locale/zh_TW/LC_MESSAGES/klines.mo
 share/metainfo/org.kde.klines.appdata.xml
 share/qlogging-categories6/klines.categories
+share/qlogging-categories6/klines.renamecategories

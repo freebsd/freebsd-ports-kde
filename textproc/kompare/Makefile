@@ -5,7 +5,7 @@ CATEGORIES=	textproc kde kde-applications
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Diff/Patch Frontend
 
-LIB_DEPENDS=	libkomparediff2.so:textproc/libkomparediff2@qt6
+LIB_DEPENDS=	libkomparediff2.so:textproc/libkomparediff2
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
 		qt:6 tar:xz xorg

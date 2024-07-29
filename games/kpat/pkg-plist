@@ -132,3 +132,4 @@ share/man/uk/man6/kpat.6.gz
 share/metainfo/org.kde.kpat.appdata.xml
 share/mime/packages/kpatience.xml
 share/qlogging-categories6/kpat.categories
+share/qlogging-categories6/kpat.renamecategories

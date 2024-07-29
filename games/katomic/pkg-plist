@@ -89,3 +89,4 @@ share/locale/zh_CN/LC_MESSAGES/katomic.mo
 share/locale/zh_TW/LC_MESSAGES/katomic.mo
 share/metainfo/org.kde.katomic.appdata.xml
 share/qlogging-categories6/katomic.categories
+share/qlogging-categories6/katomic.renamecategories

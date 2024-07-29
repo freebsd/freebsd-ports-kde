@@ -79,3 +79,4 @@ share/locale/zh_CN/LC_MESSAGES/kigo.mo
 share/locale/zh_TW/LC_MESSAGES/kigo.mo
 share/metainfo/org.kde.kigo.appdata.xml
 share/qlogging-categories6/kigo.categories
+share/qlogging-categories6/kigo.renamecategories

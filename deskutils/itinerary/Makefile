@@ -6,7 +6,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Digital travel assistant for KDE
 WWW=		https://apps.kde.org/en/itinerary
 
-LIB_DEPENDS=	libKOSM.so:astro/kosmindoormap
+LIB_DEPENDS=	libKOSM.so:astro/kosmindoormap \
+		libqt6keychain.so:security/qtkeychain@qt6
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
 		qt:6 tar:xz xorg
