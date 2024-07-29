@@ -3,8 +3,8 @@
 %%QUOTIENT_INCDIR%%/Quotient/application-service/definitions/protocol.h
 %%QUOTIENT_INCDIR%%/Quotient/application-service/definitions/user.h
 %%QUOTIENT_INCDIR%%/Quotient/avatar.h
-%%QUOTIENT_INCDIR%%/Quotient/connection_p.h
 %%QUOTIENT_INCDIR%%/Quotient/connection.h
+%%QUOTIENT_INCDIR%%/Quotient/connection_p.h
 %%QUOTIENT_INCDIR%%/Quotient/connectiondata.h
 %%QUOTIENT_INCDIR%%/Quotient/connectionencryptiondata_p.h
 %%QUOTIENT_INCDIR%%/Quotient/converters.h
@@ -52,8 +52,8 @@
 %%QUOTIENT_INCDIR%%/Quotient/csapi/leaving.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/list_joined_rooms.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/list_public_rooms.h
-%%QUOTIENT_INCDIR%%/Quotient/csapi/login_token.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/login.h
+%%QUOTIENT_INCDIR%%/Quotient/csapi/login_token.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/logout.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/message_pagination.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/notifications.h
@@ -91,6 +91,7 @@
 %%QUOTIENT_INCDIR%%/Quotient/csapi/wellknown.h
 %%QUOTIENT_INCDIR%%/Quotient/csapi/whoami.h
 %%QUOTIENT_INCDIR%%/Quotient/database.h
+%%QUOTIENT_INCDIR%%/Quotient/e2ee/cryptoutils.h
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/e2ee_common.h
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/qolmaccount.h
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/qolminboundsession.h
@@ -98,6 +99,7 @@
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/qolmoutboundsession.h
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/qolmsession.h
 %%QUOTIENT_INCDIR%%/Quotient/e2ee/qolmutility.h
+%%QUOTIENT_INCDIR%%/Quotient/e2ee/sssshandler.h
 %%QUOTIENT_INCDIR%%/Quotient/eventitem.h
 %%QUOTIENT_INCDIR%%/Quotient/events/accountdataevents.h
 %%QUOTIENT_INCDIR%%/Quotient/events/callevents.h
@@ -147,6 +149,7 @@
 %%QUOTIENT_INCDIR%%/Quotient/quotient_common.h
 %%QUOTIENT_INCDIR%%/Quotient/quotient_export.h
 %%QUOTIENT_INCDIR%%/Quotient/room.h
+%%QUOTIENT_INCDIR%%/Quotient/roommember.h
 %%QUOTIENT_INCDIR%%/Quotient/roomstateview.h
 %%QUOTIENT_INCDIR%%/Quotient/settings.h
 %%QUOTIENT_INCDIR%%/Quotient/ssosession.h
