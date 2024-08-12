@@ -4,7 +4,7 @@ DISTVERSION=	2.12.1
 CATEGORIES=	net-mgmt www
 PKGNAMESUFFIX=	${PHP_PKGNAMESUFFIX}
 
-MAINTAINER=	joneum@FreeBSD.org
+MAINTAINER=	flo@FreeBSD.org
 COMMENT=	Next generation web interface for Icinga 1 and 2
 WWW=		https://www.icinga.com/products/icinga-web-2
 
@@ -20,7 +20,6 @@ USE_PHP=	bcmath bitset ctype curl dom fileinfo filter gd gettext iconv intl ldap
 		mbstring mcrypt memcache memcached opcache pdo \
 		pdo_sqlite posix session simplexml soap sockets sqlite3 xml \
 		zlib
-IGNORE_WITH_PHP=	84
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga

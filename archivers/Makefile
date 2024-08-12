@@ -140,7 +140,6 @@
     SUBDIR += p5-PerlIO-gzip
     SUBDIR += p5-PerlIO-via-Bzip2
     SUBDIR += packddir
-    SUBDIR += paq
     SUBDIR += par
     SUBDIR += par2cmdline
     SUBDIR += par2cmdline-turbo
@@ -154,6 +153,7 @@
     SUBDIR += peazip
     SUBDIR += pecl-lzf
     SUBDIR += pecl-rar
+    SUBDIR += pecl-zstd
     SUBDIR += php-brotli
     SUBDIR += php-horde_lz4
     SUBDIR += php-lz4
@@ -180,7 +180,6 @@
     SUBDIR += plzip
     SUBDIR += ppmd
     SUBDIR += ppunpack
-    SUBDIR += pxz
     SUBDIR += py-acefile
     SUBDIR += py-bitshuffle
     SUBDIR += py-blosc2

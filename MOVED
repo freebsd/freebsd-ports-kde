@@ -23,7 +23,6 @@
 # This file can be linted with Tools/scripts/MOVEDlint.awk
 #
 # Port|Moved to|Date|Why
-x11/wmctrl|x11/wmctrl-fork|2024-05-18|Forked due to the upstream being no longer available; the port had no maintainer
 www/wt3|www/wt|2021-01-03|Has expired: Upstream end of life, switch to www/wt instead
 archivers/ecm|archivers/cmdpack|2021-01-04|ECM is now included in cmdpack
 math/qhull5|math/qhull|2021-01-04|Has expired: Legacy version of port no longer required by math/octave
@@ -3254,6 +3253,7 @@ x11-fonts/noto-serif-basic|x11-fonts/noto-serif|2024-05-13|Remove obsoleted port
 x11-fonts/noto-serif-extra|x11-fonts/noto-serif|2024-05-13|Remove obsoleted port. Use x11-fonts/noto-serif instead
 sysutils/vector||2024-05-15|Has expired: Unmaintained in tree and broken for months
 irc/sic||2024-05-15|Has expired: Last upstream release was in 2001 and no upstream WWW
+x11/wmctrl|x11/wmctrl-fork|2024-05-18|Forked due to the upstream being no longer available; the port had no maintainer
 devel/tarpaulin|devel/cargo-tarpaulin|2024-05-19|Rename port and package to reflect that this is a Cargo plugin
 sysutils/uutils-coreutils|sysutils/rust-coreutils|2024-05-21|Remove duplicate
 databases/foundationdb|databases/foundationdb71-server|2024-05-23|Reintegrated into databases/foundationdb71-server
@@ -3404,3 +3404,32 @@ textproc/rubygem-nokogiri111|textproc/rubygem-nokogiri|2024-07-17|Obsolete, use 
 devel/rubygem-google-gax||2024-07-21|Remove obsoleted port. This gem is officially end-of-life
 audio/strawberry@qt5|audio/strawberry|2024-07-21|Unflavor. Qt5 is obsolete
 audio/strawberry@qt6|audio/strawberry|2024-07-21|Unflavor. Qt5 is obsolete
+devel/rubygem-google-protobuf4|devel/rubygem-google-protobuf|2024-07-30|Remove obsoleted port. Use devel/rubygem-google-protobuf instead
+graphics/xsvg||2024-08-04|Has expired: Depends on deprecated library graphics/libsvg-cairo
+graphics/zphoto||2024-08-04|Has expired: Depends on expired graphics/ming
+math/ploticus-nox11||2024-08-04|Has expired: Depends on expired graphics/ming
+multimedia/hypnotix||2024-08-04|Has expired: Depends on expired www/py-imdbpy (use www/py-cinemagoer instead)
+net/bird||2024-08-04|Has expired: Upstream EOL was for the end of 2023
+sysutils/unieject||2024-08-04|Has expired: Abandonware, upstream repo deprecated May 17, 2020
+www/tomcat85|www/tomcat9|2024-08-04|Has expired: Upstream EOL reaches on 2024-03-31, some time after 2024-06-30 distfiles will be archived. Migrate to www/tomcat9
+archivers/pxz||2024-08-04|Has expired: Superseded by xz (Utils), support for multithreading is available since 2014
+www/mediawiki140||2024-08-04|Has expired: Upstream EOL
+archivers/paq||2024-08-04|Has expired: Outdated, unmaintained and format that never gained any traction
+audio/optimfrog-sse2||2024-08-04|Has expired: Obsolete format that never gained traction, consider using audio/flac
+audio/cam||2024-08-04|Has expired: Abandonware and obsolete, consider using audio/mixertui
+audio/epos-devel||2024-08-04|Has expired: Abandonware, last release in 2006 and upstream is dead
+audio/sidplay2|audio/sidplayfp|2024-08-04|Has expired: Abandonware and superseded by audio/sidplayfp
+audio/sidplay|audio/sidplayfp|2024-08-04|Has expired: Abandonware and superseded by audio/sidplayfp
+audio/optimfrog||2024-08-04|Has expired: Obsolete format that never gained traction, consider using audio/flac
+databases/mongodb44||2024-08-04|Has expired: EOL as of February 2024, https://www.mongodb.com/legal/support-policy/lifecycles
+graphics/svg2pdf||2024-08-04|Has expired: Depends on deprecated library graphics/libsvg-cairo, please consider using ImageMagick or librsvg
+audio/libsidplay2||2024-08-04|Has expired: Abandonware and superseded by audio/libsidplayfp
+www/py-imdbpy|www/py-cinemagoer|2024-08-04|Has expired: IMDbPY is now cinemagoer. Use www/py-cinemagoer instead
+dns/dnrd||2024-08-04|Has expired: Abandonware, last release in 2007 and last activity in 2010. Consider using Unbound, dns/dnsmasq or dns/blocky
+science/mercantile|science/py-mercantile|2024-08-04|Move science/mercantile to science/py-mercantile
+devel/py-jsonschema417|devel/py-jsonschema|2024-08-04|Remove obsoleted port. Use devel/py-jsonschema instead
+net/ns3||2024-08-07|Has expired: Outdated and unmaintained for years
+games/manaplus||2024-08-07|Has expired: Fails to build with libxml2 2.13.2 (PR 279705)
+dns/knot3-lib|dns/knot3|2024-08-09|Superseded by knot3 which provides the libraries
+devel/py-ollama|misc/py-ollama|2024-08-10|Deduplicate
+x11-toolkits/wlroots-hyprland||2024-08-11|Discontinued: use x11-toolkits/aquamarine instead

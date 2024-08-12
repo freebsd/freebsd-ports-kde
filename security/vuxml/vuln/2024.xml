@@ -1,3 +1,439 @@
+  <vuln vid="7d631146-5769-11ef-b618-1c697a616631">
+    <topic>AMD CPUs -- Guest Memory Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cpu-microcode-amd</name>
+	<range><lt>20240810</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>AMD reports:</p>
+	<blockquote cite="https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html">
+	  <p>
+	   Researchers from IOActive have reported that it may be possible for
+	   an attacker with ring 0 access to modify the configuration of System
+	   Management Mode (SMM) even when SMM Lock is enabled.  Improper
+	   validation in a model specific register (MSR) could allow a malicious
+	   program with ring0 access to modify SMM configuration while SMI lock
+	   is enabled, potentially leading to arbitrary code execution.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-31315</cvename>
+      <url>https://www.amd.com/en/resources/product-security/bulletin/amd-sb-7014.html</url>
+    </references>
+    <dates>
+      <discovery>2024-08-09</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5776cc4f-5717-11ef-b611-84a93843eb75">
+    <topic>Roundcube -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube</name>
+	<range><lt>1.6.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8">
+	  <p>XSS vulnerability in post-processing of sanitized HTML content [CVE-2024-42009]</p>
+	  <p>XSS vulnerability in serving of attachments other than HTML or SVG [CVE-2024-42008]</p>
+	  <p>information leak (access to remote content) via insufficient CSS filtering [CVE-2024-42010]</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-42009</cvename>
+      <cvename>CVE-2024-42008</cvename>
+      <cvename>CVE-2024-42010</cvename>
+      <url>https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8</url>
+    </references>
+    <dates>
+      <discovery>2024-08-04</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aa1c7af9-570e-11ef-a43e-b42e991fc52e">
+    <topic>mozilla firefox -- protocol information guessing</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>127.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1883693">
+	  <p>By monitoring the time certain operations take, an attacker could
+	have guessed which external protocol handlers were functional on a
+	user&apos;s system.  This vulnerability affects Firefox &lt; 127,
+	Firefox ESR &lt; 115.12, and Thunderbird &lt; 115.12.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-5690</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-5690</url>
+    </references>
+    <dates>
+      <discovery>2024-06-11</discovery>
+      <entry>2024-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8c342a6c-563f-11ef-a77e-901b0e9408dc">
+    <topic>soft-serve -- Remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>soft-serve</name>
+	<range><lt>0.7.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>soft-serve team reports:</p>
+	<blockquote cite="https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f">
+	  <p>Arbitrary code execution by crafting git ssh requests</p>
+	  <p>It is possible for a user who can commit files to a
+	  repository hosted by Soft Serve to execute arbitrary code
+	  via environment manipulation and Git.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-41956</cvename>
+      <url>https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-m445-w3xr-vp2f</url>
+    </references>
+    <dates>
+      <discovery>2024-08-01</discovery>
+      <entry>2024-08-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="48e6d514-5568-11ef-af48-6cc21735f730">
+    <topic>PostgreSQL -- Prevent unauthorized code execution during pg_dump</topic>
+    <affects>
+      <package>
+	<name>postgresql-client</name>
+	<range><lt>16.4</lt></range>
+	<range><lt>15.8</lt></range>
+	<range><lt>14.13</lt></range>
+	<range><lt>13.16</lt></range>
+	<range><lt>12.20</lt></range>
+      </package>
+      <package>
+	<name>postgresql-server</name>
+	<range><lt>16.4</lt></range>
+	<range><lt>15.8</lt></range>
+	<range><lt>14.13</lt></range>
+	<range><lt>13.16</lt></range>
+	<range><lt>12.20</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/support/security/CVE-2024-7348/">
+	   <p>
+	     An attacker able to create and drop non-temporary objects could
+	     inject SQL code that would be executed by a concurrent pg_dump
+	     session with the privileges of the role running pg_dump
+	     (which is often a superuser). The attack involves replacing a
+	     sequence or similar object with a view or foreign table that will
+	     execute malicious code. To prevent this, introduce a new server
+	     parameter restrict_nonsystem_relation_kind that can disable
+	     expansion of non-builtin views as well as access to foreign
+	     tables, and teach pg_dump to set it when available. Note that the
+	     attack is prevented only if both pg_dump and the server it is
+	     dumping from are new enough to have this fix.
+	   </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-7348</cvename>
+      <url>https://www.postgresql.org/support/security/CVE-2024-7348/</url>
+    </references>
+    <dates>
+      <discovery>2024-08-08</discovery>
+      <entry>2024-08-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="db8fa362-0ccb-4aa8-9220-72b7763e9a4a">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.471</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.462.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2024-08-07/">
+	  <h1>Description</h1>
+	  <h5>(Critical) SECURITY-3430 / CVE-2024-43044</h5>
+	  <p>Arbitrary file read vulnerability through agent connections can lead to RCE</p>
+	  <h1>Description</h1>
+	  <h5>(Medium) SECURITY-3349 / CVE-2024-43045</h5>
+	  <p>Missing permission check allows accessing other users' "My Views"</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-43044</cvename>
+      <cvename>CVE-2024-43045</cvename>
+      <url>https://www.jenkins.io/security/advisory/2024-08-07/</url>
+    </references>
+    <dates>
+      <discovery>2024-08-07</discovery>
+      <entry>2024-08-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="729008b9-54bf-11ef-a61b-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.2.0</ge><lt>17.2.2</lt></range>
+	<range><ge>17.1.0</ge><lt>17.1.4</lt></range>
+	<range><ge>12.0.0</ge><lt>17.0.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/">
+	  <p>Privilege Escalation via LFS Tokens Granting Unrestricted Repository Access</p>
+	  <p>Cross project access of Security policy bot</p>
+	  <p>Advanced search ReDOS in highlight for code results</p>
+	  <p>Denial of Service via banzai pipeline</p>
+	  <p>Denial of service using adoc files</p>
+	  <p>ReDoS in RefMatcher when matching branch names using wildcards</p>
+	  <p>Path encoding can cause the Web interface to not render diffs correctly</p>
+	  <p>XSS while viewing raw XHTML files through API</p>
+	  <p>Ambiguous tag name exploitation</p>
+	  <p>Logs disclosings potentially sensitive data in query params</p>
+	  <p>Password bypass on approvals using policy projects</p>
+	  <p>ReDoS when parsing git push</p>
+	  <p>Webhook deletion audit log can preserve auth credentials</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-3035</cvename>
+      <cvename>CVE-2024-6356</cvename>
+      <cvename>CVE-2024-5423</cvename>
+      <cvename>CVE-2024-4210</cvename>
+      <cvename>CVE-2024-2800</cvename>
+      <cvename>CVE-2024-6329</cvename>
+      <cvename>CVE-2024-4207</cvename>
+      <cvename>CVE-2024-3958</cvename>
+      <cvename>CVE-2024-4784</cvename>
+      <cvename>CVE-2024-3114</cvename>
+      <cvename>CVE-2024-7586</cvename>
+      <url>https://about.gitlab.com/releases/2024/08/07/patch-release-gitlab-17-2-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-08-07</discovery>
+      <entry>2024-08-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="94d441d2-5497-11ef-9d2f-080027836e8b">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py39-django42</name>
+	<name>py310-django42</name>
+	<name>py311-django42</name>
+	<range><lt>4.2.15</lt></range>
+      </package>
+      <package>
+	<name>py310-django50</name>
+	<name>py311-django50</name>
+	<range><lt>5.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2024/aug/06/security-releases/">
+	  <p>CVE-2024-41989: Memory exhaustion in django.utils.numberformat.floatformat().</p>
+	  <p>CVE-2024-41990: Potential denial-of-service in django.utils.html.urlize().</p>
+	  <p>CVE-2024-41991: Potential denial-of-service vulnerability in
+	    django.utils.html.urlize() and AdminURLFieldWidget.</p>
+	  <p>CVE-2024-42005: Potential SQL injection in QuerySet.values() and values_list().</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-41989</cvename>
+      <cvename>CVE-2024-41990</cvename>
+      <cvename>CVE-2024-41991</cvename>
+      <cvename>CVE-2024-42005</cvename>
+      <url>https://www.djangoproject.com/weblog/2024/aug/06/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2024-08-01</discovery>
+      <entry>2024-08-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="05cd9f82-5426-11ef-8a0f-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>127.0.6533.99</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>127.0.6533.99</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html">
+	 <p>This update includes 5 security fixes:</p>
+	 <ul>
+	    <li>[350528343] Critical CVE-2024-7532: Out of bounds memory access in ANGLE. Reported by wgslfuzz on 2024-07-02</li>
+	    <li>[353552540] High CVE-2024-7533: Use after free in Sharing. Reported by lime(@limeSec_) from TIANGONG Team of Legendsec at QI-ANXIN Group on 2024-07-17</li>
+	    <li>[355256380] High CVE-2024-7550: Type Confusion in V8. Reported by Zhenghang Xiao (@Kipreyyy) on 2024-07-25</li>
+	    <li>[352467338] High CVE-2024-7534: Heap buffer overflow in Layout. Reported by Tashita Software Security on 2024-07-11</li>
+	    <li>[352690885] High CVE-2024-7535: Inappropriate implementation in V8. Reported by Tashita Software Security on 2024-07-12</li>
+	    <li>[354847246] High CVE-2024-7536: Use after free in WebAudio. Reported by Cassidy Kim(@cassidy6564) on 2024-07-23</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-7532</cvename>
+      <cvename>CVE-2024-7550</cvename>
+      <cvename>CVE-2024-7534</cvename>
+      <cvename>CVE-2024-7535</cvename>
+      <cvename>CVE-2024-7536</cvename>
+      <url>https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-08-06</discovery>
+      <entry>2024-08-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="15d398ea-4f73-11ef-8a0f-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>127.0.6533.88</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>127.0.6533.88</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_30.html">
+	 <p>This update includes 3 security fixes:</p>
+	 <ul>
+	    <li>[353034820] Critical CVE-2024-6990: Uninitialized Use in Dawn. Reported by gelatin dessert on 2024-07-15</li>
+	    <li>[352872238] High CVE-2024-7255: Out of bounds read in WebTransport. Reported by Marten Richter on 2024-07-13</li>
+	    <li>[354748060] High CVE-2024-7256: Insufficient data validation in Dawn. Reported by gelatin dessert on 2024-07-23</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-6990</cvename>
+      <cvename>CVE-2024-7255</cvename>
+      <cvename>CVE-2024-7256</cvename>
+      <url>https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_30.html</url>
+    </references>
+    <dates>
+      <discovery>2024-07-30</discovery>
+      <entry>2024-07-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fb0b5574-4e64-11ef-8a0f-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>127.0.6533.72</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>127.0.6533.72</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_23.html">
+	 <p>This update includes 22 security fixes:</p>
+	 <ul>
+	    <li>[349198731] High CVE-2024-6988: Use after free in Downloads. Reported by lime(@limeSec_) from TIANGONG Team of Legendsec at QI-ANXIN Group on 2024-06-25</li>
+	    <li>[349342289] High CVE-2024-6989: Use after free in Loader. Reported by Anonymous on 2024-06-25</li>
+	    <li>[346618785] High CVE-2024-6991: Use after free in Dawn. Reported by wgslfuzz on 2024-06-12</li>
+	    <li>[339686368] Medium CVE-2024-6994: Heap buffer overflow in Layout. Reported by Huang Xilin of Ant Group Light-Year Security Lab on 2024-05-10</li>
+	    <li>[343938078] Medium CVE-2024-6995: Inappropriate implementation in Fullscreen. Reported by Alesandro Ortiz on 2024-06-01</li>
+	    <li>[333708039] Medium CVE-2024-6996: Race in Frames. Reported by Louis Jannett (Ruhr University Bochum) on 2024-04-10</li>
+	    <li>[325293263] Medium CVE-2024-6997: Use after free in Tabs. Reported by Sven Dysthe (@svn-dys) on 2024-02-15</li>
+	    <li>[340098902] Medium CVE-2024-6998: Use after free in User Education. Reported by Sven Dysthe (@svn-dys) on 2024-05-13</li>
+	    <li>[340893685] Medium CVE-2024-6999: Inappropriate implementation in FedCM. Reported by Alesandro Ortiz on 2024-05-15</li>
+	    <li>[339877158] Medium CVE-2024-7000: Use after free in CSS. Reported by Anonymous on 2024-05-11</li>
+	    <li>[347509736] Medium CVE-2024-7001: Inappropriate implementation in HTML. Reported by Jake Archibald on 2024-06-17</li>
+	    <li>[338233148] Low CVE-2024-7003: Inappropriate implementation in FedCM. Reported by Alesandro Ortiz on 2024-05-01</li>
+	    <li>[40063014] Low CVE-2024-7004: Insufficient validation of untrusted input in Safe Browsing. Reported by Anonymous on 2023-02-10</li>
+	    <li>[40068800] Low CVE-2024-7005: Insufficient validation of untrusted input in Safe Browsing. Reported by Umar Farooq on 2023-08-04</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-6988</cvename>
+      <cvename>CVE-2024-6989</cvename>
+      <cvename>CVE-2024-6991</cvename>
+      <cvename>CVE-2024-6994</cvename>
+      <cvename>CVE-2024-6995</cvename>
+      <cvename>CVE-2024-6996</cvename>
+      <cvename>CVE-2024-6997</cvename>
+      <cvename>CVE-2024-6998</cvename>
+      <cvename>CVE-2024-6999</cvename>
+      <cvename>CVE-2024-7000</cvename>
+      <cvename>CVE-2024-7001</cvename>
+      <cvename>CVE-2024-7003</cvename>
+      <cvename>CVE-2024-7004</cvename>
+      <cvename>CVE-2024-7005</cvename>
+      <url>https://chromereleases.googleblog.com/2024/07/stable-channel-update-for-desktop_23.html</url>
+    </references>
+    <dates>
+      <discovery>2024-07-23</discovery>
+      <entry>2024-07-30</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8057d198-4d26-11ef-8e64-641c67a117d8">
     <topic>znc -- remote code execution vulnerability</topic>
     <affects>
@@ -177,7 +613,7 @@
 	<range><lt>8.1.1</lt></range>
       </package>
       <package>
-	<name>mysql80-server</name>
+	<name>mysql81-server</name>
 	<range><lt>8.1.1</lt></range>
       </package>
       <package>

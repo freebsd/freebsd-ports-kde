@@ -1,10 +1,7 @@
 PORTNAME=	swayimg
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.5
+DISTVERSION=	3.1
 CATEGORIES=	x11 wayland
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES+=	35175c87817e.patch:-p1 # https://github.com/artemsen/swayimg/pull/161
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Image viewer for Sway/Wayland
@@ -31,7 +28,9 @@ PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man5/${PORTNAME}rc.5.gz \
 		share/applications/${PORTNAME}.desktop \
 		share/icons/hicolor/64x64/apps/${PORTNAME}.png \
-		${DATADIR}/swayimgrc \
+		share/icons/hicolor/128x128/apps/${PORTNAME}.png \
+		share/icons/hicolor/256x256/apps/${PORTNAME}.png \
+		${DATADIR}/${PORTNAME}rc \
 		${NULL}
 
 # XXX Drop after FreeBSD 13.4 EOL around 2026-01-31

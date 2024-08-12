@@ -345,7 +345,6 @@
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki139
-    SUBDIR += mediawiki140
     SUBDIR += mediawiki141
     SUBDIR += mediawiki142
     SUBDIR += mergelog
@@ -444,6 +443,7 @@
     SUBDIR += netstiff
     SUBDIR += netsurf
     SUBDIR += newsboat
+    SUBDIR += newsraft
     SUBDIR += nextcloud
     SUBDIR += nextcloud-appointments
     SUBDIR += nextcloud-calendar
@@ -1608,6 +1608,7 @@
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django42
     SUBDIR += py-django50
+    SUBDIR += py-django51
     SUBDIR += py-django_compressor
     SUBDIR += py-djangocms-admin-style
     SUBDIR += py-djangoql
@@ -1727,7 +1728,6 @@
     SUBDIR += py-hypercorn
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
-    SUBDIR += py-imdbpy
     SUBDIR += py-inlinestyler
     SUBDIR += py-instabot
     SUBDIR += py-internetarchive
@@ -2389,7 +2389,6 @@
     SUBDIR += tomcat-native
     SUBDIR += tomcat-native2
     SUBDIR += tomcat101
-    SUBDIR += tomcat85
     SUBDIR += tomcat9
     SUBDIR += tomee
     SUBDIR += tor-browser

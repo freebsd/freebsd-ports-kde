@@ -883,6 +883,7 @@
     SUBDIR += py-colorthief
     SUBDIR += py-colorz
     SUBDIR += py-colour
+    SUBDIR += py-contextily
     SUBDIR += py-descartes
     SUBDIR += py-diplib
     SUBDIR += py-django-easy-thumbnails
@@ -898,6 +899,7 @@
     SUBDIR += py-gdal
     SUBDIR += py-geomdl
     SUBDIR += py-geopandas
+    SUBDIR += py-geosnap
     SUBDIR += py-giddy
     SUBDIR += py-gizeh
     SUBDIR += py-glcontext
@@ -948,6 +950,7 @@
     SUBDIR += py-png
     SUBDIR += py-pointpats
     SUBDIR += py-projpicker
+    SUBDIR += py-proplot
     SUBDIR += py-pycha
     SUBDIR += py-pycollada
     SUBDIR += py-pydot
@@ -986,6 +989,7 @@
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
+    SUBDIR += py-rich-pixels
     SUBDIR += py-s2
     SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
@@ -1149,7 +1153,6 @@
     SUBDIR += ssocr
     SUBDIR += sswf
     SUBDIR += stamp
-    SUBDIR += svg2pdf
     SUBDIR += svg2png
     SUBDIR += svgalib
     SUBDIR += svgbob
@@ -1245,7 +1248,6 @@
     SUBDIR += xpeps
     SUBDIR += xpx
     SUBDIR += xsane
-    SUBDIR += xsvg
     SUBDIR += xtexcad
     SUBDIR += xv
     SUBDIR += xv-m17n
@@ -1263,9 +1265,9 @@
     SUBDIR += zathura-pdf-poppler
     SUBDIR += zathura-ps
     SUBDIR += zbar
+    SUBDIR += zeno
     SUBDIR += zgv
     SUBDIR += zimg
     SUBDIR += zint
-    SUBDIR += zphoto
 
 .include <bsd.port.subdir.mk>

@@ -19,7 +19,6 @@
     SUBDIR += denominator
     SUBDIR += dhisd
     SUBDIR += dlint
-    SUBDIR += dnrd
     SUBDIR += dns-ui
     SUBDIR += dns2blackhole
     SUBDIR += dns2tcp
@@ -85,7 +84,6 @@
     SUBDIR += knock
     SUBDIR += knot-resolver
     SUBDIR += knot3
-    SUBDIR += knot3-lib
     SUBDIR += ldapdns
     SUBDIR += ldns
     SUBDIR += letsdns

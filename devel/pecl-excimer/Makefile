@@ -1,5 +1,5 @@
 PORTNAME=	excimer
-DISTVERSION=	1.2.1
+DISTVERSION=	1.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	000.fbsd@quip.cz
@@ -10,6 +10,5 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		php:pecl
-IGNORE_WITH_PHP=	84
 
 .include <bsd.port.mk>
