@@ -1233,6 +1233,7 @@
     SUBDIR += xfractint
     SUBDIR += xglurbules
     SUBDIR += xgrasp
+    SUBDIR += ximaging
     SUBDIR += xli
     SUBDIR += xmedcon
     SUBDIR += xmlgraphics-commons
