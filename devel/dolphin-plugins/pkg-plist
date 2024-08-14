@@ -285,3 +285,4 @@ share/locale/zh_TW/LC_MESSAGES/fileviewsvnplugin.mo
 share/locale/zh_TW/LC_MESSAGES/makefileactions.mo
 share/locale/zh_TW/LC_MESSAGES/mountisoaction.mo
 share/metainfo/org.kde.dolphin-plugins.metainfo.xml
+share/qlogging-categories6/dolphingit.categories

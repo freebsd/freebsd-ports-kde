@@ -588,10 +588,15 @@ share/locale/gl/LC_MESSAGES/libfolderarchivesettings.mo
 share/locale/he/LC_MESSAGES/akonadi-filestore.mo
 share/locale/he/LC_MESSAGES/akonadi_birthdays_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_contacts_resource.mo
+share/locale/he/LC_MESSAGES/akonadi_davgroupware_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_etesync_resource.mo
+share/locale/he/LC_MESSAGES/akonadi_ews_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_google_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_ical_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_icaldir_resource.mo
+share/locale/he/LC_MESSAGES/akonadi_maildir_resource.mo
+share/locale/he/LC_MESSAGES/akonadi_maildispatcher_agent.mo
+share/locale/he/LC_MESSAGES/akonadi_mbox_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_migration_agent.mo
 share/locale/he/LC_MESSAGES/akonadi_mixedmaildir_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_newmailnotifier_agent.mo
