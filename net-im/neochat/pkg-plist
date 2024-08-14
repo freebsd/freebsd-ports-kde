@@ -1,5 +1,5 @@
 bin/neochat
-%%QT_PLUGINDIR%%/kf6/purpose/neochatplugin.so
+%%QT_PLUGINDIR%%/kf6/purpose/neochatshareplugin.so
 share/applications/org.kde.neochat.desktop
 share/icons/hicolor/scalable/apps/org.kde.neochat.svg
 share/icons/hicolor/scalable/apps/org.kde.neochat.tray.svg
