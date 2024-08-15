@@ -20,17 +20,17 @@ LIB_DEPENDS=	libKasten4Controllers.so:devel/okteta \
 		libkomparediff2.so:textproc/libkomparediff2
 RUN_DEPENDS=	gmake:devel/gmake
 
-USES=		cmake compiler:c++11-lib desktop-file-utils gettext grantlee:6 \
-		kde:6 llvm:build,run,noexport pkgconfig qt:6 shared-mime-info \
+USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:6 \
+		llvm:build,run,noexport pkgconfig qt:6 shared-mime-info \
 		shebangfix tar:xz xorg
 USE_KDE=	archive attica auth bookmarks codecs completion config \
-		configwidgets coreaddons crash guiaddons i18n iconthemes init \
+		configwidgets coreaddons crash guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kdeclarative kio \
-		newstuff notifications notifyconfig package parts \
-		runner service solid sonnet \
-		syntaxhighlighting texteditor textwidgets threadweaver \
-		widgetsaddons windowsystem xmlgui
-USE_QT=		base
+		newstuff notifications notifyconfig package parts runner \
+		service solid sonnet syntaxhighlighting texteditor \
+		texttemplate textwidgets threadweaver widgetsaddons \
+		windowsystem xmlgui
+USE_QT=		base webengine
 USE_XORG=	x11
 SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 		kdevplatform/util/.zshrc
@@ -38,7 +38,7 @@ SHEBANG_FILES=	kdevplatform/util/kdevplatform_shell_environment.sh \
 # IDE, which **probably** is used for Qt / KDE development (also
 # other things, but let's guess a target market), pull in some
 # additional development things that are otherwise build-dep-only.
-USE_KDE+=	ecm:run
+USE_KDE+=	ecm
 
 CMAKE_ARGS=	-DCMAKE_POLICY_DEFAULT_CMP0074=NEW \
 		-DClang_DIR=${LLVM_PREFIX}/lib/cmake/clang
