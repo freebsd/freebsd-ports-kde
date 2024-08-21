@@ -1790,6 +1790,7 @@
     SUBDIR += ode
     SUBDIR += ois
     SUBDIR += okteta
+    SUBDIR += ollama-hpp
     SUBDIR += omake
     SUBDIR += omniORB
     SUBDIR += omnilinter
@@ -4239,6 +4240,7 @@
     SUBDIR += picprog
     SUBDIR += pijul
     SUBDIR += pika
+    SUBDIR += pipelight
     SUBDIR += pipestatus
     SUBDIR += pire
     SUBDIR += pit
@@ -5018,6 +5020,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json5
     SUBDIR += py-json_tricks
+    SUBDIR += py-jsonargparse
     SUBDIR += py-jsondiff
     SUBDIR += py-jsonform
     SUBDIR += py-jsonlines
