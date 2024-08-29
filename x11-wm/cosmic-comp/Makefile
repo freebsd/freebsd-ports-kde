@@ -1,5 +1,5 @@
 PORTNAME=	cosmic-comp
-PORTVERSION=	s20240816
+PORTVERSION=	s20240826
 CATEGORIES=	x11-wm wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -22,9 +22,8 @@ USE_GITHUB=	yes
 USE_GL=		gbm
 USE_XORG=	pixman
 GH_ACCOUNT=	pop-os
-GH_TAGNAME=	epoch-1.0.0-alpha.1-13-ga3c8111
+GH_TAGNAME=	epoch-1.0.0-alpha.1-24-g8114116
 GH_TUPLE=	pop-os:iced:0.4.2-2011-ge31e29e9:iced/../${WRKSRC_crate_iced:T}/iced
-CARGO_ENV=	RUSTC_BOOTSTRAP=cosmic # files/patch-rust-1.79
 CARGO_FEATURES=	--no-default-features # disable systemd
 PLIST_FILES=	bin/${PORTNAME} \
 		share/cosmic/com.system76.CosmicSettings.Shortcuts/v1/defaults/keybindings.ron \

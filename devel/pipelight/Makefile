@@ -1,6 +1,7 @@
 PORTNAME=	pipelight
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -11,7 +12,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 LIB_DEPENDS=	libssh2.so:security/libssh2
 
-USES=		cargo pkgconfig ssl
+USES=		cargo localbase pkgconfig ssl
 USE_GITHUB=	yes
 CARGO_INSTALL_PATH=	${PORTNAME}
 PLIST_FILES=	bin/pipelight

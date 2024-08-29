@@ -977,6 +977,7 @@
     SUBDIR += parafly
     SUBDIR += parallel
     SUBDIR += parkverbot
+    SUBDIR += pass-coffin
     SUBDIR += pass-otp
     SUBDIR += pass-secrets
     SUBDIR += pass-update
@@ -1348,6 +1349,8 @@
     SUBDIR += schedutils
     SUBDIR += schilyutils
     SUBDIR += screen
+    SUBDIR += screen49
+    SUBDIR += screen50
     SUBDIR += screen-devel
     SUBDIR += screenfetch
     SUBDIR += screenie

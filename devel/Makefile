@@ -1400,6 +1400,7 @@
     SUBDIR += libqt6xdg
     SUBDIR += libqtxdg
     SUBDIR += libr3
+    SUBDIR += librashader
     SUBDIR += librcc
     SUBDIR += librcd
     SUBDIR += libreadline-java
@@ -1532,6 +1533,7 @@
     SUBDIR += linux-rl9-elfutils-libelf
     SUBDIR += linux-rl9-elfutils-libs
     SUBDIR += linux-rl9-icu
+    SUBDIR += linux-rl9-libatomic
     SUBDIR += linux-rl9-libevent
     SUBDIR += linux-rl9-libgfortran
     SUBDIR += linux-rl9-libpciaccess
@@ -5039,6 +5041,7 @@
     SUBDIR += py-jsonschema3
     SUBDIR += py-jsonsir
     SUBDIR += py-junitparser
+    SUBDIR += py-jupyter
     SUBDIR += py-jupyter-client
     SUBDIR += py-jupyter-collaboration
     SUBDIR += py-jupyter-core
@@ -5546,6 +5549,7 @@
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-cpp
     SUBDIR += py-pytest-datadir
+    SUBDIR += py-pytest-dependency
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-doctestplus
     SUBDIR += py-pytest-drop-dup-tests
@@ -7316,6 +7320,7 @@
     SUBDIR += rubygem-locale
     SUBDIR += rubygem-lockfile
     SUBDIR += rubygem-logger
+    SUBDIR += rubygem-logger15
     SUBDIR += rubygem-logging
     SUBDIR += rubygem-logster
     SUBDIR += rubygem-loquacious
