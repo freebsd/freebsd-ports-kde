@@ -48,7 +48,6 @@
     SUBDIR += ansible-sshjail
     SUBDIR += ansible-sysrc
     SUBDIR += anvil
-    SUBDIR += apache-mesos
     SUBDIR += apachetop
     SUBDIR += apcctrl
     SUBDIR += apcpwr
@@ -1158,6 +1157,7 @@
     SUBDIR += py-scarab
     SUBDIR += py-supervisor
     SUBDIR += py-tarsnapper
+    SUBDIR += py-tldr
     SUBDIR += py-tmuxp
     SUBDIR += py-upt
     SUBDIR += py-upt-cpan
@@ -1498,6 +1498,7 @@
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64
+    SUBDIR += u-boot-bhyve-riscv
     SUBDIR += u-boot-chip
     SUBDIR += u-boot-clearfog
     SUBDIR += u-boot-cubieboard
