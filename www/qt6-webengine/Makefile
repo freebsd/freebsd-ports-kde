@@ -23,6 +23,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
 		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libnss3.so:security/nss \
+		libopenjp2.so:graphics/openjpeg \
 		libxkbcommon.so:x11/libxkbcommon
 
 USES=		bison cmake compiler:c++20-lang gl gperf \
@@ -37,9 +38,6 @@ CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg \
 		QT_FEATURE_webengine_proprietary_codecs
 
 .if defined(BUILD_QTPDF)
-LIB_DEPENDS+=	libcups.so:print/cups \
-		libopenjp2.so:graphics/openjpeg
-
 CMAKE_ON+=	QT_FEATURE_qtpdf_build
 CMAKE_OFF+=	QT_FEATURE_qtwebengine_build
 
@@ -54,6 +52,7 @@ LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
 		libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz \
+		liblcms2.so:graphics/lcms2 \
 		libnspr4.so:devel/nspr \
 		libopenh264.so:multimedia/openh264 \
 		libopus.so:audio/opus \
@@ -61,6 +60,7 @@ LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
 		libpng.so:graphics/png \
 		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
+		libtiff.so:graphics/tiff \
 		libvpx.so:multimedia/libvpx \
 		libwebp.so:graphics/webp
 
@@ -101,8 +101,8 @@ DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 $
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .if !defined(BUILD_QTPDF)
-OPTIONS_DEFINE=		CUPS DRIVER
-OPTIONS_DEFAULT=	ALSA CUPS DRIVER
+OPTIONS_DEFINE=		DRIVER
+OPTIONS_DEFAULT=	ALSA DRIVER
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
 OPTIONS_SUB=		yes
@@ -115,13 +115,6 @@ ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_RUN_DEPENDS=	alsa-plugins>=0:audio/alsa-plugins
 ALSA_CMAKE_ON=		-DQT_FEATURE_webengine_system_alsa:BOOL=ON
 ALSA_CMAKE_OFF=		-DQT_FEATURE_webengine_system_alsa:BOOL=OFF
-
-CUPS_LIB_DEPENDS=	libcups.so:print/cups \
-			liblcms2.so:graphics/lcms2 \
-			libopenjp2.so:graphics/openjpeg \
-			libtiff.so:graphics/tiff
-CUPS_CMAKE_ON=		-DQT_FEATURE_webengine_printing_and_pdf:BOOL=ON
-CUPS_CMAKE_OFF=		-DQT_FEATURE_webengine_printing_and_pdf:BOOL=OFF
 
 DRIVER_DESC=		Install WebEngineDriver
 DRIVER_CMAKE_ON=	-DQT_FEATURE_webenginedriver:BOOL=ON
