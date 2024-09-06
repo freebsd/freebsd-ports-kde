@@ -284,6 +284,7 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-crossref
+    SUBDIR += hs-pandoc32
     SUBDIR += hs-yaml
     SUBDIR += hsb-aspell
     SUBDIR += htdig
@@ -451,7 +452,6 @@
     SUBDIR += linuxdoc
     SUBDIR += linuxdoc-tools
     SUBDIR += localize
-    SUBDIR += logseq
     SUBDIR += lookatme
     SUBDIR += loook
     SUBDIR += lowdown
@@ -459,8 +459,8 @@
     SUBDIR += lt-hyphen
     SUBDIR += lttoolbox
     SUBDIR += lua-icu-utils
+    SUBDIR += lua-luaexpat
     SUBDIR += lua-lyaml
-    SUBDIR += luaexpat
     SUBDIR += lucene
     SUBDIR += lucene5
     SUBDIR += luceneplusplus
@@ -1700,6 +1700,7 @@
     SUBDIR += qt5-xml
     SUBDIR += qt5-xmlpatterns
     SUBDIR += qu-aspell
+    SUBDIR += quarto
     SUBDIR += quickwit
     SUBDIR += rand
     SUBDIR += randlm

@@ -447,8 +447,8 @@
     SUBDIR += linux-rl9-openldap
     SUBDIR += liveMedia
     SUBDIR += lla
+    SUBDIR += lua-luasocket
     SUBDIR += lualdap
-    SUBDIR += luasocket
     SUBDIR += mDNSResponder
     SUBDIR += macchanger
     SUBDIR += mad_fcl
@@ -895,6 +895,7 @@
     SUBDIR += p5-URI-Fast
     SUBDIR += p5-URI-FromHash
     SUBDIR += p5-URI-Match
+    SUBDIR += p5-URI-NamespaceMap
     SUBDIR += p5-URI-Nested
     SUBDIR += p5-URI-OpenURL
     SUBDIR += p5-URI-Query

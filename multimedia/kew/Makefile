@@ -1,10 +1,10 @@
 PORTNAME=	kew
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.7.0
+DISTVERSION=	2.7.2
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
-COMMENT=	Command-line music player
+COMMENT=	Command-line music player with the terminal user interface (TUI)
 WWW=		https://github.com/ravachol/kew
 
 LICENSE=	GPLv2

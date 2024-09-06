@@ -693,7 +693,6 @@
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
-    SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound
     SUBDIR += rhvoice
