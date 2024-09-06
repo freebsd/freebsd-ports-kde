@@ -1,5 +1,7 @@
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qabstracthttpserver_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserver_p.h
+%%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverhttp1protocolhandler_p.h
+%%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverhttp2protocolhandler_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverliterals_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverrequest_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverresponder_p.h
@@ -16,6 +18,7 @@
 %%QT_INCDIR%%/QtHttpServer/QHttpServerRouter
 %%QT_INCDIR%%/QtHttpServer/QHttpServerRouterRule
 %%QT_INCDIR%%/QtHttpServer/QHttpServerRouterViewTraits
+%%QT_INCDIR%%/QtHttpServer/QHttpServerWebSocketUpgradeResponse
 %%QT_INCDIR%%/QtHttpServer/QtHttpServer
 %%QT_INCDIR%%/QtHttpServer/QtHttpServerDepends
 %%QT_INCDIR%%/QtHttpServer/QtHttpServerVersion
@@ -29,6 +32,7 @@
 %%QT_INCDIR%%/QtHttpServer/qhttpserverrouterviewtraits.h
 %%QT_INCDIR%%/QtHttpServer/qhttpserverviewtraits.h
 %%QT_INCDIR%%/QtHttpServer/qhttpserverviewtraits_impl.h
+%%QT_INCDIR%%/QtHttpServer/qhttpserverwebsocketupgraderesponse.h
 %%QT_INCDIR%%/QtHttpServer/qthttpserverexports.h
 %%QT_INCDIR%%/QtHttpServer/qthttpserverglobal.h
 %%QT_INCDIR%%/QtHttpServer/qthttpserverversion.h
@@ -40,6 +44,7 @@ lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersionImpl.cmake
 lib/cmake/Qt6HttpServer/Qt6HttpServerDependencies.cmake
 lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake
+lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessAliasTargets.cmake
 lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake
 %%QT_LIBDIR%%/libQt6HttpServer.prl
 %%QT_LIBDIR%%/libQt6HttpServer.so

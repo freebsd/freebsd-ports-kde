@@ -16,7 +16,7 @@ USE_QT=		base declarative shadertools:build
 CFLAGS_powerpc=		-DPFFFT_SIMD_DISABLE
 CXXFLAGS_powerpc64=	-mvsx
 
-OPTIONS_DEFINE=		FFMPEG GSTREAMER Q3D V4L VAAPI X11
+OPTIONS_DEFINE=		FFMPEG GSTREAMER PIPEWIRE Q3D V4L VAAPI X11
 OPTIONS_DEFAULT=	FFMPEG GSTREAMER PULSEAUDIO Q3D V4L VAAPI X11
 AUDIO_DESC=		Low-level audio backend
 OPTIONS_SINGLE=		AUDIO
@@ -29,13 +29,18 @@ ALSA_CMAKE_BOOL=	FEATURE_alsa
 FFMPEG_LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 FFMPEG_CMAKE_BOOL=	FEATURE_ffmpeg
 
-GSTREAMER_USES=		gnome gstreamer:1
-GSTREAMER_USE=		GL=egl GNOME=glib20 GSTREAMER=bad,gl,good,ugly
+GSTREAMER_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
+GSTREAMER_USES=		gnome gstreamer:1 xorg
+GSTREAMER_USE=		GL=egl GNOME=glib20 GSTREAMER=bad,gl,good,ugly XORG=xcb
 GSTREAMER_CMAKE_BOOL=	FEATURE_gstreamer \
 			FEATURE_gstreamer_1_0 \
 			FEATURE_gstreamer_app \
 			FEATURE_gstreamer_gl \
 			FEATURE_gstreamer_photography
+
+PIPEWIRE_LIB_DEPENDS=	libpipewire-0.3.so:multimedia/pipewire
+PIPEWIRE_CMAKE_BOOL=	FEATURE_pipewire
+PIPEWIRE_IMPLIES=	FFMPEG
 
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	FEATURE_pulseaudio

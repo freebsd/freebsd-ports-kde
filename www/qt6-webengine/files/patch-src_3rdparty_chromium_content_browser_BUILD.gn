@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2023-12-12 22:08:45 UTC
+--- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2024-07-03 01:14:49 UTC
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
-@@ -2463,6 +2463,13 @@ jumbo_source_set("browser") {
+@@ -2459,6 +2459,13 @@ jumbo_source_set("browser") {
      deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
    }
  

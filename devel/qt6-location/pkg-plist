@@ -91,7 +91,6 @@
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qplacesearchresult_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qplacesupplier_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qplaceuser_p.h
-%%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/qtlocationexports_p.h
 %%QT_INCDIR%%/QtLocation/%%FULLVER%%/QtLocation/private/unsupportedreplies_p.h
 %%QT_INCDIR%%/QtLocation/QGeoCodeReply
 %%QT_INCDIR%%/QtLocation/QGeoCodingManager
@@ -182,6 +181,7 @@ lib/cmake/Qt6Location/Qt6LocationDependencies.cmake
 lib/cmake/Qt6Location/Qt6LocationPlugins.cmake
 lib/cmake/Qt6Location/Qt6LocationTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Location/Qt6LocationTargets.cmake
+lib/cmake/Qt6Location/Qt6LocationVersionlessAliasTargets.cmake
 lib/cmake/Qt6Location/Qt6LocationVersionlessTargets.cmake
 lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryItemsOverlayPluginAdditionalTargetInfo.cmake
 lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryItemsOverlayPluginConfig.cmake

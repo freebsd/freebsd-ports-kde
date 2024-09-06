@@ -46,6 +46,7 @@ lib/cmake/Qt6Coap/Qt6CoapConfigVersionImpl.cmake
 lib/cmake/Qt6Coap/Qt6CoapDependencies.cmake
 lib/cmake/Qt6Coap/Qt6CoapTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Coap/Qt6CoapTargets.cmake
+lib/cmake/Qt6Coap/Qt6CoapVersionlessAliasTargets.cmake
 lib/cmake/Qt6Coap/Qt6CoapVersionlessTargets.cmake
 %%QT_LIBDIR%%/libQt6Coap.prl
 %%QT_LIBDIR%%/libQt6Coap.so

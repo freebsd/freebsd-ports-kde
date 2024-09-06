@@ -23,7 +23,7 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.15
-QT6_VERSION?=		6.7.2
+QT6_VERSION?=		6.8.0-beta4
 PYSIDE6_VERSION?=	6.7.2
 
 # Support for intermediate Qt6 releases. This partially defines
@@ -248,7 +248,7 @@ qt-imageformats_PORT=	graphics/${_QT_RELNAME}-imageformats
 qt-imageformats_PATH=	${LOCALBASE}/${QT_PLUGINDIR_REL}/imageformats/libqtiff.so
 
 qt-languageserver_PORT=	devel/${_QT_RELNAME}-languageserver
-qt-languageserver_LIB=	libQt${_QT_LIBVER}LanguageServer.so
+qt-languageserver_PATH=	${LOCALBASE}/${QT_LIBDIR_REL}/libQt6LanguageServer.a
 
 qt-lottie_PORT=		graphics/${_QT_RELNAME}-lottie
 qt-lottie_LIB=		libQt${_QT_LIBVER}Bodymovin.so

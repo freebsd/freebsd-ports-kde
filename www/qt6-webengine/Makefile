@@ -25,7 +25,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libnss3.so:security/nss \
 		libxkbcommon.so:x11/libxkbcommon
 
-USES=		bison cmake compiler:c++17-lang gl gperf \
+USES=		bison cmake compiler:c++20-lang gl gperf \
 		localbase:ldflags ninja:build nodejs:build,lts \
 		pkgconfig python:build qt-dist:6,webengine
 USE_GL=		opengl

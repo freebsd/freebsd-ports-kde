@@ -1,6 +1,6 @@
---- src/core/CMakeLists.txt.orig	2023-12-12 22:08:45 UTC
+--- src/core/CMakeLists.txt.orig	2024-07-03 01:14:49 UTC
 +++ src/core/CMakeLists.txt
-@@ -20,7 +20,7 @@ add_subdirectory(tools/qwebengine_convert_dict)
+@@ -21,7 +21,7 @@ add_subdirectory(tools/qwebengine_convert_dict)
  #   TOOLCHAIN SETUP
  ##
  
@@ -9,8 +9,8 @@
      setup_toolchains()
  endif()
  
-@@ -409,7 +409,7 @@ foreach(arch ${archs})
-             CONDITION QT_FEATURE_webengine_embedded_build
+@@ -425,7 +425,7 @@ foreach(arch ${archs})
+             CONDITION QT_FEATURE_webenginedriver
          )
  
 -        if(LINUX)
@@ -18,7 +18,7 @@
              list(APPEND gnArgArg
                  use_gtk=false # GTK toolkit bindings
                  use_qt=false # Qt5 toolkit bindings
-@@ -418,7 +418,7 @@ foreach(arch ${archs})
+@@ -434,7 +434,7 @@ foreach(arch ${archs})
                  use_bundled_fontconfig=false
                  use_glib=false
                  use_bluez=false
@@ -27,7 +27,7 @@
                  is_cfi=false
                  use_ozone=true
                  ozone_auto_platforms=false
-@@ -477,6 +477,10 @@ foreach(arch ${archs})
+@@ -493,6 +493,10 @@ foreach(arch ${archs})
              extend_gn_list(gnArgArg
                  ARGS use_pulseaudio
                  CONDITION QT_FEATURE_webengine_system_pulseaudio

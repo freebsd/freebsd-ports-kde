@@ -1,4 +1,4 @@
---- configure.cmake.orig	2023-12-12 22:08:45 UTC
+--- configure.cmake.orig	2024-07-03 01:14:49 UTC
 +++ configure.cmake
 @@ -68,7 +68,7 @@ endif()
  endif()
@@ -18,7 +18,7 @@
          AND TARGET Qt::Gui
          AND QT_FEATURE_xcb
          AND X11_FOUND
-@@ -465,12 +465,12 @@ add_check_for_support(
+@@ -466,12 +466,12 @@ add_check_for_support(
  )
  add_check_for_support(
     MODULES QtWebEngine
@@ -33,7 +33,7 @@
     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
  )
  if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -492,13 +492,6 @@ add_check_for_support(
+@@ -494,13 +494,6 @@ add_check_for_support(
     MESSAGE "node.js version 14 or later is required."
  )
  add_check_for_support(
@@ -47,7 +47,7 @@
     MODULES QtWebEngine QtPdf
     CONDITION Python3_EXECUTABLE
     MESSAGE "Python version 3.6 or later is required."
-@@ -576,8 +569,8 @@ add_check_for_support(
+@@ -564,8 +557,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtWebEngine
     CONDITION MSVC OR
@@ -58,7 +58,7 @@
         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     MESSAGE
         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -586,8 +579,8 @@ add_check_for_support(
+@@ -574,8 +567,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtPdf
     CONDITION MSVC OR

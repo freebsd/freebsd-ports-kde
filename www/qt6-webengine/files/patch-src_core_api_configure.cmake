@@ -1,4 +1,4 @@
---- src/core/api/configure.cmake.orig	2023-12-12 22:08:45 UTC
+--- src/core/api/configure.cmake.orig	2024-07-03 01:14:49 UTC
 +++ src/core/api/configure.cmake
 @@ -10,6 +10,7 @@ if(NOT QT_CONFIGURE_RUNNING)
      if(PkgConfig_FOUND AND QT_FEATURE_pkg_config)
@@ -27,9 +27,9 @@
 -    CONDITION LINUX AND NOT QT_FEATURE_webengine_system_libvpx
 +    CONDITION UNIX AND NOT QT_FEATURE_webengine_system_libvpx
  )
- # internal testing feature
- qt_feature("webengine-system-poppler" PRIVATE
-@@ -205,15 +211,19 @@ qt_configure_add_summary_entry(
+ list(LENGTH CMAKE_OSX_ARCHITECTURES osx_arch_count)
+ qt_feature("webenginedriver" PUBLIC
+@@ -214,15 +220,19 @@ qt_configure_add_summary_entry(
  )
  qt_configure_add_summary_entry(
      ARGS "webengine-vaapi"
@@ -51,4 +51,4 @@
 +    CONDITION UNIX
  )
  qt_configure_add_summary_entry(ARGS "webengine-v8-context-snapshot")
- qt_configure_end_summary_section() # end of "Qt WebEngineCore" section
+ qt_configure_add_summary_entry(ARGS "webenginedriver")
