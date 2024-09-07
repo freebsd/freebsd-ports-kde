@@ -601,6 +601,7 @@ share/locale/he/LC_MESSAGES/akonadi_migration_agent.mo
 share/locale/he/LC_MESSAGES/akonadi_mixedmaildir_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_newmailnotifier_agent.mo
 share/locale/he/LC_MESSAGES/akonadi_openxchange_resource.mo
+share/locale/he/LC_MESSAGES/akonadi_pop3_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_singlefile_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_tomboynotes_resource.mo
 share/locale/he/LC_MESSAGES/akonadi_vcard_resource.mo

@@ -390,10 +390,12 @@ share/locale/he/LC_MESSAGES/kio-extras_kcms.mo
 share/locale/he/LC_MESSAGES/kio6_activities.mo
 share/locale/he/LC_MESSAGES/kio6_afc.mo
 share/locale/he/LC_MESSAGES/kio6_archive.mo
+share/locale/he/LC_MESSAGES/kio6_filenamesearch.mo
 share/locale/he/LC_MESSAGES/kio6_fish.mo
 share/locale/he/LC_MESSAGES/kio6_info.mo
 share/locale/he/LC_MESSAGES/kio6_man.mo
 share/locale/he/LC_MESSAGES/kio6_mtp.mo
+share/locale/he/LC_MESSAGES/kio6_recentlyused.mo
 share/locale/he/LC_MESSAGES/kio6_sftp.mo
 share/locale/he/LC_MESSAGES/kio6_smb.mo
 share/locale/he/LC_MESSAGES/kio6_thumbnail.mo

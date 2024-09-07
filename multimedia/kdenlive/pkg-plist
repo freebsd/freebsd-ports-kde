@@ -434,6 +434,9 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/scripts/checkgpu.py
 %%DATADIR%%/scripts/checkpackages.py
 %%DATADIR%%/scripts/otiointerface.py
+%%DATADIR%%/scripts/requirements-seamless.txt
+%%DATADIR%%/scripts/requirements-whisper-windows.txt
+%%DATADIR%%/scripts/requirements-whisper.txt
 %%DATADIR%%/scripts/speech.py
 %%DATADIR%%/scripts/speechtotext.py
 %%DATADIR%%/scripts/whispertosrt.py
