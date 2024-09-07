@@ -5671,6 +5671,7 @@
     SUBDIR += py-pytz
     SUBDIR += py-pytz-deprecation-shim
     SUBDIR += py-pytzdata
+    SUBDIR += py-pyuca
     SUBDIR += py-pyudev
     SUBDIR += py-pyupgrade
     SUBDIR += py-pyusb
