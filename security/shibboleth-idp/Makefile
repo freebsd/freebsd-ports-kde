@@ -1,5 +1,6 @@
 PORTNAME=	shibboleth
 PORTVERSION=	5.1.3
+PORTREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://shibboleth.net/downloads/identity-provider/${PORTVERSION}/ \
 		http://shibboleth.net/downloads/identity-provider/latest5/${PORTVERSION}/ \
@@ -14,7 +15,7 @@ EXTRACT_ONLY=	shibboleth-identity-provider-${PORTVERSION}.tar.gz
 
 MAINTAINER=	zi@FreeBSD.org
 COMMENT=	Shibboleth Identity Provider (Internet2)
-WWW=		http://shibboleth.internet2.edu/
+WWW=		https://www.shibboleth.net/products/
 
 LICENSE=	APACHE20
 
