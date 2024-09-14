@@ -74,6 +74,10 @@ lib/libKF6NewStuffWidgets.so.%%KDE_FRAMEWORKS_VERSION%%
 %%QT_QMLDIR%%/org/kde/newstuff/private/entrygriddelegates/BigPreviewDelegate.qml
 %%QT_QMLDIR%%/org/kde/newstuff/private/entrygriddelegates/FeedbackOverlay.qml
 %%QT_QMLDIR%%/org/kde/newstuff/private/entrygriddelegates/TileDelegate.qml
+%%QT_QMLDIR%%/org/kde/newstuff/private/kde-qmlmodule.version
+%%QT_QMLDIR%%/org/kde/newstuff/private/libnewstuffqmlpluginprivate.so
+%%QT_QMLDIR%%/org/kde/newstuff/private/newstuffqmlpluginprivate.qmltypes
+%%QT_QMLDIR%%/org/kde/newstuff/private/qmldir
 %%QT_QMLDIR%%/org/kde/newstuff/qmldir
 share/applications/org.kde.knewstuff-dialog6.desktop
 share/locale/af/LC_MESSAGES/knewstuff6.mo
