@@ -4,9 +4,9 @@ bin/merkuro-mail
 lib/libMerkuroComponents.so
 lib/libMerkuroComponents.so.%%KDE_APPLICATIONS_VERSION%%
 lib/libMerkuroComponents.so.6
-lib/libmerkuro_contact_plugin.so
-lib/libmerkuro_contact_plugin.so.%%KDE_APPLICATIONS_VERSION%%
-lib/libmerkuro_contact_plugin.so.6
+lib/libmerkuro_contact.so
+lib/libmerkuro_contact.so.%%KDE_APPLICATIONS_VERSION%%
+lib/libmerkuro_contact.so.6
 %%QT_QMLDIR%%/org/kde/akonadi/AgentConfigurationForm.qml
 %%QT_QMLDIR%%/org/kde/akonadi/CollectionComboBox.qml
 %%QT_QMLDIR%%/org/kde/akonadi/MobileCollectionComboBox.qml
@@ -50,7 +50,7 @@ lib/libmerkuro_contact_plugin.so.6
 %%QT_QMLDIR%%/org/kde/merkuro/contact/Settings.qml
 %%QT_QMLDIR%%/org/kde/merkuro/contact/Sidebar.qml
 %%QT_QMLDIR%%/org/kde/merkuro/contact/kde-qmlmodule.version
-%%QT_QMLDIR%%/org/kde/merkuro/contact/libmerkuro_contact_pluginplugin.so
+%%QT_QMLDIR%%/org/kde/merkuro/contact/libmerkuro_contact_plugin.so
 %%QT_QMLDIR%%/org/kde/merkuro/contact/merkuro_contact_plugin.qmltypes
 %%QT_QMLDIR%%/org/kde/merkuro/contact/private/AddressBookMenu.qml
 %%QT_QMLDIR%%/org/kde/merkuro/contact/private/ContactGroupPage.qml

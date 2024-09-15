@@ -481,6 +481,10 @@ share/locale/sv/LC_MESSAGES/akonadi_unifiedmailbox_agent.mo
 share/locale/sv/LC_MESSAGES/kmail-refresh-settings.mo
 share/locale/sv/LC_MESSAGES/kmail.mo
 share/locale/sv/LC_MESSAGES/ktnef.mo
+share/locale/ta/LC_MESSAGES/akonadi_archivemail_agent.mo
+share/locale/ta/LC_MESSAGES/akonadi_followupreminder_agent.mo
+share/locale/ta/LC_MESSAGES/akonadi_mailfilter_agent.mo
+share/locale/ta/LC_MESSAGES/akonadi_mailmerge_agent.mo
 share/locale/ta/LC_MESSAGES/akonadi_sendlater_agent.mo
 share/locale/ta/LC_MESSAGES/akonadi_unifiedmailbox_agent.mo
 share/locale/ta/LC_MESSAGES/kmail-refresh-settings.mo

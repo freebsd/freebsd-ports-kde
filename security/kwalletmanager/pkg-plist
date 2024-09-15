@@ -3,7 +3,7 @@ lib/libexec/kf6/kauth/kcm_kwallet_helper5
 %%QT_PLUGINDIR%%/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
 share/applications/kwalletmanager5-kwalletd.desktop
 share/applications/org.kde.kwalletmanager.desktop
-share/dbus-1/services/org.kde.kwalletmanager5.service
+share/dbus-1/services/org.kde.kwalletmanager.service
 share/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 share/dbus-1/system.d/org.kde.kcontrol.kcmkwallet5.conf
 share/icons/hicolor/128x128/apps/kwalletmanager.png
