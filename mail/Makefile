@@ -270,6 +270,7 @@
     SUBDIR += notmuch-emacs
     SUBDIR += notmuch-mutt
     SUBDIR += nullmailer
+    SUBDIR += oama
     SUBDIR += openarc
     SUBDIR += opendkim
     SUBDIR += opendkim-devel
@@ -473,6 +474,7 @@
     SUBDIR += phpmailer
     SUBDIR += phpmailer6
     SUBDIR += pine-pgp-filters
+    SUBDIR += pizauth
     SUBDIR += pm-lib
     SUBDIR += policyd2
     SUBDIR += popa3d
