@@ -26,7 +26,7 @@ USES=		cmake compiler:c++11-lib desktop-file-utils gettext kde:6 \
 USE_KDE=	archive attica auth bookmarks codecs completion config \
 		configwidgets coreaddons crash guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kdeclarative kio \
-		newstuff notifications notifyconfig package parts runner \
+		libplasma newstuff notifications notifyconfig package parts runner \
 		service solid sonnet syntaxhighlighting texteditor \
 		texttemplate textwidgets threadweaver widgetsaddons \
 		windowsystem xmlgui

@@ -419,6 +419,7 @@ lib/libKDevPlatformUtil.so.%%SO_VER%%
 lib/libKDevPlatformVcs.so
 lib/libKDevPlatformVcs.so.%%SO_VER_LONG%%
 lib/libKDevPlatformVcs.so.%%SO_VER%%
+lib/libKDevelopSessionsWatch.so
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/KDevCMakeBuilder.so
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/KDevCMakeDocumentation.so
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/KDevCMakeManager.so
@@ -479,7 +480,10 @@ lib/libKDevPlatformVcs.so.%%SO_VER%%
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/kdevtestview.so
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/kdevvcschangesviewplugin.so
 %%QT_PLUGINDIR%%/kdevplatform/%%SO_VER%%/scratchpad.so
+%%QT_PLUGINDIR%%/kf6/krunner/kdevelopsessions.so
 %%QT_PLUGINDIR%%/kf6/ktexttemplate/kdev_filters.so
+%%QT_QMLDIR%%/org/kde/plasma/private/kdevelopsessions/libkdevelopsessionsplugin.so
+%%QT_QMLDIR%%/org/kde/plasma/private/kdevelopsessions/qmldir
 share/applications/org.kde.kdevelop.desktop
 share/applications/org.kde.kdevelop_bzr.desktop
 share/applications/org.kde.kdevelop_git.desktop
@@ -3270,8 +3274,11 @@ share/locale/zh_TW/LC_MESSAGES/kdevwelcomepage.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_applet_kdevelopsessions.mo
 share/locale/zh_TW/LC_MESSAGES/plasma_runner_kdevelopsessions.mo
 share/metainfo/org.kde.kdevelop.appdata.xml
+share/metainfo/org.kde.kdevelopsessions.appdata.xml
 share/mime/packages/kdevclang.xml
 share/mime/packages/kdevelop.xml
 share/mime/packages/kdevgit.xml
+share/plasma/plasmoids/org.kde.kdevelopsessions/contents/ui/main.qml
+share/plasma/plasmoids/org.kde.kdevelopsessions/metadata.json
 share/qlogging-categories6/kdevelop.categories
 share/qlogging-categories6/kdevplatform.categories
