@@ -223,6 +223,7 @@
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gssdp14
+    SUBDIR += gstreamer1-plugins-sctp
     SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtk-vnc
     SUBDIR += guacamole-server
@@ -1253,6 +1254,7 @@
     SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-activestorage70
     SUBDIR += rubygem-activestorage71
+    SUBDIR += rubygem-activestorage72
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1313,6 +1315,7 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
+    SUBDIR += rubygem-gitlab-kas-grpc
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1353,7 +1356,6 @@
     SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
-    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db

@@ -1,11 +1,7 @@
 PORTNAME=	libudev-devd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.5.2
-PORTREVISION=	1
+DISTVERSION=	0.6.0
 CATEGORIES=	devel
-
-PATCH_SITES=	https://github.com/wulf7/libudev-devd/commit/
-PATCHFILES=	2778403203cead962f52c56378b154ee1d641be8.patch:-p1
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	libudev-compatible interface for devd

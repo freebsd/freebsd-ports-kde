@@ -24,6 +24,8 @@
     SUBDIR += granite7
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
+    SUBDIR += gstreamer1-plugins-qt5
+    SUBDIR += gstreamer1-plugins-qt6
     SUBDIR += gtk-layer-shell
     SUBDIR += gtk-session-lock
     SUBDIR += gtk-sharp-beans
@@ -88,6 +90,7 @@
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libshumate
+    SUBDIR += libspelling
     SUBDIR += libunique3
     SUBDIR += libwnck
     SUBDIR += libwnck3
