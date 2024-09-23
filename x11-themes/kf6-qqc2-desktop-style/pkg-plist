@@ -1,5 +1,6 @@
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfig.cmake
 lib/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfigVersion.cmake
+%%QT_PLUGINDIR%%/kf6/kirigami/platform/org.kde.desktop.so
 %%QT_QMLDIR%%/org/kde/desktop/BusyIndicator.qml
 %%QT_QMLDIR%%/org/kde/desktop/Button.qml
 %%QT_QMLDIR%%/org/kde/desktop/CheckBox.qml
