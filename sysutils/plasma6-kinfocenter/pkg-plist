@@ -11,6 +11,7 @@ lib/libexec/kf6/kauth/kinfocenter-dmidecode-helper
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_glx.so
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_interrupts.so
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_kwinsupportinfo.so
+%%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_memory.so
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_network.so
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_opencl.so
 %%QT_PLUGINDIR%%/plasma/kcms/kinfocenter/kcm_pci.so
