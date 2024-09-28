@@ -1,9 +1,10 @@
 PKGNAMESUFFIX=	-${BACKEND}
 COMMENT=	GIO-styled async APIs for Flatpak (${BACKEND} backend)
 
-BACKEND=	gtk3
+BACKEND=	qt6
 
-USE_GNOME=	gtk30
+USES=		qt:6
+USE_QT=		base
 
 MASTERDIR=	${.CURDIR}/../libportal
 
