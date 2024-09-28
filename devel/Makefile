@@ -6,6 +6,9 @@
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
     SUBDIR += R-cran-ModelMetrics
+    SUBDIR += R-cran-R.methodsS3
+    SUBDIR += R-cran-R.oo
+    SUBDIR += R-cran-R.utils
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
@@ -546,6 +549,7 @@
     SUBDIR += cxxopts
     SUBDIR += cxxtest
     SUBDIR += cxxtools
+    SUBDIR += cython-lint
     SUBDIR += d-feet
     SUBDIR += d-scanner
     SUBDIR += d-spy
@@ -5015,14 +5019,17 @@
     SUBDIR += py-jaraco.collections
     SUBDIR += py-jaraco.context
     SUBDIR += py-jaraco.env
+    SUBDIR += py-jaraco.envs
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
     SUBDIR += py-jaraco.logging
     SUBDIR += py-jaraco.packaging
+    SUBDIR += py-jaraco.path
     SUBDIR += py-jaraco.stream
     SUBDIR += py-jaraco.text
     SUBDIR += py-jaraco.util
     SUBDIR += py-javaproperties
+    SUBDIR += py-jaxtyping
     SUBDIR += py-jdcal
     SUBDIR += py-jedi
     SUBDIR += py-jeepney
@@ -5904,6 +5911,7 @@
     SUBDIR += py-tendo
     SUBDIR += py-termcolor
     SUBDIR += py-termcolor-whl
+    SUBDIR += py-terminaltexteffects
     SUBDIR += py-termstyle
     SUBDIR += py-test-utils
     SUBDIR += py-testfixtures
@@ -5914,6 +5922,7 @@
     SUBDIR += py-testresources
     SUBDIR += py-testscenarios
     SUBDIR += py-testtools
+    SUBDIR += py-textualeffects
     SUBDIR += py-thefuzz
     SUBDIR += py-thinc
     SUBDIR += py-thinc8
@@ -6086,11 +6095,13 @@
     SUBDIR += py-xstatic-angular-gettext
     SUBDIR += py-xstatic-angular-lrdragndrop
     SUBDIR += py-xstatic-angular-schema-form
+    SUBDIR += py-xstatic-autosize
     SUBDIR += py-xstatic-bootstrap
-    SUBDIR += py-xstatic-bootstrap3
     SUBDIR += py-xstatic-bootstrap-datepicker
     SUBDIR += py-xstatic-bootstrap-scss
+    SUBDIR += py-xstatic-bootstrap3
     SUBDIR += py-xstatic-bootswatch
+    SUBDIR += py-xstatic-ckeditor
     SUBDIR += py-xstatic-d3
     SUBDIR += py-xstatic-font-awesome
     SUBDIR += py-xstatic-hogan
@@ -6485,6 +6496,7 @@
     SUBDIR += rubygem-aws-sdk-devopsguru
     SUBDIR += rubygem-aws-sdk-directconnect
     SUBDIR += rubygem-aws-sdk-directoryservice
+    SUBDIR += rubygem-aws-sdk-directoryservicedata
     SUBDIR += rubygem-aws-sdk-dlm
     SUBDIR += rubygem-aws-sdk-docdb
     SUBDIR += rubygem-aws-sdk-docdbelastic
@@ -7719,7 +7731,6 @@
     SUBDIR += rubygem-sidekiq-cron-rails70
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
-    SUBDIR += rubygem-sidekiq71
     SUBDIR += rubygem-sidekiq72
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
@@ -8248,7 +8259,7 @@
     SUBDIR += xpeviewer
     SUBDIR += xsd
     SUBDIR += xsimd
-    SUBDIR += xtensa-esp32-elf
+    SUBDIR += xtensa-esp-elf
     SUBDIR += xtl
     SUBDIR += xtl-quant-stack
     SUBDIR += xwpe

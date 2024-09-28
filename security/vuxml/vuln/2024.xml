@@ -1,3 +1,201 @@
+  <vuln vid="24375796-7cbc-11ef-a3a9-001cc0382b2f">
+    <topic>cups-filters -- remote code execution</topic>
+    <affects>
+      <package>
+	<name>cups-filters</name>
+	<range><gt>0</gt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenPrinting reports:</p>
+	<blockquote cite="https://github.com/OpenPrinting/cups-browsed/security/advisories/GHSA-rj88-6mr5-rcw8">
+	  <p>Due to the service binding to *:631 ( INADDR_ANY ), multiple bugs
+	    in cups-browsed can be exploited in sequence to introduce a
+	    malicious printer to the system. This chain of exploits ultimately
+	    enables an attacker to execute arbitrary commands remotely on the
+	    target machine without authentication when a print job is started.
+	    Posing a significant security risk over the network. Notably, this
+	    vulnerability is particularly concerning as it can be exploited
+	    from the public internet, potentially exposing a vast number of
+	    systems to remote attacks if their CUPS services are enabled.</p>
+	</blockquote>
+	<p>The vulnerability allows an attacker on the internet to create a
+	  new printer device with arbitrary commands in the PPD file of the
+	  printer. Attacks using mDNS on the local network can also replace an
+	  existing printer. The commands are executed when a user attempts to
+	  print on the malicious device. They run with the privileges of the
+	  user "cups".</p>
+	<p>It is recommended to disable the cups_browsed service until patches
+	  become available. On FreeBSD this is the default. You can check the
+	  status and disable the service with the following commands:</p>
+	<p><code># service cups_browsed status<br />
+	  # service cups_browsed stop<br />
+	  # service cups_browsed disable</code></p>
+	<p>Attacks from the internet can be blocked by removing the "cups"
+	  protocol from the BrowseRemoteProtocols and BrowseProtocols
+	  directives in /usr/local/etc/cups/cups-browsed.conf. Attacks using
+	  mDNS can be blocked by removing the "dnssd" protocol as well. Access
+	  can be limited to specific IP addresses using BrowseAllow,
+	  BrowseDeny, and BrowseOrder directives as documented in
+	  cups-browsed.conf(5). Then restart the service with the following
+	  command:</p>
+	<p><code># service cups_browsed restart</code></p>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-47076</cvename>
+      <cvename>CVE-2024-47175</cvename>
+      <cvename>CVE-2024-47176</cvename>
+      <cvename>CVE-2024-47177</cvename>
+      <url>https://github.com/OpenPrinting/cups-browsed/security/advisories/GHSA-rj88-6mr5-rcw8</url>
+    </references>
+    <dates>
+      <discovery>2024-09-26</discovery>
+      <entry>2024-09-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ca5f3bbc-7a62-11ef-9533-f875a43e1796">
+    <topic>expat -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>expat2</name>
+	<range><lt>2.6.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>libexpat reports:</p>
+	<blockquote cite="https://github.com/libexpat/libexpat/blob/master/expat/Changes">
+	<ul>
+	<li>CVE-2024-45490: Calling function XML_ParseBuffer with
+	len &lt; 0 without noticing and then calling XML_GetBuffer
+	will have XML_ParseBuffer fail to recognize the problem
+	and XML_GetBuffer corrupt memory.
+	With the fix, XML_ParseBuffer now complains with error
+	XML_ERROR_INVALID_ARGUMENT just like sibling XML_Parse
+	has been doing since Expat 2.2.1, and now documented.
+	Impact is denial of service to potentially artitrary code
+	execution.</li>
+	<li>CVE-2024-45491: Internal function dtdCopy can have an
+	integer overflow for nDefaultAtts on 32-bit platforms
+	(where UINT_MAX equals SIZE_MAX).
+	Impact is denial of service to potentially artitrary code
+	execution.</li>
+	<li>CVE-2024-45492: Internal function nextScaffoldPart can
+	have an integer overflow for m_groupSize on 32-bit
+	platforms (where UINT_MAX equals SIZE_MAX).
+	Impact is denial of service to potentially artitrary code
+	execution.</li>
+	</ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-45490</cvename>
+      <cvename>CVE-2024-45491</cvename>
+      <cvename>CVE-2024-45492</cvename>
+      <url>https://github.com/libexpat/libexpat/blob/master/expat/Changes</url>
+    </references>
+    <dates>
+      <discovery>2024-09-24</discovery>
+      <entry>2024-09-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b7ed61f-7bbf-11ef-9369-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.4.0</ge><lt>17.4.1</lt></range>
+	<range><ge>17.3.0</ge><lt>17.3.4</lt></range>
+	<range><ge>15.6.0</ge><lt>17.2.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2024/09/25/patch-release-gitlab-17-4-1-released/">
+	  <p>Maintainer can leak Dependency Proxy password by changing Dependency Proxy URL via crafted POST request</p>
+	  <p>AI feature reads unsanitized content, allowing for attacker to hide prompt injection</p>
+	  <p>Project reference can be exposed in system notes</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4278</cvename>
+      <cvename>CVE-2024-4099</cvename>
+      <cvename>CVE-2024-8974</cvename>
+      <url>https://about.gitlab.com/releases/2024/09/25/patch-release-gitlab-17-4-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2024-09-25</discovery>
+      <entry>2024-09-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="802961eb-7a89-11ef-bdd7-a0423f48a938">
+    <topic>frr - BGP</topic>
+    <affects>
+      <package>
+	<name>frr9</name>
+	<range><lt>9.1.2</lt></range>
+      </package>
+      <package>
+	<name>frr8</name>
+	<range><lt>8.5.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://github.com/FRRouting/frr/pull/16497">
+	  <p>An issue was discovered in FRRouting (FRR). bgp_attr_encap
+	in bgpd/bgp_attr.c does not check the actual remaining stream length
+	before taking the TLV value.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-44070</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-44070</url>
+    </references>
+    <dates>
+      <discovery>2024-08-19</discovery>
+      <entry>2024-09-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d47b7ae7-fe1d-4f7f-919a-480ca8035f00">
+    <topic>zeek -- potential DoS vulnerability</topic>
+    <affects>
+      <package>
+	<name>zeek</name>
+	<range><lt>7.0.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Tim Wojtulewicz of Corelight reports:</p>
+	<blockquote cite="https://github.com/zeek/zeek/releases/tag/v7.0.2">
+	  <p> The POP3 parser has been hardened to avoid unbounded
+	  state growth in the face of one-sided traffic capture or
+	  when enabled for non-POP3 traffic. </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/zeek/zeek/releases/tag/v7.0.2</url>
+    </references>
+    <dates>
+      <discovery>2024-09-24</discovery>
+      <entry>2024-09-24</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="c02b8db5-771b-11ef-9a62-002590c1f29c">
     <topic>FreeBSD -- NFS client accepts file names containing path separators</topic>
     <affects>
