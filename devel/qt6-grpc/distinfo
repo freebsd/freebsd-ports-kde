@@ -1,3 +1,3 @@
-TIMESTAMP = 1727577070
-SHA256 (KDE/Qt/6.7.3/qtgrpc-everywhere-src-6.7.3.tar.xz) = eeaaadd4163ebc3db935ba24da0c23aa1cc3d5156176b852aa17c35f1e81c6df
-SIZE (KDE/Qt/6.7.3/qtgrpc-everywhere-src-6.7.3.tar.xz) = 473000
+TIMESTAMP = 1727760736
+SHA256 (KDE/Qt/6.8.0-rc/qtgrpc-everywhere-src-6.8.0-rc.tar.xz) = f0d8c3690b0e8c94636e7759070b472a0bb23effad3e19748777d053b13a4fdc
+SIZE (KDE/Qt/6.8.0-rc/qtgrpc-everywhere-src-6.8.0-rc.tar.xz) = 514644

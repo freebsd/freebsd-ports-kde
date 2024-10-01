@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254248
-SHA256 (KDE/Qt/6.8.0-beta4/qtquick3dphysics-everywhere-src-6.8.0-beta4.tar.xz) = 1251034cb61a8ae0fddbbddf33d285e1538c986ff138ef2ec01fdc3251cdb1df
-SIZE (KDE/Qt/6.8.0-beta4/qtquick3dphysics-everywhere-src-6.8.0-beta4.tar.xz) = 4705912
+TIMESTAMP = 1727331379
+SHA256 (KDE/Qt/6.8.0-rc/qtquick3dphysics-everywhere-src-6.8.0-rc.tar.xz) = 2f3b89a5ef786d2c453668346ede0e59c68275e02bb8e96d6edd070e507a06c1
+SIZE (KDE/Qt/6.8.0-rc/qtquick3dphysics-everywhere-src-6.8.0-rc.tar.xz) = 4704892

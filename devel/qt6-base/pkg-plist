@@ -941,12 +941,14 @@ bin/qmake6
 %%QT_INCDIR%%/QtExamplesAssetDownloader/assetdownloader.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/barrier.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/concurrentcall.h
+%%QT_INCDIR%%/QtExamplesAssetDownloader/conditional.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/networkquery.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/qprocesstask.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/qtexamplesassetdownloaderversion.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/tasking_global.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/tasktree.h
 %%QT_INCDIR%%/QtExamplesAssetDownloader/tasktreerunner.h
+%%QT_INCDIR%%/QtExamplesAssetDownloader/tcpsocket.h
 %%QT_INCDIR%%/QtFbSupport/%%FULLVER%%/QtFbSupport/private/qfbbackingstore_p.h
 %%QT_INCDIR%%/QtFbSupport/%%FULLVER%%/QtFbSupport/private/qfbcursor_p.h
 %%QT_INCDIR%%/QtFbSupport/%%FULLVER%%/QtFbSupport/private/qfbscreen_p.h

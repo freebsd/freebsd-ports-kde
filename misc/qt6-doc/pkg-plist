@@ -111,6 +111,7 @@
 %%QT_DOCDIR%%/qtdoc/images/alarms3.png
 %%QT_DOCDIR%%/qtdoc/images/android-single-abis.png
 %%QT_DOCDIR%%/qtdoc/images/android-source-folder.png
+%%QT_DOCDIR%%/qtdoc/images/android.webp
 %%QT_DOCDIR%%/qtdoc/images/animation-examples.png
 %%QT_DOCDIR%%/qtdoc/images/applicationwindow.png
 %%QT_DOCDIR%%/qtdoc/images/arrow_bc.png
@@ -148,9 +149,11 @@
 %%QT_DOCDIR%%/qtdoc/images/ico_note_attention.png
 %%QT_DOCDIR%%/qtdoc/images/ico_out.png
 %%QT_DOCDIR%%/qtdoc/images/integrity-os.png
+%%QT_DOCDIR%%/qtdoc/images/ios.webp
 %%QT_DOCDIR%%/qtdoc/images/layout-examples.png
 %%QT_DOCDIR%%/qtdoc/images/lightningviewer.jpg
 %%QT_DOCDIR%%/qtdoc/images/logo.png
+%%QT_DOCDIR%%/qtdoc/images/macos.webp
 %%QT_DOCDIR%%/qtdoc/images/mainscreen.png
 %%QT_DOCDIR%%/qtdoc/images/maintenancetool.png
 %%QT_DOCDIR%%/qtdoc/images/mediaplayer.png
@@ -165,6 +168,8 @@
 %%QT_DOCDIR%%/qtdoc/images/project_structure.png
 %%QT_DOCDIR%%/qtdoc/images/qml-application.png
 %%QT_DOCDIR%%/qtdoc/images/qml-extending-types.gif
+%%QT_DOCDIR%%/qtdoc/images/qml-for-android-architecture.drawio.svg
+%%QT_DOCDIR%%/qtdoc/images/qml-for-android-comparisson.drawio.svg
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-animation.png
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-integratingjs.png
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-layouts-anchors.png
@@ -231,10 +236,13 @@
 %%QT_DOCDIR%%/qtdoc/images/wayland-multi-process.png
 %%QT_DOCDIR%%/qtdoc/images/wayland-single-process-develop.png
 %%QT_DOCDIR%%/qtdoc/images/wayland-single-process-eglfs.png
+%%QT_DOCDIR%%/qtdoc/images/windows.webp
 %%QT_DOCDIR%%/qtdoc/images/wiring1.png
 %%QT_DOCDIR%%/qtdoc/images/wiring2.png
+%%QT_DOCDIR%%/qtdoc/images/x11.webp
 %%QT_DOCDIR%%/qtdoc/images/xNIz78IPBu0.jpg
 %%QT_DOCDIR%%/qtdoc/images/xml-examples.png
+%%QT_DOCDIR%%/qtdoc/images/xr_physicsbase_teleportation.jpg
 %%QT_DOCDIR%%/qtdoc/images/yIv0vO8B7tQ.jpg
 %%QT_DOCDIR%%/qtdoc/index.html
 %%QT_DOCDIR%%/qtdoc/inputs-linux-device.html
@@ -296,6 +304,7 @@
 %%QT_DOCDIR%%/qtdoc/porting-to-qt6-using-clazy.html
 %%QT_DOCDIR%%/qtdoc/portingguide.html
 %%QT_DOCDIR%%/qtdoc/qml-codingconventions.html
+%%QT_DOCDIR%%/qtdoc/qml-for-android.html
 %%QT_DOCDIR%%/qtdoc/qml-glossary.html
 %%QT_DOCDIR%%/qtdoc/qmlapplications.html
 %%QT_DOCDIR%%/qtdoc/qmlfirststeps.html
@@ -349,6 +358,8 @@
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-stocqt-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-thermostat-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-todolist-example.html
+%%QT_DOCDIR%%/qtdoc/qtdoc-demos-windowembedding-example.html
+%%QT_DOCDIR%%/qtdoc/qtdoc-demos-xr-physicsbase-teleportation-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-tutorials-alarms-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc.index
 %%QT_DOCDIR%%/qtdoc/qtdoc.qhp

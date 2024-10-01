@@ -1,3 +1,3 @@
-TIMESTAMP = 1725253700
-SHA256 (KDE/Qt/6.8.0-beta4/qtlocation-everywhere-src-6.8.0-beta4.tar.xz) = f4f07fb2a2e4c74f5b9185364eb5e7eed7a97fdb98ed610821142e48cbfc88b9
-SIZE (KDE/Qt/6.8.0-beta4/qtlocation-everywhere-src-6.8.0-beta4.tar.xz) = 3166532
+TIMESTAMP = 1727330865
+SHA256 (KDE/Qt/6.8.0-rc/qtlocation-everywhere-src-6.8.0-rc.tar.xz) = d93cd4b5c57cb8dcaa467ccd241a81e46e650894823034079999bed751d0e75b
+SIZE (KDE/Qt/6.8.0-rc/qtlocation-everywhere-src-6.8.0-rc.tar.xz) = 3166424

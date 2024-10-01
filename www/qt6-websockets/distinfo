@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254483
-SHA256 (KDE/Qt/6.8.0-beta4/qtwebsockets-everywhere-src-6.8.0-beta4.tar.xz) = a24c4be16825eb9e23571e2f529046425e83797f4a2d5c7395c3905f7823ff7a
-SIZE (KDE/Qt/6.8.0-beta4/qtwebsockets-everywhere-src-6.8.0-beta4.tar.xz) = 459984
+TIMESTAMP = 1727331604
+SHA256 (KDE/Qt/6.8.0-rc/qtwebsockets-everywhere-src-6.8.0-rc.tar.xz) = d9ba559d781ee11499795a97b0585136a55d4ff4724a12629be90a548340cd5b
+SIZE (KDE/Qt/6.8.0-rc/qtwebsockets-everywhere-src-6.8.0-rc.tar.xz) = 459912

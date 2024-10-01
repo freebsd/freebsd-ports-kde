@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254546
-SHA256 (KDE/Qt/6.8.0-beta4/qtshadertools-everywhere-src-6.8.0-beta4.tar.xz) = ab049b0d7405ffdbd2d2fa0ae962dbe54ba1216b4d97b9ecd70c420eec4090f1
-SIZE (KDE/Qt/6.8.0-beta4/qtshadertools-everywhere-src-6.8.0-beta4.tar.xz) = 1136600
+TIMESTAMP = 1727331668
+SHA256 (KDE/Qt/6.8.0-rc/qtshadertools-everywhere-src-6.8.0-rc.tar.xz) = c7b59925dabfa7f83fb56d5c2ddbb5a02928b89e712153c272ef98053db6099e
+SIZE (KDE/Qt/6.8.0-rc/qtshadertools-everywhere-src-6.8.0-rc.tar.xz) = 1136352

@@ -12,6 +12,7 @@
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/foreigntypesbars_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/foreigntypesscatter_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/foreigntypessurface_p.h
+%%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/gradientholder_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/pierenderer_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/pointrenderer_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/q3dscene_p.h

@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254481
-SHA256 (KDE/Qt/6.8.0-beta4/qtwebengine-everywhere-src-6.8.0-beta4.tar.xz) = d97df9c1f3ee40cdf8a2c14111caaf7c420f689c523265193d6ec697f2508f36
-SIZE (KDE/Qt/6.8.0-beta4/qtwebengine-everywhere-src-6.8.0-beta4.tar.xz) = 566585364
+TIMESTAMP = 1727331602
+SHA256 (KDE/Qt/6.8.0-rc/qtwebengine-everywhere-src-6.8.0-rc.tar.xz) = 062942f7d61e4e74ae197e9390ff2125040225fc921e639e9c8ea771762bbaea
+SIZE (KDE/Qt/6.8.0-rc/qtwebengine-everywhere-src-6.8.0-rc.tar.xz) = 566568800

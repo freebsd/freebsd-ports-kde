@@ -7,6 +7,7 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudiodevice_p.h
 %%PULSEAUDIO%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudioengine_pulse_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudiohelpers_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudioringbuffer_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudiostatemachine_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudiostatemachineutils_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qaudiosystem_p.h
@@ -254,6 +255,7 @@ lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake
+lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
@@ -354,7 +356,7 @@ lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6multimedia_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt6multimediaquickprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt6multimediawidgets_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6qgstreamermediapluginimplprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%GSTREAMER%%%%QT_LIBDIR%%/metatypes/qt6qgstreamermediapluginimplprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%Q3D%%%%QT_LIBDIR%%/metatypes/qt6quick3dspatialaudioprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt6spatialaudio_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_multimedia.pri
@@ -362,7 +364,7 @@ lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_multimediaquick_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_multimediawidgets.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_multimediawidgets_private.pri
-%%QT_MKSPECDIR%%/modules/qt_lib_qgstreamermediapluginimpl_private.pri
+%%GSTREAMER%%%%QT_MKSPECDIR%%/modules/qt_lib_qgstreamermediapluginimpl_private.pri
 %%Q3D%%%%QT_MKSPECDIR%%/modules/qt_lib_quick3dspatialaudio_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_spatialaudio.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_spatialaudio_private.pri

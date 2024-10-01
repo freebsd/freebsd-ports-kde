@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254250
-SHA256 (KDE/Qt/6.8.0-beta4/qthttpserver-everywhere-src-6.8.0-beta4.tar.xz) = dc8dd5b27ef60f78c961e1b19bcacb121a373c64e8eba6eb65ff626430820edd
-SIZE (KDE/Qt/6.8.0-beta4/qthttpserver-everywhere-src-6.8.0-beta4.tar.xz) = 174456
+TIMESTAMP = 1727331381
+SHA256 (KDE/Qt/6.8.0-rc/qthttpserver-everywhere-src-6.8.0-rc.tar.xz) = dc3ce6279e2e266fd9d3adf2e0d753ba8ee3a4b63f04c45414c608b1ba806098
+SIZE (KDE/Qt/6.8.0-rc/qthttpserver-everywhere-src-6.8.0-rc.tar.xz) = 177404

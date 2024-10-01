@@ -1,3 +1,3 @@
-TIMESTAMP = 1725254252
-SHA256 (KDE/Qt/6.8.0-beta4/qtwebchannel-everywhere-src-6.8.0-beta4.tar.xz) = 6055e0c9b1715f388827686d54f3c4ab3d2debbef515b4b6d9c61607bde9d7c3
-SIZE (KDE/Qt/6.8.0-beta4/qtwebchannel-everywhere-src-6.8.0-beta4.tar.xz) = 207504
+TIMESTAMP = 1727331383
+SHA256 (KDE/Qt/6.8.0-rc/qtwebchannel-everywhere-src-6.8.0-rc.tar.xz) = 288afaa75787ff943c878ecd6b4fd550fc04463de6e53bee5a58b02d0f677885
+SIZE (KDE/Qt/6.8.0-rc/qtwebchannel-everywhere-src-6.8.0-rc.tar.xz) = 207468
