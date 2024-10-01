@@ -1,3 +1,3 @@
-TIMESTAMP = 1720355586
-SHA256 (rubygem/aws-sdk-mediastore-1.60.0.gem) = 9ae208798303a036608a485ee396bc59e7e8234e77c5c3f88cad9a66328c9af6
-SIZE (rubygem/aws-sdk-mediastore-1.60.0.gem) = 33792
+TIMESTAMP = 1727315102
+SHA256 (rubygem/aws-sdk-mediastore-1.65.0.gem) = cb78bac5e3b3ffb228dc99e12b1980c4edace7e2e1d60389fe2ab25f21fc3903
+SIZE (rubygem/aws-sdk-mediastore-1.65.0.gem) = 34304

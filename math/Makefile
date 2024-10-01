@@ -998,6 +998,7 @@
     SUBDIR += py-ml-dtypes
     SUBDIR += py-mnnpy
     SUBDIR += py-moarchiving
+    SUBDIR += py-modin
     SUBDIR += py-mpmath
     SUBDIR += py-munkres
     SUBDIR += py-narwhals
@@ -1212,7 +1213,6 @@
     SUBDIR += symphony
     SUBDIR += sympol
     SUBDIR += sympow
-    SUBDIR += tablix
     SUBDIR += taucs
     SUBDIR += tblis
     SUBDIR += testu01

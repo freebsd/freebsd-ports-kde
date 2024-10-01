@@ -229,6 +229,7 @@ include/folly/container/heap_vector_types.h
 include/folly/container/range_traits.h
 include/folly/container/small_vector.h
 include/folly/container/sorted_vector_types.h
+include/folly/container/span.h
 include/folly/container/tape.h
 include/folly/container/test/F14TestUtil.h
 include/folly/container/test/TrackingTypes.h
@@ -420,7 +421,6 @@ include/folly/experimental/ExecutionObserver.h
 include/folly/experimental/FlatCombiningPriorityQueue.h
 include/folly/experimental/FunctionScheduler.h
 include/folly/experimental/Instructions.h
-include/folly/experimental/JSONSchema.h
 include/folly/experimental/LockFreeRingBuffer.h
 include/folly/experimental/NestedCommandLineApp.h
 include/folly/experimental/PrimaryPtr.h
@@ -693,6 +693,7 @@ include/folly/hash/MurmurHash.h
 include/folly/hash/SpookyHashV1.h
 include/folly/hash/SpookyHashV2.h
 include/folly/hash/detail/ChecksumDetail.h
+include/folly/hash/traits.h
 include/folly/init/Init.h
 include/folly/init/Phase.h
 include/folly/io/Cursor-inl.h

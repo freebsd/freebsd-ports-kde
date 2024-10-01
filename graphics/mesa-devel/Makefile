@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	24.2-branchpoint-2023
-DISTVERSIONSUFFIX=	-g2d10233f2f1
+DISTVERSION=	24.2-branchpoint-3438
+DISTVERSIONSUFFIX=	-g8aa314d3e18
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -34,8 +34,7 @@ USE_LDCONFIG=	yes
 GL_SITE=	https://gitlab.freedesktop.org
 BINARY_ALIAS=	python=${PYTHON_CMD}
 SHEBANG_FILES=	src/vulkan/overlay-layer/${PORTNAME}-overlay-control.py
-MESON_ARGS=	-Dgallium-omx=disabled \
-		-Dgallium-xa=disabled \
+MESON_ARGS=	-Dgallium-xa=disabled \
 		-Dandroid-libbacktrace=disabled \
 		-Dlibunwind=disabled \
 		-Dlmsensors=disabled \
@@ -115,7 +114,7 @@ OPENCL_RUN_DEPENDS=	libclc-${LLVM_PORT:T}>0:devel/libclc@${LLVM_PORT:T}
 OPENCL_SOVERSION=	${LLVM_VERSION}${${LLVM_VERSION}>=18:?.1:}
 OPENCL_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
 OPENCL_MESON_FALSE=	b_lundef # environ
-OPENCL_MESON_TRUE=	gallium-rusticl
+OPENCL_MESON_TRUE=	gallium-rusticl opencl-spirv
 OPENCL_MESON_ON=	-Dgallium-opencl=icd
 OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
 OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD

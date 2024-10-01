@@ -1,11 +1,12 @@
 PORTNAME=	rubocop-performance
-PORTVERSION=	1.21.1
+PORTVERSION=	1.22.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Collection of RuboCop cops to check for performance optimizations
-WWW=		https://github.com/rubocop/rubocop-performance
+WWW=		https://docs.rubocop.org/rubocop-performance/ \
+		https://github.com/rubocop/rubocop-performance
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt

@@ -24,6 +24,8 @@
     SUBDIR += granite7
     SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
+    SUBDIR += gstreamer1-plugins-qt5
+    SUBDIR += gstreamer1-plugins-qt6
     SUBDIR += gtk-layer-shell
     SUBDIR += gtk-session-lock
     SUBDIR += gtk-sharp-beans
@@ -88,6 +90,7 @@
     SUBDIR += libhandy
     SUBDIR += libhandy0
     SUBDIR += libshumate
+    SUBDIR += libspelling
     SUBDIR += libunique3
     SUBDIR += libwnck
     SUBDIR += libwnck3
@@ -171,10 +174,12 @@
     SUBDIR += py-easygui
     SUBDIR += py-fltk
     SUBDIR += py-guietta
+    SUBDIR += py-kivy
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt6-chart
     SUBDIR += py-qt6-datavis3d
+    SUBDIR += py-superqt
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
     SUBDIR += py-wxPython4
@@ -237,6 +242,7 @@
     SUBDIR += tk-wrapper
     SUBDIR += tk86
     SUBDIR += tk87
+    SUBDIR += tk90
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable

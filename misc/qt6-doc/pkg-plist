@@ -415,6 +415,7 @@
 %%QT_DOCDIR%%/qtdoc/vxworks.html
 %%QT_DOCDIR%%/qtdoc/wasm.html
 %%QT_DOCDIR%%/qtdoc/wayland-and-qt.html
+%%QT_DOCDIR%%/qtdoc/wayland-requirements.html
 %%QT_DOCDIR%%/qtdoc/webos.html
 %%QT_DOCDIR%%/qtdoc/whatsnew60.html
 %%QT_DOCDIR%%/qtdoc/whatsnew61.html

@@ -1,5 +1,5 @@
-PORTNAME=	quarto # html output is broken due to a missing dependency
-DISTVERSION=	1.6.9
+PORTNAME=	quarto
+DISTVERSION=	1.6.15
 PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://github.com/quarto-dev/quarto-cli/releases/download/v${DISTVERSION}/
@@ -15,10 +15,11 @@ LICENSE_FILE=	${WRKSRC}/repo/COPYRIGHT
 RUN_DEPENDS=	bash:shells/bash \
 		deno:www/deno \
 		esbuild:devel/esbuild \
-		hs-pandoc32>0:textproc/hs-pandoc32 \
+		hs-pandoc>0:textproc/hs-pandoc \
 		typst:textproc/typst \
 		deno-dom>0:www/deno-dom \
 		tex-xetex>0:print/tex-xetex \
+		${LOCALBASE}/lib/ruby/gems/3.2/gems/dartsass-1.49.8/exe/linux/sass:textproc/rubygem-dartsass \
 		${PYTHON_PKGNAMEPREFIX}jupyter>0:devel/py-jupyter@${PY_FLAVOR}
 
 USES=		python
@@ -28,9 +29,16 @@ GH_TUPLE=	quarto-dev:quarto-cli:v${DISTVERSION}:repo/repo # only for tests
 
 XARCH!=		uname -m
 
+NO_BUILD=	yes
+
 PLIST_SUB+=	XARCH=${XARCH}
 
-NO_BUILD=	yes
+OPTIONS_DEFINE=	R
+
+R_DESC=		Install R dependency
+R_RUN_DEPENDS=	R:math/R \
+		R-cran-knitr>0:print/R-cran-knitr \
+		R-cran-rmarkdown>0:textproc/R-cran-rmarkdown
 
 post-patch:
 	# replace tokens in the quarto executable and in run-tests.sh
@@ -40,6 +48,8 @@ post-patch:
 	${REINPLACE_CMD} \
 		-e 's|%%SCRIPT_PATH%%|${STAGEDIR}${DATADIR}/bin|; s|%%ARCH_DIR%%|${XARCH}|; s|%%REPO%%|${WRKSRC}/repo|; s|$$DENO_DIR|${LOCALBASE}/bin|' \
 		${WRKSRC}/repo/tests/run-tests.sh
+	# replace python3 with the real python executable path
+	${REINPLACE_CMD} -i '' -e 's|"python3"|"${PYTHON_CMD}"|' ${WRKSRC}/bin/quarto.js
 
 do-install:
 	# copy files from the tarball
@@ -67,7 +77,11 @@ do-install:
 		${STAGEDIR}${DATADIR}/bin/quarto
 	# make quarto an executable
 	${CHMOD} +x ${STAGEDIR}${DATADIR}/bin/quarto
-	# remove Linux binaries for dart-sass since FreeBSD binaries aren't available
+	# replace Linux binary for dart-sass with the binary provided by the rubygem-dartsass package
 	${RM} -r ${STAGEDIR}${DATADIR}/bin/tools/${XARCH}/dart-sass
+	${MKDIR} ${STAGEDIR}${DATADIR}/bin/tools/${XARCH}/dart-sass
+	${LN} -s \
+		${LOCALBASE}/lib/ruby/gems/3.2/gems/dartsass-1.49.8/exe/linux/sass \
+		${STAGEDIR}${DATADIR}/bin/tools/${XARCH}/dart-sass/sass
 
 .include <bsd.port.mk>

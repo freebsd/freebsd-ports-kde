@@ -60,6 +60,7 @@
     SUBDIR += bmon
     SUBDIR += boinc-client
     SUBDIR += boinc_curses
+    SUBDIR += boinctui
     SUBDIR += bosh-bootloader
     SUBDIR += bosh-cli
     SUBDIR += bounce
@@ -169,6 +170,8 @@
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
     SUBDIR += frp
+    SUBDIR += frr10
+    SUBDIR += frr10-pythontools
     SUBDIR += frr8
     SUBDIR += frr8-pythontools
     SUBDIR += frr9
@@ -222,6 +225,7 @@
     SUBDIR += gspoof
     SUBDIR += gssdp
     SUBDIR += gssdp14
+    SUBDIR += gstreamer1-plugins-sctp
     SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtk-vnc
     SUBDIR += guacamole-server
@@ -241,6 +245,7 @@
     SUBDIR += haproxy26
     SUBDIR += haproxy27
     SUBDIR += haproxy28
+    SUBDIR += haproxy29
     SUBDIR += hblock
     SUBDIR += hexinject
     SUBDIR += hlmaster
@@ -394,6 +399,7 @@
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
+    SUBDIR += libngtcp2-gnutls
     SUBDIR += libnids
     SUBDIR += libnpupnp
     SUBDIR += libnss-cache
@@ -1108,6 +1114,7 @@
     SUBDIR += py-pynsq
     SUBDIR += py-pypacker
     SUBDIR += py-pypcap
+    SUBDIR += py-pyprowl
     SUBDIR += py-pyroute2
     SUBDIR += py-pyroute2.minimal
     SUBDIR += py-pyroute2.protocols
@@ -1250,6 +1257,7 @@
     SUBDIR += rubygem-activestorage61
     SUBDIR += rubygem-activestorage70
     SUBDIR += rubygem-activestorage71
+    SUBDIR += rubygem-activestorage72
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
@@ -1310,6 +1318,7 @@
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab-fog-azure-rm
+    SUBDIR += rubygem-gitlab-kas-grpc
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-google-cloud-bigquery
     SUBDIR += rubygem-google-cloud-bigtable
@@ -1337,6 +1346,7 @@
     SUBDIR += rubygem-google-cloud-storage145
     SUBDIR += rubygem-google-cloud-storage_transfer
     SUBDIR += rubygem-google-cloud-storage_transfer-v1
+    SUBDIR += rubygem-google-cloud-storage_transfer12
     SUBDIR += rubygem-google-cloud-trace
     SUBDIR += rubygem-google-cloud-trace-v1
     SUBDIR += rubygem-google-cloud-trace-v2
@@ -1349,7 +1359,6 @@
     SUBDIR += rubygem-ipaddr
     SUBDIR += rubygem-ipaddress
     SUBDIR += rubygem-iproto
-    SUBDIR += rubygem-kas-grpc
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
     SUBDIR += rubygem-maxmind-db

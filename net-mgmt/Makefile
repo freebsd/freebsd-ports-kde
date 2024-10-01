@@ -149,10 +149,8 @@
     SUBDIR += nagcon
     SUBDIR += nagios
     SUBDIR += nagios-certexp-plugin
-    SUBDIR += nagios-check_bacula11
     SUBDIR += nagios-check_bacula13
     SUBDIR += nagios-check_bacula15
-    SUBDIR += nagios-check_bacula9
     SUBDIR += nagios-check_clamav
     SUBDIR += nagios-check_cpu_usage
     SUBDIR += nagios-check_dhcp.pl
@@ -270,6 +268,7 @@
     SUBDIR += p5-NetAddr-IP
     SUBDIR += p5-NetAddr-IP-Lite
     SUBDIR += p5-NetApp
+    SUBDIR += p5-OSLV-Monitor
     SUBDIR += p5-POE-Component-SNMP
     SUBDIR += p5-Prometheus-Tiny
     SUBDIR += p5-Prometheus-Tiny-Shared

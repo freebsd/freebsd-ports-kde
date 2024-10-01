@@ -418,6 +418,7 @@
     SUBDIR += py-ast-comments
     SUBDIR += py-boost-histogram
     SUBDIR += py-censys
+    SUBDIR += py-cmap
     SUBDIR += py-codecarbon
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
@@ -551,7 +552,6 @@
     SUBDIR += quary
     SUBDIR += randomx
     SUBDIR += raspberrypi-gpioshutdown
-    SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
     SUBDIR += retry

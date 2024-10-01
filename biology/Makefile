@@ -5,6 +5,7 @@
     SUBDIR += R-cran-BiocManager
     SUBDIR += abyss
     SUBDIR += ad2vcf
+    SUBDIR += andi
     SUBDIR += artemis
     SUBDIR += atac-seq
     SUBDIR += augustus
@@ -53,6 +54,7 @@
     SUBDIR += fasta
     SUBDIR += fasta3
     SUBDIR += fastahack
+    SUBDIR += fastani
     SUBDIR += fastdnaml
     SUBDIR += fastool
     SUBDIR += fastp
