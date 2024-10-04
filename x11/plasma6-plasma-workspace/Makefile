@@ -1,7 +1,10 @@
 PORTNAME=	plasma-workspace
 DISTVERSION=	${KDE_PLASMA_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 kde kde-plasma
+
+PATCH_SITES=	https://invent.kde.org/plasma/plasma-workspace/-/commit/
+PATCHFILES=	35367681c1e6ec515bd31a3f3caee0ea48de1710.patch:-p1
 
 COMMENT=	KDE Plasma Workspace
 MAINTAINER=	kde@FreeBSD.org
