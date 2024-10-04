@@ -36,8 +36,8 @@ USE_XORG=	x11
 
 .if ${ARCH:Mpowerpc*}
 USES+=		llvm:min=16
-.elif ${OPSYS} == FreeBSD && ( ${OSVERSION} >= 1400091 || ( ${OSVERSION} >= 1302607 && ${OSVERSION} < 1400000 ))
-# Work around compiler bug, see pr: 272286
+.elif ${OPSYS} == FreeBSD
+# Work around compiler bug, see pr: 272285
 USES+=		llvm
 .endif
 
