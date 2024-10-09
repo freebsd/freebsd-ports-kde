@@ -1088,7 +1088,6 @@
     SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
     SUBDIR += py-zkg
-    SUBDIR += py-zope.password
     SUBDIR += py-zxcvbn
     SUBDIR += pygost
     SUBDIR += qt-sudo
