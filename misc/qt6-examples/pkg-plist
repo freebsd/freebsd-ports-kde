@@ -3829,9 +3829,9 @@
 %%QT_EXAMPLEDIR%%/platforms/android/doc/images/portrait_java.png
 %%QT_EXAMPLEDIR%%/platforms/android/doc/images/qtabstractitemmodel_portrait.png
 %%QT_EXAMPLEDIR%%/platforms/android/doc/images/qtabstractlistmodel_portrait.png
-%%QT_EXAMPLEDIR%%/platforms/android/doc/src/qml_in_android_studio_projects.qdoc
 %%QT_EXAMPLEDIR%%/platforms/android/doc/src/qtabstractitemmodel_in_android_studio_projects.qdoc
 %%QT_EXAMPLEDIR%%/platforms/android/doc/src/qtabstractlistmodel_kotlin_example.qdoc
+%%QT_EXAMPLEDIR%%/platforms/android/doc/src/qtquick_for_android_studio_projects.qdoc
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel/Main.qml
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel/main.cpp

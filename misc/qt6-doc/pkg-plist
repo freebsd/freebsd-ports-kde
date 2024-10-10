@@ -168,8 +168,6 @@
 %%QT_DOCDIR%%/qtdoc/images/project_structure.png
 %%QT_DOCDIR%%/qtdoc/images/qml-application.png
 %%QT_DOCDIR%%/qtdoc/images/qml-extending-types.gif
-%%QT_DOCDIR%%/qtdoc/images/qml-for-android-architecture.drawio.svg
-%%QT_DOCDIR%%/qtdoc/images/qml-for-android-comparisson.drawio.svg
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-animation.png
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-integratingjs.png
 %%QT_DOCDIR%%/qtdoc/images/qml-uses-layouts-anchors.png
@@ -218,6 +216,8 @@
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-samegame-med-1.png
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-samegame-med-2.png
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-stocqt.png
+%%QT_DOCDIR%%/qtdoc/images/qtquick-for-android-architecture.drawio.svg
+%%QT_DOCDIR%%/qtdoc/images/qtquick-for-android-comparisson.drawio.svg
 %%QT_DOCDIR%%/qtdoc/images/qtquick3D.png
 %%QT_DOCDIR%%/qtdoc/images/rhiarch.png
 %%QT_DOCDIR%%/qtdoc/images/robotarm-example.png
@@ -304,7 +304,6 @@
 %%QT_DOCDIR%%/qtdoc/porting-to-qt6-using-clazy.html
 %%QT_DOCDIR%%/qtdoc/portingguide.html
 %%QT_DOCDIR%%/qtdoc/qml-codingconventions.html
-%%QT_DOCDIR%%/qtdoc/qml-for-android.html
 %%QT_DOCDIR%%/qtdoc/qml-glossary.html
 %%QT_DOCDIR%%/qtdoc/qmlapplications.html
 %%QT_DOCDIR%%/qtdoc/qmlfirststeps.html
@@ -375,6 +374,7 @@
 %%QT_DOCDIR%%/qtdoc/qtpurchasing-iosclasses.html
 %%QT_DOCDIR%%/qtdoc/qtquick-debugging.html
 %%QT_DOCDIR%%/qtdoc/qtquick-deployment.html
+%%QT_DOCDIR%%/qtdoc/qtquick-for-android.html
 %%QT_DOCDIR%%/qtdoc/qtquick-performance.html
 %%QT_DOCDIR%%/qtdoc/qtquick-qml-runtime.html
 %%QT_DOCDIR%%/qtdoc/qtquick-usecase-animations.html

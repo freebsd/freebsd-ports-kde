@@ -83,7 +83,7 @@ _QT5_MASTER_SITES=		${MASTER_SITE_QT}
 _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # Qt6 specific master sites
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
-_QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/src/submodules
+_QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
 
 # Qt5 specific distnames
 .  if ${_QT_DIST} == webengine
