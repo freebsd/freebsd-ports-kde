@@ -649,6 +649,7 @@
     SUBDIR += postgis32
     SUBDIR += postgis33
     SUBDIR += postgis34
+    SUBDIR += postgis35
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-idn
     SUBDIR += postgresql-jdbc
@@ -771,6 +772,7 @@
     SUBDIR += py-fastparquet
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
+    SUBDIR += py-flask-pymongo
     SUBDIR += py-flask-sqlalchemy
     SUBDIR += py-flask-sqlalchemy30
     SUBDIR += py-gdbm
@@ -892,6 +894,7 @@
     SUBDIR += replibyte
     SUBDIR += retcl
     SUBDIR += rocksdb
+    SUBDIR += rocksdb-jni
     SUBDIR += rqlite
     SUBDIR += rrdman
     SUBDIR += rrdmerge

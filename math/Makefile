@@ -339,6 +339,7 @@
     SUBDIR += flann
     SUBDIR += flexfloat
     SUBDIR += flexiblas
+    SUBDIR += flint
     SUBDIR += flint2
     SUBDIR += flintqs
     SUBDIR += flopc++
@@ -542,8 +543,10 @@
     SUBDIR += ntpoly
     SUBDIR += numdiff
     SUBDIR += obake
+    SUBDIR += ocaml-farith
     SUBDIR += ocaml-num
     SUBDIR += ocaml-ocamlgraph
+    SUBDIR += ocaml-ocplib-simplex
     SUBDIR += ocaml-zarith
     SUBDIR += ocamlgsl
     SUBDIR += octave
