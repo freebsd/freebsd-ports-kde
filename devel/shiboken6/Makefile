@@ -3,7 +3,7 @@ DISTVERSION=	${PYSIDE6_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/QtForPython/${PORTNAME}/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION}
+DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION:R}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python binding generator for C++ libraries
@@ -14,7 +14,7 @@ LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-USES=		cmake compiler:c++17-lang gnome llvm:lib,noexport pathfix \
+USES=		cmake compiler:c++17-lang gnome llvm:lib,min=17,noexport pathfix \
 		python qt:6 tar:xz
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
@@ -29,7 +29,9 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DBUILD_TESTS:BOOL=false
 
 WRKSRC_SUBDIR=	sources/shiboken6
-PLIST_SUB=	DISTVERSION=${DISTVERSION}
+PLIST_SUB=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER} \
+		SHLIB_VER=${DISTVERSION:R} \
+		SHLIB_VERSION=${DISTVERSION}
 
 OPTIONS_DEFINE=		DOCS NUMPY
 OPTIONS_DEFAULT=	NUMPY
