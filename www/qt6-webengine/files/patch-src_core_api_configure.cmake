@@ -1,4 +1,4 @@
---- src/core/api/configure.cmake.orig	2024-07-03 01:14:49 UTC
+--- src/core/api/configure.cmake.orig	2024-10-02 15:40:01 UTC
 +++ src/core/api/configure.cmake
 @@ -10,6 +10,7 @@ if(NOT QT_CONFIGURE_RUNNING)
      if(PkgConfig_FOUND AND QT_FEATURE_pkg_config)
@@ -8,9 +8,9 @@
          pkg_check_modules(XDAMAGE xdamage)
          pkg_check_modules(POPPLER_CPP poppler-cpp IMPORTED_TARGET)
          pkg_check_modules(GBM gbm)
-@@ -90,6 +91,11 @@ qt_feature("webengine-printing-and-pdf" PRIVATE
-     CONDITION TARGET Qt::PrintSupport AND QT_FEATURE_printer AND
-     (CUPS_FOUND OR WIN32)
+@@ -87,6 +88,11 @@ qt_feature("webengine-printing-and-pdf" PRIVATE
+     AUTODETECT NOT QT_FEATURE_webengine_embedded_build
+     CONDITION TARGET Qt::PrintSupport AND QT_FEATURE_printer
  )
 +qt_feature("webengine-system-sndio" PRIVATE
 +    LABEL "Use sndio"
@@ -20,7 +20,7 @@
  qt_feature("webengine-pepper-plugins" PRIVATE
      LABEL "Pepper Plugins"
      PURPOSE "Enables use of Pepper plugins."
-@@ -170,7 +176,7 @@ qt_feature("webengine-vaapi" PRIVATE
+@@ -167,7 +173,7 @@ qt_feature("webengine-vaapi" PRIVATE
      PURPOSE "Enables support for VA-API hardware acceleration"
      AUTODETECT GBM_FOUND AND LIBVA_FOUND AND QT_FEATURE_vulkan
      # hardware accelerated encoding requires bundled libvpx
@@ -29,7 +29,7 @@
  )
  list(LENGTH CMAKE_OSX_ARCHITECTURES osx_arch_count)
  qt_feature("webenginedriver" PUBLIC
-@@ -214,15 +220,19 @@ qt_configure_add_summary_entry(
+@@ -211,15 +217,19 @@ qt_configure_add_summary_entry(
  )
  qt_configure_add_summary_entry(
      ARGS "webengine-vaapi"

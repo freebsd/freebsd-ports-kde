@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/content/browser/browser_main_loop.cc.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/content/browser/browser_main_loop.cc.orig	2024-10-02 15:40:01 UTC
 +++ src/3rdparty/chromium/content/browser/browser_main_loop.cc
 @@ -254,6 +254,12 @@
  #include "mojo/public/cpp/bindings/lib/test_random_mojo_delays.h"
@@ -26,8 +26,8 @@
  #endif
  
    // GLib's spawning of new processes is buggy, so it's important that at this
-@@ -596,7 +608,7 @@ int BrowserMainLoop::EarlyInitialization() {
-   base::PlatformThread::SetCurrentThreadType(base::ThreadType::kCompositing);
+@@ -599,7 +611,7 @@ int BrowserMainLoop::EarlyInitialization() {
+           features::kBrowserUseCompositingThreadPriority));
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
 -    BUILDFLAG(IS_ANDROID)

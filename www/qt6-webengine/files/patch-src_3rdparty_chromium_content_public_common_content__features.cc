@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/content/public/common/content_features.cc.orig	2024-07-03 01:14:49 UTC
+--- src/3rdparty/chromium/content/public/common/content_features.cc.orig	2024-10-02 15:40:01 UTC
 +++ src/3rdparty/chromium/content/public/common/content_features.cc
 @@ -36,7 +36,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartup,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -18,7 +18,7 @@
  BASE_FEATURE(kAudioServiceSandbox,
               "AudioServiceSandbox",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -665,7 +665,7 @@ BASE_FEATURE(kOverscrollHistoryNavigation,
+@@ -670,7 +670,7 @@ BASE_FEATURE(kOverscrollHistoryNavigation,
               base::FEATURE_ENABLED_BY_DEFAULT);
  
  // Setting to control overscroll history navigation.
@@ -27,7 +27,7 @@
  BASE_FEATURE(kOverscrollHistoryNavigationSetting,
               "OverscrollHistoryNavigationSetting",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -1215,7 +1215,7 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1220,7 +1220,7 @@ BASE_FEATURE(kWebAssemblyTiering,
  
  // Enable WebAssembly trap handler.
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) || \
@@ -36,7 +36,7 @@
       defined(ARCH_CPU_X86_64)) ||                                           \
      (BUILDFLAG(IS_MAC) && defined(ARCH_CPU_ARM64))
  BASE_FEATURE(kWebAssemblyTrapHandler,
-@@ -1260,7 +1260,11 @@ BASE_FEATURE(kWebUICodeCache,
+@@ -1265,7 +1265,11 @@ BASE_FEATURE(kWebUICodeCache,
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb
