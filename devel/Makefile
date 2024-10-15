@@ -4590,6 +4590,7 @@
     SUBDIR += py-castellan
     SUBDIR += py-catalogue
     SUBDIR += py-cattrs
+    SUBDIR += py-cattrs23
     SUBDIR += py-cbor
     SUBDIR += py-cbor2
     SUBDIR += py-cclib
@@ -4696,6 +4697,7 @@
     SUBDIR += py-crcmod
     SUBDIR += py-crick
     SUBDIR += py-crontab
+    SUBDIR += py-crosshair-tool
     SUBDIR += py-cson
     SUBDIR += py-csv23
     SUBDIR += py-ctags
@@ -4981,6 +4983,7 @@
     SUBDIR += py-hupper
     SUBDIR += py-hvac
     SUBDIR += py-hypothesis
+    SUBDIR += py-hypothesis-crosshair
     SUBDIR += py-hypothesmith
     SUBDIR += py-icalendar
     SUBDIR += py-ice
@@ -5530,6 +5533,7 @@
     SUBDIR += py-pyformance
     SUBDIR += py-pygdbmi
     SUBDIR += py-pygit2
+    SUBDIR += py-pygls
     SUBDIR += py-pygpx
     SUBDIR += py-pyhashxx
     SUBDIR += py-pyhcl
@@ -5574,8 +5578,8 @@
     SUBDIR += py-pyproject-flake8
     SUBDIR += py-pyproject-fmt
     SUBDIR += py-pyproject-fmt-rust
+    SUBDIR += py-pyproject-hooks
     SUBDIR += py-pyproject-metadata
-    SUBDIR += py-pyproject_hooks
     SUBDIR += py-pypugjs
     SUBDIR += py-pyqtree
     SUBDIR += py-pyquery
@@ -5705,6 +5709,7 @@
     SUBDIR += py-python-pcre
     SUBDIR += py-python-ptrace
     SUBDIR += py-python-rapidjson
+    SUBDIR += py-python-semantic-release
     SUBDIR += py-python-socketio
     SUBDIR += py-python-statsd
     SUBDIR += py-python-subunit
@@ -6020,6 +6025,7 @@
     SUBDIR += py-types-toml
     SUBDIR += py-types-typed-ast
     SUBDIR += py-types-urllib3
+    SUBDIR += py-typeshed-client
     SUBDIR += py-typing-extensions
     SUBDIR += py-typing-inspect
     SUBDIR += py-tzdata
@@ -6653,6 +6659,7 @@
     SUBDIR += rubygem-aws-sdk-marketplacedeployment
     SUBDIR += rubygem-aws-sdk-marketplaceentitlementservice
     SUBDIR += rubygem-aws-sdk-marketplacemetering
+    SUBDIR += rubygem-aws-sdk-marketplacereporting
     SUBDIR += rubygem-aws-sdk-mediaconnect
     SUBDIR += rubygem-aws-sdk-mediaconvert
     SUBDIR += rubygem-aws-sdk-medialive
@@ -6770,6 +6777,7 @@
     SUBDIR += rubygem-aws-sdk-snowball
     SUBDIR += rubygem-aws-sdk-snowdevicemanagement
     SUBDIR += rubygem-aws-sdk-sns
+    SUBDIR += rubygem-aws-sdk-socialmessaging
     SUBDIR += rubygem-aws-sdk-sqs
     SUBDIR += rubygem-aws-sdk-ssm
     SUBDIR += rubygem-aws-sdk-ssmcontacts
