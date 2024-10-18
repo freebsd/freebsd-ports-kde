@@ -381,6 +381,7 @@ share/applications/kcm_wallpaper.desktop
 share/applications/org.kde.kcolorschemeeditor.desktop
 share/applications/org.kde.kfontinst.desktop
 share/applications/org.kde.kfontview.desktop
+share/applications/org.kde.klipper.desktop
 share/applications/org.kde.plasma-fallback-session-save.desktop
 share/applications/org.kde.plasmashell.desktop
 share/applications/org.kde.plasmawindowed.desktop
@@ -3232,6 +3233,7 @@ share/locale/ja/LC_MESSAGES/kcm_style.mo
 share/locale/ja/LC_MESSAGES/kcm_users.mo
 share/locale/ja/LC_MESSAGES/kcminit.mo
 share/locale/ja/LC_MESSAGES/kded_devicenotifications.mo
+share/locale/ja/LC_MESSAGES/kded_donationmessage.mo
 share/locale/ja/LC_MESSAGES/kfontinst.mo
 share/locale/ja/LC_MESSAGES/kio_applications.mo
 share/locale/ja/LC_MESSAGES/kio_desktop.mo
