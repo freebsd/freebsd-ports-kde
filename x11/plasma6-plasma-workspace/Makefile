@@ -41,7 +41,7 @@ USE_KDE=	activities activities-stats archive attica auth baloo \
 		ecm:build plasma-wayland-protocols:build
 USE_QT=		5compat base declarative svg wayland
 USE_XORG=	ice sm x11 xau xcb xcursor xext xfixes xft xi xrender xtst
-SHEBANG_FILES=	components/calendar/kconf_update/migrate-calendar-to-plugin-id.py
+SHEBANG_FILES=	components/calendar/kconf_update/migrate-calendar-to-plugin-id.py.in
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
