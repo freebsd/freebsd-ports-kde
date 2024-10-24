@@ -1,3 +1,5 @@
-TIMESTAMP = 1728598505
-SHA256 (pyside-setup-everywhere-src-6.8.tar.xz) = 5c05ad3ae7e7279d6db9dc94a46eb0a05fd093537309f7439c38671bd7255190
-SIZE (pyside-setup-everywhere-src-6.8.tar.xz) = 14641856
+TIMESTAMP = 1729659332
+SHA256 (pyside-setup-everywhere-src-6.8.0.tar.xz) = 7ae346f2d85f04c8828f2344c96cc211f342983d3ee81cc02923897a6b5c4940
+SIZE (pyside-setup-everywhere-src-6.8.0.tar.xz) = 14646376
+SHA256 (dfe3819559ed1e04089f9d5bc009268a7b48b7c2.patch) = 140af7d38559d9656291e2e751483aaed10e592c64eb05b1f508044f67fd8edd
+SIZE (dfe3819559ed1e04089f9d5bc009268a7b48b7c2.patch) = 6308

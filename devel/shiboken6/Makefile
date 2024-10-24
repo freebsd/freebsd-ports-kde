@@ -9,6 +9,9 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python binding generator for C++ libraries
 WWW=		http://qt-project.org
 
+PATCH_SITES=	https://github.com/pyside/pyside-setup/commit/
+PATCHFILES=	dfe3819559ed1e04089f9d5bc009268a7b48b7c2.patch:-p3 # Fix signature handling for 32-bit
+
 LICENSE=	GPLv2 LGPL21 LGPL3
 LICENSE_COMB=	multi
 
@@ -30,7 +33,7 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 
 WRKSRC_SUBDIR=	sources/shiboken6
 PLIST_SUB=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER} \
-		SHLIB_VER=${DISTVERSION:R} \
+		SHLIB_VER=${DISTVERSION:R:R} \
 		SHLIB_VERSION=${DISTVERSION}
 
 OPTIONS_DEFINE=		DOCS NUMPY
