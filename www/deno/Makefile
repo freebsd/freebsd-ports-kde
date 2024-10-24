@@ -1,7 +1,6 @@
 PORTNAME=	deno
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.46.2
-PORTREVISION=	1
+DISTVERSION=	2.0.0
 CATEGORIES=	www
 
 MAINTAINER=	mikael@FreeBSD.org
@@ -26,7 +25,7 @@ GH_ACCOUNT=	denoland
 
 USE_GNOME=	glib20
 
-V8_VERS=	0.105.0
+V8_VERS=	0.106.0
 
 CARGO_ENV+=	CLANG_BASE_PATH=/usr \
 		GN=${PREFIX}/bin/gn \
@@ -61,6 +60,6 @@ post-patch:
 	${CP} ${WRKSRC}/cargo-crates/deno_core_icudata-0.0.73/src/icudtl.dat ${WRKSRC}/cargo-crates/v8-${V8_VERS}/third_party/icu/common/
 
 do-install:
-	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/${CARGO_BUILD_TARGET}/*/deno ${STAGEDIR}${LOCALBASE}/bin
+	${INSTALL_PROGRAM} ${CARGO_TARGET_DIR}/*/deno ${STAGEDIR}${LOCALBASE}/bin
 
 .include <bsd.port.mk>
