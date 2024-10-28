@@ -1,3 +1,5 @@
-TIMESTAMP = 1729260407
-SHA256 (KDE/plasma/6.2.1/kde-gtk-config-6.2.1.tar.xz) = f563d416094b2b9378d4b80336de0dded03875d9eac71ff8843c104cb867e5ec
-SIZE (KDE/plasma/6.2.1/kde-gtk-config-6.2.1.tar.xz) = 78720
+TIMESTAMP = 1729912398
+SHA256 (KDE/plasma/6.2.2/kde-gtk-config-6.2.2.tar.xz) = ba89fb135e37faa1544a9be29a10c2a40029dfd53af4ceb343289c6a69365066
+SIZE (KDE/plasma/6.2.2/kde-gtk-config-6.2.2.tar.xz) = 78724
+SHA256 (KDE/plasma/6.2.2/d23cc1f74c26783b3d652c736f4c1df7cb828e76.patch) = 8dc4994a6e2e7e9ca22f02475f83ccedebe5450290f7aafd4910f8a63437efa1
+SIZE (KDE/plasma/6.2.2/d23cc1f74c26783b3d652c736f4c1df7cb828e76.patch) = 4321
