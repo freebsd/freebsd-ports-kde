@@ -601,6 +601,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pipewire-module-xrdp
+    SUBDIR += pipewire-spa-oss
     SUBDIR += pithos
     SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-oxygen-sounds
@@ -671,6 +672,7 @@
     SUBDIR += py-soxr
     SUBDIR += py-speechrecognition
     SUBDIR += py-spotipy
+    SUBDIR += py-supysonic
     SUBDIR += py-torchaudio
     SUBDIR += py-vosk
     SUBDIR += py-wavio

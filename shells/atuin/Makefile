@@ -6,7 +6,8 @@ CATEGORIES=	shells
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Magical shell history
-WWW=		https://atuin.sh
+WWW=		https://atuin.sh \
+		https://github.com/atuinsh/atuin
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -475,7 +476,7 @@ PLIST_FILES=	bin/${PORTNAME}
 do-install:
 	# binaries (workaround for error: found a virtual manifest at `xx` instead of a package manifest)
 	${INSTALL_PROGRAM} \
-		${WRKDIR}/target/*/release/${PORTNAME} \
+		${WRKDIR}/target/release/${PORTNAME} \
 		${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

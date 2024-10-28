@@ -6,7 +6,8 @@ CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	More powerful alternative to sysctl(8) with a terminal user interface
-WWW=		https://systeroid.cli.rs
+WWW=		https://systeroid.cli.rs \
+		https://github.com/orhun/systeroid
 
 LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
@@ -196,7 +197,7 @@ do-install:
 	# binaries (workaround for error: found a virtual manifest at `xx` instead of a package manifest)
 .for p in ${PROGS}
 	${INSTALL_PROGRAM} \
-		${WRKDIR}/target/*/release/${p} \
+		${WRKDIR}/target/release/${p} \
 		${STAGEDIR}${PREFIX}/bin
 .endfor
 

@@ -655,6 +655,7 @@
     SUBDIR += kubectl
     SUBDIR += kubie
     SUBDIR += kubo-go
+    SUBDIR += kustomize
     SUBDIR += kvmclock-kmod
     SUBDIR += lava
     SUBDIR += lbl-cf
@@ -700,6 +701,7 @@
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
+    SUBDIR += loaders-update
     SUBDIR += lockfile-progs
     SUBDIR += loganalyzer
     SUBDIR += logrotate
