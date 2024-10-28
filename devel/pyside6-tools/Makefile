@@ -5,6 +5,7 @@ MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-tools
 DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION:R}
+DIST_SUBDIR=	KDE/Qt/${PYSIDE6_VERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	PySide6 development tools
@@ -23,10 +24,12 @@ USE_GL=		opengl
 USE_PYTHON=	flavors
 USE_QT=		base declarative languageserver quick3d shadertools tools
 
-SHEBANG_FILES=	pyside_tool.py qtpy2cpp_lib/tests/baseline/basic_test.py
+SHEBANG_FILES=	pyside_tool.py \
+		qtpy2cpp_lib/tests/baseline/basic_test.py
+
+WRKSRC_SUBDIR=	sources/pyside-tools
 
 PLIST_SUB=	PYSIDE_BINDIR_REL=${PYSIDE_BINDIR_REL}
-WRKSRC_SUBDIR=	sources/pyside-tools
 
 PYSIDE_RELNAME=		${PORTNAME}
 PYSIDE_BINDIR_REL?=	bin/${PYSIDE_RELNAME}

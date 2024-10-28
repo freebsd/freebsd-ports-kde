@@ -4,6 +4,7 @@ CATEGORIES=	devel
 MASTER_SITES=	QT/official_releases/QtForPython/shiboken6/PySide6-${DISTVERSION}-src
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyside-setup-everywhere-src-${DISTVERSION:R}
+DIST_SUBDIR=	KDE/Qt/${PYSIDE6_VERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python Qt bindings for Qt 6
@@ -42,7 +43,7 @@ USE_QT+=	webengine webview
 .else
 CMAKE_ON+=	CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineCore \
 		CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineQuick \
-		CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets
+		CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets \
 		CMAKE_DISABLE_FIND_PACKAGE_Qt6WebView
 PLIST_SUB+=	WEBENGINE="@comment " \
 		WEBVIEW="@comment "
