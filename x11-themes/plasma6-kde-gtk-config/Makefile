@@ -5,9 +5,6 @@ CATEGORIES=	x11-themes kde kde-plasma
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Syncs KDE settings to GTK applications
 
-PATCH_SITES=	https://invent.kde.org/plasma/${PORTNAME}/commit/
-PATCHFILES=	d23cc1f74c26783b3d652c736f4c1df7cb828e76.patch:-p1
-
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 		sassc:textproc/sassc
 LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
