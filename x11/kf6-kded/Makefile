@@ -1,6 +1,5 @@
 PORTNAME=	kded
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
 
 COMMENT=	Central daemon of KDE work spaces

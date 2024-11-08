@@ -2617,6 +2617,7 @@ share/icons/breeze-dark/actions/16/shapes-symbolic.svg
 share/icons/breeze-dark/actions/16/shapes.svg
 share/icons/breeze-dark/actions/16/shear-symbolic.svg
 share/icons/breeze-dark/actions/16/shear.svg
+share/icons/breeze-dark/actions/16/show-background.svg
 share/icons/breeze-dark/actions/16/show-dialogs-symbolic.svg
 share/icons/breeze-dark/actions/16/show-dialogs.svg
 share/icons/breeze-dark/actions/16/show-grid-symbolic.svg
@@ -7711,7 +7712,6 @@ share/icons/breeze-dark/actions/32/folder-new.svg
 share/icons/breeze-dark/actions/32/folder-symbolic.svg
 share/icons/breeze-dark/actions/32/folder-sync-symbolic.svg
 share/icons/breeze-dark/actions/32/folder-sync.svg
-share/icons/breeze-dark/actions/32/folder.svg
 share/icons/breeze-dark/actions/32/format-stroke-color-symbolic.svg
 share/icons/breeze-dark/actions/32/format-stroke-color.svg
 share/icons/breeze-dark/actions/32/games-config-custom-symbolic.svg
@@ -8418,6 +8418,7 @@ share/icons/breeze-dark/apps/22/kget-symbolic.svg
 share/icons/breeze-dark/apps/22/kgpg-symbolic.svg
 share/icons/breeze-dark/apps/22/kleopatra-symbolic.svg
 share/icons/breeze-dark/apps/22/kmail-symbolic.svg
+share/icons/breeze-dark/apps/22/knotes-symbolic.svg
 share/icons/breeze-dark/apps/22/konversation-symbolic.svg
 share/icons/breeze-dark/apps/22/kopete-symbolic.svg
 share/icons/breeze-dark/apps/22/korg-todo-symbolic.svg
@@ -8458,6 +8459,7 @@ share/icons/breeze-dark/apps/32/hwinfo.svg
 share/icons/breeze-dark/apps/32/kate-symbolic.svg
 share/icons/breeze-dark/apps/32/kdeconnect-symbolic.svg
 share/icons/breeze-dark/apps/32/klipper-symbolic.svg
+share/icons/breeze-dark/apps/32/knotes-symbolic.svg
 share/icons/breeze-dark/apps/32/ktimetracker.svg
 share/icons/breeze-dark/apps/32/kup.svg
 share/icons/breeze-dark/apps/32/kwrite.svg
@@ -8691,6 +8693,7 @@ share/icons/breeze-dark/apps/48/kmplot.svg
 share/icons/breeze-dark/apps/48/kmymoney.svg
 share/icons/breeze-dark/apps/48/knetattach.svg
 share/icons/breeze-dark/apps/48/knights.svg
+share/icons/breeze-dark/apps/48/knotes-symbolic.svg
 share/icons/breeze-dark/apps/48/knotes.svg
 share/icons/breeze-dark/apps/48/kolf.svg
 share/icons/breeze-dark/apps/48/kolourpaint.svg
@@ -16748,6 +16751,7 @@ share/icons/breeze/actions/16/shapes-symbolic.svg
 share/icons/breeze/actions/16/shapes.svg
 share/icons/breeze/actions/16/shear-symbolic.svg
 share/icons/breeze/actions/16/shear.svg
+share/icons/breeze/actions/16/show-background.svg
 share/icons/breeze/actions/16/show-dialogs-symbolic.svg
 share/icons/breeze/actions/16/show-dialogs.svg
 share/icons/breeze/actions/16/show-grid-symbolic.svg
@@ -21842,7 +21846,6 @@ share/icons/breeze/actions/32/folder-new.svg
 share/icons/breeze/actions/32/folder-symbolic.svg
 share/icons/breeze/actions/32/folder-sync-symbolic.svg
 share/icons/breeze/actions/32/folder-sync.svg
-share/icons/breeze/actions/32/folder.svg
 share/icons/breeze/actions/32/format-stroke-color-symbolic.svg
 share/icons/breeze/actions/32/format-stroke-color.svg
 share/icons/breeze/actions/32/games-config-custom-symbolic.svg
@@ -22555,6 +22558,7 @@ share/icons/breeze/apps/22/kget-symbolic.svg
 share/icons/breeze/apps/22/kgpg-symbolic.svg
 share/icons/breeze/apps/22/kleopatra-symbolic.svg
 share/icons/breeze/apps/22/kmail-symbolic.svg
+share/icons/breeze/apps/22/knotes-symbolic.svg
 share/icons/breeze/apps/22/konversation-symbolic.svg
 share/icons/breeze/apps/22/kopete-symbolic.svg
 share/icons/breeze/apps/22/korg-todo-symbolic.svg
@@ -22597,6 +22601,7 @@ share/icons/breeze/apps/32/hwinfo.svg
 share/icons/breeze/apps/32/kate-symbolic.svg
 share/icons/breeze/apps/32/kdeconnect-symbolic.svg
 share/icons/breeze/apps/32/klipper-symbolic.svg
+share/icons/breeze/apps/32/knotes-symbolic.svg
 share/icons/breeze/apps/32/ktimetracker.svg
 share/icons/breeze/apps/32/kup.svg
 share/icons/breeze/apps/32/kwrite.svg
@@ -22830,6 +22835,7 @@ share/icons/breeze/apps/48/kmplot.svg
 share/icons/breeze/apps/48/kmymoney.svg
 share/icons/breeze/apps/48/knetattach.svg
 share/icons/breeze/apps/48/knights.svg
+share/icons/breeze/apps/48/knotes-symbolic.svg
 share/icons/breeze/apps/48/knotes.svg
 share/icons/breeze/apps/48/kolf.svg
 share/icons/breeze/apps/48/kolourpaint.svg
