@@ -1,3 +1,315 @@
+  <vuln vid="d48a2224-9b4c-11ef-bdd9-4ccc6adda413">
+    <topic>gstreamer1-rtsp-server -- Potential Denial-of-Service (DoS) with specially crafted client requests</topic>
+    <affects>
+      <package>
+	<name>gstreamer1-rtsp-server</name>
+	<range><ge>1.18.0</ge><lt>1.24.9</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qingpeng Du reports:</p>
+	<blockquote cite="https://gstreamer.freedesktop.org/security/sa-2024-0004.html">
+	  <p>A series of specially crafted client requests during streaming setup
+	   (post client authentication, if any) can cause the RTSP server library
+	   to abort, if it has been compiled with assertions enabled.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-44331</cvename>
+      <url>https://gstreamer.freedesktop.org/security/sa-2024-0004.html</url>
+    </references>
+    <dates>
+      <discovery>2024-10-29</discovery>
+      <entry>2024-11-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ab254c9d-9c36-11ef-8c1c-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>130.0.6723.116</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>130.0.6723.116</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[370217726] High CVE-2024-10826: Use after free in Family Experiences. Reported by Anonymous on 2024-09-29</li>
+	    <li>[375065084] High CVE-2024-10827: Use after free in Serial. Reported by Anonymous on 2024-10-23</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-10826</cvename>
+      <cvename>CVE-2024-10827</cvename>
+      <url>https://chromereleases.googleblog.com/2024/11/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2024-11-05</discovery>
+      <entry>2024-11-06</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ecf9a798-9aa9-11ef-a8f0-a8a15998b5cb">
+    <topic>libqb -- Buffer overflow</topic>
+    <affects>
+      <package>
+	<name>libqb</name>
+	<range><lt>2.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://github.com/ClusterLabs/libqb/commit/1bbaa929b77113532785c408dd1b41cd0521ffc8">
+	  <p>log_blackbox.c in libqb before 2.0.8 allows a buffer overflow via
+	long log messages because the header size is not considered.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2023-39976</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2023-39976</url>
+    </references>
+    <dates>
+      <discovery>2023-08-08</discovery>
+      <entry>2024-11-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e17384ef-c5e8-4b5d-bb62-c13405e7f1f7">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>130.0.6723.91</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>130.0.6723.91</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_29.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[375123371] Critical CVE-2024-10487: Out of bounds write in Dawn. Reported by Apple Security Engineering and Architecture (SEAR) on 2024-10-23</li>
+	    <li>[374310077] High CVE-2024-10488: Use after free in WebRTC. Reported by Cassidy Kim(@cassidy6564) on 2024-10-18</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2024-10487</cvename>
+      <cvename>CVE-2024-10488</cvename>
+      <url>https://chromereleases.googleblog.com/2024/10/stable-channel-update-for-desktop_29.html</url>
+    </references>
+    <dates>
+      <discovery>2024-10-29</discovery>
+      <entry>2024-11-02</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3092668e-97e4-11ef-bdd9-4ccc6adda413">
+    <topic>qt5-webengine -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>qt5-webengine</name>
+	<range><lt>5.15.18p2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based">
+	  <p>Backports for 15 security bugs in Chromium:</p>
+	  <ul>
+	    <li>CVE-2024-4761: Out of bounds write in V8</li>
+	    <li>CVE-2024-5158: Type confusion in V8</li>
+	    <li>CVE-2024-7532: Out of bounds memory access in ANGLE</li>
+	    <li>CVE-2024-7965: Inappropriate implementation in V8</li>
+	    <li>CVE-2024-7967: Heap buffer overflow in Fonts</li>
+	    <li>CVE-2024-7971: Type confusion in V8</li>
+	    <li>CVE-2024-8198: Heap buffer overflow in Skia</li>
+	    <li>CVE-2024-8636: Heap buffer overflow in Skia</li>
+	    <li>CVE-2024-9123: Integer overflow in Skia</li>
+	    <li>CVE-2024-9602: Type confusion in V8</li>
+	    <li>CVE-2024-9603: Type confusion in V8</li>
+	    <li>CVE-2024-10229: Inappropriate implementation in Extensions</li>
+	    <li>CVE-2024-45490: Negative length in libexpat</li>
+	    <li>CVE-2024-45491: Integer overflow in libexpat</li>
+	    <li>CVE-2024-45492: Integer overflow in libexpat</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-4761</cvename>
+      <cvename>CVE-2024-5158</cvename>
+      <cvename>CVE-2024-7532</cvename>
+      <cvename>CVE-2024-7965</cvename>
+      <cvename>CVE-2024-7967</cvename>
+      <cvename>CVE-2024-7971</cvename>
+      <cvename>CVE-2024-8198</cvename>
+      <cvename>CVE-2024-8636</cvename>
+      <cvename>CVE-2024-9123</cvename>
+      <cvename>CVE-2024-9602</cvename>
+      <cvename>CVE-2024-9603</cvename>
+      <cvename>CVE-2024-10229</cvename>
+      <cvename>CVE-2024-45490</cvename>
+      <cvename>CVE-2024-45491</cvename>
+      <cvename>CVE-2024-45492</cvename>
+      <url>https://code.qt.io/cgit/qt/qtwebengine-chromium.git/log/?h=87-based</url>
+    </references>
+    <dates>
+      <discovery>2024-09-18</discovery>
+      <entry>2024-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fd538d14-5778-4764-b321-2ddd61a8a58f">
+    <topic>keycloak -- Missing server identity checks when sending mails via SMTPS</topic>
+    <affects>
+      <package>
+	<name>keycloak</name>
+	<range><lt>26.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Red Hat reports:</p>
+	<blockquote cite="https://bugzilla.redhat.com/show_bug.cgi?id=2315808">
+	  <p>A vulnerability was found in Apache Sling Commons Messaging
+	    Mail(angus-mail), which provides a simple interface for sending
+	    emails via SMTPS in OSGi, does not offer an option to enable
+	    server identity checks, leaving connections vulnerable to
+	    "man-in-the-middle" attacks and can allow insecure email
+	    communication.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44549</cvename>
+      <url>https://www.cve.org/CVERecord?id=CVE-2021-44549</url>
+    </references>
+    <dates>
+      <discovery>2024-10-01</discovery>
+      <entry>2024-10-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b73d1f2a-96de-11ef-9e71-00d8612f03c8">
+    <topic>librewolf -- Undefined behavior in selection node cache</topic>
+    <affects>
+      <package>
+	<name>librewolf</name>
+	<range><lt>131.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security@mozilla.org reports:</p>
+	<blockquote cite="https://bugzilla.mozilla.org/show_bug.cgi?id=1920381">
+	  <p>When manipulating the selection node cache, an attacker may have
+	been able to cause unexpected behavior, potentially leading to an
+	exploitable crash.  This vulnerability affects Firefox &lt; 131.0.3.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-9936</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2024-9936</url>
+    </references>
+    <dates>
+      <discovery>2024-10-14</discovery>
+      <entry>2024-10-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4b3a8e7d-9372-11ef-87ad-a8a15998b5cb">
+    <topic>hwloc2 -- Denial of service or other unspecified impacts</topic>
+    <affects>
+      <package>
+	<name>hwloc2</name>
+	<range><ge>2.1.0</ge><le>2.9.2</le></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cve@mitre.org reports:</p>
+	<blockquote cite="https://github.com/open-mpi/hwloc/issues/544">
+	  <p>An issue was discovered in open-mpi hwloc 2.1.0 allows attackers
+	to cause a denial of service or other unspecified impacts via
+	glibc-cpuset in topology-linux.c.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2022-47022</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2022-47022</url>
+    </references>
+    <dates>
+      <discovery>2023-08-22</discovery>
+      <entry>2024-10-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f07c8f87-8e65-11ef-81b8-659bf0027d16">
+    <topic>forgejo -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>forgejo</name>
+	<range><lt>9.0.1</lt></range>
+      </package>
+      <package>
+	<name>forgejo7</name>
+	<range><lt>7.0.10</lt></range>
+      </package>
+    </affects>
+    <description>
+       <body xmlns="http://www.w3.org/1999/xhtml">
+       <h1>Problem Description:</h1>
+       <ul>
+       <li>Forgejo generates a token which is used to authenticate web
+       endpoints that are only meant to be used internally, for instance
+       when the SSH daemon is used to push a commit with Git.  The
+       verification of this token was not done in constant time and was
+       susceptible to timing attacks.  A pre-condition for such an attack is
+       the precise measurements of the time for each operation.  Since it
+       requires observing the timing of network operations, the issue is
+       mitigated when a Forgejo instance is accessed over the internet
+       because the ISP introduce unpredictable random delays.</li>
+       <li>Because of a missing permission check, the branch used to propose
+       a pull request to a repository can always be deleted by the user
+       performing the merge.  It was fixed so that such a deletion is only
+       allowed if the user performing the merge has write permission to the
+       repository from which the pull request was made.</li>
+       </ul>
+      </body>
+    </description>
+    <references>
+      <url>https://codeberg.org/forgejo/forgejo/milestone/8544</url>
+      <url>https://codeberg.org/forgejo/forgejo/pulls/5719</url>
+      <url>https://codeberg.org/forgejo/forgejo/pulls/5718</url>
+    </references>
+    <dates>
+      <discovery>2024-10-28</discovery>
+      <entry>2024-10-29</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="fafaef4d-f364-4a07-bbdd-bf53448c593c">
     <topic>chromium -- multiple security fixes</topic>
     <affects>

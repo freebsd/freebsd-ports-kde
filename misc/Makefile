@@ -95,7 +95,6 @@
     SUBDIR += dtach
     SUBDIR += dvorak7min
     SUBDIR += dynomite
-    SUBDIR += e2fsprogs-libblkid
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += ecflow
     SUBDIR += edfbrowser
@@ -633,8 +632,6 @@
     SUBDIR += tvbrowser
     SUBDIR += tvm
     SUBDIR += tzdiff
-    SUBDIR += uk-phone
-    SUBDIR += uk-postcodes
     SUBDIR += umodunpack
     SUBDIR += unclutter
     SUBDIR += unclutter-xfixes

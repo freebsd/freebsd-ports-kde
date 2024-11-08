@@ -15,7 +15,8 @@ BUILD_DEPENDS=	kpeoplevcard>0:net/kpeoplevcard \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		wayland-protocols>=0:graphics/wayland-protocols
 RUN_DEPENDS=	sshpass:security/sshpass \
-		sshfs:sysutils/fusefs-sshfs 
+		sshfs:filesystems/sshfs \
+		kpeoplevcard>0:net/kpeoplevcard 
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
 		localbase:ldflags pkgconfig qca qt:6 tar:xz xorg
