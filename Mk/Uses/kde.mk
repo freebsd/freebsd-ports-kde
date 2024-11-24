@@ -300,8 +300,8 @@ _USE_FRAMEWORKS6_ALL=	ecm colorscheme \
 			svg \
 			statusnotifieritem \
 			plasma-wayland-protocols \
-			userfeedback \
 			texttemplate \
+			userfeedback \
 			${_USE_FRAMEWORKS_TIER1:Noxygen-icons:Nwayland} \
 			${_USE_FRAMEWORKS_TIER2} \
 			${_USE_FRAMEWORKS_TIER3:Nemoticons:Ndesignerplugin:Nactivities:Nactivities-stats:Ninit:Nplasma-framework:Nxmlrpcclient:Nkpipewire} \
@@ -957,7 +957,7 @@ kde-korganizer_PATH=		${KDE_PREFIX}/bin/korganizer
 kde-mbox-importer_PORT=		deskutils/mbox-importer
 kde-mbox-importer_PATH=		${KDE_PREFIX}/bin/mboximporter
 
-kde-mimetreeparser_PORT=	net/mimetreeparser	
+kde-mimetreeparser_PORT=	net/mimetreeparser
 kde-mimetreeparser_LIB=		libKPim${_KDE_VERSION}MimeTreeParserCore.so
 
 

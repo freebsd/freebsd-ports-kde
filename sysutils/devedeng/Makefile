@@ -1,5 +1,6 @@
 PORTNAME=	devedeng
 DISTVERSION=	4.18.0
+PORTREVISION=	1
 CATEGORIES=	sysutils multimedia python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +13,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libcanberra.so:audio/libcanberra
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}gobject3>0:devel/py-gobject3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}cairo>0:graphics/py-cairo@${PY_FLAVOR} \
 		ffmpeg>1.2.6:multimedia/ffmpeg \
 		dvdauthor:multimedia/dvdauthor \
@@ -23,7 +23,7 @@ USES=		python gettext-tools gnome
 USE_GITLAB=	yes
 GL_ACCOUNT=	rastersoft
 GL_TAGNAME=	8cd457b494c1b746633d2490e319c07f6905e1f2
-USE_GNOME=	gtk30
+USE_GNOME=	gtk30 pygobject3:run
 USE_PYTHON=	distutils autoplist
 
 NO_ARCH=	yes

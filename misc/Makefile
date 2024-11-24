@@ -275,7 +275,6 @@
     SUBDIR += mmv
     SUBDIR += mnn
     SUBDIR += molequeue
-    SUBDIR += morse
     SUBDIR += mtx
     SUBDIR += mxnet
     SUBDIR += najitool
@@ -458,6 +457,7 @@
     SUBDIR += py-llm-claude-3
     SUBDIR += py-log_symbols
     SUBDIR += py-mffpy
+    SUBDIR += py-mixpanel
     SUBDIR += py-mmcv
     SUBDIR += py-mmdet
     SUBDIR += py-mmengine
@@ -484,10 +484,12 @@
     SUBDIR += py-oterm
     SUBDIR += py-palettable
     SUBDIR += py-papermill
+    SUBDIR += py-pdd
     SUBDIR += py-pexpect
     SUBDIR += py-pkbar
     SUBDIR += py-placekey
     SUBDIR += py-polars
+    SUBDIR += py-posthog
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2

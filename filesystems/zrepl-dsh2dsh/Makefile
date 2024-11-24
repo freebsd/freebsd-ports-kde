@@ -1,6 +1,6 @@
 PORTNAME=	zrepl
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.8.9
+DISTVERSION=	0.9.1
 CATEGORIES=	filesystems sysutils
 PKGNAMESUFFIX=	-dsh2dsh
 
@@ -41,6 +41,9 @@ post-install:
 	${INSTALL_DATA} \
 		${WRKSRC}/dist/freebsd/etc/newsyslog.conf.d/${PORTNAME}.conf \
 		${STAGEDIR}${EXAMPLESDIR}/newsyslog.conf
+	${INSTALL_DATA} \
+		${WRKSRC}/dist/freebsd/etc/${PORTNAME}/keys.yaml \
+		${STAGEDIR}${ETCDIR}/keys.yaml.sample
 	${INSTALL_DATA} ${WRKSRC}/dist/freebsd/etc/${PORTNAME}/${PORTNAME}.yml \
 		${STAGEDIR}${ETCDIR}/${PORTNAME}.yml.sample
 	${INSTALL_SCRIPT} \

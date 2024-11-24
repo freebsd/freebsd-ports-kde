@@ -822,6 +822,7 @@
     SUBDIR += umix
     SUBDIR += umodplayer
     SUBDIR += umurmur
+    SUBDIR += unflac
     SUBDIR += vamp-plugin-sdk
     SUBDIR += vban
     SUBDIR += vgmplay

@@ -1232,8 +1232,6 @@ math/rkward-kde|math/rkward|2022-05-06|Switched to the name used by upstream
 graphics/photoflow||2022-05-06|Unmaintainer upstream, has been broken for months, particularly this issue isn't answered: https://github.com/aferrero2707/PhotoFlow/issues/220
 textproc/redisearch16||2022-05-09|Has expired. Use textproc/redisearch or textproc/redisearch20
 devel/git-arc|devel/freebsd-git-devtools|2022-05-13|Renamed because more tools are now included
-graphics/magnum-examples||2022-05-17|Has expired: Depends on broken graphics/magnum
-graphics/magnum-extras||2022-05-17|Has expired: Depends on broken graphics/magnum
 math/pantheon-calculator|math/elementary-calculator|2022-05-18|Switch to reverse domain name notation
 mail/p5-MIME-Fast||2022-05-19|Depends on long deprecated gmime-2.2
 mail/gmime2-sharp|mail/gmime26-sharp|2022-05-19|Depends on long deprecated gmime-2.2
@@ -3573,7 +3571,6 @@ misc/uk-postcodes||2024-10-31|Has expired: Obsolete, 20+ year old data
 misc/uk-phone||2024-10-31|Has expired: Obsolete, 20+ year old data
 textproc/ssddiff||2024-10-31|Has expired: Abandonware, unfetchable and upstream is gone
 sysutils/pydf||2024-11-02|Has expired: Inactive upstream. Does not properly work on FreeBSD
-ports-mgmt/freebsd-bugzilla-cli||2024-11-02|Has expired: Broken. Upstream unavailable
 sysutils/zap|filesystems/zap|2024-11-06|Moved to new category filesystems
 sysutils/fusefs-mergerfs|filesystems/mergerfs|2024-11-06|Moved to new category filesystems
 sysutils/squashfs-tools-ng|filesystems/squashfs-tools-ng|2024-11-06|Moved to new category filesystems
@@ -3651,7 +3648,6 @@ sysutils/R-cran-fs|filesystems/R-cran-fs|2024-11-06|Moved to new category filesy
 security/clamfs|filesystems/clamfs|2024-11-06|Moved to new category filesystems
 emulators/mtools|filesystems/mtools|2024-11-06|Moved to new category filesystems
 devel/tclvfs|filesystems/tclvfs|2024-11-06|Moved to new category filesystems
-devel/rubygem-aws-sdk-efs|filesystems/rubygem-aws-sdk-efs|2024-11-06|Moved to new category filesystems
 devel/py-s3fs|filesystems/py-s3fs|2024-11-06|Moved to new category filesystems
 devel/py-pyfakefs|filesystems/py-pyfakefs|2024-11-06|Moved to new category filesystems
 devel/py-llfuse|filesystems/py-llfuse|2024-11-06|Moved to new category filesystems
@@ -3714,3 +3710,19 @@ sysutils/dsbmd|filesystems/dsbmd|2024-11-06|Moved to new category filesystems
 sysutils/dsbmc-cli|filesystems/dsbmc-cli|2024-11-06|Moved to new category filesystems
 sysutils/dsbmc|filesystems/dsbmc|2024-11-06|Moved to new category filesystems
 misc/e2fsprogs-libblkid|filesystems/e2fsprogs-libblkid|2024-11-06|Moved to new category filesystems
+security/gpgme-qt-headers|security/gpgme-qt|2024-11-10|Flavored headers are now installed by security/gpgme-qt
+devel/flatbuffers205|devel/flatbuffers|2024-11-10|Not needed any more
+lang/gcc11-devel|lang/gcc11|2024-11-12|GCC 11 reached end of life; use the final release (or a newer major version)
+sysutils/hammer2|filesystems/hammer2|2024-11-13|Moved to new category filesystems
+sysutils/ods2|filesystems/ods2|2024-11-13|Moved to new category filesystems
+sysutils/ztop|filesystems/ztop|2024-11-13|Moved to new category filesystems
+devel/b2|devel/py-b2|2024-11-14|Add py- prefix
+misc/morse||2024-11-14|Project discontinued upstream
+games/minetest|games/luanti|2024-11-17|Chase upstream rename
+devel/rubygem-google-apis-compute_v1_057|devel/rubygem-google-apis-compute_v1-gitlab|2024-11-22|Renamed to devel/rubygem-google-apis-compute_v1-gitlab
+devel/rubygem-google-apis-sqladmin_v1beta4_041|devel/rubygem-google-apis-sqladmin_v1beta4-gitlab|2024-11-22|Renamed to devel/rubygem-google-apis-sqladmin_v1beta4-gitlab
+devel/rubygem-google-apis-androidpublisher_v3034|devel/rubygem-google-apis-androidpublisher_v3-gitlab|2024-11-22|Renamed to devel/rubygem-google-apis-androidpublisher_v3-gitlab
+textproc/rubygem-elasticsearch-model713|textproc/rubygem-elasticsearch-model-gitlab|2024-11-22|Renamed to textproc/rubygem-elasticsearch-model-gitlab
+devel/signal-fts5-extension||2024-11-22|No consumers left in the ports tree
+devel/py-gobject3|devel/py-pygobject|2024-11-22|Use proper upstream package name
+devel/pygobject3-common|devel/pygobject-common|2024-11-22|Match devel/py-pygobject, use proper upstream name

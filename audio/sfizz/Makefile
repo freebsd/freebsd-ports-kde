@@ -44,5 +44,8 @@ post-patch:
 		-e 's|CACHE_LINE_SIZE|CACHE_LINE_SIZEx|' \
 		${WRKSRC}/external/atomic_queue/include/atomic_queue/atomic_queue.h \
 		${WRKSRC}/external/atomic_queue/include/atomic_queue/defs.h
+	@${REINPLACE_CMD} \
+		-E -e 's/(template do_(push|pop)_any)/\1<>/' \
+		${WRKSRC}/external/atomic_queue/include/atomic_queue/atomic_queue.h
 
 .include <bsd.port.mk>

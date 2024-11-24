@@ -1,7 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	24.2-branchpoint-5103
-DISTVERSIONSUFFIX=	-gc108dfc930f
-PORTREVISION=	1
+DISTVERSION=	24.3-branchpoint-736
+DISTVERSIONSUFFIX=	-g6088a4373c6
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -115,11 +114,7 @@ OPENCL_LIB_DEPENDS=	libLLVMSPIRVLib.so.${OPENCL_SOVERSION}:devel/spirv-llvm-tran
 OPENCL_RUN_DEPENDS=	libclc-${LLVM_PORT:T}>0:devel/libclc@${LLVM_PORT:T}
 OPENCL_SOVERSION=	${LLVM_VERSION}${${LLVM_VERSION}>=18:?.1:}
 OPENCL_CONFIGURE_ENV=	PKG_CONFIG_PATH="${LLVM_PREFIX}/libdata/pkgconfig"
-OPENCL_MESON_FALSE=	b_lundef # environ
-OPENCL_MESON_TRUE=	gallium-rusticl opencl-spirv
-OPENCL_MESON_ON=	-Dgallium-opencl=icd
-OPENCL_MESON_OFF=	-Dgallium-opencl=disabled
-OPENCL_VARS+=		COINST_RUN_DEPENDS+=clover>0:lang/clover # ICD
+OPENCL_MESON_TRUE=	gallium-rusticl
 OPENCL_IMPLIES=		LLVM ${"${PORT_OPTIONS:Miris}":?iris:radeonsi} # any from OPTIONS_GROUP_GALLIUM
 
 VAAPI_DESC=		Hardware encoding/decoding (only r600, radeonsi)
@@ -156,8 +151,6 @@ post-patch:
 		${WRKSRC}/bin/git_sha1_gen.py
 
 post-patch-COINST-on:
-	@${MV} ${WRKSRC}/src/gallium/targets/opencl/MesaOpenCL.def.in \
-		${WRKSRC}/src/gallium/targets/opencl/MesaOpenCL${PKGNAMESUFFIX}.def.in
 	@${MV} ${WRKSRC}/src/util/00-${PORTNAME}-defaults.conf \
 		${WRKSRC}/src/util/00-${PKGBASE}-defaults.conf
 	@${MV} ${WRKSRC}/src/util/00-radv-defaults.conf \
