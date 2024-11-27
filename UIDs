@@ -281,6 +281,7 @@ keycloak:*:332:332::0:0:keycloak server:/nonexistent:/usr/sbin/nologin
 honeytrap:*:333:333::0:0:HoneyTrap Daemon:/nonexistent:/usr/sbin/nologin
 percona:*:334:334::0:0:Percona Daemons:/nonexistent:/usr/sbin/nologin
 benthos:*:335:335::0:0:Benthos Daemon:/nonexistent:/usr/sbin/nologin
+snac:*:336:336::0:0:Snac Daemon:/nonexistent:/usr/sbin/nologin
 _pma:*:336:80::0:0:phpMyAdmin Owner:/nonexistent:/usr/sbin/nologin
 daapd:*:337:337::0:0:daapd User:/nonexistent:/usr/sbin/nologin
 murmur:*:338:338::0:0:& User:/nonexistent:/usr/sbin/nologin
@@ -811,7 +812,7 @@ opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
 # free: 862
 # free: 863
 # free: 864
-# free: 865
+z2m:*:865:865::0:0:zigbee2mqtt:/usr/local/z2m:/usr/sbin/nologin
 # free: 866
 sqlpage:*:867:867::0:0:SQLPage:/nonexistent:/usr/sbin/nologin
 jellyfin:*:868:868::0:0:Jellyfin:/nonexistent:/usr/sbin/nologin

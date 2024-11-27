@@ -1,6 +1,6 @@
 PORTNAME=	quiche
 DISTVERSION=	0.22.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	junho.choi@gmail.com
@@ -15,6 +15,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	cloudflare
 GH_TUPLE=	google:boringssl:f1c75347d:boringssl/quiche/deps/boringssl
 USE_LDCONFIG=	yes
+
+RUSTFLAGS=	${ARCH:S/i386/YES/:C/^[a-z].*//:S/YES/-C target-feature=+sse,+sse2/} # add sse sse2 target-features only on i386
 
 CARGO_FEATURES=		ffi pkg-config-meta
 CARGO_BUILD=		yes

@@ -444,7 +444,6 @@
     SUBDIR += latte-integrale
     SUBDIR += lcalc
     SUBDIR += ldouble
-    SUBDIR += lean
     SUBDIR += lean4
     SUBDIR += leangz
     SUBDIR += lemon
@@ -624,6 +623,8 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-oct2mat
     SUBDIR += octave-forge-octave-pool
+    SUBDIR += octave-forge-octave_tar
+    SUBDIR += octave-forge-octave_zstd
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odbc
@@ -947,6 +948,7 @@
     SUBDIR += py-docplex
     SUBDIR += py-ducc0
     SUBDIR += py-ecos
+    SUBDIR += py-emcee
     SUBDIR += py-evalidate
     SUBDIR += py-faiss
     SUBDIR += py-fastcluster
@@ -1056,6 +1058,7 @@
     SUBDIR += py-pyodesys
     SUBDIR += py-pyprobables
     SUBDIR += py-pyreadr
+    SUBDIR += py-pyreadstat
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt
     SUBDIR += py-pystan
@@ -1140,6 +1143,7 @@
     SUBDIR += rubiks
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-bigdecimal
+    SUBDIR += rubygem-cmath
     SUBDIR += rubygem-enumerable-statistics
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3

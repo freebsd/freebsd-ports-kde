@@ -1,10 +1,10 @@
 PORTNAME=	aws-sdk-elasticloadbalancingv2
-PORTVERSION=	1.119.0
+PORTVERSION=	1.123.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Official AWS Ruby gem for Elastic Load Balancing (Elastic Load Balancing v2)
+COMMENT=	Official AWS Ruby gem for Elastic Load Balancing (Elastic Load Balancing V2)
 WWW=		https://github.com/aws/aws-sdk-ruby/tree/version-3/gems/aws-sdk-elasticloadbalancingv2
 
 LICENSE=	APACHE20

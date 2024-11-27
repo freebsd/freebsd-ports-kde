@@ -1,6 +1,6 @@
 PORTNAME=	nlopt
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.8.0
+DISTVERSION=	2.9.1
 CATEGORIES=	math
 
 MAINTAINER=	rhurlin@FreeBSD.org
@@ -21,6 +21,9 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	stevengj
 USE_LDCONFIG=	yes
 
+# 'make test': 100% tests passed, 0 tests failed out of 83
+CMAKE_ON=	NLOPT_TESTS
+
 .if ${FLAVOR:U} == minimal
 PKGNAMESUFFIX=	-${FLAVOR}
 CMAKE_OFF=	NLOPT_GUILE NLOPT_PYTHON NLOPT_SWIG
@@ -36,7 +39,8 @@ MAKE_ENV+=	GUILE_EXECUTABLE=${PREFIX}/bin/guile3 \
 RUN_DEPENDS=	${PYNUMPY}
 CONFLICTS_INSTALL=	${PORTNAME}-minimal
 PLIST_FILES+=	lib/guile/3.0/extensions/nlopt_guile.so \
-		${PYTHON_SITELIBDIR}/_nlopt%%PYTHON_EXT_SUFFIX%%.so \
+		%%PYTHON_SITELIBDIR%%/_nlopt.so \
+		%%PYTHON_SITELIBDIR%%/nlopt-2.9.1.dist-info/METADATA \
 		${PYTHON_SITELIBDIR}/nlopt.py \
 		${GUILE_SITE_DIR}/nlopt.scm
 .endif

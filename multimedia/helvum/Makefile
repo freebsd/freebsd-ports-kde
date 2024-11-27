@@ -1,6 +1,6 @@
 PORTNAME=	helvum
 DISTVERSION=	0.5.1
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	multimedia
 
 MAINTAINER=	ports@FreeBSD.org
@@ -35,7 +35,6 @@ post-patch:
 	@${REINPLACE_CMD} -e '/update_desktop_database/d' \
 		${WRKSRC}/meson.build
 # Make each cargo subcommand very verbose
-# Add explicit <triple> subdir for --target from USES=cargo
 	@${REINPLACE_CMD} -e "/cargo_options =/s/ '--/&verbose', &verbose', &/" \
 		${WRKSRC}/src/meson.build
 

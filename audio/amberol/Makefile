@@ -1,6 +1,6 @@
 PORTNAME=	amberol
 DISTVERSION=	0.10.3
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
@@ -30,7 +30,6 @@ GLIB_SCHEMAS=	io.bassi.Amberol.gschema.xml
 
 post-patch:
 # Make each cargo subcommand very verbose
-# Add explicit <triple> subdir for --target from USES=cargo
 	@${REINPLACE_CMD} -e "/cargo_options =/s/ '--/&verbose', &verbose', &/" \
 		${WRKSRC}/src/meson.build
 

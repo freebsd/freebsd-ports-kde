@@ -1,5 +1,5 @@
 PORTNAME=	gotify-server
-PORTVERSION=	2.5.0
+PORTVERSION=	2.6.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/mfechner/freebsd-net-gotify-server/raw/refs/heads/main/:yarn_cache
@@ -46,7 +46,6 @@ pre-build:
 	@cd ${WRKSRC}/ui && ${SETENV} ${MAKE_ENV} HOME=${WRKDIR} PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true yarn install --offline
 	@cd ${WRKSRC}/ui && ${SETENV} ${MAKE_ENV} yarn build
 	#${RM} -r ${STAGEDIR}${PREFIX}/share/.cache
-
 
 pre-install:
 	@${RM} ${WRKSRC}/.yarnrc

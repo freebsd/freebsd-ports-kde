@@ -1,5 +1,5 @@
-TIMESTAMP = 1729648748
-SHA256 (go/security_nuclei/nuclei-v3.3.4/v3.3.4.mod) = 2beccaf25558af838f76b6f3440b9cd05c07b703c967d565443723bfcccd8f66
-SIZE (go/security_nuclei/nuclei-v3.3.4/v3.3.4.mod) = 17288
-SHA256 (go/security_nuclei/nuclei-v3.3.4/v3.3.4.zip) = 992adc79a696dd83d3ddafdb6016955c7dae999de80b3a807caad13d7278fc0e
-SIZE (go/security_nuclei/nuclei-v3.3.4/v3.3.4.zip) = 2723605
+TIMESTAMP = 1732465565
+SHA256 (go/security_nuclei/nuclei-v3.3.6/v3.3.6.mod) = 92df5a704a9bcf8ea3b7e4fdd42f17d52630f5e9b9bf57aa1e02651d329cf952
+SIZE (go/security_nuclei/nuclei-v3.3.6/v3.3.6.mod) = 17628
+SHA256 (go/security_nuclei/nuclei-v3.3.6/v3.3.6.zip) = 5c6f8101c50b13fae4049aa15d27077179645ef03b79fe9ff22aa6f938e689ce
+SIZE (go/security_nuclei/nuclei-v3.3.6/v3.3.6.zip) = 12312670

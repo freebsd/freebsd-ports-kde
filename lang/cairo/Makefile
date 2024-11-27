@@ -1,6 +1,6 @@
 PORTNAME=	cairo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.8.4
+DISTVERSION=	2.8.5
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-language
 
@@ -12,6 +12,8 @@ WWW=		https://www.cairo-lang.org/ \
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	compilation fails: error: undefined symbol: __atomic_load
 
 BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libzstd.so:archivers/zstd

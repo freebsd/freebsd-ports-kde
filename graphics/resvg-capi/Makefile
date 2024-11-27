@@ -1,11 +1,12 @@
 PORTNAME=	resvg-c-api
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.44.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	SVG rendering library (C++/Qt API)
-WWW=		https://github.com/RazrFalcon/resvg
+WWW=		https://github.com/linebender/resvg
 
 LICENSE=	MPL20
 LICENSE_FILE=	${WRKSRC}/../../LICENSE.txt
@@ -14,7 +15,7 @@ USES=		cargo
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	RazrFalcon
+GH_ACCOUNT=	linebender
 GH_PROJECT=	resvg
 
 WRKSRC_SUBDIR=	crates/c-api

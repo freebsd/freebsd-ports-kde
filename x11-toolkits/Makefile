@@ -104,6 +104,8 @@
     SUBDIR += linux-rl9-gtk2
     SUBDIR += linux-rl9-gtk3
     SUBDIR += linux-rl9-pango
+    SUBDIR += linux-rl9-qt5-qtquickcontrols
+    SUBDIR += linux-rl9-tk86
     SUBDIR += movingmotif
     SUBDIR += mowitz
     SUBDIR += mygui
@@ -175,6 +177,7 @@
     SUBDIR += py-fltk
     SUBDIR += py-guietta
     SUBDIR += py-kivy
+    SUBDIR += py-pangocffi
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-chart
     SUBDIR += py-qt5-datavis3d

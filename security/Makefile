@@ -76,7 +76,6 @@
     SUBDIR += ccsrch
     SUBDIR += certmgr
     SUBDIR += certspotter
-    SUBDIR += cfs
     SUBDIR += cfssl
     SUBDIR += cfv
     SUBDIR += chaosreader
@@ -95,7 +94,6 @@
     SUBDIR += clamav-lts
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
-    SUBDIR += clamfs
     SUBDIR += clamsmtp
     SUBDIR += clamtk
     SUBDIR += cloak
@@ -170,6 +168,7 @@
     SUBDIR += fwknop
     SUBDIR += fwlogwatch
     SUBDIR += gcr
+    SUBDIR += gcr3
     SUBDIR += gef
     SUBDIR += git-credential-azure
     SUBDIR += git-credential-gopass
@@ -202,7 +201,6 @@
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
     SUBDIR += gpgme-qt
-    SUBDIR += gpgme-qt-headers
     SUBDIR += gsa
     SUBDIR += gsad
     SUBDIR += gsasl
@@ -359,6 +357,7 @@
     SUBDIR += linux-rl9-nettle
     SUBDIR += linux-rl9-nss
     SUBDIR += linux-rl9-p11-kit
+    SUBDIR += linux-rl9-trousers
     SUBDIR += local-php-security-checker
     SUBDIR += logcheck
     SUBDIR += lua-argon2
@@ -746,7 +745,6 @@
     SUBDIR += p5-openxpki
     SUBDIR += p5-openxpki-i18n
     SUBDIR += p5-plog
-    SUBDIR += palisade
     SUBDIR += pam-modules
     SUBDIR += pam-mysql
     SUBDIR += pam-pgsql
@@ -927,7 +925,6 @@
     SUBDIR += py-cybox
     SUBDIR += py-detect-secrets
     SUBDIR += py-dfdatetime
-    SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
     SUBDIR += py-dirhash
     SUBDIR += py-django-auth-kerberos
@@ -1114,6 +1111,7 @@
     SUBDIR += rotate
     SUBDIR += rpm-sequoia
     SUBDIR += rubygem-acme-client
+    SUBDIR += rubygem-acme-client-gitlab
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-android_key_attestation
@@ -1140,11 +1138,13 @@
     SUBDIR += rubygem-doorkeeper-rails5
     SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-doorkeeper-rails70
+    SUBDIR += rubygem-doorkeeper57-rails70
     SUBDIR += rubygem-duo_api
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
+    SUBDIR += rubygem-googleauth-gitlab
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -1184,6 +1184,7 @@
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-multipassword2
     SUBDIR += rubygem-omniauth-oauth2-generic
+    SUBDIR += rubygem-omniauth-oauth2-generic-gitlab
     SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
     SUBDIR += rubygem-omniauth-saml1
@@ -1202,6 +1203,7 @@
     SUBDIR += rubygem-pwned
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth2-gitlab
     SUBDIR += rubygem-rasn1
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
@@ -1235,12 +1237,14 @@
     SUBDIR += rubygem-securecompare
     SUBDIR += rubygem-securerandom
     SUBDIR += rubygem-signet
+    SUBDIR += rubygem-signet-gitlab
     SUBDIR += rubygem-six
     SUBDIR += rubygem-ssh_data
     SUBDIR += rubygem-sshkey
     SUBDIR += rubygem-sshkit
     SUBDIR += rubygem-sslshake
     SUBDIR += rubygem-ssrf_filter
+    SUBDIR += rubygem-ssrf_filter10
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
@@ -1340,7 +1344,6 @@
     SUBDIR += teleport
     SUBDIR += testssl.sh
     SUBDIR += tfhe
-    SUBDIR += tfsec
     SUBDIR += theonionbox
     SUBDIR += tinc
     SUBDIR += tinc-devel
