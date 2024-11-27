@@ -13,7 +13,7 @@ LIB_DEPENDS=	libboost_date_time.so:devel/boost-libs \
 		libcurl.so:ftp/curl \
 		libkolabxml.so:textproc/libkolabxml \
 		libsasl2.so:security/cyrus-sasl2 \
-		libxerces-c-3.2.so:textproc/xerces-c3 \
+		libxerces-c.so.3:textproc/xerces-c3 \
 		libqt6keychain.so:security/qtkeychain@qt6
 
 USES=		cmake:noninja compiler:c++11-lib gettext kde:6 qca qt:6 \
