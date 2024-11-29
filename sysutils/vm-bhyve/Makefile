@@ -1,10 +1,9 @@
 PORTNAME=	vm-bhyve
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.5.0
-PORTREVISION=	2
+DISTVERSION=	1.6.0
 CATEGORIES=	sysutils
 
-MAINTAINER=	churchers@gmail.com
+MAINTAINER=	driesm@FreeBSD.org
 COMMENT=	Management system for bhyve virtual machines
 WWW=		https://github.com/churchers/vm-bhyve
 

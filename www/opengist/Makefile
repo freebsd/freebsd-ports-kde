@@ -1,5 +1,5 @@
 PORTNAME=	opengist
-PORTVERSION=	1.8.1
+PORTVERSION=	1.8.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www textproc
 MASTER_SITES=	LOCAL/fox/:js
@@ -11,6 +11,7 @@ WWW=		https://opengist.io/
 
 LICENSE=	AGPLv3
 
+BROKEN_aarch64=	fails to build
 BROKEN_i386=	fails to build
 
 BUILD_DEPENDS=	npm${NODEJS_SUFFIX}>0:www/npm${NODEJS_SUFFIX}
@@ -31,6 +32,10 @@ GO_BUILDFLAGS=	-tags fs_embed \
 post-extract:
 	@${RLN} ${WRKDIR}/node_modules ${WRKSRC}/node_modules
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|opengist.db|file:/var/db/${PORTNAME}/opengist.db|g' \
+		${WRKSRC}/config.yml
+
 pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} npx --offline vite -c public/vite.config.js build
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -39,6 +44,7 @@ pre-build:
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/config.yml ${STAGEDIR}${PREFIX}/etc/${PORTNAME}/config.yml.sample
+	${MKDIR} ${STAGEDIR}/var/db/${PORTNAME}
 	${MKDIR} ${STAGEDIR}/var/run/${PORTNAME}
 	${MKDIR} ${STAGEDIR}${WWWDIR}/assets
 	cd ${WRKSRC} && ${INSTALL_DATA} public/assets/* ${STAGEDIR}${WWWDIR}/assets
