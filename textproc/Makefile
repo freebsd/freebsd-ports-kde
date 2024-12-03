@@ -155,6 +155,7 @@
     SUBDIR += diffutils
     SUBDIR += dikt
     SUBDIR += discount
+    SUBDIR += dmenu-translate
     SUBDIR += doc-mode.el
     SUBDIR += docbook
     SUBDIR += docbook-sgml
@@ -447,6 +448,7 @@
     SUBDIR += linux-c7-libxml2
     SUBDIR += linux-c7-libxslt
     SUBDIR += linux-rl9-expat
+    SUBDIR += linux-rl9-libstemmer
     SUBDIR += linux-rl9-libxml2
     SUBDIR += linux-rl9-libxslt
     SUBDIR += linux-rl9-qt5-qtxmlpatterns
@@ -532,8 +534,10 @@
     SUBDIR += opensearch
     SUBDIR += opensearch-dashboards
     SUBDIR += opensearch-dashboards210
+    SUBDIR += opensearch-dashboards213
     SUBDIR += opensearch13
     SUBDIR += opensearch210
+    SUBDIR += opensearch213
     SUBDIR += opensp
     SUBDIR += openvanilla-framework
     SUBDIR += or-aspell
