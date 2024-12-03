@@ -39,7 +39,6 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qconfig_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcore_unix_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcoreapplication_p.h
-%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcorecmdlineargs_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcoreevent_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qdatastream_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qdataurl_p.h
@@ -147,6 +146,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsimd_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsimd_x86_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsingleshottimer_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsmallbytearray_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qspan_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qstorageinfo_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qstringalgorithms_p.h
@@ -173,6 +173,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qunicodetables_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qunicodetools_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/quniquehandle_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/quniquehandle_types_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qurl_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qvariant_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qvariantanimation_p.h
@@ -1430,6 +1431,7 @@ bin/qmake6
 %%X11%%%%QT_INCDIR%%/QtGui/bus_interface.h
 %%X11%%%%QT_INCDIR%%/QtGui/cache_adaptor.h
 %%X11%%%%QT_INCDIR%%/QtGui/deviceeventcontroller_adaptor.h
+%%QT_INCDIR%%/QtGui/properties_interface.h
 %%QT_INCDIR%%/QtGui/qabstractfileiconprovider.h
 %%QT_INCDIR%%/QtGui/qabstracttextdocumentlayout.h
 %%QT_INCDIR%%/QtGui/qaccessible.h
@@ -2515,6 +2517,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtXml/qtxmlglobal.h
 %%QT_INCDIR%%/QtXml/qtxmlversion.h
 lib/cmake/Qt6/3rdparty/extra-cmake-modules/COPYING-CMAKE-SCRIPTS
+lib/cmake/Qt6/3rdparty/extra-cmake-modules/REUSE.toml
 lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/ECMFindModuleHelpersStub.cmake
 lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake
 lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindGLIB2.cmake
@@ -2530,6 +2533,7 @@ lib/cmake/Qt6/3rdparty/kwin/FindLibdrm.cmake
 lib/cmake/Qt6/3rdparty/kwin/FindLibinput.cmake
 lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake
 lib/cmake/Qt6/3rdparty/kwin/Findgbm.cmake
+lib/cmake/Qt6/3rdparty/kwin/REUSE.toml
 lib/cmake/Qt6/3rdparty/kwin/qt_attribution.json
 lib/cmake/Qt6/FindATSPI2.cmake
 lib/cmake/Qt6/FindDB2.cmake
@@ -2609,6 +2613,7 @@ lib/cmake/Qt6/QtBuildOptionsHelpers.cmake
 lib/cmake/Qt6/QtBuildPathsHelpers.cmake
 lib/cmake/Qt6/QtBuildRepoExamplesHelpers.cmake
 lib/cmake/Qt6/QtBuildRepoHelpers.cmake
+lib/cmake/Qt6/QtBuildStaticDocToolsScript.cmake
 lib/cmake/Qt6/QtCMakeHelpers.cmake
 lib/cmake/Qt6/QtCMakePackageVersionFile.cmake.in
 lib/cmake/Qt6/QtCMakeVersionHelpers.cmake
@@ -2718,6 +2723,8 @@ lib/cmake/Qt6/libexec/qt-internal-strip.bat.in
 lib/cmake/Qt6/libexec/qt-internal-strip.in
 lib/cmake/Qt6/modulecppexports.h.in
 lib/cmake/Qt6/platforms/FindIntegrityPlatformGraphics.cmake
+lib/cmake/Qt6/platforms/FindPlatformGraphics.cmake
+lib/cmake/Qt6/platforms/FindVxWorksPlatformGraphics.cmake
 lib/cmake/Qt6/platforms/Platform/Integrity.cmake
 lib/cmake/Qt6/qbatchedtestrunner.in.cpp
 lib/cmake/Qt6/qt.toolchain.cmake
@@ -3185,6 +3192,8 @@ lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6xml_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%DEBUG%%%%QT_LIBDIR%%/objects-Debug/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
 %%NO_DEBUG%%%%QT_LIBDIR%%/objects-Release/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
+%%QT_LIBDIR%%/sbom/qtbase-%%FULLVER%%.spdx
+%%QT_MKSPECDIR%%/REUSE.toml
 %%QT_MKSPECDIR%%/aix-g++-64/qmake.conf
 %%QT_MKSPECDIR%%/aix-g++-64/qplatformdefs.h
 %%QT_MKSPECDIR%%/aix-g++/qmake.conf
@@ -3702,6 +3711,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_TOOLDIR%%/ensure_pro_file.cmake
 %%QT_TOOLDIR%%/moc
 %%QT_TOOLDIR%%/qlalr
+%%QT_TOOLDIR%%/qt-android-runner.py
 %%QT_TOOLDIR%%/qt-cmake-private
 %%QT_TOOLDIR%%/qt-cmake-private-install.cmake
 %%QT_TOOLDIR%%/qt-cmake-standalone-test
