@@ -3,6 +3,9 @@ DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt6-
 
+PATCH_SITES=	https://github.com/qt/qtbase/commit/
+PATCHFILES+=	df30953228f0e364e9a3915d97f522efd8e67489.patch:-p1 # Fix configure of sqldrivers
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
 
@@ -55,7 +58,7 @@ CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_LTTngUST \
 		QT_FEATURE_openssl_linked
 CMAKE_OFF=	QT_FEATURE_eglfs \
 		QT_FEATURE_gssapi
-# sql drivers are handled in the qt6-base-sqldriver port
+# sql drivers are handled in the databases/qt6-base_sqldriver port
 CMAKE_OFF+=	FEATURE_sql_mysql \
 		FEATURE_sql_odbc \
 		FEATURE_sql_psql \
@@ -78,7 +81,8 @@ X11_LIB_DEPENDS=	libxcb-cursor.so:x11/xcb-util-cursor \
 			libxcb-render-util.so:x11/xcb-util-renderutil
 X11_USES=		xorg
 X11_USE=		XORG=ice,pixman,sm,x11,xau,xcb,xcomposite,xcursor,xdamage,xdmcp,xext,xfixes,xi,xinerama,xrandr,xrender
-X11_CMAKE_BOOL=		FEATURE_xcb FEATURE_xlib
+X11_CMAKE_BOOL=		FEATURE_xcb \
+			FEATURE_xlib
 
 .include <bsd.port.pre.mk>
 

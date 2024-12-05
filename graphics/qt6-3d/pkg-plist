@@ -580,6 +580,7 @@
 %%QT_INCDIR%%/Qt3DQuickInput/qt3dquickinput_global.h
 %%QT_INCDIR%%/Qt3DQuickInput/qt3dquickinputexports.h
 %%QT_INCDIR%%/Qt3DQuickInput/qt3dquickinputversion.h
+%%QT_INCDIR%%/Qt3DQuickRender/%%FULLVER%%/Qt3DQuickRender/private/qt3dquick3drenderforeign_p.h
 %%QT_INCDIR%%/Qt3DQuickRender/%%FULLVER%%/Qt3DQuickRender/private/qt3dquickrender_global_p.h
 %%QT_INCDIR%%/Qt3DQuickRender/%%FULLVER%%/Qt3DQuickRender/private/qt3dquickrendernodefactory_p.h
 %%QT_INCDIR%%/Qt3DQuickRender/%%FULLVER%%/Qt3DQuickRender/private/quick3deffect_p.h
@@ -626,6 +627,17 @@
 %%QT_INCDIR%%/Qt3DQuickScene2D/qt3dquickscene2d_global.h
 %%QT_INCDIR%%/Qt3DQuickScene2D/qt3dquickscene2dexports.h
 %%QT_INCDIR%%/Qt3DQuickScene2D/qt3dquickscene2dversion.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3ditem_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3dlogging_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3drenderer_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3dsgmaterial_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3dsgmaterialshader_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/%%FULLVER%%/Qt3DQuickScene3D/private/scene3dsgnode_p.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/Qt3DQuickScene3D
+%%QT_INCDIR%%/Qt3DQuickScene3D/Qt3DQuickScene3DDepends
+%%QT_INCDIR%%/Qt3DQuickScene3D/Qt3DQuickScene3DVersion
+%%QT_INCDIR%%/Qt3DQuickScene3D/qt3dquickscene3dexports.h
+%%QT_INCDIR%%/Qt3DQuickScene3D/qt3dquickscene3dversion.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/abstractpickingjob_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/abstractrenderer_p.h
 %%QT_INCDIR%%/Qt3DRender/%%FULLVER%%/Qt3DRender/private/apishadermanager_p.h
@@ -1197,6 +1209,15 @@ lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets.cmake
 lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessAliasTargets.cmake
 lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessTargets.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DAdditionalTargetInfo.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfig.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfigVersion.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfigVersionImpl.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DDependencies.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DTargets.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DVersionlessAliasTargets.cmake
+lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DVersionlessTargets.cmake
 lib/cmake/Qt63DRender/Qt63DRenderAdditionalTargetInfo.cmake
 lib/cmake/Qt63DRender/Qt63DRenderConfig.cmake
 lib/cmake/Qt63DRender/Qt63DRenderConfigVersion.cmake
@@ -1348,6 +1369,10 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake
 %%QT_LIBDIR%%/libQt63DQuickScene2D.so
 %%QT_LIBDIR%%/libQt63DQuickScene2D.so.6
 %%QT_LIBDIR%%/libQt63DQuickScene2D.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickScene3D.prl
+%%QT_LIBDIR%%/libQt63DQuickScene3D.so
+%%QT_LIBDIR%%/libQt63DQuickScene3D.so.6
+%%QT_LIBDIR%%/libQt63DQuickScene3D.so.%%FULLVER%%
 %%QT_LIBDIR%%/libQt63DRender.prl
 %%QT_LIBDIR%%/libQt63DRender.so
 %%QT_LIBDIR%%/libQt63DRender.so.6
@@ -1363,6 +1388,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt63dquickinput_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt63dquickrender_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt63dquickscene2d_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickscene3d_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_LIBDIR%%/metatypes/qt63drender_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_3danimation.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3danimation_private.pri
@@ -1386,6 +1412,8 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_3dquickrender_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3dquickscene2d.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3dquickscene2d_private.pri
+%%QT_MKSPECDIR%%/modules/qt_lib_3dquickscene3d.pri
+%%QT_MKSPECDIR%%/modules/qt_lib_3dquickscene3d_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3drender.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3drender_private.pri
 %%QT_PLUGINDIR%%/geometryloaders/libdefaultgeometryloader.so
@@ -1420,6 +1448,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake
 %%QT_QMLDIR%%/QtQuick/Scene3D/libqtquickscene3dplugin.so
 %%QT_QMLDIR%%/QtQuick/Scene3D/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Scene3D/qmldir
+%%QT_SBOMDIR%%/qt3d-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt63DAnimation.pc
 libdata/pkgconfig/Qt63DCore.pc
 libdata/pkgconfig/Qt63DExtras.pc
@@ -1431,6 +1460,7 @@ libdata/pkgconfig/Qt63DQuickExtras.pc
 libdata/pkgconfig/Qt63DQuickInput.pc
 libdata/pkgconfig/Qt63DQuickRender.pc
 libdata/pkgconfig/Qt63DQuickScene2D.pc
+libdata/pkgconfig/Qt63DQuickScene3D.pc
 libdata/pkgconfig/Qt63DRender.pc
 %%QT_DATADIR%%/modules/3DAnimation.json
 %%QT_DATADIR%%/modules/3DCore.json
@@ -1443,4 +1473,5 @@ libdata/pkgconfig/Qt63DRender.pc
 %%QT_DATADIR%%/modules/3DQuickInput.json
 %%QT_DATADIR%%/modules/3DQuickRender.json
 %%QT_DATADIR%%/modules/3DQuickScene2D.json
+%%QT_DATADIR%%/modules/3DQuickScene3D.json
 %%QT_DATADIR%%/modules/3DRender.json

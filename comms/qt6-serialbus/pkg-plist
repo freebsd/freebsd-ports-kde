@@ -120,5 +120,6 @@ lib/cmake/Qt6SerialBus/Qt6VirtualCanBusPluginTargets.cmake
 %%QT_PLUGINDIR%%/canbus/libqtpeakcanbus.so
 %%QT_PLUGINDIR%%/canbus/libqttinycanbus.so
 %%QT_PLUGINDIR%%/canbus/libqtvirtualcanbus.so
+%%QT_SBOMDIR%%/qtserialbus-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6SerialBus.pc
 %%QT_DATADIR%%/modules/SerialBus.json

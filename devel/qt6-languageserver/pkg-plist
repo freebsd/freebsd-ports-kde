@@ -51,5 +51,6 @@ lib/cmake/Qt6LanguageServerPrivate/Qt6LanguageServerPrivateVersionlessTargets.cm
 %%QT_LIBDIR%%/metatypes/qt6languageserverprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_jsonrpc_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_languageserver_private.pri
+%%QT_SBOMDIR%%/qtlanguageserver-%%FULLVER%%.spdx
 %%QT_DATADIR%%/modules/JsonRpcPrivate.json
 %%QT_DATADIR%%/modules/LanguageServerPrivate.json

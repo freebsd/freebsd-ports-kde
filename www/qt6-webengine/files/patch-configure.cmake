@@ -1,6 +1,6 @@
---- configure.cmake.orig	2024-10-02 15:40:01 UTC
+--- configure.cmake.orig	2024-11-21 04:36:37 UTC
 +++ configure.cmake
-@@ -71,7 +71,7 @@ endif()
+@@ -73,7 +73,7 @@ endif()
  endif()
  
  #### Tests
@@ -9,16 +9,16 @@
     check_for_ulimit()
  endif()
  
-@@ -432,7 +432,7 @@ qt_feature("webengine-ozone-x11" PRIVATE
+@@ -434,7 +434,7 @@ qt_feature("webengine-ozone-x11" PRIVATE
  
  qt_feature("webengine-ozone-x11" PRIVATE
-     LABEL "Support GLX on qpa-xcb"
+     LABEL "Support X11 on qpa-xcb"
 -    CONDITION LINUX
 +    CONDITION LINUX OR FREEBSD
          AND TARGET Qt::Gui
          AND QT_FEATURE_xcb
          AND X11_FOUND
-@@ -470,12 +470,12 @@ add_check_for_support(
+@@ -474,12 +474,12 @@ add_check_for_support(
  )
  add_check_for_support(
     MODULES QtWebEngine
@@ -33,7 +33,7 @@
     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
  )
  if(LINUX AND CMAKE_CROSSCOMPILING)
-@@ -498,13 +498,6 @@ add_check_for_support(
+@@ -502,13 +502,6 @@ add_check_for_support(
     MESSAGE "node.js version 14 or later is required."
  )
  add_check_for_support(
@@ -46,8 +46,8 @@
 -add_check_for_support(
     MODULES QtWebEngine QtPdf
     CONDITION Python3_EXECUTABLE
-    MESSAGE "Python version 3.6 or later is required."
-@@ -568,8 +561,8 @@ add_check_for_support(
+    MESSAGE "Python version 3.8 or later is required."
+@@ -572,8 +565,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtWebEngine
     CONDITION MSVC OR
@@ -58,7 +58,7 @@
         (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     MESSAGE
         "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -578,8 +571,8 @@ add_check_for_support(
+@@ -582,8 +575,8 @@ add_check_for_support(
  add_check_for_support(
     MODULES QtPdf
     CONDITION MSVC OR

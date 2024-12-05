@@ -202,6 +202,7 @@ lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtScxml/libdeclarative_scxmlplugin.so
 %%QT_QMLDIR%%/QtScxml/plugins.qmltypes
 %%QT_QMLDIR%%/QtScxml/qmldir
+%%QT_SBOMDIR%%/qtscxml-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Scxml.pc
 libdata/pkgconfig/Qt6ScxmlQml.pc
 libdata/pkgconfig/Qt6StateMachine.pc

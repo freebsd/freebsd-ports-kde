@@ -38,6 +38,7 @@
 %%QT_EXAMPLEDIR%%/aggregate/examples.pro
 %%QT_EXAMPLEDIR%%/assistant/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/assistant/assistant.pro
+%%QT_EXAMPLEDIR%%/assistant/doc/images/remotecontrol-example.png
 %%QT_EXAMPLEDIR%%/assistant/doc/images/simpletextviewer-example.png
 %%QT_EXAMPLEDIR%%/assistant/doc/images/simpletextviewer-findfiledialog.png
 %%QT_EXAMPLEDIR%%/assistant/doc/images/simpletextviewer-mainwindow.png
@@ -1007,48 +1008,26 @@
 %%QT_EXAMPLEDIR%%/demos/car-configurator/CarRendering.qmlproject
 %%QT_EXAMPLEDIR%%/demos/car-configurator/CarRendering.qmlproject.qtds
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/ComponentBundles/MaterialBundle/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/ComponentBundles/MaterialBundle/MirrorMaterial.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/ComponentBundles/MaterialBundle/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/DoorRight.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/Ev_SportsCar_low.hints
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/Ev_SportsCar_low.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/Hood.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/MyDoorLeft.qml
+%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/MyDoorRight.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/TrunkLid.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/EV_SportsCar_low/qmldir
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Hood/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Hood/Hood.hints
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Hood/Hood.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Hood/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/InteriorShadow/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/InteriorShadow/InteriorShadow.hints
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/InteriorShadow/InteriorShadow.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/InteriorShadow/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/LightDecal/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/LightDecal/LightDecal.hints
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/LightDecal/LightDecal.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/LightDecal/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Pebbles/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Pebbles/Pebbles.hints
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Pebbles/Pebbles.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Pebbles/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/ShadowPlane/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/ShadowPlane/ShadowPlane.hints
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/ShadowPlane/ShadowPlane.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/ShadowPlane/qmldir
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5ofde_LOD0/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5ofde_LOD0/Uk5ofde_LOD0.hints
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5ofde_LOD0/Uk5ofde_LOD0.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5ofde_LOD0/qmldir
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5pebv_LOD0/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5pebv_LOD0/Uk5pebv_LOD0.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Uk5pebv_LOD0/qmldir
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Ulbrbdt_LOD0/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Ulbrbdt_LOD0/Ulbrbdt_LOD0.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Ulbrbdt_LOD0/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Venodhb_LOD0/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Venodhb_LOD0/Venodhb_LOD0.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/asset_imports/Quick3DAssets/Venodhb_LOD0/qmldir
@@ -1060,9 +1039,6 @@
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/CameraReset.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/DebugBox.ui.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/DoorButton.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/content/FigmaExportCarConfig/Icons.ui.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/content/FigmaExportCarConfig/Logo.ui.qml
-%%QT_EXAMPLEDIR%%/demos/car-configurator/content/FigmaExportCarConfig/SvgPathItem.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/Headlights.ui.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/InteriorPointLight.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/KissButton.qml
@@ -1076,12 +1052,14 @@
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/assets/assets_download.json
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/doorIcon/Door_button.ui.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/doorIcon/Icons.ui.qml
+%%QT_EXAMPLEDIR%%/demos/car-configurator/content/doorIcon/Logo.ui.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/content/images/builtWithQt.png
 %%QT_EXAMPLEDIR%%/demos/car-configurator/doc/images/car_configurator_overview.png
 %%QT_EXAMPLEDIR%%/demos/car-configurator/doc/src/car_configurator.qdoc
 %%QT_EXAMPLEDIR%%/demos/car-configurator/imports/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/car-configurator/imports/CarRendering/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/car-configurator/imports/CarRendering/Constants.qml
+%%QT_EXAMPLEDIR%%/demos/car-configurator/imports/CarRendering/DirectoryFontLoader.qml
 %%QT_EXAMPLEDIR%%/demos/car-configurator/imports/CarRendering/qmldir
 %%QT_EXAMPLEDIR%%/demos/car-configurator/qmlcomponents.cmake
 %%QT_EXAMPLEDIR%%/demos/car-configurator/qmlmodules.cmake
@@ -1215,6 +1193,7 @@
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/doc/images/colorpalette_urlselection.png
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/doc/images/colorpalette_userlisting.png
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/doc/src/colorpaletteclient.qdoc
+%%QT_EXAMPLEDIR%%/demos/colorpaletteclient/icons/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/icons/close.svg
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/icons/delete.svg
 %%QT_EXAMPLEDIR%%/demos/colorpaletteclient/icons/dots.svg
@@ -1243,6 +1222,7 @@
 %%QT_EXAMPLEDIR%%/demos/dice/Menu_Icon.svg
 %%QT_EXAMPLEDIR%%/demos/dice/PhysicalDie.qml
 %%QT_EXAMPLEDIR%%/demos/dice/PhysicalTable.qml
+%%QT_EXAMPLEDIR%%/demos/dice/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/dice/RoundTable.qml
 %%QT_EXAMPLEDIR%%/demos/dice/Scene.qml
 %%QT_EXAMPLEDIR%%/demos/dice/android/AndroidManifest.xml
@@ -1379,6 +1359,7 @@
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/android/src/org/qtproject/qt/android/purchasing/Base64.java
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/android/src/org/qtproject/qt/android/purchasing/Base64DecoderException.java
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/android/src/org/qtproject/qt/android/purchasing/InAppPurchase.java
+%%QT_EXAMPLEDIR%%/demos/hangman/purchasing/android/src/org/qtproject/qt/android/purchasing/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/android/src/org/qtproject/qt/android/purchasing/Security.java
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/inapp/inappproduct.cpp
 %%QT_EXAMPLEDIR%%/demos/hangman/purchasing/inapp/inappproduct.h
@@ -1703,7 +1684,7 @@
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/MediaPlayer/icons/Warning_Icon.svg
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/MediaPlayer/qmldir
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/controls.png
-%%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/mediaplayer.png
+%%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/mediaplayerapp.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/playlist.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/project_structure.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/theme_info.png
@@ -1713,6 +1694,7 @@
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/main.cpp
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/mediaplayer.py
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/mediaplayer.pyproject
+%%QT_EXAMPLEDIR%%/demos/osmbuildings/3rdparty/mapbox/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/osmbuildings/3rdparty/mapbox/earcut.h
 %%QT_EXAMPLEDIR%%/demos/osmbuildings/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/osmbuildings/Main.qml
@@ -1789,6 +1771,7 @@
 %%QT_EXAMPLEDIR%%/demos/robotarm/src/import_qml_plugins.h
 %%QT_EXAMPLEDIR%%/demos/robotarm/src/main.cpp
 %%QT_EXAMPLEDIR%%/demos/rssnews/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/demos/rssnews/Main.qml
 %%QT_EXAMPLEDIR%%/demos/rssnews/content/BusyIndicator.qml
 %%QT_EXAMPLEDIR%%/demos/rssnews/content/CategoryDelegate.qml
 %%QT_EXAMPLEDIR%%/demos/rssnews/content/NewsDelegate.qml
@@ -1812,8 +1795,8 @@
 %%QT_EXAMPLEDIR%%/demos/rssnews/doc/images/qtquick-demo-rssnews-small.png
 %%QT_EXAMPLEDIR%%/demos/rssnews/doc/src/rssnews.qdoc
 %%QT_EXAMPLEDIR%%/demos/rssnews/main.cpp
+%%QT_EXAMPLEDIR%%/demos/rssnews/qmldir
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.pro
-%%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.qml
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.qmlproject
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.qrc
 %%QT_EXAMPLEDIR%%/demos/samegame/CMakeLists.txt
@@ -1884,7 +1867,6 @@
 %%QT_EXAMPLEDIR%%/demos/samegame/content/levels/level7.qml
 %%QT_EXAMPLEDIR%%/demos/samegame/content/levels/level8.qml
 %%QT_EXAMPLEDIR%%/demos/samegame/content/levels/level9.qml
-%%QT_EXAMPLEDIR%%/demos/samegame/content/qmldir
 %%QT_EXAMPLEDIR%%/demos/samegame/content/samegame.js
 %%QT_EXAMPLEDIR%%/demos/samegame/doc/images/qtquick-demo-samegame-med-1.png
 %%QT_EXAMPLEDIR%%/demos/samegame/doc/images/qtquick-demo-samegame-med-2.png
@@ -2163,6 +2145,7 @@
 %%QT_EXAMPLEDIR%%/demos/stocqt/src/timeformatter.h
 %%QT_EXAMPLEDIR%%/demos/thermostat/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/thermostat/Main.qml
+%%QT_EXAMPLEDIR%%/demos/thermostat/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/thermostat/Thermostat.qmlproject
 %%QT_EXAMPLEDIR%%/demos/thermostat/content/App.qml
 %%QT_EXAMPLEDIR%%/demos/thermostat/content/BottomBar.qml
@@ -2290,6 +2273,7 @@
 %%QT_EXAMPLEDIR%%/demos/thermostat/src/main.cpp
 %%QT_EXAMPLEDIR%%/demos/todolist/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/todolist/Main.qml
+%%QT_EXAMPLEDIR%%/demos/todolist/REUSE.toml
 %%QT_EXAMPLEDIR%%/demos/todolist/ToDoList.qmlproject
 %%QT_EXAMPLEDIR%%/demos/todolist/content/App.qml
 %%QT_EXAMPLEDIR%%/demos/todolist/content/CMakeLists.txt
@@ -2797,6 +2781,7 @@
 %%QT_EXAMPLEDIR%%/help/contextsensitivehelp/wateringconfigdialog.cpp
 %%QT_EXAMPLEDIR%%/help/contextsensitivehelp/wateringconfigdialog.h
 %%QT_EXAMPLEDIR%%/help/contextsensitivehelp/wateringconfigdialog.ui
+%%QT_EXAMPLEDIR%%/help/doc/images/context-sensitive-help-example.png
 %%QT_EXAMPLEDIR%%/help/doc/src/contextsensitivehelp.qdoc
 %%QT_EXAMPLEDIR%%/help/help.pro
 %%QT_EXAMPLEDIR%%/httpserver/CMakeLists.txt
@@ -4034,9 +4019,11 @@
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/doc/images/rssiview_settings.webp
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/doc/images/skyview_tableview.webp
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/doc/src/satelliteinfo.qdoc
+%%QT_EXAMPLEDIR%%/positioning/satelliteinfo/fonts/REUSE.toml
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/fonts/TitilliumWeb-Regular.ttf
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/fonts/TitilliumWeb-SemiBold.ttf
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/fonts/qt_attribution.json
+%%QT_EXAMPLEDIR%%/positioning/satelliteinfo/icons/REUSE.toml
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/icons/checkbox.svg
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/icons/checkbox_blank.svg
 %%QT_EXAMPLEDIR%%/positioning/satelliteinfo/icons/darkmode.svg
@@ -4500,6 +4487,7 @@
 %%QT_EXAMPLEDIR%%/quick/advancedtext/main.cpp
 %%QT_EXAMPLEDIR%%/quick/advancedtext/qt_attribution.json
 %%QT_EXAMPLEDIR%%/quick/animation/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/animation/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/animation/animation.pro
 %%QT_EXAMPLEDIR%%/quick/animation/animation.qml
 %%QT_EXAMPLEDIR%%/quick/animation/animation.qmlproject
@@ -4527,6 +4515,7 @@
 %%QT_EXAMPLEDIR%%/quick/animation/states/states.qml
 %%QT_EXAMPLEDIR%%/quick/animation/states/transitions.qml
 %%QT_EXAMPLEDIR%%/quick/canvas/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/canvas/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/canvas/LabeledSlider.qml
 %%QT_EXAMPLEDIR%%/quick/canvas/bezierCurve/bezierCurve.qml
 %%QT_EXAMPLEDIR%%/quick/canvas/canvas.pro
@@ -4589,6 +4578,7 @@
 %%QT_EXAMPLEDIR%%/quick/customitems/painteditem/textballoons.qml
 %%QT_EXAMPLEDIR%%/quick/customitems/painteditem/textballoonuser.pro
 %%QT_EXAMPLEDIR%%/quick/draganddrop/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/draganddrop/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/draganddrop/doc/images/qml-draganddrop-example.png
 %%QT_EXAMPLEDIR%%/quick/draganddrop/doc/src/draganddrop.qdoc
 %%QT_EXAMPLEDIR%%/quick/draganddrop/draganddrop.pro
@@ -4613,6 +4603,7 @@
 %%QT_EXAMPLEDIR%%/quick/embeddedinwidgets/reflect.frag.qsb
 %%QT_EXAMPLEDIR%%/quick/imageelements/BorderImageSelector.qml
 %%QT_EXAMPLEDIR%%/quick/imageelements/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/imageelements/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/imageelements/ImageCell.qml
 %%QT_EXAMPLEDIR%%/quick/imageelements/MyBorderImage.qml
 %%QT_EXAMPLEDIR%%/quick/imageelements/ShadowRectangle.qml
@@ -4735,6 +4726,7 @@
 %%QT_EXAMPLEDIR%%/quick/mousearea/mousearea.qrc
 %%QT_EXAMPLEDIR%%/quick/multieffect/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/doc/images/qml-multieffectitemswitcher-example.jpg
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/doc/src/itemswitcher.qdoc
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/itemswitcher.pro
@@ -4765,6 +4757,7 @@
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/qml/main.qml
 %%QT_EXAMPLEDIR%%/quick/multieffect/multieffect.pro
 %%QT_EXAMPLEDIR%%/quick/multieffect/testbed/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/multieffect/testbed/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/multieffect/testbed/doc/images/qml-multieffecttestbed-example.jpg
 %%QT_EXAMPLEDIR%%/quick/multieffect/testbed/doc/src/testbed.qdoc
 %%QT_EXAMPLEDIR%%/quick/multieffect/testbed/main.cpp
@@ -4800,6 +4793,7 @@
 %%QT_EXAMPLEDIR%%/quick/multieffect/testbed/testbed.pro
 %%QT_EXAMPLEDIR%%/quick/particles/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/particles/affectors/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/GreyButton.qml
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/affectors.pro
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/affectors.qml
@@ -4834,6 +4828,7 @@
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/turbulence.qml
 %%QT_EXAMPLEDIR%%/quick/particles/affectors/wander.qml
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/particles/emitters/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/burstandpulse.qml
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/customemitter.qml
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/doc/images/qml-emitters-example.png
@@ -4851,6 +4846,7 @@
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/trailemitter.qml
 %%QT_EXAMPLEDIR%%/quick/particles/emitters/velocityfrommotion.qml
 %%QT_EXAMPLEDIR%%/quick/particles/imageparticle/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/particles/imageparticle/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/particles/imageparticle/allatonce.qml
 %%QT_EXAMPLEDIR%%/quick/particles/imageparticle/colored.qml
 %%QT_EXAMPLEDIR%%/quick/particles/imageparticle/colortable.qml
@@ -4875,6 +4871,7 @@
 %%QT_EXAMPLEDIR%%/quick/particles/imageparticle/sprites.qml
 %%QT_EXAMPLEDIR%%/quick/particles/particles.pro
 %%QT_EXAMPLEDIR%%/quick/particles/system/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/particles/system/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/particles/system/doc/images/qml-system-example.png
 %%QT_EXAMPLEDIR%%/quick/particles/system/doc/src/system.qdoc
 %%QT_EXAMPLEDIR%%/quick/particles/system/dynamiccomparison.qml
@@ -4891,6 +4888,7 @@
 %%QT_EXAMPLEDIR%%/quick/particles/system/system.qrc
 %%QT_EXAMPLEDIR%%/quick/particles/system/timedgroupchanges.qml
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/pointerhandlers/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/components/Button.qml
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/components/CheckBox.qml
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/components/CorkPanel.qml
@@ -4958,6 +4956,7 @@
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/tapHandler.qml
 %%QT_EXAMPLEDIR%%/quick/pointerhandlers/tapWithModifiers.qml
 %%QT_EXAMPLEDIR%%/quick/positioners/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/positioners/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/positioners/doc/images/qml-positioners-example.png
 %%QT_EXAMPLEDIR%%/quick/positioners/doc/src/positioners.qdoc
 %%QT_EXAMPLEDIR%%/quick/positioners/main.cpp
@@ -4981,6 +4980,7 @@
 %%QT_EXAMPLEDIR%%/quick/quickshapes/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick/quickshapes/quickshapes.pro
 %%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/arcDirection.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/arcRotation.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/capStyles.qml
@@ -5015,6 +5015,7 @@
 %%QT_EXAMPLEDIR%%/quick/quickshapes/shapes/zoomtiger.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/BouncyShape.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/Cloud.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/CloudWithLightning.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/CloudWithLightningAndRain_generated.qml
@@ -5030,6 +5031,7 @@
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/Gear.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/Gear_generated.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/MapLabel.qml
+%%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/REUSE.toml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/SettingsDrawer.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/Sun.qml
 %%QT_EXAMPLEDIR%%/quick/quickshapes/weatherforecast/SunBehindCloud.qml
@@ -5075,6 +5077,7 @@
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/models/errorlistmodel.cpp
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/models/errorlistmodel.h
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/resources.cmake
+%%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/resources/ErrorListView.qml
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/resources/default.qml
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/resources/logo.png
 %%QT_EXAMPLEDIR%%/quick/quickwidgets/qmlpreviewer/states/statecontroller.cpp
@@ -5261,6 +5264,7 @@
 %%QT_EXAMPLEDIR%%/quick/scenegraph/openglunderqml/squircle.cpp
 %%QT_EXAMPLEDIR%%/quick/scenegraph/openglunderqml/squircle.h
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/SettingsDrawer.qml
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/doc/images/rhitextureitem-example.jpg
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/doc/src/rhitextureitem.qdoc
@@ -5281,6 +5285,7 @@
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/shaders/color.frag
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhitextureitem/shaders/color.vert
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhiunderqml/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/scenegraph/rhiunderqml/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhiunderqml/doc/images/rhiunderqml-example.jpg
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhiunderqml/doc/src/rhiunderqml.qdoc
 %%QT_EXAMPLEDIR%%/quick/scenegraph/rhiunderqml/main.cpp
@@ -5405,6 +5410,7 @@
 %%QT_EXAMPLEDIR%%/quick/tableview/pixelator/qt.png
 %%QT_EXAMPLEDIR%%/quick/tableview/tableview.pro
 %%QT_EXAMPLEDIR%%/quick/text/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/text/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/text/doc/images/qml-text-example.png
 %%QT_EXAMPLEDIR%%/quick/text/doc/src/text.qdoc
 %%QT_EXAMPLEDIR%%/quick/text/fonts/availableFonts.qml
@@ -5528,6 +5534,7 @@
 %%QT_EXAMPLEDIR%%/quick/vectorimage/heart.svg
 %%QT_EXAMPLEDIR%%/quick/vectorimage/main.cpp
 %%QT_EXAMPLEDIR%%/quick/views/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/views/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/views/delegatemodel/dragselection.qml
 %%QT_EXAMPLEDIR%%/quick/views/doc/images/qml-modelviews-example.png
 %%QT_EXAMPLEDIR%%/quick/views/doc/src/views.qdoc
@@ -5581,6 +5588,7 @@
 %%QT_EXAMPLEDIR%%/quick/views/views.qrc
 %%QT_EXAMPLEDIR%%/quick/window/AllScreens.qml
 %%QT_EXAMPLEDIR%%/quick/window/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/window/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/window/CurrentScreen.qml
 %%QT_EXAMPLEDIR%%/quick/window/Splash.qml
 %%QT_EXAMPLEDIR%%/quick/window/doc/images/qml-window-example.png
@@ -6072,6 +6080,7 @@
 %%QT_EXAMPLEDIR%%/quick3d/view3d/view3d.pro
 %%QT_EXAMPLEDIR%%/quick3d/virtualassistant/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick3d/virtualassistant/Main.qml
+%%QT_EXAMPLEDIR%%/quick3d/virtualassistant/REUSE.toml
 %%QT_EXAMPLEDIR%%/quick3d/virtualassistant/VirtualAssistant.qmlproject
 %%QT_EXAMPLEDIR%%/quick3d/virtualassistant/asset_imports/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick3d/virtualassistant/asset_imports/Quick3DAssets/CMakeLists.txt
@@ -7556,12 +7565,13 @@
 %%QT_EXAMPLEDIR%%/tutorials/alarms/AlarmDialog.qml
 %%QT_EXAMPLEDIR%%/tutorials/alarms/AlarmModel.qml
 %%QT_EXAMPLEDIR%%/tutorials/alarms/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/tutorials/alarms/Main.qml
 %%QT_EXAMPLEDIR%%/tutorials/alarms/TumblerDelegate.qml
 %%QT_EXAMPLEDIR%%/tutorials/alarms/alarms.pro
 %%QT_EXAMPLEDIR%%/tutorials/alarms/controls_conf.qrc
 %%QT_EXAMPLEDIR%%/tutorials/alarms/main.cpp
-%%QT_EXAMPLEDIR%%/tutorials/alarms/main.qml
 %%QT_EXAMPLEDIR%%/tutorials/alarms/qml.qrc
+%%QT_EXAMPLEDIR%%/tutorials/alarms/qmldir
 %%QT_EXAMPLEDIR%%/tutorials/alarms/qtquickcontrols2.conf
 %%QT_EXAMPLEDIR%%/tutorials/tutorials.pro
 %%QT_EXAMPLEDIR%%/uitools/CMakeLists.txt
@@ -8223,7 +8233,6 @@
 %%QT_EXAMPLEDIR%%/widgets/dialogs/trivialwizard/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/widgets/dialogs/trivialwizard/trivialwizard.cpp
 %%QT_EXAMPLEDIR%%/widgets/dialogs/trivialwizard/trivialwizard.pro
-%%QT_EXAMPLEDIR%%/widgets/doc/dropsite.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/images/addressbook-adddialog.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/addressbook-classes.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/addressbook-editdialog.png
@@ -8242,15 +8251,6 @@
 %%QT_EXAMPLEDIR%%/widgets/doc/images/dropsite-example.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/geometry.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/graphicssimpleanchorlayout-example.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_monkey.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_monkey_mess.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_16x16.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_17x17.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_32x32.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_33x33.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_48x48.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_64x64.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/icons_qt_extended_8x8.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/imagegestures-example.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/itemviews-editabletreemodel-indexes.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/itemviews-editabletreemodel-items.png
@@ -8259,17 +8259,12 @@
 %%QT_EXAMPLEDIR%%/widgets/doc/images/itemviews-editabletreemodel.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/layout1.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/layout2.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/notepad.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/notepad1.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/notepad2.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/notepad3.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/notepad4.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/notepad_menu.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/orderform-example.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/regexp-example.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/regularexpression-example.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/sipdialog-closed.png
-%%QT_EXAMPLEDIR%%/widgets/doc/images/sipdialog-opened.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/systemtray-editor.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/systemtray-example.png
 %%QT_EXAMPLEDIR%%/widgets/doc/images/treemodel-structure.png
@@ -8296,6 +8291,7 @@
 %%QT_EXAMPLEDIR%%/widgets/doc/src/dragdroprobot.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/draggableicons.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/draggabletext.qdoc
+%%QT_EXAMPLEDIR%%/widgets/doc/src/dropsite.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/easing.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/editabletreemodel.qdoc
 %%QT_EXAMPLEDIR%%/widgets/doc/src/elasticnodes.qdoc

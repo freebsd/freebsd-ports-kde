@@ -49,6 +49,7 @@
 %%QT_INCDIR%%/QtGrpcQuick/qtgrpcquickexports.h
 %%QT_INCDIR%%/QtGrpcQuick/qtgrpcquickversion.h
 %%QT_INCDIR%%/QtGrpcQuick/qtqmlgrpcstreamsender.h
+%%QT_INCDIR%%/QtProtobuf/%%FULLVER%%/QtProtobuf/private/protobuffieldpresencechecker_p.h
 %%QT_INCDIR%%/QtProtobuf/%%FULLVER%%/QtProtobuf/private/qprotobufmessage_p.h
 %%QT_INCDIR%%/QtProtobuf/%%FULLVER%%/QtProtobuf/private/qprotobufpropertyorderingbuilder_p.h
 %%QT_INCDIR%%/QtProtobuf/%%FULLVER%%/QtProtobuf/private/qprotobufregistration_p.h
@@ -300,6 +301,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginTargets.cmake
 %%QT_QMLDIR%%/QtProtobuf/libprotobufquickplugin.so
 %%QT_QMLDIR%%/QtProtobuf/plugins.qmltypes
 %%QT_QMLDIR%%/QtProtobuf/qmldir
+%%QT_SBOMDIR%%/qtgrpc-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Grpc.pc
 libdata/pkgconfig/Qt6GrpcQuick.pc
 libdata/pkgconfig/Qt6Protobuf.pc

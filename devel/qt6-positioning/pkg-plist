@@ -146,6 +146,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets.cmake
 %%QT_QMLDIR%%/QtPositioning/libpositioningquickplugin.so
 %%QT_QMLDIR%%/QtPositioning/plugins.qmltypes
 %%QT_QMLDIR%%/QtPositioning/qmldir
+%%QT_SBOMDIR%%/qtpositioning-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Positioning.pc
 libdata/pkgconfig/Qt6PositioningQuick.pc
 %%QT_DATADIR%%/modules/Positioning.json

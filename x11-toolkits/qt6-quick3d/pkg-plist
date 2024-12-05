@@ -1065,6 +1065,7 @@ lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtQuick3D/designer/source/view3D_template.qml
 %%QT_QMLDIR%%/QtQuick3D/libqquick3dplugin.so
 %%QT_QMLDIR%%/QtQuick3D/qmldir
+%%QT_SBOMDIR%%/qtquick3d-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Quick3D.pc
 libdata/pkgconfig/Qt6Quick3DAssetImport.pc
 libdata/pkgconfig/Qt6Quick3DAssetUtils.pc

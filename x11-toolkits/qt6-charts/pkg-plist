@@ -377,6 +377,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Targets.cmake
 %%QT_QMLDIR%%/QtCharts/libqtchartsqml2plugin.so
 %%QT_QMLDIR%%/QtCharts/plugins.qmltypes
 %%QT_QMLDIR%%/QtCharts/qmldir
+%%QT_SBOMDIR%%/qtcharts-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Charts.pc
 libdata/pkgconfig/Qt6ChartsQml.pc
 %%QT_DATADIR%%/modules/Charts.json

@@ -3192,7 +3192,6 @@ lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6xml_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%DEBUG%%%%QT_LIBDIR%%/objects-Debug/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
 %%NO_DEBUG%%%%QT_LIBDIR%%/objects-Release/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
-%%QT_LIBDIR%%/sbom/qtbase-%%FULLVER%%.spdx
 %%QT_MKSPECDIR%%/REUSE.toml
 %%QT_MKSPECDIR%%/aix-g++-64/qmake.conf
 %%QT_MKSPECDIR%%/aix-g++-64/qplatformdefs.h
@@ -3694,6 +3693,7 @@ lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake
 %%QT_PLUGINDIR%%/tls/libqopensslbackend.so
 %%X11%%%%QT_PLUGINDIR%%/xcbglintegrations/libqxcb-egl-integration.so
 %%X11%%%%QT_PLUGINDIR%%/xcbglintegrations/libqxcb-glx-integration.so
+%%QT_SBOMDIR%%/qtbase-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Concurrent.pc
 libdata/pkgconfig/Qt6Core.pc
 libdata/pkgconfig/Qt6DBus.pc

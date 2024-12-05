@@ -156,7 +156,7 @@
 %%QT_DOCDIR%%/qtdoc/images/macos.webp
 %%QT_DOCDIR%%/qtdoc/images/mainscreen.png
 %%QT_DOCDIR%%/qtdoc/images/maintenancetool.png
-%%QT_DOCDIR%%/qtdoc/images/mediaplayer.png
+%%QT_DOCDIR%%/qtdoc/images/mediaplayerapp.png
 %%QT_DOCDIR%%/qtdoc/images/mobile_dark.png
 %%QT_DOCDIR%%/qtdoc/images/mobile_light.png
 %%QT_DOCDIR%%/qtdoc/images/nmvurCcsWos.jpg
@@ -243,7 +243,6 @@
 %%QT_DOCDIR%%/qtdoc/images/xNIz78IPBu0.jpg
 %%QT_DOCDIR%%/qtdoc/images/xml-examples.png
 %%QT_DOCDIR%%/qtdoc/images/xr_physicsbase_teleportation.jpg
-%%QT_DOCDIR%%/qtdoc/images/yIv0vO8B7tQ.jpg
 %%QT_DOCDIR%%/qtdoc/index.html
 %%QT_DOCDIR%%/qtdoc/inputs-linux-device.html
 %%QT_DOCDIR%%/qtdoc/install-qt-design-studio.html
@@ -388,6 +387,7 @@
 %%QT_DOCDIR%%/qtdoc/rcc.html
 %%QT_DOCDIR%%/qtdoc/reference-overview.html
 %%QT_DOCDIR%%/qtdoc/restoring-geometry.html
+%%QT_DOCDIR%%/qtdoc/sbom.html
 %%QT_DOCDIR%%/qtdoc/scalability.html
 %%QT_DOCDIR%%/qtdoc/session.html
 %%QT_DOCDIR%%/qtdoc/sharedlibrary.html

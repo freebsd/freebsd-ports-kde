@@ -709,6 +709,7 @@ lib/cmake/Qt6WlShellIntegrationPrivate/Qt6WlShellIntegrationPrivateVersionlessTa
 %%QT_QMLDIR%%/QtWayland/Compositor/qmldir
 %%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml
 %%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml
+%%QT_SBOMDIR%%/qtwayland-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6WaylandClient.pc
 libdata/pkgconfig/Qt6WaylandCompositor.pc
 libdata/pkgconfig/Qt6WaylandCompositorIviapplication.pc

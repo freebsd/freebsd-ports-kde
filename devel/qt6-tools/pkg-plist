@@ -427,6 +427,7 @@ lib/cmake/Qt6UiTools/Qt6UiToolsVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools_private.pri
 %%QT_PLUGINDIR%%/designer/libqquickwidget.so
+%%QT_SBOMDIR%%/qttools-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Designer.pc
 libdata/pkgconfig/Qt6Help.pc
 libdata/pkgconfig/Qt6Linguist.pc

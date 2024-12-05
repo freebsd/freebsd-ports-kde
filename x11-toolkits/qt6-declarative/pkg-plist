@@ -1510,6 +1510,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginAdditionalTargetInfo.cmak
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfig.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfigVersion.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfigVersionImpl.cmake
+lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginDependencies.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake
@@ -2626,9 +2627,12 @@ lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsVersionlessTargets.cmake
 %%QT_PLUGINDIR%%/qmltooling/libqmldbg_quickprofiler.so
 %%QT_PLUGINDIR%%/qmltooling/libqmldbg_server.so
 %%QT_PLUGINDIR%%/qmltooling/libqmldbg_tcp.so
-%%QT_QMLDIR%%/Assets/Downloader/libqmlassetdownloaderplugin.so
+%%QT_QMLDIR%%/Assets/Downloader/libqmlassetdownloaderplugin.a
+%%QT_QMLDIR%%/Assets/Downloader/libqmlassetdownloaderplugin.prl
 %%DEBUG%%%%QT_QMLDIR%%/Assets/Downloader/objects-Debug/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Assets_Downloader_init.cpp.o
 %%NO_DEBUG%%%%QT_QMLDIR%%/Assets/Downloader/objects-Release/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Assets_Downloader_init.cpp.o
+%%DEBUG%%%%QT_QMLDIR%%/Assets/Downloader/objects-Debug/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
+%%NO_DEBUG%%%%QT_QMLDIR%%/Assets/Downloader/objects-Release/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
 %%QT_QMLDIR%%/Assets/Downloader/plugins.qmltypes
 %%QT_QMLDIR%%/Assets/Downloader/qmldir
 %%QT_QMLDIR%%/QML/plugins.qmltypes
@@ -4096,6 +4100,7 @@ lib/cmake/Qt6QuickWidgets/Qt6QuickWidgetsVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtTest/testlogger.js
 %%QT_QMLDIR%%/builtins.qmltypes
 %%QT_QMLDIR%%/jsroot.qmltypes
+%%QT_SBOMDIR%%/qtdeclarative-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6LabsAnimation.pc
 libdata/pkgconfig/Qt6LabsFolderListModel.pc
 libdata/pkgconfig/Qt6LabsPlatform.pc

@@ -76,6 +76,7 @@ lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_svgwidgets_private.pri
 %%QT_PLUGINDIR%%/iconengines/libqsvgicon.so
 %%QT_PLUGINDIR%%/imageformats/libqsvg.so
+%%QT_SBOMDIR%%/qtsvg-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Svg.pc
 libdata/pkgconfig/Qt6SvgWidgets.pc
 %%QT_DATADIR%%/modules/Svg.json

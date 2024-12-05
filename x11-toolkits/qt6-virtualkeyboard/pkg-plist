@@ -286,6 +286,7 @@ lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsVersionlessTarget
 %%QT_QMLDIR%%/QtQuick/VirtualKeyboard/libqtvkbplugin.so
 %%QT_QMLDIR%%/QtQuick/VirtualKeyboard/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/VirtualKeyboard/qmldir
+%%QT_SBOMDIR%%/qtvirtualkeyboard-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6HunspellInputMethod.pc
 libdata/pkgconfig/Qt6VirtualKeyboard.pc
 libdata/pkgconfig/Qt6VirtualKeyboardSettings.pc

@@ -71,6 +71,7 @@ lib/cmake/Qt6WebViewQuick/Qt6WebViewQuickVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtWebView/libqtwebviewquickplugin.so
 %%QT_QMLDIR%%/QtWebView/plugins.qmltypes
 %%QT_QMLDIR%%/QtWebView/qmldir
+%%QT_SBOMDIR%%/qtwebview-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6WebView.pc
 libdata/pkgconfig/Qt6WebViewQuick.pc
 %%QT_DATADIR%%/modules/WebView.json

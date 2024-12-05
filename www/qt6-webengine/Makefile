@@ -39,7 +39,8 @@ CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg \
 
 .if defined(BUILD_QTPDF)
 CMAKE_ON+=	QT_FEATURE_qtpdf_build
-CMAKE_OFF+=	QT_FEATURE_qtwebengine_build
+CMAKE_OFF+=	QT_FEATURE_qtwebengine_build \
+		QT_GENERATE_SBOM
 
 SYS_LIBS=	freetype
 .else

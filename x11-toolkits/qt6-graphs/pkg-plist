@@ -76,7 +76,6 @@
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/scatterinstancing_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/scatteritemmodelhandler_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/surfaceitemmodelhandler_p.h
-%%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/surfaceselectioninstancing_p.h
 %%QT_INCDIR%%/QtGraphs/%%FULLVER%%/QtGraphs/private/utils_p.h
 %%QT_INCDIR%%/QtGraphs/Q3DScene
 %%QT_INCDIR%%/QtGraphs/QAbstract3DAxis
@@ -269,6 +268,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginTargets.cmake
 %%QT_QMLDIR%%/QtGraphs/designer/qtgraphs2d.metainfo
 %%QT_QMLDIR%%/QtGraphs/libgraphsplugin.so
 %%QT_QMLDIR%%/QtGraphs/qmldir
+%%QT_SBOMDIR%%/qtgraphs-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Graphs.pc
 libdata/pkgconfig/Qt6GraphsWidgets.pc
 %%QT_DATADIR%%/modules/Graphs.json

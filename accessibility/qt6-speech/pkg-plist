@@ -65,5 +65,6 @@ lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtTextToSpeech/libtexttospeechqmlplugin.so
 %%QT_QMLDIR%%/QtTextToSpeech/plugins.qmltypes
 %%QT_QMLDIR%%/QtTextToSpeech/qmldir
+%%QT_SBOMDIR%%/qtspeech-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6TextToSpeech.pc
 %%QT_DATADIR%%/modules/TextToSpeech.json

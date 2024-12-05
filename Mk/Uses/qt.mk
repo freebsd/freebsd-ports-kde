@@ -74,6 +74,7 @@ QT_DESCRIPTIONSDIR_REL?=${QT_DATADIR_REL}/modules
 QT_LIBEXECDIR_REL?=	libexec/${_QT_RELNAME}
 QT_IMPORTDIR_REL?=	${QT_ARCHDIR_REL}/imports
 QT_QMLDIR_REL?=		${QT_ARCHDIR_REL}/qml
+QT_SBOMDIR_REL?=	${QT_ARCHDIR_REL}/sbom
 QT_DATADIR_REL?=	share/${_QT_RELNAME}
 QT_DOCDIR_REL?=		share/doc/${_QT_RELNAME}
 QT_L10NDIR_REL?=	${QT_DATADIR_REL}/translations
@@ -111,7 +112,7 @@ QMAKESPEC?=		${QT_MKSPECDIR}/${QMAKESPECNAME}
 QMAKE_COMPILER=	$$(ccver="$$(${CXX} --version)"; case "$$ccver" in *clang*) echo clang ;; *) echo g++ ;; esac)
 
 .  for dir in BIN INC LIB ARCH PLUGIN LIBEXEC IMPORT \
-	QML DATA DOC L10N ETC EXAMPLE TEST MKSPEC \
+	QML SBOM DATA DOC L10N ETC EXAMPLE TEST MKSPEC \
 	CMAKE TOOL
 QT_${dir}DIR=	${PREFIX}/${QT_${dir}DIR_REL}
 # Export all directories to the plist substituion for QT_DIST ports.

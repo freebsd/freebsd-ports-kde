@@ -105,3 +105,4 @@
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/snowing.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/thunder.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/nature/water.qen
+%%QT_SBOMDIR%%/qqeffectmaker-%%FULLVER%%.spdx

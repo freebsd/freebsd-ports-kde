@@ -170,6 +170,7 @@ lib/cmake/Qt6Quick3DPhysicsHelpers/Qt6Quick3DPhysicsHelpersVersionlessTargets.cm
 %%QT_QMLDIR%%/QtQuick3D/Physics/libqquick3dphysicsplugin.so
 %%QT_QMLDIR%%/QtQuick3D/Physics/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick3D/Physics/qmldir
+%%QT_SBOMDIR%%/qtquick3dphysics-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Quick3DPhysics.pc
 libdata/pkgconfig/Qt6Quick3DPhysicsHelpers.pc
 %%QT_DATADIR%%/modules/Quick3DPhysics.json

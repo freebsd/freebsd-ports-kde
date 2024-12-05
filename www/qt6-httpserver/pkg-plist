@@ -51,5 +51,6 @@ lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6httpserver_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_httpserver.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_httpserver_private.pri
+%%QT_SBOMDIR%%/qthttpserver-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6HttpServer.pc
 %%QT_DATADIR%%/modules/HttpServer.json

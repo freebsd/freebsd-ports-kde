@@ -138,6 +138,7 @@ lib/cmake/Qt6Nfc/Qt6NfcVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_bluetooth_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_nfc.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_nfc_private.pri
+%%QT_SBOMDIR%%/qtconnectivity-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Bluetooth.pc
 libdata/pkgconfig/Qt6Nfc.pc
 %%QT_DATADIR%%/modules/Bluetooth.json
