@@ -7,7 +7,7 @@ DISTNAME=	${PYQTGRAPHS_DISTNAME}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt6 toolkit, QtGraphs module
-WWW=		https://riverbankcomputing.com/software
+WWW=		https://riverbankcomputing.com/software/pyqtgraphs
 
 LICENSE=	${PYQT6_LICENSE}
 
