@@ -16,6 +16,7 @@ include/KF6/KNewStuffCore/KNSCore/TagsFilterChecker
 include/KF6/KNewStuffCore/KNSCore/Transaction
 include/KF6/KNewStuffCore/KNSCore/author.h
 include/KF6/KNewStuffCore/KNSCore/cache.h
+include/KF6/KNewStuffCore/KNSCore/categorymetadata.h
 include/KF6/KNewStuffCore/KNSCore/enginebase.h
 include/KF6/KNewStuffCore/KNSCore/entry.h
 include/KF6/KNewStuffCore/KNSCore/errorcode.h
@@ -27,6 +28,8 @@ include/KF6/KNewStuffCore/KNSCore/question.h
 include/KF6/KNewStuffCore/KNSCore/questionlistener.h
 include/KF6/KNewStuffCore/KNSCore/questionmanager.h
 include/KF6/KNewStuffCore/KNSCore/resultsstream.h
+include/KF6/KNewStuffCore/KNSCore/searchpreset.h
+include/KF6/KNewStuffCore/KNSCore/searchrequest.h
 include/KF6/KNewStuffCore/KNSCore/tagsfilterchecker.h
 include/KF6/KNewStuffCore/KNSCore/transaction.h
 include/KF6/KNewStuffWidgets/KNSWidgets/Action
