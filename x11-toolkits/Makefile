@@ -176,8 +176,10 @@
     SUBDIR += py-customtkinter
     SUBDIR += py-easygui
     SUBDIR += py-fltk
+    SUBDIR += py-fonticon-fontawesome6
     SUBDIR += py-guietta
     SUBDIR += py-kivy
+    SUBDIR += py-magicgui
     SUBDIR += py-pangocffi
     SUBDIR += py-python-xlib
     SUBDIR += py-qt5-charts
