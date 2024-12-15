@@ -1,15 +1,14 @@
 PORTNAME=	kaidan
-DISTVERSION=	0.9.1
-PORTREVISION=	4
+DISTVERSION=	0.10.0
 CATEGORIES=	net-im kde
-MASTER_SITES=	KDE/unstable/${PORTNAME}
+MASTER_SITES=	KDE/unstable/${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	User-friendly XMPP client for every device
 WWW=		https://apps.kde.org/kaidan/
 
 LICENSE=	GPLv3+
-LICENSE_FILE=	${WRKSRC}/doc/licenses/gpl-3.0.txt
+LICENSE_FILE=	${WRKSRC}/LICENSES/GPL-3.0-or-later.txt
 
 BUILD_DEPENDS=	kquickimageeditor-qt5>0:graphics/kquickimageeditor@qt5
 LIB_DEPENDS=	libQXmppQt5.so:net-im/qxmpp@qt5 \
@@ -18,10 +17,9 @@ RUN_DEPENDS=	kquickimageeditor-qt5>0:graphics/kquickimageeditor@qt5
 
 USES=		cmake compiler:c++11-lang desktop-file-utils kde:5 pkgconfig \
 		qt:5 tar:xz xorg
-USE_KDE=	auth bookmarks codecs completion config configwidgets \
-		coreaddons itemviews jobwidgets kio kirigami-addons kirigami2 \
-		notifications qqc2-desktop-style service solid widgetsaddons \
-		windowsystem xmlgui \
+USE_KDE=	completion config coreaddons jobwidgets kio kirigami-addons \
+		kirigami2 notifications qqc2-desktop-style service solid \
+		widgetsaddons windowsystem \
 		ecm:build
 USE_QT=		concurrent core dbus declarative gui location multimedia network \
 		quickcontrols2 sql svg widgets xml \
