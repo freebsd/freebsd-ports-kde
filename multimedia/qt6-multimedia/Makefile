@@ -35,6 +35,7 @@ GSTREAMER_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 # via USE_XORG, so FTTB, we must duplicate USES=xorg in the GSTREAMER
 # and X11 options and cannot hoist it to the main USES declaration as a
 # noop.
+GSTREAMER_LIB_DEPENDS=	libdrm.so:graphics/libdrm
 GSTREAMER_USES=		gnome gstreamer:1 xorg
 GSTREAMER_USE=		GL=egl GNOME=glib20 GSTREAMER=bad,gl,good,ugly XORG=xcb
 GSTREAMER_CMAKE_BOOL=	FEATURE_gstreamer \
@@ -69,5 +70,12 @@ VAAPI_IMPLIES=		FFMPEG
 X11_USES=		xorg
 X11_USE=		XORG=x11,xext,xrandr
 X11_IMPLIES=		FFMPEG
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == "i386" && ${MACHINE_CPU:Nsse}
+CXXFLAGS+=	-DDISABLE_SIMD \
+		-DPFFFT_SIMD_DISABLE
+.endif
 
 .include <bsd.port.mk>
