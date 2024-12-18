@@ -1,3 +1,3 @@
-TIMESTAMP = 1726394798
-SHA256 (KDE/release-service/24.08.1/libkdcraw-24.08.1.tar.xz) = dceda2ebbf7479ba232e9108d1cf58d613df0fa76c990106ee59dbba8c9c32f6
-SIZE (KDE/release-service/24.08.1/libkdcraw-24.08.1.tar.xz) = 37352
+TIMESTAMP = 1734460213
+SHA256 (KDE/release-service/24.12.0/libkdcraw-24.12.0.tar.xz) = 0b4b6067fd362d218f6ee088c661c42b2f55cd9e3a8bdfb82efed96bd682625c
+SIZE (KDE/release-service/24.12.0/libkdcraw-24.12.0.tar.xz) = 37308
