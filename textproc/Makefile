@@ -254,6 +254,7 @@
     SUBDIR += go-yq
     SUBDIR += gojq
     SUBDIR += goldendict
+    SUBDIR += goldendict-ng
     SUBDIR += google-ctemplate
     SUBDIR += gpp
     SUBDIR += grap
@@ -345,6 +346,7 @@
     SUBDIR += jid
     SUBDIR += jing
     SUBDIR += jless
+    SUBDIR += jnv
     SUBDIR += jo
     SUBDIR += jq
     SUBDIR += jql
@@ -472,6 +474,7 @@
     SUBDIR += makefaq
     SUBDIR += makepatch
     SUBDIR += man2html
+    SUBDIR += mandoc
     SUBDIR += mantra
     SUBDIR += markdown
     SUBDIR += markdown-mode.el
@@ -483,7 +486,6 @@
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
     SUBDIR += mdbook-mermaid
-    SUBDIR += mdocml
     SUBDIR += meilisearch
     SUBDIR += meld
     SUBDIR += metauml
@@ -1450,6 +1452,7 @@
     SUBDIR += py-markdown-include
     SUBDIR += py-markdown-it-py
     SUBDIR += py-markdown2
+    SUBDIR += py-markdownify
     SUBDIR += py-marko
     SUBDIR += py-markuppy
     SUBDIR += py-markups

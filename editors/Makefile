@@ -248,6 +248,7 @@
     SUBDIR += rubygem-neovim
     SUBDIR += sam
     SUBDIR += scite
+    SUBDIR += sciteco
     SUBDIR += se
     SUBDIR += semi
     SUBDIR += setzer
