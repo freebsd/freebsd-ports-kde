@@ -12,16 +12,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 LIB_DEPENDS=	libprotobuf.so:devel/protobuf
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext \
-		kde:5 qt:5 shared-mime-info tar:xz xorg
+		kde:6 qt:6 shared-mime-info tar:xz xorg
 USE_KDE=	auth codecs completion config configwidgets coreaddons \
-		crash doctools i18n jobwidgets kio package parts phonon \
-		plasma-framework plasma-workspace-wallpapers runner service solid \
+		crash doctools i18n jobwidgets kio kirigami-addons package \
+		parts phonon plasma-workspace-wallpapers runner service solid \
 		sonnet textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_LDCONFIG=	yes
-USE_QT=		concurrent core dbus declarative designer gui network \
-		printsupport serialport sql svg widgets xml \
-		buildtools:build qmake:build testlib:build
+USE_QT=		base declarative svg webengine
 USE_XORG=	x11
 
 CMAKE_OFF=	MOBILE
