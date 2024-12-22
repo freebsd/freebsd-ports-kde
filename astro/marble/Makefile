@@ -19,7 +19,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		sonnet textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_LDCONFIG=	yes
-USE_QT=		base declarative svg webengine
+USE_QT=		base declarative svg
 USE_XORG=	x11
 
 CMAKE_OFF=	MOBILE
@@ -38,8 +38,8 @@ GPS_USE=		QT=location
 GPS_LIB_DEPENDS=	libgps.so:astro/gpsd
 GPS_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_libgps
 
-WEBENGINE_DESC=		Build various plugins that require qt5-webengine
+WEBENGINE_DESC=		Build various plugins that require qt6-webengine
 WEBENGINE_USE=		QT=location,webchannel,webengine
-WEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets
+WEBENGINE_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Qt6WebEngineWidgets
 
 .include <bsd.port.mk>
