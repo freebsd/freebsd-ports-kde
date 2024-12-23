@@ -11,28 +11,27 @@ LIB_DEPENDS=	libAnalitza.so:math/analitza \
 		libqalculate.so:math/libqalculate \
 		libspectre.so:print/libspectre \
 		libpoppler.so:graphics/poppler \
-		libpoppler-qt6.so:graphics/poppler-qt6
+		libpoppler-qt5.so:graphics/poppler-qt5
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
-		pkgconfig python qt:6 shared-mime-info tar:xz xorg
+USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
+		pkgconfig python qt:5 shared-mime-info tar:xz xorg
 USE_KDE=	archive attica auth bookmarks codecs completion config \
-		configwidgets coreaddons crash i18n iconthemes itemmodels \
+		configwidgets coreaddons crash i18n iconthemes init itemmodels \
 		itemviews jobwidgets kio newstuff parts pty service solid \
 		sonnet syntaxhighlighting texteditor textwidgets widgetsaddons \
 		windowsystem xmlgui \
 		ecm:build
-USE_QT=		base declarative location svg tools webchannel webengine
+USE_QT=		concurrent core dbus declarative gui help location network \
+		printsupport sql svg webchannel webengine widgets xml \
+		xmlpatterns \
+		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	JULIA LUAJIT MAXIMA OCTAVE R SAGE SCILAB DOCS
+OPTIONS_DEFINE=	LUAJIT MAXIMA OCTAVE R SAGE SCILAB DOCS
 OPTIONS_SUB=	yes # R LUAJIT
-
-JULIA_DESC=	Build Julia backend
-JULIA_LIB_DEPENDS=	libjulia.so:lang/julia
-JULIA_CMAKE_OFF=	-DWITH_JULIA:BOOL=FALSE
 
 LUAJIT_DESC=	Build LuaJIT backend and install LuaJIT
 LUAJIT_LIB_DEPENDS=	libluajit-5.1.so:lang/luajit
@@ -55,6 +54,9 @@ SAGE_RUN_DEPENDS=	sage:math/sage
 
 SCILAB_DESC=	Install Scilab
 SCILAB_RUN_DEPENDS=	scilab:math/scilab
+
+# Disable python2 binding
+CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_PythonLibs
 
 post-patch:
 	${REINPLACE_CMD} -e '/FIND_PROGRAM(_GFORTRAN_EXECUTABLE/s,gfortran,${FC},' \
