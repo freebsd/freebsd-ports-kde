@@ -1,13 +1,15 @@
 PORTNAME=	babel
 PORTVERSION=	2010.01.16
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	converters lisp
-PKGNAMEPREFIX=	cl-
 MASTER_SITES=	LOCAL/olgeni
+PKGNAMEPREFIX=	cl-
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Charset encoding/decoding library written in Common Lisp
 WWW=		https://www.cliki.net/Babel
+
+LICENSE=	MIT
 
 BUILD_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/alexandria/alexandria.asd:devel/cl-alexandria \
 		${LOCALBASE}/${CL_LIBDIR_REL}/trivial-features/trivial-features.asd:devel/cl-trivial-features \
@@ -16,9 +18,9 @@ RUN_DEPENDS=	${LOCALBASE}/${CL_LIBDIR_REL}/alexandria/alexandria.asd:devel/cl-al
 		${LOCALBASE}/${CL_LIBDIR_REL}/trivial-features/trivial-features.asd:devel/cl-trivial-features \
 		${LOCALBASE}/${CL_LIBDIR_REL}/trivial-gray-streams/trivial-gray-streams.asd:devel/cl-trivial-gray-streams
 
-NO_BUILD=	yes
+USES=		cl
 
-USE_ASDF=	yes
+NO_BUILD=	yes
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
@@ -36,5 +38,4 @@ do-install:
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	@${INSTALL_DATA} ${WRKSRC}/tests/* ${STAGEDIR}${EXAMPLESDIR}
 
-.include "${.CURDIR}/../../devel/cl-asdf/bsd.cl-asdf.mk"
 .include <bsd.port.mk>

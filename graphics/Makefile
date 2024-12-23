@@ -122,6 +122,7 @@
     SUBDIR += curtail
     SUBDIR += cuttlefish
     SUBDIR += cxxplot
+    SUBDIR += d2
     SUBDIR += darktable
     SUBDIR += dataplot
     SUBDIR += dbow2
@@ -337,6 +338,7 @@
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
     SUBDIR += hugin
+    SUBDIR += hyprgraphics
     SUBDIR += icat
     SUBDIR += icc-profiles-adobe-cs4
     SUBDIR += icc-profiles-basiccolor
@@ -609,6 +611,7 @@
     SUBDIR += mypaint-brushes2
     SUBDIR += nanort
     SUBDIR += nanosvg
+    SUBDIR += natron
     SUBDIR += netpbm
     SUBDIR += nip2
     SUBDIR += noaa-apt
@@ -1121,6 +1124,7 @@
     SUBDIR += rubygem-ruby-vips
     SUBDIR += rubygem-scruffy
     SUBDIR += rubygem-svg_optimizer
+    SUBDIR += rubygem-svg_sprite
     SUBDIR += rubygem-tanuki_emoji
     SUBDIR += rx
     SUBDIR += s10sh

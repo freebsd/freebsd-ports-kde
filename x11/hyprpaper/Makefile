@@ -1,6 +1,6 @@
 PORTNAME=	hyprpaper
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.7.1
+DISTVERSION=	0.7.3
 CATEGORIES=	x11 wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -14,6 +14,7 @@ BUILD_DEPENDS=	hyprwayland-scanner>=0.4.0:devel/hyprwayland-scanner \
 		wayland-protocols>0:graphics/wayland-protocols
 LIB_DEPENDS=	libhyprlang.so:devel/hyprlang \
 		libhyprutils.so:devel/hyprutils \
+		libhyprgraphics.so:graphics/hyprgraphics \
 		libwayland-client.so:graphics/wayland \
 		libwebp.so:graphics/webp
 
@@ -35,6 +36,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/pango/d' \
 		-e '/OpenGL/d; /GLESv2/d' \
 		-e '/ rt)/d' \
+		-e '/install.*systemd/d' \
 		${WRKSRC}/CMakeLists.txt
 # Respect consolekit2 as XDG_RUNTIME_DIR fallback
 	@${REINPLACE_CMD} 's,/run/user,/var&,' \

@@ -34,6 +34,7 @@
     SUBDIR += asterisk-chan_sccp
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk18
+    SUBDIR += asterisk20
     SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -1362,6 +1363,7 @@
     SUBDIR += rubygem-google-cloud-trace-v1
     SUBDIR += rubygem-google-cloud-trace-v2
     SUBDIR += rubygem-grpc
+    SUBDIR += rubygem-grpc-tools
     SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http-parser
     SUBDIR += rubygem-http_parser.rb

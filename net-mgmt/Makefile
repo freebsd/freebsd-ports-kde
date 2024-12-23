@@ -43,6 +43,7 @@
     SUBDIR += check_nwc_health
     SUBDIR += check_ssl_cert
     SUBDIR += check_ups_health
+    SUBDIR += check_wg
     SUBDIR += chillispot
     SUBDIR += choparp
     SUBDIR += cidr
@@ -432,5 +433,10 @@
     SUBDIR += zabbix7-java
     SUBDIR += zabbix7-proxy
     SUBDIR += zabbix7-server
+    SUBDIR += zabbix72-agent
+    SUBDIR += zabbix72-frontend
+    SUBDIR += zabbix72-java
+    SUBDIR += zabbix72-proxy
+    SUBDIR += zabbix72-server
 
 .include <bsd.port.subdir.mk>
