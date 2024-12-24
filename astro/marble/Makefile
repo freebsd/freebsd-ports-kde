@@ -19,7 +19,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		sonnet textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
 USE_LDCONFIG=	yes
-USE_QT=		base declarative svg
+USE_QT=		base declarative positioning svg
 USE_XORG=	x11
 
 CMAKE_OFF=	MOBILE

@@ -14,7 +14,8 @@ USES=		cmake compiler:c++11-lang gettext kde:6 qt:6 tar:xz xorg
 USE_KDE=	auth codecs config configwidgets coreaddons dbusaddons \
 		globalaccel i18n iconthemes itemmodels itemviews kcmutils \
 		notifications package statusnotifieritem service solid \
-		widgetsaddons windowsystem xmlgui ecm:build
+		widgetsaddons windowsystem xmlgui \
+		ecm:build
 USE_QT=		base
 USE_XORG=	x11
 
