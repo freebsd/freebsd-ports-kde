@@ -231,7 +231,7 @@ lib/marble/plugins/PntPlugin.so
 lib/marble/plugins/PositionMarker.so
 lib/marble/plugins/PostalCode.so
 lib/marble/plugins/ProgressFloatItem.so
-%%GPS_OR_WEBENGINE%%lib/marble/plugins/QtPositioningPositionProviderPlugin.so
+lib/marble/plugins/QtPositioningPositionProviderPlugin.so
 lib/marble/plugins/RoutingPlugin.so
 lib/marble/plugins/RoutinoPlugin.so
 lib/marble/plugins/SatellitesPlugin.so
