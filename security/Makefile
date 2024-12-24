@@ -88,6 +88,8 @@
     SUBDIR += ckpass
     SUBDIR += cksfv
     SUBDIR += cl-md5
+    SUBDIR += cl-md5-ccl
+    SUBDIR += cl-md5-clisp
     SUBDIR += cl-md5-sbcl
     SUBDIR += clamassassin
     SUBDIR += clamav
@@ -1144,6 +1146,7 @@
     SUBDIR += rubygem-ed25519
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
+    SUBDIR += rubygem-gitlab-cloud-connector
     SUBDIR += rubygem-googleauth
     SUBDIR += rubygem-googleauth-gitlab
     SUBDIR += rubygem-gpgme

@@ -1,10 +1,7 @@
 PORTNAME=	llama-cpp
 DISTVERSIONPREFIX=	b
-DISTVERSION=	4337
+DISTVERSION=	4381
 CATEGORIES=	misc # machine-learning
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	121f915a09c1117d34aff6e8faf6d252aaf11027.patch:-p1 # Add missing pthread includes: https://github.com/ggerganov/llama.cpp/pull/9258
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Facebook's LLaMA model in C/C++ # '
@@ -16,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BROKEN_armv7=	clang crashes, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=278810
 BROKEN_i386=	compilation fails, see https://github.com/ggerganov/llama.cpp/issues/9545
 
-USES=		cmake:testing compiler:c++11-lang python:run shebangfix
+USES=		cmake:testing compiler:c++11-lang python:run,test shebangfix
 USE_LDCONFIG=	yes
 
 USE_GITHUB=	yes
@@ -42,8 +39,13 @@ VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
 			vulkan-headers>0:graphics/vulkan-headers
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
-BINARY_ALIAS=	git=false
+BINARY_ALIAS=	git=false \
+		python3=${PYTHON_CMD}
 
-# 2 tests fail: https://github.com/ggerganov/llama.cpp/issues/8906
+do-test-ci: # build of tests fails, see https://github.com/ggerganov/llama.cpp/issues/10955
+	@cd ${WRKSRC} && \
+		${SETENV} ${MAKE_ENV} bash ci/run.sh ./tmp/results ./tmp/mnt
+
+# tests as of 4381: 97% tests passed, 1 tests failed out of 31
 
 .include <bsd.port.mk>
