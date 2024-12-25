@@ -14,8 +14,8 @@ LIB_DEPENDS=	libQCoro6Core.so:devel/qcoro@qt6 \
 		libqt6keychain.so:security/qtkeychain@qt6 \
 		libdbus-1.so:devel/dbus \
 		libolm.so:security/olm
-BUILD_DEPENDS=	libquotient-qt6>=0.8.1:net-im/libquotient@qt6 \
-		kquickimageeditor-qt6>=0.2.0:graphics/kquickimageeditor@qt6 
+BUILD_DEPENDS=	libquotient>=0.9.0:net-im/libquotient \
+		kquickimageeditor-qt6>=0.2.0:graphics/kquickimageeditor@qt6
 # Quotient is a static lib, doesn't need to be in RUN_DEPENDS
 RUN_DEPENDS=	kquickimageeditor-qt6>=0.2.0:graphics/kquickimageeditor@qt6
 
@@ -36,9 +36,6 @@ USE_XORG=	x11
 
 .if ${ARCH:Mpowerpc*}
 USES+=		llvm:min=16
-.elif ${OPSYS} == FreeBSD
-# Work around compiler bug, see pr: 272285
-USES+=		llvm
 .endif
 
 .include <bsd.port.mk>
