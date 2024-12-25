@@ -1,5 +1,5 @@
 PORTNAME=	libquotient
-DISTVERSION=	0.8.2
+DISTVERSION=	0.9.1
 CATEGORIES=	net-im
 PKGNAMESUFFIX=	-${FLAVOR}
 
@@ -48,9 +48,9 @@ _QT5_ONLY_qt6=		"@comment "
 
 .include <bsd.port.options.mk>
 
-# Work around compiler bug, see pr: 272285
-.if ${OPSYS} == FreeBSD
-USES+=		llvm
-.endif
+# # Work around compiler bug, see pr: 272285
+# .if ${OPSYS} == FreeBSD
+# USES+=		llvm
+# .endif
 
 .include <bsd.port.mk>
