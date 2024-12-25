@@ -556,6 +556,8 @@ share/doc/HTML/pt_BR/kdevelop/index.cache.bz2
 share/doc/HTML/pt_BR/kdevelop/index.docbook
 share/doc/HTML/ru/kdevelop/index.cache.bz2
 share/doc/HTML/ru/kdevelop/index.docbook
+share/doc/HTML/sl/kdevelop/index.cache.bz2
+share/doc/HTML/sl/kdevelop/index.docbook
 share/doc/HTML/sv/kdevelop/index.cache.bz2
 share/doc/HTML/sv/kdevelop/index.docbook
 share/doc/HTML/uk/kdevelop/index.cache.bz2
@@ -1801,7 +1803,9 @@ share/locale/hr/LC_MESSAGES/kdevqthelp.mo
 share/locale/hr/LC_MESSAGES/kdevquickopen.mo
 share/locale/hr/LC_MESSAGES/kdevstandardoutputview.mo
 share/locale/hr/LC_MESSAGES/kdevsubversion.mo
+share/locale/hu/LC_MESSAGES/kdevandroid.mo
 share/locale/hu/LC_MESSAGES/kdevappwizard.mo
+share/locale/hu/LC_MESSAGES/kdevastyle.mo
 share/locale/hu/LC_MESSAGES/kdevbazaar.mo
 share/locale/hu/LC_MESSAGES/kdevclassbrowser.mo
 share/locale/hu/LC_MESSAGES/kdevcmake.mo
@@ -1850,6 +1854,10 @@ share/locale/hu/LC_MESSAGES/kdevvcsprojectintegration.mo
 share/locale/hu/LC_MESSAGES/kdevwelcomepage.mo
 share/locale/hu/LC_MESSAGES/plasma_applet_kdevelopsessions.mo
 share/locale/hu/LC_MESSAGES/plasma_runner_kdevelopsessions.mo
+share/locale/ia/LC_MESSAGES/kdevappwizard.mo
+share/locale/ia/LC_MESSAGES/kdevastyle.mo
+share/locale/ia/LC_MESSAGES/kdevelop.mo
+share/locale/ia/LC_MESSAGES/kdevplatform.mo
 share/locale/is/LC_MESSAGES/kdevelop.mo
 share/locale/it/LC_MESSAGES/kdevandroid.mo
 share/locale/it/LC_MESSAGES/kdevappwizard.mo
