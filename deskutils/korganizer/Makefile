@@ -19,7 +19,7 @@ USE_KDE=	attica auth bookmarks codecs completion config configwidgets \
 		ecm:build
 # pim components
 USE_KDE+=	akonadi akonadicalendar akonadicontacts akonadimime \
-		akonadinotes akonadisearch calendarcore calendarsupport \
+		akonadisearch calendarcore calendarsupport \
 		calendarutils contacts eventviews grantleetheme holidays \
 		identitymanagement imap incidenceeditor kontactinterface ldap \
 		libkdepim mailtransport mime pimcommon pimtextedit \

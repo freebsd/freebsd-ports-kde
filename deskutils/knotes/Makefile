@@ -21,7 +21,7 @@ USE_KDE=	attica auth bookmarks codecs completion config configwidgets \
 		windowsystem xmlgui \
 		ecm:build
 # pim components
-USE_KDE+=	akonadi akonadicontacts akonadinotes akonadisearch \
+USE_KDE+=	akonadi akonadicontacts akonadisearch \
 		calendarcore calendarutils contacts grantleetheme imap \
 		kontactinterface libkdepim mime pimcommon pimtextedit \
 		kdepim-runtime:run

@@ -16,7 +16,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		solid widgetsaddons windowsystem \
 		ecm:build
 # pim components
-USE_KDE+=	akonadi akonadicalendar akonadinotes calendarcore \
+USE_KDE+=	akonadi akonadicalendar calendarcore \
 		calendarutils holidays identitymanagement mime pimcommon \
 		pimtextedit
 USE_QT=		base

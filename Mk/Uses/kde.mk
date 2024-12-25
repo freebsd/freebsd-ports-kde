@@ -323,7 +323,7 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			kirigami-addons
 
 # List of components of the KDE PIM distribution (part of applications).
-_USE_KDEPIM_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
+_USE_KDEPIM_ALL=	akonadicontacts akonadiimportwizard akonadimime \
 			akonadicalendar akonadisearch \
 			calendarcore calendarsupport calendarutils \
 			contacts eventviews gapi grantleetheme \

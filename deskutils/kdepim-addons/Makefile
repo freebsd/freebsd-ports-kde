@@ -26,7 +26,7 @@ USE_KDE=	archive auth codecs completion config configwidgets coreaddons \
 		ecm:build
 # pim components
 USE_KDE+=	akonadi akonadicalendar akonadicontacts akonadiimportwizard \
-		akonadimime akonadinotes calendarcore calendarsupport \
+		akonadimime calendarcore calendarsupport \
 		calendarutils contacts eventviews gapi grantleetheme gravatar \
 		holidays identitymanagement imap incidenceeditor kaddressbook \
 		kitinerary kontactinterface kpkpass libkdepim libkleo \

@@ -16,7 +16,7 @@ USE_KDE=	akonadi auth bookmarks codecs completion config configwidgets \
 		widgetsaddons windowsystem xmlgui \
 		ecm:build
 # PIM Copmonents
-USE_KDE+=	akonadicalendar akonadicontacts akonadinotes akonadisearch \
+USE_KDE+=	akonadicalendar akonadicontacts akonadisearch \
 		calendarcore contacts identitymanagement kontactinterface ldap \
 		mime pimtextedit \
 		kdepim-runtime:run

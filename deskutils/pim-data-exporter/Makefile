@@ -19,7 +19,7 @@ USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		wallet widgetsaddons windowsystem xmlgui \
 		ecm:build
 # pim components
-USE_KDE+=	akonadi akonadicontacts akonadimime akonadinotes calendarcore \
+USE_KDE+=	akonadi akonadicontacts akonadimime calendarcore \
 		contacts grantleetheme identitymanagement imap libkdepim \
 		libkleo mailcommon mailtransport messagelib mime pimcommon \
 		pimtextedit

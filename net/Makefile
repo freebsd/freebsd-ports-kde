@@ -13,7 +13,6 @@
     SUBDIR += akonadi-calendar
     SUBDIR += akonadi-contacts
     SUBDIR += akonadi-mime
-    SUBDIR += akonadi-notes
     SUBDIR += akonadi-search
     SUBDIR += alligator
     SUBDIR += aluminum
