@@ -21,15 +21,14 @@ RUN_DEPENDS=	kquickimageeditor-qt6>=0.2.0:graphics/kquickimageeditor@qt6
 
 USES=		cmake compiler:c++20-lang desktop-file-utils gettext kde:6 \
 		pkgconfig qt:6 tar:xz xorg
-USE_KDE=	auth codecs completion config configwidgets coreaddons \
-		dbusaddons i18n itemmodels jobwidgets kio kirigami-addons \
-		kirigami2 notifications purpose qqc2-desktop-style service \
-		solid sonnet statusnotifieritem syntaxhighlighting \
-		widgetsaddons windowsystem \
-		ecm:build \
-		kquickcharts:run syntaxhighlighting:run
 USE_QT=		base multimedia webview \
 		positioning:run
+USE_KDE=	auth codecs completion config configwidgets coreaddons \
+		dbusaddons i18n itemmodels jobwidgets kio kirigami-addons \
+		kirigami2 kquickcharts notifications purpose qqc2-desktop-style \
+		service solid sonnet statusnotifieritem syntaxhighlighting \
+		widgetsaddons windowsystem \
+		ecm:build
 USE_XORG=	x11
 
 .include <bsd.port.options.mk>

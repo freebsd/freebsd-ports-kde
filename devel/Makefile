@@ -6386,6 +6386,7 @@
     SUBDIR += ruby-setup.rb
     SUBDIR += ruby-subversion
     SUBDIR += rubygem-CFPropertyList
+    SUBDIR += rubygem-CFPropertyList-gitlab
     SUBDIR += rubygem-abstract
     SUBDIR += rubygem-actionpack-action_caching
     SUBDIR += rubygem-actionpack-page_caching
@@ -6495,9 +6496,12 @@
     SUBDIR += rubygem-aws-sdk-backupstorage
     SUBDIR += rubygem-aws-sdk-batch
     SUBDIR += rubygem-aws-sdk-bcmdataexports
+    SUBDIR += rubygem-aws-sdk-bcmpricingcalculator
     SUBDIR += rubygem-aws-sdk-bedrock
     SUBDIR += rubygem-aws-sdk-bedrockagent
     SUBDIR += rubygem-aws-sdk-bedrockagentruntime
+    SUBDIR += rubygem-aws-sdk-bedrockdataautomation
+    SUBDIR += rubygem-aws-sdk-bedrockdataautomationruntime
     SUBDIR += rubygem-aws-sdk-bedrockruntime
     SUBDIR += rubygem-aws-sdk-billing
     SUBDIR += rubygem-aws-sdk-billingconductor
@@ -6583,6 +6587,7 @@
     SUBDIR += rubygem-aws-sdk-docdb
     SUBDIR += rubygem-aws-sdk-docdbelastic
     SUBDIR += rubygem-aws-sdk-drs
+    SUBDIR += rubygem-aws-sdk-dsql
     SUBDIR += rubygem-aws-sdk-dynamodb
     SUBDIR += rubygem-aws-sdk-dynamodbstreams
     SUBDIR += rubygem-aws-sdk-ebs
@@ -6640,6 +6645,7 @@
     SUBDIR += rubygem-aws-sdk-inspector2
     SUBDIR += rubygem-aws-sdk-inspectorscan
     SUBDIR += rubygem-aws-sdk-internetmonitor
+    SUBDIR += rubygem-aws-sdk-invoicing
     SUBDIR += rubygem-aws-sdk-iot
     SUBDIR += rubygem-aws-sdk-iot1clickdevicesservice
     SUBDIR += rubygem-aws-sdk-iot1clickprojects
@@ -6730,12 +6736,14 @@
     SUBDIR += rubygem-aws-sdk-neptunedata
     SUBDIR += rubygem-aws-sdk-neptunegraph
     SUBDIR += rubygem-aws-sdk-networkfirewall
+    SUBDIR += rubygem-aws-sdk-networkflowmonitor
     SUBDIR += rubygem-aws-sdk-networkmanager
     SUBDIR += rubygem-aws-sdk-networkmonitor
     SUBDIR += rubygem-aws-sdk-nimblestudio
     SUBDIR += rubygem-aws-sdk-notifications
     SUBDIR += rubygem-aws-sdk-notificationscontacts
     SUBDIR += rubygem-aws-sdk-oam
+    SUBDIR += rubygem-aws-sdk-observabilityadmin
     SUBDIR += rubygem-aws-sdk-omics
     SUBDIR += rubygem-aws-sdk-opensearchserverless
     SUBDIR += rubygem-aws-sdk-opensearchservice
@@ -6799,6 +6807,7 @@
     SUBDIR += rubygem-aws-sdk-s3-gitlab
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
+    SUBDIR += rubygem-aws-sdk-s3tables
     SUBDIR += rubygem-aws-sdk-sagemaker
     SUBDIR += rubygem-aws-sdk-sagemakeredgemanager
     SUBDIR += rubygem-aws-sdk-sagemakerfeaturestoreruntime
@@ -6810,6 +6819,7 @@
     SUBDIR += rubygem-aws-sdk-schemas
     SUBDIR += rubygem-aws-sdk-secretsmanager
     SUBDIR += rubygem-aws-sdk-securityhub
+    SUBDIR += rubygem-aws-sdk-securityir
     SUBDIR += rubygem-aws-sdk-securitylake
     SUBDIR += rubygem-aws-sdk-serverlessapplicationrepository
     SUBDIR += rubygem-aws-sdk-servicecatalog
@@ -7359,6 +7369,7 @@
     SUBDIR += rubygem-google-iam-credentials
     SUBDIR += rubygem-google-iam-credentials-v1
     SUBDIR += rubygem-google-iam-v1
+    SUBDIR += rubygem-google-logging-utils
     SUBDIR += rubygem-google-protobuf
     SUBDIR += rubygem-google-protobuf3
     SUBDIR += rubygem-googleapis-common-protos
@@ -7470,6 +7481,7 @@
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-license_finder
+    SUBDIR += rubygem-license_finder-gitlab
     SUBDIR += rubygem-licensee
     SUBDIR += rubygem-licensee-gitlab
     SUBDIR += rubygem-listen
