@@ -232,6 +232,7 @@ include/KPim6/MessageList/MessageList/View
 include/KPim6/MessageList/MessageList/WidgetBase
 include/KPim6/MessageList/messagelist/aggregationcombobox.h
 include/KPim6/MessageList/messagelist/aggregationconfigbutton.h
+include/KPim6/MessageList/messagelist/config-messagelist.h
 include/KPim6/MessageList/messagelist/enums.h
 include/KPim6/MessageList/messagelist/messagelist_export.h
 include/KPim6/MessageList/messagelist/messagelistsettings.h
