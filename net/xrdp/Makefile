@@ -15,24 +15,18 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/nasm:devel/nasm
+LIB_DEPENDS=	libImlib2.so:graphics/imlib2
 RUN_DEPENDS=	${LOCALBASE}/lib/xorg/modules/libxorgxrdp.so:x11-drivers/xorgxrdp \
 		xterm:x11/xterm
-LIB_DEPENDS=	libImlib2.so:graphics/imlib2 \
-		libopenh264.so:multimedia/openh264 \
-		libx264.so:multimedia/libx264
 
 USES=		autoreconf:build compiler:c11 cpe jpeg libtool localbase \
 		pkgconfig ssl xorg
 CPE_VENDOR=	neutrinolabs
-USE_XORG=	ice pixman sm x11 xfixes xrandr
 USE_LDCONFIG=	${PREFIX}/lib/xrdp
+USE_XORG=	ice pixman sm x11 xfixes xrandr
 
 GNU_CONFIGURE=	yes
-GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
-
-CONFIGURE_ARGS=	--enable-openh264 \
-		--enable-x264 \
-		--enable-imlib2 \
+CONFIGURE_ARGS=	--enable-imlib2 \
 		--enable-jpeg \
 		--enable-painter \
 		--enable-pam-config=freebsd \
@@ -42,34 +36,44 @@ CONFIGURE_ARGS=	--enable-openh264 \
 		--enable-vsock \
 		--localstatedir=/var \
 		--with-pkgconfigdir=${LOCALBASE}/libdata/pkgconfig
+
+INSTALL_TARGET=	install-strip
+
 LDFLAGS+=	-lssl
 CONFLICTS=	xrdp-devel
-INSTALL_TARGET=	install-strip
 SUB_FILES=	pkg-deinstall pkg-install pkg-message
 SUB_LIST=	OPENSSLBASE=${OPENSSLBASE}
 
-USER=		_xrdp
-GROUP=		_xrdp
-
 OPTIONS_DEFINE=			DEBUG FUSE IPV6
-OPTIONS_DEFAULT=		FDKAAC OPUS
-OPTIONS_GROUP=			AUDIO_CODEC
+OPTIONS_DEFAULT=		FDKAAC OPENH264 OPUS X264
+OPTIONS_GROUP=			AUDIO_CODEC VIDEO_CODEC
 OPTIONS_GROUP_AUDIO_CODEC=	FDKAAC MP3LAME OPUS
+OPTIONS_GROUP_VIDEO_CODEC=	OPENH264 X264
 FDKAAC_DESC=			Enable Fraunhofer FDK AAC for audio redirection
 FUSE_DESC=			Enable drive redirection via FUSE (experimental)
 MP3LAME_DESC=			Enable MP3 Lame for audio redirection
+OPENH264_DESC=			H.264 video codec support via OpenH264
 OPUS_DESC=			Enable Opus for audio redirection
 
 DEBUG_CONFIGURE_ENABLE=		devel-debug devel-logging
-FDKAAC_CONFIGURE_ENABLE=	fdkaac
 FDKAAC_LIB_DEPENDS=		libfdk-aac.so:audio/fdk-aac
-FUSE_CONFIGURE_ENABLE=		fuse
+FDKAAC_CONFIGURE_ENABLE=	fdkaac
 FUSE_USES=			fuse
+FUSE_CONFIGURE_ENABLE=		fuse
 IPV6_CONFIGURE_ENABLE=		ipv6
-MP3LAME_CONFIGURE_ENABLE=	mp3lame
 MP3LAME_LIB_DEPENDS=		libmp3lame.so:audio/lame
-OPUS_CONFIGURE_ENABLE=		opus
+MP3LAME_CONFIGURE_ENABLE=	mp3lame
+OPENH264_LIB_DEPENDS=		libopenh264.so:multimedia/openh264
+OPENH264_CONFIGURE_ENABLE=	openh264
 OPUS_LIB_DEPENDS=		libopus.so:audio/opus
+OPUS_CONFIGURE_ENABLE=		opus
+X264_LIB_DEPENDS=		libx264.so:multimedia/libx264
+X264_CONFIGURE_ENABLE=		x264
+
+GNU_CONFIGURE_MANPREFIX=	${PREFIX}/share
+
+GROUP=		_xrdp
+USER=		_xrdp
 
 .include <bsd.port.pre.mk>
 
@@ -95,7 +99,8 @@ post-stage:
 	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/rsakeys.ini
 	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/cert.pem
 	@${RM} ${STAGEDIR}${PREFIX}/etc/xrdp/key.pem
-.for f in sesman.ini startwm.sh reconnectwm.sh xrdp.ini xrdp_keyboard.ini gfx.toml
+.for f in sesman.ini startwm.sh reconnectwm.sh xrdp.ini xrdp_keyboard.ini \
+	gfx.toml
 	@${MV} ${STAGEDIR}${PREFIX}/etc/xrdp/$f ${STAGEDIR}${PREFIX}/etc/xrdp/$f.sample
 .endfor
 
