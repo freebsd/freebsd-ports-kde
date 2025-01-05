@@ -1,11 +1,12 @@
 PORTNAME=	obs-studio
-DISTVERSION=	30.2.3
-PORTREVISION=	1
+DISTVERSION=	31.0.0
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Open source streaming/recording software
-WWW=		https://obsproject.com/
+WWW=		https://obsproject.com/ \
+		https://github.com/obsproject/obs-studio
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -28,7 +29,7 @@ LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libjansson.so:devel/jansson \
-		libmbedtls.so:security/mbedtls \
+		libmbedtls.so:security/mbedtls3 \
 		libpci.so:devel/libpci \
 		libqrcodegencpp.so:graphics/qr-code-generator \
 		librist.so:multimedia/librist \

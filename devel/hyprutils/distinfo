@@ -1,3 +1,5 @@
-TIMESTAMP = 1731702627
-SHA256 (hyprwm-hyprutils-v0.2.6_GH0.tar.gz) = c6a6098590da0da2a755c2ea8e91629c810d20784c236d1a9e2c46eebb2c1a3f
-SIZE (hyprwm-hyprutils-v0.2.6_GH0.tar.gz) = 24051
+TIMESTAMP = 1735826541
+SHA256 (hyprwm-hyprutils-v0.3.2_GH0.tar.gz) = 2352acc654027beb5d6a3b18cf58feed5c83fc513b71789b69ef7274bf7c369a
+SIZE (hyprwm-hyprutils-v0.3.2_GH0.tar.gz) = 32985
+SHA256 (111985ee8ade.patch) = 7981d89a960b41ba17ccb29c3a773f60b3b85ec880d4ad4d01c34b44cccd0720
+SIZE (111985ee8ade.patch) = 1905

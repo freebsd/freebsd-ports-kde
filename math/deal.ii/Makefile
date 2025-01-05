@@ -1,5 +1,5 @@
 PORTNAME=	deal.II
-DISTVERSION=	9.6.1
+DISTVERSION=	9.6.2
 CATEGORIES=	math
 MASTER_SITES=	https://github.com/dealii/dealii/releases/download/v${DISTVERSION}/
 DISTNAME=	dealii-${DISTVERSION}
@@ -16,6 +16,7 @@ LICENSE_FILE_LGPL21=	${WRKSRC}/LICENSE.md
 
 BROKEN_aarch64=		error: use of undeclared identifier '__TBB_machine_fetchadd4'
 BROKEN_armv7=		clang runs out of memory
+BROKEN_i386=		compilation fails: Kokkos assumes 64-bit build; i.e., 8-byte pointers
 
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/config.hpp:devel/boost-libs
 LIB_DEPENDS=	libblis.so:math/blis \
