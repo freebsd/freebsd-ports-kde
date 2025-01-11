@@ -16,7 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/lib/ocaml/facile/facile.a:math/facile \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/chemical-mime-data.pc:science/chemical-mime-data
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext gl kde:6 \
-		pkgconfig qt:6 tar:xz xorg
+		ocaml:build pkgconfig qt:6 tar:xz xorg
 USE_GL=		gl glew glu
 USE_KDE=	archive attica auth bookmarks codecs completion config \
 		configwidgets coreaddons crash doctools guiaddons i18n \
@@ -24,8 +24,6 @@ USE_KDE=	archive attica auth bookmarks codecs completion config \
 		notifications parts plotting service solid sonnet textwidgets \
 		unitconversion widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_OCAML=	yes
-NO_OCAML_RUNDEPENDS=	yes
 USE_QT=		base scxml
 USE_XORG=	x11
 USE_LDCONFIG=	yes

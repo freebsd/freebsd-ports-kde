@@ -1,6 +1,6 @@
 PORTNAME=	koboldcpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.80.3
+DISTVERSION=	1.81.1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,8 +10,8 @@ WWW=		https://github.com/lostruins/koboldcpp
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
-BROKEN_armv7=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
-BROKEN_i386=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
+#BROKEN_armv7=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
+#BROKEN_i386=	compilation fails, see https://github.com/LostRuins/koboldcpp/issues/1129
 
 FLAVORS=	default portable
 FLAVOR?=	${FLAVORS:[1]}
@@ -66,4 +66,10 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${embd} ${STAGEDIR}${DATADIR}
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if (${ARCH} == aarch64 || ${ARCH} == armv7) && ${FLAVOR} == portable
+IGNORE=	portable flavor isn't defined on arm* because it is based on AVX2, etc. (?)
+.endif
+
+.include <bsd.port.post.mk>

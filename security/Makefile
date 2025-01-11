@@ -135,7 +135,6 @@
     SUBDIR += diffcode
     SUBDIR += digestpp
     SUBDIR += dirbuster
-    SUBDIR += dirmngr
     SUBDIR += distcache
     SUBDIR += diswall
     SUBDIR += doas
@@ -182,7 +181,6 @@
     SUBDIR += globalprotect-openconnect
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
-    SUBDIR += gnome-ssh-askpass
     SUBDIR += gnupg
     SUBDIR += gnupg-pkcs11-scd
     SUBDIR += gnupg1
@@ -220,6 +218,7 @@
     SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
+    SUBDIR += hidden-lake
     SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hockeypuck
@@ -375,13 +374,12 @@
     SUBDIR += lxqt-sudo
     SUBDIR += lynis
     SUBDIR += mac-robber
-    SUBDIR += maia
     SUBDIR += mailzu
     SUBDIR += makepasswd
     SUBDIR += maltrail
     SUBDIR += masscan
     SUBDIR += mate-pam-helper
-    SUBDIR += mbedtls
+    SUBDIR += mbedtls2
     SUBDIR += mbedtls3
     SUBDIR += mcrypt
     SUBDIR += md5deep
@@ -937,7 +935,6 @@
     SUBDIR += py-exscript
     SUBDIR += py-fail2ban
     SUBDIR += py-fido2
-    SUBDIR += py-first-server
     SUBDIR += py-flask-bcrypt
     SUBDIR += py-flask-httpauth
     SUBDIR += py-flask-kerberos
@@ -1029,7 +1026,6 @@
     SUBDIR += py-pyotp
     SUBDIR += py-pyotp2289
     SUBDIR += py-pysaml2
-    SUBDIR += py-pysaml26
     SUBDIR += py-pyscard
     SUBDIR += py-pysodium
     SUBDIR += py-pyspnego
@@ -1086,6 +1082,7 @@
     SUBDIR += py-volatility3
     SUBDIR += py-vpn-slice
     SUBDIR += py-vulndb
+    SUBDIR += py-wassima
     SUBDIR += py-webauthn
     SUBDIR += py-xkcdpass
     SUBDIR += py-xmlsec
@@ -1325,7 +1322,6 @@
     SUBDIR += sslproxy
     SUBDIR += sslscan
     SUBDIR += sslsplit
-    SUBDIR += sssd
     SUBDIR += sssd2
     SUBDIR += ssss
     SUBDIR += sst

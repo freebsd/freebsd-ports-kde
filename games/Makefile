@@ -965,6 +965,7 @@
     SUBDIR += tenebrae
     SUBDIR += tesseract
     SUBDIR += tesseract-data
+    SUBDIR += tetrigo
     SUBDIR += tetrinet
     SUBDIR += tetrinet-x
     SUBDIR += tetzle
@@ -1088,6 +1089,7 @@
     SUBDIR += xdino
     SUBDIR += xemeraldia
     SUBDIR += xeyesplus
+    SUBDIR += xfce4-eyes-plugin
     SUBDIR += xfireworks
     SUBDIR += xfrisk
     SUBDIR += xgalaga

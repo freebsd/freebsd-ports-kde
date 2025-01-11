@@ -1,8 +1,11 @@
 PORTNAME=	hyprpaper
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 wayland
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	505e447b6c48.patch:-p1 # hyprwayland-scanner 0.4.4
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Blazing fast Wayland wallpaper utility with IPC controls
@@ -39,6 +42,7 @@ post-patch:
 		-e '/ rt)/d' \
 		-e '/install.*systemd/d' \
 		${WRKSRC}/CMakeLists.txt
+	@${REINPLACE_CMD} '/GLES3/d' ${WRKSRC}/src/includes.hpp
 # Respect consolekit2 as XDG_RUNTIME_DIR fallback
 	@${REINPLACE_CMD} 's,/run/user,/var&,' \
 		${WRKSRC}/src/ipc/Socket.cpp

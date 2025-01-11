@@ -31,7 +31,6 @@
     SUBDIR += fusefs-libs
     SUBDIR += fusefs-libs3
     SUBDIR += genromfs
-    SUBDIR += gitfs
     SUBDIR += gphotofs
     SUBDIR += gvfs
     SUBDIR += hammer2
@@ -39,7 +38,6 @@
     SUBDIR += hfsfuse
     SUBDIR += hfsutils
     SUBDIR += httpdirfs
-    SUBDIR += httpfs
     SUBDIR += ifuse
     SUBDIR += jmtpfs
     SUBDIR += kio-fuse
@@ -110,7 +108,6 @@
     SUBDIR += securefs
     SUBDIR += simple-mtpfs
     SUBDIR += smbnetfs
-    SUBDIR += sqlfs
     SUBDIR += squashfs-tools
     SUBDIR += squashfs-tools-ng
     SUBDIR += squashfuse

@@ -1,10 +1,13 @@
 PORTNAME=	blender
 DISTVERSION=	4.2.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics multimedia
 MASTER_SITES=	http://download.blender.org/source/ \
 		http://mirror.cs.umn.edu/blender.org/source/ \
 		http://public.planetmirror.com/pub/blender/source/
+
+PATCH_SITES=	https://projects.blender.org/blender/blender/commit/
+PATCHFILES=	1c69154aaf033730a9e3882574d56ca6597b84ae.patch:-p1
 
 MAINTAINER=	FreeBSD@Shaneware.biz
 COMMENT=	3D modeling/rendering/animation package

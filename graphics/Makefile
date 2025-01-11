@@ -566,6 +566,7 @@
     SUBDIR += linux-rl9-webp
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
+    SUBDIR += lunasvg
     SUBDIR += lux
     SUBDIR += lximage-qt
     SUBDIR += magnum
@@ -784,6 +785,7 @@
     SUBDIR += panomatic
     SUBDIR += partio
     SUBDIR += pastel
+    SUBDIR += pcdtojpeg
     SUBDIR += pcl-pointclouds
     SUBDIR += pdf2svg
     SUBDIR += pdfpc
@@ -837,6 +839,8 @@
     SUBDIR += plantuml
     SUBDIR += plasma-kmod
     SUBDIR += plotutils
+    SUBDIR += plutosvg
+    SUBDIR += plutovg
     SUBDIR += png
     SUBDIR += png++
     SUBDIR += png2html

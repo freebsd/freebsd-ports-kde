@@ -101,7 +101,7 @@ LUAJIT_DEFAULT?=	luajit-devel
 .  endif
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT?=		5.20
-# Possible values: 8.0, 8.4, 9.0, 10.5m, 10.6m, 10.11m, 11.4m
+# Possible values: 8.0, 8.4, 9.0, 9.1, 10.5m, 10.6m, 10.11m, 11.4m
 MYSQL_DEFAULT?=		8.0
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja
@@ -126,10 +126,10 @@ _PERL5_FROM_BIN!=	${LOCALBASE}/bin/perl -e 'printf "%vd\n", $$^V;'
 _EXPORTED_VARS+=	_PERL5_FROM_BIN
 PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .  endif
-# Possible values: 12, 13, 14, 15, 16, 17
+# Possible values: 13, 14, 15, 16, 17
 PGSQL_DEFAULT?=		16
 # Possible values: 8.1, 8.2, 8.3, 8.4
-PHP_DEFAULT?=		8.2
+PHP_DEFAULT?=		8.3
 # Possible values: rust, legacy
 .  if empty(ARCH:Naarch64:Namd64:Narmv7:Ni386:Npowerpc64:Npowerpc64le:Npowerpc:Nriscv64)
 PYCRYPTOGRAPHY_DEFAULT?=	rust

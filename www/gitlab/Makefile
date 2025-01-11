@@ -88,7 +88,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-rqrcode>=2.2.0<3:www/rubygem-rqrcode \
 	rubygem-validates_hostname>=1.0.13<1.1.0:dns/rubygem-validates_hostname \
 	rubygem-rubyzip>=2.3.2<2.4:archivers/rubygem-rubyzip \
-	rubygem-acme-client-gitlab>=2.0.18<3:security/rubygem-acme-client-gitlab \
+	rubygem-acme-client-gitlab>=2.0.19<3:security/rubygem-acme-client-gitlab \
 	rubygem-browser5>=5.3.1<5.4:www/rubygem-browser5 \
 	rubygem-ohai>=18.1<19:sysutils/rubygem-ohai \
 	rubygem-gpgme>=2.0.24<2.1.0:security/rubygem-gpgme \
@@ -123,7 +123,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-google-apis-container_v1beta1>=0.43.0<0.44:devel/rubygem-google-apis-container_v1beta1 \
 	rubygem-google-apis-cloudbilling_v1>=0.21.0<0.22:devel/rubygem-google-apis-cloudbilling_v1 \
 	rubygem-google-apis-cloudresourcemanager_v1-gitlab>=0.31.0<0.32:devel/rubygem-google-apis-cloudresourcemanager_v1-gitlab \
-	rubygem-google-apis-iam_v1>=0.36.0<0.37:devel/rubygem-google-apis-iam_v1 \
+	rubygem-google-apis-iam_v1-gitlab>=0.36.0<0.37:devel/rubygem-google-apis-iam_v1-gitlab \
 	rubygem-google-apis-serviceusage_v1>=0.28.0<0.29:devel/rubygem-google-apis-serviceusage_v1 \
 	rubygem-google-apis-sqladmin_v1beta4-gitlab>=0.41.0<0.42:devel/rubygem-google-apis-sqladmin_v1beta4-gitlab \
 	rubygem-google-apis-androidpublisher_v3-gitlab>=0.34.0<0.35:devel/rubygem-google-apis-androidpublisher_v3-gitlab \

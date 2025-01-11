@@ -265,7 +265,6 @@
     SUBDIR += p5-ePerl
     SUBDIR += p5-signatures
     SUBDIR += p5-v6
-    SUBDIR += parrot
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
@@ -364,6 +363,7 @@
     SUBDIR += snobol4
     SUBDIR += solidity
     SUBDIR += spidermonkey102
+    SUBDIR += spidermonkey115
     SUBDIR += spidermonkey128
     SUBDIR += spidermonkey78
     SUBDIR += spidermonkey91
@@ -384,7 +384,6 @@
     SUBDIR += tolua
     SUBDIR += tolua++
     SUBDIR += tuareg-mode.el
-    SUBDIR += twelf
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc

@@ -1,6 +1,6 @@
 PORTNAME=	scilab
 PORTVERSION=	6.1.1
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	math cad java
 MASTER_SITES=	https://www.scilab.org/download/${PORTVERSION}/
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
@@ -83,7 +83,7 @@ _GUI_DEPENDS+=	${JAVALIBDIR}/commons-beanutils.jar:java/apache-commons-beanutils
 		${LOCALBASE}/bin/splint:devel/splint
 # Documentation building:
 _GUI_DEPENDS+=	${LOCALBASE}/share/xsl/docbook/javahelp/javahelp.xsl:textproc/docbook-xsl \
-		${JAVALIBDIR}/saxon-he-10.6.jar:textproc/saxon-he \
+		${JAVALIBDIR}/saxon-he-12.5.jar:textproc/saxon-he \
 		${JAVALIBDIR}/xml-apis-ext.jar:textproc/xml-commons \
 		xsltproc:textproc/libxslt
 # Other gui deps:
@@ -96,8 +96,8 @@ GUI_BUILD_DEPENDS=	${_GUI_DEPENDS} \
 GUI_RUN_DEPENDS=	${_GUI_DEPENDS}
 
 GUI_ALL_TARGET=	all doc
-GUI_USES=	gl
-GUI_USE=	GL=gl JAVA=yes
+GUI_USES=	gl java
+GUI_USE=	GL=gl
 GUI_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-bin-JAVA_HOME
 GUI_CONFIGURE_ON=	--with-jdk=${JAVA_HOME} \
 			--with-docbook=${LOCALBASE}/share/xsl/docbook \
