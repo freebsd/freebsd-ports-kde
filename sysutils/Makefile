@@ -1081,7 +1081,6 @@
     SUBDIR += py-upt-pypi
     SUBDIR += py-upt-rubygems
     SUBDIR += py-uptime
-    SUBDIR += py-zdaemon
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qflipper

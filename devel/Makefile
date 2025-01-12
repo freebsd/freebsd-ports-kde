@@ -4337,9 +4337,7 @@
     SUBDIR += pushmi
     SUBDIR += py-Automat
     SUBDIR += py-BTrees
-    SUBDIR += py-DateTime
     SUBDIR += py-Dumper
-    SUBDIR += py-ExtensionClass
     SUBDIR += py-Faker
     SUBDIR += py-IBMQuantumExperience
     SUBDIR += py-Jinja2
@@ -4348,8 +4346,6 @@
     SUBDIR += py-Levenshtein
     SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
-    SUBDIR += py-Products.ExternalEditor
-    SUBDIR += py-Products.PloneLanguageTool
     SUBDIR += py-PyExecJS
     SUBDIR += py-PyGithub
     SUBDIR += py-PyLD
@@ -4671,7 +4667,6 @@
     SUBDIR += py-cobble
     SUBDIR += py-codegen
     SUBDIR += py-cog
-    SUBDIR += py-collective.monkeypatcher
     SUBDIR += py-colorama
     SUBDIR += py-colored-traceback
     SUBDIR += py-coloredlogs
@@ -4780,7 +4775,6 @@
     SUBDIR += py-deptry
     SUBDIR += py-devtools
     SUBDIR += py-dexml2
-    SUBDIR += py-diazo
     SUBDIR += py-diff-cover
     SUBDIR += py-dill
     SUBDIR += py-dirspec
@@ -5806,10 +5800,8 @@
     SUBDIR += py-regress
     SUBDIR += py-remote-pdb
     SUBDIR += py-repoze.lru
-    SUBDIR += py-repoze.sphinx.autointerface
     SUBDIR += py-repoze.tm2
     SUBDIR += py-repoze.who
-    SUBDIR += py-repoze.xmliter
     SUBDIR += py-represent
     SUBDIR += py-requestsexceptions
     SUBDIR += py-requirements-detector
@@ -6213,7 +6205,6 @@
     SUBDIR += py-yunomi
     SUBDIR += py-zarr
     SUBDIR += py-zc.lockfile
-    SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
     SUBDIR += py-zfp
     SUBDIR += py-zict

@@ -870,7 +870,6 @@
     SUBDIR += pwauth
     SUBDIR += pwman
     SUBDIR += pwned-check
-    SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
     SUBDIR += py-YubiOTP
     SUBDIR += py-acme
