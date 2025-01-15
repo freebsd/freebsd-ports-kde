@@ -661,8 +661,6 @@
     SUBDIR += elfkickers
     SUBDIR += elfsh
     SUBDIR += elfutils
-    SUBDIR += elixir-hex
-    SUBDIR += elixir-make
     SUBDIR += elm-format
     SUBDIR += emacs-lsp-booster
     SUBDIR += embb
