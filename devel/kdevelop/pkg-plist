@@ -562,7 +562,7 @@ share/doc/HTML/sv/kdevelop/index.cache.bz2
 share/doc/HTML/sv/kdevelop/index.docbook
 share/doc/HTML/uk/kdevelop/index.cache.bz2
 share/doc/HTML/uk/kdevelop/index.docbook
-share/icons/hicolor/10%%KDE_APPLICATIONS_VERSION_SHORT%%x10%%KDE_APPLICATIONS_VERSION_SHORT%%/apps/kdevelop.png
+share/icons/hicolor/1024x1024/apps/kdevelop.png
 share/icons/hicolor/128x128/apps/bazaar.png
 share/icons/hicolor/128x128/apps/clazy.png
 share/icons/hicolor/128x128/apps/cmake.png

@@ -80,8 +80,8 @@ share/icons/hicolor/128x128/apps/org.kde.merkuro.contact.png
 share/icons/hicolor/128x128/apps/org.kde.merkuro.mail.png
 share/icons/hicolor/16x16/apps/org.kde.merkuro.calendar.png
 share/icons/hicolor/16x16/apps/org.kde.merkuro.mail.png
-share/icons/hicolor/%%KDE_APPLICATIONS_VERSION_SHORT%%x%%KDE_APPLICATIONS_VERSION_SHORT%%/apps/org.kde.merkuro.calendar.png
-share/icons/hicolor/%%KDE_APPLICATIONS_VERSION_SHORT%%x%%KDE_APPLICATIONS_VERSION_SHORT%%/apps/org.kde.merkuro.mail.png
+share/icons/hicolor/24x24/apps/org.kde.merkuro.calendar.png
+share/icons/hicolor/24x24/apps/org.kde.merkuro.mail.png
 share/icons/hicolor/256x256/apps/org.kde.merkuro.calendar.png
 share/icons/hicolor/256x256/apps/org.kde.merkuro.contact.png
 share/icons/hicolor/256x256/apps/org.kde.merkuro.mail.png
