@@ -11,22 +11,20 @@ LIB_DEPENDS=	libAnalitza.so:math/analitza \
 		libqalculate.so:math/libqalculate \
 		libspectre.so:print/libspectre \
 		libpoppler.so:graphics/poppler \
-		libpoppler-qt5.so:graphics/poppler-qt5
+		libpoppler-qt6.so:graphics/poppler-qt6
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
 
-USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:5 \
-		pkgconfig python qt:5 shared-mime-info tar:xz xorg
+USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
+		pkgconfig python qt:6 shared-mime-info tar:xz xorg
 USE_KDE=	archive attica auth bookmarks codecs completion config \
-		configwidgets coreaddons crash i18n iconthemes init itemmodels \
+		configwidgets coreaddons crash i18n iconthemes itemmodels \
 		itemviews jobwidgets kio newstuff parts pty service solid \
 		sonnet syntaxhighlighting texteditor textwidgets widgetsaddons \
 		windowsystem xmlgui \
 		ecm:build
-USE_QT=		concurrent core dbus declarative gui help location network \
-		printsupport sql svg webchannel webengine widgets xml \
-		xmlpatterns \
-		buildtools:build qmake:build testlib:build
+USE_QT=		base svg webchannel webengine \
+		tools:build
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 
