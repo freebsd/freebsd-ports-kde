@@ -20,6 +20,8 @@ USE_KDE=	auth codecs config configwidgets coreaddons crash dbusaddons \
 		mimetreeparser notifications service sonnet statusnotifieritem \
 		textwidgets widgetsaddons windowsystem xmlgui \
 		ecm:build
+# KDE Pim
+USE_KDE+=	akonadimime identitymanagement mailtransport
 USE_QT=		base
 USE_XORG=	x11
 
