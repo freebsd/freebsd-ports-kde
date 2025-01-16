@@ -413,6 +413,7 @@ share/locale/fi/LC_MESSAGES/falkon_mousegestures_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_pim_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_runaction.mo
+share/locale/fi/LC_MESSAGES/falkon_sitesettingsview_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_statusbaricons_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_tabmanager_qt.qm
 share/locale/fi/LC_MESSAGES/falkon_testplugin_qt.qm
@@ -628,6 +629,7 @@ share/locale/lv/LC_MESSAGES/falkon_mousegestures_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_pim_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_runaction.mo
+share/locale/lv/LC_MESSAGES/falkon_sitesettingsview_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_statusbaricons_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_tabmanager_qt.qm
 share/locale/lv/LC_MESSAGES/falkon_testplugin_qt.qm
@@ -738,6 +740,7 @@ share/locale/ru/LC_MESSAGES/falkon_mousegestures_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_pim_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_runaction.mo
+share/locale/ru/LC_MESSAGES/falkon_sitesettingsview_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_statusbaricons_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_tabmanager_qt.qm
 share/locale/ru/LC_MESSAGES/falkon_testplugin_qt.qm
@@ -754,6 +757,7 @@ share/locale/sk/LC_MESSAGES/falkon_mousegestures_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_pim_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_runaction.mo
+share/locale/sk/LC_MESSAGES/falkon_sitesettingsview_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_statusbaricons_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_tabmanager_qt.qm
 share/locale/sk/LC_MESSAGES/falkon_testplugin_qt.qm
