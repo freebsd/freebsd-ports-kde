@@ -27,7 +27,6 @@ share/icons/hicolor/48x48/apps/kget.png
 share/icons/hicolor/64x64/apps/kget.png
 %%DATADIR%%/pics/kget_splash.png
 share/kio/servicemenus/kget_download.desktop
-share/kio/servicemenus/kget_plugin.desktop
 share/knotifications6/kget.notifyrc
 share/locale/af/LC_MESSAGES/kget.mo
 share/locale/ar/LC_MESSAGES/kget.mo
