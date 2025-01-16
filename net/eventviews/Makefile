@@ -17,7 +17,7 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons \
 		ecm:build
 # pim components
 USE_KDE+=	akonadi akonadicalendar akonadicontacts calendarcore \
-		calendarsupport calendarutils contacts holidays \
+		calendarsupport calendarutils colorscheme contacts holidays \
 		identitymanagement libkdepim mime pimtextedit
 USE_QT=		base
 USE_LDCONFIG=	yes
