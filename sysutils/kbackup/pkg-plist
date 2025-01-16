@@ -10,6 +10,7 @@ share/icons/hicolor/32x32/apps/kbackup.png
 share/icons/hicolor/32x32/mimetypes/text-x-kbp.png
 share/locale/ar/LC_MESSAGES/kbackup.mo
 share/locale/ast/LC_MESSAGES/kbackup.mo
+share/locale/bg/LC_MESSAGES/kbackup.mo
 share/locale/ca/LC_MESSAGES/kbackup.mo
 share/locale/ca@valencia/LC_MESSAGES/kbackup.mo
 share/locale/cs/LC_MESSAGES/kbackup.mo
@@ -53,6 +54,7 @@ share/man/es/man1/kbackup.1.gz
 share/man/it/man1/kbackup.1.gz
 share/man/man1/kbackup.1.gz
 share/man/nl/man1/kbackup.1.gz
+share/man/sl/man1/kbackup.1.gz
 share/man/sv/man1/kbackup.1.gz
 share/man/tr/man1/kbackup.1.gz
 share/man/uk/man1/kbackup.1.gz
