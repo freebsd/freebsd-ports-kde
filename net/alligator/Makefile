@@ -9,7 +9,7 @@ WWW=		https://apps.kde.org/alligator/
 LICENSE=	GPLv2
 
 USES=		cmake desktop-file-utils gettext kde:6 qt:6 tar:xz
-USE_KDE=	config coreaddons i18n kirigami-addons syndication \
+USE_KDE=	colorscheme config coreaddons i18n kirigami-addons syndication \
 		ecm:build
 USE_QT=		base
 
