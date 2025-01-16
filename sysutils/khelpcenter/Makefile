@@ -9,7 +9,7 @@ WWW=		https://projects.kde.org/projects/kde/workspace/khelpcenter
 LIB_DEPENDS=	libxapian.so:databases/xapian-core
 
 USES=		cmake compiler:c++11-lib desktop-file-utils gettext gnome \
-		kde:6 qt:6 shebangfix tar:xz xorg
+		kde:6 python:env,run qt:6 shebangfix tar:xz xorg
 USE_GNOME=	libxml2
 USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 		coreaddons dbusaddons i18n itemmodels itemviews jobwidgets \
