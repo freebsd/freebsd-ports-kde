@@ -171,7 +171,6 @@ share/icons/hicolor/scalable/mimetypes/application-x-k3b.svgz
 %%DATADIR%%/icons/hicolor/128x128/devices/media-optical-dvd-video.png
 %%DATADIR%%/icons/hicolor/128x128/devices/media-optical-mixed-cd.png
 %%DATADIR%%/icons/hicolor/128x128/devices/media-optical-video.png
-%%DATADIR%%/icons/hicolor/16x16/actions/musicbrainz.png
 %%DATADIR%%/icons/hicolor/16x16/actions/tools-rip-audio-cd.png
 %%DATADIR%%/icons/hicolor/16x16/actions/tools-rip-video-cd.png
 %%DATADIR%%/icons/hicolor/16x16/actions/tools-rip-video-dvd.png
@@ -206,7 +205,6 @@ share/icons/hicolor/scalable/mimetypes/application-x-k3b.svgz
 %%DATADIR%%/icons/hicolor/48x48/devices/media-optical-dvd-video.png
 %%DATADIR%%/icons/hicolor/48x48/devices/media-optical-mixed-cd.png
 %%DATADIR%%/icons/hicolor/48x48/devices/media-optical-video.png
-%%DATADIR%%/icons/hicolor/64x64/actions/musicbrainz.png
 %%DATADIR%%/icons/hicolor/64x64/actions/tools-rip-audio-cd.png
 %%DATADIR%%/icons/hicolor/64x64/actions/tools-rip-video-cd.png
 %%DATADIR%%/icons/hicolor/64x64/actions/tools-rip-video-dvd.png
