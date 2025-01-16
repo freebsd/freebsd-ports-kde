@@ -11,11 +11,11 @@ LIB_DEPENDS=	libical.so:devel/libical \
 
 USES=		cmake compiler:c++11-lib gettext kde:6 qt:6 shebangfix tar:xz \
 		xorg
-USE_KDE=	auth bookmarks codecs completion config configwidgets \
+USE_KDE=	auth bookmarks colorscheme codecs completion config configwidgets \
 		coreaddons crash dbusaddons guiaddons i18n iconthemes \
 		itemmodels itemviews jobwidgets kcmutils kio notifications \
 		notifyconfig parts phonon service solid sonnet \
-		statusnotifieritem textwidgets unitconversion wallet \
+		statusnotifieritem texttemplate textwidgets unitconversion wallet \
 		widgetsaddons windowsystem xmlgui \
 		ecm:build
 # pim components
