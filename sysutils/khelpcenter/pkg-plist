@@ -1,5 +1,5 @@
 bin/khelpcenter
-lib/libexec/khc_mansearch.pl
+lib/libexec/khc_mansearch.py
 lib/libexec/khc_xapianindexer
 lib/libexec/khc_xapiansearch
 share/applications/org.kde.khelpcenter.desktop

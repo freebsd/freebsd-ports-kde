@@ -22,7 +22,7 @@ USE_KDE=	archive auth bookmarks codecs completion config configwidgets \
 USE_KDE+=	doctools
 USE_QT=		base webengine
 USE_XORG=	x11
-SHEBANG_FILES=	searchhandlers/khc_mansearch.pl
+SHEBANG_FILES=	searchhandlers/khc_mansearch.py
 
 OPTIONS_DEFINE=	DOCS
 
