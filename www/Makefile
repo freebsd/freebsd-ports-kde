@@ -1343,6 +1343,7 @@
     SUBDIR += p5-Woothee
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
+    SUBDIR += p5-Zonemaster-GUI
     SUBDIR += p5-chklinks
     SUBDIR += p5-jQuery-File-Upload
     SUBDIR += p5-libapreq2

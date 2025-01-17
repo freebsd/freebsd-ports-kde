@@ -8,7 +8,8 @@ WWW=		https://www.kde.org/
 
 LICENSE=	LGPL21
 
-IGNORE=		No longer part of KDE Gear 24.08
+DEPRECATED=	Unmaintained and no longer released by the KDE community
+EXPIRATION_DATE=	2025-03-31
 
 LIB_DEPENDS=	libical.so:devel/libical
 
