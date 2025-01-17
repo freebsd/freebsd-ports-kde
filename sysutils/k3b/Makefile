@@ -23,12 +23,12 @@ BUILD_DEPENDS=	cdrecord:sysutils/cdrtools
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext iconv \
 		kde:6 pkgconfig qt:6 shared-mime-info tar:xz xorg
 
-USE_KDE=	archive attica auth bookmarks codecs completion config \
+USE_KDE=	archive attica auth bookmarks codecs colorscheme completion config \
 		configwidgets coreaddons filemetadata i18n iconthemes \
 		itemviews jobwidgets kcmutils kio newstuff notifications \
 		notifyconfig service solid widgetsaddons windowsystem xmlgui \
 		ecm:build
-USE_QT=		base
+USE_QT=		base webengine
 USE_XORG=	x11
 
 # The ffmpeg-plugin needs patching
