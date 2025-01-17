@@ -10,6 +10,7 @@ share/icons/hicolor/64x64/apps/kanagram.png
 share/icons/hicolor/80x80/apps/kanagram-harmattan.png
 share/icons/hicolor/scalable/apps/kanagram.svgz
 %%DATADIR%%/ui/Blackboard.qml
+%%DATADIR%%/ui/IconButton.qml
 %%DATADIR%%/ui/LetterButton.qml
 %%DATADIR%%/ui/icons/1player.png
 %%DATADIR%%/ui/icons/2player.png
