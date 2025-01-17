@@ -9,6 +9,7 @@ share/icons/hicolor/256x256/apps/zanshin.png
 share/icons/hicolor/48x48/apps/zanshin.png
 share/icons/hicolor/64x64/apps/zanshin.png
 share/icons/hicolor/scalable/apps/zanshin.svgz
+share/locale/ar/LC_MESSAGES/zanshin.mo
 share/locale/ast/LC_MESSAGES/zanshin.mo
 share/locale/bg/LC_MESSAGES/zanshin.mo
 share/locale/bs/LC_MESSAGES/zanshin.mo
