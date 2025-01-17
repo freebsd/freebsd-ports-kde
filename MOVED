@@ -3180,7 +3180,6 @@ sysutils/msyslog||2024-04-13|Has expired: Unmaintained and last upstream release
 x11/xdtm||2024-04-13|Has expired: Unmaintained, last upstream release was in 2000 or earlier
 x11/multi-aterm||2024-04-13|Has expired: Unmaintained, last upstream release in 2004
 devel/py-dateutil|devel/py-python-dateutil|2024-04-13|Move devel/py-dateutil to devel/py-python-dateutil
-x11-toolkits/kirigami-addons|x11-toolkits/kirigami-addons-qt5|2024-04-13|Moved to have symmetric names with Qt6
 x11/kde5|x11/kde|2024-04-14|Remove version from KDE metaport
 x11/kde6|x11/kde|2024-04-14|Remove version from KDE metaport
 science/p5-Algorithm-SVMLight||2024-04-16|Has expired: Depends on DEPRECATED science/svmlight
