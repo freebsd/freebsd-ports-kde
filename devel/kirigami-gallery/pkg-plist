@@ -37,3 +37,4 @@ share/locale/tr/LC_MESSAGES/kirigamigallery_qt.qm
 share/locale/uk/LC_MESSAGES/kirigamigallery_qt.qm
 share/locale/zh_CN/LC_MESSAGES/kirigamigallery_qt.qm
 share/locale/zh_TW/LC_MESSAGES/kirigamigallery_qt.qm
+share/metainfo/org.kde.kirigami2.gallery.appdata.xml
