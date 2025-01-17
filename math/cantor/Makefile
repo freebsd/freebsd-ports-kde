@@ -46,6 +46,7 @@ R_LIB_DEPENDS=	libR.so:math/R
 # Required to set CFLAGS for -lgfortran.
 R_USES=		fortran
 R_CMAKE_OFF=	-DWITH_R:BOOL=FALSE
+R_BROKEN=	R backend fails with: /usr/include/c++/v1/__locale:1130:9: error: expected ';' at end of declaration list
 
 SAGE_DESC=	Install Sage
 SAGE_RUN_DEPENDS=	sage:math/sage
