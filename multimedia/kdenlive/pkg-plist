@@ -242,6 +242,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/effects/frei0r_hqdn3d.xml
 %%DATADIR%%/effects/frei0r_hueshift0r.xml
 %%DATADIR%%/effects/frei0r_iirblur.xml
+%%DATADIR%%/effects/frei0r_kaleid0sc0pe.xml
 %%DATADIR%%/effects/frei0r_keyspillm0pup.xml
 %%DATADIR%%/effects/frei0r_lenscorrection.xml
 %%DATADIR%%/effects/frei0r_letterb0xed.xml
@@ -253,6 +254,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/effects/frei0r_nervous.xml
 %%DATADIR%%/effects/frei0r_nosync0r.xml
 %%DATADIR%%/effects/frei0r_pixeliz0r.xml
+%%DATADIR%%/effects/frei0r_pixs0r.xml
 %%DATADIR%%/effects/frei0r_pr0be.xml
 %%DATADIR%%/effects/frei0r_pr0file.xml
 %%DATADIR%%/effects/frei0r_primaries.xml
@@ -282,6 +284,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/effects/frei0r_vignette.xml
 %%DATADIR%%/effects/gain.xml
 %%DATADIR%%/effects/gamma.xml
+%%DATADIR%%/effects/gpsgraphic.xml
 %%DATADIR%%/effects/gpstext.xml
 %%DATADIR%%/effects/grain.xml
 %%DATADIR%%/effects/greyscale.xml
@@ -431,6 +434,7 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/resourceproviders/pexels_photo.json
 %%DATADIR%%/resourceproviders/pexels_video.json
 %%DATADIR%%/resourceproviders/pixabay_photo.json
+%%DATADIR%%/resourceproviders/pixabay_videos.json
 %%DATADIR%%/scripts/checkgpu.py
 %%DATADIR%%/scripts/checkpackages.py
 %%DATADIR%%/scripts/otiointerface.py
@@ -439,6 +443,15 @@ share/icons/hicolor/scalable/mimetypes/video-mlt-playlist.svgz
 %%DATADIR%%/scripts/requirements-whisper.txt
 %%DATADIR%%/scripts/speech.py
 %%DATADIR%%/scripts/speechtotext.py
+%%DATADIR%%/scripts/vosk/speech.py
+%%DATADIR%%/scripts/vosk/speechtotext.py
+%%DATADIR%%/scripts/whisper/requirements-seamless.txt
+%%DATADIR%%/scripts/whisper/requirements-whisper-windows.txt
+%%DATADIR%%/scripts/whisper/requirements-whisper.txt
+%%DATADIR%%/scripts/whisper/seamlessquery.py
+%%DATADIR%%/scripts/whisper/whisperquery.py
+%%DATADIR%%/scripts/whisper/whispertosrt.py
+%%DATADIR%%/scripts/whisper/whispertotext.py
 %%DATADIR%%/scripts/whispertosrt.py
 %%DATADIR%%/scripts/whispertotext.py
 %%DATADIR%%/shortcuts/Premiere
