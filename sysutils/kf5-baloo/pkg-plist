@@ -2,7 +2,7 @@
 @comment bin/baloo_file_extractor
 @comment bin/balooctl
 @comment bin/baloosearch
-@comment bin/balooshow
+bin/balooshow
 @comment etc/xdg/autostart/baloo_file.desktop
 include/KF5/Baloo/Baloo/File
 include/KF5/Baloo/Baloo/FileMonitor
@@ -42,7 +42,7 @@ lib/libKF5BalooEngine.so.%%KDE_FRAMEWORKS_VERSION%%
 %%QT_QMLDIR%%/org/kde/baloo/libbalooplugin.so
 %%QT_QMLDIR%%/org/kde/baloo/qmldir
 @comment lib/systemd/user/kde-baloo.service
-@comment libdata/pkgconfig/Baloo.pc
+libdata/pkgconfig/Baloo.pc
 @comment share/dbus-1/interfaces/org.kde.BalooWatcherApplication.xml
 @comment share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
 @comment share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml
