@@ -8,7 +8,8 @@ WWW=		https://kate-editor.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
 		docbook-xml>0:textproc/docbook-xml
-LIB_DEPENDS=	libgit2.so:devel/libgit2
+LIB_DEPENDS=	libgit2.so:devel/libgit2 \
+		libqt6keychain.so:security/qtkeychain@qt6
 
 USES=		cmake compiler:c++11-lang cpe desktop-file-utils gettext kde:6 \
 		pkgconfig qt:6 tar:xz xorg

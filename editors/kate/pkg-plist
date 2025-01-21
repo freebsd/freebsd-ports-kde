@@ -20,6 +20,7 @@ lib/libkateprivate.so.%%KDE_APPLICATIONS_VERSION%%
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katereplicodeplugin.so
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katesearchplugin.so
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katesnippetsplugin.so
+%%QT_PLUGINDIR%%/kf6/ktexteditor/katesqlplugin.so
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katesymbolviewerplugin.so
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katexmlcheckplugin.so
 %%QT_PLUGINDIR%%/kf6/ktexteditor/katexmltoolsplugin.so
