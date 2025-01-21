@@ -11,20 +11,19 @@ LIB_DEPENDS=	libvncserver.so:net/libvncserver \
 		libssh.so:security/libssh
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
-		pkgconfig qt:6 tar:xz xorg
-USE_KDE=	activities auth bookmarks codecs completion config \
-		configwidgets coreaddons dnssd doctools i18n iconthemes \
-		kcmutils notifications notifyconfig service statusnotifieritem \
-		wallet widgetsaddons windowsystem xmlgui \
+		pkgconfig qt:6 shared-mime-info tar:xz xorg
+USE_KDE=	activities bookmarks colorscheme completion config \
+		configwidgets coreaddons crash dnssd doctools i18n iconthemes \
+		kcmutils notifications notifyconfig statusnotifieritem \
+		wallet widgetsaddons xmlgui \
 		ecm:build
-USE_QT=		base
+USE_QT=		base declarative wayland
 USE_XORG=	x11
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	WITH_VNC
 
 OPTIONS_DEFINE=	FREERDP DOCS
-OPTIONS_DEFAULT=	FREERDP
 OPTIONS_SUB=	yes
 FREERDP_CMAKE_BOOL=	WITH_RDP
 FREERDP_DESC=	Remote Desktop support via FreeRDP
