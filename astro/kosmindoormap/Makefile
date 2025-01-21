@@ -10,7 +10,7 @@ LIB_DEPENDS=	libprotobuf.so:devel/protobuf \
 		libKOpeningHours.so:devel/kopeninghours
 
 USES=		bison cmake compiler:c++11-lang gettext kde:6 qt:6 tar:xz
-USE_KDE=	i18n kirigami2 kpublictransport \
+USE_KDE=	coreaddons i18n kirigami2 kpublictransport service \
 		ecm:build
 USE_QT=		base
 
