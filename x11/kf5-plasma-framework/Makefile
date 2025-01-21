@@ -5,7 +5,7 @@ CATEGORIES=	x11 kde kde-frameworks
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 plugin based UI runtime used to write user interfaces
 
-RUN_DEPENDS=	plasma6-libplasma>0:x11/plasma6-libplasma
+DEPRECATED=	has its functionality stripped compared to a kf6 variant
 
 USES=		cmake compiler:c++11-lib gettext gl kde:5 pkgconfig qt:5 \
 		tar:xz xorg
@@ -20,6 +20,7 @@ USE_QT=		concurrent core dbus declarative gui network sql svg widgets \
 		buildtools:build qmake:build
 USE_XORG=	ice sm x11 xcb xext xrandr
 
+# KF6 coinstallability
 CMAKE_OFF=	BUILD_DESKTOPTHEMES
 
 .include <bsd.port.mk>
