@@ -12,8 +12,8 @@ LIB_DEPENDS=	libKOSM.so:astro/kosmindoormap \
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
 		qt:6 tar:xz xorg
 USE_KDE=	calendarcore completion config contacts coreaddons crash \
-		dbusaddons holidays i18n jobwidgets kio kirigami-addons \
-		kitinerary kpublictransport mime notifications \
+		dbusaddons filemetadata holidays i18n jobwidgets kio \
+		kirigami-addons kitinerary kpublictransport mime notifications \
 		qqc2-desktop-style service solid unitconversion widgetsaddons \
 		windowsystem \
 		ecm:build
