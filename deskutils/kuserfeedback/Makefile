@@ -7,10 +7,10 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Framework for collecting user feedback
 WWW=		https://github.com/kde/kuserfeedback
 
-DEPRECATED=	has its functionality stripped compared to a kf6 variant
-
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
+
+DEPRECATED=	has its functionality stripped compared to a kf6 variant
 
 USES=		bison cmake compiler:c++11-lang kde:5 qt:5 tar:xz
 USE_KDE=	ecm:build

@@ -2,10 +2,10 @@ PORTNAME=	kio
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
-DEPRECATED=	has its functionality stripped compared to a kf6 variant
-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 resource and network access abstraction
+
+DEPRECATED=	has its functionality stripped compared to a kf6 variant
 
 USES=		cmake compiler:c++11-lib desktop-file-utils \
 		gettext gnome kde:5 cpe qt:5 ssl tar:xz xorg
