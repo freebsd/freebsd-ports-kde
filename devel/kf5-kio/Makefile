@@ -2,10 +2,10 @@ PORTNAME=	kio
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
 CATEGORIES=	devel kde kde-frameworks
 
+DEPRECATED=	has its functionality stripped compared to a kf6 variant
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 resource and network access abstraction
-
-RUN_DEPENDS=	kio-extras>0:devel/kio-extras
 
 USES=		cmake compiler:c++11-lib desktop-file-utils \
 		gettext gnome kde:5 cpe qt:5 ssl tar:xz xorg
@@ -21,6 +21,7 @@ USE_QT=		concurrent core dbus declarative gui network \
 		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 
+# KF6 coinstallability
 CMAKE_ON=	KF6_COMPAT_BUILD
 
 .include <bsd.port.mk>
