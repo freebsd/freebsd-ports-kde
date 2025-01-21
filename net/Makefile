@@ -34,6 +34,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk18
     SUBDIR += asterisk20
+    SUBDIR += asterisk22
     SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -416,13 +417,6 @@
     SUBDIR += libpcapnav
     SUBDIR += libpfctl
     SUBDIR += libproxy
-    SUBDIR += libproxy-duktape
-    SUBDIR += libproxy-gnome3
-    SUBDIR += libproxy-kde
-    SUBDIR += libproxy-pacrunner
-    SUBDIR += libproxy-perl
-    SUBDIR += libproxy-python
-    SUBDIR += libproxy-webkit3
     SUBDIR += librdkafka
     SUBDIR += librespeed-cli
     SUBDIR += librespeed-go

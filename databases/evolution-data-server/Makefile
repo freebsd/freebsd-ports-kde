@@ -1,6 +1,6 @@
 PORTNAME=	evolution-data-server
 DISTVERSION=	3.44.4
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
 		libical.so:devel/libical \
 		libnss3.so:security/nss \
 		libicudata.so:devel/icu \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
+		libwebkit2gtk-4.0.so:www/webkit2-gtk@40 \
 		libjson-glib-1.0.so:devel/json-glib \
 		libp11-kit.so:security/p11-kit \
 		libnspr4.so:devel/nspr \

@@ -1088,6 +1088,7 @@
     SUBDIR += py-yara
     SUBDIR += py-yara-python-dex
     SUBDIR += py-yubikey-manager
+    SUBDIR += py-zaproxy
     SUBDIR += py-zkg
     SUBDIR += py-zxcvbn
     SUBDIR += pygost

@@ -468,6 +468,7 @@
     SUBDIR += nextcloud-deck
     SUBDIR += nextcloud-forms
     SUBDIR += nextcloud-groupfolders
+    SUBDIR += nextcloud-news
     SUBDIR += nextcloud-notes
     SUBDIR += nextcloud-tasks
     SUBDIR += nghttp2
@@ -2568,8 +2569,7 @@
     SUBDIR += webgrind
     SUBDIR += webhook
     SUBDIR += webinject
-    SUBDIR += webkit2-gtk3
-    SUBDIR += webkit2-gtk4
+    SUBDIR += webkit2-gtk
     SUBDIR += weblint++
     SUBDIR += webpy
     SUBDIR += webresolve

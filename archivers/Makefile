@@ -288,6 +288,7 @@
     SUBDIR += xdms
     SUBDIR += xmill
     SUBDIR += zchunk
+    SUBDIR += zim-tools
     SUBDIR += zip
     SUBDIR += zipmix
     SUBDIR += zipper

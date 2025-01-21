@@ -1,6 +1,6 @@
 PORTNAME=	birdfont
 DISTVERSION=	2.33.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics x11-fonts
 MASTER_SITES=	https://birdfont.org/releases/
 
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz \
 		libnotify.so:devel/libnotify \
 		libsoup-2.4.so:devel/libsoup \
-		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
+		libwebkit2gtk-4.0.so:www/webkit2-gtk@40 \
 		libxmlbird.so:textproc/libxmlbird
 
 USES=		gettext-tools gnome pkgconfig python:build shared-mime-info \
