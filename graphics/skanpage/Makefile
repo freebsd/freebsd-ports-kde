@@ -23,4 +23,11 @@ USE_KDE=	auth codecs completion config configwidgets coreaddons crash \
 		doctools:build ecm:build
 USE_QT=		base pdf
 
+OPTIONS_DEFINE=	OCR
+OPTIONS_DEFAULT=	OCR
+
+OCR_DESC=	Text recognition via Tesseract OCR
+OCR_LIB_DEPENDS=	libleptonica.so:graphics/leptonica \
+			libtesseract.so:graphics/tesseract
+
 .include <bsd.port.mk>
