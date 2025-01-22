@@ -16,7 +16,11 @@ USE_KDE=	attica auth codecs completion config configwidgets coreaddons \
 USE_QT=		base declarative
 USE_XORG=	x11
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=		DOCS SVGZ
+OPTIONS_DEFAULT=	SVGZ
+
+SVGZ_DESC=		For installing SVG files as SVGZ
+SVGZ_BUILD_DEPENDS=	7zz:archivers/7-zip
 
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>
