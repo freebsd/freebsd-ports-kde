@@ -18,7 +18,11 @@ USE_QT=		base declarative
 
 USE_LDCONFIG=	yes
 
-OPTIONS_DEFINE=	DOCS
+OPTIONS_DEFINE=		DOCS SVGZ
+OPTIONS_DEFAULT=	SVGZ
+
+SVGZ_DESC=		For installing SVG files as SVGZ
+SVGZ_BUILD_DEPENDS=	7zz:archivers/7-zip
 
 .include <${.CURDIR}/../kdegames/Makefile.common>
 .include <bsd.port.mk>
