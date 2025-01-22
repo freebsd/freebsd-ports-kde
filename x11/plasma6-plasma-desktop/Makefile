@@ -37,6 +37,11 @@ USE_KDE=	activities activities-stats attica auth baloo bookmarks \
 USE_QT=		5compat base declarative svg
 USE_XORG=	x11 xcb xcursor xext xfixes xi xrender
 
-#SHEBANG_FILES=	kcms/keyboard/*.py kcms/ksmserver/kconf_update/*.py
+OPTIONS_DEFINE=	GAMECONTROLLER
+OPTIONS_SUB=	yes
+
+GAMECONTROLLER_DESC=	Enable gamecontroller System Settings module (requires SDL)
+GAMECONTROLLER_USES=	sdl
+GAMECONTROLLER_USE=	sdl=sdl2
 
 .include <bsd.port.mk>
