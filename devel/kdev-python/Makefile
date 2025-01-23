@@ -21,7 +21,7 @@ USE_QT=		base
 USE_XORG=	x11
 
 # Versioning values, to reduce plist churn (match with devel/kdevelop)
-PLATFORM_VER=	611
+PLATFORM_VER=	61
 PLIST_SUB+=	PLATFORM_VER=${PLATFORM_VER}
 
 # Does not build with jobs.
