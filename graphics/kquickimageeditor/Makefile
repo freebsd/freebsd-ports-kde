@@ -11,8 +11,8 @@ WWW=		https://invent.kde.org/libraries/kquickimageeditor
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/LICENSES/LGPL-2.1-or-later.txt
 
-FLAVORS=	qt5 qt6
-FLAVOR?=	qt5
+FLAVORS=	qt6 qt5
+FLAVOR?=	qt6
 
 USES=		cmake compiler:c++17-lang gl kde:${FLAVOR:S/qt//} pkgconfig \
 		qt:${FLAVOR:S/qt//} tar:xz
