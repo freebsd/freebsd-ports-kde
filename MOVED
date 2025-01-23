@@ -4033,3 +4033,15 @@ net/libproxy-python||2025-01-19|Completely rewritten, plugins now built directly
 net/libproxy-webkit3||2025-01-19|Completely rewritten, plugins now built directly into the library
 www/webkit2-gtk3|www/webkit2-gtk@40|2025-01-20|Flavoured
 www/webkit2-gtk4|www/webkit2-gtk@60|2025-01-20|Flavoured
+sysutils/bareos21-traymonitor||2025-01-21|Has expired: not supported upstream
+www/bareos20-webui||2025-01-21|Has expired: not supported upstream
+www/bareos21-webui||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-traymonitor||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-client||2025-01-21|Has expired: not supported upstream
+sysutils/bareos20-server||2025-01-21|Has expired: not supported upstream
+sysutils/bareos21-client||2025-01-21|Has expired: not supported upstream
+sysutils/bareos21-server||2025-01-21|Has expired: not supported upstream
+www/mediawiki141||2025-01-22|Has expired: EOL upstream
+audio/plasma5-oxygen-sounds|audio/plasma6-oxygen-sounds|2025-01-23|Superseded by its Plasma 6 counterpart
+devel/kf5-extra-cmake-modules|devel/kf6-extra-cmake-modules|2025-01-23|Superseded by its KF6 counterpart
+devel/kf5-kapidox|devel/kf6-kapidox|2025-01-23|Superseded by its KF6 counterpart

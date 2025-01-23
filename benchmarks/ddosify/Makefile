@@ -4,12 +4,16 @@ DISTVERSION=	1.0.6
 PORTREVISION=	8
 CATEGORIES=	benchmarks
 
-MAINTAINER=	dutra@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	High-performance load testing tool
 WWW=		https://github.com/ddosify/ddosify
 
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		Unfetchable
+DEPRECATED=	Abandoned upstream
+EXPIRATION_DATE=2025-02-28
 
 USES=		go:modules
 

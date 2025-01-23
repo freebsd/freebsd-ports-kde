@@ -1,3 +1,176 @@
+  <vuln vid="2def27c7-7dd0-42cb-adf6-8e5a7afe4db3">
+    <topic>electron33 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>electron33</name>
+	<range><lt>33.3.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v33.3.2">
+	  <p>This update fixes the following vulnerabilities:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2025-0434.</li>
+	    <li>Security: backported fix for CVE-2025-0436.</li>
+	    <li>Security: backported fix for CVE-2025-0437.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-0434</cvename>
+      <url>https://github.com/advisories/GHSA-fpmx-pfpg-92xg</url>
+      <cvename>CVE-2025-0436</cvename>
+      <url>https://github.com/advisories/GHSA-ww3g-8h77-wr7v</url>
+      <cvename>CVE-2025-0437</cvename>
+      <url>https://github.com/advisories/GHSA-4353-vp82-4qq4</url>
+    </references>
+    <dates>
+      <discovery>2025-01-22</discovery>
+      <entry>2025-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24c93a28-d95b-11ef-b6b2-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>17.8.0</ge><lt>17.8.1</lt></range>
+	<range><ge>17.7.0</ge><lt>17.7.3</lt></range>
+	<range><ge>15.7.0</ge><lt>17.6.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/">
+	  <p>Stored XSS via Asciidoctor render</p>
+	  <p>Developer could exfiltrate protected CI/CD variables via CI lint</p>
+	  <p>Cyclic reference of epics leads resource exhaustion</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-0314</cvename>
+      <cvename>CVE-2024-11931</cvename>
+      <cvename>CVE-2024-6324</cvename>
+      <url>https://about.gitlab.com/releases/2025/01/22/patch-release-gitlab-17-8-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2025-01-22</discovery>
+      <entry>2025-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1e109b60-d92e-11ef-a661-08002784c58d">
+    <topic>clamav -- Possbile denial-of-service vulnerability</topic>
+    <affects>
+      <package>
+	<name>clamav</name>
+	<range><ge>1.0.0,1</ge><lt>1.4.2,1</lt></range>
+      </package>
+      <package>
+	<name>clamav-lts</name>
+	<range><ge>1.0.0,1</ge><lt>1.0.8,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ClamAV project reports:</p>
+	<blockquote cite="https://blog.clamav.net/2025/01/clamav-142-and-108-security-patch.html">
+	  <p>
+	    A possible buffer overflow read bug is found in the OLE2
+	    file parser that could cause a denial-of-service (DoS)
+	    condition.
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-20128</cvename>
+      <url>https://blog.clamav.net/2025/01/clamav-142-and-108-security-patch.html</url>
+    </references>
+    <dates>
+      <discovery>2025-01-22</discovery>
+      <entry>2025-01-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7d17676d-4828-4a43-85d6-1ee14362de6e">
+    <topic>electron32 -- Type Confusion in V8</topic>
+    <affects>
+      <package>
+	<name>electron32</name>
+	<range><lt>32.2.8</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Electron developers report:</p>
+	<blockquote cite="https://github.com/electron/electron/releases/tag/v32.2.8">
+	  <p>This update fixes the following vulnerability:</p>
+	  <ul>
+	    <li>Security: backported fix for CVE-2024-12053.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-12053</cvename>
+      <url>https://github.com/advisories/GHSA-wvx7-72hc-rp32</url>
+    </references>
+    <dates>
+      <discovery>2025-01-06</discovery>
+      <entry>2025-01-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="704aa72a-d840-11ef-a205-901b0e9408dc">
+    <topic>go -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>go122</name>
+	<range><lt>1.22.11</lt></range>
+      </package>
+      <package>
+	<name>go123</name>
+	<range><lt>1.23.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Go project reports:</p>
+	<blockquote cite="https://go.dev/issue/71156">
+	  <p>crypto/x509: usage of IPv6 zone IDs can bypass URI name constraints</p>
+	  <p>A certificate with a URI which has a IPv6 address with a
+	  zone ID may incorrectly satisfy a URI name constraint that
+	  applies to the certificate chain.</p>
+	</blockquote>
+	<blockquote cite="https://go.dev/issue/70530">
+	  <p>net/http: sensitive headers incorrectly sent after cross-domain redirect</p>
+	  <p>The HTTP client drops sensitive headers after following a
+	  cross-domain redirect.  For example, a request to a.com/
+	  containing an Authorization header which is redirected to
+	  b.com/ will not send that header to b.com.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2024-45341</cvename>
+      <cvename>CVE-2024-45336</cvename>
+      <url>https://go.dev/issue/71156</url>
+      <url>https://go.dev/issue/70530</url>
+    </references>
+    <dates>
+      <discovery>2025-01-07</discovery>
+      <entry>2025-01-21</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="3161429b-3897-4593-84a0-b41ffbbfa36b">
     <topic>electron31 -- multiple vulnerabilities</topic>
     <affects>
