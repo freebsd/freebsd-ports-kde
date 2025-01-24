@@ -1,5 +1,6 @@
 PORTNAME=	kuserfeedback
 DISTVERSION=	1.3.0
+PORTREVISION=	1
 CATEGORIES=	deskutils kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/
 
