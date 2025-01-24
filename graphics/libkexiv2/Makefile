@@ -7,8 +7,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Exiv2 library interface for KDE
 WWW=		https://www.digikam.org/
 
-FLAVORS=	qt5 qt6
-FLAVOR?=	qt5
+FLAVORS=	qt6 qt5
+FLAVOR?=	qt6
 
 LIB_DEPENDS=	libexiv2.so:graphics/exiv2
 
