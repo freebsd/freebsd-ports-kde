@@ -346,8 +346,7 @@ _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			${_USE_PHONON_ALL} \
 			akonadi \
 			libkexiv2 \
-			libkdcraw \
-			libkipi
+			libkdcraw
 
 # TODO: fix
 _USE_KDE6_ALL=		ecm colorscheme \
