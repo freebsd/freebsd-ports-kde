@@ -4049,3 +4049,8 @@ devel/rubygem-strong_migrations61|devel/rubygem-strong_migrations|2025-01-23|Has
 databases/rubygem-active_model_serializers61|databases/rubygem-active_model_serializers|2025-01-23|Has expired: Ruby on Rails 6.1.x reached EOL on 2024-10-01
 net/akonadi-notes
 print/print-manager
+archivers/ark-devel
+audio/plasma5-plasma-pa
+deskutils/plasma5-milou
+deskutils/plasma5-sddm-kcm
+deskutils/plasma5-xdg-desktop-portal-kde
