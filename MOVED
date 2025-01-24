@@ -4054,3 +4054,7 @@ audio/plasma5-plasma-pa
 deskutils/plasma5-milou
 deskutils/plasma5-sddm-kcm
 deskutils/plasma5-xdg-desktop-portal-kde
+devel/dolphin-plugins-devel
+devel/plasma5-khotkeys
+devel/plasma5-kwrited
+devel/plasma5-plasma-sdk
