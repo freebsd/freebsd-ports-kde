@@ -696,12 +696,8 @@ kde-kde-gtk-config_PATH=	${KDE_PREFIX}/lib/kconf_update_bin/gtk_theme
 kde-kdeplasma-addons_PORT=	x11-toolkits/plasma${_KDE_VERSION}-kdeplasma-addons
 kde-kdeplasma-addons_LIB=	libplasmapotdprovidercore.so
 
-kde-kgamma_PORT5=		x11/plasma${_KDE_VERSION}-kgamma5
-kde-kgamma_PORT6=		x11/plasma${_KDE_VERSION}-kgamma
-kde-kgamma_PORT=		${kde-kgamma5_PORT${_KDE_VERSION}}
-kde-kgamma_PATH5=		${QT_PLUGINDIR}/plasma/kcms/systemsettings/kcm_kgamma.so
-kde-kgamma_PATH6=		${QT_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets/kcm_kgamma.so
-kde-kgamma_PATH=		${kde-kgamma5_PATH${_KDE_VERSION}}
+kde-kgamma_PORT=		x11/plasma${_KDE_VERSION}-kgamma
+kde-kgamma_PATH=		${QT_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets/kcm_kgamma.so
 
 kde-kmenuedit_PORT=		sysutils/plasma${_KDE_VERSION}-kmenuedit
 kde-kmenuedit_PATH=		${KDE_PREFIX}/bin/kmenuedit
@@ -779,9 +775,7 @@ kde-plasma-workspace_PORT=	x11/plasma${_KDE_VERSION}-plasma-workspace
 kde-plasma-workspace_LIB=	libkworkspace${_KDE_VERSION}.so
 
 kde-plasma-workspace-wallpapers_PORT=	x11-themes/plasma${_KDE_VERSION}-plasma-workspace-wallpapers
-kde-plasma-workspace-wallpapers_PATH5=	${KDE_PREFIX}/share/plasma-workspace-wallpapers/plasma${_KDE_VERSION}-plasma-workspace-wallpapers-dummy
-kde-plasma-workspace-wallpapers_PATH6=	${KDE_PREFIX}/share/wallpapers/Autumn/contents/images/1280x1024.jpg
-kde-plasma-workspace-wallpapers_PATH=	${kde-plasma-workspace-wallpapers_PATH${_KDE_VERSION}}
+kde-plasma-workspace-wallpapers_PATH=	${KDE_PREFIX}/share/wallpapers/Autumn/contents/images/1280x1024.jpg
 
 kde-polkit-kde-agent-1_PORT=	sysutils/plasma${_KDE_VERSION}-polkit-kde-agent-1
 kde-polkit-kde-agent-1_PATH=	${KDE_PREFIX}/lib/libexec/polkit-kde-authentication-agent-1
@@ -955,7 +949,6 @@ kde-mbox-importer_PATH=		${KDE_PREFIX}/bin/mboximporter
 kde-mimetreeparser_PORT=	net/mimetreeparser
 kde-mimetreeparser_LIB=		libKPim${_KDE_VERSION}MimeTreeParserCore.so
 
-
 kde-pim-data-exporter_PORT=	deskutils/pim-data-exporter
 kde-pim-data-exporter_PATH=	${KDE_PREFIX}/bin/pimdataexporter
 # ====================== end of pim5 components ================================
@@ -999,7 +992,7 @@ kde-libksane_PORT=		graphics/libksane
 kde-libksane_LIB=		libKSaneWidgets${_KDE_VERSION}.so
 
 kde-marble_PORT=		astro/marble
-kde-marble_LIB=			libmarblewidget-qt5.so
+kde-marble_LIB=			libmarblewidget-qt6.so
 
 kde-kpublictransport_PORT=	devel/kpublictransport
 kde-kpublictransport_LIB=	libKPublicTransport.so
