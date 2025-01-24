@@ -1,5 +1,6 @@
 PORTNAME=	ktexttemplate
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	devel kde kde-frameworks
 
 COMMENT=	Library to separate the structure of documents from the data
