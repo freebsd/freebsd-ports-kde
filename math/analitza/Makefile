@@ -17,7 +17,7 @@ USE_KDE=	ecm:build
 USE_QT=		5compat base svg
 USE_LDCONFIG=	yes
 
-SHLIB_VER=	8.0.0
+SHLIB_VER=	9.0.0
 PLIST_SUB+=	SHLIB_VER="${SHLIB_VER}" \
 		SHLIB_SHVER="${SHLIB_VER:R:R}"
 
