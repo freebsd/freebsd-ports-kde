@@ -12,6 +12,8 @@ lib/libkdeconnectinterfaces.a
 lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_VERSION_SHORT%%
 lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_clipboard_config.so
+%%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_findthisdevice_config.so
+%%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_pausemusic_config.so
 %%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_runcommand_config.so
 %%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_sendnotifications_config.so
 %%QT_PLUGINDIR%%/kdeconnect/kcms/kdeconnect_share_config.so
@@ -21,11 +23,13 @@ lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_connectivity_report.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_contacts.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_findmyphone.so
+%%QT_PLUGINDIR%%/kdeconnect/kdeconnect_findthisdevice.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_lockdevice.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_mousepad.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_mpriscontrol.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_mprisremote.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_notifications.so
+%%QT_PLUGINDIR%%/kdeconnect/kdeconnect_pausemusic.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_ping.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_presenter.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_remotecommands.so
@@ -38,6 +42,7 @@ lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_sftp.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_share.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_sms.so
+%%QT_PLUGINDIR%%/kdeconnect/kdeconnect_systemvolume.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_telephony.so
 %%QT_PLUGINDIR%%/kdeconnect/kdeconnect_virtualmonitor.so
 %%QT_PLUGINDIR%%/kf6/kfileitemaction/kdeconnectfileitemaction.so
@@ -49,6 +54,10 @@ lib/libkdeconnectpluginkcm.so.%%KDE_APPLICATIONS_SHLIB_VER%%
 %%QT_QMLDIR%%/org/kde/kdeconnect/kde-qmlmodule.version
 %%QT_QMLDIR%%/org/kde/kdeconnect/kdeconnectdeclarativeplugin.qmltypes
 %%QT_QMLDIR%%/org/kde/kdeconnect/libkdeconnectdeclarativeplugin.so
+%%QT_QMLDIR%%/org/kde/kdeconnect/private/findthisdevice/kde-qmlmodule.version
+%%QT_QMLDIR%%/org/kde/kdeconnect/private/findthisdevice/kdeconnect_findthisdevice_qmlhelper.qmltypes
+%%QT_QMLDIR%%/org/kde/kdeconnect/private/findthisdevice/libkdeconnect_findthisdevice_qmlhelper.so
+%%QT_QMLDIR%%/org/kde/kdeconnect/private/findthisdevice/qmldir
 %%QT_QMLDIR%%/org/kde/kdeconnect/qmldir
 share/Thunar/sendto/kdeconnect-thunar.desktop
 share/applications/kcm_kdeconnect.desktop
@@ -101,6 +110,8 @@ share/icons/hicolor/scalable/apps/kdeconnect.svg
 share/icons/hicolor/scalable/apps/kdeconnectindicator.svg
 share/icons/hicolor/scalable/apps/kdeconnectindicatordark.svg
 share/kdeconnect/kdeconnect_clipboard_config.qml
+share/kdeconnect/kdeconnect_findthisdevice_config.qml
+share/kdeconnect/kdeconnect_pausemusic_config.qml
 share/kdeconnect/kdeconnect_runcommand_config.qml
 share/kdeconnect/kdeconnect_sendnotifications_config.qml
 share/kdeconnect/kdeconnect_share_config.qml
