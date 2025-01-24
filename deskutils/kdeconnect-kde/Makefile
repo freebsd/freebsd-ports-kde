@@ -10,7 +10,7 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libfakekey.so:x11/libfakekey \
 		libwayland-client.so:graphics/wayland \
-		libKF5PulseAudioQt.so:audio/pulseaudio-qt@qt5
+		libKF6PulseAudioQt.so:audio/pulseaudio-qt@qt6
 BUILD_DEPENDS=	kpeoplevcard>0:net/kpeoplevcard \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		wayland-protocols>=0:graphics/wayland-protocols
@@ -31,7 +31,6 @@ USE_XORG=	ice sm x11 xext xtst
 USE_LDCONFIG=	${QT_QMLDIR}/org/kde/kdeconnect
 
 OPTIONS_DEFINE=	DOCS
-CMAKE_OFF=	WITH_PULSEAUDIO # pulseaudio-qt has no Qt6 enabled tarball
 
 KDE_APPLICATIONS_SHLIB_VER=${KDE_APPLICATIONS_VERSION}
 
