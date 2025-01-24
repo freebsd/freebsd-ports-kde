@@ -21,11 +21,4 @@ CMAKE_OFF=	Quotient_INSTALL_TESTS
 
 CONFLICTS=	libqmatrixclient\*
 
-.include <bsd.port.options.mk>
-
-# # Work around compiler bug, see pr: 272285
-# .if ${OPSYS} == FreeBSD
-# USES+=		llvm
-# .endif
-
 .include <bsd.port.mk>
