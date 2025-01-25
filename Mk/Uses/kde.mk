@@ -761,9 +761,7 @@ kde-plasma-disks_PATH6=		${KDE_PREFIX}/lib/libexec/kf6/kauth/kded-smart-helper
 kde-plasma-disks_PATH=		${kde-plasma-disks_PATH${_KDE_VERSION}}
 
 kde-plasma-integration_PORT=	x11/plasma${_KDE_VERSION}-plasma-integration
-kde-plasma-integration_PATH5=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme.so
-kde-plasma-integration_PATH6=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme6.so
-kde-plasma-integration_PATH=	${kde-plasma-integration_PATH${_KDE_VERSION}}
+kde-plasma-integration_PATH=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme6.so
 
 kde-plasma-pa_PORT=		audio/plasma${_KDE_VERSION}-plasma-pa
 kde-plasma-pa_PATH=		${QT_PLUGINDIR}/plasma/kcms/systemsettings/kcm_pulseaudio.so

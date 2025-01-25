@@ -1,5 +1,6 @@
 PORTNAME=	plasma-wayland-protocols
 DISTVERSION=	1.15.0
+PORTREVISION=	1
 CATEGORIES=	x11 kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/
 

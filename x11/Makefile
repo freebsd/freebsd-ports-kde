@@ -319,7 +319,6 @@
     SUBDIR += pixman
     SUBDIR += plank
     SUBDIR += plasma-wayland-protocols
-    SUBDIR += plasma5-plasma-integration
     SUBDIR += plasma6-kactivitymanagerd
     SUBDIR += plasma6-kgamma
     SUBDIR += plasma6-kglobalacceld
