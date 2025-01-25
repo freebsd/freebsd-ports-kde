@@ -7,8 +7,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Mobipocket plugins for Strigi indexing and thumbnails
 WWW=		https://www.kde.org
 
-FLAVORS=	qt5 qt6
-FLAVOR?=	qt5
+FLAVORS=	qt6 qt5
+FLAVOR?=	qt6
 
 USES=		cmake compiler:c++11-lang kde:${FLAVOR:S/qt//} \
 		qt:${FLAVOR:S/qt//} tar:xz
