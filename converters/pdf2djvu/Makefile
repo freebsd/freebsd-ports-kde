@@ -17,7 +17,7 @@ LIB_DEPENDS=	libdjvulibre.so:graphics/djvulibre \
 
 USES=		autoreconf:build compiler:c++17-lang gettext-tools \
 		gmake iconv localbase pkgconfig tar:xz
-USE_CXXSTD=	c++17
+USE_CXXSTD=	c++20
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX=${PREFIX}/share
