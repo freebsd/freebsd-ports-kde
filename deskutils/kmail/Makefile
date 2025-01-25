@@ -45,4 +45,6 @@ DESCR=		${.CURDIR:H:H}/deskutils/kdepim/pkg-descr
 
 OPTIONS_DEFINE=	DOCS
 
+TEST_USE=		kde+=textaddons
+
 .include <bsd.port.mk>

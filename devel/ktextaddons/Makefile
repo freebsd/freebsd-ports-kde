@@ -16,7 +16,7 @@ USE_KDE=	archive auth codecs completion config configwidgets \
 		coreaddons i18n jobwidgets kio service solid sonnet \
 		syntaxhighlighting widgetsaddons windowsystem \
 		ecm:build
-USE_QT=		base
+USE_QT=		base speech
 CMAKE_ARGS=	-DQT_MAJOR_VERSION:STRING="6"
 USE_XORG=	x11
 
