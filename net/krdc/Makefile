@@ -2,7 +2,6 @@ PORTNAME=	krdc
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	net kde kde-applications
 
-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	RDP and VNC client for KDE
 WWW=		https://kde.org/applications/internet/krdc/

@@ -5,7 +5,7 @@ CATEGORIES=	net kde
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Network applications (meta port)
 
-USES=		kde:5 metaport qt:5
+USES=		kde:6 metaport qt:6
 USE_QT=		#
 
 OPTIONS_DEFINE=	FILESHARING KRDC KRFB

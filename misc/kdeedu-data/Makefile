@@ -8,8 +8,7 @@ WWW=		https://edu.kde.org/applications/all/parley
 
 USES=		cmake kde:5 qt:5 tar:xz
 USE_KDE=	ecm:build
-USE_QT=		buildtools:build \
-		qmake:build
+USE_QT=		buildtools:build qmake:build
 
 OPTIONS_DEFINE=	DOCS
 
