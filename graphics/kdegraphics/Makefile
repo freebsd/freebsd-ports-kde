@@ -6,7 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Graphics utilities for KDE (meta port)
 WWW=		https://www.kde.org
 
-USES=		kde:5 metaport qt:5
+USES=		kde:6 metaport qt:6
 USE_QT=		#
 
 OPTIONS_DEFINE=	GPHOTO \

@@ -6,7 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE PIM applications metaport
 WWW=		https://www.kde.org/
 
-USES=		kde:5 metaport qt:5
-USE_KDE=	${_USE_KDEPIM5_ALL}
+USES=		kde:6 metaport qt:6
+USE_KDE=	${_USE_KDEPIM_ALL}
 
 .include <bsd.port.mk>

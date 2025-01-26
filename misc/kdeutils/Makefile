@@ -6,7 +6,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Collection of utilities for KDE
 WWW=		https://www.kde.org/applications/utilities/
 
-USES=		kde:5 metaport
+USES=		kde:6 metaport
 
 OPTIONS_DEFINE=	ARK FILELIGHT KCALC KCHARSELECT KDEBUGSETTINGS \
 		KDF KGPG KTEATIME KTIMER KWALLETMANAGER \
