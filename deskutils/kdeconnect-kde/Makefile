@@ -11,14 +11,10 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libfakekey.so:x11/libfakekey \
 		libwayland-client.so:graphics/wayland \
 		libKF6PulseAudioQt.so:audio/pulseaudio-qt@qt6
-BUILD_DEPENDS=	kpeoplevcard>0:net/kpeoplevcard \
-		${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
 		wayland-protocols>=0:graphics/wayland-protocols
 RUN_DEPENDS=	sshpass:security/sshpass \
 		sshfs:filesystems/sshfs
-
-# FIXME: update port to Qt6 version
-#RUN_DEPENDS+=	kpeoplevcard>0:net/kpeoplevcard
 
 USES=		cmake compiler:c++11-lang desktop-file-utils gettext kde:6 \
 		localbase:ldflags pkgconfig qca qt:6 tar:xz xorg
