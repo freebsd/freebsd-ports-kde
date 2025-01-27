@@ -85,7 +85,6 @@
     SUBDIR += phoc
     SUBDIR += picom
     SUBDIR += piewm
-    SUBDIR += plasma5-kdecoration
     SUBDIR += plasma6-kdecoration
     SUBDIR += plasma6-kwin
     SUBDIR += pwm
