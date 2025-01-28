@@ -310,7 +310,10 @@ _USE_FRAMEWORKS6_ALL=	ecm colorscheme \
 _USE_FRAMEWORKS_ALL=	${_USE_FRAMEWORKS${_KDE_VERSION}_ALL}
 
 # List of components of the KDE Plasma distribution.
-_USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
+_USE_PLASMA5_ALL=	libksysguard
+
+# FIXME: clean up Plasma 6 components
+_USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi hotkeys \
 			infocenter kde-cli-tools kde-gtk-config \
 			kdeplasma-addons kgamma5 kmenuedit kscreen \
@@ -321,6 +324,7 @@ _USE_PLASMA_ALL=	activitymanagerd breeze breeze-gtk \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
 			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde \
 			kirigami-addons
+_USE_PLASMA_ALL=	${_USE_PLASMA${_KDE_VERSION}_ALL}
 
 # List of components of the KDE PIM distribution (part of applications).
 _USE_KDEPIM_ALL=	akonadicontacts akonadiimportwizard akonadimime \
