@@ -86,32 +86,33 @@ KDE_APPLICATIONS_VERSION?=	${KDE_APPLICATIONS6_VERSION}
 KDE_APPLICATIONS_SHLIB_VER?=	${KDE_APPLICATIONS6_SHLIB_VER}
 KDE_APPLICATIONS_SHLIB_G_VER?=	${KDE_APPLICATIONS6_SHLIB_G_VER}
 
-# Current KDE desktop.
+# Legacy KDE Plasma.
 KDE_PLASMA5_VERSION?=		5.27.11
 KDE_PLASMA5_BRANCH?=		stable
 
-# Next KDE Plasma desktop
+# Current KDE Plasma desktop.
 KDE_PLASMA6_VERSION?=		6.2.5
 KDE_PLASMA6_BRANCH?=		stable
 
-# Current KDE frameworks.
+# Legacy KDE frameworks (Qt5 based).
 KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
-# Next KDE Frameworks (Qt6 based)
+# Current KDE Frameworks (Qt6 based).
 KDE_FRAMEWORKS6_VERSION?=	6.9.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
-# Current KDE applications.
+# Legacy KDE applications.
 KDE_APPLICATIONS5_VERSION?=	23.08.5
 KDE_APPLICATIONS5_SHLIB_VER?=	5.24.5
 # G as in KDE Gear, and as in "don't make the variable name longer than required"
 KDE_APPLICATIONS5_SHLIB_G_VER?=	23.8.5
 KDE_APPLICATIONS5_BRANCH?=	stable
 
-# Next KDE applications.
+# Current KDE applications.
 KDE_APPLICATIONS6_VERSION?=	24.12.0
 KDE_APPLICATIONS6_SHLIB_VER?=	6.3.0
+# G as in KDE Gear, and as in "don't make the variable name longer than required".
 KDE_APPLICATIONS6_SHLIB_G_VER?=	${KDE_APPLICATIONS6_VERSION}
 KDE_APPLICATIONS6_BRANCH?=	stable
 
@@ -311,8 +312,6 @@ _USE_FRAMEWORKS_ALL=	${_USE_FRAMEWORKS${_KDE_VERSION}_ALL}
 
 # List of components of the KDE Plasma distribution.
 _USE_PLASMA5_ALL=	libksysguard
-
-# FIXME: clean up Plasma 6 components
 
 _USE_PLASMA6_ALL=	activities activities-stats activitymanagerd \
 			breeze breeze-gtk decoration discover drkonqi \
@@ -798,8 +797,6 @@ kde-systemsettings_PORT=	sysutils/plasma${_KDE_VERSION}-systemsettings
 kde-systemsettings_PATH5=	${KDE_PREFIX}/bin/systemsettings5
 kde-systemsettings_PATH6=	${KDE_PREFIX}/bin/systemsettings
 kde-systemsettings_PATH=	${kde-systemsettings_PATH${_KDE_VERSION}}
-
-
 
 kde-xdg-desktop-portal-kde_PORT=	deskutils/plasma${_KDE_VERSION}-xdg-desktop-portal-kde
 kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kde
