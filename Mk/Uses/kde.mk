@@ -789,7 +789,7 @@ kde-print-manager_PORT=		print/plasma${_KDE_VERSION}-print-manager
 kde-print-manager_PATH=		${KDE_PREFIX}/bin/kde-add-printer
 kde-print-manager_TYPE=		run
 
-kde-systemmonitor_PORT=		sysutils/plasma${_KDE_VERSION}-systemmonitor
+kde-systemmonitor_PORT=		sysutils/plasma${_KDE_VERSION}-plasma-systemmonitor
 kde-systemmonitor_PATH=		${KDE_PREFIX}/bin/plasma-systemmonitor
 kde-systemmonitor_TYPE=		run
 
