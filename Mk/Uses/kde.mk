@@ -324,7 +324,8 @@ _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
 			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde \
-			plasma5support activities activities-stats wayland globalacceld libplasma
+			plasma5support activities activities-stats wayland globalacceld libplasma \
+			ocean-sound-theme systemmonitor print-manager qqc2-breeze-style sddm-kcm
 _USE_PLASMA_ALL=	${_USE_PLASMA${_KDE_VERSION}_ALL}
 
 # List of components of the KDE PIM distribution (part of applications).
@@ -741,6 +742,10 @@ kde-milou_PATH5=			${KDE_PREFIX}/lib/libmilou.so.5
 kde-milou_PATH6=		${QT_QMLDIR}/org/kde/milou/libmilouqmlplugin.so
 kde-milou_PATH=			${kde-milou_PATH${_KDE_VERSION}}
 
+kde-ocean-sound-theme_PORT=	audio/plasma${_KDE_VERSION}-ocean-sound-theme
+kde-ocean-sound-theme_PATH=	${KDE_PREFIX}/share/sounds/ocean/index.theme
+kde-ocean-sound-theme_TYPE=	run
+
 kde-oxygen_PORT=		x11-themes/plasma${_KDE_VERSION}-oxygen
 kde-oxygen_PATH5=		${QT_PLUGINDIR}/styles/oxygen.so
 kde-oxygen_PATH6=		${QT_PLUGINDIR}/kstyle_config/kstyle_oxygen_config.so
@@ -778,6 +783,14 @@ kde-polkit-kde-agent-1_PATH=	${KDE_PREFIX}/lib/libexec/polkit-kde-authentication
 kde-powerdevil_PORT=		sysutils/plasma${_KDE_VERSION}-powerdevil
 kde-powerdevil_LIB=		libpowerdevilcore.so
 
+kde-print-manager_PORT=		print/plasma${_KDE_VERSION}-print-manager
+kde-print-manager_PATH=		${KDE_PREFIX}/bin/kde-add-printer
+kde-print-manager_TYPE=		run
+
+kde-systemmonitor_PORT=		sysutils/plasma${_KDE_VERSION}-systemmonitor
+kde-systemmonitor_PATH=		${KDE_PREFIX}/bin/plasma-systemmonitor
+kde-systemmonitor_TYPE=		run
+
 kde-systemsettings_PORT=	sysutils/plasma${_KDE_VERSION}-systemsettings
 kde-systemsettings_PATH5=	${KDE_PREFIX}/bin/systemsettings5
 kde-systemsettings_PATH6=	${KDE_PREFIX}/bin/systemsettings
@@ -790,6 +803,13 @@ kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kd
 
 kde-plasma5support_PORT=	devel/plasma${_KDE_VERSION}-plasma5support
 kde-plasma5support_LIB=		libPlasma5Support.so
+
+kde-qqc2-breeze-style_PORT=	x11-themes/plasma${_KDE_VERSION}-qqc2-breeze-style
+kde-qqc2-breeze-style_PATH=	${QT_PLUGINDIR}/kf${_KDE_VERSION}/kirigami/platform/org.kde.breeze.so
+
+kde-sddm-kcm_PORT=		deskutils/plasma${_KDE_VERSION}-sddm-kcm
+kde-sddm-kcm_PATH=		${QT_PLUGINDIR}/plasma/kcms/systemsettings/kcm_sddm.so
+kde-sddm-kcm_TYPE=		run
 
 kde-kirigami-addons_PORT=	x11-toolkits/kirigami-addons-qt${_KDE_VERSION}
 kde-kirigami-addons_PATH=	${QT_QMLDIR}/org/kde/kirigamiaddons/components/libcomponentsplugin.so
