@@ -275,7 +275,7 @@ _USE_FRAMEWORKS_TIER2=	auth completion crash doctools \
 _USE_FRAMEWORKS_TIER3=	activities activities-stats baloo bookmarks configwidgets \
 			designerplugin emoticons globalaccel guiaddons \
 			iconthemes init kcmutils kdav kdeclarative \
-			kded kdesu kio kpipewire newstuff notifyconfig parts \
+			kded kdesu kio newstuff notifyconfig parts \
 			people plasma-framework purpose runner service texteditor \
 			textwidgets wallet xmlgui xmlrpcclient
 
@@ -304,7 +304,7 @@ _USE_FRAMEWORKS6_ALL=	ecm colorscheme \
 			userfeedback \
 			${_USE_FRAMEWORKS_TIER1:Nwayland} \
 			${_USE_FRAMEWORKS_TIER2} \
-			${_USE_FRAMEWORKS_TIER3:Nemoticons:Ndesignerplugin:Nactivities:Nactivities-stats:Ninit:Nplasma-framework:Nxmlrpcclient:Nkpipewire} \
+			${_USE_FRAMEWORKS_TIER3:Nemoticons:Ndesignerplugin:Nactivities:Nactivities-stats:Ninit:Nplasma-framework:Nxmlrpcclient} \
 			${_USE_FRAMEWORKS_TIER4} \
 			${_USE_FRAMEWORKS_EXTRA}
 _USE_FRAMEWORKS_ALL=	${_USE_FRAMEWORKS${_KDE_VERSION}_ALL}
@@ -316,7 +316,7 @@ _USE_PLASMA5_ALL=	libksysguard
 _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi hotkeys \
 			infocenter kde-cli-tools kde-gtk-config \
-			kdeplasma-addons kgamma5 kmenuedit kscreen \
+			kdeplasma-addons kgamma5 kmenuedit kpipewire kscreen \
 			kscreenlocker ksshaskpass ksysguard ksystemstats kwallet-pam \
 			kwayland-integration kwin kwrited layer-shell-qt libkscreen \
 			libksysguard milou oxygen oxygen-sounds plasma-browser-integration \
@@ -359,7 +359,7 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			mediaplayer \
 			${_USE_FRAMEWORKS_ALL}  \
 			${_USE_PLASMA_ALL} \
-			plasma5support activities activities-stats kpipewire wayland globalacceld libplasma \
+			plasma5support activities activities-stats wayland globalacceld libplasma \
 			${_USE_PHONON_ALL} \
 			akonadi \
 			kpublictransport \
