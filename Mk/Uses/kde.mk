@@ -313,6 +313,7 @@ _USE_FRAMEWORKS_ALL=	${_USE_FRAMEWORKS${_KDE_VERSION}_ALL}
 _USE_PLASMA5_ALL=	libksysguard
 
 # FIXME: clean up Plasma 6 components
+
 _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi \
 			infocenter kde-cli-tools kde-gtk-config \
@@ -322,7 +323,8 @@ _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			libksysguard milou oxygen oxygen-sounds plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
-			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde
+			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde \
+			plasma5support activities activities-stats wayland globalacceld libplasma
 _USE_PLASMA_ALL=	${_USE_PLASMA${_KDE_VERSION}_ALL}
 
 # List of components of the KDE PIM distribution (part of applications).
@@ -359,7 +361,6 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			mediaplayer \
 			${_USE_FRAMEWORKS_ALL}  \
 			${_USE_PLASMA_ALL} \
-			plasma5support activities activities-stats wayland globalacceld libplasma \
 			${_USE_PHONON_ALL} \
 			kirigami-addons \
 			akonadi \
