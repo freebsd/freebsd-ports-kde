@@ -4090,6 +4090,7 @@ sysutils/plasma5-powerdevil
 sysutils/plasma5-systemsettings
 www/plasma5-plasma-browser-integration
 x11-fm/dolphin-devel
+x11-themes/plasma5-breeze
 x11-themes/plasma5-breeze-gtk
 x11-themes/plasma5-kde-gtk-config
 x11-themes/plasma5-oxygen
