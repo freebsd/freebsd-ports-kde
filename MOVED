@@ -4095,6 +4095,7 @@ x11-themes/plasma5-kde-gtk-config
 x11-themes/plasma5-oxygen
 x11-themes/plasma5-plasma-workspace-wallpapers
 x11-toolkits/plasma5-kdeplasma-addons
+x11-wm/plasma5-kdecoration
 x11-wm/plasma5-kwin
 x11/kde5|x11/kde|2024-04-14|Remove version from KDE metaport
 x11/kde6|x11/kde|2024-04-14|Remove version from KDE metaport
