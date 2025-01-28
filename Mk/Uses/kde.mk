@@ -314,18 +314,21 @@ _USE_PLASMA5_ALL=	libksysguard
 
 # FIXME: clean up Plasma 6 components
 
-_USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
-			decoration discover drkonqi \
-			infocenter kde-cli-tools kde-gtk-config \
-			kdeplasma-addons kgamma kmenuedit kpipewire kscreen \
-			kscreenlocker ksshaskpass ksystemstats kwallet-pam \
-			kwin kwrited layer-shell-qt libkscreen \
-			libksysguard milou oxygen oxygen-sounds plasma-browser-integration \
-			plasma-desktop plasma-disks plasma-integration plasma-pa \
-			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
-			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde \
-			plasma5support activities activities-stats wayland globalacceld libplasma \
-			ocean-sound-theme systemmonitor print-manager qqc2-breeze-style sddm-kcm
+_USE_PLASMA6_ALL=	activities activities-stats activitymanagerd \
+			breeze breeze-gtk decoration discover drkonqi \
+			globalacceld infocenter kde-cli-tools \
+			kde-gtk-config kdeplasma-addons kgamma kmenuedit \
+			kpipewire kscreen kscreenlocker ksshaskpass \
+			ksystemstats kwallet-pam kwin kwrited \
+			layer-shell-qt libkscreen libksysguard libplasma \
+			milou ocean-sound-theme oxygen oxygen-sounds \
+			plasma-browser-integration plasma-desktop \
+			plasma-disks plasma-integration plasma-pa \
+			plasma-sdk plasma-workspace \
+			plasma-workspace-wallpapers plasma5support \
+			polkit-kde-agent-1 powerdevil print-manager \
+			qqc2-breeze-style sddm-kcm systemmonitor \
+			systemsettings wayland xdg-desktop-portal-kde
 _USE_PLASMA_ALL=	${_USE_PLASMA${_KDE_VERSION}_ALL}
 
 # List of components of the KDE PIM distribution (part of applications).
