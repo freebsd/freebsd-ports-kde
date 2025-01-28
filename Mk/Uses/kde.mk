@@ -314,11 +314,11 @@ _USE_PLASMA5_ALL=	libksysguard
 
 # FIXME: clean up Plasma 6 components
 _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
-			decoration discover drkonqi hotkeys \
+			decoration discover drkonqi \
 			infocenter kde-cli-tools kde-gtk-config \
 			kdeplasma-addons kgamma5 kmenuedit kpipewire kscreen \
-			kscreenlocker ksshaskpass ksysguard ksystemstats kwallet-pam \
-			kwayland-integration kwin kwrited layer-shell-qt libkscreen \
+			kscreenlocker ksshaskpass ksystemstats kwallet-pam \
+			kwin kwrited layer-shell-qt libkscreen \
 			libksysguard milou oxygen oxygen-sounds plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
@@ -685,9 +685,6 @@ kde-discover_PATH=		${KDE_PREFIX}/bin/plasma-discover
 kde-drkonqi_PORT=		sysutils/plasma${_KDE_VERSION}-drkonqi
 kde-drkonqi_PATH=		${KDE_PREFIX}/lib/libexec/drkonqi
 
-kde-hotkeys_PORT=		devel/plasma${_KDE_VERSION}-khotkeys
-kde-hotkeys_LIB=		libkhotkeysprivate.so.5
-
 kde-infocenter_PORT=		sysutils/plasma${_KDE_VERSION}-kinfocenter
 kde-infocenter_PATH=		${KDE_PREFIX}/bin/kinfocenter
 
@@ -715,9 +712,6 @@ kde-kscreenlocker_LIB=		libKScreenLocker.so
 kde-ksshaskpass_PORT=		security/plasma${_KDE_VERSION}-ksshaskpass
 kde-ksshaskpass_PATH=		${KDE_PREFIX}/bin/ksshaskpass
 
-kde-ksysguard_PORT=		sysutils/plasma${_KDE_VERSION}-ksysguard
-kde-ksysguard_PATH=		${KDE_PREFIX}/bin/ksysguard
-
 kde-ksystemstats_PORT=		sysutils/plasma${_KDE_VERSION}-ksystemstats
 kde-ksystemstats_PATH=		${KDE_PREFIX}/bin/ksystemstats
 
@@ -725,9 +719,6 @@ kde-kwallet-pam_PORT=		security/plasma${_KDE_VERSION}-kwallet-pam
 kde-kwallet-pam_PATH5=		${KDE_PREFIX}/lib/pam_kwallet5.so
 kde-kwallet-pam_PATH6=		${KDE_PREFIX}/lib/security/pam_kwallet5.so
 kde-kwallet-pam_PATH=		${kde-kwallet-pam_PATH${_KDE_VERSION}}
-
-kde-kwayland-integration_PORT=	x11/plasma${_KDE_VERSION}-kwayland-integration
-kde-kwayland-integration_PATH=	${QT_PLUGINDIR}/kf${_KDE_VERSION}/kwindowsystem/KF5WindowSystemKWaylandPlugin.so
 
 kde-kwin_PORT=			x11-wm/plasma${_KDE_VERSION}-kwin
 kde-kwin_PATH=			${KDE_PREFIX}/bin/kwin_x11
