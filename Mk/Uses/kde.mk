@@ -316,14 +316,13 @@ _USE_PLASMA5_ALL=	libksysguard
 _USE_PLASMA6_ALL=	activitymanagerd breeze breeze-gtk \
 			decoration discover drkonqi \
 			infocenter kde-cli-tools kde-gtk-config \
-			kdeplasma-addons kgamma5 kmenuedit kpipewire kscreen \
+			kdeplasma-addons kgamma kmenuedit kpipewire kscreen \
 			kscreenlocker ksshaskpass ksystemstats kwallet-pam \
 			kwin kwrited layer-shell-qt libkscreen \
 			libksysguard milou oxygen oxygen-sounds plasma-browser-integration \
 			plasma-desktop plasma-disks plasma-integration plasma-pa \
 			plasma-sdk plasma-workspace plasma-workspace-wallpapers \
-			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde \
-			kirigami-addons
+			polkit-kde-agent-1 powerdevil systemsettings xdg-desktop-portal-kde
 _USE_PLASMA_ALL=	${_USE_PLASMA${_KDE_VERSION}_ALL}
 
 # List of components of the KDE PIM distribution (part of applications).
@@ -348,6 +347,7 @@ _USE_PHONON_ALL=	phonon phonon-backend
 _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			${_USE_PLASMA_ALL} \
 			${_USE_PHONON_ALL} \
+			kirigami-addons \
 			akonadi \
 			libkexiv2 \
 			libkdcraw
@@ -361,6 +361,7 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			${_USE_PLASMA_ALL} \
 			plasma5support activities activities-stats wayland globalacceld libplasma \
 			${_USE_PHONON_ALL} \
+			kirigami-addons \
 			akonadi \
 			kpublictransport \
 			libkdegames \
