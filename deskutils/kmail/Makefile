@@ -33,9 +33,9 @@ USE_KDE=	auth bookmarks codecs completion config configwidgets \
 # pim components
 USE_KDE+=	akonadi akonadicontacts akonadimime akonadisearch calendarcore \
 		calendarutils contacts grantleetheme gravatar \
-		identitymanagement kontactinterface ldap libkdepim libkleo \
-		libksieve mailcommon mailtransport messagelib mime pimcommon \
-		pimtextedit tnef \
+		identitymanagement kontactinterface ktextaddons ldap \
+		libkdepim libkleo libksieve mailcommon mailtransport \
+		messagelib mime pimcommon pimtextedit tnef \
 		kdepim-runtime:run
 USE_QT=		base
 USE_XORG=	x11

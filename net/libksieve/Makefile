@@ -18,8 +18,8 @@ USE_KDE=	archive attica auth codecs completion config configwidgets \
 		windowsystem xmlgui \
 		ecm:build
 # pim components
-USE_KDE+=	akonadi identitymanagement libkdepim mailtransport mime \
-		pimcommon pimtextedit
+USE_KDE+=	akonadi identitymanagement ktextaddons libkdepim \
+		mailtransport mime pimcommon pimtextedit
 USE_QT=		base
 USE_XORG=	x11
 USE_LDCONFIG=	yes
