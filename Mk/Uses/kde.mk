@@ -721,9 +721,7 @@ kde-ksystemstats_PORT=		sysutils/plasma${_KDE_VERSION}-ksystemstats
 kde-ksystemstats_PATH=		${KDE_PREFIX}/bin/ksystemstats
 
 kde-kwallet-pam_PORT=		security/plasma${_KDE_VERSION}-kwallet-pam
-kde-kwallet-pam_PATH5=		${KDE_PREFIX}/lib/pam_kwallet5.so
-kde-kwallet-pam_PATH6=		${KDE_PREFIX}/lib/security/pam_kwallet5.so
-kde-kwallet-pam_PATH=		${kde-kwallet-pam_PATH${_KDE_VERSION}}
+kde-kwallet-pam_PATH=		${KDE_PREFIX}/lib/security/pam_kwallet5.so
 
 kde-kwin_PORT=			x11-wm/plasma${_KDE_VERSION}-kwin
 kde-kwin_PATH=			${KDE_PREFIX}/bin/kwin_x11
@@ -740,18 +738,14 @@ kde-libksysguard_LIB6=		libKSysGuardSystemStats.so
 kde-libksysguard_LIB=		${kde-libksysguard_LIB${_KDE_VERSION}}
 
 kde-milou_PORT=			deskutils/plasma${_KDE_VERSION}-milou
-kde-milou_PATH5=			${KDE_PREFIX}/lib/libmilou.so.5
-kde-milou_PATH6=		${QT_QMLDIR}/org/kde/milou/libmilouqmlplugin.so
-kde-milou_PATH=			${kde-milou_PATH${_KDE_VERSION}}
+kde-milou_PATH=		${QT_QMLDIR}/org/kde/milou/libmilouqmlplugin.so
 
 kde-ocean-sound-theme_PORT=	audio/plasma${_KDE_VERSION}-ocean-sound-theme
 kde-ocean-sound-theme_PATH=	${KDE_PREFIX}/share/sounds/ocean/index.theme
 kde-ocean-sound-theme_TYPE=	run
 
 kde-oxygen_PORT=		x11-themes/plasma${_KDE_VERSION}-oxygen
-kde-oxygen_PATH5=		${QT_PLUGINDIR}/styles/oxygen.so
-kde-oxygen_PATH6=		${QT_PLUGINDIR}/kstyle_config/kstyle_oxygen_config.so
-kde-oxygen_PATH=		${kde-oxygen_PATH${_KDE_VERSION}}
+kde-oxygen_PATH=		${QT_PLUGINDIR}/kstyle_config/kstyle_oxygen_config.so
 
 kde-plasma-browser-integration_PORT=	www/plasma${_KDE_VERSION}-plasma-browser-integration
 kde-plasma-browser-integration_PATH=	${KDE_PREFIX}/bin/plasma-browser-integration-host
@@ -760,9 +754,7 @@ kde-plasma-desktop_PORT=	x11/plasma${_KDE_VERSION}-plasma-desktop
 kde-plasma-desktop_PATH=	${KDE_PREFIX}/bin/kaccess
 
 kde-plasma-disks_PORT=		sysutils/plasma${_KDE_VERSION}-plasma-disks
-kde-plasma-disks_PATH5=		${KDE_PREFIX}/lib/libexec/kauth/kded-smart-helper
-kde-plasma-disks_PATH6=		${KDE_PREFIX}/lib/libexec/kf6/kauth/kded-smart-helper
-kde-plasma-disks_PATH=		${kde-plasma-disks_PATH${_KDE_VERSION}}
+kde-plasma-disks_PATH=		${KDE_PREFIX}/lib/libexec/kf6/kauth/kded-smart-helper
 
 kde-plasma-integration_PORT=	x11/plasma${_KDE_VERSION}-plasma-integration
 kde-plasma-integration_PATH=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme6.so
@@ -794,9 +786,7 @@ kde-systemmonitor_PATH=		${KDE_PREFIX}/bin/plasma-systemmonitor
 kde-systemmonitor_TYPE=		run
 
 kde-systemsettings_PORT=	sysutils/plasma${_KDE_VERSION}-systemsettings
-kde-systemsettings_PATH5=	${KDE_PREFIX}/bin/systemsettings5
-kde-systemsettings_PATH6=	${KDE_PREFIX}/bin/systemsettings
-kde-systemsettings_PATH=	${kde-systemsettings_PATH${_KDE_VERSION}}
+kde-systemsettings_PATH=	${KDE_PREFIX}/bin/systemsettings
 
 kde-xdg-desktop-portal-kde_PORT=	deskutils/plasma${_KDE_VERSION}-xdg-desktop-portal-kde
 kde-xdg-desktop-portal-kde_PATH=	${KDE_PREFIX}/lib/libexec/xdg-desktop-portal-kde
