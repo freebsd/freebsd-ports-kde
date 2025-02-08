@@ -365,6 +365,7 @@ _USE_KDE6_ALL=		ecm colorscheme \
 			kirigami-addons \
 			akonadi \
 			kpublictransport \
+			libkcddb \
 			libkdegames \
 			libksane \
 			baloo-widgets \
@@ -966,7 +967,7 @@ kde-kate_PORT=			editors/kate
 kde-kate_PATH=			${QT_PLUGINDIR}/ktexteditor/katebacktracebrowserplugin.so
 
 kde-libkcddb_PORT=		audio/libkcddb
-kde-libkcddb_LIB=		libKF${_KDE_VERSION}Cddb.so
+kde-libkcddb_LIB=		libKCddb${_KDE_VERSION}.so
 
 kde-libkcompactdisc_PORT=	audio/libkcompactdisc
 kde-libkcompactdisc_LIB=	libKF${_KDE_VERSION}CompactDisc.so
