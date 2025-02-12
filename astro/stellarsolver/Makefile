@@ -1,5 +1,5 @@
 PORTNAME=	stellarsolver
-DISTVERSION=	2.5
+DISTVERSION=	2.6
 CATEGORIES=	astro
 
 MAINTAINER=	acm@FreeBSD.org
@@ -12,13 +12,13 @@ LIB_DEPENDS=	libcfitsio.so:astro/cfitsio \
 		libgsl.so:math/gsl \
 		libwcs.so:astro/wcslib
 
-USES=		cmake desktop-file-utils iconv ninja qt:5 pkgconfig
-USE_QT=		buildtools concurrent core gui qmake:build network widgets
+USES=		cmake desktop-file-utils iconv ninja qt:6 pkgconfig
+USE_QT=		base
 USE_GITHUB=	yes
 GH_ACCOUNT=	rlancaste
 
 USE_LDCONFIG=	yes
 
-CMAKE_ARGS+=	-DBUILD_BATCH_SOLVER=on
+CMAKE_ARGS+=	-DBUILD_BATCH_SOLVER=on -DNEED_DECLARE_QSORT_R=off
 
 .include <bsd.port.mk>
