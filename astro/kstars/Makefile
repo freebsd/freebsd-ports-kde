@@ -23,23 +23,22 @@ BUILD_DEPENDS=	xplanet:astro/xplanet
 RUN_DEPENDS=	xplanet:astro/xplanet
 
 USES=		cmake compiler:c++11-lib desktop-file-utils eigen:3 \
-		gettext gnome kde:5 localbase:ldflags pkgconfig qt:5 tar:xz xorg
+		gettext gnome kde:6 localbase:ldflags pkgconfig qt:6 tar:xz xorg
 USE_GNOME=	glib20
 USE_KDE=	attica auth bookmarks codecs completion config configwidgets\
 		coreaddons crash dbusaddons guiaddons i18n \
-		iconthemes init itemviews jobwidgets kio newstuff notifications \
+		iconthemes itemviews jobwidgets kio newstuff notifications \
 		notifyconfig parts plotting service solid texteditor \
 		widgetsaddons windowsystem xmlgui \
 		doctools:build ecm:build
-USE_QT=		concurrent core datavis3d dbus declarative gui multimedia \
-		network opengl printsupport sql svg testlib websockets widgets \
-		xml \
-		buildtools:build qmake:build
+USE_QT=		datavis3d declarative multimedia \
+		svg websockets
 USE_XORG=	x11
 
 # Requires devel/indi >= 2.0.0 which is not in the ports tree yet. KStars builds
 # fine with INDI 2.0.3, but support for the INDI 2.0 API in astro/phd2 and
 # astro/stellarium as of 2023-08-10 appear to be works in progress.
 CMAKE_ON=	CMAKE_DISABLE_FIND_PACKAGE_INDI
+CMAKE_OFF=	BUILD_QT5
 
 .include <bsd.port.mk>
