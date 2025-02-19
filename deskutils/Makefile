@@ -154,6 +154,7 @@
     SUBDIR += kruler
     SUBDIR += ktimetracker
     SUBDIR += kuserfeedback
+    SUBDIR += kweathercore
     SUBDIR += latte-dock
     SUBDIR += lazycli
     SUBDIR += libcprime
