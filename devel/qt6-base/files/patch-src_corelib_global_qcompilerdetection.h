@@ -5,9 +5,9 @@ error: use of the 'nodiscard' attribute is a C++20 extension
 
 https://github.com/llvm/llvm-project/issues/32865
 
---- src/corelib/global/qcompilerdetection.h.orig	2024-11-14 11:02:40 UTC
+--- src/corelib/global/qcompilerdetection.h.orig	2025-02-19 13:05:34 UTC
 +++ src/corelib/global/qcompilerdetection.h
-@@ -959,7 +959,7 @@
+@@ -961,7 +961,7 @@
  #  define Q_REQUIRED_RESULT [[nodiscard]]
  #endif
  

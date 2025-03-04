@@ -12,7 +12,7 @@
 
 PORTNAME?=	webengine
 DISTVERSION=	${QT6_VERSION}
-PORTREVISION?=	1 # Master port for print/qt6-pdf. Please keep this line.
+PORTREVISION?=	0 # Master port for print/qt6-pdf. Please keep this line.
 CATEGORIES?=	www
 PKGNAMEPREFIX=	qt6-
 
@@ -49,6 +49,7 @@ LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
 		libavcodec.so:multimedia/ffmpeg \
 		libdbus-1.so:devel/dbus \
 		libdrm.so:graphics/libdrm \
+		libepoll-shim.so:devel/libepoll-shim \
 		libevent.so:devel/libevent \
 		libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -62,6 +63,7 @@ LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
 		libre2.so:devel/re2 \
 		libsnappy.so:archivers/snappy \
 		libtiff.so:graphics/tiff \
+		libudev.so:devel/libudev-devd \
 		libvpx.so:multimedia/libvpx \
 		libwebp.so:graphics/webp
 
@@ -74,6 +76,9 @@ USE_XORG+=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 
 CMAKE_ON+=	QT_FEATURE_qtwebengine_build
 CMAKE_OFF+=	QT_FEATURE_qtpdf_build
+
+# FIXME: Reg. 6.9.0. <sys/epoll.h> not found. This should be in the build system.
+CFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
 
 SYS_LIBS=	freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus
 .endif
