@@ -232,6 +232,7 @@ include/thrift/lib/cpp2/async/HeaderServerChannel.h
 include/thrift/lib/cpp2/async/HibernatingRequestChannel.h
 include/thrift/lib/cpp2/async/Interaction.h
 include/thrift/lib/cpp2/async/InteractionOverloadPolicy.h
+include/thrift/lib/cpp2/async/InterceptorFrameworkMetadata.h
 include/thrift/lib/cpp2/async/MessageChannel.h
 include/thrift/lib/cpp2/async/MultiplexAsyncProcessor.h
 include/thrift/lib/cpp2/async/PooledRequestChannel.h
@@ -263,7 +264,6 @@ include/thrift/lib/cpp2/async/SinkBridgeUtil.h
 include/thrift/lib/cpp2/async/StreamCallbacks.h
 include/thrift/lib/cpp2/async/TAsyncTransportHandler.h
 include/thrift/lib/cpp2/async/TerminateInteractionOverloadPolicy.h
-include/thrift/lib/cpp2/async/ThreadBoundAdaptorChannel.h
 include/thrift/lib/cpp2/async/TwoWayBridge.h
 include/thrift/lib/cpp2/async/metadata/CursorBasedRequestRpcMetadataAdapter.h
 include/thrift/lib/cpp2/async/metadata/RequestRpcMetadataAdapter.h
@@ -501,6 +501,7 @@ include/thrift/lib/cpp2/server/overload/QpsOverloadChecker.h
 include/thrift/lib/cpp2/server/overload/QueueConcurrencyOverloadChecker.h
 include/thrift/lib/cpp2/server/peeking/PeekingManager.h
 include/thrift/lib/cpp2/server/peeking/TLSHelper.h
+include/thrift/lib/cpp2/server/test/RequestPileTestUtils.h
 include/thrift/lib/cpp2/server/test/util/MockServerConfigs.h
 include/thrift/lib/cpp2/test/Matcher.h
 include/thrift/lib/cpp2/test/MockCpp2ConnContext.h
@@ -671,7 +672,6 @@ include/thrift/lib/py3/client_wrapper.h
 include/thrift/lib/py3/clientcallbacks.h
 include/thrift/lib/py3/exceptions.h
 include/thrift/lib/py3/serializer.h
-include/thrift/lib/py3/server.h
 include/thrift/lib/py3/stream.h
 include/thrift/lib/py3/test/BinaryTypes.h
 include/thrift/lib/py3/test/cpp_handler.h
@@ -696,6 +696,7 @@ include/thrift/lib/python/client/test/http2_helper.h
 include/thrift/lib/python/flags.h
 include/thrift/lib/python/server/PythonAsyncProcessor.h
 include/thrift/lib/python/server/PythonAsyncProcessorFactory.h
+include/thrift/lib/python/server/event_handler.h
 include/thrift/lib/python/server/flagged/EnableResourcePoolsForPython.h
 include/thrift/lib/python/server/flagged/RcAwareTaskPatch.h
 include/thrift/lib/python/server/flagged/test/EnableResourcePoolsForPythonTest.h

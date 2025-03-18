@@ -1,7 +1,6 @@
 PORTNAME=	onnxruntime
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.20.2
-PORTREVISION=	1
+DISTVERSION=	1.21.0
 CATEGORIES=	misc # machine-learning
 DIST_SUBDIR=	${PORTNAME}
 
@@ -13,6 +12,7 @@ WWW=		https://onnxruntime.ai/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_armv7=	compilation fails: error: no member named 'linux_id' in 'cpuinfo_processor', see https://github.com/microsoft/onnxruntime/issues/23181
 BROKEN_aarch64=	compilation fails: error: no member named 'linux_id' in 'cpuinfo_processor', see https://github.com/microsoft/onnxruntime/issues/23181
 BROKEN_i386=	compilation fails: error: requested alignment is less than minimum alignment of 8 for type 'google::protobuf::internal::ThreadSafeArena::CacheAlignedLifecycleIdGenerator'
 

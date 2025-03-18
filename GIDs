@@ -306,7 +306,7 @@ readarr:*:362:
 victoria-logs:*:363:
 elog:*:364:
 gotify:*:365:
-# free: 366
+opengist:*:366:
 # free: 367
 # free: 368
 # free: 369
@@ -747,7 +747,7 @@ clickhouse:*:800:
 # free: 803
 # free: 804
 # free: 805
-# free: 806
+act_runner:*:806:
 bosun:*:807:
 clixon:*:808:
 # free: 809

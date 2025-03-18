@@ -557,6 +557,7 @@
     SUBDIR += pg_repack
     SUBDIR += pg_similarity
     SUBDIR += pg_stat_kcache
+    SUBDIR += pg_store_plans
     SUBDIR += pg_tileserv
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -575,6 +576,7 @@
     SUBDIR += pgpool-II-43
     SUBDIR += pgpool-II-44
     SUBDIR += pgpool-II-45
+    SUBDIR += pgpool-II-46
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
