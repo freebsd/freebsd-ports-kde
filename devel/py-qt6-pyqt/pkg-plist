@@ -121,6 +121,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qjsonarray.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qjsondocument.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qjsonobject.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qjsonparseerror.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qjsonvalue.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qlibrary.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtCore/qlibraryinfo.sip
@@ -275,6 +276,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qfontdatabase.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qfontinfo.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qfontmetrics.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qfontvariableaxis.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qgenericmatrix.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qglyphrun.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qguiapplication.sip
@@ -300,6 +302,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpaintengine.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpainter.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpainterpath.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpainterstateguard.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpalette.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpdfoutputintent.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpdfwriter.sip
