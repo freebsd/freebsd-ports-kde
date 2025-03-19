@@ -3787,6 +3787,7 @@
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/java/com/example/qtabstractitemmodel_java/MyDataModel.java
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/drawable/ic_launcher_background.xml
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/drawable/ic_launcher_foreground.xml
+%%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/layout-land/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/layout/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
 %%QT_EXAMPLEDIR%%/platforms/android/models/qtabstractitemmodel_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
@@ -3874,6 +3875,7 @@
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/drawable/ic_launcher_foreground.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/drawable/switch_thumb.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/drawable/switch_track.xml
+%%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/layout-land/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/layout/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_java/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
@@ -3916,6 +3918,7 @@
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/drawable/ic_launcher_foreground.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/drawable/switch_thumb.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/drawable/switch_track.xml
+%%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/layout-land/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/layout/activity_main.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
 %%QT_EXAMPLEDIR%%/platforms/android/qtquickview_kotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml

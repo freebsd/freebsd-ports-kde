@@ -1,4 +1,4 @@
---- src/core/CMakeLists.txt.orig	2025-02-21 12:29:33 UTC
+--- src/core/CMakeLists.txt.orig	2025-03-09 19:36:47 UTC
 +++ src/core/CMakeLists.txt
 @@ -21,7 +21,7 @@ add_subdirectory(tools/qwebengine_convert_dict)
  #   TOOLCHAIN SETUP
@@ -23,19 +23,19 @@
          )
  
 -        extend_gn_target(${buildGn} CONDITION LINUX AND QT_FEATURE_opengl
-+        extend_gn_target(${buildGn} CONDITION LINUX OR FREEBSD AND QT_FEATURE_opengl
++        extend_gn_target(${buildGn} CONDITION (LINUX OR FREEBSD) AND QT_FEATURE_opengl
              SOURCES
                  ozone/gl_helper.cpp ozone/gl_helper.h
          )
  
--        extend_gn_target(${buildGn} CONDITION LINUX AND QT_FEATURE_opengl AND QT_FEATURE_webengine_ozone_x11
-+        extend_gn_target(${buildGn} CONDITION LINUX OR FREEBSD AND QT_FEATURE_opengl AND QT_FEATURE_webengine_ozone_x11
+-        extend_gn_target(${buildGn} CONDITION LINUX AND QT_FEATURE_opengl AND QT_FEATURE_webengine_ozone_x11 AND QT_FEATURE_xcb_glx_plugin
++        extend_gn_target(${buildGn} CONDITION (LINUX OR FREEBSD) AND QT_FEATURE_opengl AND QT_FEATURE_webengine_ozone_x11 AND QT_FEATURE_xcb_glx_plugin
              SOURCES
                  ozone/glx_helper.cpp ozone/glx_helper.h
          )
  
 -        extend_gn_target(${buildGn} CONDITION LINUX AND QT_FEATURE_opengl AND QT_FEATURE_egl
-+        extend_gn_target(${buildGn} CONDITION LINUX OR FREEBSD AND QT_FEATURE_opengl AND QT_FEATURE_egl
++        extend_gn_target(${buildGn} CONDITION (LINUX OR FREEBSD) AND QT_FEATURE_opengl AND QT_FEATURE_egl
              SOURCES
                  ozone/egl_helper.cpp ozone/egl_helper.h
          )

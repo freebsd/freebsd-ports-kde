@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/content/app/content_main_runner_impl.cc.orig	2025-02-21 12:29:33 UTC
+--- src/3rdparty/chromium/content/app/content_main_runner_impl.cc.orig	2025-03-09 19:36:47 UTC
 +++ src/3rdparty/chromium/content/app/content_main_runner_impl.cc
 @@ -147,18 +147,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
@@ -122,7 +122,7 @@
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1167,6 +1194,11 @@ NO_STACK_PROTECTOR int ContentMainRunnerImpl::Run() {
+@@ -1169,6 +1196,11 @@ NO_STACK_PROTECTOR int ContentMainRunnerImpl::Run() {
    content_main_params_.reset();
  
    RegisterMainThreadFactories();

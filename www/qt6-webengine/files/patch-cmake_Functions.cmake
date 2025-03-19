@@ -1,4 +1,4 @@
---- cmake/Functions.cmake.orig	2025-02-21 12:29:33 UTC
+--- cmake/Functions.cmake.orig	2025-03-09 19:36:47 UTC
 +++ cmake/Functions.cmake
 @@ -136,7 +136,7 @@ function(add_linker_options target buildDir completeSt
      set(libs_rsp "${buildDir}/${ninjaTarget}_libs.rsp")
@@ -18,7 +18,7 @@
      else()
          message(DEBUG "Unrecognized OS")
      endif()
-@@ -608,7 +610,7 @@ macro(append_build_type_setup)
+@@ -612,7 +614,7 @@ macro(append_build_type_setup)
  
      extend_gn_list(gnArgArg
          ARGS enable_precompiled_headers
@@ -27,7 +27,7 @@
      )
      extend_gn_list(gnArgArg
          ARGS dcheck_always_on
-@@ -700,7 +702,7 @@ macro(append_compiler_linker_sdk_setup)
+@@ -704,7 +706,7 @@ macro(append_compiler_linker_sdk_setup)
                  use_libcxx=true
              )
          endif()
@@ -36,7 +36,7 @@
              extend_gn_list(gnArgArg ARGS use_libcxx
                  CONDITION QT_FEATURE_stdlib_libcpp
              )
-@@ -741,7 +743,7 @@ macro(append_compiler_linker_sdk_setup)
+@@ -745,7 +747,7 @@ macro(append_compiler_linker_sdk_setup)
          )
      endif()
      get_gn_arch(cpu ${TEST_architecture_arch})
@@ -45,7 +45,7 @@
  
          extend_gn_list_cflag(gnArgArg
              ARG arm_tune
-@@ -846,7 +848,7 @@ macro(append_toolchain_setup)
+@@ -850,7 +852,7 @@ macro(append_toolchain_setup)
          endif()
          unset(host_cpu)
          unset(target_cpu)
@@ -54,7 +54,7 @@
          get_gn_arch(cpu ${TEST_architecture_arch})
          list(APPEND gnArgArg
              custom_toolchain="${buildDir}/target_toolchain:target"
-@@ -987,6 +989,20 @@ function(add_gn_build_artifacts_to_target)
+@@ -991,6 +993,20 @@ function(add_gn_build_artifacts_to_target)
              set_target_properties(${arg_CMAKE_TARGET} PROPERTIES
                  LINK_DEPENDS ${arg_BUILDDIR}/${config}/${arch}/${arg_NINJA_STAMP}
              )
