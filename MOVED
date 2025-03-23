@@ -1427,7 +1427,6 @@ devel/p5-Goo-Canvas|devel/p5-Goo-Canvas2|2022-06-24|Obsolete use devel/p5-Goo-Ca
 graphics/goocanvas|graphics/goocanvas3|2022-06-24|Obsolete use graphics/goocanvas3
 x11-toolkits/tepl|x11-toolkits/tepl6|2022-06-25|Obsolete use x11-toolkits/tepl6
 lang/cmucl||2022-06-27|Has expired: Not supported upstream since 2017 and broken since FreeBSD 12.1
-devel/qbs||2022-06-27|Has expired: Abandoned and not working with modern clang
 lang/cmucl-extra||2022-06-27|Has expired: lang/cmucl is not supported upstream since 2017 and broken since FreeBSD 12.1
 security/protonvpn-cli||2022-06-27|Has expired: This version is deprecated and unsupported upstream. The port needs an update, which would require a fair amount of effort. Use OpenVPN or Wireguard with configuration files provided by ProtonVPN instead
 sysutils/firstboot-growfs||2022-06-27|Has expired: A better version is available on all FreeBSD version
@@ -4208,3 +4207,11 @@ net-im/talkatu||2025-03-10|Has expired: Upstream has switched to mercurial and u
 textproc/py-towncrier23|textproc/py-towncrier|2025-03-14|Remove obsoleted port. Use textproc/py-towncrier instead
 net/wifi-firmware-mtw-kmod|net/wifi-firmware-mt7601u-kmod|2025-03-14|Fixed to match firmware name
 devel/ccrtp||2025-03-16|Has expired: No active development in years and no users in tree
+textproc/rubygem-cucumber-gherkin29|textproc/rubygem-cucumber-gherkin|2025-03-19|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+devel/utf8cpp3|devel/utf8cpp|2025-03-19|Remove obsoleted port. Use devel/utf8cpp instead
+devel/rubygem-flipper026|devel/rubygem-flipper-gitlab|2025-03-19|Please use devel/rubygem-flipper-gitlab instead
+devel/py-pyro||2025-03-21|Has expired: Upstream development stopped, not compatible with py311, use pyro5 instead
+devel/py-serpent||2025-03-21|Has expired: Used exclusively by now deprecated devel/py-pyro
+devel/py-eggtestinfo||2025-03-21|Has expired: Was a requirement for now removed zope port
+www/rubygem-gitlab-gollum-lib|www/rubygem-gollum-lib|2025-03-22|Use www/rubygem-gollum-lib instead
+www/sogo-activesync|www/sogo|2025-03-22|Use sogo-mysqlactivesync or sogo-pgsqlactivesync flavors instead

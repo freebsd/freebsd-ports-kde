@@ -1,5 +1,6 @@
 PORTNAME=	libxkbcommon
 PORTVERSION=	1.8.1
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
@@ -24,6 +25,8 @@ MESON_ARGS=	-Denable-docs=false \
 CPE_VENDOR=	xkbcommon
 SHEBANG_FILES=	test/xkeyboard-config-test.py.in \
 		test/*.py
+
+HAS_SYMBOL_VERSION=	${PREFIX}/lib/libxkbregistry.so.0.8.1
 
 OPTIONS_DEFINE=	EVDEV WAYLAND X11
 OPTIONS_DEFAULT=EVDEV WAYLAND X11
