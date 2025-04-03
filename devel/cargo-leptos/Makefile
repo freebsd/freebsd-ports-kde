@@ -1,6 +1,6 @@
 PORTNAME=	cargo-leptos
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.2.31
+DISTVERSION=	0.2.32
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,6 +11,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN_armv7=	compilation fails: rustc-LLVM ERROR: out of memory
+BROKEN_i386=	compilation fails: undefined symbol: __atomic_fetch_add_8 (-march=i586 didn't help)
 
 BUILD_DEPENDS=	gmake:devel/gmake
 LIB_DEPENDS=	libssh2.so:security/libssh2

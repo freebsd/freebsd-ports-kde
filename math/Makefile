@@ -637,6 +637,7 @@
     SUBDIR += octave-forge-outliers
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pde1dm
+    SUBDIR += octave-forge-piqp
     SUBDIR += octave-forge-pkg-octave-doc
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
@@ -910,7 +911,6 @@
     SUBDIR += proxsuite
     SUBDIR += psurface
     SUBDIR += py-CyLP
-    SUBDIR += py-Diofant
     SUBDIR += py-GridDataFormats
     SUBDIR += py-MutatorMath
     SUBDIR += py-POT
@@ -1036,7 +1036,6 @@
     SUBDIR += py-nevergrad
     SUBDIR += py-nlopt
     SUBDIR += py-numba-stats
-    SUBDIR += py-numdifftools
     SUBDIR += py-numexpr
     SUBDIR += py-numpoly
     SUBDIR += py-numpy
@@ -1079,7 +1078,6 @@
     SUBDIR += py-pyreadstat
     SUBDIR += py-pyrr
     SUBDIR += py-pysmt
-    SUBDIR += py-pystan
     SUBDIR += py-pysym
     SUBDIR += py-pytanque
     SUBDIR += py-pytensor

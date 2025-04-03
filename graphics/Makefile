@@ -46,6 +46,7 @@
     SUBDIR += acidwarp-sdl
     SUBDIR += aeskulap
     SUBDIR += agg
+    SUBDIR += agg26
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
@@ -341,6 +342,7 @@
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
+    SUBDIR += hs-tart
     SUBDIR += hugin
     SUBDIR += hyprgraphics
     SUBDIR += icat
@@ -985,7 +987,6 @@
     SUBDIR += py-pydot
     SUBDIR += py-pydotplus
     SUBDIR += py-pyepsg
-    SUBDIR += py-pygal
     SUBDIR += py-pyganim
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos

@@ -68,7 +68,6 @@
     SUBDIR += caesarcipher
     SUBDIR += caldera
     SUBDIR += caldera-ot
-    SUBDIR += caldera4
     SUBDIR += calife
     SUBDIR += cardpeek
     SUBDIR += cargo-audit
@@ -215,7 +214,6 @@
     SUBDIR += heaan
     SUBDIR += headscale
     SUBDIR += heimdal
-    SUBDIR += heimdal-devel
     SUBDIR += helib
     SUBDIR += hexl
     SUBDIR += hidden-lake
@@ -1036,7 +1034,6 @@
     SUBDIR += py-python-cas
     SUBDIR += py-python-gnupg
     SUBDIR += py-python-gvm
-    SUBDIR += py-python-jose
     SUBDIR += py-python-nss
     SUBDIR += py-python-openid
     SUBDIR += py-python-pam

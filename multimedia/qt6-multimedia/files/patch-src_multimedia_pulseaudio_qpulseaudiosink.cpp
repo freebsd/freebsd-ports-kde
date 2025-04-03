@@ -1,3 +1,5 @@
+Fix 32-bit builds with PULSEAUDIO option.
+
 --- src/multimedia/pulseaudio/qpulseaudiosink.cpp.orig	2025-02-20 14:13:07 UTC
 +++ src/multimedia/pulseaudio/qpulseaudiosink.cpp
 @@ -496,8 +496,8 @@ qint64 QPulseAudioSink::write(const char *data, qint64

@@ -974,7 +974,6 @@
     SUBDIR += powerman
     SUBDIR += powermon
     SUBDIR += pp
-    SUBDIR += pprotectd
     SUBDIR += prips
     SUBDIR += procenv
     SUBDIR += process-viewer
@@ -1029,7 +1028,6 @@
     SUBDIR += py-filelock
     SUBDIR += py-focker
     SUBDIR += py-glances
-    SUBDIR += py-google-compute-engine
     SUBDIR += py-hared
     SUBDIR += py-hcloud
     SUBDIR += py-honcho
@@ -1397,6 +1395,7 @@
     SUBDIR += tuckr
     SUBDIR += tuptime
     SUBDIR += turbostat
+    SUBDIR += tvterm
     SUBDIR += tw_cli
     SUBDIR += twa-kmod
     SUBDIR += twmn

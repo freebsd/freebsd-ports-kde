@@ -35,6 +35,7 @@
     SUBDIR += ethash
     SUBDIR += go-ethereum
     SUBDIR += gtk-gnutella
+    SUBDIR += hostd
     SUBDIR += intermodal
     SUBDIR += jackett
     SUBDIR += jigdo
@@ -88,6 +89,7 @@
     SUBDIR += qbittorrent
     SUBDIR += radarr
     SUBDIR += readarr
+    SUBDIR += renterd
     SUBDIR += reticulum
     SUBDIR += retroshare
     SUBDIR += rslsync
@@ -104,7 +106,7 @@
     SUBDIR += twitch-tui
     SUBDIR += udpt
     SUBDIR += uhub
-    SUBDIR += vuze
+    SUBDIR += walletd
     SUBDIR += warpinator
     SUBDIR += xbt
     SUBDIR += xmrig

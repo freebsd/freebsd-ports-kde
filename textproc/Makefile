@@ -472,7 +472,6 @@
     SUBDIR += lucene5
     SUBDIR += luceneplusplus
     SUBDIR += lv-aspell
-    SUBDIR += m17n-im-config
     SUBDIR += makefaq
     SUBDIR += makepatch
     SUBDIR += man2html
@@ -706,7 +705,6 @@
     SUBDIR += p5-PDF-Reuse
     SUBDIR += p5-PDF-Table
     SUBDIR += p5-PDF-Tiny
-    SUBDIR += p5-PDF-WebKit
     SUBDIR += p5-PDF-Writer
     SUBDIR += p5-POD2-Base
     SUBDIR += p5-POE-Filter-XML
@@ -1348,7 +1346,6 @@
     SUBDIR += py-charset-normalizer
     SUBDIR += py-chevron
     SUBDIR += py-citeproc-py
-    SUBDIR += py-citeproc-py-styles
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-cmarkgfm
@@ -1364,8 +1361,8 @@
     SUBDIR += py-dict2xml
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
-    SUBDIR += py-docstring-parser
     SUBDIR += py-docstring-to-markdown
+    SUBDIR += py-docstring_parser
     SUBDIR += py-docutils
     SUBDIR += py-docx-generator
     SUBDIR += py-docx2txt
@@ -1711,7 +1708,6 @@
     SUBDIR += py-wordcloud
     SUBDIR += py-wordnet
     SUBDIR += py-wordninja
-    SUBDIR += py-wstools
     SUBDIR += py-wtf-peewee
     SUBDIR += py-wtforms
     SUBDIR += py-xhtml2pdf
@@ -1909,7 +1905,6 @@
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
     SUBDIR += rubygem-nokogiri-diff
-    SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opensearch-ruby-gitlab
     SUBDIR += rubygem-opml
@@ -2114,6 +2109,7 @@
     SUBDIR += tokay
     SUBDIR += tokyodystopia
     SUBDIR += toml-f
+    SUBDIR += tomlq
     SUBDIR += tr-aspell
     SUBDIR += trang
     SUBDIR += translate-shell

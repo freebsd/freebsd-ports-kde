@@ -5,6 +5,59 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20250402:
+  AFFECTS: users of devel/glib20 and devel/gobject-introspection building outside of Poudriere
+  AUTHOR: arrowd@FreeBSD.org
+
+  New versions of glib started to require gobject-introspection as a build
+  dependency, while gobject-introspection requires glib to build. This forms a
+  dependency cycle that is dealt with by introducing the @bootstrap flavor for
+  mentioned ports. This solution is suggested by the upstream as well, see
+  https://discourse.gnome.org/t/dealing-with-glib-and-gobject-introspection-circular-dependency/18701
+
+  When building devel/glib20 in Poudriere no manual intervention is required.
+  The devel/glib20@bootstrap gets built first and provides for
+  devel/gobject-introspection@bootstrap. This in turn provides for a normal
+  devel/glib20 build, which finally fulfills a dependency for normal devel/gobject-introspection
+
+  Users that are building outside of the isolated environments would need to
+  manually resolve the conflict when installing devel/glib20 for the first time.
+  At some point during the build the installed *-boostrap packages will prevent
+  a corresponding normal package from installing. Users would need to run
+
+  pkg remove glib-bootstrap
+
+  and later
+
+  pkg remove gobject-introspection-bootstrap
+
+  to proceed with installation. Luckily, this should not be required for the
+  further upgrades, because the installed packages would directly provide for
+  the being built ones.
+
+20250327:
+  AFFECTS: users of thunderbird
+  AUTHOR: cmt@FreeBSD.org
+
+  The mail/thunderbird port switched to Thunderbird's new release train,
+  with frequent major releases (ca. 4-weeks-cycle). Users wanting to
+  stay with the 128-releases for now and the ESR releases in general
+  should switch to the mail/thunderbird-esr port.
+
+20250325:
+  AFFECTS: users of TeX*
+  AUTHOR: bofh@FreeBSD.org
+
+  TeX system has been updated to 2025 from 2024. Normal pkg upgrade or
+  portmaster -a should handle all the upgrade properly. In case not please
+  create a ticket or send a mail to tex@FreeBSD.org
+
+  Previously users have reported to delete texlive-texmf prior to
+  starting update, or pkg-static will indicate there is a conflict
+  during the upgrade of texlive-base :
+
+  # pkg remove texlive-texmf
+
 20250321:
   AFFECTS: users of mail/oama
   AUTHOR: nivit@FreeBSD.org

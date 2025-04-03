@@ -1,5 +1,6 @@
 PORTNAME=	emacs
 DISTVERSION=	31.0.50.20250315
+PORTREVISION=	1
 PORTEPOCH=	3
 CATEGORIES=	editors
 PKGNAMESUFFIX=	-devel
@@ -202,7 +203,7 @@ TREESITTER_LIB_DEPENDS=		libtree-sitter.so:devel/tree-sitter
 TREESITTER_CONFIGURE_WITH=	tree-sitter
 WEBP_LIB_DEPENDS=		libwebpdemux.so:graphics/webp
 WEBP_CONFIGURE_WITH=		webp
-XAW3D_LIB_DEPENDS=		libXaw3d.so:x11-toolkits/Xaw3d
+XAW3D_LIB_DEPENDS=		libXaw3d.so:x11-toolkits/libXaw3d
 XAW3D_CONFIGURE_ON=		--with-x-toolkit=athena
 XAW_USE=			XORG=xaw
 XAW_CONFIGURE_ON=		--with-x-toolkit=athena \
