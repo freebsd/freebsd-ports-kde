@@ -4300,3 +4300,11 @@ devel/appstream-qt@qt5||2025-04-03|Unflavorize; only Qt6 support is needed
 devel/appstream-qt@qt6|devel/appstream-qt|2025-04-03|Unflavorize; only Qt6 support is needed
 ports-mgmt/packagekit-qt@qt5||2025-04-03|Unflavorize; only Qt6 support is needed
 ports-mgmt/packagekit-qt@qt6|ports-mgmt/packagekit-qt|2025-04-03|Unflavorize; only Qt6 support is needed
+devel/rubygem-makara61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
+security/rubygem-pundit61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
+math/matlab-installer||2025-04-04|Has expired: Unmaintained, does not support recent Matlab
+sysutils/mcweject||2025-04-04|Has expired: Unmaintained, redundant to "cdcontrol eject"
+ports-mgmt/genplist||2025-04-04|Has expired: Unmaintained, obsoleted by "make makeplist"
+databases/rubygem-scenic61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
+devel/py-blist||2025-04-04|Has expired: Abandoned project, no consumers, no modern python support
+textproc/rubygem-case_transform61||2025-04-04|Has expired: Uses EOL version 6.1.X of Rails
