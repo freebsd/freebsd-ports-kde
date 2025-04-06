@@ -7,6 +7,7 @@
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauth1.sip
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauth1signature.sip
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauth2authorizationcodeflow.sip
+%%PYQT_SIPDIR%%/QtNetworkAuth/qoauth2deviceauthorizationflow.sip
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauthhttpserverreplyhandler.sip
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauthoobreplyhandler.sip
 %%PYQT_SIPDIR%%/QtNetworkAuth/qoauthurischemereplyhandler.sip

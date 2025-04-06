@@ -213,8 +213,6 @@
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-samegame-med-1.png
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-samegame-med-2.png
 %%QT_DOCDIR%%/qtdoc/images/qtquick-demo-stocqt.png
-%%QT_DOCDIR%%/qtdoc/images/qtquick-for-android-architecture.drawio.svg
-%%QT_DOCDIR%%/qtdoc/images/qtquick-for-android-comparisson.drawio.svg
 %%QT_DOCDIR%%/qtdoc/images/qtquick3D.png
 %%QT_DOCDIR%%/qtdoc/images/rhiarch.png
 %%QT_DOCDIR%%/qtdoc/images/robotarm-example.png
@@ -381,7 +379,6 @@
 %%QT_DOCDIR%%/qtdoc/qtpurchasing-iosclasses.html
 %%QT_DOCDIR%%/qtdoc/qtquick-debugging.html
 %%QT_DOCDIR%%/qtdoc/qtquick-deployment.html
-%%QT_DOCDIR%%/qtdoc/qtquick-for-android.html
 %%QT_DOCDIR%%/qtdoc/qtquick-performance.html
 %%QT_DOCDIR%%/qtdoc/qtquick-qml-runtime.html
 %%QT_DOCDIR%%/qtdoc/qtquick-usecase-animations.html

@@ -64,6 +64,7 @@
 %%QT_INCDIR%%/QtStateMachine/%%FULLVER%%/QtStateMachine/private/qsignaltransition_p.h
 %%QT_INCDIR%%/QtStateMachine/%%FULLVER%%/QtStateMachine/private/qstate_p.h
 %%QT_INCDIR%%/QtStateMachine/%%FULLVER%%/QtStateMachine/private/qstatemachine_p.h
+%%QT_INCDIR%%/QtStateMachine/%%FULLVER%%/QtStateMachine/private/qstatemachineglobal_p.h
 %%QT_INCDIR%%/QtStateMachine/QAbstractState
 %%QT_INCDIR%%/QtStateMachine/QAbstractTransition
 %%QT_INCDIR%%/QtStateMachine/QEventTransition
@@ -133,13 +134,13 @@ lib/cmake/Qt6Scxml/Qt6ScxmlTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Scxml/Qt6ScxmlTargets.cmake
 lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessAliasTargets.cmake
 lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessTargets.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalAdditionalTargetInfo.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalConfig.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalConfigVersion.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalConfigVersionImpl.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalTargets.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalVersionlessAliasTargets.cmake
-lib/cmake/Qt6ScxmlGlobal/Qt6ScxmlGlobalVersionlessTargets.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateAdditionalTargetInfo.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfig.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersion.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersionImpl.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateTargets.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessAliasTargets.cmake
+lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessTargets.cmake
 lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateAdditionalTargetInfo.cmake
 lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateConfig.cmake
 lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateConfigVersion.cmake
@@ -251,7 +252,7 @@ libdata/pkgconfig/Qt6StateMachine.pc
 libdata/pkgconfig/Qt6StateMachineQml.pc
 %%QT_LIBEXECDIR%%/qscxmlc
 %%QT_DATADIR%%/modules/Scxml.json
-%%QT_DATADIR%%/modules/ScxmlGlobal.json
+%%QT_DATADIR%%/modules/ScxmlGlobalPrivate.json
 %%QT_DATADIR%%/modules/ScxmlQml.json
 %%QT_DATADIR%%/modules/StateMachine.json
 %%QT_DATADIR%%/modules/StateMachineQml.json

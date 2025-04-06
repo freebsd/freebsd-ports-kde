@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2024-10-22 08:31:56 UTC
+--- src/3rdparty/chromium/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc.orig	2025-03-29 00:50:57 UTC
 +++ src/3rdparty/chromium/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
-@@ -6304,7 +6304,7 @@ void WebGLRenderingContextBase::TexImageHelperMediaVid
+@@ -6298,7 +6298,7 @@ void WebGLRenderingContextBase::TexImageHelperMediaVid
    constexpr bool kAllowZeroCopyImages = true;
  #endif
  

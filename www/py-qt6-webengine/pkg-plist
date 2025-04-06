@@ -24,6 +24,7 @@
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebenginepage.sip
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebenginepermission.sip
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebengineprofile.sip
+%%PYQT_SIPDIR%%/QtWebEngineCore/qwebengineprofilebuilder.sip
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebenginequotarequest.sip
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebengineregisterprotocolhandlerrequest.sip
 %%PYQT_SIPDIR%%/QtWebEngineCore/qwebenginescript.sip

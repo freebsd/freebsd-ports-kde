@@ -36,6 +36,7 @@
 %%PYQT_SIPDIR%%/QtGraphs/qscatterdataitem.sip
 %%PYQT_SIPDIR%%/QtGraphs/qscatterdataproxy.sip
 %%PYQT_SIPDIR%%/QtGraphs/qscatterseries.sip
+%%PYQT_SIPDIR%%/QtGraphs/qspline3dseries.sip
 %%PYQT_SIPDIR%%/QtGraphs/qsplineseries.sip
 %%PYQT_SIPDIR%%/QtGraphs/qsurface3dseries.sip
 %%PYQT_SIPDIR%%/QtGraphs/qsurfacedataitem.sip
