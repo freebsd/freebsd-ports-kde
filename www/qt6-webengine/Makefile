@@ -78,8 +78,7 @@ USE_XORG+=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 CMAKE_ON+=	QT_FEATURE_qtwebengine_build
 CMAKE_OFF+=	QT_FEATURE_qtpdf_build
 
-# FIXME: Reg. 6.9.0. <sys/epoll.h> not found. This should be in the build system.
-CFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
+CXXFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
 
 SYS_LIBS=	freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus
 .endif
@@ -140,12 +139,6 @@ SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON
 SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == i386 || ${ARCH} == armv7
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-32bit-compress_files_js
-.endif
-
 post-extract:
 	@${MKDIR} ${WRKSRC}/src/3rdparty/chromium/media/audio/sndio \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/freebsd \
@@ -185,4 +178,4 @@ post-install-DRIVER-on:
 
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
