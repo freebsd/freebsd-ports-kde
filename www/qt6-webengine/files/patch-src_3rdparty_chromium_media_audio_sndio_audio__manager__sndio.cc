@@ -35,7 +35,7 @@
 +static const int kMaxOutputStreams = 50;
 +
 +// Default sample rate for input and output streams.
-+static const int kDefaultSampleRate = 48000;
++static const int kDefaultSampleRateAMS = 48000;
 +
 +void AddDefaultDevice(AudioDeviceNames* device_names) {
 +  DCHECK(device_names->empty());
@@ -77,7 +77,7 @@
 +
 +  return AudioParameters(
 +      AudioParameters::AUDIO_PCM_LOW_LATENCY, ChannelLayoutConfig::Stereo(),
-+      kDefaultSampleRate, buffer_size);
++      kDefaultSampleRateAMS, buffer_size);
 +}
 +
 +AudioManagerSndio::AudioManagerSndio(std::unique_ptr<AudioThread> audio_thread,
@@ -130,7 +130,7 @@
 +  static const int kDefaultOutputBufferSize = 2048;
 +
 +  ChannelLayoutConfig channel_layout_config = ChannelLayoutConfig::Stereo();
-+  int sample_rate = kDefaultSampleRate;
++  int sample_rate = kDefaultSampleRateAMS;
 +  int buffer_size = kDefaultOutputBufferSize;
 +  if (input_params.IsValid()) {
 +    sample_rate = input_params.sample_rate();
