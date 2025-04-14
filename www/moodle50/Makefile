@@ -1,7 +1,7 @@
 PORTNAME=	moodle
-PORTVERSION=	4.3.12
+PORTVERSION=	5.0
 CATEGORIES=	www education
-MASTER_SITES=	https://packaging.moodle.org/stable403 \
+MASTER_SITES=	https://packaging.moodle.org/stable500/ \
 		LOCAL/wen
 PKGNAMESUFFIX=	${PKGORIGIN:T:S/moodle//}${PHP_PKGNAMESUFFIX}
 
@@ -11,18 +11,14 @@ WWW=		https://www.moodle.org/
 
 LICENSE=	GPLv3
 
-DEPRECATED=     EOLed upstream
-EXPIRATION_DATE=2025-04-30
-
-CONFLICTS=	moodle41-4.1.[0-9]* moodle44-4.4.[0-9]* \
-		moodle45-4.5.[0-9]* moodle50-5.0
+CONFLICTS=	moodle41-4.1.[0-9]* moodle43-4.3.[0-9]* moodle44-4.4.[0-9]* \
+		moodle45-4.5.[0-9]*
 
 USES=		cpe php:flavors tar:tgz
 USE_PHP=	ctype curl dom exif fileinfo filter gd \
 		iconv intl mbstring opcache \
 		session simplexml soap sodium tokenizer \
 		xml xmlreader xmlrpc zip zlib
-IGNORE_WITH_PHP=	83
 
 WRKSRC=		${WRKDIR}/moodle
 
