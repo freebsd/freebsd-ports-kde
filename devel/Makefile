@@ -345,6 +345,7 @@
     SUBDIR += buf
     SUBDIR += bugzilla44
     SUBDIR += bugzilla50
+    SUBDIR += bugzilla52
     SUBDIR += build
     SUBDIR += build2
     SUBDIR += buildkite-agent
@@ -696,6 +697,7 @@
     SUBDIR += eventxx
     SUBDIR += exercisix
     SUBDIR += exomizer
+    SUBDIR += expected
     SUBDIR += f77flow
     SUBDIR += fam
     SUBDIR += fastcrc
@@ -1551,12 +1553,10 @@
     SUBDIR += linux-rl9-elfutils-libs
     SUBDIR += linux-rl9-highway
     SUBDIR += linux-rl9-icu
-    SUBDIR += linux-rl9-libatomic
     SUBDIR += linux-rl9-libevent
     SUBDIR += linux-rl9-libgfortran
     SUBDIR += linux-rl9-libpciaccess
     SUBDIR += linux-rl9-libsigc++20
-    SUBDIR += linux-rl9-libsigsegv
     SUBDIR += linux-rl9-libsoup
     SUBDIR += linux-rl9-libthai
     SUBDIR += linux-rl9-libtool-ltdl
