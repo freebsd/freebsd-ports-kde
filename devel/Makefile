@@ -1636,6 +1636,7 @@
     SUBDIR += lua-luacheck
     SUBDIR += lua-luarocks
     SUBDIR += lua-lunit
+    SUBDIR += lua-lunitx
     SUBDIR += lua-mode
     SUBDIR += lua-posix
     SUBDIR += lua-pty
@@ -1718,6 +1719,7 @@
     SUBDIR += nanopb
     SUBDIR += nant
     SUBDIR += nasm
+    SUBDIR += nativefiledialog-extended
     SUBDIR += naturaldocs
     SUBDIR += ncc
     SUBDIR += ncnf
@@ -4016,7 +4018,6 @@
     SUBDIR += p5-subversion
     SUBDIR += p5-superclass
     SUBDIR += p5-syntax
-    SUBDIR += p5-threads
     SUBDIR += p5-threads-shared
     SUBDIR += p5-true
     SUBDIR += p5-uni-perl
@@ -7503,6 +7504,7 @@
     SUBDIR += rubygem-locale
     SUBDIR += rubygem-lockfile
     SUBDIR += rubygem-logger
+    SUBDIR += rubygem-logger-gitlab
     SUBDIR += rubygem-logger15
     SUBDIR += rubygem-logging
     SUBDIR += rubygem-logster
@@ -7862,9 +7864,9 @@
     SUBDIR += rubygem-sidekiq-bulk
     SUBDIR += rubygem-sidekiq-cron
     SUBDIR += rubygem-sidekiq-cron-rails70
+    SUBDIR += rubygem-sidekiq-gitlab
     SUBDIR += rubygem-sidekiq-scheduler
     SUBDIR += rubygem-sidekiq-unique-jobs
-    SUBDIR += rubygem-sidekiq72
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple-navigation

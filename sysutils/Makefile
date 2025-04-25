@@ -1437,7 +1437,6 @@
     SUBDIR += u-boot-orangepi-r1
     SUBDIR += u-boot-orangepi-zero
     SUBDIR += u-boot-orangepi-zero-plus
-    SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine-h64
     SUBDIR += u-boot-pine64
@@ -1450,6 +1449,7 @@
     SUBDIR += u-boot-quartz64-a
     SUBDIR += u-boot-quartz64-b
     SUBDIR += u-boot-riotboard
+    SUBDIR += u-boot-radxa-zero3
     SUBDIR += u-boot-rock-pi-4
     SUBDIR += u-boot-rock64
     SUBDIR += u-boot-rockpro64

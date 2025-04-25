@@ -293,6 +293,7 @@ usr/bin/yes
 usr/bin/zdump
 usr/lib/.build-id/00/28e554acd9c16064b12195dcc8dffd7caea925
 usr/lib/.build-id/00/8c49e4fa52d5c6b4421efe93a2e0a97b34953f
+usr/lib/.build-id/00/e9e02ed1f5eceff9fd22ce6b60614cff4923ac
 usr/lib/.build-id/01/04e60502be3b325202b17234c18be5ca38aa65
 usr/lib/.build-id/01/0d96c7cac4f3abbd6e7952a6501fce60c5a4f9
 usr/lib/.build-id/01/583f6240dd9b8816b13a961865f5300765f96f
@@ -567,6 +568,7 @@ usr/lib/.build-id/63/48faa7d1b1b21beeaaa05cf62d2bbee6b3a1a7
 usr/lib/.build-id/64/adcfaf67952bd02642c3f3684b3dbb44ed013e
 usr/lib/.build-id/65/0acf559cdf61bb308a900f38dc21cd8163ec51
 usr/lib/.build-id/65/124f7ea804a19f88b7abd135eb2c93f6006ec3
+usr/lib/.build-id/65/608143ad38c3f236e2266222c70a4800afc655
 usr/lib/.build-id/65/73d1886025155886992c2f734780bde0b5a004
 usr/lib/.build-id/66/20a0e0ccad20e81566c938cfc73b91a87787f1
 usr/lib/.build-id/66/380409f61b158fd9b3c78801410225ed9b231a
@@ -1371,6 +1373,8 @@ usr/lib64/libmenuw.so.6
 usr/lib64/libmenuw.so.6.2
 usr/lib64/libmount.so.1
 usr/lib64/libmount.so.1.1.0
+usr/lib64/libmpfr.so.6
+usr/lib64/libmpfr.so.6.1.0
 usr/lib64/libmtdev.so.1
 usr/lib64/libmtdev.so.1.0.0
 usr/lib64/libncurses.so.6
@@ -1403,6 +1407,8 @@ usr/lib64/libpcre2-posix.so.3
 usr/lib64/libpcre2-posix.so.3.0.2
 usr/lib64/libpopt.so.0
 usr/lib64/libpopt.so.0.0.1
+usr/lib64/libproxy.so.1
+usr/lib64/libproxy.so.1.0.0
 usr/lib64/libpsx.so.2
 usr/lib64/libpsx.so.2.48
 usr/lib64/libpthread.so.0
@@ -1699,6 +1705,8 @@ usr/share/dbus-1/services/org.gtk.GLib.PACRunner.service
 %%PORTDOCS%%usr/share/doc/libevdev/COPYING
 %%PORTDOCS%%usr/share/doc/libffi/README.md
 %%PORTDOCS%%usr/share/doc/libgudev/NEWS
+%%PORTDOCS%%usr/share/doc/libproxy/AUTHORS
+%%PORTDOCS%%usr/share/doc/libproxy/README
 %%PORTDOCS%%usr/share/doc/libsigsegv/AUTHORS
 %%PORTDOCS%%usr/share/doc/libsigsegv/NEWS
 %%PORTDOCS%%usr/share/doc/libsigsegv/README
@@ -1706,6 +1714,10 @@ usr/share/dbus-1/services/org.gtk.GLib.PACRunner.service
 %%PORTDOCS%%usr/share/doc/libverto/ChangeLog
 %%PORTDOCS%%usr/share/doc/libverto/NEWS
 %%PORTDOCS%%usr/share/doc/libverto/README
+%%PORTDOCS%%usr/share/doc/mpfr/BUGS
+%%PORTDOCS%%usr/share/doc/mpfr/NEWS
+%%PORTDOCS%%usr/share/doc/mpfr/PATCHES
+%%PORTDOCS%%usr/share/doc/mpfr/README
 %%PORTDOCS%%usr/share/doc/mtdev/COPYING
 %%PORTDOCS%%usr/share/doc/mtdev/README
 %%PORTDOCS%%usr/share/doc/ncurses-base/README
@@ -1826,6 +1838,8 @@ usr/share/licenses/libgcc/COPYING3.LIB
 usr/share/licenses/libgudev/COPYING
 usr/share/licenses/libmount/COPYING
 usr/share/licenses/libmount/COPYING.LGPL-2.1-or-later
+usr/share/licenses/libproxy/COPYING
+usr/share/licenses/libproxy/Copyright.txt
 usr/share/licenses/libselinux/LICENSE
 usr/share/licenses/libsepol/LICENSE
 usr/share/licenses/libsigsegv/COPYING
@@ -1836,6 +1850,8 @@ usr/share/licenses/libuuid/COPYING.BSD-3-Clause
 usr/share/licenses/libverto/COPYING
 usr/share/licenses/libzstd/COPYING
 usr/share/licenses/libzstd/LICENSE
+usr/share/licenses/mpfr/COPYING
+usr/share/licenses/mpfr/COPYING.LESSER
 usr/share/licenses/ncurses-base/COPYING
 usr/share/licenses/openssl-libs/LICENSE.txt
 usr/share/licenses/pcre/COPYING

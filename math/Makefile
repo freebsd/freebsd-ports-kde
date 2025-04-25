@@ -872,6 +872,7 @@
     SUBDIR += pari_nftables
     SUBDIR += pari_seadata
     SUBDIR += paritwine
+    SUBDIR += parmetis
     SUBDIR += parmgridgen
     SUBDIR += pcalc
     SUBDIR += pdal
@@ -1056,6 +1057,7 @@
     SUBDIR += py-pplpy
     SUBDIR += py-primecountpy
     SUBDIR += py-primme
+    SUBDIR += py-pwlf
     SUBDIR += py-py-find-1st
     SUBDIR += py-pyFFTW
     SUBDIR += py-pyaudi

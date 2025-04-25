@@ -1,6 +1,6 @@
 PORTNAME=	rl9
 PORTVERSION=	${LINUX_DIST_VER}
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	emulators linux
 PKGNAMEPREFIX=	linux_base-
 EXTRACT_ONLY=	${DISTFILES:N*${SRC_SUFX}*:Nf/filesystem-*:C/:[^:]+$//}
@@ -67,6 +67,7 @@ LIB_DISTNAMES=	bzip2-libs-${bzip2_ver} \
 		libgcc-${gcc_ver} \
 		libgudev-${libgudev_ver} \
 		libmount-${util_ver} \
+		libproxy-${libproxy_ver} \
 		libselinux-${selinux_ver} \
 		libsepol-${sepol_ver} \
 		libsigsegv-${libsigsegv_ver} \
@@ -75,6 +76,7 @@ LIB_DISTNAMES=	bzip2-libs-${bzip2_ver} \
 		libuuid-${util_ver} \
 		libverto-${libverto_ver} \
 		libzstd-${zstd_ver} \
+		mpfr-${mpfr_ver} \
 		mtdev-${mtdev_ver} \
 		ncurses-libs-${ncurses_ver} \
 		openssl-libs-${openssl_ver} \
@@ -125,10 +127,12 @@ SRC_DISTFILES=	acl-${libacl_ver}${SRC_SUFX}:SOURCE \
 		libevdev-${libevdev_ver}${SRC_SUFX}:SOURCE \
 		libffi-${libffi_ver}${SRC_SUFX}:SOURCE \
 		libgudev-${libgudev_ver}${SRC_SUFX}:SOURCE \
+		libproxy-${libproxy_ver}${SRC_SUFX}:SOURCE \
 		libselinux-${selinux_ver}${SRC_SUFX}:SOURCE \
 		libsepol-${sepol_ver}${SRC_SUFX}:SOURCE \
 		libsigsegv-${libsigsegv_ver}${SRC_SUFX}:SOURCE \
 		libverto-${libverto_ver}${SRC_SUFX}:SOURCE \
+		mpfr-${mpfr_ver}${SRC_SUFX}:SOURCE \
 		mtdev-${mtdev_ver}${SRC_SUFX}:SOURCE \
 		ncurses-${ncurses_ver}${SRC_SUFX}:SOURCE \
 		openssl-${openssl_ver}${SRC_SUFX}:SOURCE \
