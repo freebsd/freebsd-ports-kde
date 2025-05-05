@@ -250,6 +250,8 @@
     SUBDIR += libxdf
     SUBDIR += lifelines
     SUBDIR += lightgbm
+    SUBDIR += linux-c7-sdl12-extralibs
+    SUBDIR += linux-rl9-sdl12-extralibs
     SUBDIR += llama-cpp
     SUBDIR += locale-en_DK
     SUBDIR += localedata
@@ -441,6 +443,7 @@
     SUBDIR += py-gguf
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
+    SUBDIR += py-gpiozero
     SUBDIR += py-halo
     SUBDIR += py-hist
     SUBDIR += py-histoprint

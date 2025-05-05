@@ -1,5 +1,5 @@
 PORTNAME=	wine
-DISTVERSION=	10.4
+DISTVERSION=	10.6
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/10.x/
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=--verbose \
 		--without-krb5 \
 		--with-mingw CROSSCC="clang" \
 		--without-netapi \
-		--without-odbc \
 		--without-opencl \
 		--without-osmesa \
 		--without-pcap \
