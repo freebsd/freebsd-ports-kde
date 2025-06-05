@@ -1,5 +1,6 @@
 PORTNAME=	screen
-DISTVERSION=	5.0.0
+DISTVERSION=	5.0.1
+PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	GNU \
 	        ftp://ftp.gnu.org/gnu/screen/ \
@@ -22,17 +23,12 @@ CONFLICTS+=	screen-devel
 
 LICENSE=	GPLv3
 
-OPTIONS_DEFINE=		INFO NETHACK XTERM_256 SYSTEM_SCREENRC MULTIUSER \
+OPTIONS_DEFINE=		INFO SYSTEM_SCREENRC MULTIUSER \
 			NOSOCKETDIR
-OPTIONS_DEFAULT=	INFO NETHACK XTERM_256 SOCKETS SYSTEM_SCREENRC \
+OPTIONS_DEFAULT=	INFO SYSTEM_SCREENRC \
 			NCURSES_DEFAULT MULTIUSER
-OPTIONS_SINGLE=		IPC NCURSES
-OPTIONS_SINGLE_IPC=	SOCKETS NAMED_PIPES
+OPTIONS_SINGLE=		NCURSES
 OPTIONS_SINGLE_NCURSES=	NCURSES_DEFAULT NCURSES_BASE NCURSES_PORT
-NETHACK_DESC=		Enable nethack-style messages
-XTERM_256_DESC=		Enable support for 256 colour xterm
-SOCKETS_DESC=		Use new (4.2.1+) sockets for IPC (default)
-NAMED_PIPES_DESC=	Use legacy (4.0.3) named pipes for IPC (override)
 SYSTEM_SCREENRC_DESC=	Install system screenrc with helpful status line
 MULTIUSER_DESC=		Install setuid-root screen to support multiuser
 MULTIUSER_PLIST_SUB=	MULTISUID="@(,,4555) "
@@ -49,6 +45,7 @@ NCURSES_PORT_USES=	ncurses:port
 OPTIONS_SUB=
 
 USES=		autoreconf:build gmake cpe
+CONFIGURE_ARGS=	--with-system_screenrc=${ETCDIR}/screenrc
 MAKE_ARGS+=	WITH_MAN=1
 
 CPE_VENDOR=	gnu
@@ -57,7 +54,7 @@ CPE_VENDOR=	gnu
 
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANPREFIX= ${PREFIX}/share
-CFLAGS+=	-I${NCURSESINC}
+CFLAGS+=	-I${NCURSESINC} -DSVR4 -DGETUTENT
 LDFLAGS+=	-L${NCURSESLIB}
 
 .if ${PORT_OPTIONS:MINFO}
@@ -70,24 +67,13 @@ USES+=		makeinfo
 # set up a custom termcap entry or .screenrc which modifies termcap
 # to contain the following: Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm
 #
-.if ${PORT_OPTIONS:MXTERM_256}
-CFLAGS+=	-DCOLORS256
-.endif
-
-.if ! ${PORT_OPTIONS:MNETHACK}
-CFLAGS+=	-DNONETHACK
-.endif
-
 .if ${PORT_OPTIONS:MNOSOCKETDIR}
 CONFIGURE_ARGS+=	--disable-socket-dir
 .endif
 
 .if defined(SCREEN_SOCKET_DIR)
-CONFIGURE_ARGS+=	--with-socket-dir=${SCREEN_SOCKET_DIR}
+CONFIGURE_ARGS+=	--enable-socket-dir=${SCREEN_SOCKET_DIR}
 .endif
-
-post-patch:
-	@${RM} ${WRKSRC}/doc/screen.info*
 
 # Bug 191029:	Users can choose whether to use sockets or named pipes.
 #		Choose sockets if you don't know what the difference is.
@@ -97,10 +83,6 @@ post-patch:
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
-
-post-configure-NAMED_PIPES-on:
-	@${ECHO_CMD} '#define NAMEDPIPE 1' >> ${WRKSRC}/config.h
-	@${ECHO_CMD} User selected named pipes override set.
 
 ETCDIR?=	${PREFIX}/etc
 

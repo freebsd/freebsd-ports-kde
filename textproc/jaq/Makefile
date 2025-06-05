@@ -1,6 +1,7 @@
 PORTNAME=	jaq
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,6 +10,8 @@ WWW=		https://github.com/01mf02/jaq
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE-MIT
+
+BROKEN_i386=	compilation fails: undefined symbol: __atomic_load_8
 
 USES=		cargo
 USE_GITHUB=	yes

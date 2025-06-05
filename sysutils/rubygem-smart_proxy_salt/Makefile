@@ -1,6 +1,5 @@
 PORTNAME=	smart_proxy_salt
-PORTVERSION=	5.1.0
-PORTREVISION=	1
+PORTVERSION=	6.0.0
 CATEGORIES=	sysutils ruby
 MASTER_SITES=	RG
 
@@ -9,9 +8,6 @@ COMMENT=	SaltStack Plug-In for Foreman's Smart Proxy
 WWW=		https://github.com/theforeman/smart_proxy_salt
 
 LICENSE=	GPLv3
-
-DEPRECATED=	Depends on expired net/py-libcloud
-EXPIRATION_DATE=2025-06-01
 
 RUN_DEPENDS=	foreman-proxy>=1.8.0:net/foreman-proxy \
 		${PYTHON_PKGNAMEPREFIX}salt>0:sysutils/py-salt@${PY_FLAVOR} \

@@ -1,11 +1,11 @@
 PORTNAME=	agg
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.2
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	graphics
 PKGNAMEPREFIX=	asciinema-
 
-MAINTAINER=	DtxdF@disroot.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Asciinema gif generator
 WWW=		https://github.com/asciinema/agg
 

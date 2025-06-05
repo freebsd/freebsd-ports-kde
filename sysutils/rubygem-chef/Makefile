@@ -1,5 +1,5 @@
 PORTNAME=	chef
-PORTVERSION=	18.7.3
+PORTVERSION=	18.7.10
 CATEGORIES=	sysutils
 MASTER_SITES=	RG
 
@@ -29,7 +29,7 @@ RUN_DEPENDS=	rubygem-addressable>=0:www/rubygem-addressable \
 		rubygem-mixlib-archive>=0.4<2.0:devel/rubygem-mixlib-archive \
 		rubygem-mixlib-authentication>=2.1<4:devel/rubygem-mixlib-authentication \
 		rubygem-mixlib-cli>=2.1.1<3.0:devel/rubygem-mixlib-cli \
-		rubygem-mixlib-log>=2.0.3<3.1.1_99:devel/rubygem-mixlib-log \
+		rubygem-mixlib-log>=2.0.3<3.2:devel/rubygem-mixlib-log \
 		rubygem-mixlib-shellout>=3.1.1<4.0:devel/rubygem-mixlib-shellout \
 		rubygem-net-ftp>=0:ftp/rubygem-net-ftp \
 		rubygem-net-sftp>=2.1.2<5.0:security/rubygem-net-sftp \
@@ -37,7 +37,7 @@ RUN_DEPENDS=	rubygem-addressable>=0:www/rubygem-addressable \
 		rubygem-plist>=3.2<4:devel/rubygem-plist \
 		rubygem-proxifier2>=1.1<2:net/rubygem-proxifier2 \
 		rubygem-syslog-logger>=1.6<2:sysutils/rubygem-syslog-logger \
-		rubygem-train-core>=3.10<3.12.7_99:net/rubygem-train-core \
+		rubygem-train-core>=3.10<3.12.13_99:net/rubygem-train-core \
 		rubygem-train-rest>=0.4.1:net/rubygem-train-rest \
 		rubygem-train-winrm>=0.2.17:net/rubygem-train-winrm \
 		rubygem-unf_ext>=0.0.8.2:textproc/rubygem-unf_ext \

@@ -1,10 +1,10 @@
 PORTNAME=	miniserve
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.29.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 
-MAINTAINER=	mikael@FreeBSD.org
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Ad-hoc HTTP server for file sharing
 WWW=		https://github.com/svenstaro/miniserve
 

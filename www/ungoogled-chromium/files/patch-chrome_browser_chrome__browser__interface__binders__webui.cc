@@ -1,6 +1,6 @@
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-04-15 08:30:07 UTC
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-05-31 17:16:41 UTC
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
-@@ -46,7 +46,7 @@
+@@ -48,20 +48,20 @@
  #include "content/public/browser/web_ui_controller_interface_binder.h"
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -8,17 +8,23 @@
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/connectors_internals/connectors_internals.mojom.h"
  #include "chrome/browser/ui/webui/connectors_internals/connectors_internals_ui.h"
- #include "chrome/browser/ui/webui/discards/discards.mojom.h"
-@@ -55,7 +55,7 @@
  #include "ui/webui/resources/cr_components/app_management/app_management.mojom.h"
+ #endif
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID) || BUILDFLAG(IS_BSD)
+ #include "chrome/browser/ui/webui/discards/discards.mojom.h"
+ #include "chrome/browser/ui/webui/discards/discards_ui.h"
+ #include "chrome/browser/ui/webui/discards/site_data.mojom.h"
  #endif
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
- #include "chrome/browser/ui/webui/whats_new/whats_new_ui.h"
-@@ -440,7 +440,7 @@ void PopulateChromeWebUIFrameBinders(
+ #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin.mojom.h"
+@@ -452,7 +452,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -27,7 +33,7 @@
    RegisterWebUIControllerInterfaceBinder<
        connectors_internals::mojom::PageHandler,
        enterprise_connectors::ConnectorsInternalsUI>(map);
-@@ -451,7 +451,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -463,7 +463,7 @@ void PopulateChromeWebUIFrameBinders(
                                           policy::DlpInternalsUI>(map);
  #endif
  
@@ -36,9 +42,9 @@
    RegisterWebUIControllerInterfaceBinder<
        app_management::mojom::PageHandlerFactory, WebAppSettingsUI>(map);
  
-@@ -544,14 +544,14 @@ void PopulateChromeWebUIFrameBinders(
-       page_image_service::mojom::PageImageServiceHandler, HistoryUI,
-       HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
+@@ -593,14 +593,14 @@ void PopulateChromeWebUIFrameBinders(
+         HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
+   }
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
@@ -53,12 +59,12 @@
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -1084,7 +1084,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -1133,7 +1133,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_DESKTOP_ANDROID) || BUILDFLAG(IS_BSD)
    RegisterWebUIControllerInterfaceBinder<discards::mojom::DetailsProvider,
                                           DiscardsUI>(map);
  

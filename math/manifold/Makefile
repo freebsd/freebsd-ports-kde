@@ -1,6 +1,7 @@
 PORTNAME=	manifold
 DISTVERSIONPREFIX=v
 DISTVERSION=	3.0.1
+PORTREVISION=	1
 CATEGORIES=	math cad
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -33,6 +34,13 @@ CMAKE_OFF=	MANIFOLD_DOWNLOADS		\
 		TRACY_ENABLE
 
 USE_LDCONFIG=	yes
+
+.include <bsd.port.options.mk>
+
+pre-configure:
+.if ${ARCH} == "i386" || ${ARCH} == "armv7"
+	${REINPLACE_CMD} -e 's|-Werror|-Wno-format|' ${WRKSRC}/CMakeLists.txt
+.endif
 
 do-test:
 	(cd ${BUILD_WRKSRC}/test && ./manifold_test)

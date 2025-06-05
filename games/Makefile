@@ -251,7 +251,6 @@
     SUBDIR += exhaust-doc
     SUBDIR += exhaust-ma
     SUBDIR += exult
-    SUBDIR += exult-devel
     SUBDIR += ezquake
     SUBDIR += f1spirit-remake
     SUBDIR += fairymax
@@ -377,7 +376,6 @@
     SUBDIR += gzdoom
     SUBDIR += hangman
     SUBDIR += hedgewars
-    SUBDIR += hedgewars-server
     SUBDIR += help_hannahs_horse
     SUBDIR += heretic
     SUBDIR += heroes

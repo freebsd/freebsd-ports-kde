@@ -1,8 +1,6 @@
 PORTNAME=	kdeconnect-kde
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
-PATCH_SITES=	https://invent.kde.org/network/kdeconnect-kde/-/commit/
-PATCHFILES=	e840491c01e7ee895c6165a6b6b4a5dfa8ea147f.patch:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Support for KDE to interface between your phone and your computer
@@ -25,9 +23,9 @@ USES=		cmake compiler:c++17-lang desktop-file-utils gettext-tools \
 USE_GL=		gl opengl # GLX
 USE_KDE=	bookmarks colorscheme completion config configwidgets \
 		coreaddons crash dbusaddons doctools guiaddons i18n iconthemes \
-		itemviews jobwidgets kcmutils kio kirigami-addons kirigami2 \
-		notifications package people qqc2-desktop-style service solid \
-		statusnotifieritem widgetsaddons windowsystem \
+		itemmodels itemviews jobwidgets kcmutils kio kirigami-addons \
+		kirigami2 notifications package people qqc2-desktop-style \
+		service solid statusnotifieritem widgetsaddons windowsystem \
 		ecm:build
 USE_QT=		base connectivity declarative multimedia wayland
 USE_XORG=	ice sm x11 xext xtst

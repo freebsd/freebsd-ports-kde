@@ -1,6 +1,6 @@
---- components/supervised_user/core/common/features.cc.orig	2025-04-15 08:30:07 UTC
+--- components/supervised_user/core/common/features.cc.orig	2025-05-31 17:16:41 UTC
 +++ components/supervised_user/core/common/features.cc
-@@ -36,7 +36,7 @@ BASE_FEATURE(kAllowSubframeLocalWebApprovals,
+@@ -37,7 +37,7 @@ BASE_FEATURE(kAllowSubframeLocalWebApprovals,
  #endif
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -9,34 +9,25 @@
  const int kLocalWebApprovalBottomSheetLoadTimeoutDefaultValueMs = 5000;
  
  const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs{
-@@ -83,7 +83,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExtensionApprovalSt
-              "UpdatedSupervisedUserExtensionApprovalStrings",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -46,7 +46,7 @@ const base::FeatureParam<int> kLocalWebApprovalBottomS
+ #endif  // BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop,
-              "EnableExtensionsPermissionsForSupervisedUsersOnDesktop",
+ BASE_FEATURE(kEnableLocalWebApprovalErrorDialog,
+              "EnableLocalWebApprovalErrorDialog",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -98,7 +98,7 @@ bool IsSupervisedUserSkipParentApprovalToInstallExtens
- #if BUILDFLAG(IS_CHROMEOS)
-   return base::FeatureList::IsEnabled(
-       kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
--#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   bool skipParentApprovalEnabled = base::FeatureList::IsEnabled(
-       kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
-   bool permissionExtensionsForSupervisedUsersEnabled =
-@@ -115,7 +115,7 @@ bool IsSupervisedUserSkipParentApprovalToInstallExtens
+@@ -89,7 +89,7 @@ bool IsLocalWebApprovalsEnabledForSubframes() {
+   return base::FeatureList::IsEnabled(kAllowSubframeLocalWebApprovals);
  }
- #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kCustomProfileStringsForSupervisedUsers,
               "CustomProfileStringsForSupervisedUsers",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -127,13 +127,13 @@ BASE_FEATURE(kShowKiteForSupervisedUsers,
+@@ -101,13 +101,13 @@ BASE_FEATURE(kShowKiteForSupervisedUsers,
  
  BASE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers,
               "ForceSafeSearchForUnauthenticatedSupervisedUsers",
@@ -52,7 +43,7 @@
  BASE_FEATURE(kEnableSupervisedUserVersionSignOutDialog,
               "EnableSupervisedUserVersionSignOutDialog",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -155,7 +155,7 @@ BASE_FEATURE(kExemptYouTubeInfrastructureFromBlocking,
+@@ -119,7 +119,7 @@ BASE_FEATURE(kEnableSupervisedUserVersionSignOutDialog
  // platform #defines.
  BASE_FEATURE(kUncredentialedFilteringFallbackForSupervisedUsers,
               "UncredentialedFilteringFallbackForSupervisedUsers",

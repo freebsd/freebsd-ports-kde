@@ -1,7 +1,7 @@
 PORTNAME=	bit
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.1.2
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	devel
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -10,6 +10,9 @@ WWW=		https://github.com/chriswalz/bit
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=     Upstream ceased development
+EXPIRATION_DATE=2025-06-21
 
 USES=		cpe go:modules
 CPE_VENDOR=	${PORTNAME}_project

@@ -1,6 +1,6 @@
---- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2025-02-19 07:43:18 UTC
+--- chrome/browser/safe_browsing/chrome_password_protection_service.cc.orig	2025-05-28 14:55:43 UTC
 +++ chrome/browser/safe_browsing/chrome_password_protection_service.cc
-@@ -1251,7 +1251,7 @@ std::string ChromePasswordProtectionService::GetOrgani
+@@ -1269,7 +1269,7 @@ std::string ChromePasswordProtectionService::GetOrgani
      ReusedPasswordAccountType password_type) const {
    if (base::FeatureList::IsEnabled(
            safe_browsing::kEnterprisePasswordReuseUiRefresh)) {

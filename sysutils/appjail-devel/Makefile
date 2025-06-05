@@ -1,10 +1,10 @@
 PORTNAME=	appjail
-DISTVERSION=	3.8.0.20250503
+DISTVERSION=	3.9.0.20250603
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
 
-MAINTAINER=	acm@FreeBSD.org
+MAINTAINER=	dtxdf@FreeBSD.org
 COMMENT=	Simple and easy-to-use tool for creating portable jails (devel)
 WWW=		https://github.com/DtxdF/AppJail
 
@@ -16,7 +16,7 @@ CONFLICTS=	appjail
 USE_GITHUB=	yes
 GH_ACCOUNT=	DtxdF
 GH_PROJECT=	AppJail
-GH_TAGNAME=	8f14cd3aa30a72c2daf1af64037c2efd002f1e8d
+GH_TAGNAME=	99c8d8cd5e1d15c7e74865dae32902a10f5f3c1f
 
 MAKE_ARGS=	APPJAIL_VERSION=${DISTVERSION}+${GH_TAGNAME}
 ALL_TARGET=	utils-strip

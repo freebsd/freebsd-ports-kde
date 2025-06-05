@@ -1,12 +1,12 @@
 PORTNAME=	e-antic
-DISTVERSION=	2.0.2
-PORTREVISION=	6
+DISTVERSION=	2.1.0
+PORTREVISION=	1
 #MASTER_SITES=	https://www.labri.fr/perso/vdelecro/e-antic/
 CATEGORIES=	math
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Real Embedded Algebraic Number Theory In C
-WWW=		https://github.com/flatsurf/e-antic
+WWW=		https://flatsurf.github.io/e-antic/
 
 LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	dual

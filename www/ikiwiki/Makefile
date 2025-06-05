@@ -1,5 +1,5 @@
 PORTNAME=	ikiwiki
-DISTVERSION=	3.20250221
+DISTVERSION=	3.20250501
 CATEGORIES=	www
 MASTER_SITES=	DEBIAN_POOL \
 		LOCAL/mat/${PORTNAME}
@@ -11,6 +11,9 @@ COMMENT=	Wiki compiler
 WWW=		https://ikiwiki.info/
 
 LICENSE=	GPLv2
+
+DEPRECATED=	Depends on expired security/p5-Data-Entropy via security/p5-Authen-Passphrase
+EXPIRATION_DATE=2025-09-01
 
 BUILD_DEPENDS=	p5-CGI-FormBuilder>=0:www/p5-CGI-FormBuilder \
 		p5-CGI-Session>=0:www/p5-CGI-Session \

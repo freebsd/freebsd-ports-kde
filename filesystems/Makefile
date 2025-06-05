@@ -94,11 +94,13 @@
     SUBDIR += py-fsspec-xrootd
     SUBDIR += py-fusepy
     SUBDIR += py-gcsfs
+    SUBDIR += py-kerchunk
     SUBDIR += py-libzfs
     SUBDIR += py-llfuse
     SUBDIR += py-prometheus-zfs
     SUBDIR += py-pyfakefs
     SUBDIR += py-s3fs
+    SUBDIR += py-tahoe-lafs
     SUBDIR += py-zfs-autobackup
     SUBDIR += rar2fs
     SUBDIR += rubygem-chef-winrm-fs

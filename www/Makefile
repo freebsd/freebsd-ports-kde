@@ -151,7 +151,6 @@
     SUBDIR += domoticz
     SUBDIR += domoticz-devel
     SUBDIR += dooble
-    SUBDIR += dot-http
     SUBDIR += dothttp
     SUBDIR += dpp
     SUBDIR += drill
@@ -490,6 +489,7 @@
     SUBDIR += node20
     SUBDIR += node22
     SUBDIR += node23
+    SUBDIR += node24
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += novnc-websockify
@@ -499,6 +499,7 @@
     SUBDIR += npm-node20
     SUBDIR += npm-node22
     SUBDIR += npm-node23
+    SUBDIR += npm-node24
     SUBDIR += nyxt
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -1515,44 +1516,35 @@
     SUBDIR += py-daphne
     SUBDIR += py-dash
     SUBDIR += py-dj-database-url
-    SUBDIR += py-dj50-channels
-    SUBDIR += py-dj50-django-auth-ldap
-    SUBDIR += py-dj50-django-choices-field
-    SUBDIR += py-dj50-django-cors-headers
-    SUBDIR += py-dj50-django-debug-toolbar
-    SUBDIR += py-dj50-django-filter
-    SUBDIR += py-dj50-django-htmx
-    SUBDIR += py-dj50-django-js-asset
-    SUBDIR += py-dj50-django-mptt
-    SUBDIR += py-dj50-django-prometheus
-    SUBDIR += py-dj50-django-redis
-    SUBDIR += py-dj50-django-rich
-    SUBDIR += py-dj50-django-tables2
-    SUBDIR += py-dj50-django-taggit
-    SUBDIR += py-dj50-django-timezone-field
-    SUBDIR += py-dj50-django-tree-queries
-    SUBDIR += py-dj50-djangorestframework
-    SUBDIR += py-dj50-drf-spectacular
-    SUBDIR += py-dj50-drf-spectacular-sidecar
-    SUBDIR += py-dj50-strawberry-graphql-django
     SUBDIR += py-dj51-channels
+    SUBDIR += py-dj51-channels-redis
+    SUBDIR += py-dj51-django-allauth
+    SUBDIR += py-dj51-django-auditlog
     SUBDIR += py-dj51-django-auth-ldap
+    SUBDIR += py-dj51-django-celery-results
     SUBDIR += py-dj51-django-choices-field
+    SUBDIR += py-dj51-django-compression-middleware
     SUBDIR += py-dj51-django-cors-headers
     SUBDIR += py-dj51-django-debug-toolbar
+    SUBDIR += py-dj51-django-extensions
     SUBDIR += py-dj51-django-filter
+    SUBDIR += py-dj51-django-guardian
     SUBDIR += py-dj51-django-htmx
     SUBDIR += py-dj51-django-js-asset
     SUBDIR += py-dj51-django-mptt
+    SUBDIR += py-dj51-django-multiselectfield
     SUBDIR += py-dj51-django-prometheus
     SUBDIR += py-dj51-django-redis
     SUBDIR += py-dj51-django-rich
+    SUBDIR += py-dj51-django-soft-delete
     SUBDIR += py-dj51-django-tables2
     SUBDIR += py-dj51-django-taggit
     SUBDIR += py-dj51-django-timezone-field
     SUBDIR += py-dj51-djangorestframework
+    SUBDIR += py-dj51-djangorestframework-guardian
     SUBDIR += py-dj51-drf-spectacular
     SUBDIR += py-dj51-drf-spectacular-sidecar
+    SUBDIR += py-dj51-drf-writable-nested
     SUBDIR += py-dj51-social-auth-app-django
     SUBDIR += py-dj51-strawberry-graphql-django
     SUBDIR += py-django-admin-rangefilter
@@ -1667,7 +1659,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django42
-    SUBDIR += py-django50
     SUBDIR += py-django51
     SUBDIR += py-django52
     SUBDIR += py-django_compressor
@@ -1690,7 +1681,6 @@
     SUBDIR += py-fake-useragent
     SUBDIR += py-falcon
     SUBDIR += py-fastapi
-    SUBDIR += py-fastapi-users
     SUBDIR += py-feedgen
     SUBDIR += py-feedgenerator
     SUBDIR += py-flasgger
@@ -1766,6 +1756,7 @@
     SUBDIR += py-google-cloud-vision
     SUBDIR += py-google-resumable-media
     SUBDIR += py-grafana-dashboard-manager
+    SUBDIR += py-granian
     SUBDIR += py-graphite-api
     SUBDIR += py-grequests
     SUBDIR += py-grimoirelab
@@ -1792,6 +1783,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-aiohttp
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-retries
     SUBDIR += py-httpx-socks
@@ -1806,6 +1798,7 @@
     SUBDIR += py-jh2
     SUBDIR += py-jonpy
     SUBDIR += py-kiss-headers
+    SUBDIR += py-klein
     SUBDIR += py-laces
     SUBDIR += py-legacy-cgi
     SUBDIR += py-lektor
@@ -1842,7 +1835,6 @@
     SUBDIR += py-proxy_tools
     SUBDIR += py-puppetboard
     SUBDIR += py-py-restclient
-    SUBDIR += py-pydrive2
     SUBDIR += py-pygsheets
     SUBDIR += py-pyjwt
     SUBDIR += py-pyjwt1
@@ -1997,6 +1989,7 @@
     SUBDIR += rt44
     SUBDIR += rt50
     SUBDIR += rubygem-ace-rails-ap
+    SUBDIR += rubygem-actioncable-gitlab
     SUBDIR += rubygem-actioncable5
     SUBDIR += rubygem-actioncable50
     SUBDIR += rubygem-actioncable52
@@ -2006,6 +1999,7 @@
     SUBDIR += rubygem-actioncable71
     SUBDIR += rubygem-actioncable72
     SUBDIR += rubygem-actioncable80
+    SUBDIR += rubygem-actionpack-gitlab
     SUBDIR += rubygem-actionpack4
     SUBDIR += rubygem-actionpack5
     SUBDIR += rubygem-actionpack50
@@ -2061,6 +2055,7 @@
     SUBDIR += rubygem-crass
     SUBDIR += rubygem-cssbundling-rails
     SUBDIR += rubygem-cssbundling-rails-gitlab
+    SUBDIR += rubygem-cssbundling-rails-rails-gitlab
     SUBDIR += rubygem-cssbundling-rails-rails70
     SUBDIR += rubygem-cssbundling-rails-rails71
     SUBDIR += rubygem-cssbundling-rails-rails72
@@ -2126,6 +2121,7 @@
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gollum-rugged_adapter
+    SUBDIR += rubygem-gon-rails-gitlab
     SUBDIR += rubygem-gon-rails5
     SUBDIR += rubygem-gon-rails50
     SUBDIR += rubygem-gon-rails60
@@ -2192,6 +2188,7 @@
     SUBDIR += rubygem-kamal
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
+    SUBDIR += rubygem-kaminari-actionview-rails-gitlab
     SUBDIR += rubygem-kaminari-actionview-rails5
     SUBDIR += rubygem-kaminari-actionview-rails50
     SUBDIR += rubygem-kaminari-actionview-rails52
@@ -2199,6 +2196,7 @@
     SUBDIR += rubygem-kaminari-actionview-rails61
     SUBDIR += rubygem-kaminari-actionview-rails70
     SUBDIR += rubygem-kaminari-activerecord
+    SUBDIR += rubygem-kaminari-activerecord-rails-gitlab
     SUBDIR += rubygem-kaminari-activerecord-rails5
     SUBDIR += rubygem-kaminari-activerecord-rails50
     SUBDIR += rubygem-kaminari-activerecord-rails52
@@ -2206,6 +2204,7 @@
     SUBDIR += rubygem-kaminari-activerecord-rails61
     SUBDIR += rubygem-kaminari-activerecord-rails70
     SUBDIR += rubygem-kaminari-core
+    SUBDIR += rubygem-kaminari-rails-gitlab
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kaminari-rails5
     SUBDIR += rubygem-kaminari-rails50
@@ -2221,6 +2220,7 @@
     SUBDIR += rubygem-llhttp
     SUBDIR += rubygem-llhttp-ffi
     SUBDIR += rubygem-lograge
+    SUBDIR += rubygem-lograge-rails-gitlab
     SUBDIR += rubygem-lograge-rails5
     SUBDIR += rubygem-lograge-rails52
     SUBDIR += rubygem-lograge-rails60
@@ -2295,6 +2295,7 @@
     SUBDIR += rubygem-rackup
     SUBDIR += rubygem-rackup10
     SUBDIR += rubygem-rackup21
+    SUBDIR += rubygem-rails-gitlab
     SUBDIR += rubygem-rails-settings-cached
     SUBDIR += rubygem-rails-settings-cached-rails5
     SUBDIR += rubygem-rails-settings-cached-rails50
@@ -2312,6 +2313,7 @@
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
     SUBDIR += rubygem-rails_stdout_logging
+    SUBDIR += rubygem-railties-gitlab
     SUBDIR += rubygem-railties4
     SUBDIR += rubygem-railties5
     SUBDIR += rubygem-railties50
@@ -2331,6 +2333,7 @@
     SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
+    SUBDIR += rubygem-redis-rack-gitlab
     SUBDIR += rubygem-redis-rack2
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redis-rails-rails5
@@ -2339,6 +2342,7 @@
     SUBDIR += rubygem-redis-rails-rails60
     SUBDIR += rubygem-redis-rails-rails61
     SUBDIR += rubygem-responders
+    SUBDIR += rubygem-responders-rails-gitlab
     SUBDIR += rubygem-responders-rails5
     SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders-rails60
@@ -2439,6 +2443,7 @@
     SUBDIR += serf
     SUBDIR += servlet-api
     SUBDIR += sfeed
+    SUBDIR += shellinabox
     SUBDIR += shiori
     SUBDIR += silicon
     SUBDIR += simple-web-server
@@ -2643,6 +2648,7 @@
     SUBDIR += yarn-node20
     SUBDIR += yarn-node22
     SUBDIR += yarn-node23
+    SUBDIR += yarn-node24
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

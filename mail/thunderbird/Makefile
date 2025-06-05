@@ -1,14 +1,16 @@
 PORTNAME=	thunderbird
-DISTVERSION=	138.0
+DISTVERSION=	139.0.1
 PORTREVISION=	1
 CATEGORIES=	mail news net-im wayland
 MASTER_SITES=	MOZILLA/${PORTNAME}/releases/${DISTVERSION}${DISTVERSIONSUFFIX}/source \
-		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build3/source
+		MOZILLA/${PORTNAME}/candidates/${DISTVERSION}${DISTVERSIONSUFFIX}-candidates/build1/source
 DISTFILES=	${DISTNAME}.source${EXTRACT_SUFX}
 
 MAINTAINER=	gecko@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
 WWW=		https://www.mozilla.com/thunderbird/
+
+#		autoconf2.13:devel/autoconf2.13 \
 
 BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		nss>=3.110:security/nss \
@@ -20,7 +22,6 @@ BUILD_DEPENDS=	nspr>=4.32:devel/nspr \
 		libvpx>=1.15.0:multimedia/libvpx \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		v4l_compat>0:multimedia/v4l_compat \
-		autoconf2.13:devel/autoconf2.13 \
 		nasm:devel/nasm \
 		yasm:devel/yasm \
 		zip:archivers/zip \

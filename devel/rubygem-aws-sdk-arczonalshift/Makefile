@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-arczonalshift
-PORTVERSION=	1.30.0
+PORTVERSION=	1.33.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

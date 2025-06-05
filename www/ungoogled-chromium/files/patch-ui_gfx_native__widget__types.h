@@ -1,6 +1,6 @@
---- ui/gfx/native_widget_types.h.orig	2025-01-25 09:34:31 UTC
+--- ui/gfx/native_widget_types.h.orig	2025-05-31 17:16:41 UTC
 +++ ui/gfx/native_widget_types.h
-@@ -101,7 +101,7 @@ class ViewAndroid;
+@@ -102,7 +102,7 @@ class ViewAndroid;
  #endif
  class SkBitmap;
  
@@ -9,12 +9,12 @@
  extern "C" {
  struct _AtkObject;
  using AtkObject = struct _AtkObject;
-@@ -214,7 +214,7 @@ using NativeViewAccessible = id;
- #else
- using NativeViewAccessible = struct objc_object*;
- #endif
+@@ -186,7 +186,7 @@ using NativeViewAccessible = IAccessible*;
+ using NativeViewAccessible = base::apple::OwnedNSObject;
+ #elif BUILDFLAG(IS_MAC)
+ using NativeViewAccessible = base::apple::OwnedNSAccessibility;
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- // Linux doesn't have a native font type.
+ // Linux doesn't have a native accessibility type.
  using NativeViewAccessible = AtkObject*;
  #else

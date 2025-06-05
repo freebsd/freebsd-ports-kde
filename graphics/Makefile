@@ -230,6 +230,7 @@
     SUBDIR += gd
     SUBDIR += gdal
     SUBDIR += gdal-grass
+    SUBDIR += gdalcpp
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf-extra
     SUBDIR += gdk-pixbuf2
@@ -400,6 +401,7 @@
     SUBDIR += kdegraphics-thumbnailers
     SUBDIR += kdiagram
     SUBDIR += kdiagram-qt6
+    SUBDIR += kealib
     SUBDIR += kf5-kimageformats
     SUBDIR += kf5-kplotting
     SUBDIR += kf5-kquickcharts
@@ -462,6 +464,7 @@
     SUBDIR += libecwj2
     SUBDIR += libemf
     SUBDIR += libepoxy
+    SUBDIR += libertiff
     SUBDIR += libetonyek01
     SUBDIR += libexif
     SUBDIR += libexif-gtk
@@ -476,6 +479,7 @@
     SUBDIR += libgphoto2
     SUBDIR += libgxps
     SUBDIR += libheif
+    SUBDIR += libicd
     SUBDIR += libimagequant
     SUBDIR += libimg
     SUBDIR += libiptcdata
@@ -492,6 +496,7 @@
     SUBDIR += libmypaint
     SUBDIR += libnsbmp
     SUBDIR += libnsgif
+    SUBDIR += libopendrive
     SUBDIR += libopenraw
     SUBDIR += libosmesa
     SUBDIR += libpano13
@@ -553,9 +558,6 @@
     SUBDIR += linux-rl9-qt5-qtimageformats
     SUBDIR += linux-rl9-qt5-qtsvg
     SUBDIR += linux-rl9-qt5-qtwayland
-    SUBDIR += linux-rl9-sdl2_gfx
-    SUBDIR += linux-rl9-sdl2_image
-    SUBDIR += linux-rl9-sdl2_ttf
     SUBDIR += linux-rl9-shaderc
     SUBDIR += linux-rl9-spirv-tools
     SUBDIR += linux-rl9-vulkan
@@ -830,7 +832,6 @@
     SUBDIR += pinta
     SUBDIR += pixd
     SUBDIR += pixelize
-    SUBDIR += pixen
     SUBDIR += pixie
     SUBDIR += plantuml
     SUBDIR += plasma-kmod
@@ -896,6 +897,7 @@
     SUBDIR += py-colorthief
     SUBDIR += py-colorz
     SUBDIR += py-colour
+    SUBDIR += py-colour-science
     SUBDIR += py-contextily
     SUBDIR += py-descartes
     SUBDIR += py-diplib
@@ -1036,6 +1038,7 @@
     SUBDIR += py-yaswfp
     SUBDIR += py-zbar-py
     SUBDIR += pywal
+    SUBDIR += qb3
     SUBDIR += qcomicbook
     SUBDIR += qcustomplot
     SUBDIR += qgis
@@ -1060,7 +1063,6 @@
     SUBDIR += qtpbfimageplugin
     SUBDIR += qtqr
     SUBDIR += quat
-    SUBDIR += quat-gui
     SUBDIR += quesa
     SUBDIR += quesoglc
     SUBDIR += quickqanava
@@ -1097,7 +1099,6 @@
     SUBDIR += rubygem-dragonfly
     SUBDIR += rubygem-emoji
     SUBDIR += rubygem-exifr
-    SUBDIR += rubygem-ezprint
     SUBDIR += rubygem-fastimage
     SUBDIR += rubygem-flamegraph
     SUBDIR += rubygem-gd2
@@ -1115,7 +1116,6 @@
     SUBDIR += rubygem-mini_magick
     SUBDIR += rubygem-mini_magick4
     SUBDIR += rubygem-opengl
-    SUBDIR += rubygem-pdfkit
     SUBDIR += rubygem-png
     SUBDIR += rubygem-railroad
     SUBDIR += rubygem-red-colors

@@ -33,8 +33,9 @@ CONFIGURE_ARGS+=	--disable-alsa \
 			--disable-xpcom
 CONFIGURE_ARGS+=	--nofatal --with-gcc="${CC}" --with-g++="${CXX}"
 
-CONFLICTS_INSTALL=	virtualbox-ose-kmod \
-			virtualbox-ose-kmod-legacy
+CONFLICTS_INSTALL=	virtualbox-ose-kmod-legacy \
+			virtualbox-ose-kmod \
+			virtualbox-ose-kmod-71
 
 PATCHDIR=		${.CURDIR}/../${PORTNAME}-70/files
 PORTSCOUT=		limit:^7\.0\.
@@ -43,11 +44,13 @@ SUB_LIST=		OPSYS=${OPSYS} OSREL=${OSREL}
 
 WRKSRC=		${WRKDIR}/VirtualBox-${DISTVERSION}
 
-OPTIONS_DEFINE=		DEBUG VIMAGE
+OPTIONS_DEFINE=		DEBUG INVARIANTS VIMAGE
 OPTIONS_DEFAULT=	VIMAGE
 OPTIONS_SUB=		yes
 DEBUG_DESC=		Debug symbols, additional logs and assertions
+INVARIANTS_DESC=	Use if kernel is compiled with INVARIANTS option
 VIMAGE_DESC=		VIMAGE virtual networking support
+INVARIANTS_CFLAGS=	-DINVARIANTS
 
 .include <bsd.port.options.mk>
 
@@ -89,7 +92,7 @@ post-patch:
 .if ${PORT_OPTIONS:MVIMAGE}
 	@${ECHO_CMD} 'VBOX_WITH_NETFLT_VIMAGE = 1' >> ${WRKSRC}/LocalConfig.kmk
 .endif
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g; s|which \$$\*|which \$$1|g' \
 	    ${WRKSRC}/Config.kmk ${WRKSRC}/configure
 	@${REINPLACE_CMD} \
 	    -e 's|\$$KBUILDDIR_BIN/kmk_sed|${LOCALBASE}/bin/kmk_sed|g' \

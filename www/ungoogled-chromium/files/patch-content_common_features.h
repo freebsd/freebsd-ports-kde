@@ -1,6 +1,6 @@
---- content/common/features.h.orig	2025-03-09 21:38:10 UTC
+--- content/common/features.h.orig	2025-05-31 17:16:41 UTC
 +++ content/common/features.h
-@@ -28,7 +28,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kCommittedOriginEn
+@@ -59,7 +59,7 @@ CONTENT_EXPORT BASE_DECLARE_FEATURE(kCommittedOriginEn
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kCommittedOriginTracking);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kCriticalClientHint);
  CONTENT_EXPORT BASE_DECLARE_FEATURE(kDocumentPolicyNegotiation);

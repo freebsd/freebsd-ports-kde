@@ -91,7 +91,7 @@ KDE_PLASMA5_VERSION?=		5.27.12
 KDE_PLASMA5_BRANCH?=		stable
 
 # Current KDE Plasma desktop.
-KDE_PLASMA6_VERSION?=		6.3.4
+KDE_PLASMA6_VERSION?=		6.3.5
 KDE_PLASMA6_BRANCH?=		stable
 
 # Legacy KDE frameworks (Qt5 based).
@@ -99,13 +99,13 @@ KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Current KDE Frameworks (Qt6 based).
-KDE_FRAMEWORKS6_VERSION?=	6.13.0
+KDE_FRAMEWORKS6_VERSION?=	6.14.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications. Update _${PORTNAME}_PROJECT_VERSION for the following ports:
 # devel/kdevelop, games/libkdegames, games/libkmahjongg, graphics/kgraphviewer
-KDE_APPLICATIONS6_VERSION?=	25.04.0
-KDE_APPLICATIONS6_SHLIB_VER?=	6.4.0
+KDE_APPLICATIONS6_VERSION?=	25.04.2
+KDE_APPLICATIONS6_SHLIB_VER?=	6.4.2
 # G as in KDE Gear, and as in "don't make the variable name longer than required".
 KDE_APPLICATIONS6_SHLIB_G_VER?=	${KDE_APPLICATIONS6_VERSION}
 KDE_APPLICATIONS6_BRANCH?=	stable
@@ -223,6 +223,7 @@ MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION
 .        endif
 DIST_SUBDIR?=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION}
 .        if ${_KDE_VERSION:M6}
+DIST_SUBDIR=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION:R}
 DESCR=			${.CURDIR:H:H}/x11/kf6-frameworks/pkg-descr
 .        endif
 .      else
@@ -273,7 +274,7 @@ PLIST_SUB+=		KDE_APPLICATIONS_VERSION="${KDE_APPLICATIONS_VERSION}" \
 _USE_PORTINGAIDS_ALL=	js jsembed kdelibs4support khtml mediaplayer kross
 
 # List of components of the KDE Frameworks distribution.
-# Not ported to FreeBSD: bluez-qt modemmanagerqt networkmanagerqt
+# Not ported to FreeBSD: bluez-qt modemmanagerqt
 _USE_FRAMEWORKS5_ALL=	activities activities-stats apidox archive attica \
 			auth baloo bookmarks breeze-icons calendarcore \
 			codecs completion config configwidgets contacts \
@@ -299,8 +300,8 @@ _USE_FRAMEWORKS6_ALL=	apidox archive attica auth baloo bookmarks \
 			i18n iconthemes idletime itemmodels itemviews \
 			jobwidgets kcmutils kdav kdeclarative kded kdesu \
 			kimageformats kio kirigami2 kquickcharts newstuff \
-			notifications notifyconfig package parts people \
-			plasma-wayland-protocols plotting prison pty purpose \
+			networkmanagerqt notifications notifyconfig package parts \
+			people plasma-wayland-protocols plotting prison pty purpose \
 			qqc2-desktop-style runner service solid sonnet \
 			statusnotifieritem svg syndication \
 			syntaxhighlighting texteditor texttemplate \
@@ -534,6 +535,9 @@ kde-layer-shell-qt_LIB=		libLayerShellQtInterface.so
 
 kde-mediaplayer_PORT=		multimedia/kf${_KDE_VERSION}-kmediaplayer
 kde-mediaplayer_LIB=		libKF${_KDE_VERSION}MediaPlayer.so.5
+
+kde-networkmanagerqt_PORT=	net-mgmt/kf${_KDE_VERSION}-networkmanager-qt
+kde-networkmanagerqt_LIB=	libKF${_KDE_VERSION}NetworkManagerQt.so
 
 kde-newstuff_PORT=		devel/kf${_KDE_VERSION}-knewstuff
 kde-newstuff_LIB=		libKF${_KDE_VERSION}NewStuffCore.so

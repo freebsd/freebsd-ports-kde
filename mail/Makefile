@@ -80,6 +80,7 @@
     SUBDIR += cyrus-imapd25
     SUBDIR += cyrus-imapd30
     SUBDIR += cyrus-imapd310
+    SUBDIR += cyrus-imapd312
     SUBDIR += cyrus-imapd32
     SUBDIR += cyrus-imapd34
     SUBDIR += cyrus-imapd36
@@ -187,6 +188,7 @@
     SUBDIR += libspf2
     SUBDIR += libsrs2
     SUBDIR += libsrs_alt
+    SUBDIR += libtlsrpt
     SUBDIR += libvmime
     SUBDIR += linux-r7-organizer
     SUBDIR += linux-r7-organizer-pro
@@ -529,7 +531,6 @@
     SUBDIR += py-mailnag
     SUBDIR += py-mailsuite
     SUBDIR += py-managesieve3
-    SUBDIR += py-milter
     SUBDIR += py-notmuch
     SUBDIR += py-notmuch2
     SUBDIR += py-offlineimap3
@@ -537,12 +538,14 @@
     SUBDIR += py-premailer
     SUBDIR += py-pyisemail
     SUBDIR += py-pymailq
+    SUBDIR += py-pymilter
     SUBDIR += py-pysasl
     SUBDIR += py-pyspf
     SUBDIR += py-python-slimta
     SUBDIR += py-pyzmail
     SUBDIR += py-rfc6555
     SUBDIR += py-spf-engine
+    SUBDIR += py-tlsrpt-reporter
     SUBDIR += py-validate_email
     SUBDIR += pymsgauth
     SUBDIR += pyzor
@@ -596,12 +599,14 @@
     SUBDIR += rspamd-devel
     SUBDIR += rss2email3
     SUBDIR += ruby-notmuch
+    SUBDIR += rubygem-actionmailbox-gitlab
     SUBDIR += rubygem-actionmailbox60
     SUBDIR += rubygem-actionmailbox61
     SUBDIR += rubygem-actionmailbox70
     SUBDIR += rubygem-actionmailbox71
     SUBDIR += rubygem-actionmailbox72
     SUBDIR += rubygem-actionmailbox80
+    SUBDIR += rubygem-actionmailer-gitlab
     SUBDIR += rubygem-actionmailer4
     SUBDIR += rubygem-actionmailer5
     SUBDIR += rubygem-actionmailer50
@@ -630,6 +635,7 @@
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
+    SUBDIR += rubygem-premailer-rails-rails-gitlab
     SUBDIR += rubygem-premailer-rails-rails5
     SUBDIR += rubygem-premailer-rails-rails52
     SUBDIR += rubygem-premailer-rails-rails60
