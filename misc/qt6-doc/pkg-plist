@@ -6,6 +6,7 @@
 %%QT_DOCDIR%%/qtcmake/cmake-deployment.html
 %%QT_DOCDIR%%/qtcmake/cmake-get-started.html
 %%QT_DOCDIR%%/qtcmake/cmake-imported-targets.html
+%%QT_DOCDIR%%/qtcmake/cmake-making-qt-available.html
 %%QT_DOCDIR%%/qtcmake/cmake-manual.html
 %%QT_DOCDIR%%/qtcmake/cmake-property-reference.html
 %%QT_DOCDIR%%/qtcmake/cmake-qt5-and-qt6-compatibility.html
@@ -57,6 +58,7 @@
 %%QT_DOCDIR%%/qtdoc/building-qt-for-qnx.html
 %%QT_DOCDIR%%/qtdoc/classes.html
 %%QT_DOCDIR%%/qtdoc/classesandfunctions.html
+%%QT_DOCDIR%%/qtdoc/concepts.html
 %%QT_DOCDIR%%/qtdoc/configure-linux-device.html
 %%QT_DOCDIR%%/qtdoc/configure-options.html
 %%QT_DOCDIR%%/qtdoc/create-your-first-applications.html
@@ -80,6 +82,7 @@
 %%QT_DOCDIR%%/qtdoc/examples-xml.html
 %%QT_DOCDIR%%/qtdoc/exceptionsafety.html
 %%QT_DOCDIR%%/qtdoc/explore-qt.html
+%%QT_DOCDIR%%/qtdoc/exportcontrols.html
 %%QT_DOCDIR%%/qtdoc/extras-changes-qt6.html
 %%QT_DOCDIR%%/qtdoc/fdl.html
 %%QT_DOCDIR%%/qtdoc/feature-delivery-example.html
@@ -326,7 +329,6 @@
 %%QT_DOCDIR%%/qtdoc/qt-edu-resources.html
 %%QT_DOCDIR%%/qtdoc/qt-embedded-fonts.html
 %%QT_DOCDIR%%/qtdoc/qt-embedded-kmap2qmap.html
-%%QT_DOCDIR%%/qtdoc/qt-embedded-makeqpf.html
 %%QT_DOCDIR%%/qtdoc/qt-for-education.html
 %%QT_DOCDIR%%/qtdoc/qt-framework-product-information.html
 %%QT_DOCDIR%%/qtdoc/qt-gui-concepts.html
@@ -370,6 +372,9 @@
 %%QT_DOCDIR%%/qtdoc/qtentrypoint.html
 %%QT_DOCDIR%%/qtdoc/qtexamples.html
 %%QT_DOCDIR%%/qtdoc/qtexamplesandtutorials.html
+%%QT_DOCDIR%%/qtdoc/qtjenny-configuration.html
+%%QT_DOCDIR%%/qtdoc/qtjenny-installation.html
+%%QT_DOCDIR%%/qtdoc/qtjenny.html
 %%QT_DOCDIR%%/qtdoc/qtlanguages.html
 %%QT_DOCDIR%%/qtdoc/qtmodules.html
 %%QT_DOCDIR%%/qtdoc/qtpurchasing-androidclasses.html
@@ -433,6 +438,7 @@
 %%QT_DOCDIR%%/qtdoc/wayland-and-qt.html
 %%QT_DOCDIR%%/qtdoc/wayland-requirements.html
 %%QT_DOCDIR%%/qtdoc/webos.html
+%%QT_DOCDIR%%/qtdoc/whatsnew.html
 %%QT_DOCDIR%%/qtdoc/whatsnew60.html
 %%QT_DOCDIR%%/qtdoc/whatsnew61.html
 %%QT_DOCDIR%%/qtdoc/whatsnew62.html

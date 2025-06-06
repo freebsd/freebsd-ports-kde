@@ -1,18 +1,20 @@
 Suppress warnings when -pedantic is passed and using std < c++20, which could
 also be errors if -Werror is also passed as is the case with www/dooble.
 
+The nodiscard attribute is C++17, but LLVM doesn't seem to think so.
+
 error: use of the 'nodiscard' attribute is a C++20 extension
 
 https://github.com/llvm/llvm-project/issues/32865
 
---- src/corelib/global/qcompilerdetection.h.orig	2025-02-19 13:05:34 UTC
+--- src/corelib/global/qcompilerdetection.h.orig	2025-05-28 10:22:57 UTC
 +++ src/corelib/global/qcompilerdetection.h
-@@ -961,7 +961,7 @@
+@@ -966,7 +966,7 @@
  #  define Q_REQUIRED_RESULT [[nodiscard]]
  #endif
  
--#if __has_cpp_attribute(nodiscard) >= 201907L /* used for both P1771 and P1301... */
-+#if __has_cpp_attribute(nodiscard) >= 201907L && (!defined(Q_CC_CLANG) || __cplusplus >= 201907L) /* used for both P1771 and P1301... */
+-#if (defined(__cplusplus) && __has_cpp_attribute(nodiscard) >= 201907L /* used for both P1771 and P1301... */) \
++#if (defined(__cplusplus) && __cplusplus >= 201907L /* used for both P1771 and P1301... */) \
+     || (!defined(__cplusplus) && __has_c_attribute(nodiscard) /* N2448 */)
  // [[nodiscard]] constructor (P1771)
  #  ifndef Q_NODISCARD_CTOR
- #    define Q_NODISCARD_CTOR [[nodiscard]]

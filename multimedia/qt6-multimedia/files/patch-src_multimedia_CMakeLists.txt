@@ -1,6 +1,6 @@
---- src/multimedia/CMakeLists.txt.orig	2025-03-09 20:10:22 UTC
+--- src/multimedia/CMakeLists.txt.orig	2025-05-04 13:16:35 UTC
 +++ src/multimedia/CMakeLists.txt
-@@ -129,7 +129,7 @@ qt_internal_extend_target(Multimedia
+@@ -136,7 +136,7 @@ qt_internal_extend_target(Multimedia
  )
  
  qt_internal_extend_target(Multimedia
