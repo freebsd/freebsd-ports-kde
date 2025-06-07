@@ -108,9 +108,9 @@ MASTER_SITES_PYQTWEBENGINE=	${MASTER_SITES_PYQT${_PYQT_VERSION}WEBENGINE}
 # below, should have a suitable epoch appended to the version.
 
 # Qt version-agnostic components
-PYQTBUILDER_VERSION=		1.18.1
+PYQTBUILDER_VERSION=		1.18.2
 QSCI2_VERSION=			2.14.1
-SIP_VERSION=			6.10.0	# ,1
+SIP_VERSION=			6.12.0	# ,1
 
 # Qt 5 components
 PYQT5SIP_VERSION=		12.17.0
@@ -123,7 +123,7 @@ PYQT5WEBENGINE_VERSION=		5.15.7
 
 # Qt 6 components
 PYQT6SIP_VERSION=		13.10.0
-PYQT6_VERSION=			6.9.0
+PYQT6_VERSION=			6.9.1
 PYQT63D_VERSION=		6.9.0
 PYQT6CHARTS_VERSION=		6.9.0
 PYQT6DATAVIS3D_VERSION=		6.9.0
@@ -160,7 +160,7 @@ PYQT6_DISTINFO_FILE=	${.CURDIR:H:H}/devel/${PYQT_RELNAME}/distinfo
 PYQT5_LICENSE=		GPLv3
 PYQT6_LICENSE=		GPLv3
 
-_USE_PYQT_ALL=		pyqt5 pyqt6 3d charts datavis3d networkauth webengine
+_USE_PYQT_ALL=		pyqt5 pyqt6 3d charts graphs datavis3d networkauth webengine
 _USE_SIP_ALL=		pysip sip
 _USE_QSCINTILLA=	qscintilla2
 _USE_PYQTBUILDER=	qtbuilder

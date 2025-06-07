@@ -3,9 +3,6 @@ bin/pyuic6
 %%PYQT_APIDIR%%/PyQt6.api
 %%PYQT_DESIGNERDIR%%/libpyqt6.so
 %%PYQT_QMLDIR%%/libpyqt6qmlplugin.so
-%%PYTHON_SITELIBDIR%%/PyQt6-%%PYQT_PYQTVERSION%%.dist-info/INSTALLER
-%%PYTHON_SITELIBDIR%%/PyQt6-%%PYQT_PYQTVERSION%%.dist-info/METADATA
-%%PYTHON_SITELIBDIR%%/PyQt6-%%PYQT_PYQTVERSION%%.dist-info/RECORD
 %%PYTHON_SITELIBDIR%%/PyQt6/QtBluetooth.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtCore.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtDBus.abi%%PYTHON_MAJOR_VER%%.so
@@ -929,4 +926,8 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtprintsupport.py
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtquickwidgets.py
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtwebenginewidgets.py
+%%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/INSTALLER
+%%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/METADATA
+%%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/RECORD
+%%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/licenses/LICENSE
 %%PYTHON_SITELIBDIR%%/dbus/mainloop/pyqt6.abi%%PYTHON_MAJOR_VER%%.so
