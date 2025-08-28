@@ -146,7 +146,7 @@ SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
 .include <bsd.port.options.mk>
 
 .if !defined(BUILD_QTPDF)
-.  if ${ARCH} == "i386"
+.  if ${ARCH:Mi386}
 USES+=		nodejs:build,20
 .  else
 USES+=		nodejs:build,lts

@@ -8298,6 +8298,7 @@
     SUBDIR += tailor
     SUBDIR += talloc
     SUBDIR += talloc242
+    SUBDIR += talloc243
     SUBDIR += task
     SUBDIR += taskctl
     SUBDIR += taskflow
@@ -8330,6 +8331,7 @@
     SUBDIR += test-drive
     SUBDIR += tevent
     SUBDIR += tevent016
+    SUBDIR += tevent017
     SUBDIR += tex-kpathsea
     SUBDIR += tex-libtexlua
     SUBDIR += tex-libtexluajit
