@@ -11,8 +11,8 @@ Related URLs:
 * https://bugs.kde.org/show_bug.cgi?id=479679
 * https://github.com/llvm/llvm-project/issues/36746
 
---- src/client/qwaylandshellsurface_p.h.orig	2025-05-29 00:19:49 UTC
-+++ src/client/qwaylandshellsurface_p.h
+--- src/plugins/platforms/wayland/qwaylandshellsurface_p.h.orig	2025-05-29 00:19:49 UTC
++++ src/plugins/platforms/wayland/qwaylandshellsurface_p.h
 @@ -85,6 +85,7 @@ class Q_WAYLANDCLIENT_EXPORT QWaylandShellSurface : pu
      QPlatformWindow *platformWindow();
      struct wl_surface *wlSurface();

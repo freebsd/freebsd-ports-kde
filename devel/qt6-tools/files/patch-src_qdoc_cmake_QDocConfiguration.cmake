@@ -6,14 +6,13 @@ set in DEFAULT_VERSIONS.
 
 PR: 287430
 
---- .cmake.conf.orig	2025-05-29 00:19:42 UTC
-+++ .cmake.conf
-@@ -3,7 +3,7 @@ set(QDOC_SUPPORTED_CLANG_VERSIONS
- set(QT_EXTRA_INTERNAL_TARGET_DEFINES "QT_NO_AS_CONST=1")
- set(QDOC_MINIMUM_CLANG_VERSION "17")
+--- src/qdoc/cmake/QDocConfiguration.cmake.orig	2025-08-15 17:35:03 UTC
++++ src/qdoc/cmake/QDocConfiguration.cmake
+@@ -8,6 +8,6 @@ set(QDOC_SUPPORTED_CLANG_VERSIONS
+ 
+ # List of explicitly supported Clang versions for QDoc
  set(QDOC_SUPPORTED_CLANG_VERSIONS
 -    "20.1" "19.1" "18.1" "17.0"
 +    ${QDOC_USER_CLANG_VERSION}
  )
- list(APPEND QT_EXTRA_INTERNAL_TARGET_DEFINES "QT_NO_FOREACH=1")
- list(APPEND QT_EXTRA_INTERNAL_TARGET_DEFINES "QT_NO_CONTEXTLESS_CONNECT=1")
+ 
