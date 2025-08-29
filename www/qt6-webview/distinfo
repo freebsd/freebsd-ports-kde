@@ -1,3 +1,3 @@
-TIMESTAMP = 1756198717
-SHA256 (KDE/Qt/6.9.2/qtwebview-everywhere-src-6.9.2.tar.xz) = 4ccfd14ae68222d5709e54c970da51d7f0b4cf58af045a96935dfcc34f1b1ff1
-SIZE (KDE/Qt/6.9.2/qtwebview-everywhere-src-6.9.2.tar.xz) = 125560
+TIMESTAMP = 1756432519
+SHA256 (KDE/Qt/6.10.0-beta3/qtwebview-everywhere-src-6.10.0-beta3.tar.xz) = 470f50759c9d99b178bd272f59028ccd3b5468b2d17772e24ea75eb1fba88570
+SIZE (KDE/Qt/6.10.0-beta3/qtwebview-everywhere-src-6.10.0-beta3.tar.xz) = 128604
