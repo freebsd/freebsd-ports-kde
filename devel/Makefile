@@ -4748,6 +4748,7 @@
     SUBDIR += py-cwcwidth
     SUBDIR += py-cxx
     SUBDIR += py-cycler
+    SUBDIR += py-cyclopts
     SUBDIR += py-cykhash
     SUBDIR += py-cymbal
     SUBDIR += py-cymem
@@ -5146,6 +5147,7 @@
     SUBDIR += py-jupyter-core
     SUBDIR += py-jupyter-docprovider
     SUBDIR += py-jupyter-events
+    SUBDIR += py-jupyter-kernel-gateway
     SUBDIR += py-jupyter-kernel-test
     SUBDIR += py-jupyter-lsp
     SUBDIR += py-jupyter-packaging
