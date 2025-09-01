@@ -77,8 +77,8 @@ lib/cmake/Qt6WebViewQuickPrivate/Qt6WebViewQuickPrivateVersionlessTargets.cmake
 %%QT_LIBDIR%%/libQt6WebViewQuick.so
 %%QT_LIBDIR%%/libQt6WebViewQuick.so.6
 %%QT_LIBDIR%%/libQt6WebViewQuick.so.%%FULLVER%%
-%%QT_LIBDIR%%/metatypes/qt6webview_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6webviewquick_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webview_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webviewquick_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_webview.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webview_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webviewquick.pri

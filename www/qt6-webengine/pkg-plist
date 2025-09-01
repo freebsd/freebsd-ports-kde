@@ -258,10 +258,10 @@ lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateVersionlessTarget
 %%QT_LIBDIR%%/libQt6WebEngineWidgets.so
 %%QT_LIBDIR%%/libQt6WebEngineWidgets.so.6
 %%QT_LIBDIR%%/libQt6WebEngineWidgets.so.%%FULLVER%%
-%%QT_LIBDIR%%/metatypes/qt6webenginecore_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6webenginequick_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6webenginequickdelegatesqml_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6webenginewidgets_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webenginecore_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webenginequick_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webenginequickdelegatesqml_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6webenginewidgets_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginecore.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginecore_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_webenginequick.pri

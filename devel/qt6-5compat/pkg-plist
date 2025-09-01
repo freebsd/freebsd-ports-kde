@@ -84,7 +84,7 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargets.cmake
 %%QT_LIBDIR%%/libQt6Core5Compat.so
 %%QT_LIBDIR%%/libQt6Core5Compat.so.6
 %%QT_LIBDIR%%/libQt6Core5Compat.so.%%FULLVER%%
-%%QT_LIBDIR%%/metatypes/qt6core5compat_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6core5compat_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat_private.pri
 %%QT_QMLDIR%%/Qt5Compat/GraphicalEffects/Blend.qml

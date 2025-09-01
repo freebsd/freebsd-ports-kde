@@ -150,8 +150,8 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginTargets.cmake
 %%QT_LIBDIR%%/libQt6PositioningQuick.so
 %%QT_LIBDIR%%/libQt6PositioningQuick.so.6
 %%QT_LIBDIR%%/libQt6PositioningQuick.so.%%FULLVER%%
-%%QT_LIBDIR%%/metatypes/qt6positioning_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6positioningquick_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6positioning_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6positioningquick_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_positioning.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_positioning_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_positioningquick.pri

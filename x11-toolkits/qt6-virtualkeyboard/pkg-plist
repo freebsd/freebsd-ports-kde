@@ -254,10 +254,10 @@ lib/cmake/Qt6VirtualKeyboardSettingsPrivate/Qt6VirtualKeyboardSettingsPrivateVer
 %%QT_LIBDIR%%/libQt6VirtualKeyboardSettings.so
 %%QT_LIBDIR%%/libQt6VirtualKeyboardSettings.so.6
 %%QT_LIBDIR%%/libQt6VirtualKeyboardSettings.so.%%FULLVER%%
-%%QT_LIBDIR%%/metatypes/qt6hunspellinputmethod_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6virtualkeyboard_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6virtualkeyboardqml_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_LIBDIR%%/metatypes/qt6virtualkeyboardsettings_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6hunspellinputmethod_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6virtualkeyboard_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6virtualkeyboardqml_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6virtualkeyboardsettings_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_hunspellinputmethod.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_hunspellinputmethod_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_virtualkeyboard.pri
