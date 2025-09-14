@@ -6,13 +6,13 @@ set in DEFAULT_VERSIONS.
 
 PR: 287430
 
---- src/qdoc/cmake/QDocConfiguration.cmake.orig	2025-08-15 17:35:03 UTC
+--- src/qdoc/cmake/QDocConfiguration.cmake.orig	2025-09-01 17:41:35 UTC
 +++ src/qdoc/cmake/QDocConfiguration.cmake
 @@ -8,6 +8,6 @@ set(QDOC_SUPPORTED_CLANG_VERSIONS
  
  # List of explicitly supported Clang versions for QDoc
  set(QDOC_SUPPORTED_CLANG_VERSIONS
--    "20.1" "19.1" "18.1" "17.0"
+-    "21.1" "20.1" "19.1" "18.1" "17.0.6"
 +    ${QDOC_USER_CLANG_VERSION}
  )
  
