@@ -1,5 +1,6 @@
 PORTNAME=	gnucash
 PORTVERSION=	5.12
+PORTREVISION=	1
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -84,6 +85,9 @@ OFX_VARS=		GLIB_SCHEMAS+=org.gnucash.GnuCash.dialogs.import.ofx.gschema.xml
 
 PYTHON_CMAKE_BOOL=	WITH_PYTHON
 PYTHON_USES=		python
+
+post-patch:
+	@${REINPLACE_CMD} -e 's/-Werror //' ${WRKSRC}/CMakeLists.txt
 
 post-install-PYTHON-on:
 	@(cd ${STAGEDIR}${PREFIX} \

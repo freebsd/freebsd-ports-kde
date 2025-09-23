@@ -334,6 +334,7 @@
     SUBDIR += rust
     SUBDIR += rust-bootstrap
     SUBDIR += rust-nightly
+    SUBDIR += rust188
     SUBDIR += rustpython
     SUBDIR += s7
     SUBDIR += s7-nrepl
@@ -397,6 +398,5 @@
     SUBDIR += ypsilon
     SUBDIR += zephir
     SUBDIR += zig
-    SUBDIR += zig010
 
 .include <bsd.port.subdir.mk>

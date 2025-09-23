@@ -204,9 +204,9 @@ CARGO_CRATES=	accesskit-0.21.0 \
 		libadwaita-0.7.2 \
 		libadwaita-sys-0.7.2 \
 		libc-0.2.175 \
-		libdisplay-info-0.2.2 \
-		libdisplay-info-derive-0.1.0 \
-		libdisplay-info-sys-0.2.2 \
+		libdisplay-info-0.3.0 \
+		libdisplay-info-derive-0.1.1 \
+		libdisplay-info-sys-0.3.0 \
 		libloading-0.8.8 \
 		libm-0.2.15 \
 		libredox-0.1.9 \

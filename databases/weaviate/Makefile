@@ -1,6 +1,7 @@
 PORTNAME=	weaviate
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.30.17
+PORTREVISION=	1
 CATEGORIES=	databases # artificial-intelligence
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +11,8 @@ WWW=		https://weaviate.io/ \
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	build error: no error messages printed
 
 USES=		go:modules
 

@@ -301,6 +301,7 @@
     SUBDIR += diskcheckd
     SUBDIR += diskimage-tools
     SUBDIR += diskonaut
+    SUBDIR += diskroaster
     SUBDIR += diskscrub
     SUBDIR += diskus
     SUBDIR += dmg2img
@@ -352,6 +353,7 @@
     SUBDIR += egress-monitor
     SUBDIR += eject
     SUBDIR += eksctl
+    SUBDIR += elephant
     SUBDIR += elfx86exts
     SUBDIR += endian
     SUBDIR += enteruser
@@ -520,6 +522,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += ictree
     SUBDIR += imgurbash2
     SUBDIR += immortal
     SUBDIR += incron
@@ -609,6 +612,7 @@
     SUBDIR += kustomize
     SUBDIR += kvmclock-kmod
     SUBDIR += lava
+    SUBDIR += lazyssh
     SUBDIR += lbl-cf
     SUBDIR += lbl-hf
     SUBDIR += lcdproc
@@ -731,6 +735,7 @@
     SUBDIR += monit
     SUBDIR += monitord
     SUBDIR += monitorix
+    SUBDIR += moor
     SUBDIR += moreutils
     SUBDIR += most
     SUBDIR += mountsmb2
@@ -763,6 +768,7 @@
     SUBDIR += netevent
     SUBDIR += nfcutils
     SUBDIR += ngbuddy
+    SUBDIR += nginx-ui
     SUBDIR += nitro
     SUBDIR += nitrogen
     SUBDIR += nix
@@ -1014,6 +1020,7 @@
     SUBDIR += pxattr
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-lint
     SUBDIR += py-ansible-runner
     SUBDIR += py-appjail-gui
@@ -1332,6 +1339,7 @@
     SUBDIR += ssd_report
     SUBDIR += sshsudo
     SUBDIR += ssync
+    SUBDIR += stackit
     SUBDIR += stalepid
     SUBDIR += stepsync
     SUBDIR += storcli
@@ -1427,6 +1435,7 @@
     SUBDIR += u-boot-a13-olinuxino
     SUBDIR += u-boot-a64-olinuxino
     SUBDIR += u-boot-bananapi
+    SUBDIR += u-boot-bananapi-r2-pro
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
     SUBDIR += u-boot-bhyve-arm64

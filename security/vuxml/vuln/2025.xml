@@ -1,3 +1,484 @@
+  <vuln vid="6904ba53-22ff-4478-bfae-059dc2eefee1">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>140.0.7339.185</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>140.0.7339.185</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html">
+	 <p>This update includes 4 security fixes:</p>
+	 <ul>
+	    <li>[445380761] High CVE-2025-10585: Type Confusion in V8. Reported by Google Threat Analysis Group on 2025-09-16</li>
+	    <li>[435875050] High CVE-2025-10500: Use after free in Dawn. Reported by Giunash (Gyujeong Jin) on 2025-08-03</li>
+	    <li>[440737137] High CVE-2025-10501: Use after free in WebRTC. Reported by sherkito on 2025-08-23</li>
+	    <li>[438038775] High CVE-2025-10502: Heap buffer overflow in ANGLE. Reported by Google Big Sleep on 2025-08-12</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-10585</cvename>
+      <cvename>CVE-2025-10500</cvename>
+      <cvename>CVE-2025-10501</cvename>
+      <cvename>CVE-2025-10502</cvename>
+      <url>https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b51a4121-9607-11f0-becf-00a098b42aeb">
+    <topic>PCRE2: heap-buffer-overflow read in match_ref due to missing boundary restoration in SCS</topic>
+    <affects>
+      <package>
+	<name>pcre2</name>
+	<range><eq>10.45</eq></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>security-advisories@github.com reports:</p>
+	<blockquote cite="https://github.com/PCRE2Project/pcre2/commit/a141712e5967d448c7ce13090ab530c8e3d82254">
+	  <p>The PCRE2 library is a set of C functions that implement regular
+	expression pattern matching.  In version 10.45, a heap-buffer-overflow
+	read vulnerability exists in the PCRE2 regular expression matching
+	engine, specifically within the handling of the (*scs:...) (Scan
+	SubString) verb when combined with (*ACCEPT) in src/pcre2_match.c.
+	This vulnerability may potentially lead to information disclosure
+	if the out-of-bounds data read during the memcmp affects the final
+	match result in a way observable by the attacker.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-58050</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-58050</url>
+    </references>
+    <dates>
+      <discovery>2025-08-27</discovery>
+      <entry>2025-09-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="744966b3-93d8-11f0-b8da-589cfc10a551">
+    <topic>expat -- dynamic memory allocations issue</topic>
+    <affects>
+      <package>
+	<name>expat2</name>
+	<range><lt>2.7.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>expat security advisory:</p>
+	<blockquote cite="https://nvd.nist.gov/vuln/detail/CVE-2025-59375">
+	  <p>libexpat allows attackers to trigger large dynamic memory allocations
+	  via a small document that is submitted for parsing.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-59375</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-59375</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b9b668f0-96ec-4568-b618-2edea45d6933">
+    <topic>jenkins -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>jenkins</name>
+	<range><lt>2.528</lt></range>
+      </package>
+      <package>
+	<name>jenkins-lts</name>
+	<range><lt>2.516.3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jenkins Security Advisory:</p>
+	<blockquote cite="https://www.jenkins.io/security/advisory/2025-09-17/">
+	  <h1>Description</h1>
+	  <h5>(High) SECURITY-3618 / CVE-2025-5115</h5>
+	  <p>HTTP/2 denial of service vulnerability in bundled Jetty</p>
+	  <h5>(Medium) SECURITY-3594 / CVE-2025-59474</h5>
+	  <p>Missing permission check allows obtaining agent names</p>
+	  <h5>(Medium) SECURITY-3625 / CVE-2025-59475</h5>
+	  <p> Missing permission check in authenticated users' profile menu</p>
+	  <h5>(Medium) SECURITY-3424 / CVE-2025-59476</h5>
+	  <p>Log message injection vulnerability</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-5115</cvename>
+      <cvename>CVE-2025-59474</cvename>
+      <cvename>CVE-2025-59475</cvename>
+      <cvename>CVE-2025-59476</cvename>
+      <url>https://www.jenkins.io/security/advisory/2025-09-17/</url>
+    </references>
+    <dates>
+      <discovery>2025-09-17</discovery>
+      <entry>2025-09-17</entry>
+  </dates>
+  </vuln>
+
+  <vuln vid="f6ca7c47-9190-11f0-b8da-589cfc10a551">
+    <topic>unit-java -- security vulnerability</topic>
+    <affects>
+      <package>
+	<name>unit-java</name>
+	<range><lt>1.34.2</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>F5 reports:</p>
+	<blockquote cite="https://my.f5.com/manage/s/article/K000149959">
+	  <p>When NGINX Unit with the Java Language Module is in use,
+	  undisclosed requests can lead to an infinite loop and cause
+	  an increase in CPU resource utilization.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-1695</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2025-1695</url>
+    </references>
+    <dates>
+      <discovery>2025-09-14</discovery>
+      <entry>2025-09-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3aee6703-8ff6-11f0-b8da-589cfc10a551">
+    <topic>cups -- security vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cups</name>
+	<range><lt>2.4.13</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OpenPrinting reports:</p>
+	<blockquote cite="https://github.com/OpenPrinting/cups/security/advisories/GHSA-4c68-qgrh-rmmq">
+	  <p>When the AuthType is set to anything but Basic, if the request contains an
+	    Authorization: Basic ... header, the password is not checked.</p>
+	</blockquote>
+	<blockquote cite="https://github.com/OpenPrinting/cups/security/advisories/GHSA-7qx3-r744-6qv4">
+	  <p>An unsafe deserialization and validation of printer attributes, causes null
+	    dereference in libcups library.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-58060</cvename>
+      <cvename>CVE-2025-58364</cvename>
+      <url>https://github.com/OpenPrinting/cups/security/advisories/GHSA-4c68-qgrh-rmmq</url>
+      <url>https://github.com/OpenPrinting/cups/security/advisories/GHSA-7qx3-r744-6qv4</url>
+    </references>
+    <dates>
+      <discovery>2025-09-11</discovery>
+      <entry>2025-09-12</entry>
+      <modified>2025-09-16</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="f50640fa-89a4-4795-a302-47b0dea8cee5">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>140.0.7339.127</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>140.0.7339.127</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_9.html">
+	 <p>This update includes 2 security fixes:</p>
+	 <ul>
+	    <li>[440454442] Critical CVE-2025-10200: Use after free in Serviceworker. Reported by Looben Yang on 2025-08-22</li>
+	    <li>[439305148] High CVE-2025-10201: Inappropriate implementation in Mojo. Reported by Sahan Fernando &amp; Anon on 2025-08-18</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-10200</cvename>
+      <cvename>CVE-2025-10201</cvename>
+      <url>https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_9.html</url>
+    </references>
+    <dates>
+      <discovery>2025-09-09</discovery>
+      <entry>2025-09-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="602fc0fa-8ece-11f0-9d03-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>18.3.0</ge><lt>18.3.2</lt></range>
+	<range><ge>18.2.0</ge><lt>18.2.6</lt></range>
+	<range><ge>7.8.0</ge><lt>18.1.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/">
+	  <p>Denial of Service issue in SAML Responses impacts GitLab CE/EE</p>
+	  <p>Server-Side Request Forgery issue in Webhook custom header impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in User-Controllable Fields impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in endpoint file upload impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in token listing operations impacts GitLab CE/EE</p>
+	  <p>Information disclosure issue in runner endpoints impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-2256</cvename>
+      <cvename>CVE-2025-6454</cvename>
+      <cvename>CVE-2025-1250</cvename>
+      <cvename>CVE-2025-7337</cvename>
+      <cvename>CVE-2025-10094</cvename>
+      <cvename>CVE-2025-6769</cvename>
+      <url>https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/</url>
+    </references>
+    <dates>
+      <discovery>2025-09-10</discovery>
+      <entry>2025-09-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bda50cf1-8bcf-11f0-b3f7-a8a1599412c6">
+    <topic>chromium -- multiple security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>140.0.7339.80</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>140.0.7339.80</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop.html">
+	 <p>This update includes 6 security fixes:</p>
+	 <ul>
+	    <li>[434513380] High CVE-2025-9864: Use after free in V8. Reported by Pavel Kuzmin of Yandex Security Team on 2025-07-28</li>
+	    <li>[437147699] Medium CVE-2025-9865: Inappropriate implementation in Toolbar. Reported by Khalil Zhani on 2025-08-07</li>
+	    <li>[379337758] Medium CVE-2025-9866: Inappropriate implementation in Extensions. Reported by NDevTK on 2024-11-16</li>
+	    <li>[415496161] Medium CVE-2025-9867: Inappropriate implementation in Downloads. Reported by Farras Givari on 2025-05-04</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-9864</cvename>
+      <cvename>CVE-2025-9865</cvename>
+      <cvename>CVE-2025-9866</cvename>
+      <cvename>CVE-2025-9867</cvename>
+      <url>https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2025-09-02</discovery>
+      <entry>2025-09-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="340dc4c1-895a-11f0-b6e5-4ccc6adda413">
+    <topic>exiv2 -- Denial-of-service</topic>
+    <affects>
+      <package>
+	<name>exiv2</name>
+	<range><lt>0.28.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kevin Backhouse reports:</p>
+	<blockquote cite="https://github.com/Exiv2/exiv2/security/advisories/GHSA-m54q-mm9w-fp6g">
+	  <p>A denial-of-service was found in Exiv2 version v0.28.5: a quadratic
+	  algorithm in the ICC profile parsing code in jpegBase::readMetadata()
+	  can cause Exiv2 to run for a long time. Exiv2 is a command-line utility
+	  and C++ library for reading, writing, deleting, and modifying the
+	  metadata of image files. The denial-of-service is triggered when Exiv2
+	  is used to read the metadata of a crafted jpg image file.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-55304</cvename>
+      <url>https://github.com/Exiv2/exiv2/security/advisories/GHSA-m54q-mm9w-fp6g</url>
+    </references>
+    <dates>
+      <discovery>2025-08-29</discovery>
+      <entry>2025-09-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="84a77710-8958-11f0-b6e5-4ccc6adda413">
+    <topic>exiv2 -- Out-of-bounds read in Exiv2::EpsImage::writeMetadata()</topic>
+    <affects>
+      <package>
+	<name>exiv2</name>
+	<range><lt>0.28.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kevin Backhouse reports:</p>
+	<blockquote cite="https://github.com/Exiv2/exiv2/security/advisories/GHSA-496f-x7cq-cq39">
+	  <p>An out-of-bounds read was found in Exiv2 versions v0.28.5 and earlier.
+	  Exiv2 is a command-line utility and C++ library for reading, writing,
+	  deleting, and modifying the metadata of image files. The out-of-bounds
+	  read is triggered when Exiv2 is used to write metadata into a crafted
+	  image file. An attacker could potentially exploit the vulnerability to
+	  cause a denial of service by crashing Exiv2, if they can trick the victim
+	  into running Exiv2 on a crafted image file.</p>
+	  <p>Note that this bug is only triggered when writing the metadata, which
+	  is a less frequently used Exiv2 operation than reading the metadata. For
+	  example, to trigger the bug in the Exiv2 command-line application, you
+	  need to add an extra command-line argument such as delete.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-54080</cvename>
+      <url>https://github.com/Exiv2/exiv2/security/advisories/GHSA-496f-x7cq-cq39</url>
+    </references>
+    <dates>
+      <discovery>2025-08-29</discovery>
+      <entry>2025-09-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0db8684f-8938-11f0-8325-bc2411f8eb0b">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py39-django42</name>
+	<name>py310-django42</name>
+	<name>py311-django42</name>
+	<range><lt>4.2.24</lt></range>
+      </package>
+      <package>
+	<name>py310-django51</name>
+	<name>py311-django51</name>
+	<range><lt>5.1.12</lt></range>
+      </package>
+      <package>
+	<name>py310-django52</name>
+	<name>py311-django52</name>
+	<range><lt>5.2.6</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2025/sep/03/security-releases/">
+	  <p>CVE-2025-57833: Potential SQL injection in FilteredRelation column aliases.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2025-57833</cvename>
+      <url>https://www.djangoproject.com/weblog/2025/sep/03/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2025-09-01</discovery>
+      <entry>2025-09-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9f9b0b37-88fa-11f0-90a2-6cc21735f730">
+    <topic>Shibboleth Service Provider -- SQL injection vulnerability in ODBC plugin</topic>
+    <affects>
+      <package>
+	<name>shibboleth-sp</name>
+	<range><lt>3.5.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Internet2 reports:</p>
+	<blockquote cite="https://shibboleth.net/community/advisories/secadv_20250903.txt">
+	  <p>The Shibboleth Service Provider includes a storage API usable
+	  for a number of different use cases such as the session cache,
+	  replay cache, and relay state management. An ODBC extension
+	  plugin is provided with some distributions of the software
+	  (notably on Windows).</p>
+	  <p>A SQL injection vulnerability was identified in some of the
+	  queries issued by the plugin, and this can be creatively
+	  exploited through specially crafted inputs to exfiltrate
+	  information stored in the database used by the SP.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://shibboleth.net/community/advisories/secadv_20250903.txt</url>
+    </references>
+    <dates>
+      <discovery>2025-09-03</discovery>
+      <entry>2025-09-03</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="aaa060af-88d6-11f0-a294-b0416f0c4c67">
+    <topic>Vieb -- Remote Code Execution via Visiting Untrusted URLs</topic>
+    <affects>
+      <package>
+	<name>linux-vieb</name>
+	<range><lt>12.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Zhengyu Liu, Jianjia Yu, Jelmer van Arnhem report:</p>
+	<blockquote cite="https://github.com/Jelmerro/Vieb/security/advisories/GHSA-h2fq-667q-7gpm">
+    <p>We discovered a remote code execution (RCE) vulnerability in the latest
+      release of the Vieb browser (v12.3.0). By luring a user to visit a
+      malicious website, an attacker can achieve arbitrary code execution on the
+      victim’s machine.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/Jelmerro/Vieb/security/advisories/GHSA-h2fq-667q-7gpm</url>
+    </references>
+    <dates>
+      <discovery>2025-07-31</discovery>
+      <entry>2025-09-03</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="d7b7e505-8486-11f0-9d03-2cf05da270f3">
     <topic>Gitlab -- vulnerabilities</topic>
     <affects>
@@ -2067,7 +2548,7 @@
     <affects>
       <package>
 	<name>libxslt</name>
-	<range><lt>2</lt></range> <!-- adjust should libxslt ever be fixed -->
+	<range><lt>1.1.43_2</lt></range> <!-- adjust should libxslt ever be fixed -->
       </package>
       <package>
 	<name>linux-c7-libxslt</name>
