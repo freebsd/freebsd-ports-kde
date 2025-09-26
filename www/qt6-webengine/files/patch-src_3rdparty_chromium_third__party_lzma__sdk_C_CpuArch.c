@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c.orig	2025-02-19 07:43:18 UTC
+--- src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c.orig	2025-08-15 18:30:00 UTC
 +++ src/3rdparty/chromium/third_party/lzma_sdk/C/CpuArch.c
-@@ -854,7 +854,35 @@ BoolInt CPU_IsSupported_SHA1(void) { return APPLE_CRYP
+@@ -854,7 +854,35 @@ BoolInt CPU_IsSupported_AES (void) { return APPLE_CRYP
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  BoolInt CPU_IsSupported_AES (void) { return APPLE_CRYPTO_SUPPORT_VAL; }
  

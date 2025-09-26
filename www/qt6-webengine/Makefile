@@ -39,6 +39,7 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 
 CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg \
 		QT_FEATURE_webengine_proprietary_codecs
+#CMAKE_OFF=	QT_FEATURE_webengine_system_zlib
 
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
@@ -84,7 +85,7 @@ CMAKE_OFF+=	QT_FEATURE_qtpdf_build
 
 CXXFLAGS+=	-I${LOCALBASE}/include/libepoll-shim
 
-SYS_LIBS=	freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus
+SYS_LIBS=	freetype harfbuzz-ng libdrm libpng libxml libxslt openh264 opus
 .endif
 
 # The build system reads the environment variable $NINJA_PATH to decide whether
@@ -157,6 +158,7 @@ post-extract:
 	@${MKDIR} ${WRKSRC}/src/3rdparty/chromium/media/audio/sndio \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/freebsd \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/openbsd
+	(cd ${WRKSRC}/src/3rdparty/chromium/third_party/libdrm/src/include && ${CP} drm/drm.h .)
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%CPPFLAGS%%|${CPPFLAGS}|;s|%%CXXFLAGS%%|${CXXFLAGS}|;s|%%LDFLAGS%%|${LDFLAGS}|' \

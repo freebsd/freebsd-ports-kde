@@ -3754,6 +3754,7 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/features/android/spec_post.prf
 %%QT_MKSPECDIR%%/features/benchmark.prf
 %%QT_MKSPECDIR%%/features/build_pass.prf
+%%QT_MKSPECDIR%%/features/ccache.prf
 %%QT_MKSPECDIR%%/features/cmake_functions.prf
 %%QT_MKSPECDIR%%/features/cmdline.prf
 %%QT_MKSPECDIR%%/features/configure.prf
@@ -3852,7 +3853,6 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/features/uikit/xcodebuild.mk
 %%QT_MKSPECDIR%%/features/uikit/xcodebuild.prf
 %%QT_MKSPECDIR%%/features/unix/bsymbolic_functions.prf
-%%QT_MKSPECDIR%%/features/unix/ccache.prf
 %%QT_MKSPECDIR%%/features/unix/hide_symbols.prf
 %%QT_MKSPECDIR%%/features/unix/largefile.prf
 %%QT_MKSPECDIR%%/features/unix/no_direct_extern_access.prf
@@ -4203,6 +4203,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_DOCDIR%%/global/includes/corelib/port-from-qregexp.qdocinc
 %%QT_DOCDIR%%/global/includes/examples-run.qdocinc
 %%QT_DOCDIR%%/global/includes/module-use.qdocinc
+%%QT_DOCDIR%%/global/includes/squish-tested-example.qdocinc
 %%QT_DOCDIR%%/global/includes/standardpath/functiondocs.qdocinc
 %%QT_DOCDIR%%/global/macros-online.qdocconf
 %%QT_DOCDIR%%/global/macros.qdocconf

@@ -1,6 +1,6 @@
---- configure.cmake.orig	2025-08-18 00:53:11 UTC
+--- configure.cmake.orig	2025-08-15 18:30:00 UTC
 +++ configure.cmake
-@@ -291,12 +291,12 @@ qt_webengine_configure_check("supported-platform"
+@@ -290,12 +290,12 @@ qt_webengine_configure_check("supported-platform"
  
  qt_webengine_configure_check("supported-platform"
      MODULES QtWebEngine
@@ -15,7 +15,7 @@
      MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
  )
  
-@@ -316,15 +316,6 @@ qt_webengine_configure_check("static-build"
+@@ -315,15 +315,6 @@ qt_webengine_configure_check("static-build"
      MESSAGE "Static build is not supported."
  )
  
@@ -31,7 +31,7 @@
  qt_webengine_configure_check("python3"
      MODULES QtWebEngine QtPdf
      CONDITION Python3_FOUND
-@@ -455,6 +446,8 @@ qt_webengine_configure_check("compiler"
+@@ -454,6 +445,8 @@ qt_webengine_configure_check("compiler"
      CONDITION MSVC OR
          (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
          (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
@@ -40,7 +40,7 @@
          (MACOS AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
      MESSAGE
          "${CMAKE_CXX_COMPILER_ID} compiler is not supported."
-@@ -464,6 +457,8 @@ qt_webengine_configure_check("compiler"
+@@ -463,6 +456,8 @@ qt_webengine_configure_check("compiler"
      CONDITION MSVC OR
          (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
          (LINUX AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
@@ -49,7 +49,7 @@
          (APPLE AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang") OR
          (ANDROID AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang") OR
          (MINGW AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU") OR
-@@ -725,7 +720,7 @@ qt_feature("webengine-ozone-x11" PRIVATE
+@@ -720,7 +715,7 @@ qt_feature("webengine-ozone-x11" PRIVATE
  
  qt_feature("webengine-ozone-x11" PRIVATE
      LABEL "Support X11 on qpa-xcb"

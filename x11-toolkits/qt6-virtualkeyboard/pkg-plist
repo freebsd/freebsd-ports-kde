@@ -77,9 +77,6 @@ lib/cmake/Qt6/FindCerenceXt9.cmake
 lib/cmake/Qt6/FindHunspell.cmake
 lib/cmake/Qt6/FindMyScript.cmake
 lib/cmake/Qt6BuildInternals/StandaloneTests/QtVirtualKeyboardTestsConfig.cmake
-lib/cmake/Qt6BundledOpenwnn/Qt6BundledOpenwnnDependencies.cmake
-lib/cmake/Qt6BundledPinyin/Qt6BundledPinyinDependencies.cmake
-lib/cmake/Qt6BundledTcime/Qt6BundledTcimeDependencies.cmake
 lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake
 lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake
 lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfigVersion.cmake

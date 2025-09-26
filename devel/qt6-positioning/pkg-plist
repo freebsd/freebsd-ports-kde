@@ -82,7 +82,6 @@
 lib/cmake/Qt6/FindGconf.cmake
 lib/cmake/Qt6/FindGypsy.cmake
 lib/cmake/Qt6BuildInternals/StandaloneTests/QtPositioningTestsConfig.cmake
-lib/cmake/Qt6Bundled_Clip2Tri/Qt6Bundled_Clip2TriDependencies.cmake
 lib/cmake/Qt6Positioning/Qt6PositioningAdditionalTargetInfo.cmake
 lib/cmake/Qt6Positioning/Qt6PositioningConfig.cmake
 lib/cmake/Qt6Positioning/Qt6PositioningConfigVersion.cmake
