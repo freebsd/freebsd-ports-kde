@@ -1,7 +1,7 @@
 PORTNAME=	kops
 PORTVERSION=	1.33.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	danilo@FreeBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Kubernetes Operations
 WWW=		https://github.com/kubernetes/kops
 
 LICENSE=	APACHE20
+
+BROKEN_i386=	linking fails: mapping output file failed: cannot allocate memory
 
 BUILD_DEPENDS=	go-bindata:devel/go-bindata
 

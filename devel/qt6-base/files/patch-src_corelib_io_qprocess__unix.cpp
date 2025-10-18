@@ -1,3 +1,8 @@
+Use dlsym to access environ. This avoids undefined references during linking
+with -Wl,-no-undefined.
+
+See https://reviews.freebsd.org/D30842
+
 --- src/corelib/io/qprocess_unix.cpp.orig	2025-08-11 04:54:51 UTC
 +++ src/corelib/io/qprocess_unix.cpp
 @@ -59,10 +59,9 @@

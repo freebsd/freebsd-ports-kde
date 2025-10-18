@@ -49,12 +49,14 @@
     SUBDIR += chmlib
     SUBDIR += chrono
     SUBDIR += cinnamon-translations
+    SUBDIR += claude-code
     SUBDIR += cldr-emoji-annotation
     SUBDIR += clex
     SUBDIR += clifm
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += code2prompt
+    SUBDIR += codex
     SUBDIR += colortail
     SUBDIR += coloursum
     SUBDIR += colwide
@@ -76,6 +78,7 @@
     SUBDIR += cpp-mcp
     SUBDIR += cpuid
     SUBDIR += crosti
+    SUBDIR += crush
     SUBDIR += cryptoballot
     SUBDIR += cs
     SUBDIR += cstream
@@ -158,9 +161,12 @@
     SUBDIR += g810-led
     SUBDIR += gedkeeper
     SUBDIR += geekcode
+    SUBDIR += gemini-cli
     SUBDIR += getopt
     SUBDIR += ggml
     SUBDIR += gimp-help-en
+    SUBDIR += github-copilot-cli
+    SUBDIR += github-copilot-language-server
     SUBDIR += gkrellm-gamma
     SUBDIR += gkrellm-xkb
     SUBDIR += gkrellmbgchg2
@@ -194,6 +200,7 @@
     SUBDIR += hulgalugha
     SUBDIR += hwdata
     SUBDIR += hxtools
+    SUBDIR += hyprqt6engine
     SUBDIR += ignition-fuel-tools
     SUBDIR += iio-oscilloscope
     SUBDIR += imerge
@@ -496,6 +503,7 @@
     SUBDIR += py-mem0ai
     SUBDIR += py-mffpy
     SUBDIR += py-mixpanel
+    SUBDIR += py-ml-collections
     SUBDIR += py-mmcv
     SUBDIR += py-mmdet
     SUBDIR += py-mmengine
@@ -535,10 +543,13 @@
     SUBDIR += py-pyfiglet
     SUBDIR += py-pykml
     SUBDIR += py-pymatreader
+    SUBDIR += py-pyowm
     SUBDIR += py-pypatent
     SUBDIR += py-pyprind
     SUBDIR += py-pyqir
+    SUBDIR += py-python-crc
     SUBDIR += py-python-geohash
+    SUBDIR += py-python-pygtrie
     SUBDIR += py-python-utils
     SUBDIR += py-pytorch
     SUBDIR += py-pytorch-lightning
@@ -628,6 +639,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += rustlings
     SUBDIR += ruut
     SUBDIR += schilytools
     SUBDIR += sdformat

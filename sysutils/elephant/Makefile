@@ -1,6 +1,7 @@
 PORTNAME=	elephant
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.7
+DISTVERSION=	2.1.8
+PORTREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -10,12 +11,12 @@ WWW=		https://github.com/abenz1267/elephant
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-NOT_FOR_ARCHS=		i386
-NOT_FOR_ARCHS_REASON=	-buildmode=plugin not supported on freebsd/386
+NOT_FOR_ARCHS=		aarch64 armv7 i386
+NOT_FOR_ARCHS_REASON=	-buildmode=plugin not supported on these architectures
 
 USES=		go:1.25,modules
 
-GO_MODULE=	github.com/abenz1267/elephant
+GO_MODULE=	github.com/abenz1267/elephant/v2
 GO_TARGET=	./cmd/elephant
 
 PLIST_FILES=	bin/${PORTNAME}
@@ -64,8 +65,8 @@ WEBSEARCH_PLIST_FILES=	etc/xdg/elephant/providers/websearch.so
 ENABLED_PROVIDERS=	${SELECTED_OPTIONS:NDOCS:tl}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}&|' \
-		${GO_WRKSRC}/internal/providers/load.go
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		${GO_WRKSRC}/vendor/github.com/adrg/xdg/paths_unix.go
 
 post-build:
 .for provider in ${ENABLED_PROVIDERS}

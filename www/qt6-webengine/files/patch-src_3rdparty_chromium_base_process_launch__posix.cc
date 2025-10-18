@@ -1,3 +1,8 @@
+Use dlsym to access environ. This avoids undefined references during linking
+with -Wl,-no-undefined.
+
+See https://reviews.freebsd.org/D30842
+
 --- src/3rdparty/chromium/base/process/launch_posix.cc.orig	2025-08-18 00:53:11 UTC
 +++ src/3rdparty/chromium/base/process/launch_posix.cc
 @@ -67,7 +67,9 @@

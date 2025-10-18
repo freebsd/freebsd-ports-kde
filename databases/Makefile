@@ -813,6 +813,7 @@
     SUBDIR += py-pony
     SUBDIR += py-postgresql
     SUBDIR += py-powa-collector
+    SUBDIR += py-prisma
     SUBDIR += py-psycogreen
     SUBDIR += py-psycopg
     SUBDIR += py-psycopg-c
@@ -840,6 +841,7 @@
     SUBDIR += py-redis
     SUBDIR += py-redis2
     SUBDIR += py-redis5
+    SUBDIR += py-redisvl
     SUBDIR += py-rrdtool
     SUBDIR += py-schemachange
     SUBDIR += py-sispy
@@ -1121,6 +1123,8 @@
     SUBDIR += timescaledb-backup
     SUBDIR += timescaledb-tune
     SUBDIR += tinycdb
+    SUBDIR += tkrzw
+    SUBDIR += tkrzw-python
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant
     SUBDIR += trilogy

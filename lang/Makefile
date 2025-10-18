@@ -89,7 +89,6 @@
     SUBDIR += gauche
     SUBDIR += gawk
     SUBDIR += gcc
-    SUBDIR += gcc11
     SUBDIR += gcc12
     SUBDIR += gcc12-devel
     SUBDIR += gcc13
@@ -291,6 +290,7 @@
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-dhall
+    SUBDIR += py-gherkin-official
     SUBDIR += py-hy
     SUBDIR += py-lupa
     SUBDIR += py-sly
@@ -383,6 +383,7 @@
     SUBDIR += tolua++
     SUBDIR += trealla-prolog
     SUBDIR += tuareg-mode.el
+    SUBDIR += typescript
     SUBDIR += typstfmt
     SUBDIR += typstyle
     SUBDIR += ucc

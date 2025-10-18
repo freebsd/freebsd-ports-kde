@@ -1834,6 +1834,12 @@
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/Main.qml
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/AndroidManifest.xml
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-hdpi/icon.png
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-ldpi/icon.png
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-mdpi/icon.png
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-xhdpi/icon.png
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-xxhdpi/icon.png
+%%QT_EXAMPLEDIR%%/demos/qtjennydemo/android/res/drawable-xxxhdpi/icon.png
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/backend.cpp
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/backend.h
 %%QT_EXAMPLEDIR%%/demos/qtjennydemo/doc/images/qtjennydemo_overview.png

@@ -72,8 +72,6 @@
 %%DATADIR%%/Definitions/aidoruonline.yml
 %%DATADIR%%/Definitions/aither-api.yml
 %%DATADIR%%/Definitions/amigosshare.yml
-%%DATADIR%%/Definitions/anime-time.yml
-%%DATADIR%%/Definitions/anime-timel.yml
 %%DATADIR%%/Definitions/animelayer.yml
 %%DATADIR%%/Definitions/animelovers-api.yml
 %%DATADIR%%/Definitions/animetorrentsro.yml
@@ -136,6 +134,7 @@
 %%DATADIR%%/Definitions/catorrent.yml
 %%DATADIR%%/Definitions/cdfile.yml
 %%DATADIR%%/Definitions/ceskeforum.yml
+%%DATADIR%%/Definitions/cgpeers.yml
 %%DATADIR%%/Definitions/chdbits.yml
 %%DATADIR%%/Definitions/chilebt-api.yml
 %%DATADIR%%/Definitions/cinemageddon.yml
@@ -271,7 +270,6 @@
 %%DATADIR%%/Definitions/internetarchive.yml
 %%DATADIR%%/Definitions/isohunt2.yml
 %%DATADIR%%/Definitions/itatorrents.yml
-%%DATADIR%%/Definitions/itorrent.yml
 %%DATADIR%%/Definitions/jme-reunit3d-api.yml
 %%DATADIR%%/Definitions/joyhd.yml
 %%DATADIR%%/Definitions/jpopsuki.yml
@@ -347,6 +345,7 @@
 %%DATADIR%%/Definitions/newstudiol.yml
 %%DATADIR%%/Definitions/nicept.yml
 %%DATADIR%%/Definitions/nipponsei.yml
+%%DATADIR%%/Definitions/nirvana.yml
 %%DATADIR%%/Definitions/noname-club.yml
 %%DATADIR%%/Definitions/noname-clubl.yml
 %%DATADIR%%/Definitions/nordicquality.yml
@@ -383,7 +382,6 @@
 %%DATADIR%%/Definitions/pornolab.yml
 %%DATADIR%%/Definitions/pornotorrent.yml
 %%DATADIR%%/Definitions/pornrips.yml
-%%DATADIR%%/Definitions/pornxlab.yml
 %%DATADIR%%/Definitions/portugas-api.yml
 %%DATADIR%%/Definitions/postman.yml
 %%DATADIR%%/Definitions/postman-api.yml
@@ -436,6 +434,7 @@
 %%DATADIR%%/Definitions/seedpool-api.yml
 %%DATADIR%%/Definitions/selezen.yml
 %%DATADIR%%/Definitions/sewerpt.yml
+%%DATADIR%%/Definitions/sextorrent.yml
 %%DATADIR%%/Definitions/sexypics.yml
 %%DATADIR%%/Definitions/sfp.yml
 %%DATADIR%%/Definitions/shanaproject.yml
@@ -486,7 +485,6 @@
 %%DATADIR%%/Definitions/tmghub.yml
 %%DATADIR%%/Definitions/tocashare.yml
 %%DATADIR%%/Definitions/tokyotosho.yml
-%%DATADIR%%/Definitions/torlock.yml
 %%DATADIR%%/Definitions/tormac.yml
 %%DATADIR%%/Definitions/tornado.yml
 %%DATADIR%%/Definitions/torrent-heaven.yml
@@ -562,7 +560,6 @@
 %%DATADIR%%/Definitions/yggcookie.yml
 %%DATADIR%%/Definitions/yggtorrent.yml
 %%DATADIR%%/Definitions/yoinked.yml
-%%DATADIR%%/Definitions/yourbittorrent.yml
 %%DATADIR%%/Definitions/yts.yml
 %%DATADIR%%/Definitions/yuscene-api.yml
 %%DATADIR%%/Definitions/zamundanet.yml
