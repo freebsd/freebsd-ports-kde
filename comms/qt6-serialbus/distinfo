@@ -1,3 +1,3 @@
-TIMESTAMP = 1758845443
-SHA256 (KDE/Qt/6.10.0-rc/qtserialbus-everywhere-src-6.10.0-rc.tar.xz) = 645b15e34ed8d2c2d72b0eba04c5e0cd8801eaec98549b703266fe2f5dfdd041
-SIZE (KDE/Qt/6.10.0-rc/qtserialbus-everywhere-src-6.10.0-rc.tar.xz) = 535376
+TIMESTAMP = 1760758032
+SHA256 (KDE/Qt/6.10.0/qtserialbus-everywhere-src-6.10.0.tar.xz) = c627b2bfffe267bb53bbdbac60c22a08bcdbfb6775983ae5d16c975298a4ec30
+SIZE (KDE/Qt/6.10.0/qtserialbus-everywhere-src-6.10.0.tar.xz) = 535324

@@ -1,3 +1,3 @@
-TIMESTAMP = 1758845506
-SHA256 (KDE/Qt/6.10.0-rc/qtbase-everywhere-src-6.10.0-rc.tar.xz) = d0d57c25cb8506b61d73400913510c056c0333ad0b23b7b295d141e2f898311e
-SIZE (KDE/Qt/6.10.0-rc/qtbase-everywhere-src-6.10.0-rc.tar.xz) = 50206024
+TIMESTAMP = 1760758107
+SHA256 (KDE/Qt/6.10.0/qtbase-everywhere-src-6.10.0.tar.xz) = ead4623bcb54a32257c5b3e3a5aec6d16ec96f4cda58d2e003f5a0c16f72046d
+SIZE (KDE/Qt/6.10.0/qtbase-everywhere-src-6.10.0.tar.xz) = 50194096
