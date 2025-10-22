@@ -4149,7 +4149,6 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SliderGroove.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SliderHandle.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SwitchIndicator.qml
-%%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/TextFieldBackground.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/qmldir
