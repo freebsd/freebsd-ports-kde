@@ -9,6 +9,7 @@
     SUBDIR += coyim
     SUBDIR += cutegram
     SUBDIR += debugtox
+    SUBDIR += deltachat-desktop
     SUBDIR += dendrite
     SUBDIR += dino
     SUBDIR += discordo
@@ -66,6 +67,7 @@
     SUBDIR += meanwhile
     SUBDIR += mikutter
     SUBDIR += mtxclient
+    SUBDIR += nchat
     SUBDIR += neochat
     SUBDIR += nextcloud-spreed-signaling
     SUBDIR += nextcloud-talk

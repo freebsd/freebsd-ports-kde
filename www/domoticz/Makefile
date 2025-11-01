@@ -1,6 +1,5 @@
 PORTNAME=	domoticz
-DISTVERSION=	2024.7
-PORTREVISION=	3
+DISTVERSION=	2025.2
 CATEGORIES=	www
 
 MAINTAINER=	kiwi@FreeBSD.org
@@ -10,8 +9,10 @@ WWW=		https://www.domoticz.com
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/License.txt
 
+BUILD_DEPENDS=	${LOCALBASE}/include/jwt-cpp/jwt.h:devel/jwt-cpp
+
 LIB_DEPENDS=	libcurl.so:ftp/curl \
-		libboost_system.so:devel/boost-libs \
+		libboost_thread.so:devel/boost-libs \
 		libjsoncpp.so:devel/jsoncpp \
 		libmosquitto.so:net/mosquitto
 
@@ -27,7 +28,8 @@ CMAKE_OFF+=	GIT_SUBMODULE \
 		USE_BUILTIN_MINIZIP \
 		USE_BUILTIN_JSONCPP \
 		USE_BUILTIN_MQTT \
-		USE_STATIC_OPENZWAVE
+		USE_STATIC_OPENZWAVE \
+		USE_BUILTIN_JWTCPP
 
 CMAKE_INSTALL_PREFIX=	${PREFIX}/domoticz
 
@@ -50,11 +52,6 @@ PRECOMP_CMAKE_BOOL=	USE_PRECOMPILED_HEADER
 
 PYTHON_USES=		python:3.9+
 PYTHON_CMAKE_BOOL=	USE_PYTHON
-
-post-patch:
-	@${REINPLACE_CMD} -e '/find_package/s| system||' \
-			  -e '/target_link_libraries/s| Boost::system||' \
-		${WRKSRC}/CMakeLists.txt
 
 post-install:
 	${MKDIR} ${STAGEDIR}/var/db/domoticz ${STAGEDIR}/var/run/domoticz

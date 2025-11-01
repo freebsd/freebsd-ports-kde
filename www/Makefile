@@ -15,6 +15,7 @@
     SUBDIR += R-cran-miniUI
     SUBDIR += R-cran-pixture
     SUBDIR += R-cran-pkgdown
+    SUBDIR += R-cran-revealjs
     SUBDIR += R-cran-rvest
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
@@ -126,6 +127,7 @@
     SUBDIR += codeigniter
     SUBDIR += colly
     SUBDIR += coppermine
+    SUBDIR += corepack
     SUBDIR += cpp-httplib
     SUBDIR += cpr
     SUBDIR += crawl
@@ -204,6 +206,7 @@
     SUBDIR += flickcurl
     SUBDIR += foreign-cdm
     SUBDIR += forgejo
+    SUBDIR += forgejo-lts
     SUBDIR += forgejo7
     SUBDIR += formication
     SUBDIR += foswiki
@@ -506,6 +509,7 @@
     SUBDIR += node20
     SUBDIR += node22
     SUBDIR += node24
+    SUBDIR += node25
     SUBDIR += nostromo
     SUBDIR += novnc
     SUBDIR += npc
@@ -513,6 +517,7 @@
     SUBDIR += npm-node20
     SUBDIR += npm-node22
     SUBDIR += npm-node24
+    SUBDIR += npm-node25
     SUBDIR += nyxt
     SUBDIR += oatpp
     SUBDIR += oauth2-proxy
@@ -1452,7 +1457,6 @@
     SUBDIR += phpbb3
     SUBDIR += phpfpmtop
     SUBDIR += phpgroupware
-    SUBDIR += phpmustache
     SUBDIR += phpmyfaq
     SUBDIR += phprecipebook
     SUBDIR += phpsysinfo
@@ -1583,6 +1587,7 @@
     SUBDIR += py-dj52-django-js-asset
     SUBDIR += py-dj52-django-mptt
     SUBDIR += py-dj52-django-multiselectfield
+    SUBDIR += py-dj52-django-netfields
     SUBDIR += py-dj52-django-prometheus
     SUBDIR += py-dj52-django-redis
     SUBDIR += py-dj52-django-rich
@@ -1758,6 +1763,7 @@
     SUBDIR += py-flask-jwt
     SUBDIR += py-flask-jwt-extended
     SUBDIR += py-flask-limiter
+    SUBDIR += py-flask-limiter3
     SUBDIR += py-flask-login
     SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
@@ -2038,6 +2044,7 @@
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale
+    SUBDIR += rdrview
     SUBDIR += rearx
     SUBDIR += reddsaver
     SUBDIR += redmine51
@@ -2338,8 +2345,10 @@
     SUBDIR += rubygem-protocol-http1
     SUBDIR += rubygem-protocol-http2
     SUBDIR += rubygem-protocol-rack
+    SUBDIR += rubygem-protocol-url
     SUBDIR += rubygem-protocol-websocket
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-puma-gitlab
     SUBDIR += rubygem-puma6
     SUBDIR += rubygem-puma_worker_killer
     SUBDIR += rubygem-pusher-client
@@ -2484,6 +2493,7 @@
     SUBDIR += rubygem-turbolinks
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
+    SUBDIR += rubygem-typhoeus-gitlab
     SUBDIR += rubygem-typhoeus14
     SUBDIR += rubygem-uglifier
     SUBDIR += rubygem-underscore-rails
@@ -2647,6 +2657,7 @@
     SUBDIR += unit-ruby
     SUBDIR += unit-wasm
     SUBDIR += unitc
+    SUBDIR += urlfinder
     SUBDIR += uwebsockets
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
@@ -2724,6 +2735,7 @@
     SUBDIR += yarn-node20
     SUBDIR += yarn-node22
     SUBDIR += yarn-node24
+    SUBDIR += yarn-node25
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

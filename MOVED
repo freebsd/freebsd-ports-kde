@@ -1443,7 +1443,6 @@ databases/mysql55-server||2022-06-30|Has expired: Upstream support ended on Dece
 databases/mysql55-client||2022-06-30|Has expired: Upstream support ended on December 2018
 multimedia/schroedinger||2022-06-30|Has expired: Abandoned legacy video codec, upstream is dead and last release was back in 2012
 emulators/kcemu||2022-06-30|Has expired: Depends on expired multimedia/schroedinger
-multimedia/ccextractor||2022-06-30|Has expired: Depends on expired multimedia/schroedinger
 security/libgringotts||2022-06-30|Has expired: Abandonware, upstream dead and last release in 2008
 deskutils/osmo||2022-06-30|Has expired: Depends on expired security/libgringotts
 devel/itext||2022-06-30|Has expired: Outdated version and deprecated by upstream
@@ -4808,3 +4807,45 @@ deskutils/gnome-shell-extension-openweather||2025-10-14|Has expired: Superseded 
 math/vtk8|math/vtk9|2025-10-14|Last user switched to math/vtk9
 security/iddawc||2025-10-14|Has expired: Upstream repo archived on Nov 11, 2024
 editors/quilter||2025-10-15|Deprecated upstream
+devel/py-types-urllib3|net/py-urllib3|2025-10-18|Remove obsoleted port. The urllib3 package includes type annotations or type stubs since version 2.0.0. Use net/py-urllib3 instead
+devel/rubygem-aws-sdk-opsworks||2025-10-18|Remove obsoleted port
+devel/rubygem-aws-sdk-opsworkscm||2025-10-18|Remove obsoleted port
+devel/rubygem-aws-sdk-sms||2025-10-18|Remove obsoleted port
+devel/rubygem-cucumber9|devel/rubygem-cucumber|2025-10-18|Remove obsoleted port. Use devel/rubygem-cucumber instead
+devel/rubygem-cucumber-core13|devel/rubygem-cucumber-core|2025-10-18|Remove obsoleted port. Use devel/rubygem-cucumber-core instead
+devel/rubygem-cucumber-messages22|devel/rubygem-cucumber-messages|2025-10-18|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages24|devel/rubygem-cucumber-messages|2025-10-18|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-cucumber-messages25|devel/rubygem-cucumber-messages|2025-10-18|Remove obsoleted port. Use devel/rubygem-cucumber-messages instead
+devel/rubygem-fog-core210|devel/rubygem-fog-core|2025-10-18|Remove obsoleted port. Use devel/rubygem-fog-core instead
+devel/rubygem-fog-core250|devel/rubygem-fog-core|2025-10-18|Remove obsoleted port. Use devel/rubygem-fog-core instead
+devel/rubygem-json27|devel/rubygem-json|2025-10-18|Remove obsoleted port. Use devel/rubygem-json instead
+net/rubygem-fog-aws328|net/rubygem-fog-aws|2025-10-18|Remove obsoleted port. Use net/rubygem-fog-aws instead
+textproc/rubygem-cucumber-gherkin27|textproc/rubygem-cucumber-gherkin|2025-10-18|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-cucumber-gherkin30|textproc/rubygem-cucumber-gherkin|2025-10-18|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+textproc/rubygem-cucumber-gherkin32|textproc/rubygem-cucumber-gherkin|2025-10-18|Remove obsoleted port. Use textproc/rubygem-cucumber-gherkin instead
+devel/gocritic|devel/go-critic|2025-10-19|Commands renamed up stream
+net/asterisk18||2025-10-21|Has expired: Migrate to newer asterisk, security support ends soon
+mail/mu4e|mail/mu|2025-10-21|Becomes integrated as default to its backend port mail/mu
+sysutils/extrace|sysutils/extrace-freebsd|2025-10-24|Rename to better match upstream name
+devel/rubygem-vite_rails-rails70|devel/rubygem-vite_rails-gitlab|2025-10-25|Use devel/rubygem-vite_rails-gitlab instead
+devel/rubygem-vite_ruby33|devel/rubygem-vite_ruby-gitlab|2025-10-25|Use devel/rubygem-vite_ruby-gitlab instead
+devel/rubygem-multi_json114|devel/rubygem-multi_json-gitlab|2025-10-25|Use devel/rubygem-multi_json-gitlab instead
+devel/pycomposefile|devel/py-pycomposefile|2025-10-27|Rename to add py- prefix. Move devel/pycomposefile to devel/py-pycomposefile
+devel/rubygem-fugit111|devel/rubygem-fugit|2025-10-27|Remove obsoleted port. Use devel/rubygem-fugit instead
+science/py-hiphive|science/py-hiPhive|2025-10-28|Spelling changed into camel case on PYPI and GH
+games/burrtools|games/burr-tools|2025-10-31|Harmonise with upstream repository name
+databases/mongodb60|databases/mongodb70|2025-11-01|Has expired: EOL starting August 2025, see https://www.mongodb.com/legal/support-policy/lifecycles, please use databases/mongodb70
+www/phpmustache||2025-11-01|Has expired: Installation mode changed from systemwide to per-application with Composer
+dns/fpdns||2025-11-01|Has expired: Upstream repository has been archived on Sep 19, 2024
+databases/py-pycql||2025-11-01|Has expired: Upstream repository has been archived on Aug 31, 2021
+devel/py-types-ujson||2025-11-01|Has expired: No longer required by devel/py-ujson ≥ 5.11
+devel/pysvn||2025-11-01|Has expired: Fails to build
+cad/impact||2025-11-01|Has expired: Does not work as intended
+emulators/citra-qt5||2025-11-01|Has expired: project has been discontinued and build fails with FFmpeg >7
+emulators/citra||2025-11-01|Has expired: project has been discontinued and build fails with FFmpeg >7
+games/renpy||2025-11-01|Has expired: Uses deprecated version of python
+security/rhonabwy||2025-11-01|Has expired: Upstream repository has been archived on Nov 11, 2024
+devel/electron35||2025-11-01|Has expired: EOLed upstream, switch to newer version
+lang/python39||2025-11-01|Has expired: Upgrade to a newer Python version. 3.9 is in maintenance status and gets security fixes only. End-of-Life: 2025-10. See https://devguide.python.org/versions/
+devel/py-pyjq|textproc/py-jq|2025-11-01|Removed: Depended on expired Python version 3.9 and does not build with newer Python
+devel/py-ctags||2025-11-01|Removed: Depended on expired Python version 3.9 and does not build with newer Python

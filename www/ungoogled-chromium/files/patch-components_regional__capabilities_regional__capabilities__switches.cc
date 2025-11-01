@@ -1,7 +1,7 @@
---- components/regional_capabilities/regional_capabilities_switches.cc.orig	2025-09-10 13:22:16 UTC
+--- components/regional_capabilities/regional_capabilities_switches.cc.orig	2025-11-01 06:40:37 UTC
 +++ components/regional_capabilities/regional_capabilities_switches.cc
-@@ -18,7 +18,7 @@ BASE_FEATURE(kMitigateLegacySearchEnginePromoOverlap,
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -23,7 +23,7 @@ BASE_FEATURE(kResolveRegionalCapabilitiesFromDevice,
+              base::FEATURE_ENABLED_BY_DEFAULT);
  #endif
  
 -#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)

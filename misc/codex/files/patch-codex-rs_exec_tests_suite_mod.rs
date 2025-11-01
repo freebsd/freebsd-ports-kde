@@ -1,4 +1,4 @@
---- codex-rs/exec/tests/suite/mod.rs.orig	2025-10-09 01:48:45 UTC
+--- codex-rs/exec/tests/suite/mod.rs.orig	2025-10-25 21:16:34 UTC
 +++ codex-rs/exec/tests/suite/mod.rs
 @@ -4,5 +4,6 @@ mod resume;
  mod originator;

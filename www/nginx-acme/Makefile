@@ -1,6 +1,6 @@
 PORTNAME=	acme
 PORTVERSION=	0.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/nginx/nginx-${PORTNAME}/releases/download/v${PORTVERSION}/:acme \
 		https://nginx.org/download/:nginx
@@ -8,7 +8,7 @@ PKGNAMEPREFIX=	nginx-devel-
 DISTFILES=	nginx-${PORTNAME}-${DISTVERSION}.tar.gz:acme \
 		nginx-${NGINX_VERSION}.tar.gz
 
-MAINTAINER=	osa@FreeBSD.org
+MAINTAINER=	joneum@FreeBSD.org
 COMMENT=	ACME module for NGINX
 WWW=		https://github.com/nginx/nginx-acme
 

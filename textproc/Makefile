@@ -234,6 +234,7 @@
     SUBDIR += gdome2
     SUBDIR += gh-grep
     SUBDIR += git-chglog
+    SUBDIR += gitlab-code-parser
     SUBDIR += gitlab-elasticsearch-indexer
     SUBDIR += gitlab-zoekt-indexer
     SUBDIR += gl-aspell
@@ -1837,10 +1838,9 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
-    SUBDIR += rubygem-cucumber-gherkin27
-    SUBDIR += rubygem-cucumber-gherkin30
-    SUBDIR += rubygem-cucumber-gherkin32
+    SUBDIR += rubygem-cucumber-gherkin34
     SUBDIR += rubygem-cucumber-html-formatter
+    SUBDIR += rubygem-cucumber-html-formatter21
     SUBDIR += rubygem-dartsass
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
@@ -1933,6 +1933,7 @@
     SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-octopress-escape-code
     SUBDIR += rubygem-opensearch-ruby-gitlab
+    SUBDIR += rubygem-openvox-strings
     SUBDIR += rubygem-opml
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-ox

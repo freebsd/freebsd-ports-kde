@@ -1,6 +1,6 @@
 PORTNAME=	bolt
 PORTVERSION=	3.30.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils rubygems
 MASTER_SITES=	RG
 
@@ -34,6 +34,7 @@ RUN_DEPENDS=	r10k:sysutils/rubygem-r10k \
 
 USES=		gem shebangfix
 
+CONFLICTS_INSTALL=rubygem-openbolt
 ruby_OLD_CMD+=	/opt/puppetlabs/puppet/bin/ruby
 SHEBANG_FILES=	libexec/*
 

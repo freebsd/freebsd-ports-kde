@@ -1,7 +1,7 @@
---- chrome/browser/browser_features.cc.orig	2025-09-10 13:22:16 UTC
+--- chrome/browser/browser_features.cc.orig	2025-11-01 06:40:37 UTC
 +++ chrome/browser/browser_features.cc
-@@ -80,7 +80,7 @@ BASE_FEATURE(kClearUserDataUponProfileDestruction,
-              "ClearUserDataUponProfileDestruction",
+@@ -70,7 +70,7 @@ BASE_FEATURE(kCertVerificationNetworkTime, base::FEATU
+ BASE_FEATURE(kClearUserDataUponProfileDestruction,
               base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX)
@@ -9,17 +9,17 @@
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -99,7 +99,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyProvider,
+@@ -85,7 +85,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyProvider,
+ // Destroy profiles when their last browser window is closed, instead of when
  // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
-              "DestroyProfileOnBrowserClose",
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -241,7 +241,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
-              "SandboxExternalProtocolBlockedWarning",
+@@ -204,7 +204,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlocked, base::FE
+ BASE_FEATURE(kSandboxExternalProtocolBlockedWarning,
               base::FEATURE_ENABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_LINUX)

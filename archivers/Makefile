@@ -156,6 +156,7 @@
     SUBDIR += pecl-rar
     SUBDIR += pecl-zstd
     SUBDIR += php-brotli
+    SUBDIR += php-bzip3
     SUBDIR += php-horde_lz4
     SUBDIR += php-lz4
     SUBDIR += php-snappy
@@ -254,6 +255,7 @@
     SUBDIR += rzip
     SUBDIR += sectar
     SUBDIR += sharutils
+    SUBDIR += smpq
     SUBDIR += snappy
     SUBDIR += snappy-java
     SUBDIR += snzip
