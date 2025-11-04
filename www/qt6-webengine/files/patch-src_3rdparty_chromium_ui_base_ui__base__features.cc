@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/ui/base/ui_base_features.cc.orig	2025-08-15 18:30:00 UTC
+--- src/3rdparty/chromium/ui/base/ui_base_features.cc.orig	2025-10-02 00:36:39 UTC
 +++ src/3rdparty/chromium/ui/base/ui_base_features.cc
 @@ -133,7 +133,7 @@ BASE_FEATURE(kWaylandUiScale,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -18,7 +18,7 @@
  BASE_FEATURE(kExperimentalFlingAnimation,
               "ExperimentalFlingAnimation",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -307,7 +307,7 @@ bool IsForcedColorsEnabled() {
+@@ -311,7 +311,7 @@ bool IsForcedColorsEnabled() {
  // and Linux. This feature will be released for other platforms in later
  // milestones.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

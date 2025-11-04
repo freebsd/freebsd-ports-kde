@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/content/public/common/content_features.cc.orig	2025-08-15 18:30:00 UTC
+--- src/3rdparty/chromium/content/public/common/content_features.cc.orig	2025-10-02 00:36:39 UTC
 +++ src/3rdparty/chromium/content/public/common/content_features.cc
 @@ -72,7 +72,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartup,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -9,7 +9,7 @@
  BASE_FEATURE(kAudioServiceOutOfProcess,
               "AudioServiceOutOfProcess",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -1232,9 +1232,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1238,9 +1238,9 @@ BASE_FEATURE(kWebAssemblyTiering,
  
  // Enable WebAssembly trap handler.
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
@@ -21,7 +21,7 @@
       defined(ARCH_CPU_ARM64))
  BASE_FEATURE(kWebAssemblyTrapHandler,
               "WebAssemblyTrapHandler",
-@@ -1290,7 +1290,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExtended,
+@@ -1296,7 +1296,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExtended,
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

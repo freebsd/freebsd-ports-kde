@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/ui/base/ui_base_features.h.orig	2025-08-15 18:30:00 UTC
+--- src/3rdparty/chromium/ui/base/ui_base_features.h.orig	2025-10-02 00:36:39 UTC
 +++ src/3rdparty/chromium/ui/base/ui_base_features.h
-@@ -126,7 +126,7 @@ BASE_DECLARE_FEATURE(kWaylandUiScale);
+@@ -129,7 +129,7 @@ BASE_DECLARE_FEATURE(kWaylandUiScale);
  BASE_DECLARE_FEATURE(kWaylandUiScale);
  #endif  // BUILDFLAG(IS_OZONE)
  

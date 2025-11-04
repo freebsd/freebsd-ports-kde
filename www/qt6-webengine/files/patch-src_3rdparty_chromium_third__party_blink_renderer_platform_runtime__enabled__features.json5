@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-08-15 18:30:00 UTC
+--- src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-10-02 00:36:39 UTC
 +++ src/3rdparty/chromium/third_party/blink/renderer/platform/runtime_enabled_features.json5
 @@ -427,7 +427,7 @@
        name: "AppTitle",
@@ -27,7 +27,7 @@
        origin_trial_allows_third_party: true,
      },
      {
-@@ -3275,7 +3275,7 @@
+@@ -3279,7 +3279,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
@@ -36,7 +36,7 @@
        status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -3412,7 +3412,7 @@
+@@ -3416,7 +3416,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -45,7 +45,7 @@
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -4467,7 +4467,7 @@
+@@ -4478,7 +4478,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -54,7 +54,7 @@
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4654,7 +4654,7 @@
+@@ -4665,7 +4665,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -63,7 +63,7 @@
        status: "experimental",
        base_feature: "none",
      },
-@@ -4923,7 +4923,7 @@
+@@ -4934,7 +4934,7 @@
      {
        name: "WebIdentityDigitalCredentials",
        origin_trial_feature_name: "WebIdentityDigitalCredentials",
