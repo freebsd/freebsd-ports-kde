@@ -55,7 +55,6 @@ LIB_DEPENDS+=	libabsl_base.so:devel/abseil \
 		libdbus-1.so:devel/dbus \
 		libdrm.so:graphics/libdrm \
 		libepoll-shim.so:devel/libepoll-shim \
-		libevent.so:devel/libevent \
 		libexpat.so:textproc/expat2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libharfbuzz.so:print/harfbuzz \
