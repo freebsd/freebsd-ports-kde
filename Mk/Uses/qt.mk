@@ -257,7 +257,7 @@ qt-languageserver_PORT=	devel/${_QT_RELNAME}-languageserver
 qt-languageserver_PATH=	${LOCALBASE}/${QT_LIBDIR_REL}/libQt6LanguageServer.a
 
 qt-lottie_PORT=		graphics/${_QT_RELNAME}-lottie
-qt-lottie_LIB=		libQt${_QT_LIBVER}Bodymovin.so
+qt-lottie_LIB=		libQt${_QT_LIBVER}Lottie.so
 
 qt-linguist_PORT=	devel/${_QT_RELNAME}-linguist
 qt-linguist_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/linguist
