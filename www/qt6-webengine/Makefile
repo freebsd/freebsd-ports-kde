@@ -39,7 +39,6 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 
 CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg \
 		QT_FEATURE_webengine_proprietary_codecs
-#CMAKE_OFF=	QT_FEATURE_webengine_system_zlib
 
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
