@@ -1,5 +1,5 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	142.0.7444.59
+PORTVERSION=	142.0.7444.134
 PULSEMV=	16
 PULSEV=		${PULSEMV}.1
 UGVERSION=	${DISTVERSION}-1
@@ -285,11 +285,9 @@ MAKE_ENV+=	C_INCLUDE_PATH=${LOCALBASE}/include \
 WRKSRC=		${WRKDIR}/chromium-${DISTVERSION}
 
 # rust
-RUSTC_VERSION!= rustc -V 2>/dev/null || true
 MAKE_ENV+=	RUSTC_BOOTSTRAP=1
 GN_ARGS+=	enable_rust=true \
-		rust_sysroot_absolute="${LOCALBASE}" \
-		rustc_version="${RUSTC_VERSION}"
+		rust_sysroot_absolute="${LOCALBASE}"
 
 pre-everything::
 	@${ECHO_MSG}

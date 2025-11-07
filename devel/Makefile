@@ -5327,6 +5327,7 @@
     SUBDIR += py-mypy_extensions
     SUBDIR += py-mystic
     SUBDIR += py-naiveBayesClassifier
+    SUBDIR += py-namex
     SUBDIR += py-nanobind
     SUBDIR += py-nanotime
     SUBDIR += py-natsort
@@ -8431,6 +8432,7 @@
     SUBDIR += tinycbor
     SUBDIR += tinygo
     SUBDIR += tinylaf
+    SUBDIR += tinyopt
     SUBDIR += tinysparql
     SUBDIR += tkcon
     SUBDIR += tkcvs
