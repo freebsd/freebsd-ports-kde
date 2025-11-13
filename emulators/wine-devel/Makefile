@@ -24,10 +24,7 @@ USES=		bison cpe desktop-file-utils gmake llvm:min=17,build,noexport \
 		localbase pkgconfig sdl shebangfix tar:xz
 CPE_VENDOR=	winehq
 USE_GCC=	yes
-WINELIBDIR=	${PREFIX}/lib
-.if !defined(USE_LDCONFIG32)
-USE_LDCONFIG=	${WINELIBDIR} ${WINELIBDIR}/wine
-.endif
+USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/wine
 USE_SDL=	sdl2
 
 SHEBANG_FILES=	tools/make_requests tools/winemaker/winemaker \
@@ -78,7 +75,6 @@ OPTIONS_RADIO_AUDIO=	ALSA OSS
 OPTIONS_SUB=		yes
 
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
-FFMPEG_DESC=	FFMPEG support
 GECKO_DESC=	Bundle Gecko MSI package for Wine
 MONO_DESC=	Bundle Mono MSI package for Wine
 WAYLAND_DESC=	Wayland Support
