@@ -436,6 +436,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qcoloroutput_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qdeferredpointer_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsannotation_p.h
+%%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsaotirbuilder_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsbasicblocks_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljscodegenerator_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljscompilepass_p.h
@@ -646,6 +647,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmlsorterbase_p.h
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmlsortercompositor_p.h
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmlsortfilterproxymodel_p.h
+%%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmlsortfilterproxymodel_p_p.h
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmlstringsorter_p.h
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmltableinstancemodel_p.h
 %%QT_INCDIR%%/QtQmlModels/%%FULLVER%%/QtQmlModels/private/qqmltreemodeltotablemodel_p_p.h
@@ -706,6 +708,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQmlXmlListModel/qtqmlxmllistmodelexports.h
 %%QT_INCDIR%%/QtQmlXmlListModel/qtqmlxmllistmodelversion.h
 %%QT_INCDIR%%/QtQuick/%%FULLVER%%/QtQuick/private/qaccessiblequickitem_p.h
+%%QT_INCDIR%%/QtQuick/%%FULLVER%%/QtQuick/private/qaccessiblequicktextedit_p.h
 %%QT_INCDIR%%/QtQuick/%%FULLVER%%/QtQuick/private/qaccessiblequickview_p.h
 %%QT_INCDIR%%/QtQuick/%%FULLVER%%/QtQuick/private/qqmldesignermetaobject_p.h
 %%QT_INCDIR%%/QtQuick/%%FULLVER%%/QtQuick/private/qquadpath_p.h
@@ -1433,6 +1436,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQuickTemplates2/%%FULLVER%%/QtQuickTemplates2/private/qquickweeknumbermodel_p.h
 %%QT_INCDIR%%/QtQuickTemplates2/%%FULLVER%%/QtQuickTemplates2/private/qtquicktemplates2-config_p.h
 %%QT_INCDIR%%/QtQuickTemplates2/%%FULLVER%%/QtQuickTemplates2/private/qtquicktemplates2global_p.h
+%%QT_INCDIR%%/QtQuickTemplates2/%%FULLVER%%/QtQuickTemplates2/private/qtquicktemplates2math_p.h
 %%QT_INCDIR%%/QtQuickTemplates2/QtQuickTemplates2
 %%QT_INCDIR%%/QtQuickTemplates2/QtQuickTemplates2Depends
 %%QT_INCDIR%%/QtQuickTemplates2/QtQuickTemplates2Version
@@ -1999,6 +2003,7 @@ lib/cmake/Qt6Qml/Qt6QmlMacros.cmake
 lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in
 lib/cmake/Qt6Qml/Qt6QmlPluginTemplate.cpp.in
 lib/cmake/Qt6Qml/Qt6QmlPlugins.cmake
+lib/cmake/Qt6Qml/Qt6QmlProperties.cmake
 lib/cmake/Qt6Qml/Qt6QmlPublicCMakeHelpers.cmake
 lib/cmake/Qt6Qml/Qt6QmlTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Qml/Qt6QmlTargets.cmake
@@ -2679,7 +2684,6 @@ lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivat
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateConfigVersion.cmake
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateConfigVersionImpl.cmake
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateDependencies.cmake
-lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivatePlugins.cmake
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateTargets.cmake
 lib/cmake/Qt6QuickVectorImageGeneratorPrivate/Qt6QuickVectorImageGeneratorPrivateVersionlessAliasTargets.cmake
@@ -4149,6 +4153,7 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SliderGroove.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SliderHandle.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/SwitchIndicator.qml
+%%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/TextFieldBackground.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Controls/Fusion/impl/qmldir
@@ -4319,6 +4324,7 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/ScrollBar.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/ScrollIndicator.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/ScrollView.qml
+%%QT_QMLDIR%%/QtQuick/Controls/Universal/SearchField.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/SelectionRectangle.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/Slider.qml
 %%QT_QMLDIR%%/QtQuick/Controls/Universal/SpinBox.qml

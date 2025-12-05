@@ -5,6 +5,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtConcurrent/QtConcurrentFilter
 %%QT_INCDIR%%/QtConcurrent/QtConcurrentMap
 %%QT_INCDIR%%/QtConcurrent/QtConcurrentRun
+%%QT_INCDIR%%/QtConcurrent/QtConcurrentTask
 %%QT_INCDIR%%/QtConcurrent/QtConcurrentVersion
 %%QT_INCDIR%%/QtConcurrent/qtaskbuilder.h
 %%QT_INCDIR%%/QtConcurrent/qtconcurrent_global.h
@@ -30,7 +31,6 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qabstractitemmodel_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qabstractproxymodel_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qanimationgroup_p.h
-%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qbytedata_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcalendarbackend_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcalendarmath_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qcborcommon_p.h
@@ -86,7 +86,6 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qipaddress_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qislamiccivilcalendar_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qitemselectionmodel_p.h
-%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qiterable_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qjalalicalendar_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qjson_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qjsonparser_p.h
@@ -717,6 +716,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/qiodevicebase.h
 %%QT_INCDIR%%/QtCore/qitemselectionmodel.h
 %%QT_INCDIR%%/QtCore/qiterable.h
+%%QT_INCDIR%%/QtCore/qiterable_impl.h
 %%QT_INCDIR%%/QtCore/qiterator.h
 %%QT_INCDIR%%/QtCore/qjsonarray.h
 %%QT_INCDIR%%/QtCore/qjsondocument.h
@@ -1626,6 +1626,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qabstractsocket_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qabstractsocketengine_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qauthenticator_p.h
+%%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qbytedatabuffer_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qdecompresshelper_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qdnslookup_p.h
 %%DTLS%%%%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qdtls_p.h
@@ -1689,6 +1690,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qsslpresharedkeyauthenticator_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qsslserver_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qsslsocket_p.h
+%%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qtcontenttypeparser_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qtcpserver_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qtcpsocket_p.h
 %%QT_INCDIR%%/QtNetwork/%%FULLVER%%/QtNetwork/private/qtldurl_p.h
@@ -4186,6 +4188,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_DOCDIR%%/global/compat.qdocconf
 %%QT_DOCDIR%%/global/config.qdocconf
 %%QT_DOCDIR%%/global/cpp-doc-macros.qdocconf
+%%QT_DOCDIR%%/global/disabledwarnings.qdocconf
 %%QT_DOCDIR%%/global/externalsites.qdocconf
 %%QT_DOCDIR%%/global/externalsites/external-resources.qdoc
 %%QT_DOCDIR%%/global/externalsites/qt-webpages.qdoc

@@ -111,7 +111,6 @@
 %%QT_DOCDIR%%/qtdoc/images/addalarms.png
 %%QT_DOCDIR%%/qtdoc/images/alarms2.png
 %%QT_DOCDIR%%/qtdoc/images/alarms3.png
-%%QT_DOCDIR%%/qtdoc/images/android-single-abis.png
 %%QT_DOCDIR%%/qtdoc/images/android-source-folder.png
 %%QT_DOCDIR%%/qtdoc/images/android.webp
 %%QT_DOCDIR%%/qtdoc/images/animation-examples.png
@@ -197,8 +196,7 @@
 %%QT_DOCDIR%%/qtdoc/images/qtcreator-clazy-checks-for-porting-to-qt6.png
 %%QT_DOCDIR%%/qtdoc/images/qtcreator-create-templates.png
 %%QT_DOCDIR%%/qtdoc/images/qtcreator-qt-quick-editors.png
-%%QT_DOCDIR%%/qtdoc/images/qtdesignstudio-examples.png
-%%QT_DOCDIR%%/qtdoc/images/qtdesignstudio.png
+%%QT_DOCDIR%%/qtdoc/images/qtdesignstudio.webp
 %%QT_DOCDIR%%/qtdoc/images/qthangman-example.png
 %%QT_DOCDIR%%/qtdoc/images/qthangman-store-example.png
 %%QT_DOCDIR%%/qtdoc/images/qtinstallercomponents.png
@@ -228,7 +226,6 @@
 %%QT_DOCDIR%%/qtdoc/images/threadsandobjects.png
 %%QT_DOCDIR%%/qtdoc/images/tiger.png
 %%QT_DOCDIR%%/qtdoc/images/tool-examples.png
-%%QT_DOCDIR%%/qtdoc/images/txtviewer_screenshot.png
 %%QT_DOCDIR%%/qtdoc/images/vectorimageexample.png
 %%QT_DOCDIR%%/qtdoc/images/vxwb-advanced-settings.png
 %%QT_DOCDIR%%/qtdoc/images/vxwb-cmake-rtp-project.png
@@ -249,7 +246,6 @@
 %%QT_DOCDIR%%/qtdoc/images/xr_physicsbase_teleportation.jpg
 %%QT_DOCDIR%%/qtdoc/index.html
 %%QT_DOCDIR%%/qtdoc/inputs-linux-device.html
-%%QT_DOCDIR%%/qtdoc/install-qt-design-studio.html
 %%QT_DOCDIR%%/qtdoc/integrity-building-and-flashing-dd-project.html
 %%QT_DOCDIR%%/qtdoc/integrity-building-monolith.html
 %%QT_DOCDIR%%/qtdoc/integrity-building-qt-8155p-on-ubuntu.html
@@ -306,7 +302,6 @@
 %%QT_DOCDIR%%/qtdoc/plugins-howto.html
 %%QT_DOCDIR%%/qtdoc/porting-qt3d-to-qtquick3d.html
 %%QT_DOCDIR%%/qtdoc/porting-to-android.html
-%%QT_DOCDIR%%/qtdoc/porting-to-ios.html
 %%QT_DOCDIR%%/qtdoc/porting-to-qt6-using-clazy.html
 %%QT_DOCDIR%%/qtdoc/portingguide.html
 %%QT_DOCDIR%%/qtdoc/qmltypes.html
@@ -356,7 +351,6 @@
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-colorpaletteclient-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-dice-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-documentviewer-example.html
-%%QT_DOCDIR%%/qtdoc/qtdoc-demos-documentviewer-plugins-txtviewer-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-fx-material-showroom-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-graphs-csv-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-hangman-example.html
@@ -425,6 +419,7 @@
 %%QT_DOCDIR%%/qtdoc/topics-graphics2d.html
 %%QT_DOCDIR%%/qtdoc/topics-network-connectivity.html
 %%QT_DOCDIR%%/qtdoc/topics-ui.html
+%%QT_DOCDIR%%/qtdoc/topics-vectorimageformats.html
 %%QT_DOCDIR%%/qtdoc/touchinputexamples.html
 %%QT_DOCDIR%%/qtdoc/trademarks.html
 %%QT_DOCDIR%%/qtdoc/uic.html

@@ -1017,6 +1017,7 @@
 %%QT_EXAMPLEDIR%%/demos/android/splashscreen/quick/doc/src/qml-splashscreen-in-android.qdoc
 %%QT_EXAMPLEDIR%%/demos/android/splashscreen/quick/main.cpp
 %%QT_EXAMPLEDIR%%/demos/android/splashscreen/quick/qt_logo.png
+%%QT_EXAMPLEDIR%%/demos/calqlatr/.qmllint.ini
 %%QT_EXAMPLEDIR%%/demos/calqlatr/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/calqlatr/Main.qml
 %%QT_EXAMPLEDIR%%/demos/calqlatr/android/AndroidManifest.xml
@@ -1029,6 +1030,7 @@
 %%QT_EXAMPLEDIR%%/demos/calqlatr/calqlatr.pro
 %%QT_EXAMPLEDIR%%/demos/calqlatr/calqlatr.qmlproject
 %%QT_EXAMPLEDIR%%/demos/calqlatr/calqlatr.qrc
+%%QT_EXAMPLEDIR%%/demos/calqlatr/content/ApplicationState.qml
 %%QT_EXAMPLEDIR%%/demos/calqlatr/content/BackspaceButton.qml
 %%QT_EXAMPLEDIR%%/demos/calqlatr/content/CalculatorButton.qml
 %%QT_EXAMPLEDIR%%/demos/calqlatr/content/Display.qml
@@ -1352,7 +1354,6 @@
 %%QT_EXAMPLEDIR%%/demos/documentviewer/doc/images/documentviewer_open.png
 %%QT_EXAMPLEDIR%%/demos/documentviewer/doc/images/txtviewer_screenshot.png
 %%QT_EXAMPLEDIR%%/demos/documentviewer/doc/src/documentviewer.qdoc
-%%QT_EXAMPLEDIR%%/demos/documentviewer/doc/src/txtviewer.qdoc
 %%QT_EXAMPLEDIR%%/demos/documentviewer/plugins/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/documentviewer/plugins/Q3DViewer/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/documentviewer/plugins/Q3DViewer/QueryMimeTypes.qml
@@ -1499,6 +1500,7 @@
 %%QT_EXAMPLEDIR%%/demos/hangman/qml/StoreView.qml
 %%QT_EXAMPLEDIR%%/demos/hangman/qml/Word.qml
 %%QT_EXAMPLEDIR%%/demos/hangman/resources.qrc
+%%QT_EXAMPLEDIR%%/demos/lightningviewer/.qmllint.ini
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/Info.plist
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/ActionsLayer.qml
@@ -1511,7 +1513,7 @@
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/Main.qml
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/MapLayersDrawer.qml
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/MapLayersItem.qml
-%%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/MapType.qml
+%%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/MapTypeConfig.qml
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/MapView.qml
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/SwitchMap.qml
 %%QT_EXAMPLEDIR%%/demos/lightningviewer/LightningViewerModule/controller.cpp
@@ -1789,9 +1791,7 @@
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/MediaPlayer/qmldir
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/controls.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/mediaplayerapp.png
-%%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/playlist.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/project_structure.png
-%%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/images/theme_info.png
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/src/mediaplayer.qdoc
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/doc/src/mediaplayer.rst
 %%QT_EXAMPLEDIR%%/demos/mediaplayer/filenameprovider.h
@@ -1888,9 +1888,13 @@
 %%QT_EXAMPLEDIR%%/demos/robotarm/RobotArm.qmlproject
 %%QT_EXAMPLEDIR%%/demos/robotarm/backend_mock/Backend/BackendMock.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/backend_mock/Backend/qmldir
+%%QT_EXAMPLEDIR%%/demos/robotarm/content/+Material/App.qml
+%%QT_EXAMPLEDIR%%/demos/robotarm/content/+Material/Circle.qml
+%%QT_EXAMPLEDIR%%/demos/robotarm/content/+Material/LabeledSlider.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/content/App.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/content/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/demos/robotarm/content/LabeledSlider.ui.qml
+%%QT_EXAMPLEDIR%%/demos/robotarm/content/Circle.qml
+%%QT_EXAMPLEDIR%%/demos/robotarm/content/LabeledSlider.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/content/MainScreen.ui.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/content/NodeIndicator.qml
 %%QT_EXAMPLEDIR%%/demos/robotarm/content/RoboticArm.ui.qml
@@ -1950,6 +1954,7 @@
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.pro
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.qmlproject
 %%QT_EXAMPLEDIR%%/demos/rssnews/rssnews.qrc
+%%QT_EXAMPLEDIR%%/demos/samegame/.qmllint.ini
 %%QT_EXAMPLEDIR%%/demos/samegame/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/demos/samegame/Main.qml
 %%QT_EXAMPLEDIR%%/demos/samegame/content/Block.qml
@@ -2778,7 +2783,6 @@
 %%QT_EXAMPLEDIR%%/graphs/2d/quickwidgetgraphs/piegraph.h
 %%QT_EXAMPLEDIR%%/graphs/2d/quickwidgetgraphs/piewidget.cpp
 %%QT_EXAMPLEDIR%%/graphs/2d/quickwidgetgraphs/piewidget.h
-%%QT_EXAMPLEDIR%%/graphs/2d/quickwidgetgraphs/qml/quickwidgetgraphs/main.qml
 %%QT_EXAMPLEDIR%%/graphs/2d/quickwidgetgraphs/quickwidgetgraphs.pro
 %%QT_EXAMPLEDIR%%/graphs/3d/3d.pro
 %%QT_EXAMPLEDIR%%/graphs/3d/CMakeLists.txt
@@ -3168,8 +3172,6 @@
 %%QT_EXAMPLEDIR%%/multimedia/audiooutput/main.cpp
 %%QT_EXAMPLEDIR%%/multimedia/audiorecorder/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/multimedia/audiorecorder/Info.plist.in
-%%QT_EXAMPLEDIR%%/multimedia/audiorecorder/audiolevel.cpp
-%%QT_EXAMPLEDIR%%/multimedia/audiorecorder/audiolevel.h
 %%QT_EXAMPLEDIR%%/multimedia/audiorecorder/audiorecorder.cpp
 %%QT_EXAMPLEDIR%%/multimedia/audiorecorder/audiorecorder.h
 %%QT_EXAMPLEDIR%%/multimedia/audiorecorder/audiorecorder.pro
@@ -3246,7 +3248,6 @@
 %%QT_EXAMPLEDIR%%/multimedia/declarative-camera/images/camera_white_balance_sunny.png
 %%QT_EXAMPLEDIR%%/multimedia/declarative-camera/images/toolbutton.png
 %%QT_EXAMPLEDIR%%/multimedia/declarative-camera/images/toolbutton.sci
-%%QT_EXAMPLEDIR%%/multimedia/declarative-camera/permission-denied.qml
 %%QT_EXAMPLEDIR%%/multimedia/declarative-camera/qmlcamera.cpp
 %%QT_EXAMPLEDIR%%/multimedia/multimedia.pro
 %%QT_EXAMPLEDIR%%/multimedia/player/CMakeLists.txt
@@ -3388,7 +3389,9 @@
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/Controls.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/Info.plist.in
+%%QT_EXAMPLEDIR%%/multimedia/video/recorder/Main.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/MediaList.qml
+%%QT_EXAMPLEDIR%%/multimedia/video/recorder/PermissionHelper.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/Playback.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/RecordButton.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/SettingsEncoder.qml
@@ -3396,7 +3399,6 @@
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/Style.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/StyleParameter.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/StyleRectangle.qml
-%%QT_EXAMPLEDIR%%/multimedia/video/recorder/StyleSlider.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/VideoSourceSelect.qml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/android/AndroidManifest.xml
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/doc/images/qml-recorder-control-bar-overview.gif
@@ -3404,9 +3406,6 @@
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/doc/images/qmlrecorder.jpg
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/doc/src/recorder.qdoc
 %%QT_EXAMPLEDIR%%/multimedia/video/recorder/main.cpp
-%%QT_EXAMPLEDIR%%/multimedia/video/recorder/main.qml
-%%QT_EXAMPLEDIR%%/multimedia/video/recorder/main_no_permissions.qml
-%%QT_EXAMPLEDIR%%/multimedia/video/recorder/qmldir
 %%QT_EXAMPLEDIR%%/multimedia/video/video.pro
 %%QT_EXAMPLEDIR%%/multimedia/videographicsitem/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/multimedia/videographicsitem/doc/images/video-videographicsitem.png
@@ -4243,19 +4242,6 @@
 %%QT_EXAMPLEDIR%%/qmake/tutorial/hellowin.cpp
 %%QT_EXAMPLEDIR%%/qmake/tutorial/main.cpp
 %%QT_EXAMPLEDIR%%/qml/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/CMakeLists.txt
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/Main.qml
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/doc/images/qml-i18n-example.png
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/doc/src/i18n.qdoc
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/i18n/base.ts
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/i18n/qml_en.ts
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/i18n/qml_en_AU.ts
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/i18n/qml_fr.ts
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/main.cpp
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/qml-i18n.pro
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/qml-i18n.qmlproject
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/qml-i18n.qrc
-%%QT_EXAMPLEDIR%%/qml/qml-i18n/qmldir
 %%QT_EXAMPLEDIR%%/qml/qml.pro
 %%QT_EXAMPLEDIR%%/qml/tutorials/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/qml/tutorials/extending-qml-advanced/CMakeLists.txt
@@ -4926,6 +4912,7 @@
 %%QT_EXAMPLEDIR%%/quick/mousearea/mousearea.qmlproject
 %%QT_EXAMPLEDIR%%/quick/mousearea/mousearea.qrc
 %%QT_EXAMPLEDIR%%/quick/multieffect/CMakeLists.txt
+%%QT_EXAMPLEDIR%%/quick/multieffect/REUSE.toml
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/CMakeLists.txt.shared
 %%QT_EXAMPLEDIR%%/quick/multieffect/itemswitcher/doc/images/qml-multieffectitemswitcher-example.jpg
@@ -6808,9 +6795,11 @@
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/flatstyle.qml
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/flatstyle.qmlproject
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Flat/Button.qml
+%%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Flat/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Flat/CheckBox.qml
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Flat/Switch.qml
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Flat/qmldir
+%%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Theme/CMakeLists.txt
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Theme/Theme.qml
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/imports/Theme/qmldir
 %%QT_EXAMPLEDIR%%/quickcontrols/flatstyle/main.cpp

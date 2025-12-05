@@ -104,6 +104,7 @@
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebenginedialogrequests_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebenginefaviconprovider_p_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineforeigntypes_p.h
+%%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineframe_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebenginenewwindowrequest_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineprofile_p.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineprofileprototype_p.h
