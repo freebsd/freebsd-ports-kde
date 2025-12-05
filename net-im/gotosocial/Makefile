@@ -1,6 +1,6 @@
 PORTNAME=	gotosocial
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.20.1
+DISTVERSION=	0.20.2
 PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	https://codeberg.org/superseriousbusiness/${PORTNAME}/releases/download/v${DISTVERSION}/

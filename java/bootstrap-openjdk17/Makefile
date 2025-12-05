@@ -1,6 +1,6 @@
 PORTNAME=	openjdk17
 PORTVERSION=	17.0.1.12.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	LOCAL/glewis/bootstrap-openjdk17 \
 		LOCAL/pkubaj/bootstrap-openjdk17

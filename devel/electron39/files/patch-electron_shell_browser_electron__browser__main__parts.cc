@@ -1,4 +1,4 @@
---- electron/shell/browser/electron_browser_main_parts.cc.orig	2025-10-27 17:58:27 UTC
+--- electron/shell/browser/electron_browser_main_parts.cc.orig	2025-11-18 19:25:22 UTC
 +++ electron/shell/browser/electron_browser_main_parts.cc
 @@ -76,7 +76,7 @@
  #include "ui/wm/core/wm_state.h"

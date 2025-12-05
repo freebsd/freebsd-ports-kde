@@ -1,4 +1,4 @@
---- electron/shell/services/node/node_service.cc.orig	2025-10-27 17:58:27 UTC
+--- electron/shell/services/node/node_service.cc.orig	2025-11-18 19:25:22 UTC
 +++ electron/shell/services/node/node_service.cc
 @@ -24,7 +24,7 @@
  #include "shell/common/node_includes.h"

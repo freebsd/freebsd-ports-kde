@@ -3,6 +3,7 @@
     SUBDIR += GxSwitchlessWah-lv2
     SUBDIR += HVSC-Update
     SUBDIR += Maaate
+    SUBDIR += TonieToolbox
     SUBDIR += a2jmidid
     SUBDIR += abcde
     SUBDIR += abcselect
@@ -104,7 +105,6 @@
     SUBDIR += deadbeef-spectrogram-plugin
     SUBDIR += deadbeef-vu-meter-plugin
     SUBDIR += deadbeef-waveform-seekbar-plugin
-    SUBDIR += decibels
     SUBDIR += denemo
     SUBDIR += dexed
     SUBDIR += dgedit

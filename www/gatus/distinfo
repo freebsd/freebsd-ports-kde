@@ -1,5 +1,5 @@
-TIMESTAMP = 1762041844
-SHA256 (gatus-v5.30.0.vendor.tar.gz) = 18adaeee6bd4bf7cad89cbdfb51ceb894c4a01a2de4d34a63eb679ca409cdcbf
-SIZE (gatus-v5.30.0.vendor.tar.gz) = 51715166
-SHA256 (TwiN-gatus-v5.30.0_GH0.tar.gz) = 3069217638af392a701b78e7d285ae18847077a1b97e6fe8b82047ea2733456e
-SIZE (TwiN-gatus-v5.30.0_GH0.tar.gz) = 2888071
+TIMESTAMP = 1764192075
+SHA256 (gatus-v5.33.0.vendor.tar.gz) = ad1bfb7ba7181e4c5b34b01a9559a20697ad5de282f71a74e52bdd68f9062083
+SIZE (gatus-v5.33.0.vendor.tar.gz) = 51695185
+SHA256 (TwiN-gatus-v5.33.0_GH0.tar.gz) = e93ce6de9a39a20434fa62aa4dfd071ebb8f822b3d813c83f3506b2a30440014
+SIZE (TwiN-gatus-v5.33.0_GH0.tar.gz) = 2965861
