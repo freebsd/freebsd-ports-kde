@@ -3,9 +3,6 @@ DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt6-
 
-PATCH_SITES=	https://github.com/qt/qtbase/commit/
-PATCHFILES+=	a6ac84731776381ee5ac6b6306acdc4418e900d9.patch:-p1 # https://bugreports.qt.io/browse/QTBUG-141074
-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
 
