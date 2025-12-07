@@ -52,6 +52,7 @@ shiboken6/include/sbkenum.h
 shiboken6/include/sbkerrors.h
 shiboken6/include/sbkfeature_base.h
 shiboken6/include/sbkmodule.h
+shiboken6/include/sbkmodule_p.h
 shiboken6/include/sbknumpycheck.h
 shiboken6/include/sbknumpyview.h
 shiboken6/include/sbkpep.h
