@@ -123,6 +123,7 @@ CFLAGS+=			${_CFLAGS_${CHOSEN_COMPILER_TYPE}}
 _CFLAGS_clang=			-fno-color-diagnostics
 .endif
 CONFIGURE_ENV+=			NOCOLOR=yes WAF_LOG_FORMAT='%(c1)s%(zone)s%(c2)s %(message)s'
+FORTIFY_UNSAFE=			yes
 MAKE_ENV+=			NOCOLOR=yes WAF_LOG_FORMAT='%(c1)s%(zone)s%(c2)s %(message)s'
 # for libexecinfo: (so that __builtin_frame_address() finds the top of the stack)
 CFLAGS_amd64+=			-fno-omit-frame-pointer
