@@ -98,6 +98,7 @@ CONFIGURE_ARGS=			--mandir="${PREFIX}/share/man" \
 # XXX: Flags
 CONFIGURE_ENV=			PTHREAD_LDFLAGS="-lpthread" \
 				PYTHONHASHSEED=1
+FORTIFY_UNSAFE=			yes
 MAKE_ENV=			PYTHONHASHSEED=1
 
 USES=				bison compiler:c++11-lang iconv localbase:ldflags \
