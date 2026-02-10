@@ -5,6 +5,14 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260226:
+  AFFECTS: users of java/openjdk*
+  AUTHOR: ronald@FreeBSD.org
+
+  Version JAVA_DEFAULT is updated from 8 to 21.
+  No specific action should be needed, just a heads-up to test before
+  deploying to production as this is quite a big step in versions.
+
 20260206:
   AFFECTS: users of devel/freebsd-git-devtools
   AUTHOR: jrm@FreeBSD.org
