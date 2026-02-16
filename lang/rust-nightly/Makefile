@@ -14,8 +14,11 @@ MASTERDIR=	${.CURDIR}/../rust
 PATCHDIR=	${.CURDIR}/files
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
-NIGHTLY_DATE=		2026-02-08
+NIGHTLY_DATE=		2026-02-23
 BOOTSTRAPS_DATE=	2026-01-20
 RUST_BOOTSTRAP_VERSION=	beta
+
+post-extract:
+	@${FIND} -d ${WRKSRC} -name .github -exec ${RM} -r {} \;
 
 .include "${MASTERDIR}/Makefile"
