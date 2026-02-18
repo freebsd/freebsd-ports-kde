@@ -1,6 +1,5 @@
 PORTNAME=	symon
-PORTVERSION=	2.88
-PORTREVISION=	2
+DISTVERSION=	2.90
 CATEGORIES=	sysutils
 MASTER_SITES=	https://wpd.home.xs4all.nl/symon/philes/ \
 		LOCAL/uqs
@@ -8,6 +7,11 @@ MASTER_SITES=	https://wpd.home.xs4all.nl/symon/philes/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Performance and information monitoring tool
 WWW=		https://wpd.home.xs4all.nl/symon/
+
+LICENSE=	BSD2CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_FreeBSD_15=	requires no longer supported ioctl(DIOCGETSTATUS)
 
 SUB_FILES=	pkg-message
 
@@ -62,8 +66,5 @@ post-extract:
 post-patch:
 # We need to teach symon about mbstat changes/removal in r253351 and r253361.
 	@${RM} ${WRKSRC}/platform/FreeBSD/sm_mbuf.c
-.if ${OPSYS} == FreeBSD
-	@${REINPLACE_CMD} 's|altq/|net/&|' ${WRKSRC}/platform/FreeBSD/sm_pfq.c
-.endif
 
 .include <bsd.port.post.mk>
