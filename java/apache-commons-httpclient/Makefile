@@ -32,11 +32,6 @@ PLIST_FILES=	%%JAVAJARDIR%%/${PORTNAME}.jar
 
 PORTDOCS=	*
 
-post-patch:
-	@${REINPLACE_CMD} 's/Ortwin Gl.*ck/Ortwin Glueck/' \
-		${WRKSRC}/src/java/org/apache/commons/httpclient/*.java \
-		${WRKSRC}/src/java/org/apache/commons/httpclient/*/*.java
-
 do-install:
 	@${ECHO_MSG} -n ">> Installing JAR file as ${JAVAJARDIR}/${PORTNAME}.jar..."
 	@${INSTALL_DATA} ${WRKSRC}/dist/${PORTNAME}.jar ${STAGEDIR}${JAVAJARDIR}/
