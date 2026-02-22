@@ -85,7 +85,7 @@ PLUGINS_CXXFLAGS_clang=	-Wno-narrowing
 
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${FILESDIR}/*.desktop ${STAGEDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/*.desktop ${STAGEDIR}${DESKTOPDIR}
 	${INSTALL_DATA} ${FILESDIR}/*.png ${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <../../math/vtk9/Makefile.version>
