@@ -125,6 +125,7 @@ include/wine/windows/amstream.idl
 include/wine/windows/amva.h
 include/wine/windows/amvideo.h
 include/wine/windows/amvideo.idl
+include/wine/windows/apisetcconv.h
 include/wine/windows/appcompatapi.h
 include/wine/windows/appmgmt.h
 include/wine/windows/appmodel.h
@@ -625,6 +626,7 @@ include/wine/windows/inseng.idl
 include/wine/windows/inspectable.h
 include/wine/windows/inspectable.idl
 include/wine/windows/interactioncontext.h
+include/wine/windows/intsafe.h
 include/wine/windows/intshcut.h
 include/wine/windows/ioringapi.h
 include/wine/windows/ip2string.h
@@ -1405,6 +1407,8 @@ include/wine/windows/wspiapi.h
 include/wine/windows/wtsapi32.h
 include/wine/windows/wtypes.h
 include/wine/windows/wtypes.idl
+include/wine/windows/wtypesbase.h
+include/wine/windows/wtypesbase.idl
 include/wine/windows/wuapi.h
 include/wine/windows/wuapi.idl
 include/wine/windows/x3daudio.h
@@ -1637,6 +1641,7 @@ lib/wine/%%WINEARCH%%-unix/libspoolss.a
 lib/wine/%%WINEARCH%%-unix/libsti.a
 lib/wine/%%WINEARCH%%-unix/libstrmbase.a
 lib/wine/%%WINEARCH%%-unix/libstrmiids.a
+lib/wine/%%WINEARCH%%-unix/libstrsafe.a
 lib/wine/%%WINEARCH%%-unix/libsxs.a
 lib/wine/%%WINEARCH%%-unix/libt2embed.a
 lib/wine/%%WINEARCH%%-unix/libtapi32.a
@@ -1727,6 +1732,7 @@ lib/wine/%%WINEARCH%%-windows/adsldp.dll
 lib/wine/%%WINEARCH%%-windows/adsldpc.dll
 lib/wine/%%WINEARCH%%-windows/advapi32.dll
 lib/wine/%%WINEARCH%%-windows/advpack.dll
+lib/wine/%%WINEARCH%%-windows/aero.msstyles
 lib/wine/%%WINEARCH%%-windows/amsi.dll
 lib/wine/%%WINEARCH%%-windows/amstream.dll
 lib/wine/%%WINEARCH%%-windows/apisetschema.dll
@@ -1763,6 +1769,7 @@ lib/wine/%%WINEARCH%%-windows/certutil.exe
 lib/wine/%%WINEARCH%%-windows/cfgmgr32.dll
 lib/wine/%%WINEARCH%%-windows/chakra.dll
 lib/wine/%%WINEARCH%%-windows/chcp.com
+lib/wine/%%WINEARCH%%-windows/cldapi.dll
 lib/wine/%%WINEARCH%%-windows/clock.exe
 lib/wine/%%WINEARCH%%-windows/clusapi.dll
 lib/wine/%%WINEARCH%%-windows/cmd.exe
@@ -2205,6 +2212,7 @@ lib/wine/%%WINEARCH%%-windows/libspoolss.a
 lib/wine/%%WINEARCH%%-windows/libsti.a
 lib/wine/%%WINEARCH%%-windows/libstrmbase.a
 lib/wine/%%WINEARCH%%-windows/libstrmiids.a
+lib/wine/%%WINEARCH%%-windows/libstrsafe.a
 lib/wine/%%WINEARCH%%-windows/libsxs.a
 lib/wine/%%WINEARCH%%-windows/libt2embed.a
 lib/wine/%%WINEARCH%%-windows/libtapi32.a
@@ -2261,7 +2269,6 @@ lib/wine/%%WINEARCH%%-windows/libwtsapi32.a
 lib/wine/%%WINEARCH%%-windows/libxaudio2_8.a
 lib/wine/%%WINEARCH%%-windows/libxinput.a
 lib/wine/%%WINEARCH%%-windows/libxmllite.a
-lib/wine/%%WINEARCH%%-windows/light.msstyles
 lib/wine/%%WINEARCH%%-windows/loadperf.dll
 lib/wine/%%WINEARCH%%-windows/localspl.dll
 lib/wine/%%WINEARCH%%-windows/localui.dll
