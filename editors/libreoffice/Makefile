@@ -1,4 +1,4 @@
-PORTREVISION=	1
+PORTREVISION=	2
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	p5-Archive-Zip>=0:archivers/p5-Archive-Zip \
 		cppunit-config:devel/cppunit \
 		dmake:devel/dmake \
 		gperf>=3.1:devel/gperf \
-		${LOCALBASE}/include/libcuckoo/cuckoohash_map.hh:devel/libcuckoo \
 		mdds>=${MDDS_VERSION}:devel/mdds \
 		gpatch:devel/patch \
 		${LOCALBASE}/include/sane/sane.h:graphics/sane-backends \
@@ -194,17 +193,9 @@ GTK4_LIB_DEPENDS=	libepoxy.so:graphics/libepoxy \
 GTK4_USE=	GNOME=gtk40
 
 JAVA_BUILD_DEPENDS=	ant:devel/apache-ant \
-			${JAVAJARDIR}/commons-codec.jar:java/apache-commons-codec \
-			${JAVAJARDIR}/commons-httpclient.jar:java/apache-commons-httpclient \
-			${JAVAJARDIR}/commons-lang3.jar:java/apache-commons-lang3 \
-			${JAVAJARDIR}/commons-logging.jar:java/apache-commons-logging \
 			${JAVAJARDIR}/junit.jar:java/junit
 JAVA_CATEGORIES=	java
 JAVA_CONFIGURE_ON=	--with-ant-home=${LOCALBASE}/share/java/apache-ant \
-			--with-commons-codec-jar=${JAVAJARDIR}/commons-codec.jar \
-			--with-commons-httpclient-jar=${JAVAJARDIR}/commons-httpclient.jar \
-			--with-commons-lang-jar=${JAVAJARDIR}/commons-lang3.jar \
-			--with-commons-logging-jar=${JAVAJARDIR}/commons-logging.jar \
 			--with-jdk-home="${JAVA_HOME}" \
 			--with-junit=${JAVAJARDIR}/junit.jar \
 			--with-hamcrest=${JAVAJARDIR}/hamcrest.jar \
@@ -308,7 +299,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--disable-mpl-subset \
 		--exec-prefix=${PREFIX} \
 		--with-boost=${LOCALBASE} \
-		--with-build-version="FreeBSD ports ${PKGVERSION}" \
+		--with-extra-buildid="FreeBSD ports ${PKGVERSION}" \
 		--with-external-dict-dir=${LOCALBASE}/share/hunspell \
 		--with-external-hyph-dir=${LOCALBASE}/share/hyphen \
 		--with-external-tar=${DISTDIR}/${DIST_SUBDIR} \
@@ -320,7 +311,6 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--with-system-argon2=no \
 		--with-system-afdko=no \
 		--with-system-cppunit \
-		--with-system-cuckoo \
 		--with-system-curl \
 		--with-system-dicts \
 		--with-system-dragonbox=no \
