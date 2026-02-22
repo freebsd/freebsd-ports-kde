@@ -1,8 +1,9 @@
 PORTNAME=	xlibre-xf86-video-scfb
 PORTVERSION=	25.0.0
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	b-aaz@proton.me
+MAINTAINER=	xlibre@FreeBSD.org
 COMMENT=	XLibre syscons display driver
 WWW=		https://github.com/X11Libre/xf86-video-scfb
 

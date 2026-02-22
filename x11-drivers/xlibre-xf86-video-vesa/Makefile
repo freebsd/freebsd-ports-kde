@@ -1,9 +1,9 @@
 PORTNAME=	xlibre-xf86-video-vesa
 PORTVERSION=	25.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	b-aazbsd@proton.me
+MAINTAINER=	xlibre@FreeBSD.org
 COMMENT=	XLibre vesa display driver
 WWW=		https://githhub.com/X11Libre/xf86-video-vesa
 

@@ -1,8 +1,9 @@
 PORTNAME=	xlibre-xf86-video-intel
 PORTVERSION=	25.0.1
+PORTREVISION=	1
 CATEGORIES=	x11-drivers
 
-MAINTAINER=	b-aazbsd@proton.me
+MAINTAINER=	xlibre@FreeBSD.org
 COMMENT=	XLibre legacy driver for Intel integrated graphics chipsets
 WWW=		https://01.org/linuxgraphics/xf86-video-intel/
 
