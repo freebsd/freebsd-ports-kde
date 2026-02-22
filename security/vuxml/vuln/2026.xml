@@ -1,3 +1,30 @@
+  <vuln vid="716d25a6-0fdc-11f1-bfdf-ff9355aecb00">
+    <topic>openexr -- buffer overflow in istream_nonparallel_read on invalid input data</topic>
+    <affects>
+      <package>
+	<name>openexr</name>
+	<range><lt>3.3.7</lt></range>
+	<range><ge>3.4.0</ge><lt>3.4.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.5">
+	  <p>[openexr] v3.4.5 [...] fixes an incorrect size check in istream_nonparallel_read that could lead to a buffer overflow on invalid input data.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.5</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/commit/6bb2ddf1068573d073edf81270a015b38cc05cef</url>
+    </references>
+    <dates>
+      <discovery>2026-02-16</discovery>
+      <entry>2026-02-22</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="428e782a-0e92-11f1-a9b1-0cc47ada5f32">
     <topic>jenkins -- multiple vulnerabilities</topic>
     <affects>
