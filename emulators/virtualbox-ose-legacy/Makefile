@@ -1,6 +1,6 @@
 PORTNAME=	virtualbox-ose
 DISTVERSION=	5.2.44
-PORTREVISION?=	34
+PORTREVISION?=	35
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/:src \
 		LOCAL/bofh/emulators/virtualbox-ose-legacy:docs
@@ -342,7 +342,9 @@ do-install:
 
 	${MKDIR} ${STAGEDIR}${VBOX_DIR}
 	cd ${KMK_BUILDDIR}/bin && ${COPYTREE_SHARE} \
-	    "*.fd *.r0 *.rc *.so components" ${STAGEDIR}${VBOX_DIR}
+	    "*.fd *.r0 *.rc *.so components" ${STAGEDIR}${VBOX_DIR} && \
+	    ${COPYTREE_SHARE} UnattendedTemplates ${STAGEDIR}${DATADIR}
+
 .if ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MWEBSERVICE}
 	${RLN} ${STAGEDIR}${DATADIR}/sdk ${STAGEDIR}${VBOX_DIR}
 .endif

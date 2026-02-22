@@ -1,6 +1,6 @@
 PORTNAME=	virtualbox-ose
 DISTVERSION=	7.2.6
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/:src \
 		LOCAL/vvd:docs
@@ -352,7 +352,9 @@ do-install:
 
 	${MKDIR} ${STAGEDIR}${VBOX_DIR}
 	cd ${KMK_BUILDDIR}/bin && ${COPYTREE_SHARE} \
-	    "*.fd *.r0 *.so components" ${STAGEDIR}${VBOX_DIR}
+	    "*.fd *.r0 *.so components" ${STAGEDIR}${VBOX_DIR} && \
+	    ${COPYTREE_SHARE} UnattendedTemplates ${STAGEDIR}${DATADIR}
+
 .if ${PORT_OPTIONS:MPYTHON} || ${PORT_OPTIONS:MWEBSERVICE}
 	${RLN} ${STAGEDIR}${DATADIR}/sdk ${STAGEDIR}${VBOX_DIR}
 .endif
