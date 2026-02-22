@@ -20,9 +20,17 @@ rcvar=${name}_enable
 
 : ${podman_enable:=NO}
 : ${podman_flags:="--noout"}
+: ${podman_user:="www"}
+: ${podman_group:="www"}
+: ${podman_mode:="0770"}
+: ${podman_rundir:="/var/run/podman"}
+: ${podman_socket:="${podman_rundir}/podman.sock"}
+: ${podman_socket_timeout:=5}
 
 podman=%%PREFIX%%/bin/${name}
+start_precmd="podman_prestart"
 start_cmd="podman_start"
+start_postcmd="podman_poststart"
 stop_cmd="podman_stop"
 restart_cmd="podman_stop && podman_start"
 
@@ -30,6 +38,30 @@ restart_cmd="podman_stop && podman_start"
 container_list=$(
     ${podman} container ls --all --filter restart-policy=always -q \
         | tr '\n' ' ')
+
+podman_prestart()
+{
+    install -d -o ${podman_user} -g ${podman_group} -m ${podman_mode} ${podman_rundir}
+}
+
+podman_poststart()
+{
+    local _timeout=${podman_socket_timeout}
+    local _elapsed=0
+
+    while [ ${_elapsed} -lt ${_timeout} ]; do
+        if [ -S "${podman_socket}" ]; then
+            chown ${podman_user}:${podman_group} "${podman_socket}"
+            chmod ${podman_mode} "${podman_socket}"
+            return 0
+        fi
+        sleep 1
+        _elapsed=$((_elapsed + 1))
+    done
+
+    warn "Timed out waiting for ${podman_socket} after ${_timeout} seconds"
+    return 1
+}
 
 podman_start()
 {
