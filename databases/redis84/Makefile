@@ -22,14 +22,13 @@ USE_RC_SUBR=	redis sentinel
 
 MAKE_ENV=	OPTIMIZATION= \
 		V=yo
-BINARY_ALIAS=	gmd5sum=md5sum
-
-#PIE_UNSAFE=	ld: error: relocation R_X86_64_32 cannot be used against local \
-#		symbol; recompile with -fPIC
 
 CONFLICTS_INSTALL=	redis-devel redis[0-9]*
 
-PORTSCOUT=	limit:^[0-9\.]*$$
+BINARY_ALIAS=	gmd5sum=md5sum
+#PIE_UNSAFE=	ld: error: relocation R_X86_64_32 cannot be used against local \
+#		symbol; recompile with -fPIC
+PORTSCOUT=	limit:^8\.4\.
 SUB_FILES=	pkg-message
 SUB_LIST=	PORTNAME=${PORTNAME} \
 		REDIS_DBDIR=${REDIS_DBDIR} \
