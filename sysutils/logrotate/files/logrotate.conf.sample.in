@@ -12,7 +12,7 @@ create
 compress
 
 # RPM packages drop log rotation information into this directory
-include __PREFIX__/etc/logrotate.d
+include %%PREFIX%%/etc/logrotate.d
 
 /var/log/lastlog {
     monthly
