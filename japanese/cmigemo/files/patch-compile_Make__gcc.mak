@@ -1,6 +1,6 @@
---- compile/Make_gcc.mak.orig	2014-12-20 04:39:02 UTC
+--- compile/Make_gcc.mak.orig	2022-06-23 01:52:51 UTC
 +++ compile/Make_gcc.mak
-@@ -44,4 +44,7 @@ uninstall-lib:
+@@ -44,4 +44,7 @@ dictionary:
  	$(RM) $(libdir)/$(libmigemo)
  
  dictionary:
