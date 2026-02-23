@@ -1,9 +1,9 @@
 PORTNAME=	librepcb
-DISTVERSION=	2.0.1
+DISTVERSION=	2.0.0
 DISTVERSIONSUFFIX=	-source
 CATEGORIES=	cad
-MASTER_SITES=	https://download.librepcb.org/releases/${DISTVERSION}/
-#MASTER_SITES=	LOCAL/yuri:main # .zip archive repackaged as .tar.gz
+#MASTER_SITES=	https://download.librepcb.org/releases/${DISTVERSION}/
+MASTER_SITES=	LOCAL/yuri:main # .zip archive repackaged as .tar.gz
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Schematic and PCB editing software
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg4 \
 		libTKService.so:cad/opencascade
 
 USES=		cargo cmake:noninja,testing compiler:c++17-lang desktop-file-utils gl \
-		gmake localbase:ldflags qt:6 shared-mime-info xorg zip
+		gmake localbase:ldflags qt:6 shared-mime-info xorg #zip
 USE_QT=		base declarative svg tools:build
 USE_GL=		gl glu
 USE_XORG=	x11
@@ -30,8 +30,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTVERSION}
 
 MAKE_ENV+=	${WRK_ENV} ${CARGO_ENV}
 
-DISTFILES+=	librepcb-${DISTVERSIONFULL}.zip
-#DISTFILES+=	librepcb-${DISTVERSIONFULL}.tar.gz:main # .zip archive repackaged as .tar.gz
+#DISTFILES+=	librepcb-${DISTVERSIONFULL}.zip:main
+DISTFILES+=	librepcb-${DISTVERSIONFULL}.tar.gz:main # .zip archive repackaged as .tar.gz
 
 CARGO_SRC_SUBDIR=	libs/librepcb/rust-core # Rust sub-project
 #CARGO_SRC_SUBDIR=	libs/slint # Rust sub-project
