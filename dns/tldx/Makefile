@@ -4,7 +4,7 @@ DISTVERSION=	1.3.4
 PORTREVISION=	3
 CATEGORIES=	dns
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Domain Availability Research Tool
 WWW=		https://github.com/brandonyoungdev/tldx
 

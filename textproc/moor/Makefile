@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	2.10.4
 CATEGORIES=	textproc
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Pager designed to do the right thing without any configuration
 WWW=		https://github.com/walles/moor
 

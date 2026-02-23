@@ -4,7 +4,7 @@ DISTVERSION=	1.5.0
 PORTREVISION=	8
 CATEGORIES=	security
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Google Authenticator in your terminal
 WWW=		https://github.com/pcarrier/gauth \
 		https://pkg.go.dev/github.com/pcarrier/gauth

@@ -4,7 +4,7 @@ DISTVERSION=	2.1.4
 PORTREVISION=	1
 CATEGORIES=	multimedia
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Turn your mobile device(s) into a wireless/usb webcam
 WWW=		https://github.com/dev47apps/droidcam-linux-client
 

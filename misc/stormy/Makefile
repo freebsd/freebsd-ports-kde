@@ -4,7 +4,7 @@ DISTVERSION=	0.3.3
 PORTREVISION=	9
 CATEGORIES=	misc
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Minimal, customizable, and neofetch-like weather CLI
 WWW=		https://terminaltrove.com/stormy/ \
 		https://github.com/ashish0kumar/stormy

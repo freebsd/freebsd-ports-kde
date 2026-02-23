@@ -3,7 +3,7 @@ DISTVERSION=	0.18.1
 PORTREVISION=	1
 CATEGORIES=	net-im
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Electron-free Signal app written in Rust
 WWW=		https://gitlab.com/schmiddi-on-mobile/flare
 

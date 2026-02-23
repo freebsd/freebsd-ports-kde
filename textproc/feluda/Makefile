@@ -4,7 +4,7 @@ DISTVERSION=	1.11.0 # Cargo.lock patched: `make patch cargo-crates`
 PORTREVISION=	1
 CATEGORIES=	textproc
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Detect license usage restrictions in your project
 WWW=		https://github.com/anistark/feluda
 

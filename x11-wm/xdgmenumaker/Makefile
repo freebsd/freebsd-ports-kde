@@ -2,7 +2,7 @@ PORTNAME=	xdgmenumaker
 DISTVERSION=	2.4
 CATEGORIES=	x11-wm python
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Generate XDG menus for various window managers
 WWW=		https://github.com/gapan/xdgmenumaker
 

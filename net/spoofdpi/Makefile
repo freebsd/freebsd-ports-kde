@@ -4,7 +4,7 @@ DISTVERSION=	1.2.1
 PORTREVISION=	3
 CATEGORIES=	net
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Simple and fast anti-censorship tool
 WWW=		https://spoofdpi.xvzc.dev/ \
 		https://github.com/xvzc/SpoofDPI/

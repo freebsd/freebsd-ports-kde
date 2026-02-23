@@ -5,7 +5,7 @@ PORTREVISION=	5
 CATEGORIES=	multimedia gnome
 DIST_SUBDIR=	gnome
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Trim videos quickly without re-encoding and sacrificing video quality
 WWW=		https://gitlab.gnome.org/YaLTeR/video-trimmer
 

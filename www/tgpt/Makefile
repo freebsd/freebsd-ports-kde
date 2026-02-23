@@ -4,7 +4,7 @@ DISTVERSION=	2.11.1
 PORTREVISION=	2
 CATEGORIES=	www
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	AI Chatbots in terminal without needing API keys
 WWW=		https://github.com/aandrew-me/tgpt
 

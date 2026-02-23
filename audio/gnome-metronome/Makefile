@@ -5,7 +5,7 @@ CATEGORIES=	audio gnome
 PKGNAMEPREFIX=	gnome-
 DIST_SUBDIR=	gnome
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Keep the tempo
 WWW=		https://gitlab.gnome.org/World/metronome
 

@@ -4,7 +4,7 @@ DISTVERSION=	0.3.0
 PORTREVISION=	6
 CATEGORIES=	sysutils
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Terminal-based interactive SSH Manager to manage your servers
 WWW=		https://github.com/Adembc/lazyssh \
 		https://pkg.go.dev/github.com/Adembc/lazyssh

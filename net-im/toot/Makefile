@@ -4,7 +4,7 @@ CATEGORIES=	net-im python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	nxjoseph@protonmail.com
+MAINTAINER=	nxjoseph@FreeBSD.org
 COMMENT=	Interact with the Mastodon social network from the command line
 WWW=		https://github.com/ihabunek/toot \
 		https://pypi.org/project/toot
