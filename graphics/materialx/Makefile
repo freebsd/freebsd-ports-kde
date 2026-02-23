@@ -1,7 +1,7 @@
 PORTNAME=	materialx
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.39.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics
 
 MAINTAINER=	freebsd@sysctl.cz
@@ -13,13 +13,14 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	libglvnd>0:graphics/libglvnd \
 		openimageio>0:graphics/openimageio \
-		openshadinglanguage>0:graphics/openshadinglanguage
+		openshadinglanguage>0:graphics/openshadinglanguage \
+		libxkbcommon>0:x11/libxkbcommon
 LIB_DEPENDS=	libImath.so:math/Imath \
 		libOpenColorIO.so:graphics/opencolorio \
 		libOpenImageIO.so:graphics/openimageio \
 		libOpenImageIO_Util.so:graphics/openimageio
 
-USES=		cmake gl localbase python:3.9+ xorg
+USES=		cmake compiler:c++17-lang gl localbase python xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	AcademySoftwareFoundation
 GH_PROJECT=	MaterialX
@@ -33,7 +34,7 @@ GH_TUPLE=	mitsuba-renderer:nanogui:6452dd6:nanogui/source/MaterialXView/NanoGUI 
 
 USE_GL=		opengl
 USE_LDCONFIG=	yes
-USE_XORG=	ice sm x11 xt
+USE_XORG=	ice sm x11 xcursor xext xi xinerama xrandr xt xxf86vm
 
 CMAKE_ARGS=	-DCMAKE_INSTALL_PREFIX=${STAGEDIR}${PREFIX} \
 		-DNANOGUI_NATIVE_FLAGS="" \
