@@ -1,7 +1,12 @@
 PORTNAME=	cloudcompare
 DISTVERSIONPREFIX=	v
 DISTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	graphics
+MASTER_SITES=	https://raw.githubusercontent.com/${GH_ACCOUNT}/${GH_PROJECT}/refs/tags/v2.12.4/snap/gui/:icons
+DISTFILES=	ccViewer.png:icons cloudcompare.png:icons
+DIST_SUBDIR=	${PORTNAME}-${DISTVERSION}
+EXTRACT_ONLY=	${_DISTFILES:N*.png}
 
 MAINTAINER=	alven@FreeBSD.org
 COMMENT=	3D point cloud (and triangular mesh) editing and processing software
@@ -86,7 +91,7 @@ PLUGINS_CXXFLAGS_clang=	-Wno-narrowing
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${FILESDIR}/*.desktop ${STAGEDIR}${DESKTOPDIR}
-	${INSTALL_DATA} ${FILESDIR}/*.png ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${_DISTDIR}/*.png ${STAGEDIR}${PREFIX}/share/pixmaps
 
 .include <../../math/vtk9/Makefile.version>
 .include <bsd.port.mk>
