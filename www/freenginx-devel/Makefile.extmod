@@ -317,7 +317,7 @@ VOD_LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 VOD_USES=		iconv
 VOD_VARS=		DSO_EXTMODS+=vod
 
-VTS_GH_TUPLE=		vozlt:nginx-module-vts:37d319f:vts
+VTS_GH_TUPLE=		vozlt:nginx-module-vts:1ca7229:vts
 VTS_VARS=		DSO_EXTMODS+=vts
 
 XSS_GH_TUPLE=		openresty:xss-nginx-module:0e77f38:xss
