@@ -1,0 +1,15 @@
+--- Makefile.orig	2026-02-23 07:56:46 UTC
++++ Makefile
+@@ -1,10 +1,10 @@ LIBNAME= qrencode
+ LIBNAME= qrencode
+-CFLAGS= -std=gnu99 -pedantic -Wall -Wextra -O2 -shared -fPIC
++CFLAGS+= -std=gnu99 -pedantic -Wall -Wextra -shared -fPIC
+ 
+ all: so
+ 
+ so:	$(LIBNAME).c
+-	$(CC) $(CFLAGS) $(LIBNAME).c  -lqrencode -lpng -o $(LIBNAME).so
++	$(CC) $(CFLAGS) $(LIBNAME).c -lqrencode -lpng -o $(LIBNAME).so
+ 
+ clean:
+ 	rm -f $(LIBNAME).so 
