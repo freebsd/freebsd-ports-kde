@@ -12,7 +12,7 @@ LICENSE=	MIT
 LIB_DEPENDS=	libqrencode.so:graphics/libqrencode \
 		libpng.so:graphics/png
 
-USES=		lua:module pkgconfig
+USES=		lua:module
 USE_GITHUB=	yes
 GH_ACCOUNT=	vincascm
 GH_TAGNAME=	v1.1.1
