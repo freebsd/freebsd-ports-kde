@@ -6,6 +6,9 @@ MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
+PATCH_SITES=	https://github.com/pyca/cryptography/commit/
+PATCHFILES=	43eb178ee3aae8d0060221118437b03c23570a41.patch:-p1
+
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Cryptographic recipes and primitives for Python developers
 WWW=		https://cryptography.io/en/latest/ \
