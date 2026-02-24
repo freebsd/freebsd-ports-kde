@@ -4,7 +4,7 @@
 #.include "${.CURDIR}/../../security/courier-authlib/Makefile.dep"
 #.endif
 #
-# in your Makefile *before* any 
+# in your Makefile *before* any
 #.include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MAUTH_LDAP}
