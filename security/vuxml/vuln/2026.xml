@@ -1,3 +1,32 @@
+  <vuln vid="4594110e-1151-11f1-b3f8-8447094a420f">
+    <topic>Vaultwarden -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>vaultwarden</name>
+	<range><lt>1.35.4</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Vaultwarden project reports:</p>
+	<blockquote cite="https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.4">
+	  <ul>
+	    <li>GHSA-w9f8-m526-h7fh. This vulnerability would allow an attacker to access a cipher from a different user (fully encrypted) if they already know its internal UUID.</li>
+	    <li>GHSA-h4hq-rgvh-wh27. This vulnerability allows an attacker with manager-level access within an organization to modify collections they can access, even if they do not have management permissions for them.</li>
+	    <li>GHSA-r32r-j5jq-3w4m. This vulnerability allows an attacker with manager-level access within an organization to modify collections they are not assigned.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.4</url>
+    </references>
+    <dates>
+      <discovery>2026-02-23</discovery>
+      <entry>2026-02-24</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="716d25a6-0fdc-11f1-bfdf-ff9355aecb00">
     <topic>openexr -- buffer overflow in istream_nonparallel_read on invalid input data</topic>
     <affects>
