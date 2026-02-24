@@ -4386,6 +4386,7 @@
     SUBDIR += py-aioapns
     SUBDIR += py-aioboto3
     SUBDIR += py-aiobotocore
+    SUBDIR += py-aiofile
     SUBDIR += py-aiofiles
     SUBDIR += py-aiohttp-apispec
     SUBDIR += py-aioice
