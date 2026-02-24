@@ -308,6 +308,7 @@ cbsd/etc/defaults/vm-linux-Gentoo-2025-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kali-2025-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kubuntu-desktop-22-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kubuntu-desktop-24-x86_64.conf
+cbsd/etc/defaults/vm-linux-Lakka-6-x86_64.conf
 cbsd/etc/defaults/vm-linux-Lubuntu-desktop-22-x86_64.conf
 cbsd/etc/defaults/vm-linux-Lubuntu-desktop-24-x86_64.conf
 cbsd/etc/defaults/vm-linux-Manjaro-2026-x86_64.conf
