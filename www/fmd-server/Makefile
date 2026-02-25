@@ -1,7 +1,7 @@
 PORTNAME=	fmd-server
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.14.0
-CATEGORIES=	sysutils
+CATEGORIES=	www
 
 MAINTAINER=	mm@FreeBSD.org
 COMMENT=	FMD web server to locate and control your devices
