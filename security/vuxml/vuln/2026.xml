@@ -1,3 +1,93 @@
+  <vuln vid="fbc47390-11e9-11f1-8148-bc241121aa0a">
+    <topic>FreeBSD -- Local DoS and possible privilege escalation via routing sockets</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.0</ge><lt>15.0_4</lt></range>
+	<range><ge>14.3</ge><lt>14.3_9</lt></range>
+	<range><ge>13.5</ge><lt>13.5_10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>The rtsock_msg_buffer() function serializes routing information
+	into a buffer.  As a part of this, it copies sockaddr structures
+	into a sockaddr_storage structure on the stack.  It assumes that
+	the source sockaddr length field had already been validated, but
+	this is not necessarily the case, and it's possible for a malicious
+	userspace program to craft a request which triggers a 127-byte
+	overflow.</p>
+	<p>In practice, this overflow immediately overwrites the canary for
+	the rtsock_msg_buffer() stack frame, resulting in a panic once the
+	function returns.</p>
+	<h1>Impact:</h1>
+	<p>The bug allows an unprivileged user to crash the kernel by
+	triggering a stack buffer overflow in rtsock_msg_buffer().  In
+	particular, the overflow will corrupt a stack canary value that is
+	verified when the function returns; this mitigates the impact of
+	the stack overflow by triggering a kernel panic.</p>
+	<p>Other kernel bugs may exist which allow userspace to find the canary
+	value and thus defeat the mitigation, at which point local privilege
+	escalation may be possible.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-3038</cvename>
+      <freebsdsa>SA-26:05.route</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-02-24</discovery>
+      <entry>2026-02-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a88f5b2d-11e9-11f1-8148-bc241121aa0a">
+    <topic>FreeBSD -- Jail chroot escape via fd exchange with a different jail</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>14.3</ge><lt>14.3_9</lt></range>
+	<range><ge>13.5</ge><lt>13.5_10</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	<p>If two sibling jails are restricted to separate filesystem
+	trees, which is to say that neither of the two jail root directories
+	is an ancestor of the other, jailed processes may nonetheless be
+	able to access a shared directory via a nullfs mount, if the
+	administrator has configured one.</p>
+	<p>In this case, cooperating processes in the two jails may establish
+	a connection using a unix domain socket and exchange directory
+	descriptors with each other.</p>
+	<p>When performing a filesystem name lookup, at each step of the lookup,
+	the kernel checks whether the lookup would descend below the jail
+	root of the current process.  If the jail root directory is not
+	encountered, the lookup continues.</p>
+	<h1>Impact:</h1>
+	<p>In a configuration where processes in two different jails are
+	able to exchange file descriptors using a unix domain socket, it
+	is possible for a jailed process to receive a directory for a
+	descriptor that is below that process' jail root.  This enables
+	full filesystem access for a jailed process, breaking the chroot.</p>
+	<p>Note that the system administrator is still responsible for ensuring
+	that an unprivileged user on the jail host is not able to pass
+	directory descriptors to a jailed process, even in a patched
+	kernel.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2025-15576</cvename>
+      <freebsdsa>SA-26:04.jail</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-02-24</discovery>
+      <entry>2026-02-25</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="4594110e-1151-11f1-b3f8-8447094a420f">
     <topic>Vaultwarden -- Multiple vulnerabilities</topic>
     <affects>
