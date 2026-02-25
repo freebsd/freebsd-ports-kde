@@ -1,5 +1,6 @@
 PORTNAME=	jitsi
 DISTVERSION=	2.3-198
+PORTREVISION=	1
 CATEGORIES=	net-im java
 PKGNAMESUFFIX=	-videobridge
 

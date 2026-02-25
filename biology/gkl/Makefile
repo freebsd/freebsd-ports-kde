@@ -1,5 +1,6 @@
 PORTNAME=	gkl
 DISTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	biology devel
 
 MAINTAINER=	yuri@FreeBSD.org

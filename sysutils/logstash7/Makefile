@@ -1,5 +1,6 @@
 PORTNAME=	logstash
 PORTVERSION=	7.17.11
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-darwin-x86_64
 CATEGORIES=	sysutils java
 MASTER_SITES=	https://artifacts.elastic.co/downloads/logstash/

@@ -1,5 +1,6 @@
 PORTNAME=	prismlauncher
 DISTVERSION=	10.0.5
+PORTREVISION=	1
 CATEGORIES=	games java
 MASTER_SITES=	https://github.com/PrismLauncher/PrismLauncher/releases/download/${DISTVERSION}/
 DISTNAME=	PrismLauncher-${DISTVERSION}

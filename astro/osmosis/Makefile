@@ -1,5 +1,6 @@
 PORTNAME=	osmosis
 PORTVERSION=	0.49.2
+PORTREVISION=	1
 CATEGORIES=	astro java
 MASTER_SITES=	https://github.com/openstreetmap/osmosis/releases/download/${PORTVERSION}/
 

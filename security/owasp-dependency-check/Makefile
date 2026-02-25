@@ -5,7 +5,7 @@
 PORTNAME=	owasp-dependency-check
 PORTVERSION=	3.1.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security java
 MASTER_SITES=	LOCAL/pi/:source2
 DISTFILES+=	owasp-dependency-check-${PORTVERSION}-maven-repository.tar.gz:source2

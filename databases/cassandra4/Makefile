@@ -1,5 +1,6 @@
 PORTNAME=	cassandra
 DISTVERSION=	4.0.8
+PORTREVISION=	1
 CATEGORIES=	databases java
 MASTER_SITES=	https://archive.apache.org/dist/${PORTNAME}/${DISTVERSION}/:apache \
 		https://repo1.maven.org/maven2/com/github/luben/zstd-jni/1.5.0-4/:maven

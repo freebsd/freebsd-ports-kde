@@ -1,5 +1,6 @@
 PORTNAME=	tomcat-native
 DISTVERSION=	2.0.12
+PORTREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	https://archive.apache.org/dist/tomcat/tomcat-connectors/native/${PORTVERSION}/source/
 PKGNAMESUFFIX=	2
