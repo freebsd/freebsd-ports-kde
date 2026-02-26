@@ -6351,6 +6351,7 @@
     SUBDIR += py-xxhash
     SUBDIR += py-yacs
     SUBDIR += py-yamllint
+    SUBDIR += py-yamlloader
     SUBDIR += py-yamlordereddictloader
     SUBDIR += py-yappi
     SUBDIR += py-yapps2
