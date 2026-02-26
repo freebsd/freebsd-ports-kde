@@ -1,5 +1,5 @@
 PORTNAME=	nextpnr
-PORTVERSION=	g20250221
+PORTVERSION=	g20250225
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-devel
 
@@ -15,7 +15,7 @@ NOT_FOR_ARCHS_REASON=	clang segfault
 
 BUILD_DEPENDS=	${LOCALBASE}/share/trellis/database:devel/trellis \
 		${LOCALBASE}/share/icebox:devel/icestorm \
-		${LOCALBASE}/share/prjpeppercorn:devel/prjpeppercorn111
+		${LOCALBASE}/share/prjpeppercorn:devel/prjpeppercorn112
 LIB_DEPENDS=	libboost_thread.so:devel/boost-libs \
 		libboost_program_options.so:devel/boost-libs
 
@@ -24,7 +24,7 @@ USE_QT=		base
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ
 GH_TUPLE=	YosysHQ:nextpnr-tests:ce15412:tests/tests
-GH_TAGNAME=	1f4d3fdc914d0b060deeda07fc8fdaa1468876c0
+GH_TAGNAME=	e953c250a475f1a5d3e604c1e5f98f3ac9ae67e5
 
 CONFLICTS_INSTALL=	nextpnr
 
