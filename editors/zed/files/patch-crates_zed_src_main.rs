@@ -1,4 +1,4 @@
---- crates/zed/src/main.rs.orig	2026-01-29 22:37:26 UTC
+--- crates/zed/src/main.rs.orig	2026-02-25 15:15:01 UTC
 +++ crates/zed/src/main.rs
 @@ -13,6 +13,7 @@ use collections::HashMap;
  use client::{Client, ProxySettings, UserStore, parse_zed_link};
@@ -24,7 +24,7 @@
      app.background_executor()
          .spawn(crashes::init(InitCrashHandler {
              session_id,
-@@ -579,6 +582,7 @@ fn main() {
+@@ -577,6 +580,7 @@ fn main() {
          auto_update::init(client.clone(), cx);
          dap_adapters::init(cx);
          auto_update_ui::init(cx);
