@@ -1,3 +1,48 @@
+  <vuln vid="102a03c9-1316-11f1-93ca-2cf05da270f3">
+    <topic>Gitlab -- vulnerabilities</topic>
+    <affects>
+<package>
+<name>gitlab-ce</name>
+<name>gitlab-ee</name>
+<range><ge>18.9.0</ge><lt>18.9.1</lt></range>
+<range><ge>18.8.0</ge><lt>18.8.5</lt></range>
+<range><ge>9.0.0</ge><lt>18.7.5</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://about.gitlab.com/releases/2026/02/25/patch-release-gitlab-18-9-1-released/">
+	  <p>Cross-site Scripting issue in Mermaid sandbox impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in container registry impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in Jira events endpoint impacts GitLab CE/EE</p>
+	  <p>Regular Expression Denial of Service issue in GitLab merge requests impacts GitLab CE/EE</p>
+	  <p>Missing rate limit in Bitbucket Server importer impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in CI trigger API impacts GitLab CE/EE</p>
+	  <p>Denial of Service issue in token decoder impacts GitLab CE/EE</p>
+	  <p>Improper Access Control issue in Conan package registry impacts GitLab EE</p>
+	  <p>Access Control issue in CI job mutation impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-0752</cvename>
+      <cvename>CVE-2025-14511</cvename>
+      <cvename>CVE-2026-1662</cvename>
+      <cvename>CVE-2026-1388</cvename>
+      <cvename>CVE-2026-2845</cvename>
+      <cvename>CVE-2025-3525</cvename>
+      <cvename>CVE-2026-1725</cvename>
+      <cvename>CVE-2026-1747</cvename>
+      <cvename>CVE-2025-14103</cvename>
+      <url>https://about.gitlab.com/releases/2026/02/25/patch-release-gitlab-18-9-1-released/</url>
+    </references>
+    <dates>
+      <discovery>2026-02-25</discovery>
+      <entry>2026-02-26</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="fe6209a3-126c-11f1-8a62-0897988a1c07">
     <topic>mail/mailpit -- Server-Side Request Forgery (SSRF) via Link Check API</topic>
     <affects>
