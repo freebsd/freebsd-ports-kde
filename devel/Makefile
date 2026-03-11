@@ -8238,6 +8238,7 @@
     SUBDIR += rubygem-unicode-emoji
     SUBDIR += rubygem-unicode-version
     SUBDIR += rubygem-unicode_utils
+    SUBDIR += rubygem-uniform_notifier
     SUBDIR += rubygem-unleash
     SUBDIR += rubygem-useragent
     SUBDIR += rubygem-uuid
