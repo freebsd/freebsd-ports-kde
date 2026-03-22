@@ -480,7 +480,8 @@ lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_uiplugin.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools_private.pri
-%%QT_LIBDIR%%/objects-Release/QMakeParserCumulative_resources_1/.qt/rcc/qrc_proparser_init.cpp.o
+%%DEBUG%%%%QT_LIBDIR%%/objects-Debug/QMakeParserCumulative_resources_1/.qt/rcc/qrc_proparser_init.cpp.o
+%%NO_DEBUG%%%%QT_LIBDIR%%/objects-Release/QMakeParserCumulative_resources_1/.qt/rcc/qrc_proparser_init.cpp.o
 %%QT_PLUGINDIR%%/designer/libqquickwidget.so
 %%QT_SBOMDIR%%/qttools-%%FULLVER%%.spdx
 libdata/pkgconfig/Qt6Designer.pc
