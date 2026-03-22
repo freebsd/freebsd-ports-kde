@@ -1,3 +1,3 @@
-TIMESTAMP = 1770200101
-SHA256 (KDE/Qt/6.10.2/qtcharts-everywhere-src-6.10.2.tar.xz) = 405116b4c5eded981484c4c154eb392d44b69b587342f1193181175e309f2c00
-SIZE (KDE/Qt/6.10.2/qtcharts-everywhere-src-6.10.2.tar.xz) = 4651740
+TIMESTAMP = 1773146269
+SHA256 (KDE/Qt/6.11.0-rc/qtcharts-everywhere-src-6.11.0-rc.tar.xz) = 16bdd06589a01a89cf57ac8da96581c04b2a11b391ced6fc527ecf6e0f37cd40
+SIZE (KDE/Qt/6.11.0-rc/qtcharts-everywhere-src-6.11.0-rc.tar.xz) = 4651784

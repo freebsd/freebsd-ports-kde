@@ -1,3 +1,4 @@
+bin/qqem6
 %%QT_BINDIR%%/qqem
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/basic/brightness_contrast.qen
 %%QT_QMLDIR%%/QtQuickEffectMaker/defaultnodes/basic/colorize.qen

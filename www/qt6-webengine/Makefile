@@ -40,8 +40,10 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 
 CONFIGURE_ENV=	NODEJS_EXECUTABLE="${LOCALBASE}/bin/node"
 
+CMAKE_ARGS=	-DQWELibClang_BIN_PATH="${LOCALBASE}/bin"
 CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg \
 		QT_FEATURE_webengine_proprietary_codecs
+CMAKE_OFF=	QT_FEATURE_webengine_precompiled_headers
 
 .if defined(BUILD_QTPDF)
 CMAKE_ON+=	QT_FEATURE_qtpdf_build
@@ -111,7 +113,7 @@ DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 $
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .if !defined(BUILD_QTPDF)
-OPTIONS_DEFINE=		DRIVER PIPEWIRE
+OPTIONS_DEFINE=		DRIVER PIPEWIRE # RUST
 OPTIONS_DEFAULT=	ALSA DRIVER PIPEWIRE
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -137,6 +139,13 @@ PIPEWIRE_CMAKE_OFF=	-DQT_FEATURE_webengine_webrtc_pipewire:BOOL=OFF
 PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_ON=	-DQT_FEATURE_webengine_system_pulseaudio:BOOL=ON
 PULSEAUDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_pulseaudio:BOOL=OFF
+
+#RUST_DESC=		Build with Rust (experimental)
+#RUST_BROKEN=		doesn't link
+#RUST_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
+#			rustc:lang/rust
+#RUST_USES=		llvm:lib,noexport
+#RUST_CMAKE_BOOL=	QT_FEATURE_webengine_rust_build
 
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON
@@ -165,6 +174,13 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/src/3rdparty/chromium/third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp \
 		${WRKSRC}/src/3rdparty/chromium/ui/events/ozone/layout/xkb/xkb_keyboard_layout_engine.cc
+.if defined(LLVM_VERSION)
+	@${REINPLACE_CMD} -e 's|%%LLVM_VERSION%%|${LLVM_VERSION}' \
+		${WRKSRC}/cmake/FindQWELibClang.cmake
+.else
+	@${REINPLACE_CMD} -e 's|%%LLVM_VERSION%%||' \
+		${WRKSRC}/cmake/FindQWELibClang.cmake
+.endif
 
 pre-configure:
 # We used to remove bundled libraries to be sure that webengine uses
