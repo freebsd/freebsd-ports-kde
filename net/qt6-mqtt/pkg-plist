@@ -45,6 +45,7 @@ lib/cmake/Qt6Mqtt/Qt6MqttConfigVersionImpl.cmake
 lib/cmake/Qt6Mqtt/Qt6MqttDependencies.cmake
 lib/cmake/Qt6Mqtt/Qt6MqttTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Mqtt/Qt6MqttTargets.cmake
+lib/cmake/Qt6Mqtt/Qt6MqttTargetsPrecheck.cmake
 lib/cmake/Qt6Mqtt/Qt6MqttVersionlessAliasTargets.cmake
 lib/cmake/Qt6Mqtt/Qt6MqttVersionlessTargets.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateAdditionalTargetInfo.cmake
@@ -53,6 +54,7 @@ lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateConfigVersion.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateConfigVersionImpl.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateDependencies.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateTargets.cmake
+lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateTargetsPrecheck.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateVersionlessAliasTargets.cmake
 lib/cmake/Qt6MqttPrivate/Qt6MqttPrivateVersionlessTargets.cmake
 %%QT_LIBDIR%%/libQt6Mqtt.prl
