@@ -113,7 +113,7 @@ DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 $
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .if !defined(BUILD_QTPDF)
-OPTIONS_DEFINE=		DRIVER PIPEWIRE # RUST
+OPTIONS_DEFINE=		DRIVER PIPEWIRE RUST
 OPTIONS_DEFAULT=	ALSA DRIVER PIPEWIRE
 OPTIONS_SINGLE=		AUDIO
 OPTIONS_SINGLE_AUDIO=	ALSA PULSEAUDIO SNDIO
@@ -140,12 +140,12 @@ PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
 PULSEAUDIO_CMAKE_ON=	-DQT_FEATURE_webengine_system_pulseaudio:BOOL=ON
 PULSEAUDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_pulseaudio:BOOL=OFF
 
-#RUST_DESC=		Build with Rust (experimental)
-#RUST_BROKEN=		doesn't link
-#RUST_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
-#			rustc:lang/rust
-#RUST_USES=		llvm:lib,noexport
-#RUST_CMAKE_BOOL=	QT_FEATURE_webengine_rust_build
+RUST_DESC=		Build with Rust (experimental)
+RUST_BROKEN=		doesn't link
+RUST_BUILD_DEPENDS=	bindgen:devel/rust-bindgen-cli \
+			rustc:lang/rust
+RUST_USES=		llvm:lib,noexport
+RUST_CMAKE_BOOL=	QT_FEATURE_webengine_rust_build
 
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON

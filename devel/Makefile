@@ -8415,6 +8415,7 @@
     SUBDIR += shfmt
     SUBDIR += shiboken2
     SUBDIR += shiboken6
+    SUBDIR += shiboken6-tools
     SUBDIR += shmap
     SUBDIR += shroud
     SUBDIR += shtk

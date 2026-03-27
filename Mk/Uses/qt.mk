@@ -23,8 +23,8 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.18
-QT6_VERSION?=		6.11.0-rc
-PYSIDE6_VERSION?=	6.11.0-rc
+QT6_VERSION?=		6.11.0
+PYSIDE6_VERSION?=	6.11.0
 
 # Support for intermediate Qt6 releases. This partially defines
 # _QT6_MASTER_SITE_SUBDIR and would probably be better in qt-dist.mk,
@@ -206,7 +206,7 @@ qt-connectivity_LIB=	libQt${_QT_LIBVER}Bluetooth.so
 qt-core_PORT=		devel/${_QT_RELNAME}-core
 qt-core_LIB=		libQt${_QT_LIBVER}Core.so
 
-qt_canvaspainter_PORT=	x11-toolkits/${_QT_RELNAME)-canvaspainter
+qt-canvaspainter_PORT=	x11-toolkits/${_QT_RELNAME}-canvaspainter
 qt-canvaspainter_LIB=	libQt${_QT_LIBVER}CanvasPainter.so
 
 qt-datavis3d_PORT=	x11-toolkits/${_QT_RELNAME}-datavis3d
