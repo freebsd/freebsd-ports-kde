@@ -62,6 +62,8 @@ lib/cmake/Qt6NetworkAuthPrivate/Qt6NetworkAuthPrivateVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6networkauth_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_networkauth.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_networkauth_private.pri
+%%QT_SBOMDIR%%/qtnetworkauth-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtnetworkauth-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtnetworkauth-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6NetworkAuth.pc
 %%QT_DATADIR%%/modules/NetworkAuth.json

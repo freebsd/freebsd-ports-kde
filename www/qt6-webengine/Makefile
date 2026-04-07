@@ -24,7 +24,9 @@ COMMENT?=	Qt 6 library to render web content
 # 32-bit platforms are not supported by upstream, but we're limping them along.
 ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386
 
-BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
+		${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclonedx-python-lib@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}spdx-tools>=0.8.3:misc/py-spdx-tools@${PY_FLAVOR}
 LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 		libnss3.so:security/nss \
 		libopenjp2.so:graphics/openjpeg \
@@ -110,7 +112,7 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 # real number of make jobs via MAKE_JOBS_NUMBER to ninja(1) to CONFIGURE_ENV.
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 ${MAKE_ARGS:N${DESTDIRNAME}=*}
 
-BINARY_ALIAS=	python3=${PYTHON_CMD}
+BINARY_ALIAS=	git=false python3=${PYTHON_CMD}
 
 .if !defined(BUILD_QTPDF)
 OPTIONS_DEFINE=		DRIVER PIPEWIRE RUST

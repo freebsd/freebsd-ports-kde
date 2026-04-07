@@ -153,7 +153,9 @@ lib/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtRemoteObjects/libdeclarative_remoteobjectsplugin.so
 %%QT_QMLDIR%%/QtRemoteObjects/plugins.qmltypes
 %%QT_QMLDIR%%/QtRemoteObjects/qmldir
+%%QT_SBOMDIR%%/qtremoteobjects-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtremoteobjects-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtremoteobjects-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6RemoteObjects.pc
 libdata/pkgconfig/Qt6RemoteObjectsQml.pc
 libdata/pkgconfig/Qt6RepParser.pc

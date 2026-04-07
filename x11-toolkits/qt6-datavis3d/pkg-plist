@@ -248,7 +248,9 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6DataVisualizationQmlpluginTargetsPrecheck.cmake
 %%QT_QMLDIR%%/QtDataVisualization/libdatavisualizationqmlplugin.so
 %%QT_QMLDIR%%/QtDataVisualization/plugins.qmltypes
 %%QT_QMLDIR%%/QtDataVisualization/qmldir
+%%QT_SBOMDIR%%/qtdatavisualization-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtdatavisualization-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtdatavisualization-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6DataVisualization.pc
 libdata/pkgconfig/Qt6DataVisualizationQml.pc
 %%QT_DATADIR%%/modules/DataVisualization.json

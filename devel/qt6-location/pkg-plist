@@ -227,6 +227,8 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationTargetsPrecheck.cmake
 %%QT_QMLDIR%%/QtLocation/libdeclarative_locationplugin.so
 %%QT_QMLDIR%%/QtLocation/plugins.qmltypes
 %%QT_QMLDIR%%/QtLocation/qmldir
+%%QT_SBOMDIR%%/qtlocation-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtlocation-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtlocation-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Location.pc
 %%QT_DATADIR%%/modules/Location.json

@@ -1628,7 +1628,9 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargetsPrecheck.cmake
 %%QT_QMLDIR%%/QtQuick/Scene3D/libqtquickscene3dplugin.so
 %%QT_QMLDIR%%/QtQuick/Scene3D/plugins.qmltypes
 %%QT_QMLDIR%%/QtQuick/Scene3D/qmldir
+%%QT_SBOMDIR%%/qt3d-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qt3d-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qt3d-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt63DAnimation.pc
 libdata/pkgconfig/Qt63DCore.pc
 libdata/pkgconfig/Qt63DExtras.pc

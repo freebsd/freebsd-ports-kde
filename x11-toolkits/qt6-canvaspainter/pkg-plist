@@ -106,6 +106,8 @@ lib/cmake/Qt6CanvasPainterTools/Qt6CanvasPainterToolsVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6canvaspainter_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_canvaspainter.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_canvaspainter_private.pri
+%%QT_SBOMDIR%%/qtcanvaspainter-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtcanvaspainter-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtcanvaspainter-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6CanvasPainter.pc
 %%QT_DATADIR%%/modules/CanvasPainter.json

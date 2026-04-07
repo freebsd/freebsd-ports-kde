@@ -156,7 +156,9 @@ lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginTargetsPrecheck.cmake
 %%QT_QMLDIR%%/Qt/labs/lottieqt/VectorImageHelpers/qmldir
 %%QT_QMLDIR%%/Qt/labs/lottieqt/liblottieplugin.so
 %%QT_QMLDIR%%/Qt/labs/lottieqt/qmldir
+%%QT_SBOMDIR%%/qtlottie-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtlottie-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtlottie-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Lottie.pc
 libdata/pkgconfig/Qt6LottieVectorImageHelpers.pc
 %%QT_DATADIR%%/modules/Lottie.json

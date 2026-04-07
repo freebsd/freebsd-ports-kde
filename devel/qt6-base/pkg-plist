@@ -4174,7 +4174,9 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%WAYLAND%%%%QT_PLUGINDIR%%/wayland-shell-integration/libxdg-shell.so
 %%X11%%%%QT_PLUGINDIR%%/xcbglintegrations/libqxcb-egl-integration.so
 %%X11%%%%QT_PLUGINDIR%%/xcbglintegrations/libqxcb-glx-integration.so
+%%QT_SBOMDIR%%/qtbase-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtbase-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtbase-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Concurrent.pc
 libdata/pkgconfig/Qt6Core.pc
 libdata/pkgconfig/Qt6DBus.pc

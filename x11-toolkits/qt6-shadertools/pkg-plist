@@ -48,6 +48,8 @@ lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6shadertools_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_shadertools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_shadertools_private.pri
+%%QT_SBOMDIR%%/qtshadertools-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtshadertools-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtshadertools-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6ShaderTools.pc
 %%QT_DATADIR%%/modules/ShaderTools.json

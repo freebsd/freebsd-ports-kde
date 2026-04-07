@@ -198,7 +198,9 @@ lib/cmake/Qt6SensorsQuickPrivate/Qt6SensorsQuickPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtSensors/libsensorsquickplugin.so
 %%QT_QMLDIR%%/QtSensors/plugins.qmltypes
 %%QT_QMLDIR%%/QtSensors/qmldir
+%%QT_SBOMDIR%%/qtsensors-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtsensors-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtsensors-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Sensors.pc
 libdata/pkgconfig/Qt6SensorsQuick.pc
 %%QT_DATADIR%%/modules/Sensors.json

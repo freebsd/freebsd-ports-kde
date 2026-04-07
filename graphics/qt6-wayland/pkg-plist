@@ -538,7 +538,9 @@ lib/cmake/Qt6WaylandEglCompositorHwIntegrationPrivate/Qt6WaylandEglCompositorHwI
 %%QT_QMLDIR%%/QtWayland/Compositor/qmldir
 %%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml
 %%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml
+%%QT_SBOMDIR%%/qtwayland-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtwayland-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtwayland-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6WaylandCompositor.pc
 libdata/pkgconfig/Qt6WaylandCompositorIviapplication.pc
 libdata/pkgconfig/Qt6WaylandCompositorPresentationTime.pc

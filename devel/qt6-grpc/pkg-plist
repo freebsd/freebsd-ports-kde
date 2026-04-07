@@ -399,7 +399,9 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6protobufquickpluginTargetsPrecheck.cmake
 %%QT_QMLDIR%%/QtProtobuf/libprotobufquickplugin.so
 %%QT_QMLDIR%%/QtProtobuf/plugins.qmltypes
 %%QT_QMLDIR%%/QtProtobuf/qmldir
+%%QT_SBOMDIR%%/qtgrpc-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtgrpc-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtgrpc-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Grpc.pc
 libdata/pkgconfig/Qt6GrpcQuick.pc
 libdata/pkgconfig/Qt6Protobuf.pc

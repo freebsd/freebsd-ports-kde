@@ -573,7 +573,9 @@ lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateVersionlessTargets.cmake
 %%Q3D%%%%QT_QMLDIR%%/QtQuick3D/SpatialAudio/libquick3dspatialaudioplugin.so
 %%Q3D%%%%QT_QMLDIR%%/QtQuick3D/SpatialAudio/plugins.qmltypes
 %%Q3D%%%%QT_QMLDIR%%/QtQuick3D/SpatialAudio/qmldir
+%%QT_SBOMDIR%%/qtmultimedia-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtmultimedia-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtmultimedia-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Multimedia.pc
 libdata/pkgconfig/Qt6MultimediaWidgets.pc
 libdata/pkgconfig/Qt6SpatialAudio.pc

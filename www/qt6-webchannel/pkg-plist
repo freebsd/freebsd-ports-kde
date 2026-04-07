@@ -84,7 +84,9 @@ lib/cmake/Qt6WebChannelQuickPrivate/Qt6WebChannelQuickPrivateVersionlessTargets.
 %%QT_QMLDIR%%/QtWebChannel/libwebchannelquickplugin.so
 %%QT_QMLDIR%%/QtWebChannel/plugins.qmltypes
 %%QT_QMLDIR%%/QtWebChannel/qmldir
+%%QT_SBOMDIR%%/qtwebchannel-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtwebchannel-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtwebchannel-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6WebChannel.pc
 libdata/pkgconfig/Qt6WebChannelQuick.pc
 %%QT_DATADIR%%/modules/WebChannel.json

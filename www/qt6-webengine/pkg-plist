@@ -302,7 +302,11 @@ lib/cmake/Qt6WebEngineWidgetsPrivate/Qt6WebEngineWidgetsPrivateVersionlessTarget
 %%QT_QMLDIR%%/QtWebEngine/libqtwebenginequickplugin.so
 %%QT_QMLDIR%%/QtWebEngine/plugins.qmltypes
 %%QT_QMLDIR%%/QtWebEngine/qmldir
+%%QT_SBOMDIR%%/qtwebengine-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtwebengine-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtwebengine-%%FULLVER%%.spdx.json
+%%QT_SBOMDIR%%/qtwebengine-chromium-webengine-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtwebengine-chromium-webengine-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6WebEngineCore.pc
 libdata/pkgconfig/Qt6WebEngineQuick.pc
 libdata/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc

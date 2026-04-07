@@ -300,7 +300,9 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6GraphspluginTargetsPrecheck.cmake
 %%QT_QMLDIR%%/QtGraphs/designer/qtgraphs2d.metainfo
 %%QT_QMLDIR%%/QtGraphs/libgraphsplugin.so
 %%QT_QMLDIR%%/QtGraphs/qmldir
+%%QT_SBOMDIR%%/qtgraphs-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtgraphs-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtgraphs-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Graphs.pc
 libdata/pkgconfig/Qt6GraphsWidgets.pc
 %%QT_DATADIR%%/modules/Graphs.json

@@ -60,6 +60,8 @@ lib/cmake/Qt6TaskTreePrivate/Qt6TaskTreePrivateVersionlessTargets.cmake
 %%QT_LIBDIR%%/metatypes/qt6tasktree_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_tasktree.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_tasktree_private.pri
+%%QT_SBOMDIR%%/qttasktree-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qttasktree-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qttasktree-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6TaskTree.pc
 %%QT_DATADIR%%/modules/TaskTree.json

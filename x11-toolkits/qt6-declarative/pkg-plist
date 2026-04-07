@@ -4946,7 +4946,9 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtTest/testlogger.js
 %%QT_QMLDIR%%/builtins.qmltypes
 %%QT_QMLDIR%%/jsroot.qmltypes
+%%QT_SBOMDIR%%/qtdeclarative-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtdeclarative-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtdeclarative-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6LabsAnimation.pc
 libdata/pkgconfig/Qt6LabsFolderListModel.pc
 libdata/pkgconfig/Qt6LabsPlatform.pc

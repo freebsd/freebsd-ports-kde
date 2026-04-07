@@ -1204,7 +1204,9 @@ lib/cmake/Qt6Quick3DUtilsPrivate/Qt6Quick3DUtilsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/QtQuick3D/lightmapviewer/lightmapviewer.qmltypes
 %%QT_QMLDIR%%/QtQuick3D/lightmapviewer/qmldir
 %%QT_QMLDIR%%/QtQuick3D/qmldir
+%%QT_SBOMDIR%%/qtquick3d-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qtquick3d-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qtquick3d-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Quick3D.pc
 libdata/pkgconfig/Qt6Quick3DAssetImport.pc
 libdata/pkgconfig/Qt6Quick3DAssetUtils.pc

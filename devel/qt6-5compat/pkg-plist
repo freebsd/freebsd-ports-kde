@@ -129,6 +129,8 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectsprivateTargetsPrecheck.cmake
 %%QT_QMLDIR%%/Qt5Compat/GraphicalEffects/private/qmldir
 %%QT_QMLDIR%%/Qt5Compat/GraphicalEffects/qmldir
 %%QT_QMLDIR%%/Qt5Compat/GraphicalEffects/qtgraphicaleffectsplugin.qmltypes
+%%QT_SBOMDIR%%/qt5compat-%%FULLVER%%.cdx.json
 %%QT_SBOMDIR%%/qt5compat-%%FULLVER%%.spdx
+%%QT_SBOMDIR%%/qt5compat-%%FULLVER%%.spdx.json
 libdata/pkgconfig/Qt6Core5Compat.pc
 %%QT_DATADIR%%/modules/Core5Compat.json
