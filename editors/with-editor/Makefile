@@ -4,7 +4,7 @@ DISTVERSION=	3.4.8
 CATEGORIES=	editors elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Use the Emacsclient as the $$EDITOR of child processes
 WWW=		https://github.com/magit/with-editor
 

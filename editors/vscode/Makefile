@@ -1,6 +1,5 @@
 PORTNAME=	vscode
 DISTVERSION=	${VSCODE_VERSION}
-PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	https://github.com/tagattie/FreeBSD-VSCode/releases/download/${DISTVERSION}/:node_modules
 DISTFILES=	vscode-node-modules-${DISTVERSION}${EXTRACT_SUFX}:node_modules \
@@ -19,7 +18,7 @@ ONLY_FOR_ARCHS=	amd64
 EXTRACT_DEPENDS=jq:textproc/jq \
 		node${NODEJS_VERSION}>0:www/node${NODEJS_VERSION}
 BUILD_DEPENDS=	zip:archivers/zip \
-		tsgo:lang/typescript-go \
+		typescript-go>=7.0.0.g20260306:lang/typescript-go \
 		jq:textproc/jq \
 		rg:textproc/ripgrep
 LIB_DEPENDS=	libatk-bridge-2.0.so:accessibility/at-spi2-core \
@@ -59,12 +58,19 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		bash:shells/bash
 TEST_DEPENDS=	bash:shells/bash
 
-USES=		desktop-file-utils display:test electron:39,build,test gl \
-		gmake gnome gssapi:mit iconv:wchar_t jpeg localbase:ldflags \
+USES=		cargo desktop-file-utils display:test electron:39,build,test \
+		gl gmake gnome gssapi:mit iconv:wchar_t jpeg localbase:ldflags \
 		nodejs:22,build pkgconfig python:build shebangfix xorg
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
+GH_TUPLE=	Teddy-Zhu:node-clipboard-rs:v0.0.5:node_clipboard_rs/node-clipboard-rs
+
+CARGO_CARGOTOML=${WRKSRC}/node-clipboard-rs/Cargo.toml
+CARGO_CARGOLOCK=${WRKSRC}/node-clipboard-rs/Cargo.lock
+CARGO_BUILD=	no
+CARGO_INSTALL=	no
+CARGO_TEST=	no
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
@@ -195,13 +201,51 @@ pre-build:
 			fi; \
 		done; \
 	done
+# build native node module for @teddyzhu/clipboard
+	@${CARGO_CARGO_RUN} build \
+		--manifest-path ${CARGO_CARGOTOML} \
+		--verbose --verbose \
+		${CARGO_BUILD_ARGS}
+	${CP} ${CARGO_TARGET_DIR}/*/libclipboard.so \
+		${WRKSRC}/node_modules/@github/copilot/clipboard/node_modules/@teddyzhu/clipboard/clipboard.freebsd-${ELECTRON_ARCH}.node
+	${CP} ${CARGO_TARGET_DIR}/*/libclipboard.so \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/clipboard/node_modules/@teddyzhu/clipboard/clipboard.freebsd-${ELECTRON_ARCH}.node
+	${CP} ${CARGO_TARGET_DIR}/*/libclipboard.so \
+		${WRKSRC}/remote/node_modules/@github/copilot/clipboard/node_modules/@teddyzhu/clipboard/clipboard.freebsd-${ELECTRON_ARCH}.node
 # copy rg binary file to @vscode/ripgrep node module directory
-	@${MKDIR} ${WRKSRC}/node_modules/@vscode/ripgrep/bin
-	@${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/@vscode/ripgrep/bin
-	@${MKDIR} ${WRKSRC}/build/node_modules/@vscode/ripgrep/bin
-	@${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/build/node_modules/@vscode/ripgrep/bin
-	@${MKDIR} ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
-	@${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
+	@${MKDIR} ${WRKSRC}/node_modules/@vscode/ripgrep/bin \
+		${WRKSRC}/build/node_modules/@vscode/ripgrep/bin \
+		${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
+	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/node_modules/@vscode/ripgrep/bin
+	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/build/node_modules/@vscode/ripgrep/bin
+	${CP} ${LOCALBASE}/bin/rg ${WRKSRC}/remote/node_modules/@vscode/ripgrep/bin
+# copy rg binary file to @github/copilot node modules directory
+	@${MKDIR} ${WRKSRC}/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH} \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH} \
+		${WRKSRC}/remote/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH}
+	${CP} ${LOCALBASE}/bin/rg \
+		${WRKSRC}/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH}
+	${CP} ${LOCALBASE}/bin/rg \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH}
+	${CP} ${LOCALBASE}/bin/rg \
+		${WRKSRC}/remote/node_modules/@github/copilot/ripgrep/bin/freebsd-${ELECTRON_ARCH}
+# copy keytar.node binary file to @github/copilot node modules directory
+	@${MKDIR} ${WRKSRC}/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH} \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH} \
+		${WRKSRC}/remote/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+	${CP} ${WRKSRC}/node_modules/keytar/build/Release/keytar.node \
+		${WRKSRC}/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+	${CP} ${WRKSRC}/node_modules/keytar/build/Release/keytar.node \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+	${CP} ${WRKSRC}/node_modules/keytar/build/Release/keytar.node \
+		${WRKSRC}/remote/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+# copy pty.node binary file to @github/copilot node modules directory
+	${CP} ${WRKSRC}/node_modules/node-pty/build/Release/pty.node \
+		${WRKSRC}/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+	${CP} ${WRKSRC}/node_modules/node-pty/build/Release/pty.node \
+		${WRKSRC}/node_modules/@github/copilot-sdk/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
+	${CP} ${WRKSRC}/node_modules/node-pty/build/Release/pty.node \
+		${WRKSRC}/remote/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
 
 do-build:
 # remove backup files so that they are not included in the package
@@ -215,6 +259,9 @@ do-build:
 			npm --userconfig=${WRKSRC}/.npmrc run gulp vscode-linux-${ELECTRON_ARCH}-min
 # move marketplace extensions
 	@${MV} ${WRKDIR}/builtInExtensions/* ${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}/resources/app/extensions
+# rename linux directory to freebsd
+	@${MV} ${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}/resources/app/node_modules/@github/copilot/prebuilds/linux-${ELECTRON_ARCH} \
+		${WRKDIR}/VSCode-linux-${ELECTRON_ARCH}/resources/app/node_modules/@github/copilot/prebuilds/freebsd-${ELECTRON_ARCH}
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d
@@ -257,7 +304,7 @@ pre-test:
 
 do-test:
 # unit tests
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh --build || ${TRUE}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./scripts/test.sh || ${TRUE}
 # UI smoke tests
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} npm run smoketest
 

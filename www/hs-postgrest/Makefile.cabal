@@ -151,7 +151,7 @@ USE_CABAL=	HTTP-4000.4.1_6 \
 		primitive-extras-0.10.2.2 \
 		primitive-unlifted-2.2.0.0 \
 		profunctors-5.6.3 \
-		prometheus-client-1.1.1 \
+		prometheus-client-1.1.1_1 \
 		protolude-0.3.5 \
 		psqueues-0.2.8.2 \
 		ptr-0.16.8.7 \

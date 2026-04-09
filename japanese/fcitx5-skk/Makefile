@@ -3,7 +3,7 @@ DISTVERSION=	5.1.9
 CATEGORIES=	japanese textproc
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-skk/
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	SKK Kana-Kanji inputmethod for fcitx5
 WWW=		https://github.com/fcitx/fcitx5-skk
 

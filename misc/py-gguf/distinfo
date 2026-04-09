@@ -1,3 +1,3 @@
-TIMESTAMP = 1763919658
-SHA256 (ggml-org-llama.cpp-0.17.1.7134-b7134_GH0.tar.gz) = a5e97acb5dfe4a47fb161ca9183c394bd4aeaa44a95ba4c7b184ecc70496723b
-SIZE (ggml-org-llama.cpp-0.17.1.7134-b7134_GH0.tar.gz) = 27279622
+TIMESTAMP = 1775628052
+SHA256 (ggml-org-llama.cpp-0.18.0.8701-b8701_GH0.tar.gz) = 25d373d9d8668231af2f4e8e9f30d79ce36b4e3171bcef612382161264a74d80
+SIZE (ggml-org-llama.cpp-0.18.0.8701-b8701_GH0.tar.gz) = 29712232

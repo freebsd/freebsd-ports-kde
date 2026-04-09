@@ -351,6 +351,7 @@ include/wine/windows/common.ver
 include/wine/windows/commoncontrols.h
 include/wine/windows/commoncontrols.idl
 include/wine/windows/compobj.h
+include/wine/windows/compressapi.h
 include/wine/windows/comsvcs.h
 include/wine/windows/comsvcs.idl
 include/wine/windows/concurrencysal.h
@@ -1338,6 +1339,8 @@ include/wine/windows/windows.graphics.capture.interop.h
 include/wine/windows/windows.graphics.capture.interop.idl
 include/wine/windows/windows.graphics.directx.direct3d11.h
 include/wine/windows/windows.graphics.directx.direct3d11.idl
+include/wine/windows/windows.graphics.directx.direct3d11.interop.h
+include/wine/windows/windows.graphics.directx.direct3d11.interop.idl
 include/wine/windows/windows.graphics.directx.h
 include/wine/windows/windows.graphics.directx.idl
 include/wine/windows/windows.graphics.display.h
@@ -1687,6 +1690,7 @@ lib/wine/%%WINEARCH%%-unix/libhttpapi.a
 lib/wine/%%WINEARCH%%-unix/libicmui.a
 lib/wine/%%WINEARCH%%-unix/libicu.a
 lib/wine/%%WINEARCH%%-unix/libieframe.a
+lib/wine/%%WINEARCH%%-unix/libiertutil.a
 lib/wine/%%WINEARCH%%-unix/libimagehlp.a
 lib/wine/%%WINEARCH%%-unix/libimm32.a
 lib/wine/%%WINEARCH%%-unix/libinetcomm.a
@@ -2147,6 +2151,7 @@ lib/wine/%%WINEARCH%%-windows/ir50_32.dll
 lib/wine/%%WINEARCH%%-windows/irprops.cpl
 lib/wine/%%WINEARCH%%-windows/itircl.dll
 lib/wine/%%WINEARCH%%-windows/itss.dll
+lib/wine/%%WINEARCH%%-windows/iyuv_32.dll
 lib/wine/%%WINEARCH%%-windows/joy.cpl
 lib/wine/%%WINEARCH%%-windows/jscript.dll
 lib/wine/%%WINEARCH%%-windows/jsproxy.dll
@@ -2264,6 +2269,7 @@ lib/wine/%%WINEARCH%%-windows/libhttpapi.a
 lib/wine/%%WINEARCH%%-windows/libicmui.a
 lib/wine/%%WINEARCH%%-windows/libicu.a
 lib/wine/%%WINEARCH%%-windows/libieframe.a
+lib/wine/%%WINEARCH%%-windows/libiertutil.a
 lib/wine/%%WINEARCH%%-windows/libimagehlp.a
 lib/wine/%%WINEARCH%%-windows/libimm32.a
 lib/wine/%%WINEARCH%%-windows/libinetcomm.a
@@ -2798,6 +2804,7 @@ lib/wine/%%WINEARCH%%-windows/winbrand.dll
 lib/wine/%%WINEARCH%%-windows/windows.applicationmodel.dll
 lib/wine/%%WINEARCH%%-windows/windows.devices.bluetooth.dll
 lib/wine/%%WINEARCH%%-windows/windows.devices.enumeration.dll
+lib/wine/%%WINEARCH%%-windows/windows.devices.radios.dll
 lib/wine/%%WINEARCH%%-windows/windows.devices.usb.dll
 lib/wine/%%WINEARCH%%-windows/windows.gaming.input.dll
 lib/wine/%%WINEARCH%%-windows/windows.gaming.ui.gamebar.dll

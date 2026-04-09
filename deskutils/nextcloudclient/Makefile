@@ -1,5 +1,5 @@
 PORTNAME=	nextcloudclient
-PORTVERSION=	4.0.8
+PORTVERSION=	33.0.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	deskutils
 
@@ -11,6 +11,7 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	inkscape:graphics/inkscape
 LIB_DEPENDS=	libinotify.so:devel/libinotify \
+		libkdsingleapplication-qt6.so:devel/kdsingleapplication \
 		libqt6keychain.so:security/qtkeychain@qt6 \
 		libxkbcommon.so:x11/libxkbcommon \
 		libp11.so:security/libp11

@@ -244,7 +244,6 @@
     SUBDIR += mimedefang
     SUBDIR += mini_sendmail
     SUBDIR += minimalist
-    SUBDIR += missey
     SUBDIR += mlmmj
     SUBDIR += mlmmj-archive-mid
     SUBDIR += mlmmj-archiver
@@ -739,6 +738,7 @@
     SUBDIR += squirrelmail-wetteronline-plugin
     SUBDIR += sqwebmail
     SUBDIR += ssmtp
+    SUBDIR += stalwart
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed

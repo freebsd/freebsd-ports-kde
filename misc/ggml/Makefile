@@ -1,7 +1,6 @@
 PORTNAME=	ggml
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.7
-PORTREVISION=	1
+DISTVERSION=	0.9.11
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,9 +18,9 @@ BROKEN_i386=	compilation fails: LLVM ERROR: out of memory
 USE_GITHUB=	yes
 GH_ACCOUNT=	ggml-org
 
-CMAKE_ON=	BUILD_SHARED_LIBS \
-		GGML_NATIVE
-CMAKE_OFF=	GGML_BUILD_TESTS \
+CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	GGML_NATIVE \
+		GGML_BUILD_TESTS \
 		GGML_BUILD_EXAMPLES \
 		GGML_SSE42 \
 		GGML_AVX \
@@ -33,6 +32,8 @@ CMAKE_TESTING_ON=	GGML_BUILD_TESTS
 
 BINARY_ALIAS=	git=false
 
+PLIST_SUB+=	DISTVERSION=${DISTVERSION}
+
 OPTIONS_DEFINE=		VULKAN
 OPTIONS_DEFAULT=	VULKAN
 OPTIONS_SUB=		yes
@@ -43,5 +44,6 @@ VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
 # tests as of 0.9.5: 100% tests passed, 0 tests failed out of 21
+# tests as of 0.9.11: 95% tests passed, 1 tests failed out of 21: test-backend-ops fails because of OOM in the 6GB Vulkan device
 
 .include <bsd.port.mk>

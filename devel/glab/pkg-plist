@@ -115,6 +115,9 @@
 %%MANPAGES%%share/man/man1/glab-mr-list.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-merge.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-note.1.gz
+%%MANPAGES%%share/man/man1/glab-mr-note-list.1.gz
+%%MANPAGES%%share/man/man1/glab-mr-note-reopen.1.gz
+%%MANPAGES%%share/man/man1/glab-mr-note-resolve.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-rebase.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-reopen.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-revoke.1.gz
@@ -160,6 +163,7 @@
 %%MANPAGES%%share/man/man1/glab-runner-assign.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller-create.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller-delete.1.gz
+%%MANPAGES%%share/man/man1/glab-runner-controller-get.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller-list.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller-scope-create.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller-scope-delete.1.gz
@@ -173,7 +177,9 @@
 %%MANPAGES%%share/man/man1/glab-runner-controller-update.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-controller.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-delete.1.gz
+%%MANPAGES%%share/man/man1/glab-runner-jobs.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-list.1.gz
+%%MANPAGES%%share/man/man1/glab-runner-managers.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-unassign.1.gz
 %%MANPAGES%%share/man/man1/glab-runner-update.1.gz
 %%MANPAGES%%share/man/man1/glab-runner.1.gz

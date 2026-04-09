@@ -8,7 +8,7 @@ DISTNAME=	mpg123el.cgi?${PORTVERSION}
 EXTRACT_SUFX=	# empty
 EXTRACT_ONLY=	# empty
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Front-end to mpg123/ogg123 audio player for Emacsen
 WWW=		http://www.gentei.org/~yuuji/software/mpg123el/
 

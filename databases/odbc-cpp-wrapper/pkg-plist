@@ -18,5 +18,4 @@ include/odbc/StatementBase.h
 include/odbc/StringConverter.h
 include/odbc/Types.h
 include/odbc/Util.h
-lib/libodbccpp.a
 lib/libodbccpp.so

@@ -1,6 +1,6 @@
 PORTNAME=	jbidwatcher
 PORTVERSION=	2.5.6
-PORTREVISION=	3
+PORTREVISION=	5
 CATEGORIES=	misc java
 MASTER_SITES=	http://www.jbidwatcher.com/download/
 

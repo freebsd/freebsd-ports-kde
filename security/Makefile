@@ -74,6 +74,7 @@
     SUBDIR += cargo-audit
     SUBDIR += ccrypt
     SUBDIR += ccsrch
+    SUBDIR += cdxgen
     SUBDIR += certificate_maker
     SUBDIR += certmgr
     SUBDIR += certmonger
@@ -260,6 +261,7 @@
     SUBDIR += keepass-plugin-keepassrpc
     SUBDIR += keepassxc
     SUBDIR += keepassxc276
+    SUBDIR += keepsecret
     SUBDIR += keybase
     SUBDIR += keychain
     SUBDIR += keyprint
@@ -455,8 +457,6 @@
     SUBDIR += openssl-pkcs11provider
     SUBDIR += openssl-unsafe
     SUBDIR += openssl111
-    SUBDIR += openssl33
-    SUBDIR += openssl33-quictls
     SUBDIR += openssl34
     SUBDIR += openssl35
     SUBDIR += openssl36
@@ -969,6 +969,8 @@
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-httpx-auth
+    SUBDIR += py-iam-expand
+    SUBDIR += py-iamdata
     SUBDIR += py-iris-check-module
     SUBDIR += py-iris-client
     SUBDIR += py-iris-evtx-module
@@ -1023,6 +1025,7 @@
     SUBDIR += py-plaso
     SUBDIR += py-pnu-certwatch
     SUBDIR += py-pnu-vuxml
+    SUBDIR += py-policyuniverse
     SUBDIR += py-potr
     SUBDIR += py-pwntools
     SUBDIR += py-pyaes
@@ -1325,7 +1328,6 @@
     SUBDIR += snort-rep
     SUBDIR += snort2pfcd
     SUBDIR += snort3
-    SUBDIR += snortsam
     SUBDIR += snortsnarf
     SUBDIR += snowflake-tor
     SUBDIR += snuffleupagus

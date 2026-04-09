@@ -5,7 +5,7 @@ PORTREVISION=	7
 CATEGORIES=	textproc elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Major-mode for editing AsciiDoc files in Emacs
 WWW=		https://github.com/bbatsov/adoc-mode
 

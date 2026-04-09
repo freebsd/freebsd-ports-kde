@@ -11,7 +11,7 @@ CATEGORIES=	devel
 MAINTAINER=	mfechner@FreeBSD.org
 COMMENT=	Portable, pure C implementation of the Git core
 WWW=		https://libgit2.org \
-		https://libgit2.github.com/
+		https://github.com/libgit2/libgit2
 
 LICENSE=	GPLv2
 

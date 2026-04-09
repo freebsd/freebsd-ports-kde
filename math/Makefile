@@ -38,6 +38,7 @@
     SUBDIR += R-cran-acepack
     SUBDIR += R-cran-admisc
     SUBDIR += R-cran-alabama
+    SUBDIR += R-cran-ankiR
     SUBDIR += R-cran-ash
     SUBDIR += R-cran-assertthat
     SUBDIR += R-cran-backports
@@ -45,6 +46,7 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-carData
     SUBDIR += R-cran-coda
+    SUBDIR += R-cran-collections
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-conquer
@@ -591,6 +593,7 @@
     SUBDIR += octave-forge-fl-core
     SUBDIR += octave-forge-fpl
     SUBDIR += octave-forge-fuzzy-logic-toolkit
+    SUBDIR += octave-forge-fxp
     SUBDIR += octave-forge-ga
     SUBDIR += octave-forge-general
     SUBDIR += octave-forge-generate_html
@@ -1060,6 +1063,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-numpy-groupies
     SUBDIR += py-numpy-stl
+    SUBDIR += py-numpy1
     SUBDIR += py-openTSNE
     SUBDIR += py-opt-einsum
     SUBDIR += py-or-tools

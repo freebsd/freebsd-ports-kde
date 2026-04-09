@@ -1,5 +1,5 @@
 PORTNAME=	xapian
-PORTVERSION=	1.4.30
+PORTVERSION=	1.4.31
 DISTVERSIONPREFIX=	bindings-
 CATEGORIES=	databases ruby
 MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION}/ \

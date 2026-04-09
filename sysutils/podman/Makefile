@@ -1,8 +1,11 @@
 PORTNAME=	podman
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.8.1
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
+PATCH_SITES=	https://github.com/containers/podman/commit/
+PATCHFILES+=	9a10cefd18a3f19e49aa6ae5683d1bcea37bdc97.patch:-p1 # https://github.com/containers/podman/pull/28317
 MAINTAINER=	dfr@FreeBSD.org
 COMMENT=	Manage Pods, Containers and Container Images
 WWW=		https://podman.io/
@@ -20,15 +23,13 @@ RUN_DEPENDS=	conmon:sysutils/conmon \
 		containers-common>=0:sysutils/containers-common \
 		ocijail:sysutils/ocijail
 
-USES=		gmake go:1.24+,no_targets pkgconfig python:build shebangfix
+USES=		gmake go:no_targets pkgconfig python:build shebangfix
+USE_GITHUB=	yes
+GH_ACCOUNT=	containers
 USE_RC_SUBR=	podman podman_service
 
 SHEBANG_FILES=	${WRKSRC}/hack/markdown-preprocess
 MAKE_ARGS=	SHELL=${LOCALBASE}/bin/bash
-
-USE_GITHUB=	yes
-GH_ACCOUNT=	containers
-GH_PROJECT=	podman
 
 INSTALL_TARGET=	install install.completions
 

@@ -317,7 +317,6 @@
 #
 # PY_SETUPTOOLS			- setuptools port based on USE_PYTHON=distutils
 # PYGAME			- pygame port
-# PYNUMPY			- NumPy port
 # PY_MERCURIAL			- mercurial port, PKGNAME varies based on default
 #				  Python version
 # PY_BOOST			- Boost Python libraries port
@@ -849,7 +848,6 @@ CMAKE_ARGS+=	-DPython${PYTHON_MAJOR_VER}_EXECUTABLE:FILEPATH="${PYTHON_CMD}"
 
 # Python 3rd-party modules
 PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game@${PY_FLAVOR}
-PYNUMPY=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16,1<1.27,1:math/py-numpy@${PY_FLAVOR}
 
 .  if defined(_PYTHON_FEATURE_DISTUTILS)
 .    if ${PYTHON_MAJOR_VER} < 3

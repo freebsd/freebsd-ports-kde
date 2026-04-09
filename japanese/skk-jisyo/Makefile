@@ -7,7 +7,7 @@ CATEGORIES=	japanese
 PKGNAMESUFFIX=	-cdb
 .endif
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT?=	Jisyo (dictionary) files for the SKK Japanese-input software
 WWW=		http://openlab.jp/skk/dic.html
 

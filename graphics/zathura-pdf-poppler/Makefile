@@ -3,7 +3,7 @@ DISTVERSION=	2026.02.03
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/zathura-pdf-poppler/download/
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Poppler render PDF plugin for Zathura PDF viewer
 WWW=		https://pwmt.org/projects/zathura-pdf-poppler/
 

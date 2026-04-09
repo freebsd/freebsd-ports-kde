@@ -1,4 +1,4 @@
---- chrome/browser/net/profile_network_context_service.cc.orig	2026-02-16 10:45:29 UTC
+--- chrome/browser/net/profile_network_context_service.cc.orig	2026-03-30 11:37:05 UTC
 +++ chrome/browser/net/profile_network_context_service.cc
 @@ -144,7 +144,7 @@
  #endif
@@ -18,7 +18,7 @@
  std::unique_ptr<net::ClientCertStore> GetWrappedCertStore(
      Profile* profile,
      std::unique_ptr<net::ClientCertStore> platform_store) {
-@@ -1294,7 +1294,7 @@ ProfileNetworkContextService::CreateClientCertStore() 
+@@ -1247,7 +1247,7 @@ ProfileNetworkContextService::CreateClientCertStore() 
        std::make_unique<net::ClientCertStoreNSS>(
            base::BindRepeating(&CreateCryptoModuleBlockingPasswordDelegate,
                                kCryptoModulePasswordClientAuth));

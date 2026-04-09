@@ -262,7 +262,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		ratatui-0.30.0 \
 		ratatui-core-0.1.0 \
 		ratatui-crossterm-0.1.0 \
-		ratatui-image-10.0.3 \
+		ratatui-image-10.0.6 \
 		ratatui-macros-0.7.0 \
 		ratatui-termion-0.1.0 \
 		ratatui-termwiz-0.1.0 \

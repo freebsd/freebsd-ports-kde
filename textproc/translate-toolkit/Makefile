@@ -1,5 +1,5 @@
 PORTNAME=	translate-toolkit
-PORTVERSION=	3.19.0
+PORTVERSION=	3.19.3
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI \
 		https://github.com/translate/translate/releases/download/${PORTVERSION}/
@@ -29,7 +29,69 @@ NO_ARCH=	yes
 
 SHEBANG_FILES=	tools/*
 
-MANPAGES=	android2po csv2po csv2tbx dtd2po flatxml2po html2po ical2po idml2po ini2po json2po md2po moz2po mozlang2po odf2xliff oo2po oo2xliff php2po po2csv po2dtd po2flatxml po2html po2ical po2idml po2ini po2json po2md po2moz po2mozlang po2odf po2oo po2php po2prop po2rc po2resx po2sub po2symb po2tiki po2tmx po2ts po2txt po2web2py po2wordfast po2xliff po2yaml pot2po prop2po rc2po resx2po sub2po symb2po tbx2po tiki2po ts2po txt2po web2py2po xliff2odf xliff2oo yaml2po
+MANPAGES=	android2po \
+		arb2po \
+		asciidoc2po \
+		csv2po \
+		csv2tbx \
+		dtd2po \
+		flatxml2po \
+		html2po \
+		ical2po \
+		idml2po \
+		ini2po \
+		json2po \
+		md2po \
+		moz2po \
+		mozlang2po \
+		odf2xliff \
+		oo2po \
+		oo2xliff \
+		php2po \
+		po2asciidoc \
+		po2csv \
+		po2dtd \
+		po2flatxml \
+		po2html \
+		po2ical \
+		po2idml \
+		po2ini \
+		po2json \
+		po2md \
+		po2moz \
+		po2mozlang \
+		po2odf \
+		po2oo \
+		po2php \
+		po2prop \
+		po2rc \
+		po2resx \
+		po2sub \
+		po2symb \
+		po2tiki \
+		po2tmx \
+		po2ts \
+		po2txt \
+		po2web2py \
+		po2wordfast \
+		po2wxl \
+		po2xliff \
+		po2yaml \
+		pot2po \
+		prop2po \
+		rc2po \
+		resx2po \
+		sub2po \
+		symb2po \
+		tbx2po \
+		tiki2po \
+		ts2po \
+		txt2po \
+		web2py2po \
+		wxl2po \
+		xliff2odf \
+		xliff2oo \
+		yaml2po
 
 OPTIONS_DEFINE=	ALL CHARDET FLUENT ICAL INI LEVENSHTEIN MARKDOWN PHP RC SPELLCHECK SUBTITLES TOML YAML
 OPTIONS_DEFAULT=ALL CHARDET FLUENT ICAL INI LEVENSHTEIN MARKDOWN PHP RC SPELLCHECK SUBTITLES TOML YAML
@@ -50,6 +112,7 @@ YAML_DESC=	YAML format support
 
 CHARDET_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}charset-normalizer>=3.4.0<4.0:textproc/py-charset-normalizer@${PY_FLAVOR}
 FLUENT_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fluent.syntax>=0.19.0<0.20:textproc/py-fluent.syntax@${PY_FLAVOR}
+FLUENT_VARS=		MANPAGES+="fluent2po"
 ICAL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}vobject>=0.9.6.1:deskutils/py-vobject@${PY_FLAVOR}
 ICAL_VARS=		MANPAGES+="ical2po po2ical"
 INI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}iniparse>=0.5:devel/py-iniparse@${PY_FLAVOR}

@@ -1,5 +1,6 @@
 PORTNAME=	sdl2
 DISTVERSION=	2.32.10
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/libsdl-org/SDL/releases/download/release-${DISTVERSION}/ \
 		https://www.libsdl.org/release/
@@ -65,7 +66,7 @@ CSD_IMPLIES=		WAYLAND
 DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DBUS_CMAKE_BOOL=	SDL_DBUS
 
-FCITX_LIB_DEPENDS=	libfcitx-config.so:chinese/fcitx
+FCITX_RUN_DEPENDS=	fcitx5>=0:textproc/fcitx5
 FCITX_IMPLIES=		DBUS
 
 HIDAPI_CMAKE_BOOL=	SDL_HIDAPI

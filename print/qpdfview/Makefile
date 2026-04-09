@@ -5,7 +5,7 @@ CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/${PORTNAME}/trunk/${DISTVERSION}/+download/
 DISTNAME=	${PORTNAME}-${DISTVERSION:S/.0$//}
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Tabbed DjVu/PDF/PS document viewer
 WWW=		https://launchpad.net/qpdfview
 

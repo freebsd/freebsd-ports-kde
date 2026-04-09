@@ -1,5 +1,5 @@
 PORTNAME=	xapian-core
-PORTVERSION=	1.4.30
+PORTVERSION=	1.4.31
 PORTEPOCH=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://oligarchy.co.uk/xapian/${PORTVERSION}/ \

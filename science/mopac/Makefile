@@ -12,7 +12,7 @@ WWW=		http://openmopac.net \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-TEST_DEPENDS=	${PYNUMPY}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 
 USES=		blaslapack:openblas cmake:testing fortran python:test
 USE_LDCONFIG=	yes

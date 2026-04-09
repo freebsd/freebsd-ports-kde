@@ -1,6 +1,6 @@
 PORTNAME=	twitter
 PORTVERSION=	8.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
 
@@ -18,7 +18,7 @@ RUN_DEPENDS=	rubygem-addressable>=2.8<3:www/rubygem-addressable \
 		rubygem-llhttp-ffi>=0.5.0<0.6:www/rubygem-llhttp-ffi \
 		rubygem-http>=5.2<6:www/rubygem-http \
 		rubygem-http-form_data>=2.3<3:www/rubygem-http-form_data \
-		rubygem-memoizable>=0.4.0<0.5:devel/rubygem-memoizable \
+		rubygem-memoizable>=0.4.0<1:devel/rubygem-memoizable \
 		rubygem-multipart-post>=2.4<3:www/rubygem-multipart-post \
 		rubygem-naught>=2.0<3:devel/rubygem-naught \
 		rubygem-simple_oauth>=0.4.0<0.5:net/rubygem-simple_oauth

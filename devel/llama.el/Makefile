@@ -4,7 +4,7 @@ DISTVERSION=	1.0.3
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Compact syntax for short lambda in Emacs Lisp
 WWW=		https://github.com/tarsius/llama
 

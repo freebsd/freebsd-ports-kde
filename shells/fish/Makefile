@@ -1,6 +1,5 @@
 PORTNAME=	fish
-DISTVERSION=	4.3.3
-PORTREVISION=	1
+DISTVERSION=	4.6.0
 CATEGORIES=	shells
 MASTER_SITES=	https://github.com/fish-shell/fish-shell/releases/download/${PORTVERSION}/
 
@@ -40,7 +39,7 @@ MANPAGES_CMAKE_BOOL=	WITH_DOCS
 MANPAGES_VARS=		MAKE_JOBS_UNSAFE=yes
 
 NLS_USES=	gettext
-NLS_CMAKE_BOOL=	WITH_GETTEXT
+NLS_CMAKE_BOOL=	WITH_MESSAGE_LOCALIZATION
 
 .include <bsd.port.pre.mk>
 

@@ -1,5 +1,5 @@
-TIMESTAMP = 1773152789
-SHA256 (go/devel_git-pkgs/git-pkgs-v0.15.0/v0.15.0.mod) = d0c0cd6e55e424b8f127395c59aa85ab857e038dc8e88bb9fd43d753323d7c21
-SIZE (go/devel_git-pkgs/git-pkgs-v0.15.0/v0.15.0.mod) = 13171
-SHA256 (go/devel_git-pkgs/git-pkgs-v0.15.0/v0.15.0.zip) = 925942c8e4abd8b4e22997cb22a1a187040070db4ff1e202158e03787b69fc20
-SIZE (go/devel_git-pkgs/git-pkgs-v0.15.0/v0.15.0.zip) = 709311
+TIMESTAMP = 1773966708
+SHA256 (go/devel_git-pkgs/git-pkgs-v0.15.1/v0.15.1.mod) = a307a012f52af31dec60f77685c2927e82d2ef8b2c974ed09f5b133e94323827
+SIZE (go/devel_git-pkgs/git-pkgs-v0.15.1/v0.15.1.mod) = 13171
+SHA256 (go/devel_git-pkgs/git-pkgs-v0.15.1/v0.15.1.zip) = 7540fdf2d9a87703e7e2ab0b5570c66b4581aab152c138a9b6eb667c890c7f9e
+SIZE (go/devel_git-pkgs/git-pkgs-v0.15.1/v0.15.1.zip) = 716322

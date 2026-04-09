@@ -1,6 +1,6 @@
 PORTNAME=	colt
 PORTVERSION=	1.2.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	science java
 MASTER_SITES=	http://acs.lbl.gov/software/colt/colt-download/releases/
 

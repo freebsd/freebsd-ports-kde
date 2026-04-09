@@ -1,6 +1,6 @@
 PORTNAME=	java-getopt
 PORTVERSION=	1.0.14
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	java devel
 MASTER_SITES=	http://www.urbanophile.com/arenn/hacking/getopt/
 

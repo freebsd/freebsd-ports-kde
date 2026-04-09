@@ -1,10 +1,14 @@
 PORTNAME=	forgejo
 DISTVERSIONPREFIX=	v
 DISTVERSION=	11.0.11
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://codeberg.org/forgejo/forgejo/releases/download/${DISTVERSIONFULL}/
 PKGNAMESUFFIX=	-lts
 DISTNAME=	forgejo-src-${DISTVERSION}
+
+PATCHFILES=	9762f9ea2041d4eaf38e47415ea0692fa60cf0a7.patch:-p1
+PATCH_SITES=	https://codeberg.org/forgejo/forgejo/commit/
 
 MAINTAINER=	des@FreeBSD.org
 COMMENT=	Compact self-hosted Git forge

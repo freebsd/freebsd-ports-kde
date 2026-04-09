@@ -1,6 +1,7 @@
 PORTNAME=	nextest
 DISTVERSIONPREFIX=	cargo-nextest-
 DISTVERSION=	0.9.130
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,6 +13,8 @@ LICENSE=	APACHE20 MIT
 LICENSE_COMB=	dual
 LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+BROKEN_aarch64=compilation fails: error[E0308]: mismatched types, see https://github.com/oxidecomputer/usdt/issues/545
 
 LIB_DEPENDS=	libzstd.so:archivers/zstd
 

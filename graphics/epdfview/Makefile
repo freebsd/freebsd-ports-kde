@@ -3,7 +3,7 @@ DISTVERSION=	0.2.0
 PORTREVISION=	3
 CATEGORIES=	graphics print gnome
 
-MAINTAINER=	mew14930xvi@inbox.lv
+MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Lightweight PDF document viewer
 WWW=		https://github.com/Flow-It/epdfview_old
 

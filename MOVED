@@ -5168,5 +5168,68 @@ misc/unicode-cldr|textproc/CLDR|2026-03-14|Remove duplicate port. Use textproc/C
 emulators/ppsspp-qt5|emulators/ppsspp|2026-03-15|Qt5 is end of life, please use emulators/ppsspp
 devel/py-marshmallow-enum||2026-03-15|Has expired: Upstream repository has been archived on Oct 19, 2022
 java/openjdk20||2026-03-15|Has expired: No longer supported by upstream
-textproc/py-en-core-web-sm|textproc/py-en-core-web-sm|2026-03-17|Add py- prefix to match Python package name
+textproc/en-core-web-sm|textproc/py-en-core-web-sm|2026-03-17|Add py- prefix to match Python package name
 sysutils/beats9|sysutils/beats93|2026-03-20|Use Beats port with preferred major.minor number instead
+science/kst2|science/kst|2026-03-25|Rename to match upstream naming
+graphics/luminance-qt5||2026-03-29|Broken for more than a year
+sysutils/tmate-ssh-server||2026-03-31|Has expired: Upstream unmaintained
+editors/wordgrinder||2026-03-31|Has expired: broken since 2023, maintainer AWOL
+www/py-django-cron||2026-03-31|Has expired: Upstream inactive since 3+ years, not compatible with Django 5.2 or newer
+deskutils/py-paperless|deskutils/py-paperless-ngx|2026-03-31|Has expired: Upstream repository archived since 2021 and no compatibility for Django 5+. Please migrate to deskutils/py-paperless-ngx
+www/py-django-bleach||2026-03-31|Has expired: Upstream has been archived on November 5, 2024
+www/py-django-tagging|www/py-django-taggit|2026-03-31|Has expired: Upstream inactive since 5+ years, not compatible with Django 5+. Please use www/py-django-taggit instead
+www/py-django-star-ratings||2026-03-31|Has expired: Upstream repository has been archived on May 21, 2025
+ftp/ftpsesame||2026-03-31|Has expired: dead upstream, broken on FreeBSD 15
+devel/loki||2026-03-31|Has expired: dead upstream, sole consumer removed from tree long ago
+mail/missey||2026-03-31|Has expired: mail/missey has been abandoned for many years
+devel/jsl||2026-03-31|Has expired: No more upstream, use JSLint instead
+security/snortsam||2026-03-31|Has expired: dead upstream, broken on FreeBSD 15
+devel/py-graphene-django300|devel/py-graphene-django|2026-03-31|Has expired: Obsolete, was used as temporary solution due compatibility issues. Please use devel/py-graphene-django instead
+filesystems/moosefs2-chunkserver||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-cgiserv||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-cgi||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-netdump||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-metalogger||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-cli||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+filesystems/moosefs2-client||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+multimedia/gstreamer1-plugins-svt-hevc||2026-03-31|Has expired: SVT-HEVC project discontinued by Intel on 2024-07-29
+filesystems/moosefs2-master||2026-03-31|Has expired: 2.x reached EoL 2017-12-31, use filesystems/moosefs-* 4.x instead
+games/xcubes|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xdino|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xhexagons|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xmball|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xmlink|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xoct|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xpanex|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xpyraminx|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xrubik|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xskewb|games/xpuzzles|2026-03-31|Merged into xpuzzles
+games/xtriangles|games/xpuzzles|2026-03-31|Merged into xpuzzles
+databases/mysql94-client||2026-03-31|Has expired: EOLed upstream, switch to newer version
+databases/mysql91-client||2026-03-31|Has expired: EOLed upstream, switch to newer version
+databases/mysql91-server||2026-03-31|Has expired: EOLed upstream, switch to newer version
+databases/mysql94-server||2026-03-31|Has expired: EOLed upstream, switch to newer version
+www/obhttpd||2026-03-31|Has expired: Depends on bundled version of LibreSSL which is unsupported upstream
+net/cloud-init-devel|net/cloud-init|2026-03-31|Has expired: Outdated and no longer maintained, consider migrating to net/cloud-init
+net/libzmq3|net/libzmq4|2026-03-31|Has expired: Upstream unmaintained version with multiple vulnerabilities
+sysutils/tmate||2026-03-31|Has expired: Upstream unmaintained
+x11/mrxvt||2026-03-31|Has expired: Upstream unmaintained and has known vulnerability
+www/glassfish4|www/glassfish|2026-03-31|Has expired: Very old version reached EoL, use www/glassfish instead
+devel/qjson||2026-03-31|Has expired: Deprecated upstream, not used by anything
+multimedia/gstreamer1-vaapi||2026-03-31|Has expired: Project discontinued
+databases/postgresql-cstore_fdw||2026-03-31|Has expired: Columnar storage is now part of databases/pg_citus. Please migrate
+sysutils/alfio||2026-03-31|Has expired: Upstream abandoned the project and does not distribute it anymore
+devel/py-absl|devel/py-absl-py|2026-03-31|Has expired: Use devel/py-absl-py
+security/openssl33-quictls||2026-03-31|Removed: Upstream project has been archived
+security/openssl33||2026-03-31|Has expired: Please use security/openssl35 (LTS)
+textproc/lexilla||2026-04-01|Has expired: No consumers left in the tree, the library is intended to be bundled
+x11-toolkits/scintilla||2026-04-01|Has expired: No consumers left in the tree, the library is intended to be bundled
+security/py-shodan|net/py-shodan|2026-04-03|Remove duplicate port. Use net/py-shodan instead
+devel/py-jsonschema-spec|devel/py-jsonschema-path|2026-04-05|Remove obsoleted port. Use devel/py-jsonschema-path instead
+devel/py-libcst03|devel/py-libcst|2026-04-05|Remove obsoleted port. Use devel/py-libcst instead
+devel/py-babi_grammars|devel/py-babi-grammars|2026-04-05|Rename to match upstream naming
+devel/capnproto1|devel/capnproto-tiledb|2026-04-05|Rename for better naming
+net-mgmt/argus3|net-mgmt/argus|2026-04-06|Update to latest version and remove version suffix
+net-mgmt/argus3-clients|net-mgmt/argus-clients|2026-04-06|Update to latest version and remove version suffix
+textproc/py-asciinema|textproc/asciinema|2026-04-06|No longer based on python, use textproc/asciinema instead
+multimedia/jellyfin-media-player|multimedia/jellyfin-desktop|2026-06-08|Project has been renamed

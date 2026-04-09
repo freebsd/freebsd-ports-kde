@@ -1,6 +1,6 @@
 PORTNAME=	polars-runtime
 DISTVERSIONPREFIX=	py-
-DISTVERSION=	1.39.0
+DISTVERSION=	1.39.3
 CATEGORIES=	misc
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +11,8 @@ WWW=		https://github.com/pola-rs/polars
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN=		compilation alias: https://github.com/pola-rs/polars/issues/27130
 
 FLAVORS=	compat 32 64 # runtime values; it might look hackish to define different types of flavors in this Python port, but Polars needs all of them to be installed and there should be no problems as long as files are installed into proper locations
 FLAVOR?=	${FLAVORS:[1]}

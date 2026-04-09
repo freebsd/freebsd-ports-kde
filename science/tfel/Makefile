@@ -1,6 +1,6 @@
 PORTNAME=	tfel
 PORTVERSION=	4.0.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	science
 MASTER_SITES=	SF/${PORTNAME}/
 PKGNAMESUFFIX=	-mfront
@@ -24,10 +24,10 @@ OPTIONS_DEFAULT=	DOCS PYTHON
 OPTIONS_SUB=		yes
 
 PYTHON_USES=		localbase python
-PYTHON_BUILD_DEPENDS=	${PYNUMPY}
+PYTHON_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 PYTHON_LIB_DEPENDS=	${PY_BOOST}	\
 			libboost_thread.so:devel/boost-libs
-PYTHON_RUN_DEPENDS=	${PYNUMPY}
+PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 PYTHON_CMAKE_BOOL=	enable-python enable-python-bindings
 
 CMAKE_ON=	enable-aster enable-calculix enable-fortran

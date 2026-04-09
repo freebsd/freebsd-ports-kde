@@ -27,9 +27,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 # mail/rubygem-net-smtp is required as ruby 3.1 removed it
 # textproc/rubygem-psych3 is required as ruby 3.1 applied an update to psych 4.0 which has breaking changes
 # mail/rubygem-net-pop is required as ruby 3.1 removed it
-#gitlab-zoekt-indexer>=0.16.0:textproc/gitlab-zoekt-indexer
-# Gitlab does not work with nodejs 24, but keep it here for a later upgrade
-# yarn${NODEJS_SUFFIX}>=1.10.0:www/yarn${NODEJS_SUFFIX}
 MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	gitlab-elasticsearch-indexer>=5.13.3:textproc/gitlab-elasticsearch-indexer \
 	gitlab-agent>=${GITLAB_VERSION}:net/gitlab-agent \
@@ -38,7 +35,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	gitlab-workhorse>=${GITLAB_VERSION}:www/gitlab-workhorse \
 	gitlab-zoekt-indexer>=1.11.0:textproc/gitlab-zoekt-indexer \
 	redis>=6.2.11:databases/redis \
-	yarn-node20>=1.10.0:www/yarn-node20 \
+	yarn${NODEJS_SUFFIX}>=1.10.0:www/yarn${NODEJS_SUFFIX} \
 	gtar>0:archivers/gtar \
 	bash>0:shells/bash \
 	rubygem-parser>=3.3.10.1:devel/rubygem-parser \
@@ -295,7 +292,7 @@ MY_DEPENDS=	gitaly>=${GITLAB_VERSION}:devel/gitaly \
 	rubygem-grape_logging-gitlab>=1.8.4<2.0:devel/rubygem-grape_logging-gitlab \
 	rubygem-gitlab-net-dns>=0.15.0<0.16:dns/rubygem-gitlab-net-dns \
 	rubygem-countries>=4.1.3<4.2.0:devel/rubygem-countries \
-	rubygem-retriable>=3.1.2<3.2.0:devel/rubygem-retriable \
+	rubygem-retriable-gitlab>=3.1.2<3.2.0:devel/rubygem-retriable-gitlab \
 	rubygem-lru_redux>0:devel/rubygem-lru_redux \
 	rubygem-mail-gitlab>=2.9.0<2.9.1:mail/rubygem-mail-gitlab \
 	rubygem-lockbox>=1.4.1<1.5:security/rubygem-lockbox \

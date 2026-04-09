@@ -4,7 +4,7 @@ DISTVERSION=	5.0.2
 CATEGORIES=	devel elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Client libraries for the APIs of various Git forges
 WWW=		https://github.com/magit/ghub
 

@@ -85,7 +85,6 @@
     SUBDIR += cjdns
     SUBDIR += claws
     SUBDIR += cloud-init
-    SUBDIR += cloud-init-devel
     SUBDIR += cloudflare-speed-cli
     SUBDIR += cloudflared
     SUBDIR += cloudquery
@@ -337,6 +336,7 @@
     SUBDIR += kidentitymanagement
     SUBDIR += kimap
     SUBDIR += kio-gdrive
+    SUBDIR += kio-gopher
     SUBDIR += kio-zeroconf
     SUBDIR += kippo
     SUBDIR += kitinerary
@@ -406,6 +406,7 @@
     SUBDIR += libnet
     SUBDIR += libnfs
     SUBDIR += libngtcp2
+    SUBDIR += libngtcp2-boringssl
     SUBDIR += libngtcp2-gnutls
     SUBDIR += libngtcp2-wolfssl
     SUBDIR += libnids
@@ -439,8 +440,8 @@
     SUBDIR += libwebsockets
     SUBDIR += libyang
     SUBDIR += libyang2
+    SUBDIR += libyang3
     SUBDIR += libzapojit
-    SUBDIR += libzmq3
     SUBDIR += libzmq4
     SUBDIR += liferea
     SUBDIR += linphone
@@ -503,6 +504,7 @@
     SUBDIR += msend
     SUBDIR += msgraph
     SUBDIR += msoak
+    SUBDIR += mtg
     SUBDIR += mtr
     SUBDIR += multicat
     SUBDIR += mvfst
@@ -1047,6 +1049,7 @@
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
+    SUBDIR += py-awsipranges
     SUBDIR += py-blobfile
     SUBDIR += py-bonsai
     SUBDIR += py-casttube
@@ -1157,6 +1160,7 @@
     SUBDIR += py-rabbitpy
     SUBDIR += py-radix
     SUBDIR += py-raet
+    SUBDIR += py-rdap
     SUBDIR += py-ripe.atlas.cousteau
     SUBDIR += py-ripe.atlas.sagan
     SUBDIR += py-ripe.atlas.tools

@@ -13,7 +13,7 @@ WWW=		https://biosig.sourceforge.net/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/../../COPYING
 
-BUILD_DEPENDS=	${PYNUMPY}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 LIB_DEPENDS=	libbiosig.so:biology/biosig
 
 USES=		python tar:xz

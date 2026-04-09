@@ -25,7 +25,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
  		libprotobuf.so:devel/protobuf
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytorch>0:misc/py-pytorch@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}torchvision>0:misc/py-torchvision@${PY_FLAVOR}
-TEST_DEPENDS=	${PYNUMPY}
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR}
 
 USES=		cmake:indirect compiler:c++17-lang python
 USE_PYTHON=	pep517 autoplist pytest

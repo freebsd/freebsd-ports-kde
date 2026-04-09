@@ -1,0 +1,16 @@
+Obtained from:	https://github.com/mapnik/mapnik/commit/ca60dda74671cb373419b8a8f91b0f730c16f161
+
+--- plugins/input/ogr/ogr_datasource.cpp.orig	2025-10-01 08:04:52 UTC
++++ plugins/input/ogr/ogr_datasource.cpp
+@@ -378,7 +378,11 @@ void ogr_datasource::init(mapnik::parameters const& pa
+         }
+     }
+     mapnik::parameters& extra_params = desc_.get_extra_parameters();
++#if GDAL_VERSION_NUM >= GDAL_COMPUTE_VERSION(3, 12, 0)
++    const OGRSpatialReference* srs_ref = layer->GetSpatialRef();
++#else
+     OGRSpatialReference* srs_ref = layer->GetSpatialRef();
++#endif
+     char* srs_output = nullptr;
+     if (srs_ref && srs_ref->exportToProj4(&srs_output) == OGRERR_NONE)
+     {

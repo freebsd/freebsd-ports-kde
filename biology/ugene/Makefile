@@ -3,7 +3,7 @@ PORTVERSION=	40.1
 PORTREVISION=	1
 CATEGORIES=	biology science
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	makc@FreeBSD.org
 COMMENT=	Integrated bioinformatics toolkit
 WWW=		https://ugene.net/
 

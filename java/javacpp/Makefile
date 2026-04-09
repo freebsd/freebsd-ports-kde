@@ -1,5 +1,6 @@
 PORTNAME=	javacpp
 DISTVERSION=	1.5.13
+PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	https://repo1.maven.org/maven2/org/bytedeco/${PORTNAME}/${DISTVERSION}/
 DISTFILES=	${DISTNAME}.jar

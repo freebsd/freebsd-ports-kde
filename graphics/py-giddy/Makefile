@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}esda>=2.7<2.9:science/py-esda@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mapclassify>=2.7:graphics/py-mapclassify@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=0:math/py-matplotlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}quantecon>=0.8:finance/py-quantecon@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}scipy>=1.11,1:science/py-scipy@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}scipy>=1.12,1:science/py-scipy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}seaborn>=0:math/py-seaborn@${PY_FLAVOR}
 
 USES=		python:3.11+

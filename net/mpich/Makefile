@@ -3,7 +3,7 @@ DISTVERSION=	5.0.0
 CATEGORIES=	net parallel
 MASTER_SITES=	https://github.com/pmodels/mpich/releases/download/v${DISTVERSION}/
 
-MAINTAINER=	laurent.chardon@gmail.com
+MAINTAINER=	laurent@FreeBSD.org
 COMMENT=	Portable implementation of MPI-1, MPI-2 and MPI-3
 WWW=		https://www.mpich.org/
 

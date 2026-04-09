@@ -1,5 +1,5 @@
 PORTNAME=	appjail
-DISTVERSION=	4.9.1.20260308
+DISTVERSION=	4.11.0.20260407
 PORTEPOCH=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-devel
@@ -16,7 +16,7 @@ CONFLICTS=	appjail
 USE_GITHUB=	yes
 GH_ACCOUNT=	DtxdF
 GH_PROJECT=	AppJail
-GH_TAGNAME=	f7d2f12d4f739c841af24d145fd8859117f035e1
+GH_TAGNAME=	3134061156a45e77d448f8ad31158c1380b71922
 
 MAKE_ARGS=	APPJAIL_VERSION=${DISTVERSION}+${GH_TAGNAME}
 ALL_TARGET=	utils-strip
@@ -44,6 +44,7 @@ X11_RUN_DEPENDS=		su-exec:security/su-exec \
 				xauth:x11/xauth \
 				xdotool:x11/xdotool \
 				Xephyr:x11-servers/xorg-server@xephyr \
+				xev:x11/xev \
 				xseticon:x11/xseticon
 
 post-install:
