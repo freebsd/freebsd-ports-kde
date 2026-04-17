@@ -1,6 +1,6 @@
 PORTNAME=	fleur
 DISTVERSION=	7.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	science # chemistry
 
 MAINTAINER=	yuri@FreeBSD.org

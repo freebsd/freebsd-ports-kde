@@ -6,7 +6,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		anes-0.1.6 \
 		anstyle-1.0.14 \
 		anyhow-1.0.102 \
-		arc-swap-1.9.0 \
+		arc-swap-1.9.1 \
 		asn1-rs-0.6.2 \
 		asn1-rs-derive-0.5.1 \
 		asn1-rs-impl-0.2.0 \
@@ -18,13 +18,13 @@ CARGO_CRATES=	adler2-2.0.1 \
 		aws-lc-sys-0.39.1 \
 		base64-0.22.1 \
 		bencher-0.1.5 \
-		bitflags-2.11.0 \
+		bitflags-2.11.1 \
 		brotli-8.0.2 \
 		brotli-decompressor-5.0.0 \
 		bumpalo-3.20.2 \
 		bytes-1.11.1 \
 		cast-0.3.0 \
-		cc-1.2.58 \
+		cc-1.2.60 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
@@ -65,7 +65,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		env_logger-0.10.2 \
 		equivalent-1.0.2 \
 		errno-0.3.14 \
-		fastrand-2.3.0 \
+		fastrand-2.4.1 \
 		find-msvc-tools-0.1.9 \
 		flate2-1.1.9 \
 		fnv-1.0.7 \
@@ -117,7 +117,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		id-arena-2.3.0 \
 		idna-1.1.0 \
 		idna_adapter-1.2.1 \
-		indexmap-2.13.0 \
+		indexmap-2.13.1 \
 		inventory-0.3.24 \
 		ipconfig-0.3.4 \
 		ipnet-2.12.0 \
@@ -127,13 +127,13 @@ CARGO_CRATES=	adler2-2.0.1 \
 		itertools-0.13.0 \
 		itoa-1.0.18 \
 		jobserver-0.1.34 \
-		js-sys-0.3.93 \
+		js-sys-0.3.95 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
-		libc-0.2.183 \
+		libc-0.2.185 \
 		libm-0.2.16 \
 		linux-raw-sys-0.12.1 \
-		litemap-0.8.1 \
+		litemap-0.8.2 \
 		litrs-1.0.0 \
 		lock_api-0.4.14 \
 		log-0.4.29 \
@@ -162,11 +162,11 @@ CARGO_CRATES=	adler2-2.0.1 \
 		oid-registry-0.7.1 \
 		once_cell-1.21.4 \
 		oorandom-11.1.5 \
-		openssl-0.10.76 \
+		openssl-0.10.77 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.2.1 \
-		openssl-src-300.5.5+3.5.5 \
-		openssl-sys-0.9.112 \
+		openssl-src-300.6.0+3.6.2 \
+		openssl-sys-0.9.113 \
 		parking_lot-0.12.5 \
 		parking_lot_core-0.9.12 \
 		paste-1.0.15 \
@@ -180,7 +180,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		pin-project-internal-1.1.11 \
 		pin-project-lite-0.2.17 \
 		pin-utils-0.1.0 \
-		pkg-config-0.3.32 \
+		pkg-config-0.3.33 \
 		plotters-0.3.7 \
 		plotters-backend-0.3.7 \
 		plotters-svg-0.3.7 \
@@ -188,7 +188,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		pnet_datalink-0.35.0 \
 		pnet_sys-0.35.0 \
 		portable-atomic-1.13.1 \
-		potential_utf-0.1.4 \
+		potential_utf-0.1.5 \
 		powerfmt-0.2.0 \
 		ppv-lite86-0.2.21 \
 		precomputed-hash-0.1.1 \
@@ -197,13 +197,13 @@ CARGO_CRATES=	adler2-2.0.1 \
 		proc-macro2-1.0.106 \
 		psl-types-2.0.11 \
 		publicsuffix-2.3.0 \
-		pyo3-0.28.2 \
+		pyo3-0.28.3 \
 		pyo3-async-runtimes-0.28.0 \
-		pyo3-build-config-0.28.2 \
-		pyo3-ffi-0.28.2 \
+		pyo3-build-config-0.28.3 \
+		pyo3-ffi-0.28.3 \
 		pyo3-log-0.13.3 \
-		pyo3-macros-0.28.2 \
-		pyo3-macros-backend-0.28.2 \
+		pyo3-macros-0.28.3 \
+		pyo3-macros-backend-0.28.3 \
 		pythonize-0.28.0 \
 		quickcheck-1.0.3 \
 		quinn-0.11.9 \
@@ -213,14 +213,14 @@ CARGO_CRATES=	adler2-2.0.1 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
 		rand-0.8.5 \
-		rand-0.9.2 \
-		rand-0.10.0 \
+		rand-0.9.4 \
+		rand-0.10.1 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
 		rand_core-0.9.5 \
-		rand_core-0.10.0 \
-		rayon-1.11.0 \
+		rand_core-0.10.1 \
+		rayon-1.12.0 \
 		rayon-core-1.13.0 \
 		rcgen-0.13.2 \
 		redox_syscall-0.5.18 \
@@ -234,7 +234,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rustix-1.1.4 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.14.0 \
-		rustls-webpki-0.103.10 \
+		rustls-webpki-0.103.12 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
 		same-file-1.0.6 \
@@ -242,7 +242,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		scopeguard-1.2.0 \
 		security-framework-3.6.0 \
 		security-framework-sys-2.17.0 \
-		semver-1.0.27 \
+		semver-1.0.28 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
@@ -277,12 +277,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		time-0.3.45 \
 		time-core-0.1.7 \
 		time-macros-0.2.25 \
-		tinystr-0.8.2 \
+		tinystr-0.8.3 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.50.0 \
-		tokio-macros-2.6.1 \
+		tokio-1.51.1 \
+		tokio-macros-2.7.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.26.4 \
 		tokio-stream-0.1.18 \
@@ -316,19 +316,19 @@ CARGO_CRATES=	adler2-2.0.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.1+wasi-0.2.4 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.116 \
-		wasm-bindgen-futures-0.4.66 \
-		wasm-bindgen-macro-0.2.116 \
-		wasm-bindgen-macro-support-0.2.116 \
-		wasm-bindgen-shared-0.2.116 \
-		wasm-bindgen-test-0.3.66 \
-		wasm-bindgen-test-macro-0.3.66 \
-		wasm-bindgen-test-shared-0.2.116 \
+		wasm-bindgen-0.2.118 \
+		wasm-bindgen-futures-0.4.68 \
+		wasm-bindgen-macro-0.2.118 \
+		wasm-bindgen-macro-support-0.2.118 \
+		wasm-bindgen-shared-0.2.118 \
+		wasm-bindgen-test-0.3.68 \
+		wasm-bindgen-test-macro-0.3.68 \
+		wasm-bindgen-test-shared-0.2.118 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasm-streams-0.5.0 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.93 \
+		web-sys-0.3.95 \
 		web-time-1.1.0 \
 		web_atoms-0.2.3 \
 		webpki-root-certs-1.0.6 \
@@ -370,20 +370,20 @@ CARGO_CRATES=	adler2-2.0.1 \
 		wit-bindgen-rust-macro-0.51.0 \
 		wit-component-0.244.0 \
 		wit-parser-0.244.0 \
-		writeable-0.6.2 \
+		writeable-0.6.3 \
 		x509-parser-0.16.0 \
 		yasna-0.5.2 \
-		yoke-0.8.1 \
-		yoke-derive-0.8.1 \
+		yoke-0.8.2 \
+		yoke-derive-0.8.2 \
 		zerocopy-0.8.48 \
 		zerocopy-derive-0.8.48 \
-		zerofrom-0.1.6 \
-		zerofrom-derive-0.1.6 \
+		zerofrom-0.1.7 \
+		zerofrom-derive-0.1.7 \
 		zeroize-1.8.2 \
 		zeroize_derive-1.4.3 \
-		zerotrie-0.2.3 \
-		zerovec-0.11.5 \
-		zerovec-derive-0.11.2 \
+		zerotrie-0.2.4 \
+		zerovec-0.11.6 \
+		zerovec-derive-0.11.3 \
 		zlib-rs-0.6.3 \
 		zmij-1.0.21 \
 		zstd-0.13.3 \

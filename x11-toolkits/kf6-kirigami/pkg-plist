@@ -191,6 +191,7 @@ lib/libKirigamiTemplates.so.%%KDE_FRAMEWORKS_VERSION%%
 %%QT_QMLDIR%%/org/kde/kirigami/templates/InlineMessage.qml
 %%QT_QMLDIR%%/org/kde/kirigami/templates/InlineViewHeader.qml
 %%QT_QMLDIR%%/org/kde/kirigami/templates/KirigamiTemplates.qmltypes
+%%QT_QMLDIR%%/org/kde/kirigami/templates/LinkButton.qml
 %%QT_QMLDIR%%/org/kde/kirigami/templates/NavigationTabBar.qml
 %%QT_QMLDIR%%/org/kde/kirigami/templates/NavigationTabButton.qml
 %%QT_QMLDIR%%/org/kde/kirigami/templates/OverlayDrawer.qml

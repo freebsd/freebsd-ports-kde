@@ -1195,6 +1195,8 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-parser.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-recur.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-recur.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-shortdoc.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-shortdoc.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-utils.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar-utils.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/calendar/icalendar.el.gz
@@ -3259,6 +3261,8 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-comint.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-core.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-core.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-csharp.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-csharp.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-css.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-css.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/org/ob-ditaa.el.gz
@@ -4093,10 +4097,10 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/transient.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/tree-widget.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/tree-widget.elc
-%%DATADIR%%/%%EMACS_VER%%/lisp/treesit.el.gz
-%%DATADIR%%/%%EMACS_VER%%/lisp/treesit.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/treesit-x.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/treesit-x.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/treesit.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/treesit.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/tty-tip.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/tty-tip.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/tutorial.el.gz
@@ -4311,7 +4315,6 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/xwidget.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/yank-media.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/yank-media.elc
-%%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/site-lisp/site-start.el
 %%DATADIR%%/%%EMACS_VER%%/site-lisp/subdirs.el
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/alloc.c
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/android-asset.h
@@ -4569,6 +4572,8 @@ share/applications/emacsclient.desktop
 %%SOURCES%%%%DATADIR%%/%%EMACS_VER%%/src/xwidget.h
 %%DATADIR%%/info/elisp_type_hierarchy.jpg
 %%DATADIR%%/info/elisp_type_hierarchy.txt
+%%DATADIR%%/site-lisp/default.el
+%%DATADIR%%/site-lisp/site-start.el
 %%DATADIR%%/site-lisp/subdirs.el
 share/icons/hicolor/128x128/apps/emacs.png
 share/icons/hicolor/16x16/apps/emacs.png

@@ -1,8 +1,10 @@
-TIMESTAMP = 1774030811
-SHA256 (aws-session-manager-plugin-1.2.792.0_GH0.tar.gz) = 207851175cdd9a233c966e3e7a74cf27563bc669add6198e425a2d53e29127f3
-SIZE (aws-session-manager-plugin-1.2.792.0_GH0.tar.gz) = 35494472
-SHA256 (aws-aws-sdk-go-v1.54.10_GH0.tar.gz) = d682bdd896a59a6ad82fceae275a6c20bd1d9b193758dc1db06db97fab956dac
-SIZE (aws-aws-sdk-go-v1.54.10_GH0.tar.gz) = 33088833
+TIMESTAMP = 1775315976
+SHA256 (aws-session-manager-plugin-1.2.804.0_GH0.tar.gz) = 0e5ed340d1f824eeb8c01729455573446e2e800d5d3c00b8f3efd621cb479aff
+SIZE (aws-session-manager-plugin-1.2.804.0_GH0.tar.gz) = 60872896
+SHA256 (aws-aws-sdk-go-v2-release-2026-03-09_GH0.tar.gz) = cc4800726f12e39c5f38d1322518fa7b82b7f4f934ed6811bd1c63c39f947bf7
+SIZE (aws-aws-sdk-go-v2-release-2026-03-09_GH0.tar.gz) = 58025688
+SHA256 (aws-smithy-go-v1.24.2_GH0.tar.gz) = 8daceebeeb30d1efe86fbed7068f47d924a179d1adb6aedf1c70de9ef58ea75e
+SIZE (aws-smithy-go-v1.24.2_GH0.tar.gz) = 480755
 SHA256 (davecgh-go-spew-v1.1.1_GH0.tar.gz) = 7d82b9bb7291adbe7498fe946920ab3e7fc9e6cbfc3b2294693fad00bf0dd17e
 SIZE (davecgh-go-spew-v1.1.1_GH0.tar.gz) = 42152
 SHA256 (fsnotify-fsnotify-v1.4.7_GH0.tar.gz) = b7530d973d0ab0e58ad8ce1b9a4b963d6f57b3d72f2f9e13d49846976361b1cd

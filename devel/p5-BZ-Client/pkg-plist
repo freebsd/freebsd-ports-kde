@@ -6,6 +6,12 @@
 %%PERL5_MAN3%%/BZ::Client::Product.3.gz
 %%PERL5_MAN3%%/BZ::Client::Test.3.gz
 %%PERL5_MAN3%%/BZ::Client::XMLRPC.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Array.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Handler.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Parser.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Response.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Struct.3.gz
+%%PERL5_MAN3%%/BZ::Client::XMLRPC::Value.3.gz
 %%SITE_PERL%%/BZ/Client.pm
 %%SITE_PERL%%/BZ/Client/API.pm
 %%SITE_PERL%%/BZ/Client/Bug.pm

@@ -1,5 +1,5 @@
 PORTNAME=	llguidance
-DISTVERSION=	1.7.0
+DISTVERSION=	1.7.2
 CATEGORIES=	textproc python # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -63,6 +63,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		bytes-1.11.1 \
 		cast-0.3.0 \
 		castaway-0.2.3 \
+		cbindgen-0.29.2 \
 		cc-1.2.27 \
 		cfg-if-1.0.1 \
 		ciborium-0.2.2 \
@@ -91,7 +92,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		derive_builder-0.20.2 \
 		derive_builder_core-0.20.2 \
 		derive_builder_macro-0.20.2 \
-		derivre-0.3.8 \
+		derivre-0.3.9 \
 		dirs-6.0.0 \
 		dirs-sys-0.5.0 \
 		displaydoc-0.2.5 \
@@ -248,7 +249,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rustix-1.0.7 \
 		rustls-0.23.28 \
 		rustls-pki-types-1.12.0 \
-		rustls-webpki-0.103.3 \
+		rustls-webpki-0.103.10 \
 		rustversion-1.0.21 \
 		ryu-1.0.20 \
 		same-file-1.0.6 \
@@ -261,6 +262,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		serde-json-fmt-0.1.0 \
 		serde_derive-1.0.219 \
 		serde_json-1.0.140 \
+		serde_spanned-1.0.0 \
 		serde_urlencoded-0.7.1 \
 		shlex-1.3.0 \
 		slab-0.4.11 \
@@ -293,8 +295,12 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.26.2 \
 		tokio-util-0.7.15 \
+		toml-0.9.5 \
 		toml_datetime-0.6.11 \
+		toml_datetime-0.7.0 \
 		toml_edit-0.22.27 \
+		toml_parser-1.0.10+spec-1.1.0 \
+		toml_writer-1.0.7+spec-1.1.0 \
 		tower-0.5.2 \
 		tower-http-0.6.6 \
 		tower-layer-0.3.3 \
@@ -362,6 +368,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		windows_x86_64_msvc-0.52.6 \
 		windows_x86_64_msvc-0.53.0 \
 		winnow-0.7.12 \
+		winnow-1.0.0 \
 		wit-bindgen-rt-0.39.0 \
 		writeable-0.6.1 \
 		yoke-0.8.0 \

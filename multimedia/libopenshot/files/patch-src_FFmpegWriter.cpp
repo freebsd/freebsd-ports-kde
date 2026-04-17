@@ -1,4 +1,4 @@
---- src/FFmpegWriter.cpp.orig	2026-03-20 19:34:28 UTC
+--- src/FFmpegWriter.cpp.orig	2026-04-02 23:34:37 UTC
 +++ src/FFmpegWriter.cpp
 @@ -168,7 +168,7 @@ void FFmpegWriter::SetVideoOptions(bool has_video, std
  		const AVCodec *new_codec;
@@ -35,7 +35,7 @@
  				}
  #endif  // FFmpeg 4.0+
  		} else {
-@@ -1429,22 +1432,26 @@ void FFmpegWriter::open_video(AVFormatContext *oc, AVS
+@@ -1429,21 +1432,25 @@ void FFmpegWriter::open_video(AVFormatContext *oc, AVS
  		adapter_num = openshot::Settings::Instance()->HW_EN_DEVICE_SET;
  		std::clog << "Encoding Device Nr: " << adapter_num << "\n";
  		if (adapter_num < 3 && adapter_num >=0) {
@@ -58,34 +58,8 @@
 +#if defined(__unix__)
  		if( adapter_ptr != NULL && access( adapter_ptr, W_OK ) == 0 ) {
  #elif defined(_WIN32) || defined(__APPLE__)
- 		if( adapter_ptr != NULL ) {
-+#else
 +		if( adapter_ptr != NULL ) {
++#else
+ 		if( adapter_ptr != NULL ) {
  #endif
  			ZmqLogger::Instance()->AppendDebugMethod(
- 				"Encode Device present using device",
-@@ -1510,7 +1517,11 @@ void FFmpegWriter::open_video(AVFormatContext *oc, AVS
- 		switch (video_codec_ctx->codec_id) {
- 			case AV_CODEC_ID_H264:
- 				video_codec_ctx->max_b_frames = 0;  // At least this GPU doesn't support b-frames
-+#if LIBAVFORMAT_VERSION_MAJOR >= 61
-+				video_codec_ctx->profile = AV_PROFILE_H264_BASELINE | AV_PROFILE_H264_CONSTRAINED;
-+#else
- 				video_codec_ctx->profile = FF_PROFILE_H264_BASELINE | FF_PROFILE_H264_CONSTRAINED;
-+#endif
- 				av_opt_set(video_codec_ctx->priv_data, "preset", "slow", 0);
- 				av_opt_set(video_codec_ctx->priv_data, "tune", "zerolatency", 0);
- 				av_opt_set(video_codec_ctx->priv_data, "vprofile", "baseline", AV_OPT_SEARCH_CHILDREN);
-@@ -2400,6 +2411,12 @@ void FFmpegWriter::AddSphericalMetadata(const std::str
- 	map->pitch = static_cast<int32_t>(pitch_deg * (1 << 16));
- 	map->roll  = static_cast<int32_t>(roll_deg  * (1 << 16));
- 
-+# if LIBAVFORMAT_VERSION_MAJOR >= 62
-+	av_packet_side_data_add(
-+		&video_st->codecpar->coded_side_data, &video_st->codecpar->nb_coded_side_data,
-+		AV_PKT_DATA_SPHERICAL, reinterpret_cast<uint8_t*>(map), sd_size, 0);
-+# else
- 	av_stream_add_side_data(video_st, AV_PKT_DATA_SPHERICAL, reinterpret_cast<uint8_t*>(map), sd_size);
-+# endif
- #endif
- }

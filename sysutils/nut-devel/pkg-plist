@@ -11,7 +11,7 @@
 %%CGI%%%%WWWDIR%%/header.html
 %%CGI%%%%WWWDIR%%/index.html
 %%CGI%%%%WWWDIR%%/nut-banner.png
-%%CGI%%%%WWWDIR%%/nut-logo.png
+%%CGI%%%%WWWDIR%%/nut-logo-60x60.png
 %%ETCDIR%%/cmdvartab
 %%ETCDIR%%/driver.list
 @sample %%ETCDIR%%/nut.conf.sample
@@ -259,6 +259,8 @@ lib/libnutscan.so.4.1.0
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_list_start.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_readline.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_readline_timeout.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_readline_timeout_may_disconnect.3.gz
+%%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline_timeout_may_disconnect.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_report_build_details.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline.3.gz
 %%MANPAGES%%%%DEV%%share/man/man3/upscli_sendline_timeout.3.gz

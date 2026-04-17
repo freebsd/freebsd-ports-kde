@@ -1,5 +1,5 @@
 PORTNAME=	embree
-PORTVERSION=	4.4.0
+PORTVERSION=	4.4.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	graphics
 
@@ -22,7 +22,7 @@ CMAKE_ARGS=	-DEMBREE_TASKING_SYSTEM:STRING=${_ETS} \
 		-DEMBREE_RAY_MASK:BOOL=ON \
 		-DEMBREE_ZIP_MODE:BOOL=OFF
 
-PLIST_SUB+=	VERSION=${PORTVERSION} MANSUFX=4${PORTNAME}4.gz
+PLIST_SUB+=	VERSION=${PORTVERSION} MANSUFX=${PORTNAME}4.gz
 
 OPTIONS_DEFINE=	BACKFACE_CULLING DOCS EXAMPLES ISPC TBB
 OPTIONS_DEFAULT=	ISPC TBB
@@ -70,8 +70,6 @@ post-patch:
 	    '/DESTINATION "src" COMPONENT examples)/s,^INSTALL,#&,' \
 		${WRKSRC}/tutorials/minimal/CMakeLists.txt \
 		${WRKSRC}/tutorials/CMakeLists.txt
-	@${REINPLACE_CMD} -e '/monitorMemoryFunction/s,int64,intptr_t,' \
-		${WRKSRC}/tutorials/forest/forest_device.ispc
 
 do-test:
 	${TEST_WRKSRC}/${PORTNAME}_verify

@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.336
 CATEGORIES=	graphics
 
-MAINTAINER=	atanubiswas484@gmail.com
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Utility libraries for Vulkan developers
 WWW=		https://github.com/KhronosGroup/Vulkan-Utility-Libraries
 

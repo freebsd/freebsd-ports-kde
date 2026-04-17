@@ -1,9 +1,8 @@
 PORTNAME=	adoc-mode.el
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.7.0
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	textproc elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Major-mode for editing AsciiDoc files in Emacs
@@ -16,22 +15,20 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	bbatsov
 GH_PROJECT=	adoc-mode
 
-NO_ARCH=	yes
+CONFLICTS_INSTALL=	adoc-mode.el-emacs_*
 
-PLIST_FILES=	${EMACS_VERSION_SITE_LISPDIR}/adoc-mode.el \
-		${EMACS_VERSION_SITE_LISPDIR}/adoc-mode.elc
+NO_ARCH=	yes
+NO_BUILD=	yes
+
+PLIST_FILES=	${EMACS_SITE_LISPDIR}/adoc-mode.el
 PORTDOCS=	CHANGELOG.md CONTRIBUTING.md README.adoc
 
 OPTIONS_DEFINE=	DOCS
 
-do-build:
-	(cd ${WRKSRC} \
-	&& ${EMACS_CMD} -Q -batch -L . -f batch-byte-compile adoc-mode.el)
-
 do-install:
-	${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+	${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/adoc-mode.el* \
-		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
 
 do-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}

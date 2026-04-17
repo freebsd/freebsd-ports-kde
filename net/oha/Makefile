@@ -1,7 +1,6 @@
 PORTNAME=	oha
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.0
-PORTREVISION=	7
+DISTVERSION=	1.14.0
 CATEGORIES=	net
 
 MAINTAINER=	otis@FreeBSD.org
@@ -9,6 +8,7 @@ COMMENT=	Web load generator
 WWW=		https://github.com/hatoo/oha
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cargo gmake llvm ssl
 USE_GITHUB=	yes

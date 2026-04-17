@@ -1,5 +1,5 @@
 PORTNAME=	nanocoder
-DISTVERSION=	1.24.1
+DISTVERSION=	1.25.1
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -19,7 +19,7 @@ FETCH_DEPENDS=	npm:www/npm \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 BUILD_DEPENDS=	npm:www/npm
 
-USES=		cmake:indirect nodejs:run
+USES=		cmake:indirect ninja:build nodejs:run
 
 PACKAGE_NAME=	@nanocollective/nanocoder
 
@@ -58,8 +58,8 @@ do-build:
 	@cd ${WRKSRC} && \
 		npm rebuild --nodedir=${LOCALBASE}
 
-x:
-	${FIND} ${STAGEDIR}${PREFIX}/lib/node_modules/@nanocollective/nanocoder/node_modules/node-llama-cpp/ -name 'CMake*'
+NODE_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
+PLIST_SUB=	NODE_ARCH=${NODE_ARCH}
 
 do-install:
 	# install files

@@ -215,6 +215,9 @@
 %%MANPAGES%%share/man/man1/glab-stack-switch.1.gz
 %%MANPAGES%%share/man/man1/glab-stack-sync.1.gz
 %%MANPAGES%%share/man/man1/glab-stack.1.gz
+%%MANPAGES%%share/man/man1/glab-todo-done.1.gz
+%%MANPAGES%%share/man/man1/glab-todo-list.1.gz
+%%MANPAGES%%share/man/man1/glab-todo.1.gz
 %%MANPAGES%%share/man/man1/glab-token-create.1.gz
 %%MANPAGES%%share/man/man1/glab-token-list.1.gz
 %%MANPAGES%%share/man/man1/glab-token-revoke.1.gz

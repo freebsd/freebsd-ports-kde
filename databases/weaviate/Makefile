@@ -1,8 +1,7 @@
 PORTNAME=	weaviate
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.34.3
-PORTREVISION=	5
-CATEGORIES=	databases # artificial-intelligence
+DISTVERSION=	1.36.11
+CATEGORIES=	databases # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Vector database that stores both objects and vectors

@@ -1,5 +1,5 @@
 PORTNAME=	pekwm
-DISTVERSION=	0.4.3
+DISTVERSION=	0.4.4
 PORTEPOCH=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	https://www.pekwm.se/pekwm/uv/
@@ -26,11 +26,8 @@ OPTIONS_DEFAULT=	PANGO
 
 PANGO_DESC=	Use Pango font support (both Cairo and Xft)
 
-PANGO_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-			libharfbuzz.so:print/harfbuzz \
-			libpangocairo-1.0.so:x11-toolkits/pango
-PANGO_USES=		gettext-runtime gnome
-PANGO_USE=		GNOME=cairo,glib20
+PANGO_USES=		gnome
+PANGO_USE=		GNOME=cairo,pangoft2
 PANGO_CMAKE_BOOL=	ENABLE_PANGO
 
 post-install:

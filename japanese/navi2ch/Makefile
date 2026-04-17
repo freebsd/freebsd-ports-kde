@@ -1,9 +1,8 @@
 PORTNAME=	navi2ch
 PORTVERSION=	2.0.0.d
-PORTREVISION=	27
+PORTREVISION=	28
 PORTEPOCH=	1
 CATEGORIES=	japanese www elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	mce@FreeBSD.org
 COMMENT=	2ch.net and 2ch-like BBS navigator for Emacsen
@@ -14,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	proxy2ch:japanese/proxy2ch
 
-USES=		emacs
+USES=		emacs:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	naota
 GH_TAGNAME=	7811dba
@@ -32,8 +31,8 @@ PORTDOCS=	${PORTDOC_FILES} contrib
 
 PORTDOC_FILES=	ChangeLog README TODO
 PORTDOC_LISPS=	gikope.el navi2ch-logo.el navi2ch-migemo.el
-NICONDIR=	${EMACS_LIBDIR_WITH_VER}/etc/${PORTNAME}/icons
-NLISPDIR=	${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
+NICONDIR=	${EMACS_LIBDIR}/etc/${PORTNAME}/icons
+NLISPDIR=	${EMACS_SITE_LISPDIR}/${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS X11
 X11_RUN_DEPENDS=${LOCALBASE}/share/fonts/mona/monak12.pcf.gz:japanese/font-mona

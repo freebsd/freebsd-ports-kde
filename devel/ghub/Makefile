@@ -1,8 +1,8 @@
 PORTNAME=	ghub
 DISTVERSIONPREFIX=	v
 DISTVERSION=	5.0.2
+PORTREVISION=	1
 CATEGORIES=	devel elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Client libraries for the APIs of various Git forges
@@ -11,22 +11,22 @@ WWW=		https://github.com/magit/ghub
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=30.1.0.0:misc/compat.el@${EMACS_FLAVOR} \
-		llama.el${EMACS_PKGNAMESUFFIX}>=1.0:devel/llama.el@${EMACS_FLAVOR} \
-		treepy.el${EMACS_PKGNAMESUFFIX}>=0.1.2:devel/treepy.el@${EMACS_FLAVOR}
-RUN_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=30.1.0.0:misc/compat.el@${EMACS_FLAVOR} \
-		llama.el${EMACS_PKGNAMESUFFIX}>=1.0:devel/llama.el@${EMACS_FLAVOR} \
-		treepy.el${EMACS_PKGNAMESUFFIX}>=0.1.2:devel/treepy.el@${EMACS_FLAVOR}
+BUILD_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el \
+		llama.el>=1.0:devel/llama.el \
+		treepy.el>=0.1.2:devel/treepy.el
+RUN_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el \
+		llama.el>=1.0:devel/llama.el \
+		treepy.el>=0.1.2:devel/treepy.el
 
-USES=		emacs gmake makeinfo
+USES=		emacs:build gmake makeinfo
 USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
-MAKE_ARGS=	LOAD_PATH=" -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR} -L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/compat -L ."
+MAKE_ARGS=	LOAD_PATH=" -L ${PREFIX}/${EMACS_SITE_LISPDIR} -L ${PREFIX}/${EMACS_SITE_LISPDIR}/compat -L ."
 MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	lisp info
 
-CONFLICTS_INSTALL=	ghub-emacs*
+CONFLICTS_INSTALL=	ghub-emacs_*
 
 NO_ARCH=	yes
 
@@ -46,14 +46,12 @@ PDF_USE=		TEX=dvipdfmx:build
 PDF_ALL_TARGET=		pdf
 PDF_PLIST_FILES=	${DOCSDIR}/ghub.pdf
 
-ELISP_FILES=	ghub-autoloads.el ghub-graphql.el ghub-graphql.elc \
-		ghub-legacy.el ghub-legacy.elc ghub.el ghub.elc gsexp.el \
-		gsexp.elc
+ELISP_FILES=	ghub-autoloads.el ghub-graphql.el ghub-legacy.el ghub.el gsexp.el
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}
 	${INSTALL_DATA} ${ELISP_FILES:C/^/${WRKSRC}\/lisp\//} \
-		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/${PORTNAME}
+		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.info ${STAGEDIR}${PREFIX}/${INFO_PATH}
 
 do-install-DOCS-on:

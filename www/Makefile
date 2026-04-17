@@ -245,7 +245,6 @@
     SUBDIR += gobuffalo
     SUBDIR += gohugo
     SUBDIR += googlebook_dl
-    SUBDIR += googler
     SUBDIR += gophernicus
     SUBDIR += gopherus
     SUBDIR += gotty
@@ -1973,7 +1972,6 @@
     SUBDIR += py-ttrv
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
-    SUBDIR += py-tvdb_api
     SUBDIR += py-twill
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
@@ -2676,6 +2674,7 @@
     SUBDIR += vertx
     SUBDIR += vger
     SUBDIR += vigil
+    SUBDIR += vikunja
     SUBDIR += vimb
     SUBDIR += vinyl09
     SUBDIR += visitors

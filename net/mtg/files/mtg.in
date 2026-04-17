@@ -13,8 +13,9 @@
 # mtg_group (group):			Set group to run mtg.
 #					Default is "wheel".
 # mtg_args (str): 			Set flags used with mtg.
-#					Default is "". Use `mtg --help` to get instruction.
-# mtg_syslog_output_enable (string):	Set to YES to enable syslog output
+#					Default is "run %%ETCDIR%%/config.toml".
+#					Use `mtg --help` to get instruction.
+# mtg_syslog_output_enable (bool):	Set to YES to enable syslog output
 #					Default is "NO". See daemon(8).
 # mtg_syslog_output_tag (str):		Set syslog tag if syslog enabled.
 #					Default is "mtg". See daemon(8).
@@ -30,9 +31,10 @@ rcvar=mtg_enable
 
 load_rc_config $name
 
-: ${mtg_enable:=no}
-: ${mtg_user:="%%MTG_USER%%"}
-: ${mtg_group:="%%MTG_GROUP%%"}
+: ${mtg_enable:="NO"}
+: ${mtg_user:="%%USER%%"}
+: ${mtg_group:="%%GROUP%%"}
+: ${mtg_args:="run %%ETCDIR%%/config.toml"}
 : ${mtg_syslog_output_enable:="NO"}
 
 start_precmd="mtg_prestart"

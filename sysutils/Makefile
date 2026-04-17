@@ -755,6 +755,7 @@
     SUBDIR += moreutils
     SUBDIR += most
     SUBDIR += mountsmb2
+    SUBDIR += mpifileutils
     SUBDIR += mping
     SUBDIR += mprocs
     SUBDIR += mptd
@@ -1037,6 +1038,7 @@
     SUBDIR += pxattr
     SUBDIR += py-ansible-compat
     SUBDIR += py-ansible-core
+    SUBDIR += py-ansible-core218
     SUBDIR += py-ansible-core219
     SUBDIR += py-ansible-core220
     SUBDIR += py-ansible-lint
@@ -1549,6 +1551,7 @@
     SUBDIR += uif2iso
     SUBDIR += unetbootin
     SUBDIR += uniutils
+    SUBDIR += unixexec
     SUBDIR += unquote
     SUBDIR += unstow
     SUBDIR += upower

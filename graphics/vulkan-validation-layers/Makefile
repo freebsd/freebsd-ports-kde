@@ -4,7 +4,7 @@ DISTVERSION=	1.4.336
 PORTREVISION=	1
 CATEGORIES=	graphics
 
-MAINTAINER=	atanubiswas484@gmail.com
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Validation layers for the Vulkan graphics API
 WWW=		https://github.com/KhronosGroup/Vulkan-ValidationLayers
 

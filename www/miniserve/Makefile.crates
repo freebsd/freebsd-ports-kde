@@ -345,12 +345,12 @@ CARGO_CRATES=	actix-codec-0.5.2 \
 		tinystr-0.8.3 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.51.0 \
+		tokio-1.51.1 \
 		tokio-macros-2.7.0 \
 		tokio-rustls-0.26.4 \
 		tokio-util-0.7.18 \
 		toml_datetime-1.1.1+spec-1.1.0 \
-		toml_edit-0.25.10+spec-1.1.0 \
+		toml_edit-0.25.11+spec-1.1.0 \
 		toml_parser-1.1.2+spec-1.1.0 \
 		tower-0.5.3 \
 		tower-http-0.6.8 \

@@ -62,7 +62,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		cairo-sys-rs-0.22.0 \
 		cast-0.3.0 \
 		cbc-0.2.0-rc.1 \
-		cc-1.2.59 \
+		cc-1.2.60 \
 		cesu8-1.1.0 \
 		cfg-expr-0.20.7 \
 		cfg-if-1.0.4 \
@@ -74,7 +74,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		cipher-0.5.0-rc.1 \
 		clap-4.6.0 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.0 \
+		clap_complete-4.6.1 \
 		clap_derive-4.6.0 \
 		clap_lex-1.1.0 \
 		clap_mangen-0.2.33 \
@@ -189,10 +189,10 @@ CARGO_CRATES=	adler2-2.0.1 \
 		gettext-rs-0.7.7 \
 		gettext-sys-0.26.0 \
 		ghash-0.6.0-rc.2 \
-		gif-0.14.1 \
-		gio-0.22.4 \
+		gif-0.14.2 \
+		gio-0.22.5 \
 		gio-sys-0.22.0 \
-		glib-0.22.4 \
+		glib-0.22.5 \
 		glib-macros-0.22.2 \
 		glib-sys-0.22.3 \
 		glob-0.3.3 \
@@ -210,7 +210,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		half-2.7.1 \
 		hash32-0.2.1 \
 		hashbrown-0.15.5 \
-		hashbrown-0.16.1 \
+		hashbrown-0.17.0 \
 		heapless-0.7.17 \
 		heck-0.5.0 \
 		hex-0.4.3 \
@@ -226,7 +226,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		httparse-1.10.1 \
 		hybrid-array-0.4.10 \
 		hyper-1.9.0 \
-		hyper-rustls-0.27.7 \
+		hyper-rustls-0.27.8 \
 		hyper-tls-0.6.0 \
 		hyper-util-0.1.20 \
 		iana-time-zone-0.1.65 \
@@ -244,7 +244,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		image-0.25.10 \
 		image-webp-0.2.4 \
 		imagesize-0.14.0 \
-		indexmap-2.13.1 \
+		indexmap-2.14.0 \
 		inotify-0.11.1 \
 		inotify-sys-0.1.5 \
 		inout-0.1.4 \
@@ -283,21 +283,21 @@ CARGO_CRATES=	adler2-2.0.1 \
 		jni-sys-macros-0.4.1 \
 		jobserver-0.1.34 \
 		jpeg-decoder-0.3.2 \
-		js-sys-0.3.94 \
+		js-sys-0.3.95 \
 		keccak-0.2.0-rc.0 \
 		kqueue-1.1.1 \
 		kqueue-sys-1.0.4 \
-		ksni-0.3.3 \
+		ksni-0.3.4 \
 		kurbo-0.13.0 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
 		libadwaita-0.9.1 \
 		libadwaita-sys-0.9.1 \
 		libbz2-rs-sys-0.2.2 \
-		libc-0.2.184 \
+		libc-0.2.185 \
 		libloading-0.8.9 \
 		libm-0.2.16 \
-		libredox-0.1.15 \
+		libredox-0.1.16 \
 		libz-sys-1.1.28 \
 		linux-raw-sys-0.12.1 \
 		litemap-0.8.2 \
@@ -354,10 +354,10 @@ CARGO_CRATES=	adler2-2.0.1 \
 		once_cell_polyfill-1.70.2 \
 		oorandom-11.1.5 \
 		open-5.3.3 \
-		openssl-0.10.76 \
+		openssl-0.10.77 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.2.1 \
-		openssl-sys-0.9.112 \
+		openssl-sys-0.9.113 \
 		option-ext-0.2.0 \
 		ordered-stream-0.2.0 \
 		owo-colors-4.3.0 \
@@ -391,7 +391,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		pkcs1-0.8.0-rc.4 \
 		pkcs8-0.10.2 \
 		pkcs8-0.11.0-rc.7 \
-		pkg-config-0.3.32 \
+		pkg-config-0.3.33 \
 		plain-0.2.3 \
 		plotters-0.3.7 \
 		plotters-backend-0.3.7 \
@@ -420,7 +420,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		r-efi-6.0.0 \
 		radium-0.7.0 \
 		rand-0.8.5 \
-		rand-0.9.2 \
+		rand-0.9.3 \
 		rand_chacha-0.3.1 \
 		rand_chacha-0.9.0 \
 		rand_core-0.6.4 \
@@ -430,7 +430,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rayon-core-1.13.0 \
 		rc2-0.9.0-pre.0 \
 		redox_syscall-0.5.18 \
-		redox_syscall-0.7.3 \
+		redox_syscall-0.7.4 \
 		redox_users-0.5.2 \
 		regex-1.12.3 \
 		regex-automata-0.4.14 \
@@ -447,14 +447,14 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rpassword-7.4.0 \
 		rsa-0.9.10 \
 		rsa-0.10.0-rc.9 \
-		rtoolbox-0.0.3 \
+		rtoolbox-0.0.4 \
 		rustc_version-0.4.1 \
 		rusticata-macros-4.1.0 \
 		rustix-1.1.4 \
-		rustls-0.23.37 \
+		rustls-0.23.38 \
 		rustls-native-certs-0.8.3 \
 		rustls-pki-types-1.14.0 \
-		rustls-webpki-0.103.10 \
+		rustls-webpki-0.103.11 \
 		rustversion-1.0.22 \
 		rusty-fork-0.3.1 \
 		rustybuzz-0.20.1 \
@@ -535,7 +535,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tinyvec_macros-0.1.1 \
 		tls_codec-0.4.2 \
 		tls_codec_derive-0.4.2 \
-		tokio-1.51.0 \
+		tokio-1.51.1 \
 		tokio-macros-2.7.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-rustls-0.26.4 \
@@ -543,7 +543,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tokio-util-0.7.18 \
 		toml-1.1.2+spec-1.1.0 \
 		toml_datetime-1.1.1+spec-1.1.0 \
-		toml_edit-0.25.10+spec-1.1.0 \
+		toml_edit-0.25.11+spec-1.1.0 \
 		toml_parser-1.1.2+spec-1.1.0 \
 		toml_writer-1.1.1+spec-1.1.0 \
 		tower-0.5.3 \
@@ -591,16 +591,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.2+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.117 \
-		wasm-bindgen-futures-0.4.67 \
-		wasm-bindgen-macro-0.2.117 \
-		wasm-bindgen-macro-support-0.2.117 \
-		wasm-bindgen-shared-0.2.117 \
+		wasm-bindgen-0.2.118 \
+		wasm-bindgen-futures-0.4.68 \
+		wasm-bindgen-macro-0.2.118 \
+		wasm-bindgen-macro-support-0.2.118 \
+		wasm-bindgen-shared-0.2.118 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasm-streams-0.4.2 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.94 \
+		web-sys-0.3.95 \
 		weezl-0.1.12 \
 		widestring-1.2.1 \
 		winapi-0.3.9 \

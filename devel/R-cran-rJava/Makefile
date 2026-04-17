@@ -1,6 +1,6 @@
 PORTNAME=	rJava
 DISTVERSION=	1.0-15
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel java
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -36,6 +36,7 @@ MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}	\
 		${TEST_ENV}
 # Mk/Uses/cran.mk does not use TEST_ENV for test but MAKE_ENV
 TEST_ENV=	DISPLAY=${DISPLAY} XAUTHORITY=${XAUTHORITY}
+NO_SHLIB_REQUIRES_GLOB=	libjvm.so
 
 #pre-configure:
 	# Just for debug purpose but this fails with new USES=java although build is OK

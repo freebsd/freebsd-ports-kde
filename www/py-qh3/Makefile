@@ -1,7 +1,6 @@
 PORTNAME=	qh3
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.6.0
-PORTREVISION=	1
+DISTVERSION=	1.7.1
 CATEGORIES=	www python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -34,23 +33,22 @@ CARGO_CRATES=	aes-0.8.4 \
 		asn1-rs-derive-0.6.0 \
 		asn1-rs-impl-0.2.0 \
 		autocfg-1.5.0 \
-		aws-lc-fips-sys-0.13.11 \
-		aws-lc-rs-1.16.0 \
-		aws-lc-sys-0.37.1 \
+		aws-lc-fips-sys-0.13.13 \
+		aws-lc-rs-1.16.2 \
+		aws-lc-sys-0.39.1 \
 		base64ct-1.8.3 \
 		bincode-1.3.3 \
-		bindgen-0.71.1 \
 		bindgen-0.72.1 \
 		bitflags-2.11.0 \
 		block-buffer-0.10.4 \
 		block-padding-0.3.3 \
 		cbc-0.1.2 \
-		cc-1.2.56 \
+		cc-1.2.58 \
 		cexpr-0.6.0 \
 		cfg-if-1.0.4 \
 		cipher-0.4.4 \
 		clang-sys-1.8.1 \
-		cmake-0.1.57 \
+		cmake-0.1.58 \
 		const-oid-0.9.6 \
 		cpufeatures-0.2.17 \
 		crypto-common-0.1.7 \
@@ -89,27 +87,27 @@ CARGO_CRATES=	aes-0.8.4 \
 		idna_adapter-1.2.1 \
 		inout-0.1.4 \
 		itertools-0.13.0 \
-		itoa-1.0.17 \
+		itoa-1.0.18 \
 		jobserver-0.1.34 \
 		lazy_static-1.5.0 \
-		libc-0.2.182 \
+		libc-0.2.183 \
 		libloading-0.8.9 \
 		libm-0.2.16 \
 		litemap-0.8.1 \
 		log-0.4.29 \
-		ls-qpack-rs-0.2.3 \
-		ls-qpack-rs-sys-0.2.3 \
+		ls-qpack-rs-0.3.1 \
+		ls-qpack-rs-sys-0.3.1 \
 		memchr-2.8.0 \
 		minimal-lexical-0.2.1 \
 		nom-7.1.3 \
 		num-bigint-0.4.6 \
 		num-bigint-dig-0.8.6 \
-		num-conv-0.2.0 \
+		num-conv-0.2.1 \
 		num-integer-0.1.46 \
 		num-iter-0.1.45 \
 		num-traits-0.2.19 \
 		oid-registry-0.8.1 \
-		once_cell-1.21.3 \
+		once_cell-1.21.4 \
 		pbkdf2-0.12.2 \
 		pem-rfc7468-0.7.0 \
 		pkcs1-0.7.5 \
@@ -127,7 +125,7 @@ CARGO_CRATES=	aes-0.8.4 \
 		pyo3-macros-0.28.2 \
 		pyo3-macros-backend-0.28.2 \
 		python3-dll-a-0.2.14 \
-		quote-1.0.44 \
+		quote-1.0.45 \
 		r-efi-5.3.0 \
 		rand-0.8.5 \
 		rand_chacha-0.3.1 \
@@ -138,13 +136,13 @@ CARGO_CRATES=	aes-0.8.4 \
 		rfc6979-0.4.0 \
 		ring-0.17.14 \
 		rsa-0.9.10 \
-		rustc-hash-2.1.1 \
+		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
 		rusticata-macros-4.1.0 \
 		rustls-0.23.37 \
 		rustls-pemfile-2.2.0 \
 		rustls-pki-types-1.14.0 \
-		rustls-webpki-0.103.9 \
+		rustls-webpki-0.103.10 \
 		salsa20-0.10.2 \
 		scrypt-0.11.0 \
 		semver-1.0.27 \
@@ -196,8 +194,8 @@ CARGO_CRATES=	aes-0.8.4 \
 		x509-parser-0.18.1 \
 		yoke-0.8.1 \
 		yoke-derive-0.8.1 \
-		zerocopy-0.8.40 \
-		zerocopy-derive-0.8.40 \
+		zerocopy-0.8.48 \
+		zerocopy-derive-0.8.48 \
 		zerofrom-0.1.6 \
 		zerofrom-derive-0.1.6 \
 		zeroize-1.8.2 \

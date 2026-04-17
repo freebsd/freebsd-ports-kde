@@ -1,5 +1,5 @@
 PORTNAME=	evcc
-DISTVERSION=	0.304.1
+DISTVERSION=	0.304.3
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/mfechner/${PORTNAME}/:npmcache
 DISTFILES=	${PORTNAME}-npm-cache-${DISTVERSION}${EXTRACT_SUFX}:npmcache
@@ -12,9 +12,14 @@ WWW=		https://evcc.io/ \
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_i386=	Platform i386 is not supported
+
 BUILD_DEPENDS=	npm>0:www/npm
 
 USES=		gmake go:1.26+,modules,no_targets nodejs:lts,build tar:zstd
+
+# Find here: https://github.com/evcc-io/evcc/releases
+_SHA=		94c2606797503bf2ce5381fb81522710e7cfe708
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	evcc-io
@@ -22,7 +27,8 @@ USE_RC_SUBR=	${PORTNAME}
 GO_MOD_DIST=	github
 GO_MODULE=	github.com/evcc-io/evccmain
 
-MAKE_ENV=	npm_config_offline=true
+MAKE_ENV=	npm_config_offline=true TAG_NAME=${DISTVERSION} SHA=${_SHA}
+
 # parallel build failed in my tests, so disable it here
 MAKE_JOBS_UNSAFE=yes
 ALL_TARGET=	default

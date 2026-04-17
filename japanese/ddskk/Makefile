@@ -1,7 +1,7 @@
 PORTNAME=	ddskk
 DISTVERSION=	17.2
+PORTREVISION=	1
 CATEGORIES=	japanese elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Simple Kana to Kanji conversion program on Emacsen
@@ -10,7 +10,7 @@ WWW=		http://openlab.ring.gr.jp/skk/ddskk.html
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		emacs
+USES=		emacs:build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	skk-dev
@@ -19,7 +19,10 @@ GH_TAGNAME=	ddskk-17.2_Mena
 MAKE_ARGS=	PREFIX="${STAGEDIR}${PREFIX}" \
 		SKK_LISPDIR="${STAGEDIR}${PREFIX}/${SKK_LISPDIR}" \
 		SKK_INFODIR="${STAGEDIR}${PREFIX}/${INFO_PATH}"
-ALL_TARGET=	elc info
+ALL_TARGET=	info
+
+CONFLICTS_INSTALL=	ja-ddskk-emacs_*
+
 NO_ARCH=	yes
 
 INFO=		skk
@@ -28,7 +31,7 @@ PORTDOCS=	AUTHORS.ja CODENAME.ja Contributors Development.ja.org \
 		FAQ.ja NEWS.ja README.ccc.org history.md
 PORTEXAMPLES=	dot.emacs dot.skk
 
-SKK_LISPDIR=	${EMACS_VERSION_SITE_LISPDIR}/skk
+SKK_LISPDIR=	${EMACS_SITE_LISPDIR}/skk
 
 OPTIONS_DEFINE=	DOCS EXAMPLES
 

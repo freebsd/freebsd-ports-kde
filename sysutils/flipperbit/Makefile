@@ -1,7 +1,6 @@
 PORTNAME=	flipperbit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.1.2
-PORTREVISION=	21
+DISTVERSION=	0.1.3 # version only on crates.io, not on GitHub
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -15,6 +14,7 @@ USES=		cargo
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	0xor0ne
+GH_TAGNAME=	9faf1d8
 
 CARGO_CRATES=	atty-0.2.14 \
 		autocfg-1.1.0 \
@@ -26,7 +26,7 @@ CARGO_CRATES=	atty-0.2.14 \
 		const-random-0.1.13 \
 		const-random-macro-0.1.13 \
 		crunchy-0.2.2 \
-		debugoff-0.2.1 \
+		debugoff-0.2.2 \
 		getrandom-0.2.6 \
 		goldberg-0.1.0 \
 		hashbrown-0.11.2 \

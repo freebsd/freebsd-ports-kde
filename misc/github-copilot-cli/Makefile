@@ -1,9 +1,9 @@
 PORTNAME=	github-copilot-cli
-DISTVERSION=	1.0.21
+DISTVERSION=	1.0.27
 PORTEPOCH=	1
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
-DIST_SUBDIR=	${PORTNAME}
+DIST_SUBDIR=	${PORTNAME}-x # -x is to see if it would fix checksum errors
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	GitHub Copilot CLI brings the power of the coding agent to terminal
@@ -44,6 +44,7 @@ RUN_DEPENDS=	libsecret>0:security/libsecret \
 USES=		nodejs:run pkgconfig python:build
 
 .elif ${FLAVOR} == binary
+BROKEN=		See if the binary flavor somehow causes fetch failures
 DISTFILES+=	${NODE_HEADERS}${EXTRACT_SUFX}
 
 BUILD_DEPENDS=	npm:www/npm \
@@ -79,8 +80,8 @@ USES=		nodejs:build pkgconfig python:build
 
 NODE_HEADERS=	node-v22.19.0-headers
 
-JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
-PLIST_SUB=	JS_ARCH=${JS_ARCH}
+NODE_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
+PLIST_SUB=	NODE_ARCH=${NODE_ARCH}
 
 DEP_MODULES=			pty sharp keytar node_addon_api
 dep_pty_npm_name=		@devm33/node-pty
@@ -165,8 +166,8 @@ do-build:
 	@cd ${WRKDIR}/sharp-${dep_sharp_version}/node_modules/${dep_sharp_npm_name}/src && \
 		${SETENV} HOME=${WRKDIR} PYTHON=${PYTHON_CMD} CXXFLAGS="-I${LOCALBASE}/include" \
 			node-gyp configure build --nodedir=${WRKDIR}/node-v22.19.0 && \
-		${MKDIR} ${WRKSRC}/node_modules/@img/sharp-freebsd-x64 && \
-		${CP} build/Release/sharp-freebsd-x64.node ${WRKSRC}/node_modules/@img/sharp-freebsd-x64/sharp.node
+		${MKDIR} ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/sharp-freebsd-${NODE_ARCH} && \
+		${CP} build/Release/sharp-freebsd-${NODE_ARCH}.node ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/sharp-freebsd-${NODE_ARCH}/sharp.node
 	@${ECHO_MSG} "====> Building keytar..."
 	@cd ${WRKDIR}/keytar-${dep_keytar_version}/node_modules/${dep_keytar_npm_name} && \
 		${SETENV} HOME=${WRKDIR} CFLAGS="-I${LOCALBASE}/include" CXXFLAGS="-I${LOCALBASE}/include" \
@@ -174,11 +175,6 @@ do-build:
 		${CP} build/Release/keytar.node ${WRKSRC}/node_modules/${PACKAGE_NAME}/prebuilds/freebsd-x64/
 .if ${FLAVOR} == binary
 	@${ECHO_MSG} "====> Creating copilot bundle (includes node runtime)..."
-	# Copy @img/sharp-freebsd-x64 into copilot's node_modules so it is findable
-	# after extraction to the cache dir (node resolves it relative to app.js)
-	@${MKDIR} ${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img
-	@${CP} -r ${WRKSRC}/node_modules/@img/sharp-freebsd-x64 \
-		${WRKSRC}/node_modules/${PACKAGE_NAME}/node_modules/@img/
 	# Embed the node runtime so it runs without a system node installation
 	@${CP} ${LOCALBASE}/bin/node ${WRKSRC}/node_modules/${PACKAGE_NAME}/node
 	@cd ${WRKSRC}/node_modules/${PACKAGE_NAME} && \

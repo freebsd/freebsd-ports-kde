@@ -138,6 +138,8 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/examples/sssd-example.conf \
 		${STAGEDIR}${ETCDIR}/sssd.conf.sample
+	${INSTALL_DATA} ${FILESDIR}/sssd-newsyslog.conf.sample \
+		${STAGEDIR}${LOCALBASE}/etc/newsyslog.conf.d/sssd.conf.sample
 	${LN} -sf libnss_sss.so.2 ${STAGEDIR}${PREFIX}/lib/nss_sss.so.1
 
 # Skip whitespace tests, see

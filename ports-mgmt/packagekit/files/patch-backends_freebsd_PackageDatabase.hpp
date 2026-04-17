@@ -7,7 +7,7 @@
 +
 +        // We don't want libpkg to interactively ask us questions about OS
 +        // versions mismatch. Provide a default "no" reply.
-+        pkg_set_ignore_osversion (FALSE);
++        pkg_set_ignore_osversion (TRUE);
      }
  
      struct cleanup_cb

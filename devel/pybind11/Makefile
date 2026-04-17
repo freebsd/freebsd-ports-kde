@@ -1,6 +1,6 @@
 PORTNAME=	pybind11
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.1
+DISTVERSION=	3.0.3
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,12 +17,19 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	pybind
 
 CMAKE_OFF=	PYBIND11_TEST
+CMAKE_ARGS=	-Dprefix_for_pc_file=${PREFIX}
 
 CMAKE_TESTING_ON=	PYBIND11_TEST # 6 tests are known to fail: https://github.com/pybind/pybind11/issues/4580
 CMAKE_TESTING_TARGET=	pytest
 
 NO_ARCH=	yes
 
-# tests of 3.0.1: 5 failed, 1253 passed, 20 skipped, 2 xfailed, 1 xpassed in 53.99s
+# tests as of 3.0.3: (see https://github.com/pybind/pybind11/issues/6037)
+# Results (39.99s):
+#          5 failed
+#       3884 passed
+#         26 skipped
+#          3 xfailed
+#          1 xpassed
 
 .include <bsd.port.mk>

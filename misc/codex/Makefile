@@ -1,6 +1,6 @@
 PORTNAME=	codex
 DISTVERSIONPREFIX=	rust-v
-DISTVERSION=	0.117.0
+DISTVERSION=	0.120.0
 CATEGORIES=	misc devel
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -87,12 +87,12 @@ post-patch:
 		${BUILD_WRKSRC}/core/tests/suite/user_notification.rs \
 		${BUILD_WRKSRC}/shell-command/src/parse_command.rs \
 		${BUILD_WRKSRC}/shell-escalation/src/unix/escalate_server.rs \
-		${BUILD_WRKSRC}/tui/src/exec_command.rs \
-		${BUILD_WRKSRC}/tui_app_server/src/exec_command.rs
+		${BUILD_WRKSRC}/tui/src/exec_command.rs
 	@${REINPLACE_CMD} -e 's|python3|${PYTHON_VERSION}|' \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/command_exec.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_resume.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/thread_shell_command.rs \
+		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_interrupt.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_start.rs \
 		${BUILD_WRKSRC}/app-server/tests/suite/v2/turn_start_zsh_fork.rs \
 		${BUILD_WRKSRC}/core-skills/src/invocation_utils.rs \
@@ -111,11 +111,12 @@ post-patch:
 		${BUILD_WRKSRC}/hooks/src/events/post_tool_use.rs \
 		${BUILD_WRKSRC}/shell-command/src/bash.rs \
 		${BUILD_WRKSRC}/shell-command/src/command_safety/is_safe_command.rs \
+		${BUILD_WRKSRC}/tui/src/app.rs \
+		${BUILD_WRKSRC}/tui/src/chatwidget/tests/app_server.rs \
+		${BUILD_WRKSRC}/tui/src/chatwidget/tests/approval_requests.rs \
+		${BUILD_WRKSRC}/tui/src/chatwidget/tests/exec_flow.rs \
+		${BUILD_WRKSRC}/tui/src/exec_command.rs \
 		${BUILD_WRKSRC}/tui/src/render/highlight.rs \
-		${BUILD_WRKSRC}/tui_app_server/src/app.rs \
-		${BUILD_WRKSRC}/tui_app_server/src/chatwidget/tests.rs \
-		${BUILD_WRKSRC}/tui_app_server/src/exec_command.rs \
-		${BUILD_WRKSRC}/tui_app_server/src/render/highlight.rs \
 		${BUILD_WRKSRC}/utils/pty/src/tests.rs
 
 post-build-COMPLETIONS-on:

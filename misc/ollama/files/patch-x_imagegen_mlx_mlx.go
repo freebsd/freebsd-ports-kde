@@ -1,6 +1,6 @@
---- x/imagegen/mlx/mlx.go.orig	1979-11-30 00:00:00.000000000 -0800
-+++ x/imagegen/mlx/mlx.go	2026-03-27 00:29:56.018820000 -0700
-@@ -4,6 +4,7 @@
+--- x/imagegen/mlx/mlx.go.orig	1979-11-30 08:00:00 UTC
++++ x/imagegen/mlx/mlx.go
+@@ -4,6 +4,7 @@ package mlx
  #cgo CFLAGS: -O3 -I${SRCDIR}/../../mlxrunner/mlx/include -I${SRCDIR}
  #cgo darwin LDFLAGS: -lc++ -framework Metal -framework Foundation -framework Accelerate
  #cgo linux LDFLAGS: -lstdc++ -ldl
@@ -8,7 +8,7 @@
  #cgo windows LDFLAGS: -lstdc++
  
  // Use generated wrappers instead of direct MLX headers
-@@ -23,6 +24,10 @@
+@@ -23,6 +24,10 @@ static inline mlx_stream default_stream() {
  static inline mlx_stream default_stream() {
      if (_default_stream.ctx == NULL) {
          _default_stream = mlx_default_gpu_stream_new();
@@ -19,7 +19,7 @@
      }
      return _default_stream;
  }
-@@ -1512,14 +1517,21 @@
+@@ -1512,14 +1517,21 @@ func LoadSafetensorsNative(path string) (*SafetensorsF
  	defer C.free(unsafe.Pointer(cPath))
  
  	stream := C.default_stream()
@@ -44,7 +44,7 @@
  	}
  	return &SafetensorsFile{arrays: arrays, metadata: metadata}, nil
  }
-@@ -1755,12 +1767,17 @@
+@@ -1755,12 +1767,17 @@ func findMLXLibrary() string {
  			return candidate
  		}
  

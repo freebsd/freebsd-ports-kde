@@ -1,5 +1,5 @@
 PORTNAME=	lnav
-DISTVERSION=	0.13.2
+DISTVERSION=	0.14.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/tstack/${PORTNAME}/releases/download/v${DISTVERSION}/
 
@@ -9,6 +9,9 @@ WWW=		https://lnav.org/
 
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+NOT_FOR_ARCHS=	i386
+NOT_FOR_ARCHS_REASON=	./time_util.hh:324:9: error: non-constant-expression cannot be narrowed from type 'rep' (aka 'long long') to 'time_t' (aka 'int') in initializer list [-Wc++11-narrowing]
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libpcre2-8.so:devel/pcre2 \

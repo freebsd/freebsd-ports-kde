@@ -1,6 +1,6 @@
---- x/imagegen/models/zimage/vae.go.orig	1979-11-30 00:00:00.000000000 -0800
+--- x/imagegen/models/zimage/vae.go.orig	1979-11-30 08:00:00 UTC
 +++ x/imagegen/models/zimage/vae.go
-@@ -332,6 +332,16 @@
+@@ -332,6 +332,16 @@ func (rb *ResnetBlock2D) Forward(x *mlx.Array) *mlx.Ar
  
  // Forward applies the ResNet block with staged evaluation
  func (rb *ResnetBlock2D) Forward(x *mlx.Array) *mlx.Array {
@@ -17,7 +17,7 @@
  	var h *mlx.Array
  
  	// Stage 1: norm1
-@@ -461,6 +471,15 @@
+@@ -461,6 +471,15 @@ func (ab *VAEAttentionBlock) Forward(x *mlx.Array) *ml
  // Input and output are in NHWC format [B, H, W, C]
  func (ab *VAEAttentionBlock) Forward(x *mlx.Array) *mlx.Array {
  	residual := x

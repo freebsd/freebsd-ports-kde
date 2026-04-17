@@ -1,6 +1,6 @@
---- content/renderer/renderer_main.cc.orig	2026-03-24 16:59:08 UTC
+--- content/renderer/renderer_main.cc.orig	2026-04-15 12:07:04 UTC
 +++ content/renderer/renderer_main.cc
-@@ -196,7 +196,7 @@ int RendererMain(MainFunctionParams parameters) {
+@@ -180,7 +180,7 @@ int RendererMain(MainFunctionParams parameters) {
  
    InitializeSkia();
  

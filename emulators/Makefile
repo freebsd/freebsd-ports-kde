@@ -28,8 +28,8 @@
     SUBDIR += dps8m
     SUBDIR += dynamips-community
     SUBDIR += edumips64
+    SUBDIR += einstein-newton
     SUBDIR += elliott-803
-    SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += emutos
     SUBDIR += es-de

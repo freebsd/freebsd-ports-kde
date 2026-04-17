@@ -1,8 +1,8 @@
 -- same issue as first chunk: https://github.com/ollama/ollama/issues/15107
 
---- x/imagegen/server.go.orig
+--- x/imagegen/server.go.orig	1979-11-30 08:00:00 UTC
 +++ x/imagegen/server.go
-@@ -55,7 +55,9 @@
+@@ -55,7 +55,9 @@ func NewServer(modelName string) (*Server, error) {
  	return &Server{
  		modelName: modelName,
  		done:      make(chan error, 1),
@@ -13,7 +13,7 @@
  	}, nil
  }
  
-@@ -116,8 +118,8 @@
+@@ -116,8 +118,8 @@ func (s *Server) Load(ctx context.Context, _ ml.System
  	cmd := exec.Command(exe, "runner", "--imagegen-engine", "--model", s.modelName, "--port", strconv.Itoa(port))
  	cmd.Env = os.Environ()
  

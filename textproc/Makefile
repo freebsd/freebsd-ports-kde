@@ -333,7 +333,6 @@
     SUBDIR += it-mythes
     SUBDIR += itstool
     SUBDIR += jade
-    SUBDIR += jalingo
     SUBDIR += jaq
     SUBDIR += jarnal
     SUBDIR += jdictionary

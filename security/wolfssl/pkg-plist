@@ -166,7 +166,7 @@ lib/cmake/wolfssl/wolfssl-targets.cmake
 lib/libwolfssl.a
 lib/libwolfssl.so
 lib/libwolfssl.so.44
-lib/libwolfssl.so.44.1.0
+lib/libwolfssl.so.44.2.0
 libdata/pkgconfig/wolfssl.pc
 %%PORTDOCS%%%%DOCSDIR%%/QUIC.md
 %%PORTDOCS%%%%DOCSDIR%%/README.txt

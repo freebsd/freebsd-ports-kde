@@ -1,7 +1,6 @@
 PORTNAME=	cairo
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.16.1
-PORTREVISION=	1
+DISTVERSION=	2.17.0
 CATEGORIES=	lang
 PKGNAMESUFFIX=	-language
 
@@ -56,7 +55,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		aws-lc-sys-0.37.0 \
 		base64-0.22.1 \
 		bimap-0.6.3 \
-		bincode-2.0.1 \
 		bit-set-0.8.0 \
 		bit-vec-0.8.0 \
 		bitflags-2.10.0 \
@@ -71,7 +69,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		byteorder-1.5.0 \
 		bytes-1.11.1 \
 		cairo-lang-primitive-token-1.0.0 \
-		cairo-vm-3.1.0 \
+		cairo-vm-3.2.0 \
 		cc-1.2.55 \
 		cesu8-1.1.0 \
 		cfg-if-1.0.4 \
@@ -393,7 +391,6 @@ CARGO_CRATES=	adler2-2.0.1 \
 		unicode-xid-0.2.6 \
 		unit-prefix-0.5.2 \
 		untrusted-0.9.0 \
-		unty-0.0.4 \
 		url-2.5.8 \
 		utf8_iter-1.0.4 \
 		utf8parse-0.2.2 \

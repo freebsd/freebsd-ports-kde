@@ -1,5 +1,6 @@
 PORTNAME=	ess
 DISTVERSION=	26.01.0
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://ess.r-project.org/ \
 		https://stat.ethz.ch/ESS/downloads/ess/ \
@@ -19,8 +20,10 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 RUN_DEPENDS=	R:math/R
 
-USES=		emacs gmake makeinfo perl5 tar:tgz
+USES=		emacs:build gmake makeinfo perl5 tar:tgz
 USE_PERL5=	build
+
+CONFLICTS_INSTALL=	ess-emacs_*
 
 NO_ARCH=	yes
 
@@ -55,9 +58,8 @@ do-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html   ${STAGEDIR}${DOCSDIR}
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
-	@${CP} ${WRKSRC}/lisp/*.el  ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
-	@${CP} ${WRKSRC}/lisp/*.elc ${STAGEDIR}${PREFIX}/share/emacs/site-lisp/ess/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/ess/
+	@${CP} ${WRKSRC}/lisp/*.el  ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/ess/
 	${INSTALL_DATA} ${WRKSRC}/doc/info/ess.info ${STAGEDIR}${PREFIX}/${INFO_PATH}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_LIBDIR}/etc/ess/
 	(cd ${WRKSRC}/etc && ${CP} ess-julia.jl ess-sas-sh-command \

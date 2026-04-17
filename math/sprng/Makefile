@@ -2,7 +2,8 @@ PORTNAME=	SPRNG
 PORTVERSION=	5.0
 PORTREVISION=	4
 CATEGORIES=	math science
-MASTER_SITES=	http://www.sprng.org/Version${PORTVERSION}/
+MASTER_SITES=	LOCAL/thierry	\
+		http://www.sprng.org/Version${PORTVERSION}/
 DISTNAME=	${PORTNAME:tl}${PORTVERSION:R}
 
 MAINTAINER=	thierry@FreeBSD.org

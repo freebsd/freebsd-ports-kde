@@ -1,8 +1,8 @@
 PORTNAME=	with-editor
 DISTVERSIONPREFIX=	v
 DISTVERSION=	3.4.8
+PORTREVISION=	1
 CATEGORIES=	editors elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Use the Emacsclient as the $$EDITOR of child processes
@@ -11,14 +11,14 @@ WWW=		https://github.com/magit/with-editor
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=30.1.0.0:misc/compat.el@${EMACS_FLAVOR}
-RUN_DEPENDS=	compat.el${EMACS_PKGNAMESUFFIX}>=30.1.0.0:misc/compat.el@${EMACS_FLAVOR}
+BUILD_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el
+RUN_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el
 
-USES=		emacs gmake makeinfo
+USES=		emacs:build gmake makeinfo
 USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
-MAKE_ENV+=	LOAD_PATH="-L ${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}/compat"
+MAKE_ENV+=	LOAD_PATH="-L ${PREFIX}/${EMACS_SITE_LISPDIR}/compat"
 MAKE_JOBS_UNSAFE=	yes
 ALL_TARGET=	lisp info
 
@@ -27,9 +27,8 @@ CONFLICTS_INSTALL=	with-editor-devel-emacs*
 NO_ARCH=	yes
 
 INFO=		with-editor
-PLIST_FILES=	${EMACS_VERSION_SITE_LISPDIR}/with-editor-autoloads.el \
-		${EMACS_VERSION_SITE_LISPDIR}/with-editor.el \
-		${EMACS_VERSION_SITE_LISPDIR}/with-editor.elc
+PLIST_FILES=	${EMACS_SITE_LISPDIR}/with-editor-autoloads.el \
+		${EMACS_SITE_LISPDIR}/with-editor.el
 PORTDOCS=	README.org with-editor.html
 
 OPTIONS_DEFINE=	DOCS PDF
@@ -46,9 +45,9 @@ PDF_ALL_TARGET=		pdf
 PDF_PLIST_FILES=	${DOCSDIR}/with-editor.pdf
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/lisp/*.el* \
-		${STAGEDIR}${PREFIX}/${EMACS_VERSION_SITE_LISPDIR}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/lisp/*.el \
+		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.info ${STAGEDIR}${PREFIX}/${INFO_PATH}
 
 do-install-DOCS-on:

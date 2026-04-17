@@ -1,5 +1,5 @@
 PORTNAME=	claude-code
-DISTVERSION=	2.1.96
+DISTVERSION=	2.1.110
 CATEGORIES=	misc # machine-learning
 DISTFILES=	${PORTNAME}-${DISTVERSION}${EXTRACT_SUFX}
 
@@ -12,6 +12,7 @@ FETCH_DEPENDS=	cargo:lang/rust \
 		jq:textproc/jq \
 		npm:www/npm \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
+EXTRACT_DEPENDS=	curl:ftp/curl
 RUN_DEPENDS=	rg:textproc/ripgrep
 
 USES=		nodejs:run
@@ -19,11 +20,12 @@ USES=		nodejs:run
 JS_ARCH=	${ARCH:S/amd64/x64/:S/aarch64/arm64/:S/i386/ia32/:S/powerpc64le/ppc64le/:S/powerpc64/ppc64/:C/armv[67]/arm/} # modeled after electron.mk
 PLIST_SUB=	JS_ARCH=${JS_ARCH}
 
-OPTIONS_DEFINE=		AUDIO_CAPTURE
-OPTIONS_DEFAULT=	AUDIO_CAPTURE
+OPTIONS_DEFINE=		AUDIO_CAPTURE USE_CURL_USER_AGENT
+OPTIONS_DEFAULT=	AUDIO_CAPTURE USE_CURL_USER_AGENT
 OPTIONS_SUB=		yes
 
 AUDIO_CAPTURE_DESC=		Build native audio capture module for FreeBSD
+USE_CURL_USER_AGENT_DESC=	Use curl User-Agent for web fetching to bypass bot-blocking filters (e.g. Anubis)
 AUDIO_CAPTURE_BUILD_DEPENDS=	${LOCALBASE}/bin/cargo:lang/rust \
 				pkgconf:devel/pkgconf
 AUDIO_CAPTURE_LIB_DEPENDS=	libasound.so:audio/alsa-lib
@@ -75,6 +77,13 @@ post-extract-AUDIO_CAPTURE-on:
 	# patch cli.js to load audio-capture on FreeBSD
 	${REINPLACE_CMD} -i '' \
 		-e 's|q!=="darwin"&&q!=="linux"&&q!=="win32"|q!=="darwin"\&\&q!=="linux"\&\&q!=="win32"\&\&q!=="freebsd"|' \
+		${CLI_JS}
+
+post-extract-USE_CURL_USER_AGENT-on:
+	# patch cli.js to use a curl-style User-Agent for web fetching
+	@_V=$$(${LOCALBASE}/bin/curl --version 2>/dev/null | head -1 | ${AWK} '{print $$2}'); \
+	${REINPLACE_CMD} -i '' \
+		-e 's|function rgq(){return`Claude-User ($${oA()}; +https://support.anthropic.com/)`}|function rgq(){return"curl/'"$$_V"'"}|' \
 		${CLI_JS}
 
 do-build:

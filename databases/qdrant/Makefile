@@ -1,7 +1,6 @@
 PORTNAME=	qdrant
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.17.0
-PORTREVISION=	1
+DISTVERSION=	1.17.1
 PORTEPOCH=	1
 CATEGORIES=	databases
 
@@ -25,6 +24,8 @@ USES=		cargo gmake llvm:min=13 perl5 pkgconfig
 USE_GITHUB=	yes
 USE_PERL5=	build
 USE_RC_SUBR=	qdrant
+
+MAKE_ENV=	AWS_LC_SYS_NO_JITTER_ENTROPY=1 # workaround for https://github.com/aws/aws-lc-rs/issues/1097
 
 QDRANT_DBDIR?=	/var/db/qdrant
 QDRANT_USER?=	nobody

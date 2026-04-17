@@ -1,5 +1,5 @@
 PORTNAME=	BZ-Client
-DISTVERSION=	1.06
+DISTVERSION=	1.064
 CATEGORIES=	devel perl5
 MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:DJZORT
@@ -22,5 +22,7 @@ TEST_DEPENDS=	p5-libwww>=0:www/p5-libwww \
 
 USES=		perl5
 USE_PERL5=	configure
+
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

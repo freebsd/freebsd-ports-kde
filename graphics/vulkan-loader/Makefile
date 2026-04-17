@@ -3,7 +3,7 @@ DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.336
 CATEGORIES=	graphics devel
 
-MAINTAINER=	atanubiswas484@gmail.com
+MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Driver loader for the Vulkan graphics API
 WWW=		https://github.com/KhronosGroup/Vulkan-Loader
 

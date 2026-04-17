@@ -1,7 +1,6 @@
 PORTNAME=	ffn
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.1.3
-PORTREVISION=	1
+DISTVERSION=	1.1.5
 CATEGORIES=	finance python
 #MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -36,6 +35,6 @@ GH_ACCOUNT=	pmorissette
 
 NO_ARCH=	yes
 
-# tests as of 1.1.2: 54 passed, 6 warnings in 495.57s (0:08:15)
+# tests as of 1.1.5: 51 passed in 6.15s
 
 .include <bsd.port.mk>

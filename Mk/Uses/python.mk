@@ -117,6 +117,9 @@
 #	distutils	- Use distutils as do-configure, do-build and
 #			  do-install targets. implies flavors.
 #
+#			  Deprecated in favour of pep517, functionality to be
+#			  removed in a future setuptools.
+#
 #	pep517		- Follow the PEP-517 standard to build and install wheels
 #			  as do-build and do-install targets. implies flavors.
 #
@@ -708,6 +711,7 @@ _CURRENTPORT:=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_FLAVOR}
 RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools44>0:devel/py-setuptools44@${PY_FLAVOR}
 .    else
+DEV_WARNING+=		"USE_PYTHON=distutils is deprecated, setup.py as a command line tool is deprecated and the ability to use it as such will be removed in a future setuptools. As setup.py is still a valid configuration file for setuptools, please migrate to USE_PYTHON=pep517 with setuptools in BUILD_DEPENDS."
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>=63.1.0:devel/py-setuptools@${PY_FLAVOR}
 .    endif
 .  endif

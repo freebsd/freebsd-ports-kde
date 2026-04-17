@@ -1,6 +1,6 @@
 PORTNAME=	awslim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.12
+DISTVERSION=	0.6.13
 PORTREVISION=	0
 CATEGORIES=	sysutils
 
@@ -21,7 +21,7 @@ USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	fujiwara
 GH_TUPLE=	alecthomas:kong:v1.10.0:alecthomas_kong/vendor/github.com/alecthomas/kong \
-		aws:aws-sdk-go-v2:v${AWS_SDK_VER}:aws_aws_sdk_go_v2 \
+		aws:aws-sdk-go-v2:v${AWS_SDK_VER}:aws_aws_sdk_go_v2/vendor/github.com/aws/aws-sdk-go-v2 \
 		aws:smithy-go:v1.24.2:aws_smithy_go/vendor/github.com/aws/smithy-go \
 		go-yaml:yaml:v2.2.8:go_yaml_yaml/vendor/gopkg.in/yaml.v2 \
 		goccy:go-yaml:v1.19.2:goccy_go_yaml/vendor/github.com/goccy/go-yaml \
@@ -40,7 +40,7 @@ PLIST_FILES=	bin/awslim
 COMMENT_default=	all services
 COMMENT_compact=	selected services
 
-AWS_SDK_VER=	1.41.4
+AWS_SDK_VER=	1.41.5
 
 post-extract:
 	${CP} ${FILESDIR}/modules.txt ${WRKSRC}/vendor/

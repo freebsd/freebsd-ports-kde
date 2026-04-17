@@ -1,9 +1,9 @@
 PORTNAME=	Lingua-EN-Syllable
-PORTVERSION=	0.251
-PORTREVISION=	1
+DISTVERSION=	0.27
 CATEGORIES=	textproc perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
+MASTER_SITE_SUBDIR=	CPAN:NEILB
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Routine for estimating syllable count in words

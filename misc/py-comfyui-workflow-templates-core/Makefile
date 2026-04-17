@@ -1,6 +1,6 @@
 PORTNAME=	comfyui-workflow-templates-core
-DISTVERSION=	0.3.175
-CATEGORIES=	misc python
+DISTVERSION=	0.3.198
+CATEGORIES=	misc python # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	${PORTNAME:S/-/_/g}-${DISTVERSION}

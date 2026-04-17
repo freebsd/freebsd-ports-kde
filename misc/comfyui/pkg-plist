@@ -56,6 +56,8 @@ bin/comfyui
 %%DATADIR%%/blueprints/.glsl/Brightness_and_Contrast_1.frag
 %%DATADIR%%/blueprints/.glsl/Chromatic_Aberration_16.frag
 %%DATADIR%%/blueprints/.glsl/Color_Adjustment_15.frag
+%%DATADIR%%/blueprints/.glsl/Color_Balance_15.frag
+%%DATADIR%%/blueprints/.glsl/Color_Curves_8.frag
 %%DATADIR%%/blueprints/.glsl/Edge-Preserving_Blur_128.frag
 %%DATADIR%%/blueprints/.glsl/Film_Grain_15.frag
 %%DATADIR%%/blueprints/.glsl/Glow_30.frag
@@ -72,6 +74,8 @@ bin/comfyui
 %%DATADIR%%/blueprints/Canny to Video (LTX 2.0).json
 %%DATADIR%%/blueprints/Chromatic Aberration.json
 %%DATADIR%%/blueprints/Color Adjustment.json
+%%DATADIR%%/blueprints/Color Balance.json
+%%DATADIR%%/blueprints/Color Curves.json
 %%DATADIR%%/blueprints/Depth to Image (Z-Image-Turbo).json
 %%DATADIR%%/blueprints/Depth to Video (ltx 2.0).json
 %%DATADIR%%/blueprints/Edge-Preserving Blur.json
@@ -179,6 +183,7 @@ bin/comfyui
 %%DATADIR%%/comfy/ldm/cosmos/position_embedding.py
 %%DATADIR%%/comfy/ldm/cosmos/predict2.py
 %%DATADIR%%/comfy/ldm/cosmos/vae.py
+%%DATADIR%%/comfy/ldm/ernie/model.py
 %%DATADIR%%/comfy/ldm/flux/controlnet.py
 %%DATADIR%%/comfy/ldm/flux/layers.py
 %%DATADIR%%/comfy/ldm/flux/math.py
@@ -248,6 +253,7 @@ bin/comfyui
 %%DATADIR%%/comfy/ldm/pixart/pixartms.py
 %%DATADIR%%/comfy/ldm/qwen_image/controlnet.py
 %%DATADIR%%/comfy/ldm/qwen_image/model.py
+%%DATADIR%%/comfy/ldm/rt_detr/rtdetr_v4.py
 %%DATADIR%%/comfy/ldm/util.py
 %%DATADIR%%/comfy/ldm/wan/model.py
 %%DATADIR%%/comfy/ldm/wan/model_animate.py
@@ -298,6 +304,7 @@ bin/comfyui
 %%DATADIR%%/comfy/text_encoders/byt5_tokenizer/special_tokens_map.json
 %%DATADIR%%/comfy/text_encoders/byt5_tokenizer/tokenizer_config.json
 %%DATADIR%%/comfy/text_encoders/cosmos.py
+%%DATADIR%%/comfy/text_encoders/ernie.py
 %%DATADIR%%/comfy/text_encoders/flux.py
 %%DATADIR%%/comfy/text_encoders/genmo.py
 %%DATADIR%%/comfy/text_encoders/hidream.py
@@ -325,6 +332,10 @@ bin/comfyui
 %%DATADIR%%/comfy/text_encoders/qwen25_tokenizer/merges.txt
 %%DATADIR%%/comfy/text_encoders/qwen25_tokenizer/tokenizer_config.json
 %%DATADIR%%/comfy/text_encoders/qwen25_tokenizer/vocab.json
+%%DATADIR%%/comfy/text_encoders/qwen35.py
+%%DATADIR%%/comfy/text_encoders/qwen35_tokenizer/merges.txt
+%%DATADIR%%/comfy/text_encoders/qwen35_tokenizer/tokenizer_config.json
+%%DATADIR%%/comfy/text_encoders/qwen35_tokenizer/vocab.json
 %%DATADIR%%/comfy/text_encoders/qwen_image.py
 %%DATADIR%%/comfy/text_encoders/qwen_vl.py
 %%DATADIR%%/comfy/text_encoders/sa_t5.py
@@ -371,6 +382,7 @@ bin/comfyui
 %%DATADIR%%/comfy_api/latest/_caching.py
 %%DATADIR%%/comfy_api/latest/_input/__init__.py
 %%DATADIR%%/comfy_api/latest/_input/basic_types.py
+%%DATADIR%%/comfy_api/latest/_input/curve_types.py
 %%DATADIR%%/comfy_api/latest/_input/video_types.py
 %%DATADIR%%/comfy_api/latest/_input_impl/__init__.py
 %%DATADIR%%/comfy_api/latest/_input_impl/video_types.py
@@ -422,6 +434,7 @@ bin/comfyui
 %%DATADIR%%/comfy_api_nodes/apis/tripo.py
 %%DATADIR%%/comfy_api_nodes/apis/veo.py
 %%DATADIR%%/comfy_api_nodes/apis/vidu.py
+%%DATADIR%%/comfy_api_nodes/apis/wan.py
 %%DATADIR%%/comfy_api_nodes/apis/wavespeed.py
 %%DATADIR%%/comfy_api_nodes/nodes_bfl.py
 %%DATADIR%%/comfy_api_nodes/nodes_bria.py
@@ -492,6 +505,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_context_windows.py
 %%DATADIR%%/comfy_extras/nodes_controlnet.py
 %%DATADIR%%/comfy_extras/nodes_cosmos.py
+%%DATADIR%%/comfy_extras/nodes_curve.py
 %%DATADIR%%/comfy_extras/nodes_custom_sampler.py
 %%DATADIR%%/comfy_extras/nodes_dataset.py
 %%DATADIR%%/comfy_extras/nodes_differential_diffusion.py
@@ -535,6 +549,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_morphology.py
 %%DATADIR%%/comfy_extras/nodes_nag.py
 %%DATADIR%%/comfy_extras/nodes_nop.py
+%%DATADIR%%/comfy_extras/nodes_number_convert.py
 %%DATADIR%%/comfy_extras/nodes_optimalsteps.py
 %%DATADIR%%/comfy_extras/nodes_pag.py
 %%DATADIR%%/comfy_extras/nodes_painter.py
@@ -549,6 +564,7 @@ bin/comfyui
 %%DATADIR%%/comfy_extras/nodes_replacements.py
 %%DATADIR%%/comfy_extras/nodes_resolution.py
 %%DATADIR%%/comfy_extras/nodes_rope.py
+%%DATADIR%%/comfy_extras/nodes_rtdetr.py
 %%DATADIR%%/comfy_extras/nodes_sag.py
 %%DATADIR%%/comfy_extras/nodes_sd3.py
 %%DATADIR%%/comfy_extras/nodes_sdpose.py
@@ -649,6 +665,7 @@ bin/comfyui
 %%DATADIR%%/tests-unit/assets_test/services/test_bulk_ingest.py
 %%DATADIR%%/tests-unit/assets_test/services/test_enrich.py
 %%DATADIR%%/tests-unit/assets_test/services/test_ingest.py
+%%DATADIR%%/tests-unit/assets_test/services/test_path_utils.py
 %%DATADIR%%/tests-unit/assets_test/services/test_tag_histogram.py
 %%DATADIR%%/tests-unit/assets_test/services/test_tagging.py
 %%DATADIR%%/tests-unit/assets_test/test_assets_missing_sync.py
@@ -666,6 +683,7 @@ bin/comfyui
 %%DATADIR%%/tests-unit/comfy_extras_test/__init__.py
 %%DATADIR%%/tests-unit/comfy_extras_test/image_stitch_test.py
 %%DATADIR%%/tests-unit/comfy_extras_test/nodes_math_test.py
+%%DATADIR%%/tests-unit/comfy_extras_test/nodes_number_convert_test.py
 %%DATADIR%%/tests-unit/comfy_quant/test_mixed_precision.py
 %%DATADIR%%/tests-unit/comfy_test/folder_path_test.py
 %%DATADIR%%/tests-unit/comfy_test/model_detection_test.py
@@ -711,6 +729,7 @@ bin/comfyui
 %%DATADIR%%/tests/inference/__init__.py
 %%DATADIR%%/tests/inference/graphs/default_graph_sdxl1_0.json
 %%DATADIR%%/tests/inference/test_inference.py
+%%DATADIR%%/tests/test_asset_seeder.py
 %%DATADIR%%/user
 %%DATADIR%%/utils/__init__.py
 %%DATADIR%%/utils/extra_config.py

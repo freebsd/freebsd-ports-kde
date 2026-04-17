@@ -1,6 +1,5 @@
 PORTNAME=	mbedtls
-DISTVERSION=	4.0.0
-PORTREVISION=	1
+DISTVERSION=	4.1.0
 CATEGORIES=	security devel
 MASTER_SITES=	https://github.com/Mbed-TLS/${PORTNAME}/releases/download/${DISTNAME}/
 PKGNAMESUFFIX=	4

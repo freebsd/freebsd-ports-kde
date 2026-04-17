@@ -18,7 +18,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		block-buffer-0.10.4 \
 		bumpalo-3.18.1 \
 		bytemuck-1.23.1 \
-		bytes-1.10.1 \
+		bytes-1.11.1 \
 		cc-1.2.27 \
 		cfg-if-1.0.1 \
 		cfg_aliases-0.2.1 \

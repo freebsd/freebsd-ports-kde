@@ -1,6 +1,6 @@
 PORTNAME=	log4j
 PORTVERSION=	1.2.17
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel java
 MASTER_SITES=	APACHE/logging/${PORTNAME}/${PORTVERSION}
 
@@ -10,6 +10,8 @@ WWW=		https://logging.apache.org/log4j/1.2/
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	EOL since 2015, superseded by devel/apache-log4j2; https://news.apache.org/foundation/entry/apache_logging_services_project_announces
 
 USES=		cpe java
 

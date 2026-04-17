@@ -1,6 +1,6 @@
---- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-04-02 08:54:25 UTC
+--- chrome/browser/ui/tabs/public/tab_features.h.orig	2026-04-15 11:25:12 UTC
 +++ chrome/browser/ui/tabs/public/tab_features.h
-@@ -148,7 +148,7 @@ class TabContextualizationController;
+@@ -155,7 +155,7 @@ class TabContextualizationController;
  }  // namespace lens
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -9,7 +9,7 @@
  namespace wallet {
  class ChromeWalletablePassClient;
  }  // namespace wallet
-@@ -542,7 +542,7 @@ class TabFeatures {
+@@ -571,7 +571,7 @@ class TabFeatures {
        skills_ui_tab_controller_;
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -18,9 +18,9 @@
    std::unique_ptr<wallet::ChromeWalletablePassClient> walletable_pass_client_;
  #endif
  
-@@ -553,7 +553,7 @@ class TabFeatures {
+@@ -582,7 +582,7 @@ class TabFeatures {
    std::unique_ptr<skills::SkillsUpdateObserver> skills_update_observer_;
- #endif  // BUILDFLAG(ENABLE_GLIC) && !BUILDFLAG(IS_ANDROID)
+ #endif  //  !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)

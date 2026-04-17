@@ -915,6 +915,8 @@ share/icons/hicolor/scalable/mimetypes/application-x-kicad-worksheet.svg
 %%DATADIR%%/plugins/kicad_utils.py
 %%DATADIR%%/resources/images.tar.gz
 %%DATADIR%%/schemas/api.v1.schema.json
+%%DATADIR%%/schemas/kicad-remote-provider-metadata-v1.schema.json
+%%DATADIR%%/schemas/kicad-remote-symbol-manifest-v1.schema.json
 %%DATADIR%%/schemas/pcm.v1.schema.json
 %%DATADIR%%/schemas/pcm.v2.schema.json
 %%DATADIR%%/scripting/kicad_pyshell/__init__.py

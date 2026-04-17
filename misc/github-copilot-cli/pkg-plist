@@ -1,7 +1,7 @@
 bin/copilot
 lib/node_modules/.bin/copilot
 lib/node_modules/@github/copilot/app.js
-lib/node_modules/@github/copilot/builtin-skills/customizing-copilot-cloud-agents-environment/SKILL.md
+lib/node_modules/@github/copilot/builtin-skills/customize-cloud-agent/SKILL.md
 lib/node_modules/@github/copilot/changelog.json
 lib/node_modules/@github/copilot/clipboard/index.js
 lib/node_modules/@github/copilot/clipboard/node_modules/@teddyzhu/clipboard/LICENSE
@@ -31,8 +31,8 @@ lib/node_modules/@github/copilot/definitions/task.agent.yaml
 lib/node_modules/@github/copilot/index.js
 lib/node_modules/@github/copilot/npm-loader.js
 lib/node_modules/@github/copilot/npm-loader.js.orig
-lib/node_modules/@github/copilot/prebuilds/freebsd-%%JS_ARCH%%/keytar.node
-lib/node_modules/@github/copilot/prebuilds/freebsd-%%JS_ARCH%%/pty.node
+lib/node_modules/@github/copilot/prebuilds/freebsd-%%NODE_ARCH%%/keytar.node
+lib/node_modules/@github/copilot/prebuilds/freebsd-%%NODE_ARCH%%/pty.node
 lib/node_modules/@github/copilot/preloads/extension_bootstrap.mjs
 lib/node_modules/@github/copilot/preloads/extension_sdk_resolver.mjs
 lib/node_modules/@github/copilot/queries/bash-highlights.scm
@@ -95,5 +95,5 @@ lib/node_modules/@github/copilot/tree-sitter-tsx.wasm
 lib/node_modules/@github/copilot/tree-sitter-typescript.wasm
 lib/node_modules/@github/copilot/tree-sitter.wasm
 lib/node_modules/@github/copilot/worker/conoutSocketWorker.js
-lib/node_modules/@img/sharp-freebsd-%%JS_ARCH%%/sharp.node
+lib/node_modules/@github/copilot/node_modules/@img/sharp-freebsd-%%NODE_ARCH%%/sharp.node
 @dir lib/node_modules/@github/copilot/ripgrep/bin

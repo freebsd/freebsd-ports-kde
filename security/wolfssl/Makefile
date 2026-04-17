@@ -1,5 +1,5 @@
 PORTNAME=	wolfssl
-PORTVERSION=	5.9.0
+PORTVERSION=	5.9.1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.wolfssl.com/ \
 		LOCAL/fox
@@ -11,7 +11,7 @@ WWW=		https://www.wolfssl.com/
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe libtool zip
+USES=		cpe libtool zip autoreconf
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
@@ -39,6 +39,7 @@ CONFIGURE_ARGS=	--disable-dependency-tracking \
 		--enable-tls13 \
 		--enable-tls13-draft18 \
 		--enable-keying-material
+
 TEST_TARGET=	check
 CFLAGS+=	-DWOLFSSL_ALT_NAMES -DWOLFSSL_GETRANDOM=1 -DWOLFSSL_TLS13_MIDDLEBOX_COMPAT
 CFLAGS_i386=	-DWOLFSSL_SHA224

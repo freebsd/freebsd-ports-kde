@@ -5,6 +5,64 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20260412:
+  AFFECTS: Users of sysutils/ansible
+  AUTHOR: cy@FreeBSD.org
+
+  An overhaul of the templating system and a new feature called Data Tagging
+  may affect existing roles resulting in problematic behaviours. Users should
+  review the Ansible 12 Porting Guide at
+  https://docs.ansible.com/projects/ansible/devel/porting_guides/porting_guide_12.html
+
+20260412:
+  AFFECTS: Users of sysutils/py-ansible-core
+  AUTHOR: cy@FreeBSD.org
+
+  A number of behavioural changes may affect existing playbooks and roles.
+  Users are encouraged to review the Ansible-core 2.19 Porting Guide at
+  https://docs.ansible.com/ansible/latest/porting_guides/porting_guide_core_2.19.html
+
+20260411:
+  AFFECTS: users of elisp (*-emacs_*) packages
+  AUTHOR: jrm@FreeBSD.org
+
+  Packages for different flavors of elisp ports have been removed.  For
+  example, the old and new packages for devel/tablist are:
+  |-------------------------+---------|
+  | Before                  | After   |
+  |-------------------------+---------|
+  | tablist                 | tablist |
+  | tablist-emacs_canna     |         |
+  | tablist-emacs_devel_nox |         |
+  | tablist-emacs_devel     |         |
+  | tablist-emacs_nox       |         |
+  | tablist-emacs_wayland   |         |
+  |-------------------------+---------|
+
+  If you have any -emacs_* packages installed, simply running `pkg upgrade`
+  will not upgrade and replace them with the new package.  Run these commands
+  under /bin/sh with superuser privileges before upgrading.
+
+  for i in $(pkg query -g %n *-emacs_*); do
+    if [ "$i" != "notmuch-emacs_*" ]; then
+      nn=$(echo "$i" | sed -e 's/-emacs_[a-z_]*//')
+    else
+      nn=$(echo "$i" | sed -e 's/-emacs_[a-z_]*/-emacs/')
+    fi
+    pkg set -yn "$i":"$nn"
+  done
+
+  If you are building ports in an unclean environment, you may have to specify
+  the Emacs build flavor to avoid conflicts.  For example, if you have the
+  default flavor of editors/emacs installed, add the following to
+  /etc/make.conf:
+
+  DEFAULT_VERSIONS+=emacs=full
+
+  Possible values are: full, canna, nox, wayland, devel_full, and devel_nox.
+  Values prefixed with devel_ select editors/emacs-devel; others select
+  editors/emacs.  The default is nox.
+
 20260401:
   AFFECTS: users of security/openvpn
   AUTHOR: mandree@FreeBSD.org

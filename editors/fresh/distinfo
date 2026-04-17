@@ -1,4 +1,4 @@
-TIMESTAMP = 1775579657
+TIMESTAMP = 1776013060
 SHA256 (rust/crates/ab_glyph-0.2.32.crate) = 01c0457472c38ea5bd1c3b5ada5e368271cb550be7a4ca4a0b4634e9913f6cc2
 SIZE (rust/crates/ab_glyph-0.2.32.crate) = 20967
 SHA256 (rust/crates/ab_glyph_rasterizer-0.1.10.crate) = 366ffbaa4442f4684d91e2cd7c5ea7c4ed8add41959a31447066e279e432b618
@@ -1387,5 +1387,5 @@ SHA256 (rust/crates/zmij-1.0.21.crate) = b8848ee67ecc8aedbaf3e4122217aff89263923
 SIZE (rust/crates/zmij-1.0.21.crate) = 26665
 SHA256 (Jesterhearts-ratatui-wgpu-cdcf5c6987adba56b060f6a8532ee83b25a4e3e5_GH0.tar.gz) = f155d1f90cc6fdd13bda413a316339de0ff6c3171810429b27464fbfe4a8b0e3
 SIZE (Jesterhearts-ratatui-wgpu-cdcf5c6987adba56b060f6a8532ee83b25a4e3e5_GH0.tar.gz) = 1162688
-SHA256 (sinelaw-fresh-v0.2.22_GH0.tar.gz) = 0e4b7ea378cd8665bf94d2da021eeb983f25af34971236e2ec7a97d3884fa8ac
-SIZE (sinelaw-fresh-v0.2.22_GH0.tar.gz) = 25795796
+SHA256 (sinelaw-fresh-v0.2.23_GH0.tar.gz) = 38d74be24e527aa9870f7f46e0d52699a5ec09c608288deb26e8e46054f9fecb
+SIZE (sinelaw-fresh-v0.2.23_GH0.tar.gz) = 25930788

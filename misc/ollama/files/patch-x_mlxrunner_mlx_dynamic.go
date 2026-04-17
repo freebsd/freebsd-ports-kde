@@ -1,32 +1,29 @@
---- x/mlxrunner/mlx/dynamic.go.orig	2026-03-26 19:59:35.600583000 -0700
-+++ x/mlxrunner/mlx/dynamic.go	2026-03-26 20:00:54.082312000 -0700
-@@ -72,7 +72,7 @@
+--- x/mlxrunner/mlx/dynamic.go.orig	2026-04-09 01:42:19 UTC
++++ x/mlxrunner/mlx/dynamic.go
+@@ -83,7 +83,7 @@ func libOllamaRoots() []string {
+ 		case "darwin":
+ 			roots = append(roots, filepath.Join(exeDir, "lib", "ollama"))
+ 			roots = append(roots, exeDir) // app bundle: Contents/Resources/
+-		case "linux":
++		case "linux", "freebsd":
+ 			roots = append(roots, filepath.Join(exeDir, "..", "lib", "ollama"))
+ 		case "windows":
+ 			roots = append(roots, filepath.Join(exeDir, "lib", "ollama"))
+@@ -143,7 +143,7 @@ func prependLibraryPath(dir string) {
  	switch runtime.GOOS {
- 	case "windows":
- 		libraryName = "mlxc.dll"
+ 	case "darwin":
+ 		envVar = "DYLD_LIBRARY_PATH"
 -	case "linux":
 +	case "linux", "freebsd":
- 		libraryName = "libmlxc.so"
- 	}
- 
-@@ -93,7 +93,7 @@
+ 		envVar = "LD_LIBRARY_PATH"
+ 	default:
+ 		return
+@@ -157,7 +157,7 @@ func init() {
  
  func init() {
  	switch runtime.GOOS {
 -	case "darwin", "linux", "windows":
 +	case "darwin", "linux", "freebsd", "windows":
- 
  	default:
  		return
-@@ -126,7 +126,10 @@
- 		if eval, err := filepath.EvalSymlinks(exe); err == nil {
- 			exe = eval
- 		}
--		searchDirs = append(searchDirs, filepath.Dir(exe))
-+		exeDir := filepath.Dir(exe)
-+		searchDirs = append(searchDirs, exeDir)
-+		// On Linux/FreeBSD the installed layout is bin/ollama + lib/ollama/libmlxc.so
-+		searchDirs = append(searchDirs, filepath.Join(exeDir, "..", "lib", "ollama"))
  	}
- 
- 	if cwd, err := os.Getwd(); err == nil {

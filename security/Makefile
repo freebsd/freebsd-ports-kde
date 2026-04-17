@@ -227,6 +227,7 @@
     SUBDIR += hidden-lake
     SUBDIR += highwayhash
     SUBDIR += himitsu
+    SUBDIR += hiprompt-gtk
     SUBDIR += hitch
     SUBDIR += hockeypuck
     SUBDIR += honeytrap
@@ -966,6 +967,7 @@
     SUBDIR += py-gssapi
     SUBDIR += py-guardpost
     SUBDIR += py-gvm-tools
+    SUBDIR += py-himitsu-keyring
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-httpx-auth

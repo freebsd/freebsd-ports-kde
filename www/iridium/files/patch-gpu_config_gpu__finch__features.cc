@@ -1,4 +1,4 @@
---- gpu/config/gpu_finch_features.cc.orig	2026-03-24 16:59:08 UTC
+--- gpu/config/gpu_finch_features.cc.orig	2026-04-15 12:07:04 UTC
 +++ gpu/config/gpu_finch_features.cc
 @@ -110,7 +110,7 @@ const base::FeatureParam<std::string>
  // of associating with an unused IPC::Channel.
@@ -19,7 +19,7 @@
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -450,7 +451,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup, base::FEATURE
+@@ -457,7 +458,7 @@ BASE_FEATURE(kGPUDriverBugListTestGroup, base::FEATURE
  const base::FeatureParam<int> kGPUDriverBugListTestGroupId{
      &kGPUDriverBugListTestGroup, "test_group", 0};
  

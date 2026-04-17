@@ -5232,4 +5232,21 @@ devel/capnproto1|devel/capnproto-tiledb|2026-04-05|Rename for better naming
 net-mgmt/argus3|net-mgmt/argus|2026-04-06|Update to latest version and remove version suffix
 net-mgmt/argus3-clients|net-mgmt/argus-clients|2026-04-06|Update to latest version and remove version suffix
 textproc/py-asciinema|textproc/asciinema|2026-04-06|No longer based on python, use textproc/asciinema instead
-multimedia/jellyfin-media-player|multimedia/jellyfin-desktop|2026-06-08|Project has been renamed
+multimedia/jellyfin-media-player|multimedia/jellyfin-desktop|2026-04-08|Project has been renamed
+databases/movine||2026-04-11|Remove: abandoned upstream
+java/openjdk22||2026-04-12|Has expired: No longer supported by upstream
+mail/py-offlineimap3|mail/py-offlineimap|2026-04-13|Project is now in PyPi as offlineimap
+textproc/jalingo||2026-04-13|Has expired: Last release in 2006. Does not compile in Java 9+
+science/colt||2026-04-13|Has expired: java 8 only, unmaintained, no users in the ports tree, latest release was 2004
+www/googler||2026-04-13|Has expired: Upstream repository archived on 2022-03-05; use www/ddgr as alternative
+misc/jbidwatcher||2026-04-14|Has expired: unmaintained, upstream website is gone, no users in the ports tree
+multimedia/py-tvnamer||2026-04-14|Has expired: Upstream project appears to be abandoned, last release was in 2021
+devel/prjpeppercorn111||2026-04-14|No longer supported by devel/nextpnr
+www/py-tvdb_api||2026-04-15|Has expired: Upstream project appears to be abandoned, last release was in 2021
+graphics/libkdcraw@qt5|graphics/libkdcraw-qt5|2026-04-16|Unflavorize; keep the last release with Qt5 support
+graphics/libkdcraw@qt6|graphics/libkdcraw|2026-04-16|Unflavorize; only Qt6 is supported from now
+audio/libkcompactdisc||2026-04-16|Development discontinued, not shipped with KDE Gear since 26.04
+multimedia/dvdstyler||2026-04-16|Dead upstream
+multimedia/lebiniou||2026-04-16|Dead upstream
+multimedia/lebiniou-data||2026-04-16|Dead upstream
+emulators/emu64||2026-04-16|Broken, fails to build

@@ -26,6 +26,12 @@ if ! command -v "$GO_CMD" >/dev/null 2>&1; then
 	exit 1
 fi
 
+# make GoLang proxy
+echo "==> submitting the new version $VERSION to GoLang proxy"
+GOPROXY=proxy.golang.org $GO_CMD list -m github.com/$GH_ACCOUNT_FORK/ollama@v$VERSION
+
+exit 1
+
 echo "updating $GH_PROJECT to version $VERSION"
 
 # remove old dirs

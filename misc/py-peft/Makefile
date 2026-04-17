@@ -1,6 +1,5 @@
 PORTNAME=	peft
-DISTVERSION=	0.17.1
-PORTREVISION=	2
+DISTVERSION=	0.19.0
 CATEGORIES=	misc python # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -36,9 +35,18 @@ USES=		python
 USE_PYTHON=	distutils autoplist pytest
 
 TEST_ENV=	${MAKE_ENV} PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+TEST_ARGS=	-p no:relaxed
+
+post-patch:
+	@${TOUCH} ${WRKSRC}/tests/__init__.py
 
 NO_ARCH=	yes
 
-# tests fail to run, see https://github.com/huggingface/peft/issues/2789
+# tests as of 0.19.0:
+# Results (885.15s):
+#      70278 passed
+#       3362 skipped
+#         10 xfailed
+#      18751 warnings
 
 .include <bsd.port.mk>

@@ -1,7 +1,7 @@
 PORTNAME=	csharp-mode.el
 PORTVERSION=	2.0.0
+PORTREVISION=	1
 CATEGORIES=	lang elisp
-PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Emacs major mode for editing C\# source code
@@ -13,6 +13,8 @@ USES=		emacs
 USE_GITHUB=	yes
 GH_ACCOUNT=	josteink
 GH_PROJECT=	csharp-mode
+
+CONFLICTS_INSTALL=	csharp-mode.el-emacs_*
 
 NO_ARCH=	yes
 NO_BUILD=	yes

@@ -1,7 +1,6 @@
 PORTNAME=	comfyui
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.18.0
-PORTREVISION=	1
+DISTVERSION=	0.19.0
 CATEGORIES=	misc python # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -19,13 +18,13 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.11.8:www/py-aiohttp@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}comfy-aimdo>=0.2.12:misc/py-comfy-aimdo@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}comfy-kitchen>=0.2.8:misc/py-comfy-kitchen@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}comfyui-embedded-docs>=0.4.3:misc/py-comfyui-embedded-docs@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}comfyui-frontend-package>=1.41.21:misc/py-comfyui-frontend-package@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}comfyui-workflow-templates>=0.9.26:misc/py-comfyui-workflow-templates@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}comfyui-frontend-package>=1.42.10:misc/py-comfyui-frontend-package@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}comfyui-workflow-templates>=0.9.47:misc/py-comfyui-workflow-templates@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}einops>0:misc/py-einops@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}filelock>0:sysutils/py-filelock@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}glfw>0:graphics/py-glfw@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}kornia>=0.7.1:graphics/py-kornia@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy1>=1.25.0:math/py-numpy1@${PY_FLAVOR} \
 		${PY_PILLOW} \
 		${PYTHON_PKGNAMEPREFIX}psutil>0:sysutils/py-psutil@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pydantic-settings>=2.0:devel/py-pydantic-settings@${PY_FLAVOR} \
@@ -46,7 +45,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.11.8:www/py-aiohttp@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}torchvision>0:misc/py-torchvision@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tqdm>0:misc/py-tqdm@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}transformers>=4.50.3:misc/py-transformers@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}yarl>=1.18.0:www/py-yarl@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}yarl>=1.18.0:www/py-yarl@${PY_FLAVOR}
 
 USES=		python shebangfix
 

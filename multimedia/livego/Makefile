@@ -1,5 +1,6 @@
 PORTNAME=	livego
 DISTVERSION=	0.0.20
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	rodrigo@FreeBSD.org

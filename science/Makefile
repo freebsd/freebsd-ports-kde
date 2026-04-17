@@ -59,7 +59,6 @@
     SUBDIR += clhep
     SUBDIR += clipper
     SUBDIR += code_saturne
-    SUBDIR += colt
     SUBDIR += conduit
     SUBDIR += coordgenlibs
     SUBDIR += cp2k

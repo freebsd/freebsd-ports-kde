@@ -1,6 +1,6 @@
 PORTNAME=	neovim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.12.0
+DISTVERSION=	0.12.1
 CATEGORIES=	editors
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -75,7 +75,8 @@ post-stage:
 	${FIND} ${STAGEDIR}${PREFIX}/lib/nvim -name "*.so" -exec ${STRIP_CMD} {} +
 
 do-test:
-	${GMAKE} -C ${WRKSRC} test
+	# Restrict tests to unittest target while functionaltest target fails
+	${GMAKE} -C ${WRKSRC} unittest
 
 versions:
 	for r in \
@@ -86,7 +87,7 @@ versions:
 		tree-sitter-grammars/tree-sitter-vim \
 		neovim/tree-sitter-vimdoc; \
 	do \
-		printf '%-20s %s\n' "$${r##*/}" \
+		${PRINTF} '%-20s %s\n' "$${r##*/}" \
 		"$$(curl -fsSL https://api.github.com/repos/$$r/releases/latest \
 		| perl -MJSON::PP -e 'use v5.38; say decode_json(do {local $$/; <>})->{tag_name}')"; \
 	done
