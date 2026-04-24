@@ -37,8 +37,10 @@ post-extract:
 	${RM} -r ${WRKSRC}/pyuic/uic/port_v2
 
 post-patch:
-	${REINPLACE_CMD} -e 's|%%PYQT_DESIGNERDIR%%|${PYQT_DESIGNERDIR}|' ${WRKSRC}/project.py
-	${REINPLACE_CMD} -e 's|%%PYQT_QMLDIR%%|${PYQT_QMLDIR}|' ${WRKSRC}/project.py
+	${REINPLACE_CMD} \
+		-e 's|%%PYQT_DESIGNERDIR%%|${PYQT_DESIGNERDIR}|' \
+		-e 's|%%PYQT_QMLDIR%%|${PYQT_QMLDIR}|' \
+		${WRKSRC}/project.py
 
 post-install:
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
