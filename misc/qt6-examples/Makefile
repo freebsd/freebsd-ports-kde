@@ -10,6 +10,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt 6 examples source code
 WWW=		https://www.qt.io/
 
+LICENSE=	BSD3CLAUSE
+
 USES=		qt:6 tar:xz
 USE_QT=		#
 
