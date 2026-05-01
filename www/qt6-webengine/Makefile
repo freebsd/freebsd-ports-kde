@@ -211,4 +211,46 @@ post-install-DRIVER-on:
 
 .endif
 
+# Update/create a mid-cycle security patch for the chromium sources.
+qtwebengine-create-security-patch:
+	@${ECHO_CMD} "===> Updating/creating mid-cycle security patch..."
+	@if ! command -v git >/dev/null 2>&1; then \
+	    ${ECHO_CMD} "ERROR: 'git' is not installed or not in PATH. Please install devel/git."; \
+	    exit 1; \
+	fi; \
+	${ECHO_CMD} "===>  Determining base qtwebengine-chromium submodule hash from qtwebengine tag v${DISTVERSION}..."; \
+	tmp_repo=$$(${MKTEMP} -d -t qtwebengine_repo); \
+	cd "$${tmp_repo}" && git init --quiet && \
+	git fetch --depth 1 --quiet https://code.qt.io/qt/qtwebengine.git "refs/tags/v${DISTVERSION}:refs/tags/v${DISTVERSION}" && \
+	base_hash=$$(git ls-tree refs/tags/v${DISTVERSION} src/3rdparty | ${AWK} '{print $$3}'); \
+	cd - >/dev/null; \
+	${RM} -rf "$${tmp_repo}"; \
+	if [ -z "$${base_hash}" ]; then \
+	    ${ECHO_CMD} "ERROR: Could not determine base qtwebegine-chromium submodule hash from qtwebengine tag v${DISTVERSION}."; \
+	    exit 1; \
+	fi; \
+	${ECHO_CMD} "===>  Using qtwebengine-chromium base hash: $${base_hash}"; \
+	${ECHO_CMD} "===>  Determining qtwebengine-chromium branch..."; \
+	chromium_major=$$(${FETCH_CMD} -q -o - "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/plain/chromium/chrome/VERSION?id=$${base_hash}" | ${AWK} -F= '/^MAJOR/ {print $$2}' | ${TR} -d '\r'); \
+	if [ -z "$${chromium_major}" ]; then \
+	    ${ECHO_CMD} "ERROR: Could not determine Chromium major version."; \
+	    exit 1; \
+	fi; \
+	chromium_branch="$${chromium_major}-based"; \
+	${ECHO_CMD} "===>  Using qtwebengine-chromium branch: $${chromium_branch}"; \
+	${ECHO_CMD} "===>  Fetching security rollup patch from $${base_hash} to $${chromium_branch}..."; \
+	tmp_patch=$$(${MKTEMP} -t qt_sec_patch); \
+	if ! ${FETCH_CMD} -o "$${tmp_patch}" "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/rawdiff/?id=$${chromium_branch}&id2=$${base_hash}" >/dev/null 2>&1; then \
+	    ${ECHO_CMD} "ERROR: Could not fetch diff from https://code.qt.io/cgit/."; \
+	    ${RM} -f "$${tmp_patch}"; \
+	    exit 1; \
+	fi; \
+	${ECHO_CMD} "===>  Formatting patch paths..."; \
+	${SED} -E \
+	    -e 's|^(--- )a/|\1src/3rdparty/|' \
+	    -e 's|^(\+\+\+ )b/|\1src/3rdparty/|' \
+	    "$${tmp_patch}" > ${.CURDIR}/files/patch-security-rollup; \
+	${RM} -f "$${tmp_patch}"; \
+	${ECHO_CMD} "===>  Updated ${FILESDIR}/patch-security-rollup"
+
 .include <bsd.port.mk>
