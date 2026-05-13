@@ -1,7 +1,7 @@
 PORTNAME=	mkr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.63.0
-PORTREVISION=	5
+DISTVERSION=	0.64.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	tagattie@FreeBSD.org
@@ -11,7 +11,7 @@ WWW=		https://github.com/mackerelio/mkr
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		go:modules
+USES=		go:1.26+,modules
 
 GO_MODULE=	github.com/mackerelio/mkr
 GO_BUILDFLAGS=	-ldflags="-s -w"

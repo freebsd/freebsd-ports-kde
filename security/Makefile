@@ -283,7 +283,6 @@
     SUBDIR += krb5-122
     SUBDIR += krb5-devel
     SUBDIR += kstart
-    SUBDIR += ktls_isa-l_crypto-kmod
     SUBDIR += kuku
     SUBDIR += kwalletmanager
     SUBDIR += l0pht-watch
@@ -457,7 +456,6 @@
     SUBDIR += openssl-oqsprovider
     SUBDIR += openssl-pkcs11provider
     SUBDIR += openssl-unsafe
-    SUBDIR += openssl111
     SUBDIR += openssl34
     SUBDIR += openssl35
     SUBDIR += openssl36
@@ -899,6 +897,7 @@
     SUBDIR += py-badkeys
     SUBDIR += py-base58
     SUBDIR += py-bcrypt
+    SUBDIR += py-biscuit-auth
     SUBDIR += py-bitbox02
     SUBDIR += py-blake3
     SUBDIR += py-btchip-python
@@ -1132,6 +1131,7 @@
     SUBDIR += ratify
     SUBDIR += ratproxy
     SUBDIR += rats
+    SUBDIR += rbw
     SUBDIR += rcracki_mt
     SUBDIR += rekor
     SUBDIR += reop

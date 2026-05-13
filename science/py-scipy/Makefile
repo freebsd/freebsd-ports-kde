@@ -1,6 +1,6 @@
 PORTNAME=	scipy
 DISTVERSION=	1.17.1
-PORTREVISION=	1
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	science python
 MASTER_SITES=	https://docs.scipy.org/doc/${PORTNAME}-1.17.0/:doc \
@@ -22,10 +22,10 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}meson-python>=0.15.0:devel/meson-python@${
 		${PYTHON_PKGNAMEPREFIX}pybind11>=2.13.2:devel/py-pybind11@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pythran>=0.14.0:devel/py-pythran@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/py-setuptools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=1.26.4:math/py-numpy1@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.26.4:math/py-numpy@${PY_FLAVOR} \
 		boost-libs>=1.89.0:devel/boost-libs
 LIB_DEPENDS=	libqhull_r.so:math/qhull
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.26.4:math/py-numpy1@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.26.4:math/py-numpy@${PY_FLAVOR}
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest-cov>0:devel/py-pytest-cov@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-timeout>0:devel/py-pytest-timeout@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-xdist>0:devel/py-pytest-xdist@${PY_FLAVOR} \
@@ -48,6 +48,7 @@ TEST_ARGS=	--pyargs scipy
 PYTEST_BROKEN_TESTS=	test_threading
 
 BINARY_ALIAS=	cython=cython-${PYTHON_VER} \
+		f2py=f2py-${PYTHON_VER} \
 		pybind11-config=pybind11-config-${PYTHON_VER} \
 		pythran=pythran-${PYTHON_VER}
 

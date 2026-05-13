@@ -65,6 +65,7 @@ bin/vlogscli
 %%PORTDOCS%%%%DOCSDIR%%/integrations/bindplane-library.webp
 %%PORTDOCS%%%%DOCSDIR%%/integrations/bindplane-pipelines.webp
 %%PORTDOCS%%%%DOCSDIR%%/integrations/bindplane.md
+%%PORTDOCS%%%%DOCSDIR%%/data-ingestion/Splunk.md
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_DATA%%
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_LOGS%%
 @dir(%%VICTORIA_USER%%,%%VICTORIA_GROUP%%,750) %%VICTORIA_RUN%%

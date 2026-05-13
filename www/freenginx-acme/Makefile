@@ -1,6 +1,5 @@
 PORTNAME=	acme
-DISTVERSION=	0.3.1
-PORTREVISION=	7
+DISTVERSION=	0.4.1
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/nginx/nginx-${PORTNAME}/releases/download/v${PORTVERSION}/:acme \
 		https://freenginx.org/download/:freenginx

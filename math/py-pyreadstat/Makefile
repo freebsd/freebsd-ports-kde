@@ -1,5 +1,5 @@
 PORTNAME=	pyreadstat
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.4
 PORTREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	PYPI
@@ -16,9 +16,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}narwhals>=2.10.1:math/py-narwhals@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=0:math/py-numpy1@${PY_FLAVOR}
+		${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
 
-USES=		python
+USES=		iconv python
 USE_PYTHON=	autoplist concurrent cython pep517
 
 post-install:

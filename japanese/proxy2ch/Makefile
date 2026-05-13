@@ -1,7 +1,7 @@
 PORTNAME=	proxy2ch
-DISTVERSION=	20260306
+DISTVERSION=	20260418
 CATEGORIES=	japanese www
-MASTER_SITES=	https://codeberg.org/NanashiNoGombe/${PORTNAME}/archive/v${DISTVERSION}-snapshot${EXTRACT_SUFX}?dummy=/
+MASTER_SITES=	https://codeberg.org/NanashiNoGombe/${PORTNAME}/archive/v${DISTVERSION}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	mce@FreeBSD.org
 COMMENT=	Proxy server for 5ch.io, bbspink.com and talk.jp

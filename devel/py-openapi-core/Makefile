@@ -1,5 +1,6 @@
 PORTNAME=	openapi-core
-PORTVERSION=	0.23.0
+PORTVERSION=	0.23.1
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}isodate>=0:devel/py-isodate@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema>=4.23.0<5:devel/py-jsonschema@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}jsonschema-path>=0.4.5<0.5:devel/py-jsonschema-path@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}more-itertools>=0:devel/py-more-itertools@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}openapi-schema-validator>=0.7.0<0.9.0:devel/py-openapi-schema-validator@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}openapi-schema-validator>=0.7.0<0.10.0:devel/py-openapi-schema-validator@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}openapi-spec-validator>=0.8.0<0.9:devel/py-openapi-spec-validator@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}typing-extensions>=4.8.0<5:devel/py-typing-extensions@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}werkzeug>=2.1.0:www/py-werkzeug@${PY_FLAVOR}
@@ -42,10 +43,10 @@ AIOHTTP_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aiohttp>=3.0:www/py-aiohttp@${PY_FLA
 DJANGO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django42>=4.0:www/py-django42@${PY_FLAVOR}
 FALCON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}falcon>=4.0:www/py-falcon@${PY_FLAVOR}
 FASTAPI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aioitertools>=0.11<0.14:devel/py-aioitertools@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}fastapi>=0.111<0.13.0:www/py-fastapi@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}fastapi>=0.111<0.140:www/py-fastapi@${PY_FLAVOR}
 FLASK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}flask>=2.0:www/py-flask@${PY_FLAVOR}
 REQUESTS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR}
 STARLETTE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aioitertools>=0.11<0.14:devel/py-aioitertools@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}starlette>=0.40.0<0.60.0:www/py-starlette@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}starlette>=0.40.0<1.1.0:www/py-starlette@${PY_FLAVOR}
 
 .include <bsd.port.mk>

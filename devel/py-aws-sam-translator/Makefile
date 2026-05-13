@@ -1,5 +1,5 @@
 PORTNAME=	aws-sam-translator
-DISTVERSION=	1.108.0
+DISTVERSION=	1.109.0
 CATEGORIES=	devel python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,5 +24,6 @@ USES=		python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
+NO_TEST=	yes
 
 .include <bsd.port.mk>

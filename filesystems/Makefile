@@ -3,6 +3,7 @@
     SUBDIR += R-cran-fs
     SUBDIR += acfgfs
     SUBDIR += afuse
+    SUBDIR += amazon-efs-utils
     SUBDIR += archivemount
     SUBDIR += automount
     SUBDIR += avfs
@@ -97,6 +98,7 @@
     SUBDIR += py-fsspec-xrootd
     SUBDIR += py-fusepy
     SUBDIR += py-gcsfs
+    SUBDIR += py-ioztat
     SUBDIR += py-kerchunk
     SUBDIR += py-libzfs
     SUBDIR += py-llfuse

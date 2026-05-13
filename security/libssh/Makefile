@@ -3,7 +3,7 @@ PORTVERSION=	0.12.0
 PORTREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.libssh.org/files/${PORTVERSION:R}/ \
-		https://ftp.openbsd.org/pub/OpenBSD/distfiles/
+		LOCAL/sunpoet
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Library implementing the SSH2 protocol

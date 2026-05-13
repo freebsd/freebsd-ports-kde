@@ -22,7 +22,7 @@ LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg \
 		libopenshot-audio.so:audio/libopenshot-audio \
 		libzmq.so:net/libzmq4
 
-USES=		cmake pkgconfig python qt:5
+USES=		cmake compiler:c++17-lang pkgconfig python qt:5
 USE_GITHUB=	yes
 GH_ACCOUNT=	OpenShot
 USE_LDCONFIG=	yes
@@ -67,9 +67,7 @@ RUBY_CMAKE_BOOL=	ENABLE_RUBY
 RUBY_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_Ruby
 
 .if !exists(/usr/include/omp.h)
-USES+=		compiler:gcc-c++17-lib
-.else
-USES+=		compiler:c++17-lang
+USE_GCC=		yes
 .endif
 
 .include <bsd.port.mk>

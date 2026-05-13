@@ -1,3 +1,3 @@
-TIMESTAMP = 1775927429
-SHA256 (containers-skopeo-v1.22.1_GH0.tar.gz) = b4db7a6afc7ad07d4880ea425dd5ad26b6cf29b9a65bf94145e7568f34b95f23
-SIZE (containers-skopeo-v1.22.1_GH0.tar.gz) = 10323947
+TIMESTAMP = 1776198487
+SHA256 (containers-skopeo-v1.22.2_GH0.tar.gz) = b6e1f208c1048f7a80613e8154774e6a3fdc891aeb45325c8ed905be4dee48d8
+SIZE (containers-skopeo-v1.22.2_GH0.tar.gz) = 10327855

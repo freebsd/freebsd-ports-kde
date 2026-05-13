@@ -1,7 +1,7 @@
 PORTNAME=	appstream-generator
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.10.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	ports-mgmt
 MASTER_SITES=	LOCAL/arrowd/:assets
 DISTFILES=	${_ASSETS_DISTNAME}${EXTRACT_SUFX}:assets
@@ -61,7 +61,9 @@ post-patch:
 post-install:
 	cd ${WRKSRC}/data && \
 		${COPYTREE_SHARE} templates ${STAGEDIR}${DATADIR}
-	${INSTALL_SCRIPT} ${PATCHDIR}/poudriere-hook-bulk.sh ${STAGEDIR}${DATADIR}
+	@${MKDIR} -p ${STAGEDIR}${PREFIX}/etc/poudriere.d/hooks
+	${INSTALL_SCRIPT} ${PATCHDIR}/poudriere-hook-bulk.sh \
+		${STAGEDIR}${PREFIX}/etc/poudriere.d/hooks/appstream-post-bulk.sh.sample
 
 repackage-js:
 	pkg info npm > /dev/null

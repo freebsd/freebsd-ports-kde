@@ -1,6 +1,5 @@
 PORTNAME=	orderless.el
-DISTVERSION=	1.5
-PORTREVISION=	2
+DISTVERSION=	1.6
 CATEGORIES=	editors elisp
 
 MAINTAINER=	pat@patmaddox.com

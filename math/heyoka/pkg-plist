@@ -7,6 +7,7 @@ include/heyoka/detail/aligned_vector.hpp
 include/heyoka/detail/analytical_theories_helpers.hpp
 include/heyoka/detail/binomial.hpp
 include/heyoka/detail/cm_utils.hpp
+include/heyoka/detail/composite_function.hpp
 include/heyoka/detail/debug.hpp
 include/heyoka/detail/dfloat.hpp
 include/heyoka/detail/div.hpp
@@ -103,6 +104,7 @@ include/heyoka/kw.hpp
 include/heyoka/lagrangian.hpp
 include/heyoka/llvm_state.hpp
 include/heyoka/logging.hpp
+include/heyoka/make_optional.hpp
 include/heyoka/math.hpp
 include/heyoka/math/acos.hpp
 include/heyoka/math/acosh.hpp
@@ -141,12 +143,14 @@ include/heyoka/model/cr3bp.hpp
 include/heyoka/model/dayfrac.hpp
 include/heyoka/model/egm2008.hpp
 include/heyoka/model/elp2000.hpp
+include/heyoka/model/eo_dynamics.hpp
 include/heyoka/model/eop.hpp
 include/heyoka/model/ffnn.hpp
 include/heyoka/model/fixed_centres.hpp
 include/heyoka/model/frame_transformations.hpp
 include/heyoka/model/iau2006.hpp
 include/heyoka/model/jb08_tn.hpp
+include/heyoka/model/lagrange_prop.hpp
 include/heyoka/model/mascon.hpp
 include/heyoka/model/nbody.hpp
 include/heyoka/model/nrlmsise00_tn.hpp
@@ -171,5 +175,5 @@ lib/cmake/heyoka/heyoka-config.cmake
 lib/cmake/heyoka/heyoka_export-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/heyoka/heyoka_export.cmake
 lib/libheyoka.so
-lib/libheyoka.so.42
-lib/libheyoka.so.42.0
+lib/libheyoka.so.43
+lib/libheyoka.so.43.0

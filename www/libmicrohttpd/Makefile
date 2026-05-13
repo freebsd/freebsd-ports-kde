@@ -1,5 +1,5 @@
 PORTNAME=	libmicrohttpd
-DISTVERSION=	1.0.4
+DISTVERSION=	1.0.5
 CATEGORIES=	www
 MASTER_SITES=	GNU
 
@@ -10,7 +10,7 @@ WWW=		https://www.gnu.org/software/libmicrohttpd/
 LICENSE=	LGPL21+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe libtool localbase pathfix
+USES=		cpe libtool localbase pathfix pkgconfig
 USE_LDCONFIG=	yes
 CPE_VENDOR=	gnu
 

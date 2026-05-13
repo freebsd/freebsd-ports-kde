@@ -1,6 +1,6 @@
---- crates/fs/tests/integration/fs.rs.orig	2026-03-26 12:08:08 UTC
+--- crates/fs/tests/integration/fs.rs.orig	2026-04-23 01:03:50 UTC
 +++ crates/fs/tests/integration/fs.rs
-@@ -528,7 +528,12 @@ async fn test_rename(executor: BackgroundExecutor) {
+@@ -529,7 +529,12 @@ async fn test_rename(executor: BackgroundExecutor) {
  }
  
  #[gpui::test]
@@ -14,7 +14,7 @@
  async fn test_realfs_parallel_rename_without_overwrite_preserves_losing_source(
      executor: BackgroundExecutor,
  ) {
-@@ -556,7 +561,12 @@ async fn test_realfs_parallel_rename_without_overwrite
+@@ -557,7 +562,12 @@ async fn test_realfs_parallel_rename_without_overwrite
  }
  
  #[gpui::test]

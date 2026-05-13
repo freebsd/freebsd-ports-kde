@@ -1,10 +1,9 @@
 PORTNAME=	pg.el
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.63
-PORTREVISION=	1
+DISTVERSION=	0.65
 CATEGORIES=	databases elisp
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	PostgreSQL Elisp interface
 WWW=		https://github.com/emarsden/pg-el
 

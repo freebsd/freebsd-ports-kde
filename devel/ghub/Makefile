@@ -1,7 +1,6 @@
 PORTNAME=	ghub
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.0.2
-PORTREVISION=	1
+DISTVERSION=	5.1.0
 CATEGORIES=	devel elisp
 
 MAINTAINER=	jrm@FreeBSD.org
@@ -11,20 +10,16 @@ WWW=		https://github.com/magit/ghub
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el \
-		llama.el>=1.0:devel/llama.el \
-		treepy.el>=0.1.2:devel/treepy.el
 RUN_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el \
+		cond-let>0.2:devel/cond-let \
 		llama.el>=1.0:devel/llama.el \
-		treepy.el>=0.1.2:devel/treepy.el
+		treepy.el>=0.1.3:devel/treepy.el
 
 USES=		emacs:build gmake makeinfo
 USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
 MAKE_ARGS=	LOAD_PATH=" -L ${PREFIX}/${EMACS_SITE_LISPDIR} -L ${PREFIX}/${EMACS_SITE_LISPDIR}/compat -L ."
-MAKE_JOBS_UNSAFE=	yes
-ALL_TARGET=	lisp info
 
 CONFLICTS_INSTALL=	ghub-emacs_*
 
@@ -38,15 +33,23 @@ OPTIONS_DEFINE=	DOCS PDF
 PDF_DESC=	Build and install PDF document
 
 DOCS_BUILD_DEPENDS=	gsed:textproc/gsed
-DOCS_ALL_TARGET=	html
 DOCS_BINARY_ALIAS=	sed=gsed
 PDF_BUILD_DEPENDS=	texi2pdf:print/texinfo
 PDF_USES=		tex
 PDF_USE=		TEX=dvipdfmx:build
-PDF_ALL_TARGET=		pdf
 PDF_PLIST_FILES=	${DOCSDIR}/ghub.pdf
 
 ELISP_FILES=	ghub-autoloads.el ghub-graphql.el ghub-legacy.el ghub.el gsexp.el
+
+do-build:
+	cd ${WRKSRC} && ${MAKE_CMD} info
+	cd ${WRKSRC}/lisp && ${MAKE_CMD} autoloads
+
+do-build-DOCS-on:
+	cd ${WRKSRC} && SED=gsed ${MAKE_CMD} html
+
+do-build-PDF-on:
+	cd ${WRKSRC} && ${MAKE_CMD} pdf
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}

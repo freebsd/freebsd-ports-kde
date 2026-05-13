@@ -1,5 +1,5 @@
 PORTNAME=	ejabberd
-PORTVERSION=	26.03
+PORTVERSION=	26.04
 CATEGORIES=	net-im
 MASTER_SITES=	https://code.jquery.com/:jquery \
 		https://github.com/twbs/bootstrap/releases/download/v5.3.8/:bootstrap
@@ -107,7 +107,7 @@ EREDIS_VER=	1.2.0
 ESIP_VER=	1.0.60
 EZLIB_VER=	1.0.16
 FAST_TLS_VER=	1.1.26
-FAST_XML_VER=	1.1.58
+FAST_XML_VER=	1.1.60
 FAST_YAML_VER=	1.0.40
 IDNA_VER=	7.1.0
 JIFFY_VER=	1.1.1
@@ -123,7 +123,7 @@ PKIX_VER=	1.0.10
 SQLITE3_VER=	1.1.15
 STRINGPREP_VER=	1.0.34
 STUN_VER=	1.2.22
-XMPP_VER=	1.13.1
+XMPP_VER=	1.13.3
 YCONF_VER=	1.0.23
 ERLYDTL_VER=	0.15.0
 JQUERY_VER=	4.0.0
@@ -173,13 +173,11 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^AC_INIT(ejabberd,/s,m4_esyscmd([^)]*),${PORTVERSION},' \
 			${WRKSRC}/configure.ac
 	@${REINPLACE_CMD} -e 's,/bin/bash,/bin/sh,' \
-		-e 's,^jquery=.*$$,jquery=${WRKSRC}/jquery-${JQUERY_VER}.min.js,' \
 		-e 's,^bootstrap=.*$$,bootstrap=${WRKSRC}/bootstrap-${BOOTSTRAP_VER}-dist.zip,' \
+		-e 's,sha256sum -c -,sha256sum -c /dev/stdin,' \
 		-e '/^curl/d' \
 		${WRKSRC}/tools/dl_invites_page_deps.sh
-.for F in jquery-${JQUERY_VER}.min.js bootstrap-${BOOTSTRAP_VER}-dist.zip
-	@${CP} ${DISTDIR}/${F} ${WRKSRC}/${F}
-.endfor
+	@${CP} ${DISTDIR}/bootstrap-${BOOTSTRAP_VER}-dist.zip ${WRKSRC}/
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh

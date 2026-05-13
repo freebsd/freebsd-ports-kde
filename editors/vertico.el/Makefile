@@ -1,6 +1,5 @@
 PORTNAME=	vertico.el
-DISTVERSION=	2.5
-PORTREVISION=	2
+DISTVERSION=	2.7
 CATEGORIES=	editors elisp
 
 MAINTAINER=	pat@patmaddox.com

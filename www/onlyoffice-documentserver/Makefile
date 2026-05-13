@@ -1,12 +1,14 @@
 PORTNAME=	onlyoffice-documentserver
 DISTVERSIONPREFIX=	v
 DISTVERSION=	9.3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	LOCAL/mikael/v8/:source1 \
-		https://nodejs.org/dist/v${_PKGFETCH_NODE_VERSION}/:source2
+		https://nodejs.org/dist/v${_PKGFETCH_NODE_VERSION}/:source2 \
+		https://github.com/fsbruva/onlyoffice-DS-npm-cache/releases/download/${_NPM_CACHE_TAG}/:source3
 DISTFILES+=	v8-8.9.255.25_all.tar.gz:source1 \
-		node-v${_PKGFETCH_NODE_VERSION}.tar.gz:source2
+		node-v${_PKGFETCH_NODE_VERSION}.tar.gz:source2 \
+		onlyoffice-DS-npm-cache-${_NPM_CACHE_TAG}.tar.gz:source3
 
 MAINTAINER=	fsbruva@yahoo.com
 COMMENT=	Secure office and productivity apps
@@ -18,13 +20,15 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	Upstream only supports amd64 and arm64
 
-# node version used with "npm install @yao-pkg/pkg@6.14.1"
-# keep in sync with patch-build__tools_scripts_build__server.py and patch-document-server-package_Makefile
+# node version used with "npm install" inside ${WRKSRC}/yao-pkg
+# kept in sync with patch-build__tools_scripts_build__server.py and patch-document-server-package_Makefile
 _DS_BUILD=		8
-_DS_SHARP_VER=		0.32.6
-_PKGFETCH_NODE_VERSION=	20.20.0
-_YAOPKG_VER=		6.14.1
+_PKGFETCH_NODE_VERSION=	24.14.1
+_NPM_CACHE_TAG= ${_DS_TAGNAME}-202604230220
+# end of cache build config
+
 _NODE_DISTFILE=	node-v${_PKGFETCH_NODE_VERSION}.tar.gz
+WRKSRC_npm_cache= ${WRKDIR}/onlyoffice-DS-npm-cache-${_NPM_CACHE_TAG}
 
 # Map FreeBSD ARCH to the node/sharp platform-arch suffix
 .if ${MACHINE_ARCH} == aarch64
@@ -41,10 +45,9 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Jinja2>=0:devel/py-Jinja2@${PY_FLAVOR} \
 		glib>=2.54:devel/glib20 \
 		gn:devel/gn \
 		ninja:devel/ninja \
-		npm:www/npm-node20 \
+		npm:www/npm-node24 \
 		optipng:graphics/optipng
 
-# Need libvips because npm module sharp requires it on Unix OS's
 LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 		libbrotlicommon.so:archivers/brotli \
 		libbrotlidec.so:archivers/brotli \
@@ -95,8 +98,7 @@ GH_TUPLE=	ONLYOFFICE:build_tools:${_DS_TAGNAME}:buildtools/build_tools \
 		ONLYOFFICE:DocumentBuilder:626d1e44db3d06ceb8298215a67ef0475912d89a:document_builder/DocumentBuilder \
 		ONLYOFFICE:onlyoffice.github.io:b26d001664d771df4f663d2d3ba7dd4a188b6cab:sdkjs_plugins_v1/onlyoffice.github.io \
 		jasenhuang:katana-parser:be6df45:jasenhuang_katana/core/Common/3dParty/html/katana-parser \
-		hunspell:hyphen:73dd296:hunspell_hyphen/core/Common/3dParty/hyphen/hyphen \
-		fsbruva:onlyoffice-DS-npm-cache:${_DS_TAGNAME}-202603231741-prodmatch:npm_cache
+		hunspell:hyphen:73dd296:hunspell_hyphen/core/Common/3dParty/hyphen/hyphen
 
 JAVA_VERSION=	11+
 
@@ -106,6 +108,7 @@ USE_QT=		qmake:build
 MAKE_ENV=	BUILD_NUMBER=${_DS_BUILD} \
 		npm_package_config_node_gyp_nodedir=${LOCALBASE} \
 		npm_package_config_node_gyp_python=${PYTHON_CMD} \
+		NODE_OPTIONS=--max-old-space-size=3072 \
 		PKG_BUILD_PATH=${WRKDIR}/.pkg-build \
 		PKG_CACHE_PATH=${WRKDIR}/.pkg-cache \
 		PRODUCT_VERSION=${DISTVERSION} \
@@ -114,8 +117,6 @@ MAKE_ENV=	BUILD_NUMBER=${_DS_BUILD} \
 # Don't create __pycache__ directory when executing node-gyp
 # This is a workaround to avoid filesystem violations during poudriere build
 MAKE_ENV+=	PYTHONDONTWRITEBYTECODE=1
-
-CONFLICTS_BUILD=	devel/googletest
 
 # do not strip docservice, converter, metrics and json
 STRIP=
@@ -271,17 +272,20 @@ do-build:
 	@cd ${WRKSRC}/server/DocService ; node_modules/.bin/patch-package
 	@cd ${WRKSRC}/server/DocService/node_modules/sharp ; ${SETENV} ${MAKE_ENV} NODE_ENV=production npm run install
 
+	# Install Metrics dependencies and patch statsd for Node 24 compatibility
+	# (util.log was removed in Node 23; patch replaces it with console.log)
+	@cd ${WRKSRC}/server/Metrics ; ${SETENV} ${MAKE_ENV} NODE_ENV=production npm install --ignore-scripts
+	@cd ${WRKSRC}/server/Metrics ; node_modules/.bin/patch-package
+
 	@${MKDIR} ${WRKSRC}/yao-pkg
 	@${CP} ${WRKSRC_npm_cache}/yao-pkg-package.json      ${WRKSRC}/yao-pkg/package.json
-	@${CP} ${WRKSRC_npm_cache}/yao-pkg-package-lock.json ${WRKSRC}/yao-pkg/package-lock.json
-	@cd ${WRKSRC}/yao-pkg ; ${SETENV} ${MAKE_ENV} npm install @yao-pkg/pkg@${_YAOPKG_VER}
+	@${CP} ${WRKSRC_npm_cache}/yao-pkg-npm-shrinkwrap-${MACHINE_ARCH}.json ${WRKSRC}/yao-pkg/npm-shrinkwrap.json
+	@cd ${WRKSRC}/yao-pkg ; ${SETENV} ${MAKE_ENV} npm install
 
 	@cd ${WRKSRC} && ${PATCH} -N -s -i ${FILESDIR}/extra-patch-pkg-fetch_lib-es5_build.js || ${TRUE}
 	@cd ${WRKSRC} && ${PATCH} -N -s -i ${WRKSRC_npm_cache}/extra-patch-pkg-fetch_patches_node.v${_PKGFETCH_NODE_VERSION}.cpp.patch || ${TRUE}
 
 	cd ${WRKSRC}/build_tools/tools/freebsd ; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} automate.py
-
-# Warning regarding missing modern-syslog is harmless - unused syslog backend of statsd requires it
 	cd ${WRKSRC}/document-server-package ; ${SETENV} ${MAKE_ENV} ${GMAKE} freebsd
 
 do-install:

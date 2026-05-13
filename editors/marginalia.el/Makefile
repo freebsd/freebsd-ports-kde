@@ -1,6 +1,5 @@
 PORTNAME=	marginalia.el
-DISTVERSION=	2.4
-PORTREVISION=	2
+DISTVERSION=	2.9
 CATEGORIES=	editors elisp
 
 MAINTAINER=	pat@patmaddox.com

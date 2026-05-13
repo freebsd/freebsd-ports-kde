@@ -1,7 +1,7 @@
 PORTNAME=	hyprland
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.54.3
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	x11-wm wayland
 MASTER_SITES=	https://github.com/hyprwm/Hyprland/releases/download/${DISTVERSIONFULL}/
 DISTNAME=	source-${DISTVERSIONFULL}
@@ -48,12 +48,6 @@ LDFLAGS+=	-Wl,--as-needed # GL, pango deps
 LDFLAGS+=	-pthread
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-source
-
-# XXX Drop after FreeBSD 13.5 EOL around 2026-04-30
-# https://cgit.freebsd.org/src/commit/?id=af93fea71038
-.if !exists(/usr/include/sys/timerfd.h)
-LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
-.endif
 
 # XXX Drop after FreeBSD 14.* EOL around 2028-11-30
 # https://cgit.freebsd.org/src/commit/?id=3965de642c29

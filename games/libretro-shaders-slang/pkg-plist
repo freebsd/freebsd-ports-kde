@@ -1070,11 +1070,8 @@
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/monitor-slotmask-bloom.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/monitor-slotmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-BASE.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-1-classic_take.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-1-selective-classic_take.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-1-selective.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-1.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-2.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-Generic.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-NTSC-Megadrive-Genesis.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-PAL-my-old.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-aperturegrille-bloom-bezel.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-4.1/tv-aperturegrille-bloom-bezelwider.slangp
@@ -1094,9 +1091,9 @@
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-FXAA_sharp-aperturegrille.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-New_slotmask_gm.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-New_slotmask_rgb.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Aperturegrille-Overmask-IntegerScaling.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Aperturegrille-Overmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Aperturegrille.slangp
-%%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Core_SlotMask-Overmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Core_SlotMask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Screen_SlotMask-Chameleon.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-Screen_Hmask-Screen_SlotMask.slangp
@@ -1110,6 +1107,8 @@
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-for_HigherNits.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-slotmask-TVL410.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/Monitor-slotmask-TVL500-for_1080p.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-ng/TV/Tv-NTSC-Generic.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-ng/TV/Tv-NTSC-Megadrive-Genesis.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/TV/Tv-NTSC_Generic-AA_sharp-Selective.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/TV/Tv-NTSC_Megadrive-AA_sharp-Selective.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/VGA/Monitor-VGA-DoubleScan-Amber.slangp
@@ -1119,6 +1118,7 @@
 %%DATADIR%%/bezel/koko-aio/Presets-ng/VGA/Monitor-VGA-DoubleScan.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/VectorGFX/Vector_neon_4_mame2003plus_defaults.slangp
 %%DATADIR%%/bezel/koko-aio/Presets-ng/VectorGFX/Vector_std_4_mame2003plus_defaults.slangp
+%%DATADIR%%/bezel/koko-aio/Presets-ng/VectorGFX/test.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/Dots-sharp_4-3.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/Dots_1-1.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/Dots_4-3.slangp
@@ -1148,6 +1148,7 @@
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/PSP-Overlay-Night-Small-Y_flip.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/PSP-Overlay-Night-Small.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/PSP.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_Handhelds-ng/VirtualBoy.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/FXAA-bloom-immersive.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/FXAA-bloom.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/clean-scanlines-classic_take.slangp
@@ -1167,11 +1168,8 @@
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/monitor-slotmask-bloom.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/monitor-slotmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-BASE.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-1-classic_take.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-1-selective-classic_take.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-1-selective.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-1.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-2.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-Generic.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-NTSC-Megadrive-Genesis.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-PAL-my-old.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-aperturegrille-bloom-bezel.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-4.1/tv-aperturegrille-bloom-bezelwider.slangp
@@ -1191,9 +1189,9 @@
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-FXAA_sharp-aperturegrille.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-New_slotmask_gm.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-New_slotmask_rgb.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Aperturegrille-Overmask-IntegerScaling.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Aperturegrille-Overmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Aperturegrille.slangp
-%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Core_SlotMask-Overmask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Core_SlotMask.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Screen_SlotMask-Chameleon.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-Screen_Hmask-Screen_SlotMask.slangp
@@ -1207,6 +1205,8 @@
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-for_HigherNits.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-slotmask-TVL410.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/Monitor-slotmask-TVL500-for_1080p.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/TV/Tv-NTSC-Generic.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/TV/Tv-NTSC-Megadrive-Genesis.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/TV/Tv-NTSC_Generic-AA_sharp-Selective.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/TV/Tv-NTSC_Megadrive-AA_sharp-Selective.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/Presets-ng/VGA/Monitor-VGA-DoubleScan-Amber.slangp
@@ -1224,15 +1224,15 @@
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/koko-aio-ng.slangp
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/readme.txt
 %%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/refs/bezel-dark.slangp
+%%DATADIR%%/bezel/koko-aio/Presets_HiresGames_Fast/refs/deconvergence-std.slangp
 %%DATADIR%%/bezel/koko-aio/config/config-static.inc
 %%DATADIR%%/bezel/koko-aio/config/config-user-optional-template.txt
-%%DATADIR%%/bezel/koko-aio/config/config-user-optional.txt
-%%DATADIR%%/bezel/koko-aio/config/config-user-optional.txt.bak
 %%DATADIR%%/bezel/koko-aio/config/config-user.txt
 %%DATADIR%%/bezel/koko-aio/docs-ng.md
 %%DATADIR%%/bezel/koko-aio/koko-aio-ng-DMG.slangp
 %%DATADIR%%/bezel/koko-aio/koko-aio-ng.slangp
 %%DATADIR%%/bezel/koko-aio/refs/bezel-dark.slangp
+%%DATADIR%%/bezel/koko-aio/refs/deconvergence-std.slangp
 %%DATADIR%%/bezel/koko-aio/shaders-ng/ambi_temporal_pass.slang
 %%DATADIR%%/bezel/koko-aio/shaders-ng/avglum_pass.slang
 %%DATADIR%%/bezel/koko-aio/shaders-ng/bloom_pass_1.slang
@@ -2519,6 +2519,7 @@
 %%DATADIR%%/crt/crt-effects/raster_bloom.slangp
 %%DATADIR%%/crt/crt-effects/ray_traced_curvature.slangp
 %%DATADIR%%/crt/crt-effects/ray_traced_curvature_append.slangp
+%%DATADIR%%/crt/crt-effects/royale-curve-append.slangp
 %%DATADIR%%/crt/crt-effects/shaders/analog-service-menu.slang
 %%DATADIR%%/crt/crt-effects/shaders/crt-black-crush-koko/crt-black_crush-koko.slang
 %%DATADIR%%/crt/crt-effects/shaders/crt-black-crush-koko/crt-black_crush_avglum-koko.slang
@@ -2540,6 +2541,7 @@
 %%DATADIR%%/crt/crt-effects/shaders/phosphorlut/scanlines-interlace-linearize.slang
 %%DATADIR%%/crt/crt-effects/shaders/raster_bloom/avg-lum.slang
 %%DATADIR%%/crt/crt-effects/shaders/raster_bloom/raster_bloom.slang
+%%DATADIR%%/crt/crt-effects/shaders/royale-curve-append.slang
 %%DATADIR%%/crt/crt-effects/shaders/rt_curvature/parameters.inc
 %%DATADIR%%/crt/crt-effects/shaders/rt_curvature/rt_curvature.slang
 %%DATADIR%%/crt/crt-effects/shaders/rt_curvature/shared.inc
@@ -2611,6 +2613,7 @@
 %%DATADIR%%/crt/lottesRVM.slangp
 %%DATADIR%%/crt/mame_hlsl.slangp
 %%DATADIR%%/crt/metacrt.slangp
+%%DATADIR%%/crt/monoCRT.slangp
 %%DATADIR%%/crt/newpixie-crt.slangp
 %%DATADIR%%/crt/newpixie-mini.slangp
 %%DATADIR%%/crt/shaders/Advanced_CRT_shader_whkrmrgks0.slang
@@ -3069,6 +3072,7 @@
 %%DATADIR%%/crt/shaders/metacrt/gradient.png
 %%DATADIR%%/crt/shaders/metacrt/woodgrain.png
 %%DATADIR%%/crt/shaders/moire-resolve.slang
+%%DATADIR%%/crt/shaders/monoCRT.slang
 %%DATADIR%%/crt/shaders/newpixie-mini/newpixie-mini.slang
 %%DATADIR%%/crt/shaders/newpixie/accumulate.slang
 %%DATADIR%%/crt/shaders/newpixie/blur_horiz.slang
@@ -3265,6 +3269,69 @@
 %%DATADIR%%/downsample/shaders/mixed-res/multiLUT-modified.slang
 %%DATADIR%%/downsample/shaders/mixed-res/output.slang
 %%DATADIR%%/downsample/shaders/mixed-res/support/fxaa-plus-alpha.slang
+%%DATADIR%%/edge-smoothing/artcnn/LICENSE
+%%DATADIR%%/edge-smoothing/artcnn/README.md
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f16-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f16-dn-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f16-ds-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f32-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f32-dn-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/artcnn-c4f32-ds-2x-luma.slangp
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-dn-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f16-ds-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-dn-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-1.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-2.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-3.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-4.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-5.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d-6.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-conv2d.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-c4f32-ds-depth-to-space.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-color-common.inc
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-common.inc
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-header-common.inc
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-jinc-math.inc
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-jinc2-on-yuv.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-rgb-to-yuv.slang
+%%DATADIR%%/edge-smoothing/artcnn/shaders/artcnn-yuv-to-rgb-2x.slang
 %%DATADIR%%/edge-smoothing/cleanEdge/cleanEdge-scale.slangp
 %%DATADIR%%/edge-smoothing/cleanEdge/shaders/cleanEdge-scale.slang
 %%DATADIR%%/edge-smoothing/ddt/3-point.slangp
@@ -3342,22 +3409,28 @@
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/jinc2-cshift-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/jinc2-on-passoutput0.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/jinc2-on-passoutput3.slang
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-common.inc
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns128-win8x4-kernel.inc
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns128-win8x4-pass1-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns128-win8x4-pass1-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns128-win8x4-pass2-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns128-win8x4-pass2-rgb.slang
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns16-win8x4-kernel.inc
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns16-win8x4-pass1-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns16-win8x4-pass1-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns16-win8x4-pass2-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns16-win8x4-pass2-rgb.slang
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns256-win8x4-kernel.inc
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns256-win8x4-pass1-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns256-win8x4-pass1-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns256-win8x4-pass2-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns256-win8x4-pass2-rgb.slang
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns32-win8x4-kernel.inc
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns32-win8x4-pass1-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns32-win8x4-pass1-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns32-win8x4-pass2-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns32-win8x4-pass2-rgb.slang
+%%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns64-win8x4-kernel.inc
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns64-win8x4-pass1-luma.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns64-win8x4-pass1-rgb.slang
 %%DATADIR%%/edge-smoothing/nnedi3/shaders/nnedi3-nns64-win8x4-pass2-luma.slang
@@ -4077,6 +4150,8 @@
 %%DATADIR%%/nes_raw_palette/shaders/nes-color-decoder.slang
 %%DATADIR%%/ntsc/artifact-colors.slangp
 %%DATADIR%%/ntsc/blargg.slangp
+%%DATADIR%%/ntsc/decoupled-guest-advanced-ntsc 0-Svideo.slangp
+%%DATADIR%%/ntsc/decoupled-guest-advanced-ntsc 2-RF.slangp
 %%DATADIR%%/ntsc/mame-ntsc.slangp
 %%DATADIR%%/ntsc/ntsc-256px-composite-scanline.slangp
 %%DATADIR%%/ntsc/ntsc-256px-composite.slangp
@@ -4105,6 +4180,25 @@
 %%DATADIR%%/ntsc/shaders/blargg/blargg-0.slang
 %%DATADIR%%/ntsc/shaders/blargg/blargg-1.slang
 %%DATADIR%%/ntsc/shaders/blargg/blargg_params.inc
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/afterglow0.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/crt-guest-advanced-ntsc-pass1.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/custom-fast-sharpen.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/interlace-ntsc.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/linearize-ntsc-new.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/lut/inv-trinitron-lut.png
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/lut/nec-lut.png
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/lut/ntsc-lut.png
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/lut/trinitron-lut.png
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/ntsc/ntsc-pass1.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/ntsc/ntsc-pass2.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/ntsc/ntsc-pass3.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/advanced/pre-shaders-afterglow-sega.slang
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-ntsc 1-Composite.slangp
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-ntsc 3.slangp
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-ntsc 4.slangp
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-ntsc 5.slangp
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-ntsc Guest-Defaults.slangp
+%%DATADIR%%/ntsc/shaders/decoupled-guest/decoupled-guest-advanced-readme.md
 %%DATADIR%%/ntsc/shaders/maister/ntsc-decode-filter-2phase.inc
 %%DATADIR%%/ntsc/shaders/maister/ntsc-decode-filter-3phase.inc
 %%DATADIR%%/ntsc/shaders/maister/ntsc-gauss-pass.slang
@@ -4164,10 +4258,37 @@
 %%DATADIR%%/ntsc/shaders/patchy-ntsc/patchy-ntsc-separate-y-c.slang
 %%DATADIR%%/ntsc/shaders/patchy-ntsc/trilinearLUT-switchable.slang
 %%DATADIR%%/ntsc/tiny_ntsc.slangp
+%%DATADIR%%/pal/decoupled-guest-advanced-pal 0-SCART.slangp
+%%DATADIR%%/pal/decoupled-guest-advanced-pal 3-RF.slangp
 %%DATADIR%%/pal/pal-r57shell-moire-only.slangp
 %%DATADIR%%/pal/pal-r57shell.slangp
 %%DATADIR%%/pal/pal-singlepass.slangp
 %%DATADIR%%/pal/resources/nes_lut.png
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/afterglow0.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/crt-guest-advanced-ntsc-pass1.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/custom-fast-sharpen-pal.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/interlace-ntsc.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/linearize-ntsc-new.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/lut/inv-trinitron-lut.png
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/lut/nec-lut.png
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/lut/ntsc-lut.png
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/lut/trinitron-lut.png
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/pal/pal-pass1.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/pal/pal-pass2.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/pal/pal-pass3.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/advanced/pre-shaders-afterglow-sega.slang
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 1-S-Video-Clean.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 1-S-Video.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 2-Composite-Clean.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 2-Composite-Dirty.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 2-Composite.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 3-RF-Clean.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 3-RF-Dirty.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 3-RF-Dirty2.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 3-RF-Dirty3.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal 3-RF-Dirty4.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-pal Guest-Defaults.slangp
+%%DATADIR%%/pal/shaders/decoupled-guest/decoupled-guest-advanced-readme.md
 %%DATADIR%%/pal/shaders/pal-r57shell-moire-only.slang
 %%DATADIR%%/pal/shaders/pal-r57shell.slang
 %%DATADIR%%/pal/shaders/pal-singlepass.slang
@@ -4220,7 +4341,9 @@
 %%DATADIR%%/pixel-art-scaling/smuberstep.slangp
 %%DATADIR%%/pixel-art-scaling/soft-pixel-art.slangp
 %%DATADIR%%/pixel-art-scaling/uniform-nearest.slangp
+%%DATADIR%%/presets/apple-monitor-II.slangp
 %%DATADIR%%/presets/authentic-gbc-frontlit.slangp
+%%DATADIR%%/presets/black-and-white-tv.slangp
 %%DATADIR%%/presets/blurs/dual-bloom-filter-aa-lv2-fsr-gamma-ramp-glass.slangp
 %%DATADIR%%/presets/blurs/dual-bloom-filter-aa-lv2-fsr-gamma-ramp.slangp
 %%DATADIR%%/presets/blurs/dual-bloom-filter-aa-lv2-fsr.slangp

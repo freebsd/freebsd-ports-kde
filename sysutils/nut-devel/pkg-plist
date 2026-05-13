@@ -44,11 +44,11 @@ bin/upssched-cmd
 lib/libnutclient.a
 lib/libnutclient.so
 lib/libnutclient.so.2
-lib/libnutclient.so.2.1.0
+lib/libnutclient.so.2.2.0
 lib/libupsclient.a
 lib/libupsclient.so
 lib/libupsclient.so.7
-lib/libupsclient.so.7.1.0
+lib/libupsclient.so.7.2.0
 lib/libnutclientstub.a
 lib/libnutclientstub.so
 lib/libnutclientstub.so.1

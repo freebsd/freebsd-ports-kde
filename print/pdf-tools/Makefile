@@ -1,7 +1,7 @@
 PORTNAME=	pdf-tools
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print elisp
 PKGNAMESUFFIX=	${EMACS_PKGNAMESUFFIX}
 
@@ -17,7 +17,8 @@ LIB_DEPENDS=	libpng16.so:graphics/png \
 		libpoppler.so:graphics/poppler
 RUN_DEPENDS=	tablist>=0.70:devel/tablist
 
-USES=		autoreconf:build emacs:build gettext-runtime gmake gnome magick:7,build,run
+USES=		autoreconf:build emacs:build gettext-runtime gmake gnome \
+		magick:7,build,run pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	vedang
 USE_GNOME=	cairo glib20
@@ -25,8 +26,9 @@ USE_GNOME=	cairo glib20
 CONFLICTS_INSTALL=	pdf-tools-emacs_*
 
 do-build:
-	cd ${WRKSRC}/server && ./autogen.sh && ./configure -q && make
-	 ${EMACS_CMD} -q --batch -f loaddefs-generate-batch \
+	cd ${WRKSRC}/server && ./autogen.sh && \
+		${CONFIGURE_ENV} ./configure -q && ${MAKE_CMD}
+	${EMACS_CMD} -q --batch -f loaddefs-generate-batch \
 		${WRKSRC}/lisp/${PORTNAME}-loaddefs.el ${WRKSRC}/lisp
 
 do-install:

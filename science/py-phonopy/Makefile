@@ -1,5 +1,5 @@
 PORTNAME=	phonopy
-DISTVERSION=	3.4.0
+DISTVERSION=	3.5.1
 PORTREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	PYPI
@@ -15,11 +15,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	cmake:devel/cmake-core \
 		${PYTHON_PKGNAMEPREFIX}nanobind>0:devel/py-nanobind@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}scikit-build-core>0:devel/py-scikit-build-core@${PY_FLAVOR} \
 		${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}setuptools-scm>0:devel/py-setuptools-scm@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=1.16:math/py-numpy1@${PY_FLAVOR} \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=1.16:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}h5py>=3.0:science/py-h5py@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}matplotlib>=2.2.2:math/py-matplotlib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}spglib>=2.3:science/py-spglib@${PY_FLAVOR} \
@@ -35,19 +35,9 @@ TEST_WRKSRC=	${WRKSRC}/test
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/phonopy/_phonopy${PYTHON_TAG}.so
 
-# tests as of 3.0.1: (see https://github.com/phonopy/phonopy/issues/739)
-# Results (47.21s):
-#         26 failed
-#        183 passed
-#          6 skipped
-#         53 warnings
-#        272 errors
-
-# tests as of 3.4.0:
-# Results (59.91s):
-#        380 failed
-#       1997 passed
-#         22 skipped
-#         52 warnings
+# tests as of 3.5.1:
+# Results (64.10s (0:01:04)):
+#      880 passed
+#       22 skipped
 
 .include <bsd.port.mk>

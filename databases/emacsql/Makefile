@@ -1,17 +1,15 @@
 PORTNAME=	emacsql
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.3.5
-PORTREVISION=	1
+DISTVERSION=	4.3.6
 CATEGORIES=	databases elisp
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	High-level Emacs Lisp RDBMS front-end
 WWW=		https://github.com/magit/emacsql
 
 LICENSE=	UNLICENSE
 LICENSE_FILE=	${WRKSRC}/UNLICENSE
 
-BUILD_DEPENDS=	pg.el>=0.39:databases/pg.el
 RUN_DEPENDS=	pg.el>=0.39:databases/pg.el
 
 USES=		emacs:build gmake
@@ -19,8 +17,7 @@ USES=		emacs:build gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	magit
 
-MAKE_ENV+=	LOAD_PATH="-L ${PREFIX}/${EMACS_SITE_LISPDIR}"
-MAKE_JOBS_UNSAFE=	yes
+ALL_TARGET=	autoloads
 TEST_TARGET=	test
 
 CONFLICTS_INSTALL=	emacsql-emacs_*
@@ -32,8 +29,7 @@ PORTDOCS=	README.md
 OPTIONS_DEFINE=	DOCS
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/bin \
-		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}
+	@${MKDIR} ${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}
 	${INSTALL_DATA} ${WRKSRC}/*.el \
 		${STAGEDIR}${PREFIX}/${EMACS_SITE_LISPDIR}/${PORTNAME}
 

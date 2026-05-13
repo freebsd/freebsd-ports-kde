@@ -180,6 +180,7 @@
 %%DATADIR%%/crt/crt-caligari.glslp
 %%DATADIR%%/crt/crt-cgwg-fast.glslp
 %%DATADIR%%/crt/crt-consumer-1w-ntsc.glslp
+%%DATADIR%%/crt/crt-consumer-arcade.glslp
 %%DATADIR%%/crt/crt-consumer-classic.glslp
 %%DATADIR%%/crt/crt-consumer.glslp
 %%DATADIR%%/crt/crt-easymode-halation.glslp
@@ -249,6 +250,7 @@
 %%DATADIR%%/crt/shaders/crt-cgwg-fast.glsl
 %%DATADIR%%/crt/shaders/crt-consumer/bezel.png
 %%DATADIR%%/crt/shaders/crt-consumer/crt-consumer-1w.glsl
+%%DATADIR%%/crt/shaders/crt-consumer/crt-consumer-arcade.glsl
 %%DATADIR%%/crt/shaders/crt-consumer/crt-consumer-classic.glsl
 %%DATADIR%%/crt/shaders/crt-consumer/crt-consumer.glsl
 %%DATADIR%%/crt/shaders/crt-consumer/glow_x.glsl
@@ -1332,12 +1334,14 @@
 %%DATADIR%%/scalenx/shaders/scale2xplus.glsl
 %%DATADIR%%/scalenx/shaders/scale3x.glsl
 %%DATADIR%%/scalenx/shaders/scale3xSFX.glsl
+%%DATADIR%%/scanlines/broadcast.glslp
 %%DATADIR%%/scanlines/gdv-mini-scanlines.glslp
 %%DATADIR%%/scanlines/ossc.glslp
 %%DATADIR%%/scanlines/res-independent-scanlines.glslp
 %%DATADIR%%/scanlines/scanline-fract.glslp
 %%DATADIR%%/scanlines/scanline.glslp
 %%DATADIR%%/scanlines/scanlines-sine-abs.glslp
+%%DATADIR%%/scanlines/shaders/broadcast.glsl
 %%DATADIR%%/scanlines/shaders/gdv-mini-scanlines.glsl
 %%DATADIR%%/scanlines/shaders/ossc.glsl
 %%DATADIR%%/scanlines/shaders/res-independent-scanlines.glsl

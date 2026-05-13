@@ -1,6 +1,5 @@
 PORTNAME=	onboard
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.3-7
+DISTVERSION=	1.4.4-1
 CATEGORIES=	accessibility
 
 MAINTAINER=	duchateau.olivier@gmail.com
@@ -21,28 +20,29 @@ RUN_DEPENDS=	iso-codes>0:misc/iso-codes \
 USES=	gettext-tools gnome pkgconfig python shebangfix xorg
 USE_GITHUB=	yes
 GH_ACCOUNT=	${PORTNAME}-osk
-GH_TAGNAME=	79f870d
 USE_GNOME=	dconf glib20 gtk30 intltool:build pygobject3
 GLIB_SCHEMAS=	org.onboard.gschema.xml
 USE_PYTHON=	distutils py3kplist
 USE_XORG=	x11 xi xkbfile xtst
 
-SHEBANG_FILES=	Onboard/pypredict/tools/checkmodels
+SHEBANG_FILES=	Onboard/pypredict/tools/checkmodels \
+		scripts/toggle-onboard-hoverclick
 SHEBANG_GLOB=	*.py
 
 post-patch:
 	${REINPLACE_CMD} -i "" -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/Onboard/Config.py \
-		${WRKSRC}/Onboard/LanguageSupport.py \
 		${WRKSRC}/Onboard/Indicator.py \
 		${WRKSRC}/data/org.onboard.Onboard.service
 	${REINPLACE_CMD} -i "" -e 's|%%PYTHON_CMD%%|${PYTHON_CMD}|' \
-		${WRKSRC}/setup.py
+		${WRKSRC}/setup.py \
+		${WRKSRC}/scripts/sokSettings.py
 # Avoid to pollute pkg-plist
 	@${FIND} ${WRKSRC} -type f -name '*.orig' -delete
 
 post-install:
 	@${RM} ${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/org.gnome.shell.extensions.onboard-indicator.gschema.xml
+	@${RM} ${STAGEDIR}${PREFIX}/share/doc/${PORTNAME}/README*
 
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/Onboard/pypredict/lm${PYTHON_SOABI}.so
 	@${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/Onboard/osk${PYTHON_SOABI}.so

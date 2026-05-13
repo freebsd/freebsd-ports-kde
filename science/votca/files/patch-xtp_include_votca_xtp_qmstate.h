@@ -1,8 +1,8 @@
---- xtp/include/votca/xtp/qmstate.h.orig	2025-10-03 18:44:55 UTC
+--- xtp/include/votca/xtp/qmstate.h.orig	2026-03-09 18:52:35 UTC
 +++ xtp/include/votca/xtp/qmstate.h
-@@ -23,6 +23,7 @@
- 
+@@ -24,6 +24,7 @@
  // Standard includes
+ #include <cassert>
  #include <string>
 +#include <cassert>
  

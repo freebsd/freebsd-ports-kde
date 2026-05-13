@@ -1,6 +1,6 @@
-TIMESTAMP = 1770753875
-SHA256 (gnome/papers-48.8.tar.xz) = 17c9d8fcd5c27dfa82c8b43c9cee3a73136f00debd88150edecfdddaaba9f3ac
-SIZE (gnome/papers-48.8.tar.xz) = 4585820
+TIMESTAMP = 1775999144
+SHA256 (gnome/papers-48.9.tar.xz) = c943512fa76f852da4c71717e5cf863535882b90c64908048f67622fa857e330
+SIZE (gnome/papers-48.9.tar.xz) = 4585944
 SHA256 (gnome/rust/crates/aes-0.8.4.crate) = b169f7a6d4742236a0a00c541b845991d0ac43e546831af1249753ab4c3aa3a0
 SIZE (gnome/rust/crates/aes-0.8.4.crate) = 124812
 SHA256 (gnome/rust/crates/aho-corasick-1.1.3.crate) = 8e60d3430d3a69478ad0993f19238d2df97c507009a52b3c10addcd7f6bcb916

@@ -1,7 +1,6 @@
 PORTNAME=	llama.el
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0.3
-PORTREVISION=	1
+DISTVERSION=	1.0.4
 CATEGORIES=	devel elisp
 
 MAINTAINER=	jrm@FreeBSD.org
@@ -11,7 +10,6 @@ WWW=		https://github.com/tarsius/llama
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el
 RUN_DEPENDS=	compat.el>=30.1.0.0:misc/compat.el
 
 USES=		emacs:build gmake
@@ -20,7 +18,7 @@ GH_ACCOUNT=	tarsius
 GH_PROJECT=	llama
 
 MAKE_ARGS=	LOAD_PATH=" -L ${PREFIX}/${EMACS_SITE_LISPDIR} -L ."
-MAKE_JOBS_UNSAFE=	Opening input file: No such file or directory, /wrkdirs/usr/ports/devel/llama.el/work-nox/llama-0.6.0/.#llama-autoloads.el
+ALL_TARGET=	autoloads
 
 CONFLICTS_INSTALL=	llama.el-emacs_*
 

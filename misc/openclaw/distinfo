@@ -1,7 +1,9 @@
-TIMESTAMP = 1776245116
-SHA256 (openclaw/openclaw-2026.4.14.tar.gz) = a399b30021ad0073d5eaed6ed2e2fc1118383b2ac4d772686b5c0229c5417e36
-SIZE (openclaw/openclaw-2026.4.14.tar.gz) = 143065438
-SHA256 (openclaw/sharp-0.34.5.tar.gz) = bb3ef10332851a4593a899177baef5891d9195fc2968c25595417a20cdbd2c1c
-SIZE (openclaw/sharp-0.34.5.tar.gz) = 175649
-SHA256 (openclaw/node-addon-api-8.5.0.tar.gz) = 13cb296778b75379caff8d80dcf65d8bc6b91a2d2214487446ce2d150129baf4
-SIZE (openclaw/node-addon-api-8.5.0.tar.gz) = 61745
+TIMESTAMP = 1777622027
+SHA256 (openclaw/openclaw-2026.4.29.tar.gz) = 700fd92e7b94cc2d435dbb40a758e87cebcca0c79c155067d1b38ad14f4466e0
+SIZE (openclaw/openclaw-2026.4.29.tar.gz) = 60846911
+SHA256 (openclaw/sharp-0.34.5.tar.gz) = 51d49607b350a8dd7d79442e4770209a4c0b6a895e4b1c4f49345a6c95f6e23e
+SIZE (openclaw/sharp-0.34.5.tar.gz) = 175644
+SHA256 (openclaw/koffi-2.16.1.tar.gz) = dcf21a43e55eb43621ea1e04e565588562282da5cf426976e45c3c2fcb82cc9d
+SIZE (openclaw/koffi-2.16.1.tar.gz) = 7885104
+SHA256 (openclaw/node-addon-api-8.5.0.tar.gz) = 152ef6a9b5450a7c0ce87a2d0be3aa458d1f65c515e9d189cc9fa09feb5aa50e
+SIZE (openclaw/node-addon-api-8.5.0.tar.gz) = 61743

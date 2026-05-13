@@ -1,6 +1,6 @@
 PORTNAME=	skim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.6.0
+DISTVERSION=	4.6.2
 CATEGORIES=	deskutils
 PKGNAMESUFFIX=	-fuzzy-finder
 
@@ -51,7 +51,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		bytes-1.11.1 \
 		cast-0.3.0 \
 		castaway-0.2.4 \
-		cc-1.2.60 \
+		cc-1.2.61 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.1.1 \
 		cfg_aliases-0.2.1 \
@@ -59,11 +59,11 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		ciborium-0.2.2 \
 		ciborium-io-0.2.2 \
 		ciborium-ll-0.2.2 \
-		clap-4.6.0 \
+		clap-4.6.1 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.2 \
+		clap_complete-4.6.3 \
 		clap_complete_nushell-4.6.0 \
-		clap_derive-4.6.0 \
+		clap_derive-4.6.1 \
 		clap_lex-1.1.0 \
 		clap_mangen-0.3.0 \
 		color-eyre-0.6.5 \
@@ -133,9 +133,9 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		getrandom-0.4.2 \
 		gimli-0.32.3 \
 		gnuplot-0.0.46 \
-		gungraun-0.18.1 \
+		gungraun-0.18.2 \
 		gungraun-macros-0.8.0 \
-		gungraun-runner-0.18.1 \
+		gungraun-runner-0.18.2 \
 		half-2.7.1 \
 		hashbrown-0.15.5 \
 		hashbrown-0.16.1 \
@@ -149,20 +149,20 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		indoc-2.0.7 \
 		insta-1.47.2 \
 		instability-0.3.12 \
-		interprocess-2.4.0 \
+		interprocess-2.4.2 \
 		is_terminal_polyfill-1.70.2 \
 		itertools-0.13.0 \
 		itertools-0.14.0 \
 		itoa-1.0.18 \
-		jiff-0.2.23 \
-		jiff-static-0.2.23 \
-		js-sys-0.3.95 \
+		jiff-0.2.24 \
+		jiff-static-0.2.24 \
+		js-sys-0.3.97 \
 		kanal-0.1.1 \
 		kasuari-0.4.12 \
 		lab-0.11.0 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
-		libc-0.2.185 \
+		libc-0.2.186 \
 		libmimalloc-sys-0.1.44 \
 		line-clipping-0.3.7 \
 		linux-raw-sys-0.12.1 \
@@ -210,7 +210,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		plotters-backend-0.3.7 \
 		plotters-svg-0.3.7 \
 		portable-atomic-1.13.1 \
-		portable-atomic-util-0.2.6 \
+		portable-atomic-util-0.2.7 \
 		portable-pty-0.9.0 \
 		powerfmt-0.2.0 \
 		prettyplease-0.2.37 \
@@ -221,7 +221,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		quote-1.0.45 \
 		r-efi-5.3.0 \
 		r-efi-6.0.0 \
-		rand-0.8.5 \
+		rand-0.8.6 \
 		rand-0.10.1 \
 		rand_core-0.6.4 \
 		rand_core-0.10.1 \
@@ -293,7 +293,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tinytemplate-1.2.1 \
 		tinyvec-1.11.0 \
 		tinyvec_macros-0.1.1 \
-		tokio-1.51.1 \
+		tokio-1.52.1 \
 		tokio-macros-2.7.0 \
 		tokio-util-0.7.18 \
 		tracing-0.1.44 \
@@ -302,7 +302,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		tracing-subscriber-0.3.23 \
 		tui-term-0.3.4 \
 		typeid-1.0.3 \
-		typenum-1.19.0 \
+		typenum-1.20.0 \
 		ucd-trie-0.1.7 \
 		unicase-2.9.0 \
 		unicode-display-width-0.3.0 \
@@ -313,7 +313,7 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		unicode-width-0.2.2 \
 		unicode-xid-0.2.6 \
 		utf8parse-0.2.2 \
-		uuid-1.23.0 \
+		uuid-1.23.1 \
 		valuable-0.1.1 \
 		version_check-0.9.5 \
 		vt100-0.16.2 \
@@ -321,16 +321,16 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		vtparse-0.6.2 \
 		walkdir-2.5.0 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasip2-1.0.2+wasi-0.2.9 \
+		wasip2-1.0.3+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.118 \
-		wasm-bindgen-macro-0.2.118 \
-		wasm-bindgen-macro-support-0.2.118 \
-		wasm-bindgen-shared-0.2.118 \
+		wasm-bindgen-0.2.120 \
+		wasm-bindgen-macro-0.2.120 \
+		wasm-bindgen-macro-support-0.2.120 \
+		wasm-bindgen-shared-0.2.120 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.95 \
+		web-sys-0.3.97 \
 		wezterm-bidi-0.2.3 \
 		wezterm-blob-leases-0.1.1 \
 		wezterm-color-types-0.3.0 \
@@ -344,19 +344,10 @@ CARGO_CRATES=	addr2line-0.25.1 \
 		winapi-util-0.1.11 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		windows-link-0.2.1 \
-		windows-sys-0.52.0 \
 		windows-sys-0.61.2 \
-		windows-targets-0.52.6 \
-		windows_aarch64_gnullvm-0.52.6 \
-		windows_aarch64_msvc-0.52.6 \
-		windows_i686_gnu-0.52.6 \
-		windows_i686_gnullvm-0.52.6 \
-		windows_i686_msvc-0.52.6 \
-		windows_x86_64_gnu-0.52.6 \
-		windows_x86_64_gnullvm-0.52.6 \
-		windows_x86_64_msvc-0.52.6 \
 		winreg-0.10.1 \
 		wit-bindgen-0.51.0 \
+		wit-bindgen-0.57.1 \
 		wit-bindgen-core-0.51.0 \
 		wit-bindgen-rust-0.51.0 \
 		wit-bindgen-rust-macro-0.51.0 \

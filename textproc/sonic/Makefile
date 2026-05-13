@@ -1,7 +1,7 @@
 PORTNAME=	sonic
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.4.9
-PORTREVISION=	16
+PORTREVISION=	17
 CATEGORIES=	textproc
 MAINTAINER=	wadegimpbc@tuta.com
 COMMENT=	Fast, lightweight, and schema-less search backend

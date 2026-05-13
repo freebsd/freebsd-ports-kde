@@ -108,6 +108,7 @@
     SUBDIR += coccigrep
     SUBDIR += code-minimap
     SUBDIR += code2html
+    SUBDIR += codebook
     SUBDIR += codesearch
     SUBDIR += codespell
     SUBDIR += colordiff
@@ -515,6 +516,7 @@
     SUBDIR += muse
     SUBDIR += mxml
     SUBDIR += mythes
+    SUBDIR += nano-pdf
     SUBDIR += nb-aspell
     SUBDIR += nds-aspell
     SUBDIR += nerdlog
@@ -1772,6 +1774,7 @@
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
     SUBDIR += py-youseedee
+    SUBDIR += py-yte
     SUBDIR += py-zensical
     SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt

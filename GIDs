@@ -327,7 +327,7 @@ cascade:*:383:
 omada:*:384:
 mtail:*:385:
 zoraxy:*:386:
-# free: 387
+goimapnotify:*:387:
 autopulse:*:388:
 ldap:*:389:
 # free: 390
@@ -797,7 +797,7 @@ p0f:*:852:
 _geodns:*:853:
 ebusd:*:854:
 opensearch:*:855:
-# free: 856
+lubelogger:*:856:
 kanidmd:*:857:
 umurmur:*:858:
 kanidm:*:859:

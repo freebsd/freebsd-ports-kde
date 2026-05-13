@@ -1,5 +1,6 @@
 PORTNAME=	vaultwarden
-DISTVERSION=	1.35.6
+DISTVERSION=	1.36.0
+#PORTREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	mr@FreeBSD.org
@@ -10,7 +11,6 @@ LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 BROKEN_i386=    doesn't buld on pkg builder
-BROKEN_FreeBSD_13=      fails to compile : Needs OpenSSL v3.0.0 or later to compile
 
 LIB_DEPENDS+=	libcapnp.so:devel/capnproto \
 		libgmp.so:math/gmp \

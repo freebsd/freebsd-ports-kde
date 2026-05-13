@@ -1,7 +1,7 @@
 PORTNAME=	limine
-DISTVERSION=	10.7.0
+DISTVERSION=	12.2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	https://codeberg.org/Limine/Limine/releases/download/v${DISTVERSION}/
+MASTER_SITES=	https://github.com/Limine-Bootloader/Limine/releases/download/v${DISTVERSION}/
 
 MAINTAINER=	mintsuki@protonmail.com
 COMMENT=	Modern, advanced, portable, multiprotocol bootloader and boot manager

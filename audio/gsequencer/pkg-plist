@@ -39,6 +39,7 @@ include/ags/audio/ags_linear_interpolate_util.h
 include/ags/audio/ags_low_pass_filter_util.h
 include/ags/audio/ags_marker.h
 include/ags/audio/ags_midi.h
+include/ags/audio/ags_modular_synth_util.h
 include/ags/audio/ags_noise_util.h
 include/ags/audio/ags_notation.h
 include/ags/audio/ags_note.h
@@ -190,6 +191,12 @@ include/ags/audio/fx/ags_fx_lv2_audio_signal.h
 include/ags/audio/fx/ags_fx_lv2_channel.h
 include/ags/audio/fx/ags_fx_lv2_channel_processor.h
 include/ags/audio/fx/ags_fx_lv2_recycling.h
+include/ags/audio/fx/ags_fx_modular_synth_audio.h
+include/ags/audio/fx/ags_fx_modular_synth_audio_processor.h
+include/ags/audio/fx/ags_fx_modular_synth_audio_signal.h
+include/ags/audio/fx/ags_fx_modular_synth_channel.h
+include/ags/audio/fx/ags_fx_modular_synth_channel_processor.h
+include/ags/audio/fx/ags_fx_modular_synth_recycling.h
 include/ags/audio/fx/ags_fx_notation_audio.h
 include/ags/audio/fx/ags_fx_notation_audio_processor.h
 include/ags/audio/fx/ags_fx_notation_audio_signal.h

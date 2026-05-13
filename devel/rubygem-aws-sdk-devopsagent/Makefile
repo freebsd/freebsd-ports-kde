@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-devopsagent
-PORTVERSION=	1.0.0
+PORTVERSION=	1.3.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

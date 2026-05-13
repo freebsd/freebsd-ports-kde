@@ -1,5 +1,5 @@
 PORTNAME=	translate-toolkit
-PORTVERSION=	3.19.3
+PORTVERSION=	3.19.8
 CATEGORIES=	textproc
 MASTER_SITES=	PYPI \
 		https://github.com/translate/translate/releases/download/${PORTVERSION}/
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=61:devel/py-setuptools@${PY_FL
 		${RUN_DEPENDS}
 RUN_DEPENDS=	bash:shells/bash \
 		msghack:devel/gettext-msghack \
-		${PYTHON_PKGNAMEPREFIX}lxml>=5.2.0<6.1:devel/py-lxml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}lxml>=6.1.0<7.0:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}unicode-segmentation-rs>=0.2.0<0.3:textproc/py-unicode-segmentation-rs@${PY_FLAVOR}
 
@@ -42,6 +42,7 @@ MANPAGES=	android2po \
 		ini2po \
 		json2po \
 		md2po \
+		mdx2po \
 		moz2po \
 		mozlang2po \
 		odf2xliff \
@@ -58,6 +59,7 @@ MANPAGES=	android2po \
 		po2ini \
 		po2json \
 		po2md \
+		po2mdx \
 		po2moz \
 		po2mozlang \
 		po2odf \
@@ -125,7 +127,7 @@ PHP_VARS=		MANPAGES+="php2po po2php"
 RC_RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}pyparsing>=3.2.0<3.4:devel/py-pyparsing@${PY_FLAVOR}
 RC_VARS=		MANPAGES+="po2rc rc2po"
 SPELLCHECK_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}enchant>=3.3.0:textproc/py-enchant@${PY_FLAVOR}
-SUBTITLES_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aeidon>=1.14.1<1.16:textproc/py-aeidon@${PY_FLAVOR}
+SUBTITLES_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}aeidon>=1.15<1.17:textproc/py-aeidon@${PY_FLAVOR}
 TOML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tomlkit>=0.13.0<0.15.0:textproc/py-tomlkit@${PY_FLAVOR}
 TOML_VARS=		MANPAGES+="toml2po po2toml"
 YAML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ruamel.yaml>=0.18.0<0.20.0:devel/py-ruamel.yaml@${PY_FLAVOR}

@@ -1,7 +1,6 @@
 PORTNAME=	lean4
 DISTVERSIONPREFIX=	v
-DISTVERSION=	4.29.0
-PORTREVISION=	1
+DISTVERSION=	4.29.1
 CATEGORIES=	math lang devel # lean4 is primarily a math theorem prover, but it is also a language and a development environment
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -12,7 +11,6 @@ WWW=		https://lean-lang.org/ \
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_FreeBSD_13=	compilation fails: error: use of undeclared identifier 'clearenv'
 BROKEN_armv7=	compilation fails: ../../.build/stage1/lib/temp/Init/Coe.depend: No such file or directory
 BROKEN_i386=	linking fails: INTERNAL PANIC: out of memory (during: Linking runLinter)
 
@@ -81,5 +79,6 @@ post-install:
 # tests as of 4.25.2-20251201: 100% tests passed, 0 tests failed out of 3367
 # tests as of 4.29.0-rc2: 99% tests passed, 12 tests failed out of 3584, see https://github.com/leanprover/lean4/issues/12721
 # tests as of 4.29.0: 99% tests passed, 18 tests failed out of 3582, see https://github.com/leanprover/lean4/issues/13174
+# tests as of 4.29.1: 99% tests passed, 24 tests failed out of 3584
 
 .include <bsd.port.mk>

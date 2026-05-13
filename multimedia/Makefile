@@ -64,6 +64,7 @@
     SUBDIR += filebot
     SUBDIR += flvmeta
     SUBDIR += fswebcam
+    SUBDIR += funnelcake
     SUBDIR += gaupol
     SUBDIR += gavl
     SUBDIR += get_iplayer
@@ -146,6 +147,8 @@
     SUBDIR += kooha
     SUBDIR += kvazaar
     SUBDIR += l-smash
+    SUBDIR += lebiniou
+    SUBDIR += lebiniou-data
     SUBDIR += libaacs
     SUBDIR += libass
     SUBDIR += libbdplus

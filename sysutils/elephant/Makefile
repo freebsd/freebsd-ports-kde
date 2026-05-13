@@ -1,6 +1,6 @@
 PORTNAME=	elephant
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2.20.3
+DISTVERSION=	2.21.0
 PORTREVISION=	1
 CATEGORIES=	sysutils
 
@@ -28,8 +28,8 @@ OPTIONS_DEFAULT=	${OPTIONS_GROUP_PROVIDERS:NBITWARDEN:NNIRIACTIONS:NNIRISESSIONS
 OPTIONS_GROUP=		PROVIDERS
 OPTIONS_GROUP_PROVIDERS=1PASSWORD BITWARDEN BOOKMARKS CALC CLIPBOARD \
 			DESKTOPAPPLICATIONS FILES MENUS NIRIACTIONS \
-			NIRISESSIONS PROVIDERLIST RUNNER SNIPPETS SYMBOLS TODO \
-			UNICODE WEBSEARCH WINDOWS WIREPLUMBER
+			NIRISESSIONS PLAYERCTL PROVIDERLIST RUNNER SNIPPETS \
+			SYMBOLS TODO UNICODE WEBSEARCH WINDOWS WIREPLUMBER
 
 PROVIDERS_DESC=		Enabled providers
 1PASSWORD_DESC=		Access your 1Password vaults
@@ -43,6 +43,7 @@ MENUS_DESC=		Create custom menus
 NIRIACTIONS_DESC=	Search and execute Niri actions
 NIRISESSIONS_DESC=	Create predefined session layouts and open them
 PROVIDERLIST_DESC=	Lists all providers and configured menus
+PLAYERCTL_DESC=		Control media/audio players with playerctl
 RUNNER_DESC=		Execute everything installed in your PATH
 SNIPPETS_DESC=		Create and access text snippets
 SYMBOLS_DESC=		Search for emojis and symbols
@@ -74,6 +75,8 @@ NIRIACTIONS_RUN_DEPENDS=niri:x11-wm/niri
 NIRIACTIONS_PLIST_FILES=etc/xdg/elephant/providers/niriactions.so
 NIRISESSIONS_RUN_DEPENDS=niri:x11-wm/niri
 NIRISESSIONS_PLIST_FILES=etc/xdg/elephant/providers/nirisessions.so
+PLAYERCTL_RUN_DEPENDS=	playerctl:multimedia/playerctl
+PLAYERCTL_PLIST_FILES=	etc/xdg/elephant/providers/playerctl.so
 PROVIDERLIST_PLIST_FILES=etc/xdg/elephant/providers/providerlist.so
 RUNNER_PLIST_FILES=	etc/xdg/elephant/providers/runner.so
 SNIPPETS_RUN_DEPENDS=	wtype:x11/wtype

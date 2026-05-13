@@ -455,6 +455,7 @@
     SUBDIR += liveMedia
     SUBDIR += lla
     SUBDIR += lldap
+    SUBDIR += localgo
     SUBDIR += lua-luasocket
     SUBDIR += lualdap
     SUBDIR += mDNSResponder
@@ -526,6 +527,7 @@
     SUBDIR += ndpi
     SUBDIR += ndproxy
     SUBDIR += neatvnc
+    SUBDIR += nekobox
     SUBDIR += nemesis
     SUBDIR += netatalk4
     SUBDIR += netcat
@@ -1496,7 +1498,9 @@
     SUBDIR += rustdesk-server
     SUBDIR += ryu
     SUBDIR += s3m
+    SUBDIR += s3req
     SUBDIR += s5cmd
+    SUBDIR += s6-networking
     SUBDIR += sacc
     SUBDIR += sakisafecli
     SUBDIR += samba416
@@ -1598,6 +1602,8 @@
     SUBDIR += tcpslice
     SUBDIR += tcpsplit
     SUBDIR += tcpstat
+    SUBDIR += tcpstats-kmod
+    SUBDIR += tcpstats-reader
     SUBDIR += tcptestsuite
     SUBDIR += tcptrace
     SUBDIR += tcptraceroute
@@ -1655,6 +1661,7 @@
     SUBDIR += unison
     SUBDIR += unison248
     SUBDIR += unison251
+    SUBDIR += unison253
     SUBDIR += unix2tcp
     SUBDIR += urelay
     SUBDIR += uriparser

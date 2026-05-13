@@ -1,6 +1,6 @@
 PORTNAME=	pybind11
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.0.3
+DISTVERSION=	3.0.4
 CATEGORIES=	devel python
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,6 +10,8 @@ WWW=		https://pybind11.readthedocs.io/en/stable/ \
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+TEST_DEPENDS=	pytest:devel/py-pytest@${PY_FLAVOR}
 
 USES=		cmake:testing compiler:c++11-lang python:build
 
@@ -24,12 +26,6 @@ CMAKE_TESTING_TARGET=	pytest
 
 NO_ARCH=	yes
 
-# tests as of 3.0.3: (see https://github.com/pybind/pybind11/issues/6037)
-# Results (39.99s):
-#          5 failed
-#       3884 passed
-#         26 skipped
-#          3 xfailed
-#          1 xpassed
+# tests as of 3.0.4: 1291 passed, 27 skipped, 3 xfailed, 1 xpassed in 22.92s
 
 .include <bsd.port.mk>

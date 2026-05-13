@@ -333,7 +333,7 @@ cascade:*:383:383::0:0:Cascade Daemon:/var/db/cascade:/usr/sbin/nologin
 omada:*:384:384::0:0:Omada Wireless Controller:/nonexistent:/usr/sbin/nologin
 mtail:*:385:385::0:0:mtail:/nonexistent:/usr/sbin/nologin
 zoraxy:*:386:386::0:0:Zoraxy Service:/nonexistent:/usr/sbin/nologin
-# free: 387
+goimapnotify:*:387:387::0:0:Goimapnotify Daemon:/nonexistent:/usr/sbin/nologin
 autopulse:*:388:388::0:0:Autopulse Daemon:/nonexistent:/usr/sbin/nologin
 ldap:*:389:389::0:0:OpenLDAP Server:/nonexistent:/usr/sbin/nologin
 # free: 390
@@ -803,7 +803,7 @@ p0f:*:852:852::0:0:p0f unprivileged user:/var/empty:/usr/sbin/nologin
 _geodns:*:853:853::0:0:GeoDNS User:/var/empty:/usr/sbin/nologin
 ebusd:*:854:854::0:0:eBUS Daemon user:/nonexistent:/usr/sbin/nologin
 opensearch:*:855:855::0:0:opensearch user:/nonexistent:/usr/sbin/nologin
-# free: 856
+lubelogger:*:856:856::0:0:LubeLogger webapp daemon:/var/db/lubelogger:/usr/sbin/nologin
 kanidmd:*:857:857::0:0:Kanidmd server:/nonexistent:/usr/sbin/nologin
 umurmur:*:858:858::0:0:uMurmur:/nonexistent:/usr/sbin/nologin
 kanidm:*:859:859::0:0:Kanidm client resolver:/nonexistent:/usr/sbin/nologin

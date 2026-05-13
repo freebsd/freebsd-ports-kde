@@ -1,6 +1,6 @@
 PORTNAME=	tinyauth
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.0.4
+DISTVERSION=	5.0.7
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/:assets
@@ -19,7 +19,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
-USES=		go:1.25+,modules
+USES=		go:1.26+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	steveiliop56
 
@@ -43,7 +43,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION} && git rev-parse HEAD'
 # in the Tinyauth repository to get the value of GITID.
-GITID=		03f13efc77554e5b7f52fa419912d24b0a5f2648
+GITID=		479f1657812b7bf01438607464dedaa148155301
 
 BUILD_DATE=	$$(date -u '+%Y-%m-%dT%H:%M:%S')
 

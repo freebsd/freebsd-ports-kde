@@ -1,6 +1,6 @@
---- setup.py.orig	2025-07-03 16:13:44 UTC
+--- setup.py.orig	2026-04-11 20:15:35 UTC
 +++ setup.py
-@@ -159,7 +159,7 @@ def clean_before_build(command):
+@@ -160,7 +160,7 @@ def clean_before_build(command):
      if command in ["build", "build_ext", "clean", "sdist"]:
          print("removing __pycache__ directories recursively")
          subprocess.check_call(
@@ -9,17 +9,7 @@
  
      # Symlinked extension libraries trip up "setup.py sdist". Delete them.
      if command in ["clean", "sdist"]:
-@@ -262,8 +262,7 @@ class Extension_osk(Extension):
-                            extra_compile_args=[
-                                "-Wsign-compare",
-                                "-Wdeclaration-after-statement",
--                               "-Werror=declaration-after-statement",
--                               "-Wlogical-op"],
-+                               "-Werror=declaration-after-statement"],
- 
-                            **pkgconfig('gdk-3.0', 'x11', 'xi', 'xtst', 'xkbfile',
-                                        'dconf', 'libcanberra', 'hunspell',
-@@ -311,8 +310,7 @@ class Extension_lm(Extension):
+@@ -313,8 +313,7 @@ class Extension_lm(Extension):
                             libraries = [],
                             define_macros=[('NDEBUG', '1')],
                             extra_compile_args=[
@@ -29,7 +19,7 @@
                            )
  
  extension_lm = Extension_lm("Onboard", "Onboard")
-@@ -399,7 +397,7 @@ class build_i18n_custom(DistUtilsExtra.auto.build_i18n
+@@ -401,7 +400,7 @@ class build_i18n_custom(DistUtilsExtra.auto.build_i18n
              # Get the autostart directory
              autostart_destination = os.path.join(config_path, "autostart") 
          else:
@@ -38,7 +28,7 @@
    
  
          for i, file_set in enumerate(self.distribution.data_files):
-@@ -437,33 +435,6 @@ class CustomInstallCommand(install):
+@@ -439,33 +438,6 @@ class CustomInstallCommand(install):
          # Run the default installation
          install.run(self)
  
@@ -72,7 +62,7 @@
  class UninstallCommand(Command):
      """Custom uninstall command to remove all installed files"""
  
-@@ -619,16 +590,8 @@ DistUtilsExtra.auto.setup(
+@@ -621,16 +593,8 @@ DistUtilsExtra.auto.setup(
      description = 'Simple On-screen Keyboard',
  
      packages = ['Onboard', 'Onboard.pypredict'],
@@ -90,7 +80,7 @@
                    ('share/icons/hicolor/16x16/apps', glob.glob('icons/hicolor/16/*')),
                    ('share/icons/hicolor/22x22/apps', glob.glob('icons/hicolor/22/*')),
                    ('share/icons/hicolor/24x24/apps', glob.glob('icons/hicolor/24/*')),
-@@ -648,17 +611,13 @@ DistUtilsExtra.auto.setup(
+@@ -650,17 +614,13 @@ DistUtilsExtra.auto.setup(
                    ('share/onboard/models', glob.glob('models/*.lm')),
                    ('share/onboard/tools', glob.glob('Onboard/pypredict/tools/checkmodels')),
                    ('share/onboard/emojione/svg', glob.glob('emojione/svg/*.svg')),

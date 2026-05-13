@@ -1,6 +1,6 @@
 PORTNAME=	grafana
 DISTVERSIONPREFIX=	v
-DISTVERSION=	12.4.2
+DISTVERSION=	13.0.1
 PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://dl.grafana.com/oss/release/ \
@@ -37,9 +37,9 @@ DISTFILES=	grafana-${DISTVERSION}.linux-amd64${EXTRACT_SUFX} \
 		pkg/build/go.mod:gomod \
 		pkg/build/wire/go.mod:gomod \
 		pkg/codegen/go.mod:gomod \
+		pkg/infra/features/go.mod:gomod \
 		pkg/plugins/codegen/go.mod:gomod \
 		pkg/plugins/go.mod:gomod \
-		pkg/promlib/go.mod:gomod \
 		pkg/semconv/go.mod:gomod \
 		pkg/storage/unified/resource/kv/go.mod:gomod
 EXTRACT_ONLY=	${DISTFILES:N*.mod\:*:N*.mod:C/:.*//:Ngo.work}
@@ -59,13 +59,11 @@ USES=		cpe go:modules
 USE_GITHUB=	yes
 
 USE_RC_SUBR=	grafana
-TAG=		ebade4c
+TAG=		a100054
 
 GO_MOD_DIST=	github
 GO_MODULE=	github.com/grafana/grafana
-GO_TARGET=	./pkg/cmd/grafana \
-		./pkg/cmd/grafana-server \
-		./pkg/cmd/grafana-cli
+GO_TARGET=	./pkg/cmd/grafana
 GO_BUILDFLAGS=	-ldflags="-w -X main.version=${DISTVERSION} -X main.commit=${TAG} \
 		-X main.buildstamp=$$(${STAT} -f %Sm -t %s ${WRKSRC}/.gitignore)"
 

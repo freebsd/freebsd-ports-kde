@@ -1,5 +1,5 @@
 PORTNAME=	tifffile
-PORTVERSION=	2026.1.28
+PORTVERSION=	2026.3.3
 PORTREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	PYPI \
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>=0:devel/py-setuptools@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}wheel>=0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>=0:math/py-numpy1@${PY_FLAVOR}
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>=0,1:math/py-numpy@${PY_FLAVOR}
 
 USES=		dos2unix python:3.11+
 USE_PYTHON=	autoplist concurrent pep517
@@ -34,6 +34,6 @@ XML_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml@${PY_F
 			${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR}
 ZARR_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}fsspec>=0:filesystems/py-fsspec@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}kerchunk>=0:filesystems/py-kerchunk@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}zarr>=3.1.3:devel/py-zarr@${PY_FLAVOR}
+			${PYTHON_PKGNAMEPREFIX}zarr>=3.1.5:devel/py-zarr@${PY_FLAVOR}
 
 .include <bsd.port.mk>

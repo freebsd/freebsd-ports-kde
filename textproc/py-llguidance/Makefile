@@ -1,5 +1,6 @@
 PORTNAME=	llguidance
-DISTVERSION=	1.7.2
+DISTVERSION=	1.7.5
+PORTREVISION=	1
 CATEGORIES=	textproc python # machine-learning
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -13,7 +14,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}maturin>=1.0:devel/py-maturin@${PY_FLAVOR}
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy1>0:math/py-numpy1@${PY_FLAVOR} \
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}numpy>0:math/py-numpy@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytorch>0:misc/py-pytorch@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}transformers>0:misc/py-transformers@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tiktoken>0:textproc/py-tiktoken@${PY_FLAVOR} \
@@ -92,7 +93,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		derive_builder-0.20.2 \
 		derive_builder_core-0.20.2 \
 		derive_builder_macro-0.20.2 \
-		derivre-0.3.9 \
+		derivre-0.3.11 \
 		dirs-6.0.0 \
 		dirs-sys-0.5.0 \
 		displaydoc-0.2.5 \
@@ -195,10 +196,10 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		once_cell-1.21.3 \
 		once_cell_polyfill-1.70.1 \
 		oorandom-11.1.5 \
-		openssl-0.10.73 \
+		openssl-0.10.78 \
 		openssl-macros-0.1.1 \
 		openssl-probe-0.1.6 \
-		openssl-sys-0.9.109 \
+		openssl-sys-0.9.114 \
 		option-ext-0.2.0 \
 		outref-0.5.2 \
 		page_size-0.6.0 \
@@ -224,7 +225,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		pyo3-macros-backend-0.28.2 \
 		quote-1.0.40 \
 		r-efi-5.3.0 \
-		rand-0.9.1 \
+		rand-0.9.4 \
 		rand_chacha-0.9.0 \
 		rand_core-0.9.3 \
 		rayon-1.10.0 \
@@ -249,7 +250,7 @@ CARGO_CRATES=	addr2line-0.24.2 \
 		rustix-1.0.7 \
 		rustls-0.23.28 \
 		rustls-pki-types-1.12.0 \
-		rustls-webpki-0.103.10 \
+		rustls-webpki-0.103.13 \
 		rustversion-1.0.21 \
 		ryu-1.0.20 \
 		same-file-1.0.6 \

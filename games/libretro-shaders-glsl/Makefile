@@ -1,5 +1,5 @@
 PORTNAME=	libretro-shaders-glsl
-DISTVERSION=	g20260330
+DISTVERSION=	g20260423
 CATEGORIES=	games
 
 MAINTAINER=	bsdcode@disroot.org
@@ -12,7 +12,7 @@ LICENSE=	GPLv3
 USE_GITHUB=	yes
 GH_ACCOUNT=	libretro
 GH_PROJECT=	glsl-shaders
-GH_TAGNAME=	bf52cc8
+GH_TAGNAME=	2f0979f
 
 DATADIR=	${PREFIX}/share/libretro/shaders/shaders_glsl
 

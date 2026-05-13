@@ -1,5 +1,6 @@
 PORTNAME=	libchdr
-DISTVERSION=	g20260310
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	bsdcode@disroot.org
@@ -15,7 +16,6 @@ USES=		cmake pathfix
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	rtissera
-GH_TAGNAME=	7715de1
 
 USE_LDCONFIG=	yes
 
@@ -26,6 +26,8 @@ CMAKE_ON=	INSTALL_STATIC_LIBS \
 EXTRACT_AFTER_ARGS=	--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/deps/miniz* \
 			--exclude ${GH_PROJECT_DEFAULT}-${GH_TAGNAME_EXTRACT}/deps/zstd* \
 			--no-same-owner --no-same-permissions
+
+PLIST_SUB=	SOVERSION=${DISTVERSION:R}
 
 OPTIONS_DEFINE=		LTO
 OPTIONS_DEFAULT=	LTO

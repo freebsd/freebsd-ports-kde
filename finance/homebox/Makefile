@@ -1,6 +1,6 @@
 PORTNAME=	homebox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.24.2
+DISTVERSION=	0.25.0
 PORTREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	LOCAL/dtxdf/${PORTNAME}/:assets
@@ -17,7 +17,7 @@ LICENSE=	AGPLv3
 ONLY_FOR_ARCHS=	aarch64 amd64
 ONLY_FOR_ARCHS_REASON=	module modernc.org/sqlite only supported on aarch64 and amd64
 
-USES=		go:modules
+USES=		go:1.26+,modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	sysadminsmedia
 
@@ -43,7 +43,7 @@ PLIST_FILES=	bin/${PORTNAME} \
 
 # Run 'git checkout ${DISTVERSIONPREFIX}${DISTVERSION} && git rev-parse HEAD'
 # in the Homebox repository to get the value of GITID.
-GITID=		90b69123f44b9d56f11f88c5282580e660e7ea89
+GITID=		e911e6a1ca00e098799131f45c9f0496eb9ac773
 
 HOMEBOX_USER=	${PORTNAME}
 HOMEBOX_GROUP=	${HOMEBOX_USER}

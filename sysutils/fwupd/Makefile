@@ -1,13 +1,11 @@
 PORTNAME=	fwupd
-DISTVERSION=	2.1.1
+DISTVERSION=	2.1.2
 CATEGORIES=	sysutils
 
 MAINTAINER=	decke@FreeBSD.org
 COMMENT=	Update firmware automatically, safely, and reliably
 
 LICENSE=	LGPL21
-
-BROKEN_FreeBSD_13=	requires at least FreeBSD 14
 
 BUILD_DEPENDS=	blkid:filesystems/libblkid \
 		flashrom>0:sysutils/flashrom \
@@ -59,6 +57,7 @@ MESON_ARGS+=	-Dlibmnl=disabled \
 		-Dpolkit=disabled \
 		-Dsystemd=disabled \
 		-Dpassim=disabled \
+		-Dhsi=disabled \
 		-Dumockdev_tests=disabled \
 		-Dplugin_modem_manager=disabled \
 		-Dpython=${PYTHON_CMD}

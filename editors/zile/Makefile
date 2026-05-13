@@ -20,6 +20,8 @@ USE_PERL5=	build
 
 GNU_CONFIGURE=	yes
 
+TEST_TARGET=	check
+
 PLIST_FILES=	bin/${PORTNAME} \
 		share/man/man1/${PORTNAME}.1.gz
 PORTDOCS=	AUTHORS FAQ NEWS dotzile.sample

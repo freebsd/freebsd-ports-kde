@@ -1,6 +1,6 @@
---- electron/shell/browser/api/electron_api_app.cc.orig	2026-03-17 08:46:52 UTC
+--- electron/shell/browser/api/electron_api_app.cc.orig	2026-05-01 21:06:40 UTC
 +++ electron/shell/browser/api/electron_api_app.cc
-@@ -100,7 +100,7 @@
+@@ -102,7 +102,7 @@
  #include "shell/common/process_util.h"
  #endif
  
@@ -9,7 +9,7 @@
  #include "base/nix/scoped_xdg_activation_token_injector.h"
  #include "base/nix/xdg_util.h"
  #endif
-@@ -428,7 +428,7 @@ bool NotificationCallbackWrapper(
+@@ -430,7 +430,7 @@ bool NotificationCallbackWrapper(
      base::CommandLine cmd,
      const base::FilePath& cwd,
      const std::vector<uint8_t> additional_data) {
@@ -18,7 +18,7 @@
    // Set the global activation token sent as a command line switch by another
    // electron app instance. This also removes the switch after use to prevent
    // any side effects of leaving it in the command line after this point.
-@@ -613,7 +613,7 @@ void App::OnFinishLaunching(base::DictValue launch_inf
+@@ -615,7 +615,7 @@ void App::OnFinishLaunching(base::DictValue launch_inf
  }
  
  void App::OnFinishLaunching(base::DictValue launch_info) {
@@ -27,7 +27,7 @@
    // Set the application name for audio streams shown in external
    // applications. Only affects pulseaudio currently.
    media::AudioManager::SetGlobalAppName(Browser::Get()->GetName());
-@@ -962,7 +962,7 @@ void App::SetDesktopName(const std::string& desktop_na
+@@ -964,7 +964,7 @@ void App::SetDesktopName(const std::string& desktop_na
  }
  
  void App::SetDesktopName(const std::string& desktop_name) {
@@ -54,7 +54,7 @@
      auto memory_info = process_metric.second->GetMemoryInfo();
  
      auto memory_dict = gin_helper::Dictionary::CreateEmpty(isolate);
-@@ -1855,7 +1855,7 @@ gin::ObjectTemplateBuilder App::GetObjectTemplateBuild
+@@ -1878,7 +1878,7 @@ gin::ObjectTemplateBuilder App::GetObjectTemplateBuild
        .SetMethod(
            "removeAsDefaultProtocolClient",
            base::BindRepeating(&Browser::RemoveAsDefaultProtocolClient, browser))
@@ -63,7 +63,7 @@
        .SetMethod(
            "getApplicationInfoForProtocol",
            base::BindRepeating(&Browser::GetApplicationInfoForProtocol, browser))
-@@ -1913,7 +1913,7 @@ gin::ObjectTemplateBuilder App::GetObjectTemplateBuild
+@@ -1937,7 +1937,7 @@ gin::ObjectTemplateBuilder App::GetObjectTemplateBuild
        .SetMethod("getJumpListSettings", &App::GetJumpListSettings)
        .SetMethod("setJumpList", &App::SetJumpList)
  #endif

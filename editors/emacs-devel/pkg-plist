@@ -2712,6 +2712,8 @@ share/applications/emacsclient.desktop
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/slovak.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/symbol-ksc.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/symbol-ksc.elc
+%%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/syriac.el.gz
+%%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/syriac.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/tamil-dvorak.el.gz
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/tamil-dvorak.elc
 %%DATADIR%%/%%EMACS_VER%%/lisp/leim/quail/thai.el.gz

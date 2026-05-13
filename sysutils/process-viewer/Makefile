@@ -1,5 +1,6 @@
 PORTNAME=	process-viewer
 DISTVERSION=	g20260130
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	yuri@FreeBSD.org

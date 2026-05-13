@@ -1,6 +1,6 @@
 PORTNAME=	cpp-httplib
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.40.0
+DISTVERSION=	0.44.0
 CATEGORIES=	www devel
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -9,8 +9,6 @@ WWW=		https://github.com/yhirose/cpp-httplib
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN_FreeBSD_13=	configure fails: OpenSSL is too old: Found unsuitable version "1.1.1t", but required is at least "3.0.0"
 
 TEST_DEPENDS=	gmake:devel/gmake
 
@@ -32,7 +30,7 @@ PLIST_FILES=	include/httplib.h \
 		lib/cmake/httplib/httplibConfigVersion.cmake \
 		lib/cmake/httplib/httplibTargets.cmake
 
-CONFLICTS_BUILD=	googletest # should be CONFLICTS_TEST
+#CONFLICTS_BUILD=	googletest # should be CONFLICTS_TEST
 
 OPTIONS_DEFINE=		BROTLI SSL
 OPTIONS_DEFAULT=	BROTLI SSL

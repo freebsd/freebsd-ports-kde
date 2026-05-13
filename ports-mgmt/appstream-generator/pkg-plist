@@ -1,7 +1,7 @@
 bin/appstream-generator
+etc/poudriere.d/hooks/appstream-post-bulk.sh.sample
 %%DATADIR%%/asgen-hints.json
 %%DATADIR%%/hicolor-theme-index.theme
-%%DATADIR%%/poudriere-hook-bulk.sh
 %%DATADIR%%/templates/debian/base.html
 %%DATADIR%%/templates/debian/main.html
 %%DATADIR%%/templates/debian/static/css/highlight.css

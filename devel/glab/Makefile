@@ -1,6 +1,7 @@
 PORTNAME=	glab
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.92.1
+DISTVERSION=	1.95.0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	mfechner@FreeBSD.org
@@ -19,7 +20,7 @@ _BUILD_VERSION=		${DISTVERSION}
 _BUILD_PLATFORM=	${OPSYS:tl}
 _BUILD_DATE=		$$(date +%Y-%m-%d)
 # Find here: https://gitlab.com/gitlab-org/cli/-/tags
-_TAG=			fcecef5594725be203a4357d6751691988f76049
+_TAG=			6a2f207dd73796fb27873b9197bebbaf63e6fae2
 
 GO_MODULE=	gitlab.com/gitlab-org/cli
 GO_TARGET=	./cmd/${PORTNAME}
@@ -52,7 +53,7 @@ pre-build:
 
 post-install-COMPLETIONS-on:
 .for _shell in bash fish zsh
-	${GO_WRKDIR_BIN}/${PORTNAME} completion -s ${_shell} \
+	${SETENV} HOME=${WRKDIR} ${GO_WRKDIR_BIN}/${PORTNAME} completion -s ${_shell} \
 		>${STAGEDIR}${PREFIX}/${COMPLETIONS_PLIST_FILES:M*${_shell}*}
 .endfor
 
@@ -62,7 +63,7 @@ post-install-DOCS-on:
 		${STAGEDIR}${DOCSDIR}
 
 post-install-MANPAGES-on:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} run \
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} HOME=${WRKDIR} ${GO_CMD} run \
 		./cmd/gen-docs --manpage --path ${STAGEDIR}${PREFIX}/share/man/man1)
 
 .include <bsd.port.mk>

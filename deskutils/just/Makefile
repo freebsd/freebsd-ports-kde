@@ -1,5 +1,5 @@
 PORTNAME=	just
-DISTVERSION=	1.49.0
+DISTVERSION=	1.51.0
 CATEGORIES=	deskutils
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -28,23 +28,23 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		arrayref-0.3.9 \
 		arrayvec-0.7.6 \
 		autocfg-1.5.0 \
-		bitflags-2.11.0 \
-		blake3-1.8.4 \
+		bitflags-2.11.1 \
+		blake3-1.8.5 \
 		block-buffer-0.10.4 \
 		block2-0.6.2 \
 		bstr-1.12.1 \
 		bumpalo-3.20.2 \
 		bytecount-0.6.9 \
 		camino-1.2.2 \
-		cc-1.2.59 \
+		cc-1.2.62 \
 		cfg-if-1.0.4 \
 		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
 		chrono-0.4.44 \
-		clap-4.6.0 \
+		clap-4.6.1 \
 		clap_builder-4.6.0 \
-		clap_complete-4.6.0 \
-		clap_derive-4.6.0 \
+		clap_complete-4.6.4 \
+		clap_derive-4.6.1 \
 		clap_lex-1.1.0 \
 		clap_mangen-0.3.0 \
 		colorchoice-1.0.5 \
@@ -63,33 +63,35 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		dirs-sys-0.5.0 \
 		dispatch2-0.3.1 \
 		dotenvy-0.15.7 \
-		edit-distance-2.2.2 \
 		equivalent-1.0.2 \
 		errno-0.3.14 \
-		fastrand-2.4.0 \
+		fastrand-2.4.1 \
 		find-msvc-tools-0.1.9 \
 		fnv-1.0.7 \
 		foldhash-0.1.5 \
+		futures-core-0.3.32 \
+		futures-task-0.3.32 \
+		futures-util-0.3.32 \
 		generic-array-0.14.7 \
 		getopts-0.2.24 \
 		getrandom-0.2.17 \
 		getrandom-0.4.2 \
 		hashbrown-0.15.5 \
-		hashbrown-0.16.1 \
+		hashbrown-0.17.1 \
 		heck-0.5.0 \
 		hermit-abi-0.5.2 \
 		iana-time-zone-0.1.65 \
 		iana-time-zone-haiku-0.1.2 \
 		id-arena-2.3.0 \
-		indexmap-2.13.1 \
+		indexmap-2.14.0 \
 		is_executable-1.0.5 \
 		is_terminal_polyfill-1.70.2 \
 		itoa-1.0.18 \
-		js-sys-0.3.94 \
+		js-sys-0.3.98 \
 		leb128fmt-0.1.0 \
 		lexiclean-0.0.1 \
-		libc-0.2.184 \
-		libredox-0.1.15 \
+		libc-0.2.186 \
+		libredox-0.1.16 \
 		linux-raw-sys-0.12.1 \
 		log-0.4.29 \
 		memchr-2.8.0 \
@@ -104,6 +106,7 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		option-ext-0.2.0 \
 		papergrid-0.14.0 \
 		percent-encoding-2.3.2 \
+		pin-project-lite-0.2.17 \
 		pretty_assertions-1.4.1 \
 		prettyplease-0.2.37 \
 		proc-macro-error-attr2-2.0.0 \
@@ -113,8 +116,8 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		pulldown-cmark-to-cmark-10.0.4 \
 		quote-1.0.45 \
 		r-efi-6.0.0 \
-		rand-0.10.0 \
-		rand_core-0.10.0 \
+		rand-0.10.1 \
+		rand_core-0.10.1 \
 		rayon-core-1.13.0 \
 		redox_users-0.5.2 \
 		regex-1.12.3 \
@@ -133,7 +136,8 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		sha2-0.10.9 \
 		shellexpand-3.1.2 \
 		shlex-1.3.0 \
-		similar-3.0.0 \
+		similar-3.1.0 \
+		slab-0.4.12 \
 		snafu-0.9.0 \
 		snafu-derive-0.9.0 \
 		strsim-0.11.1 \
@@ -142,14 +146,13 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		syn-2.0.117 \
 		tabled-0.18.0 \
 		tabled_derive-0.10.0 \
-		target-2.1.0 \
 		tempfile-3.27.0 \
 		temptree-0.2.0 \
 		terminal_size-0.4.4 \
 		thiserror-2.0.18 \
 		thiserror-impl-2.0.18 \
 		typed-arena-2.0.2 \
-		typenum-1.19.0 \
+		typenum-1.20.0 \
 		unicase-2.9.0 \
 		unicode-ident-1.0.24 \
 		unicode-segmentation-1.13.2 \
@@ -157,15 +160,15 @@ CARGO_CRATES=	aho-corasick-1.1.4 \
 		unicode-xid-0.2.6 \
 		unsafe-libyaml-0.2.11 \
 		utf8parse-0.2.2 \
-		uuid-1.23.0 \
+		uuid-1.23.1 \
 		version_check-0.9.5 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
 		wasip2-1.0.1+wasi-0.2.4 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.117 \
-		wasm-bindgen-macro-0.2.117 \
-		wasm-bindgen-macro-support-0.2.117 \
-		wasm-bindgen-shared-0.2.117 \
+		wasm-bindgen-0.2.121 \
+		wasm-bindgen-macro-0.2.121 \
+		wasm-bindgen-macro-support-0.2.121 \
+		wasm-bindgen-shared-0.2.121 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \

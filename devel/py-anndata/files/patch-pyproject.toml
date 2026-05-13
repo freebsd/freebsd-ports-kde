@@ -6,6 +6,6 @@
      "legacy-api-wrap",
 -    "zarr >=2.18.7, !=3.0.*",
 +    "zarr >=2.18.4, !=3.0.*",
+     "scverse-misc>=0.0.3",
  ]
  dynamic = [ "version" ]
- 

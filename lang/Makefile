@@ -16,6 +16,7 @@
     SUBDIR += basic256
     SUBDIR += bend
     SUBDIR += bsh
+    SUBDIR += bun
     SUBDIR += bwbasic
     SUBDIR += c
     SUBDIR += cairo
@@ -59,7 +60,6 @@
     SUBDIR += elixir-devel
     SUBDIR += elixir-mode.el
     SUBDIR += elk
-    SUBDIR += elm
     SUBDIR += emacs-lisp-intro
     SUBDIR += emilua
     SUBDIR += erlang
@@ -74,6 +74,7 @@
     SUBDIR += erlang-runtime26
     SUBDIR += erlang-runtime27
     SUBDIR += erlang-runtime28
+    SUBDIR += erlang-runtime29
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -101,10 +102,10 @@
     SUBDIR += gcc15
     SUBDIR += gcc15-devel
     SUBDIR += gcc16-devel
+    SUBDIR += gcc17-devel
     SUBDIR += gcc6-aux
     SUBDIR += gforth
     SUBDIR += ghc
-    SUBDIR += ghc92
     SUBDIR += ghc94
     SUBDIR += ghc96
     SUBDIR += ghc98
@@ -310,6 +311,7 @@
     SUBDIR += python313
     SUBDIR += python313t
     SUBDIR += python314
+    SUBDIR += python315
     SUBDIR += qmasm
     SUBDIR += quickjs
     SUBDIR += quickjs-ng
@@ -326,7 +328,6 @@
     SUBDIR += rhino
     SUBDIR += rizin
     SUBDIR += rizin-cutter
-    SUBDIR += ruby32
     SUBDIR += ruby33
     SUBDIR += ruby34
     SUBDIR += ruby40
@@ -399,5 +400,6 @@
     SUBDIR += zephir
     SUBDIR += zig
     SUBDIR += zig014
+    SUBDIR += zig015
 
 .include <bsd.port.subdir.mk>

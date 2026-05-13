@@ -1,6 +1,5 @@
 PORTNAME=	ruff
-DISTVERSION=	0.15.10
-PORTREVISION=	0
+DISTVERSION=	0.15.12
 CATEGORIES=	devel python
 #MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -43,7 +42,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		anstyle-wincon-3.0.10 \
 		anyhow-1.0.102 \
 		approx-0.5.1 \
-		arc-swap-1.9.0 \
+		arc-swap-1.9.1 \
 		argfile-1.0.0 \
 		arrayvec-0.7.6 \
 		assert_fs-1.1.3 \
@@ -155,8 +154,8 @@ CARGO_CRATES=	adler2-2.0.1 \
 		fsevent-sys-4.1.0 \
 		funty-2.0.0 \
 		generic-array-0.14.7 \
-		get-size-derive2-0.7.4 \
-		get-size2-0.7.4 \
+		get-size-derive2-0.8.0 \
+		get-size2-0.8.0 \
 		getopts-0.2.24 \
 		getrandom-0.2.16 \
 		getrandom-0.3.4 \
@@ -167,7 +166,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		half-2.6.0 \
 		hashbrown-0.14.5 \
 		hashbrown-0.15.5 \
-		hashbrown-0.16.1 \
+		hashbrown-0.17.0 \
 		hashlink-0.10.0 \
 		heck-0.5.0 \
 		hermit-abi-0.5.2 \
@@ -188,16 +187,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		ignore-0.4.25 \
 		imara-diff-0.2.0 \
 		imperative-1.0.7 \
-		indexmap-2.13.0 \
+		indexmap-2.14.0 \
 		indicatif-0.18.4 \
 		indoc-2.0.7 \
 		inotify-0.11.0 \
 		inotify-sys-0.1.5 \
-		insta-1.47.1 \
+		insta-1.47.2 \
 		insta-cmd-0.6.0 \
 		interpolator-0.5.0 \
 		intrusive-collections-0.9.7 \
-		inventory-0.3.21 \
+		inventory-0.3.24 \
 		is-macro-0.3.7 \
 		is-terminal-0.4.16 \
 		is_terminal_polyfill-1.70.1 \
@@ -232,7 +231,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		manyhow-macros-0.11.4 \
 		markdown-1.0.0 \
 		matchers-0.2.0 \
-		matchit-0.9.1 \
+		matchit-0.9.2 \
 		memchr-2.8.0 \
 		memoffset-0.9.1 \
 		mimalloc-0.1.48 \
@@ -256,7 +255,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		once_cell_polyfill-1.70.1 \
 		oorandom-11.1.5 \
 		option-ext-0.2.0 \
-		ordermap-1.1.0 \
+		ordermap-1.2.0 \
 		os_pipe-1.2.2 \
 		os_str_bytes-7.1.1 \
 		page_size-0.6.0 \
@@ -309,7 +308,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		r-efi-6.0.0 \
 		radium-0.7.0 \
 		rand-0.8.5 \
-		rand-0.10.0 \
+		rand-0.10.1 \
 		rand_chacha-0.3.1 \
 		rand_core-0.6.4 \
 		rand_core-0.10.0 \
@@ -330,6 +329,9 @@ CARGO_CRATES=	adler2-2.0.1 \
 		rustix-1.1.4 \
 		rustversion-1.0.22 \
 		ryu-1.0.20 \
+		salsa-0.26.1 \
+		salsa-macro-rules-0.26.1 \
+		salsa-macros-0.26.1 \
 		same-file-1.0.6 \
 		schemars-1.2.1 \
 		schemars_derive-1.2.1 \
@@ -352,6 +354,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		shellexpand-3.1.2 \
 		shlex-1.3.0 \
 		similar-2.7.0 \
+		similar-3.1.0 \
 		siphasher-1.0.1 \
 		smallvec-1.15.1 \
 		snapbox-1.0.0 \
@@ -389,12 +392,12 @@ CARGO_CRATES=	adler2-2.0.1 \
 		tinyvec-1.10.0 \
 		tinyvec_macros-0.1.1 \
 		toml-0.9.12+spec-1.1.0 \
-		toml-1.1.0+spec-1.1.0 \
+		toml-1.1.2+spec-1.1.0 \
 		toml_datetime-0.7.5+spec-1.1.0 \
-		toml_datetime-1.1.0+spec-1.1.0 \
+		toml_datetime-1.1.1+spec-1.1.0 \
 		toml_edit-0.23.6 \
-		toml_parser-1.1.0+spec-1.1.0 \
-		toml_writer-1.1.0+spec-1.1.0 \
+		toml_parser-1.1.2+spec-1.1.0 \
+		toml_writer-1.1.1+spec-1.1.0 \
 		tracing-0.1.44 \
 		tracing-attributes-0.1.31 \
 		tracing-core-0.1.36 \
@@ -508,8 +511,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zstd-0.11.2+zstd.1.5.2 \
 		zstd-safe-5.0.2+zstd.1.5.2 \
 		zstd-sys-2.0.16+zstd.1.5.7 \
-		lsp-types@git+https://github.com/astral-sh/lsp-types.git?rev=e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c\#e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c \
-		salsa,salsa-macro-rules,salsa-macros@git+https://github.com/salsa-rs/salsa.git?rev=2f687a17ceea8ec7aaa605561ccbde938ccef086\#2f687a17ceea8ec7aaa605561ccbde938ccef086
+		lsp-types@git+https://github.com/astral-sh/lsp-types.git?rev=e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c\#e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c
 
 CARGO_BUILD=	no
 CARGO_INSTALL=	no

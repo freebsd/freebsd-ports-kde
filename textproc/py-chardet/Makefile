@@ -1,5 +1,5 @@
 PORTNAME=	chardet
-PORTVERSION=	7.1.0
+PORTVERSION=	7.4.3
 PORTEPOCH=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	PYPI
@@ -10,7 +10,7 @@ COMMENT=	Universal encoding detector for Python
 WWW=		https://chardet.readthedocs.io/en/latest/ \
 		https://github.com/chardet/chardet
 
-LICENSE=	MIT
+LICENSE=	BSD0CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}hatch-vcs>=0:devel/py-hatch-vcs@${PY_FLAVOR} \

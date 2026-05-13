@@ -1,5 +1,5 @@
 PORTNAME=	mpc
-DISTVERSION=	1.4.0
+DISTVERSION=	1.4.1
 CATEGORIES=	math devel
 MASTER_SITES=	GNU
 
@@ -28,7 +28,7 @@ PLIST_FILES=	include/mpc.h 			\
 		lib/libmpc.a 			\
 		lib/libmpc.so 			\
 		lib/libmpc.so.3 		\
-		lib/libmpc.so.3.4.0		\
+		lib/libmpc.so.3.4.1		\
 		libdata/pkgconfig/mpc.pc
 
 .include <bsd.port.mk>

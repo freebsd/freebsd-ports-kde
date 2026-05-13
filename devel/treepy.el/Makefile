@@ -1,9 +1,8 @@
 PORTNAME=	treepy.el
-DISTVERSION=	0.1.2
-PORTREVISION=	16
+DISTVERSION=	0.1.3
 CATEGORIES=	devel elisp
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Generic tree traversing tools for Emacs Lisp
 WWW=		https://github.com/volrath/treepy.el
 

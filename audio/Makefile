@@ -23,6 +23,7 @@
     SUBDIR += alsa-sndio
     SUBDIR += alsa-utils
     SUBDIR += alure
+    SUBDIR += amarok
     SUBDIR += amb-plugins
     SUBDIR += amberol
     SUBDIR += ampache
@@ -632,6 +633,7 @@
     SUBDIR += py-auditok
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
+    SUBDIR += py-edge-tts
     SUBDIR += py-espeakng-loader
     SUBDIR += py-essentia
     SUBDIR += py-eyed3
@@ -713,6 +715,7 @@
     SUBDIR += rubygem-ruby-ogginfo
     SUBDIR += rubygem-ruby-shout
     SUBDIR += s3mod
+    SUBDIR += sag
     SUBDIR += samplv1-lv2
     SUBDIR += sayonara
     SUBDIR += sbagen
@@ -744,6 +747,7 @@
     SUBDIR += somafm-cli
     SUBDIR += sonata
     SUBDIR += songrec
+    SUBDIR += songsee
     SUBDIR += sonic-visualiser
     SUBDIR += sonicradio
     SUBDIR += sonivox

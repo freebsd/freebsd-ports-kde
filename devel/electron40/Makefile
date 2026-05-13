@@ -217,7 +217,7 @@ SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 # See ${WRKSRC}/electron/DEPS for CHROMIUM_VER
 CHROMIUM_VER=			144.0.7559.236
 # See ${WRKSRC}/electron/DEPS for NODE_VER
-NODE_VER=			24.14.0
+NODE_VER=			24.15.0
 # See ${WRKSRC}/electron/DEPS for NAN_VER
 NAN_VER=			675cefebca42410733da8a454c8d9391fcebfbc2
 # See ${WRKSRC}/electron/DEPS for SQUIRREL_MAC_VER
@@ -229,7 +229,7 @@ MANTLE_VER=			78d3966b3c331292ea29ec38661b25df0a245948
 # See ${WRKSRC}/electron/DEPS for ENGFLOW_RECLIENT_CONFIGS_VER
 ENGFLOW_RECLIENT_CONFIGS_VER=	955335c30a752e9ef7bff375baab5e0819b6c00d
 # Keep in sync with devel/esbuild
-ESBUILD_VER=			0.27.1
+ESBUILD_VER=			0.28.0
 
 .include "Makefile.version"
 .include <bsd.port.pre.mk>

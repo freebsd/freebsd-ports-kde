@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "name": "@deltachat-desktop/target-electron",
-  "version": "2.48.0",
+  "version": "2.49.1",
   "description": "Desktop Application for delta.chat",
   "repository": {
     "type": "git",
@@ -81,7 +81,7 @@
     "application-config": "^3.0.0",
     "chai": "^5.1.1",
     "debounce": "^1.2.0",
-    "electron": "^41.1.0",
+    "electron": "^41.2.0",
     "electron-builder": "^26.7.0",
     "esbuild": "^0.25.0",
     "mocha": "^10.7.0",

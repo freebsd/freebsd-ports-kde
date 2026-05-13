@@ -1,6 +1,5 @@
 PORTNAME=	consult.el
-DISTVERSION=	2.9
-PORTREVISION=	2
+DISTVERSION=	3.3
 CATEGORIES=	editors elisp
 
 MAINTAINER=	pat@patmaddox.com

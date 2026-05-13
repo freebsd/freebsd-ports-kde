@@ -1,5 +1,5 @@
 PORTNAME=	libgedit-gfls
-DISTVERSION=	0.4.0
+DISTVERSION=	0.4.1
 CATEGORIES=	filesystems gnome
 DIST_SUBDIR=	gnome
 

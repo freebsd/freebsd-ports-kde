@@ -1,6 +1,7 @@
 PORTNAME=	taskwarrior-tui
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.27.0
+PORTREVISION=	1
 CATEGORIES=	deskutils
 
 MAINTAINER=	adamw@FreeBSD.org
@@ -24,10 +25,10 @@ PLIST_FILES=	bin/taskwarrior-tui \
 		share/zsh/site-functions/_taskwarrior-tui
 
 post-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/man/man1
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/bash-completion/completions
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/man/man1
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions
 	${INSTALL_DATA} ${WRKSRC}/completions/taskwarrior-tui.bash \
 		${STAGEDIR}${PREFIX}/share/bash-completion/completions/taskwarrior-tui
 	${INSTALL_DATA} ${WRKSRC}/completions/taskwarrior-tui.fish \

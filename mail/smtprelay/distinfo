@@ -1,5 +1,5 @@
-TIMESTAMP = 1775501946
-SHA256 (go/mail_smtprelay/smtprelay-v1.13.2/v1.13.2.mod) = 9467a5a83981a0889ece171901742b7a66d726cffe1903d32c0d4b080ea72019
-SIZE (go/mail_smtprelay/smtprelay-v1.13.2/v1.13.2.mod) = 664
-SHA256 (go/mail_smtprelay/smtprelay-v1.13.2/v1.13.2.zip) = 6b722f57c273110bdb4f4d39db9b9af59c951370fe5c7d163781247032af5e60
-SIZE (go/mail_smtprelay/smtprelay-v1.13.2/v1.13.2.zip) = 32848
+TIMESTAMP = 1777811079
+SHA256 (go/mail_smtprelay/smtprelay-v1.13.3/v1.13.3.mod) = 60d3cbec7a102daf6996625789c5d86b98c5e4c27c984b18dc737ee25e0a8d21
+SIZE (go/mail_smtprelay/smtprelay-v1.13.3/v1.13.3.mod) = 665
+SHA256 (go/mail_smtprelay/smtprelay-v1.13.3/v1.13.3.zip) = b0f37d7ff00b0f48ca2d53b9d3274dd794e7c5f8cff06f123c4c578fa5cfeb99
+SIZE (go/mail_smtprelay/smtprelay-v1.13.3/v1.13.3.zip) = 32839

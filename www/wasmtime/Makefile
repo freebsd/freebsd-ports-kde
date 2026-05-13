@@ -1,6 +1,6 @@
 PORTNAME=	wasmtime
 DISTVERSIONPREFIX=	v
-DISTVERSION=	43.0.1
+DISTVERSION=	44.0.1
 CATEGORIES=	www
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -32,6 +32,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		anyhow-1.0.100 \
 		arbitrary-1.4.2 \
 		arbtest-0.3.2 \
+		async-task-4.7.1 \
 		async-trait-0.1.89 \
 		atomic-waker-1.1.2 \
 		autocfg-1.1.0 \
@@ -44,7 +45,6 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		bit-vec-0.6.3 \
 		bitflags-1.3.2 \
 		bitflags-2.9.4 \
-		bitmaps-2.1.0 \
 		block-buffer-0.10.2 \
 		bstr-1.6.0 \
 		bumpalo-3.20.0 \
@@ -117,6 +117,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		errno-0.3.14 \
 		escape8259-0.5.2 \
 		fallible-iterator-0.3.0 \
+		fastrand-1.9.0 \
 		fastrand-2.3.0 \
 		fd-lock-4.0.4 \
 		file-per-thread-logger-0.2.0 \
@@ -139,11 +140,14 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		futures-core-0.3.31 \
 		futures-executor-0.3.31 \
 		futures-io-0.3.31 \
+		futures-lite-1.13.0 \
 		futures-macro-0.3.31 \
 		futures-sink-0.3.31 \
 		futures-task-0.3.31 \
 		futures-util-0.3.31 \
 		fxprof-processed-profile-0.8.1 \
+		gdbstub-0.7.10 \
+		gdbstub_arch-0.3.3 \
 		generic-array-0.14.5 \
 		getrandom-0.2.15 \
 		getrandom-0.3.1 \
@@ -184,7 +188,6 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		id-arena-2.3.0 \
 		idna-1.1.0 \
 		idna_adapter-1.2.0 \
-		im-rc-15.1.0 \
 		indexmap-1.9.1 \
 		indexmap-2.13.0 \
 		inout-0.1.3 \
@@ -201,7 +204,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		ittapi-sys-0.4.0 \
 		jobserver-0.1.32 \
 		js-sys-0.3.74 \
-		json-from-wast-0.245.0 \
+		json-from-wast-0.246.1 \
 		lazy_static-1.4.0 \
 		leb128-0.2.5 \
 		leb128fmt-0.1.0 \
@@ -219,6 +222,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		logos-codegen-0.14.2 \
 		logos-derive-0.14.2 \
 		mach2-0.4.2 \
+		managed-0.8.0 \
 		matchers-0.2.0 \
 		matrixmultiply-0.3.9 \
 		maybe-owned-0.3.4 \
@@ -228,7 +232,8 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		minimal-lexical-0.2.1 \
 		miniz_oxide-0.8.9 \
 		mio-1.1.0 \
-		mutatis-0.3.2 \
+		mutatis-0.4.0 \
+		mutatis-derive-0.4.0 \
 		native-tls-0.2.14 \
 		ndarray-0.15.6 \
 		nom-7.1.3 \
@@ -239,7 +244,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		num-traits-0.2.19 \
 		num_cpus-1.17.0 \
 		object-0.36.5 \
-		object-0.38.1 \
+		object-0.39.0 \
 		ocaml-boxroot-sys-0.2.0 \
 		ocaml-interop-0.8.8 \
 		ocaml-sys-0.22.3 \
@@ -255,8 +260,10 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		openvino-sys-0.9.0 \
 		ort-2.0.0-rc.10 \
 		ort-sys-2.0.0-rc.10 \
+		parking-2.2.1 \
 		password-hash-0.4.2 \
 		paste-1.0.7 \
+		pastey-0.2.1 \
 		pbkdf2-0.11.0 \
 		pem-rfc7468-0.7.0 \
 		percent-encoding-2.3.2 \
@@ -280,7 +287,6 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		rand_core-0.6.3 \
 		rand_core-0.9.3 \
 		rand_xorshift-0.3.0 \
-		rand_xoshiro-0.6.0 \
 		raw-cpuid-11.5.0 \
 		rawpointer-0.2.1 \
 		rayon-1.5.3 \
@@ -301,9 +307,9 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		rustix-0.38.43 \
 		rustix-1.0.8 \
 		rustix-linux-procfs-0.1.1 \
-		rustls-0.22.4 \
+		rustls-0.23.37 \
 		rustls-pki-types-1.13.1 \
-		rustls-webpki-0.102.2 \
+		rustls-webpki-0.103.10 \
 		rustversion-1.0.14 \
 		rusty-fork-0.3.0 \
 		ryu-1.0.9 \
@@ -327,7 +333,6 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		signal-hook-registry-1.4.1 \
 		simd-adler32-0.3.7 \
 		similar-2.7.0 \
-		sized-chunks-0.6.5 \
 		slab-0.4.11 \
 		smallvec-1.15.1 \
 		smallvec-2.0.0-alpha.10 \
@@ -347,7 +352,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		syn-2.0.106 \
 		synstructure-0.13.1 \
 		system-interface-0.27.3 \
-		tar-0.4.41 \
+		tar-0.4.45 \
 		target-lexicon-0.13.0 \
 		tch-0.17.0 \
 		tempfile-3.23.0 \
@@ -368,7 +373,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		tokio-macros-2.6.0 \
 		tokio-native-tls-0.3.1 \
 		tokio-openssl-0.6.5 \
-		tokio-rustls-0.25.0 \
+		tokio-rustls-0.26.4 \
 		tokio-util-0.7.16 \
 		toml-0.9.8 \
 		toml_datetime-0.7.3 \
@@ -402,6 +407,7 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		vcpkg-0.2.15 \
 		version_check-0.9.4 \
 		wait-timeout-0.2.0 \
+		waker-fn-1.2.0 \
 		walkdir-2.5.0 \
 		want-0.3.0 \
 		wasi-0.11.0+wasi-snapshot-preview1 \
@@ -414,22 +420,25 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		wasm-bindgen-macro-0.2.97 \
 		wasm-bindgen-macro-support-0.2.97 \
 		wasm-bindgen-shared-0.2.97 \
-		wasm-compose-0.245.0 \
+		wasm-compose-0.246.1 \
 		wasm-encoder-0.245.0 \
+		wasm-encoder-0.246.1 \
 		wasm-metadata-0.245.0 \
-		wasm-mutate-0.245.0 \
-		wasm-smith-0.245.0 \
-		wasm-wave-0.245.0 \
+		wasm-metadata-0.246.1 \
+		wasm-mutate-0.246.1 \
+		wasm-smith-0.246.1 \
+		wasm-wave-0.246.1 \
 		wasmi-1.0.8 \
 		wasmi_collections-1.0.8 \
 		wasmi_core-1.0.8 \
 		wasmi_ir-1.0.8 \
 		wasmparser-0.228.0 \
 		wasmparser-0.245.0 \
-		wasmprinter-0.245.0 \
+		wasmparser-0.246.1 \
+		wasmprinter-0.246.1 \
 		wast-35.0.2 \
-		wast-245.0.0 \
-		wat-1.245.0 \
+		wast-246.0.1 \
+		wat-1.246.1 \
 		webpki-root-certs-1.0.4 \
 		webpki-roots-0.26.1 \
 		which-6.0.3 \
@@ -473,16 +482,20 @@ CARGO_CRATES=	addr2line-0.24.1 \
 		wit-bindgen-rust-0.53.0 \
 		wit-bindgen-rust-macro-0.53.0 \
 		wit-component-0.245.0 \
+		wit-component-0.246.1 \
 		wit-parser-0.245.0 \
+		wit-parser-0.246.1 \
 		witx-0.9.1 \
 		write16-1.0.0 \
 		writeable-0.5.5 \
+		wstd-0.6.6 \
+		wstd-macro-0.6.6 \
 		xattr-1.6.1 \
 		yoke-0.7.5 \
 		yoke-derive-0.7.5 \
 		zerofrom-0.1.5 \
 		zerofrom-derive-0.1.5 \
-		zeroize-1.7.0 \
+		zeroize-1.8.2 \
 		zerovec-0.10.4 \
 		zerovec-derive-0.10.3 \
 		zip-0.6.6 \

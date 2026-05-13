@@ -12,7 +12,7 @@ share/man/man8/cbsd.8.gz
 %%FBSD%%cbsd/tools/racct-hoster-statsd
 %%FBSD%%cbsd/tools/racct-jail-statsd
 %%FBSD%%cbsd/tools/vale-ctl
-%%X86%%cbsd/misc/popcnttest
+%%X86%%cbsd/misc/x86-cpu-cap
 cbsd/.clang-format
 cbsd/.gitignore
 cbsd/.ssh/config
@@ -296,6 +296,7 @@ cbsd/etc/defaults/vm-linux-BlissOS-x86_64.conf
 cbsd/etc/defaults/vm-linux-BlueOnyx-10-x86_64.conf
 cbsd/etc/defaults/vm-linux-CentOS-stream-10-x86_64.conf
 cbsd/etc/defaults/vm-linux-CentOS-stream-9-x86_64.conf
+cbsd/etc/defaults/vm-linux-Clonezilla-3-x86_64.conf
 cbsd/etc/defaults/vm-linux-Debian-11-x86_64.conf
 cbsd/etc/defaults/vm-linux-Debian-12-x86_64.conf
 cbsd/etc/defaults/vm-linux-Debian-13-aarch64.conf
@@ -315,6 +316,7 @@ cbsd/etc/defaults/vm-linux-Gentoo-2025-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kali-2025-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kubuntu-desktop-22-x86_64.conf
 cbsd/etc/defaults/vm-linux-Kubuntu-desktop-24-x86_64.conf
+cbsd/etc/defaults/vm-linux-Kubuntu-desktop-26-x86_64.conf
 cbsd/etc/defaults/vm-linux-Lakka-6-x86_64.conf
 cbsd/etc/defaults/vm-linux-Lubuntu-desktop-22-x86_64.conf
 cbsd/etc/defaults/vm-linux-Lubuntu-desktop-24-x86_64.conf
@@ -357,6 +359,8 @@ cbsd/etc/defaults/vm-linux-TinyCore-16-x86_64.conf
 cbsd/etc/defaults/vm-linux-TrueNAS-Scale-25-x86_64.conf
 cbsd/etc/defaults/vm-linux-Ubuntu-desktop-22-x86_64.conf
 cbsd/etc/defaults/vm-linux-Ubuntu-desktop-24-x86_64.conf
+cbsd/etc/defaults/vm-linux-Ubuntu-desktop-26-x86_64.conf
+cbsd/etc/defaults/vm-linux-Ubuntu-server-26-x86_64.conf
 cbsd/etc/defaults/vm-linux-Ubuntuserver-20-x86_64.conf
 cbsd/etc/defaults/vm-linux-Ubuntuserver-22-x86_66.conf
 cbsd/etc/defaults/vm-linux-Ubuntuserver-24-x86_64.conf

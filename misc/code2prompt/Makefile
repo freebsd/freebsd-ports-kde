@@ -1,6 +1,7 @@
 PORTNAME=	code2prompt
 DISTVERSIONPREFIX=	v
 DISTVERSION=	4.2.0
+PORTREVISION=	1
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org

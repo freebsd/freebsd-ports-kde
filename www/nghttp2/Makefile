@@ -1,6 +1,5 @@
 PORTNAME=	nghttp2
-PORTVERSION=	1.68.1
-PORTREVISION=	1
+PORTVERSION=	1.69.0
 CATEGORIES=	www net
 MASTER_SITES=	https://github.com/nghttp2/nghttp2/releases/download/v${PORTVERSION}/
 

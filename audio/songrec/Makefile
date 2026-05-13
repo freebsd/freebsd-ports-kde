@@ -1,5 +1,5 @@
 PORTNAME=	songrec
-DISTVERSION=	0.6.7
+DISTVERSION=	0.7.1
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -11,10 +11,11 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 LIB_DEPENDS=	libasound.so:audio/alsa-lib \
 		libdbus-1.so:devel/dbus \
+		libpipewire-0.3.so:multimedia/pipewire \
 		libpulse.so:audio/pulseaudio \
 		libsoup-3.0.so:devel/libsoup3
 
-USES=		cargo gettext-runtime gnome pkgconfig ssl
+USES=		cargo gettext-runtime gnome llvm:22 pkgconfig ssl
 USE_GNOME=	gdkpixbuf glib20 gtk40 libadwaita
 
 USE_GITHUB=	yes
@@ -27,6 +28,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		alsa-0.11.0 \
 		alsa-sys-0.4.0 \
 		android_system_properties-0.1.5 \
+		annotate-snippets-0.11.5 \
 		anstream-1.0.0 \
 		anstyle-1.0.14 \
 		anstyle-parse-1.0.0 \
@@ -42,14 +44,16 @@ CARGO_CRATES=	adler2-2.0.1 \
 		async-lock-3.4.2 \
 		async-process-2.5.0 \
 		async-recursion-1.1.1 \
-		async-signal-0.2.13 \
+		async-signal-0.2.14 \
 		async-task-4.7.1 \
 		async-trait-0.1.89 \
 		atomic-waker-1.1.2 \
+		audio_thread_priority-0.35.1 \
 		autocfg-1.5.0 \
-		base64-0.12.3 \
+		base64-0.22.1 \
+		bindgen-0.72.1 \
 		bitflags-1.3.2 \
-		bitflags-2.11.0 \
+		bitflags-2.11.1 \
 		block-0.1.6 \
 		block2-0.6.2 \
 		blocking-1.6.2 \
@@ -60,32 +64,38 @@ CARGO_CRATES=	adler2-2.0.1 \
 		bytes-1.11.1 \
 		cairo-rs-0.21.5 \
 		cairo-sys-rs-0.21.5 \
-		cc-1.2.57 \
+		cc-1.2.60 \
 		cesu8-1.1.0 \
+		cexpr-0.6.0 \
 		cfg-expr-0.20.7 \
 		cfg-if-1.0.4 \
+		cfg_aliases-0.2.1 \
 		chacha20-0.10.0 \
 		chfft-0.3.4 \
 		chrono-0.4.44 \
-		clap-4.6.0 \
+		clang-sys-1.8.1 \
+		clap-4.6.1 \
 		clap_builder-4.6.0 \
 		clap_lex-1.1.0 \
-		clap_mangen-0.2.33 \
+		clap_mangen-0.3.0 \
 		colorchoice-1.0.5 \
 		combine-4.6.7 \
 		concurrent-queue-2.5.0 \
+		convert_case-0.8.0 \
+		cookie-factory-0.3.3 \
 		core-foundation-sys-0.8.7 \
-		coreaudio-rs-0.14.0 \
-		cpal-0.17.3 \
+		coreaudio-rs-0.14.2 \
 		cpufeatures-0.3.0 \
 		crc32fast-1.5.0 \
 		crossbeam-utils-0.8.21 \
 		csv-1.4.0 \
 		csv-core-0.1.13 \
 		dasp_sample-0.11.0 \
+		dbus-0.6.5 \
 		directories-6.0.0 \
 		dirs-sys-0.5.0 \
 		dispatch2-0.3.1 \
+		either-1.15.0 \
 		encoding_rs-0.8.35 \
 		endi-1.1.1 \
 		enumflags2-0.7.12 \
@@ -96,7 +106,7 @@ CARGO_CRATES=	adler2-2.0.1 \
 		event-listener-5.4.1 \
 		event-listener-strategy-0.5.4 \
 		extended-0.1.0 \
-		fastrand-2.3.0 \
+		fastrand-2.4.1 \
 		fdeflate-0.3.7 \
 		fern-0.7.1 \
 		field-offset-0.3.6 \
@@ -115,17 +125,17 @@ CARGO_CRATES=	adler2-2.0.1 \
 		gdk-pixbuf-sys-0.21.5 \
 		gdk4-0.10.3 \
 		gdk4-sys-0.10.3 \
-		getrandom-0.1.16 \
 		getrandom-0.2.17 \
 		getrandom-0.4.2 \
-		gettext-rs-0.5.0 \
-		gettext-sys-0.19.9 \
+		gettext-rs-0.7.7 \
+		gettext-sys-0.26.0 \
 		gio-0.21.5 \
 		gio-sys-0.21.5 \
 		glib-0.21.5 \
 		glib-build-tools-0.21.0 \
 		glib-macros-0.21.5 \
 		glib-sys-0.21.5 \
+		glob-0.3.3 \
 		gobject-sys-0.21.5 \
 		graphene-rs-0.21.5 \
 		graphene-sys-0.21.5 \
@@ -135,46 +145,58 @@ CARGO_CRATES=	adler2-2.0.1 \
 		gtk4-macros-0.10.3 \
 		gtk4-sys-0.10.3 \
 		hashbrown-0.15.5 \
-		hashbrown-0.16.1 \
+		hashbrown-0.17.0 \
 		heck-0.5.0 \
 		hermit-abi-0.5.2 \
 		hex-0.4.3 \
+		hound-3.5.1 \
 		humantime-2.3.0 \
 		iana-time-zone-0.1.65 \
 		iana-time-zone-haiku-0.1.2 \
 		id-arena-2.3.0 \
 		image-0.25.10 \
-		indexmap-2.13.0 \
+		indexmap-2.14.0 \
 		is_terminal_polyfill-1.70.2 \
+		itertools-0.13.0 \
 		itoa-1.0.18 \
 		jni-0.21.1 \
 		jni-sys-0.3.1 \
 		jni-sys-0.4.1 \
 		jni-sys-macros-0.4.1 \
-		js-sys-0.3.91 \
-		ksni-0.3.3 \
+		js-sys-0.3.95 \
+		ksni-0.3.4 \
 		lazy_static-1.5.0 \
 		leb128fmt-0.1.0 \
 		libadwaita-0.8.1 \
 		libadwaita-sys-0.8.1 \
-		libc-0.2.183 \
-		libm-0.2.16 \
+		libc-0.2.185 \
+		libdbus-sys-0.2.7 \
+		libloading-0.8.9 \
 		libpulse-binding-2.30.1 \
 		libpulse-sys-1.23.0 \
-		libredox-0.1.15 \
+		libredox-0.1.16 \
+		libspa-0.9.2 \
+		libspa-sys-0.9.2 \
 		linux-raw-sys-0.12.1 \
 		locale_config-0.3.0 \
 		log-0.4.29 \
-		mach2-0.5.0 \
+		mach2-0.4.3 \
+		mach2-0.6.0 \
 		malloc_buf-0.0.6 \
 		memchr-2.8.0 \
 		memoffset-0.9.1 \
+		minimal-lexical-0.2.1 \
+		minimp3-sys-0.3.2 \
+		minimp3_fixed-0.5.4 \
 		miniz_oxide-0.8.9 \
 		moxcms-0.8.1 \
 		mpris-server-0.9.0 \
 		ndk-0.9.0 \
 		ndk-context-0.1.1 \
 		ndk-sys-0.6.0+11769913 \
+		nix-0.30.1 \
+		nom-7.1.3 \
+		nom-8.0.0 \
 		num-bigint-0.4.6 \
 		num-complex-0.4.6 \
 		num-derive-0.4.2 \
@@ -206,92 +228,83 @@ CARGO_CRATES=	adler2-2.0.1 \
 		percent-encoding-2.3.2 \
 		pin-project-lite-0.2.17 \
 		piper-0.2.5 \
-		pkg-config-0.3.32 \
+		pipewire-0.9.2 \
+		pipewire-sys-0.9.2 \
+		pkg-config-0.3.33 \
 		png-0.18.1 \
 		polling-3.11.0 \
-		ppv-lite86-0.2.21 \
 		prettyplease-0.2.37 \
 		proc-macro-crate-3.5.0 \
 		proc-macro2-1.0.106 \
 		pulsectl-rs-0.3.2 \
-		pxfm-0.1.28 \
+		pxfm-0.1.29 \
 		quote-1.0.45 \
 		r-efi-6.0.0 \
-		rand-0.7.3 \
-		rand-0.10.0 \
-		rand_chacha-0.2.2 \
-		rand_core-0.5.1 \
-		rand_core-0.10.0 \
-		rand_distr-0.6.0 \
-		rand_hc-0.2.0 \
+		rand-0.10.1 \
+		rand_core-0.10.1 \
 		redox_users-0.5.2 \
 		regex-1.12.3 \
 		regex-automata-0.4.14 \
 		regex-syntax-0.8.10 \
 		rodio-0.22.2 \
-		roff-1.1.0 \
-		rtrb-0.3.3 \
+		roff-1.1.1 \
+		rustc-hash-2.1.2 \
 		rustc_version-0.4.1 \
 		rustix-1.1.4 \
 		rustversion-1.0.22 \
 		ryu-1.0.23 \
 		same-file-1.0.6 \
-		semver-1.0.27 \
+		semver-1.0.28 \
 		serde-1.0.228 \
 		serde_core-1.0.228 \
 		serde_derive-1.0.228 \
 		serde_fmt-1.1.0 \
 		serde_json-1.0.149 \
 		serde_repr-0.1.20 \
-		serde_spanned-1.1.0 \
+		serde_spanned-1.1.1 \
 		shell32-sys-0.1.2 \
 		shlex-1.3.0 \
 		signal-hook-registry-1.4.8 \
-		simd-adler32-0.3.8 \
+		simd-adler32-0.3.9 \
 		slab-0.4.12 \
+		slice-ring-buffer-0.3.4 \
 		smallvec-1.15.1 \
 		soup3-0.8.0 \
 		soup3-sys-0.8.0 \
 		strsim-0.11.1 \
-		sval-2.17.0 \
-		sval_buffer-2.17.0 \
-		sval_dynamic-2.17.0 \
-		sval_fmt-2.17.0 \
-		sval_json-2.17.0 \
-		sval_nested-2.17.0 \
-		sval_ref-2.17.0 \
-		sval_serde-2.17.0 \
+		sval-2.18.0 \
+		sval_buffer-2.18.0 \
+		sval_dynamic-2.18.0 \
+		sval_fmt-2.18.0 \
+		sval_json-2.18.0 \
+		sval_nested-2.18.0 \
+		sval_ref-2.18.0 \
+		sval_serde-2.18.0 \
 		symphonia-0.5.5 \
 		symphonia-bundle-flac-0.5.5 \
-		symphonia-bundle-mp3-0.5.5 \
 		symphonia-codec-aac-0.5.5 \
-		symphonia-codec-adpcm-0.5.5 \
 		symphonia-codec-alac-0.5.5 \
-		symphonia-codec-pcm-0.5.5 \
 		symphonia-codec-vorbis-0.5.5 \
 		symphonia-core-0.5.5 \
-		symphonia-format-caf-0.5.5 \
-		symphonia-format-isomp4-0.5.5 \
 		symphonia-format-mkv-0.5.5 \
 		symphonia-format-ogg-0.5.5 \
 		symphonia-format-riff-0.5.5 \
 		symphonia-metadata-0.5.5 \
 		symphonia-utils-xiph-0.5.5 \
 		syn-2.0.117 \
-		system-deps-7.0.7 \
+		system-deps-7.0.8 \
 		target-lexicon-0.13.3 \
+		temp-dir-0.1.16 \
 		tempfile-3.27.0 \
 		thiserror-1.0.69 \
 		thiserror-2.0.18 \
 		thiserror-impl-1.0.69 \
 		thiserror-impl-2.0.18 \
-		toml-0.9.12+spec-1.1.0 \
-		toml-1.1.0+spec-1.1.0 \
-		toml_datetime-0.7.5+spec-1.1.0 \
-		toml_datetime-1.1.0+spec-1.1.0 \
-		toml_edit-0.25.8+spec-1.1.0 \
-		toml_parser-1.1.0+spec-1.1.0 \
-		toml_writer-1.1.0+spec-1.1.0 \
+		toml-1.1.2+spec-1.1.0 \
+		toml_datetime-1.1.1+spec-1.1.0 \
+		toml_edit-0.25.11+spec-1.1.0 \
+		toml_parser-1.1.2+spec-1.1.0 \
+		toml_writer-1.1.1+spec-1.1.0 \
 		tracing-0.1.44 \
 		tracing-attributes-0.1.31 \
 		tracing-core-0.1.36 \
@@ -299,28 +312,27 @@ CARGO_CRATES=	adler2-2.0.1 \
 		typeid-1.0.3 \
 		uds_windows-1.2.1 \
 		unicode-ident-1.0.24 \
+		unicode-segmentation-1.13.2 \
+		unicode-width-0.2.2 \
 		unicode-xid-0.2.6 \
 		utf8parse-0.2.2 \
-		uuid-0.8.2 \
-		uuid-1.22.0 \
+		uuid-1.23.1 \
 		value-bag-1.12.0 \
 		value-bag-serde1-1.12.0 \
 		value-bag-sval2-1.12.0 \
 		version-compare-0.2.1 \
 		walkdir-2.5.0 \
-		wasi-0.9.0+wasi-snapshot-preview1 \
 		wasi-0.11.1+wasi-snapshot-preview1 \
-		wasip2-1.0.2+wasi-0.2.9 \
+		wasip2-1.0.3+wasi-0.2.9 \
 		wasip3-0.4.0+wasi-0.3.0-rc-2026-01-06 \
-		wasm-bindgen-0.2.114 \
-		wasm-bindgen-futures-0.4.64 \
-		wasm-bindgen-macro-0.2.114 \
-		wasm-bindgen-macro-support-0.2.114 \
-		wasm-bindgen-shared-0.2.114 \
+		wasm-bindgen-0.2.118 \
+		wasm-bindgen-macro-0.2.118 \
+		wasm-bindgen-macro-support-0.2.118 \
+		wasm-bindgen-shared-0.2.118 \
 		wasm-encoder-0.244.0 \
 		wasm-metadata-0.244.0 \
 		wasmparser-0.244.0 \
-		web-sys-0.3.91 \
+		web-sys-0.3.95 \
 		winapi-0.2.8 \
 		winapi-0.3.9 \
 		winapi-build-0.1.1 \
@@ -349,8 +361,9 @@ CARGO_CRATES=	adler2-2.0.1 \
 		windows_x86_64_gnullvm-0.42.2 \
 		windows_x86_64_msvc-0.42.2 \
 		winnow-0.7.15 \
-		winnow-1.0.0 \
+		winnow-1.0.2 \
 		wit-bindgen-0.51.0 \
+		wit-bindgen-0.57.1 \
 		wit-bindgen-core-0.51.0 \
 		wit-bindgen-rust-0.51.0 \
 		wit-bindgen-rust-macro-0.51.0 \
@@ -360,15 +373,20 @@ CARGO_CRATES=	adler2-2.0.1 \
 		zbus-5.14.0 \
 		zbus_macros-5.14.0 \
 		zbus_names-4.3.1 \
-		zerocopy-0.8.47 \
-		zerocopy-derive-0.8.47 \
 		zmij-1.0.21 \
 		zvariant-5.10.0 \
 		zvariant_derive-5.10.0 \
-		zvariant_utils-3.3.0
+		zvariant_utils-3.3.0 \
+		cpal@git+https://github.com/RustAudio/cpal.git?rev=bce156d\#bce156d8a3ea5999f763bb831342fb2f6ed23db1
 
 PLIST_FILES=	bin/${PORTNAME}
 
 # known problem: The 'Audio input' combobox doesn't have any selections, see https://github.com/marin-m/SongRec/issues/115
+
+post-patch:
+	@${PATCH} -p0 -d ${WRKDIR}/cpal-bce156d8a3ea5999f763bb831342fb2f6ed23db1 \
+		< ${PATCHDIR}/cpal-alsa-estrpipe.patch
+	@${PATCH} -p0 -d ${WRKDIR}/cpal-bce156d8a3ea5999f763bb831342fb2f6ed23db1 \
+		< ${PATCHDIR}/cpal-frames-to-duration-bsd.patch
 
 .include <bsd.port.mk>

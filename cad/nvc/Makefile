@@ -1,5 +1,5 @@
 PORTNAME=	nvc
-DISTVERSION=	1.19.3
+DISTVERSION=	1.20.1
 CATEGORIES=	cad
 MASTER_SITES=	https://www.nickg.me.uk/files/
 
@@ -47,6 +47,7 @@ BUILD_WRKSRC=		${BUILD_DIR}
 CONFIGURE_WRKSRC=	${BUILD_DIR}
 INSTALL_WRKSRC=		${BUILD_DIR}
 TEST_WRKSRC=		${WRKSRC}/.build
+TEST_ENV=		PATH=${STAGEDIR}${PREFIX}/bin:${PATH}
 
 BUILD_DIR=	${WRKSRC}/.build
 LLVM_VERSION=	${LLVM_DEFAULT}
@@ -54,6 +55,6 @@ LLVM_VERSION=	${LLVM_DEFAULT}
 post-install:
 	@${FIND} ${STAGEDIR}${PREFIX} -name "*.so" | ${XARGS} ${STRIP_CMD}
 
-# tests as of 1.19.0: 1 of 2 tests failed, see https://github.com/nickg/nvc/issues/1401
+# tests as of 1.20.1: All 2 tests passed
 
 .include <bsd.port.mk>

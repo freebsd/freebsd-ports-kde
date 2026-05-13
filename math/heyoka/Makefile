@@ -1,6 +1,6 @@
 PORTNAME=	heyoka
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7.10.0
+DISTVERSION=	7.11.0
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -39,13 +39,13 @@ CMAKE_TESTING_ON=	HEYOKA_BUILD_TESTS
 # CMake's find_package() needs the minor version set correctly, otherwise it
 # will not be able to find the LLVM package.
 .if ${LLVM_VERSION} >= 18
-LLVM_VERSION_MINOR=     1
+LLVM_VERSION_MINOR=	1
 .else
-LLVM_VERSION_MINOR=     0
+LLVM_VERSION_MINOR=	0
 .endif
 
 CMAKE_ARGS+=		-DFREEBSD_LLVM_VERSION=${LLVM_VERSION}.${LLVM_VERSION_MINOR}
 
-# tests as of 7.10.0: 100% tests passed, 0 tests failed out of 162
+# tests as of 7.11.0: 100% tests passed, 0 tests failed out of 162
 
 .include <bsd.port.post.mk>

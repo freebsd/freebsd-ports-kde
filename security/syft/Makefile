@@ -1,7 +1,7 @@
 PORTNAME=	syft
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.42.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security devel
 
 MAINTAINER=	youngbill.empire411@gmail.com
@@ -9,6 +9,9 @@ COMMENT=	CLI tool for generating SBOMs from container images and filesystems
 WWW=		https://github.com/anchore/syft
 
 LICENSE=	APACHE20
+
+ONLY_FOR_ARCHS= aarch64 amd64
+ONLY_FOR_ARCHS_REASON=  module modernc.org/sqlite only supported on aarch64 and amd64
 
 GO_WRKSRC=	${WRKSRC}
 
@@ -151,9 +154,7 @@ GH_TUPLE=	\
 		google:cel-spec:v0.24.0:google_cel_spec/vendor/cel.dev/expr \
 		google:go-cmp:v0.7.0:google_go_cmp/vendor/github.com/google/go-cmp \
 		google:go-containerregistry:v0.21.1:google_go_containerregistry/vendor/github.com/google/go-containerregistry \
-		google:go-genproto:9219d122eba9:google_go_genproto/vendor/google.golang.org/genproto \
-		google:go-genproto:95abcf5c77ba:google_go_genproto_1/vendor/google.golang.org/genproto/googleapis/api \
-		google:go-genproto:95abcf5c77ba:google_go_genproto_2/vendor/google.golang.org/genproto/googleapis/rpc \
+		google:go-genproto:95abcf5c77ba:google_go_genproto/vendor/google.golang.org/genproto \
 		google:licensecheck:v0.3.1:google_licensecheck/vendor/github.com/google/licensecheck \
 		google:pprof:a4b03ec1a45e:google_pprof/vendor/github.com/google/pprof \
 		google:s2a-go:v0.1.9:google_s2a_go/vendor/github.com/google/s2a-go \

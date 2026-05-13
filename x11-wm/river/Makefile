@@ -1,5 +1,5 @@
 PORTNAME=	river
-DISTVERSION=	0.4.2
+DISTVERSION=	0.4.3
 CATEGORIES=	x11-wm wayland
 MASTER_SITES=	https://codeberg.org/river/river/releases/download/v${DISTVERSION}/
 DISTFILES=	river-${DISTVERSIONFULL}${EXTRACT_SUFX}

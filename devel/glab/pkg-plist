@@ -56,7 +56,6 @@
 %%MANPAGES%%share/man/man1/glab-deploy-key-get.1.gz
 %%MANPAGES%%share/man/man1/glab-deploy-key-list.1.gz
 %%MANPAGES%%share/man/man1/glab-deploy-key.1.gz
-%%MANPAGES%%share/man/man1/glab-duo-ask.1.gz
 %%MANPAGES%%share/man/man1/glab-duo-cli.1.gz
 %%MANPAGES%%share/man/man1/glab-duo.1.gz
 %%MANPAGES%%share/man/man1/glab-gpg-key-add.1.gz
@@ -115,6 +114,7 @@
 %%MANPAGES%%share/man/man1/glab-mr-list.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-merge.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-note.1.gz
+%%MANPAGES%%share/man/man1/glab-mr-note-create.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-note-list.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-note-reopen.1.gz
 %%MANPAGES%%share/man/man1/glab-mr-note-resolve.1.gz
@@ -135,6 +135,13 @@
 %%MANPAGES%%share/man/man1/glab-opentofu-state-unlock.1.gz
 %%MANPAGES%%share/man/man1/glab-opentofu-state.1.gz
 %%MANPAGES%%share/man/man1/glab-opentofu.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote-graph-status.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote-query.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote-schema.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote-status.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote-tools.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit-remote.1.gz
+%%MANPAGES%%share/man/man1/glab-orbit.1.gz
 %%MANPAGES%%share/man/man1/glab-release-create.1.gz
 %%MANPAGES%%share/man/man1/glab-release-delete.1.gz
 %%MANPAGES%%share/man/man1/glab-release-download.1.gz
@@ -189,12 +196,16 @@
 %%MANPAGES%%share/man/man1/glab-schedule-run.1.gz
 %%MANPAGES%%share/man/man1/glab-schedule-update.1.gz
 %%MANPAGES%%share/man/man1/glab-schedule.1.gz
+%%MANPAGES%%share/man/man1/glab-search-semantic.1.gz
+%%MANPAGES%%share/man/man1/glab-search.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-create.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-download.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-get.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-list.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile-remove.1.gz
 %%MANPAGES%%share/man/man1/glab-securefile.1.gz
+%%MANPAGES%%share/man/man1/glab-skills-install.1.gz
+%%MANPAGES%%share/man/man1/glab-skills.1.gz
 %%MANPAGES%%share/man/man1/glab-snippet-create.1.gz
 %%MANPAGES%%share/man/man1/glab-snippet.1.gz
 %%MANPAGES%%share/man/man1/glab-ssh-key-add.1.gz
@@ -233,6 +244,8 @@
 %%MANPAGES%%share/man/man1/glab-variable-update.1.gz
 %%MANPAGES%%share/man/man1/glab-variable.1.gz
 %%MANPAGES%%share/man/man1/glab-version.1.gz
+%%MANPAGES%%share/man/man1/glab-work-items-create.1.gz
+%%MANPAGES%%share/man/man1/glab-work-items-delete.1.gz
 %%MANPAGES%%share/man/man1/glab-work-items-list.1.gz
 %%MANPAGES%%share/man/man1/glab-work-items.1.gz
 %%MANPAGES%%share/man/man1/glab.1.gz

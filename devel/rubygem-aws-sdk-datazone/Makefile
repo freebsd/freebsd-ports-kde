@@ -1,5 +1,5 @@
 PORTNAME=	aws-sdk-datazone
-PORTVERSION=	1.71.0
+PORTVERSION=	1.75.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 

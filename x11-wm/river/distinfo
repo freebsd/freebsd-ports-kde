@@ -1,6 +1,6 @@
-TIMESTAMP = 1775052172
-SHA256 (zig/river-0.4.2.tar.gz) = f1878c2468ed607163d0b362f7d1056271f1729c38a8178c58f904c2c73ce2d3
-SIZE (zig/river-0.4.2.tar.gz) = 163548
+TIMESTAMP = 1776779825
+SHA256 (zig/river-0.4.3.tar.gz) = 604314654a50a6283d724debc804ee76b41cc6cf808d0eca1b268b6d97ce85a1
+SIZE (zig/river-0.4.3.tar.gz) = 164735
 SHA256 (zig/pixman-0.3.0.tar.gz) = cd7fe3415d4d58685a94fdedd308e9994a37f012828940cfb603461de7f2c6ad
 SIZE (zig/pixman-0.3.0.tar.gz) = 7966
 SHA256 (zig/wayland-0.4.0.tar.gz) = 907fdd18c7ede1ab1f249c618ba5dce3b8a72c26e50090b4ae7010033a419ba9

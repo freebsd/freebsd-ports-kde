@@ -1,7 +1,7 @@
 PORTNAME=	pypdfium2
-PORTVERSION=	5.6.0
+PORTVERSION=	5.7.1
 CATEGORIES=	graphics python
-MASTER_SITES=	PYPI
+#MASTER_SITES=	PYPI # no tests
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -21,7 +21,10 @@ BUILD_DEPENDS=	${LO_PDFIUM}:editors/libreoffice \
 RUN_DEPENDS=	${LO_PDFIUM}:editors/libreoffice
 
 USES=		python
-USE_PYTHON=	autoplist concurrent pep517
+USE_PYTHON=	pep517 concurrent autoplist pytest
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	pypdfium2-team
 
 # pdfium version bundled with LibreOffice (editors/libreoffice)
 PDFIUM_VER=		7471
@@ -34,5 +37,7 @@ LO_PDFIUM=		${LOCALBASE}/lib/libreoffice/program/libpdfiumlo.so
 MAKE_ENV=	PDFIUM_BINDINGS=reference \
 		PDFIUM_PLATFORM=system-search:${PDFIUM_VER} \
 		GIVEN_FULLVER=${PDFIUM_FULL_VER}
+
+# tests as of 5.7.1: 8 failed, 160 passed, 3 skipped, 3 warnings in 5.73s (failures are possibly due to the custom ctypesgen commented out)
 
 .include <bsd.port.mk>

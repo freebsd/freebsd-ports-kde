@@ -1,11 +1,9 @@
 PORTNAME=	podman
 DISTVERSIONPREFIX=	v
-DISTVERSION=	5.8.1
-PORTREVISION=	2
+DISTVERSION=	5.8.2
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
-PATCH_SITES=	https://github.com/containers/podman/commit/
-PATCHFILES+=	9a10cefd18a3f19e49aa6ae5683d1bcea37bdc97.patch:-p1 # https://github.com/containers/podman/pull/28317
 MAINTAINER=	dfr@FreeBSD.org
 COMMENT=	Manage Pods, Containers and Container Images
 WWW=		https://podman.io/

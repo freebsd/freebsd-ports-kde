@@ -1,3 +1,3 @@
-TIMESTAMP = 1773966806
-SHA256 (xapian-bindings-1.4.31.tar.xz) = a38cc7ba4188cc0bd27dc7369f03906772047087a1c54f1b93355d5e9103c304
-SIZE (xapian-bindings-1.4.31.tar.xz) = 1122212
+TIMESTAMP = 1775571278
+SHA256 (xapian-bindings-2.0.0.tar.xz) = 9a544b69c31355a92edbcd4102cf0f1ec4407fd0a4645f4870fb52300b736910
+SIZE (xapian-bindings-2.0.0.tar.xz) = 1123744

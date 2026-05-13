@@ -105,6 +105,7 @@
     SUBDIR += icingaweb2-module-incubator
     SUBDIR += icingaweb2-module-jira
     SUBDIR += icingaweb2-module-map
+    SUBDIR += icingaweb2-module-monitoring
     SUBDIR += icingaweb2-module-pdfexport
     SUBDIR += icingaweb2-module-reactbundle
     SUBDIR += icingaweb2-module-reporting

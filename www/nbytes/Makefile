@@ -1,5 +1,5 @@
 PORTNAME=	nbytes
-PORTVERSION=	0.1.3
+PORTVERSION=	0.1.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
@@ -14,16 +14,12 @@ TEST_DEPENDS=	googletest>=0:devel/googletest
 
 USES=		cmake:testing compiler:c++20-lang
 
-CMAKE_OFF=	BUILD_TESTING \
-		NBYTES_DEVELOPMENT_CHECKS
+CMAKE_OFF=	NBYTES_DEVELOPMENT_CHECKS \
+		NBYTES_ENABLE_TESTING
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_TESTING_ON=	NBYTES_ENABLE_TESTING
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nodejs
-
-# Remove after 13.5-RELEASE EoL
-.if !exists(/usr/bin/clang-scan-deps)
-USES+=		llvm:build
-.endif
 
 .include <bsd.port.mk>

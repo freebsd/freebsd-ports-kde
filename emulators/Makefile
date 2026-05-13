@@ -30,6 +30,7 @@
     SUBDIR += edumips64
     SUBDIR += einstein-newton
     SUBDIR += elliott-803
+    SUBDIR += emu64
     SUBDIR += emulationstation
     SUBDIR += emutos
     SUBDIR += es-de
@@ -61,6 +62,7 @@
     SUBDIR += lib765
     SUBDIR += libc6-shim
     SUBDIR += libdsk
+    SUBDIR += libmt32emu
     SUBDIR += libretro-bsnes
     SUBDIR += libretro-flycast
     SUBDIR += libretro-kronos
@@ -113,6 +115,7 @@
     SUBDIR += ppsspp
     SUBDIR += py-gns3-converter
     SUBDIR += py-m64py
+    SUBDIR += py-qemu.qmp
     SUBDIR += py-unicorn
     SUBDIR += qemu
     SUBDIR += qemu-cheri
@@ -164,22 +167,12 @@
     SUBDIR += virtualbox-ose-additions-71
     SUBDIR += virtualbox-ose-additions-72
     SUBDIR += virtualbox-ose-additions-legacy
-    SUBDIR += virtualbox-ose-additions-nox11
-    SUBDIR += virtualbox-ose-additions-nox11-70
-    SUBDIR += virtualbox-ose-additions-nox11-71
-    SUBDIR += virtualbox-ose-additions-nox11-72
-    SUBDIR += virtualbox-ose-additions-nox11-legacy
     SUBDIR += virtualbox-ose-kmod
     SUBDIR += virtualbox-ose-kmod-70
     SUBDIR += virtualbox-ose-kmod-71
     SUBDIR += virtualbox-ose-kmod-72
     SUBDIR += virtualbox-ose-kmod-legacy
     SUBDIR += virtualbox-ose-legacy
-    SUBDIR += virtualbox-ose-nox11
-    SUBDIR += virtualbox-ose-nox11-70
-    SUBDIR += virtualbox-ose-nox11-71
-    SUBDIR += virtualbox-ose-nox11-72
-    SUBDIR += virtualbox-ose-nox11-legacy
     SUBDIR += visualboyadvance-m
     SUBDIR += vmips
     SUBDIR += vmsbackup

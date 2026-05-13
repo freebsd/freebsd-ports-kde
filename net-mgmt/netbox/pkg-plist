@@ -162,6 +162,7 @@
 %%DATADIR%%/core/tests/test_filtersets.py
 %%DATADIR%%/core/tests/test_models.py
 %%DATADIR%%/core/tests/test_openapi_schema.py
+%%DATADIR%%/core/tests/test_tables.py
 %%DATADIR%%/core/tests/test_views.py
 %%DATADIR%%/core/ui/__init__.py
 %%DATADIR%%/core/ui/panels.py
@@ -275,6 +276,7 @@
 %%DATADIR%%/dcim/migrations/0225_gfk_indexes.py
 %%DATADIR%%/dcim/migrations/0226_add_mptt_tree_indexes.py
 %%DATADIR%%/dcim/migrations/0226_modulebay_rebuild_tree.py
+%%DATADIR%%/dcim/migrations/0227_alter_interface_speed_bigint.py
 %%DATADIR%%/dcim/migrations/__init__.py
 %%DATADIR%%/dcim/migrations/initial_data/module_type_profiles/cpu.json
 %%DATADIR%%/dcim/migrations/initial_data/module_type_profiles/expansion_card.json
@@ -312,12 +314,14 @@
 %%DATADIR%%/dcim/tables/template_code.py
 %%DATADIR%%/dcim/tests/__init__.py
 %%DATADIR%%/dcim/tests/test_api.py
+%%DATADIR%%/dcim/tests/test_cable_profiles.py
 %%DATADIR%%/dcim/tests/test_cablepaths.py
 %%DATADIR%%/dcim/tests/test_cablepaths2.py
 %%DATADIR%%/dcim/tests/test_filtersets.py
 %%DATADIR%%/dcim/tests/test_forms.py
 %%DATADIR%%/dcim/tests/test_models.py
 %%DATADIR%%/dcim/tests/test_natural_ordering.py
+%%DATADIR%%/dcim/tests/test_tables.py
 %%DATADIR%%/dcim/tests/test_views.py
 %%DATADIR%%/dcim/tests/utils.py
 %%DATADIR%%/dcim/ui/__init__.py
@@ -1100,7 +1104,6 @@
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700-QNNSSZIK.woff2
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700italic-KTWD2UYU.woff
 %%DATADIR%%/project-static/dist/roboto-mono-latin-700italic-WWLRMKIN.woff2
-%%DATADIR%%/project-static/docs/.info
 %%DATADIR%%/project-static/eslint.config.js
 %%DATADIR%%/project-static/img/logo_netbox_bright_teal.svg
 %%DATADIR%%/project-static/img/logo_netbox_dark_teal.svg
@@ -1230,6 +1233,7 @@
 %%DATADIR%%/templates/core/datasource.html
 %%DATADIR%%/templates/core/datasource/attrs/ignore_rules.html
 %%DATADIR%%/templates/core/datasource/attrs/source_url.html
+%%DATADIR%%/templates/core/htmx/system_db_schema.html
 %%DATADIR%%/templates/core/inc/config_data.html
 %%DATADIR%%/templates/core/inc/datafile_panel.html
 %%DATADIR%%/templates/core/inc/plugin_installation.html
@@ -1373,7 +1377,12 @@
 %%DATADIR%%/templates/extras/configcontext.html
 %%DATADIR%%/templates/extras/configcontextprofile.html
 %%DATADIR%%/templates/extras/configtemplate.html
+%%DATADIR%%/templates/extras/configtemplate/attrs/data_file.html
 %%DATADIR%%/templates/extras/customfield.html
+%%DATADIR%%/templates/extras/customfield/attrs/choice_set.html
+%%DATADIR%%/templates/extras/customfield/attrs/related_object_filter.html
+%%DATADIR%%/templates/extras/customfield/attrs/search_weight.html
+%%DATADIR%%/templates/extras/customfield/attrs/type.html
 %%DATADIR%%/templates/extras/customfieldchoiceset.html
 %%DATADIR%%/templates/extras/customlink.html
 %%DATADIR%%/templates/extras/dashboard/reset.html
@@ -1385,6 +1394,7 @@
 %%DATADIR%%/templates/extras/dashboard/widgets/objectlist.html
 %%DATADIR%%/templates/extras/dashboard/widgets/rssfeed.html
 %%DATADIR%%/templates/extras/eventrule.html
+%%DATADIR%%/templates/extras/eventrule/attrs/action_data.html
 %%DATADIR%%/templates/extras/exporttemplate.html
 %%DATADIR%%/templates/extras/htmx/script_result.html
 %%DATADIR%%/templates/extras/imageattachment.html
@@ -1399,7 +1409,23 @@
 %%DATADIR%%/templates/extras/object_imageattachments.html
 %%DATADIR%%/templates/extras/object_journal.html
 %%DATADIR%%/templates/extras/object_render_config.html
+%%DATADIR%%/templates/extras/panels/configcontext_assignment.html
+%%DATADIR%%/templates/extras/panels/configcontext_data.html
+%%DATADIR%%/templates/extras/panels/configcontextprofile_schema.html
 %%DATADIR%%/templates/extras/panels/custom_fields.html
+%%DATADIR%%/templates/extras/panels/customfield_related_objects.html
+%%DATADIR%%/templates/extras/panels/customfieldchoiceset_choices.html
+%%DATADIR%%/templates/extras/panels/eventrule_event_types.html
+%%DATADIR%%/templates/extras/panels/imageattachment_file.html
+%%DATADIR%%/templates/extras/panels/imageattachment_image.html
+%%DATADIR%%/templates/extras/panels/notificationgroup_groups.html
+%%DATADIR%%/templates/extras/panels/notificationgroup_users.html
+%%DATADIR%%/templates/extras/panels/object_types.html
+%%DATADIR%%/templates/extras/panels/savedfilter_object_types.html
+%%DATADIR%%/templates/extras/panels/tableconfig_columns.html
+%%DATADIR%%/templates/extras/panels/tableconfig_ordering.html
+%%DATADIR%%/templates/extras/panels/tag_item_types.html
+%%DATADIR%%/templates/extras/panels/tag_object_types.html
 %%DATADIR%%/templates/extras/panels/tags.html
 %%DATADIR%%/templates/extras/report/base.html
 %%DATADIR%%/templates/extras/report/jobs.html
@@ -1415,6 +1441,7 @@
 %%DATADIR%%/templates/extras/tableconfig.html
 %%DATADIR%%/templates/extras/tableconfig_edit.html
 %%DATADIR%%/templates/extras/tag.html
+%%DATADIR%%/templates/extras/tag/attrs/tagged_item_count.html
 %%DATADIR%%/templates/extras/templatetags/log_level.html
 %%DATADIR%%/templates/extras/webhook.html
 %%DATADIR%%/templates/generic/_base.html
@@ -1550,6 +1577,7 @@
 %%DATADIR%%/templates/ui/panels/object_attributes.html
 %%DATADIR%%/templates/ui/panels/objects_table.html
 %%DATADIR%%/templates/ui/panels/related_objects.html
+%%DATADIR%%/templates/ui/panels/text_code.html
 %%DATADIR%%/templates/users/attrs/full_name.html
 %%DATADIR%%/templates/users/group.html
 %%DATADIR%%/templates/users/inc/user_activity.html
@@ -1645,6 +1673,8 @@
 %%DATADIR%%/tenancy/tests/__init__.py
 %%DATADIR%%/tenancy/tests/test_api.py
 %%DATADIR%%/tenancy/tests/test_filtersets.py
+%%DATADIR%%/tenancy/tests/test_models.py
+%%DATADIR%%/tenancy/tests/test_tables.py
 %%DATADIR%%/tenancy/tests/test_views.py
 %%DATADIR%%/tenancy/ui/__init__.py
 %%DATADIR%%/tenancy/ui/panels.py
@@ -1866,6 +1896,7 @@
 %%DATADIR%%/utilities/testing/api.py
 %%DATADIR%%/utilities/testing/base.py
 %%DATADIR%%/utilities/testing/filtersets.py
+%%DATADIR%%/utilities/testing/tables.py
 %%DATADIR%%/utilities/testing/utils.py
 %%DATADIR%%/utilities/testing/views.py
 %%DATADIR%%/utilities/tests/__init__.py
@@ -1946,6 +1977,7 @@
 %%DATADIR%%/virtualization/tests/test_api.py
 %%DATADIR%%/virtualization/tests/test_filtersets.py
 %%DATADIR%%/virtualization/tests/test_models.py
+%%DATADIR%%/virtualization/tests/test_tables.py
 %%DATADIR%%/virtualization/tests/test_views.py
 %%DATADIR%%/virtualization/ui/__init__.py
 %%DATADIR%%/virtualization/ui/panels.py
@@ -2050,6 +2082,7 @@
 %%DATADIR%%/wireless/tests/__init__.py
 %%DATADIR%%/wireless/tests/test_api.py
 %%DATADIR%%/wireless/tests/test_filtersets.py
+%%DATADIR%%/wireless/tests/test_tables.py
 %%DATADIR%%/wireless/tests/test_views.py
 %%DATADIR%%/wireless/ui/__init__.py
 %%DATADIR%%/wireless/ui/panels.py

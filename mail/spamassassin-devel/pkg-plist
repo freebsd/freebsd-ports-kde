@@ -57,6 +57,9 @@ lib/libspamc.so.0
 %%SITE_PERL%%/Mail/SpamAssassin/Header/ArcAuthenticationResults.pm
 %%SITE_PERL%%/Mail/SpamAssassin/Header/AuthenticationResults.pm
 %%SITE_PERL%%/Mail/SpamAssassin/Header/ParameterHeader.pm
+%%SITE_PERL%%/Mail/SpamAssassin/FuzzyHash.pm
+%%SITE_PERL%%/Mail/SpamAssassin/FuzzyHash/Util.pm
+%%SITE_PERL%%/Mail/SpamAssassin/FuzzyHash/ZOrder.pm
 %%SITE_PERL%%/Mail/SpamAssassin/Locales.pm
 %%SITE_PERL%%/Mail/SpamAssassin/Locker.pm
 %%SITE_PERL%%/Mail/SpamAssassin/Locker/Flock.pm
@@ -184,6 +187,9 @@ lib/libspamc.so.0
 %%PERL5_MAN3%%/Mail::SpamAssassin::Header::ArcAuthenticationResults.3.gz
 %%PERL5_MAN3%%/Mail::SpamAssassin::Header::AuthenticationResults.3.gz
 %%PERL5_MAN3%%/Mail::SpamAssassin::Header::ParameterHeader.3.gz
+%%PERL5_MAN3%%/Mail::SpamAssassin::FuzzyHash.3.gz
+%%PERL5_MAN3%%/Mail::SpamAssassin::FuzzyHash::Util.3.gz
+%%PERL5_MAN3%%/Mail::SpamAssassin::FuzzyHash::ZOrder.3.gz
 %%PERL5_MAN3%%/Mail::SpamAssassin::Logger.3.gz
 %%PERL5_MAN3%%/Mail::SpamAssassin::Logger::File.3.gz
 %%PERL5_MAN3%%/Mail::SpamAssassin::Logger::Stderr.3.gz

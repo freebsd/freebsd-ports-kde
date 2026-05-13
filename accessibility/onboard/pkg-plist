@@ -155,10 +155,10 @@ etc/xdg/autostart/onboard-autostart.desktop
 %%PYTHON_SITELIBDIR%%/Onboard/utils.py
 %%PYTHON_SITELIBDIR%%/__pycache__/settings_ui%%PYTHON_TAG%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/__pycache__/settings_ui%%PYTHON_TAG%%.pyc
-%%PYTHON_SITELIBDIR%%/onboard-1.4.3-py%%PYTHON_VER%%.egg-info/PKG-INFO
-%%PYTHON_SITELIBDIR%%/onboard-1.4.3-py%%PYTHON_VER%%.egg-info/SOURCES.txt
-%%PYTHON_SITELIBDIR%%/onboard-1.4.3-py%%PYTHON_VER%%.egg-info/dependency_links.txt
-%%PYTHON_SITELIBDIR%%/onboard-1.4.3-py%%PYTHON_VER%%.egg-info/top_level.txt
+%%PYTHON_SITELIBDIR%%/onboard-1.4.4.dev1-py%%PYTHON_VER%%.egg-info/PKG-INFO
+%%PYTHON_SITELIBDIR%%/onboard-1.4.4.dev1-py%%PYTHON_VER%%.egg-info/SOURCES.txt
+%%PYTHON_SITELIBDIR%%/onboard-1.4.4.dev1-py%%PYTHON_VER%%.egg-info/dependency_links.txt
+%%PYTHON_SITELIBDIR%%/onboard-1.4.4.dev1-py%%PYTHON_VER%%.egg-info/top_level.txt
 %%PYTHON_SITELIBDIR%%/settings_ui.py
 share/applications/onboard-settings.desktop
 share/applications/onboard.desktop
@@ -2159,9 +2159,10 @@ share/man/man1/onboard.1.gz
 %%DATADIR%%/layouts/French_diacritics-Lower.svg
 %%DATADIR%%/layouts/French_diacritics-Upper.svg
 %%DATADIR%%/layouts/French_diacritics.onboard
-%%DATADIR%%/layouts/Full Keyboard-Alpha.svg
-%%DATADIR%%/layouts/Full Keyboard-Numpad.svg
-%%DATADIR%%/layouts/Full Keyboard.onboard
+%%DATADIR%%/layouts/Full-Emoji-Keyboard.onboard
+%%DATADIR%%/layouts/Full-Keyboard-Alpha.svg
+%%DATADIR%%/layouts/Full-Keyboard-Numpad.svg
+%%DATADIR%%/layouts/Full-Keyboard.onboard
 %%DATADIR%%/layouts/Grid-Alpha.svg
 %%DATADIR%%/layouts/Grid.onboard
 %%DATADIR%%/layouts/Phone-Alpha.svg
@@ -2239,12 +2240,15 @@ share/man/man1/onboard.1.gz
 %%DATADIR%%/models/sv_SE.lm
 %%DATADIR%%/models/tr_TR.lm
 %%DATADIR%%/scripts/sokSettings.py
+%%DATADIR%%/scripts/toggle-onboard-hoverclick
 %%DATADIR%%/settings.ui
 %%DATADIR%%/settings_docking_dialog.ui
 %%DATADIR%%/settings_scanner_dialog.ui
 %%DATADIR%%/settings_theme_dialog.ui
 %%DATADIR%%/themes/Ambiance.theme
+%%DATADIR%%/themes/AmbianceDark.theme
 %%DATADIR%%/themes/Aubergine.colors
+%%DATADIR%%/themes/AubergineDark.colors
 %%DATADIR%%/themes/Black.colors
 %%DATADIR%%/themes/Blackboard.theme
 %%DATADIR%%/themes/Charcoal.colors
@@ -2259,11 +2263,13 @@ share/man/man1/onboard.1.gz
 %%DATADIR%%/themes/HighContrastInverse.theme
 %%DATADIR%%/themes/HighContrastInverseBlack.colors
 %%DATADIR%%/themes/HighContrastInverseBlue.colors
+%%DATADIR%%/themes/HighContrastInverseBlue.theme
 %%DATADIR%%/themes/LowContrast.colors
 %%DATADIR%%/themes/LowContrast.theme
 %%DATADIR%%/themes/ModelM.colors
 %%DATADIR%%/themes/ModelM.theme
 %%DATADIR%%/themes/Nightshade.theme
+%%DATADIR%%/themes/Ronboard.theme
 %%DATADIR%%/themes/Typist.colors
 %%DATADIR%%/themes/Typist.theme
 %%DATADIR%%/tools/checkmodels

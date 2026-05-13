@@ -1,6 +1,6 @@
 PORTNAME=	ggml
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.11
+DISTVERSION=	0.11.0
 CATEGORIES=	misc # machine-learning
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -10,10 +10,12 @@ WWW=		https://github.com/ggml-org/ggml
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BROKEN_i386=	compilation fails: LLVM ERROR: out of memory
+
+BUILD_DEPENDS=	spirv-headers>0:graphics/spirv-headers
+
 USES=		cmake:testing compiler:c++17-lang llvm:build,min=22 python:run shebangfix
 USE_LDCONFIG=	yes
-
-BROKEN_i386=	compilation fails: LLVM ERROR: out of memory
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	ggml-org
@@ -43,7 +45,6 @@ VULKAN_BUILD_DEPENDS=	glslc:graphics/shaderc \
 			vulkan-headers>0:graphics/vulkan-headers
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
 
-# tests as of 0.9.5: 100% tests passed, 0 tests failed out of 21
-# tests as of 0.9.11: 95% tests passed, 1 tests failed out of 21: test-backend-ops fails because of OOM in the 6GB Vulkan device
+# tests as of 0.11.0: 100% tests passed, 0 tests failed out of 21
 
 .include <bsd.port.mk>

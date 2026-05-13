@@ -1,25 +1,24 @@
 PORTNAME=	forge
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.6.2
-PORTREVISION=	1
+DISTVERSION=	0.6.4
 CATEGORIES=	devel elisp
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	jrm@FreeBSD.org
 COMMENT=	Work with Git forges from the comfort of Magit
 WWW=		https://github.com/magit/forge
 
 LICENSE=	GPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	closql>=2.3:databases/closql \
+RUN_DEPENDS=	closql>=2.4:databases/closql \
 		compat.el>=30.1.0.0:misc/compat.el \
 		cond-let>=0.2:devel/cond-let \
 		emacsql>=4.3.1:databases/emacsql \
-		ghub>=5.0:devel/ghub \
+		ghub>=5.1:devel/ghub \
 		llama.el>=1.0:devel/llama.el \
-		magit>=4.4:devel/magit \
+		magit>=4.5:devel/magit \
 		markdown-mode.el>=2.7:textproc/markdown-mode.el \
-		transient>=0.10:devel/transient \
+		transient>=0.12:devel/transient \
 		yaml.el>=1.2.0:textproc/yaml.el
 
 USES=		emacs:build gmake makeinfo

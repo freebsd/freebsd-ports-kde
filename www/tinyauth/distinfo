@@ -1,7 +1,7 @@
-TIMESTAMP = 1774567833
-SHA256 (tinyauth-v5.0.4.frontend.tar.gz) = b1c45453e96b11bebd9c5783fa8e510da8316bff7d4f0f425cd5ccb63a72dca5
-SIZE (tinyauth-v5.0.4.frontend.tar.gz) = 1009761
-SHA256 (tinyauth-v5.0.4.vendor.tar.gz) = b89857ec1f62f61f6d4e248c8edd98177bf374e407f7692c3e7780211a6dccab
-SIZE (tinyauth-v5.0.4.vendor.tar.gz) = 57837513
-SHA256 (steveiliop56-tinyauth-v5.0.4_GH0.tar.gz) = 7b878e9a7014e09b4b4cc886b920e8dde41b2858f441d0eb542e246d3dee4ddd
-SIZE (steveiliop56-tinyauth-v5.0.4_GH0.tar.gz) = 4787573
+TIMESTAMP = 1776447798
+SHA256 (tinyauth-v5.0.7.frontend.tar.gz) = 0094e98a41f9936416a92b36f86a32a55ea274bd1c78719727ed238ddbdd5546
+SIZE (tinyauth-v5.0.7.frontend.tar.gz) = 988230
+SHA256 (tinyauth-v5.0.7.vendor.tar.gz) = f79834df38daa8cfdd5d9c78fe564846a6b262fc8af7e33e1edd309cb8eefcdc
+SIZE (tinyauth-v5.0.7.vendor.tar.gz) = 58190053
+SHA256 (steveiliop56-tinyauth-v5.0.7_GH0.tar.gz) = a1e76e26b964d1888ac7c07b95e3c9adba18840de066fc11a363207d28809611
+SIZE (steveiliop56-tinyauth-v5.0.7_GH0.tar.gz) = 4789501
