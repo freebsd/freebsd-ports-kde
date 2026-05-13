@@ -1,6 +1,6 @@
 PORTNAME=	bash-completion
 PORTVERSION=	2.17.0
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	2
 CATEGORIES=	shells
 MASTER_SITES=	https://github.com/scop/bash-completion/releases/download/${PORTVERSION}/
@@ -12,7 +12,8 @@ WWW=		https://github.com/scop/bash-completion
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pexpect>=4:misc/py-pexpect@${PY_FLAVOR} \
+TEST_DEPENDS=	bash:shells/bash \
+		${PYTHON_PKGNAMEPREFIX}pexpect>=4:misc/py-pexpect@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}pytest-xdist>=0,1:devel/py-pytest-xdist@${PY_FLAVOR}
 
 USES=		autoreconf gmake python:test tar:xz
@@ -55,6 +56,7 @@ post-configure:
 			${WRKSRC}/completions/*
 
 post-install:
+	${RM} ${STAGEDIR}${DATADIR}/completions/interdiff
 	${RM} ${STAGEDIR}${DATADIR}/completions/makepkg
 
 .include <bsd.port.mk>
