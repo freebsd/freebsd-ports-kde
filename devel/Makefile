@@ -1850,6 +1850,7 @@
     SUBDIR += open-beagle
     SUBDIR += open62541
     SUBDIR += openapi
+    SUBDIR += openapi-generator
     SUBDIR += openapi-tui
     SUBDIR += opencl
     SUBDIR += opencl-clang
