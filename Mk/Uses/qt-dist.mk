@@ -29,8 +29,8 @@ _COMMON_DISTS=		3d base charts connectivity datavis3d declarative \
 _QT5_DISTS=		gamepad graphicaleffects quickcontrols quickcontrols2 \
 			script webglplugin x11extras xmlpatterns
 _QT6_DISTS=		5compat canvaspainter coap doc graphs grpc httpserver \
-			languageserver lottie mqtt positioning quick3dphysics \
-			quickeffectmaker shadertools tasktree
+			languageserver lottie mqtt openapi positioning \
+			quick3dphysics quickeffectmaker shadertools tasktree
 _QT_DISTS=		${_COMMON_DISTS} \
 			${_QT${_QT_VER}_DISTS}
 
@@ -84,6 +84,14 @@ _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/su
 # Qt6 specific master sites
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
 _QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
+# devel/qt6-openapi needs an offline archive of the maven deps.
+# In order to create the offline archive, we need to ignore the
+# `qtopenapi-create-maven-deps` target which is used to created
+# the offline archive.
+.  if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
+_QT6_MASTER_SITES+=		LOCAL/kde:maven
+_QT6_MASTER_SITE_SUBDIR+=	KDE/Qt/${_QT_VERSION}:maven
+.  endif
 
 # Qt5 specific distnames
 .  if ${_QT_DIST} == webengine
@@ -102,6 +110,13 @@ MASTER_SITES=			${_QT${_QT_VER}_MASTER_SITES${_KDE_${_QT_DIST}:D_kde}}
 MASTER_SITE_SUBDIR=		${_QT${_QT_VER}_MASTER_SITE_SUBDIR${_KDE_${_QT_DIST}:D_kde}}
 DISTNAME=			${_QT${_QT_VER}_DISTNAME${_KDE_${_QT_DIST}:D_kde}}
 DISTFILES=			${DISTNAME:S,$,${EXTRACT_SUFX},}
+# devel/qt6-openapi needs an offline archive of the maven deps.
+# In order to create the offline archive, we need to ignore the
+# `qtopenapi-create-maven-deps` target which is used to created
+# the offline archive.
+.    if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
+DISTFILES+=			${DISTNAME:S|everywhere-src|maven-deps|:S|$|${EXTRACT_SUFX}|}:maven
+.    endif
 .  endif
 DIST_SUBDIR=			KDE/Qt/${_QT_VERSION}
 

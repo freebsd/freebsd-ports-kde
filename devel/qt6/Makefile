@@ -20,15 +20,19 @@ _UNIQUE_QT_PORTS= \
 # create a bogus 'distinfo' file with just a timestamp.
 makesum: qt-update-distinfo
 
-# Update distinfo for all Qt components
+# Update distinfo for all Qt components. devel/qt6-openapi needs a second pass
+# after the main distfile is downloaded and the maven deps are created.
 qt-update-distinfo:
 	@${ECHO_CMD} "===> Updating distinfo for all Qt components..."; \
 	unique_qt_ports=$$(${_UNIQUE_QT_PORTS}); \
 	for port in $$unique_qt_ports; do \
+	    if [ "$${port}" = "devel/qt${_QT_VER}-openapi" ]; then \
+		${MAKE} -C ${.CURDIR:H:H}/$${port} -DDISABLE_LICENSES -DQTOPENAPI_MAINTAINER_MODE makesum qtopenapi-create-maven-deps; \
+	    fi; \
 	    ${MAKE} -C ${.CURDIR:H:H}/$${port} -DDISABLE_LICENSES makesum; \
 	done
 
-# Reset PORTREVISION for all Qt components
+# Reset PORTREVISION for all Qt components.
 qt-reset-portrevision:
 	@${ECHO_CMD} "===> Resetting PORTREVISION for Qt components..."; \
 	unique_qt_ports=$$(${_UNIQUE_QT_PORTS}); \

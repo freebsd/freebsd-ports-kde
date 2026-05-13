@@ -169,7 +169,7 @@ _USE_QT5_ONLY=		assistant buildtools concurrent core dbus \
 			widgets x11extras xml xmlpatterns
 
 _USE_QT6_ONLY=		5compat base canvaspainter coap graphs grpc httpserver \
-			languageserver lottie mqtt pdf positioning \
+			languageserver lottie mqtt openapi pdf positioning \
 			quick3dphysics quickeffectmaker shadertools tasktree \
 			tools translations sqldriver-sqlite sqldriver-mysql \
 			sqldriver-psql sqldriver-odbc
@@ -286,6 +286,9 @@ qt-network_LIB=		libQt${_QT_LIBVER}Network.so
 
 qt-networkauth_PORT=	net/${_QT_RELNAME}-networkauth
 qt-networkauth_LIB=	libQt${_QT_LIBVER}NetworkAuth.so
+
+qt-openapi_PORT=	devel/${_QT_RELNAME}-openapi
+qt-openapi_LIB=		libQt${_QT_LIBVER}OpenApiCommon.so
 
 qt-opengl_PORT=		graphics/${_QT_RELNAME}-opengl
 qt-opengl_LIB=		libQt${_QT_LIBVER}OpenGL.so
