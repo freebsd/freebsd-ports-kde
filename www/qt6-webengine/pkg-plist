@@ -146,14 +146,14 @@ bin/QtWebEngineProcess6
 %%QT_INCDIR%%/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
 %%QT_INCDIR%%/QtWebEngineWidgets/qtwebenginewidgetsversion.h
 %%QT_INCDIR%%/QtWebEngineWidgets/qwebengineview.h
-lib/cmake/Qt6/FindBindgen.cmake
 lib/cmake/Qt6/FindGPerf.cmake
 lib/cmake/Qt6/FindGn.cmake
 lib/cmake/Qt6/FindNinja.cmake
 lib/cmake/Qt6/FindNodejs.cmake
 lib/cmake/Qt6/FindPkgConfigHost.cmake
+lib/cmake/Qt6/FindQWEBindgen.cmake
 lib/cmake/Qt6/FindQWELibClang.cmake
-lib/cmake/Qt6/FindRust.cmake
+lib/cmake/Qt6/FindQWERust.cmake
 lib/cmake/Qt6/FindSnappy.cmake
 lib/cmake/Qt6BuildInternals/StandaloneTests/QtWebEngineTestsConfig.cmake
 lib/cmake/Qt6Designer/Qt6QWebEngineViewPluginAdditionalTargetInfo.cmake

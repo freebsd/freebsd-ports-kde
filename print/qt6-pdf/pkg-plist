@@ -54,14 +54,14 @@
 %%QT_INCDIR%%/QtPdfWidgets/qpdfview.h
 %%QT_INCDIR%%/QtPdfWidgets/qtpdfwidgetsglobal.h
 %%QT_INCDIR%%/QtPdfWidgets/qtpdfwidgetsversion.h
-@comment lib/cmake/Qt6/FindBindgen.cmake
 @comment lib/cmake/Qt6/FindGPerf.cmake
 @comment lib/cmake/Qt6/FindGn.cmake
 @comment lib/cmake/Qt6/FindNinja.cmake
 @comment lib/cmake/Qt6/FindNodejs.cmake
 @comment lib/cmake/Qt6/FindPkgConfigHost.cmake
+@comment lib/cmake/Qt6/FindQWEBindgen.cmake
 @comment lib/cmake/Qt6/FindQWELibClang.cmake
-@comment lib/cmake/Qt6/FindRust.cmake
+@comment lib/cmake/Qt6/FindQWERust.cmake
 @comment lib/cmake/Qt6/FindSnappy.cmake
 @comment lib/cmake/Qt6BuildInternals/StandaloneTests/QtWebEngineTestsConfig.cmake
 lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake

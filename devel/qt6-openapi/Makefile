@@ -9,7 +9,7 @@ COMMENT=	Qt HTTP client generator using OpenAPI
 BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cyclonedx-python-lib>0:textproc/py-cyclonedx-python-lib@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}spdx-tools>=0.8.3:misc/py-spdx-tools@${PY_FLAVOR} \
 		vulkan-headers>1.4:graphics/vulkan-headers \
-		maven>0:devel/maven \
+		maven38>0:devel/maven38 \
 		openapi-generator>0:devel/openapi-generator
 RUN_DEPENDS=	openapi-generator>0:devel/openapi-generator
 

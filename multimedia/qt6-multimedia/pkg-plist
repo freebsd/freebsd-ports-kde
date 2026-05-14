@@ -342,6 +342,7 @@
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qambisonicdecoder_p.h
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qambisonicdecoderdata_p.h
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qaudioengine_p.h
+%%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qaudioengine_threaded_p.h
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qaudioroom_p.h
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qspatialsound_p.h
 %%QT_INCDIR%%/QtSpatialAudio/%%FULLVER%%/QtSpatialAudio/private/qtspatialaudioglobal_p.h

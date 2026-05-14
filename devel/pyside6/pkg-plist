@@ -109,6 +109,7 @@ PySide6/include/pysideqmlregistertype_p.h
 PySide6/include/pysideqmltypeinfo_p.h
 PySide6/include/pysideqmluncreatable.h
 PySide6/include/pysideqobject.h
+PySide6/include/pysideqobject_p.h
 PySide6/include/pysideqslotobject_p.h
 PySide6/include/pysiderephandler_p.h
 PySide6/include/pysidesignal.h
@@ -281,6 +282,7 @@ lib/libpyside6remoteobjects.a
 %%PYTHON_SITELIBDIR%%/PySide6/support/deprecated.py
 %%PYTHON_SITELIBDIR%%/PySide6/support/generate_pyi.py
 %%QT_PLUGINDIR%%/designer/libPySidePlugin.so
+lib/wheels/cmake/PySide6/PySide6Config.abi%%PYTHON_MAJOR_VER%%.cmake
 lib/wheels/cmake/PySide6/PySide6Targets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/wheels/cmake/PySide6/PySide6Targets.cmake
 libdata/pkgconfig/pyside6.pc
