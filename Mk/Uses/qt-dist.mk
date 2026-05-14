@@ -84,10 +84,8 @@ _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/su
 # Qt6 specific master sites
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
 _QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
-# devel/qt6-openapi needs an offline archive of the maven deps.
-# In order to create the offline archive, we need to ignore the
-# `qtopenapi-create-maven-deps` target which is used to created
-# the offline archive.
+# devel/qt6-openapi needs an offline archive of the maven deps
+# which we supply locally.
 .  if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
 _QT6_MASTER_SITES+=		LOCAL/kde/KDE/Qt/${_QT_VERSION}:maven
 .  endif
@@ -110,9 +108,9 @@ MASTER_SITE_SUBDIR=		${_QT${_QT_VER}_MASTER_SITE_SUBDIR${_KDE_${_QT_DIST}:D_kde}
 DISTNAME=			${_QT${_QT_VER}_DISTNAME${_KDE_${_QT_DIST}:D_kde}}
 DISTFILES=			${DISTNAME:S,$,${EXTRACT_SUFX},}
 # devel/qt6-openapi needs an offline archive of the maven deps.
-# In order to create the offline archive, we need to ignore the
-# `qtopenapi-create-maven-deps` target which is used to created
-# the offline archive.
+# When QTOPENAPI_MAINTAINER_MODE is defined, this allows the
+# qtopenapi-create-maven-deps target to function without
+# trying to download a non-existent distfile.
 .    if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
 DISTFILES+=			${DISTNAME:S|everywhere-src|maven-deps|:S|$|${EXTRACT_SUFX}|}:maven
 .    endif
