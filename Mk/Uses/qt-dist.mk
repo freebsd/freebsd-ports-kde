@@ -89,8 +89,7 @@ _QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT
 # `qtopenapi-create-maven-deps` target which is used to created
 # the offline archive.
 .  if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
-_QT6_MASTER_SITES+=		LOCAL/kde:maven
-_QT6_MASTER_SITE_SUBDIR+=	KDE/Qt/${_QT_VERSION}:maven
+_QT6_MASTER_SITES+=		LOCAL/kde/KDE/Qt/${_QT_VERSION}:maven
 .  endif
 
 # Qt5 specific distnames
