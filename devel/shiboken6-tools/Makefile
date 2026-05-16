@@ -15,7 +15,7 @@ LICENSE_COMB=	multi
 
 LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
-USES=		cmake compiler:c++17-lang gnome llvm:lib,min=17,noexport \
+USES=		cmake compiler:c++17-lang gnome llvm:lib,min=17,max=22,noexport \
 		python qt:6 tar:xz
 USE_GNOME=	libxml2
 USE_LDCONFIG=	${PREFIX}/${PORTNAME}
