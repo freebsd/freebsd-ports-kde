@@ -211,14 +211,17 @@ post-install-DRIVER-on:
 
 .endif
 
-# Update/create a mid-cycle security patch for the chromium sources.
+# Update/create a mid-cycle security patch for the chromium sources and generate VuXML.
+# To run faster, apply for an NVD API key: https://nvd.nist.gov/developers/request-an-api-key
+# and call target with NVD_API_KEY=<your_api_key> or set NVD_API_KEY=<your_api_key> in
+# /etc/make.conf or set it in your environment.
 qtwebengine-create-security-patch:
 	@${ECHO_CMD} "===> Updating/creating mid-cycle security patch..."
 	@if ! command -v git >/dev/null 2>&1; then \
 	    ${ECHO_CMD} "ERROR: 'git' is not installed or not in PATH. Please install devel/git."; \
 	    exit 1; \
 	fi; \
-	${ECHO_CMD} "===>  Determining base qtwebengine-chromium submodule hash from qtwebengine tag v${DISTVERSION}..."; \
+	${ECHO_CMD} "====> Determining base qtwebengine-chromium submodule hash from qtwebengine tag v${DISTVERSION}..."; \
 	tmp_repo=$$(${MKTEMP} -d -t qtwebengine_repo); \
 	cd "$${tmp_repo}" && git init --quiet && \
 	git fetch --depth 1 --quiet https://code.qt.io/qt/qtwebengine.git "refs/tags/v${DISTVERSION}:refs/tags/v${DISTVERSION}" && \
@@ -229,28 +232,52 @@ qtwebengine-create-security-patch:
 	    ${ECHO_CMD} "ERROR: Could not determine base qtwebegine-chromium submodule hash from qtwebengine tag v${DISTVERSION}."; \
 	    exit 1; \
 	fi; \
-	${ECHO_CMD} "===>  Using qtwebengine-chromium base hash: $${base_hash}"; \
-	${ECHO_CMD} "===>  Determining qtwebengine-chromium branch..."; \
+	${ECHO_CMD} "====> Using qtwebengine-chromium base hash: $${base_hash}"; \
+	${ECHO_CMD} "====> Determining qtwebengine-chromium branch..."; \
 	chromium_major=$$(${FETCH_CMD} -q -o - "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/plain/chromium/chrome/VERSION?id=$${base_hash}" | ${AWK} -F= '/^MAJOR/ {print $$2}' | ${TR} -d '\r'); \
 	if [ -z "$${chromium_major}" ]; then \
 	    ${ECHO_CMD} "ERROR: Could not determine Chromium major version."; \
 	    exit 1; \
 	fi; \
 	chromium_branch="$${chromium_major}-based"; \
-	${ECHO_CMD} "===>  Using qtwebengine-chromium branch: $${chromium_branch}"; \
-	${ECHO_CMD} "===>  Fetching security rollup patch from $${base_hash} to $${chromium_branch}..."; \
+	${ECHO_CMD} "====> Using qtwebengine-chromium branch: $${chromium_branch}"; \
+	${ECHO_CMD} "====> Fetching security rollup patch from $${base_hash} to $${chromium_branch}..."; \
 	tmp_patch=$$(${MKTEMP} -t qt_sec_patch); \
 	if ! ${FETCH_CMD} -o "$${tmp_patch}" "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/rawdiff/?id=$${chromium_branch}&id2=$${base_hash}" >/dev/null 2>&1; then \
 	    ${ECHO_CMD} "ERROR: Could not fetch diff from https://code.qt.io/cgit/."; \
 	    ${RM} -f "$${tmp_patch}"; \
 	    exit 1; \
 	fi; \
-	${ECHO_CMD} "===>  Formatting patch paths..."; \
-	${SED} -E \
-	    -e 's|^(--- )a/|\1src/3rdparty/|' \
-	    -e 's|^(\+\+\+ )b/|\1src/3rdparty/|' \
-	    "$${tmp_patch}" > ${.CURDIR}/files/patch-security-rollup; \
+	${ECHO_CMD} "====> Formatting patch paths and adding header..."; \
+	( \
+	    ${PRINTF} "Base-Commit: $${base_hash}\nBranch: $${chromium_branch}\n\n"; \
+	    ${SED} -E \
+	      -e 's|^(--- )a/|\1src/3rdparty/|' \
+	      -e 's|^(\+\+\+ )b/|\1src/3rdparty/|' \
+	      "$${tmp_patch}" \
+	) > ${.CURDIR}/files/patch-security-rollup; \
 	${RM} -f "$${tmp_patch}"; \
-	${ECHO_CMD} "===>  Updated ${FILESDIR}/patch-security-rollup"
+	${ECHO_CMD} "===> Updated ${FILESDIR}/patch-security-rollup"; \
+	if [ -f "${FILESDIR}/generate-vuxml-entry.py" ]; then \
+	    current_year=$$(date +%Y); \
+	    vuxml_file="${.CURDIR:H:H}/security/vuxml/vuln/$${current_year}.xml"; \
+	    ${ECHO_CMD} "===> Generating VuXML entry in $${vuxml_file}..."; \
+	    tmp_vuxml=$$(${MKTEMP} -t qt_vuxml); \
+	    ${SETENV} NVD_API_KEY=${NVD_API_KEY} ${PYTHON_CMD} ${FILESDIR}/generate-vuxml-entry.py -f "$${vuxml_file}" "$${base_hash}" "$${chromium_branch}" "${PKGVERSION}" > "$${tmp_vuxml}"; \
+	    if [ -s "$${tmp_vuxml}" ]; then \
+	        if [ -f "$${vuxml_file}" ]; then \
+	            ${ECHO_CMD} "====> Prepending entry to $${vuxml_file}..."; \
+	            ${CAT} "$${tmp_vuxml}" "$${vuxml_file}" > "$${vuxml_file}.new"; \
+	            ${MV} "$${vuxml_file}.new" "$${vuxml_file}"; \
+	        else \
+	            ${ECHO_CMD} "====> Warning: $${vuxml_file} not found. Saving to ${.CURDIR}/vuxml_entry.xml instead. Maybe it's the new year and security/vuxml needs to be updated?"; \
+	            ${MV} "$${tmp_vuxml}" ${.CURDIR}/vuxml_entry.xml; \
+	        fi; \
+	    else \
+	        ${RM} -f "$${tmp_vuxml}"; \
+	    fi; \
+	else \
+	    ${ECHO_CMD} "====> Warning: ${FILESDIR}/generate-vuxml-entry.py not found. Skipping VuXML generation."; \
+	fi
 
 .include <bsd.port.mk>
