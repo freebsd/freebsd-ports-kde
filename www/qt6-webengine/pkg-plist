@@ -60,6 +60,7 @@ bin/QtWebEngineProcess6
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreDepends
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCoreVersion
 %%QT_INCDIR%%/QtWebEngineCore/qtwebenginecore-config.h
+%%QT_INCDIR%%/QtWebEngineCore/qtwebenginecoreexports.h
 %%QT_INCDIR%%/QtWebEngineCore/qtwebenginecoreglobal.h
 %%QT_INCDIR%%/QtWebEngineCore/qtwebenginecoreversion.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebenginecertificateerror.h
@@ -146,6 +147,9 @@ bin/QtWebEngineProcess6
 %%QT_INCDIR%%/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
 %%QT_INCDIR%%/QtWebEngineWidgets/qtwebenginewidgetsversion.h
 %%QT_INCDIR%%/QtWebEngineWidgets/qwebengineview.h
+lib/cmake/Qt6/ConfigVersionOverrides/WebEngineCore/Override_1000_qtproject.cmake
+lib/cmake/Qt6/ConfigVersionOverrides/WebEngineQuick/Override_1000_qtproject.cmake
+lib/cmake/Qt6/ConfigVersionOverrides/WebEngineWidgets/Override_1000_qtproject.cmake
 lib/cmake/Qt6/FindGPerf.cmake
 lib/cmake/Qt6/FindGn.cmake
 lib/cmake/Qt6/FindNinja.cmake

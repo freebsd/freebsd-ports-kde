@@ -37,10 +37,12 @@ bin/qtplugininfo6
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/invisible_widget_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/layout_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/layoutinfo_p.h
+%%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/menuactionlineedit_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/metadatabase_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/morphmenu_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/newactiondialog_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/newformwidget_p.h
+%%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/objectutils_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/orderdialog_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/plaintexteditor_p.h
 %%QT_INCDIR%%/QtDesigner/%%FULLVER%%/QtDesigner/private/plugindialog_p.h
@@ -239,11 +241,16 @@ bin/qtplugininfo6
 %%QT_INCDIR%%/QtHelp/ui_qhelpfiltersettingswidget.h
 %%QT_INCDIR%%/QtQDocCatch/QtQDocCatchDepends
 %%QT_INCDIR%%/QtQDocCatch/catch/catch.hpp
+%%QT_INCDIR%%/QtQDocCatchConversions/QtQDocCatchConversions
 %%QT_INCDIR%%/QtQDocCatchConversions/QtQDocCatchConversionsDepends
+%%QT_INCDIR%%/QtQDocCatchConversions/QtQDocCatchConversionsVersion
 %%QT_INCDIR%%/QtQDocCatchConversions/catch_conversions/qdoc_catch_conversions.h
 %%QT_INCDIR%%/QtQDocCatchConversions/catch_conversions/qt_catch_conversions.h
 %%QT_INCDIR%%/QtQDocCatchConversions/catch_conversions/std_catch_conversions.h
+%%QT_INCDIR%%/QtQDocCatchConversions/qtqdoccatchconversionsversion.h
+%%QT_INCDIR%%/QtQDocCatchGenerators/QtQDocCatchGenerators
 %%QT_INCDIR%%/QtQDocCatchGenerators/QtQDocCatchGeneratorsDepends
+%%QT_INCDIR%%/QtQDocCatchGenerators/QtQDocCatchGeneratorsVersion
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/generators/combinators/cycle_generator.h
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/generators/combinators/oneof_generator.h
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/generators/k_partition_of_r_generator.h
@@ -256,6 +263,7 @@ bin/qtplugininfo6
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/utilities/semantics/move_into_vector.h
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/utilities/statistics/distribution.h
 %%QT_INCDIR%%/QtQDocCatchGenerators/catch_generators/utilities/statistics/percentages.h
+%%QT_INCDIR%%/QtQDocCatchGenerators/qtqdoccatchgeneratorsversion.h
 %%QT_INCDIR%%/QtTools/%%FULLVER%%/QtTools/private/qttools-config_p.h
 %%QT_INCDIR%%/QtTools/QtTools
 %%QT_INCDIR%%/QtTools/QtToolsDepends

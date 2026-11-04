@@ -1,4 +1,5 @@
 bin/androiddeployqt6
+bin/harmonydeployqt6
 bin/qmake6
 bin/wasmdeployqt6
 %%QT_INCDIR%%/QtConcurrent/QtConcurrent
@@ -173,9 +174,14 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtimezoneprivate_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtipccommon_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtools_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtparsecommon_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtparseqttemporalformat_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtparsetemporal_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtparsetimezone_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtrace_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtranslator_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qtransposeproxymodel_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qttemporalpattern_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qunicodetables_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qunicodetools_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/quniquehandle_p.h
@@ -614,6 +620,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtCore/QtVersionChecks
 %%QT_INCDIR%%/QtCore/q17memory.h
 %%QT_INCDIR%%/QtCore/q20algorithm.h
+%%QT_INCDIR%%/QtCore/q20atomic.h
 %%QT_INCDIR%%/QtCore/q20bit.h
 %%QT_INCDIR%%/QtCore/q20chrono.h
 %%QT_INCDIR%%/QtCore/q20functional.h
@@ -979,7 +986,11 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtFbSupport/QtFbSupportVersion
 %%QT_INCDIR%%/QtFbSupport/qtfbsupportversion.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/atspiadaptor_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/bus_interface_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/cache_adaptor_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/dbusconnection_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/deviceeventcontroller_adaptor_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/properties_interface_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qabstractfileiconengine_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qabstractfileiconprovider_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qabstractlayoutstyleinfo_p.h
@@ -1068,6 +1079,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qgrayraster_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qgridlayoutengine_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qguiapplication_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qguisvg_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qharfbuzzng_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qhexstring_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qhighdpiscaling_p.h
@@ -1182,9 +1194,11 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qvulkanwindow_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qwindow_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qxbmhandler_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qxdgdesktopportalfiletransfer_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qxdgnotificationproxy_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qxkbcommon_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/qxpmhandler_p.h
+%%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/private/socket_interface_p.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/qpa/qplatformaccessibility.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/qpa/qplatformbackingstore.h
 %%QT_INCDIR%%/QtGui/%%FULLVER%%/QtGui/qpa/qplatformclipboard.h
@@ -1259,6 +1273,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtGui/QAccessibleTextUpdateEvent
 %%QT_INCDIR%%/QtGui/QAccessibleValueChangeEvent
 %%QT_INCDIR%%/QtGui/QAccessibleValueInterface
+%%QT_INCDIR%%/QtGui/QAccessibleViewportInterface
 %%QT_INCDIR%%/QtGui/QAction
 %%QT_INCDIR%%/QtGui/QActionEvent
 %%QT_INCDIR%%/QtGui/QActionGroup
@@ -1462,10 +1477,6 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtGui/QtGui
 %%QT_INCDIR%%/QtGui/QtGuiDepends
 %%QT_INCDIR%%/QtGui/QtGuiVersion
-%%QT_INCDIR%%/QtGui/bus_interface.h
-%%QT_INCDIR%%/QtGui/cache_adaptor.h
-%%QT_INCDIR%%/QtGui/deviceeventcontroller_adaptor.h
-%%QT_INCDIR%%/QtGui/properties_interface.h
 %%QT_INCDIR%%/QtGui/qabstractfileiconprovider.h
 %%QT_INCDIR%%/QtGui/qabstracttextdocumentlayout.h
 %%QT_INCDIR%%/QtGui/qaccessibilityhints.h
@@ -1585,7 +1596,6 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtGui/qvulkanwindow.h
 %%QT_INCDIR%%/QtGui/qwindow.h
 %%QT_INCDIR%%/QtGui/qwindowdefs.h
-%%QT_INCDIR%%/QtGui/socket_interface.h
 %%QT_INCDIR%%/QtInputSupport/%%FULLVER%%/QtInputSupport/private/devicehandlerlist_p.h
 %%QT_INCDIR%%/QtInputSupport/%%FULLVER%%/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
 %%QT_INCDIR%%/QtInputSupport/%%FULLVER%%/QtInputSupport/private/qevdevkeyboardhandler_p.h
@@ -1719,6 +1729,8 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtNetwork/QHstsPolicy
 %%QT_INCDIR%%/QtNetwork/QHttp1Configuration
 %%QT_INCDIR%%/QtNetwork/QHttp2Configuration
+%%QT_INCDIR%%/QtNetwork/QHttpHeaderRangeSet
+%%QT_INCDIR%%/QtNetwork/QHttpHeaderRangeSpec
 %%QT_INCDIR%%/QtNetwork/QHttpHeaders
 %%QT_INCDIR%%/QtNetwork/QHttpMultiPart
 %%QT_INCDIR%%/QtNetwork/QHttpPart
@@ -1753,6 +1765,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtNetwork/QSslEllipticCurve
 %%QT_INCDIR%%/QtNetwork/QSslError
 %%QT_INCDIR%%/QtNetwork/QSslKey
+%%QT_INCDIR%%/QtNetwork/QSslKeyingMaterial
 %%QT_INCDIR%%/QtNetwork/QSslPreSharedKeyAuthenticator
 %%QT_INCDIR%%/QtNetwork/QSslServer
 %%QT_INCDIR%%/QtNetwork/QSslSocket
@@ -1802,6 +1815,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtNetwork/qsslellipticcurve.h
 %%QT_INCDIR%%/QtNetwork/qsslerror.h
 %%QT_INCDIR%%/QtNetwork/qsslkey.h
+%%QT_INCDIR%%/QtNetwork/qsslkeyingmaterial.h
 %%QT_INCDIR%%/QtNetwork/qsslpresharedkeyauthenticator.h
 %%QT_INCDIR%%/QtNetwork/qsslserver.h
 %%QT_INCDIR%%/QtNetwork/qsslsocket.h
@@ -2030,6 +2044,7 @@ bin/wasmdeployqt6
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qcsvbenchmarklogger_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qemulationdetector_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qjunittestlogger_p.h
+%%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qmeanvarianceaccumulator_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qplaintestlogger_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qpropertytesthelper_p.h
 %%QT_INCDIR%%/QtTest/%%FULLVER%%/QtTest/private/qsignaldumper_p.h
@@ -2114,10 +2129,10 @@ bin/wasmdeployqt6
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-wlr-data-control-unstable-v1.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-wp-primary-selection-unstable-v1.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xdg-output-unstable-v1.h
+%%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xdg-session-management-v1.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xdg-shell.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xdg-system-bell-v1.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xdg-toplevel-drag-v1.h
-%%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwayland-xx-session-management-v1.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandabstractdecoration_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandappmenu_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandbuffer_p.h
@@ -2150,6 +2165,7 @@ bin/wasmdeployqt6
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandintegration_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandmimehelper_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandnativeinterface_p.h
+%%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandpipewritehelper_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandplatformservices_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandpointergestures_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/qwaylandprimaryselectionv1_p.h
@@ -2197,10 +2213,10 @@ bin/wasmdeployqt6
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-wlr-data-control-unstable-v1-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-wp-primary-selection-unstable-v1-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xdg-output-unstable-v1-client-protocol.h
+%%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xdg-session-management-v1-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xdg-shell-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xdg-system-bell-v1-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xdg-toplevel-drag-v1-client-protocol.h
-%%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/%%FULLVER%%/QtWaylandClient/private/wayland-xx-session-management-v1-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/QWaylandClientExtension
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/QWaylandClientExtensionTemplate
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandClient/QtWaylandClient
@@ -2217,10 +2233,8 @@ bin/wasmdeployqt6
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandGlobal/QtWaylandGlobalVersion
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandGlobal/qtwaylandglobal-config.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWaylandGlobal/qtwaylandglobalversion.h
-%%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/%%FULLVER%%/QtWlShellIntegration/private/qwayland-wayland.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/%%FULLVER%%/QtWlShellIntegration/private/qwaylandwlshellintegration_p.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/%%FULLVER%%/QtWlShellIntegration/private/qwaylandwlshellsurface_p.h
-%%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/%%FULLVER%%/QtWlShellIntegration/private/wayland-wayland-client-protocol.h
 %%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/QtWlShellIntegration
 %%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/QtWlShellIntegrationDepends
 %%WAYLAND%%%%QT_INCDIR%%/QtWlShellIntegration/QtWlShellIntegrationVersion
@@ -2725,7 +2739,9 @@ lib/cmake/Qt6/FindATSPI2.cmake
 lib/cmake/Qt6/FindBundletool.cmake
 lib/cmake/Qt6/FindDB2.cmake
 lib/cmake/Qt6/FindDirectFB.cmake
+lib/cmake/Qt6/FindEventfd.cmake
 lib/cmake/Qt6/FindGLESv2.cmake
+lib/cmake/Qt6/FindGLESv3.cmake
 lib/cmake/Qt6/FindGSSAPI.cmake
 lib/cmake/Qt6/FindGTK3.cmake
 lib/cmake/Qt6/FindInterbase.cmake
@@ -2738,6 +2754,7 @@ lib/cmake/Qt6/FindLiburing.cmake
 lib/cmake/Qt6/FindMimer.cmake
 lib/cmake/Qt6/FindMtdev.cmake
 lib/cmake/Qt6/FindMySQL.cmake
+lib/cmake/Qt6/FindNodeAddonApi.cmake
 lib/cmake/Qt6/FindOracle.cmake
 lib/cmake/Qt6/FindPPS.cmake
 lib/cmake/Qt6/FindPostgreSQL.cmake
@@ -2754,6 +2771,7 @@ lib/cmake/Qt6/FindWrapBundledLibpngConfigExtra.cmake
 lib/cmake/Qt6/FindWrapBundledPcre2ConfigExtra.cmake
 lib/cmake/Qt6/FindWrapBundledZLIBConfigExtra.cmake
 lib/cmake/Qt6/FindWrapDBus1.cmake
+lib/cmake/Qt6/FindWrapFontconfig.cmake
 lib/cmake/Qt6/FindWrapFreetype.cmake
 lib/cmake/Qt6/FindWrapHarfbuzz.cmake
 lib/cmake/Qt6/FindWrapJpeg.cmake
@@ -2799,6 +2817,7 @@ lib/cmake/Qt6/QtAutoDetectHelpers.cmake
 lib/cmake/Qt6/QtAutogenHelpers.cmake
 lib/cmake/Qt6/QtBaseTopLevelHelpers.cmake
 lib/cmake/Qt6/QtBuild.cmake
+lib/cmake/Qt6/QtBuildCMakeFromSourcesScript.cmake
 lib/cmake/Qt6/QtBuildHelpers.cmake
 lib/cmake/Qt6/QtBuildInformation.cmake
 lib/cmake/Qt6/QtBuildOptionsHelpers.cmake
@@ -2808,6 +2827,7 @@ lib/cmake/Qt6/QtBuildRepoHelpers.cmake
 lib/cmake/Qt6/QtBuildStaticDocToolsScript.cmake
 lib/cmake/Qt6/QtCMakeHelpers.cmake
 lib/cmake/Qt6/QtCMakePackageVersionFile.cmake.in
+lib/cmake/Qt6/QtCMakePackageVersionFileOverride.cmake.in
 lib/cmake/Qt6/QtCMakeVersionHelpers.cmake
 lib/cmake/Qt6/QtCompilerFlags.cmake
 lib/cmake/Qt6/QtCompilerOptimization.cmake
@@ -2833,6 +2853,7 @@ lib/cmake/Qt6/QtGenerateLibHelpers.cmake
 lib/cmake/Qt6/QtGenerateLibPri.cmake
 lib/cmake/Qt6/QtGenerateVersionScript.cmake
 lib/cmake/Qt6/QtGlobalStateHelpers.cmake
+lib/cmake/Qt6/QtHarmonyOSHelpers.cmake
 lib/cmake/Qt6/QtHeadersClean.cmake
 lib/cmake/Qt6/QtInitProject.cmake
 lib/cmake/Qt6/QtInstallHelpers.cmake
@@ -2845,6 +2866,7 @@ lib/cmake/Qt6/QtModuleConfigPrivate.cmake.in
 lib/cmake/Qt6/QtModuleDependencies.cmake.in
 lib/cmake/Qt6/QtModuleHeadersCheck.cmake
 lib/cmake/Qt6/QtModuleHelpers.cmake
+lib/cmake/Qt6/QtModuleMapHelpers.cmake
 lib/cmake/Qt6/QtModuleToolsConfig.cmake.in
 lib/cmake/Qt6/QtModuleToolsDependencies.cmake.in
 lib/cmake/Qt6/QtModuleToolsVersionlessTargets.cmake.in
@@ -2875,6 +2897,7 @@ lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake
 lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake
 lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake
 lib/cmake/Qt6/QtPublicGitHelpers.cmake
+lib/cmake/Qt6/QtPublicHarmonyOSToolchainHelpers.cmake
 lib/cmake/Qt6/QtPublicJsonHelpers.cmake
 lib/cmake/Qt6/QtPublicPluginHelpers.cmake
 lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake
@@ -2912,6 +2935,7 @@ lib/cmake/Qt6/QtScopeFinalizerHelpers.cmake
 lib/cmake/Qt6/QtSeparateDebugInfo.Info.plist.in
 lib/cmake/Qt6/QtSeparateDebugInfo.cmake
 lib/cmake/Qt6/QtSetup.cmake
+lib/cmake/Qt6/QtSetupAndroid.cmake
 lib/cmake/Qt6/QtSimdHelpers.cmake
 lib/cmake/Qt6/QtSingleRepoTargetSetBuildHelpers.cmake
 lib/cmake/Qt6/QtStandaloneTestsConfig.cmake.in
@@ -2929,6 +2953,7 @@ lib/cmake/Qt6/QtWasmHelpers.cmake
 lib/cmake/Qt6/QtWindowsHelpers.cmake
 lib/cmake/Qt6/QtWrapperScriptHelpers.cmake
 lib/cmake/Qt6/QtWriteArgsFile.cmake
+@dir lib/cmake/Qt6/android
 lib/cmake/Qt6/config.tests/binary_for_strip/CMakeLists.txt
 lib/cmake/Qt6/config.tests/binary_for_strip/lib1.cpp
 lib/cmake/Qt6/config.tests/static_link_order/CMakeLists.txt
@@ -3573,6 +3598,9 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_BINDIR%%/androiddeployqt
 %%QT_BINDIR%%/androiddeployqt6
 %%QT_BINDIR%%/androidtestrunner
+%%QT_BINDIR%%/harmonydeployqt
+%%QT_BINDIR%%/harmonydeployqt6
+%%QT_BINDIR%%/harmonyostestrunner
 %%QT_BINDIR%%/qdbuscpp2xml
 %%QT_BINDIR%%/qdbusxml2cpp
 %%QT_BINDIR%%/qmake
@@ -3887,6 +3915,8 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/features/metatypes.prf
 %%QT_MKSPECDIR%%/features/moc.prf
 %%QT_MKSPECDIR%%/features/no_debug_info.prf
+%%QT_MKSPECDIR%%/features/ohos/ohos.prf
+%%QT_MKSPECDIR%%/features/ohos/resolve_target.prf
 %%QT_MKSPECDIR%%/features/permissions.prf
 %%QT_MKSPECDIR%%/features/plugin_bundle.prf
 %%QT_MKSPECDIR%%/features/precompile_header.prf
@@ -3925,6 +3955,7 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/features/uikit/devices.py
 %%QT_MKSPECDIR%%/features/uikit/exclusive_builds_post.prf
 %%QT_MKSPECDIR%%/features/uikit/gc_binaries.prf
+%%QT_MKSPECDIR%%/features/uikit/qt.prf
 %%QT_MKSPECDIR%%/features/uikit/resolve_config.prf
 %%QT_MKSPECDIR%%/features/uikit/sdk.prf
 %%QT_MKSPECDIR%%/features/uikit/testcase.prf
@@ -4082,6 +4113,8 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/modules/qt_lib_xml_private.pri
 %%QT_MKSPECDIR%%/netbsd-g++/qmake.conf
 %%QT_MKSPECDIR%%/netbsd-g++/qplatformdefs.h
+%%QT_MKSPECDIR%%/ohos-clang/qmake.conf
+%%QT_MKSPECDIR%%/ohos-clang/qplatformdefs.h
 %%QT_MKSPECDIR%%/openbsd-g++/qmake.conf
 %%QT_MKSPECDIR%%/openbsd-g++/qplatformdefs.h
 %%QT_MKSPECDIR%%/qconfig.pri
@@ -4136,6 +4169,8 @@ lib/cmake/Qt6XmlPrivate/Qt6XmlPrivateVersionlessTargets.cmake
 %%QT_MKSPECDIR%%/wasm-emscripten/qplatformdefs.h
 %%QT_MKSPECDIR%%/win32-arm64-msvc/qmake.conf
 %%QT_MKSPECDIR%%/win32-arm64-msvc/qplatformdefs.h
+%%QT_MKSPECDIR%%/win32-arm64ec-msvc/qmake.conf
+%%QT_MKSPECDIR%%/win32-arm64ec-msvc/qplatformdefs.h
 %%QT_MKSPECDIR%%/win32-clang-g++/qmake.conf
 %%QT_MKSPECDIR%%/win32-clang-g++/qplatformdefs.h
 %%QT_MKSPECDIR%%/win32-clang-msvc/qmake.conf
@@ -4420,6 +4455,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_DATADIR%%/wayland/protocols/idle-inhibit/idle-inhibit-unstable-v1.xml
 %%QT_DATADIR%%/wayland/protocols/linux-dmabuf/REUSE.toml
 %%QT_DATADIR%%/wayland/protocols/linux-dmabuf/linux-dmabuf-unstable-v1.xml
+%%QT_DATADIR%%/wayland/protocols/linux-dmabuf/linux-dmabuf-v1.xml
 %%QT_DATADIR%%/wayland/protocols/linux-dmabuf/qt_attribution.json
 %%QT_DATADIR%%/wayland/protocols/pointer-gestures/REUSE.toml
 %%QT_DATADIR%%/wayland/protocols/pointer-gestures/pointer-gestures-unstable-v1.xml
@@ -4435,7 +4471,7 @@ libdata/pkgconfig/Qt6Xml.pc
 %%QT_DATADIR%%/wayland/protocols/scaler/scaler.xml
 %%QT_DATADIR%%/wayland/protocols/session-management/REUSE.toml
 %%QT_DATADIR%%/wayland/protocols/session-management/qt_attribution.json
-%%QT_DATADIR%%/wayland/protocols/session-management/xx-session-management-v1.xml
+%%QT_DATADIR%%/wayland/protocols/session-management/xdg-session-management-v1.xml
 %%QT_DATADIR%%/wayland/protocols/tablet/REUSE.toml
 %%QT_DATADIR%%/wayland/protocols/tablet/qt_attribution.json
 %%QT_DATADIR%%/wayland/protocols/tablet/tablet-unstable-v2.xml

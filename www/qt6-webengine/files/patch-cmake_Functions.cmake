@@ -1,11 +1,11 @@
---- cmake/Functions.cmake.orig	2026-08-11 12:42:19 UTC
+--- cmake/Functions.cmake.orig	2026-09-27 10:44:57 UTC
 +++ cmake/Functions.cmake
 @@ -103,7 +103,7 @@ function(add_linker_options target buildDir completeSt
      set(ldir_rsp "${buildDir}/${ninjaTarget}_ldir.rsp")
      set(lflags_rsp "${buildDir}/${ninjaTarget}_lflags.rsp")
      set_target_properties(${cmakeTarget} PROPERTIES STATIC_LIBRARY_OPTIONS "@${objects_rsp}")
--    if(LINUX OR ANDROID)
-+    if(LINUX OR ANDROID OR FREEBSD)
+-    if(LINUX OR ANDROID OR OHOS)
++    if(LINUX OR ANDROID OR OHOS OR FREEBSD)
           get_gn_arch(cpu ${TEST_architecture_arch})
  
           #QTBUG-145054#

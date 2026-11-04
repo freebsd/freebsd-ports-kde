@@ -2,6 +2,7 @@
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIEnum
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIHttpFileElement
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIHttpRequestInput
+%%QT_INCDIR%%/QtOpenApiCommon/QOAIHttpResponseParseParameters
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIObject
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIServerConfiguration
 %%QT_INCDIR%%/QtOpenApiCommon/QOAIServerVariable

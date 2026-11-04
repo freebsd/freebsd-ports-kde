@@ -11,7 +11,7 @@
 #
 
 PORTNAME?=	webengine
-DISTVERSION=	${QT6_VERSION}
+DISTVERSION=	${QT6_WEBENGINE_VERSION}
 # This is the parent port of print/qt6-pdf. Please always keep 'PORTREVISION?='
 # and reset the value to '0' only after increasing QT6_VERSION in Mk/Uses/qt.mk.
 PORTREVISION?=	0
@@ -114,6 +114,7 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 ${MAKE_ARGS:N${DESTDIRNAME}=*}
 
 BINARY_ALIAS=	git=false python3=${PYTHON_CMD}
+WRKSRC=		${WRKDIR}/qtwebengine-everywhere-src-${PORTVERSION:R}
 
 .if !defined(BUILD_QTPDF)
 OPTIONS_DEFINE=		DRIVER PIPEWIRE RUST

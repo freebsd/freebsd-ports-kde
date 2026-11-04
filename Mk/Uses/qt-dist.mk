@@ -84,7 +84,11 @@ _QT5_MASTER_SITES=		${MASTER_SITE_QT}
 _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # Qt6 specific master sites
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
+.  if ${_QT_DIST} == webengine
+_QT6_MASTER_SITE_SUBDIR=        ${_QT6_WEBENGINE_RELEASE_TYPE}_releases/qtwebengine/${QT6_WEBENGINE_VERSION}/
+.  else
 _QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
+.  endif
 # devel/qt6-openapi needs an offline archive of the maven deps
 # which we supply locally.
 .  if ${_QT_DIST} == openapi && !defined(QTOPENAPI_MAINTAINER_MODE)
@@ -308,8 +312,13 @@ QMAKE_ARGS+=		QT_CONFIG+="${QT_CONFIG:N-*:O:u}"
 QMAKE_ARGS+=		QT_CONFIG-="${QT_CONFIG:M-*:O:u:C/^-//}"
 .  endif
 
+.  if ${_QT_DIST} == webengine
+PLIST_SUB+=		SHORTVER=${QT6_WEBENGINE_VERSION:R} \
+			FULLVER=${QT6_WEBENGINE_VERSION:C/-.*//}
+.  else
 PLIST_SUB+=		SHORTVER=${_QT_VERSION:R} \
 			FULLVER=${_QT_VERSION:C/-.*//}
+.  endif
 .  if defined(WITH_DEBUG)
 PLIST_SUB+=		DEBUG="" \
 			NO_DEBUG="@comment "
@@ -317,7 +326,6 @@ PLIST_SUB+=		DEBUG="" \
 PLIST_SUB+=		DEBUG="@comment " \
 			NO_DEBUG=""
 .  endif
-
 # Handle additional PLIST directories, which should only be used for Qt-dist ports.
 .  for dir in ETC
 # Export QT_ETCDIR.

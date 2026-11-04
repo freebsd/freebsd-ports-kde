@@ -20,4 +20,7 @@ USE_GL=		opengl
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 USE_QT=		base
 
+CMAKE_ON=	FEATURE_jasper \
+		FEATURE_mng
+
 .include <bsd.port.mk>

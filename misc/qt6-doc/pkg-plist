@@ -94,6 +94,10 @@
 %%QT_DOCDIR%%/qtdoc/gettingstarted.html
 %%QT_DOCDIR%%/qtdoc/gpl.html
 %%QT_DOCDIR%%/qtdoc/groups.html
+%%QT_DOCDIR%%/qtdoc/harmonyos-building-deploying-apps.html
+%%QT_DOCDIR%%/qtdoc/harmonyos-building.html
+%%QT_DOCDIR%%/qtdoc/harmonyos-prerequisites.html
+%%QT_DOCDIR%%/qtdoc/harmonyos.html
 %%QT_DOCDIR%%/qtdoc/hierarchy.html
 %%QT_DOCDIR%%/qtdoc/highdpi.html
 %%QT_DOCDIR%%/qtdoc/i18n-plural-rules.html
@@ -112,6 +116,14 @@
 %%QT_DOCDIR%%/qtdoc/images/addalarms.png
 %%QT_DOCDIR%%/qtdoc/images/alarms2.png
 %%QT_DOCDIR%%/qtdoc/images/alarms3.png
+%%QT_DOCDIR%%/qtdoc/images/android-getting-started-result-in-action.gif
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-create-quick-project.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-project-details.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-project-kit-selection.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-project-management.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-project-name-location.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-project-result.webp
+%%QT_DOCDIR%%/qtdoc/images/android-gettingstarted-select-device.webp
 %%QT_DOCDIR%%/qtdoc/images/android-source-folder.png
 %%QT_DOCDIR%%/qtdoc/images/android.webp
 %%QT_DOCDIR%%/qtdoc/images/android_overview_apps.webp
@@ -129,10 +141,9 @@
 %%QT_DOCDIR%%/qtdoc/images/coffee_machine_selection.png
 %%QT_DOCDIR%%/qtdoc/images/coffee_machine_selection_android_landscape.png
 %%QT_DOCDIR%%/qtdoc/images/coffee_machine_selection_windows.png
-%%QT_DOCDIR%%/qtdoc/images/colorpalette_editing.png
-%%QT_DOCDIR%%/qtdoc/images/colorpalette_listing.png
-%%QT_DOCDIR%%/qtdoc/images/colorpalette_urlselection.png
-%%QT_DOCDIR%%/qtdoc/images/colorpalette_userlisting.png
+%%QT_DOCDIR%%/qtdoc/images/colorpalette_editing.webp
+%%QT_DOCDIR%%/qtdoc/images/colorpalette_listing.webp
+%%QT_DOCDIR%%/qtdoc/images/colorpalette_userlisting.webp
 %%QT_DOCDIR%%/qtdoc/images/controls.png
 %%QT_DOCDIR%%/qtdoc/images/deployment-mac-application.png
 %%QT_DOCDIR%%/qtdoc/images/deployment-mac-bundlestructure.png
@@ -230,6 +241,7 @@
 %%QT_DOCDIR%%/qtdoc/images/toycustomizer-landscape.png
 %%QT_DOCDIR%%/qtdoc/images/toycustomizer.png
 %%QT_DOCDIR%%/qtdoc/images/vectorimageexample.png
+%%QT_DOCDIR%%/qtdoc/images/vscodeext-installation.webp
 %%QT_DOCDIR%%/qtdoc/images/vxwb-advanced-settings.png
 %%QT_DOCDIR%%/qtdoc/images/vxwb-cmake-rtp-project.png
 %%QT_DOCDIR%%/qtdoc/images/vxwb-connection.png
@@ -291,6 +303,7 @@
 %%QT_DOCDIR%%/qtdoc/newclasses61.html
 %%QT_DOCDIR%%/qtdoc/newclasses610.html
 %%QT_DOCDIR%%/qtdoc/newclasses611.html
+%%QT_DOCDIR%%/qtdoc/newclasses612.html
 %%QT_DOCDIR%%/qtdoc/newclasses62.html
 %%QT_DOCDIR%%/qtdoc/newclasses63.html
 %%QT_DOCDIR%%/qtdoc/newclasses64.html
@@ -301,7 +314,6 @@
 %%QT_DOCDIR%%/qtdoc/newclasses69.html
 %%QT_DOCDIR%%/qtdoc/obsoleteclasses.html
 %%QT_DOCDIR%%/qtdoc/obsoleteqmltypes.html
-%%QT_DOCDIR%%/qtdoc/overviews-main.html
 %%QT_DOCDIR%%/qtdoc/overviews.html
 %%QT_DOCDIR%%/qtdoc/packaging-recommendations.html
 %%QT_DOCDIR%%/qtdoc/plugins-howto.html
@@ -329,11 +341,13 @@
 %%QT_DOCDIR%%/qtdoc/qt-embedded-fonts.html
 %%QT_DOCDIR%%/qtdoc/qt-embedded-kmap2qmap.html
 %%QT_DOCDIR%%/qtdoc/qt-for-education.html
+%%QT_DOCDIR%%/qtdoc/qt-framework-product-information.html
 %%QT_DOCDIR%%/qtdoc/qt-gpl-exception-1-0.html
 %%QT_DOCDIR%%/qtdoc/qt-gui-concepts.html
 %%QT_DOCDIR%%/qtdoc/qt-intro.html
 %%QT_DOCDIR%%/qtdoc/qt-online-installation.html
 %%QT_DOCDIR%%/qtdoc/qt-releases.html
+%%QT_DOCDIR%%/qtdoc/qt-tools-security.html
 %%QT_DOCDIR%%/qtdoc/qt-tools-utilities.html
 %%QT_DOCDIR%%/qtdoc/qt6-buildsystem.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-attribution-colorpaletteclient.html
@@ -371,7 +385,7 @@
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-thermostat-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-todolist-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-toycustomizer-example.html
-%%QT_DOCDIR%%/qtdoc/qtdoc-demos-windowembedding-example.html
+%%QT_DOCDIR%%/qtdoc/qtdoc-demos-windowhosting-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-xr-physicsbase-teleportation-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-toc.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-tutorials-alarms-example.html
@@ -436,6 +450,7 @@
 %%QT_DOCDIR%%/qtdoc/whatsnew61.html
 %%QT_DOCDIR%%/qtdoc/whatsnew610.html
 %%QT_DOCDIR%%/qtdoc/whatsnew611.html
+%%QT_DOCDIR%%/qtdoc/whatsnew612.html
 %%QT_DOCDIR%%/qtdoc/whatsnew62.html
 %%QT_DOCDIR%%/qtdoc/whatsnew63.html
 %%QT_DOCDIR%%/qtdoc/whatsnew64.html
@@ -493,6 +508,7 @@
 %%QT_DOCDIR%%/qtplatformintegration/images/home.png
 %%QT_DOCDIR%%/qtplatformintegration/images/ico_out.png
 %%QT_DOCDIR%%/qtplatformintegration/images/logo.png
+%%QT_DOCDIR%%/qtplatformintegration/mixing-qt-with-other-ui-toolkits.html
 %%QT_DOCDIR%%/qtplatformintegration/native-interfaces.html
 %%QT_DOCDIR%%/qtplatformintegration/platform-integration.html
 %%QT_DOCDIR%%/qtplatformintegration/platform-type-conversions.html

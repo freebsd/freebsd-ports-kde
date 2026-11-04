@@ -23,8 +23,9 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.19
-QT6_VERSION?=		6.11.3
-PYSIDE6_VERSION?=	6.11.3
+QT6_VERSION?=		6.12.0
+QT6_WEBENGINE_VERSION?=	6.140.0-rc
+PYSIDE6_VERSION?=	6.12.0
 
 # Support for intermediate Qt6 releases. This partially defines
 # _QT6_MASTER_SITE_SUBDIR and would probably be better in qt-dist.mk,
@@ -33,6 +34,11 @@ PYSIDE6_VERSION?=	6.11.3
 _QT6_RELEASE_TYPE=		development
 .  else
 _QT6_RELEASE_TYPE=		official
+.  endif
+.  if ${QT6_WEBENGINE_VERSION:M*beta*} || ${QT6_WEBENGINE_VERSION:M*rc*}
+_QT6_WEBENGINE_RELEASE_TYPE=	development
+.  else
+_QT6_WEBENGINE_RELEASE_TYPE=	official
 .  endif
 
 # We accept the Qt version to be passed by either or all of the three mk files.

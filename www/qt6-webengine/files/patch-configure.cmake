@@ -1,4 +1,4 @@
---- configure.cmake.orig	2026-08-11 12:42:19 UTC
+--- configure.cmake.orig	2026-09-27 10:44:57 UTC
 +++ configure.cmake
 @@ -310,12 +310,12 @@ qt_webengine_configure_check("supported-platform"
  
@@ -10,9 +10,9 @@
  )
  qt_webengine_configure_check("supported-platform"
      MODULES QtPdf
--    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID
-+    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID OR FREEBSD
-     MESSAGE "Build can be done only on Linux, Windows, macO, iOS and Android."
+-    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID OR OHOS
++    CONDITION LINUX OR WIN32 OR MACOS OR IOS OR ANDROID OR OHOS OR FREEBSD
+     MESSAGE "Build can be done only on Linux, Windows, macO, iOS, Android and OHOS."
  )
  
 @@ -335,15 +335,6 @@ qt_webengine_configure_check("static-build"

@@ -21,7 +21,7 @@ _QT_DISTS=	3d 5compat activeqt base canvaspainter charts coap \
 		multimedia networkauth opcua openapi positioning quick3d \
 		quick3dphysics remoteobjects scxml sensors serialbus \
 		serialport speech tasktree tools virtualkeyboard wayland \
-		webchannel webengine websockets webview
+		webchannel websockets webview
 _QT_EXAMPLES=	${_QT_DISTS:C/^/qt/}
 
 EXAMPLESDIR=	${PREFIX}/share/examples/qt6

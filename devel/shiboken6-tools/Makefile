@@ -33,6 +33,17 @@ PLIST_SUB=	PYTHON_MAJOR_VER=${PYTHON_MAJOR_VER} \
 		SHLIB_VER=${DISTVERSION:R} \
 		SHLIB_VERSION=${DISTVERSION}
 
+OPTIONS_DEFINE=		DOCS
+
+DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}furo>0:textproc/py-furo@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}myst-parser>0:textproc/py-myst-parser@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx-copybutton>0:textproc/py-sphinx-copybutton@${PY_FLAVOR} \
+			${PYTHON_PKGNAMEPREFIX}sphinx-design>0:textproc/py-sphinx-design@${PY_FLAVOR}
+DOCS_BINARY_ALIAS=	sphinx-build=sphinx-build-${PYTHON_VER}
+DOCS_ALL_TARGET=	all doc
+DOCS_PORTDOCS=		*
+
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/bin/shiboken_tool.py
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
@@ -41,5 +52,9 @@ post-install:
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR}/shiboken6_generator \
 		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/shiboken6_generator
+
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/html
+	(cd ${BUILD_WRKSRC}/doc/html; ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/html)
 
 .include <bsd.port.mk>
