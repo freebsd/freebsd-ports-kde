@@ -368,7 +368,7 @@ uhub:*:411:411::0:0:uHub ADC Daemon:/nonexistent:/usr/sbin/nologin
 # free: 419
 oxidized:*:420:420::0:0:Oxidized Owner:/var/db/oxidized:/usr/sbin/nologin
 # free: 421
-# free: 422
+igmpproxy:*:422:422::0:0:igmpproxy daemon:/nonexistent:/usr/sbin/nologin
 # free: 423
 # free: 424
 # free: 425
@@ -431,7 +431,7 @@ promxy:*:481:481::0:0:Promxy Daemon:/nonexistent:/usr/sbin/nologin
 openbao:*:482:482:daemon:0:0:OpenBao Daemon:/nonexistent:/usr/sbin/nologin
 garage:*:483:483::0:0:Garage Daemon:/var/db/garage:/usr/sbin/nologin
 stalwart:*:484:484::0:0:stalwart Mail Server Daemon:/nonexistent:/usr/sbin/nologin
-# free: 485
+stalwart-proxy:*:485:485::0:0:Stalwart Proxy Daemon:/nonexistent:/usr/sbin/nologin
 # free: 486
 # free: 487
 # free: 488

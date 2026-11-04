@@ -1,7 +1,7 @@
 PORTNAME=	freenginx
 PORTVERSION=	${NGINX_VERSION}
 .include "version.mk"
-PORTREVISION?=	29
+PORTREVISION?=	1
 CATEGORIES=	www
 MASTER_SITES=	https://freenginx.org/download/ \
 		LOCAL/joneum
@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	nginx nginx-devel
 
-PORTSCOUT=	limit:^1\.28\.[0-9]*
+PORTSCOUT=	limit:^1\.30\.[0-9]*
 
 USES=		cpe
 

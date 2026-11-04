@@ -891,6 +891,7 @@
     SUBDIR += gitaly
     SUBDIR += gitea-act_runner
     SUBDIR += gitg
+    SUBDIR += github-act-runner
     SUBDIR += github-backup-utils
     SUBDIR += gitid
     SUBDIR += gitinspector
@@ -4343,6 +4344,7 @@
     SUBDIR += php-composer
     SUBDIR += php-grpc
     SUBDIR += php-ice37
+    SUBDIR += php-laminas-stdlib
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
     SUBDIR += php-mustache
@@ -4498,6 +4500,7 @@
     SUBDIR += py-aioice
     SUBDIR += py-aioitertools
     SUBDIR += py-aiologger
+    SUBDIR += py-aiologic
     SUBDIR += py-aiomisc
     SUBDIR += py-aiomisc-pytest
     SUBDIR += py-aiorpcX
@@ -4906,6 +4909,7 @@
     SUBDIR += py-ctypesgen
     SUBDIR += py-cucumber-expressions
     SUBDIR += py-cucumber-tag-expressions
+    SUBDIR += py-culsans
     SUBDIR += py-curio
     SUBDIR += py-cursive
     SUBDIR += py-curtsies
@@ -5248,6 +5252,7 @@
     SUBDIR += py-importlab
     SUBDIR += py-importlib-metadata
     SUBDIR += py-importlib-metadata8
+    SUBDIR += py-importlib-metadata9
     SUBDIR += py-importlib-resources
     SUBDIR += py-in-n-out
     SUBDIR += py-incremental
@@ -5328,6 +5333,7 @@
     SUBDIR += py-jschema-to-python
     SUBDIR += py-jschon
     SUBDIR += py-jsmin
+    SUBDIR += py-json-rpc
     SUBDIR += py-json5
     SUBDIR += py-json_tricks
     SUBDIR += py-jsonargparse
@@ -5976,6 +5982,7 @@
     SUBDIR += py-pytest-canonical-data
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cases
+    SUBDIR += py-pytest-check
     SUBDIR += py-pytest-checkdocs
     SUBDIR += py-pytest-codspeed
     SUBDIR += py-pytest-console-scripts
@@ -6173,6 +6180,7 @@
     SUBDIR += py-rfc3339
     SUBDIR += py-rfc3339-validator
     SUBDIR += py-rfc3986-validator
+    SUBDIR += py-rfc8785
     SUBDIR += py-rich-click
     SUBDIR += py-rich-toolkit
     SUBDIR += py-riot
@@ -6543,6 +6551,7 @@
     SUBDIR += py-wirerope
     SUBDIR += py-wlc
     SUBDIR += py-woops
+    SUBDIR += py-worldmonitor-sdk
     SUBDIR += py-wrapt
     SUBDIR += py-wrapt1
     SUBDIR += py-wsgi-intercept
@@ -8637,6 +8646,7 @@
     SUBDIR += rubygem-with_advisory_lock81
     SUBDIR += rubygem-with_env
     SUBDIR += rubygem-wmi-lite
+    SUBDIR += rubygem-worldmonitor
     SUBDIR += rubygem-xdg
     SUBDIR += rubygem-xdg9
     SUBDIR += rubygem-xorcist
@@ -9012,6 +9022,7 @@
     SUBDIR += yajl-tcl
     SUBDIR += yaml-cpp
     SUBDIR += yaml2argdata
+    SUBDIR += yascreen
     SUBDIR += yasm
     SUBDIR += yder
     SUBDIR += youcompleteme

@@ -282,6 +282,7 @@
     SUBDIR += nerd-fonts-victormono
     SUBDIR += nerd-fonts-zedmono
     SUBDIR += nexfontsel
+    SUBDIR += nordwand-mono-ttf
     SUBDIR += noto
     SUBDIR += noto-basic
     SUBDIR += noto-emoji
@@ -398,6 +399,7 @@
     SUBDIR += py-vfblib
     SUBDIR += raleway
     SUBDIR += roboto-fonts-ttf
+    SUBDIR += selawik
     SUBDIR += sgifonts
     SUBDIR += sharefonts
     SUBDIR += showfont
