@@ -15,8 +15,6 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/QtNfc.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtOpenGL.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtOpenGLWidgets.abi%%PYTHON_MAJOR_VER%%.so
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/QtPdf.abi%%PYTHON_MAJOR_VER%%.so
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/QtPdfWidgets.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtPositioning.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtPrintSupport.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/PyQt6/QtQml.abi%%PYTHON_MAJOR_VER%%.so
@@ -318,6 +316,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpygui_native_interface.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpygui_qlist.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpygui_qmap.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpygui_qrhi_platform.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qpygui_vulkan.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qquaternion.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qrasterwindow.sip
@@ -325,8 +324,11 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qregion.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qrgb.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qrgba64.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qrhi.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qscreen.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qsessionmanager.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qshader.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qshaderdescription.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qshortcut.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qstandarditemmodel.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtGui/qstatictext.sip
@@ -450,6 +452,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslellipticcurve.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslerror.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslkey.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslkeyingmaterial.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslpresharedkeyauthenticator.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslserver.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtNetwork/qsslsocket.sip
@@ -491,21 +494,6 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtOpenGLWidgets/QtOpenGLWidgets.toml
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtOpenGLWidgets/QtOpenGLWidgetsmod.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtOpenGLWidgets/qopenglwidget.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/QtPdf.toml
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/QtPdfmod.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfbookmarkmodel.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfdocument.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfdocumentrenderoptions.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdflink.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdflinkmodel.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfpagenavigator.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfpagerenderer.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfsearchmodel.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdf/qpdfselection.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdfWidgets/QtPdfWidgets.toml
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdfWidgets/QtPdfWidgetsmod.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdfWidgets/qpdfpageselector.sip
-%%PDF%%%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPdfWidgets/qpdfview.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPositioning/QtPositioning.toml
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPositioning/QtPositioningmod.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtPositioning/qgeoaddress.sip
@@ -574,6 +562,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickpainteditem.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickrendercontrol.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickrendertarget.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickrhiitem.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquicktextdocument.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickview.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtQuick/qquickwindow.sip
@@ -777,6 +766,7 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qpushbutton.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qpywidgets_qlist.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qradiobutton.sip
+%%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qrhiwidget.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qrubberband.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qscrollarea.sip
 %%PYTHON_SITELIBDIR%%/PyQt6/bindings/QtWidgets/qscrollbar.sip
@@ -932,8 +922,8 @@ bin/pyuic6
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtprintsupport.py
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtquickwidgets.py
 %%PYTHON_SITELIBDIR%%/PyQt6/uic/widget-plugins/qtwebenginewidgets.py
+%%PYTHON_SITELIBDIR%%/dbus/mainloop/pyqt6.abi%%PYTHON_MAJOR_VER%%.so
 %%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/INSTALLER
 %%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/METADATA
 %%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/RECORD
 %%PYTHON_SITELIBDIR%%/pyqt6-%%PYQT_PYQTVERSION%%.dist-info/licenses/LICENSE
-%%PYTHON_SITELIBDIR%%/dbus/mainloop/pyqt6.abi%%PYTHON_MAJOR_VER%%.so

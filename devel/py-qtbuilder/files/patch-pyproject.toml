@@ -3,7 +3,7 @@ with 63.x.
 
 [1] https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270358
 
---- pyproject.toml.orig	2025-06-03 14:12:19 UTC
+--- pyproject.toml.orig	2026-10-04 11:04:07 UTC
 +++ pyproject.toml
 @@ -1,7 +1,7 @@
  # The project configuration for PyQt-builder.
@@ -14,10 +14,10 @@ with 63.x.
  build-backend = "setuptools.build_meta"
  
  [tool.setuptools_scm]
-@@ -14,8 +14,8 @@ requires-python = ">=3.8"
+@@ -14,8 +14,8 @@ requires-python = ">=3.10"
  urls.homepage = "https://github.com/Python-PyQt/PyQt-builder"
  dependencies = ["packaging", "sip >=6.7, <7"]
- requires-python = ">=3.8"
+ requires-python = ">=3.10"
 -license = "BSD-2-Clause"
 -license-files = ["LICENSE"]
 +license = {file = "LICENSE"}

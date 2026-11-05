@@ -29,17 +29,6 @@ SIP_ARGS=	--confirm-license \
 
 PORTSCOUT=	limit:^${_QT_VERSION:R}
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == armv7 || ${ARCH} == i386 || ${ARCH} == powerpc64le
-USE_QT+=	pdf
-PLIST_SUB+=	PDF=""
-.else
-SIP_ARGS+=	--disable QtPdf \
-		--disable QtPdfWidgets
-PLIST_SUB+=	PDF="@comment "
-.endif
-
 post-extract:
 	${RM} -r ${WRKSRC}/pyuic/uic/port_v2
 
@@ -59,4 +48,4 @@ post-install:
 	@${FIND} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/PyQt6 \
 		-name '*.so*' -exec ${STRIP_CMD} {} +
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

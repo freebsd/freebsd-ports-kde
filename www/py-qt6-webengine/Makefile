@@ -9,6 +9,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt6 toolkit, QtWebEngine module
 WWW=		https://riverbankcomputing.com/software/pyqt
 
+ONLY_FOR_ARCHS=	aarch64 amd64 armv7 i386 powerpc64le
+
 USES=		gl pyqt:6,dist python qt:6
 USE_GL=		opengl
 USE_PYQT=	pyqt6 qtbuilder:build sip:build
