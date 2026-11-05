@@ -188,6 +188,7 @@
     SUBDIR += py-pangocffi
     SUBDIR += py-pyfltk
     SUBDIR += py-python-xlib
+    SUBDIR += py-qt6-canvaspainter
     SUBDIR += py-qt5-charts
     SUBDIR += py-qt5-datavis3d
     SUBDIR += py-qt6-charts

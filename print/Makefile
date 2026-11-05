@@ -195,6 +195,7 @@
     SUBDIR += py-pyipp
     SUBDIR += py-pypdf
     SUBDIR += py-python-ly
+    SUBDIR += py-qt6-pdf
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab
     SUBDIR += py-rtf
