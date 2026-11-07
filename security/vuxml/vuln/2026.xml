@@ -1,3 +1,521 @@
+  <vuln vid="de74d92b-4f87-4334-973b-5d24a7c4528a">
+    <topic>gstreamer1 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>gstreamer1-plugins-bad</name>
+	<name>gstreamer1-plugins-good</name>
+	<range><lt>1.28.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The GStreamer project reports:</p>
+	<blockquote cite="https://gstreamer.freedesktop.org/security/">
+	  <p>Multiple security issues were identified and fixed in the GStreamer framework.</p>
+	  <ul>
+	    <li>GStreamer-SA-2026-0093: Out-of-bounds read in MXF demuxer</li>
+	    <li>GStreamer-SA-2026-0094: Use of uninitialized memory in H.265 bitstream parser</li>
+	    <li>GStreamer-SA-2026-0095: Out-of-bounds read in H.264 RTP depayloader</li>
+	    <li>GStreamer-SA-2026-0096: Multiple out-of-bounds reads, null pointer write and denial of service in the VMnc video decoder</li>
+	    <li>GStreamer-SA-2026-0097: Local file disclosure via manifest references in adaptive streaming (HLS/DASH) demuxers</li>
+	    <li>GStreamer-SA-2026-0098: Out-of-bounds write and infinite loop when reading responses from a Festival speech synthesis server</li>
+	    <li>GStreamer-SA-2026-0099: Out-of-bounds read when parsing DVB short event descriptors</li>
+	    <li>GStreamer-SA-2026-0100: Out-of-bounds write in the RTP raw video depayloader with crafted stream dimensions</li>
+	    <li>GStreamer-SA-2026-0101: Out-of-bounds write in the ASF muxer when writing metadata with certain Unicode characters</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-116611</cvename>
+      <cvename>CVE-2026-119610</cvename>
+      <cvename>CVE-2026-121601</cvename>
+      <cvename>CVE-2026-121611</cvename>
+      <cvename>CVE-2026-121629</cvename>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0093.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0094.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0095.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0096.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0097.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0098.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0099.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0100.html</url>
+      <url>https://gstreamer.freedesktop.org/security/sa-2026-0101.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-06</discovery>
+      <entry>2026-11-07</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="06eeb817-d93d-11f1-908f-3c7c3fba4204">
+    <topic>Keycloak -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>keycloak</name>
+	  <range><lt>26.8.2</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Keycloak Team reports:</p>
+	<blockquote cite="https://github.com/keycloak/keycloak/releases/tag/26.8.2">
+	  <ul>
+	    <li>CVE-2026-92358: Cross-browser fallback proof survives successful account linking and self-service unlink organizations</li>
+	    <li>CVE-2026-105305: Device Authorization Grant bypasses per-client minimum.acr.value enforcement authentication</li>
+	    <li>CVE-2026-107623: OIDC DCR read-modify-write silently disables offline token revocation on backchannel logout oidc</li>
+	    <li>CVE-2026-107889: Stored XSS on the login page via kcSanitize bypass authentication</li>
+	    <li>CVE-2026-112201: Login-failure upsert trusts MySQL/MariaDB affected-row count</li>
+	    <li>CVE-2026-112208: Account takeover via stale SSO_AUTH note in Organization identity-first login (reproduced on 26.8.1) </li>
+	    <li>CVE-2026-110932: Keycloak &lt;= 26.8.0 : Unauthenticated persistent disk exhaustion (theme gzip cache) </li>
+	    <li>CVE-2026-107123: Unauthenticated DoS in Keycloak SAML endpoint</li>
+	    <li>CVE-2026-107124: Session takeover by victim logout with injected id_token_hint</li>
+	    <li>CVE-2026-107602: Unauthenticated CPU and worker-pool exhaustion (restart required) via SAML 1.1 KeyInfo parser loop on a legal ds:KeyName</li>
+	    <li>CVE-2026-110931: Unauthenticated single-request JVM termination (OutOfMemoryError) via SAML 1.1 AuthorityBinding parser loop, incomplete fix of CVE-2026-7307</li>
+	    <li>CVE-2026-97367: DCR azp+sid claim substitution via User Property mappers allows Account REST victim session takeover — #YWH-PGM40475-313</li>
+	    <li>CVE-2026-97174: CIBA sub parameter injection causes attacker authentication to issue victim tokens — #YWH-PGM40475-289</li>
+	    <li>CVE-2026-114232: UMA user-managed permission resourceType field not validated — cross-owner resource access — #YWH-PGM40475-306</li>
+	    <li>CVE-2026-97847: Client manager can replace a sessionless token principal and take over the realm — #YWH-PGM40475-292</li>
+	    <li>CVE-2026-96547: DCR registration-time claim-path gap: attribute mappers forge realm_access.roles from user-editable fields</li>
+	    <li>CVE-2026-96457: Group-admin DENY bypass via top-level move (GroupsResource, CVE-2026-9099 regression)</li>
+	    <li>CVE-2026-96460: Token from token exchange can have unlimited expiration</li>
+	    <li>CVE-2026-97848: [SECURITY] Protocol mapper with jsonType=JSON bypasses CVE-2026-16102 fix — duplicate resource_access claim in access token;
+		forged resource_access in ID token, userinfo and introspection response</li>
+	    <li>CVE-2026-109081: Principal with only create-client can inject a role into the realm default-roles — #YWH-PGM40475-290</li>
+	    <li>CVE-2026-93998: SAML adapter accepts assertions from the wrong configured issuer</li>
+	    <li>CVE-2026-96453: kcadm custom truststores trust arbitrary self-signed certificates</li>
+	    <li>CVE-2026-92857: Identity spoofing: a default-allowed DCR protocol mapper writes the reserved sub and aud claims</li>
+	    <li>CVE-2026-103112: Account Takeover via Authentication Race</li>
+	    <li>CVE-2026-97175: Unverified IdP email auto-linking enables account takeover</li>
+	    <li>CVE-2026-96447: Stateless token preferred_username fallback enables identity rebinding after client recreation</li>
+	    <li>CVE-2026-82965: SAML SOAP endpoint DoS via unbounded XML parsing on /realms/{realm}/protocol/saml/resolve</li>
+	    <li>CVE-2026-96448: FGAP v2 composite-blind role mapping lets manage-users assign a wrapper containing realm-admin — #YWH-PGM40475-256</li>
+	    <li>CVE-2026-92855: Keycloak SAML Broker Accepts Holder-of-Key Assertions Without Proof of Key Possession</li>
+	    <li>CVE-2026-92856: Keycloak SAML Identity Broker Ignores `ProxyRestriction`, Allowing Forbidden Downstream Assertion Issuance</li>
+	    <li>CVE-2026-19688: Admin API missing audience check</li>
+	    <li>CVE-2026-117691: SAML redirect binding signature bypass via percent-encoded parameter name (%53AMLResponse) — broker login as any user</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-92358</cvename>
+      <cvename>CVE-2026-105305</cvename>
+      <cvename>CVE-2026-107623</cvename>
+      <cvename>CVE-2026-107889</cvename>
+      <cvename>CVE-2026-112201</cvename>
+      <cvename>CVE-2026-112208</cvename>
+      <cvename>CVE-2026-110932</cvename>
+      <cvename>CVE-2026-107123</cvename>
+      <cvename>CVE-2026-107124</cvename>
+      <cvename>CVE-2026-107602</cvename>
+      <cvename>CVE-2026-110931</cvename>
+      <cvename>CVE-2026-97367</cvename>
+      <cvename>CVE-2026-97174</cvename>
+      <cvename>CVE-2026-114232</cvename>
+      <cvename>CVE-2026-97847</cvename>
+      <cvename>CVE-2026-96547</cvename>
+      <cvename>CVE-2026-96457</cvename>
+      <cvename>CVE-2026-96460</cvename>
+      <cvename>CVE-2026-97848</cvename>
+      <cvename>CVE-2026-109081</cvename>
+      <cvename>CVE-2026-93998</cvename>
+      <cvename>CVE-2026-96453</cvename>
+      <cvename>CVE-2026-92857</cvename>
+      <cvename>CVE-2026-103112</cvename>
+      <cvename>CVE-2026-97175</cvename>
+      <cvename>CVE-2026-96447</cvename>
+      <cvename>CVE-2026-82965</cvename>
+      <cvename>CVE-2026-96448</cvename>
+      <cvename>CVE-2026-92855</cvename>
+      <cvename>CVE-2026-92856</cvename>
+      <cvename>CVE-2026-19688</cvename>
+      <cvename>CVE-2026-117691</cvename>
+      <url>https://github.com/keycloak/keycloak/releases/tag/26.8.2</url>
+    </references>
+    <dates>
+      <discovery>2026-11-05</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3ef78a27-f164-47ab-99b7-30c3e675d70c">
+    <topic>Elixir -- Mix deps.partition configuration not validated on multi-user systems</topic>
+    <affects>
+      <package>
+	<name>elixir-devel</name>
+	<range><lt>1.20.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elixir reports:</p>
+	<blockquote cite="https://github.com/elixir-lang/elixir/releases/tag/v1.20.5">
+	  <ul>
+	    <li>[mix deps.partition] Validate deps.partition configuration
+	      with checksum on multi-user systems (CVE-2026-97209)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-97209</cvename>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.20.5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c084ccd3-efb8-4fda-aeb9-04bf715d0b55">
+    <topic>Elixir -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>elixir</name>
+	<range><lt>1.18.6</lt></range>
+	<range><ge>1.19.0</ge><lt>1.19.7</lt></range>
+      </package>
+      <package>
+	<name>elixir-devel</name>
+	<range><lt>1.20.5</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elixir reports:</p>
+	<blockquote cite="https://github.com/elixir-lang/elixir/releases/tag/v1.19.7">
+	  <ul>
+	    <li>[URI] Bind port limits during URI.parse (CVE-2026-109821)</li>
+	    <li>[JSON] Raise when decoding integers in JSON beyond float64
+	      ranges (CVE-2026-115274)</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109821</cvename>
+      <cvename>CVE-2026-115274</cvename>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.18.6</url>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.19.7</url>
+      <url>https://github.com/elixir-lang/elixir/releases/tag/v1.20.5</url>
+    </references>
+    <dates>
+      <discovery>2026-10-29</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1faea94f-d8fc-11f1-9968-3c7c3fba4204">
+    <topic>OpenEXR -- 3.4.17 fixes multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>openexr</name>
+	  <range><lt>3.4.17</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Cary Phillips reports:</p>
+	<blockquote cite="https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.17">
+	  <p>This version also addresses a regression introduced in v3.4.14 in reading deep images on
+	     big-endian hosts, due to a byte-order bug in the deep sample count table.
+	     Little-endian hosts are unaffected.</p>
+	  <ul>
+	    <li>CVE Pending (GHSA-WHF5-29MJ-GP53): Heap Out-of-Bounds Write via Signed Integer Overflow in DWAA/DWAB 'LossyDctDecoder.</li>
+	    <li>CVE Pending (GHSA-VP77-HHRC-M2C3): Subsampled chunk-height miscount: heap overflow in B44 encoder, NULL dereference in DWA decoder/encoder.</li>
+	    <li>CVE Pending (GHSA-RXWG-X3WX-PGFH): Heap out-of-bounds write via 32-bit tile-area integer overflow in 'DeepTiledOutputFile' (deep-image re-save path) — possible incomplete fix of PR #939.</li>
+	    <li>CVE Pending (GHSA-RJG8-982X-JHC2): Uninitialized Heap Memory Disclosure in DWA Decompression via Short zlib Stream Mapped to Success.</li>
+	    <li>CVE Pending (GHSA-J76P-H7GW-VMPF): Heap buffer overflow in the OpenEXR Python bindings when two RGB channel groups coalesce to the same key.</li>
+	    <li>CVE Pending (GHSA-G248-596F-9995): Unvalidated extra 'chlist' header attributes merged into 'Header::channels()' cause a heap overflow in 'run_fill'.</li>
+	    <li>CVE Pending (GHSA-FRX8-5P4H-J8M7): Heap OOB Write via Integer Overflow in B44 Chunk Unpacked-Size Computation — Remote Code Execution in OpenEXRCore.</li>
+	    <li>CVE Pending (GHSA-638X-X7MR-89XC): Out-of-bounds write at an attacker-chosen displacement in legacy Python 'InputFile.channel()'.</li>
+	    <li>CVE Pending (GHSA-3CP4-779M-H837): Use-after-free in OpenEXRCore 'exr_copy_unset_attributes()' when a channel name exceeds 31 bytes.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-WHF5-29MJ-GP53</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-VP77-HHRC-M2C3</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-RXWG-X3WX-PGFH</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-RJG8-982X-JHC2</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-J76P-H7GW-VMPF</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-G248-596F-9995</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-FRX8-5P4H-J8M7</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-638X-X7MR-89XC</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/security/advisories/GHSA-3CP4-779M-H837</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/releases/tag/v3.4.17</url>
+      <url>https://github.com/AcademySoftwareFoundation/openexr/blob/v3.4.17/CHANGES.md#version-3417-october-30-2026</url>
+    </references>
+    <dates>
+      <discovery>2026-10-31</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2053672c-d8f6-11f1-9968-3c7c3fba4204">
+    <topic>Gitea -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>gitea</name>
+	  <range><lt>28.3.0</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitea reports:</p>
+	<blockquote cite="https://blog.gitea.com/release-of-28.3.0/">
+	  <ul>
+	    <li>CVE-2026-120263: With 'ACCOUNT_LINKING = auto' and open registration, the link-account
+		sign-up form let a user who signed in through an OAuth2 provider enter the user name
+		or email address of an existing account, which was then linked to the external identity
+		and signed in without a password.</li>
+	    <li>CVE-2026-118386: A user with read access could submit a pull request review whose commit_id
+		named their own commit, on a pull request whose head branch is in the same repository.</li>
+	    <li>CVE-2026-117635: The 'public-only' token restriction was not applied to the admin API,
+		so a 'public-only' token of a site administrator could list the email addresses of all users,
+		create private organizations and runner registration tokens, and create new administrators.</li>
+	    <li>CVE-2026-119441: 'DELETE /api/v1/orgs/{org}/repos' did not reject 'public-only' tokens, so
+		such a token of an organization owner could delete all repositories of the organization,
+		private ones included.</li>
+	    <li>CVE-2026-116296: The release, milestone and label API routes did not reject changes to
+		archived repositories, so a user with write access could replace release assets, delete
+		releases, and change milestones and labels of an archived repository.</li>
+	    <li>CVE-2026-117685: The OCI cross-repository blob mount checked access to the source blob
+		with the user’s full permissions instead of the token’s, so a 'public-only' package token
+		could mount a private blob into a public package and read it.</li>
+	    <li>CVE-2026-113429: The legacy Actions artifact upload stored the 'Content-Encoding' request
+		header without a check and served it back as the 'Content-Type' of the download, so a
+		workflow could upload an artifact that is rendered as HTML on the Gitea origin (stored XSS)
+		when a victim opens its download link. The header is no longer stored.</li>
+	    <li>CVE-2026-118394: The OIDC userinfo endpoint read the token scope only from the 'Authorization'
+		header, so a 'public-only' token sent as a query parameter received the user’s private
+		organizations and teams in the 'groups' claim.</li>
+	    <li>CVE-2026-119625: '/{username}' accepted a token sent as HTTP Basic without checking its scope,
+		so a token with an unrelated scope could read the owner’s private activity through the user feed
+		('.rss' / '.atom'), and a 'public-only' token could see private repositories and organizations on the
+		profile pages.</li>
+	    <li>CVE-2026-119627: The web profile pages and RSS/Atom feeds of users and organizations with
+		limited visibility were shown to 'public-only' tokens.</li>
+	    <li>CVE-2026-112887: Actions task tokens carry no token scope, and repository filters treated
+		the negative ID of the Actions system user as “no owner filter”, so a job’s 'GITEA_TOKEN'
+		could list every private repository of the instance through 'GET /api/v1/user/repos'.</li>
+	    <li>CVE-2026-116474: A job’s 'GITEA_TOKEN' could add an email address and a GPG key to the
+		'gitea-actions' system user, so commits signed with that key were shown as signed by
+		the instance. Only the displayed signature status was affected.</li>
+	    <li>CVE-2026-116289: A 'public-only' token with 'write:organization' of an organization owner
+		could create an organization runner registration token. A runner registered with it then
+		received jobs, including their secrets, from the organization’s private repositories.</li>
+	    <li>CVE-2026-117646: The repositories, stars and watching tabs of user profiles and the
+		organization home page showed private repositories to 'public-only' tokens.</li>
+	    <li>CVE-2026-118395: The deprecated 'POST /api/v1/org/{org}/repos' route did not reject
+		'public-only' tokens, so such a token could create private repositories in an organization.</li>
+	    <li>CVE-2026-114199: 'GET /api/v1/users/{username}/heatmap' counted contributions to private
+		repositories for 'public-only' tokens.</li>
+	    <li>CVE-2026-117649: The issue timeline showed private issues that were linked as dependencies
+		to users who could not read them: the web page showed their title, and the API returned the
+		full issue including its body.</li>
+	    <li>CVE-2026-119533: Project boards showed the title, number, state and repository of private
+		pull requests that referenced an issue on the board to visitors who could not read them.</li>
+	    <li>CVE-2026-118504: Several issue API routes did not reject changes to archived repositories,
+		so a user with write access could still change deadlines, tracked times, stopwatches,
+		reactions, pins and blocking issues in an archived repository.</li>
+	    <li>CVE-2026-117677: The Helm chart upload inflated the whole archive before the package size
+		quota was checked, without a size limit, so a user with package write access could tie up
+		the server with a small, highly compressed upload. The amount of data inflated is now bounded.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-120263</cvename>
+      <cvename>CVE-2026-118386</cvename>
+      <cvename>CVE-2026-117635</cvename>
+      <cvename>CVE-2026-119441</cvename>
+      <cvename>CVE-2026-116296</cvename>
+      <cvename>CVE-2026-117685</cvename>
+      <cvename>CVE-2026-113429</cvename>
+      <cvename>CVE-2026-118394</cvename>
+      <cvename>CVE-2026-119625</cvename>
+      <cvename>CVE-2026-119627</cvename>
+      <cvename>CVE-2026-112887</cvename>
+      <cvename>CVE-2026-116474</cvename>
+      <cvename>CVE-2026-116289</cvename>
+      <cvename>CVE-2026-117646</cvename>
+      <cvename>CVE-2026-118395</cvename>
+      <cvename>CVE-2026-114199</cvename>
+      <cvename>CVE-2026-117649</cvename>
+      <cvename>CVE-2026-119533</cvename>
+      <cvename>CVE-2026-118504</cvename>
+      <cvename>CVE-2026-117677</cvename>
+      <url>https://blog.gitea.com/release-of-28.3.0/</url>
+    </references>
+    <dates>
+      <discovery>2026-11-01</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="117b053d-d8e3-11f1-985e-901b0edee044">
+    <topic>anki -- Malicious APKG can lead to arbitrary code execution via iframes</topic>
+    <affects>
+    <package>
+      <name>anki</name>
+      <range><lt>26.09.4</lt></range>
+    </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Anki developers reports:</p>
+	<blockquote cite="https://github.com/ankitects/anki/security/advisories/GHSA-j9v5-m549-cg6c">
+	<p>On Anki Desktop, a crafted APKG can execute an arbitrary executable
+	after either clicking Show in the import result, opening the imported deck or
+	viewing a note in the editor.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/ankitects/anki/security/advisories/GHSA-j9v5-m549-cg6c</url>
+    </references>
+    <dates>
+      <discovery>2026-11-04</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="7830ba05-0215-40b0-9d9b-e4e4829d9b3c">
+    <topic>uptime-kuma -- unauthenticated administrator account creation</topic>
+    <affects>
+      <package>
+	<name>uptime-kuma</name>
+	<range><le>2.5.8</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-119552: Uptime Kuma through 2.5.8 contains a race condition
+	  in the Socket.IO first-run setup handler that allows unauthenticated
+	  attackers to create an additional administrator account. Attackers can
+	  send concurrent setup requests during the bcrypt hashing window to
+	  bypass the empty user table check, then modify monitors, API keys, and
+	  enable disableAuth.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119552</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-119552</url>
+    </references>
+    <dates>
+      <discovery>2026-10-30</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="923b5da5-d8db-11f1-8d43-18cf5efc6bb4">
+    <topic>openvox -- Authenticated RCE on OpenVox server via Event Deserialization</topic>
+    <affects>
+      <package>
+	<name>openvox-agent8</name>
+	<range><lt>8.32.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-agent9</name>
+	<range><lt>9.3.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVoxProject reports:</p>
+	<blockquote cite="https://voxpupuli.org/blog/2026/11/03/critical-cve-updates/">
+	  <p>The Puppet/OpenVox report is a JSON document the agent sends to the
+	    server after each enforcement run. It details what changes were
+	    made, any warnings or error messages, and any resources that failed
+	    to apply correctly. It also contains a full list of all events that
+	    happened, where an event might be “content &lt;foo&gt; changed to
+	    &lt;bar&gt;” or the like. In some circumstances involving custom
+	    resource types, an event might include a serialized Ruby object
+	    (programming code turned into text) instead of just plain JSON. When
+	    the report is processed, these objects are deserialized back into
+	    something the compiler can use. Unfortunately a malicious event
+	    object can be constructed in such a way that code executes on the
+	    server when this happens.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115731</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-115731</url>
+      <url>https://github.com/OpenVoxProject/openvox/security/advisories/GHSA-ffr6-rwpm-p5wq</url>
+      <url>https://portal.perforce.com/s/cve/a91Qi000003IaHpIAK/report-deserialization-code-execution</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6cd47e21-d8db-11f1-8d43-18cf5efc6bb4">
+    <topic>openvox -- Flawed Hostname Check allows Puppet Client Impersonation</topic>
+    <affects>
+      <package>
+	<name>openvoxdb8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvoxdb9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server8</name>
+	<range><lt>8.18.0</lt></range>
+      </package>
+      <package>
+	<name>openvox-server9</name>
+	<range><lt>9.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVoxProject reports:</p>
+	<blockquote cite="https://voxpupuli.org/blog/2026/11/03/critical-cve-updates/">
+	  <p>Trapperkeeper is the framework we use for running our Clojure based
+	  applications and <code>trapperkeeper-authorization</code> is the shared
+	  authentication library that parses OpenVox’s <code>auth.conf</code> file and
+	  such. This file allows authentication rules to be specified in
+	  multiple ways, including plain strings (<code>foo.example.com</code>), wildcards
+	  (<code>*.example.com</code>), or regular expressions (<code>/lab-\d{3}.example.com/</code>).
+	  Plain strings and wildcard matches were handled by the same logic
+	  and this resulted in wildcard behavior incorrectly showing up in all
+	  non-regex rules. The end result of this meant that a certificate
+	  name of <code>evil.target.example.com</code> would be allowed to impersonate
+	  <code>target.example.com</code> and access information or perform actions as the
+	  target certname. In some non-default configurations, this could even
+	  inject exported resources into arbitrary agent catalogs across the
+	    infrastructure.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-115732</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-115732</url>
+      <url>https://github.com/OpenVoxProject/trapperkeeper-authorization/security/advisories/GHSA-q4hm-33rc-572g</url>
+      <url>https://portal.perforce.com/s/cve/a91Qi000003IaJRIA0/certificate-name-authorization-bypass</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-05</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="61a6b109-d852-11f1-bae2-3497f65b111b">
     <topic>security/wolfssh -- multiple vulnerabilities</topic>
     <affects>
@@ -24615,8 +25133,11 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
 <package>
 <name>expat</name>
 <name>linux-c7-expat</name>
-<name>linux-rl9-expat</name>
 <range><lt>2.8.1</lt></range>
+</package>
+<package>
+<name>linux-rl9-expat</name>
+<range><lt>2.5.0_9</lt></range>
 </package>
     </affects>
     <description>
@@ -24635,6 +25156,7 @@ vulnerability is fixed in crate versions: 36.0.7, 42.0.2, and 43.0.1.</p>
     <dates>
       <discovery>2025-10-01</discovery>
       <entry>2026-05-11</entry>
+      <modified>2026-11-05</modified>
     </dates>
   </vuln>
 

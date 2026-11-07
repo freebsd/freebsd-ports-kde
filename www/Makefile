@@ -544,13 +544,17 @@
     SUBDIR += nginx-module-cache-purge
     SUBDIR += nginx-module-cert-expiry
     SUBDIR += nginx-module-dav-ext
+    SUBDIR += nginx-module-drizzle
+    SUBDIR += nginx-module-echo
     SUBDIR += nginx-module-encrypted-session
+    SUBDIR += nginx-module-eval
     SUBDIR += nginx-module-fancyindex
     SUBDIR += nginx-module-fips-check
     SUBDIR += nginx-module-footer
     SUBDIR += nginx-module-form-input
     SUBDIR += nginx-module-geoip2
     SUBDIR += nginx-module-gridfs
+    SUBDIR += nginx-module-headers-more
     SUBDIR += nginx-module-iconv
     SUBDIR += nginx-module-ip-anon
     SUBDIR += nginx-module-json-status
@@ -564,9 +568,13 @@
     SUBDIR += nginx-module-njs
     SUBDIR += nginx-module-passenger
     SUBDIR += nginx-module-postgres
+    SUBDIR += nginx-module-rds-csv
+    SUBDIR += nginx-module-rds-json
     SUBDIR += nginx-module-redis2
+    SUBDIR += nginx-module-set-misc
     SUBDIR += nginx-module-sflow
     SUBDIR += nginx-module-slowfs-cache
+    SUBDIR += nginx-module-srcache
     SUBDIR += nginx-module-stream-limit-req
     SUBDIR += nginx-module-sts
     SUBDIR += nginx-module-subs-filter
@@ -574,6 +582,7 @@
     SUBDIR += nginx-module-upload
     SUBDIR += nginx-module-vod
     SUBDIR += nginx-module-websockify
+    SUBDIR += nginx-module-xss
     SUBDIR += nginx-module-zstd
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter
@@ -1535,6 +1544,7 @@
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
     SUBDIR += plasma6-plasma-browser-integration
+    SUBDIR += plasma6lts-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews
     SUBDIR += pocket-id
@@ -2084,6 +2094,7 @@
     SUBDIR += py-woob
     SUBDIR += py-woob-qt
     SUBDIR += py-wsgidav
+    SUBDIR += py-wsgiproxy2
     SUBDIR += py-xandikos
     SUBDIR += py-xyzservices
     SUBDIR += py-yarl

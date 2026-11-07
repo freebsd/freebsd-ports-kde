@@ -488,6 +488,7 @@
     SUBDIR += cmph
     SUBDIR += coccinelle
     SUBDIR += cocogitto
+    SUBDIR += codeaster_devtools
     SUBDIR += codebase-memory-mcp
     SUBDIR += codeblocks
     SUBDIR += codemark
@@ -4352,7 +4353,6 @@
     SUBDIR += php-pie
     SUBDIR += php-raphf
     SUBDIR += php-swoole
-    SUBDIR += php80-APCu
     SUBDIR += php80-arcanist
     SUBDIR += php82-ffi
     SUBDIR += php82-gettext
@@ -4427,6 +4427,9 @@
     SUBDIR += plasma6-kwrited
     SUBDIR += plasma6-plasma-sdk
     SUBDIR += plasma6-plasma5support
+    SUBDIR += plasma6lts-kwrited
+    SUBDIR += plasma6lts-plasma-sdk
+    SUBDIR += plasma6lts-plasma5support
     SUBDIR += please
     SUBDIR += pmccabe
     SUBDIR += pmd
