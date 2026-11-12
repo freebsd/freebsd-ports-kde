@@ -1110,6 +1110,7 @@
     SUBDIR += py-slip10
     SUBDIR += py-social-auth-core
     SUBDIR += py-social-auth-core4
+    SUBDIR += py-social-auth-core5
     SUBDIR += py-spake2
     SUBDIR += py-ssh-audit
     SUBDIR += py-sshpubkeys
@@ -1230,10 +1231,13 @@
     SUBDIR += rubygem-metasploit_payloads-mettle
     SUBDIR += rubygem-nessus_rest
     SUBDIR += rubygem-net-scp
+    SUBDIR += rubygem-net-scp-gitlab
     SUBDIR += rubygem-net-scp1
     SUBDIR += rubygem-net-sftp
+    SUBDIR += rubygem-net-sftp-gitlab
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
+    SUBDIR += rubygem-net-ssh-gitlab
     SUBDIR += rubygem-net-ssh-krb
     SUBDIR += rubygem-net-ssh-multi
     SUBDIR += rubygem-net-ssh5

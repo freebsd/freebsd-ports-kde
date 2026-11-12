@@ -264,7 +264,7 @@ lavinmq:*:315:315::0:0:LavinMQ user:/nonexistent:/usr/sbin/nologin
 nut:*:316:316::0:0:Network UPS Tools user:/nonexistent:/usr/sbin/nologin
 hedgedoc:*:317:317::0:0:HedgeDoc user:/nonexistent:/usr/sbin/nologin
 icingadirector:*:318:183::0:0:icingadirector user:/nonexistent:/usr/sbin/nologin
-rustdesk:*:319:319::0:0:rustdesk-server user:/nonexistent:/usr/sbin/nologin
+rustdesk:*:319:319::0:0:rustdesk-server user:/var/db/rustdesk-server:/usr/sbin/nologin
 teleirc:*:320:320::0:0:Telegram and IRC bridge:/nonexistent:/usr/sbin/nologin
 caldera:*:321:321::0:0:Caldera Mitre user:/nonexistent:/usr/sbin/nologin
 tlsc:*:322:322::0:0:TLS connect daemon:/nonexistent:/usr/sbin/nologin
@@ -351,8 +351,8 @@ spectrumknx:*:401:401::0:0:SpectrumKNX Daemon:/var/db/spectrumknx:/usr/sbin/nolo
 # free: 402
 # free: 403
 svn:*:404:404::0:0:Subversion daemon:/var/db/svn:/usr/sbin/nologin
-# free: 405
-# free: 406
+rustfs:*:405:405::0:0:RustFS Daemon:/var/db/rustfs:/usr/sbin/nologin
+tuwunel:*:406:406::0:0:Tuwunel Matrix Homeserver:/var/db/tuwunel:/usr/sbin/nologin
 # free: 407
 # free: 408
 # free: 409
@@ -369,7 +369,7 @@ uhub:*:411:411::0:0:uHub ADC Daemon:/nonexistent:/usr/sbin/nologin
 oxidized:*:420:420::0:0:Oxidized Owner:/var/db/oxidized:/usr/sbin/nologin
 # free: 421
 igmpproxy:*:422:422::0:0:igmpproxy daemon:/nonexistent:/usr/sbin/nologin
-# free: 423
+surrealdb:*:423:423::0:0:surrealdb daemon:/var/db/surrealdb:/usr/sbin/nologin
 # free: 424
 # free: 425
 drweb:*:426:426::0:0:Dr.Web Mail Scanner:/nonexistent:/usr/sbin/nologin
@@ -449,7 +449,7 @@ microbin:*:499:499::0:0:Tiny, self-contained, configurable paste bin and URL sho
 qw:*:500:500::0:0:QuakeWorld Server:/nonexistent:/usr/sbin/nologin
 qwfwd:*:501:501::0:0:QuakeWorld Proxy:/nonexistent:/usr/sbin/nologin
 # free: 502
-# free: 503
+gerrit:*:503:503::0:0:Gerrit Code Review:/var/db/gerrit:/usr/sbin/nologin
 # free: 504
 _bbstored:*:505:505::0:0:Box Backup Store Daemon:/nonexistent:/usr/sbin/nologin
 radmind:*:506:506::0:0:radmind User:/var/radmind:/usr/sbin/nologin

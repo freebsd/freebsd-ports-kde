@@ -4831,7 +4831,6 @@ devel/py-pyjq|textproc/py-jq|2025-11-01|Removed: Depended on expired Python vers
 devel/py-ctags||2025-11-01|Removed: Depended on expired Python version 3.9 and does not build with newer Python
 net-im/tdlib-purple||2025-11-01|Remove broken port
 databases/erlfdb||2025-11-01|Depends on removed port databases/foundationdb71-client
-www/mitmproxy||2025-11-02|Remove broken port
 net-im/signald|net-im/signal-cli|2025-11-02|Has expired: this project is no longer actively maintained. Use signal-cli instead
 net-im/libsignal-client|net-im/libsignal|2025-11-05|Renamed to match upstream name
 games/openlierox||2025-11-06|Remove broken port
@@ -5804,3 +5803,11 @@ cad/astk-serveur||2026-11-06|Superseded by science/codeaster-frontend
 databases/mysql267-client|databases/mysql2610-client|2026-11-06|Has expired: EOLed upstream with unfixed vulnerabilities, use databases/mysql2610-server
 databases/mysql267-server|databases/mysql2610-server|2026-11-06|Has expired: EOLed upstream with unfixed vulnerabilities, use databases/mysql2610-server
 devel/php80-APCu||2026-11-06|No longer required in the cluster
+devel/php80-arcanist||2026-11-07|No longer required in the cluster
+www/filebrowser||2026-11-08|Has expired: Upstream repo archived on Aug 31, 2026
+www/github-release-monitor||2026-11-10|Has expired: Cannot upgrade due to linuxisms
+mail/masqmail||2026-11-10|Has expired: Unmaintained with known parser and memory-safety issues use dma from base or mail/msmtp
+deskutils/tasksh||2026-11-10|Has expired: No upstream activity over the last 4 years
+games/polyglot||2026-11-10|Has expired: Obsolete software, original master site is no longer available
+devel/p5-Device-USB||2026-11-10|Has expired: Upstream advises it as deprecated and noo longer suitable for use
+sysutils/mapchan||2026-11-10|Has expired: Incomplete implementation and does not work as intended anymore

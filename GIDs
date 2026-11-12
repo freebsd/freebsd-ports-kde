@@ -346,8 +346,8 @@ spectrumknx:*:401:
 lid_switchd:*:402:
 airplane_radiosd:*:403:
 svn:*:404:
-# free: 405
-# free: 406
+rustfs:*:405:
+tuwunel:*:406:
 # free: 407
 # free: 408
 # free: 409
@@ -364,7 +364,7 @@ uhub:*:411:
 oxidized:*:420:
 # free: 421
 igmpproxy:*:422:
-# free: 423
+surrealdb:*:423:
 # free: 424
 # free: 425
 drweb:*:426:
@@ -444,7 +444,7 @@ microbin:*:499:
 qw:*:500:
 qwfwd:*:501:
 birdvty:*:502:
-# free: 503
+gerrit:*:503:
 # free: 504
 _bbstored:*:505:
 radmind:*:506:

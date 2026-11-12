@@ -216,7 +216,6 @@
     SUBDIR += mailutils
     SUBDIR += mailx
     SUBDIR += mairix
-    SUBDIR += masqmail
     SUBDIR += mb2md
     SUBDIR += mbar
     SUBDIR += mblaze
@@ -753,6 +752,7 @@
     SUBDIR += stalwart-cli
     SUBDIR += stalwart-migrate
     SUBDIR += stalwart-proxy
+    SUBDIR += stalwart016
     SUBDIR += surblhost
     SUBDIR += swaks
     SUBDIR += sylpheed
@@ -770,6 +770,7 @@
     SUBDIR += up-imapproxy
     SUBDIR += usendmail
     SUBDIR += vacation
+    SUBDIR += vandelay
     SUBDIR += vbsfilter
     SUBDIR += vexim
     SUBDIR += vpopmail

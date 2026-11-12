@@ -186,6 +186,7 @@
     SUBDIR += elasticsearch-plugin-head
     SUBDIR += elasticsearch8
     SUBDIR += elasticsearch94
+    SUBDIR += elasticsearch95
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
     SUBDIR += en-mythes
@@ -1699,6 +1700,7 @@
     SUBDIR += py-rouge-score
     SUBDIR += py-rst2ansi
     SUBDIR += py-rst2html5
+    SUBDIR += py-rtoml
     SUBDIR += py-sacrebleu
     SUBDIR += py-sacremoses
     SUBDIR += py-scour
@@ -2059,6 +2061,7 @@
     SUBDIR += rubygem-phone
     SUBDIR += rubygem-pretty-xml
     SUBDIR += rubygem-prism
+    SUBDIR += rubygem-prism1
     SUBDIR += rubygem-psych
     SUBDIR += rubygem-psych3
     SUBDIR += rubygem-raabro

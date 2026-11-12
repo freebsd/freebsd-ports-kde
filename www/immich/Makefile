@@ -1,6 +1,6 @@
 PORTNAME=	immich
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.6
+DISTVERSION=	3.4.0
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/joneum/FreeBSD-Immich/releases/download/v${BUILDKIT_VERSION}/:buildkit
 DISTFILES=	immich-freebsd-buildkit-${BUILDKIT_VERSION}${EXTRACT_SUFX}:buildkit
@@ -12,9 +12,8 @@ WWW=		https://immich.app/
 LICENSE=	AGPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-ONLY_FOR_ARCHS=	aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	native Node.js modules are only tested on \
-			64-bit platforms
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON=	rolldown provides no FreeBSD/arm64 binding
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/npm:www/npm-node22
 LIB_DEPENDS=	libheif.so:graphics/libheif \
@@ -41,13 +40,13 @@ USE_RC_SUBR=	immich_server
 # made by unpacking the release tarball and running, with the pnpm version
 # from packageManager in package.json:
 #   pnpm install --frozen-lockfile --ignore-scripts --store-dir <kit>/pnpm-store
-#   cd <kit> && npm pack pnpm@<version>
+#   cd <kit> && npm pack pnpm@<version> @pnpm/exe.freebsd-x64@<version>
 # plus the geodata files from geonames.org and natural-earth-vector, and
 # the immich-plugin-core payload from the upstream container image.
 BUILDKIT=	${WRKDIR}/immich-freebsd-buildkit-${BUILDKIT_VERSION}
 BUILDKIT_VERSION=	${DISTVERSION}
-PNPM=		${WRKDIR}/pnpm-prefix/bin/pnpm
-PNPM_VERSION=	11.27.1
+PNPM=		${WRKDIR}/pnpm-prefix/pnpm
+PNPM_VERSION=	12.15.0
 PLUGIN_SDK=	@immich+plugin-sdk@file+packages+plugin-sdk
 
 MAKE_ENV=	CI=1 \
@@ -72,18 +71,20 @@ post-patch:
 		${WRKSRC}/server/src/services/database-backup.service.ts
 
 pre-build:
-	cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} PATH=${PATH} \
-		npm install -g --prefix ${WRKDIR}/pnpm-prefix \
-		${BUILDKIT}/pnpm-${PNPM_VERSION}.tgz
+	@${MKDIR} ${WRKDIR}/pnpm-prefix
+	@${TAR} -xf ${BUILDKIT}/pnpm-exe.freebsd-x64-${PNPM_VERSION}.tgz \
+		-C ${WRKDIR}/pnpm-prefix --strip-components 1 package/pnpm
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${PNPM} install --offline --frozen-lockfile \
+		${PNPM} install --offline --frozen-lockfile --ignore-scripts \
 		--store-dir ${BUILDKIT}/pnpm-store
 	@for d in ${WRKSRC}/node_modules/.pnpm/sharp@*/node_modules/sharp; do \
 		(cd $$d && ${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/node install/build.js) \
 		|| exit 1; \
 	done
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${PNPM} rebuild --offline
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PNPM} --filter @immich/plugin-sdk --filter @immich/sdk \
 		--filter immich build

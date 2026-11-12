@@ -1149,6 +1149,7 @@
     SUBDIR += py-python-ipware
     SUBDIR += py-python-keystoneclient
     SUBDIR += py-python-ldap
+    SUBDIR += py-python-manilaclient
     SUBDIR += py-python-neutronclient
     SUBDIR += py-python-novaclient
     SUBDIR += py-python-openstackclient
@@ -1413,6 +1414,7 @@
     SUBDIR += rubygem-nats-pure-gitlab
     SUBDIR += rubygem-net-http2
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap-gitlab
     SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
@@ -1495,6 +1497,7 @@
     SUBDIR += rubygem-t
     SUBDIR += rubygem-train
     SUBDIR += rubygem-train-core
+    SUBDIR += rubygem-train-core-gitlab
     SUBDIR += rubygem-train-rest
     SUBDIR += rubygem-train-winrm
     SUBDIR += rubygem-tweetstream
