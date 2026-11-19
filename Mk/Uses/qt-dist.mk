@@ -84,8 +84,9 @@ _QT5_MASTER_SITES=		${MASTER_SITE_QT}
 _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
 # Qt6 specific master sites
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
+# As of Qt 6.12.0, QtWebEngine is a separate project
 .  if ${_QT_DIST} == webengine
-_QT6_MASTER_SITE_SUBDIR=        ${_QT6_WEBENGINE_RELEASE_TYPE}_releases/qtwebengine/${QT6_WEBENGINE_VERSION}/
+_QT6_MASTER_SITE_SUBDIR=        ${_QT6_WEBENGINE_RELEASE_TYPE}_releases/qtwebengine/${QT6_WEBENGINE_VERSION:R}/${QT6_WEBENGINE_VERSION}/src
 .  else
 _QT6_MASTER_SITE_SUBDIR=	${_QT6_RELEASE_TYPE}_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
 .  endif
@@ -116,7 +117,11 @@ DISTFILES=			${DISTNAME:S,$,${EXTRACT_SUFX},}
 DISTFILES+=			${DISTNAME:S|everywhere-src|maven-deps|:S|$|${EXTRACT_SUFX}|}:maven
 .    endif
 .  endif
+.  if ${_QT_DIST} == webengine
+DIST_SUBDIR=			KDE/Qt/qtwebengine
+.  else
 DIST_SUBDIR=			KDE/Qt/${_QT_VERSION}
+.  endif
 
 .  if ${_QT_VER:M5}
 # KDE maintains a repository with a patched Qt5 distribution.

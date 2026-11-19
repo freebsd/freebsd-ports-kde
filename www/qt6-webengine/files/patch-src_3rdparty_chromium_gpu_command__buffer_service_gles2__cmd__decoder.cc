@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2026-10-21 00:29:58 UTC
+--- src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc.orig	2026-11-10 16:05:30 UTC
 +++ src/3rdparty/chromium/gpu/command_buffer/service/gles2_cmd_decoder.cc
-@@ -3071,7 +3071,7 @@ GLES2Decoder* GLES2Decoder::Create(
+@@ -3074,7 +3074,7 @@ GLES2Decoder* GLES2Decoder::Create(
  // Fix for Qt WebEngine Crash when QSG_RHI_BACKEND=opengl
  // Allow linux to run fuzzers.
  #if BUILDFLAG(ENABLE_VALIDATING_COMMAND_DECODER) || BUILDFLAG(IS_LINUX) || \

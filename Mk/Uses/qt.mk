@@ -24,7 +24,7 @@ _QT_MK_INCLUDED=	qt.mk
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.19
 QT6_VERSION?=		6.12.0
-QT6_WEBENGINE_VERSION?=	6.140.0-rc
+QT6_WEBENGINE_VERSION?=	6.140.0
 PYSIDE6_VERSION?=	6.12.0
 
 # Support for intermediate Qt6 releases. This partially defines

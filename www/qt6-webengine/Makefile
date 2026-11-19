@@ -114,7 +114,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 ${MAKE_ARGS:N${DESTDIRNAME}=*}
 
 BINARY_ALIAS=	git=false python3=${PYTHON_CMD}
-WRKSRC=		${WRKDIR}/qtwebengine-everywhere-src-${PORTVERSION:R}
 
 .if !defined(BUILD_QTPDF)
 OPTIONS_DEFINE=		DRIVER PIPEWIRE RUST
@@ -233,17 +232,7 @@ qtwebengine-create-security-patch:
 	    exit 1; \
 	fi; \
 	${ECHO_CMD} "====> Using qtwebengine-chromium base hash: $${base_hash}"; \
-	${ECHO_CMD} "====> Determining qtwebengine-chromium branch..."; \
-	chromium_major=$$(${FETCH_CMD} -q -o - "https://code.qt.io/cgit/qt/qtwebengine-chromium.git/plain/chromium/chrome/VERSION?id=$${base_hash}" 2>/dev/null | ${AWK} -F= '/^MAJOR/ {print $$2}' | ${TR} -d '\r'); \
-	if [ -z "$${chromium_major}" ]; then \
-	    ${ECHO_CMD} "====> code.qt.io failed. Falling back to GitHub for VERSION fetch..."; \
-	    chromium_major=$$(${FETCH_CMD} -q -o - "https://raw.githubusercontent.com/qt/qtwebengine-chromium/$${base_hash}/chromium/chrome/VERSION" 2>/dev/null | ${AWK} -F= '/^MAJOR/ {print $$2}' | ${TR} -d '\r'); \
-	    if [ -z "$${chromium_major}" ]; then \
-	        ${ECHO_CMD} "ERROR: Could not determine Chromium major version from code.qt.io or GitHub."; \
-	        exit 1; \
-	    fi; \
-	fi; \
-	chromium_branch="$${chromium_major}-based"; \
+	chromium_branch="${DISTVERSION:R:E}-based"; \
 	${ECHO_CMD} "====> Using qtwebengine-chromium branch: $${chromium_branch}"; \
 	${ECHO_CMD} "====> Fetching security rollup patch from $${base_hash} to $${chromium_branch}..."; \
 	tmp_patch=$$(${MKTEMP} -t qt_sec_patch); \

@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2024-03-22 08:19:40 UTC
+--- src/3rdparty/chromium/gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc.orig	2026-11-10 16:05:30 UTC
 +++ src/3rdparty/chromium/gpu/command_buffer/service/shared_image/wrapped_sk_image_backing.cc
-@@ -214,7 +214,7 @@ bool WrappedSkImageBacking::Initialize(const std::stri
+@@ -255,7 +255,7 @@ bool WrappedSkImageBacking::Initialize(const std::stri
  
      constexpr GrRenderable is_renderable = GrRenderable::kYes;
      constexpr GrProtected is_protected = GrProtected::kNo;
