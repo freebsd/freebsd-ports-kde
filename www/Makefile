@@ -573,15 +573,18 @@
     SUBDIR += nginx-module-lua-stream
     SUBDIR += nginx-module-memc
     SUBDIR += nginx-module-modsecurity3
+    SUBDIR += nginx-module-mogilefs
     SUBDIR += nginx-module-ndk
     SUBDIR += nginx-module-njs
     SUBDIR += nginx-module-otel
     SUBDIR += nginx-module-passenger
     SUBDIR += nginx-module-postgres
+    SUBDIR += nginx-module-push-stream
     SUBDIR += nginx-module-rds-csv
     SUBDIR += nginx-module-rds-json
     SUBDIR += nginx-module-redis
     SUBDIR += nginx-module-redis2
+    SUBDIR += nginx-module-rtmp
     SUBDIR += nginx-module-set-misc
     SUBDIR += nginx-module-sflow
     SUBDIR += nginx-module-slowfs-cache
@@ -590,7 +593,9 @@
     SUBDIR += nginx-module-sts
     SUBDIR += nginx-module-subs-filter
     SUBDIR += nginx-module-syslog5424
+    SUBDIR += nginx-module-tarantool
     SUBDIR += nginx-module-upload
+    SUBDIR += nginx-module-upstream-check
     SUBDIR += nginx-module-vod
     SUBDIR += nginx-module-websockify
     SUBDIR += nginx-module-xss
@@ -619,6 +624,7 @@
     SUBDIR += onionshare-cli
     SUBDIR += onlyoffice-documentserver
     SUBDIR += opencart
+    SUBDIR += opencloud
     SUBDIR += openemr
     SUBDIR += opengist
     SUBDIR += openresty
@@ -2657,6 +2663,7 @@
     SUBDIR += sabredav
     SUBDIR += samdruckerserver
     SUBDIR += sarg
+    SUBDIR += sblg
     SUBDIR += scloader
     SUBDIR += script4rss
     SUBDIR += selenium

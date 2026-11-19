@@ -40,6 +40,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk20
     SUBDIR += asterisk22
+    SUBDIR += asterisk24
     SUBDIR += astron
     SUBDIR += avahi
     SUBDIR += avahi-app
@@ -1512,6 +1513,10 @@
     SUBDIR += rubygem-uri_template
     SUBDIR += rubygem-whois
     SUBDIR += rubygem-x
+    SUBDIR += rubygem-x-core
+    SUBDIR += rubygem-x-resources
+    SUBDIR += rubygem-x-streams
+    SUBDIR += rubygem-x-uploads
     SUBDIR += rubygem-xmlrpc
     SUBDIR += rude
     SUBDIR += rustconn
@@ -1594,6 +1599,7 @@
     SUBDIR += stc
     SUBDIR += stone
     SUBDIR += storj
+    SUBDIR += stu
     SUBDIR += stund
     SUBDIR += subnetcalc
     SUBDIR += suckblow
@@ -1747,6 +1753,7 @@
     SUBDIR += wping
     SUBDIR += wstunnel
     SUBDIR += wutil
+    SUBDIR += x-cli
     SUBDIR += x11vnc
     SUBDIR += x2goclient
     SUBDIR += x2goclient-cli

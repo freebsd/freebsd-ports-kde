@@ -461,6 +461,7 @@
     SUBDIR += py-analysis-framework-base
     SUBDIR += py-anthropic
     SUBDIR += py-apache-beam
+    SUBDIR += py-apache-tvm-ffi
     SUBDIR += py-ascii-magic
     SUBDIR += py-ast-comments
     SUBDIR += py-autogen
@@ -473,6 +474,7 @@
     SUBDIR += py-cmap
     SUBDIR += py-codecarbon
     SUBDIR += py-cohere
+    SUBDIR += py-cohere-melody
     SUBDIR += py-colorbrewer
     SUBDIR += py-colored
     SUBDIR += py-colorzero
@@ -567,6 +569,7 @@
     SUBDIR += py-langgraph
     SUBDIR += py-langgraph-checkpoint
     SUBDIR += py-langgraph-checkpoint-conformance
+    SUBDIR += py-langgraph-checkpoint-postgres
     SUBDIR += py-langgraph-checkpoint-sqlite
     SUBDIR += py-langgraph-prebuilt
     SUBDIR += py-langgraph-sdk
@@ -607,6 +610,7 @@
     SUBDIR += py-modelscope
     SUBDIR += py-modelscope-hub
     SUBDIR += py-molequeue
+    SUBDIR += py-mslk
     SUBDIR += py-napari
     SUBDIR += py-napari-resources
     SUBDIR += py-napari-svg
@@ -631,6 +635,7 @@
     SUBDIR += py-openvdb
     SUBDIR += py-optimum
     SUBDIR += py-optuna
+    SUBDIR += py-oss-harmony
     SUBDIR += py-oterm
     SUBDIR += py-paddlepaddle
     SUBDIR += py-palettable

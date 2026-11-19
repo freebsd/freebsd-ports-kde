@@ -1,3 +1,1934 @@
+  <vuln vid="890d1126-e36c-11f1-bae2-3497f65b111b">
+    <topic>nginx -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+       <name>nginx</name>
+       <name>nginx-full</name>
+       <name>nginx-lite</name>
+       <name>nginx-naxsi</name>
+       <range><lt>1.30.7,3</lt></range>
+      </package>
+      <package>
+       <name>nginx-devel</name>
+       <range><lt>1.31.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>The nginx developers report:</p>
+       <blockquote cite="https://nginx.org/en/security_advisories.html">
+       <p>
+       A buffer overflow might occur in a worker process when using the
+       "try_files" and "alias" directives in certain configurations
+       (CVE-2026-125283).
+       </p>
+       <p>
+       A flow control window overflow in HTTP/2 might allow an attacker to
+       cause a segmentation fault in a worker process, or might have
+       potential other impact (CVE-2026-123007).
+       </p>
+       <p>
+       use-after-free might occur in a worker process when using HTTP/2 if
+       worker_connections were not enough (CVE-2026-123633).
+       </p>
+       <p>
+       use-after-free might occur in a worker process when using HTTP/3 if
+       worker_connections were not enough (CVE-2026-121810).
+       </p>
+       <p>
+       use-after-free condition might occur if the "resolver" directive was
+       used and the same name was simultaneously resolved in subrequests,
+       allowing an attacker who is able to trigger name resolution to cause
+       segmentation fault in a worker process, or might have potential other
+       impact (CVE-2026-123634).
+       </p>
+       <p>
+       use-after-free might occur in a worker process in the mail proxy
+       server (CVE-2026-113425).
+       </p>
+       <p>
+       In the stream module, an attacker who is able to complete the SSL
+       handshake synchronously might cause client SSL certificates to be
+       verified using the configuration of the default server rather than
+       the virtual server selected by SNI (CVE-2026-120967).
+       </p>
+       <p>
+       A segmentation fault might occur in a worker process when using PROXY
+       protocol version 2 with dynamic SSL certificate loading
+       (CVE-2026-120993).
+       </p>
+       <p>
+       The ngx_stream_ssl_preread_module might interpret malformed
+       ClientHello messages differently than other TLS implementations,
+       which might result in bypassing security restrictions
+       (CVE-2026-123640).
+       </p>
+       <p>
+       Worker processes might get caught in an endless loop while reading
+       the request body over SSL (CVE-2026-118899).
+       </p>
+      </blockquote>
+     </body>
+    </description>
+    <references>
+      <url>https://nginx.org/en/security_advisories.html</url>
+      <cvename>CVE-2026-113425</cvename>
+      <cvename>CVE-2026-118899</cvename>
+      <cvename>CVE-2026-120967</cvename>
+      <cvename>CVE-2026-120993</cvename>
+      <cvename>CVE-2026-121810</cvename>
+      <cvename>CVE-2026-123007</cvename>
+      <cvename>CVE-2026-123633</cvename>
+      <cvename>CVE-2026-123634</cvename>
+      <cvename>CVE-2026-123640</cvename>
+      <cvename>CVE-2026-125283</cvename>
+    </references>
+    <dates>
+      <discovery>2026-11-18</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b2317a60-e358-11f1-b3a2-2cf05da270f3">
+    <topic>Gitlab -- Vulnerabilities</topic>
+    <affects>
+<package>
+	<name>gitlab-ce</name>
+	<name>gitlab-ee</name>
+	<range><ge>19.5.0</ge><lt>19.5.6</lt></range>
+	<range><ge>19.4.0</ge><lt>19.4.8</lt></range>
+	<range><ge>7.0.0</ge><lt>19.3.9</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gitlab reports:</p>
+	<blockquote cite="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-6-released/?nav=19.5.6">
+	  <p>Cross-site Scripting issue in wiki pages impacts GitLab CE/EE</p>
+	  <p>Cross-site Scripting issue in Error Tracking impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in CI/CD pipeline jobs impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in workspaces impacts GitLab CE/EE</p>
+	  <p>NULL Pointer Dereference issue in GitLab agent server impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in scheduled pipeline execution policies impacts GitLab EE</p>
+	  <p>Acceptance of Extraneous Untrusted Data With Trusted Data issue in Maven virtual registry impacts GitLab EE</p>
+	  <p>Path Traversal issue in GitLab Pages impacts GitLab CE/EE</p>
+	  <p>Cross-site Scripting issue in Confluence integration impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in merge request discussions impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in job artifacts impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in Package Registry impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in GitLab agent for Kubernetes impacts GitLab CE/EE</p>
+	  <p>Authorization Bypass Through User-Controlled Key issue in GitLab Duo Agent Platform impacts GitLab EE</p>
+	  <p>Missing Authorization issue in NuGet package registry impacts GitLab CE/EE</p>
+	  <p>Authorization Bypass Through User-Controlled Key issue in GitLab Duo seat management impacts GitLab EE</p>
+	  <p>Missing Authorization issue in snippets impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in CI/CD templates impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in Git LFS impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in iterations impacts GitLab EE</p>
+	  <p>Missing Authorization issue in issues impacts GitLab CE/EE</p>
+	  <p>Improper Validation of Specified Quantity in Input issue in GitLab Duo usage analytics impacts GitLab EE</p>
+	  <p>Missing Authorization issue in project import impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in GitLab Duo Agent Platform impacts GitLab EE</p>
+	  <p>Insufficient Granularity of Access Control issue in merge request scheduling impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in GitLab MCP server impacts GitLab CE/EE</p>
+	  <p>Missing Authorization issue in GitLab Duo group settings impacts GitLab EE</p>
+	  <p>Incorrect Authorization issue in GitLab Duo Agent Platform flows impacts GitLab EE</p>
+	  <p>Reliance on Untrusted Inputs in a Security Decision issue in GitLab Duo with Amazon Q impacts GitLab EE</p>
+	  <p>Authentication Bypass by Spoofing issue in group import member email mapping impacts GitLab CE/EE</p>
+	  <p>Use of Incorrectly-Resolved Name or Reference issue in merge request diffs impacts GitLab CE/EE</p>
+	  <p>Server-Side Request Forgery issue in repository import impacts GitLab CE/EE</p>
+	  <p>Incorrect Authorization issue in pipeline execution policies impacts GitLab EE</p>
+	  <p>Incorrect Authorization issue in GitLab Duo Code Review impacts GitLab EE</p>
+	  <p>Insertion of Sensitive Information into Log File issue in GraphQL logging impacts GitLab CE/EE</p>
+	  <p>Improper Cleanup on Thrown Exception issue in GitLab Duo access rules impacts GitLab EE</p>
+	  <p>Missing Authorization issue in Git LFS impacts GitLab CE/EE</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-105739</cvename>
+      <cvename>CVE-2026-108153</cvename>
+      <cvename>CVE-2026-18241</cvename>
+      <cvename>CVE-2026-97187</cvename>
+      <cvename>CVE-2026-115428</cvename>
+      <cvename>CVE-2026-85778</cvename>
+      <cvename>CVE-2026-112203</cvename>
+      <cvename>CVE-2026-11768</cvename>
+      <cvename>CVE-2026-16609</cvename>
+      <cvename>CVE-2026-118961</cvename>
+      <cvename>CVE-2026-121533</cvename>
+      <cvename>CVE-2026-16545</cvename>
+      <cvename>CVE-2026-18491</cvename>
+      <cvename>CVE-2026-115736</cvename>
+      <cvename>CVE-2026-115218</cvename>
+      <cvename>CVE-2026-104902</cvename>
+      <cvename>CVE-2026-104934</cvename>
+      <cvename>CVE-2026-108150</cvename>
+      <cvename>CVE-2026-108155</cvename>
+      <cvename>CVE-2026-104717</cvename>
+      <cvename>CVE-2026-102907</cvename>
+      <cvename>CVE-2026-125920</cvename>
+      <cvename>CVE-2026-108154</cvename>
+      <cvename>CVE-2026-129253</cvename>
+      <cvename>CVE-2026-129321</cvename>
+      <cvename>CVE-2026-123142</cvename>
+      <cvename>CVE-2026-122045</cvename>
+      <cvename>CVE-2026-128849</cvename>
+      <cvename>CVE-2026-115219</cvename>
+      <cvename>CVE-2026-129252</cvename>
+      <cvename>CVE-2026-111747</cvename>
+      <cvename>CVE-2026-126141</cvename>
+      <cvename>CVE-2026-101358</cvename>
+      <cvename>CVE-2026-121948</cvename>
+      <cvename>CVE-2026-110990</cvename>
+      <cvename>CVE-2026-122226</cvename>
+      <cvename>CVE-2026-110750</cvename>
+      <url>https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-6-released/?nav=19.5.6</url>
+    </references>
+    <dates>
+      <discovery>2026-11-16</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="654410f6-e37f-11f1-b58b-8447094a420f">
+    <topic>MariaDB -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>mariadb123-server</name>
+	<range><lt>12.3.4</lt></range>
+      </package>
+      <package>
+	<name>mariadb118-server</name>
+	<range><lt>11.8.10</lt></range>
+      </package>
+      <package>
+	<name>mariadb114-server</name>
+	<range><lt>11.4.14</lt></range>
+      </package>
+      <package>
+	<name>mariadb1011-server</name>
+	<range><lt>10.11.20</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MariaDB reports:</p>
+	<blockquote cite="https://mariadb.com/docs/release-notes/community-server/12.3/12.3.4">
+	  <p>No further detail provided by MariaDB.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101802</cvename>
+      <cvename>CVE-2026-101796</cvename>
+      <cvename>CVE-2026-101794</cvename>
+      <cvename>CVE-2026-101775</cvename>
+      <cvename>CVE-2026-101747</cvename>
+      <cvename>CVE-2026-101725</cvename>
+      <cvename>CVE-2026-101679</cvename>
+      <cvename>CVE-2026-101619</cvename>
+      <cvename>CVE-2026-101618</cvename>
+      <cvename>CVE-2026-101617</cvename>
+      <cvename>CVE-2026-101615</cvename>
+      <cvename>CVE-2026-101614</cvename>
+      <cvename>CVE-2026-101608</cvename>
+      <url>https://mariadb.com/docs/release-notes/community-server/12.3/12.3.4</url>
+      <url>https://mariadb.com/docs/release-notes/community-server/11.8/11.8.10</url>
+      <url>https://mariadb.com/docs/release-notes/community-server/11.4/11.4.14</url>
+      <url>https://mariadb.com/docs/release-notes/community-server/10.11/10.11.20</url>
+    </references>
+    <dates>
+      <discovery>2026-11-16</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c0ecba9d-e313-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- tmpfs(4) fails to clear set-group-ID bit on new files</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>tmpfs(4) did not clear the set-group-ID bit when a file was
+	  created by a user who was not a member of the file's group.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user with write access to a tmpfs(4)
+	  directory owned by a group they do not belong to can create a
+	  set-group-ID executable for that group, and so gain that group's
+	  privileges.  For example, where /tmp is a tmpfs(4) mount, any local
+	  user can obtain the privileges of the wheel group, which owns
+	  /tmp.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127749</cvename>
+      <freebsdsa>SA-26:94.tmpfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a55d3c3a-e313-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Local privilege escalation via TCP MSG_OOB handling</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When a segment carrying urgent data was received, tcp_pulloutofband()
+	  removed the urgent byte by modifying the received data in place,
+	  without checking whether the underlying buffer was writable.  For
+	  example, when a local sender used sendfile(2), the data could
+	  reference the cached pages of the file being sent.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can exploit this to modify the cached
+	  contents of files they are only permitted to read, and thereby
+	  obtain superuser privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127748</cvename>
+      <freebsdsa>SA-26:93.tcp</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8aedf1a9-e313-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Directory permission bypass via open(2)</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>open(2) omits permission checks when it has just created the
+	  file being opened.  When called with both O_CREAT and O_DIRECTORY
+	  on an existing directory, open(2) did not create anything, but still
+	  omitted the checks.  As a result, a user could open a directory for
+	  reading or searching without the corresponding permission.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can list the contents of directories
+	  they are not permitted to read, and access files within directories
+	  they are not permitted to search, subject to the permissions of
+	  those files and of the directory's ancestors.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127746</cvename>
+      <freebsdsa>SA-26:92.vfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="694ec2f0-e313-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via missing fdescfs(4) access checks</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>fdescfs(4) did not implement access checks for its files, and
+	  did not verify that a descriptor was open for writing before changing
+	  the size of the underlying file.  As a result, truncate(2) on
+	  /dev/fd/N succeeded even when descriptor N was open read-only.
+	  fdescfs(4) also checked the wrong Capsicum rights on the descriptor
+	  when changing file attributes.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can truncate or extend any file which
+	  they are able to open for reading, including system files owned by
+	  root.  This may allow privilege escalation or a Denial of Service
+	  (DoS).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127745</cvename>
+      <freebsdsa>SA-26:91.fdescfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="272af53f-e313-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via prefaulting on largepage mappings</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>The kernel's prefaulting code was not aware of large page
+	  mappings, and entered their constituent base pages into the page
+	  tables individually.  As a result, a process could obtain a mapping
+	  of a page belonging to a large page object after the object had
+	  been freed.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can exploit this to access freed
+	  physical memory and escalate privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127744</cvename>
+      <freebsdsa>SA-26:90.vm</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ecd494c5-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Multiple vulnerabilities in bsnmpd(1)</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>bsnmpd(1) skips USM authentication and VACM checks for SNMPv3
+	  discovery requests, which should elicit only a Report.  However,
+	  it executed any variable bindings carried by a discovery request,
+	  so GET and SET requests could be processed without authentication
+	  or access control.  This was possible even when the USM and VACM
+	  modules were not loaded, as in the default configuration.  Related
+	  flaws allowed a client to mark an ordinary request as a discovery
+	  request, or to use a discovery request to read the agent's USM and
+	  VACM configuration.  (CVE-2026-127742)</p>
+	  <p>The VACM module did not reject vacmViewTreeFamilyMask values longer
+	  than 16 bytes, resulting in a heap buffer overflow.  (CVE-2026-127743)</p>
+	<h1>Impact:</h1>
+	  <p>An unauthenticated remote attacker able to send SNMPv3 messages
+	  to bsnmpd(1) can read and modify any object managed by the agent,
+	  including objects which reconfigure the agent itself.  Where the
+	  VACM module is loaded, the attacker can also trigger the heap
+	  overflow in bsnmpd(1), which runs as root, potentially leading to
+	  remote code execution.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127742</cvename>
+      <cvename>CVE-2026-127743</cvename>
+      <freebsdsa>SA-26:89.bsnmp</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ac524394-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via sound software buffer resizing</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When reading from or writing to an audio channel, the sound(4)
+	  driver dropped the channel lock while copying data between the
+	  channel's software buffer and userspace.  The buffer resize path
+	  did not account for this, so a concurrent resize could free the
+	  buffer while the copy was in progress.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user with access to a /dev/dsp* sound
+	  device can exploit this race to trigger a use-after-free in the
+	  kernel and escalate privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127741</cvename>
+      <freebsdsa>SA-26:88.sound</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8ff9bae6-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via socket unsplice timeout</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When a splice's idle timeout expired, the kernel unspliced the
+	  source socket without verifying that the socket still belonged to
+	  that splice.  If another thread had meanwhile unspliced the socket
+	  and spliced it again, the timeout handler could tear down the new
+	  splice instead, resulting in a use-after-free.  Concurrent teardowns
+	  of a splice after an error were similarly unserialized.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user may be able to exploit the use-after-free
+	  to escalate privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127740</cvename>
+      <freebsdsa>SA-26:87.socket</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="707d112d-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via compat32 recvmsg(2) control messages</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When copying received control messages out to a 32-bit process,
+	  compat32 temporarily modified the length field of each message
+	  header in place.  When a large control message was read with the
+	  MSG_PEEK flag, its storage remained shared with the socket buffer,
+	  so this modification could race with concurrent operations on the
+	  same socket and corrupt the socket's queue of messages.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can exploit the resulting memory
+	  corruption to escalate privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101321</cvename>
+      <freebsdsa>SA-26:86.freebsd32</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="42294611-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Multiple vulnerabilities in kevent(2)</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When an EVFILT_TIMER event was removed, the kernel failed to
+	  wait for a concurrently firing timer callback if the owning process
+	  had been stopped and continued by signals.  The callback could then
+	  run after the event's memory was freed.  (CVE-2026-101320)</p>
+	  <p>When copying a KQUEUE_CPONFORK kqueue during fork(2), the kernel
+	  temporarily dropped the kqueue lock while iterating over its lists
+	  of events.  If another thread registered an event in the meantime,
+	  the array holding these lists could be reallocated, and the copy
+	  loop would then modify the freed array.  This bug does not affect
+	  FreeBSD 14.  (CVE-2026-127750)</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can exploit the EVFILT_TIMER race
+	  to obtain superuser privileges.  The KQUEUE_CPONFORK race also
+	  corrupts kernel memory and may likewise be exploitable.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101320</cvename>
+      <cvename>CVE-2026-127750</cvename>
+      <freebsdsa>SA-26:85.kqueue</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="21b00ba9-e312-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- bhyve guests can panic the host on Intel CPUs</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>vmm(4) did not reject guest writes to IA32_TSC_AUX which set
+	  the MSR's reserved upper 32 bits.  Loading such a value into the
+	  physical MSR raises a general protection fault in the host kernel.</p>
+	<h1>Impact:</h1>
+	  <p>Malicious, privileged software running in a guest can cause the
+	  host to panic, resulting in a Denial of Service (DoS) for the host
+	  and all of its guests.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101319</cvename>
+      <freebsdsa>SA-26:84.vmm</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f783a9ba-e311-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via shutdown(2) race on unix sockets</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>shutdown(2) on a unix socket checked whether the socket was
+	  listening, then dropped the socket lock before operating on the
+	  socket's data buffers.  A concurrent call to listen(2) could convert
+	  the socket in the meantime, causing shutdown(2) to operate on the
+	  connection queue as if it were a data buffer.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user may be able to exploit the resulting
+	  memory corruption to escalate privileges.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127751</cvename>
+      <freebsdsa>SA-26:83.unix</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d57900fc-e311-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- IPsec stream cipher counter reuse</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>esp_output() incremented the IV counter while holding the SA
+	  lock in shared mode, so packets transmitted concurrently on different
+	  CPUs could be assigned the same counter value.  As a result, multiple
+	  packets could be encrypted with the same IV and key.</p>
+	<h1>Impact:</h1>
+	  <p>An on-path attacker may be able to modify intercepted packets
+	  without detection, and potentially recover the plaintext of packets
+	  which share an IV.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101318</cvename>
+      <freebsdsa>SA-26:82.ipsec</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b1803084-e311-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Capsicum and O_RESOLVE_BENEATH bypass at mount roots</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>To resolve ".." from the root of a mounted file system, the
+	  kernel first steps to the directory on which that file system is
+	  mounted, then looks up ".." there.  The check for leaving the
+	  starting directory compared against the mount point rather than the
+	  root of the mounted file system.  If the starting directory was
+	  itself the root of a mounted file system, the check never matched,
+	  and the lookup escaped to the parent of the mount point.</p>
+	<h1>Impact:</h1>
+	  <p>A sandboxed process, or a program relying on O_RESOLVE_BENEATH
+	  or AT_RESOLVE_BENEATH, whose starting directory is the root of a
+	  mounted file system can access any file under its root directory.
+	  The descriptor's rights and normal file system permissions still
+	  apply.  Lookups that start in any other directory are not affected.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101312</cvename>
+      <freebsdsa>SA-26:81.vfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="35d11826-e311-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Privilege escalation via inotify watch descriptor wraparound</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When automatically removing a watch, inotify_log_one() checked
+	  only that a watch with the same watch descriptor was still registered,
+	  not that it was the same watch.  Watch descriptors are allocated
+	  from a 32-bit counter, so by forcing the counter to wrap around, a
+	  user could cause a new watch to reuse the descriptor of one being
+	  removed concurrently.  The kernel could then free a watch which was
+	  still in use, resulting in a use-after-free.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user may be able to exploit the bug to
+	  escalate privileges, potentially gaining full control of the affected
+	  system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101316</cvename>
+      <freebsdsa>SA-26:80.vfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="07d484a7-e311-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- NFSv4 server remote code execution via stateid type confusion</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When processing a DELEGRETURN operation, the NFSv4 server did
+	  not verify that the supplied stateid referred to a delegation.  A
+	  client could supply an open or lock stateid instead, causing the
+	  server to free that state while it was still referenced, resulting
+	  in a use-after-free.</p>
+	<h1>Impact:</h1>
+	  <p>A remote NFSv4 client which is able to open a file on an exported
+	  file system can corrupt kernel memory on the server, causing a
+	  kernel panic or potentially executing arbitrary code in the kernel.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101317</cvename>
+      <freebsdsa>SA-26:79.nfs</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e58b4598-e310-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- gssd maps unrecognized Kerberos principals to UID 0</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When gssd(8) could not map a principal to a local user, it
+	  failed to set the user ID of the resulting credentials, leaving it
+	  as zero.  The NFS server does not apply the exports(5) -maproot and
+	  -mapall options to Kerberos-authenticated requests, so the principal
+	  was granted superuser access.</p>
+	<h1>Impact:</h1>
+	  <p>A remote user holding valid Kerberos credentials for a principal
+	  that does not map to a local user on the NFS server can read and
+	  modify any file on file systems exported with Kerberos security.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101315</cvename>
+      <freebsdsa>SA-26:78.gssd</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="baab8eb5-e310-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Local privilege escalation via netlink heap buffer overflow</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>When a reply message outgrew its buffer, _nlmsg_refill_buffer()
+	  allocated a larger one and copied the partially written message
+	  into it.  The new buffer was sized for the data being added but not
+	  for the part of the message already written, so the kernel could
+	  write past its end.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user, including one in a jail, can overflow
+	  a kernel heap buffer, potentially escalating privileges and gaining
+	  full control of the affected system.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127747</cvename>
+      <freebsdsa>SA-26:77.netlink</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="6a6aaf64-e310-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Multiple vulnerabilities in the ocs_fc(4) driver</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>Several vulnerabilities were found in the ocs_fc(4) driver.</p>
+	  <p>The driver's ioctl(2) interface, which members of the operator group
+	  can access, did not require superuser privileges and did not
+	  adequately validate requests.  Among other problems, it failed to
+	  bound user-supplied buffer sizes and PCI configuration space offsets,
+	  and could issue adapter commands referencing freed memory.
+	  (CVE-2026-127752)</p>
+	  <p>The driver did not adequately validate the length of FCP command
+	  frames received from initiators, and did not range check exchange
+	  identifiers reported by the adapter, potentially leading to
+	  out-of-bounds memory accesses.  (CVE-2026-127753)</p>
+	  <p>When rejecting a Process Login (PRLI) request with an unsupported
+	  FC-4 type, the driver sent a second response for the same exchange,
+	  resulting in a use-after-free.  Any port which had completed a Port
+	  Login (PLOGI) could trigger this with a single PRLI.  Additionally,
+	  formatting the adapter's active profile ID could overflow a stack
+	  buffer.  (CVE-2026-127754)</p>
+	<h1>Impact:</h1>
+	  <p>A local user in the operator group can use the ioctl(2) interface
+	  to corrupt kernel memory or reprogram the adapter, potentially
+	  gaining full control of the system.  A remote port on the same Fibre
+	  Channel fabric can trigger a use-after-free or out-of-bounds memory
+	  access in the kernel, resulting in a Denial of Service (DoS) or
+	  potentially arbitrary code execution in the kernel.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-127752</cvename>
+      <cvename>CVE-2026-127753</cvename>
+      <cvename>CVE-2026-127754</cvename>
+      <freebsdsa>SA-26:76.ocs_fc</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="41f92d57-e310-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Kernel memory disclosure via Linuxulator extattr syscalls</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>The Linuxulator's listxattr() implementation sized its kernel
+	  buffer using min(), which truncates its arguments to 32 bits.  A
+	  64-bit Linux process could pass a size which yielded a small buffer
+	  while later bounds checks used the full size.  The code parsing the
+	  attribute list then read past the end of the buffer and copied
+	  adjacent kernel memory to userspace.</p>
+	<h1>Impact:</h1>
+	  <p>An unprivileged local user can read kernel memory, which may
+	  contain sensitive information, or trigger a kernel panic, resulting
+	  in a Denial of Service (DoS).</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101314</cvename>
+      <freebsdsa>SA-26:75.linux</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8f936426-e30f-11f1-a3e1-bc241121aa0a">
+    <topic>FreeBSD -- Kernel memory disclosure via KTLS control messages</topic>
+    <affects>
+      <package>
+	<name>FreeBSD-kernel</name>
+	<range><ge>15.1</ge><lt>15.1_7</lt></range>
+	<range><ge>14.5</ge><lt>14.5_4</lt></range>
+	<range><ge>14.4</ge><lt>14.4_13</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<h1>Problem Description:</h1>
+	  <p>The code in sosend_generic() which parses TLS_SET_RECORD_TYPE
+	  control messages failed to verify that the message was large enough
+	  to hold its one-byte payload.  A control message containing only a
+	  cmsghdr would pass the size check, causing the kernel to read one
+	  byte past the end of the message and use it as the TLS record
+	  type.</p>
+	<h1>Impact:</h1>
+	  <p>A local user with a KTLS-enabled socket can send a crafted
+	  TLS_SET_RECORD_TYPE control message to cause the kernel to read one
+	  byte of uninitialized kernel memory and use it as the TLS record
+	  type in an outgoing TLS record.  For TLS 1.2 connections, the record
+	  type is visible in the plaintext record header, constituting a
+	  kernel information disclosure.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101313</cvename>
+      <freebsdsa>SA-26:74.ktls</freebsdsa>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c26f4a22-e2f6-11f1-97f8-589cfc10a683">
+    <topic>libXfont2 -- Multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>libXfont2</name>
+<range><lt>2.0.10</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Xorg team reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-November/003765.html">
+	  <ul>
+	  <li>CVE-2026-109909: PCF Font Parsing Negative Skip Out-Of-Bounds Read</li>
+	  <li>CVE-2026-109920: libXfont2 FreeType backend uninitialised strike_index out-of-bounds read</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109909</cvename>
+      <cvename>CVE-2026-109920</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-November/003765.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-18</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e561f892-e2f5-11f1-97f8-589cfc10a683">
+    <topic>libfontenc -- Parsing validation failure</topic>
+    <affects>
+<package>
+<name>libfontenc</name>
+<range><lt>1.1.10</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Xorg team reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-November/003765.html">
+	  <p>CVE-2026-109908: X.Org libfontenc File Parsing Validation Failure.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109908</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-November/003765.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-18</discovery>
+      <entry>2026-11-18</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="297e3635-e276-11f1-8135-8447094a420f">
+    <topic>OpenSSL -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>3.5.10,1</lt></range>
+      </package>
+      <package>
+	<name>openssl30</name>
+	<range><lt>3.0.24</lt></range>
+      </package>
+      <package>
+	<name>openssl34</name>
+	<range><lt>3.4.8_2</lt></range>
+      </package>
+      <package>
+	<name>openssl36</name>
+	<range><lt>3.6.6</lt></range>
+      </package>
+      <package>
+	<name>openssl40</name>
+	<range><lt>4.0.4</lt></range>
+      </package>
+      <package>
+	<name>openssl41</name>
+	<range><lt>4.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://openssl-library.org/news/secadv/20261117.txt">
+	  <ul><li>Out-of-Bounds Read in TLS 1.3 Key-Share Processing with Suite B Certificate Flag (CVE-2026-35190) (Low)</li>
+	  <li>Use-After-Free in PEM_X509_INFO_read_bio_ex() When Appending to a Caller-Supplied Stack Fails (CVE-2026-107493) (Low)</li>
+	  <li>Unbounded Memory Retention in QUIC Server for Rejected Streams (CVE-2026-124709) (Low)</li></ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-35190</cvename>
+      <cvename>CVE-2026-107493</cvename>
+      <cvename>CVE-2026-124709</cvename>
+      <url>https://openssl-library.org/news/secadv/20261117.txt</url>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="142f0839-e259-11f1-ab7d-10ffe07f9334">
+    <topic>mailpit -- Unauthenticated SMTP message crashes Mailpit</topic>
+    <affects>
+      <package>
+	<name>mailpit</name>
+	<range>
+	  <ge>1.33.1</ge>
+	  <lt>1.34.0</lt>
+	</range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Mailpit author  reports:</p>
+	<blockquote cite="https://github.com/axllent/mailpit/security/advisories/GHSA-v887-64wg-qqc9">
+	  <p>internal/mimeparser/mimeparser.go:40 writes decoded
+	  RFC 2231 parameters into the map returned by enmime's
+	  tolerant mediatype.Parse. That parser can legally return
+	  a nil map with a nil error, and ParseMediaType only checks
+	  the error, not params == nil. A message part whose
+	  Content-Type media type is a single non-ASCII whitespace
+	  character (U+00A0) and that carries an extended parameter
+	  such as a*=iso-8859-1''%E9 reaches the loop, the assignment
+	  panics, and the panic runs inside the per-connection SMTP
+	  goroutine, which has no recover.  One anonymous SMTP
+	  message kills the whole process: SMTP, web UI and REST
+	  API together.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/axllent/mailpit/security/advisories/GHSA-v887-64wg-qqc9</url>
+    </references>
+    <dates>
+      <discovery>2026-11-17</discovery>
+      <entry>2026-11-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="05eaad8b-e202-11f1-85bb-1c697a616631">
+    <topic>Emacs -- Arbitrary code execution via .dir-locals.el</topic>
+    <affects>
+      <package>
+	<name>emacs</name>
+	<name>emacs-canna</name>
+	<name>emacs-nox</name>
+	<name>emacs-wayland</name>
+	<range><lt>31.1_4,3</lt></range>
+      </package>
+      <package>
+	<name>emacs-devel</name>
+	<name>emacs-devel-nox</name>
+	<range><lt>32.0.50.20261115,3</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	  <h1>Problem Description</h1>
+	  <p>Emacs validates the major modes named in the auto-mode-alist of a
+	  .dir-locals.el before calling them.  Functions in entries of the form
+	  (REGEXP FUNCTION t) were called without this validation.</p>
+	  <h1>Impact</h1>
+	  <p>Visiting a file in a directory tree containing a crafted
+	  .dir-locals.el can execute arbitrary Lisp code with the privileges of
+	  the user running Emacs.</p>
+	</body>
+    </description>
+    <references>
+      <url>https://www.openwall.com/lists/oss-security/2026/11/11/7</url>
+      <url>https://debbugs.gnu.org/82213</url>
+      <url>https://git.savannah.gnu.org/cgit/emacs.git/commit/?id=205ae0b0583dbfe09e258164adbc49e130645221</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9282c386-b630-4303-82df-027ae4600015">
+    <topic>chromium -- security fixes</topic>
+    <affects>
+      <package>
+       <name>chromium</name>
+       <range><lt>157.0.8103.78</lt></range>
+      </package>
+      <package>
+       <name>ungoogled-chromium</name>
+       <range><lt>157.0.8103.78</lt></range>
+      </package>
+      <package>
+       <name>linux-chrome</name>
+       <range><lt>157.0.8103.78</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+       <p>Chrome Releases reports:</p>
+       <blockquote cite="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html">
+	 <p>This update includes 83 security fixes:</p>
+	 <ul>
+	    <li>Critical CVE-2026-126885: Use after free in ServiceWorker.</li>
+	    <li>Critical CVE-2026-126895: Use after free in CSS.</li>
+	    <li>Critical CVE-2026-126879: Use after free in Layout.</li>
+	    <li>Critical CVE-2026-126846: Use after free in Skia.</li>
+	    <li>Critical CVE-2026-126911: Use after free in Accessibility.</li>
+	    <li>High CVE-2026-126864: Use after free in V8.</li>
+	    <li>High CVE-2026-126889: Off-by-one error in V8.</li>
+	    <li>High CVE-2026-126859: Link following in FileSystem.</li>
+	    <li>High CVE-2026-126886: Use after free in Frames.</li>
+	    <li>High CVE-2026-126887: Use after free in Animation.</li>
+	    <li>High CVE-2026-126870: Uninitialized resource in ANGLE.</li>
+	    <li>High CVE-2026-126912: Buffer overflow in Skia.</li>
+	    <li>High CVE-2026-126919: Use after free in BrowserTag.</li>
+	    <li>High CVE-2026-126878: Information leak in Core.</li>
+	    <li>High CVE-2026-126909: Use after free in Passwords.</li>
+	    <li>High CVE-2026-126847: Type confusion in V8.</li>
+	    <li>High CVE-2026-126853: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-126865: Use after free in DOM.</li>
+	    <li>High CVE-2026-126916: Integer overflow in V8.</li>
+	    <li>High CVE-2026-126903: Improper state validation in ANGLE.</li>
+	    <li>High CVE-2026-126910: Type confusion in V8.</li>
+	    <li>High CVE-2026-126842: Use after free in ANGLE.</li>
+	    <li>High CVE-2026-126898: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-126871: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126875: Missing authorization in V8.</li>
+	    <li>High CVE-2026-126862: Improper input validation in Core.</li>
+	    <li>High CVE-2026-126900: Use after free in CSS.</li>
+	    <li>High CVE-2026-126904: Use after free in Compositing.</li>
+	    <li>High CVE-2026-126907: Uninitialized resource in Media.</li>
+	    <li>High CVE-2026-126851: Use after free in Accessibility.</li>
+	    <li>High CVE-2026-126845: Uninitialized resource in GPU.</li>
+	    <li>High CVE-2026-126881: Improper initialization in Media.</li>
+	    <li>High CVE-2026-126867: Use after free in Browser.</li>
+	    <li>High CVE-2026-126863: Use after free in HTML.</li>
+	    <li>High CVE-2026-126896: Missing authorization in V8.</li>
+	    <li>High CVE-2026-126869: Use after free in Frames.</li>
+	    <li>High CVE-2026-126858: Uninitialized resource in ANGLE.</li>
+	    <li>High CVE-2026-126891: Use after free in V8.</li>
+	    <li>High CVE-2026-126874: Type confusion in V8.</li>
+	    <li>High CVE-2026-126876: Integer overflow in Skia.</li>
+	    <li>High CVE-2026-126918: Use after free in Layout.</li>
+	    <li>High CVE-2026-126866: Incorrect authorization in Extensions.</li>
+	    <li>High CVE-2026-126844: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-126884: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126894: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126861: Use after free in Media.</li>
+	    <li>High CVE-2026-126917: Memory corruption in V8.</li>
+	    <li>High CVE-2026-126856: Incomplete cleanup in Cache.</li>
+	    <li>High CVE-2026-126905: Incomplete cleanup in V8.</li>
+	    <li>High CVE-2026-126873: Use after free in Extensions.</li>
+	    <li>High CVE-2026-126922: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126914: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-126880: Type confusion in V8.</li>
+	    <li>High CVE-2026-126872: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-126877: Use after free in Dawn.</li>
+	    <li>High CVE-2026-126888: Buffer overflow in Turbolev.</li>
+	    <li>High CVE-2026-126843: Type confusion in Turbolev.</li>
+	    <li>High CVE-2026-126854: Incorrect authorization in Layout.</li>
+	    <li>High CVE-2026-126892: Use after free in MediaStream.</li>
+	    <li>High CVE-2026-126897: Type confusion in V8.</li>
+	    <li>High CVE-2026-126857: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126883: Use after free in Core.</li>
+	    <li>High CVE-2026-126840: Out of bounds write in Network.</li>
+	    <li>High CVE-2026-126848: Uninitialized resource in Skia.</li>
+	    <li>High CVE-2026-126882: Information leak in Skia.</li>
+	    <li>High CVE-2026-126906: Race condition in Extensions.</li>
+	    <li>High CVE-2026-126915: Use of uninitialized variable in Skia.</li>
+	    <li>High CVE-2026-126893: Out of bounds write in V8.</li>
+	    <li>High CVE-2026-126855: Missing authorization in ImageCapture.</li>
+	    <li>High CVE-2026-126908: Type confusion in V8.</li>
+	    <li>High CVE-2026-126849: Type confusion in V8.</li>
+	    <li>High CVE-2026-126901: Use after free in PDF.</li>
+	    <li>High CVE-2026-126852: Use after free in MediaStream.</li>
+	    <li>High CVE-2026-126850: Incorrect authorization in SiteIsolation.</li>
+	    <li>High CVE-2026-126841: Out of bounds read in Skia.</li>
+	    <li>High CVE-2026-126902: Incorrect reference resolution in Browser.</li>
+	    <li>High CVE-2026-126868: Type confusion in V8.</li>
+	    <li>High CVE-2026-126921: Use after free in Accessibility.</li>
+	    <li>High CVE-2026-126913: Out of bounds read in Compositing.</li>
+	    <li>High CVE-2026-126890: Out of bounds read in Media.</li>
+	    <li>High CVE-2026-126860: Incorrect authorization in FileSystem.</li>
+	    <li>High CVE-2026-126920: Information leak in Skia.</li>
+	    <li>High CVE-2026-126899: Use after free in Elements.</li>
+	 </ul>
+       </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-126885</cvename>
+      <cvename>CVE-2026-126895</cvename>
+      <cvename>CVE-2026-126879</cvename>
+      <cvename>CVE-2026-126846</cvename>
+      <cvename>CVE-2026-126911</cvename>
+      <cvename>CVE-2026-126864</cvename>
+      <cvename>CVE-2026-126889</cvename>
+      <cvename>CVE-2026-126859</cvename>
+      <cvename>CVE-2026-126886</cvename>
+      <cvename>CVE-2026-126887</cvename>
+      <cvename>CVE-2026-126870</cvename>
+      <cvename>CVE-2026-126912</cvename>
+      <cvename>CVE-2026-126919</cvename>
+      <cvename>CVE-2026-126878</cvename>
+      <cvename>CVE-2026-126909</cvename>
+      <cvename>CVE-2026-126847</cvename>
+      <cvename>CVE-2026-126853</cvename>
+      <cvename>CVE-2026-126865</cvename>
+      <cvename>CVE-2026-126916</cvename>
+      <cvename>CVE-2026-126903</cvename>
+      <cvename>CVE-2026-126910</cvename>
+      <cvename>CVE-2026-126842</cvename>
+      <cvename>CVE-2026-126898</cvename>
+      <cvename>CVE-2026-126871</cvename>
+      <cvename>CVE-2026-126875</cvename>
+      <cvename>CVE-2026-126862</cvename>
+      <cvename>CVE-2026-126900</cvename>
+      <cvename>CVE-2026-126904</cvename>
+      <cvename>CVE-2026-126907</cvename>
+      <cvename>CVE-2026-126851</cvename>
+      <cvename>CVE-2026-126845</cvename>
+      <cvename>CVE-2026-126881</cvename>
+      <cvename>CVE-2026-126867</cvename>
+      <cvename>CVE-2026-126863</cvename>
+      <cvename>CVE-2026-126896</cvename>
+      <cvename>CVE-2026-126869</cvename>
+      <cvename>CVE-2026-126858</cvename>
+      <cvename>CVE-2026-126891</cvename>
+      <cvename>CVE-2026-126874</cvename>
+      <cvename>CVE-2026-126876</cvename>
+      <cvename>CVE-2026-126918</cvename>
+      <cvename>CVE-2026-126866</cvename>
+      <cvename>CVE-2026-126844</cvename>
+      <cvename>CVE-2026-126884</cvename>
+      <cvename>CVE-2026-126894</cvename>
+      <cvename>CVE-2026-126861</cvename>
+      <cvename>CVE-2026-126917</cvename>
+      <cvename>CVE-2026-126856</cvename>
+      <cvename>CVE-2026-126905</cvename>
+      <cvename>CVE-2026-126873</cvename>
+      <cvename>CVE-2026-126922</cvename>
+      <cvename>CVE-2026-126914</cvename>
+      <cvename>CVE-2026-126880</cvename>
+      <cvename>CVE-2026-126872</cvename>
+      <cvename>CVE-2026-126877</cvename>
+      <cvename>CVE-2026-126888</cvename>
+      <cvename>CVE-2026-126843</cvename>
+      <cvename>CVE-2026-126854</cvename>
+      <cvename>CVE-2026-126892</cvename>
+      <cvename>CVE-2026-126897</cvename>
+      <cvename>CVE-2026-126857</cvename>
+      <cvename>CVE-2026-126883</cvename>
+      <cvename>CVE-2026-126840</cvename>
+      <cvename>CVE-2026-126848</cvename>
+      <cvename>CVE-2026-126882</cvename>
+      <cvename>CVE-2026-126906</cvename>
+      <cvename>CVE-2026-126915</cvename>
+      <cvename>CVE-2026-126893</cvename>
+      <cvename>CVE-2026-126855</cvename>
+      <cvename>CVE-2026-126908</cvename>
+      <cvename>CVE-2026-126849</cvename>
+      <cvename>CVE-2026-126901</cvename>
+      <cvename>CVE-2026-126852</cvename>
+      <cvename>CVE-2026-126850</cvename>
+      <cvename>CVE-2026-126841</cvename>
+      <cvename>CVE-2026-126902</cvename>
+      <cvename>CVE-2026-126868</cvename>
+      <cvename>CVE-2026-126921</cvename>
+      <cvename>CVE-2026-126913</cvename>
+      <cvename>CVE-2026-126890</cvename>
+      <cvename>CVE-2026-126860</cvename>
+      <cvename>CVE-2026-126920</cvename>
+      <cvename>CVE-2026-126899</cvename>
+      <url>https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01744469280.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-11</discovery>
+      <entry>2026-11-16</entry>
+      <modified>2026-11-16</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="36f77a27-e080-11f1-bbb3-901b0e9408dc">
+    <topic>conduit -- event redaction vulnerability</topic>
+    <affects>
+      <package>
+	<name>matrix-conduit</name>
+	<range><lt>0.10.17</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Conduit team reports:</p>
+	<blockquote cite="https://gitlab.com/famedly/conduit/-/tags/v0.10.17">
+	  <p>Fixes a vulnerability where the redaction process didn't
+	  check if the event being redacted was from the same room as
+	  the redaction event.  It is recommended you upgrade
+	  ASAP.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://gitlab.com/famedly/conduit/-/tags/v0.10.17</url>
+    </references>
+    <dates>
+      <discovery>2026-11-14</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d6484a4c-e01c-11f1-8e2f-5404a68ad561">
+    <topic>traefik -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+      <name>traefik</name>
+      <range><lt>3.7.18</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+      <p>The traefik project releases a new version addressing multiple vulnerabilities:</p>
+      <blockquote cite="https://github.com/traefik/traefik/releases/tag/v3.7.18">
+      <ul>
+      <li>GHSA-ccgh-9g52-6vwg (nginx client certificate authentication verification bypass)</li>
+      <li>GHSA-cp28-5662-543f (path-based authorization bypass)</li>
+      <li>GHSA-p956-6gvv-mxqp (ForwardAuth NTLM authentication bypass via Proxy-Authorization)</li>
+      <li>GHSA-x5pf-cqh3-2gv8 (Unauthenticated memory-exhaustion DoS)</li>
+      <li>GHSA-rr42-h8r2-f28g (Unbounded BasicAuth password length)</li>
+      </ul>
+      </blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/traefik/traefik/releases/tag/v3.7.18</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4d2a90c7-df51-11f1-a655-3497f65b111b">
+    <topic>FreeIPA -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>freeipa-server</name>
+	  <range><lt>4.13.5</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The FreeIPA project reports:</p>
+	<blockquote cite="https://www.freeipa.org/release-notes/4-13-5.html">
+	  <p>CVE-2026-53683: client-side open redirect in reset_password.html.
+	    The page takes the url query parameter as a redirection target
+	    without validating or allow-listing it, so an attacker can send a
+	    user to an arbitrary site once the password reset completes. No
+	    authentication is required, and the link appears to come from the
+	    IdM domain, which makes it useful for phishing.</p>
+	  <p>CVE-2026-86593: unauthenticated denial of service in the session
+	    endpoints login_password, change_password and sync_token. They do
+	    not limit the size of the request body, so an attacker can tie up
+	    the WSGI worker pool. That pool serves the whole /ipa application,
+	    so exhausting it also denies the Kerberos authenticated paths such
+	    as the web interface and the admin RPC. This is the same root cause
+	    already fixed for i18n_messages and migration.py, whose fix covered
+	    only a single caller.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-53683</cvename>
+      <cvename>CVE-2026-86593</cvename>
+      <url>https://www.freeipa.org/release-notes/4-13-5.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-09</discovery>
+      <entry>2026-11-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e8416dd1-df3e-11f1-8608-589cfc0f9aca">
+    <topic>MongoDB Server -- Pre-authentication use-after-free in replica set primary catch-up</topic>
+    <affects>
+      <package>
+	<name>mongodb70</name>
+	<range><lt>7.0.48</lt></range>
+      </package>
+      <package>
+	<name>mongodb80</name>
+	<range><lt>8.0.37</lt></range>
+      </package>
+      <package>
+	<name>mongodb90</name>
+	<range><lt>9.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MongoDB reports:</p>
+	<blockquote cite="https://www.mongodb.com/community/forums/t/important-mongodb-security-update-available-action-required-november-10-2026/344843">
+	  <p>MongoDB identified and fixed an important vulnerability
+	    (CVE-2026-118383, CVSS 9.5) that could allow unauthorized access
+	    to the MongoDB Server. We found it internally through our
+	    proactive security program, and we are not aware of any attempts
+	    to take advantage of this vulnerability.</p>
+	</blockquote>
+	<p>https://jira.mongodb.org/browse/SERVER-138119 reports:</p>
+	<blockquote cite="https://jira.mongodb.org/browse/SERVER-138119">
+	  <p>A use-after-free in the replication component of MongoDB Server
+	    can occur when a newly elected replica set primary completes
+	    catch-up. The condition can be caused by requests that do not
+	    require authentication, and may result in the server terminating
+	    unexpectedly or, under certain conditions, arbitrary code
+	    execution in the context of the server process. Replica set
+	    members are affected, including the shard and config server
+	    replica set members of sharded clusters; standalone mongod
+	    instances are not.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-118383</cvename>
+      <url>https://cveawg.mitre.org/api/cve/CVE-2026-118383</url>
+      <url>https://www.mongodb.com/community/forums/t/important-mongodb-security-update-available-action-required-november-10-2026/344843</url>
+      <url>https://jira.mongodb.org/browse/SERVER-138119</url>
+      <url>https://jira.mongodb.org/browse/SERVER-138175</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="52ed373b-df37-11f1-8135-8447094a420f">
+    <topic>mod_http2 -- heap corruption and RCE in assign_headers</topic>
+    <affects>
+      <package>
+	<name>ap24-mod_http2</name>
+	<range><lt>2.0.43</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Apache httpd project reports:</p>
+	<blockquote cite="https://httpd.apache.org/security/vulnerabilities_24.html">
+	  <p>CVE-2026-119618 (critical): mod_http2: heap corruption and RCE in assign_headers</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-119618</cvename>
+      <url>https://httpd.apache.org/security/vulnerabilities_24.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-11</discovery>
+      <entry>2026-11-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1ede43e-de8c-11f1-bae2-3497f65b111b">
+    <topic>angie -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>angie</name>
+	<range><lt>1.12.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Angie Software Team reports:</p>
+	<blockquote cite="https://en.angie.software/angie/docs/oss_changes/#angie-1-12-4">
+	  <p>When variables were used in the root or alias directives, or
+	    in the log file path of the access_log directive in the HTTP
+	    module or the access_log directive in the stream module, worker
+	    process memory corruption or a worker process crash could occur
+	    (CVE-2026-93479).</p>
+	  <p>When the ssl_session_cache directive was used with the shared
+	    parameter without the ssl_session_ticket_key directive, an
+	    attacker could forge a TLS session and bypass client certificate
+	    verification (CVE-2026-97629).</p>
+	  <p>When requests received over HTTP/3 were proxied, a part of an
+	    unknown frame might be treated as the request body, which might
+	    result in bypassing the client_max_body_size limit or injecting
+	    data into the proxied request (CVE-2026-95101).</p>
+	  <p>When the alias directive was used, if the request URI was
+	    changed by the rewrite directive and the $request_filename
+	    variable was evaluated afterwards, worker process memory
+	    corruption or a worker process crash could occur
+	    (CVE-2026-15176).</p>
+	  <p>When asynchronous file I/O (aio) was used in certain
+	    configurations, if an SSI page contained include virtual
+	    commands, worker process memory corruption or a worker process
+	    crash could occur (CVE-2026-97205).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-93479</cvename>
+      <cvename>CVE-2026-97629</cvename>
+      <cvename>CVE-2026-95101</cvename>
+      <cvename>CVE-2026-15176</cvename>
+      <cvename>CVE-2026-97205</cvename>
+      <url>https://en.angie.software/angie/docs/oss_changes/#angie-1-12-4</url>
+    </references>
+    <dates>
+      <discovery>2026-10-16</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a1ee2283-de8c-11f1-bae2-3497f65b111b">
+    <topic>angie-module-njs -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>angie-module-njs</name>
+	<range><lt>1.0.2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The njs development team reports:</p>
+	<blockquote cite="https://nginx.org/en/docs/njs/changes.html#njs1.0.2">
+	  <p>Memory leak when parsing malformed XML in the njs engine
+	    (CVE-2026-101025).  Repeated malformed input could exhaust
+	    worker process memory.  Affects 0.7.10-1.0.1.</p>
+	  <p>Incomplete XML attribute values containing entity references
+	    (CVE-2026-101019).  JavaScript accessors could return values
+	    different from those used by XML canonicalization, affecting
+	    signed XML validation.  Affects 0.7.10-1.0.1.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-101025</cvename>
+      <cvename>CVE-2026-101019</cvename>
+      <url>https://nginx.org/en/docs/njs/changes.html#njs1.0.2</url>
+      <url>https://nginx.org/en/docs/njs/security.html#advisories</url>
+    </references>
+    <dates>
+      <discovery>2026-10-14</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f8802557-dea7-11f1-bf46-901b0e13f1a0">
+    <topic>X.Org X server and Xwayland -- Multiple vulnerabilities</topic>
+    <affects>
+<package>
+<name>xorg-server</name>
+<name>xephyr</name>
+<name>xorg-vfbserver</name>
+<range><lt>21.1.26,1</lt></range>
+</package>
+<package>
+<name>xorg-nestserver</name>
+<range><lt>21.1.26,2</lt></range>
+</package>
+<package>
+<name>xwayland</name>
+<range><lt>24.1.15,1</lt></range>
+</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>X.Org reports:</p>
+	<blockquote cite="https://lists.x.org/archives/xorg-announce/2026-November/003759.html">
+	  <p>
+	    CVE-2026-109091: X.Org Server EDID DS_RANGES Out-Of-Bounds Write
+	    CVE-2026-109092: X.Org Server XvShmPutImage Shared-Memory Bounds Overflow
+	    CVE-2026-109093: X.Org Server XTestFakeInput Valuator Stack Out-Of-Bounds Write
+	    CVE-2026-109094: X.Org Server XRes QueryResourceBytes Swap Path Size Overflow
+	    CVE-2026-109095: X.Org Server glamor Xv Image Size Integer Overflow
+	    CVE-2026-109096: X.Org Server XvPutImage Negative Image Size Length Bypass
+	    CVE-2026-109903: X.Org Server XvQueryImageAttributes Negative Size Reply
+	    CVE-2026-109904: X.Org Server XRes QueryClientIds Request Size Overflow
+	  </p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-109091</cvename>
+      <cvename>CVE-2026-109092</cvename>
+      <cvename>CVE-2026-109093</cvename>
+      <cvename>CVE-2026-109094</cvename>
+      <cvename>CVE-2026-109095</cvename>
+      <cvename>CVE-2026-109096</cvename>
+      <cvename>CVE-2026-109903</cvename>
+      <cvename>CVE-2026-109904</cvename>
+      <url>https://lists.x.org/archives/xorg-announce/2026-November/003759.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-10</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="1a672925-de93-11f1-9824-6cc21735f730">
+    <topic>PostgreSQL -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>postgresql14-server</name>
+	<name>postgresql14-client</name>
+	<name>postgresql14-contrib</name>
+	<name>postgresql14-plperl</name>
+	<name>postgresql14-pltcl</name>
+	<range><lt>14.25</lt></range>
+      </package>
+      <package>
+	<name>postgresql15-server</name>
+	<name>postgresql15-client</name>
+	<name>postgresql15-contrib</name>
+	<name>postgresql15-plperl</name>
+	<name>postgresql15-pltcl</name>
+	<range><lt>15.20</lt></range>
+      </package>
+      <package>
+	<name>postgresql16-server</name>
+	<name>postgresql16-client</name>
+	<name>postgresql16-contrib</name>
+	<name>postgresql16-plperl</name>
+	<name>postgresql16-pltcl</name>
+	<range><lt>16.16</lt></range>
+      </package>
+      <package>
+	<name>postgresql17-server</name>
+	<name>postgresql17-client</name>
+	<name>postgresql17-contrib</name>
+	<name>postgresql17-plperl</name>
+	<name>postgresql17-pltcl</name>
+	<range><lt>17.12</lt></range>
+      </package>
+      <package>
+	<name>postgresql18-server</name>
+	<name>postgresql18-client</name>
+	<name>postgresql18-contrib</name>
+	<name>postgresql18-plperl</name>
+	<name>postgresql18-pltcl</name>
+	<range><lt>18.7</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PostgreSQL project reports:</p>
+	<blockquote cite="https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/">
+	  <ul>
+	    <li>CVE-2026-6460: Add defenses against problems caused by
+	      altering composite types concurrently with operations on data of
+	      those types</li>
+	    <li>CVE-2026-6464: Ensure that psql counts all the COPY FROM STDIN
+	      commands appearing in a multi-query command string</li>
+	    <li>CVE-2026-6467: Prevent corrupting a newly-installed extension
+	      by renaming its target schema during CREATE EXTENSION or by
+	      installing it into a temporary schema</li>
+	    <li>CVE-2026-14661: Validate all connection options in replication
+	      subscriptions and contrib/dblink</li>
+	    <li>CVE-2026-16237: Enforce view row visibility in INSERT ... ON
+	      CONFLICT</li>
+	    <li>CVE-2026-16240: Fix use of externally-controlled format string
+	      in pg_basebackup</li>
+	    <li>CVE-2026-18447: Disallow declaring SQL functions as returning
+	      type "any"</li>
+	    <li>CVE-2026-116303: Check EXECUTE privilege before calling cast
+	      functions within to_json() and other conversion-to-JSON code;
+	      Check EXECUTE privilege before calling cast functions within
+	      foreign key enforcement checks</li>
+	    <li>CVE-2026-116304: Fix race condition leading to use-after-free
+	      in shared tupledesc management</li>
+	    <li>CVE-2026-116306: Cope with concurrent rowtype changes in
+	      ExecEvalFieldStore[De]Form()</li>
+	    <li>CVE-2026-116307: In PL/Perl, fix use-after-free triggered by
+	      releasing a prepared query that is being executed</li>
+	    <li>CVE-2026-116308: In contrib/dict_int, return NULL for
+	      zero-length tokens</li>
+	    <li>CVE-2026-116309: Fix type confusion in PL/Perl's
+	      get_perl_array_ref()</li>
+	    <li>CVE-2026-116310: Fix use-after-free in COPY FROM ON_ERROR
+	      reporting (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116311: Prevent DROP OWNED BY from changing row-level
+	      security policies on tables that the current user does not
+	      own</li>
+	    <li>CVE-2026-116312: Avoid inserting the wrong tuple into a
+	      trigger transition table in a MERGE that does an INSERT followed
+	      by an UPDATE (PostgreSQL 15, 16, 17, 18 only)</li>
+	    <li>CVE-2026-116313: Use fully-qualified operator names in
+	      vacuumdb (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116314: Harden pg_restore against corrupt archive
+	      files</li>
+	    <li>CVE-2026-116315: Fix buffer overrun in tsvector_delete()</li>
+	    <li>CVE-2026-116316: Disallow security-restricted operations from
+	      creating types in temporary schemas</li>
+	    <li>CVE-2026-116317: Fix buffer overrun in ts_rank_cd()</li>
+	    <li>CVE-2026-116318: Ensure that pg_dump quotes the names of NOT
+	      NULL constraints (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116319: Fix use-after-free in
+	      plperl_return_next_internal()</li>
+	    <li>CVE-2026-116320: Fix use-after-free in scans of Perl arrays
+	      and hashes</li>
+	    <li>CVE-2026-116321: Prevent construction of invalid name values
+	      via element assignment</li>
+	    <li>CVE-2026-116322: Delay processing of cancel request packets
+	      until it's safe to handle them (PostgreSQL 18 only)</li>
+	    <li>CVE-2026-116323: Fix use-after-free hazards in re-entrant use
+	      of PL/Tcl</li>
+	    <li>CVE-2026-116325: Ensure that reindexdb correctly quotes index
+	      names it is dealing with (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116326: Support tied Perl objects in PL/Perl and
+	      associated contrib modules; Fix PL/Perl to cope with errors thrown
+	      from tied objects</li>
+	    <li>CVE-2026-116327: Treat application of a leaky function to a
+	      CaseTestExpr or internal Param node as leaky</li>
+	    <li>CVE-2026-116328: Prevent memory corruption after a large
+	      allocation in a generation memory context is freed (PostgreSQL 15,
+	      16, 17, 18 only)</li>
+	    <li>CVE-2026-116329: Guard against malicious alteration of a table
+	      while a statistics import function is running on it (PostgreSQL 18
+	      only)</li>
+	    <li>CVE-2026-116330: Make the \[un]restrict commands functional in
+	      pg_dump's tar-format output</li>
+	    <li>CVE-2026-116331: Don't generate an index-based plan for an
+	      aggregate whose input and output types don't match</li>
+	    <li>CVE-2026-116332: Disallow closing a portal that is still being
+	      set up</li>
+	    <li>CVE-2026-116333: Avoid out-of-bounds reads in parallel btree
+	      scans with array keys (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-116335: Check that commutator and negator operator
+	      pairs return the same data type</li>
+	    <li>CVE-2026-116336: Prevent functions in index predicates and
+	      expressions from breaking REINDEX CONCURRENTLY by manipulating the
+	      indexes</li>
+	    <li>CVE-2026-120139: Harden more memory-size calculations against
+	      integer overflow</li>
+	    <li>CVE-2026-120141: Fix type confusion in set-returning functions
+	      that return RECORD, when materialized in a query's target
+	      list</li>
+	    <li>CVE-2026-120142: Handle dropped columns safely while comparing
+	      row types (PostgreSQL 17, 18 only)</li>
+	    <li>CVE-2026-120143: Forcibly close portals associated with
+	      transition tables at the end of the trigger function</li>
+	    <li>CVE-2026-120144: Replace the type cache's in_progress_list
+	      mechanism with something simpler and safer (PostgreSQL 18
+	      only)</li>
+	    <li>CVE-2026-120145: Reject system catalogs as logical replication
+	      targets</li>
+	    <li>CVE-2026-120146: Align REASSIGN OWNED's caller-privilege
+	      checks with ALTER ... OWNER TO's checks</li>
+	    <li>CVE-2026-120147: Reject re-entrant use of contrib/dblink</li>
+	    <li>CVE-2026-120148: Refuse to create extended statistics on
+	      expressions of transient types</li>
+	    <li>CVE-2026-120149: Avoid out-of-bounds accesses in FDW batch
+	      inserts</li>
+	    <li>CVE-2026-120150: Fix use-after-free in expanded-record domain
+	      constraint checking</li>
+	    <li>CVE-2026-120151: Cope with concurrent rowtype changes in
+	      PL/pgSQL record field assignment</li>
+	    <li>CVE-2026-120152: Fix use-after-free in pg_show_all_settings()
+	      (PostgreSQL 16, 17, 18 only)</li>
+	    <li>CVE-2026-120153: Reject more unsafe names in extension script
+	      substitutions</li>
+	    <li>CVE-2026-120154: Check ON CONFLICT target row against RLS
+	      policies before applying user quals</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-6460</cvename>
+      <cvename>CVE-2026-6464</cvename>
+      <cvename>CVE-2026-6467</cvename>
+      <cvename>CVE-2026-14661</cvename>
+      <cvename>CVE-2026-16237</cvename>
+      <cvename>CVE-2026-16240</cvename>
+      <cvename>CVE-2026-18447</cvename>
+      <cvename>CVE-2026-116303</cvename>
+      <cvename>CVE-2026-116304</cvename>
+      <cvename>CVE-2026-116306</cvename>
+      <cvename>CVE-2026-116307</cvename>
+      <cvename>CVE-2026-116308</cvename>
+      <cvename>CVE-2026-116309</cvename>
+      <cvename>CVE-2026-116310</cvename>
+      <cvename>CVE-2026-116311</cvename>
+      <cvename>CVE-2026-116312</cvename>
+      <cvename>CVE-2026-116313</cvename>
+      <cvename>CVE-2026-116314</cvename>
+      <cvename>CVE-2026-116315</cvename>
+      <cvename>CVE-2026-116316</cvename>
+      <cvename>CVE-2026-116317</cvename>
+      <cvename>CVE-2026-116318</cvename>
+      <cvename>CVE-2026-116319</cvename>
+      <cvename>CVE-2026-116320</cvename>
+      <cvename>CVE-2026-116321</cvename>
+      <cvename>CVE-2026-116322</cvename>
+      <cvename>CVE-2026-116323</cvename>
+      <cvename>CVE-2026-116325</cvename>
+      <cvename>CVE-2026-116326</cvename>
+      <cvename>CVE-2026-116327</cvename>
+      <cvename>CVE-2026-116328</cvename>
+      <cvename>CVE-2026-116329</cvename>
+      <cvename>CVE-2026-116330</cvename>
+      <cvename>CVE-2026-116331</cvename>
+      <cvename>CVE-2026-116332</cvename>
+      <cvename>CVE-2026-116333</cvename>
+      <cvename>CVE-2026-116335</cvename>
+      <cvename>CVE-2026-116336</cvename>
+      <cvename>CVE-2026-120139</cvename>
+      <cvename>CVE-2026-120141</cvename>
+      <cvename>CVE-2026-120142</cvename>
+      <cvename>CVE-2026-120143</cvename>
+      <cvename>CVE-2026-120144</cvename>
+      <cvename>CVE-2026-120145</cvename>
+      <cvename>CVE-2026-120146</cvename>
+      <cvename>CVE-2026-120147</cvename>
+      <cvename>CVE-2026-120148</cvename>
+      <cvename>CVE-2026-120149</cvename>
+      <cvename>CVE-2026-120150</cvename>
+      <cvename>CVE-2026-120151</cvename>
+      <cvename>CVE-2026-120152</cvename>
+      <cvename>CVE-2026-120153</cvename>
+      <cvename>CVE-2026-120154</cvename>
+      <url>https://www.postgresql.org/docs/release/18.7/</url>
+      <url>https://www.postgresql.org/docs/release/17.12/</url>
+      <url>https://www.postgresql.org/docs/release/16.16/</url>
+      <url>https://www.postgresql.org/docs/release/15.20/</url>
+      <url>https://www.postgresql.org/docs/release/14.25/</url>
+    </references>
+    <dates>
+      <discovery>2026-11-12</discovery>
+      <entry>2026-11-12</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="05286f93-de01-11f1-bbb3-901b0e9408dc">
     <topic>conduit -- e2ee signing keys vulnerability</topic>
     <affects>
@@ -110,7 +2041,8 @@
 	<name>libressl-libtls</name>
 	<name>libressl-devel</name>
 	<name>libressl-devel-libtls</name>
-	<range><lt>4.4.1</lt></range>
+	<range><lt>4.3.5</lt></range>
+	<range><ge>4.4.0</ge><lt>4.4.1</lt></range>
       </package>
     </affects>
     <description>
@@ -127,6 +2059,7 @@
     <dates>
       <discovery>2026-11-11</discovery>
       <entry>2026-11-11</entry>
+      <modified>2026-11-12</modified>
     </dates>
   </vuln>
 
@@ -4815,50 +6748,6 @@
     </dates>
   </vuln>
 
-  <vuln vid="b755b277-cf12-11f1-bae2-3497f65b111b">
-    <topic>ca_root_nss -- trusted root certificate from compromised CA eMudhra</topic>
-    <affects>
-      <package>
-	<name>ca_root_nss</name>
-	<range><lt>3.131.1</lt></range>
-      </package>
-    </affects>
-    <description>
-      <body xmlns="http://www.w3.org/1999/xhtml">
-	<h1>Problem Description:</h1>
-	  <p>eMudhra generated several of its TLS intermediate CA certificates
-	  with trivially small private keys, which have since been recovered
-	  and publicly disclosed.  Those intermediates are signed by the
-	  "emSign ECC Root CA - G3" root certificate, which this port installs
-	  as part of its trusted bundle up to and including version 3.131.
-	  NSS 3.131.1 removes the root certificate.</p>
-	  <p>The intermediates have been revoked, but OpenSSL does not check
-	  certificate revocation by default.</p>
-	  <p>FreeBSD-SA-26:73.caroot addresses the base system trust store by
-	  marking the root certificate as untrusted.  That only affects the
-	  store generated by certctl(8), never the bundle installed by this
-	  port.  On FreeBSD 14 the port owns /etc/ssl/cert.pem by default, and
-	  software reading the bundle directly, such as programs built with Go
-	  or Rust, uses /usr/local/etc/ssl/cert.pem or /usr/local/share/certs
-	  on every version of FreeBSD.  Such configurations keep trusting the
-	  root certificate until the package is updated.</p>
-	<h1>Impact:</h1>
-	  <p>An attacker able to intercept network traffic can use the
-	  compromised keys to issue a certificate that impersonates any TLS
-	  server, allowing the traffic to be read or modified without
-	  detection.</p>
-      </body>
-    </description>
-    <references>
-      <freebsdsa>SA-26:73.caroot</freebsdsa>
-      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=2084101</url>
-    </references>
-    <dates>
-      <discovery>2026-10-21</discovery>
-      <entry>2026-10-23</entry>
-    </dates>
-  </vuln>
-
   <vuln vid="158544f8-cf02-11f1-b0f1-d0f4051da3a3">
     <topic>vifm -- Unverified Ownership</topic>
     <affects>
@@ -6069,13 +7958,17 @@ record.</li>
   </vuln>
 
   <vuln vid="070a35ef-cd22-11f1-ada3-bc241121aa0a">
-    <topic>FreeBSD -- TLS certificate store update due to eMudhra compromise</topic>
+    <topic>TLS certificate store update due to eMudhra compromise</topic>
     <affects>
       <package>
 	<name>FreeBSD</name>
 	<range><ge>15.1</ge><lt>15.1_6</lt></range>
 	<range><ge>14.5</ge><lt>14.5_3</lt></range>
 	<range><ge>14.4</ge><lt>14.4_12</lt></range>
+      </package>
+      <package>
+	<name>ca_root_nss</name>
+	<range><lt>3.131.1</lt></range>
       </package>
     </affects>
     <description>
@@ -6092,6 +7985,14 @@ record.</li>
 	  <p>The corrected bundle marks "emSign ECC Root CA - G3" as untrusted.
 	  It also incorporates the other root certificate additions and
 	  removals in NSS 3.131.1.</p>
+	  <p>FreeBSD-SA-26:73.caroot addresses the base system trust store by
+	  marking the root certificate as untrusted.  That only affects the
+	  store generated by certctl(8), never the bundle installed by this
+	  port.  On FreeBSD 14 the port owns /etc/ssl/cert.pem by default, and
+	  software reading the bundle directly, such as programs built with Go
+	  or Rust, uses /usr/local/etc/ssl/cert.pem or /usr/local/share/certs
+	  on every version of FreeBSD.  Such configurations keep trusting the
+	  root certificate until the package is updated.</p>
 	<h1>Impact:</h1>
 	  <p>An attacker able to intercept network traffic can use the
 	  compromised keys to issue a certificate that impersonates any TLS
@@ -6101,10 +8002,12 @@ record.</li>
     </description>
     <references>
       <freebsdsa>SA-26:73.caroot</freebsdsa>
+      <url>https://bugzilla.mozilla.org/show_bug.cgi?id=2084101</url>
     </references>
     <dates>
       <discovery>2026-10-21</discovery>
       <entry>2026-10-21</entry>
+      <modified>2026-11-17</modified>
     </dates>
   </vuln>
 
