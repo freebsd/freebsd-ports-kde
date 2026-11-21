@@ -588,7 +588,6 @@
     SUBDIR += iograph
     SUBDIR += iohyve
     SUBDIR += ioping
-    SUBDIR += ipa
     SUBDIR += ipad_charge
     SUBDIR += ipdbtools
     SUBDIR += ipget
@@ -656,7 +655,6 @@
     SUBDIR += kubie
     SUBDIR += kubo-go
     SUBDIR += kustomize
-    SUBDIR += kvmclock-kmod
     SUBDIR += lazydocker
     SUBDIR += lazyssh
     SUBDIR += lbl-cf

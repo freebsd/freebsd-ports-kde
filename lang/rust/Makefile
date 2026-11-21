@@ -1,6 +1,6 @@
 PORTNAME=	rust
 PORTVERSION?=	1.99.1
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/:src \
 		https://dev-static.rust-lang.org/dist/:src \
@@ -28,11 +28,9 @@ ONLY_FOR_ARCHS_REASON?=	requires prebuilt bootstrap compiler
 
 LIB_DEPENDS=	libcurl.so:ftp/curl
 
-USES=		cmake:indirect cpe ninja:build pkgconfig python:build shebangfix ssl tar:xz
+USES=		cmake:indirect cpe ninja:build pkgconfig python:build ssl tar:xz
 
 CPE_VENDOR=	rust-lang
-
-SHEBANG_FILES=	compiler/rustc_codegen_cranelift/.github/scripts/free-disk-space.sh
 
 MAKE_ENV=	DESTDIR=${STAGEDIR} \
 		LIBGIT2_NO_PKG_CONFIG=1 \
@@ -153,6 +151,9 @@ IGNORE=	fails to build with qemu-user-static
 DISTFILES:=	${DISTFILES:M*\:src} \
 		${ONLY_FOR_ARCHS:O:@_arch@${:!${MAKE} ARCH=${_arch} -V'DISTFILES:N*\:src'!}@}
 .endif
+
+post-extract:
+	@${FIND} -d ${WRKSRC} -name .github -exec ${RM} -r {} \;
 
 post-patch:
 	@${REINPLACE_CMD} 's,gdb,${LOCALBASE}/bin/gdb,' ${WRKSRC}/src/etc/rust-gdb
