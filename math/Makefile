@@ -167,6 +167,7 @@
     SUBDIR += R-cran-uroot
     SUBDIR += R-cran-wk
     SUBDIR += R-cran-xts
+    SUBDIR += R-cran-yardstick
     SUBDIR += R-cran-zoo
     SUBDIR += SCIP
     SUBDIR += SoPlex
@@ -1018,6 +1019,7 @@
     SUBDIR += py-evalidate
     SUBDIR += py-fairlearn
     SUBDIR += py-faiss
+    SUBDIR += py-fast-simplification
     SUBDIR += py-fastcluster
     SUBDIR += py-fdasrsf
     SUBDIR += py-fenics-basix
@@ -1203,6 +1205,7 @@
     SUBDIR += py-uncertainties
     SUBDIR += py-unyt
     SUBDIR += py-vector
+    SUBDIR += py-vhacdx
     SUBDIR += py-vincenty
     SUBDIR += py-yt
     SUBDIR += py-z3-solver

@@ -5,7 +5,7 @@
 #
 # 5:		Depend on KDE Frameworks 5 components and variables.
 # 6:		Depend on KDE Frameworks 6 components and variables.
-#		The version may be omitted when all required components are
+#		The version should be omitted when all required components are
 #		indifferent to the Frameworks version, e.g. ecm or breeze-icons.
 #
 # Variables that can be set by a port:
@@ -100,9 +100,9 @@ PORTSCOUT=		limit:^6\.6\.
 .  elif ${CATEGORIES:Mkde-plasma}
 _PLASMA_VER=		6
 CONFLICTS_INSTALL+=	plasma6lts-${PORTNAME}-6.*
-.     if ${KDE_PLASMA_DEFAULT} != 6 && empty(_USE_PLASMA_LATEST:M${PORTNAME})
+.    if ${KDE_PLASMA_DEFAULT} != 6 && empty(_USE_PLASMA_LATEST:M${PORTNAME})
 IGNORE=		cannot be installed: Plasma 6 LTS is set a as default distribution
-.     endif
+.    endif
 .  endif
 
 .  if !${_PLASMA_SUPPORTED:M${_PLASMA_VER}}
@@ -133,7 +133,7 @@ KDE_FRAMEWORKS5_VERSION?=	5.116.0
 KDE_FRAMEWORKS5_BRANCH?=	stable
 
 # Current KDE Frameworks (Qt6 based).
-KDE_FRAMEWORKS6_VERSION?=	6.31.0
+KDE_FRAMEWORKS6_VERSION?=	6.32.0
 KDE_FRAMEWORKS6_BRANCH?=	stable
 
 # Current KDE applications.
@@ -212,6 +212,7 @@ LICENSE?=		LGPL20
 #    vendor is therefore kde.
 CPE_VENDOR?=		kde
 
+# === Gear ===
 .    if ${_KDE_CATEGORY:Mkde-applications}
 PORTVERSION?=		${KDE_APPLICATIONS_VERSION}
 MASTER_SITES?=		KDE/${KDE_APPLICATIONS_BRANCH}/release-service/${KDE_APPLICATIONS_VERSION}/src
@@ -233,6 +234,8 @@ PLIST_SUB+=		KDE_PIM_SHLIB_VER=${KDE_PIM_SHLIB_VER} \
 PLIST_SUB+=		SHLIB_VER_LONG=${_${PORTNAME}_PROJECT_VERSION}.${KDE_APPS_BASED_PATCHLEVEL}
 .      endif
 DIST_SUBDIR?=		KDE/release-service/${KDE_APPLICATIONS_VERSION}
+
+# === Plasma ===
 .    elif ${_KDE_CATEGORY:Mkde-plasma} || ${_KDE_CATEGORY:Mkde-plasma6lts}
 PORTVERSION?=		${KDE_PLASMA_VERSION}
 PKGNAMEPREFIX?=		plasma${_PLASMA_VER}-
@@ -240,6 +243,8 @@ MASTER_SITES?=		KDE/${KDE_PLASMA_BRANCH}/plasma/${KDE_PLASMA_VERSION}
 DIST_SUBDIR?=		KDE/plasma/${KDE_PLASMA_VERSION}
 WWW?=			https://kde.org/plasma-desktop/
 DESCR=			${.CURDIR:H:H}/x11/plasma${_PLASMA_VER}-plasma/pkg-descr
+
+# === Frameworks ===
 .    elif ${_KDE_CATEGORY:Mkde-frameworks}
 PORTVERSION?=		${KDE_FRAMEWORKS_VERSION}
 PKGNAMEPREFIX?=		kf${_KDE_VERSION}-
@@ -252,17 +257,18 @@ MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION
 .        else
 MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}
 .        endif
-.      else
-MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}
-.      endif
 DIST_SUBDIR?=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION}
-.      if ${_KDE_VERSION:M6}
+PORTSCOUT=		limit:^5\.
+# https://bugs.freebsd.org/299313
+DEPRECATED=		Depends on unsupported Qt 5
+EXPIRATION_DATE=	2026-12-31
+.      else # KDE Frameworks 6
+MASTER_SITES?=		KDE/${KDE_FRAMEWORKS_BRANCH}/frameworks/${KDE_FRAMEWORKS_VERSION:R}
 DIST_SUBDIR=		KDE/frameworks/${KDE_FRAMEWORKS_VERSION:R}
 DESCR=			${.CURDIR:H:H}/x11/kf6-frameworks/pkg-descr
 .      endif
-.      if ${_KDE_VERSION:M5}
-PORTSCOUT=	limit:^5\.
-.      endif
+
+# ===
 .    else
 IGNORE?=		unknown CATEGORY value '${_KDE_CATEGORY}' #'
 .    endif
@@ -279,8 +285,6 @@ CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH="${LOCALBASE}"
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH="${LOCALBASE};${KDE_PREFIX}" \
 		-DCMAKE_INSTALL_PREFIX="${KDE_PREFIX}" \
 		-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=true
-
-KDE_MAN_PREFIX?=	${KDE_PREFIX}/share/man
 
 # Enforce the chosen Qt Version
 CMAKE_ARGS+=	-DQT_MAJOR_VERSION=${_QT_VER}
@@ -349,9 +353,8 @@ _USE_PLASMA6_ALL=	activities activities-stats activitymanagerd \
 			aurorae breeze breeze-gtk decoration discover \
 			globalacceld infocenter kde-cli-tools \
 			kde-gtk-config kdeplasma-addons kmenuedit \
-			knighttime \
-			kpipewire kscreen kscreenlocker ksshaskpass \
-			ksystemstats kwallet-pam kwin kwrited \
+			knighttime kpipewire kscreen kscreenlocker \
+			ksshaskpass ksystemstats kwallet-pam kwin kwrited \
 			layer-shell-qt libkscreen libksysguard libplasma \
 			milou ocean-sound-theme oxygen oxygen-sounds \
 			plasma-browser-integration plasma-desktop \

@@ -1,3 +1,404 @@
+  <vuln vid="cb0b8278-b308-4b8d-82b3-4e8235a7aaa2">
+    <topic>ruby -- heap-based buffer overflow</topic>
+    <affects>
+      <package>
+	<name>ruby33</name>
+	<range><ge>3.3,1</ge><lt>3.3.14,1</lt></range>
+      </package>
+      <package>
+	<name>ruby34</name>
+	<range><ge>3.4.0,1</ge><lt>3.4.13,1</lt></range>
+      </package>
+      <package>
+	<name>ruby40</name>
+	<range><ge>4.0.0,1</ge><lt>4.0.10,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CVE-2026-132825: Ruby before 3.3.14, 3.4.13, and 4.0.10 has a heap-
+	  based buffer overflow during case conversion. One byte can be
+	  written outside a buffer for, for example, ISO-8859-1 or
+	  Windows-1252.</p>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-132825</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-132825</url>
+    </references>
+    <dates>
+      <discovery>2026-11-19</discovery>
+      <entry>2026-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f3974045-b3af-403d-b169-b3c830a93fc4">
+    <topic>ruby -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>ruby33</name>
+	<range><lt>3.3.13,1</lt></range>
+      </package>
+      <package>
+	<name>ruby34</name>
+	<range><lt>3.4.12,1</lt></range>
+      </package>
+      <package>
+	<name>ruby40</name>
+	<range><lt>4.0.9,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	  <p>k0kubun reports:</p>
+	  <blockquote cite="https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/">
+	  <ul>
+	    <li>CVE-2026-89078: Double Free issue in Regular Expression Parser</li>
+	    <li>CVE-2026-93577: Integer Overflow issue in Regular Expression Compiler</li>
+	    <li>CVE-2026-97229: Integer Overflow issue in CI/CD Regular Expression Compiler</li>
+	    <li>CVE-2026-110264: Integer Overflow issue in Regular Expression Compiler</li>
+	  </ul>
+	  </blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-89078</cvename>
+      <cvename>CVE-2026-93577</cvename>
+      <cvename>CVE-2026-97229</cvename>
+      <cvename>CVE-2026-110264</cvename>
+      <url>https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/</url>
+    </references>
+    <dates>
+      <discovery>2026-10-23</discovery>
+      <entry>2026-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="16776118-a5b5-4295-807e-17b62c83bcc5">
+    <topic>rubygem-activestorage -- arbitrary file write and read</topic>
+    <affects>
+      <package>
+	<name>rubygem-activestorage81</name>
+	<range><ge>8.1</ge><lt>8.1.4.1</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activestorage80</name>
+	<range><lt>8.0.5.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	  <p>flavorjones reports:</p>
+	  <blockquote cite="https://github.com/rails/rails/security/advisories/GHSA-f3w6-w445-fwh9">
+	  <p>A Rails application that processes attachments with
+	  ImageMagick may allow an unauthenticated attacker to write
+	  arbitrary files on the server and, when attachments are
+	  stored with the Disk service, to read arbitrary files
+	  readable by the application process. Those files typically
+	  include secret_key_base and credentials for external
+	  systems, which may in turn allow escalation to remote
+	  code execution or lateral movement to those systems.</p>
+	  </blockquote>
+	</body>
+    </description>
+    <references>
+      <cvename>CVE-2026-122006</cvename>
+      <url>https://nvd.nist.gov/vuln/detail/CVE-2026-122006</url>
+      <url>https://github.com/rails/rails/security/advisories/GHSA-f3w6-w445-fwh9</url>
+    </references>
+    <dates>
+      <discovery>2026-11-03</discovery>
+      <entry>2026-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b8fc42ea-e738-11f1-b58b-8447094a420f">
+    <topic>Roundcube mail -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>roundcube-php82</name>
+	<name>roundcube-php83</name>
+	<name>roundcube-php84</name>
+	<name>roundcube-php85</name>
+	<name>roundcube-php85</name>
+	<range><lt>1.7.7,1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Roundcube mail project reports:</p>
+	<blockquote cite="https://roundcube.net/news/2026/11/23/security-updates-1.6.22-and-1.7.7">
+	  <p>Check link for details.</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://roundcube.net/news/2026/11/23/security-updates-1.6.22-and-1.7.7</url>
+    </references>
+    <dates>
+      <discovery>2026-11-23</discovery>
+      <entry>2026-11-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d113e97-e6db-11f1-8ead-93299b7f89e8">
+    <topic>gpgme -- double free vulnerability</topic>
+    <affects>
+      <package>
+	<name>gpgme</name>
+	<range><lt>2.3.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>GnuPG reports:</p>
+	<blockquote cite="https://static.dev.gnupg.org/T8557">
+	  <p>By using an OpenPGP key containing a crafted very long user id it
+	    is possible to trigger a double free. This double free can be used
+	    exfiltrate data from applications by sending for example signed
+	    data. Exploiting this bug to mount an Remote Code Execution attack
+	    (RCE) can't be ruled out.</p>
+	  <p>The root cause for this bug are two GPGME internal functions to
+	    read the status lines and key listings from gpg. Initially a buffer
+	    of 1024 bytes is allocated which is reallocated if more space is
+	    required. When reallocating the pointer to the new buffer, it is used
+	    by the function, but it is only assigned back to the context object
+	    at the end of the function. Thus if the function returns early due
+	    to a read error or other events, the context is not updated and
+	    keeps the stale pointer to the freed memory. Eventually, the context
+	    is released and the memory is freed a second time. Due to other
+	    allocations in between the common double free checks of memory
+	    allocators may not be triggered.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-129975</cvename>
+      <url>https://static.dev.gnupg.org/T8557</url>
+      <url>https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html</url>
+    </references>
+    <dates>
+      <discovery>2026-11-20</discovery>
+      <entry>2026-11-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0da120f6-e687-11f1-aceb-3c7c3fba4204">
+    <topic>Blocky -- multiple vulnerabilities</topic>
+    <affects>
+	<package>
+	  <name>blocky</name>
+	  <range><lt>0.37.0</lt></range>
+	</package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Blocky Project reports:</p>
+	<blockquote cite="https://github.com/0xERR0R/blocky/releases/tag/v0.37.0">
+	  <p>Thanks to <a href="https://github.com/kevinpark1217">@kevinpark1217</a> for reporting these seven
+	     findings, fixing them, and contributing regression tests. If you use Blocky’s built-in validator
+	     (dnssec.validate: true), upgrade to v0.37.0. Six fixes affect earlier releases; the seventh hardens
+	     code introduced during development of v0.37.0.</p>
+	  <ul>
+	    <li>Chain of trust (GHSA-rfc7-q64c-hj2f): DS and DNSKEY records must belong to the zone being validated.
+		If Blocky cannot complete validation beneath a trust anchor, it returns SERVFAIL rather than serving
+		unchecked data.</li>
+	    <li>Complete answers (GHSA-8mfq-h5hh-mqf2): Blocky checks that the answer matches the question and response
+		code. A signed alias leading to unsigned data no longer marks the whole answer as authenticated (AD).</li>
+	    <li>Authority for negative answers (GHSA-6fgw-qmpq-vwxp): Proof that a name or record does not exist must
+		come from the zone responsible for it. A signature from another zone is not sufficient.</li>
+	    <li>Wildcard and denial proofs (GHSA-mv8x-2h8p-g3wh): Blocky now requires complete proofs for wildcard answers,
+		nonexistent names (NXDOMAIN), and missing record types (NODATA), including checking for aliases where required.</li>
+	    <li>NSEC3 Opt-Out (GHSA-583r-m4vv-q43p): Blocky requires a complete proof from the parent before treating a delegation
+		as unsigned.</li>
+	    <li>RSA signature failures (GHSA-g35c-mff8-4w2w): A failed signature under a supported algorithm is rejected rather than
+		treated as evidence that the data is unsigned.</li>
+	    <li>Validation work limits (development builds only; GHSA-vgm3-vqcv-4hv6): Blocky bounds RSA exponent size and
+		signature-verification work per query. No prior release shipped the large-exponent fallback affected by this finding.</li>
+	  </ul>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/0xERR0R/blocky/releases/tag/v0.37.0</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-rfc7-q64c-hj2f</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-8mfq-h5hh-mqf2</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-6fgw-qmpq-vwxp</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-mv8x-2h8p-g3wh</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-583r-m4vv-q43p</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-g35c-mff8-4w2w</url>
+      <url>https://github.com/0xERR0R/blocky/security/advisories/GHSA-vgm3-vqcv-4hv6</url>
+    </references>
+    <dates>
+      <discovery>2026-11-21</discovery>
+      <entry>2026-11-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="15b98472-e624-11f1-9eae-18cf5efc6bb4">
+    <topic>openvoxdb -- An authenticated node can write another node's factset through the PuppetDB facts terminus</topic>
+    <affects>
+      <package>
+	<name>openvoxdb-terminus8</name>
+	<range><lt>8.18.1</lt></range>
+      </package>
+      <package>
+	<name>openvoxdb-terminus9</name>
+	<range><lt>9.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+	<body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenVoxProject reports:</p>
+	<blockquote cite="https://voxpupuli.org/blog/2026/11/19/openvoxdb-factset-overwrite/">
+	<p>Let’s do a quick refresher on the lifecycle of OpenVox facts.</p>
+	<p>
+	  When the agent starts a run, it generates facts and sends them to
+	  the server along with the catalog request. The server combines
+	  them with trusted information from the agent’s SSL certificate and
+	  uses them during compilation. It also caches these facts in
+	  OpenVoxDB where they can be used for other purposes; dashboards,
+	  OpenBolt target lists, puppetdb_query() calls, etc.
+	</p>
+	<p>
+	  Outside of regular catalog compilation, agents can update their
+	  own cached facts using the /puppet/v3/facts endpoint. The flaw
+	  fixed in this release is that OpenVoxDB was not validating that
+	  the factset being stored with this endpoint actually represented
+	  the agent submitting the facts!
+	</p>
+	<p>
+	  Now, to be clear, this doesn’t directly affect classification or
+	  Hiera lookups. Those will always use the fresh factset submitted
+	  by the agent. What is affected is any classification using or
+	  gated behind puppetdb_query() calls or any OpenBolt plans that use
+	  a puppetdb_query() or OpenBolt tasks that use PQL to select a list
+	  of targets. This would also affect any custom administration
+	  tooling that used facts from OpenVoxDB.
+	</p>
+	<p>
+	  In particular, this could lead to administrative actions intended
+	  for one node actually executing on another node, which a skilled
+	  attacker could leverage via social engineering to achieve
+	  privilege escalation.
+	</p>
+	</blockquote>
+	</body>
+    </description>
+    <references>
+      <url>https://github.com/OpenVoxProject/openvoxdb/security/advisories/GHSA-859m-7qpm-85p7</url>
+    </references>
+    <dates>
+      <discovery>2026-11-19</discovery>
+      <entry>2026-11-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8f3c2d4-e5a1-11f1-bae2-3497f65b111b">
+    <topic>angie -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>angie</name>
+	<range><lt>1.12.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Angie Software Team reports:</p>
+	<blockquote cite="https://en.angie.software/angie/docs/oss_changes/#angie-1-12-5">
+	  <p>When the try_files directive with values containing variables
+	    was used in a location with the alias directive, a buffer overflow
+	    might occur in certain configurations, allowing an attacker to
+	    corrupt the worker process memory or cause its crash
+	    (CVE-2026-125283).</p>
+	  <p>When HTTP/2 was used, processing of specially crafted messages
+	    from a client while a response was being sent to it might result
+	    in worker process memory corruption or a worker process crash,
+	    or might have potential other impact (CVE-2026-123007).</p>
+	  <p>When HTTP/2 was used, if processing a request required an
+	    outgoing connection and free connections were not enough, an
+	    HTTP/2 connection could be mistakenly closed while a request was
+	    still being processed in it; as a result, worker process memory
+	    corruption or a worker process crash could occur
+	    (CVE-2026-123633).</p>
+	  <p>When HTTP/3 was used, if processing a request required an
+	    outgoing connection and free connections were not enough, a QUIC
+	    connection could be mistakenly closed while a request was still
+	    being processed in it; as a result, worker process memory
+	    corruption or a worker process crash could occur
+	    (CVE-2026-121810).</p>
+	  <p>When the resolver directive was used to resolve proxied server
+	    names while processing a request, and the same name was
+	    simultaneously resolved in a subrequest, an attacker able to
+	    trigger name resolution might corrupt worker process memory or
+	    cause a worker process crash; the issue might also have potential
+	    other impact (CVE-2026-123634).</p>
+	  <p>In the mail proxy module, closing the connection or writing data
+	    by a client while the server was connecting to a proxied server,
+	    resolving a client name, or waiting for a response from the
+	    authentication server could lead to worker process memory
+	    corruption or a worker process crash (CVE-2026-113425).</p>
+	  <p>In the stream module, if virtual servers were selected by SNI
+	    and client SSL certificate verification was configured more
+	    strictly in the server selected by SNI than in the default
+	    server, the verification could be performed using the
+	    configuration of the default server, allowing an attacker to
+	    bypass it (CVE-2026-120967).</p>
+	  <p>When the ssl_preread directive was used, malformed ClientHello
+	    messages might be interpreted differently than in other TLS
+	    implementations, which might result in bypassing security
+	    restrictions based on the $ssl_preread_server_name and
+	    $ssl_preread_alpn_protocols variables (CVE-2026-123640).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-125283</cvename>
+      <cvename>CVE-2026-123007</cvename>
+      <cvename>CVE-2026-123633</cvename>
+      <cvename>CVE-2026-121810</cvename>
+      <cvename>CVE-2026-123634</cvename>
+      <cvename>CVE-2026-113425</cvename>
+      <cvename>CVE-2026-120967</cvename>
+      <cvename>CVE-2026-123640</cvename>
+      <url>https://en.angie.software/angie/docs/oss_changes/#angie-1-12-5</url>
+    </references>
+    <dates>
+      <discovery>2026-11-18</discovery>
+      <entry>2026-11-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a8f3c2d5-e5a1-11f1-bae2-3497f65b111b">
+    <topic>angie-module-cache-purge -- symlink traversal when walking cache trees</topic>
+    <affects>
+      <package>
+	<name>angie-module-cache-purge</name>
+	<range><lt>3.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The ngx_cache_purge developers report:</p>
+	<blockquote cite="https://github.com/nginx-modules/ngx_cache_purge/releases/tag/3.0.4">
+	  <p>Fixed a symlink traversal vulnerability during cache tree
+	    traversal.  An attacker with the ability to create symbolic
+	    links inside the cache directory could potentially cause cache
+	    purge operations to delete arbitrary files accessible to the
+	    worker process (CVE-2026-108981).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2026-108981</cvename>
+      <url>https://github.com/nginx-modules/ngx_cache_purge/releases/tag/3.0.4</url>
+    </references>
+    <dates>
+      <discovery>2026-10-11</discovery>
+      <entry>2026-11-21</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="a66ea137-7d48-4991-953d-73cfdaf1da76">
     <topic>clamav -- Multiple vulnerabilities</topic>
     <affects>

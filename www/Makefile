@@ -587,6 +587,7 @@
     SUBDIR += nginx-module-rtmp
     SUBDIR += nginx-module-set-misc
     SUBDIR += nginx-module-sflow
+    SUBDIR += nginx-module-shibboleth
     SUBDIR += nginx-module-slowfs-cache
     SUBDIR += nginx-module-srcache
     SUBDIR += nginx-module-stream-limit-req
@@ -597,8 +598,10 @@
     SUBDIR += nginx-module-upload
     SUBDIR += nginx-module-upstream-check
     SUBDIR += nginx-module-vod
+    SUBDIR += nginx-module-vts
     SUBDIR += nginx-module-websockify
     SUBDIR += nginx-module-xss
+    SUBDIR += nginx-module-zip
     SUBDIR += nginx-module-zstd
     SUBDIR += nginx-naxsi
     SUBDIR += nginx-prometheus-exporter

@@ -896,6 +896,7 @@
     SUBDIR += git-workspace
     SUBDIR += gitaly
     SUBDIR += gitea-act_runner
+    SUBDIR += gitea-cli
     SUBDIR += gitg
     SUBDIR += github-act-runner
     SUBDIR += github-backup-utils
@@ -1225,6 +1226,7 @@
     SUBDIR += kf6-kdeclarative
     SUBDIR += kf6-kdoctools
     SUBDIR += kf6-kfilemetadata
+    SUBDIR += kf6-kfilemetadata-plugins
     SUBDIR += kf6-ki18n
     SUBDIR += kf6-kidletime
     SUBDIR += kf6-kio
@@ -6811,8 +6813,6 @@
     SUBDIR += ros-urdfdom
     SUBDIR += ros-urdfdom_headers
     SUBDIR += ros-vcstool
-    SUBDIR += ros-vcstools
-    SUBDIR += ros-wstool
     SUBDIR += roswell
     SUBDIR += rote
     SUBDIR += rpclib
@@ -6910,12 +6910,14 @@
     SUBDIR += rubygem-aws-eventstream
     SUBDIR += rubygem-aws-partitions
     SUBDIR += rubygem-aws-sdk
+    SUBDIR += rubygem-aws-sdk-abusesignal
     SUBDIR += rubygem-aws-sdk-accessanalyzer
     SUBDIR += rubygem-aws-sdk-account
     SUBDIR += rubygem-aws-sdk-accountaccess
     SUBDIR += rubygem-aws-sdk-accountaccessruntime
     SUBDIR += rubygem-aws-sdk-acm
     SUBDIR += rubygem-aws-sdk-acmpca
+    SUBDIR += rubygem-aws-sdk-agentdiscovery
     SUBDIR += rubygem-aws-sdk-agentregistry
     SUBDIR += rubygem-aws-sdk-agentregistrycontrol
     SUBDIR += rubygem-aws-sdk-aiops
@@ -6925,6 +6927,7 @@
     SUBDIR += rubygem-aws-sdk-apigateway
     SUBDIR += rubygem-aws-sdk-apigatewaymanagementapi
     SUBDIR += rubygem-aws-sdk-apigatewayv2
+    SUBDIR += rubygem-aws-sdk-apiportal
     SUBDIR += rubygem-aws-sdk-appconfig
     SUBDIR += rubygem-aws-sdk-appconfigdata
     SUBDIR += rubygem-aws-sdk-appfabric
@@ -7227,10 +7230,12 @@
     SUBDIR += rubygem-aws-sdk-partnercentralaccount
     SUBDIR += rubygem-aws-sdk-partnercentralbenefits
     SUBDIR += rubygem-aws-sdk-partnercentralchannel
+    SUBDIR += rubygem-aws-sdk-partnercentralmarketing
     SUBDIR += rubygem-aws-sdk-partnercentralrevenuemeasurement
     SUBDIR += rubygem-aws-sdk-partnercentralselling
     SUBDIR += rubygem-aws-sdk-paymentcryptography
     SUBDIR += rubygem-aws-sdk-paymentcryptographydata
+    SUBDIR += rubygem-aws-sdk-payments
     SUBDIR += rubygem-aws-sdk-pcaconnectorad
     SUBDIR += rubygem-aws-sdk-pcaconnectorscep
     SUBDIR += rubygem-aws-sdk-pcs
@@ -7288,6 +7293,7 @@
     SUBDIR += rubygem-aws-sdk-sagemaker
     SUBDIR += rubygem-aws-sdk-sagemakeredgemanager
     SUBDIR += rubygem-aws-sdk-sagemakerfeaturestoreruntime
+    SUBDIR += rubygem-aws-sdk-sagemakergatewayruntime
     SUBDIR += rubygem-aws-sdk-sagemakergeospatial
     SUBDIR += rubygem-aws-sdk-sagemakerinferencerouterruntime
     SUBDIR += rubygem-aws-sdk-sagemakerjobruntime
@@ -7822,6 +7828,7 @@
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
     SUBDIR += rubygem-git
+    SUBDIR += rubygem-git-gitlab
     SUBDIR += rubygem-git-version-bump
     SUBDIR += rubygem-github_api
     SUBDIR += rubygem-gitlab
@@ -8126,6 +8133,7 @@
     SUBDIR += rubygem-opentelemetry-common-gitlab
     SUBDIR += rubygem-opentelemetry-exporter-otlp
     SUBDIR += rubygem-opentelemetry-exporter-otlp-common
+    SUBDIR += rubygem-opentelemetry-exporter-otlp-common-gitlab
     SUBDIR += rubygem-opentelemetry-exporter-otlp-gitlab
     SUBDIR += rubygem-opentelemetry-exporter-otlp-logs
     SUBDIR += rubygem-opentelemetry-exporter-otlp-metrics
@@ -8201,6 +8209,7 @@
     SUBDIR += rubygem-opentelemetry-instrumentation-net_http
     SUBDIR += rubygem-opentelemetry-instrumentation-net_http-gitlab
     SUBDIR += rubygem-opentelemetry-instrumentation-openai
+    SUBDIR += rubygem-opentelemetry-instrumentation-openai-gitlab
     SUBDIR += rubygem-opentelemetry-instrumentation-pg
     SUBDIR += rubygem-opentelemetry-instrumentation-pg-gitlab
     SUBDIR += rubygem-opentelemetry-instrumentation-que
@@ -8230,8 +8239,10 @@
     SUBDIR += rubygem-opentelemetry-instrumentation-trilogy
     SUBDIR += rubygem-opentelemetry-instrumentation-trilogy-gitlab
     SUBDIR += rubygem-opentelemetry-logs-api
+    SUBDIR += rubygem-opentelemetry-logs-api-gitlab
     SUBDIR += rubygem-opentelemetry-logs-sdk
     SUBDIR += rubygem-opentelemetry-metrics-api
+    SUBDIR += rubygem-opentelemetry-metrics-api-gitlab
     SUBDIR += rubygem-opentelemetry-metrics-sdk
     SUBDIR += rubygem-opentelemetry-registry
     SUBDIR += rubygem-opentelemetry-registry-gitlab
@@ -8290,6 +8301,7 @@
     SUBDIR += rubygem-pqueue
     SUBDIR += rubygem-prettier_print
     SUBDIR += rubygem-prettyprint
+    SUBDIR += rubygem-process_executer
     SUBDIR += rubygem-profile
     SUBDIR += rubygem-progressbar
     SUBDIR += rubygem-prometheus-client-mmap
@@ -8600,6 +8612,7 @@
     SUBDIR += rubygem-tool
     SUBDIR += rubygem-tracer
     SUBDIR += rubygem-traces
+    SUBDIR += rubygem-track_open_instances
     SUBDIR += rubygem-trailblazer-option
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
