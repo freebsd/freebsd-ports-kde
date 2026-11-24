@@ -61,11 +61,9 @@
 %%QT_INCDIR%%/QtVirtualKeyboard/qvirtualkeyboardobserver.h
 %%QT_INCDIR%%/QtVirtualKeyboard/qvirtualkeyboardselectionlistmodel.h
 %%QT_INCDIR%%/QtVirtualKeyboard/qvirtualkeyboardtrace.h
-%%QT_INCDIR%%/QtVirtualKeyboardQml/%%FULLVER%%/QtVirtualKeyboardQml/private/qtvirtualkeyboardqml-config_p.h
 %%QT_INCDIR%%/QtVirtualKeyboardQml/QtVirtualKeyboardQml
 %%QT_INCDIR%%/QtVirtualKeyboardQml/QtVirtualKeyboardQmlDepends
 %%QT_INCDIR%%/QtVirtualKeyboardQml/QtVirtualKeyboardQmlVersion
-%%QT_INCDIR%%/QtVirtualKeyboardQml/qtvirtualkeyboardqml-config.h
 %%QT_INCDIR%%/QtVirtualKeyboardQml/qtvirtualkeyboardqmlexports.h
 %%QT_INCDIR%%/QtVirtualKeyboardQml/qtvirtualkeyboardqmlversion.h
 %%QT_INCDIR%%/QtVirtualKeyboardSettings/%%FULLVER%%/QtVirtualKeyboardSettings/private/qquickvirtualkeyboardsettings_p.h

@@ -244,6 +244,7 @@
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrendershaderkeys_p.h
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrendershaderlibrarymanager_p.h
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrendershadermetadata_p.h
+%%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrendershadertokenizer_p.h
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrendershadowmap_p.h
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrenderskeleton_p.h
 %%QT_INCDIR%%/QtQuick3DRuntimeRender/%%FULLVER%%/QtQuick3DRuntimeRender/private/qssgrenderskin_p.h

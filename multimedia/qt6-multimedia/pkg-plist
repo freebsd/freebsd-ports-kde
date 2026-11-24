@@ -8,6 +8,7 @@
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegaudioinput_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegaudiorenderer_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegavaudioformat_p.h
+%%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegcertificateutils_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegcodec_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegcodeccontext_p.h
 %%FFMPEG%%%%QT_INCDIR%%/QtFFmpegMediaPluginImpl/%%FULLVER%%/QtFFmpegMediaPluginImpl/private/qffmpegcodecstorage_p.h
@@ -125,6 +126,7 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qdmabuftextureimporter_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qdmabufvideobuffer_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qdrawavaudiodecoder_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qeglimagefunctions_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qerrorinfo_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qhwvideobuffer_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qimagevideobuffer_p.h
@@ -140,8 +142,11 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmemoryvideobuffer_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_drm_support_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_enum_to_string_converter_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_gl_support_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_ranges_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_source_resolver_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_va_support_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimedia_vulkan_support_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qmultimediautils_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_async_support_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_audiocontextmanager_p.h
@@ -152,6 +157,7 @@
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_audiosource_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_audiostream_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_instance_p.h
+%%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_portal_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_propertydict_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_registry_support_p.h
 %%PIPEWIRE%%%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qpipewire_screencapture_p.h
@@ -192,6 +198,7 @@
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qrhivaluemapper_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qrtaudioengine_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsamplecache_p.h
+%%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qscreencapture_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsharedhandle_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsoundeffect_p.h
 %%QT_INCDIR%%/QtMultimedia/%%FULLVER%%/QtMultimedia/private/qsoundeffectsynchronous_p.h
@@ -313,6 +320,7 @@
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/capturesessionfixture_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/formatutils_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/framegenerator_p.h
+%%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/framegrabber_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/mediabackendutils_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/mediafileselector_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/mediainfo_p.h
@@ -327,6 +335,9 @@
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/qscopedenvironmentvariable_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/qsequentialfileadaptor_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/qsinewavevalidator_p.h
+%%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/qvideoframetestutils_p.h
+%%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/rhi_support_p.h
+%%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/surfacecapturetestutils_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/%%FULLVER%%/QtMultimediaTestLib/private/testvideosink_p.h
 %%QT_INCDIR%%/QtMultimediaTestLib/QtMultimediaTestLib
 %%QT_INCDIR%%/QtMultimediaTestLib/QtMultimediaTestLibDepends

@@ -87,6 +87,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitfont_p.h
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitglobal_p.h
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitpalette_p.h
+%%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitpropertypath_p.h
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitpropertyresolver_p.h
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitreader_p.h
 %%QT_INCDIR%%/QtLabsStyleKit/%%FULLVER%%/QtLabsStyleKit/private/qqstylekitstyle_p.h
@@ -1609,6 +1610,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/qquickqmlgenerator_p.h
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/qquickvectorimageglobal_p.h
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/qquickvectorimageplugin_p.h
+%%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/qquickvectorimagesource_p.h
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/qsvgvisitorimpl_p.h
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/%%FULLVER%%/QtQuickVectorImageGenerator/private/utils_p.h
 %%QT_INCDIR%%/QtQuickVectorImageGenerator/QtQuickVectorImageGenerator
@@ -1636,6 +1638,7 @@ bin/qmlscene6
 %%QT_INCDIR%%/QtQuickWidgets/qtquickwidgetsexports.h
 %%QT_INCDIR%%/QtQuickWidgets/qtquickwidgetsglobal.h
 %%QT_INCDIR%%/QtQuickWidgets/qtquickwidgetsversion.h
+@dir lib/cmake/Qt6
 lib/cmake/Qt6BuildInternals/StandaloneTests/QtDeclarativeTestsConfig.cmake
 lib/cmake/Qt6LabsAnimation/Qt6LabsAnimationAdditionalTargetInfo.cmake
 lib/cmake/Qt6LabsAnimation/Qt6LabsAnimationConfig.cmake
@@ -3616,6 +3619,7 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/Qt/labs/StyleKit/Dial.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/Dialog.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/DialogButtonBox.qml
+%%QT_QMLDIR%%/Qt/labs/StyleKit/Drawer.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/Frame.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/GroupBox.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/ItemDelegate.qml
@@ -3647,16 +3651,18 @@ lib/cmake/Qt6QuickWidgetsPrivate/Qt6QuickWidgetsPrivateVersionlessTargets.cmake
 %%QT_QMLDIR%%/Qt/labs/StyleKit/SwitchDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/TabBar.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/TabButton.qml
+%%QT_QMLDIR%%/Qt/labs/StyleKit/TableViewDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/TextArea.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/TextField.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/ToolBar.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/ToolButton.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/ToolSeparator.qml
+%%QT_QMLDIR%%/Qt/labs/StyleKit/ToolTip.qml
+%%QT_QMLDIR%%/Qt/labs/StyleKit/Tumbler.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/BackgroundAndIndicatorDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/BackgroundDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/BusyIndicatorDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/ContentItemIndicator.qml
-%%QT_QMLDIR%%/Qt/labs/StyleKit/impl/DialDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/FallbackStyle.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/HandleDelegate.qml
 %%QT_QMLDIR%%/Qt/labs/StyleKit/impl/IndicatorDelegate.qml
@@ -5323,4 +5329,3 @@ libdata/pkgconfig/Qt6QuickWidgets.pc
 %%QT_DATADIR%%/modules/QuickVectorImageGeneratorPrivate.json
 %%QT_DATADIR%%/modules/QuickVectorImageHelpers.json
 %%QT_DATADIR%%/modules/QuickWidgets.json
-@dir lib/cmake/Qt6

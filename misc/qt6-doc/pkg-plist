@@ -10,6 +10,7 @@
 %%QT_DOCDIR%%/qtcmake/cmake-manual.html
 %%QT_DOCDIR%%/qtcmake/cmake-property-reference.html
 %%QT_DOCDIR%%/qtcmake/cmake-qt5-and-qt6-compatibility.html
+%%QT_DOCDIR%%/qtcmake/cmake-set-variables-and-properties.html
 %%QT_DOCDIR%%/qtcmake/cmake-supported-cmake-versions.html
 %%QT_DOCDIR%%/qtcmake/cmake-variable-reference.html
 %%QT_DOCDIR%%/qtcmake/images/arrow_bc.png
@@ -49,6 +50,7 @@
 %%QT_DOCDIR%%/qtdoc/android-platform-notes.html
 %%QT_DOCDIR%%/qtdoc/android-publishing-to-googleplay.html
 %%QT_DOCDIR%%/qtdoc/android-runtime-licensing-notes.html
+%%QT_DOCDIR%%/qtdoc/android-security.html
 %%QT_DOCDIR%%/qtdoc/android-services.html
 %%QT_DOCDIR%%/qtdoc/android-supported-versions-selection-guidelines.html
 %%QT_DOCDIR%%/qtdoc/android.html

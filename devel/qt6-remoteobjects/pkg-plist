@@ -31,7 +31,6 @@
 %%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectRegistryHost
 %%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectReplica
 %%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectSettingsStore
-%%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectSourceLocation
 %%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectSourceLocationInfo
 %%QT_INCDIR%%/QtRemoteObjects/QRemoteObjectSourceLocations
 %%QT_INCDIR%%/QtRemoteObjects/QtROClientFactory
